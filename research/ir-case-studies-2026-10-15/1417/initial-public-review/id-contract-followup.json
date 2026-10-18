@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T08:46:52.886898+00:00",
+  "company_id": "jp:1417",
+  "status": "alternate_capture_id_contract_reproduced",
+  "supersedes_independent_file": false,
+  "earlier_independent_checkpoint": {
+    "path": "independent-recheck.json",
+    "sha256": "1770ed4ed7bf5c2ab23c9bcfb61cd45880a5775319207905c06a2b72a6e794fa",
+    "unchanged": true
+  },
+  "new_information": {
+    "attribution": "Original artifact creator explanation relayed by parent after independent checkpoint",
+    "formula": "'case-public:' + SHA256_UTF8(url + '\\n' + retrieved_at + '\\n' + raw_sha256)",
+    "prior_formula_recording_limitation": "The original assigned artifacts said deterministic IDs but did not document this exact capture formula."
+  },
+  "sources": [
+    {
+      "source_id": "case-public:a2667ec6d640963ec27e12b4df615778cd8ae74524f7e989517ebefe9df19ba8",
+      "url": "https://ir.mirait-one.com/",
+      "retrieved_at": "2026-10-15T08:34:02.490983+00:00",
+      "original_raw_sha256": "b521019b2478d3663d626181497900ce9d6b507700b4ecf14f548a47f3a5e2ce",
+      "capture_id_recomputed": "case-public:a2667ec6d640963ec27e12b4df615778cd8ae74524f7e989517ebefe9df19ba8",
+      "capture_id_matches": true,
+      "shared_source_id_recomputed": "case-public:295a07e75384a5e87f29598a9dc705a3eb901e98533a32693a6677a0295e9ed9",
+      "shared_source_id_matches": false
+    },
+    {
+      "source_id": "case-public:54f7849586b8391bb42007c3bea2c3df63bea74db6302ca2f97eaf87b586b038",
+      "url": "https://ir.mirait-one.com/data/order02.html",
+      "retrieved_at": "2026-10-15T08:34:40.647728+00:00",
+      "original_raw_sha256": "3f2ecee9ed0bc42abd50482864bae6222d0a8fb020cd44f78bc94af159a32969",
+      "capture_id_recomputed": "case-public:54f7849586b8391bb42007c3bea2c3df63bea74db6302ca2f97eaf87b586b038",
+      "capture_id_matches": true,
+      "shared_source_id_recomputed": "case-public:37580736a3a0693189aff11a95cd895acc7fc523944ffe3c5c3d58ec21775b8f",
+      "shared_source_id_matches": false
+    }
+  ],
+  "conclusion": "Both saved IDs reproduce the creator-confirmed capture-identity formula. The shared stable_source_id helper uses company/content/metadata identity and excludes retrieval time, so its differing outputs represent a different contract, not proof of raw/text/citation corruption. This followup does not certify shared-ID or DB intake compatibility.",
+  "remaining_intake_boundary": "Original source container still lacks schema_version. Parent will create separately reviewed canonical inputs while retaining old snapshots; this followup does not generate or validate those future files.",
+  "scope": {
+    "network_GETs": 0,
+    "database_accesses": 0,
+    "IR_questions_registered_or_sent": 0,
+    "financial_meaning_validation": false,
+    "model_adoption": false,
+    "prior_artifact_final_changes": 0
+  },
+  "verification": {
+    "source_count": 2,
+    "capture_formula_matches": 2,
+    "shared_helper_matches": 0,
+    "original_independent_checkpoint_sha_unchanged": true
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "recorded_at": "2026-10-16T04:07:17.860049+00:00",
+  "status": "passed_insertion_only_document_checks",
+  "changes": [
+    {
+      "path": "docs/workflow.md",
+      "before_sha256": "0ac18f252b6da89b1f1df5ec2e93d2f1417eb337a75dfac914fa44a9363d704a",
+      "after_sha256": "3bf68e91e9f53fab83119dd77a997237cacc2fa01879b58e932e28402c80b06a",
+      "insertion_character_position": 13765,
+      "insertion_UTF8_byte_position": 26265,
+      "insertion": "任意の `question.public_information_review` は `{reviewed_at, reviewer, rationale, sources: [{source_id, source_snapshot_sha256, scope, basis_quote}]}` を持つ。`sources` は非空・ID重複なし、`scope` は読んだ頁・表・対象期などの非空文字列、`basis_quote` は保存本文の逐語引用。根拠は `ir-plan.sources` へ渡し、レビュー専用sourceを仮説の `evidence_ids` や評価入力へ自動追加しない。`source_snapshot_sha256` は `ir_agent.models.json_text` を使った `hashlib.sha256(json_text(source).encode(\"utf-8\")).hexdigest()` の小文字64桁で、本文/PDFのSHAや別のJSON表現のSHAとは区別する。原典の全連鎖について同社・公開性・時点を照合し、market_dataはレビュー根拠にしない。\n\n`reviewed_at` は自己申告で、`reviewed_at <= created_at <= as_of` が必要。保存経路では全レビュー根拠の実first-save/legacy known-byをその時点へ照合し、レビュー時・判定境界・現在の公開性訂正も確認する。IR返信由来なら保存返信/質問のID・同社・本文一致を確認して訂正へ結ぶ。不正参照はエラー、時点/公開性不足は下書きに理由を残す。newfieldがある場合だけサーバーが `public_information_review_check` を計算し、固定契約付きでは `decision_contract.preflight`、契約なしでは質問の同名fieldへ保存する。この派生checkを新規requestで指定せず、再送には元requestを使う。変更retryは拒否し、新しい既送信記録では再確認して不足時に止める。`mark-sent` は外部で既送信の記録であり、同一送信のretryは元の履歴を保つ。\n\nこの任意fieldを使わない旧経路は従来どおりで、同名の余剰JSONもこの機能の確認結果として参照しない。引用存在・確認範囲の固定は、意味上の「答えがない」、実読、全公表資料の最新性、送信準備や金融判断の完了を保証しない。`public_answer_status` の意味レビューと既存の方針・回答分岐の点検は残る。[実装の受入記録](../research/ir-public-information-review-binding-integration-2026-10-16/parent-acceptance.json)を参照する。\n\n",
+      "insertion_character_count": 1229,
+      "before_all_bytes_recoverable_by_removing_one_exact_insertion": true
+    },
+    {
+      "path": "docs/ir-question-preparation.md",
+      "before_sha256": "be39fd3d71b8b5428b63254bf509a559a76ce46299ddecebfc54cfac446fd987",
+      "after_sha256": "c5e881e0a0874edfc28dcc67d8d48c69600a4916254131477f71b961218d7a7f",
+      "insertion_character_position": 1064,
+      "insertion_UTF8_byte_position": 2256,
+      "insertion": "公開資料の確認範囲・時点・引用は、任意の [`question.public_information_review`](workflow.md#出典付き方針で判断を点検する) として不変質問へ固定できる。読んだ資料のID/native JSON SHA、頁・表・対象期のscope、逐語quoteと、残る問いの理由を保存し、実保存来歴と現在の公開性訂正も別に照合する。これは本プロジェクトの参照固定であり、未回答の意味・実読・全資料の最新性や送信準備完了の認証ではない。レビュー根拠を評価入力へ自動採用せず、未導入の旧経路・外部既送信記録は区別する。\n\n",
+      "insertion_character_count": 277,
+      "before_all_bytes_recoverable_by_removing_one_exact_insertion": true
+    }
+  ],
+  "all_original_bytes_retained": true,
+  "new_prep_paragraph_count": 1,
+  "workflow_paragraph_count": 3,
+  "new_links": [
+    {
+      "from": "docs/workflow.md",
+      "target": "../research/ir-public-information-review-binding-integration-2026-10-16/parent-acceptance.json",
+      "local_path_exists": true,
+      "heading_text_checked": null
+    },
+    {
+      "from": "docs/ir-question-preparation.md",
+      "target": "workflow.md#出典付き方針で判断を点検する",
+      "local_path_exists": true,
+      "heading_text_checked": "出典付き方針で判断を点検する"
+    }
+  ],
+  "root_acceptance": {
+    "path": "research/ir-public-information-review-binding-integration-2026-10-16/parent-acceptance.json",
+    "sha256": "ffe7089e380eff8b0133def786725040aa0c52938aabd3a05cba3eefeb50eeb1"
+  },
+  "root_acceptance_unchanged": true,
+  "code_and_test_sha256_unchanged": {
+    "src/ir_agent/models.py": "e0d0444fda0e730de6c6e9beaa110bbd796de00f3228c041daa016284a8e234e",
+    "src/ir_agent/decision.py": "5243aa9c51d42d1abc9a2cd95cc65d8b9671be1625a30d8cdeaddfdade026614",
+    "src/ir_agent/decision_lifecycle.py": "a6813698eb32ea6293d765b616a86340f6695d247e563ebcca3296941f633273",
+    "src/ir_agent/harness.py": "23e145a1487fe2a529f64e842a1468b23131d61a260c6746147cbe42ccd25d3e",
+    "src/ir_agent/public_information_review.py": "1c7d19a0cf79d1628144196217cd84bfd0c656a48a1308934a13943e70b249aa",
+    "tests/test_public_information_review.py": "e66303ce2dd2488c88e87c5051af4438d0ccfc894f48f0472ebee46e7d39a2ec"
+  },
+  "tests_run": 0,
+  "GETs": 0,
+  "DB_connections": 0,
+  "source_edits": 0,
+  "financial_rules_or_inputs_added": 0
+}

@@ -1,0 +1,48 @@
+{
+  "company_id": "jp:3817",
+  "maximum_GETs": 4,
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu"
+  ],
+  "holds_v8_file": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+  "holds_v8_SHA256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952",
+  "allowed_requests": [
+    {
+      "role": "issuer_robots",
+      "url": "https://www.sra-hd.co.jp/robots.txt"
+    },
+    {
+      "role": "issuer_IR",
+      "url": "https://www.sra-hd.co.jp/ir/index.html"
+    },
+    {
+      "role": "issuer_library",
+      "url": "https://www.sra-hd.co.jp/ir/ir-library.html",
+      "literal_capture_pointer": "$.GETs[1].html_visible_text.links[9]",
+      "reason": "Official literal IR library; check whether external-author reports are actually indexed, no provider guess"
+    }
+  ],
+  "robots_reviews": {
+    "www.sra-hd.co.jp": {
+      "proceed": true,
+      "branch": "complete404_missingrobots",
+      "raw_file": "research/ir-case-studies-2026-10-15/3817/external-author-research-discovery-2026-10-16/raw/4ad74b57fef3ec0b96059ec61116fc73cc1f8c5bbb4d39c1b077fea3231ec44f",
+      "raw_sha256": "4ad74b57fef3ec0b96059ec61116fc73cc1f8c5bbb4d39c1b077fea3231ec44f",
+      "capture_pointer": "$.GETs[0]",
+      "observed_complete_at": "2026-10-16T09:20:50.035208+00:00",
+      "interpretation": "Complete404 robots response; existing missing-robots branch only, no positive rule text. No meta refresh execution."
+    }
+  },
+  "rules": "normal TLS/proxy fixed Codex-IR-Research/0.1; no auto redirect/retry/JS/search/URL guess/provider bypass; stop failure or no relevant literal"
+}

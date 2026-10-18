@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T13:18:26.329680+00:00",
+  "status": "one_position_origin_boundary_gap_reproduced_two_synthetic_databases",
+  "finding": {
+    "severity": "P1",
+    "title": "窓口catalog由来の省略heldが既定falseから確認済み判断contextへ混入する",
+    "observed": "catalog入力/変換companyにはheldが無いが、validate_companyがfalseを補い、put_companyが保有観測を作成する。position_at/position_forは明示ユーザーheld:falseと同じkind:observedを返す。",
+    "impact": "既存の全て同一の合成評価入力で、既定falseを渡すとbuy_review、held:Noneの対照はposition_not_verified/unresolved。質問契約にもsynthetic_position無しでfalse/observedが固定される。catalog import単独が投資判断や発注を自動実行するという主張ではない。",
+    "not_just_a_name": "observedという名前の是非ではなく、保有申告の無い入力にboolが与えられ、実際のunknown guardを解除することを再現した。明示ユーザー申告の観測自体をbrokerによる実保有証明と呼ぶ必要もない。",
+    "evidence": [
+      {
+        "path": "src/ir_agent/contacts.py",
+        "line": 149,
+        "end_line": 157,
+        "point": "catalog変換結果はstatus:watchと窓口情報。heldは含まない。"
+      },
+      {
+        "path": "src/ir_agent/models.py",
+        "line": 137,
+        "point": "held省略をFalseで補う。省略と明示falseのvalidate結果は同一。"
+      },
+      {
+        "path": "src/ir_agent/harness.py",
+        "line": 88,
+        "point": "contact importはvalidate_companyしてput_companyへ渡す。"
+      },
+      {
+        "path": "src/ir_agent/store.py",
+        "line": 178,
+        "point": "company持込みの由来を区別せずobserve_positionを呼ぶ。"
+      },
+      {
+        "path": "src/ir_agent/store.py",
+        "line": 194,
+        "end_line": 203,
+        "point": "観測にorigin/申告者/確認状態は無く、全行をkind:observedとして返す。"
+      },
+      {
+        "path": "src/ir_agent/decision_lifecycle.py",
+        "line": 72,
+        "end_line": 82,
+        "point": "このpositionを判断の保有状態へ採用する。"
+      },
+      {
+        "path": "src/ir_agent/decision.py",
+        "line": 102,
+        "end_line": 104,
+        "point": "context.heldがboolならposition_not_verifiedを通過する。"
+      }
+    ],
+    "adjacent_same_boundary_paths": [
+      {
+        "path": "src/ir_agent/harness.py",
+        "line": 117,
+        "end_line": 125,
+        "probe_evidence": "catalog tempDBで観測のみ空にした隔離段階。held引数省略のstatus-only更新でもfalse/observedを作成。",
+        "meaning": "fresh defaultの抑止だけではstatus更新から再導入される。"
+      },
+      {
+        "path": "src/ir_agent/store.py",
+        "line": 99,
+        "end_line": 104,
+        "probe_evidence": "同じtempDBの観測のみ空にしてlegacy会社を再openする隔離段階。catalog由来company metadataからfalse/observedを作成。",
+        "meaning": "bootstrapをtrusted実保有/申告確認へ格上げしない対策も要る。"
+      },
+      {
+        "path": "src/ir_agent/store.py",
+        "line": 184,
+        "end_line": 191,
+        "evidence_kind": "read_only_code_observation_not_extra_probe",
+        "meaning": "現コードはheldが同じなら新観測を作らない。旧origin不明falseから明示falseへの新確認を保存する際、bool同値だけの重複抑止では来歴を失う。"
+      }
+    ]
+  },
+  "existing_contract_and_test_intent": [
+    {
+      "path": "docs/workflow.md",
+      "line": 11,
+      "meaning": "会社JSONの既定held:falseは明示仕様。表示互換のためこの値自体を削除/上書きする必要はない。"
+    },
+    {
+      "path": "docs/workflow.md",
+      "line": 269,
+      "meaning": "保有履歴が無ければposition_history_unknownとし現在状態を過去へ投影しない、という判断利用の境界がある。catalog既定値が作った履歴は申告根拠を増やしていない。"
+    },
+    {
+      "path": "tests/test_contacts.py",
+      "test": "test_bom_alphanumeric_code_and_conditions_are_preserved_without_active_or_disclosure",
+      "meaning": "converter companyにheldが無いことを確認する。"
+    },
+    {
+      "path": "tests/test_contact_workflow.py",
+      "test": "test_new_company_is_watch_without_financial_sources_theses_or_jobs",
+      "meaning": "会社held:false、watch、財務資料/thesis/job無しを確認。position originや後続判断contextは検証していない。"
+    },
+    {
+      "path": "tests/test_decision_lifecycle.py",
+      "test": "test_legacy_database_observes_position_now_without_backdating",
+      "line": 214,
+      "meaning": "当時DBにあるcompany metadata held:trueを起動時に観測し、それ以前へ遡らせないことを意図する既存テスト。実保有/明示申告の独立確認のテストではない。このknown-by metadata観測と判断に使える保有申告を分ける。"
+    },
+    {
+      "path": "tests/test_decision_lifecycle.py",
+      "test": "test_review_uses_last_position_observed_before_its_as_of",
+      "meaning": "明示held:false変更の過去時点利用は正当な既存要件。今回の修正でも維持する対象。"
+    }
+  ],
+  "minimal_fix_candidate_not_implemented": [
+    "会社JSONのheld:false等、旧source/仮説/観測/判断JSONは保持する。catalog/providerの既定値・省略から新たな確認済み保有観測を作らない。入力時の省略をvalidation前に識別するか、信頼する申告入口を明示し、単なるprovider boolをユーザー申告へ昇格しない。",
+    "新しい明示保有申告は、申告である来歴と実観測時刻を持つ新しいposition観測として追記する。同じfalseでもorigin不明の旧行しか無ければ新確認を落とさない。正当な同一要求再送の冪等性とは区別する。",
+    "statusだけの変更は保有申告を作らず、heldが明示指定された場合だけ申告観測の入口にする。catalog/provider更新は既存の正当な保有申告を消さない。",
+    "Store起動時の旧company存在/値の観測はmetadataのknown-byとして扱う。起動時刻に存在した事実を、実保有確認や元の初回申告時刻と同一視しない。",
+    "position_at/position_forの判断用途は、来歴が十分な明示申告だけを使い、それが無ければNone/unknownにする。既定company値は表示互換のままでもよい。"
+  ],
+  "legacy_origin_limit": {
+    "current_schema_columns": [
+      "id",
+      "company_id",
+      "observed_at",
+      "held"
+    ],
+    "cannot_recover": "旧観測行にはheld/time/companyしかなく、明示申告かcatalog既定かをbooleanや時刻から復元できない。company.held:falseやir_contactの有無だけで旧行を確認済みにしない。",
+    "safe_boundary": "旧行は削除/上書きせずorigin不明として保存し、新たな信頼する申告を別観測で追加する。新originを既存rowへ後付けして過去確認済みにしない。",
+    "compatibility_cost": "旧実行結果のrawは保持する一方、旧unknown-originだけの判断入力は新たな申告まで保留する必要がある。既存bootstrapテストの非遡及性はmetadata観測の意味として残し、判断への採用資格とは別にする。",
+    "fresh_default_suppression_alone_sufficient": false
+  },
+  "probe": {
+    "script": "probe.py",
+    "result": "probe-result.json",
+    "synthetic_database_count": 2,
+    "financial_inputs": "Existing test_decision.plan fixture only; values/policy/price/probabilities unchanged, identity/time rebased.",
+    "extra_path_isolation": "catalog probeの同じ使い捨てDBの観測行だけを空にしてstatus/legacy入口を隔離。実/旧DB履歴は触っていない。"
+  },
+  "scope_limits": [
+    "明示ユーザー保有申告を独立broker検証済みと呼ばない。ここでのbugは申告自体の欠損を既定falseで埋めること。",
+    "catalog importはwatch会社を作るだけで、自動買い/送信/注文はない。後続の完全な合成判断でunknown gate解除を再現した。",
+    "新しいschema/APIの実装はしていない。移行と互換影響は親が判断後、別担当が扱う。"
+  ],
+  "input_snapshots": [
+    {
+      "path": "src/ir_agent/models.py",
+      "sha256": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c"
+    },
+    {
+      "path": "src/ir_agent/store.py",
+      "sha256": "2b9e6f3a3170c9164c052bf98c3e36b23b52dcdadd83d49f0b351350a22bceb9"
+    },
+    {
+      "path": "src/ir_agent/harness.py",
+      "sha256": "5f75ba6452a61f47eb96c0ae06629d7251c90c84b53c46c7181953bff4b5b7bd"
+    },
+    {
+      "path": "src/ir_agent/contacts.py",
+      "sha256": "97b4a5fe86e82255e53c8a91eaa1c1c76a9f8d2b4f136e16c10386ae2e8b9ead"
+    },
+    {
+      "path": "src/ir_agent/decision.py",
+      "sha256": "2c441f1d94a38453427dd8be3f589565dd7170a4c8cd7ec248be71d1ec516934"
+    },
+    {
+      "path": "src/ir_agent/decision_lifecycle.py",
+      "sha256": "6663f44f66cc20a097f0fff47b58751c161525c7339cf6a5b1356f5eeb14d9b3"
+    },
+    {
+      "path": "docs/workflow.md",
+      "sha256": "6415612b8dca5bdd3c9070cdacc94117292968ac1c05dc8cbfe63d4395028ec3"
+    },
+    {
+      "path": "docs/decision-policy.md",
+      "sha256": "e687e70c70ec9ce4b40b935bb9e908cd2d1328f44dfa488fad639557fbba8de5"
+    },
+    {
+      "path": "tests/test_contacts.py",
+      "sha256": "9e828627d7a01c702da9154305fec7111f56c5692dced897bc4956eea92f7faf"
+    },
+    {
+      "path": "tests/test_contact_workflow.py",
+      "sha256": "b30d7546e085e97b0b018cb867a5ab376baa42dde9b910a559b1512ee107a4cf"
+    },
+    {
+      "path": "tests/test_decision_lifecycle.py",
+      "sha256": "cea2467f3a6096e6fdc5960bf9e64f915386063cce70ee58547c1033c27c360d"
+    },
+    {
+      "path": "tests/test_decision.py",
+      "sha256": "8d3389fdd6354a3624effd24fd1958a0f4c515461010886797763a511212904d"
+    },
+    {
+      "path": "examples/demo.json",
+      "sha256": "71532a16b8efec2fbdbe4a03311bfe9abffebe3626a7be19752d216ef211a5da"
+    },
+    {
+      "path": "examples/question.json",
+      "sha256": "3f2f064e97126d6269f3db578dcba9d0776f0fcf648f7aa43608c47b4a7de2df"
+    }
+  ],
+  "execution": {
+    "synthetic_databases": 2,
+    "temporary_catalog_files": 1,
+    "actual_DB_accesses": 0,
+    "new_GETs": 0,
+    "production_or_old_file_changes": 0,
+    "full_suite_runs": 0
+  }
+}

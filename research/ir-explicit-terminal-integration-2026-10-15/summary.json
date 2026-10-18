@@ -1,0 +1,27 @@
+{
+  "recorded_at": "2026-10-15T05:21:42.803259+00:00",
+  "tests": {
+    "count": 1253,
+    "seconds": "36.735",
+    "result": "passed",
+    "command": ".venv/bin/python -m unittest discover -s tests -v"
+  },
+  "target_tests": {
+    "valuation_library": 17,
+    "provenance_ir_and_cli_integration": 6
+  },
+  "independent_recheck": "passed",
+  "scope": "Explicit terminal next-period FCFF with a single discount rate; new opt-in method and unchanged legacy valuation contracts",
+  "method": "dcf_explicit_terminal",
+  "actual_db_changed_by_feature": false,
+  "synthetic_workflow": "passed in memory; version2 saved with old thesis and question data unchanged",
+  "not_implemented": [
+    "annual varying discount rates",
+    "forecast preparation",
+    "financial meaning certification",
+    "automatic stable-reinvestment adoption or currency conversion",
+    "actual company policy/forecast adoption"
+  ],
+  "external_sends": 0,
+  "orders": 0
+}

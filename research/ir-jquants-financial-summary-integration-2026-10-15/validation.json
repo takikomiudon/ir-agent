@@ -1,0 +1,73 @@
+{
+  "SDK_evidence_file": "research/ir-jquants-financial-summary-integration-2026-10-15/sdk-contract-evidence.json",
+  "SDK_evidence_sha256": "08006016990cd8dc4ad2696fd4853fa319eef1afd74baf460d203d040206bed8",
+  "actual_operating_DB_access": 0,
+  "actual_operating_DB_writes": 0,
+  "before_byte_copies_verified": true,
+  "changed_files": {
+    "docs/jquants-financial-summary.md": {
+      "byte_count": 5297,
+      "sha256": "bfe0540ef7b1dc3c28f96e742ca73f174b240ca40d325c8e19de4ffc05f0247b"
+    },
+    "src/ir_agent/adapters/__init__.py": {
+      "byte_count": 694,
+      "sha256": "d1a71b0992717016f31829b618e3185deb947f2c4fe146c853d28684ee905be8"
+    },
+    "src/ir_agent/adapters/jquants_financials.py": {
+      "byte_count": 7163,
+      "sha256": "153fc9df09a0cf7a09ca271044f4c63a3f4425e0db98a21397c2037f922c96d4"
+    },
+    "src/ir_agent/cli.py": {
+      "byte_count": 26180,
+      "sha256": "2598b5fae3b86a3a8ed728fc4ae38cfd883ee7c3a01d438c30b5a462e1b4b6d2"
+    },
+    "tests/test_jquants_financial_summary.py": {
+      "byte_count": 15309,
+      "sha256": "ddbb64c6019e6190435c2f8a183608a5695e4ae85b477047a0ab8ba6b47909fd"
+    }
+  },
+  "contract": [
+    "One date_yyyymmdd SDK call; no cursor argument/storage/delta/range/master/per-company calls",
+    "Nonempty explicit canonical existing jp:CODE scope; no company record creation",
+    "Returned target DiscDate must equal requested disclosure day",
+    "JSON-compatible SDK rows preserve missing, raw field values, separate period/forecast/NC fields and unknown returned columns",
+    "No units, consolidation, numerical forecast or financial model adoption inferred",
+    "Same row stable ID and changed row new ID; SDK receipt time excluded from identity",
+    "published_at null; SDK result receipt clock after call, never wire HTTP completion",
+    "SDK internal pagination may mean multiple HTTP requests"
+  ],
+  "external_API_auth_calls": 0,
+  "financial_models_decisions_classifications_qualitative_jobs_modified": false,
+  "focused_runs": [
+    {
+      "command": ".venv/bin/python -m unittest discover -s tests -p test_jquants_financial_summary.py -v",
+      "log": "research/ir-jquants-financial-summary-integration-2026-10-15/focused-tests.log",
+      "result": "pass",
+      "sha256": "858078ec94d49b0c471c65d47cc30c9c7a344e6b6cceb7334194e354c8876d94",
+      "test_count": 19
+    },
+    {
+      "command": ".venv/bin/python -m unittest discover -s tests -p test_adapters.py -v",
+      "log": "research/ir-jquants-financial-summary-integration-2026-10-15/adapter-regression-tests.log",
+      "result": "pass",
+      "sha256": "172827dcfde0f2f88b90b59ab2d7007e6d59b687f0a1277c1be837546474808b",
+      "test_count": 24
+    }
+  ],
+  "full_suite_run_by_producer": false,
+  "independent_review_completed": false,
+  "initial_fixture_corrections": "Initial new CLI fixture omitted required bundle.schema_version and asserted nonexistent companies_added instead of existing companies return key; fixtures corrected before successful focused runs.",
+  "limitations": [
+    "Installed SDK source is implementation evidence, not current endpoint documentation fetched during this task. Units remain uninterpreted.",
+    "A daily snapshot does not prove complete plan entitlement, full market coverage, latest guidance or original issuer PDF availability.",
+    "SDK has already converted dates and may have converted values/dropped non-schema columns; no original HTTP lexeme/precision/wire validation.",
+    "A source still requires separate classification, semantic review and model/input adoption.",
+    "No live credential, provider availability, retry behavior or external scheduler verified."
+  ],
+  "new_network_GETs": 0,
+  "quote_provider_dataset_compatibility_read_only_review": "Existing normalize_jquants_quote requires market_data + provider jquants + dataset equities/bars/daily. New public_disclosure + provider jquants_financials + dataset fins/summary is rejected; quote implementation unchanged.",
+  "real_financial_data_received": 0,
+  "recorded_at": "2026-10-15T20:37:46.131216+00:00",
+  "status": "implemented_focused_verified_pending_parent_full_suite_and_acceptance",
+  "tests_use_only_synthetic_rows_and_temp_databases": true
+}

@@ -1,0 +1,48 @@
+{
+  "recorded_at": "2026-10-16T10:19:36.624525+00:00",
+  "normalizer_CLI": [
+    ".venv/bin/ir-agent",
+    "normalize-facts",
+    "research/ir-case-studies-2026-10-15/2929/annual-per-share-disclosed-facts-2026-10-16/normalization-input.json"
+  ],
+  "normalizer_exit": 0,
+  "normalizer_version": 1,
+  "normalizer_output_sources": 2,
+  "final_bundle_sources": 3,
+  "final_bundle_composition": "Original unchanged + knowncorrection unchanged + original-based disclosed-facts derived; no corrections applied. See normalizer-output.json for unmodified native2source result.",
+  "derived_id": "disclosed-facts:8cd53e8d69bfd982908ca784be132e0009d9cf53f0a19b23e84d79285fea3a9f",
+  "derived_native_SHA256": "ca83c7d339c79748da4b7f726426d2fcfcd6440a08c0aeb9a99c83fcf7a1d5db",
+  "derived_retrieved_at": "2026-10-16T10:18:05.739941+00:00",
+  "original_native_SHA256": "4989a354f8aa51d2c63e604f2fd2d15fde556c9dcf7cfb2f2449a309c1b6d3c3",
+  "correction_native_SHA256": "0cf9a39daa828bc013c01d304cb46c8cba4100e943dd1d06f566e3693ff8a510",
+  "normalizer_original_snapshot_SHA256": "677eeb030d33d96919ee55bf10be9e70c444d6e7584b39eb50305e0ac1e87560",
+  "hash_semantics": "native uses models.json_text; normalizer original_snapshot uses compactcanonical_json; raw/content/native/normalizerSHA kept distinct",
+  "known_correction_in_existing_derived_metadata_path": "metadata.review.rationale; per-fact structured scope.known_correction",
+  "known_correction_native_DAG_edge_created": false,
+  "financial_inputs_verified": false,
+  "independent_meaning_review_verified": false,
+  "expected_value_eligible": false,
+  "meaning_review_required": true,
+  "model_input_audit_request_prepared": true,
+  "model_input_audit_executed": false,
+  "reason_audit_not_run": "audit_model_inputs internally invokes calculate_valuation; currenttask normalizer-only with audit input preparation. No model calculation/result output.",
+  "checks": {
+    "pure_normalizer_savedclock_bytes_reproduction_exact": true,
+    "2direct_original_tokens_EPS68_61_BPS453_35": true,
+    "original_and_correction_wholeobjects_unchanged": true,
+    "basis_quote_unit_period_Unicode_UTF8_token_locations_exact": true,
+    "old_correction25_and_original26_manifestpins_unchanged": true,
+    "input12pins_unchanged": true,
+    "three_sources_validate": true,
+    "new_correction_image_numeric_facts": 0
+  },
+  "CLI_Store_constructed": false,
+  "GET_DB_Storewrites_shared_old_edits_calculation_financial_adoption_IR": 0,
+  "output_SHA256": {
+    "normalization-input.json": "ce98ec425c309f8848bae9c894f77511c8a608bffee83363f35bbf452543b51d",
+    "normalizer-output.json": "9aae5429e0df0abc91870333fad03c1c684bb3897b5d9b78a1445b0ceaab2710",
+    "normalized-bundle.json": "47f6dd0ce9dd8257cbfb00091faaa7699cf620f9924bf132ccd5a117b6315e9d",
+    "model-input-audit-request.json": "7edce0abe19ee8384a486ee90e67aeae76fe1c8ddcef064fd6927c5d14531fd7",
+    "reproduce.py": "98f7a7ae54f55b58ddbdd3aee84feb3a77ca5baaab7a65e8ca31217fd4ae541c"
+  }
+}

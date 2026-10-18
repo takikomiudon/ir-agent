@@ -1,0 +1,53 @@
+{
+  "synthetic": true,
+  "executed_at": "2026-10-15T06:43:24.005367+00:00",
+  "database": ":memory:",
+  "external_send_performed": false,
+  "orders": 0,
+  "HTTP_requests": 0,
+  "fictional_mark_sent_only": true,
+  "workflow": "Synthetic frozen asset-amount question -> fictional sent-state -> synthetic public clarification -> fresh fictional price -> atomic reply application and saved review.",
+  "question_id": "synthetic-equity-bridge-non_operating_assets_jpy",
+  "reply_id": "synthetic-reply-nonoperating-assets",
+  "reply_raw_text": "架空の公開資料の補足です。基本ケースの会社全体の非営業資産額は20円です。非支配持分額は10円から変更していません。これは合成テスト専用であり、実企業の回答・金額・将来CFの保証ではありません。",
+  "basis_quote": "基本ケースの会社全体の非営業資産額は20円です。",
+  "rationale": "架空公開補足の20円という原文を、質問前に固定したassets_confirmed_20枝へ対応させる。基本ケースの非営業資産10→20だけを適用し、非支配持分・FCFF・割引率・成長率・株数は維持する。",
+  "allowed_parameter_paths": [
+    "scenarios.base.inputs.non_operating_assets_jpy"
+  ],
+  "actual_parameter_changes": [
+    "scenarios.base.inputs.non_operating_assets_jpy"
+  ],
+  "base_non_operating_assets_before_jpy": "10",
+  "base_non_operating_assets_after_jpy": "20",
+  "base_minority_interests_before_jpy": "10",
+  "base_minority_interests_after_jpy": "10",
+  "all_other_canonical_inputs_unchanged": true,
+  "applied": true,
+  "action": "exit_review",
+  "new_thesis_version": 2,
+  "old_thesis_version_unchanged": true,
+  "old_question_data_unchanged": true,
+  "raw_reply_unchanged": true,
+  "saved_decision_review_id": "decision-ab2e80a66ebbae1b7ecbef81f10bc2ac",
+  "saved_review_thesis_version": 2,
+  "saved_review_policy_id": "synthetic-equity-bridge-policy",
+  "saved_review_policy_version": 1,
+  "saved_review_quote_source_id": "synthetic-equity-bridge-reply-price",
+  "saved_review_quote_price_jpy": "1600",
+  "saved_review_reasons": [
+    "valuation_target_reached"
+  ],
+  "frozen_policy_snapshot_matches_saved_review": true,
+  "fictional_runtime_clocks": {
+    "ingest_and_policy_saved": "2026-10-09T10:00:00+09:00",
+    "question_saved": "2026-10-09T10:01:00+09:00",
+    "sent_at": "2026-10-09T10:05:00+09:00",
+    "reply_received_and_saved": "2026-10-09T16:00:00+09:00",
+    "quote_saved": "2026-10-09T16:59:00+09:00",
+    "reply_evaluated": "2026-10-09T17:00:00+09:00"
+  },
+  "actual_company_financial_inputs_adopted": false,
+  "actual_investment_policy_adopted": false,
+  "scope": "Software integration demonstration only. No accounting-meaning, forecast, IR efficacy or actual-company investment validation."
+}

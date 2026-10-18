@@ -1,0 +1,126 @@
+{
+  "recorded_at": "2026-10-16T15:28:43.529030+00:00",
+  "status": "prepared_file_only_not_ingested",
+  "DB_readonly_verification": {
+    "path": "data/ir-research-2026-10-15.sqlite3",
+    "opened_at": "2026-10-16T15:28:43.513095+00:00",
+    "mode": "sqlite URI mode=ro; PRAGMA query_only=ON; contextlib.closing",
+    "Store_used": false,
+    "source_exact_object_matches_old_request": true,
+    "source_id": "case-public:7304bcc072a7a497d7bdfede25cf02938f6c4fee91df789d9fc96cafb8c682db",
+    "native_source_SHA256": "cad8d5782fdc58295e5a5e260adc2cb7fcd245d843bae31a26be1e76b1e81f5e",
+    "native_serialization": "models.json_text sorted keys ensure_ascii=False default separators",
+    "source_content_UTF8_SHA256": "028c6e8b3b29313ba08bb63a8bfcf4016496c3a764b2d307e06197e15bcb72ec",
+    "SQL_saved_content_hash": "028c6e8b3b29313ba08bb63a8bfcf4016496c3a764b2d307e06197e15bcb72ec",
+    "compact_source_snapshot_SHA256": "17030a54c3ec9c3fb8c8a744b43760f2f58cecd52992fca00b3994071288b724",
+    "existing_company_sources_count_at_query": 4,
+    "old_fact_ids_seen": [
+      "4318-reported-annual-EPS-FY2026",
+      "4318-reported-BPS-at-20260331"
+    ],
+    "new_fact_ID_collision": false,
+    "new_derived_already_in_DB_at_query": false,
+    "DB_write": false
+  },
+  "source_publication": {
+    "display_date": "2026-04-30",
+    "published_at": null,
+    "original_retrieved_at": "2026-10-16T10:20:34.020327+00:00",
+    "original_actual_first_save_not_queried": null
+  },
+  "source_object_and_metadata_unchanged": true,
+  "derived": {
+    "source_id": "disclosed-facts:60a24d2579e0851d95e744391e7001f177903bea232a41c254da2761e338a093",
+    "native_SHA256": "e602de4b93e534861568eabf8fe9994e0a8ffc1a2656580ec1846d906dcf7952",
+    "content_SHA256": "ed96e40e87434cfb8365c854d408f7a667e404294cfcc96095341f9f5660998b",
+    "retrieved_at": "2026-10-16T15:28:43.518847+00:00",
+    "local_output_saved_after_HTTP_not_an_actual_DB_first_save": true,
+    "DB_first_saved_at": null,
+    "financial_inputs_verified": false,
+    "meaning_review_required": true
+  },
+  "reviewed_at": "2026-10-16T15:28:43.516941+00:00",
+  "pure_API_execution_at": "2026-10-16T15:28:43.518847+00:00",
+  "module_SHA256": "d434b41cfa19568d0cef1a2e6710365f447012d75a4b07ca950cc62b6bd9db51",
+  "checks": {
+    "fact_count": 4,
+    "API_replay_whole_equal": true,
+    "source_values_reproduction": {
+      "source_id": "disclosed-facts:60a24d2579e0851d95e744391e7001f177903bea232a41c254da2761e338a093",
+      "applicable": true,
+      "status": "reproduced",
+      "reason_codes": [],
+      "financial_inputs_verified": false,
+      "meaning_review_required": true,
+      "original_content_sha256_status": "matched",
+      "original_snapshot_sha256_status": "matched_supplied_snapshot",
+      "fact_kinds": [
+        {
+          "id": "4318-reported-consolidated-revenue-FY2026",
+          "kind": "reported_fact"
+        },
+        {
+          "id": "4318-reported-consolidated-cost-of-sales-FY2026",
+          "kind": "reported_fact"
+        },
+        {
+          "id": "4318-reported-consolidated-SGA-FY2026",
+          "kind": "reported_fact"
+        },
+        {
+          "id": "4318-reported-consolidated-operating-income-FY2026",
+          "kind": "reported_fact"
+        }
+      ],
+      "original_source_id": "case-public:7304bcc072a7a497d7bdfede25cf02938f6c4fee91df789d9fc96cafb8c682db"
+    },
+    "values_JPY": [
+      "33924750000",
+      "11337224000",
+      "18003834000",
+      "4583690000"
+    ],
+    "exact_tokens_period_unit_same_quote": true,
+    "Unicode_UTF8_spans": true,
+    "no_EPS_BPS_duplicate": true,
+    "no_new_source_original": true,
+    "old_pins_unchanged": true,
+    "normalization_version": 1
+  },
+  "display_reconciliation": {
+    "unit": "千円",
+    "calculation_purpose": "Display cross-check only, not OP normalization",
+    "displayed_revenue_less_COGS_less_SGA": "4583692",
+    "reported_operating_income": "4583690",
+    "difference_calculated_minus_reported": "2",
+    "cause": null,
+    "cause_not_independently_verified": true,
+    "OP_overwritten": false,
+    "no_rounding_or_truncation_cause_assumed": true
+  },
+  "scope": {
+    "reused_physical_pages": [
+      11
+    ],
+    "p15_DA_context_only_not_factized": true,
+    "new_semantic_or_image_pages": [],
+    "future_or_TTM_conversion": false,
+    "normal_earnings_or_OIADP_recognition": false,
+    "financial_model_adoption": false,
+    "market_price_EV_ranking_IR": false,
+    "shared_index_updated": false,
+    "ingestion_or_job_run": false
+  },
+  "old_input_pins": {
+    "research/ir-case-studies-2026-10-15/4318/annual-per-share-disclosed-facts-2026-10-16/normalization-input.json": "bf8b3a0dea86c7a9fb950f8e13b8da2d9ca7567f935e6e869d12e80837d99e1f",
+    "research/ir-case-studies-2026-10-15/4318/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json": "1b6fcd6854455cba067ac3a90d13453377fa346e0ebff9e5e83b5045ecf5eada",
+    "research/ir-case-studies-2026-10-15/4318/nonrecurring-earnings-method-application-2026-10-16/review.json": "551e7fc9db4498a57e1e600f9aea72b526f5f65a1431908b86473fa891fbba85",
+    "research/ir-case-studies-2026-10-15/4318/nonrecurring-earnings-method-application-2026-10-16/quotes-and-pins.json": "c97f0260450fecc8e89d023a706ce6f1fb10bb9c73cb305010ad2df3bbafea89",
+    "research/ir-case-studies-2026-10-15/4318/annual-accounting-input-discovery-2026-10-16/annual-full.txt": "028c6e8b3b29313ba08bb63a8bfcf4016496c3a764b2d307e06197e15bcb72ec",
+    "research/ir-case-studies-2026-10-15/4318/annual-accounting-input-discovery-2026-10-16/source-quotes.json": "918883381a1c74b116e2de23f83d4c6dd08e9ed3f2fd9e030774355995400cd6",
+    "src/ir_agent/disclosed_facts.py": "d434b41cfa19568d0cef1a2e6710365f447012d75a4b07ca950cc62b6bd9db51",
+    "src/ir_agent/models.py": "e0d0444fda0e730de6c6e9beaa110bbd796de00f3228c041daa016284a8e234e",
+    "src/ir_agent/adapters/common.py": "a6ca5fdd16778706f8a4de072bcdb27f5dcd78efbc6768039d1116606ebbb095",
+    "research/ir-case-studies-2026-10-15/disclosed-fact-index-v42.json": "a1f0345a1bfaad52aa3e491885c8364303b0e0558e27b2d737b562a6449160b4"
+  }
+}

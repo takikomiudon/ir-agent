@@ -1,0 +1,306 @@
+{
+  "case_id": "1975-segment-earnings-order-and-cash-basis-monitor",
+  "company_id": "jp:1975",
+  "issue_id": "1975-segment-profit-orders-and-cash-basis",
+  "status": "file_only_prepared_not_registrable_before_actual_source_save",
+  "synthetic": false,
+  "prepared_at": "2026-10-16T04:29:04.986382+00:00",
+  "purpose": "設備工事と機器の売上/粗利/営業損益、受注回復見込みと実績、利益段階と現金化を同じ公表定義で継続比較する。",
+  "author_method_references": [
+    {
+      "id": "anthropic.earnings-preview",
+      "ref": {
+        "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+        "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sections": [
+        "Step 1: Gather Context",
+        "Step 2: Key Metrics Framework",
+        "Step 4: Catalyst Checklist"
+      ],
+      "project_adaptation": "会社/四半期/セグメント別売上・利益/当時会社予想を同じ期・定義で比較する。未取得consensus・将来予測/株価反応は補わない。",
+      "author_did_not_state_1975_specific_conditions": true
+    },
+    {
+      "id": "anthropic.thesis-tracker",
+      "ref": {
+        "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+        "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sections": [
+        "Step 2: Update Log",
+        "Important Notes / quarterly review"
+      ],
+      "project_adaptation": "同じ論点へ実際の新資料による支持・反証候補・無変化・不明を追記する。価格/閾値による独自反証は作らず、四半期を内部研究日に適応。",
+      "author_did_not_state_1975_specific_conditions": true
+    },
+    {
+      "id": "anthropic.dd-meeting-prep",
+      "ref": {
+        "path": "third_party/anthropic/skills/dd-meeting-prep/SKILL.md",
+        "sha256": "a74eecadece794106d515ce3d00e07b3857ed123e841e8962e26363d2413d94f"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sections": [
+        "Step 1: Meeting Context",
+        "Step 3: Benchmarks & Context",
+        "Important Notes / neutral questions"
+      ],
+      "project_adaptation": "既知情報/懸念/比較資料を整理し、公表既答を再質問へ戻さない。未読と会社無回答を分ける。PE面談の非公開DD・問数・身振り評価は採用しない。",
+      "author_did_not_state_1975_specific_conditions": true
+    }
+  ],
+  "source_ids": [
+    "case-public:f13100626c01d39255de178a6e37d14566e477cb6a9083095b79ab659d1d7eef",
+    "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea"
+  ],
+  "source_inventory": [
+    {
+      "source_id": "case-public:f13100626c01d39255de178a6e37d14566e477cb6a9083095b79ab659d1d7eef",
+      "source_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/source-bundle.json",
+        "sha256": "48efae2cd97b384af41b63b32b462fe4cd603e601edad9313d857e76026abf7c",
+        "json_pointer": "/sources/0"
+      },
+      "native_snapshot_sha256": "655b02bc682f95640f45fdeb1dac2de7941022bd90b3a2d4252f49ea691de42f",
+      "snapshot_algorithm": "SHA256 UTF8 sorted JSON default separators; native registry domain",
+      "content_sha256": "9083d2490a064785bc33d071ff685d31c8597d89ee0787a35ead87ee3f10456c",
+      "publication_day": null,
+      "published_at_preserved": null,
+      "retrieved_at_preserved": "2026-10-16T04:18:36.768102+00:00",
+      "actual_DB_first_saved_at": null
+    },
+    {
+      "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
+      "source_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/source-bundle.json",
+        "sha256": "48efae2cd97b384af41b63b32b462fe4cd603e601edad9313d857e76026abf7c",
+        "json_pointer": "/sources/1"
+      },
+      "native_snapshot_sha256": "2aae3878ce397e408f088338e4b9728e4a3c4e594a247fdbb3adfff34c27dfce",
+      "snapshot_algorithm": "SHA256 UTF8 sorted JSON default separators; native registry domain",
+      "content_sha256": "5b590ae0edd7df00cc1b165437bc4e81d23fa117addbbbd948ff827668b95c83",
+      "publication_day": "2026-08-04",
+      "published_at_preserved": null,
+      "retrieved_at_preserved": "2026-10-16T04:18:59.234370+00:00",
+      "actual_DB_first_saved_at": null
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "construction-versus-equipment-sales-gross-margin-and-operating-profit",
+      "known": "Q1設備工事は売上18,668百万円/営業利益2,242百万円。会社は売上増と売上総利益率改善による営業増益と説明。機器製造販売は売上814百万円/営業損失37百万円（前年25百万円損失）。同事業の売上総利益率は改善したが売上減で営業損失拡大という説明も同時に保持。",
+      "next_comparison": "後続公表資料は事業別の売上/粗利率/営業損益、同じ四半期・累計・比較期間で照合し、全社値と混同せず新しい要因/訂正を記録する。",
+      "residual": "採算改善の持続性、数量/価格/mix、資機材・労務費等の内訳は既読範囲以上に未確定。",
+      "do_not_infer": "粗利率改善だけで機器黒字化や全社同じ成長を認定しない。損失を0/正値にせず、業種・一四半期損益だけで循環/赤字成長モデルrouteを選ばない。丸め差から未表示値を作らない。",
+      "evidence_quote_ids": [
+        "Q1-statement-physical-4",
+        "Q1-statement-physical-7"
+      ]
+    },
+    {
+      "id": "orders-recovery-expectation-versus-results-and-dated-guidance",
+      "known": "Q1設備工事受注35,204百万円（前年同期比17.2%増）、機器受注1,028百万円（15.4%減）は実績。機器の下半期受注回復は会社の見込みで、契約成立/実績ではない。Q1 2026-04-01〜06-30とFY2026-04-01〜2027-03-31会社予想は別。8/4原文は5/14発表予想から変更なしと記載（5/14原資料の独立読了ではない）。",
+      "next_comparison": "新資料の受注フロー/期間/事業範囲と実際の回復説明を当時見込みへ対応させ、会社予想の版・対象期と実績を別に比較する。",
+      "residual": "回復の実際の時期/範囲/寄与、受注/取消/残高・認識の細かな定義、後日の予想更新は本準備では未確認。別担当未freeze資料を既読採用しない。",
+      "do_not_infer": "見込みを受注済/確率/独自予測へ変えずQ1年度化もしない。前年同期比と旧予想比を混同せず当時据置をOctober最新としない。未読/未freezeを会社非開示/無回答に変えない。",
+      "evidence_quote_ids": [
+        "Q1-statement-physical-1",
+        "Q1-statement-physical-4",
+        "current-Q1-static-document-listing"
+      ]
+    },
+    {
+      "id": "profit-stages-historical-share-basis-and-cash-realization",
+      "known": "Q1は売上19,483/営業2,205/経常2,334/税前2,334/税合計788/親NI1,546百万円を別表示。PLの特別益/特損等の0は百万円未満切捨て表示で厳密0とはしない。BS説明の現金預金1,197百万円減は残高差。期末発行済（自己株含む）27,200,000/自己株1,324,717/Q1平均25,875,312株を分け、EPS/DPSと会社総額も別系列。",
+      "next_comparison": "新原典で同じ期・利益段階・単位・株主帰属を照合し、一時項目/税費用と現金化/CFの起点を別々に確認する。歴史的株数や会社予想EPS/DPSを現在分母/将来配当列へそのまま持ち越さない。",
+      "residual": "現金化時期/営業CF/再投資/正常税・持続利益はこの既読範囲で未確定。CF/segment注記・受注補足は初期1/2/4/7外で未読という履歴を保ち、別担当成果の現在状態を断定しない。",
+      "do_not_infer": "現金預金の減少をCFO/FCFや資金流出総額にしない。CF未読を未作成/0としない。税内訳/利益の丸めを配賦し直さず、全特別損益足戻し・通常税/将来CFを作らない。Q1連結変更無を現在まで不変とせず株数/配当を金融採用へ変えない。",
+      "evidence_quote_ids": [
+        "Q1-statement-physical-1",
+        "Q1-statement-physical-2",
+        "Q1-statement-physical-4",
+        "Q1-statement-physical-7"
+      ]
+    }
+  ],
+  "evidence_quote_bindings": {
+    "current-Q1-static-document-listing": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "d441ce4c537089b34d360da155744b4f870e69d765ed9f0c1127b9c0a9ae9bbc",
+        "json_pointer": "/0"
+      },
+      "source_id": "case-public:f13100626c01d39255de178a6e37d14566e477cb6a9083095b79ab659d1d7eef",
+      "physical_page": null,
+      "source_character_start": 2224,
+      "source_character_end": 2296,
+      "quote_sha256": "7a007241ade5becd09d2c56c8a6a933741080a5d20c99edfbb0891bb5b8baa0c",
+      "exact_source_content": true
+    },
+    "Q1-statement-physical-1": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "d441ce4c537089b34d360da155744b4f870e69d765ed9f0c1127b9c0a9ae9bbc",
+        "json_pointer": "/1"
+      },
+      "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
+      "physical_page": 1,
+      "source_character_start": 0,
+      "source_character_end": 4265,
+      "quote_sha256": "f3c5067169cff796cab7d7efb2ed21f034a185d26c18023fb799dc58291741d5",
+      "exact_source_content": true
+    },
+    "Q1-statement-physical-2": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "d441ce4c537089b34d360da155744b4f870e69d765ed9f0c1127b9c0a9ae9bbc",
+        "json_pointer": "/2"
+      },
+      "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
+      "physical_page": 2,
+      "source_character_start": 4266,
+      "source_character_end": 5166,
+      "quote_sha256": "6c6d7b320fd60d3a5b74b37cfe1cc9d6408c93fa6ebe7c739749dee9f75b52de",
+      "exact_source_content": true
+    },
+    "Q1-statement-physical-4": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "d441ce4c537089b34d360da155744b4f870e69d765ed9f0c1127b9c0a9ae9bbc",
+        "json_pointer": "/3"
+      },
+      "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
+      "physical_page": 4,
+      "source_character_start": 6360,
+      "source_character_end": 7979,
+      "quote_sha256": "4ea5f7ea3fa33fe0e74fa783444e36fa654a0fc2f613eba5c1e7a91bc7530d59",
+      "exact_source_content": true
+    },
+    "Q1-statement-physical-7": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "d441ce4c537089b34d360da155744b4f870e69d765ed9f0c1127b9c0a9ae9bbc",
+        "json_pointer": "/4"
+      },
+      "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
+      "physical_page": 7,
+      "source_character_start": 11281,
+      "source_character_end": 13425,
+      "quote_sha256": "4ddecd7c24375f63110fd34d545343ee5106c4c21697c8fb596c8edbff4a9ff4",
+      "exact_source_content": true
+    }
+  },
+  "root_acceptance_ref": {
+    "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/parent-acceptance.json",
+    "sha256": "c79b599fa5f5b1a87c4862893bdef21a736699c892765b61a29550455aa3a81a"
+  },
+  "actual_source_first_saved_at": null,
+  "bootstrap_handoff_reviewed_at": null,
+  "bootstrap_or_register_request_created": false,
+  "actual_DB_checked_by_preparer": false,
+  "limited_reading_scope": {
+    "HTML": "初期rootのQ1資料リンク掲載部分のみ。全サイト/現在の全公表状態ではない。",
+    "statement_full_text_saved_pages": 12,
+    "accepted_semantic_image_pages": [
+      1,
+      2,
+      4,
+      7
+    ],
+    "other_pages": "初期受入範囲外。別担当の追加読解/派生値をこの準備にpin/既読採用しない。",
+    "this_preparation_new_pages_or_sources": 0,
+    "initial_unattempted_link_is_historical": "初回時点の説明資料literal未試行ログは保持するが、別担当を含む現在全体の取得状態を断定しない。",
+    "full_statement_or_site_read": false,
+    "meaning_certification": false
+  },
+  "comparison_protocol": {
+    "supports": "新実根拠が特定の同期間/事業/単位の説明を支持する場合だけ候補にする。",
+    "counterevidence": "元観測への実際の訂正/矛盾を記録し、未採用閾値/株価反応を反証にしない。",
+    "unchanged": "既存公表内容/再表現だけで不変を許す。",
+    "unresolved": "未読/曖昧/不足を保ち、会社無回答/0/評価引下げと自動同一視しない。"
+  },
+  "already_answered_not_to_reask": [
+    "設備工事増収/粗利率改善/営業増益と機器粗利率改善/赤字拡大の両立",
+    "当Q1受注実績と機器下半期回復見込みの区別",
+    "当時会社予想/据置、利益段階/単位/歴史的株数",
+    "現金預金は残高差というBS説明、CFはこの初期scope外"
+  ],
+  "management_review": {
+    "date": "2027-01-16",
+    "timezone": "Asia/Tokyo",
+    "purpose": "quarterly method adapted to three calendar months; internal research date only"
+  },
+  "future_material_boundary": "後続説明PDF/注記読解/派生9値等の未freeze成果はinventory/既読/依存guardへ含めず、rootが完了成果を受入しfinal化するまで原2sourceだけ。",
+  "IR_boundary": "新IR文案/回答分岐/送信準備は作らない。公開既答を再質問に戻さず、将来利益/税/利回り・評価の保証を会社に求めない。",
+  "financial_inputs_verified": false,
+  "financial_input_adoption": false,
+  "financial_thesis_or_investment_action": null,
+  "new_numeric_forecasts_valuationbranches_prices_IRdrafts": 0,
+  "unadopted": [
+    "業種による循環/評価route選択",
+    "正常利益/将来税/CF/再投資/現在株数",
+    "数値thesis/独立予測/倍率/価格/確率/売買条件",
+    "会社決算日/売却期限/外部送信"
+  ],
+  "frozen_actual_dependencies_only": [
+    {
+      "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/source-bundle.json",
+      "sha256": "48efae2cd97b384af41b63b32b462fe4cd603e601edad9313d857e76026abf7c"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/source-quotes.json",
+      "sha256": "d441ce4c537089b34d360da155744b4f870e69d765ed9f0c1127b9c0a9ae9bbc"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/review.json",
+      "sha256": "e15ffa53d3d6c30574ec8ec4f5932450fe8b487dda7de29f05c1366f61d360b6"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/README.md",
+      "sha256": "764654b883f4bdc793c07af81738c0aa837af6db3327f9d401f7951330a3b2e1"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/parent-acceptance.json",
+      "sha256": "c79b599fa5f5b1a87c4862893bdef21a736699c892765b61a29550455aa3a81a"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/images/03-physical-01.png",
+      "sha256": "4f6183422dd0d32ce280098f1011dcdd5aa113c05b8ef056099da5080ee14216"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/images/03-physical-02.png",
+      "sha256": "fe4899a9dc4d34e0ec9c57751695db9dce936ab7b5afe85cb487d3624637250a"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/images/03-physical-04.png",
+      "sha256": "594e460731696cd8edb75cca3f2462249373f6395d6b5b6882a39bee688ad0b4"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/images/03-physical-07.png",
+      "sha256": "3fd93888e609c941bc130b0641e1c75d83c24f9d75395939ab27adeac2838e8f"
+    },
+    {
+      "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+      "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33"
+    },
+    {
+      "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+      "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b"
+    },
+    {
+      "path": "third_party/anthropic/skills/dd-meeting-prep/SKILL.md",
+      "sha256": "a74eecadece794106d515ce3d00e07b3857ed123e841e8962e26363d2413d94f"
+    }
+  ],
+  "preparation_checks": {
+    "only_root_accepted_initial_two_sources": true,
+    "quote_bindings_exact": 5,
+    "condition_count": 3,
+    "future_unfrozen_other_agent_outputs_pinned": 0,
+    "all_dependency_pins_unchanged": true,
+    "DB_GET_API_code_shared_or_oldfile_edits": 0
+  }
+}

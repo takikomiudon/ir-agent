@@ -1,0 +1,83 @@
+{
+  "security_code": "4752",
+  "company_name": "昭和システムエンジニアリング",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "情報・通信業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.showa-sys-eng.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T12:49:06.269581+00:00",
+  "completed_at": "2026-10-11T12:49:40.437415+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/4752/20261011T124906269626Z/01.json",
+      "url": "https://www.showa-sys-eng.co.jp/",
+      "retrieved_at": "2026-10-11T12:49:18.813439+00:00",
+      "quote": "株式会社 昭和システムエンジニアリング",
+      "role": "issuer_identity"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.showa-sys-eng.co.jp/",
+      "final_url": "https://www.showa-sys-eng.co.jp/",
+      "snapshot": "evidence/4752/20261011T124906269626Z/01.json",
+      "retrieved_at": "2026-10-11T12:49:18.813439+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.showa-sys-eng.co.jp/ir_info.html",
+      "final_url": "https://www.showa-sys-eng.co.jp/ir_info.html",
+      "snapshot": "evidence/4752/20261011T124906269626Z/02.json",
+      "retrieved_at": "2026-10-11T12:49:30.099844+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "保存範囲で金融IRメール/フォーム用途は未実証。窓口不存在ではない。",
+    "IR資料/ニュースとIR質問受付を区別。追加先は保存literal linkから確認できていない。"
+  ],
+  "discovery": {
+    "security_code": "4752",
+    "official_url": "https://www.showa-sys-eng.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "昭和システムエンジニアリング",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/4752/20261011T124906269626Z/01.json",
+      "normalized_name": "昭和システムエンジニアリング",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/4752/20261011T124906269626Z/02.json",
+      "normalized_name": "昭和システムエンジニアリング",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 2,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 3,
+  "previous_attempts": [
+    "attempts/4752/20261011T045047507271Z.json",
+    "attempts/4752/20261011T124940437578Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "ir_operations_47_batch04",
+    "reviewed_at": "2026-10-11T12:59:56.576198+00:00",
+    "notes": "昭和システムエンジニアリング正式名を公式homepageで確認。保存2HTMLはhomepageとIRニュース/資料一覧で金融IR受付指定・IRメール・質問フォーム/actualcontact hrefが保存されていない。IR情報ページの存在や開示PDFをメール/フォーム質問窓口に昇格せずU。未保存の問い合わせパスを推測しない。"
+  }
+}

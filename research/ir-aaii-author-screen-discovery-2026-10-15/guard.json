@@ -1,0 +1,52 @@
+{
+  "UA": "Codex-IR-Research/0.1",
+  "central_hold": {
+    "exact_hosts": [
+      "contents.xj-storage.jp",
+      "ssl4.eir-parts.net",
+      "web.fisco.jp",
+      "sharedresearch.jp",
+      "www.toyo.co.jp",
+      "www.xj-storage.jp",
+      "www.investors.com",
+      "data.swcms.net",
+      "jpx-jquants.com"
+    ],
+    "host_count": 9,
+    "index_version": 5,
+    "path": "research/ir-source-access-holds-2026-10-15/holds-v5.json",
+    "seed_exact_host_held": false,
+    "sha256": "51a04fa3e0c30fc084fa48f5d6410be64b755f84825bcd604f9e80ed1fd4d400"
+  },
+  "constraints": {
+    "URL_guessing": false,
+    "actual_DB_access": false,
+    "automatic_redirects": false,
+    "different_host": false,
+    "financial_rule_adoption": false,
+    "retries": 0,
+    "search_query": false,
+    "shared_docs_code_edit": false
+  },
+  "exact_host": "www.aaii.com",
+  "explicit_allowed_urls": [
+    "https://www.aaii.com/robots.txt"
+  ],
+  "maximum_GETs": 4,
+  "prior_route_search": {
+    "matches": [],
+    "note": "AAII token matches in two source JSON files were base64-only; parsed short string values had no actual AAII references. No complete filesystem-wide absence claim.",
+    "patterns": [
+      "aaii.com",
+      "American Association of Individual Investors"
+    ],
+    "scope": [
+      "research",
+      "docs",
+      "third_party"
+    ]
+  },
+  "recorded_at": "2026-10-15T22:02:52.319655+00:00",
+  "scope": "AAII official source candidate discovery only; no adoption or investment actions",
+  "seed": "https://www.aaii.com/"
+}

@@ -1,0 +1,11 @@
+# 1950接続後の現在状態を3文書へ反映
+
+README.md、事例README、ongoing-workの現在値と1950の完了状況だけを更新した。3文書の変更前全文bytesをbefore/の元相対pathへ保存し、SHAをbefore-manifest.jsonに固定した。changes.diffはこのbeforeからの実差分。旧事例表の全行・17:45以降の履歴・過去記録節・1,534テストの説明・1904p10のfile-only段落を保持した。
+
+現在180資料（公開179・市場1）、公開資料30社/財務内容25社、分類179、105job完了（intake85/定性20）、attempt102/event204/receipt102、20case/41版/119既読、legacy28/trusted152、pending/leased0。索引v31は22社162fact/35parent/37派生/28会社原典pair、実35派生155fact、外部8331/9702の2派生7fact不変。1950原4＋推奨参照表現1sourceの保存/分類、native v1/既読5、初回queue0と旧85fe代替版未投入を記載し、会社表へ1950を追加した。推奨表現の索引採用を金融入力の採用としない。1963初回はfile-onlyとして現在実台帳へ算入しない。
+
+mode=ro/query_only/contextlib.closingの読み取りで集計を照合し、1950の原4＋推奨派生1source全object・availability firstsave receipt・現在分類snapshot・native v1全recordも保存済み受入と一致した。v31受入と全268ローカル文書リンクを確認した。DB mainSHAは前後9204bf1af5260b61e81ab50b77e90ea914009e750723dcd17752d46ed55bce4dで不変。
+
+最初の読取集計ではjobs.dataという存在しない列を参照して停止した。実スキーマを確認しjobs.packet内kindとstatus列へ読取照会だけを修正、失敗と非書込のSHAをreadonly-query-correction.jsonに保存した。source/receiptを再投入せず、コードやDBスキーマを変えていない。
+
+新GET・DB書込み・コード/既存個社成果物変更は0。新テストは実行していない。1,534件成功は既存コード受入の記録であり、本doc更新で再実行したものではない。専有proof以外は指定3文書だけを変更。rootレビュー待ちで停止する。

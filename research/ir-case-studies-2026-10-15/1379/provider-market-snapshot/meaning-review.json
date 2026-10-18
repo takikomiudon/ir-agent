@@ -1,0 +1,100 @@
+{
+  "company_id": "jp:1379",
+  "reviewed_at": "2026-10-15T05:42:22.333046+00:00",
+  "status": "provider_reported_market_snapshot_candidate_not_adopted",
+  "review_author": "Codex / information_value",
+  "source_id": "sharedresearch-stock:14c38b71b93e2f60a03c639c0071bbd8d21a10036b54969a1c3402a83be9639b",
+  "source_contract": "market_data / requires_research false / published_at null",
+  "raw_field_meanings": [
+    {
+      "path": [
+        "company",
+        "stock",
+        "ticker"
+      ],
+      "raw_value": "1379",
+      "normalized_as": "company_id jp:1379",
+      "meaning": "Provider ticker matches company.tick and parent source company; instrument/venue is not independently verified."
+    },
+    {
+      "path": [
+        "company",
+        "stock",
+        "currency"
+      ],
+      "raw_value": "JPY",
+      "normalized_as": "currency JPY",
+      "meaning": "Provider declares JPY. No FX conversion or currency inference from nationality."
+    },
+    {
+      "path": [
+        "company",
+        "stock",
+        "price"
+      ],
+      "raw_value": 2048,
+      "normalized_as": "price_jpy string \"2048\"",
+      "meaning": "Positive integer provided by this cached stock object. Last/close/bid/ask/adjustment conventions are not established."
+    },
+    {
+      "path": [
+        "company",
+        "stock",
+        "quotedAt"
+      ],
+      "raw_value": "2026-10-14T06:30:00.000Z",
+      "normalized_as": "observed_at exact original timestamp, observation_precision instant",
+      "meaning": "Instant precision describes provider timestamp representation. Exchange execution/closing time, upstream feed/delay and market state are not independently confirmed."
+    }
+  ],
+  "clocks": {
+    "provider_declared_observed_at": "2026-10-14T06:30:00.000Z",
+    "original_transport_retrieved_at": "2026-10-15T05:28:30.141744+00:00",
+    "derived_extraction_retrieved_at": "2026-10-15T05:40:23.213016+00:00",
+    "published_at": null,
+    "note": "quotedAt is neither source publication time nor current runtime. Original report selectedProject publication time is not used as stock publication time. Reproduction keeps the first extraction clock."
+  },
+  "source_binding": {
+    "original_source_ids": [
+      "case-public:a14372edbaf8c2897b8553a1a93dc1e4b1dc63859a14ce2f716bdb571a862e7b"
+    ],
+    "original_source_content_scope": "Visible reportContent only, not the structured company.stock record.",
+    "raw_evidence_route": "Original metadata raw HTML -> one window.state literal -> strict unique-key finite JSON -> saved embedded state equality -> company.stock four named fields.",
+    "proof_artifact": "stock-field-extraction.json",
+    "raw_source_field_values_reproduced": true,
+    "limitation": "Existing general quote field checks resolve fields in the derived market source. They do not independently rerun this case extractor or prove parent.content contains stock. The raw/embedded proof needs separate review before import/use."
+  },
+  "excluded_fields": [
+    "marketCap",
+    "sharesOutstanding",
+    "priceToEarningsRatio",
+    "priceToBookRatio",
+    "returnOnEquity"
+  ],
+  "excluded_field_reason": "Period/denominator/definition and relation to adopted valuation inputs are unverified; no values for these fields are extracted/adopted.",
+  "provider": "Shared Research",
+  "live_quote_verified": false,
+  "current_market_price_verified": false,
+  "exchange_independently_verified": false,
+  "price_type": null,
+  "adjustment_basis": null,
+  "feed_delay": null,
+  "tradability": null,
+  "financial_inputs_verified": false,
+  "model_adopted": false,
+  "financial_values_automatically_adopted": false,
+  "quote_freshness_policy": null,
+  "current_action": null,
+  "registration_note": "Original parent registration was stated by the parent agent; this task does not read DB or assign first_saved_at. New market source is not imported.",
+  "side_effects": {
+    "HTTP_requests": 0,
+    "DB_reads": 0,
+    "DB_writes": 0,
+    "existing_source_writes": 0,
+    "valuation_runs": 0,
+    "theses": 0,
+    "policies": 0,
+    "orders": 0,
+    "sends": 0
+  }
+}

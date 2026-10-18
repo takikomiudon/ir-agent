@@ -1,0 +1,193 @@
+{
+  "company_id": "jp:135A",
+  "adoption_performed": false,
+  "direct_author_EPS_FCF_price_forecast_found": false,
+  "external_future_estimate_candidates_found": true,
+  "external_future_estimate_candidate_count": 3,
+  "office_condition_comparison": {
+    "author": "株式会社AENTRO / AENTRO Research",
+    "report_date": "2026-05-11",
+    "author_period_label": "FY27上期",
+    "author_office_names": [
+      "宇都宮",
+      "長野",
+      "金沢",
+      "広島",
+      "福岡"
+    ],
+    "author_count_literal": "5拠点",
+    "author_milestones": [
+      "上期中に開所",
+      "下期から案件寄与"
+    ],
+    "author_quote_ids": [
+      "author-office-half-year-context",
+      "author-monitoring-benchmarks"
+    ],
+    "issuer_period_basis": {
+      "formal_interim_start": "2026-03-01",
+      "formal_interim_end": "2026-08-31",
+      "quote_id": "existing-issuer-interim-dates"
+    },
+    "issuer_latest_disclosure_date": "2026-10-14",
+    "issuer_opened": {
+      "office": "金沢",
+      "timing_literal": "７月に開設済"
+    },
+    "issuer_planned": {
+      "names": [
+        "宇都宮",
+        "長野",
+        "広島",
+        "福岡"
+      ],
+      "count_literal": "４営業所",
+      "status_literal": "今後開設予定"
+    },
+    "issuer_quote_id": "existing-issuer-latest-office-plan",
+    "difference": "May author upper-half opening expectation and October issuer still-planned status do not align as a current verified expectation. Preserve both instead of overwriting the author assumption.",
+    "definition_alignment": {
+      "named_offices_match": true,
+      "office_or_branch_definition_verified": false,
+      "opening_vs_start_of_operations_vs_first_order_vs_revenue_contribution": null,
+      "revenue_contribution_lag_or_impact": null,
+      "author_unclear_Q1_wording_also_retained": true
+    },
+    "not_inferred": [
+      "Company full-year guidance miss",
+      "All offices delayed by a calculated duration",
+      "Entire author thesis invalidated",
+      "EPS change or buy/sell action"
+    ],
+    "IR_value_candidate_for_later_review": "Definition/status could affect the author conditional slowdown branch, but decision impact/model path and question readiness are not set in this task.",
+    "author_conditional_slowdown_operator": "AND",
+    "other_required_condition": "継続顧客比率45%近辺で頭打ち",
+    "single_office_condition_is_not_sufficient": true
+  },
+  "issuer_guidance_reprints": [
+    {
+      "concept": "FY27EPS",
+      "literal_value": "94.85円",
+      "source_quote_id": "issuer-forecast-EPS-label",
+      "classification": "issuer_guidance",
+      "difference_from_latest_saved_issuer": "Same literal94.85; reportMay11 predates latestOct14 company disclosure, no claim of full data reconciliation."
+    },
+    {
+      "concept": "FY28/FY29 sales ranges",
+      "source_quote_id": "issuer-medium-term-plan-attribution",
+      "classification": "issuer_guidance_or_company_policy_range_reprint",
+      "not_author_owned_numerical_forecast": true
+    }
+  ],
+  "author_numeric_research_candidates": [
+    {
+      "id": "FY29-margin-monitoring-yardstick",
+      "classification": "author_proposed_monitoring_assumption_not_explicit_point_forecast",
+      "author": "株式会社AENTRO / AENTRO Research",
+      "report_date": "2026-05-11",
+      "revision_date": null,
+      "individual_author": null,
+      "first_retrieved_at": "2026-10-15T05:43:16.598131+00:00",
+      "target_period_label": "FY29 (report uses February year-end labels)",
+      "target_period_start": null,
+      "target_period_end": null,
+      "concept": "operating_profit_margin",
+      "literal_value": "35%近傍",
+      "raw_source_quote_id": "author-monitoring-benchmarks",
+      "issuer_guidance_difference": "Issuer policy range30..40%; this author picks an approximate location within that range for monitoring, not an issuer-announced35% point estimate.",
+      "usable_now_as": "Dated hypothesis/monitoring discussion candidate only",
+      "missing_for_model": [
+        "Exact observation period/date and approximation tolerance",
+        "Revenue/expense/tax/share bridge",
+        "Independent forecast and latest-view review"
+      ],
+      "current_engine_path": null,
+      "adopted": false,
+      "forecast_candidate": true,
+      "origin": "external_author_operating_estimate_or_conditional_assumption",
+      "raw_context_quote_id": "author-monitoring-benchmarks",
+      "unit": "%",
+      "author_report_date": "2026-05-11",
+      "reporting_scope_verified": false,
+      "model_adoption": false,
+      "literal_value_or_range": "35%近傍",
+      "source_raw_sha256": "0cfe0cdb8d1eff0d6814dd514e99e4684b4ff73b888cc318398061aee0247ad5"
+    },
+    {
+      "id": "FY29-customer-count-monitoring",
+      "classification": "author_proposed_monitoring_range_not_eps_forecast",
+      "author": "株式会社AENTRO / AENTRO Research",
+      "report_date": "2026-05-11",
+      "revision_date": null,
+      "individual_author": null,
+      "first_retrieved_at": "2026-10-15T05:43:16.598131+00:00",
+      "target_period_label": "FY29まで",
+      "target_period_start": null,
+      "target_period_end": null,
+      "concept": "cumulative_customer_count",
+      "literal_value": "550-600社ペース（毎期+70社前後）",
+      "raw_source_quote_id": "author-monitoring-benchmarks",
+      "issuer_guidance_difference": "No matched issuerFY29 customer count promise verified. Company business plans and actual customer-count definition must be kept separate.",
+      "usable_now_as": "Dated operating-hypothesis candidate only",
+      "missing_for_model": [
+        "Matched customer identity/cohort definition",
+        "Revenue/margin mapping and confidence",
+        "Current-period reassessment"
+      ],
+      "current_engine_path": null,
+      "adopted": false,
+      "forecast_candidate": true,
+      "origin": "external_author_operating_estimate_or_conditional_assumption",
+      "raw_context_quote_id": "author-monitoring-benchmarks",
+      "unit": "社",
+      "author_report_date": "2026-05-11",
+      "reporting_scope_verified": false,
+      "model_adoption": false,
+      "literal_value_or_range": "550-600社ペース（毎期+70社前後）",
+      "source_raw_sha256": "0cfe0cdb8d1eff0d6814dd514e99e4684b4ff73b888cc318398061aee0247ad5"
+    },
+    {
+      "id": "FY28-conditional-slowdown",
+      "classification": "author_conditional_scenario_not_unconditional_forecast",
+      "author": "株式会社AENTRO / AENTRO Research",
+      "report_date": "2026-05-11",
+      "revision_date": null,
+      "individual_author": null,
+      "first_retrieved_at": "2026-10-15T05:43:16.598131+00:00",
+      "target_period_label": "FY28時点",
+      "target_period_start": null,
+      "target_period_end": null,
+      "concept": "sales_CAGR_conditional_slowdown",
+      "literal_value": "+35-40%",
+      "conditions": [
+        "Office openings delayed",
+        "Continuing-customer ratio remains near45%"
+      ],
+      "raw_source_quote_id": "author-conditional-slowdown",
+      "issuer_guidance_difference": "Company medium-term policy+CAGR50%; lower growth here is author conditional downside narrative. CAGR base/end not specified clearly enough for a forecast array.",
+      "usable_now_as": "Candidate stress narrative, no expected outcome or probability",
+      "missing_for_model": [
+        "CAGR base/end periods and revenue path",
+        "Likelihood/probability (not supplied)",
+        "EPS/FCF/tax/reinvestment bridge"
+      ],
+      "current_engine_path": null,
+      "adopted": false,
+      "forecast_candidate": true,
+      "origin": "external_author_operating_estimate_or_conditional_assumption",
+      "raw_context_quote_id": "author-conditional-slowdown",
+      "unit": "%",
+      "author_report_date": "2026-05-11",
+      "reporting_scope_verified": false,
+      "model_adoption": false,
+      "literal_value_or_range": "+35-40%",
+      "source_raw_sha256": "0cfe0cdb8d1eff0d6814dd514e99e4684b4ff73b888cc318398061aee0247ad5",
+      "condition_operator": "AND",
+      "branch_guard": "Both author conditions must be established under matched definitions; office evidence alone does not imply slowdown range, valuation-premise failure or an investment action."
+    }
+  ],
+  "not_to_adopt_as_forward_multiple": {
+    "source_quote_id": "author-historical-multiple-hypothetical",
+    "reason": "HistoricalFY25PER50.2 and hypothetical repricing discussion, no explicit future-horizon multiple."
+  }
+}

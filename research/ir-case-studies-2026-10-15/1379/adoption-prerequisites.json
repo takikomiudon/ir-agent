@@ -1,0 +1,1043 @@
+{
+  "schema_version": 1,
+  "artifact_type": "single_company_adoption_prerequisites",
+  "company_id": "jp:1379",
+  "issuer": "ホクト株式会社",
+  "recorded_at": "2026-10-15T05:34:42.045465+00:00",
+  "author": "Codex / information_value",
+  "status": "research_prerequisites_only",
+  "research_only": true,
+  "holding_horizon": "数カ月〜1年（利用者の期間。DCF/DDMの予測nや安定期間とは別）",
+  "valuation_as_of": null,
+  "adopted_method": null,
+  "financial_inputs_verified": false,
+  "model_adopted": false,
+  "basis_artifact_hashes": {
+    "research/ir-case-studies-2026-10-15/1379/source-bundle.json": "2d5ca761f0d3be81681a61f1ea8e45beb68a6af0b816ca8b1ccd369502ab5302",
+    "research/ir-case-studies-2026-10-15/1379/review.json": "d6491bcc5a90bc386a4d7d1544b7baa24f27bba8681c715489dc3ef42dd51baf",
+    "research/ir-case-studies-2026-10-15/1379/disclosed-facts/normalized-bundle.json": "85aaa1129c71f436ebbc12d568d2526860b23bd1004885e0af77e7df68f7b05e",
+    "research/ir-case-studies-2026-10-15/1379/disclosed-facts/meaning-review.json": "66b02f9a8005e9b12c64bfee55817a77340aaa97496c6a2d6456802e35c5aae0",
+    "research/ir-case-studies-2026-10-15/1379/public-definition-review/review.json": "75c49ca39227c5e61af92faf042b7ebf7a6ffc4c3535acb4b2170c9092ed97e0",
+    "research/ir-case-studies-2026-10-15/1379/public-definition-review/source-quotes.json": "52e3f5da0469b2b66d256e9c03d48e1c412b4238a2e7b76f5969a0a165323a3a",
+    "src/ir_agent/valuation.py": "af42500de82d824ee29bde15fc44cfe66db1db7bbf2f00abed59ab26474e8a2a",
+    "src/ir_agent/decision.py": "2c441f1d94a38453427dd8be3f589565dd7170a4c8cd7ec248be71d1ec516934",
+    "research/published-rating-policies-2026-10-15/policy-profiles.json": "2c8f2e67fce829f8725fbc50e2ae4ecde58571abf148d0954c755f4085ad51d7",
+    "research/ir-case-studies-2026-10-15/1379/payout-policy-followup/source-bundle.json": "ad37a300b370b2e80c6d2699b1bf35072ecbf83b29ba8efa153d96cca1684a71",
+    "research/ir-case-studies-2026-10-15/1379/payout-policy-followup/sources.json": "0fa520caa8de80eb60ff4f7b67b6ce4213c1af12db03c3d26359449f73fc2197",
+    "research/ir-case-studies-2026-10-15/1379/payout-policy-followup/review.json": "cf43ff3eca6643bfd0d00db22c8848b668724a178c574f41e661b95d6a250791",
+    "research/ir-case-studies-2026-10-15/1379/reused/06.json": "e00d6bd31d62305a75dfd0cdcfffa7b4c8a5f075a826b0d49d99ddc3e0a0f1f5",
+    "research/ir-case-studies-2026-10-15/1379/external-report-discovery/review.json": "c15fa56cf50ef75505c5d20e088f487f19a3151ddf9e233645abc0ee3f52f0d9",
+    "research/ir-case-studies-2026-10-15/1379/external-report-discovery/source-bundle.json": "8c03d26c4c8004a66da1610b9b5e9f7da587c88e654666810015789d7f830f97",
+    "research/ir-case-studies-2026-10-15/1379/external-report-discovery/sources.json": "dfd1c8db36d886c8524be04b3de55fe23fb7fe5d23a2a54cbfc19837a846ac06",
+    "research/ir-case-studies-2026-10-15/1379/external-report-discovery/README.md": "68a007da7aa031821e2f2c4282fb1122cfc820f9bfff29335f7ccdd2b0caf839",
+    "research/ir-case-studies-2026-10-15/1379/earnings-preview-candidate.json": "14f935ea63edf1ca19fab4aa314a81b9f71bcd754c9ebfe7ea36797bfc6f3d29",
+    "research/ir-case-studies-2026-10-15/1379/earnings-preview-candidate.md": "65937a353367d2ab67943885bf6d3a1c3f59e52c92b4d890acfa4ed25c844c88"
+  },
+  "method_sources": [
+    {
+      "id": "anthropic.earnings-preview",
+      "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+      "revision": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "supports": "予想の出典/日付、会社別主要指標、Bull/Base/Bearの事業上の成立条件。確率・倍率・売買閾値の値は与えない。"
+    },
+    {
+      "id": "damodaran.story-to-numbers",
+      "path": "research/ir-policy-adoption-2026-10-15/README.md",
+      "reference": "2025 valuation project p4/p8; ValIntro p3/p6/p10",
+      "supports": "説明と評価の主要入力、新情報後の再評価、不確実な評価と期間内触媒。"
+    },
+    {
+      "id": "damodaran.financial-services.2009",
+      "path": "docs/financial-equity-valuation-spec.md",
+      "reference": "原典PDF p14–15",
+      "supports": "会社FCFF/WACCと株主DPS/keの違い、DDMの5入力と翌期配当。現在のホクトへの適合を原典が保証するものではない。"
+    },
+    {
+      "id": "damodaran.cyclical-commodity.2009",
+      "path": "docs/cyclical-reinvestment-spec.md",
+      "reference": "CR-Q01/02/06/09, PDF p10/11/21/24",
+      "supports": "利益/再投資/ROC/資金条件、回復と成長の重複、税/NOLの区別。ホクトの全サイクルや適用routeを認定しない。"
+    },
+    {
+      "id": "damodaran.young-growth.2009",
+      "path": "docs/explicit-terminal-fcff-spec.md",
+      "reference": "ET-Q01/02/03/04, PDF p39–40",
+      "supports": "終価n+1 FCFFとn期末割引、原典年別率と現単一rの違い。"
+    },
+    {
+      "id": "iwaicosmo.sample.20260417",
+      "path": "research/published-rating-policies-2026-10-15/README.md",
+      "supports": "半年TOPIX相対・概数の部分確認。絶対買い/利確/費用/リスクの採用済みpolicyではない。"
+    }
+  ],
+  "source_scope": {
+    "formal_statement_source_id": "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+    "canonical_snapshot_sha256": "4dc91f93ddad945ba0bfed3713f787ad36111b24d60f7da62dddf534c6aaeb0c",
+    "url": "https://ssl4.eir-parts.net/doc/1379/tdnet/2870977/00.pdf",
+    "retrieved_at": "2026-10-15T05:15:01.401229+00:00",
+    "published_at": null,
+    "publication_date_as_saved": "2026-08-12",
+    "accounting_basis": "日本基準",
+    "reporting_scope": "連結",
+    "latest_disclosure_completeness_verified": false,
+    "database_receipt_checked": false,
+    "note": "既存5公表値/定義レビュー/保存財務本文からの限定整理。DB/新GET/原PDF再取得は実施しない。source hash一致は会計意味/将来適合の認定ではない。"
+  },
+  "existing_public_candidates": [
+    {
+      "fact_id": "hokto1379-2027q1-basic-eps",
+      "concept": "reported_basic_earnings_per_share",
+      "kind": "reported_fact",
+      "candidate_value": "14.44",
+      "unit": "JPY-per-share",
+      "period": {
+        "dates_basis": "PDF1連結業績見出しの開始終了日。Q1累計であり、前年同四半期/第2四半期累計と区別。",
+        "end_date": "2026-06-30",
+        "fiscal_year_end": "2027-03-31",
+        "period_type": "quarterly_cumulative",
+        "quarter": 1,
+        "start_date": "2026-04-01"
+      },
+      "scope": {
+        "accounting_basis_as_stated": "日本基準",
+        "company_id": "jp:1379",
+        "diluted_eps_automatically_adopted": false,
+        "eps_basis": "basic_column_as_reviewer_identified",
+        "issuer": "ホクト株式会社",
+        "reporting_scope": "consolidated",
+        "scope_alignment_with_model_verified": false,
+        "scope_basis": "PDF1正式短信表題〔日本基準〕（連結）。配当は発行会社の普通株式1株当たり配当であって連結損益項目ではない。"
+      },
+      "source_id": "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+      "derived_source_id": "disclosed-facts:43b8d8f89d4eb8dc1a97242c8082d63c5ec0e2d155e0d44009f241518a2b1b78",
+      "derived_source_snapshot_sha256": "ee05589fa207dbdd5e0aac38ed8006e636a21a4f188bc1e441b967955508f719",
+      "source_value_path": [
+        "content",
+        "facts",
+        0,
+        "value"
+      ],
+      "source_value_path_note": "Decode source.content JSON before indexing facts; same field-path convention as model-inputs.",
+      "normalization_artifact": "research/ir-case-studies-2026-10-15/1379/disclosed-facts/normalized-bundle.json",
+      "basis_quote": "潜在株式調整後\n                         １株当たり\n                                                  １株当たり\n                        四半期純利益\n                                                 四半期純利益\n                                     円 銭               円 銭\n2027年３月期第１四半期                        14.44             12.37\n2026年３月期第１四半期                        43.43             37.21",
+      "assigned_model_input_path": null,
+      "financial_inputs_verified": false,
+      "meaning_review_required": true,
+      "model_adopted": false
+    },
+    {
+      "fact_id": "hokto1379-2027fy-company-eps",
+      "concept": "company_forecast_basic_earnings_per_share",
+      "kind": "issuer_guidance",
+      "candidate_value": "167.22",
+      "unit": "JPY-per-share",
+      "period": {
+        "dates_basis": "PDF1連結業績予想見出しの開始終了日。同じFYの年間配当予想にも対応させるreviewer assertion。",
+        "end_date": "2027-03-31",
+        "fiscal_year_end": "2027-03-31",
+        "period_type": "full_year_company_forecast",
+        "start_date": "2026-04-01"
+      },
+      "scope": {
+        "accounting_basis_as_stated": "日本基準",
+        "company_id": "jp:1379",
+        "eps_basis": "forecast_undiluted_column_as_reviewer_identified",
+        "issuer": "ホクト株式会社",
+        "reporting_scope": "consolidated",
+        "scope_alignment_with_model_verified": false,
+        "scope_basis": "PDF1正式短信表題〔日本基準〕（連結）。配当は発行会社の普通株式1株当たり配当であって連結損益項目ではない。"
+      },
+      "source_id": "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+      "derived_source_id": "disclosed-facts:43b8d8f89d4eb8dc1a97242c8082d63c5ec0e2d155e0d44009f241518a2b1b78",
+      "derived_source_snapshot_sha256": "ee05589fa207dbdd5e0aac38ed8006e636a21a4f188bc1e441b967955508f719",
+      "source_value_path": [
+        "content",
+        "facts",
+        1,
+        "value"
+      ],
+      "source_value_path_note": "Decode source.content JSON before indexing facts; same field-path convention as model-inputs.",
+      "normalization_artifact": "research/ir-case-studies-2026-10-15/1379/disclosed-facts/normalized-bundle.json",
+      "basis_quote": "３．2027年３月期の連結業績予想（2026年４月１日～2027年３月31日）\n                                （％表示は、通期は対前期、四半期は対前年同四半期増減率）\n                                                                              親会社株主に帰属              １株当たり\n                    売上高                   営業利益                  経常利益\n                                                                              する当期純利益               当期純利益\n                 百万円           ％       百万円           ％      百万円        ％       百万円      ％               円 銭\n第２四半期（累計）        38,900       2.2        110       89.3       330     7.2       △94     －              △3.00\n   通期            88,100       2.5      7,260        3.3     7,650    △6.6      5,250 △25.1             167.22\n（注）直近に公表されている業績予想からの修正の有無：無",
+      "assigned_model_input_path": null,
+      "financial_inputs_verified": false,
+      "meaning_review_required": true,
+      "model_adopted": false
+    },
+    {
+      "fact_id": "hokto1379-2027q1-operating-income",
+      "concept": "reported_consolidated_operating_income",
+      "kind": "reported_fact",
+      "candidate_value": "418000000",
+      "unit": "JPY",
+      "period": {
+        "dates_basis": "PDF1連結業績見出しの開始終了日。Q1累計であり、前年同四半期/第2四半期累計と区別。",
+        "end_date": "2026-06-30",
+        "fiscal_year_end": "2027-03-31",
+        "period_type": "quarterly_cumulative",
+        "quarter": 1,
+        "start_date": "2026-04-01"
+      },
+      "scope": {
+        "accounting_basis_as_stated": "日本基準",
+        "company_id": "jp:1379",
+        "issuer": "ホクト株式会社",
+        "reporting_scope": "consolidated",
+        "scope_alignment_with_model_verified": false,
+        "scope_basis": "PDF1正式短信表題〔日本基準〕（連結）。配当は発行会社の普通株式1株当たり配当であって連結損益項目ではない。"
+      },
+      "source_id": "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+      "derived_source_id": "disclosed-facts:43b8d8f89d4eb8dc1a97242c8082d63c5ec0e2d155e0d44009f241518a2b1b78",
+      "derived_source_snapshot_sha256": "ee05589fa207dbdd5e0aac38ed8006e636a21a4f188bc1e441b967955508f719",
+      "source_value_path": [
+        "content",
+        "facts",
+        2,
+        "value"
+      ],
+      "source_value_path_note": "Decode source.content JSON before indexing facts; same field-path convention as model-inputs.",
+      "normalization_artifact": "research/ir-case-studies-2026-10-15/1379/disclosed-facts/normalized-bundle.json",
+      "basis_quote": "（百万円未満切捨て）\n１．2027年３月期第１四半期の連結業績（2026年４月１日～2026年６月30日）\n （１）連結経営成績（累計）                                                              （％表示は、対前年同四半期増減率）\n                                                                                         親会社株主に帰属する\n                           売上高                      営業利益                   経常利益\n                                                                                           四半期純利益\n                          百万円           ％         百万円          ％       百万円            ％    百万円        ％\n2027年３月期第１四半期             19,343       4.4         418      136.8       777        426.1      452 △66.7\n2026年３月期第１四半期             18,524       3.9          176        －        147        △84.0    1,358  125.4\n（注）包括利益",
+      "assigned_model_input_path": null,
+      "financial_inputs_verified": false,
+      "meaning_review_required": true,
+      "model_adopted": false
+    },
+    {
+      "fact_id": "hokto1379-2027fy-company-operating-income",
+      "concept": "company_forecast_consolidated_operating_income",
+      "kind": "issuer_guidance",
+      "candidate_value": "7260000000",
+      "unit": "JPY",
+      "period": {
+        "dates_basis": "PDF1連結業績予想見出しの開始終了日。同じFYの年間配当予想にも対応させるreviewer assertion。",
+        "end_date": "2027-03-31",
+        "fiscal_year_end": "2027-03-31",
+        "period_type": "full_year_company_forecast",
+        "start_date": "2026-04-01"
+      },
+      "scope": {
+        "accounting_basis_as_stated": "日本基準",
+        "company_id": "jp:1379",
+        "issuer": "ホクト株式会社",
+        "reporting_scope": "consolidated",
+        "scope_alignment_with_model_verified": false,
+        "scope_basis": "PDF1正式短信表題〔日本基準〕（連結）。配当は発行会社の普通株式1株当たり配当であって連結損益項目ではない。"
+      },
+      "source_id": "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+      "derived_source_id": "disclosed-facts:43b8d8f89d4eb8dc1a97242c8082d63c5ec0e2d155e0d44009f241518a2b1b78",
+      "derived_source_snapshot_sha256": "ee05589fa207dbdd5e0aac38ed8006e636a21a4f188bc1e441b967955508f719",
+      "source_value_path": [
+        "content",
+        "facts",
+        3,
+        "value"
+      ],
+      "source_value_path_note": "Decode source.content JSON before indexing facts; same field-path convention as model-inputs.",
+      "normalization_artifact": "research/ir-case-studies-2026-10-15/1379/disclosed-facts/normalized-bundle.json",
+      "basis_quote": "３．2027年３月期の連結業績予想（2026年４月１日～2027年３月31日）\n                                （％表示は、通期は対前期、四半期は対前年同四半期増減率）\n                                                                              親会社株主に帰属              １株当たり\n                    売上高                   営業利益                  経常利益\n                                                                              する当期純利益               当期純利益\n                 百万円           ％       百万円           ％      百万円        ％       百万円      ％               円 銭\n第２四半期（累計）        38,900       2.2        110       89.3       330     7.2       △94     －              △3.00\n   通期            88,100       2.5      7,260        3.3     7,650    △6.6      5,250 △25.1             167.22\n（注）直近に公表されている業績予想からの修正の有無：無",
+      "assigned_model_input_path": null,
+      "financial_inputs_verified": false,
+      "meaning_review_required": true,
+      "model_adopted": false
+    },
+    {
+      "fact_id": "hokto1379-2027fy-company-annual-dividend",
+      "concept": "company_forecast_annual_dividend_per_share",
+      "kind": "issuer_guidance",
+      "candidate_value": "62.00",
+      "unit": "JPY-per-share",
+      "period": {
+        "dates_basis": "PDF1連結業績予想見出しの開始終了日。同じFYの年間配当予想にも対応させるreviewer assertion。",
+        "end_date": "2027-03-31",
+        "fiscal_year_end": "2027-03-31",
+        "period_type": "full_year_company_forecast",
+        "start_date": "2026-04-01"
+      },
+      "scope": {
+        "accounting_basis_as_stated": "日本基準",
+        "company_id": "jp:1379",
+        "consolidated_profit_measure": false,
+        "issuer": "ホクト株式会社",
+        "measure_reporting_scope": "issuer_dividend_per_ordinary_share",
+        "reporting_scope": "consolidated",
+        "scope_alignment_with_model_verified": false,
+        "scope_basis": "PDF1正式短信表題〔日本基準〕（連結）。配当は発行会社の普通株式1株当たり配当であって連結損益項目ではない。"
+      },
+      "source_id": "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+      "derived_source_id": "disclosed-facts:43b8d8f89d4eb8dc1a97242c8082d63c5ec0e2d155e0d44009f241518a2b1b78",
+      "derived_source_snapshot_sha256": "ee05589fa207dbdd5e0aac38ed8006e636a21a4f188bc1e441b967955508f719",
+      "source_value_path": [
+        "content",
+        "facts",
+        4,
+        "value"
+      ],
+      "source_value_path_note": "Decode source.content JSON before indexing facts; same field-path convention as model-inputs.",
+      "normalization_artifact": "research/ir-case-studies-2026-10-15/1379/disclosed-facts/normalized-bundle.json",
+      "basis_quote": "２．配当の状況\n                                                   年間配当金\n               第１四半期末         第２四半期末              第３四半期末             期末              合計\n                   円 銭            円 銭                 円 銭                 円 銭               円 銭\n2026年３月期             －            10.00                 －                 45.00             55.00\n2027年３月期             －\n2027年３月期（予想）                            10.00               －             52.00             62.00\n（注）直近に公表されている配当予想からの修正の有無：無",
+      "assigned_model_input_path": null,
+      "financial_inputs_verified": false,
+      "meaning_review_required": true,
+      "model_adopted": false
+    }
+  ],
+  "additional_raw_public_context": [
+    {
+      "id": "public-shares-and-dilution-caution",
+      "source_id": "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+      "source_snapshot_sha256": "4dc91f93ddad945ba0bfed3713f787ad36111b24d60f7da62dddf534c6aaeb0c",
+      "url": "https://ssl4.eir-parts.net/doc/1379/tdnet/2870977/00.pdf",
+      "retrieved_at": "2026-10-15T05:15:01.401229+00:00",
+      "pdf_page": 2,
+      "character_start": 248,
+      "character_end_exclusive": 778,
+      "offset_unit": "Unicode code points within saved PDF page",
+      "basis_quote": "    （４）発行済株式数（普通株式）\n                              2027年３月期１\n      ①   期末発行済株式数（自己株式を含む）               33,359,040株   2026年３月期    33,359,040株\n                              Ｑ\n                              2027年３月期１\n      ②   期末自己株式数                         1,990,866株    2026年３月期    2,012,666株\n                              Ｑ\n                              2027年３月期１                 2026年３月期１\n     ③    期中平均株式数（四半期累計）                  31,353,674株               31,271,314株\n                              Ｑ                         Ｑ\n\n\n\n",
+      "scope": "Raw public rows as context; not newly normalized or adopted model inputs."
+    },
+    {
+      "id": "public-quarter-end-cash-and-assets",
+      "source_id": "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+      "source_snapshot_sha256": "4dc91f93ddad945ba0bfed3713f787ad36111b24d60f7da62dddf534c6aaeb0c",
+      "url": "https://ssl4.eir-parts.net/doc/1379/tdnet/2870977/00.pdf",
+      "retrieved_at": "2026-10-15T05:15:01.401229+00:00",
+      "pdf_page": 6,
+      "character_start": 0,
+      "character_end_exclusive": 2201,
+      "offset_unit": "Unicode code points within saved PDF page",
+      "basis_quote": "                                        ホクト(株)(1379) 2027年３月期 第１四半期決算短信\n\n\n２．四半期連結財務諸表及び主な注記\n（１）四半期連結貸借対照表\n                                                    （単位：百万円）\n                          前連結会計年度            当第１四半期連結会計期間\n                         (2026年３月31日)          (2026年６月30日)\n資産の部\n 流動資産\n   現金及び預金                           18,740                 21,979\n   受取手形及び売掛金                         6,948                  6,560\n   有価証券                              5,977                  4,077\n   商品及び製品                            2,220                  2,677\n   仕掛品                               4,345                  4,461\n   原材料及び貯蔵品                          1,103                  1,220\n   その他                               1,201                    545\n   貸倒引当金                               △8                     △8\n   流動資産合計                           40,529                 41,514\n 固定資産\n   有形固定資産\n     建物及び構築物                        74,960                 75,209\n      減価償却累計額                      △41,862                △42,535\n      建物及び構築物（純額）                   33,097                 32,673\n     機械装置及び運搬具                      73,442                 74,326\n      減価償却累計額                      △65,354                △66,196\n      機械装置及び運搬具（純額）                  8,088                  8,129\n     土地                             14,680                 15,549\n     その他                             3,645                  3,890\n      減価償却累計額                       △2,086                △2,131\n      その他（純額）                        1,559                  1,759\n     有形固定資産合計                       57,426                 58,112\n   無形固定資産                               96                     85\n   投資その他の資産\n     投資有価証券                         11,046                 11,451\n     退職給付に係る資産                       2,174                  2,187\n     その他                             2,623                  2,549\n     貸倒引当金                           △170                   △172\n     投資その他の資産合計                     15,674                 16,016\n   固定資産合計                           73,196                 74,215\n 資産合計                              113,726                115,729\n\n\n\n\n                      - 4 -\n",
+      "scope": "Raw public rows as context; not newly normalized or adopted model inputs."
+    },
+    {
+      "id": "public-quarter-end-liabilities-and-equity",
+      "source_id": "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+      "source_snapshot_sha256": "4dc91f93ddad945ba0bfed3713f787ad36111b24d60f7da62dddf534c6aaeb0c",
+      "url": "https://ssl4.eir-parts.net/doc/1379/tdnet/2870977/00.pdf",
+      "retrieved_at": "2026-10-15T05:15:01.401229+00:00",
+      "pdf_page": 7,
+      "character_start": 0,
+      "character_end_exclusive": 1881,
+      "offset_unit": "Unicode code points within saved PDF page",
+      "basis_quote": "                                     ホクト(株)(1379) 2027年３月期 第１四半期決算短信\n\n\n                                                 （単位：百万円）\n                       前連結会計年度            当第１四半期連結会計期間\n                      (2026年３月31日)          (2026年６月30日)\n負債の部\n 流動負債\n   支払手形及び買掛金                      1,667                  1,994\n   電子記録債務                         3,293                  3,584\n   短期借入金                          5,636                  9,640\n   未払法人税等                         2,676                    237\n   賞与引当金                          1,434                    833\n   その他                            8,776                  9,977\n   流動負債合計                        23,483                 26,267\n 固定負債\n   新株予約権付社債                      10,011                 10,010\n   長期借入金                         10,683                 10,013\n   退職給付に係る負債                        318                    310\n   資産除去債務                         1,071                  1,079\n   その他                            3,233                  3,542\n   固定負債合計                        25,318                 24,957\n 負債合計                            48,802                 51,225\n純資産の部\n 株主資本\n   資本金                           5,500                  5,500\n   資本剰余金                         5,728                  5,728\n   利益剰余金                        52,460                 51,482\n   自己株式                         △3,694                 △3,656\n   株主資本合計                       59,994                 59,054\n その他の包括利益累計額\n   その他有価証券評価差額金                   4,440                  4,824\n   為替換算調整勘定                       △212                    △66\n   退職給付に係る調整累計額                     702                    692\n   その他の包括利益累計額合計                  4,929                  5,450\n 純資産合計                           64,924                 64,504\n負債純資産合計                         113,726                115,729\n\n\n\n\n                   - 5 -\n",
+      "scope": "Raw public rows as context; not newly normalized or adopted model inputs."
+    },
+    {
+      "id": "public-q1-cf-not-prepared",
+      "source_id": "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+      "source_snapshot_sha256": "4dc91f93ddad945ba0bfed3713f787ad36111b24d60f7da62dddf534c6aaeb0c",
+      "url": "https://ssl4.eir-parts.net/doc/1379/tdnet/2870977/00.pdf",
+      "retrieved_at": "2026-10-15T05:15:01.401229+00:00",
+      "pdf_page": 11,
+      "character_start": 145,
+      "character_end_exclusive": 549,
+      "offset_unit": "Unicode code points within saved PDF page",
+      "basis_quote": "（四半期連結キャッシュ・フロー計算書に関する注記）\n 当第１四半期連結累計期間に係る四半期連結キャッシュ・フロー計算書は作成しておりません。なお、第１四半期\n連結累計期間に係る減価償却費（無形固定資産に係る償却費を含む。）は、次のとおりであります。\n                    前第１四半期連結累計期間              当第１四半期連結累計期間\n                    （自 2025年４月１日               （自 2026年４月１日\n                     至 2025年６月30日）              至 2026年６月30日）\n  減価償却費                        1,341百万円                 1,295百万円\n\n\n\n\n                       - 9 -\n",
+      "scope": "Raw public rows as context; not newly normalized or adopted model inputs."
+    }
+  ],
+  "valuation_methods": [
+    {
+      "method": "eps_multiple",
+      "adoption_status": "not_adopted",
+      "input_requirements": [
+        {
+          "input_key": "eps_jpy",
+          "model_value": null,
+          "public_candidate_value": "167.22",
+          "unit": "JPY-per-share",
+          "target_period": "2026-04-01〜2027-03-31（2027年3月期会社予想）",
+          "status": "issuer_guidance_candidate_not_adopted",
+          "candidate_fact_ids": [
+            "hokto1379-2027fy-company-eps"
+          ],
+          "raw_evidence_ids": [],
+          "required_provider": "会社の公式開示。独立シナリオは明示された外部予測者/採用者。",
+          "required_document_type": "保存正式短信PDF1頁の通期予想、予想前提/改定開示、必要なら日付付き証券アナリスト予測。",
+          "next_acquisition_or_application_task": "167.22円を当該FYの会社予想を用いるケースにするか、別対象期/独立予測が必要かを記録。最新改定と予測株数/希薄化・正常利益適合を公式archiveで確認する作業を別途起票。",
+          "adoption_requirement": "会社予想を使う研究は可能だが、FYラベル・予測分母・対象シナリオ・利益の質への適合が未採用。Q1 14.44円の4倍で代用しない。"
+        },
+        {
+          "input_key": "pe",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "times",
+          "target_period": "採用EPSと同じ予測期/利益基準、評価日t0に対応。",
+          "status": "needs_sourced_multiple_and_adoption",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [],
+          "required_provider": "公表アナリスト評価の著者、又は明示された外部評価方針の採用者。",
+          "required_document_type": "1379を対象にEPS期と利益調整、目標PERの算定根拠を示す日付付き公開レポート。又は比較企業/利益基準/重みの明示された外部評価手順。",
+          "next_acquisition_or_application_task": "対象EPS・株式種類・期・評価日の一致する評価資料を探す。倍率が掲載されない場合はnullのままにし、同業/市場平均や目標価格から都合よく逆算して採用しない。",
+          "adoption_requirement": "出典・単位・対象期間・定義とシナリオへの適合を説明し、明示採用する。数値は自動転記しない。"
+        }
+      ],
+      "fit_remaining": "利益の質/季節性・会社予想の対象FY/株数、EPS期と倍率の対応が未確認。最小2数値という実装上の性質は、ホクトへの推奨理由ではない。"
+    },
+    {
+      "method": "dcf",
+      "adoption_status": "not_adopted",
+      "input_requirements": [
+        {
+          "input_key": "fcf_jpy",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "JPY per company per annual flow",
+          "target_period": "評価日t0と予測年末1〜nは未採用。各年の開始/終了・年次flowを明示する必要。",
+          "status": "needs_explicit_forward_unlevered_fcff",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [
+            "public-q1-cf-not-prepared"
+          ],
+          "required_provider": "公式の実績/会社計画資料＋期別FCFF/営業利益・税・再投資を予測する外部評価者/明示採用者。",
+          "required_document_type": "実際にCF計算書を作成する年次/中間の正式資料、税/利息・投資/運転資本の注記、期間別事業予測。",
+          "next_acquisition_or_application_task": "まず公式archiveで正式CFのある最新年次/中間資料と当該注記のリンクを特定する。Q1未作成の事実を維持し、履歴/現在規模/再投資を確認後、外部の年次予測との対応を別作業で作る。",
+          "adoption_requirement": "公表Q1 OI418百万円/通期予想OI7260百万円はNOPATでもFCFFでもない。D&Aや残高差のみからCFを復元せず、Q1を4倍しない。"
+        },
+        {
+          "input_key": "discount_rate",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "annual decimal ratio",
+          "target_period": "予測1〜n期と安定期を同じrに限定する現コードの全期間。",
+          "status": "needs_sourced_wacc_and_single_rate_fit",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [],
+          "required_provider": "WACCの対象期/定義を示す外部評価者、入力の市場/債券データ提供者。",
+          "required_document_type": "risk-free、ERP/beta、負債コスト/税、資本構成と通貨/名目実質を示す日付付き評価資料。",
+          "next_acquisition_or_application_task": "JPY会社全体FCFFに対応するWACCの原資料/仮定を集める。成長期と安定期に別率が必要なら現単一rとの差だけ別仕様候補へ残し、平均率を作らない。",
+          "adoption_requirement": "出典・単位・対象期間・定義とシナリオへの適合を説明し、明示採用する。数値は自動転記しない。"
+        },
+        {
+          "input_key": "terminal_growth_rate",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "annual decimal ratio",
+          "target_period": "安定n+1期以後。FCFFと同じ通貨/名目実質。",
+          "status": "needs_sourced_stable_growth_and_transition",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [],
+          "required_provider": "外部評価者/明示採用者。会社の長期計画は根拠候補。",
+          "required_document_type": "安定成長・存続・競争/市場容量と再投資/ROCが対応する予測説明。",
+          "next_acquisition_or_application_task": "現在の価格・生産/販売説明と安定成長の違いを確認し、成長と回復の重複、安定期移行の根拠を揃える。GDP/物価や会社成長目標を自動転用しない。",
+          "adoption_requirement": "出典・単位・対象期間・定義とシナリオへの適合を説明し、明示採用する。数値は自動転記しない。"
+        },
+        {
+          "input_key": "cash_jpy",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "JPY per company stock",
+          "target_period": "原資料の残高2026-06-30。評価日t0への対応は未採用。",
+          "status": "public_balance_rows_need_cash_scope_review",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [
+            "public-quarter-end-cash-and-assets"
+          ],
+          "required_provider": "会社の公式BS/CF注記と非営業資産範囲を採用する評価者。",
+          "required_document_type": "正式短信PDF6頁、cash equivalents/拘束性預金/有価証券の注記、期後の資金移動開示。",
+          "next_acquisition_or_application_task": "現金及び預金・有価証券・投資有価証券のうちモデルで加える範囲を公表注記から確認する。残高日と評価日を揃え、買収/設備支払等による期後変動を無根拠にroll-forwardしない。",
+          "adoption_requirement": "現預金等の行は保存済みだが、DCF用cash adjustmentの範囲・実質処分可能性と評価日時点への適合が未確認。"
+        },
+        {
+          "input_key": "debt_jpy",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "JPY per company stock",
+          "target_period": "原資料の残高2026-06-30。評価日t0への対応は未採用。",
+          "status": "public_balance_rows_need_debt_and_conversion_review",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [
+            "public-quarter-end-liabilities-and-equity"
+          ],
+          "required_provider": "会社の公式BS/金融商品注記、CB等の契約開示と評価者。",
+          "required_document_type": "正式短信PDF7頁の短期/長期借入金・新株予約権付社債等、償還/転換/リースの注記と期後変動。",
+          "next_acquisition_or_application_task": "有利子負債として控除する範囲と株式希薄化の整合を確認。負債合計や買掛金をそのままdebtへせず、CB転換と負債控除/株数の二重調整を避ける。",
+          "adoption_requirement": "出典・単位・対象期間・定義とシナリオへの適合を説明し、明示採用する。数値は自動転記しない。"
+        },
+        {
+          "input_key": "shares_outstanding",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "ordinary shares",
+          "target_period": "原資料の期末2026-06-30/期中平均2026-04-01〜06-30。モデルの評価時点/持分基準は未採用。",
+          "status": "public_share_rows_need_basis_and_dilution_review",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [
+            "public-shares-and-dilution-caution"
+          ],
+          "required_provider": "会社の株式/自己株式/潜在株式・新株予約権付社債の公式開示。",
+          "required_document_type": "正式短信PDF2頁、株式分割/自己株買い/消却/転換の期後開示、将来株数前提。",
+          "next_acquisition_or_application_task": "期末発行済数（自己株込み）、自己株数、期中平均、基本/希薄化後EPSの分母を区別し、採用する持分基準を説明する。黙って控除/加算した株数を採用しない。",
+          "adoption_requirement": "出典・単位・対象期間・定義とシナリオへの適合を説明し、明示採用する。数値は自動転記しない。"
+        }
+      ],
+      "terminal_contract": "終価分子は最後の予測FCFF×(1+g)。最後の予測期から安定期へこの式が適合する根拠は未充足。"
+    },
+    {
+      "method": "dcf_explicit_terminal",
+      "adoption_status": "not_adopted",
+      "input_requirements": [
+        {
+          "input_key": "fcf_jpy",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "JPY per company per annual flow",
+          "target_period": "評価日t0と予測年末1〜nは未採用。各年の開始/終了・年次flowを明示する必要。",
+          "status": "needs_explicit_forward_unlevered_fcff",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [
+            "public-q1-cf-not-prepared"
+          ],
+          "required_provider": "公式の実績/会社計画資料＋期別FCFF/営業利益・税・再投資を予測する外部評価者/明示採用者。",
+          "required_document_type": "実際にCF計算書を作成する年次/中間の正式資料、税/利息・投資/運転資本の注記、期間別事業予測。",
+          "next_acquisition_or_application_task": "まず公式archiveで正式CFのある最新年次/中間資料と当該注記のリンクを特定する。Q1未作成の事実を維持し、履歴/現在規模/再投資を確認後、外部の年次予測との対応を別作業で作る。",
+          "adoption_requirement": "公表Q1 OI418百万円/通期予想OI7260百万円はNOPATでもFCFFでもない。D&Aや残高差のみからCFを復元せず、Q1を4倍しない。"
+        },
+        {
+          "input_key": "discount_rate",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "annual decimal ratio",
+          "target_period": "予測1〜n期と安定期を同じrに限定する現コードの全期間。",
+          "status": "needs_sourced_wacc_and_single_rate_fit",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [],
+          "required_provider": "WACCの対象期/定義を示す外部評価者、入力の市場/債券データ提供者。",
+          "required_document_type": "risk-free、ERP/beta、負債コスト/税、資本構成と通貨/名目実質を示す日付付き評価資料。",
+          "next_acquisition_or_application_task": "JPY会社全体FCFFに対応するWACCの原資料/仮定を集める。成長期と安定期に別率が必要なら現単一rとの差だけ別仕様候補へ残し、平均率を作らない。",
+          "adoption_requirement": "出典・単位・対象期間・定義とシナリオへの適合を説明し、明示採用する。数値は自動転記しない。"
+        },
+        {
+          "input_key": "terminal_growth_rate",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "annual decimal ratio",
+          "target_period": "安定n+1期以後。FCFFと同じ通貨/名目実質。",
+          "status": "needs_sourced_stable_growth_and_transition",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [],
+          "required_provider": "外部評価者/明示採用者。会社の長期計画は根拠候補。",
+          "required_document_type": "安定成長・存続・競争/市場容量と再投資/ROCが対応する予測説明。",
+          "next_acquisition_or_application_task": "現在の価格・生産/販売説明と安定成長の違いを確認し、成長と回復の重複、安定期移行の根拠を揃える。GDP/物価や会社成長目標を自動転用しない。",
+          "adoption_requirement": "出典・単位・対象期間・定義とシナリオへの適合を説明し、明示採用する。数値は自動転記しない。"
+        },
+        {
+          "input_key": "cash_jpy",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "JPY per company stock",
+          "target_period": "原資料の残高2026-06-30。評価日t0への対応は未採用。",
+          "status": "public_balance_rows_need_cash_scope_review",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [
+            "public-quarter-end-cash-and-assets"
+          ],
+          "required_provider": "会社の公式BS/CF注記と非営業資産範囲を採用する評価者。",
+          "required_document_type": "正式短信PDF6頁、cash equivalents/拘束性預金/有価証券の注記、期後の資金移動開示。",
+          "next_acquisition_or_application_task": "現金及び預金・有価証券・投資有価証券のうちモデルで加える範囲を公表注記から確認する。残高日と評価日を揃え、買収/設備支払等による期後変動を無根拠にroll-forwardしない。",
+          "adoption_requirement": "現預金等の行は保存済みだが、DCF用cash adjustmentの範囲・実質処分可能性と評価日時点への適合が未確認。"
+        },
+        {
+          "input_key": "debt_jpy",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "JPY per company stock",
+          "target_period": "原資料の残高2026-06-30。評価日t0への対応は未採用。",
+          "status": "public_balance_rows_need_debt_and_conversion_review",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [
+            "public-quarter-end-liabilities-and-equity"
+          ],
+          "required_provider": "会社の公式BS/金融商品注記、CB等の契約開示と評価者。",
+          "required_document_type": "正式短信PDF7頁の短期/長期借入金・新株予約権付社債等、償還/転換/リースの注記と期後変動。",
+          "next_acquisition_or_application_task": "有利子負債として控除する範囲と株式希薄化の整合を確認。負債合計や買掛金をそのままdebtへせず、CB転換と負債控除/株数の二重調整を避ける。",
+          "adoption_requirement": "出典・単位・対象期間・定義とシナリオへの適合を説明し、明示採用する。数値は自動転記しない。"
+        },
+        {
+          "input_key": "shares_outstanding",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "ordinary shares",
+          "target_period": "原資料の期末2026-06-30/期中平均2026-04-01〜06-30。モデルの評価時点/持分基準は未採用。",
+          "status": "public_share_rows_need_basis_and_dilution_review",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [
+            "public-shares-and-dilution-caution"
+          ],
+          "required_provider": "会社の株式/自己株式/潜在株式・新株予約権付社債の公式開示。",
+          "required_document_type": "正式短信PDF2頁、株式分割/自己株買い/消却/転換の期後開示、将来株数前提。",
+          "next_acquisition_or_application_task": "期末発行済数（自己株込み）、自己株数、期中平均、基本/希薄化後EPSの分母を区別し、採用する持分基準を説明する。黙って控除/加算した株数を採用しない。",
+          "adoption_requirement": "出典・単位・対象期間・定義とシナリオへの適合を説明し、明示採用する。数値は自動転記しない。"
+        },
+        {
+          "input_key": "terminal_fcff_jpy",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "JPY per company annual flow",
+          "target_period": "明示した予測最終期nの直後n+1安定期。暦年/年度と開始終了は未採用。",
+          "status": "needs_explicit_n_plus_1_fcff_and_bridge",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [],
+          "required_provider": "外部評価者/明示採用者。stable-reinvestmentを使う場合もNOPAT_next/g/ROC_newの提供者を明記。",
+          "required_document_type": "n+1安定期FCFF又は同じ期のNOPAT_next・g・将来新規投資ROCと税/再投資/資金条件を示す予測資料。",
+          "next_acquisition_or_application_task": "現在OIや過去資本収益率から安定期を決めず、n+1期と安定期の対応を確定する。資料がなければnull。単体計算の成功を金融採用へ変換しない。",
+          "adoption_requirement": "n+1 FCFFに成長/税/再投資を再適用しない。予測FCFF配列に終価翌期を追加してnを変えない。原典例の率や期間を転用しない。"
+        }
+      ],
+      "terminal_contract": "7必須キーの新method。明示n+1 FCFFをn期末TVへ使う。単一rのscopeは同じ。"
+    },
+    {
+      "method": "dividend_discount",
+      "adoption_status": "not_adopted",
+      "input_requirements": [
+        {
+          "input_key": "dividends_per_share_jpy",
+          "model_value": null,
+          "public_candidate_value": "62.00",
+          "unit": "JPY-per-share per future payout period",
+          "target_period": "評価日t0と予測年末1〜nは未採用。各年の開始/終了・年次flowを明示する必要。",
+          "status": "one_fiscal_dividend_guidance_only_not_future_series",
+          "candidate_fact_ids": [
+            "hokto1379-2027fy-company-annual-dividend"
+          ],
+          "raw_evidence_ids": [
+            "FAQ-record-dates-and-public-pointer",
+            "semiannual-policy-and-authority"
+          ],
+          "required_provider": "会社の配当予想/決議/権利基準日・支払日開示＋多年配当予測の外部評価者/明示採用者。",
+          "required_document_type": "保存短信PDF1頁の年間予想、配当金の推移/配当決議/支払開始日、長期還元方針と留保/投資計画。 当該FYの中間/期末の予想と決議、基準日/支払開始日の個別公表資料と権利保有記録。",
+          "next_acquisition_or_application_task": "年間62円の会社FY予想と評価時点以後の受取配当を区別する。既存FAQの権利基準日は支払日ではない。保有開始時点の権利を確認し、将来年次列への延長は別根拠を必要とする。 10/15仮想新規購入後の次12カ月と会社年度の違いを確認し、中間10/期末52をまとめて年末t1へ置かない。受渡/権利落ち日や個人の受取可否は計算・断定しない。",
+          "adoption_requirement": "62円の会社予想は充足候補1件で、DDMの第1期配当/全将来配当列の採用ではない。DOE目標から未来DPSを逆算しない。"
+        },
+        {
+          "input_key": "cost_of_equity",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "annual decimal ratio",
+          "target_period": "明示予測配当1〜n期。",
+          "status": "needs_sourced_forecast_cost_of_equity",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [],
+          "required_provider": "株主資本コストの定義/前提を示す外部評価者と市場データ提供者。",
+          "required_document_type": "JPY株主CF用の株主資本コストとrisk-free/ERP/beta等の時点付き根拠。",
+          "next_acquisition_or_application_task": "株主CF用keを会社全体WACC/借入金利/DOEと区別し、配当予測期に対応する明示前提を探す。",
+          "adoption_requirement": "出典・単位・対象期間・定義とシナリオへの適合を説明し、明示採用する。数値は自動転記しない。"
+        },
+        {
+          "input_key": "terminal_cost_of_equity",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "annual decimal ratio",
+          "target_period": "安定n+1期以後。",
+          "status": "needs_sourced_stable_cost_of_equity",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [],
+          "required_provider": "安定期リスクを評価する外部評価者/明示採用者。",
+          "required_document_type": "安定期事業/財務リスクに対応した株主資本コスト説明。",
+          "next_acquisition_or_application_task": "現在keを自動コピーせず、異なる安定期ke又は同じとする根拠を確認する。原典2009年の値を転用しない。",
+          "adoption_requirement": "出典・単位・対象期間・定義とシナリオへの適合を説明し、明示採用する。数値は自動転記しない。"
+        },
+        {
+          "input_key": "terminal_dividend_per_share_jpy",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "JPY-per-share",
+          "target_period": "明示した予測最終期nの直後n+1安定期。暦年/年度と開始終了は未採用。",
+          "status": "needs_explicit_n_plus_1_dividend",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [],
+          "required_provider": "長期配当・配分可能利益/成長投資を予測する外部評価者/明示採用者。",
+          "required_document_type": "安定期の配当能力・留保/再投資・株数と支払を整合させる予測資料。",
+          "next_acquisition_or_application_task": "会社FY配当62円や2029/3期DOE目標を終価翌期配当へ変換せず、予測最終期nとn+1期を明示する。",
+          "adoption_requirement": "出典・単位・対象期間・定義とシナリオへの適合を説明し、明示採用する。数値は自動転記しない。"
+        },
+        {
+          "input_key": "terminal_growth_rate",
+          "model_value": null,
+          "public_candidate_value": null,
+          "unit": "annual decimal ratio",
+          "target_period": "安定n+1期以後のDPS成長。",
+          "status": "needs_sourced_stable_dividend_growth",
+          "candidate_fact_ids": [],
+          "raw_evidence_ids": [],
+          "required_provider": "外部評価者/明示採用者。",
+          "required_document_type": "DPS/利益/再投資/希薄化・存続の整合を示す安定成長の予測説明。",
+          "next_acquisition_or_application_task": "DOEは還元額と資本の比率でありDPS成長率ではない。投資期間数カ月〜1年から永久成長率を作らない。",
+          "adoption_requirement": "出典・単位・対象期間・定義とシナリオへの適合を説明し、明示採用する。数値は自動転記しない。"
+        }
+      ],
+      "fit_remaining": "一般事業会社へDDMを採るなら還元が株主価値を表す条件/留保と再投資・多年株数/配当能力の根拠が必要。銀行用2009原典の規制仮定を転用しない。"
+    }
+  ],
+  "forecast_and_probability": {
+    "aggregation": "unweighted",
+    "scenario_definitions": null,
+    "scenario_probabilities": null,
+    "expected_value_jpy": null,
+    "expected_upside_pct": null,
+    "notes": [
+      "会社予想を独立予測の実績へ格上げしない。会社予想を使う1ケースの研究は可能だが用途/期の採用が必要。",
+      "独立予測/倍率/期別FCFF等が必要な箇所は提供者と出典を明記し、見つからなければnull。",
+      "unweightedを使う場合は確率を空欄にし、平均・均等確率で期待値を作らない。",
+      "現buy分岐は期待評価がなければscenario_probabilities_not_configured。シナリオ範囲だけで購入候補にしない。"
+    ]
+  },
+  "market_price_requirement": {
+    "price_jpy": null,
+    "quote_id": null,
+    "status": "needs_market_source_and_valuation_date",
+    "unit": "JPY-per-ordinary-share",
+    "target_period": "将来の実際の判断時点。過去財務残高日・資料取得日とは別。",
+    "required_provider": "既存adapter対応の市場データ提供者/公式の価格資料。1379・株式種類・市場・調整基準を明示。",
+    "required_document_type": "価格値/観測日時/精度・timezone/取得時刻/データ遅延・調整/非調整の基準を持つ保存market_data source。",
+    "next_task": "採用評価日を定めた時点で当該価格を取得・保存し、price_path/observed_at_pathを原sourceの実fieldへ結ぶ。鮮度policyは別に採用する。",
+    "limitations": "決算短信/会社予想/DOEや配当利回りから現在価格を逆算しない。価格取得だけで仮説/方針は完成しない。"
+  },
+  "execution_policy": {
+    "adopted_policy_ref": null,
+    "required_parameters": [
+      {
+        "parameter": "entry_cost_pct",
+        "value": null,
+        "status": "not_adopted",
+        "unit": "percent of actual new-entry value",
+        "target_period": "判断実行時点と数カ月〜1年の投資目的。方針有効日/版・質問前固定時刻は未設定。",
+        "required_provider_or_document": "利用者が実利用する証券会社の公式料金表/注文条件、取引金額・株数・商品/口座区分に対応する費用方針。",
+        "existing_evidence": "Anthropicは記録すべき条件を示すが共通の数値を与えない。保存rating原典もこのfieldを充足しない。",
+        "next_acquisition_or_adoption_task": "当該条件を本当に定義する原文と適用範囲を取得し、利用者又は出典付き採用者が方針として採用する。未充足ならnullを保持。",
+        "limitations": "固定額/段階料率の場合は適用取引条件がないと率へ換算できない。費用0を補わない。"
+      },
+      {
+        "parameter": "exit_cost_pct",
+        "value": null,
+        "status": "not_adopted",
+        "unit": "percent of actual sale proceeds",
+        "target_period": "判断実行時点と数カ月〜1年の投資目的。方針有効日/版・質問前固定時刻は未設定。",
+        "required_provider_or_document": "同じ取引条件の売却料金表/費用方針、税/スプレッド等をどこに含めるかの明示。",
+        "existing_evidence": "Anthropicは記録すべき条件を示すが共通の数値を与えない。保存rating原典もこのfieldを充足しない。",
+        "next_acquisition_or_adoption_task": "当該条件を本当に定義する原文と適用範囲を取得し、利用者又は出典付き採用者が方針として採用する。未充足ならnullを保持。",
+        "limitations": "課税口座/取得原価/損益による税を一律率として無断で加えず、採用する費用範囲を明示。"
+      },
+      {
+        "parameter": "minimum_upside_pct",
+        "value": null,
+        "status": "not_adopted",
+        "unit": "absolute net expected upside percent",
+        "target_period": "判断実行時点と数カ月〜1年の投資目的。方針有効日/版・質問前固定時刻は未設定。",
+        "required_provider_or_document": "絶対リターン・期間・費用と評価不確実性を定義した利用者又は適合する外部投資方針。",
+        "existing_evidence": "Anthropicは記録すべき条件を示すが共通の数値を与えない。保存rating原典もこのfieldを充足しない。",
+        "next_acquisition_or_adoption_task": "当該条件を本当に定義する原文と適用範囲を取得し、利用者又は出典付き採用者が方針として採用する。未充足ならnullを保持。",
+        "limitations": "半年TOPIX相対15%程度を代入しない。会社のDOE/利益成長目標も別概念。"
+      },
+      {
+        "parameter": "maximum_downside_pct",
+        "value": null,
+        "status": "not_adopted",
+        "unit": "percent under supplied scenario-value set",
+        "target_period": "判断実行時点と数カ月〜1年の投資目的。方針有効日/版・質問前固定時刻は未設定。",
+        "required_provider_or_document": "提示シナリオに対する許容損失/リスクの明示された利用者又は外部方針。",
+        "existing_evidence": "Anthropicは記録すべき条件を示すが共通の数値を与えない。保存rating原典もこのfieldを充足しない。",
+        "next_acquisition_or_adoption_task": "当該条件を本当に定義する原文と適用範囲を取得し、利用者又は出典付き採用者が方針として採用する。未充足ならnullを保持。",
+        "limitations": "シナリオ最低値は統計的最悪損失や信頼区間ではない。価格変動率から許容値を生成しない。"
+      },
+      {
+        "parameter": "max_quote_age_seconds",
+        "value": null,
+        "status": "not_adopted",
+        "unit": "seconds",
+        "target_period": "判断実行時点と数カ月〜1年の投資目的。方針有効日/版・質問前固定時刻は未設定。",
+        "required_provider_or_document": "価格の利用目的/取引時間/データ遅延を踏まえた利用者又は外部の明示採用ルール。",
+        "existing_evidence": "Anthropicは記録すべき条件を示すが共通の数値を与えない。保存rating原典もこのfieldを充足しない。",
+        "next_acquisition_or_adoption_task": "当該条件を本当に定義する原文と適用範囲を取得し、利用者又は出典付き採用者が方針として採用する。未充足ならnullを保持。",
+        "limitations": "取得できたquoteのageを見て都合よく期限を設定せず、サービス遅延時間をそのまま許容鮮度にしない。"
+      },
+      {
+        "parameter": "target_scenario",
+        "value": null,
+        "status": "not_adopted",
+        "unit": "name of an actually supplied valuation scenario",
+        "target_period": "判断実行時点と数カ月〜1年の投資目的。方針有効日/版・質問前固定時刻は未設定。",
+        "required_provider_or_document": "明示された採用シナリオと退出/目標点検の利用者又は外部方針。",
+        "existing_evidence": "Anthropicは記録すべき条件を示すが共通の数値を与えない。保存rating原典もこのfieldを充足しない。",
+        "next_acquisition_or_adoption_task": "当該条件を本当に定義する原文と適用範囲を取得し、利用者又は出典付き採用者が方針として採用する。未充足ならnullを保持。",
+        "limitations": "baseという文字列を先に置かない。数値未設定の仮想scenario名を採用済みとしない。"
+      }
+    ],
+    "optional_allow_date_precision": {
+      "value": null,
+      "status": "not_adopted",
+      "note": "日付のみquoteを許すかは別の明示方針。timestampを勝手に補わない。"
+    },
+    "external_rating_fit": {
+      "source_profile": "iwaicosmo.sample.20260417",
+      "source_date": "2026-04-17",
+      "adopted": false,
+      "source_return_basis": "今後半年以内のTOPIX相対。Aは15%程度以上、B+は5〜15%程度。原文の概数をそのまま参照。",
+      "mismatches": [
+        "現decisionのminimum_upside_pctは費用調整後の絶対期待上昇余地でありTOPIX相対ではない。",
+        "相対returnの演算/配当/費用・税、概数の厳密境界は未確認。",
+        "目標価格到達で必ず全売却する命令や最大下落幅/quote ageを原典は提供していない。"
+      ],
+      "separate_spec_candidate": "完全な原文・比較基準/予測期間/return演算・費用・境界と採用が得られた場合にだけrelative rating evaluatorを別仕様で検討。現absolute policyを変更しない。"
+    },
+    "fee_expression_limit": {
+      "status": "needs_actual_fee_terms",
+      "note": "現policyは割合の明示費用を表す。固定/段階料金は取引額・条件なしでは率へ写せない。不一致なら別仕様候補にし、独自の0%/平均料率を足さない。"
+    }
+  },
+  "ir_precommitment_dependency": {
+    "registered_thesis_ref": null,
+    "registered_question_ref": null,
+    "baseline_model_input_paths": null,
+    "public_earnings_qa": "未取得/全社不存在は未認定。一般FAQと説明会Q&Aを分ける。",
+    "needed": [
+      "採用する評価入力・対象期と公表根拠/将来仮定",
+      "反証可能な仮説と検証期限・次回公表指標",
+      "根拠ある回答別入力変更と、曖昧/拒否/無回答の変更なし枝",
+      "質問前固定の会社・仮説版・policy版・現在価格根拠"
+    ],
+    "likelihood": null,
+    "prior": null,
+    "payoff": null,
+    "question_cost": null,
+    "EVSI": null,
+    "status": "not_question_ready",
+    "note": "このpacketは実モデルpathを割当てず、公開で解決済みの定義を再質問しない。IR返信の正しさや語調から尤度/将来利益を作らない。"
+  },
+  "next_bounded_tasks": [
+    {
+      "id": "receive-preview",
+      "kind": "saved_artifact_reference_received",
+      "scope": "既存1379 previewを受領・参照済み。4論点に必要な次回公表指標と本packetの数値/期/提供者の不足を分ける。数値モデルpath・採用仮説へは変換しない。"
+    },
+    {
+      "id": "annual-interim-and-capital-definitions",
+      "kind": "future_official_source_request",
+      "starting_saved_index": "https://www.hokto-kinoko.co.jp/corporate/ir/shiryou/",
+      "document_request": "正式CFのある年次/中間報告・税/投資/運転資本、現預金とcash equivalents、有利子負債・CB転換、自己株/希薄化の注記。",
+      "scope_boundary": "初めに保存公式索引の明示リンクだけを確認し、取得予算と対象文書を別taskで固定。動的endpoint/未知URLを推測せず、Q1CF未作成をCF=0としない。"
+    },
+    {
+      "id": "company-and-independent-estimates",
+      "kind": "future_forecast_source_request",
+      "document_request": "まず会社の同一FY予想前提/改定を公式archiveで確認。独立予測が必要なら1379を明記した公開/正当に利用できる日付付き予測・評価レポート1件。",
+      "required_fields": "著者/提供者、発行・取得日、利益/株数の定義、対象FY/予測期間、EPS/配当/FCFFの区分、倍率/割引率/安定期の算定理由。",
+      "scope_boundary": "公開で存在する/取得できるとは仮定しない。口座登録/認証情報/有料契約を行わず、未取得なら不足を保持。外部予測の存在だけで精度を保証しない。",
+      "existing_attempt_result": "Shared Research本文への到達と供給者/更新日は確認済みだが、当該通期数値は会社予想。独立数値予測候補は今回0件。到達確認の同じ2GETを繰り返す作業にはしない。"
+    },
+    {
+      "id": "price-fees-and-policy",
+      "kind": "future_market_and_user_external_policy_request",
+      "document_request": "判断時点の1379市場価格と価格精度、実利用予定の証券会社・商品/注文条件の公表料金表、適用できる費用/絶対リターン/リスク/quote鮮度/target scenarioの明示方針。",
+      "scope_boundary": "提供者や利用条件が未定なら未定と記録。公開ratingを代用せず、出典なしで費用/閾値/確率を採用しない。資料が揃うまで既存codeでunresolvedを維持。"
+    }
+  ],
+  "implementation_conclusion": {
+    "code_required_now": false,
+    "reason": "既存EPS/DCF/DDM/明示終価・model-inputs/ir-plan/policyが必要な数値契約を既に持つ。今回は不足の提供者/資料/期間・採用根拠を解く作業で、新計算器・汎用監査gateでは解決しない。",
+    "conditional_separate_specs_only": [
+      "年別WACCが根拠として必要な場合の現単一rとの差",
+      "TOPIX相対評価と絶対期待上昇余地の差",
+      "実取引条件が与えられても固定/段階費用を正確に割合で表せない場合の差",
+      "実支払日と個別権利に即したDDMを必要とする場合の、現年末・年次cashflow近似との差（支払日/権利資料が揃った場合だけ検討）。"
+    ]
+  },
+  "side_effects": {
+    "new_GETs": 0,
+    "DB_reads": 0,
+    "DB_writes": 0,
+    "existing_materials_modified": false,
+    "new_forecasts": 0,
+    "new_policy_adoptions": 0,
+    "new_theses": 0,
+    "new_questions": 0,
+    "messages_sent": 0,
+    "orders": 0
+  },
+  "payout_timing_context": {
+    "status": "future_investor_cashflow_timing_not_adopted",
+    "record_date_reference": {
+      "source_id": null,
+      "saved_snapshot": "research/ir-case-studies-2026-10-15/1379/reused/06.json",
+      "snapshot_sha256": "e00d6bd31d62305a75dfd0cdcfffa7b4c8a5f075a826b0d49d99ddc3e0a0f1f5",
+      "quote_reference_artifact": "research/ir-case-studies-2026-10-15/1379/public-definition-review/source-quotes.json",
+      "quote_id": "FAQ-record-dates-and-public-pointer",
+      "basis_quote": "配当金支払いの株主確定日はいつですか？ 利益配当金は3月31日、中間配当金は9月30日です。 詳しくは配当金の推移をご覧ください",
+      "note": "旧・日付不明FAQの基準日説明。支払日/現在の個別権利/確定配当決議ではない。"
+    },
+    "payout_frequency_and_authority": {
+      "source_id": "case-public:94005d715005d80af588f17e7c39eb05e6e31e96eb661ed98afb16004e30d971",
+      "source_snapshot_sha256": "1ee9cd2a55aeb4d61f3354b6668c464f567c5efefd61520e7730bb9800446e84",
+      "url": "https://www.hokto-kinoko.co.jp/corporate/ir/kabushiki/haitoukin/",
+      "retrieved_at": "2026-10-15T05:25:53.482854+00:00",
+      "published_at": null,
+      "basis_quote": "当社は、中間配当と期末配当の年２回の剰余金の配当を行うことを基本方針としております。 これらの剰余金の配当の決定機関は、期末配当については株主総会、中間配当については取締役会であります。",
+      "location": {
+        "text_character_start": 3291,
+        "text_character_end": 3384,
+        "offset_unit": "Unicode code points in saved UTF-8 visible text, end exclusive",
+        "pdf_page": null
+      },
+      "review_artifact": "research/ir-case-studies-2026-10-15/1379/payout-policy-followup/review.json",
+      "note": "年2回の基本方針と決定機関を支持。現在FYの決議日時・支払日・投資家権利を確認する記載ではない。"
+    },
+    "illustrative_investor_context": {
+      "description": "2026-10-15から仮に新規購入する投資家の将来受取を考える。実際の利用者の注文/保有を示さない。",
+      "actual_investor_holding_history_ref": null,
+      "purchase_timestamp": null,
+      "settlement_date": null,
+      "ex_dividend_date": null,
+      "receipt_eligibility": null,
+      "next_12_month_receivable_dps": null
+    },
+    "mismatches_to_avoid": [
+      "会社2027/3年度の年間予想62円と、10/15仮想購入後の次12カ月受取配当は同じとは限らない。",
+      "中間10円・期末52円は会社予想の区分で、両方を丸ごと将来の年末t1へ置く根拠にはならない。",
+      "9/30や3/31という株主確定日の説明から、支払日・権利落ち日・受渡日や個別投資家の受取可否を計算/断定しない。",
+      "予想、配当決議、基準日、支払日、保有/権利の記録を区別し、投資期間とモデルの年次cashflow時間軸を対応付ける。"
+    ],
+    "required_additional_evidence": [
+      "当該FYの中間/期末配当の会社決議・金額/予想状態・基準日・支払開始日の公表資料。",
+      "実際の投資時点・保有/権利記録と、利用する市場/証券会社の適用受渡・権利処理の一次規則。認証や個人情報を推測で埋めない。",
+      "年末払DDMとして集約するならその時間近似の採用理由。実支払日どおりの割引が必要なら現年末年次モデルとの差を別仕様候補へ。"
+    ],
+    "code_change_required_now": false
+  },
+  "external_forecast_discovery": {
+    "status": "report_reached_independent_numeric_forecast_not_verified",
+    "review_artifact": "research/ir-case-studies-2026-10-15/1379/external-report-discovery/review.json",
+    "README": "research/ir-case-studies-2026-10-15/1379/external-report-discovery/README.md",
+    "report_url": "https://sharedresearch.jp/ja/companies/1379",
+    "provider_author": {
+      "organization_display_name": "Shared Research（本文SR社）",
+      "organization_attribution_status": "supported_by_official_intro_link_and_report_own_label",
+      "individual_author": null,
+      "individual_author_status": "unverified",
+      "independence_verified": false,
+      "company_support": {
+        "status": "issuer_involvement_supported_monetary_terms_unknown",
+        "supported_statement": "Issuer says company group issued coverage report to support investor understanding",
+        "quote_ids": [
+          "issuer-involvement-and-purpose",
+          "issuer-identifies-provider"
+        ],
+        "paid_commission_contract": null,
+        "fee_amount": null,
+        "funding_terms": null,
+        "provider_method_or_client_contract_verified": false
+      }
+    },
+    "provider_declared_report_update": {
+      "title": "2027年3月期第1四半期決算レポート更新",
+      "provider_declared_published_at_ja": "2026-09-18T08:24:14.640Z",
+      "visible_day": "2026-09-18",
+      "day_and_selected_project_timestamp_consistent": true,
+      "all_historical_sections_have_this_date": false,
+      "first_public_availability_independently_verified": false
+    },
+    "classification": {
+      "issuer_guidance_reprint": {
+        "status": "supported_explicit_label",
+        "quote_ids": [
+          "report-explicit-company-guidance"
+        ],
+        "table_header_note": "FY27/3 column also labels company forecast; no numeric-normalizer run",
+        "not_external_independent_forecast": true
+      },
+      "author_qualitative_analysis": {
+        "status": "supported_self_attribution",
+        "quote_ids": [
+          "provider-qualitative-view-label"
+        ],
+        "not_a_numeric_forecast": true
+      },
+      "author_owned_numeric_forecast": {
+        "status": "not_verified_in_limited_classification_review",
+        "candidates": [],
+        "counts_are_not_proof_of_global_absence": true
+      },
+      "all_numeric_model_adoption": false,
+      "values_and_growth_percentages_reconciled_to_issuer_primary": false,
+      "term_scan_on_saved_report_for_classification_only": {
+        "会社予想": 49,
+        "当社予想": 0,
+        "SR予想": 0,
+        "アナリスト": 0,
+        "著者": 0,
+        "委託": 2,
+        "費用": 14,
+        "取材協力": 0
+      }
+    },
+    "evidence_quotes": [
+      {
+        "quote_id": "issuer-involvement-and-purpose",
+        "source_id": "case-public:5e94275a6376a8e235b5771d8a5b7ff2dbfa01a521d7a7294770c2cdbee7d6a3",
+        "source_snapshot_sha256": "9b49e49fd673e38b7f70514a5ffb39dfcb0b943ca24e8be092e4e3482de41c73",
+        "basis_quote": "当社グループは、投資家の皆様に向けて、当社へ興味を持っていただき、ご理解を深めていただくことを目的として、リサーチカバレッジレポートを発行いたしました。",
+        "location": {
+          "text_character_start": 3194,
+          "text_character_end": 3270,
+          "offset_unit": "Unicode code points in source.content, end exclusive",
+          "pdf_page": null
+        },
+        "review_support": "Issuer describes company-group involvement and investor-understanding purpose; no paid-commission terms or funding amount inferred."
+      },
+      {
+        "quote_id": "issuer-identifies-provider",
+        "source_id": "case-public:5e94275a6376a8e235b5771d8a5b7ff2dbfa01a521d7a7294770c2cdbee7d6a3",
+        "source_snapshot_sha256": "9b49e49fd673e38b7f70514a5ffb39dfcb0b943ca24e8be092e4e3482de41c73",
+        "basis_quote": "シェアードリサーチ社は、世界の投資家に企業の本質を伝えるリサーチ会社であり、",
+        "location": {
+          "text_character_start": 3271,
+          "text_character_end": 3309,
+          "offset_unit": "Unicode code points in source.content, end exclusive",
+          "pdf_page": null
+        },
+        "review_support": "Issuer identifies SharedResearch as report provider. Promotional description about investor perspective is not independent verification."
+      },
+      {
+        "quote_id": "report-explicit-company-guidance",
+        "source_id": "case-public:a14372edbaf8c2897b8553a1a93dc1e4b1dc63859a14ce2f716bdb571a862e7b",
+        "source_snapshot_sha256": "a7c5a03a3a37f873b1c65f3f19fa4ebe76e9ce42ef99496552061b4495f9aa91",
+        "basis_quote": "2027年3月期会社予想は、売上高88,100百万円（前期比2.5%増）、営業利益7,260百万円（同3.3%増）、経常利益7,650百万円（同6.5%減）、親会社株主に帰属する当期純利益5,250百万円（同25.1%減）を見込む。",
+        "location": {
+          "text_character_start": 2817,
+          "text_character_end": 2933,
+          "offset_unit": "Unicode code points in source.content, end exclusive",
+          "pdf_page": null
+        },
+        "review_support": "Explicitly company guidance repeated by external provider, not author-owned forecast; no financial values adopted or reconciled."
+      },
+      {
+        "quote_id": "provider-qualitative-view-label",
+        "source_id": "case-public:a14372edbaf8c2897b8553a1a93dc1e4b1dc63859a14ce2f716bdb571a862e7b",
+        "source_snapshot_sha256": "a7c5a03a3a37f873b1c65f3f19fa4ebe76e9ce42ef99496552061b4495f9aa91",
+        "basis_quote": "SR社では同社の強みに関して以下のように考える。",
+        "location": {
+          "text_character_start": 3365,
+          "text_character_end": 3389,
+          "offset_unit": "Unicode code points in source.content, end exclusive",
+          "pdf_page": null
+        },
+        "review_support": "Provider distinguishes its qualitative view; this label does not establish an independent numeric earnings forecast."
+      }
+    ],
+    "adoption_effect": "外部レポートへの到達は独立数値予測の獲得ではない。会社予想の再掲はissuer_guidanceのまま、SRの定性見解は数値シナリオではない。全model_valueは引き続きnull。",
+    "remaining_dependency": "著者独自の数値予測・評価倍率/割引率等が必要な場合、対象期/定義/著者/根拠が明示された予測資料を別途確認する。今回の限定探索の未確認を全社不存在/常に有料と断定しない。"
+  },
+  "received_preview_reference": {
+    "artifact": "research/ir-case-studies-2026-10-15/1379/earnings-preview-candidate.json",
+    "recorded_at": "2026-10-15T05:31:14.832410+00:00",
+    "status": "completed_public_followup_preview_no_ir_registration",
+    "operating_issue_ids": [
+      "domestic-price-demand",
+      "domestic-production-sales",
+      "chemical-pricing-cost-supply",
+      "costs-versus-comparison-base"
+    ],
+    "use": "国内価格/需要、生産/販売、化成品価格/費用/供給、費用比較基準の4論点の公開確認/反証候補として参照する。独立数値予測/モデル入力・仮説採用として扱わない。",
+    "forecast_numeric_inputs_adopted": false,
+    "question_registered": false
+  }
+}

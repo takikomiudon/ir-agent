@@ -1,0 +1,882 @@
+{
+  "schema_version": 1,
+  "artifact_type": "saved_author_japanese_company_valuation_readiness",
+  "recorded_at": "2026-10-15T06:28:28.164202+00:00",
+  "status": "research_readiness_only_no_financial_adoption",
+  "conclusion": {
+    "author_adaptive_case_printed_inputs_complete": true,
+    "existing_unmodified_public_api_returns_same_full_equity_formula": false,
+    "exact_author_output_reproduced": false,
+    "candidate_for_next_bounded_contract_review": true,
+    "reason": "Adaptive author forecast FCFF and explicit year4 terminal FCFF, single r/g and all five equity bridge quantities are visible. Existing explicit-terminal DCF has no separate non-operating-assets or minority-interest fields; displayed rounding and Table3 inconsistencies prevent a claim of exact original-output reproduction. Do not relabel assets as cash or NCI as debt."
+  },
+  "source": {
+    "source_id": "damodaran.cyclical-commodity.2009",
+    "author": "Aswath Damodaran",
+    "title": "Ups and Downs: Valuing Cyclical and Commodity Companies",
+    "url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/commodity.pdf",
+    "publication_date": "2009-09",
+    "retrieved_at": "2026-10-15T01:26:14.401821+00:00",
+    "registry": "../valuation-model-routing-2026-10-15/sources.json",
+    "raw_field": "raw_pdf_base64",
+    "pdf_sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+    "byte_count": 670511,
+    "pdf_page_count": 40,
+    "extracted_text_sha256": "bc0de814b9bac9a6923a09919084071f4342e1fbfe5f9665c678d32ce096ea5b",
+    "raw_hash_reproduced": true,
+    "saved_text_equals_fresh_layout_extraction": true,
+    "full_text_search": {
+      "terms": [
+        "Toyota",
+        "Yen",
+        "yen",
+        "ADR",
+        "USD",
+        "dollar"
+      ],
+      "relevant_pages_read": [
+        15,
+        16,
+        17,
+        18,
+        23,
+        24,
+        25
+      ],
+      "scope": "Toyota case sections and surrounding text; search is not proof that every possible security convention is absent."
+    },
+    "visual_checks": [
+      {
+        "pdf_page": 17,
+        "method": "pdftoppm -f PAGE -l PAGE -scale-to 1600 -png",
+        "inspected": true,
+        "rendered_image_sha256": "e66e1aee36ea8dcd2449149d3492284800b5871be16421c65d361361b99baafa",
+        "image_file_copied_to_research": false
+      },
+      {
+        "pdf_page": 18,
+        "method": "pdftoppm -f PAGE -l PAGE -scale-to 1600 -png",
+        "inspected": true,
+        "rendered_image_sha256": "f181d86c4388c36fbdae5712f5ee91a1f7e70bbdaefde66d537e6242876e6c20",
+        "image_file_copied_to_research": false
+      },
+      {
+        "pdf_page": 24,
+        "method": "pdftoppm -f PAGE -l PAGE -scale-to 1600 -png",
+        "inspected": true,
+        "rendered_image_sha256": "7279ec2d3c2dbeb15779a81041e633b364e43cb09dd08c08eed997e2f6d5ecfd",
+        "image_file_copied_to_research": false
+      },
+      {
+        "pdf_page": 25,
+        "method": "pdftoppm -f PAGE -l PAGE -scale-to 1600 -png",
+        "inspected": true,
+        "rendered_image_sha256": "b1627b9c115a46a9cbaf2a74eb57c7be855a4ad847d523df8a35bc16d487907b",
+        "image_file_copied_to_research": false
+      }
+    ]
+  },
+  "quotations": [
+    {
+      "id": "TY01",
+      "pdf_page": 15,
+      "quote": "Table 2: Toyota’s Operating Performance – 1998-2009 (in millions of Yen)",
+      "page_character_start": 1266,
+      "page_character_end": 1338,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY02",
+      "pdf_page": 16,
+      "quote": "revenues in 2009 yields a normalized operating income of 1,660.7 billion yen",
+      "page_character_start": 1072,
+      "page_character_end": 1148,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY03",
+      "pdf_page": 16,
+      "quote": "Using the ten-year Japanese yen government bond\n        rate of 1.50% as the riskfree rate and an equity risk premium of 6.5%",
+      "page_character_start": 1557,
+      "page_character_end": 1682,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY04",
+      "pdf_page": 16,
+      "quote": "3.448 billion shares outstanding at\n        3060 Yen/share",
+      "page_character_start": 2000,
+      "page_character_end": 2058,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY05",
+      "pdf_page": 17,
+      "quote": "the marginal tax rate for Japan in 2009 was 40.7%.",
+      "page_character_start": 103,
+      "page_character_end": 153,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY06",
+      "pdf_page": 17,
+      "quote": "we will assume that the firm is in stable growth, growing at 1.50%\n         (capped at the riskfree rate) in perpetuity.",
+      "page_character_start": 619,
+      "page_character_end": 739,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY07",
+      "pdf_page": 17,
+      "quote": "generate a return on capital equal to its cost of capital on its\n         investments.",
+      "page_character_start": 799,
+      "page_character_end": 885,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY08",
+      "pdf_page": 17,
+      "quote": "The reinvestment rate that emerges from these two assumptions is\n         29.46%:",
+      "page_character_start": 887,
+      "page_character_end": 968,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY09",
+      "pdf_page": 17,
+      "quote": "1660.7 (1.015) (1- .407) (1- .2946)",
+      "page_character_start": 1675,
+      "page_character_end": 1710,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY10",
+      "pdf_page": 17,
+      "quote": "(.0509 - .015)",
+      "page_character_start": 1844,
+      "page_character_end": 1858,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY11",
+      "pdf_page": 17,
+      "quote": "Adding in cash (2,288 billion Yen) and non-operating assets (6,845 billion Yen),\nsubtracting out debt (11,862 billion Yen) and minority interests in consolidated",
+      "page_character_start": 1868,
+      "page_character_end": 2029,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY12",
+      "pdf_page": 17,
+      "quote": "subsidiaries (583 billion Yen), and dividing by the number of shares (3.448 billion) yields\na value per share of 4735 yen/share.",
+      "page_character_start": 2047,
+      "page_character_end": 2175,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY13",
+      "pdf_page": 17,
+      "quote": "we are assuming that the book value of these assets is the market value.",
+      "page_character_start": 2669,
+      "page_character_end": 2741,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY14",
+      "pdf_page": 18,
+      "quote": "are also taken at book value, but the amount is small enough that using a market value would have made\n    little difference in our final value per share.",
+      "page_character_start": 2117,
+      "page_character_end": 2271,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY15",
+      "pdf_page": 18,
+      "quote": "19640 + 2288 + 6845 - 11862 - 583",
+      "page_character_start": 170,
+      "page_character_end": 203,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY16",
+      "pdf_page": 23,
+      "quote": "the revenues in the next financial year (April 2009 – March 2010) would\ndecline 10% and be accompanied by operating losses",
+      "page_character_start": 2327,
+      "page_character_end": 2449,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY17",
+      "pdf_page": 24,
+      "quote": "the next 3 years and for\nthe terminal year (year 4):",
+      "page_character_start": 332,
+      "page_character_end": 384,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY18",
+      "pdf_page": 24,
+      "quote": "FCFF                                       ¥254       -¥412       -¥88      ¥314         ¥713",
+      "page_character_start": 1226,
+      "page_character_end": 1319,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY19",
+      "pdf_page": 24,
+      "quote": "Terminal value                                                             ¥19,856",
+      "page_character_start": 1321,
+      "page_character_end": 1403,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY20",
+      "pdf_page": 24,
+      "quote": "After-tax Operating Income                 ¥175       -¥612       ¥212      ¥714        ¥1,011",
+      "page_character_start": 1035,
+      "page_character_end": 1129,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY21",
+      "pdf_page": 24,
+      "quote": "- Reinvestment                             -¥79       -¥200       ¥300      ¥400         ¥298",
+      "page_character_start": 1131,
+      "page_character_end": 1224,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY22",
+      "pdf_page": 24,
+      "quote": "Cost of capital                           5.09%      5.09%        5.09%     5.09%       5.09%",
+      "page_character_start": 1849,
+      "page_character_end": 1942,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY23",
+      "pdf_page": 24,
+      "quote": "Revenue growth rate                                   -10%         4%        8%         1.50%",
+      "page_character_start": 558,
+      "page_character_end": 651,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY24",
+      "pdf_page": 24,
+      "quote": "+ Cash & Other non-operating assets ¥9,133",
+      "page_character_start": 1997,
+      "page_character_end": 2039,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY25",
+      "pdf_page": 24,
+      "quote": "Value of Operating Assets =                ¥16,907",
+      "page_character_start": 1945,
+      "page_character_end": 1995,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY26",
+      "pdf_page": 24,
+      "quote": "Value of Equity =                          ¥13,595\n Value per share =                           ¥3,943",
+      "page_character_start": 2144,
+      "page_character_end": 2246,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY27",
+      "pdf_page": 24,
+      "quote": "Operating Income                           ¥268       -¥612       ¥212      ¥916        ¥1,704",
+      "page_character_start": 844,
+      "page_character_end": 938,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY28",
+      "pdf_page": 24,
+      "quote": "Taxes                                       ¥93         ¥0         ¥0       ¥203         ¥694",
+      "page_character_start": 940,
+      "page_character_end": 1033,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY29",
+      "pdf_page": 24,
+      "quote": "Capital Invested                         ¥14,945     ¥14,745     ¥15,045   ¥15,445\n Return on Capital                         1.79%      -4.15%       1.41%     5.93%       5.09%",
+      "page_character_start": 1490,
+      "page_character_end": 1667,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY30",
+      "pdf_page": 24,
+      "quote": "Tax rate                                  34.73%     36.22%      37.72%    39.21%      40.70%\n NOL                                                              ¥611.85   ¥399.74",
+      "page_character_start": 1670,
+      "page_character_end": 1847,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY31",
+      "pdf_page": 25,
+      "quote": "We keep the cost of capital unchanged at 5.09% over the period",
+      "page_character_start": 167,
+      "page_character_end": 229,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY32",
+      "pdf_page": 25,
+      "quote": "Making the identical adjustments for cash, non-\noperating assets, debt and minority interests that we used in illustration 3",
+      "page_character_start": 412,
+      "page_character_end": 536,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY33",
+      "pdf_page": 25,
+      "quote": "share of 3,060 Yen in February 2009.",
+      "page_character_start": 730,
+      "page_character_end": 766,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY34",
+      "pdf_page": 17,
+      "quote": "the return on\ncapital that we computed based on the normalized income and the capital invested at the end of 2008 was\n4.98%",
+      "page_character_start": 2381,
+      "page_character_end": 2504,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    {
+      "id": "TY35",
+      "pdf_page": 15,
+      "quote": "its 2008-2009 fiscal year (stretching from April 2008 to\nMarch 2009).",
+      "page_character_start": 1074,
+      "page_character_end": 1143,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    }
+  ],
+  "instant_normalization_case": {
+    "illustration": 3,
+    "pages": [
+      15,
+      16,
+      17,
+      18
+    ],
+    "period": {
+      "base_author_label": "FY 2009 (Est), fiscal year April2008–March2009",
+      "valuation_time": "early 2009; exact day not supplied",
+      "first_stable_period": "next annual period from immediately normalized base; no exact dates supplied",
+      "explicit_forecast_years": 0
+    },
+    "normalization": {
+      "table2_year_count": 12,
+      "author_selected_year_labels": "1998–2009 including 2009 Est",
+      "author_normalized_pretax_operating_income_billion_jpy": "1660.7",
+      "author_average_margin_percent": "7.33",
+      "source_audit": "../cyclical-normalization-2026-10-15/source-audit.json",
+      "quote_ids": [
+        "TY01",
+        "TY02"
+      ],
+      "meaning": "Normalized model base, not actual 2009 operating profit or after-tax NOPAT."
+    },
+    "assumptions": {
+      "tax_rate": "0.407",
+      "stable_growth_rate": "0.015",
+      "wacc": "0.0509",
+      "new_investment_roc": "0.0509",
+      "displayed_reinvestment_rate": "0.2946",
+      "quote_ids": [
+        "TY05",
+        "TY06",
+        "TY07",
+        "TY08"
+      ],
+      "roc_note": "Future ROC=WACC is Toyota-specific author assumption; footnote historical normalized ROC4.98% is separate and is not substituted."
+    },
+    "formulas": {
+      "nopat_next": "OI_normalized * (1+g) * (1-tax)",
+      "fcff_next": "NOPAT_next * (1-reinvestment_rate)",
+      "operating_value_t0": "FCFF_next / (WACC-g)",
+      "equity_value": "operating_value + cash + nonoperating_assets - debt - minority_interest",
+      "per_share": "equity_value / shares",
+      "quote_ids": [
+        "TY09",
+        "TY10",
+        "TY11",
+        "TY12",
+        "TY15"
+      ],
+      "math_equation_image_checked_pages": [
+        17,
+        18
+      ]
+    },
+    "author_printed_output": {
+      "operating_value_billion_jpy": "19640",
+      "per_share_jpy": "4735"
+    },
+    "existing_api_limits": [
+      "cycle-margin raw-ratio arithmetic reproduces its specified intermediate, not every rounded p17 amount.",
+      "stable-reinvestment recomputes g/ROC and cannot select printed .2946 as if exact equality.",
+      "Current DCF methods require n>=1; instantaneous n=0 stable capitalization is outside that forecast-array contract.",
+      "Non-operating assets and minority interests have no separate DCF input fields."
+    ],
+    "full_reproduction_with_existing_api": false
+  },
+  "adaptive_case": {
+    "illustration": 5,
+    "pages": [
+      23,
+      24,
+      25
+    ],
+    "period": {
+      "current": "Author current year; table forecast starts with next year",
+      "year1_label": "April2009–March2010, literal author month range",
+      "year1_exact_start_day": null,
+      "year1_exact_end_day": null,
+      "years2_3_exact_dates": null,
+      "explicit_forecast_years": 3,
+      "terminal_year": 4,
+      "terminal_value_time": "end of year3",
+      "terminal_pv_discount_periods": 3,
+      "quote_ids": [
+        "TY16",
+        "TY17"
+      ]
+    },
+    "currency_and_security": {
+      "currency": "JPY",
+      "amount_scale": "billion JPY for Table3, established by p25 operating-value text and identical p17 adjustments",
+      "share_scale": "billion author shares",
+      "per_share_unit": "Yen/share",
+      "USD_or_FX_conversion_used": false,
+      "ADR_ratio": null,
+      "security_listing_or_ticker_verified": false,
+      "note": "The Toyota example is expressly Yen/share and uses3.448billion shares; no ADR transformation is stated. No present listing/identifier is inferred."
+    },
+    "required_input_readiness": [
+      {
+        "key": "fcf_jpy",
+        "directly_displayed": true,
+        "author_display": [
+          "-412",
+          "-88",
+          "314"
+        ],
+        "scale_only_candidate_value": [
+          "-412000000000",
+          "-88000000000",
+          "314000000000"
+        ],
+        "unit": "billion JPY → JPY",
+        "quote_ids": [
+          "TY18"
+        ],
+        "meaning": "Author forecast annual years 1,2,3; current FCFF254 is not a forecast period.",
+        "candidate_attribution": "external_estimate",
+        "financial_adoption": false
+      },
+      {
+        "key": "terminal_fcff_jpy",
+        "directly_displayed": true,
+        "author_display": "713",
+        "scale_only_candidate_value": "713000000000",
+        "unit": "billion JPY → JPY",
+        "quote_ids": [
+          "TY18"
+        ],
+        "meaning": "Explicit terminal year4 = n+1, not year3 FCFF times growth.",
+        "candidate_attribution": "external_estimate",
+        "financial_adoption": false
+      },
+      {
+        "key": "discount_rate",
+        "directly_displayed": true,
+        "author_display": "5.09%",
+        "scale_only_candidate_value": "0.0509",
+        "unit": "annual ratio",
+        "quote_ids": [
+          "TY31"
+        ],
+        "meaning": "One unchanged author WACC throughout; not a new rate estimate.",
+        "candidate_attribution": "author_case_input",
+        "financial_adoption": false
+      },
+      {
+        "key": "terminal_growth_rate",
+        "directly_displayed": true,
+        "author_display": "1.50%",
+        "scale_only_candidate_value": "0.015",
+        "unit": "annual ratio",
+        "quote_ids": [
+          "TY23"
+        ],
+        "meaning": "Terminal-year/stable rate, not recovery rates -10%,4%,8%.",
+        "candidate_attribution": "author_case_input",
+        "financial_adoption": false
+      },
+      {
+        "key": "cash_jpy",
+        "directly_displayed": true,
+        "author_display": "2288",
+        "scale_only_candidate_value": "2288000000000",
+        "unit": "billion JPY → JPY",
+        "quote_ids": [
+          "TY11",
+          "TY32"
+        ],
+        "meaning": "Actual author cash adjustment; not cash plus other assets.",
+        "candidate_attribution": "author_case_input",
+        "financial_adoption": false
+      },
+      {
+        "key": "debt_jpy",
+        "directly_displayed": true,
+        "author_display": "11862",
+        "scale_only_candidate_value": "11862000000000",
+        "unit": "billion JPY → JPY",
+        "quote_ids": [
+          "TY11",
+          "TY32"
+        ],
+        "meaning": "Actual author debt; minority interest remains separate.",
+        "candidate_attribution": "author_case_input",
+        "financial_adoption": false
+      },
+      {
+        "key": "non_operating_assets_jpy",
+        "directly_displayed": true,
+        "author_display": "6845",
+        "scale_only_candidate_value": "6845000000000",
+        "unit": "billion JPY → JPY",
+        "quote_ids": [
+          "TY11",
+          "TY32"
+        ],
+        "meaning": "Author securities/other-company holdings; book value assumed market value, footnote3.",
+        "candidate_attribution": "author_case_input",
+        "financial_adoption": false
+      },
+      {
+        "key": "minority_interests_jpy",
+        "directly_displayed": true,
+        "author_display": "583",
+        "scale_only_candidate_value": "583000000000",
+        "unit": "billion JPY → JPY",
+        "quote_ids": [
+          "TY12",
+          "TY32"
+        ],
+        "meaning": "Consolidated-subsidiary minority interest, book-value assumption; not debt.",
+        "candidate_attribution": "author_case_input",
+        "financial_adoption": false
+      },
+      {
+        "key": "shares_outstanding",
+        "directly_displayed": true,
+        "author_display": "3.448",
+        "scale_only_candidate_value": "3448000000",
+        "unit": "billion author shares → shares",
+        "quote_ids": [
+          "TY12",
+          "TY32"
+        ],
+        "meaning": "Same author denominator reused by adaptive case; no ADR ratio or FX conversion.",
+        "candidate_attribution": "author_case_input",
+        "financial_adoption": false
+      }
+    ],
+    "direct_author_cf_attribution": {
+      "kind_candidate": "external_estimate",
+      "basis": "p23 author forecast assumptions plus p24 Expected Free Cash Flow to Firm table",
+      "scope": "Direct displayed author cash-flow forecasts can be cited without re-estimating current accounting, NOL, ROC or reinvestment. Attribution does not certify accuracy or adopt the values.",
+      "quote_ids": [
+        "TY16",
+        "TY17",
+        "TY18"
+      ]
+    },
+    "terminal_mapping": {
+      "method_candidate": "dcf_explicit_terminal",
+      "n": 3,
+      "formula": "Vop_0 = sum(FCFF_t/(1+r)^t,t=1..3) + [FCFF_4/(r-g)]/(1+r)^3",
+      "do_not_use": "legacy dcf would use314*(1+.015)=318.71, not the directly printed terminal713. Do not apply growth/tax/reinvestment again to713.",
+      "author_printed_terminal_value_billion_jpy": "19856",
+      "terminal_value_is_model_output_not_missing_input": true
+    },
+    "author_printed_output": {
+      "operating_value_billion_jpy": "16907",
+      "cash_and_other_nonoperating_billion_jpy": "9133",
+      "debt_billion_jpy": "11862",
+      "minority_interest_billion_jpy": "583",
+      "equity_value_billion_jpy": "13595",
+      "per_share_jpy": "3943",
+      "historical_comparison_price_jpy": "3060",
+      "historical_price_date_precision": "February2009; exact date unknown"
+    },
+    "equity_bridge_support": {
+      "cash_plus_nonoperating_billion_jpy": "2288 + 6845 = 9133",
+      "printed_bridge_identity": "16907 + 9133 - 11862 - 583 = 13595",
+      "same_shares": "3.448 billion, p25 says identical adjustments from illustration3",
+      "quote_ids": [
+        "TY11",
+        "TY12",
+        "TY24",
+        "TY25",
+        "TY26",
+        "TY32"
+      ]
+    },
+    "existing_contract_gap": {
+      "method": "dcf_explicit_terminal",
+      "supported_required_groups": [
+        "fcf_jpy",
+        "terminal_fcff_jpy",
+        "discount_rate",
+        "terminal_growth_rate",
+        "cash_jpy",
+        "debt_jpy",
+        "shares_outstanding"
+      ],
+      "unsupported_distinct_groups": [
+        "non_operating_assets_jpy",
+        "minority_interests_jpy"
+      ],
+      "reason": "Current public API computes EV+cash-debt before division. Adding6,845 to cash or583 to debt changes the meaning of those input fields. No such fabricated request was executed."
+    }
+  },
+  "independent_arithmetic": {
+    "engine": "fractions.Fraction, exact rationals from displayed decimal strings; Decimal70 only serializes results",
+    "currency_scale": "company-wide billion JPY unless key says per_share_jpy",
+    "formulas": {
+      "adaptive": "sum(FCFF_t/(1+.0509)^t,t=1..3)+(713/(.0509-.015))/(1+.0509)^3",
+      "equity_bridge": "Vop + 2288 + 6845 - 11862 - 583",
+      "shares": "3.448billion; numerator billion JPY divided by billion shares gives JPY/share",
+      "instant": "1660.7*1.015*(1-.407)*(1-.2946)/(.0509-.015)"
+    },
+    "results": {
+      "instant_next_nopat_billion_jpy": "999.5670265",
+      "instant_fcff_using_displayed_reinvestment_rate_billion_jpy": "705.0945804931",
+      "instant_operating_value_using_displayed_equation_billion_jpy": "19640.51756248189415041782729805013927576601671309192200557103064066852",
+      "instant_per_share_using_unrounded_equation_value_jpy": "4735.648945035352131791713253494819975570190462033620071221296589521034",
+      "instant_per_share_using_author_printed_operating_value_jpy": "4735.498839907192575406032482598607888631090487238979118329466357308585",
+      "reinvestment_from_displayed_g_divided_by_roc": "0.2946954813359528487229862475442043222003929273084479371316306483300589",
+      "instant_fcff_using_exact_g_divided_by_roc_billion_jpy": "704.9991404980353634577603143418467583497053045186640471512770137524558",
+      "instant_operating_value_using_exact_g_divided_by_roc_billion_jpy": "19637.85906679764243614931237721021611001964636542239685658153241650295",
+      "adaptive_terminal_value_from_printed_terminal_fcff_billion_jpy": "19860.72423398328690807799442896935933147632311977715877437325905292479",
+      "adaptive_forecast_pv_billion_jpy": "-201.1781390708046902903740278601038199667436914494701697720153126937216",
+      "adaptive_terminal_pv_billion_jpy": "17112.39928702637832489178020690219849288109881993819039334166922022106",
+      "adaptive_operating_value_from_printed_fcff_billion_jpy": "16911.22114795557363460140617904209467291435512848872022356965390752734",
+      "adaptive_equity_from_printed_fcff_billion_jpy": "13599.22114795557363460140617904209467291435512848872022356965390752734",
+      "adaptive_per_share_from_printed_fcff_jpy": "3944.089660079922747854236130812672468942678401533851572961036516104217",
+      "adaptive_operating_value_using_author_printed_tv_billion_jpy": "16907.15065297790228289887932641503911489977920372033099903850278957538",
+      "adaptive_equity_using_author_printed_operating_value_billion_jpy": "13595",
+      "adaptive_per_share_using_author_printed_operating_value_jpy": "3942.865429234338747099767981438515081206496519721577726218097447795824",
+      "adaptive_terminal_fcff_from_printed_nopat_and_exact_g_divided_by_roc_billion_jpy": "713.0628683693516699410609037328094302554027504911591355599214145383104",
+      "legacy_dcf_terminal_from_last_forecast_billion_jpy": "318.71",
+      "table3_current_pretax_roc": "0.01793241886918701906992305118768819003011040481766477082636333221813315",
+      "table3_current_aftertax_roc": "0.01170960187353629976580796252927400468384074941451990632318501170960187",
+      "table3_year3_pretax_roc": "0.05930721916477824538685658789252185173195208805438653285853026869537067",
+      "table3_year3_aftertax_roc": "0.04622855292975072839106506960181288442861767562317902233732599546778893"
+    },
+    "not_new_author_inputs": true,
+    "target_fitting_or_hidden_precision_reconstruction": false
+  },
+  "inconsistencies_and_limits": [
+    {
+      "id": "margin_base_precision",
+      "source_pages": [
+        15,
+        16,
+        17
+      ],
+      "issue": "Raw annual OI/S mean applied to22661325 million yields1660712.207887...million, while p17 uses1660.7billion. Displayed7.33% applied literally differs again. Preserve original source-audit paths, do not force a single hidden-precision route."
+    },
+    {
+      "id": "absolute_income_average",
+      "source_pages": [
+        15,
+        16
+      ],
+      "issue": "Table average1306867million vs prose1332.9billion; retained from original audit."
+    },
+    {
+      "id": "reinvestment_precision",
+      "source_pages": [
+        17,
+        25
+      ],
+      "issue": ".015/.0509 = .2946954813..., not exact printed .2946. Stable-reinvestment computes the ratio, not the displayed rounded/truncated author number."
+    },
+    {
+      "id": "terminal_and_pv_precision",
+      "source_pages": [
+        24,
+        25
+      ],
+      "issue": "713/(.0509-.015)=19860.7242..., not printed19856; resulting Vop16911.2211...and per-share3944.08966...are not printed16907/3943. Using author printed TV19856 gives Vop16907.15065..., a useful separately labelled display check, not a substitute terminal input or inferred hidden precision."
+    },
+    {
+      "id": "table3_pretax_aftertax_roc",
+      "source_pages": [
+        24
+      ],
+      "issue": "Current displayed1.79% is consistent approximately with268/14945, not175/14945. Year3 displayed5.93% is consistent approximately with916/15445, not714/15445. Do not treat Table3 as a corrected after-tax ROC data set."
+    },
+    {
+      "id": "table3_tax_rounding_and_nol",
+      "source_pages": [
+        24
+      ],
+      "issue": "Displayed916-203=713 vs aftertax714;1704-694=1010 vs aftertax1011. NOL and changing effective-to-marginal rates are explicit; no flat-tax recalculation or inferred unprinted values. Exact rounding/internal computations are unavailable."
+    },
+    {
+      "id": "capital_stock_and_exxon_reference",
+      "source_pages": [
+        17,
+        21,
+        22,
+        24
+      ],
+      "issue": "Table3 IC_t=IC_(t-1)+R_t is a case projection, not universal actual-book-capital reconciliation. Existing source-audit retains Exxon footnote101629 vs page22 prose10629 and billion/million unit inconsistency; these are not repaired inputs for Toyota."
+    },
+    {
+      "id": "rounding_not_specified",
+      "source_pages": [
+        17,
+        18,
+        24,
+        25
+      ],
+      "issue": "Paper does not supply complete unrounded calculation values or a universal rounding procedure. No tolerance or exact-match guarantee is invented."
+    },
+    {
+      "id": "historical_source_and_adoption",
+      "source_pages": [
+        15,
+        16,
+        17,
+        18,
+        23,
+        24,
+        25
+      ],
+      "issue": "Saved September2009 author example, obtained2026-10-15. Does not establish present Toyota forecasts, security/quote freshness, 2009 point-in-time availability in this DB, trading costs, IR branches or investment policy."
+    }
+  ],
+  "next_task_boundary": {
+    "recommendation": "Adaptive3periods is a bounded candidate for next specification review of separately named non-operating assets and minority interest alongside existing explicit-terminal DCF. Directly use author-displayed FCFF and terminalFCFF as external-estimate research inputs, retaining display discrepancies. No additional source exploration or new normalization/forecast calculator is required for that review.",
+    "not_implemented": [
+      "new DCF fields or method",
+      "n=0 perpetuity support",
+      "Table3 correction",
+      "forecast adoption or source ingestion",
+      "IR question or investment selection"
+    ],
+    "acceptance_if_later_authorized": [
+      "Keep cash2288/nonoperating6845/debt11862/NCI583 separate, with billionJPY→JPY scale conversions and3.448billion shares.",
+      "Keep n=3, explicit year4CF713, r=.0509 andg=.015; do not insert growth/tax/reinvestment into713 again.",
+      "Retain negative forecastFCFF and author-estimate attribution; do not rebuild Table3 from ROC/tax/NOL.",
+      "Publish independent arithmetic from displayed inputs alongside author printed results and unresolved precision; do not claim exact original reproduction.",
+      "Preserve existing method input/output behavior and legacy ignored-field semantics; implementation design remains a later task."
+    ]
+  },
+  "input_references": [
+    {
+      "path": "research/cyclical-normalization-2026-10-15/source-audit.json",
+      "sha256": "dad3e161c9cf978afd2be3b681a4dd53458bec72562ec26b1b98fde83a88f365"
+    },
+    {
+      "path": "examples/cyclical-margin.toyota-author.json",
+      "sha256": "6e03af4533c4115f4d11481b96852033d4eaa9a284ea446039108901d93398b9"
+    },
+    {
+      "path": "src/ir_agent/cyclical_margin.py",
+      "sha256": "1cad059e8244a3f5fb080d4ffb8df26ab9d9bcd4752e8993bcf84de70151bc16"
+    },
+    {
+      "path": "src/ir_agent/stable_reinvestment.py",
+      "sha256": "8e95ffbb61155f7a42ff1b2d00f27071daa431cb7c37841d32e79372216a93a9"
+    },
+    {
+      "path": "src/ir_agent/valuation.py",
+      "sha256": "af42500de82d824ee29bde15fc44cfe66db1db7bbf2f00abed59ab26474e8a2a"
+    },
+    {
+      "path": "src/ir_agent/model_inputs.py",
+      "sha256": "23aa6ef4146a8bc1fb931f8df81a6914e1d345809f7617d0a37f913a25a6ffe2"
+    },
+    {
+      "path": "docs/cyclical-normalization-spec.md",
+      "sha256": "3015ba3b7352ea1f07c273ddb4b1aa90bb62f8634f517f6062189755b7a52583"
+    },
+    {
+      "path": "docs/cyclical-reinvestment-spec.md",
+      "sha256": "6d10c16d0d020ad6afd6e3ed63ddba24ba6b81499b6f71b163cde05432bd31b7"
+    },
+    {
+      "path": "docs/explicit-terminal-fcff-spec.md",
+      "sha256": "b9f95fafd9a14a46e337bb9d345c10313c7af51843f542bcf482fd46b3ae8ffb"
+    }
+  ],
+  "execution": {
+    "GET_calls": 0,
+    "DB_accesses": 0,
+    "production_changes": 0,
+    "existing_artifact_changes": 0,
+    "full_suite_runs": 0,
+    "existing_full_valuation_functions_executed": false,
+    "reason": "No complete request was fabricated across unsupported balance-sheet categories or n=0; only independent displayed-input arithmetic was performed.",
+    "research_output_files": [
+      "readiness.json",
+      "readiness.md"
+    ]
+  },
+  "financial_inputs_verified": false,
+  "model_adopted": false,
+  "investment_decision": null,
+  "IR_questions_registered": 0,
+  "external_sends": 0,
+  "orders": 0
+}

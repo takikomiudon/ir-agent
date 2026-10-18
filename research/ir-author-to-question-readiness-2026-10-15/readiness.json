@@ -1,0 +1,691 @@
+{
+  "schema_version": 1,
+  "artifact_type": "cross_case_author_to_IR_readiness_research",
+  "recorded_at": "2026-10-15T09:58:59.125919+00:00",
+  "status": "research_comparison_only",
+  "path_base": "repository root",
+  "scope": {
+    "company_ids": [
+      "jp:135A",
+      "jp:1518",
+      "jp:1721",
+      "jp:7525",
+      "jp:8151"
+    ],
+    "selection_basis": "parent-specified five saved cases; code order is presentation only, not investment ranking",
+    "evidence_cutoff": "saved artifacts read for this comparison; not a fresh comprehensive public-web check",
+    "GETs": 0,
+    "database_accesses": 0
+  },
+  "method": {
+    "principles": [
+      {
+        "attribution": "Anthropic thesis-tracker, fixed upstream",
+        "file": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+        "quote": "A thesis should be falsifiable — if nothing could disprove it, it's not a thesis",
+        "application": "著者の論点と反対の公開根拠も照合する。個別企業の許容幅・売買条件はこの文から生成しない。"
+      },
+      {
+        "attribution": "Anthropic thesis-tracker, fixed upstream",
+        "file": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+        "quote": "Track disconfirming evidence as rigorously as confirming evidence",
+        "application": "支持・弱める根拠・比較不能を既存論点に対応付ける。"
+      },
+      {
+        "attribution": "Anthropic earnings-preview, fixed upstream",
+        "file": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+        "quote": "Consensus estimates change — always note the source and date of estimates",
+        "application": "会社予想の再掲、著者予測、最新実績と時点を分ける。各社レポートを自動的にコンセンサスとは呼ばない。"
+      },
+      {
+        "attribution": "Project adaptation; not an upstream financial threshold",
+        "file": "docs/decision-policy.md",
+        "quote": "公開資料に既に答えがある質問は優先しない。",
+        "application": "公開解決済みを質問候補へ戻さず、会社定義・著者の曖昧な条件・投資家評価を分ける。"
+      },
+      {
+        "attribution": "Project adaptation; not an upstream IR schema",
+        "file": "docs/decision-policy.md",
+        "quote": "無回答・曖昧な説明・回答拒否は `unresolved` とし、それだけで評価額を下げない。",
+        "application": "定義照会の解釈を研究上固定できても、利益・倍率・仮説全体の反証へ自動変換しない。"
+      }
+    ],
+    "method_references": [
+      {
+        "file": "docs/decision-policy.md",
+        "sha256": "e687e70c70ec9ce4b40b935bb9e908cd2d1328f44dfa488fad639557fbba8de5"
+      },
+      {
+        "file": "docs/workflow.md",
+        "sha256": "6415612b8dca5bdd3c9070cdacc94117292968ac1c05dc8cbfe63d4395028ec3"
+      },
+      {
+        "file": ".agents/skills/jp-equity-ir/SKILL.md",
+        "sha256": "d58897e57a2a103829987fe07636078fba9d7cc3eed3187e5ae12cc3d3136c4c"
+      },
+      {
+        "file": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+        "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b"
+      },
+      {
+        "file": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+        "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33"
+      }
+    ],
+    "author_principles_vs_project_adaptation": "著者の観測/反証/予測前提は日付付きで継承。公開先行、A/B/曖昧の対応、質問前固定とJSON/CLI契約はプロジェクト適応。外部著者の曖昧な条件を会社の回答で完成させない。",
+    "branch_scope": "研究上の定義/比較可能性の解釈と、既存ハーネスの数値回答分岐は別。前者を先に整理できる場合でも、後者のための仮のthesis/確率/評価入力を作らない。",
+    "formal_API_boundary": "question add / decision_contract へ進む場合は、既存契約に従う保存済みthesis版、変更対象、出典付き方針/価格等が必要。本資料はそれらの登録も送信許可も表さない。",
+    "ambiguity": "不明・曖昧・無回答は未解決を維持し、反証成立/評価額低下へ自動変換しない。",
+    "horizon": "利用者の数カ月〜1年という検証窓と長期予測・価格修正の触媒は別。新規の管理日・公表日・売却期限は設定していない。"
+  },
+  "cases": [
+    {
+      "company_id": "jp:135A",
+      "company_name": "VRAIN Solution",
+      "existing_issue_reference": "case-record-v2 の著者3条件と既存 customer-counting-definition-review の定義論点を継承。既存研究草案を複製しない。",
+      "author": {
+        "organization": "株式会社AENTRO / AENTRO Research",
+        "report_display_date": "2026-05-11",
+        "authored_claim": "累計取引社数のFY29目安、FY29利益率の目安、拠点遅延かつ継続顧客比率45%近辺での頭打ちに伴うFY28成長鈍化という条件付き説明。",
+        "scope_limit": "著者本文の期表記不整合、近辺の幅、観測期間、CAGRの起終点は未確定。会社説明と混ぜて補正しない。"
+      },
+      "publicly_resolved_do_not_reask": [
+        "2026/10/14公表の中間期の累計取引社数394社は受注ベース。顧客1社の集約単位の解決とは別。",
+        "継続顧客売上1084百万円・売上比率57.5%は同中間期の総売上1884百万円に対応し、売上から年度内新規顧客売上を引く式が公表済み。顧客維持率・DX repeat90%以上・保守ストックではない。",
+        "平均単価20百万円は年度内累計。Q1の22百万円、前期18百万円と期を分ける。中間累計OI率21.7%、Q2単独35.7%、通期会社予想30.1%も別。",
+        "金沢7月開設済みと残る拠点計画、営業社員の初売上までの目安、受注から納品までの目安は別の公開説明。"
+      ],
+      "unresolved_owner": {
+        "company_definition": [
+          "累計取引社数の「1社」の集計単位と、337→394を比較する基準の継続性。TAMの従業員10名以上の事業所数をKPIの顧客単位と同一視しない。"
+        ],
+        "external_author": [
+          "550–600社ペースとの比較に必要な著者側の数え方、35%近傍・45%近辺の幅/期間、FY28 CAGRの期と拠点立上げの定義。会社には著者の意図を保証させない。"
+        ],
+        "investor_valuation": [
+          "数カ月〜1年の観測とFY29到達を分ける。利益/CFへの対応、現在評価、価格差が期間内に修正される材料は未採用。"
+        ]
+      },
+      "next_public_check": {
+        "dependency": "保存済み顧客定義レビューの未解決次元に絞り、会社のKPI注記・公開Q&Aの同一基準/変更履歴の説明を確認する。後続の同じ期/定義の公開実績を旧論点へ対応付ける。",
+        "already_checked_boundary": "既存保存範囲では受注段階は解決、顧客IDの集約方法は未解決。新規の網羅確認を済ませたとはしない。",
+        "newly_obtained": false
+      },
+      "before_IR_branch_can_be_fixed": {
+        "research_interpretation": "対象系列・期・集計単位を固定し、基準が継続なら会社系列の比較へ進む、変更ありなら公開ブリッジ/再表示を求めて比較を保留、説明不足なら未解決、と読む範囲を明記できる。法人/工場どちらの回答でも、それだけで著者仮説の支持/反証にしない。",
+        "additional_evidence_needed": "会社系列の定義が分かっても、著者目安との同一定義対応と近辺の許容幅は別途未解決。既存研究草案の範囲を超えて自動判定しない。",
+        "numeric_branch": "利益への影響と採用モデル入力が未設定。定義回答だけでEPSや倍率を変更する正式分岐は固定できていない。"
+      },
+      "conceptual_change_route": "顧客数の比較可能性 → 著者の顧客増加論点の再点検。利益への変換は未設定。",
+      "canonical_model_path": null,
+      "profit_impact": null,
+      "IR_draft_created": false,
+      "question_registered": false,
+      "current_outreach_eligibility": null,
+      "financial_model_adopted": false,
+      "references": [
+        {
+          "file": "research/ir-case-studies-2026-10-15/135A/author-condition-followup/case-record-v2.json",
+          "sha256": "2e566e72a04a89938357220715a10603a51ce1ce744207599ac921de6e81328b",
+          "jsonpaths": [
+            "$.attribution_and_time",
+            "$.author_three_candidate_reconciliation",
+            "$.publicly_resolved_do_not_reask",
+            "$.adoption_boundary"
+          ]
+        },
+        {
+          "file": "research/ir-case-studies-2026-10-15/135A/customer-counting-definition-review.json",
+          "sha256": "a56a16dd37aa19238f14b73581017d40fdab6b6033cdaf4747e6744f9bf9e539",
+          "jsonpaths": [
+            "$.definition_dimensions",
+            "$.comparison_layers",
+            "$.one_definition_question_candidate",
+            "$.contact_note"
+          ]
+        },
+        {
+          "file": "research/ir-case-studies-2026-10-15/135A/horizon-and-catalyst-review.json",
+          "sha256": "038b0aaf991bf3e4e7cefec84e6f25070ac6ab8e7a9b9aad0085119989ae3fdd",
+          "jsonpaths": []
+        }
+      ],
+      "evidence": [
+        {
+          "id": "author-original-customer-yardstick",
+          "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+          "existing_quote_file": "research/ir-case-studies-2026-10-15/135A/customer-counting-definition-review.json",
+          "existing_quote_file_sha256": "a56a16dd37aa19238f14b73581017d40fdab6b6033cdaf4747e6744f9bf9e539",
+          "existing_quote_jsonpath": "$.quotes.9",
+          "pdf_page": null,
+          "quote": "累計取引社数 337社 FY29までに550-600社ペース（毎期+70社前後）",
+          "quote_sha256": "62cde03aad1b5ff89342e8bf87e2fb50f48db1d3abea47d6d2d4d9880766291b",
+          "content_start": 40510,
+          "content_end_exclusive": 40550,
+          "offset_unit": "zero-based Unicode code points in identified preserved content; end exclusive",
+          "bundle": "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/source-bundle.json",
+          "bundle_sha256": "199178e927dbe28570bfe30e8ce354e12e30b41d6e1930bf84a34f3f51a07527",
+          "content_jsonpath": "$.sources.1.content",
+          "url": "https://research.aentroinc.com/ja/report/VRAIN_Solution/Initiation"
+        },
+        {
+          "id": "author-conditional-slowdown",
+          "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+          "existing_quote_file": "research/ir-case-studies-2026-10-15/135A/author-condition-followup/case-record-v2.json",
+          "existing_quote_file_sha256": "2e566e72a04a89938357220715a10603a51ce1ce744207599ac921de6e81328b",
+          "existing_quote_jsonpath": "$.quotes.1",
+          "pdf_page": null,
+          "quote": "もし拠点立ち上げが遅延し、かつ継続顧客比率が45%近辺で頭打ちになれば、FY28時点でCAGR+35-40%への減速が現実味を帯び、バリュエーションの前提は成り立たなくなる。",
+          "quote_sha256": "7b52da4d7e40aaf8dac7d96ba1e373b006dbddc20da12d2c0eb8f366c4a0e56b",
+          "content_start": 40863,
+          "content_end_exclusive": 40950,
+          "offset_unit": "zero-based Unicode code points in identified preserved content; end exclusive",
+          "bundle": "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/source-bundle.json",
+          "bundle_sha256": "199178e927dbe28570bfe30e8ce354e12e30b41d6e1930bf84a34f3f51a07527",
+          "content_jsonpath": "$.sources.1.content",
+          "url": "https://research.aentroinc.com/ja/report/VRAIN_Solution/Initiation"
+        },
+        {
+          "id": "published-order-basis",
+          "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+          "existing_quote_file": "research/ir-case-studies-2026-10-15/135A/customer-counting-definition-review.json",
+          "existing_quote_file_sha256": "a56a16dd37aa19238f14b73581017d40fdab6b6033cdaf4747e6744f9bf9e539",
+          "existing_quote_jsonpath": "$.quotes.2",
+          "pdf_page": 5,
+          "quote": "※1 受注ベース",
+          "quote_sha256": "baeac9749d19d18482d3fe885330e8e2c840e524d82f502f281bbfa5f958b622",
+          "content_start": 4374,
+          "content_end_exclusive": 4382,
+          "offset_unit": "zero-based Unicode code points in identified preserved content; end exclusive",
+          "bundle": "research/ir-case-studies-2026-10-15/135A/presentation-followup/source-bundle.json",
+          "bundle_sha256": "4fd50c80f02e4e1d6ed78689f3c8a2df185187a2f89324f0c0f33418b850e8cf",
+          "content_jsonpath": "$.sources.2.content",
+          "url": "https://contents.xj-storage.jp/xcontents/AS06543/add89fe1/7c75/426d/908b/a7cb51fa85bb/140120260831528813.pdf"
+        }
+      ],
+      "representative_issue": {
+        "topic": "累計取引社数の集計単位と経時比較",
+        "scope": "著者3条件のうち顧客増加の論点を代表として扱う。他の数値は比較を誤らないための既存文脈。"
+      }
+    },
+    {
+      "company_id": "jp:1518",
+      "company_name": "三井松島ホールディングス",
+      "existing_issue_reference": "1518-existing-business-and-investment-profit-drivers の .existing / .investment / .comparison_basis を継承。",
+      "author": {
+        "organization": "FISCO",
+        "individual_author": "客員アナリスト 茂木稜司 / Ryoji Mogi",
+        "report_display_date": "2026-06-29",
+        "authored_claim": "既存事業の安定成長に加え、投資事業の利益創出能力が業績変動要因として重要性を増すとの定性的見方。",
+        "scope_limit": "重要性の数値基準、観測期限、売買条件、著者自身のEPS予測はこの論点にない。会社依頼・報酬関係あり。"
+      },
+      "publicly_resolved_do_not_reask": [
+        "7/22の会社通期修正と8/7の7/22予想維持は公表済み。FISCO掲載の旧会社予想を最新予想として扱わない。",
+        "Q1の既存事業売上・営業利益の説明、受取配当472百万円は営業外、売却益1553百万円は特別利益、MMIの株式運用益がセグメント利益外である説明は公開済み。",
+        "FISCOの前年通期436/744百万円と当期Q1 472/1553百万円は同期間比較ではない。Q1 CFは未作成で償却注記をFCFにしない。",
+        "2025/10/1の1:5分割・自己株式/BBT・比較EPSの調整と、山洋が年次会社予想に含まれる範囲、8/21結合予定は公開済み。予定を完了に変えない。"
+      ],
+      "unresolved_owner": {
+        "company_definition": [
+          "後続資料でも不明な場合の同期間・同連結範囲の事業比較/取得処分のブリッジ、投資収益の主体別内訳。連結配当・売却益の全額がMMI由来とは確定していない。"
+        ],
+        "external_author": [
+          "将来の「重要性」の程度/期間と既存事業成長・投資運用力の評価。Q1の投資益の存在だけでは将来の持続性/優位性を確認しない。"
+        ],
+        "investor_valuation": [
+          "一時/継続損益・税/NCI・営業CFと利益を対応付けた将来入力、株数の期対応、評価手法は未採用。"
+        ]
+      },
+      "next_public_check": {
+        "dependency": "次の比較可能な会社決算/セグメント説明で既存事業と投資収益を別に追い、取得/処分範囲、山洋の実際の結合/連結時点を公表根拠で確認する。",
+        "already_checked_boundary": "三つの会社原典までの比較は保存済み。別の保存経路点検でも後日の山洋完了証拠は未発見で、未公表と断定しない。",
+        "newly_obtained": false
+      },
+      "before_IR_branch_can_be_fixed": {
+        "research_interpretation": "同じ期・主体・P/L区分を固定し、会社説明がその分類を明確にするか、比較基準が異なるか、未解決かを読む分岐を準備できる。現時点は後続公開資料の比較が先であり、同義の質問を追加しない。",
+        "additional_evidence_needed": "公開後も残る特定の金額/主体/期間の橋渡しが著者論点の何を変えるかを特定する。運用益が将来も続くかの保証を会社回答に求めない。",
+        "numeric_branch": "Q1の投資益を年次化/正常化する根拠と採用モデルがない。利益の存在からEPS変更/投資判断へ進む分岐は未固定。"
+      },
+      "conceptual_change_route": "同範囲の既存事業と投資収益の分離 → 既存の二つの利益ドライバーの公開検証。",
+      "canonical_model_path": null,
+      "profit_impact": null,
+      "IR_draft_created": false,
+      "question_registered": false,
+      "current_outreach_eligibility": null,
+      "financial_model_adopted": false,
+      "references": [
+        {
+          "file": "research/ir-case-studies-2026-10-15/1518/author-condition-followup/case-record.json",
+          "sha256": "763cb8ad2f001b7ed0eb7395508e1960a5c3b0c7715b00ab963b679c46dc1a1e",
+          "jsonpaths": [
+            "$.prior_issue",
+            "$.author_view",
+            "$.existing_component_correspondence",
+            "$.publicly_answered_no_repeat_IR_needed",
+            "$.next_public_observation"
+          ]
+        },
+        {
+          "file": "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/actual-intake.json",
+          "sha256": "ea896c09435dbe4cf363ba2ce5f6f049b92a289bbbf5f764634d6e5875fa84de",
+          "jsonpaths": []
+        },
+        {
+          "file": "research/ir-case-studies-2026-10-15/1518/acquisition-completion-routes/root-recheck.json",
+          "sha256": "63f26cf4a19fb12e5e8153524567446eee6c0ad57820ff5c64f2df715100d314",
+          "jsonpaths": []
+        }
+      ],
+      "evidence": [
+        {
+          "id": "author-qualitative-forward-view",
+          "source_id": "fisco1518-02",
+          "existing_quote_file": "research/ir-case-studies-2026-10-15/1518/author-condition-followup/case-record.json",
+          "existing_quote_file_sha256": "763cb8ad2f001b7ed0eb7395508e1960a5c3b0c7715b00ab963b679c46dc1a1e",
+          "existing_quote_jsonpath": "$.quotations.0",
+          "pdf_page": 15,
+          "quote": "今後は既存事業\nの安定成長に加えて、投資事業からの利益創出能力も業績変動要因として重要性を増していくものと弊社では考\nえる。",
+          "quote_sha256": "b6e809b477350089d44e167884fa74701402b0d1d426c4a79455412605d60349",
+          "content_start": 37467,
+          "content_end_exclusive": 37529,
+          "offset_unit": "zero-based Unicode code points in identified preserved content; end exclusive",
+          "text_file": "research/ir-public-valuation-report-discovery-2026-10-15/1518-fisco/02.pdf.txt",
+          "text_sha256": "0e672e07d927754f04563723e3f7a77cb7404af3fbb483577a82f3bf0f01fe31",
+          "source_id_basis": "capture identifier from existing author record; not asserted to be a DB source ID"
+        },
+        {
+          "id": "August-keeps-July-guidance",
+          "source_id": "case-public:eaa775e10e74acf3b6ae3f12ed9fd1e15f1df3b30f6d284f60c05698abbe5606",
+          "existing_quote_file": "research/ir-case-studies-2026-10-15/1518/author-condition-followup/case-record.json",
+          "existing_quote_file_sha256": "763cb8ad2f001b7ed0eb7395508e1960a5c3b0c7715b00ab963b679c46dc1a1e",
+          "existing_quote_jsonpath": "$.quotations.4",
+          "pdf_page": 5,
+          "quote": "最近の業績動向を踏まえ、2026年７月22日に公表しました業績予想数値に変更はございません。業績予想を見直す\n必要が生じた場合には、速やかに開示する予定であります。",
+          "quote_sha256": "3b6dd68ac38f6498dc8e35e39997009a6a07de423ce5d1201f95288ebf06d8f2",
+          "content_start": 9511,
+          "content_end_exclusive": 9593,
+          "offset_unit": "zero-based Unicode code points in identified preserved content; end exclusive",
+          "bundle": "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/source-bundle.json",
+          "bundle_sha256": "e8f0688afce7fe8fcd0971b6e4cdf93098b17d45ca78dc2a5ef718c54df89e91",
+          "content_jsonpath": "$.sources.0.content",
+          "url": "https://www.mitsui-matsushima.co.jp/wp/wp-content/uploads/2026/08/eff4fb8c0a7a6c4f520ca795b4dfe472.pdf"
+        },
+        {
+          "id": "presentation-investment-outside-segment-profit",
+          "source_id": "case-public:6b8814a314e73faf371dbff0f975df7505936a3c69686c02532cb6f5c928de46",
+          "existing_quote_file": "research/ir-case-studies-2026-10-15/1518/author-condition-followup/case-record.json",
+          "existing_quote_file_sha256": "763cb8ad2f001b7ed0eb7395508e1960a5c3b0c7715b00ab963b679c46dc1a1e",
+          "existing_quote_jsonpath": "$.quotations.7",
+          "pdf_page": 9,
+          "quote": "※MM Investmentsの上場株式運用益は下記セグメント利益には含まれておらず、経常利益・特別利益に計上",
+          "quote_sha256": "9bce69d8c776c25bf5e0955f5ec79fce6eaa9e77ad29c3ff0b8972253e355913",
+          "content_start": 5657,
+          "content_end_exclusive": 5712,
+          "offset_unit": "zero-based Unicode code points in identified preserved content; end exclusive",
+          "bundle": "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/source-bundle.json",
+          "bundle_sha256": "e8f0688afce7fe8fcd0971b6e4cdf93098b17d45ca78dc2a5ef718c54df89e91",
+          "content_jsonpath": "$.sources.1.content",
+          "url": "https://www.mitsui-matsushima.co.jp/wp/wp-content/uploads/2026/08/6038503d5b6f6d748b60d6b33fb2efaf.pdf"
+        }
+      ],
+      "representative_issue": {
+        "topic": "既存事業と投資事業という利益ドライバーの分離",
+        "scope": "既存1論点の3観測部分を再利用。"
+      }
+    },
+    {
+      "company_id": "jp:1721",
+      "company_name": "コムシスホールディングス",
+      "existing_issue_reference": [
+        "1721-sr-s1-qualified-oligopoly-margin",
+        "1721-sr-s2-rationalization-execution",
+        "1721-sr-s3-growth-business-exposure",
+        "1721-sr-w1-carrier-dependence",
+        "1721-sr-w2-share-expansion-constraint",
+        "1721-sr-w3-it-lag-relative-peers"
+      ],
+      "author": {
+        "organization": "Shared Research（SR社）",
+        "report_context_update": "2026-08-18T02:52:30.711Z",
+        "claim_original_publication_time": null,
+        "authored_claim": "資格/寡占と相対利益率、合理化実行、IT/DX等への露出という三つの強みと、キャリア依存、シェア制約、同業比IT分野の遅れという三つの弱み。",
+        "scope_limit": "SRの定性的評価と会社計画転載を区別。provider更新時刻は各文の作成/公表時刻ではなく、明示的な数値反証/売買ルールもない。"
+      },
+      "publicly_resolved_do_not_reask": [
+        "会社HTMLのFY26実績とFY27計画、億円単位は表示済み。SRの通期会社計画は著者自身の予測に変換しない。",
+        "事業区分別とグループ別セグメントは別表で、グループ間取引未消去の注記もある。ITソリューション事業を同名の情報システムグループへ置き換えない。",
+        "Q1の季節性と通期据置はSR本文に会社説明として既にある。正式短信の取得/照合とは別。"
+      ],
+      "unresolved_owner": {
+        "company_definition": [
+          "正式短信/原表での精度・版・区分対応。HTML当期純利益計画378億円とSRの37860百万円は表示換算で60百万円差があるが、原因/版を未確認。会社の事業分類、内部消去、再分類、費用の比較範囲。"
+        ],
+        "external_author": [
+          "高利益率/合理化実行力/ITの遅れという比較評価や因果には、同時期同範囲の同業・市場根拠が必要。会社の一回のQ1や前向き説明で六論点を確定しない。"
+        ],
+        "investor_valuation": [
+          "事業露出から将来利益/CFへの変換、確率/評価方法/価格条件は未採用。GP−OPを未確認の販管費factにしない。"
+        ]
+      },
+      "next_public_check": {
+        "dependency": "正式短信/公表原表で期間・連結範囲・計画版・精度を先に照合し、事業区分別の同基準の後続実績を確認する。合理化/相対評価には公開費用注記や同業資料が別途要る。",
+        "already_checked_boundary": "会社HTMLと受信済みSR本文・既存構造化factsの範囲。Shared Researchの追加取得保留を迂回しない。",
+        "newly_obtained": false
+      },
+      "before_IR_branch_can_be_fixed": {
+        "research_interpretation": "原表を先に確保し、区分/計画版が一致するか、変更を要するか、説明不足かという比較可能性の分岐を固定する。60百万円差だけで会社予想悪化/著者反証としない。",
+        "additional_evidence_needed": "公開確認後も残る会社固有の集計範囲/再分類/費用対応だけを抽出し、既存六論点のどれへの影響か特定する。数値許容幅を新設しない。",
+        "numeric_branch": "六つの定性主張は評価入力へ未対応。会社による構造説明だけで利益率/倍率を変更する分岐は未固定。"
+      },
+      "conceptual_change_route": "同じ事業区分・費用/顧客範囲での観測 → SR六論点の部分的な再点検。相対/因果評価は別根拠。",
+      "canonical_model_path": null,
+      "profit_impact": null,
+      "IR_draft_created": false,
+      "question_registered": false,
+      "current_outreach_eligibility": null,
+      "financial_model_adopted": false,
+      "references": [
+        {
+          "file": "research/ir-case-studies-2026-10-15/1721/author-conditions/case-record.json",
+          "sha256": "ac18df211f0b4d4b57b1f9fed309f3831f8f1dc3da8ba33654d290ff11436dec",
+          "jsonpaths": [
+            "$.claims",
+            "$.publicly_resolved_items",
+            "$.next_public_checks",
+            "$.source_meaning_issue",
+            "$.source_meaning_issue_original_record"
+          ]
+        },
+        {
+          "file": "research/ir-case-studies-2026-10-15/1721/external-report-review/review.json",
+          "sha256": "1f9800496b7769c3b26fed450ea53c42eca11328b4ac335e7033d4de6f5e0ba3",
+          "jsonpaths": [
+            "$.forecast_display_comparison"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "1721-sr-s2-rationalization-execution-quote",
+          "source_id": "case-public:5224d00136e3d9bfeb0146a6c9692ca40f98dd4e6ff5cd08ac8bbadc5eea61bc",
+          "existing_quote_file": "research/ir-case-studies-2026-10-15/1721/author-conditions/quotes.json",
+          "existing_quote_file_sha256": "66de32fbe92b9be814a3348799e257ec9ea8ae11f88e5f6dc831ab64e9b95846",
+          "existing_quote_jsonpath": "$.quotes.13",
+          "pdf_page": null,
+          "quote": "SR社が考える同社の強みは、次の3点である。\n1）NTTグループによる工事資格認定等を背景に寡占化された通信建設市場を主戦場としていることもあり、建設会社としては高い利益率を確保している\n2）合理化に対する意識の強さと、それを実現するための各種施策の実行力を持つ",
+          "quote_sha256": "0abd18d62744ec86060b03b0ac17ad2f7a612eb248c67038031718ef49550ab5",
+          "content_start": 4149,
+          "content_end_exclusive": 4280,
+          "offset_unit": "zero-based Unicode code points in identified preserved content; end exclusive",
+          "bundle": "research/ir-case-studies-2026-10-15/1721/external-report-review/source-bundle.json",
+          "bundle_sha256": "05c6eb08de956503f55037cdc03a200a0f28d9c13a28d025190e2f4717d69dd3",
+          "content_jsonpath": "$.sources.0.content",
+          "url": "https://sharedresearch.jp/ja/companies/1721"
+        },
+        {
+          "id": "issuer-consolidated-actual-plan-table",
+          "source_id": "case-public:c40a0892e6a19ffb1e94b85e4d2d26d5a66c4b7021eaf2c50a47d6a69e0363aa",
+          "existing_quote_file": "research/ir-case-studies-2026-10-15/1721/author-conditions/quotes.json",
+          "existing_quote_file_sha256": "66de32fbe92b9be814a3348799e257ec9ea8ae11f88e5f6dc831ab64e9b95846",
+          "existing_quote_jsonpath": "$.quotes.7",
+          "pdf_page": null,
+          "quote": "（単位：億円） 2026年3月期（実績） 2027年3月期（計画） 増減率（％） 受注高 6,856 7,200 5.0 売上高 6,306 6,700 6.2 売上総利益 919 992 7.9 営業利益 509 540 6.1 経常利益 521 550 5.4 親会社株主に帰属する当期純利益 363 378 4.3",
+          "quote_sha256": "93bd35940605a68cc36afb485b93fcba2e66d49d947be2f15766cea1f0896eb5",
+          "content_start": 1035,
+          "content_end_exclusive": 1195,
+          "offset_unit": "zero-based Unicode code points in identified preserved content; end exclusive",
+          "bundle": "research/ir-case-studies-2026-10-15/1721/initial-public-review/source-bundle.json",
+          "bundle_sha256": "2eb478ee8e089e4662443bb0345eec45c53f39113d12f097539a95ede9f411ed",
+          "content_jsonpath": "$.sources.1.content",
+          "url": "https://www.comsys-hd.co.jp/ir/zaimu/forecast.html"
+        }
+      ],
+      "representative_issue": {
+        "topic": "合理化の実行力というSR評価を同範囲の費用で比較する準備",
+        "existing_claim_id": "1721-sr-s2-rationalization-execution",
+        "scope": "六論点を新規に検証し直すものではなく、代表1件の会社定義/著者比較/投資家評価を区別。他の主張は既存文脈。"
+      }
+    },
+    {
+      "company_id": "jp:7525",
+      "company_name": "リックス",
+      "existing_issue_reference": "7525-author-watch-original-product-ratio（既存 pdf-size-followup の注視論点を継承）。",
+      "author": {
+        "organization": "QUICK企業価値研究所",
+        "individual_authors": [
+          "佐久間聰",
+          "中村宏司"
+        ],
+        "report_display_date": "2026-10-02",
+        "authored_claim": "利益率が比較的高いオリジナル品の売上比率について、会社が他KPI比で伸び悩むとする状況を注視する。",
+        "scope_limit": "利益率/ROE向上は会社の意図、伸び悩みは会社へ帰属した説明、注視は著者の見方。著者の許容停滞期間/最低進捗はない。"
+      },
+      "publicly_resolved_do_not_reask": [
+        "オリジナル品は自社製造だけでなく、グループ製品・専売仕入品を含む。比率は売上高構成比であり利益寄与率ではない。",
+        "会社目標の27/3期40%以上と31/3期55%以上は別目標。29.3%と足元約30%は時点/精度が異なり、差から改善を確定しない。",
+        "グループの再生・修理の具体例はあるが全サービス算入の意味ではない。著者が比率の停滞を注視する定性説明は公表済み。"
+      ],
+      "unresolved_owner": {
+        "company_definition": [
+          "分子/分母の連単・子会社直接販売・内部消去・区分変更、OEM/サービスの範囲。p6/7の海外専売品とp44国内パートナーの説明範囲、p32のブランド/PBと三分類との対応は未確定。"
+        ],
+        "external_author": [
+          "伸び悩みの許容幅/期間や他KPIとの比較基準。会社目標の未達を即座に著者反証/売却条件としない。"
+        ],
+        "investor_valuation": [
+          "売上比率から利益/ROE/EPSへの変換、費用/税/構成変化と評価は別分析。比率上昇だけで絶対売上増や利益増を確定しない。"
+        ]
+      },
+      "next_public_check": {
+        "dependency": "著者が出所とした会社LV2030/GP2026・26/3期説明会資料で、KPI範囲/版/精度/過去基準との連続性を確認する。公表されていれば同基準の最新比率・絶対売上・分類別売上を併せて読む。",
+        "already_checked_boundary": "現時点はQUICK本文の定義/例示/会社計画転載を点検済み。会社一次資料で同範囲を確認したとの主張はしない。",
+        "newly_obtained": false
+      },
+      "before_IR_branch_can_be_fixed": {
+        "research_interpretation": "公開定義を先に固定し、同じ範囲/基準で比較可、範囲変更により再表示/ブリッジ必要、不明で保留、という限定解釈を置く。著者の注視を独自数値の反証ルールへ変えない。",
+        "additional_evidence_needed": "一次資料後も残る特定の分類対応/集計範囲が比率の経時比較を変えること。会社目標を尋ね直す草案は作らない。",
+        "numeric_branch": "分類別収益性/費用等と採用モデルの橋渡しが未設定。会社が高利益率と述べたことだけでEPS/倍率を上げる分岐は未固定。"
+      },
+      "conceptual_change_route": "売上mixの定義/連続性 → オリジナル品比率の停滞という旧論点の比較。利益影響は未確定。",
+      "canonical_model_path": null,
+      "profit_impact": null,
+      "IR_draft_created": false,
+      "question_registered": false,
+      "current_outreach_eligibility": null,
+      "financial_model_adopted": false,
+      "references": [
+        {
+          "file": "research/ir-case-studies-2026-10-15/7525/author-original-product-review/case-record.json",
+          "sha256": "ccec4fc4179bd510a39268ec8ae5af07c83bdafad1a3e75e6c0c3fa9617cd61a",
+          "jsonpaths": [
+            "$.claim",
+            "$.definition_review",
+            "$.observations_company_goals_and_author_tolerance",
+            "$.publicly_resolved_no_need_to_ask",
+            "$.next_public_confirmation",
+            "$.possible_company_IR_definition_topics"
+          ]
+        },
+        {
+          "file": "research/ir-case-studies-2026-10-15/7525/author-original-product-review/validation.json",
+          "sha256": "d83271216697fa1af6e0aba07ef8ed1eb570733027b2672f17e7214eea708557",
+          "jsonpaths": []
+        }
+      ],
+      "evidence": [
+        {
+          "id": "author-watch-ratio-plateau",
+          "source_id": "case-public:b87e707ca4bec9077ffecb14be83767b1b4311e45b1d25d26a051c7e59a06656",
+          "existing_quote_file": "research/ir-case-studies-2026-10-15/7525/author-original-product-review/quotes.json",
+          "existing_quote_file_sha256": "2c7a5313fd804d1aea7f6f3dd279c17d2c675e314952c54d7edd069b3c2a628c",
+          "existing_quote_jsonpath": "$.text_quotes.0",
+          "pdf_page": 45,
+          "quote": "同社は、比較的利益率が高い「オリジナル品」の比率を向上させることで営業利益率および ROE の向上につ\n  なげる考え。だが、同社によれば、売上高など他の KPI に比べ伸び悩んでいる様子。動向を注視したい。",
+          "quote_sha256": "9010a4e70f41efa28548a69102008bc1628a8e204a82bb4c7378abc794be92fc",
+          "content_start": 46574,
+          "content_end_exclusive": 46678,
+          "offset_unit": "zero-based Unicode code points in identified preserved content; end exclusive",
+          "bundle": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/source-bundle.json",
+          "bundle_sha256": "f2feb89d3464ea4c9167764d2dac2a0ad6853b97efc7576fd572ffdc33719e13",
+          "content_jsonpath": "$.sources.0.content",
+          "url": "https://www.nomura-ir.co.jp/ja/qnresearch/report_7525/main/00/teaserItems1/00/link/qnresearch_7525.pdf"
+        },
+        {
+          "id": "p44-original-definition-and-longterm-goal",
+          "source_id": "case-public:b87e707ca4bec9077ffecb14be83767b1b4311e45b1d25d26a051c7e59a06656",
+          "existing_quote_file": "research/ir-case-studies-2026-10-15/7525/author-original-product-review/quotes.json",
+          "existing_quote_file_sha256": "2c7a5313fd804d1aea7f6f3dd279c17d2c675e314952c54d7edd069b3c2a628c",
+          "existing_quote_jsonpath": "$.text_quotes.1",
+          "pdf_page": 44,
+          "quote": "同社が「オリジナル品」と呼んでいる自社製品（自社製造）とグループ会社製品（「ロッキー」ブランド、グループ\n   会社が製造）、専売仕入商品（国内パートナー企業が製造し同社だけが取り扱う商品）は利益率が高い。オ\n   リジナル品の売上高に占める比率は足元で 30％程度だが、同社は長期的（31/3 期）に 55％へ引き上げるこ\n   とを目指している。",
+          "quote_sha256": "33172f2b904255a13a088cbfbd7e5b968ab4eef3409364774db5e2f959ec3489",
+          "content_start": 45480,
+          "content_end_exclusive": 45655,
+          "offset_unit": "zero-based Unicode code points in identified preserved content; end exclusive",
+          "bundle": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/source-bundle.json",
+          "bundle_sha256": "f2feb89d3464ea4c9167764d2dac2a0ad6853b97efc7576fd572ffdc33719e13",
+          "content_jsonpath": "$.sources.0.content",
+          "url": "https://www.nomura-ir.co.jp/ja/qnresearch/report_7525/main/00/teaserItems1/00/link/qnresearch_7525.pdf"
+        }
+      ],
+      "representative_issue": {
+        "topic": "オリジナル品比率の伸び悩みを比較できる集計範囲",
+        "existing_claim_id": "7525-author-watch-original-product-ratio"
+      }
+    },
+    {
+      "company_id": "jp:8151",
+      "company_name": "東陽テクニカ",
+      "existing_issue_reference": "既存external-report-reviewの事業仮説とissuer-source-routes / issuer-annual-followupを継承。",
+      "author": {
+        "organization": "アストリス・アドバイザリー・ジャパン株式会社",
+        "individual_author": null,
+        "report_display_date": "2025-06-03",
+        "authored_claim": "防衛/AD-ADASとリカーリングの成長、高収益事業mixの利益率寄与と投資/人材採用費による相殺、受注から売上までの時間差を前提にした著者予測。",
+        "scope_limit": "2025年9月期Q2更新時点。取得した静的五行内の最新であり2026年最新予測とは未確認。会社委託/報酬関係あり、作者責任と独立性は別。"
+      },
+      "publicly_resolved_do_not_reask": [
+        "原レポートには著者自身のFY25–27 E予測とFY25会社予想の別列があり、全てを会社予想再掲とはしない。",
+        "受注から計上まで12カ月超の案件や納入期ずれリスク、売上mix改善と投資/採用費の相殺という著者説明がある。受注残を当期売上へ変換しない。",
+        "記載PER13.7等は当時株価に対する著者予想ベースの記述倍率で、採用目標倍率/公正評価式ではない。"
+      ],
+      "unresolved_owner": {
+        "company_definition": [
+          "同じ対象期の会社実績と納入/売上認識・事業分類・株数/希薄化・DPSの基準。現状は会社本文未取得であり、会社が未公表という意味ではない。"
+        ],
+        "external_author": [
+          "旧予測以後の修正、予測の採用期間/前提と公正評価式/時期。会社は著者の見積り/許容差/倍率を保証できない。"
+        ],
+        "investor_valuation": [
+          "最新実績/予測の採用、株基準/期間/利益との意味対応、現在価格/評価と期間内触媒は未採用。"
+        ]
+      },
+      "next_public_check": {
+        "dependency": "許可された取得/提供資料の範囲で、対象期が一致する会社正式本文と後続著者改訂をまず確保する。取得済みルートのrobots停止を迂回しない。",
+        "already_checked_boundary": "issuer-annual-followupはrobots1GET後に停止、会社金融本文0。FY25 EPS/DPS実績や会計/株基準の比較はnullのまま。",
+        "newly_obtained": false
+      },
+      "before_IR_branch_can_be_fixed": {
+        "research_interpretation": "現状は資料到着前のため、旧予測対実績の支持/反証分岐を固定したとはしない。本文入手後に同期間・同分類・株基準で照合し、なお残る会社定義だけを特定する。",
+        "additional_evidence_needed": "会社公表値と著者予測の期/単位/主体/株基準の対応、修正vintageと具体的な予測前提を先に保存する。通常公開される実績を未取得のまま質問へ置き換えない。",
+        "numeric_branch": "独自予測数値が取得できても金融意味/採用モデル/公正倍率は未確定。旧記述PERを目標倍率にして回答後再計算する分岐は作れない。"
+      },
+      "conceptual_change_route": "同期間の実績/納入時期・mix/費用の公開説明 → 旧著者予測前提の再点検。",
+      "canonical_model_path": null,
+      "profit_impact": null,
+      "IR_draft_created": false,
+      "question_registered": false,
+      "current_outreach_eligibility": null,
+      "financial_model_adopted": false,
+      "references": [
+        {
+          "file": "research/ir-case-studies-2026-10-15/8151/external-report-review/review.json",
+          "sha256": "7ee9d92627dbd2fd5024853296f1178dccda5c86a0e4c0abfa8783ff61dd5d79",
+          "jsonpaths": [
+            "$.authorship",
+            "$.business_hypotheses",
+            "$.source_kind_separation",
+            "$.next_public_evidence_requirements",
+            "$.vintage_boundary"
+          ]
+        },
+        {
+          "file": "research/ir-case-studies-2026-10-15/8151/issuer-source-routes/routes.json",
+          "sha256": "f6e7b12b4ce6553025fc965159eaa801ff20d097999d5901eb1b5900a2355c61",
+          "jsonpaths": []
+        },
+        {
+          "file": "research/ir-case-studies-2026-10-15/8151/issuer-annual-followup/review.json",
+          "sha256": "d3bea11204ee6a1eb89b81e93d700c90a6d3c0024d55eda0b2273eaae93bf1eb",
+          "jsonpaths": [
+            "$.actual_observation",
+            "$.comparability",
+            "$.issuer_actuals",
+            "$.stopping_rule"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "report-date-and-identity",
+          "source_id": "case-public:9bc7787f756b997532a3d34506a897e458bca6dadaf7c9e4d987993a7c085c88",
+          "existing_quote_file": "research/ir-case-studies-2026-10-15/8151/external-report-review/quotes.json",
+          "existing_quote_file_sha256": "218fa546abffb1bad9f9a6ac47d70d12d31356c645a9ca585b67d08c03423c8a",
+          "existing_quote_jsonpath": "$.0",
+          "pdf_page": 1,
+          "quote": "東陽テクニカ(8151)\n過去最高の受注により、力強い成長を見込む                                                                            2025 年 6 月 3 日\n2025 年 9 月期 2Q 決算アップデート",
+          "quote_sha256": "1f59454ce881d4e22a203db49ef04d57cdefe3a0f5087dfbaa61b17f98cdfdb8",
+          "content_start": 0,
+          "content_end_exclusive": 147,
+          "offset_unit": "zero-based Unicode code points in identified preserved content; end exclusive",
+          "bundle": "research/ir-case-studies-2026-10-15/8151/external-report-review/source-bundle.json",
+          "bundle_sha256": "1b7aa11e05ce10cabfe9fcaf4ed23bb87c2e4beed7bd4cb0a7af2f0e46a9389a",
+          "content_jsonpath": "$.sources.1.content",
+          "url": "https://www.astrisadvisory.com/hubfs/Corporate%20Advisory/Corporate%20Research%20Reports/TOYO%20CORPORATION%2006032025%20(JPN).pdf"
+        },
+        {
+          "id": "profitability-investment-and-fcf-premises",
+          "source_id": "case-public:9bc7787f756b997532a3d34506a897e458bca6dadaf7c9e4d987993a7c085c88",
+          "existing_quote_file": "research/ir-case-studies-2026-10-15/8151/external-report-review/quotes.json",
+          "existing_quote_file_sha256": "218fa546abffb1bad9f9a6ac47d70d12d31356c645a9ca585b67d08c03423c8a",
+          "existing_quote_jsonpath": "$.5",
+          "pdf_page": 6,
+          "quote": "•   収益性 – 売上構成の改善は、先進モビリティ、海洋／防衛、ソフトウェア開発支\n                    援などの収益性の高い事業の大幅な成長によって推進され、利益率にプラスの\n                    影響を与えると予測する。ただし、プラスの影響は、投資の増加と人材採用によ\n                    る販管費の増加によって一部相殺される可能性もある。\n                •   フリーキャッシュフロー創出 – 設備投資と販管費率が高いにもかかわらず、同社\n                    はプラスのフリーキャッシュフローを維持できると予測する。",
+          "quote_sha256": "bfd157a4f0dc603254d156fa26ca58ea83e17a52c9d2e8709dd858d4fd107399",
+          "content_start": 16511,
+          "content_end_exclusive": 16820,
+          "offset_unit": "zero-based Unicode code points in identified preserved content; end exclusive",
+          "bundle": "research/ir-case-studies-2026-10-15/8151/external-report-review/source-bundle.json",
+          "bundle_sha256": "1b7aa11e05ce10cabfe9fcaf4ed23bb87c2e4beed7bd4cb0a7af2f0e46a9389a",
+          "content_jsonpath": "$.sources.1.content",
+          "url": "https://www.astrisadvisory.com/hubfs/Corporate%20Advisory/Corporate%20Research%20Reports/TOYO%20CORPORATION%2006032025%20(JPN).pdf"
+        }
+      ],
+      "representative_issue": {
+        "topic": "高収益mix改善と投資/採用費相殺という旧著者前提の照合準備",
+        "scope": "未stableのauthor-forecast-conditionsは参照しない。"
+      }
+    }
+  ],
+  "boundaries": {
+    "new_values_or_thresholds_or_probabilities_or_multiples": false,
+    "new_deadlines_or_tolerances": false,
+    "new_IR_drafts": 0,
+    "question_registrations": 0,
+    "new_theses_or_models": 0,
+    "financial_actions": 0,
+    "automatic_priority_scores": null,
+    "send_authorization": null,
+    "financial_inputs_verified": false,
+    "meaning_review_complete": false,
+    "author_independence_verified": false,
+    "current_outreach_eligibility": null,
+    "new_production_code": false
+  },
+  "limitations": [
+    "既存保存研究の限定比較。全公開資料の最新性/網羅性、全著者改訂、現在窓口条件は未確認。",
+    "引用SHA/offsetの一致は財務意味・因果・独立性・予測精度・モデル採用を証明しない。",
+    "source IDsは保存bundle/既存親recordを参照。今回DBとの直接照合やPIT利用可能性の再認証はしていない。",
+    "古い著者予測と後日の会社資料を今回比較したもので、当時保存した前向き予測/検証成績ではない。"
+  ]
+}

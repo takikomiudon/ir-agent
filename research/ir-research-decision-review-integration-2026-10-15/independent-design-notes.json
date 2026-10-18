@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T20:49:30.918873+00:00",
+  "status": "design_notes_only_waiting_for_implementation_freeze",
+  "design_ref": {
+    "file": "research/ir-public-decision-review-design-2026-10-15/README.md",
+    "sha256": "30bf279ce59259ff827c66c0c3ba82f4586642c7789b4eb3b22efc1ac8aa89d5"
+  },
+  "scope": "Finite contract/fault-condition design review of existing helpers. New code is still being edited; no final implementation acceptance or test run is claimed.",
+  "required_fault_conditions": [
+    {
+      "id": "RD-D01",
+      "priority": "required",
+      "topic": "Pure early returns do not validate a structural request",
+      "existing_contract": "decision._evaluate_decision checks policy/position/thesis status before quote/source validation.",
+      "references": [
+        "src/ir_agent/decision.py:_evaluate_decision",
+        "research/ir-public-decision-review-design-2026-10-15/README.md:必要な場合だけ足す最小契約"
+      ],
+      "fault_condition": "Supply an invalid bound price/company/path while position is unknown or policy parameters are missing. Pure currently returns unresolved before reaching the bad binding.",
+      "required_result": "The new wrapper rejects a supplied malformed identity/quote binding with zero new review rows, while valid incomplete quote/settings may remain unresolved. Do not change the old pure early-return order.",
+      "minimal_action": "Perform structural/reference validation before pure calculation. If extracting the existing quote validation into a narrow shared helper, preserve old return reasons/order and current quote normalization behavior."
+    },
+    {
+      "id": "RD-D02",
+      "priority": "required",
+      "topic": "Closure collection is not cycle/publicity/availability certification",
+      "existing_contract": "DecisionLifecycle.sources_for collects thesis and quote origins, deduplicates IDs, and rejects wrong-company loaded sources; it does not itself detect a cycle. Store.source_availability checks receipt/effective time/company/cycles, not publicity or synthetic provenance.",
+      "references": [
+        "src/ir_agent/decision_lifecycle.py:sources_for",
+        "src/ir_agent/store.py:source_availability",
+        "src/ir_agent/decision.py:_check_source_origins"
+      ],
+      "fault_condition": "A second parent is missing, late, different-company, held, synthetic, or forms a cycle. A shared valid parent should remain valid. Include a quote-origin case, not only thesis roots.",
+      "required_result": "Every selected original source in both closures is checked and saved with SHA; no hidden second parent or quote ancestor may make a real/public-only result appear clean.",
+      "minimal_action": "Reuse existing closure/availability/publicity contracts as separate checks. Do not call the schedule reader as a generic decision validator: its schedule scope rejects market sources."
+    },
+    {
+      "id": "RD-D03",
+      "priority": "required",
+      "topic": "Raw latest CAS differs from strict-current selection and aggregate diagnostics",
+      "existing_contract": "Store.thesis_view may select an older visible thesis when the raw newest is future/unknown; availability_status can be partial solely due to an unrelated excluded older legacy row.",
+      "references": [
+        "src/ir_agent/store.py:thesis",
+        "src/ir_agent/store.py:thesis_view"
+      ],
+      "fault_condition": "Raw v2 is future/unusable but v1 is currently visible; separately, latest valid v2 has unrelated old v1 legacy unknown.",
+      "required_result": "Expected version must equal raw newest and selected usable version; never silently compute from v1 in the former case. In the latter, inspect selected_availability rather than blanket-rejecting aggregate partial solely due to old excluded rows.",
+      "minimal_action": "Check selected record identity and its selected receipt/source diagnostics explicitly; retain excluded diagnostics without changing the existing PIT reader."
+    },
+    {
+      "id": "RD-D04",
+      "priority": "required",
+      "topic": "Current receipt and historical prior use are distinct claims",
+      "existing_contract": "RecordAvailability.at returns known-by evidence for legacy_presence and exact first-save evidence for trusted_insert. Current availability alone is not proof of existence at a prior thesis date.",
+      "references": [
+        "src/ir_agent/availability.py:RecordAvailability.at",
+        "src/ir_agent/store.py:thesis_view",
+        "src/ir_agent/decision.py:_evaluate_decision"
+      ],
+      "fault_condition": "An old-dated source/thesis is inserted now, or a legacy row is only known present now.",
+      "required_result": "A current baseline uses its trusted actual current evaluation time and preserves receipt diagnostics; never label it a historical/PIT or pre-outcome decision. If any prior-usage-time claim is made, verify that cutoff separately rather than infer it from current available=true.",
+      "minimal_action": "Do not add historical write modes or require a reconstructed exact legacy first save where current known-by evidence is the only claim. Unknown/unavailable selected evidence remains unresolved."
+    },
+    {
+      "id": "RD-D05",
+      "priority": "required",
+      "topic": "Explicit positions must not fall back across unqualified observations",
+      "existing_contract": "Store.declared_position_at examines the latest observation and requires its own explicit_user_declaration receipt. It intentionally does not search backward for an older declared value.",
+      "references": [
+        "src/ir_agent/store.py:declare_position",
+        "src/ir_agent/store.py:declared_position_at",
+        "src/ir_agent/decision_lifecycle.py:position_for"
+      ],
+      "fault_condition": "Company import defaults held=false; or an older declared true is followed by an undeclared observation; or held changes after save.",
+      "required_result": "Unknown remains unknown on save/current view. Imported company.held and stale declarations cannot authorize a financial action. Saved result stays historical after a later position change.",
+      "minimal_action": "Use declared_position_at directly and do not add a new synthetic_position override to this thin API unless separately required. A same-held redeclaration need not create a new financial rule; keep any stricter identity comparison explicit."
+    },
+    {
+      "id": "RD-D06",
+      "priority": "required",
+      "topic": "Reply assessment helper is not complete original-reply binding",
+      "existing_contract": "source_assessments(reply_id=None) discovers metadata.reply_id only on supplied ir_reply sources and returns latest visible saved assessments; no history returns an empty mapping. It does not validate the reply/question receipt or certify missing metadata as public.",
+      "references": [
+        "src/ir_agent/information_review.py:source_assessments",
+        "src/ir_agent/prediction_bindings.py:_Reader.publicity",
+        "src/ir_agent/decision_lifecycle.py:dependency_source_information_holds"
+      ],
+      "fault_condition": "An IR ancestor has missing reply_id, unknown reply/question, no visible assessment, or immutable source metadata remains held after a later public classification.",
+      "required_result": "Do not infer public-only from an empty assessment mapping. Saved source metadata holds and absent/held underlying reply bindings remain visible. A positive assessment is not permission to rewrite immutable source metadata.",
+      "minimal_action": "Inspect full closure types and original bindings separately; reuse saved source-publicity logic. public-only may be true only for a complete usable no-IR closure."
+    },
+    {
+      "id": "RD-D07",
+      "priority": "required",
+      "topic": "Current classification changes must not silently be consumed",
+      "existing_contract": "current_decision_view treats an unconsumed later public_clarification version as needing review as well as a held version. It depends on reply_id and cannot directly accept a research record.",
+      "references": [
+        "src/ir_agent/information_review.py:current_decision_view",
+        "src/ir_agent/information_review.py:assessments"
+      ],
+      "fault_condition": "After saving, dependency classification changes to potential_nonpublic and then back to public_clarification with a new version. Include a quote-ancestor reply.",
+      "required_result": "Current view is unresolved for the hold and remains review-required for the unconsumed public version. Historical_result is unchanged; a new current baseline needs a new ID.",
+      "minimal_action": "Save consumed version mapping, call source_assessments over the complete saved closure, and compare versions. Do not invent a dummy reply_id to reuse the old current wrapper."
+    },
+    {
+      "id": "RD-D08",
+      "priority": "required",
+      "topic": "Retry identity must precede latest CAS and use fixed policy version",
+      "existing_contract": "Existing immutable records/requests return their first result on exact retry. Fixed policy rows and first_saved_at are available independently of any newest policy version.",
+      "references": [
+        "src/ir_agent/store.py:decision_policy",
+        "src/ir_agent/store.py:decision_policy_saved_at",
+        "src/ir_agent/decision_lifecycle.py:add_review"
+      ],
+      "fault_condition": "Exact same ID/request after thesis advances or quote expires; same ID with changed quote/policy/assessment; newer policy version published after saving.",
+      "required_result": "Exact retry returns original immutable record and first_saved_at before CAS; current projection may only add holds. Changed request rejects. New IDs require the newest applicable thesis and the explicitly selected registered policy version.",
+      "minimal_action": "Use one new table with request digest and exact request; no extra generic receipt registry or latest-policy auto-selection."
+    },
+    {
+      "id": "RD-D09",
+      "priority": "required",
+      "topic": "Existing current helpers certify only narrow checks",
+      "existing_contract": "_current_quote_check checks timing against saved result quote/policy. _current_thesis_check compares raw version only; neither certifies position, full availability, review deadline or all source-publicity corrections.",
+      "references": [
+        "src/ir_agent/information_review.py:_current_quote_check",
+        "src/ir_agent/information_review.py:_current_thesis_check",
+        "src/ir_agent/decision.py:check_quote_timing"
+      ],
+      "fault_condition": "Price age is exactly limit and limit+1µs; JST next_review_date becomes due; latest thesis changes or becomes unusable; position becomes unknown; historical result was already unresolved.",
+      "required_result": "Use the existing boundary semantics, add only required current holds, never upgrade a past unresolved result by current display or mutate its history. Selected availability is checked in addition to raw version.",
+      "minimal_action": "A research-only current wrapper can reuse narrow timing/version helpers and append its own required checks; do not broaden the old reply current view."
+    },
+    {
+      "id": "RD-D10",
+      "priority": "required",
+      "topic": "Synthetic provenance includes source ancestors, not only policy",
+      "existing_contract": "evaluate_decision rejects a non-synthetic context with synthetic_example policy but does not by itself reject metadata.synthetic on every source/thesis ancestor. Model-input/read-only provenance helper has an explicit source synthetic check.",
+      "references": [
+        "src/ir_agent/decision.py:_evaluate_decision",
+        "src/ir_agent/model_inputs.py:_origin_issues",
+        "src/ir_agent/prediction_bindings.py:_Reader.source_graph"
+      ],
+      "fault_condition": "A real request uses a real-looking policy and a synthetic second-parent/quote source or thesis marker.",
+      "required_result": "Never promote synthetic source/thesis/position evidence into a real current baseline. The caller cannot erase trusted source synthetic provenance.",
+      "minimal_action": "Add the explicit complete-closure synthetic consistency check in the wrapper; do not alter financial parameters or invent assumptions."
+    },
+    {
+      "id": "RD-D11",
+      "priority": "required",
+      "topic": "Atomic save and trusted current clock only",
+      "existing_contract": "Store._record_write supports nested savepoints; RecordAvailability entity types are intentionally limited. Current code schemas and caller JSON are separate contracts.",
+      "references": [
+        "src/ir_agent/store.py:_record_write",
+        "src/ir_agent/availability.py:RecordAvailability",
+        "research/ir-public-decision-review-design-2026-10-15/README.md:版、再送、時間の扱い"
+      ],
+      "fault_condition": "Clock sampled before lock; caller supplies held/snapshot/action/as_of; calculation or insert fails after validation; transaction retry races with another writer.",
+      "required_result": "Trusted clock sampled after write lock; no caller snapshots or past write cutoff; calculation/snapshot/result/request/new-row save is atomic. No thesis/company/source/question/reply mutation.",
+      "minimal_action": "A new table first_saved_at is sufficient. Do not add a new RecordAvailability entity or second request receipt table. Keep old decision_reviews.reply_id NOT NULL and old JSON/API behavior intact."
+    }
+  ],
+  "safe_simplifications": [
+    "Keep finance arithmetic and all pure policy decisions in evaluate_decision. The new layer resolves DB records and binds evidence; it need not duplicate valuation arithmetic or market rules.",
+    "A narrowly extracted quote-binding helper can enforce wrapper structure without changing the old pure early-return order. Test old contracts before/after extraction, particularly missing policy/position and derived J-Quants quote normalization.",
+    "Current-only writes plus a separate read projection avoid historical write modes, performance scoring, question/reply fabrication, source invalidation, scheduler work or extra ledgers. None of those are needed for a saved current baseline."
+  ],
+  "final_review_focus_after_root_signal": [
+    "Inspect wrapper validation order and any quote-helper extraction while preserving old pure semantics.",
+    "Check required failure groups with focused isolated fixtures and existing legacy regression tests; root owns the full suite run.",
+    "Check request/CAS order, selected availability rather than aggregate legacy status, all-source synthetic/publicity closure, version changes and current-view holds."
+  ],
+  "execution": {
+    "network": 0,
+    "actual_DB_access": 0,
+    "memory_DB_access": 0,
+    "code_edits": 0,
+    "tests_executed": 0,
+    "existing_files_edited": 0,
+    "outputs_only": [
+      "independent-design-notes.json",
+      "independent-design-notes.md"
+    ]
+  },
+  "limits": [
+    "These notes identify risks in composing existing helpers, not confirmed bugs in the unfinished implementation.",
+    "No new requirement for financial thresholds, issuer forecasts, exact historical first saves, or additional IR questions is introduced.",
+    "Function references identify contracts as inspected; the implementation may extract helpers before the final review, which will require fresh code inspection."
+  ]
+}

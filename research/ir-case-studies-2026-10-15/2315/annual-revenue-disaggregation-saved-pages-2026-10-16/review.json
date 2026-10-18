@@ -1,0 +1,131 @@
+{
+  "recorded_at": {
+    "utc": "2026-10-16T05:57:08.145342+00:00",
+    "jst": "2026-10-16T14:57:08.145342+09:00"
+  },
+  "company_id": "jp:2315",
+  "status": "finite_last_annual_table_scope_complete_awaiting_root_image_meaning_acceptance",
+  "source_pins": {
+    "file": "research/ir-case-studies-2026-10-15/2315/annual-revenue-disaggregation-saved-pages-2026-10-16/source-pins.json",
+    "sha256": "a2fc4c7e5c071ed1598c5d0d6cb498ae2fc8e033a71c5b85c8dc9989ce7ee066",
+    "bytes": 4529
+  },
+  "page_quotes": {
+    "file": "research/ir-case-studies-2026-10-15/2315/annual-revenue-disaggregation-saved-pages-2026-10-16/page-quotes.json",
+    "sha256": "fe4fbed140538da96e65b83d97dc90ef84f976b12b12ef6d9403a036dc3b475c",
+    "bytes": 6767
+  },
+  "meaning_scope": {
+    "new_physical_pages": [
+      87,
+      88
+    ],
+    "section": "収益認識関係 1. 顧客との契約から生じる収益を分解した情報（年度別の表と注記だけ）",
+    "table_locator_verified_before_extraction": true,
+    "images_visually_read": [
+      87,
+      88
+    ],
+    "annual_source_pages_total": 123,
+    "full_document_review": false,
+    "excluded_same_page_regions": [
+      "p87 の企業結合・資産除去債務・賃貸不動産など対象表の前文",
+      "p88 の収益認識関係 2 及び 3 とその表・注記"
+    ],
+    "new_page_limit": 2,
+    "last_annual_scope": true,
+    "further_reference_followed": false
+  },
+  "findings": [
+    {
+      "topic": "金融サービスの顧客契約収益とその他の収益の年次区分",
+      "status": "publicly_answered_for_the_two_stated_annual_periods",
+      "quote_ids": [
+        "annual-FY2024-revenue-disaggregation-table",
+        "annual-FY2025-revenue-disaggregation-table"
+      ],
+      "answer": "前連結会計年度（2023-11-01〜2024-10-31）の金融サービス事業は、顧客との契約から生じる収益 3,254、その他 33,562、外部顧客への売上高 36,816 と表示。当連結会計年度（2024-11-01〜2025-10-31）はそれぞれ 492、792、1,284 と表示。単位はいずれも千円で、連結注記の報告セグメント列。",
+      "limits": "表示額の転記だけであり、新しい金融facts/モデル入力ではない。構成の逆算・期間差の補完・比較可能範囲や現在Q3への同一定義適用は行わない。"
+    },
+    {
+      "topic": "移転時点と行列の読み分け",
+      "status": "publicly_answered_at_table_scope",
+      "quote_ids": [
+        "annual-FY2024-revenue-disaggregation-table",
+        "annual-FY2024-other-segment-column-note",
+        "annual-FY2025-revenue-disaggregation-table"
+      ],
+      "answer": "金融サービスの顧客契約収益は両年とも「一時点で移転される財又はサービス」の表示と同額で、「一定の期間にわたり移転される財又はサービス」は「―」。p87 注1の「その他」はメディア事業を含む報告外セグメント列の説明であり、金融サービス列にある「その他」収益の成分説明ではない。",
+      "limits": "ダッシュを数値0に変換しない。表記の端数や合計差を計算で修正しない。"
+    },
+    {
+      "topic": "内部・外部と暗号資産の取引別対応",
+      "status": "partly_resolved_external_label_only_transaction_definition_unresolved",
+      "quote_ids": [
+        "annual-FY2024-revenue-disaggregation-table",
+        "annual-FY2024-other-segment-column-note",
+        "annual-FY2025-revenue-disaggregation-table"
+      ],
+      "answer": "表の最終行は「外部顧客への売上高」と明記される。この特定表には内部売上額/内部消去の別欄がなく、暗号資産売買・実現売却損益・未実現評価損益・手数料を顧客契約/その他のいずれに含むかという明記もない。",
+      "limits": "「外部」は相手の範囲であり、売却代金と簿価を総額/純額とする定義の証明ではない。内部売上なしとはしない。792 や 33,562 から暗号資産成分や損益を逆算しない。現在Q3の負の売上の構成や評価損のPL科目はここでは確定しない。"
+    }
+  ],
+  "accepted_context_not_requoted": {
+    "annual_71_72_and_existing_Q3_policy_comparison": {
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/annual-crypto-presentation-saved-pages-2026-10-16/review.json",
+        "sha256": "18b59e8d7907ef242953be9b1d45b8ee1e4de850b0e5bba45ed89a85fa223827",
+        "bytes": 8505
+      },
+      "json_pointers": [
+        "/findings/1",
+        "/findings/2",
+        "/findings/3"
+      ],
+      "meaning": "p72の表参照は今回解決。既受入の評価方法・特定Zaif顧客取引差額・活発市場なし評価損の原価注記はそれぞれ元の限定scopeのまま。会計変更なしを法人/事業/取引mix不変又は現Q3全取引のPL科目証明へ拡張しない。"
+    },
+    "old_definition_ticket": {
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/question-residual-review-2026-10-16/research-ticket.json",
+        "sha256": "b44d2cd6056010a94dab89461de8727e11fb8b417ac732a0d6154f8eb7e65f71",
+        "bytes": 42152
+      },
+      "json_pointer": "/research_question",
+      "read_only": true
+    }
+  },
+  "effect_on_existing_definition_research_ticket": {
+    "ticket_id": "2315-negative-financial-revenue-definition",
+    "old_ticket_edited": false,
+    "withdraw_or_do_not_repeat": [
+      {
+        "scope": "年次のみ",
+        "description": "顧客契約収益とそれ以外の金融セグメント区分額が公表されているか、どこにあるかという一般的確認は取り下げる。物理87/88の年度・千円・外部顧客区分を公開既答へ移す。"
+      },
+      {
+        "scope": "既受入方針と今回の分解表",
+        "description": "既受入の暗号資産評価方法、特定Zaif顧客取引の差額認識方針、年次PLの非区分表示、今回の年度分解表を一括して未確認とする問いや公開箇所案内を重ねない。各限定scopeは元受入に従う。"
+      }
+    ],
+    "retain_as_unresolved_only_if_comparison_still_requires_it": [
+      {
+        "old_ticket_json_pointer": "/research_question/question",
+        "description": "現在Q3金融サービス事業「外部顧客への売上高△44,890千円」の同一法人/取引範囲について、売却代金・簿価・手数料等の総額/純額と未実現評価を含むかという具体的適用部分は、この年次表だけでは解けない。年次に顧客契約とその他があることから、それぞれを売買/評価/手数料へ割り当てない。"
+      }
+    ],
+    "disposition": "旧票を自動的に全取り下げにも送信候補昇格にもしない。公開既答を除いた現在指標への適用残余だけをrootが後で判断する。今回、新たなIR草案/正式質問/監視更新は作らない。"
+  },
+  "operations": {
+    "GET": 0,
+    "DB": 0,
+    "new_source": 0,
+    "old_file_change": 0,
+    "old_ticket_or_monitoring_change": 0,
+    "normalizer": 0,
+    "financial_fact_bundle": 0,
+    "forecast": 0,
+    "model_execution_or_adoption": 0,
+    "IRdraft_or_send": 0
+  },
+  "stop": "Last annual scope: two new pages87/88, Section1 only. No additional locators followed; frozen manual handoff awaits root acceptance."
+}

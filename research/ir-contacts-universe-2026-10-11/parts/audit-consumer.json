@@ -1,0 +1,35 @@
+{
+  "reviewer": "codex_audit_consumer",
+  "scope": "new confirmed records with numeric security_code 7000-8999; excludes previous_record",
+  "completed": true,
+  "reviewed_at": "2026-10-11T04:04:44.103691+00:00",
+  "reviews": [
+    {
+      "security_code": "8078",
+      "company_name": "阪和興業",
+      "verdict": "confirmed",
+      "notes": "阪和興業公式IRページ evidence/8078/04.json が個人のお客様用フォームとして https://www.hanwa.co.jp/contact/form1/ を案内し、05.json の会社名・URLが一致。05.json のフォーム本体に「お問い合わせ項目 営業について 投資家情報について 採用について その他」と投資家情報の選択肢を確認し、メール入力欄 email01/email02 と質問用 textarea inquiry を確認。ナビゲーションのIR文言を受付根拠にはしていない。個人のお客様専用フォームであること、名前・E-mail・内容が必須で住所/電話は差し支えなければ記入する案内を確認。GETによる受付案内・入力欄の検証のみで送信/返信は未検証。",
+      "evidence_snapshots": [
+        "evidence/8078/04.json",
+        "evidence/8078/05.json"
+      ],
+      "individual_access_observation": "explicit individual form; record field not changed per review scope"
+    }
+  ],
+  "coverage": {
+    "range_records": 808,
+    "status_counts": {
+      "unconfirmed": 804,
+      "confirmed": 3,
+      "provisional": 1
+    },
+    "new_confirmed_reviewed": 1,
+    "pending_confirmed": 0,
+    "previous_records_excluded": [
+      "7071",
+      "7685",
+      "7734"
+    ]
+  },
+  "final_range_recheck": true
+}

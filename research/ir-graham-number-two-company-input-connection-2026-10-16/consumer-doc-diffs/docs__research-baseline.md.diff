@@ -1,0 +1,17 @@
+--- before/docs/research-baseline.md
++++ docs/research-baseline.md
+@@ -47,12 +47,12 @@
+ 
+ [公式サイト経由の市場表示](../research/ir-case-studies-2026-10-15/1975/market-comparison-input-discovery-2026-10-16/README.md)は「2026/10/16 15:30・3,860」を取得した。表示内の通貨・timezoneは未確認、6月末以降の株数基準も別入力として残す。数値の大小だけで現在のnet-net合否や売買へ進めない。この方法の直接入力でない繰越高の定義回答からNCAV境界を変えない。
+ 
+-[通期原本の追加保存と比較](../research/ir-case-studies-2026-10-15/1975/annual-earnings-book-input-discovery-2026-10-16/actual-connection/actual-verification.json)で、1975はnative v3・既読7となった。会社表示のFY2026年3月期実績EPS358.13円・BPS1,965.51円から、保存済みcribleの別式 `sqrt(22.5 × EPS × BVPS)` を[独立算術](../research/ir-case-studies-2026-10-15/1975/graham-number-annual-arithmetic-2026-10-16/parent-acceptance.json)で再現すると3,979.69円。丸め総額/別の平均・期末株数から計算するlaneは3,979.53円で、会社直接表示と置換しない。OCIを含む普通株式純資産と日本基準「株主資本」を区別した。
++[通期原本の追加保存と比較](../research/ir-case-studies-2026-10-15/1975/annual-earnings-book-input-discovery-2026-10-16/actual-connection/actual-verification.json)で、1975はその時点でnative v3・既読7となった。年次EPS/BPS派生sourceの比較後はv4・既読8。会社表示のFY2026年3月期実績EPS358.13円・BPS1,965.51円から、保存済みcribleの別式 `sqrt(22.5 × EPS × BVPS)` を[独立算術](../research/ir-case-studies-2026-10-15/1975/graham-number-annual-arithmetic-2026-10-16/parent-acceptance.json)で再現すると3,979.69円。丸め総額/別の平均・期末株数から計算するlaneは3,979.53円で、会社直接表示と置換しない。OCIを含む普通株式純資産と日本基準「株主資本」を区別した。
+ 
+ これは価格表示を知った後の方法探索であり、事前固定された成績検証ではない。NCAVとGraham Numberの目的・期間・入力・版を別々に保持し、望む判定を得るための切替や二つの境界の合成はしない。どちらも原Grahamの全適格条件、1年以内の到達予測や売買規則を実装したものではない。同式は[既存valuationの新method](graham-number-valuation-spec.md)から再利用でき、全1,573テストの受入を完了した。
+ 
+ [既存質問の整理](../research/ir-case-studies-2026-10-15/1975/ir-question-disposition-after-public-review-2026-10-16/parent-acceptance.json)では、公開既答を除き、繰越高のscope/取消変更をC2の条件付き比較論点として残した。現NCAVや採用済みforward EPSへ回答を変換する経路はなく、優先IRは0。この文脈を次の正当な年次資料レビューで実際に引き継いだ。数値評価に直結しない定義研究を一律禁止するのではなく、比較に使う目的を先に具体化する。
+ 
+-[5480](../research/ir-case-studies-2026-10-15/5480/native-case-setup-2026-10-16/actual-inputs/actual-verification.json)も同じ23社集合から既存資料を利用し、Damodaranの循環正常化の3論点を監視へ接続した。全サイクル・正常利益・再投資は未解決のまま、native v2・既読10・内部管理Jan16を保持する。3817の年次原本はfile-onlyで、この実台帳の件数に加えない。
++[5480](../research/ir-case-studies-2026-10-15/5480/native-case-setup-2026-10-16/actual-inputs/actual-verification.json)も同じ23社集合から既存資料を利用し、Damodaranの循環正常化の3論点を監視へ接続した。全サイクル・正常利益・再投資は未解決のまま、native v2・既読10・内部管理Jan16を保持する。3817も[年次原典とEPS/BPSの実入力接続](../research/ir-graham-number-two-company-input-connection-2026-10-16/README.md)を完了し、native v2・既読2を登録した。報告実績EPS443.34円/BPS2,659.88円を保持し、当時の翌期会社予想435.34円や個別値とは混ぜない。両社のsource数値照合は金融採用と区別する。
+ 
+ 購入価格・利確価格は採用評価と方針から求める。Tweedyの価値到達時の売却・継続保有理由の点検を使うが、原典にない一律の割安率・利確率を補わない。価格が価値を超える場合も、継続保有理由を含めて検討する。[評価と退出の参照範囲](tweedy-value-research.md)を維持する。

@@ -1,0 +1,38 @@
+{
+  "recorded_at": "2026-10-16T04:04:02.887702+00:00",
+  "fix_implementation": "research/ir-public-information-review-binding-fix-2026-10-16/implementation.json",
+  "fix_implementation_sha256": "1ec04ea0b7fe30b67bc2f76a1999973d06643ed611dbb6954567ddf337970383",
+  "fixed_file_pins": {
+    "src/ir_agent/models.py": "e0d0444fda0e730de6c6e9beaa110bbd796de00f3228c041daa016284a8e234e",
+    "src/ir_agent/decision.py": "5243aa9c51d42d1abc9a2cd95cc65d8b9671be1625a30d8cdeaddfdade026614",
+    "src/ir_agent/decision_lifecycle.py": "a6813698eb32ea6293d765b616a86340f6695d247e563ebcca3296941f633273",
+    "src/ir_agent/harness.py": "23e145a1487fe2a529f64e842a1468b23131d61a260c6746147cbe42ccd25d3e",
+    "src/ir_agent/public_information_review.py": "1c7d19a0cf79d1628144196217cd84bfd0c656a48a1308934a13943e70b249aa",
+    "tests/test_public_information_review.py": "e66303ce2dd2488c88e87c5051af4438d0ccfc894f48f0472ebee46e7d39a2ec"
+  },
+  "checks": [
+    {
+      "id": "F1-persistent-long-DAG",
+      "status": "resolved_in_finite_counterexample",
+      "same_1100_ancestor_input": true,
+      "saved_and_synthetic_sent_state_without_recursion": true,
+      "closure_receipts": 1101,
+      "reason_codes": [],
+      "original_request_retry_keeps_frozen_check": true
+    },
+    {
+      "id": "F2-samecompany-reply-content",
+      "status": "resolved_in_finite_counterexample",
+      "same_different_body_input_rejected": true,
+      "error_type": "ValueError",
+      "error": "Public information review source differs from its saved reply",
+      "memory_DB_unchanged": true
+    }
+  ],
+  "GETs": 0,
+  "actual_DB_connections_or_writes": 0,
+  "synthetic_memory_DBs": 2,
+  "production_code_changes": 0,
+  "fullsuite_run": false,
+  "scope": "Only prior F1/F2 inputs rechecked; no new branches/financial adoption/IRsend. Root runs fullsuite and broader legacy byte comparison."
+}

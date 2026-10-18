@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "company_id": "jp:1332",
+  "reviewed_at": "2026-10-15T05:14:00.204931+00:00",
+  "status": "bounded_public_source_review_only",
+  "review_basis": "保存済み補足説明PDF物理9/27頁、正式短信物理13頁（印刷11頁）、保存Q&Aの関連回答。新規取得なし。2026年10月時点の最新資料を網羅したことは未確認。",
+  "source_ids": {
+    "supp": "case-public:350cdd851d1bc29904f49f94567ea58394289b240d0d4cf0be41f240e8451c15",
+    "qa": "case-public:4d94dab44227e9323c57efba272a030a4b27d10be2bfaacb66a5e37b3d46d329",
+    "statement": "case-public:a6203650fe32b00c12d4b6f4c5b3f4fe252431cd4449a1f2716ea658fede985b"
+  },
+  "financial_inputs_verified": false,
+  "meaning_review_required": true,
+  "model_adopted": false,
+  "reported_period": {
+    "fiscal_year_end": "2027-03-31",
+    "quarter": "Q1",
+    "current_consolidated_cumulative_start": "2026-04-01",
+    "current_consolidated_cumulative_end": "2026-06-30",
+    "comparison_consolidated_cumulative_start": "2025-04-01",
+    "comparison_consolidated_cumulative_end": "2025-06-30",
+    "date_basis_quote_id": "statement13-cf-note",
+    "supplement_labels": "2027年3月期 第１四半期 / 2026年3月期 第１四半期",
+    "metric_level_scope_alignment_verified": false,
+    "limits": "正式注記は連結累計期間を日付で明示、補足9は同四半期・連結を表題で明示。ただし子会社別の集計期間、換算、取得時点、CF区分や丸めの完全一致はこの3頁/Q&Aから未確認。"
+  },
+  "findings": [
+    {
+      "id": "quarterly-statement-versus-voluntary-disclosure",
+      "status": "directly_disclosed",
+      "quote_ids": [
+        "statement13-cf-note",
+        "supp9-period-unit",
+        "supp9-cfo-capex-investing",
+        "supp9-fcf-financing"
+      ],
+      "conclusion": "正式短信は当第1四半期連結累計期間の四半期連結CF計算書を作成していないと明記。一方、補足9頁は連結の営業CF▲53億円、投資CF▲133億円、財務CF288億円、FCF▲186億円を表示する。両者は資料種類が異なり両立する。",
+      "not_established": "補足CFを正式四半期CF計算書と分類すること、また正式CF未作成を理由に公開CF情報がないとすること。"
+    },
+    {
+      "id": "depreciation-definition",
+      "status": "partially_resolved",
+      "quote_ids": [
+        "supp9-period-unit",
+        "supp9-da",
+        "supp9-goodwill",
+        "statement13-cf-note"
+      ],
+      "conclusion": "補足の減価償却費はのれん償却を含むと明示。正式注記の減価償却費は、のれんを除く無形固定資産の償却を含み、のれん償却額を別行に示す。含有範囲の違いは公開で確認できる。",
+      "reported_values": [
+        {
+          "source_key": "supp",
+          "raw_label": "減価償却費（のれん償却※含む）",
+          "current_raw_value": "77",
+          "raw_unit": "億円"
+        },
+        {
+          "source_key": "supp",
+          "raw_label": "※参考：のれん償却費用",
+          "current_raw_value": "2",
+          "raw_unit": "億円"
+        },
+        {
+          "source_key": "statement",
+          "raw_label": "減価償却費",
+          "current_raw_value": "7,573",
+          "raw_unit": "百万円"
+        },
+        {
+          "source_key": "statement",
+          "raw_label": "のれんの償却額",
+          "current_raw_value": "219",
+          "raw_unit": "百万円（〃）"
+        }
+      ],
+      "unresolved": "包含範囲ラベルだけで上記公表金額の一致は証明できない。丸め方法、集計範囲/期間、補足表の定義に関する精密なbridgeは指定範囲にない。",
+      "arithmetic_performed": false,
+      "calculation_input_adopted": false
+    },
+    {
+      "id": "capex-versus-cash-outflow",
+      "status": "partially_resolved",
+      "quote_ids": [
+        "supp9-period-unit",
+        "supp9-cfo-capex-investing",
+        "supp9-script"
+      ],
+      "conclusion": "補足は設備投資額を固定資産取得額と括弧書きし、当期▲145億円を表示。別行の投資CFは▲133億円で、国内外の工場投資による増加との会社説明がある。",
+      "unresolved": "設備投資指標の対象資産、有形/無形、リース、非現金取得、支払時期、資産取得に係る買掛金、投資CFの他項目を含む完全定義/組替表は確認できない。固定資産取得額を正式CF上の有形固定資産取得支出と同定しない。投資CF全体との一対一対応も未確認。",
+      "arithmetic_performed": false,
+      "calculation_input_adopted": false
+    },
+    {
+      "id": "trade-payable-versus-borrowing",
+      "status": "issuer_explained_partial",
+      "quote_ids": [
+        "supp9-period-unit",
+        "supp9-working-capital",
+        "supp9-fcf-financing",
+        "supp9-script"
+      ],
+      "conclusion": "運転資本（当期▲111億円）のポイント欄は、南米養殖会社取得による長期買掛金返済と北米加工食品会社の売上増に伴う売掛金増加を挙げる。長期買掛金を長期借入金に読み替えない。短期借入金及びCP増減額196億円、長期借入金増減額157億円は別途財務CFの行群にある。スクリプトも借入金/CPの活用を財務CFの説明にしている。",
+      "unresolved": "運転資本の全構成項目、各要因の金額、取得関連買掛金の契約性質や金融性、CF区分の調整、売掛金を含む全運転資本残高との対応は不明。借入金の増減は純額表示で、借入実行/返済の総額内訳や条件は得られない。",
+      "arithmetic_performed": false,
+      "calculation_input_adopted": false
+    },
+    {
+      "id": "fish-valuation-scope",
+      "status": "limited_profit_explanation_not_cf_bridge",
+      "quote_ids": [
+        "supp27-definitions",
+        "supp27-ifrs-label",
+        "supp27-comparison-scope",
+        "supp27-valuation-row",
+        "qa-sa-yadran"
+      ],
+      "conclusion": "27頁は在池魚評価損益（IFRS評価）を出荷前の在池魚の想定利益とし、未実現利益調整を在庫に含まれる未実現利益の調整と説明する。内訳比較の列は前年26/3がSA社、当年27/3がSA社・Yadran社計。各列の在池魚評価損益は▲1億円と表示。Q&AはSAの前年同期比とYadranの計画比を区別して事業損益/在池魚評価の影響を説明する。",
+      "unresolved": "この頁は南米養殖の利益/評価の説明であり、在池魚評価損益から連結営業CF/運転資本への調整表を示さない。税、実現、連結調整、現金支出と評価増減の関係は未確認。",
+      "interpretation_limits": [
+        "「ほぼ影響なし」を金額ゼロ、CF影響ゼロ、キャッシュフロー上の非現金調整ゼロとしない。",
+        "部分指標のIFRS評価ラベルをグループ全体の会計基準の断定にしない。",
+        "SA単独とSA・Yadran合計、前年同期比と計画比を同一基準で比較しない。",
+        "右側相場図のUSD/kgと左側損益表の億円を混同しない。"
+      ],
+      "calculation_input_adopted": false
+    },
+    {
+      "id": "qa-recovery-description",
+      "status": "issuer_explanation_not_quantitative_cashflow",
+      "quote_ids": [
+        "qa-investment-recovery"
+      ],
+      "conclusion": "Q&Aは北米が減価償却費の負担を吸収し利益を計上する段階、欧州が今年から投資回収フェーズに入る見込みと説明する。会社の説明として既に公表されている。",
+      "unresolved": "CF上の投資回収実績、将来CF数値、D&Aと設備投資のbridge、回収期間/ROCの数値根拠は示さない。見込みを実現済み利益や現金回収と扱わない。"
+    }
+  ],
+  "resolved_without_ir": [
+    {
+      "question": "この四半期に正式な四半期連結CF計算書を作成しているか。",
+      "public_answer": "作成していないと正式注記に明記。",
+      "quote_ids": [
+        "statement13-cf-note"
+      ]
+    },
+    {
+      "question": "正式CF計算書がないので営業/投資/財務CFの公表情報は一切ないのか。",
+      "public_answer": "補足9頁に各CFとFCFの当期値がある。正式計算書と区別して引用する。",
+      "quote_ids": [
+        "supp9-cfo-capex-investing",
+        "supp9-fcf-financing"
+      ]
+    },
+    {
+      "question": "補足のD&Aはのれんを含むか、正式注記のD&Aはのれんと別か。",
+      "public_answer": "補足はのれん込み、正式注記はのれんを除く無形償却を含むD&Aと、のれん償却額を別行表示。金額bridgeが解決済みという意味ではない。",
+      "quote_ids": [
+        "supp9-da",
+        "supp9-goodwill",
+        "statement13-cf-note"
+      ]
+    },
+    {
+      "question": "会社は営業CF/運転資本悪化の要因を何も説明していないのか。",
+      "public_answer": "長期買掛金返済と北米の売掛金増加を公表。要因の存在を再質問する必要はないが、全項目/金額内訳は未解決。",
+      "quote_ids": [
+        "supp9-working-capital",
+        "supp9-script"
+      ]
+    },
+    {
+      "question": "補足9頁の返済要因は長期借入金返済と書かれているか。",
+      "public_answer": "原文は長期買掛金返済。長期借入金増減は財務CFの別行。",
+      "quote_ids": [
+        "supp9-working-capital",
+        "supp9-fcf-financing"
+      ]
+    },
+    {
+      "question": "設備投資額の表示ラベルと投資増加の大まかな説明は何か。",
+      "public_answer": "固定資産取得額という表示と、国内外工場投資による増加という説明がある。現金支出への一致は未解決。",
+      "quote_ids": [
+        "supp9-cfo-capex-investing",
+        "supp9-script"
+      ]
+    },
+    {
+      "question": "27頁の在池魚/未実現利益の意味と比較主体は何か。",
+      "public_answer": "注記で想定利益/在庫の未実現利益調整を説明し、前年SAと当年SA・Yadran計を明示。CF調整の定義とは異なる。",
+      "quote_ids": [
+        "supp27-definitions",
+        "supp27-comparison-scope"
+      ]
+    },
+    {
+      "question": "海外食品工場が回収段階かという会社の見解を聞く必要があるか。",
+      "public_answer": "北米/欧州について公開Q&Aで既に説明。会社説明の存在自体を聞き直す必要はない。現金回収の確認済み事実にはしない。",
+      "quote_ids": [
+        "qa-investment-recovery"
+      ]
+    }
+  ],
+  "remaining_public_research_first": [
+    {
+      "id": "da-bridge",
+      "issue": "補足D&A/のれんの原数値・丸めと正式注記の集計/定義のbridge",
+      "status": "not_verified_in_bounded_sources",
+      "reason_to_keep_open": "包含範囲の注記はあるが、金額が一致することの証明がない。",
+      "potential_ir_scope_if_still_unresolved": "既存公表表の定義/表示方法を確認する問いに限定。未公開の足元数値を求めない。"
+    },
+    {
+      "id": "capex-cash-bridge",
+      "issue": "設備投資額（固定資産取得額）と資産取得に係る現金支出/投資CF全体とのbridge",
+      "status": "not_verified_in_bounded_sources",
+      "reason_to_keep_open": "支払タイミング・非現金/リース・対象資産・他投資CF項目の詳細がない。"
+    },
+    {
+      "id": "wc-component-bridge",
+      "issue": "運転資本の構成、長期買掛金返済と売掛金増加の金額/会計上の区分",
+      "status": "not_verified_in_bounded_sources",
+      "reason_to_keep_open": "要因は公表済みだが全項目/残高/区分の整合表はない。"
+    },
+    {
+      "id": "fish-noncash-bridge",
+      "issue": "在池魚評価/未実現利益の連結営業CF調整への対応",
+      "status": "not_verified_in_bounded_sources",
+      "reason_to_keep_open": "指定27頁とQ&Aは利益の説明でありCF調整明細ではない。"
+    },
+    {
+      "id": "period-scope-bridge",
+      "issue": "同四半期の表示と子会社集計期間、比較範囲、取得/換算を含む指標単位の整合",
+      "status": "partially_identified_not_fully_verified",
+      "reason_to_keep_open": "正式連結期間と補足四半期ラベルは確認。27頁のSA対SA・Yadranという範囲差も公表されているが、全CF指標の同一範囲は未確認。"
+    }
+  ],
+  "evidence_dependence": [
+    {
+      "source_group": "same_supplement_pdf",
+      "quote_ids": [
+        "supp9-da",
+        "supp9-working-capital",
+        "supp9-cfo-capex-investing",
+        "supp9-fcf-financing",
+        "supp9-goodwill",
+        "supp9-script",
+        "supp27-definitions",
+        "supp27-comparison-scope"
+      ],
+      "treatment": "同じ原典の表・脚注・スクリプト・別頁であり、引用数を独立した財務裏付け数にしない。"
+    },
+    {
+      "source_group": "public_issuer_qa",
+      "quote_ids": [
+        "qa-investment-recovery",
+        "qa-sa-yadran"
+      ],
+      "treatment": "別の公開文書だが同じ会社の説明。第三者検証/監査済みとしない。"
+    },
+    {
+      "source_group": "formal_statement_note",
+      "quote_ids": [
+        "statement13-cf-note"
+      ],
+      "treatment": "正式注記は別原典。正式CF計算書を作成したという裏付けにはならず、D&A数値のbridgeも自動認定しない。"
+    }
+  ],
+  "not_performed": [
+    "未一致額の加減/差額の推計",
+    "補足CFから将来FCFF・年率予測の作成",
+    "運転資本全体・純再投資・NOPAT・税・ROCの補完",
+    "金融モデルへの採用",
+    "新規公開資料の取得",
+    "DB書込",
+    "IR送信・フォーム入力"
+  ],
+  "reproduction": {
+    "citation_file": "source-quotes.json",
+    "raw_text_snapshot_hash_checks": true,
+    "pdf_images_viewed": 3,
+    "pdf_page_reextractions_match": 3,
+    "html_visible_text_reextraction_matches": true,
+    "quote_offsets_match": 14,
+    "bounded_review_only": true
+  }
+}

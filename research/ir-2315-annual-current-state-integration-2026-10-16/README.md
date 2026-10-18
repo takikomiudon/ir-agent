@@ -1,0 +1,7 @@
+2315年次の実保存・定性job完了後に、現在3docsだけを更新しました。before/に現3file完全bytes、changes.diffに限定差分を保存。旧202state受入は05:49:30の歴史として保持し、v35全factsと201source時点snapshotは不変です。
+
+RO/query_only/closingで203source202分類/112全job完了(intake91qual21)、109attempt218event109receipt、24head46版142既読、legacy28trusted175/public202market1/34公開企業29財務企業、Jan15 12/Jan16 12を実測。2315v2/config1・既読8の全recordがactualと一致し、旧7bootstrapと管理日全recordも保持。job.result.requestはworker-result全5fieldと一致し、summary/観測双方の公開既答・旧一般問の一部削減・現Q3unresolvedを確認しました。
+
+旧case表全行をそのまま残し、2315年次追補行を追加して現在v2と旧v1履歴を明記。年次1/66/67/71/72/87/88の限定範囲だけで一般定義を部分解消し、IR価値未立証・金融採用0を維持します。2327入口は2GET/1source/本文0file-only・未算入で、資料不存在/投資除外やJS再開へ変換しません。2163外部2sourceもfile-only不変です。
+
+44codepinsは1558PASS39.753秒の既存受入と現SHA一致、1558/1534記載は不変・新test実行0。初回RO検査でDBのresult envelopeをworker request本体と直接比較してassertion停止し、検査したrequestfieldとの比較へ修正しました。mutator/GET/旧producer修正はありません。その他docs/roles/skill/production/実DB書込/外部行為/金融採用0。rootレビュー待ちで停止します。

@@ -1,0 +1,52 @@
+{
+  "summary": "既読会社原典から作られた未読の派生4資料・13項目を比較した。新しい会社開示や新期の業績ではない。税率差異表とDTA残高、四半期実績と通期会社予想、3月末BPSと6月末BSを区別できるが、一時費用の現金時期・中国損失の税務帰属・将来税/NOL・正常CFの未解決点は変わらない。金融入力検証・数値仮説・投資判断・正式質問は行わない。",
+  "recorded_at": "2026-10-15T22:50:10.708951+00:00",
+  "source_reviews": [
+    {
+      "source_id": "disclosed-facts:0c718f2c84fb7cf40e3eea6f5fe28cdf78ebe6de6589e0c51da2196845ce8d90",
+      "snapshot_sha256": "010f861182efa6522185e293fedb86976d31d2c0128935707c74781b1bbbac2a",
+      "read_state": "reviewed",
+      "outcome": "unchanged",
+      "basis_quote": "\"definition\":\"税率差異表の法定実効税率の歴史的表示値。現金税率・正常/将来税率を認定せず、同表の調整後負担率と区別する。\"",
+      "rationale": "有報物理p94/印刷p91を再表現したreported_fact 6件であり、新しい税務情報ではない。2026年3月31日で終わる当連結会計年度の法定実効税率30.58%（ratio 0.3058）と税効果会計後負担率100.77%（1.0077）は歴史的税率差異表の値で、後者を上限1へ丸めない。同日DTA原因別の繰越欠損金338百万円・減損損失否認211百万円、DTA全体の評価性引当額△788百万円、相殺後DTA純額516百万円は別の会計残高。338を欠損金元本、211を中国減損の税額、△788を338だけへの控除としない。元caseのhistorical-tax-vs-future-tax-NOLで既に分けた観測と同じであり、Damodaranに沿った将来税引後CFのための現金税率/利用可能NOL/正常税率は埋まらない。p94だけで会計基準未確認nullを保持し、中国探索の閉じた経路を再開しない。"
+    },
+    {
+      "source_id": "disclosed-facts:350ff4b665b890148361dbb95305956570763182c3078f95d0665ac79a6c15fb",
+      "snapshot_sha256": "549943787283c19a778ca6ecf0de0bf1f444a13efc1c77fa30355737de462125",
+      "read_state": "reviewed",
+      "outcome": "unchanged",
+      "basis_quote": "\"definition\":\"短信「１株当たり四半期純利益」の当第1四半期連結実績。潜在株式調整後の「－」の列とは区別する。四半期値を年率換算しない。定義・列・範囲の読取りは抽出担当の主張であり、自動検証済み金融入力ではない。\"",
+      "rationale": "既読2026年8月5日付Q1短信の3値を構造化した資料。2026年4月1日〜6月30日の連結実績EPS5.21円と、2026年4月1日〜2027年3月31日の会社通期予想EPS27.45円を分ける。同年度の92.00円は発行会社の年間配当予想合計であり、連結利益や持続可能配当ではない。元caseの27.45円/92円の年度確認を維持し、四半期EPSの年率換算・正常EPS・確率シナリオ・配当列を作らない。費用を利益へ足し戻す根拠や、CFOで既に調整した減損を二重加算する根拠にはならない。会社予想をプロジェクト予想へ採用せず、Damodaranの税引後/債務前CFや再投資不足も未解決。"
+    },
+    {
+      "source_id": "disclosed-facts:bef81e966c226b614fdd7cb359d26ae670d892cbf6fd97d934aee742f333ef50",
+      "snapshot_sha256": "53ce05cb16384eb890ab4ddd422e3d8990ac2aef9dc9683d81a9db155829fb8a",
+      "read_state": "reviewed",
+      "outcome": "unchanged",
+      "basis_quote": "\"definition\":\"有報「１株当たり情報」の当連結会計年度末、直接表示された１株当たり純資産額2,672.60円。前連結会計年度の値・EPSと区別し、純資産額や株数から再計算しない。円→JPY-per-shareの表示単位対応だけを保持し、2026年6月末や現在のBPS、本源価値・清算価値へ転用しない。\"",
+      "rationale": "既読有報p103の直接表示reported_factで、2026年3月31日連結年度末普通株式BPS2,672.60円を保持する。年次EPSのフロー期間とは異なる時点残高であり、2026年6月末/現在へ持ち越さない。この範囲のaccounting_basis:nullも維持する。純資産や株数からの逆算・未丸め精度・現在PBR・簿価を本源価値/清算価値とする判断は行わない。既存cost/tax/cashflow論点の中国費用包含・現金時期・税率/NOLの定義をこの1値は追加解決せず、正常利益/税引後CFの採用条件は変わらない。"
+    },
+    {
+      "source_id": "disclosed-facts:f7efe93a490b1bf5051da04bce9259f17ab78ef8e4eeb0700f344d8dc5660d5d",
+      "snapshot_sha256": "9329689683137dd0444171e415d78b6f8d5d35743d85a4174fc6c4e7f29b7072",
+      "read_state": "reviewed",
+      "outcome": "unchanged",
+      "basis_quote": "\"definition\":\"総資産。連結貸借対照表の資産合計に対応する表示実績。総資産を純資産・株主価値・本源価値にしない。 百万円からJPYへの表示単位換算だけを行う。\"",
+      "rationale": "既読Q1短信p1と対象BSの2026年6月30日連結reported_fact 3件。総資産100,182百万円、純資産65,372百万円、参考自己資本64,077百万円を各別概念として保持する。差額から非支配持分や株数を作らず、BPSを逆算しない。3月末有報BPSと時点/単位が違うため一株値の現在化や直接比較をしない。純資産/資産を価値又は評価CFに置き換えず、既存費用の損益分類・CFO調整・税効果との対応不足を埋めたとはしない。従来のDamodaranに沿う費用/税/再投資定義の未解決を維持する。"
+    }
+  ],
+  "case_observation": {
+    "issue_id": "5988-cost-tax-cashflow-basis",
+    "outcome": "unchanged",
+    "rationale": "元caseのexpense-and-CFO-no-double-add、historical-tax-vs-future-tax-NOL、conditional-definition-gapsを維持する。税6値の構造化は歴史的税率とDTAを区別する既存観測を再表現し、EPS/DPSの年度とBPS/BSの期末を明示するが、新しい会社説明・中国費用の帰属/現金時期・将来税/利用可能NOL・期待税引後CFを追加しない。Anthropic型の支持/反証記録とDamodaran型のCF定義点検の研究手順だけを続け、未解決を売買の反証へ変換しない。旧原典のknown-byと今回の派生読解を新期開示/正確な旧初回保存に読み替えない。",
+    "evidence_source_ids": [
+      "disclosed-facts:0c718f2c84fb7cf40e3eea6f5fe28cdf78ebe6de6589e0c51da2196845ce8d90",
+      "disclosed-facts:350ff4b665b890148361dbb95305956570763182c3078f95d0665ac79a6c15fb",
+      "disclosed-facts:bef81e966c226b614fdd7cb359d26ae670d892cbf6fd97d934aee742f333ef50",
+      "disclosed-facts:f7efe93a490b1bf5051da04bce9259f17ab78ef8e4eeb0700f344d8dc5660d5d"
+    ]
+  },
+  "management_review_update": {
+    "mode": "retain"
+  }
+}

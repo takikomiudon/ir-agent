@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "reviewer": "codex_data_adapters_resource_review",
+  "reviewed_at": "2026-10-11T07:05:29.154560+00:00",
+  "reported_problem_context": {
+    "source": "parent task message; these are reported observations, not newly issued network requests",
+    "affected_wrapper_batch": "second batch, started about 06:44 UTC and stopped about 06:53 UTC",
+    "reported_configured_global_rps": 1.92,
+    "reported_final_global_rps": 1.536,
+    "reported_get_calls": 497,
+    "reported_completed_companies": 82,
+    "reported_failure": "common HTTP503 at three origins",
+    "collector_version_context": "Affected subprocess loaded the old serial-header gate before the throughput patch; current cleanup body is unchanged by that patch."
+  },
+  "scope": {
+    "external_http_get_count": 0,
+    "form_input_or_submission_count": 0,
+    "collector_code_changes": 0,
+    "records_changed": 0,
+    "raw_evidence_changed": 0,
+    "proxy_or_ca_changes": 0
+  },
+  "runtime_packages": {
+    "requests": "2.34.2",
+    "urllib3": "2.8.0"
+  },
+  "source_references": [
+    {
+      "symbol": "Fetcher._dispatch_get",
+      "local_path": "/workspace/ir-agent/scripts/research_ir_universe.py",
+      "first_line": 284,
+      "file_sha256": "c89e680f603078f73d244ec16983d8e9ce4f520f53c2c2d8673d20d99310be7a"
+    },
+    {
+      "symbol": "Fetcher.raw_get",
+      "local_path": "/workspace/ir-agent/scripts/research_ir_universe.py",
+      "first_line": 318,
+      "file_sha256": "c89e680f603078f73d244ec16983d8e9ce4f520f53c2c2d8673d20d99310be7a"
+    },
+    {
+      "symbol": "Fetcher.capture_one",
+      "local_path": "/workspace/ir-agent/scripts/research_ir_universe.py",
+      "first_line": 390,
+      "file_sha256": "c89e680f603078f73d244ec16983d8e9ce4f520f53c2c2d8673d20d99310be7a"
+    },
+    {
+      "symbol": "Fetcher.capture",
+      "local_path": "/workspace/ir-agent/scripts/research_ir_universe.py",
+      "first_line": 428,
+      "file_sha256": "c89e680f603078f73d244ec16983d8e9ce4f520f53c2c2d8673d20d99310be7a"
+    },
+    {
+      "symbol": "requests.api.request",
+      "local_path": "/workspace/ir-agent/.venv/lib/python3.12/site-packages/requests/api.py",
+      "first_line": 24,
+      "file_sha256": "4d15480ac046f089209798e8650476ef4a28ebe6f81b400758f8ef42ec6b5509"
+    },
+    {
+      "symbol": "requests.Session.__exit__",
+      "local_path": "/workspace/ir-agent/.venv/lib/python3.12/site-packages/requests/sessions.py",
+      "first_line": 508,
+      "file_sha256": "96fbb30bbbf06a59a5268d13b57885149756aa3f31695b5c15e41dd7bb2f67a6"
+    },
+    {
+      "symbol": "requests.Session.close",
+      "local_path": "/workspace/ir-agent/.venv/lib/python3.12/site-packages/requests/sessions.py",
+      "first_line": 883,
+      "file_sha256": "96fbb30bbbf06a59a5268d13b57885149756aa3f31695b5c15e41dd7bb2f67a6"
+    },
+    {
+      "symbol": "requests.Response.__exit__",
+      "local_path": "/workspace/ir-agent/.venv/lib/python3.12/site-packages/requests/models.py",
+      "first_line": 813,
+      "file_sha256": "d1bc0d990abf5d5ebee05f890911b4363fadf2d5264b686a963df47c529b6ace"
+    },
+    {
+      "symbol": "requests.Response.close",
+      "local_path": "/workspace/ir-agent/.venv/lib/python3.12/site-packages/requests/models.py",
+      "first_line": 1169,
+      "file_sha256": "d1bc0d990abf5d5ebee05f890911b4363fadf2d5264b686a963df47c529b6ace"
+    },
+    {
+      "symbol": "requests.Response.iter_content",
+      "local_path": "/workspace/ir-agent/.venv/lib/python3.12/site-packages/requests/models.py",
+      "first_line": 912,
+      "file_sha256": "d1bc0d990abf5d5ebee05f890911b4363fadf2d5264b686a963df47c529b6ace"
+    },
+    {
+      "symbol": "requests.HTTPAdapter.close",
+      "local_path": "/workspace/ir-agent/.venv/lib/python3.12/site-packages/requests/adapters.py",
+      "first_line": 555,
+      "file_sha256": "647eabd4453de232aa40b55ff033d6f19778910b7e7069c51fdf63076fc77493"
+    },
+    {
+      "symbol": "urllib3.HTTPResponse.close",
+      "local_path": "/workspace/ir-agent/.venv/lib/python3.12/site-packages/urllib3/response.py",
+      "first_line": 1309,
+      "file_sha256": "0e4559c737914d4f8f941dca9ecfaf6caec6792258302bffec7b8b41dae3c71a"
+    },
+    {
+      "symbol": "urllib3.HTTPResponse.release_conn",
+      "local_path": "/workspace/ir-agent/.venv/lib/python3.12/site-packages/urllib3/response.py",
+      "first_line": 810,
+      "file_sha256": "0e4559c737914d4f8f941dca9ecfaf6caec6792258302bffec7b8b41dae3c71a"
+    },
+    {
+      "symbol": "urllib3.HTTPResponse._error_catcher",
+      "local_path": "/workspace/ir-agent/.venv/lib/python3.12/site-packages/urllib3/response.py",
+      "first_line": 916,
+      "file_sha256": "0e4559c737914d4f8f941dca9ecfaf6caec6792258302bffec7b8b41dae3c71a"
+    },
+    {
+      "symbol": "urllib3.HTTPConnectionPool.urlopen",
+      "local_path": "/workspace/ir-agent/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py",
+      "first_line": 598,
+      "file_sha256": "6a147869216b94449a053e869d4311cba23294551c83ee20fe5d2f1eaff50a3e"
+    },
+    {
+      "symbol": "urllib3.HTTPConnectionPool._put_conn",
+      "local_path": "/workspace/ir-agent/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py",
+      "first_line": 300,
+      "file_sha256": "6a147869216b94449a053e869d4311cba23294551c83ee20fe5d2f1eaff50a3e"
+    }
+  ],
+  "reference_documentation": [
+    {
+      "url": "https://requests.readthedocs.io/en/latest/user/advanced/#body-content-workflow",
+      "fetched": false,
+      "purpose": "Reference URL only; conclusions use installed local implementation."
+    },
+    {
+      "url": "https://requests.readthedocs.io/en/latest/user/advanced/#keep-alive",
+      "fetched": false,
+      "purpose": "Reference URL only; no external GET was made."
+    }
+  ],
+  "cleanup_findings": [
+    {
+      "path": "received HTTP Response",
+      "result": "raw_get enters with response before reading, redirect processing, charset decoding or HTML parsing; normal and exceptional exits call Response.__exit__ -> close.",
+      "branches": [
+        "HTML success",
+        "non-HTML",
+        "robots HTTP responses",
+        "redirect hop responses",
+        "401/403/429",
+        "HTTP503 TLS error body",
+        "body read exceptions",
+        "three MiB cap",
+        "charset/parsing exceptions"
+      ]
+    },
+    {
+      "path": "stream body",
+      "result": "Response.close closes raw for an unconsumed body and calls release_conn. Completed iter_content marks content consumed and still releases the connection. urllib3 closes exceptional connections; returning to a closed pool closes/discards the connection."
+    },
+    {
+      "path": "exception before Response creation",
+      "result": "requests.api.request uses with Session; TLS/connect failures leave through Session.__exit__ -> close -> HTTPAdapter.close, clearing normal and proxy pools."
+    },
+    {
+      "path": "no GET policy/circuit stop",
+      "result": "raw_get/capture_one return metadata before constructing any HTTP Response; no live Response is cached. Robot cache and redirect lists store dictionaries, not Response objects."
+    },
+    {
+      "path": "wrapper child completion",
+      "result": "stdout log is opened with a context manager around Popen/wait; after wait the child reference is cleared and the log handle closes. An exited collector process cannot retain its open descriptors."
+    },
+    {
+      "path": "cross-GET connection reuse",
+      "result": "Module-level requests.get creates/closes a temporary Session on every call. Cross-GET pool reuse is absent. This is connection churn, not evidence of a leak or a proved explanation for shared503."
+    }
+  ],
+  "offline_mock_diagnostic": {
+    "method": "Real requests.Response __exit__/close and requests.Session cleanup, with in-memory Raw.stream and patched Session.request/get. No transport was invoked.",
+    "case_count": 9,
+    "all_passed": true,
+    "cases": [
+      {
+        "case": "html_success",
+        "response_close_calls": 1,
+        "raw_close_calls": 0,
+        "release_conn_calls": 1,
+        "content_consumed": true,
+        "captured_error": null,
+        "external_http_get_count": 0
+      },
+      {
+        "case": "robots_404",
+        "response_close_calls": 1,
+        "raw_close_calls": 0,
+        "release_conn_calls": 1,
+        "content_consumed": true,
+        "captured_error": null,
+        "external_http_get_count": 0
+      },
+      {
+        "case": "redirect_302",
+        "response_close_calls": 1,
+        "raw_close_calls": 0,
+        "release_conn_calls": 1,
+        "content_consumed": true,
+        "captured_error": null,
+        "external_http_get_count": 0
+      },
+      {
+        "case": "non_html_success",
+        "response_close_calls": 1,
+        "raw_close_calls": 0,
+        "release_conn_calls": 1,
+        "content_consumed": true,
+        "captured_error": null,
+        "external_http_get_count": 0
+      },
+      {
+        "case": "http_tls_503",
+        "response_close_calls": 1,
+        "raw_close_calls": 0,
+        "release_conn_calls": 1,
+        "content_consumed": true,
+        "captured_error": null,
+        "external_http_get_count": 0
+      },
+      {
+        "case": "body_read_error",
+        "response_close_calls": 1,
+        "raw_close_calls": 1,
+        "release_conn_calls": 1,
+        "content_consumed": false,
+        "captured_error": "ChunkedEncodingError",
+        "external_http_get_count": 0
+      },
+      {
+        "case": "oversize_body",
+        "response_close_calls": 1,
+        "raw_close_calls": 1,
+        "release_conn_calls": 1,
+        "content_consumed": false,
+        "captured_error": "ValueError",
+        "external_http_get_count": 0
+      },
+      {
+        "case": "unknown_charset",
+        "response_close_calls": 1,
+        "raw_close_calls": 0,
+        "release_conn_calls": 1,
+        "content_consumed": true,
+        "captured_error": "LookupError",
+        "external_http_get_count": 0
+      },
+      {
+        "case": "exception_before_response",
+        "captured_error": "SSLError",
+        "session_close_calls": 1,
+        "response_created": false,
+        "external_http_get_count": 0
+      }
+    ]
+  },
+  "process_samples": [
+    {
+      "observed_at": "2026-10-11T06:59:45.726897+00:00",
+      "wrapper_status": "collecting",
+      "wrapper_pid": 9385,
+      "wrapper_fd_entry_count": 5,
+      "collector_pid": 12988,
+      "collector_fd_entry_count": 4,
+      "owned_socket_count": null,
+      "fd_inspection": "All links were unreadable; no zero-socket conclusion is supported."
+    },
+    {
+      "observed_at": "2026-10-11T07:00:31.621284+00:00",
+      "wrapper_status": "waiting_for_recovery",
+      "wrapper_pid": 9385,
+      "wrapper_fd_entry_count": 4,
+      "collector_pid": null,
+      "last_collector_pid": 12988,
+      "last_collector_proc_present": false,
+      "owned_socket_count": null,
+      "fd_inspection_error": "readlink and fdinfo PermissionError errno13",
+      "network_namespace_tcp_states": {
+        "tcp:ESTABLISHED": 1,
+        "tcp:TIME_WAIT": 7,
+        "tcp:LISTEN": 1
+      },
+      "tcp_state_scope": "whole namespace, not attributed to the wrapper"
+    },
+    {
+      "observed_at": "2026-10-11T07:05:29.154514+00:00",
+      "wrapper_status": "waiting_for_recovery",
+      "processes": [
+        {
+          "pid": 9385,
+          "kind": "adaptive_wrapper",
+          "status": {
+            "State": "S (sleeping)",
+            "PPid": "9382",
+            "FDSize": "64",
+            "VmRSS": "22992 kB",
+            "Threads": "1"
+          },
+          "fd_entry_count": 4,
+          "readable_fd_link_count": 0,
+          "readable_fdinfo_count": 0,
+          "inspection_error_counts": {
+            "readlink:PermissionError:errno13": 4,
+            "fdinfo:PermissionError:errno13": 4
+          },
+          "open_file_limit": "Max open files            16384                16384                files     ",
+          "owned_socket_count": null
+        }
+      ],
+      "active_collector_pid": null,
+      "last_collector_pid": 12988,
+      "last_collector_proc_present": false,
+      "network_namespace_tcp_states": {
+        "tcp:LISTEN": 1,
+        "tcp:ESTABLISHED": 1
+      },
+      "tcp_state_scope": "entire current network namespace, not owned by the wrapper"
+    }
+  ],
+  "conclusion": "Inspected cleanup paths and nine offline diagnostics show no demonstrated Response/session release bug. Wrapper FD count returned from 5 during a batch to 4 after child exit. The shared503 cause remains undetermined; no collector patch was made.",
+  "limitations": [
+    "PermissionError13 prevents reading another process FD links/fdinfo. Socket ownership and zero open sockets cannot be concluded.",
+    "Namespace TIME_WAIT describes connections waiting after closure, not necessarily open wrapper FDs; namespace counts include other processes.",
+    "The 06:44 affected collector has exited; its live per-request FD history is unavailable.",
+    "Offline response cleanup tests do not measure proxy-side resources, tunnels, quotas or remote failure causes.",
+    "No environments, full process argv, sensitive FD paths, socket endpoint addresses or credentials were retained in this report."
+  ]
+}

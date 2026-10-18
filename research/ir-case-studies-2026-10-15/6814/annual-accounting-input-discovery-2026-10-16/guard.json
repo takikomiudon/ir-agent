@@ -1,0 +1,54 @@
+{
+  "company_id": "jp:6814",
+  "maximum_GETs": 5,
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu"
+  ],
+  "holds_v8_file": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+  "holds_v8_SHA256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952",
+  "allowed_requests": [
+    {
+      "role": "issuer_robots",
+      "url": "https://www.furuno.co.jp/robots.txt"
+    },
+    {
+      "role": "issuer_annual_index",
+      "url": "https://www.furuno.co.jp/ir/library/bs.html",
+      "literal_provenance": "savedIR02links110"
+    },
+    {
+      "role": "issuer_past_annual_index",
+      "url": "https://www.furuno.co.jp/ir/library/bs_archives.html",
+      "literal_provenance": "$.GETs[1].html_visible_text.links[141]",
+      "reason": "Annual fullFY not in latestquarterindex, exact staticpastindex literal"
+    },
+    {
+      "role": "issuer_annual_PDF",
+      "url": "https://www.furuno.co.jp/Portals/0/images/ir/library/bs/kessan_26kt.pdf",
+      "literal_provenance": "$.GETs[2].html_visible_text.links[164]",
+      "period_binding": "2026年2月期（2025年3月〜2026年2月）通期 block, static HTML retained"
+    }
+  ],
+  "robots_reviews": {
+    "www.furuno.co.jp": {
+      "proceed": true,
+      "branch": "fresh_robots200",
+      "raw_file": "research/ir-case-studies-2026-10-15/6814/annual-accounting-input-discovery-2026-10-16/raw/a19fe12487b7e27905ca893e384499cd5783a338398a7c62aca3d0c99024f745",
+      "raw_sha256": "a19fe12487b7e27905ca893e384499cd5783a338398a7c62aca3d0c99024f745",
+      "observed_complete_at": "2026-10-16T10:27:04.523842+00:00",
+      "rules": "user-agent:* allow:/*; exactURLfixedUAchecked"
+    }
+  },
+  "rules": "normalTLSproxyfixedUA/allGETinclredirectrobotsmax5/noJSfeedretriessearchURLguessproviderbypass/annualPDF1only/no price"
+}

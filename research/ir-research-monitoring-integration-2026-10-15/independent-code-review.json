@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T09:07:33.080812+00:00",
+  "reviewer": "decision_review",
+  "status": "bounded_independent_code_review_complete_no_concrete_defect_found",
+  "reviewed_files": {
+    "src/ir_agent/research_monitoring.py": "8c49b673b9b3bc555636e7f522a318a896d48a81176fd59574a056271a860ddb",
+    "scripts/report_research_monitoring.py": "bb2e1f9cabf66b2513a87b2aa2bfc67d76937be5bd2fdd71fbffd21fc7ed849c",
+    "tests/test_research_monitoring.py": "ef548eb161a47181b84d3cfade936d0cc5ccccfa7ae1033a91ea9205247a7cbe",
+    "tests/test_research_monitoring_cli.py": "d80e88ff347b072d866d2f7a307f69115ebd387ea3b754194a4509ed25dff271",
+    "research/ir-research-monitoring-integration-2026-10-15/contract.md": "f3d7ae7dc8d51526bc02453dab3d13f9f8c6be31c7e3479e25ad28be95e93b41",
+    "research/ir-research-monitoring-integration-2026-10-15/independent-review-plan.md": "e96e9f5b22a1b2f4674ddd1e2ed5b020a25a17ccb10fe5927eca221d2c66a89f",
+    "research/ir-research-monitoring-integration-2026-10-15/actual-case-requests.json": "fdf4dfb19bac90e11b45e84697b7769e7a072e5ddb4bacfaafa3d5f75504277c",
+    "research/ir-research-monitoring-integration-2026-10-15/actual-request-preparation.json": "372c1731855a3fa34cfd52e4f9c201f15ffa545154592ad52c55d7320847c343",
+    "research/ir-research-monitoring-integration-2026-10-15/operational-calendar-basis.json": "be96f64fd125c32300d6d63ddc0422be67f2f4170bda7a35d531544e65c41f31"
+  },
+  "method": "Read implementation, wrapper, contract and targettests; wrote fresh standalone finite synthetic fixtures/assertions rather than rerunning existing testfunctions. No source code edits.",
+  "cases": [
+    {
+      "case": "15_inventory_5_reviewed_10_unknown_vs_3_reviewed",
+      "outcome": "passed",
+      "new_saved": [
+        0,
+        0
+      ],
+      "pending": [
+        10,
+        0
+      ],
+      "statuses": [
+        "needs_manual_review",
+        "no_new_trigger_in_checked_scope"
+      ],
+      "repeat_request_DB_dump_bytes_changes_unchanged": true
+    },
+    {
+      "case": "coexisting_due_pending_arrival_unlisted_future_and_unclassified",
+      "outcome": "passed",
+      "new_saved_sources": [
+        "late-old-publication"
+      ],
+      "previously_unlisted_sources": [
+        "boundary-equal",
+        "old-unlisted"
+      ],
+      "management_due": true,
+      "pending_count": 14,
+      "reason_codes": [
+        "first_saved_after_knowledge_at",
+        "classification_not_available"
+      ]
+    },
+    {
+      "case": "legacy_presence_not_firstsave",
+      "outcome": "passed",
+      "first_saved_at": null,
+      "arrival": "unknown"
+    },
+    {
+      "case": "future_manifest_and_fixed_case_hash",
+      "outcome": "passed",
+      "historical_manifest": "held",
+      "hash_mismatch_preserved": true
+    },
+    {
+      "case": "Tokyo_calendar_and_unbound_or_missing_management_evidence",
+      "outcome": "passed",
+      "due_before_at_local_midnight": [
+        false,
+        true
+      ],
+      "unknown_timezone_due": null,
+      "quote_without_ISO_date_due": null
+    },
+    {
+      "case": "shared_DAG_second_parent_later_hold",
+      "outcome": "passed",
+      "lineage_nodes": 4,
+      "historical_usability": "matched",
+      "current_use": "held"
+    },
+    {
+      "case": "second_parent_future_saved",
+      "outcome": "passed",
+      "historical_usable": false
+    },
+    {
+      "case": "missing_vs_known_empty_tables",
+      "outcome": "passed",
+      "missing_row_count": null,
+      "known_empty_row_count": 0,
+      "DDL_or_DML": 0
+    },
+    {
+      "case": "prepared_actual_v1_on_synthetic_empty_DB_only",
+      "outcome": "passed",
+      "management_due": [
+        null,
+        null
+      ],
+      "date_not_bound_to_quote_preserved": true,
+      "past_manifest_statuses": [
+        "held",
+        "held"
+      ],
+      "pending_from_declared_inventory": [
+        10,
+        0
+      ],
+      "actual_source_availability_checked": false
+    },
+    {
+      "case": "outer_transaction_and_ro_wrapper",
+      "outcome": "passed",
+      "outer_uncommitted_insert_preserved_until_caller_rollback": true,
+      "wrapper_DB_bytes_unchanged": true,
+      "missing_DB_created": false
+    }
+  ],
+  "finding_count": 0,
+  "specification_clarifications": [
+    {
+      "topic": "ISO managementdate binding",
+      "result": "Documented first-version restriction: literal ISOdate must occur in samebasisquote. Actualv1 is expectedunknown, not a defect; root retains it and preparesv2 separately."
+    },
+    {
+      "topic": "Current-use vs historical",
+      "result": "Historical source usability and later current classification hold remain separate; arrival is receipt fact, not evidenceusability or reviewcompletion."
+    }
+  ],
+  "limits": [
+    "No actualDB access or current realissuer source-availability verification. Actualv1 only exercised against an empty syntheticDB to isolate manifest/date semantics.",
+    "No network, scheduler, daemon, newjob, financial action, valuation or modelmeaning review.",
+    "Caller last_review_at/recorded_at/reviewstatus are declarations; no trusted researchfile first-save or prospectivecommitment proof.",
+    "No broad corruption/fuzz/performance/restore-loss audit; no independent proof of case-to-author semantictruth.",
+    "No whole1819company or liveWeb monitoring claim."
+  ],
+  "execution": {
+    "GETs": 0,
+    "actual_DB_accesses": 0,
+    "production_edits": 0,
+    "existing_artifact_edits": 0,
+    "new_integration_artifacts": [
+      "independent-code-review.json",
+      "independent-code-review.md"
+    ],
+    "existing_input_hashes_unchanged": 9,
+    "new_jobs": 0,
+    "financial_actions": 0,
+    "full_suite_runs": 0
+  }
+}

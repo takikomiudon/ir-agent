@@ -1,0 +1,36 @@
+{
+  "allowed_requests_with_literal_parent_pointers": [
+    {
+      "role": "issuer_robots",
+      "url": "https://www.raito.co.jp/robots.txt",
+      "basis": "robots endpoint on selected official host"
+    },
+    {
+      "role": "issuer_root",
+      "url": "https://www.raito.co.jp/",
+      "basis": "selected CSV official_url"
+    },
+    {
+      "role": "results_index",
+      "url": "https://www.raito.co.jp/ir/irshiryou/",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[1].html_visible_text.links[31]",
+      "literal_href": "/ir/irshiryou/",
+      "label": "IRライブラリー"
+    },
+    {
+      "role": "quarter_results_index",
+      "url": "https://www.raito.co.jp/ir/irshiryou/tanshin/",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[2].html_visible_text.links[61]",
+      "literal_href": "https://www.raito.co.jp/ir/irshiryou/tanshin/",
+      "label": "決算短信"
+    }
+  ],
+  "results_index_is_static_categories_with_explicit_financial_subindex": true,
+  "quarter_results_index_pdf_anchor_count": 0,
+  "quarter_results_index_raw_dot_pdf_count": 0,
+  "dynamic_scripts_requested_or_executed": false,
+  "root_or_robots_refetched": false,
+  "external_hosts_requested": false
+}

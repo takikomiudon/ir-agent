@@ -1,0 +1,204 @@
+{
+  "synthetic": true,
+  "description": "Explicitly injected historical paper timestamps and invented observations",
+  "external_sends": 0,
+  "network_requests": 0,
+  "observation_versions": 4,
+  "eligible_before_verification": 0,
+  "eligible_after_verification": 1,
+  "calibration_status": "needs_calibration",
+  "later_summary": {
+    "status": "observations_only",
+    "calibration_status": "needs_calibration",
+    "as_of": "2026-10-10T07:00:00+00:00",
+    "record_count": 1,
+    "active_count": 1,
+    "not_yet_recorded_count": 0,
+    "eligible_count": 1,
+    "dispatch_counts": {
+      "sent": 1
+    },
+    "response_counts": {
+      "on_time_reply": 1
+    },
+    "verification_counts": {
+      "verified": 1
+    },
+    "records_with_late_replies": 0,
+    "unknown_policy_count": 1,
+    "excluded_active_count": 0,
+    "cohorts": [
+      {
+        "cohort_id": "synthetic-cost-nature",
+        "design_version": 1,
+        "definition": {
+          "state_timing": "at_question",
+          "states": {
+            "mixed": "架空の対象費用に単発と継続の双方がある",
+            "persistent": "架空の対象費用が翌期にも反復する",
+            "temporary": "架空の対象費用は単発で翌期に反復しない"
+          },
+          "target_period": {
+            "end": "2026-09-30",
+            "start": "2026-04-01"
+          },
+          "signals": {
+            "declined": "回答拒否",
+            "no_response_by_deadline": "期限までの受信確認済みで返信なし",
+            "persistent_explanation": "継続又は混在との説明",
+            "temporary_explanation": "単発であるとの説明",
+            "unclear": "公開性は確認済みだが費用の性質は不明確"
+          },
+          "synthetic": true
+        },
+        "definition_sha256": "9058b0a7543b0c61b162b59164d012908bc5159d65656ee8ee4bfff5924ac810",
+        "record_count": 1,
+        "active_count": 1,
+        "eligible_count": 1,
+        "excluded_count": 0,
+        "exclusion_counts": {},
+        "company_counts": {
+          "synthetic-company": 1
+        },
+        "policy_counts": {
+          "unknown": 1
+        },
+        "state_signal_counts": {
+          "mixed": {
+            "declined": 0,
+            "no_response_by_deadline": 0,
+            "persistent_explanation": 0,
+            "temporary_explanation": 0,
+            "unclear": 0
+          },
+          "persistent": {
+            "declined": 0,
+            "no_response_by_deadline": 0,
+            "persistent_explanation": 0,
+            "temporary_explanation": 0,
+            "unclear": 0
+          },
+          "temporary": {
+            "declined": 0,
+            "no_response_by_deadline": 0,
+            "persistent_explanation": 0,
+            "temporary_explanation": 1,
+            "unclear": 0
+          }
+        },
+        "descriptive_signal_ratios_given_verified_state": {
+          "mixed": {
+            "declined": {
+              "numerator": 0,
+              "denominator": 0,
+              "ratio": null
+            },
+            "no_response_by_deadline": {
+              "numerator": 0,
+              "denominator": 0,
+              "ratio": null
+            },
+            "persistent_explanation": {
+              "numerator": 0,
+              "denominator": 0,
+              "ratio": null
+            },
+            "temporary_explanation": {
+              "numerator": 0,
+              "denominator": 0,
+              "ratio": null
+            },
+            "unclear": {
+              "numerator": 0,
+              "denominator": 0,
+              "ratio": null
+            }
+          },
+          "persistent": {
+            "declined": {
+              "numerator": 0,
+              "denominator": 0,
+              "ratio": null
+            },
+            "no_response_by_deadline": {
+              "numerator": 0,
+              "denominator": 0,
+              "ratio": null
+            },
+            "persistent_explanation": {
+              "numerator": 0,
+              "denominator": 0,
+              "ratio": null
+            },
+            "temporary_explanation": {
+              "numerator": 0,
+              "denominator": 0,
+              "ratio": null
+            },
+            "unclear": {
+              "numerator": 0,
+              "denominator": 0,
+              "ratio": null
+            }
+          },
+          "temporary": {
+            "declined": {
+              "numerator": 0,
+              "denominator": 1,
+              "ratio": "0"
+            },
+            "no_response_by_deadline": {
+              "numerator": 0,
+              "denominator": 1,
+              "ratio": "0"
+            },
+            "persistent_explanation": {
+              "numerator": 0,
+              "denominator": 1,
+              "ratio": "0"
+            },
+            "temporary_explanation": {
+              "numerator": 1,
+              "denominator": 1,
+              "ratio": "1"
+            },
+            "unclear": {
+              "numerator": 0,
+              "denominator": 1,
+              "ratio": "0"
+            }
+          }
+        },
+        "within_company_repetition_present": false
+      }
+    ],
+    "observations": [
+      {
+        "id": "synthetic-observation-1",
+        "company_id": "synthetic-company",
+        "question_id": "synthetic-question-1",
+        "cohort_id": "synthetic-cost-nature",
+        "design_version": 1,
+        "policy_ref": null,
+        "synthetic": true,
+        "active": true,
+        "signal": "temporary_explanation",
+        "state": "temporary",
+        "eligible_for_descriptive_table": true,
+        "exclusion_reasons": [],
+        "late_reply_count": 0,
+        "verification_status": "verified",
+        "dispatch_status": "sent",
+        "response_status": "on_time_reply",
+        "visible_external_changes": 0
+      }
+    ],
+    "signal_rule": "Use the earliest received on-time reply visible at as_of; conflicting simultaneous first replies are excluded. Late replies do not replace a verified deadline no-response signal.",
+    "limitations": [
+      "Ratios describe only the sent, signal-observed, supplied verified-label subset; selection and missing-label bias remain.",
+      "Repeated observations within a company are not independent evidence.",
+      "Public-document references and state labels are supplied assertions, not independently checked by this API.",
+      "No likelihood estimation, smoothing, performance threshold, investment ranking or sending is performed."
+    ]
+  }
+}

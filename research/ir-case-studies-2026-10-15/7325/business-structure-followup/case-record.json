@@ -1,0 +1,108 @@
+{
+  "DB_access_by_producer": 0,
+  "IR_questions_added": 0,
+  "artifact_type": "issuer_business_and_model_scope_review_not_financial_thesis",
+  "company_id": "jp:7325",
+  "company_name": "株式会社アイリックコーポレーション",
+  "company_observations": [
+    {
+      "claim": "会社は保険ショップ直営店を運営し、独自分析・検索システムで顧客の保険選びを支援すると説明している。",
+      "claim_kind": "issuer_business_description",
+      "issue_id": "7325-B01-direct-shops-and-selection-support",
+      "outcome": "supports",
+      "quote_ids": [
+        "7325-B01-direct-shops-and-selection-support"
+      ]
+    },
+    {
+      "claim": "会社はFC保険ショップの比較推奨サービス、送客、人材教育、店舗運営指導、プロモーション等の運営支援を説明している。",
+      "claim_kind": "issuer_business_description",
+      "issue_id": "7325-B02-franchise-operating-support",
+      "outcome": "supports",
+      "quote_ids": [
+        "7325-B02-franchise-operating-support"
+      ],
+      "store_counts_not_used_as_financial_forecast": true
+    },
+    {
+      "claim": "末尾事業紹介は保険クリニック、販売事業者向けsolution、FA、グループ会社のsystem/AI-OCRという4事業を説明している。",
+      "claim_kind": "issuer_business_description",
+      "issue_id": "7325-B03-four-business-description",
+      "outcome": "supports",
+      "quote_ids": [
+        "7325-B03-four-business-description"
+      ]
+    }
+  ],
+  "company_status_changed": false,
+  "conditions": [],
+  "external_sends_orders": 0,
+  "financial_inputs_verified": false,
+  "investment_actions_added": 0,
+  "issue_id": "7325-business-and-model-scope",
+  "issue_kind": "issuer_business_structure_and_research_model_applicability",
+  "method_policy_reference": {
+    "Damodaran_evaluated_7325": false,
+    "author": "Aswath Damodaran",
+    "company_facts_not_sourced_to_method_author": true,
+    "method_reference_ids": [
+      "financial-debt",
+      "financial-cf-definition",
+      "financial-regcapital"
+    ],
+    "not_a_direct_author_company_assessment": true,
+    "policy_file": "research/valuation-model-routing-2026-10-15/routing.json",
+    "policy_file_sha256": "868aff8827b8a399bd73bf80a3797b2e8b38f97e2acc9ec2ce2eefa0c8121069",
+    "project_adaptation": "採用済み著者方針を会社原本の事業構造点検へ適応し、業種タグだけで負債の営業上の意味や規制資本制約を確定しない。保険業タグから銀行型regulatory-FCFEを自動適用せず、一括投資除外もしない。",
+    "route_id": "financial_service_equity_review",
+    "source_record_file": "research/valuation-model-routing-2026-10-15/sources.json",
+    "source_record_file_sha256": "a9b8c046d3ff5b23eb65fdaabdd4ee8ef55c66498b52cbcad9fc5099c3cc7538"
+  },
+  "model_applicability": {
+    "financial_equity_model_review": null,
+    "financial_model_executed": false,
+    "ordinary_model_review": null,
+    "outcome": "unresolved",
+    "rationale": "今回の会社説明は保険選択・FC支援・技術サービスを支持するが、負債/保険責任/規制資本/CF定義を確定しない。銀行等の規制資本モデルにも通常事業モデルにも機械的に振り分けない。",
+    "regulatory_FCFE_applicable": null,
+    "valuation_model_selected": null
+  },
+  "new_GETs_by_producer": 0,
+  "next_finite_task_if_needed": {
+    "new_GET_authorized_or_executed_here": false,
+    "no_IR_question_created_to_fill_missing_data": true,
+    "no_automatic_deeper_link_traversal": true,
+    "scope": "If a model or financial hypothesis is to be adopted, separately inspect a bounded issuer financial/segment original for revenue-recognition/entity/segment and liability/capital definitions.",
+    "status": "proposal_only_no_new_acquisition",
+    "trigger": "具体的なモデル採用又は財務論点の検証に上記定義が必要となった場合"
+  },
+  "numeric_forecasts_added": 0,
+  "quote_file": "research/ir-case-studies-2026-10-15/7325/business-structure-followup/quotes.json",
+  "quote_file_sha256": "112116171366cd76a45472d09c2793940a4ca1c684196d528bbb186880e7e153",
+  "recorded_at": "2026-10-15T20:09:15.908384+00:00",
+  "schema_version": 1,
+  "semantic_review_scope": {
+    "HTML_block_ids": [
+      "7325-B01-direct-shops-and-selection-support",
+      "7325-B02-franchise-operating-support",
+      "7325-B03-four-business-description"
+    ],
+    "count": 3,
+    "full_HTML_mechanical_extraction_not_full_semantic_review": true
+  },
+  "source_file": "research/ir-case-studies-2026-10-15/7325/business-structure-followup/source-only-bundle.json",
+  "source_file_sha256": "72d2ffb0c0f1510384c708a65aec152edb930567c395fb8a399aa5cbb0da18d4",
+  "source_ids": [
+    "case-public:ce5ce2f094f06ae10f2fcc69854489b820cae9b9f77c3903add6657da5dceb82"
+  ],
+  "source_snapshot_sha256": "dc27e22bf97af2359fb6d338db6b65bb4f40f4ab2bfae314fecec642ce7b795c",
+  "status": "fixed_three_block_company_description_review_complete_model_applicability_unresolved",
+  "unresolved": [
+    "グループ全体の引受責任や保険負債の有無と主体別範囲",
+    "代理店/FC/技術サービスの手数料・売上認識と財務的重要性",
+    "規制資本制約の適用主体・必要/目標資本と分配制約",
+    "負債・運転資本・再投資が営業上どのような役割を持つか",
+    "通常事業モデル又は金融株主価値モデルへの適合"
+  ],
+  "valuation_multiples_added": 0
+}

@@ -1,0 +1,405 @@
+{
+  "schema_version": 1,
+  "artifact_type": "source_backed_decision_scope_review",
+  "recorded_at": "2026-10-15T05:48:56.276535+00:00",
+  "status": "research_only_no_policy_or_trading_adoption",
+  "scope": {
+    "new_gets": 0,
+    "database_accesses": 0,
+    "production_changed": false,
+    "existing_artifacts_changed": false,
+    "new_generic_api_registry_or_gate": false,
+    "empirical_financial_performance_claim": false
+  },
+  "main_findings": [
+    {
+      "id": "probability_not_universal_author_gate",
+      "finding": "固定Anthropicの定性的な仮説更新/反証・監視は確率付き期待値を前提にしない。完全previewは数値/株価含意等も求めるが、シナリオ確率の必須欄はない。",
+      "classification": "bounded_author_requirement_interpretation",
+      "quotes": [
+        "AT01",
+        "AT02",
+        "AT03",
+        "AT04",
+        "AT06",
+        "EP02",
+        "EP03"
+      ]
+    },
+    {
+      "id": "current_code_can_unweighted_exit",
+      "finding": "現コードは数値モデル/方針/価格が揃う場合、unweightedでも反証watch/exit、保有target/risk/holdの分岐へ到達する。新規buyだけ期待値なしで保留。",
+      "classification": "current_project_contract",
+      "quotes": [
+        "CG05",
+        "CG05B"
+      ],
+      "reproduction": "code-requirements-repro.json"
+    },
+    {
+      "id": "blanket_numerical_gates_block_qualitative_only",
+      "finding": "valuation付きthesisと6方針一括必須、価格/valuation前提はproject choice。反証確認まで買い用minupsideが必要な構造。これを著者の要件と呼ばない。",
+      "classification": "project_choice_not_author_rule",
+      "quotes": [
+        "CG01",
+        "CG02",
+        "CG03",
+        "CG04",
+        "CG06",
+        "CG06B"
+      ]
+    },
+    {
+      "id": "research_expiry_not_sale",
+      "finding": "著者の定期点検と、既存codeの期限保留は自動退出規則ではない。明示退出条件/保有確認のない期限到来やfloating予定からexitを作らない。",
+      "classification": "author_principle_and_project_behavior_distinguished",
+      "quotes": [
+        "AT05",
+        "AT06",
+        "CG03"
+      ]
+    },
+    {
+      "id": "quantified_information_value_distinct",
+      "finding": "EVSIの期待効用計算に分布・信号尤度等は必要。その不足を全ての公開事実点検やIR研究の禁止へ拡張しない。",
+      "classification": "method_specific_requirement",
+      "quotes": [
+        "EV01"
+      ],
+      "method_reference": {
+        "artifact": "research/ir-policy-adoption-2026-10-15/sources.json",
+        "json_pointer": "/methods/0"
+      }
+    },
+    {
+      "id": "rating_not_a_buy_default",
+      "finding": "保存サンプルの定義はTOPIX相対予想で、明示シナリオ確率はないが算定全体は未確認。本人の絶対上昇余地/費用/リスク/退出規則へ流用しない。",
+      "classification": "limited_external_definition_not_adopted",
+      "quotes": [
+        "PR01",
+        "PR02"
+      ]
+    },
+    {
+      "id": "no_independent_prediction_imputation",
+      "finding": "定性点検に独立数値予測は不要。一方、数値評価へ進むなら事業説明→出典付き入力への対応が必要。会社予想を独立予測や将来継続値へ昇格せず、買い条件を補わない。",
+      "classification": "author_narrative_principle_and_project_adoption_boundary",
+      "quotes": [
+        "DM01",
+        "DM02",
+        "DM03",
+        "EP01",
+        "EP04"
+      ]
+    }
+  ],
+  "code_requirement_summary": {
+    "thesis": "valuationと保存価格の計算成功を含む完全なthesis",
+    "policy_six_parameters": [
+      "minimum_upside_pct",
+      "maximum_downside_pct",
+      "entry_cost_pct",
+      "exit_cost_pct",
+      "max_quote_age_seconds",
+      "target_scenario"
+    ],
+    "ordering": [
+      "thesis/policy validation",
+      "all six policy values",
+      "position/thesis/publicity/evidence",
+      "review due",
+      "source/quote binding and freshness",
+      "valuation",
+      "invalidation/held target/risk/hold",
+      "unheld expected-entry branch"
+    ],
+    "research_label_not_formal_action": "文章上の監視/要再研究はcompany.status=watchやdecision.proposed_action=watchへのDB変更ではない。",
+    "independent_forecast_validity_certified_by_calculator": false
+  },
+  "1379_public_condition_application": [
+    {
+      "condition_id": "domestic-price-demand",
+      "title": "国内きのこ価格・需要",
+      "baseline_preview": {
+        "artifact": "research/ir-case-studies-2026-10-15/1379/earnings-preview-candidate.json",
+        "json_pointer": "/operating_condition_reviews/0",
+        "quote_ids": [
+          "presentation-actual-operating-profit-drivers",
+          "domestic-marketing-weather-price",
+          "company-price-comparison-bases"
+        ]
+      },
+      "attribution": {
+        "company": "既存引用に記録された当該Q1の会社説明",
+        "project": "持続性・因果帰属・通期への寄与を検証する条件と解釈。会社が必要十分条件/数量感応度として開示したものではない。"
+      },
+      "qualitative_assessment": {
+        "now": "Q1の単価好調という会社説明は確認済み。販促だけの恒久的な価格力という帰属は、会社自身の天候/野菜相場説明があるため採用しない。",
+        "support": "同じ品種・期間・比較基準の価格/販売/利益が整合する場合は当該説明の支持。",
+        "disconfirm": "価格の失速、販売/利益との不整合は持続解釈を弱め再研究。",
+        "unclear": "分母/構成/販売が不明なら未解決。"
+      },
+      "actual_canonical_model_path": null,
+      "trade_action": null,
+      "new_forecast_or_probability": null,
+      "next_materials": [
+        "次回の正式短信の国内きのこ説明・セグメント比較",
+        "次回説明資料の同一定義の単価/販売数量/構成表、開示があれば公開Q&A"
+      ],
+      "ir_definition_only_change": "公開定義が明確になれば説明だけ訂正。反証成立、退出、EPS/PER引上げへ自動接続しない。"
+    },
+    {
+      "condition_id": "domestic-production-sales",
+      "title": "需要予測に基づく生産調整・生産と販売の区別",
+      "baseline_preview": {
+        "artifact": "research/ir-case-studies-2026-10-15/1379/earnings-preview-candidate.json",
+        "json_pointer": "/operating_condition_reviews/1",
+        "quote_ids": [
+          "domestic-production-quality-cost-activity",
+          "production-demand-forecast-and-area",
+          "company-production-comparison-bases",
+          "domestic-acquisition-scope"
+        ]
+      },
+      "attribution": {
+        "company": "既存引用に記録された当該Q1の会社説明",
+        "project": "持続性・因果帰属・通期への寄与を検証する条件と解釈。会社が必要十分条件/数量感応度として開示したものではない。"
+      },
+      "qualitative_assessment": {
+        "now": "需要予測による生産調整と計画達成は会社説明として確認済み。生産=販売/売切り/需要増という推論は採らない。",
+        "support": "生産、販売/在庫、品質の説明が同範囲で整合する場合は支持。",
+        "disconfirm": "公表在庫/特売/品質問題や不整合は安定収益という解釈への反証候補。",
+        "unclear": "販売未公表、子会社化/商品範囲差が未整理なら未解決。"
+      },
+      "actual_canonical_model_path": null,
+      "trade_action": null,
+      "new_forecast_or_probability": null,
+      "next_materials": [
+        "次回の国内生産比較表と対象範囲の注記",
+        "次回の販売/在庫/特売に関する公表説明と連結範囲/商品構成の変更注記"
+      ],
+      "ir_definition_only_change": "公開定義が明確になれば説明だけ訂正。反証成立、退出、EPS/PER引上げへ自動接続しない。"
+    },
+    {
+      "condition_id": "chemical-pricing-cost-supply",
+      "title": "化成品の価格改定・仕入コスト・供給",
+      "baseline_preview": {
+        "artifact": "research/ir-case-studies-2026-10-15/1379/earnings-preview-candidate.json",
+        "json_pointer": "/operating_condition_reviews/2",
+        "quote_ids": [
+          "chemical-supply-cost-pricing",
+          "presentation-actual-operating-profit-drivers"
+        ]
+      },
+      "attribution": {
+        "company": "既存引用に記録された当該Q1の会社説明",
+        "project": "持続性・因果帰属・通期への寄与を検証する条件と解釈。会社が必要十分条件/数量感応度として開示したものではない。"
+      },
+      "qualitative_assessment": {
+        "now": "価格改定と仕入/供給制限、受注安定を区別して確認済み。改定実施だけから将来の転嫁率/採算は認定しない。",
+        "support": "同一セグメントの価格・数量・供給/仕入と利益の説明が整合する場合は支持。",
+        "disconfirm": "会社が公表する転嫁遅れ/供給難/受注/採算悪化は持続解釈を弱める。",
+        "unclear": "寄与を分けられなければ未解決、転嫁率は補わない。"
+      },
+      "actual_canonical_model_path": null,
+      "trade_action": null,
+      "new_forecast_or_probability": null,
+      "next_materials": [
+        "次回正式短信の化成品説明/セグメント表",
+        "次回説明資料の増減要因と、開示されれば価格改定/供給条件の公開Q&A"
+      ],
+      "ir_definition_only_change": "公開定義が明確になれば説明だけ訂正。反証成立、退出、EPS/PER引上げへ自動接続しない。"
+    },
+    {
+      "condition_id": "costs-versus-comparison-base",
+      "title": "費用抑制の持続性と前年比/計画比",
+      "baseline_preview": {
+        "artifact": "research/ir-case-studies-2026-10-15/1379/earnings-preview-candidate.json",
+        "json_pointer": "/operating_condition_reviews/3",
+        "quote_ids": [
+          "presentation-actual-operating-profit-drivers",
+          "presentation-actual-vs-initial-plan",
+          "cost-bridge-versus-prior-year",
+          "domestic-production-quality-cost-activity"
+        ]
+      },
+      "attribution": {
+        "company": "既存引用に記録された当該Q1の会社説明",
+        "project": "持続性・因果帰属・通期への寄与を検証する条件と解釈。会社が必要十分条件/数量感応度として開示したものではない。"
+      },
+      "qualitative_assessment": {
+        "now": "前年比の費用要因図と計画比販管費抑制は別。計画超過=前年比恒久削減という解釈は採らない。",
+        "support": "同一範囲・比較基準の費用/時期説明が整合する場合は支持。",
+        "disconfirm": "実際に公表された費用後ずれ/抑制剥落は持続解釈を弱める。",
+        "unclear": "後ずれは現在未確認。営業利益→EPSの税/特別損益/株数を省略しない。"
+      },
+      "actual_canonical_model_path": null,
+      "trade_action": null,
+      "new_forecast_or_probability": null,
+      "next_materials": [
+        "次回の費用増減要因/計画比較と、時期・範囲の会社説明",
+        "次回正式損益計算書/セグメント注記。公開された累計を独自に単期化しない。"
+      ],
+      "ir_definition_only_change": "公開定義が明確になれば説明だけ訂正。反証成立、退出、EPS/PER引上げへ自動接続しない。"
+    }
+  ],
+  "1379_checkpoint": {
+    "artifact": "research/ir-case-studies-2026-10-15/1379/earnings-preview-candidate.json",
+    "json_pointer": "/next_public_checkpoint",
+    "scheduled_date_is_not_verified_deadline": true,
+    "fiscal_label_time_timezone_and_occurrence_unresolved": true,
+    "new_actual_announcement_or_followup_evidence_claimed": false
+  },
+  "user_and_adoption_boundary": {
+    "specified_context": [
+      "日本株",
+      "数カ月〜1年",
+      "IR前の仮説/反証/回答別判断",
+      "既存手法の参照と組合せ"
+    ],
+    "not_supplied_by_these_instructions": [
+      "会社別の予測/倍率/確率",
+      "最低上昇余地/許容損失/本人費用",
+      "採用済みの会社別評価額/退出条件"
+    ],
+    "holding_horizon_is_not_automatic_exit_deadline": true,
+    "published_author_values_are_not_automatic_user_adoption": true
+  },
+  "recommended_minimal_next_task": {
+    "code_required_now": false,
+    "task": "既存1379 previewの4IDを基準にした会社固有の公開証拠再点検",
+    "already_usable_now": "本reviewの4つの解釈判断を研究へ使う。会社説明の存在は確認、恒久性/因果/売上への無根拠な外挿は採らない。既存previewを同義に再作成する必要はない。",
+    "trigger": "実際に新しい公開資料が保存され、会社/対象期/比較範囲を照合できた時。予定日到来だけでは起動しない。",
+    "deliverable": "既存previewへの参照、同じ4condition ID、原文引用/時点/比較範囲、支持/反証候補/未解決、変更した研究解釈を記した会社固有の追記artifact。",
+    "not_added": [
+      "汎用API/registry/gate",
+      "仮の数値valuation/株価",
+      "均等確率/勝率",
+      "定義回答からexitや倍率引上げ",
+      "DBへの定性thesis自動登録"
+    ],
+    "later_code_boundary": "具体的なDB統合需要が生じたら既存数値thesis/現在表示との境界をそのケースで検討。minupside gateだけの移動ではvalidate_thesis/daily等の前提は解消しない。"
+  },
+  "input_snapshots": [
+    {
+      "path": "docs/decision-policy.md",
+      "sha256": "4d39af5c284e8b02138b608a2a310e50c5e268ce2d2f92220888d13b3a76eca3",
+      "byte_count": 10529
+    },
+    {
+      "path": "docs/ir-decision-flow.md",
+      "sha256": "046d6f28ce2560b5a9c37ddf42bca604b89dc65a4ff6107f6b43b74853f08ff5",
+      "byte_count": 4323
+    },
+    {
+      "path": "third_party/anthropic/manifest.json",
+      "sha256": "45ff843e1c334454b63221fec6311f0c6bf525e79b99096e35f8f2542a405fdf",
+      "byte_count": 4591
+    },
+    {
+      "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+      "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+      "byte_count": 2736
+    },
+    {
+      "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+      "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+      "byte_count": 2757
+    },
+    {
+      "path": "research/ir-policy-adoption-2026-10-15/README.md",
+      "sha256": "9320cf6b56952d9a2458a81256e46ddda681a884d32bd6f74763087fe2b92356",
+      "byte_count": 9762
+    },
+    {
+      "path": "research/ir-policy-adoption-2026-10-15/sources.json",
+      "sha256": "4b4f591641916b002ab37cb547bc11b5a0726f5a03647d0230ef4c85c32125f1",
+      "byte_count": 26625
+    },
+    {
+      "path": "research/ir-policy-adoption-2026-10-15/evidence/08a2f88e320ec50a.json",
+      "sha256": "2b9df941925e6ef306041867c306426cdd1ab1e39e3531e06fc3c29fa2f23b34",
+      "byte_count": 19345
+    },
+    {
+      "path": "research/ir-policy-adoption-2026-10-15/evidence/e52613a01405bfcd.txt",
+      "sha256": "112d65a5682bd4205f5f82294b001b913fa9ee9295cecae018936f71a59c0864",
+      "byte_count": 18610
+    },
+    {
+      "path": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt",
+      "sha256": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106",
+      "byte_count": 5841
+    },
+    {
+      "path": "research/published-rating-policies-2026-10-15/README.md",
+      "sha256": "7e9f523ef6679e59bc05588069700fdfc241722b62fdd5b0631c310ca1a102da",
+      "byte_count": 6962
+    },
+    {
+      "path": "research/published-rating-policies-2026-10-15/sources.json",
+      "sha256": "a47b717e3f73da5f5eff7d7e4c099ca43444c2af2590a6a1cd8bccb193eced73",
+      "byte_count": 6916941
+    },
+    {
+      "path": "research/published-rating-policies-2026-10-15/policy-profiles.json",
+      "sha256": "2c8f2e67fce829f8725fbc50e2ae4ecde58571abf148d0954c755f4085ad51d7",
+      "byte_count": 8758
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1379/earnings-preview-candidate.json",
+      "sha256": "14f935ea63edf1ca19fab4aa314a81b9f71bcd754c9ebfe7ea36797bfc6f3d29",
+      "byte_count": 56348
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1379/earnings-preview-candidate.md",
+      "sha256": "65937a353367d2ab67943885bf6d3a1c3f59e52c92b4d890acfa4ed25c844c88",
+      "byte_count": 6263
+    },
+    {
+      "path": "src/ir_agent/decision.py",
+      "sha256": "2c441f1d94a38453427dd8be3f589565dd7170a4c8cd7ec248be71d1ec516934",
+      "byte_count": 22938
+    },
+    {
+      "path": "src/ir_agent/models.py",
+      "sha256": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c",
+      "byte_count": 10045
+    },
+    {
+      "path": "src/ir_agent/valuation.py",
+      "sha256": "af42500de82d824ee29bde15fc44cfe66db1db7bbf2f00abed59ab26474e8a2a",
+      "byte_count": 21023
+    },
+    {
+      "path": "src/ir_agent/harness.py",
+      "sha256": "5707ac71d6dd4b962bb2281572a7f5eb5939e257d433257034344a2b7b464f99",
+      "byte_count": 37926
+    },
+    {
+      "path": "tests/test_decision.py",
+      "sha256": "8d3389fdd6354a3624effd24fd1958a0f4c515461010886797763a511212904d",
+      "byte_count": 18141
+    }
+  ],
+  "validation": {
+    "pure_synthetic_reproduction_cases": 9,
+    "all_source_quotes_matched_selected_saved_text": true,
+    "fixed_two_anthropic_file_hashes_match_manifest": true,
+    "existing_input_files_unchanged_at_write": true
+  },
+  "limits": [
+    "本書は数値投資判断を解放する承認・policy採用ではない。",
+    "保存原著の範囲を超える普遍的な金融定理を主張しない。",
+    "1379の条件は事業説明への検証仮説で、通期予想の必要十分条件や独立予測ではない。",
+    "現在の実DB/相場/保有を確認していない。コード再現は合成fixtureで金融値の適合を実証しない。"
+  ],
+  "author_full_thesis_boundary": {
+    "full_new_thesis_requires_target_and_exit_trigger": true,
+    "full_new_thesis_source_quotes": [
+      "AT05"
+    ],
+    "1379_complete_investment_thesis_claimed": false,
+    "qualitative_subprocedure_can_be_applied_before_numeric_adoption": "特定事業説明への新事実の支持/反証/中立という部分手順を使う。完全なthesis/previewや実行可能な売買規則の完成とはしない。"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "security_code": "9661",
+  "company_name": "歌舞伎座",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "サービス業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.kabuki-za.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T04:04:08.150382+00:00",
+  "completed_at": "2026-10-11T04:04:11.326725+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/9661/01.json",
+      "url": "https://www.kabuki-za.co.jp/",
+      "retrieved_at": "2026-10-11T04:04:09.596245+00:00",
+      "quote": "IR情報 有価証券報告書 決算短信 事業報告 プレスリリース 電子公告 株主情報 株主総会 株式事務 株主優待について",
+      "http_status": 200,
+      "role": "manual_contact_scope_review"
+    },
+    {
+      "snapshot": "evidence/9661/02.json",
+      "url": "https://www.kabuki-za.co.jp/sitemap/",
+      "retrieved_at": "2026-10-11T04:04:10.580863+00:00",
+      "quote": "株式会社歌舞伎座 【株主優待予約】 サイトマップ チケット 一幕見席 団体観劇 お食事 インターネット食事予約 インターネット折詰予約",
+      "http_status": 200,
+      "role": "manual_contact_scope_review"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.kabuki-za.co.jp/",
+      "final_url": "https://www.kabuki-za.co.jp/",
+      "snapshot": "evidence/9661/01.json",
+      "retrieved_at": "2026-10-11T04:04:09.596245+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.kabuki-za.co.jp/sitemap/",
+      "final_url": "https://www.kabuki-za.co.jp/sitemap/",
+      "snapshot": "evidence/9661/02.json",
+      "retrieved_at": "2026-10-11T04:04:10.580863+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用メール/質問フォームの明示を実証できなかった。窓口不存在の判定ではない。",
+    "公式トップとサイトマップの保存本文・リンクを個別確認したが、IR資料・株式事務・株主優待予約への導線のみ。IR質問用メール/フォームを実証できない。株式事務等の未取得リンク先で受付方法が見つかる可能性は残る。"
+  ],
+  "discovery": {
+    "security_code": "9661",
+    "official_url": "https://www.kabuki-za.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "歌舞伎座",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/9661/01.json",
+      "normalized_name": "歌舞伎座",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/9661/02.json",
+      "normalized_name": "歌舞伎座",
+      "security_code_observed": false
+    }
+  ],
+  "classification_version": 2,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "successful_official_page_count": 2,
+  "manual_review": {
+    "reviewer": "codex_audit_consumer",
+    "reviewed_at": "2026-10-11T04:25:34.264899+00:00",
+    "notes": "保存済み公式トップとサイトマップの公開本文・全リンク・form controls を個別に点検。いずれも会社名は歌舞伎座と一致するが、IR情報は有価証券報告書・決算短信・事業報告等への導線、株主情報は株主総会・株式事務・株主優待への導線のみ。IR質問用メールアドレス、質問フォーム、IR問い合わせとして明示されたリンクは保存証拠にない。食事・催し物の予約と株式会社歌舞伎座の株主優待予約をIR質問窓口として扱わない。保存済み2ページの form 配列はいずれも空。株式事務等のリンク先本文はこの依頼では未取得なので窓口不存在とは判定せず unconfirmed を維持。新規GET/メール送信/フォーム送信は全て0件。"
+  }
+}

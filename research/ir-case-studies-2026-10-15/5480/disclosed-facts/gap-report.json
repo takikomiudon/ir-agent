@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "company_id": "jp:5480",
+  "scope": "Only the pre-existing eight saved captures; absence here is not absence from all public issuer disclosures.",
+  "new_get_count": 0,
+  "newest_financial_release_verified": false,
+  "normalized_fact_count": 1,
+  "items": [
+    {
+      "item": "eps",
+      "status": "not_found_in_saved_corpus",
+      "structured_value": null,
+      "terms": [
+        "EPS",
+        "1株当たり",
+        "一株当たり"
+      ],
+      "gap": "公表EPSの金額、基本/希薄化後区分、対象期を確認できない。親会社株主に帰属する当期純利益7,215百万円は総額でありEPSではない。発行済株式数や期中平均株式数もないため割算でEPSを作らない。",
+      "saved_text_keyword_hits": {
+        "EPS": {},
+        "1株当たり": {},
+        "一株当たり": {}
+      }
+    },
+    {
+      "item": "consolidated_operating_income",
+      "status": "one_reported_annual_fact_normalized",
+      "structured_fact_id": "nyk5480-fy202603-consolidated-operating-income",
+      "terms": [
+        "営業利益"
+      ],
+      "gap": "第144期2025-04-01〜2026-03-31の通期連結実績だけ。最新四半期、全サイクル履歴、正常営業利益、会計基準の照合は不足。",
+      "saved_text_keyword_hits": {
+        "営業利益": {
+          "07.json": 1
+        }
+      }
+    },
+    {
+      "item": "depreciation_and_amortization",
+      "status": "qualitative_reference_only_no_amount",
+      "structured_value": null,
+      "terms": [
+        "減価償却",
+        "減価償却費"
+      ],
+      "gap": "07.jsonに人件費や減価償却費など固定費が増加した説明はあるが金額はない。減価償却単独と償却費込み、原価/販管費/CF調整の範囲も未確認。0化、差額推定、将来予測なし。",
+      "saved_text_keyword_hits": {
+        "減価償却": {
+          "07.json": 1
+        },
+        "減価償却費": {
+          "07.json": 1
+        }
+      }
+    },
+    {
+      "item": "capital_expenditure",
+      "status": "not_found_in_saved_corpus",
+      "structured_value": null,
+      "terms": [
+        "設備投資",
+        "設備投資額",
+        "固定資産の取得"
+      ],
+      "gap": "支払ベースの投資CF、取得原価/建設仮勘定増加、維持投資と成長投資などを区別できる公表額が保存本文にない。減価償却との同額仮定や将来再投資予測を作らない。",
+      "saved_text_keyword_hits": {
+        "設備投資": {},
+        "設備投資額": {},
+        "固定資産の取得": {}
+      }
+    },
+    {
+      "item": "issued_and_treasury_shares",
+      "status": "not_found_in_saved_corpus",
+      "structured_value": null,
+      "terms": [
+        "発行済",
+        "発行株",
+        "自己株"
+      ],
+      "gap": "期末発行済数/自己株式数/期中平均数はない。FAQの100株は売買単位、会社概要の24,300,910,790円は資本金であり株数ではない。単位株数や資本金から総株数を逆算しない。",
+      "saved_text_keyword_hits": {
+        "発行済": {},
+        "発行株": {},
+        "自己株": {}
+      }
+    }
+  ],
+  "cyclical_model_unresolved": [
+    "evidence of a full cycle, without a fixed calendar-year default",
+    "consistent accounting and consolidated scope across the full-cycle history",
+    "current scale and structural changes",
+    "normalized earnings, return on capital, reinvestment and financing cost",
+    "recovery path separated from long-run growth; no double-counted rebound",
+    "current price and separately adopted investment conditions"
+  ],
+  "valuation_created": false,
+  "forecast_created": false,
+  "database_operations": 0
+}

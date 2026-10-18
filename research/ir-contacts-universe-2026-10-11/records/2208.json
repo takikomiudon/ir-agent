@@ -1,0 +1,128 @@
+{
+  "security_code": "2208",
+  "company_name": "ブルボン",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "食料品",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.bourbon.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T04:01:47.668630+00:00",
+  "completed_at": "2026-10-11T04:01:56.802037+00:00",
+  "manual_review_required": false,
+  "evidence": [],
+  "fetches": [
+    {
+      "url": "https://www.bourbon.co.jp/",
+      "final_url": "https://www.bourbon.co.jp/",
+      "snapshot": "evidence/2208/01.json",
+      "retrieved_at": "2026-10-11T04:01:49.396594+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.bourbon.co.jp/ir/",
+      "final_url": "https://www.bourbon.co.jp/ir/",
+      "snapshot": "evidence/2208/02.json",
+      "retrieved_at": "2026-10-11T04:01:50.910874+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.bourbon.co.jp/ir/stock/basic_information.html",
+      "final_url": "https://www.bourbon.co.jp/ir/stock/basic_information.html",
+      "snapshot": "evidence/2208/03.json",
+      "retrieved_at": "2026-10-11T04:01:52.326074+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.bourbon.co.jp/news/ir.xml",
+      "final_url": "https://www.bourbon.co.jp/news/ir.xml",
+      "snapshot": "evidence/2208/04.json",
+      "retrieved_at": "2026-10-11T04:01:53.543572+00:00",
+      "http_status": 503,
+      "error": null
+    },
+    {
+      "url": "https://www.bourbon.co.jp/ir/news/",
+      "final_url": "https://www.bourbon.co.jp/ir/news/",
+      "snapshot": "evidence/2208/05.json",
+      "retrieved_at": "2026-10-11T04:01:54.074731+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.bourbon.co.jp/ir/business.html",
+      "final_url": "https://www.bourbon.co.jp/ir/business.html",
+      "snapshot": "evidence/2208/06.json",
+      "retrieved_at": "2026-10-11T04:01:55.244057+00:00",
+      "http_status": 503,
+      "error": null
+    },
+    {
+      "url": "https://www.bourbon.co.jp/ir/management_policy.html",
+      "final_url": "https://www.bourbon.co.jp/ir/management_policy.html",
+      "snapshot": "evidence/2208/07.json",
+      "retrieved_at": "2026-10-11T04:01:55.740206+00:00",
+      "http_status": 503,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用メール/質問フォームの明示を実証できなかった。窓口不存在の判定ではない。"
+  ],
+  "discovery": {
+    "security_code": "2208",
+    "official_url": "https://www.bourbon.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ブルボン",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/2208/01.json",
+      "normalized_name": "ブルボン",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/2208/02.json",
+      "normalized_name": "ブルボン",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/2208/03.json",
+      "normalized_name": "ブルボン",
+      "security_code_observed": true
+    },
+    {
+      "snapshot": "evidence/2208/05.json",
+      "normalized_name": "ブルボン",
+      "security_code_observed": false
+    }
+  ],
+  "classification_version": 2,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "successful_official_page_count": 4,
+  "manual_review": {
+    "reviewer": "codex_audit_it",
+    "reviewed_at": "2026-10-11T04:21:32.720872+00:00",
+    "review_scope": "saved_public_snapshots_only_no_new_get",
+    "snapshots_reviewed": [
+      "evidence/2208/01.json",
+      "evidence/2208/02.json",
+      "evidence/2208/03.json",
+      "evidence/2208/05.json"
+    ],
+    "notes": "ブルボンの公式ホーム、IRトップ、株式基本情報、IRニュースの保存頁を確認。保存範囲にIR質問用の公開メール／フォームを確認できない。対象としたIRページのみから窓口不存在・受付拒否を判断しない。 保存範囲での未確認であり、窓口不存在・受付拒否の断定ではない。"
+  },
+  "manual_classification_version": 1
+}

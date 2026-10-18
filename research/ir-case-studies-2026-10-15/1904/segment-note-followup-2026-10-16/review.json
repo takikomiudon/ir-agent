@@ -1,0 +1,134 @@
+{
+  "artifact_type": "same_saved_source_additional_page_reading_not_native_result",
+  "recorded_at": "2026-10-16T03:09:02.366222+00:00",
+  "company_id": "jp:1904",
+  "case_id": "1904-earnings-and-event-basis-monitor",
+  "issue_id": "1904-quarter-guidance-share-and-perimeter-basis",
+  "residual_id": "P1",
+  "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+  "native_baseline": {
+    "case_file": "research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/qualitative-review/case-after.json",
+    "case_file_sha256": "b16e29ebfeef3bcf3d6a4800fb9a507810609594335bf2f5de806c692362e141",
+    "case_version": 4,
+    "head_version": 4,
+    "config_revision": 1,
+    "native_case_first_saved_at_from_frozen_file": "2026-10-16T03:03:48.349828+00:00",
+    "result_file": "research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/qualitative-review/result.json",
+    "result_file_sha256": "e141aa30f81579eb225ca3cad1c40420a0eaaeb5d52e0371e91de47ee7d5857f",
+    "prior_summary_pointer": "/summary",
+    "prior_unread_state": "At casev4 p10 was unread; this is a later local observation and does not alter that historical state.",
+    "baseline_is_file_observation_not_current_DB_claim": true
+  },
+  "read_scope": {
+    "new_semantic_page": [
+      10
+    ],
+    "printed_page": "8",
+    "new_image_page": [
+      10
+    ],
+    "prior_scope": [
+      1,
+      2,
+      4,
+      7,
+      9,
+      11,
+      12
+    ],
+    "other_page_reading": false,
+    "new_publications_or_sources": 0,
+    "same_source_more_understanding": true
+  },
+  "publicly_resolved": [
+    {
+      "id": "P1-period-unit-columns",
+      "finding": "同じ頁が前年Q1連結累計期間と当Q1連結累計期間を別表で表示し、いずれも千円と明記。報告セグメントは日本・米国・中国・オーストラリアで、合計・調整額・四半期連結財務諸表計上額の別列がある。",
+      "quote_ids": [
+        "prior-quarter-period-unit",
+        "prior-quarter-table-columns",
+        "current-quarter-period-unit",
+        "current-quarter-table-columns"
+      ],
+      "limit": "同じ名称の列が存在することは、法人構成・配賦方法・集計定義に変更がない認証ではない。単体工事表への対応も示されていない。"
+    },
+    {
+      "id": "P1-profit-measure-adjustment",
+      "finding": "両表の注1はセグメント利益又は損失の調整額をセグメント間取引消去額と説明。注2は同利益又は損失の合計額をQ1連結損益計算書の営業利益へ調整すると説明している。",
+      "quote_ids": [
+        "prior-quarter-profit-and-adjustment-notes",
+        "current-quarter-profit-and-adjustment-notes"
+      ],
+      "limit": "全社費用・本社費の新しい定義や親会社純利益へのブリッジとは呼ばない。表示金額の加減算・再集計・丸め修復を行わない。"
+    },
+    {
+      "id": "P1-revenue-presentation",
+      "finding": "売上高に一時点で移転される財／一定期間にわたり移転される財、顧客との契約から生じる収益／その他の収益、外部顧客への売上高／内部売上高又は振替高を区別している。",
+      "quote_ids": [
+        "current-quarter-revenue-presentation"
+      ],
+      "limit": "ダッシュを数値0に変換しない。各行を新規工事/改修保守・反復収益と同一視しない。認識区分の表示は費用発生や現金回収時点の証明ではない。"
+    }
+  ],
+  "comparison_now_possible": {
+    "scope": "同じ頁に会社が並べた前年Q1連結累計表と当Q1連結累計表の地域別表示・利益段階・調整列を対照できる。",
+    "prior_period_as_printed": "自2025年４月１日 至2025年６月30日",
+    "current_period_as_printed": "自2026年４月１日 至2026年６月30日",
+    "measure": "セグメント利益又は損失／営業利益への調整",
+    "raw_unit": "千円",
+    "numerical_difference_or_ratio_computed": false,
+    "actual_profit_driver_attributed": false,
+    "meaning_crosswalk_to_individual_order_tables_verified": false
+  },
+  "known_public_explanations_not_to_reask": [
+    "セグメント表の所在、表示期、単位、印字された地域名・各列・公表利益額そのもの",
+    "この頁の調整額の公表説明と、営業利益への調整という利益段階",
+    "この頁が表示する収益認識区分と外部顧客/内部売上の区分"
+  ],
+  "still_unresolved": [
+    {
+      "lane": "company_definition_or_reporting_scope",
+      "items": [
+        "地域区分がどの法人・契約・売上帰属基準を含むか、比較対象間の集計/配賦変更や遡及修正の有無はp10に明示されていない。",
+        "p12個別受注/完成工事高とp10地域別連結収益の対応は未確認。同じ日本という名称から国内単体と認定しない。",
+        "公表結果の価格/数量/案件mix/採算・コスト/一時要因への分解はp10表に明示されていない。",
+        "セグメント利益から親会社帰属純利益、税・CFへの対応はこの頁から解けない。"
+      ],
+      "status": "not_resolved_on_this_single_page_not_claim_of_companywide_nondisclosure"
+    },
+    {
+      "lane": "investor_or_external_author_assumptions",
+      "items": [
+        "正常利益、持続利益率、将来税率・CF・再投資、取得後寄与や将来EPS、評価倍率・価格条件は投資家/著者側の根拠を要する。",
+        "四半期営業利益と年度親会社利益予想は異なる期/利益段階。地域表だけで年度予想を補完/達成保証しない。"
+      ],
+      "status": "unconfigured_not_company_required_to_supply_investment_judgment"
+    }
+  ],
+  "P1_status": "partially_resolved_by_public_reporting_definitions; profit-driver/OP-to-parentNI/normalforecast remains unresolved",
+  "IR_status": {
+    "new_draft": false,
+    "send_ready": false,
+    "financial_path": null,
+    "EVSI": "not_estimated",
+    "reason": "今回で公表定義の一部は既答へ移ったが、採用金融入力/判断影響が未設定。残余を自動的に質問へ昇格しない。"
+  },
+  "handoff": {
+    "file_only_addendum_for_later_legitimate_job": true,
+    "native_case_or_source_modified": false,
+    "native_source_review_or_job_created": false,
+    "next_step_owner": "root may review image/quotes and decide whether to carry this same-issue observation into a subsequent authorized packet/result; this artifact is not job completion."
+  },
+  "counters": {
+    "GET": 0,
+    "DB_access": 0,
+    "DB_write": 0,
+    "code_old_file_or_shared_docs_edit": 0,
+    "normalizer_calls": 0,
+    "new_numeric_facts": 0,
+    "new_source": 0,
+    "native_update": 0,
+    "financial_calculations_or_valuation": 0,
+    "IR_draft_or_send": 0
+  }
+}

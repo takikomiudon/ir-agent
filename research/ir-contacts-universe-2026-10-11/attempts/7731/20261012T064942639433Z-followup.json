@@ -1,0 +1,99 @@
+{
+  "security_code": "7731",
+  "company_name": "ニコン",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "精密機器",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.nikon.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T22:06:04.349057+00:00",
+  "completed_at": "2026-10-11T22:07:03.322561+00:00",
+  "manual_review_required": true,
+  "evidence": [],
+  "fetches": [
+    {
+      "url": "https://www.nikon.co.jp/",
+      "final_url": "https://www.jp.nikon.com/",
+      "snapshot": "evidence/7731/20261011T220604349121Z/01.json",
+      "retrieved_at": "2026-10-11T22:06:47.552139+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "requested_url": "https://www.jp.nikon.com/contacts/",
+      "url": "https://www.jp.nikon.com/contacts/",
+      "http_status": 200,
+      "retrieved_at": "2026-10-12T06:32:55.099827+00:00",
+      "http_get_attempted": true,
+      "http_get_started_at": "2026-10-12T06:32:56.424762+00:00",
+      "http_response_received_at": "2026-10-12T06:32:57.118500+00:00",
+      "http_get_completed_at": "2026-10-12T06:32:57.126845+00:00",
+      "http_get_elapsed_seconds": 0.7021207380021224,
+      "host_wait_seconds": 0.32486850500572473,
+      "global_wait_seconds": 0.9987394729978405,
+      "wait_seconds": 1.3236079780035652,
+      "global_rps_at_dispatch": 0.5,
+      "response_headers": {
+        "date": "Mon, 12 Oct 2026 06:32:57 GMT",
+        "server": "envoy",
+        "via": "1.1 269f6797bf1cba121590ad659e6f3e82.cloudfront.net (CloudFront)"
+      },
+      "retry_after_seconds": null,
+      "failure_signature": null,
+      "final_url": "https://www.jp.nikon.com/contacts/",
+      "snapshot": "evidence/7731/20261012T062252095900Z/followup-0154.json",
+      "discovery_parent_url": "https://www.jp.nikon.com/",
+      "discovery_parent_snapshot": "evidence/7731/20261011T220604349121Z/01.json",
+      "discovery_link_label": "お問い合わせ",
+      "explicit_ir_link": true,
+      "purpose": "ir_contact_followup"
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。"
+  ],
+  "discovery": {
+    "security_code": "7731",
+    "official_url": "https://www.nikon.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ニコン",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/7731/20261011T220604349121Z/01.json",
+      "normalized_name": "ニコン",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 2,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 4,
+  "previous_attempts": [
+    "attempts/7731/20261011T045047678936Z.json",
+    "attempts/7731/20261011T220703322752Z.json",
+    "attempts/7731/20261012T063257129566Z-followup.json"
+  ],
+  "followup_completed_at": "2026-10-12T06:32:57.135138+00:00",
+  "followup_http_get_attempt_count": 2,
+  "followup_review_pending": [
+    {
+      "snapshot": "evidence/7731/20261012T062252095900Z/followup-0154.json",
+      "url": "https://www.jp.nikon.com/contacts/",
+      "parent_url": "https://www.jp.nikon.com/",
+      "parent_snapshot": "evidence/7731/20261011T220604349121Z/01.json",
+      "discovery_link_label": "お問い合わせ",
+      "explicit_ir_link": true,
+      "purpose": "ir_contact_followup"
+    }
+  ]
+}

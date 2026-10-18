@@ -1,0 +1,284 @@
+{
+  "recorded_at": "2026-10-16T15:18:15.812053+00:00",
+  "status": "bounded_two_source_method_review_complete_not_financial_adoption",
+  "sources": {
+    "FAQ": {
+      "url": "https://acquirersmultiple.com/faq/",
+      "text": {
+        "file": "research/ir-acquirers-multiple-author-method-discovery-2026-10-16/text/03.txt",
+        "sha256": "6cc853e77fe2b33a93b5f0d89575a205a4472b73250d0e6a21e3df0bb48e7f69"
+      },
+      "acquisition": {
+        "file": "research/ir-acquirers-multiple-author-method-discovery-2026-10-16/capture.json",
+        "sha256": "266fed598de566eb6a1882656a73780ad0cede4ab39904fdd8d971ed33c71fd5"
+      },
+      "acceptance": {
+        "file": "research/ir-acquirers-multiple-author-method-discovery-2026-10-16/parent-acceptance.json",
+        "sha256": "75dcbeac8c61a88827ec2d14e169a50c47f7ae2692b6a5df10b42fd029244ce8"
+      },
+      "HTTP_completed_at": "2026-10-16T15:05:13.722818+00:00",
+      "publication_date": null,
+      "current_rule_version": null,
+      "attribution": "サイトの一次自己説明。Tobias Carlisleが一部所有との記載は、FAQ全段落の個人著作/署名の認証ではない。"
+    },
+    "article_2016": {
+      "url": "https://acquirersmultiple.com/2016/04/four-steps-to-implementing-a-quantitative-value-investment-strategy/",
+      "text": {
+        "file": "research/ir-acquirers-multiple-four-steps-author-source-2026-10-16/text/01.txt",
+        "sha256": "ec2decfbe16eafd8475bd3b510b0e685bed87595b6ad14fd4605bc0183b66824"
+      },
+      "acquisition": {
+        "file": "research/ir-acquirers-multiple-four-steps-author-source-2026-10-16/acquisition-review.json",
+        "sha256": "8f86a02c33b06d5f323a943f0f249cd717d14ca74565f070a7f1932b14e8549f"
+      },
+      "acceptance": {
+        "file": "research/ir-acquirers-multiple-four-steps-author-source-2026-10-16/parent-acceptance.json",
+        "sha256": "502655c6f78d40d37f7731ffd2a01f97ebae3b940c27821bd17b7f705e4eb7fa"
+      },
+      "scope": "4連載の第4稿本文と免責のみ。全4稿読了ではない。",
+      "visible_byline": "Tobias Carlisle",
+      "visible_article_day": "2016-04-20",
+      "HTML_declared_published_at": "2016-04-20T15:16:36+00:00",
+      "HTML_declared_modified_at": "2017-04-14T07:21:18+00:00",
+      "HTTP_completed_at": "2026-10-16T15:08:27.053546+00:00",
+      "date_limits": "ページ自己申告のメタデータ。現在取得した全広告/コメントや全規則が2016時点の版であるとの歴史検証ではない。",
+      "not_reviewed": [
+        "コメント67件の意味解釈",
+        "関連リンク",
+        "残り3稿",
+        "後年FAQとの完全な同一性/適用関係"
+      ]
+    }
+  },
+  "definitions": [
+    {
+      "topic": "対象比率",
+      "quote_ids": [
+        "F1",
+        "F2"
+      ],
+      "meaning": "Acquirerの比率はEV/Operating Earnings、スクリーナーはCRSP/Compustat merged databaseのOIADPと記す。EBITと同義として置き換えず、非反復特別項目除外の会社判断にも定義確認が要る。",
+      "context_ref": "F-definition"
+    },
+    {
+      "topic": "別比率",
+      "quote_ids": [
+        "F3",
+        "F4"
+      ],
+      "meaning": "別のenterprise multipleはOIBDPを分母に使い、本文は償却前として説明する。OIADP/EBIT/OIBDP/EBITDAを混ぜない。"
+    },
+    {
+      "topic": "算式",
+      "quote_ids": [
+        "F5",
+        "F6"
+      ],
+      "meaning": "算術の骨格は公開されている。実際のOIADPデータ又は定義が一致する構成項目を要する。国内営業利益への自動置換や内包D&Aの二重控除をしない。",
+      "context_ref": "F-operating-and-EV"
+    },
+    {
+      "topic": "時間基準",
+      "quote_ids": [
+        "F7"
+      ],
+      "meaning": "TTM又は直近四半期との総括説明だけで、各構成値がどちらか、フロー/残高の組合せ・公表利用可能時点・現在の株数/株価の組合せは未確定。"
+    },
+    {
+      "topic": "件数・業種・版",
+      "quote_ids": [
+        "F8",
+        "F9",
+        "F10",
+        "F11"
+      ],
+      "meaning": "一般欄は上位30と最低20保有、2022年変更欄は金融/公益組入・有料全データ・業種上位6を記す。2016記事/2022変更/2023母集団例を合成しない。業種の永久除外や日本への同じ母集団適用を導かない。",
+      "context_ref": "F-universes-and-versions"
+    }
+  ],
+  "article_rules_source_version_only": {
+    "selection": {
+      "context_ref": "A-main-body",
+      "meaning": "サイトのスクリーナー順位を使う。最低20保有との提案、保有したくない銘柄を任意に除く余地あり。最良候補を算出する完全な未加工データ仕様・欠損/同順位処理はこの記事だけでは確定しない。"
+    },
+    "scaling": {
+      "quote_id": "A4",
+      "meaning": "12か月を通じた段階的購入を考慮する提案。月2–3又は四半期7–8は例示であり、機械的購入義務ではない。"
+    },
+    "sell_and_hold": [
+      {
+        "quote_id": "A1",
+        "condition": "上昇銘柄の基本記述",
+        "instruction": "税引後リターン最大化のため1年と1日保有後売却とするが、次の画面残存例外を必ず併読する。"
+      },
+      {
+        "quote_id": "A1",
+        "condition": "上昇 AND 1年と1日後もスクリーナー内",
+        "instruction": "画面を離れるまで保有継続。期間到達だけの強制利確ではない。"
+      },
+      {
+        "quote_id": "A1",
+        "condition": "下落 AND スクリーナー内",
+        "instruction": "保有。含み損という理由だけの退出ではない。"
+      },
+      {
+        "quote_id": "A1",
+        "condition": "下落 AND スクリーナー外",
+        "instruction": "売却。条件をORへ変更しない。"
+      }
+    ],
+    "review_and_replace": {
+      "quote_ids": [
+        "A2",
+        "A3"
+      ],
+      "meaning": "少なくとも四半期に入替の必要性を確認し、売却後に未保有の次順位へ補充。四半期の強制入替や全銘柄の1年決済とは異なる。"
+    },
+    "unresolved_details": [
+      "損益ゼロの場合",
+      "約定価格/執行時点・取引費用等",
+      "当該税タイミングが依拠する税制の詳細と日本への適合",
+      "現在FAQの製品/業種条件との接続",
+      "未加工入力から順位/除外を完全再現する仕様",
+      "損益の費用控除前後の定義",
+      "母集団欠損により画面外となった場合の扱い"
+    ],
+    "Japan_and_user_horizon": "1年と1日は原文の税目的の手順。日本株/利用者の数カ月〜1年へ税制検証なしで移さず、12か月の段階購入も利用者の保有期間/退出期限にしない。",
+    "literal_condition_limits": {
+      "losing_positions": "本文の下落かつ画面内/外という条件に年数条件を追加しない。",
+      "winner_timing": "1年と1日を固定366日や全銘柄の最大保有1年へ変換しない。",
+      "tax": "税目的は明示されるが、適用法域・税率・日本の口座区分は本文だけでは認証しない。",
+      "fit_to_user_horizon": "画面残存による継続例外があるため、利用者の数カ月〜1年との適合は未確定。",
+      "examples_and_guidance": "月2–3/四半期7–8は購入例、最低20は分散のガイド。現在の日本株に強制する数値条件ではない。"
+    }
+  },
+  "reproduction_boundary": {
+    "possible": "定義と時点が一致した入力が別途あれば公開EVとOperating Earnings（原典の利益指標）の算術を独立に検証できる。2016本文の条件分岐を文言上区別できる。これは今の日本株への全自動選択/売却システムや実証成績の認証ではない。",
+    "financial_fields_needed_for_this_method": [
+      "時点・通貨・株式範囲を確認した時価総額（又は価格と対応する株数）",
+      "優先株・非支配持分・総債務・現金同等物の定義と測定基準",
+      "OIADP対応値、又はRevenue/COGS/SG&A/D&Aの重複しない定義対応",
+      "各フローのTTM/四半期と残高の時点、公表・利用可能時点"
+    ],
+    "still_not_specified": [
+      "日本の会社/会計科目とデータベース項目の適合",
+      "負EV/ゼロ又は負分母/欠損/同順位の扱い",
+      "日本の対象母集団・業種分類と2016/2022/2023の採用版",
+      "画面外判定を作る最新データ更新・執行・税の仕様"
+    ],
+    "not_adopted": [
+      "個社の正常利益/予測",
+      "日本株適合・超過収益・IR効果",
+      "公正価値/買売価格・退出閾値",
+      "金融業/公益業の一般除外",
+      "既存入力・policyへの自動接続"
+    ]
+  },
+  "context_spans": {
+    "F-definition": {
+      "source": "FAQ",
+      "character_start": 1285,
+      "character_end": 2230,
+      "utf8_byte_start": 1300,
+      "utf8_byte_end": 2267,
+      "offset_convention": "zero_based_half_open_in_saved_UTF8_text",
+      "meaning_ja": "サイトはOIADPを使う上からの構成をEBITとの違いとして述べ、将来反復を見込まない特別項目の除外で比較可能になると説明する。これはサイトの方法説明であり、個別企業の正常利益や比較可能性を検証済みにはしない。"
+    },
+    "F-operating-and-EV": {
+      "source": "FAQ",
+      "character_start": 5424,
+      "character_end": 7282,
+      "utf8_byte_start": 5486,
+      "utf8_byte_end": 7366,
+      "offset_convention": "zero_based_half_open_in_saved_UTF8_text",
+      "meaning_ja": "EVの構成とRevenue（売上高）からCOGS・SG&A・D&Aを控除する式を表示。借入金の利息・税の差への説明はあるが、日本開示の原価/販管費に既に含む償却の再控除を避ける対応定義やリース等の具体分類はここから確定しない。"
+    },
+    "F-universes-and-versions": {
+      "source": "FAQ",
+      "character_start": 12567,
+      "character_end": 14770,
+      "utf8_byte_start": 12714,
+      "utf8_byte_end": 14929,
+      "offset_convention": "zero_based_half_open_in_saved_UTF8_text",
+      "meaning_ja": "2023年1月1日例の母集団と2022年2月の変更説明は別の記載。前者の大型最小約80億ドル、全投資可能の最小約4億ドル等と、後者の大型最低200億ドル/大小境界約20億ドルを同じ現行条件に統合しない。小型はOTC除外との説明。後者は有料画面の全データと業種上位6件、金融・公益初組入を説明。国別日本適用や現在実装の認証はない。"
+    },
+    "A-main-body": {
+      "source": "article_2016",
+      "character_start": 643,
+      "character_end": 2283,
+      "utf8_byte_start": 648,
+      "utf8_byte_end": 2298,
+      "offset_convention": "zero_based_half_open_in_saved_UTF8_text",
+      "meaning_ja": "上位候補から最低20銘柄、任意に保有したくない銘柄を除く余地と分散の説明、段階購入を考慮する提案、損益と画面残存を組み合わせた売却/継続、四半期以上の頻度で必要性を点検し売却後に未保有の次順位へ補充する手順。四半期ごとの強制全面入替とは述べない。"
+    },
+    "A-disclaimer": {
+      "source": "article_2016",
+      "character_start": 2283,
+      "character_end": 2720,
+      "utf8_byte_start": 2298,
+      "utf8_byte_end": 2742,
+      "offset_convention": "zero_based_half_open_in_saved_UTF8_text",
+      "meaning_ja": "サイトは投資助言等の主体ではないと表示し、式の利用は運用成果や成功を保証しないとする。本文の歴史的リターン/ボラティリティ等の宣伝を独立実証へ昇格させない。"
+    }
+  },
+  "verification": {
+    "inputs": [
+      {
+        "file": "research/ir-acquirers-multiple-author-method-discovery-2026-10-16/text/03.txt",
+        "sha256": "6cc853e77fe2b33a93b5f0d89575a205a4472b73250d0e6a21e3df0bb48e7f69"
+      },
+      {
+        "file": "research/ir-acquirers-multiple-author-method-discovery-2026-10-16/raw/4e1dc1f0dfa7a0ab0a34afb226ed628e89dda854aca8a0365edf67975c2686c9",
+        "sha256": "4e1dc1f0dfa7a0ab0a34afb226ed628e89dda854aca8a0365edf67975c2686c9"
+      },
+      {
+        "file": "research/ir-acquirers-multiple-author-method-discovery-2026-10-16/capture.json",
+        "sha256": "266fed598de566eb6a1882656a73780ad0cede4ab39904fdd8d971ed33c71fd5"
+      },
+      {
+        "file": "research/ir-acquirers-multiple-author-method-discovery-2026-10-16/acquisition-review.json",
+        "sha256": "f83270140e9784b92bee6d9cf196f2b55f9a0ab7452efdc1a55231309014e56a"
+      },
+      {
+        "file": "research/ir-acquirers-multiple-author-method-discovery-2026-10-16/parent-acceptance.json",
+        "sha256": "75dcbeac8c61a88827ec2d14e169a50c47f7ae2692b6a5df10b42fd029244ce8"
+      },
+      {
+        "file": "research/ir-acquirers-multiple-four-steps-author-source-2026-10-16/text/01.txt",
+        "sha256": "ec2decfbe16eafd8475bd3b510b0e685bed87595b6ad14fd4605bc0183b66824"
+      },
+      {
+        "file": "research/ir-acquirers-multiple-four-steps-author-source-2026-10-16/raw/744a8283b77a7253697d4f26225ee7eba149f1490c6ef23c1a551aa0fab9df0d",
+        "sha256": "744a8283b77a7253697d4f26225ee7eba149f1490c6ef23c1a551aa0fab9df0d"
+      },
+      {
+        "file": "research/ir-acquirers-multiple-four-steps-author-source-2026-10-16/capture.json",
+        "sha256": "cadd215677f8b4889efb7c410456c137b5de8fca60559ae2a4359bedecc3acde"
+      },
+      {
+        "file": "research/ir-acquirers-multiple-four-steps-author-source-2026-10-16/acquisition-review.json",
+        "sha256": "8f86a02c33b06d5f323a943f0f249cd717d14ca74565f070a7f1932b14e8549f"
+      },
+      {
+        "file": "research/ir-acquirers-multiple-four-steps-author-source-2026-10-16/parent-acceptance.json",
+        "sha256": "502655c6f78d40d37f7731ffd2a01f97ebae3b940c27821bd17b7f705e4eb7fa"
+      }
+    ],
+    "start_pins_file": {
+      "file": "research/ir-acquirers-multiple-method-review-2026-10-16/read-start.json",
+      "sha256": "8d9961087cc44bb53cb52fe175da8a304c2341f35de322b8b0f3999c43a41a3f"
+    },
+    "raw_and_text_start_end_unchanged": true,
+    "quote_count": 15,
+    "all_nonempty_exact_character_and_UTF8": true,
+    "English_words_in_generated_direct_quotes_by_source": {
+      "FAQ": 80,
+      "article_2016": 81
+    },
+    "generated_English_quotes_below_90_per_source": true,
+    "context_spans_valid": true,
+    "new_GET_DB_Store_code_shared_docs_oldsource_edits": 0,
+    "source_fact_and_project_interpretation_separated": true
+  },
+  "meaning_limits": "方法候補の限定読解のみ。原典の宣伝は独立実証でなく、人数/読解回数で金融適用が成立するものでもない。完全な規則/現行版/Japan認証はしない。"
+}

@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T12:48:35.270016+00:00",
+  "artifact_type": "independent_FAQ_formal_guidance_display_comparison_review",
+  "status": "bounded_comparison_and_normalization_reproduced_with_scope_precision_and_freshness_limits",
+  "original_artifact_SHA256": {
+    "faq-normalized.json": "de2de4cca7fc315d63d0f759738e274a8894018fb7cb43e8c9f86db3ace5c977",
+    "filing-request.json": "c53ee735011b97c31f69b5051932c6a83801f870776c8e12b4bd9fb3b472f963",
+    "filing-page1.png": "7ad50562c385e90f1dd60b37f2302df8d4af23a7af31e62de3e3253ac4468583",
+    "comparison.json": "f7a3d2fb98ebbe62f5530c6b40330481cea10bed803451409d43c56e11f9ceef",
+    "filing-normalized.json": "d273afe49a1f6d94d80c785e90542c6afc2b2ec7e5fa04f3f98a51eeb8aa9c55",
+    "source-quotes.json": "916d18b41009c5df512c307a6b07d3b47846ff42d768f9e179e37a2e043f654e",
+    "README.md": "616f7531c32ea267be5454cbd6724b404d11ce9360d07c93f6bc5c3c02c1daeb",
+    "faq-request.json": "f9b0560b74c5a40573357a14e418fa988410d6424a36bb0c948973400a88af0b",
+    "validation.json": "e4bbcfb3549c3e520af3bf3ae20d886eb4e2743834bc23bffa61bc37a7f94f10"
+  },
+  "protected_old_input_SHA256": {
+    "data/case-source-bundle.json": "09dc53022739abfdc8d4e88957de1ec01c33b26566c4e63564330a3a72d2118d",
+    "research/ir-public-qa-interpretation-cases-2026-10-15/input-cases-v2.json": "fd6affd7f2759c28a341c52eb4c8de1e2c5d40e411d8ede9e0eaa1ec07bc1692",
+    "research/ir-case-studies-2026-10-15/3774/disclosed-facts-draft.json": "4a1162fd3f7cf28b8058e7cfc55495b5777142811c5be4b9d6287dd89d6b6c0c",
+    "research/ir-case-studies-2026-10-15/3774/disclosed-facts-normalized.json": "a627f43a9aecea6986861049e3927f688413e619a51d3ff73716e815a105a331",
+    "research/ir-case-studies-2026-10-15/3774/extraction-notes.md": "de5c3b8b6f7caa6a97717dc4c37dbcfefb24ff0776f077d06b884e78bd529fef",
+    "research/ir-case-studies-2026-10-15/3774/evidence/0e5d120d1acbad92f9fa7b96166c320a5f867764c81b4b9e828acec677267c5a.raw": "0e5d120d1acbad92f9fa7b96166c320a5f867764c81b4b9e828acec677267c5a",
+    "research/ir-case-studies-2026-10-15/3774/evidence/3f8e02d9d7390f80.json": "619ff51671b3d218cf4d3cb96e2405463050491a99d0b3af9e8635c5505b6538",
+    "research/ir-case-studies-2026-10-15/3774/evidence/2f41e73809f88df8bc22e748cfd1e9aaa9002258c86a9c90dc359bdf82747047.raw": "2f41e73809f88df8bc22e748cfd1e9aaa9002258c86a9c90dc359bdf82747047",
+    "research/ir-case-studies-2026-10-15/3774/evidence/58fa60ba292505d2.json": "494e8c4c10add7415317b363d2b5c0e9ef9be35ef0c563bed8fba6415a440417",
+    "research/ir-case-studies-2026-10-15/3774/evidence/58fa60ba292505d2.txt": "f3cc58c011bbfc8f52ae8ce2ce6bdf04ff9f3f502e7177026e6f4ba6a4c3c107"
+  },
+  "source_checks": [
+    {
+      "label": "faq",
+      "source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+      "original_snapshot_canonical_JSON_SHA_match": true,
+      "original_raw_capture_text_SHA_match": true,
+      "text_equals_original_source_content": true,
+      "transport_text_equals_extraction": true,
+      "transport_text_note": "HTML capture.text is the declared visible extraction.",
+      "original_retrieval_preserved_separately_from_HTTP_completion": true,
+      "source_publication_instant_null_preserved": true,
+      "pdf_layout_memory_reextraction_bytes_match": null
+    },
+    {
+      "label": "filing",
+      "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+      "original_snapshot_canonical_JSON_SHA_match": true,
+      "original_raw_capture_text_SHA_match": true,
+      "text_equals_original_source_content": true,
+      "transport_text_equals_extraction": false,
+      "transport_text_note": "PDF capture.text is the original generic binary-decoded/truncated transport representation, not the extraction; source uses explicitly saved pdftotext .txt and that is re-extracted from raw PDF here.",
+      "original_retrieval_preserved_separately_from_HTTP_completion": true,
+      "source_publication_instant_null_preserved": true,
+      "pdf_layout_memory_reextraction_bytes_match": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "id": "faq-q9-guidance",
+      "source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+      "exact_source_content_offset_match": true,
+      "quote_UTF8_SHA256_computed": "c4f5dfc8b455868cf8813893bb0526c0266b95b60f44afc5a9b81b7d29ca73fb",
+      "physical_PDF_page_offset_match": null
+    },
+    {
+      "id": "faq-accounting-context",
+      "source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+      "exact_source_content_offset_match": true,
+      "quote_UTF8_SHA256_computed": "6867c3743199146c2c3c134a99b6cc79bd4420c61f8256b92bf43af267ec2639",
+      "physical_PDF_page_offset_match": null
+    },
+    {
+      "id": "filing-full-year-guidance-table",
+      "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+      "exact_source_content_offset_match": true,
+      "quote_UTF8_SHA256_computed": "912a46ee58653f15eb79476c2c0352257bece207f142dc1d6a89f76b765150d9",
+      "physical_PDF_page_offset_match": true
+    },
+    {
+      "id": "filing-header-date-and-basis",
+      "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+      "exact_source_content_offset_match": true,
+      "quote_UTF8_SHA256_computed": "dd9886c06a9f4264ebad289ddedf28b2db2a4600bfb0b324bc999e6c4b1215f4",
+      "physical_PDF_page_offset_match": true
+    },
+    {
+      "id": "filing-forecast-uncertainty",
+      "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+      "exact_source_content_offset_match": true,
+      "quote_UTF8_SHA256_computed": "9b74580a7b0095b03d56e549765dcb65115c072a5374526db38c347458486013",
+      "physical_PDF_page_offset_match": true
+    },
+    {
+      "id": "filing-display-rounding",
+      "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+      "exact_source_content_offset_match": true,
+      "quote_UTF8_SHA256_computed": "6803cb4dbd44a1072bf15fb951c35e16e88e2bc728d4a8daff8fce9d60066873",
+      "physical_PDF_page_offset_match": true
+    }
+  ],
+  "normalization_API_checks": [
+    {
+      "side": "faq",
+      "fact_count": 4,
+      "original_source_unchanged": true,
+      "normalized_bundle_exact_API_replay_at_stored_derived_retrieved_at": true,
+      "input_not_mutated": true,
+      "reproduction_result": {
+        "source_id": "disclosed-facts:cbec4ac1cb013a68f3cba5a0ba8648738e6b076297c7ddd86a09b6b3ea904937",
+        "applicable": true,
+        "status": "reproduced",
+        "reason_codes": [],
+        "financial_inputs_verified": false,
+        "meaning_review_required": true,
+        "original_content_sha256_status": "matched",
+        "original_snapshot_sha256_status": "matched_supplied_snapshot",
+        "fact_kinds": [
+          {
+            "id": "iij-faq-fy2027-revenue",
+            "kind": "issuer_guidance"
+          },
+          {
+            "id": "iij-faq-fy2027-operating_profit",
+            "kind": "issuer_guidance"
+          },
+          {
+            "id": "iij-faq-fy2027-profit_before_tax",
+            "kind": "issuer_guidance"
+          },
+          {
+            "id": "iij-faq-fy2027-profit_attributable_to_owners_of_parent",
+            "kind": "issuer_guidance"
+          }
+        ],
+        "original_source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d"
+      },
+      "CLI_executed_in_independent_review": false,
+      "DB_connections_in_independent_review": 0,
+      "replay_is_not_new_source_creation_or_new_historical_availability": true
+    },
+    {
+      "side": "filing",
+      "fact_count": 4,
+      "original_source_unchanged": true,
+      "normalized_bundle_exact_API_replay_at_stored_derived_retrieved_at": true,
+      "input_not_mutated": true,
+      "reproduction_result": {
+        "source_id": "disclosed-facts:3b2754828b7a2d6b21d6e3ae1de55b71ee2a1a24f1528f4c6b7e902e3ca76942",
+        "applicable": true,
+        "status": "reproduced",
+        "reason_codes": [],
+        "financial_inputs_verified": false,
+        "meaning_review_required": true,
+        "original_content_sha256_status": "matched",
+        "original_snapshot_sha256_status": "matched_supplied_snapshot",
+        "fact_kinds": [
+          {
+            "id": "iij-filing-fy2027-revenue",
+            "kind": "issuer_guidance"
+          },
+          {
+            "id": "iij-filing-fy2027-operating_profit",
+            "kind": "issuer_guidance"
+          },
+          {
+            "id": "iij-filing-fy2027-profit_before_tax",
+            "kind": "issuer_guidance"
+          },
+          {
+            "id": "iij-filing-fy2027-profit_attributable_to_owners_of_parent",
+            "kind": "issuer_guidance"
+          }
+        ],
+        "original_source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f"
+      },
+      "CLI_executed_in_independent_review": false,
+      "DB_connections_in_independent_review": 0,
+      "replay_is_not_new_source_creation_or_new_historical_availability": true
+    }
+  ],
+  "independent_metric_arithmetic": [
+    {
+      "concept": "revenue",
+      "label": "売上収益",
+      "FAQ_display_oku_JPY": "3,850",
+      "filing_annual_display_million_JPY": "385,000",
+      "independently_calculated_JPY": "385000000000",
+      "display_difference_million_JPY": "0",
+      "independent_arithmetic": "Fraction, declared 億円 × 100000000 / 百万円 × 1000000; no float or normalizer multiplier lookup",
+      "display_units_and_full_year_row_columns_visually_confirmed": true,
+      "kind": "issuer_guidance",
+      "same_vintage_or_latest_forecast_verified": false,
+      "financial_adoption": false
+    },
+    {
+      "concept": "operating_profit",
+      "label": "営業利益",
+      "FAQ_display_oku_JPY": "385",
+      "filing_annual_display_million_JPY": "38,500",
+      "independently_calculated_JPY": "38500000000",
+      "display_difference_million_JPY": "0",
+      "independent_arithmetic": "Fraction, declared 億円 × 100000000 / 百万円 × 1000000; no float or normalizer multiplier lookup",
+      "display_units_and_full_year_row_columns_visually_confirmed": true,
+      "kind": "issuer_guidance",
+      "same_vintage_or_latest_forecast_verified": false,
+      "financial_adoption": false
+    },
+    {
+      "concept": "profit_before_tax",
+      "label": "税引前利益",
+      "FAQ_display_oku_JPY": "370",
+      "filing_annual_display_million_JPY": "37,000",
+      "independently_calculated_JPY": "37000000000",
+      "display_difference_million_JPY": "0",
+      "independent_arithmetic": "Fraction, declared 億円 × 100000000 / 百万円 × 1000000; no float or normalizer multiplier lookup",
+      "display_units_and_full_year_row_columns_visually_confirmed": true,
+      "kind": "issuer_guidance",
+      "same_vintage_or_latest_forecast_verified": false,
+      "financial_adoption": false
+    },
+    {
+      "concept": "profit_attributable_to_owners_of_parent",
+      "label": "親会社の所有者に帰属する当期利益",
+      "FAQ_display_oku_JPY": "250",
+      "filing_annual_display_million_JPY": "25,000",
+      "independently_calculated_JPY": "25000000000",
+      "display_difference_million_JPY": "0",
+      "independent_arithmetic": "Fraction, declared 億円 × 100000000 / 百万円 × 1000000; no float or normalizer multiplier lookup",
+      "display_units_and_full_year_row_columns_visually_confirmed": true,
+      "kind": "issuer_guidance",
+      "same_vintage_or_latest_forecast_verified": false,
+      "financial_adoption": false
+    }
+  ],
+  "visual_review": {
+    "file": "filing-page1.png",
+    "SHA256": "7ad50562c385e90f1dd60b37f2302df8d4af23a7af31e62de3e3253ac4468583",
+    "method": "tools.view_image(detail=original), original saved cover image",
+    "document_header_IFRS_consolidated_and_2026_08_07_printed_date_observed": true,
+    "forecast_section_3_annual_period_2026_04_01_to_2027_03_31_observed": true,
+    "annual_row_not_Q1_actual_or_interim_cumulative": true,
+    "tax_before_profit_and_parent_owner_attribution_columns_observed": true,
+    "literal_rounding_note": "(百万円未満四捨五入)",
+    "underlying_one_yen_precision_verified": false,
+    "image_byte_rerender_reproduction_performed": false
+  },
+  "scope_and_attribution_review": {
+    "FAQ_fiscal_year_and_our_group_only_no_start_end_or_update_date_inferred": true,
+    "FAQ_general_IFRS_context_does_not_certify_detailed_scope": true,
+    "both_issuer_guidance_not_independent_author_forecasts": true,
+    "same_detailed_perimeter_forecast_vintage_or_latest_status_verified": false,
+    "formal_revision_none_not_FAQ_vintage_proof": true,
+    "tax_before_profit_not_reclassified_to_ordinary_profit": true,
+    "parent_owner_profit_not_total_profit_or_EPS_reverse_calculation": true,
+    "display_match_not_forecast_attainment_or_investment_suitability": true,
+    "same_display_values_need_not_be_reasked_in_IR_only_within_saved_scope": true
+  },
+  "execution_provenance_boundary": {
+    "historical_CLI_SHA_as_recorded": "57254a8e24df6b7be8c772e637821a0546b66ece40088238bf3a5643a4c13979",
+    "historical_CLI_memory_DB_connections_as_recorded": 2,
+    "current_CLI_not_opened_or_rerun": true,
+    "independent_review_API_only_no_DB_connections": true,
+    "disclosed_facts_module_SHA256_at_review": "b26f5b612b701f3d58abda681d375ebe4db072614e86f4de83bab21b422a866d",
+    "historical_CLI_execution_not_independently_rerun_or_recertified": true
+  },
+  "findings": [
+    {
+      "id": "purpose-current-wording",
+      "severity": "nonblocking_wording_limit",
+      "JSON_pointer": "/purpose",
+      "detail": "The isolated phrase 現予想 can sound current. Read under explicit recorded README/limitations as a comparison of saved guidance displays only. No latest/current forecast evidence is established; no artifact edit is made."
+    }
+  ],
+  "preservation_boundary": {
+    "old_EPS_draft_and_normalized_3fact_files_protected_hashes_match": true,
+    "old_67fact_index_and_financial_models_opened_or_modified_in_review": false,
+    "operational_DB_opened_or_modified_in_review": false,
+    "state_of_unopened_index_models_DB_independently_reaudited": false,
+    "no_claim_all_globally_unchanged_by_other_concurrent_workers": true
+  },
+  "scope": {
+    "source_count": 2,
+    "metric_pairs": 4,
+    "facts": 8,
+    "exact_quotes": 6,
+    "GETs": 0,
+    "DB_connections": 0,
+    "CLI_invocations": 0,
+    "production_or_existing_file_changes": 0,
+    "financial_model_or_policy_adoption": 0,
+    "IR_registration_or_send": 0
+  },
+  "limitations": [
+    "Raw/capture/snapshot/content identity and deterministic normalization do not certify financial forecast meaning or actual prediction precision.",
+    "Original stored retrieval clocks predate HTTP start and remain unchanged; neither original first-save nor publication instant is established from them.",
+    "Displayed annual amounts match after explicit unit conversion; identical vintage, detailed perimeter, latest status and attainability remain unverified."
+  ]
+}

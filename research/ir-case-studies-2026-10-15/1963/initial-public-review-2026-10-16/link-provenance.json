@@ -1,0 +1,87 @@
+{
+  "performed_requests": [
+    {
+      "role": "issuer_robots",
+      "url": "https://www.jgc.com/robots.txt",
+      "basis": "robots endpoint on selected official host"
+    },
+    {
+      "role": "issuer_root",
+      "url": "https://www.jgc.com/",
+      "basis": "selected CSV official_url"
+    },
+    {
+      "role": "canonical_root",
+      "url": "https://www.jgc.com/jp/",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[1].response_headers.location",
+      "same_host_explicit_redirect_hop": 1,
+      "GET_budget_counted": true
+    },
+    {
+      "role": "results_index",
+      "url": "https://www.jgc.com/jp/ir/ir-library/financial-s-summary.html",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[2].html_visible_text.links[66]",
+      "literal_href": "/jp/ir/ir-library/financial-s-summary.html",
+      "label": "決算短信/ 決算説明会資料"
+    },
+    {
+      "role": "quarter_statement",
+      "url": "https://www.jgc.com/jp/ir/ir-library/assets/pdf/fy26_1q_tanshin.pdf",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[3].html_visible_text.links[91]",
+      "literal_href": "https://www.jgc.com/jp/ir/ir-library/assets/pdf/fy26_1q_tanshin.pdf",
+      "label": "決算短信[PDF:408.9 KB]"
+    }
+  ],
+  "samehost_redirect_hop": {
+    "from": "02.json",
+    "Location_pointer": "$.response_headers.location",
+    "to": "03.json",
+    "counted_GET3": true,
+    "automatic_follow": false
+  },
+  "current_Q1_public_materials_unattempted": [
+    {
+      "source_id": "case-public:857ccc64117019f749deae2362782d39c1416e4dc8bedd5af1c9172e2cb59733",
+      "capture": "04.json",
+      "literal_anchor_pointer": "$.html_visible_text.links[92]",
+      "anchor": {
+        "url": "https://www.jgc.com/jp/ir/ir-library/assets/pdf/fy26_1q_gaiyou.pdf",
+        "href": "https://www.jgc.com/jp/ir/ir-library/assets/pdf/fy26_1q_gaiyou.pdf",
+        "label": "決算概要[PDF:884.2 KB]"
+      },
+      "heading_date_from_quote": "current-quarter-explanations-and-QA-listed",
+      "GET_attempted": false,
+      "reason": "Initial5GET cap reached; separate finite scope would be needed"
+    },
+    {
+      "source_id": "case-public:857ccc64117019f749deae2362782d39c1416e4dc8bedd5af1c9172e2cb59733",
+      "capture": "04.json",
+      "literal_anchor_pointer": "$.html_visible_text.links[93]",
+      "anchor": {
+        "url": "https://www.jgc.com/jp/ir/ir-library/assets/pdf/fy26_1q_gaiyou_note.pdf",
+        "href": "https://www.jgc.com/jp/ir/ir-library/assets/pdf/fy26_1q_gaiyou_note.pdf",
+        "label": "決算概要（説明要旨付き）[PDF:591.9 KB]"
+      },
+      "heading_date_from_quote": "current-quarter-explanations-and-QA-listed",
+      "GET_attempted": false,
+      "reason": "Initial5GET cap reached; separate finite scope would be needed"
+    },
+    {
+      "source_id": "case-public:857ccc64117019f749deae2362782d39c1416e4dc8bedd5af1c9172e2cb59733",
+      "capture": "04.json",
+      "literal_anchor_pointer": "$.html_visible_text.links[94]",
+      "anchor": {
+        "url": "https://www.jgc.com/jp/ir/ir-library/assets/pdf/fy26_1q_OnlineConference_j.pdf",
+        "href": "https://www.jgc.com/jp/ir/ir-library/assets/pdf/fy26_1q_OnlineConference_j.pdf",
+        "label": "オンラインカンファレンスにおける質疑応答[PDF:296.5 KB]"
+      },
+      "heading_date_from_quote": "current-quarter-explanations-and-QA-listed",
+      "GET_attempted": false,
+      "reason": "Initial5GET cap reached; separate finite scope would be needed"
+    }
+  ],
+  "further_GETs_planned": 0
+}

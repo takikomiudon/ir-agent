@@ -1,0 +1,41 @@
+{
+  "recorded_at": "2026-10-15T21:47:15.297869+00:00",
+  "status": "all_preexisting_rows_exactly_unchanged",
+  "original_transaction_error": "Nested BEGIN IMMEDIATE from wrapping APIs that own their transactions",
+  "old_tables_exact": {
+    "companies": true,
+    "decision_policies": true,
+    "decision_reviews": true,
+    "evaluations": true,
+    "ir_evaluation_protocol_versions": true,
+    "ir_observation_versions": true,
+    "ir_observations": true,
+    "ir_prediction_models": true,
+    "ir_predictions": true,
+    "job_attempt_events": true,
+    "job_attempts": true,
+    "job_request_receipts": true,
+    "jobs": true,
+    "metadata": true,
+    "position_declarations": true,
+    "position_observations": true,
+    "qualitative_case_versions": true,
+    "questions": true,
+    "record_availability": true,
+    "replies": true,
+    "reply_information_research_checks": true,
+    "reply_information_reviews": true,
+    "source_classifications": true,
+    "source_reviews": true,
+    "sources": true,
+    "theses": true
+  },
+  "new_empty_schema_tables": {
+    "research_decision_reviews": 0
+  },
+  "actual_main_sha256": "113124884bd08e6ac3956555da606343b4c5df95a87a255268ecacf8e3c9ab97",
+  "sources": 124,
+  "classifications": 123,
+  "business_mutations": 0,
+  "next_step": "Repeat only the proven shadow API sequence without an outer transaction; no code/schema workaround or database restore"
+}

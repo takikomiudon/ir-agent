@@ -1,0 +1,101 @@
+{
+  "security_code": "1848",
+  "company_name": "富士ピー・エス",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "建設業",
+  "investigation_status": "confirmed",
+  "verification_level": "form_fields_verified",
+  "official_url": "https://www.fujips.co.jp/",
+  "contact_url": "https://contact.fujips.co.jp/contact/",
+  "channels": [
+    "form"
+  ],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "candidate",
+  "attempted_at": "2026-10-11T03:59:28.336517+00:00",
+  "completed_at": "2026-10-11T03:59:34.404349+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/1848/03.json",
+      "url": "https://contact.fujips.co.jp/contact/",
+      "retrieved_at": "2026-10-11T03:59:32.602135+00:00",
+      "quote": "部にお電話ください。 事業者一覧ページへ お問い合わせ種別 必須 選択してください 土木情報についてのお問い合わせ 建築情報についてのお問い合わせ 採用情報についてのお問い合わせ 投資家情報についてのお問い合わせ その他についてのお問い合わせ お名前 必須 フリガナ 必須 メールアドレス 必須 確認のためもう一度入力ください お電話番号 必須 ※半角数字（ハイフン不要）で入力ください。 貴",
+      "role": "contact_channel"
+    },
+    {
+      "snapshot": "evidence/1848/02.json",
+      "url": "https://www.fujips.co.jp/ir/",
+      "retrieved_at": "2026-10-11T03:59:30.459084+00:00",
+      "quote": "ー・エス 個人投資家向けWEB説明会 採用情報 採用情報 新卒採用 キャリア採用 お取引先の皆様へ お問い合わせ 富士ピー・エスについて 技術情報 施工実績 CSR／社会・環境 IR情報 採用情報 お取引先の皆様",
+      "role": "official_parent_link",
+      "link_target": "https://contact.fujips.co.jp/",
+      "resolved_target": "https://contact.fujips.co.jp/contact/"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.fujips.co.jp/",
+      "final_url": "https://www.fujips.co.jp/",
+      "snapshot": "evidence/1848/01.json",
+      "retrieved_at": "2026-10-11T03:59:29.202318+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.fujips.co.jp/ir/",
+      "final_url": "https://www.fujips.co.jp/ir/",
+      "snapshot": "evidence/1848/02.json",
+      "retrieved_at": "2026-10-11T03:59:30.459084+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://contact.fujips.co.jp/",
+      "final_url": "https://contact.fujips.co.jp/contact/",
+      "snapshot": "evidence/1848/03.json",
+      "retrieved_at": "2026-10-11T03:59:32.602135+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "公開 GET の保存本文と非 hidden 入力欄を点検。送信、JavaScript・CAPTCHA の動作、実際の返信は未検証。"
+  ],
+  "discovery": {
+    "security_code": "1848",
+    "official_url": "https://www.fujips.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "富士ピー・エス",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/1848/01.json",
+      "normalized_name": "富士ピーエス",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/1848/02.json",
+      "normalized_name": "富士ピーエス",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/1848/03.json",
+      "normalized_name": "富士ピーエス",
+      "security_code_observed": false
+    }
+  ],
+  "classification_version": 2,
+  "successful_official_page_count": 3,
+  "manual_review": {
+    "reviewer": "ir_operations",
+    "reviewed_at": "2026-10-11T04:16:58.656881+00:00",
+    "notes": "実フォーム本文の「投資家情報についてのお問い合わせ」選択肢と、返信メール入力・問い合わせ本文 textarea を確認。ナビゲーションや個人情報方針のIR語からは推定していない。 公式法人サイトの保存リンクから当該フォームへの誘導を照合し、外部フォーム／グループ窓口の会社同一性の根拠を追加した。"
+  }
+}

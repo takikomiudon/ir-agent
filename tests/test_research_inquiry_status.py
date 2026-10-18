@@ -1,0 +1,69 @@
+"""Status exposes research records without changing financial question counts."""
+import unittest
+
+from ir_agent.harness import Harness
+from ir_agent.store import Store
+import test_research_inquiries as fixtures
+
+at = fixtures.at
+
+
+class ResearchInquiryStatusTests(unittest.TestCase):
+    # Reuse the temporary synthetic company/source/case fixture, not its tests.
+    setUp = fixtures.ResearchInquiryTests.setUp
+    add_source = fixtures.ResearchInquiryTests.add_source
+    binding = fixtures.ResearchInquiryTests.binding
+    inquiry = fixtures.ResearchInquiryTests.inquiry
+    prepare = fixtures.ResearchInquiryTests.prepare
+    review = fixtures.ResearchInquiryTests.review
+
+    @staticmethod
+    def financial_and_other_status(status):
+        return {k: v for k, v in status.items() if k not in
+                ('research_inquiries', 'research_inquiry_replies', 'research_inquiry_reviews')}
+
+    def test_empty_database_reports_empty_research_states_and_zero_independent_counts(self):
+        store = Store(':memory:')
+        self.addCleanup(store.close)
+        status = Harness(store).status()
+        self.assertEqual(status['research_inquiries'], {})
+        self.assertEqual(status['research_inquiry_replies'], 0)
+        self.assertEqual(status['research_inquiry_reviews'], 0)
+        self.assertEqual(self.financial_and_other_status(status), {
+            'companies': 0, 'sources': 0, 'theses': 0, 'replies': 0, 'evaluations': 0,
+            'decision_policies': 0, 'decision_reviews': 0, 'signal_predictions': 0,
+            'evaluation_protocol_versions': 0, 'jobs': {}, 'questions': {}})
+
+    def test_research_lifecycle_counts_are_separate_from_financial_records(self):
+        original = self.financial_and_other_status(self.harness.status())
+        self.prepare()
+        self.assertEqual(self.harness.status()['research_inquiries'], {'draft': 1})
+        self.api.add_inquiry(self.inquiry(id='another', topic='another-topic'), now=at(4))
+        self.api.mark_sent('research-one', at(5).isoformat(), now=at(5))
+        self.assertEqual(self.harness.status()['research_inquiries'], {'draft': 1, 'awaiting_reply': 1})
+        self.api.add_reply({'id': 'research-reply', 'inquiry_id': 'research-one',
+            'received_at': at(6).isoformat(), 'raw_text': 'specified product series'}, now=at(7))
+        status = self.harness.status()
+        self.assertEqual(status['research_inquiries'], {'draft': 1, 'answered': 1})
+        self.assertEqual(status['research_inquiry_replies'], 1)
+        self.assertEqual(status['research_inquiry_reviews'], 0)
+        self.api.add_review(self.review(), now=at(8))
+        first = self.harness.status()
+        self.assertEqual(first['research_inquiry_reviews'], 1)
+        correction = self.review(expected_version=1, recorded_at=at(9).isoformat(),
+            information_status='potential_nonpublic', branch_id='unresolved')
+        del correction['public_information_review']
+        self.api.add_review(correction, now=at(9))
+        final = self.harness.status()
+        self.assertEqual(final['research_inquiry_reviews'], 2)
+        self.assertEqual(final['research_inquiry_replies'], 1)
+        self.assertEqual(final['research_inquiries'], {'draft': 1, 'answered': 1})
+        self.assertEqual(self.financial_and_other_status(final), original)
+        self.assertEqual(final['questions'], {})
+        self.assertEqual(final['replies'], 0)
+        self.assertEqual(final['evaluations'], 0)
+        self.assertEqual(self.harness.inbox(), {'drafts': [], 'awaiting_replies': [], 'replies_for_review': []})
+
+
+if __name__ == '__main__':
+    unittest.main()

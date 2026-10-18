@@ -1,0 +1,170 @@
+{
+  "status": "independent_focused_review_complete",
+  "findings": [],
+  "checks": [
+    {
+      "name": "old optional-free API full result 200",
+      "passed": true,
+      "result_sha256": "3081da4362547f2f87d31d46232caa0fb6345e6674bc26e0ac83c18baffac1e0"
+    },
+    {
+      "name": "old optional-free API full result 301",
+      "passed": true,
+      "result_sha256": "b029d144883b4895245dcedc0f1f81c24184895257a56ef8a560eb7a293e1dc1"
+    },
+    {
+      "name": "old optional-free API full result 403",
+      "passed": true,
+      "result_sha256": "8403f517f07ba32fd17d31a16103217e32f435c01d8a324976641b959242804c"
+    },
+    {
+      "name": "old optional-free API full result 429",
+      "passed": true,
+      "result_sha256": "4127e4c73398cbd4fca49bf24cfc94e1a86a5b3833f495ee6a23e5f8bd0357d2"
+    },
+    {
+      "name": "old optional-free API full result 503",
+      "passed": true,
+      "result_sha256": "c412fcdac51546e8eaf6bc1b9987e119723ee88f259c578bf11b218b47def6f7"
+    },
+    {
+      "name": "existing nonoverwritten matching_symlink",
+      "passed": true,
+      "storage_error": "FileExistsError"
+    },
+    {
+      "name": "existing nonoverwritten dangling_symlink",
+      "passed": true,
+      "storage_error": "FileExistsError"
+    },
+    {
+      "name": "existing nonoverwritten directory",
+      "passed": true,
+      "storage_error": "IsADirectoryError"
+    },
+    {
+      "name": "existing nonoverwritten corrupt_regular",
+      "passed": true,
+      "storage_error": "FileExistsError"
+    },
+    {
+      "name": "storage failure isolated link_permission",
+      "passed": true,
+      "storage_error": "PermissionError"
+    },
+    {
+      "name": "storage failure isolated link_unsupported",
+      "passed": true,
+      "storage_error": "OSError"
+    },
+    {
+      "name": "storage failure isolated temp_permission",
+      "passed": true,
+      "storage_error": "PermissionError"
+    },
+    {
+      "name": "storage and HTTP failures stay separate 403",
+      "passed": true,
+      "storage_status": "failed",
+      "failure_signature": "http_403"
+    },
+    {
+      "name": "storage and HTTP failures stay separate 429",
+      "passed": true,
+      "storage_status": "failed",
+      "failure_signature": "http_429"
+    },
+    {
+      "name": "storage and HTTP failures stay separate 503",
+      "passed": true,
+      "storage_status": "failed",
+      "failure_signature": "http_503"
+    },
+    {
+      "name": "cleanup failure diagnosed and complete target retained",
+      "passed": true
+    },
+    {
+      "name": "entity clock before storage and final completion",
+      "passed": true,
+      "events": [
+        "clock",
+        "clock",
+        "clock",
+        "iteration_started",
+        "iteration_exhausted",
+        "clock",
+        "fsync",
+        "clock"
+      ],
+      "times": {
+        "retrieved_at": "2026-10-15T22:30:01+00:00",
+        "http_get_started_at": "2026-10-15T22:30:02+00:00",
+        "http_response_received_at": "2026-10-15T22:30:03+00:00",
+        "raw_body_completed_at": "2026-10-15T22:30:04+00:00",
+        "http_get_completed_at": "2026-10-15T22:30:05+00:00"
+      }
+    },
+    {
+      "name": "old injected falsey fetcher preserved",
+      "passed": true
+    },
+    {
+      "name": "freeze scripts/research_ir_universe.py",
+      "passed": true
+    },
+    {
+      "name": "freeze scripts/collect_ir_followups.py",
+      "passed": true
+    },
+    {
+      "name": "freeze tests/test_ir_raw_entity_preservation.py",
+      "passed": true
+    }
+  ],
+  "check_count": 21,
+  "failed_checks": 0,
+  "network_requests": 0,
+  "real_db_operations": 0,
+  "implementation_edits": 0,
+  "old_capture_edits": 0,
+  "full_suite_run": false,
+  "reviewed_files": [
+    {
+      "path": "scripts/research_ir_universe.py",
+      "before_sha256": "4e4cd3a65a69f6e7fb61ce73a85fda7b5fba95352a8544e719f49a4a2fe86bdf",
+      "after_sha256": "373e06e6bd2b3fe7bf8e9b86de9d124118371eec9534ebea9a1ef07161e154f6",
+      "after_bytes": 73326
+    },
+    {
+      "path": "scripts/collect_ir_followups.py",
+      "before_sha256": "589b42b8bf89fd8e6affd6c0348db4c6a30c3bd7a48634613a0d181b12723362",
+      "after_sha256": "fa3df311c8c11632ae0f4a430ce9eaddbe965c4d77e3593d7ef3954b9cdd9bae",
+      "after_bytes": 136706
+    },
+    {
+      "path": "tests/test_ir_raw_entity_preservation.py",
+      "before_sha256": null,
+      "after_sha256": "37f260be63ff2bf897545fd57ce47f09a5f0ce8ccc8875416807992722cc545c",
+      "after_bytes": 10888
+    }
+  ],
+  "scope_notes": [
+    "Atomic visible publication via same-directory fsynced temporary and hardlink; existing names never overwritten. No claim of power-loss durability: parent directory is not fsynced.",
+    "Complete iter_content entity may already be Content-Encoding decoded. raw_body_completed_at is local iteration completion, not wire completion, publication, or DB first-save time.",
+    "Cleanup failure is exposed on full capture as raw_storage_cleanup_error; compact request_metadata omits that additional diagnostic. This does not change retained SHA target or network error classification.",
+    "Same-user adversarial path replacement and persistent filesystem corruption are not prevented by this local collector; no broader artifact-security design was requested.",
+    "Independent cases augment rather than repeat the producer focused tests."
+  ],
+  "reproduction_runner": "/tmp/ir_raw_entity_independent.py",
+  "focused_test_run": {
+    "tests_run": 11,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "PASS",
+    "network_guard": "socket.socket.connect raises AssertionError; all HTTP responses synthetic",
+    "log": "focused-tests.log"
+  },
+  "execution_note": "Initial independent injected fake omitted the existing required stats method. The fake was corrected to a falsey BoundedFetcher subclass; no implementation change."
+}

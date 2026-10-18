@@ -1,0 +1,85 @@
+{
+  "method": "arithmetic_equal_annual_periods",
+  "basis": {
+    "company_id": "synthetic:cycle-margin-demo",
+    "currency": "JPY",
+    "amount_unit": "millions",
+    "scope": "Fictional consolidated company",
+    "accounting_basis": "Synthetic arithmetic fixture",
+    "profit_concept": "pretax_operating_income"
+  },
+  "annual_observations": [
+    {
+      "id": "loss-period",
+      "basis": {
+        "company_id": "synthetic:cycle-margin-demo",
+        "currency": "JPY",
+        "amount_unit": "millions",
+        "scope": "Fictional consolidated company",
+        "accounting_basis": "Synthetic arithmetic fixture",
+        "profit_concept": "pretax_operating_income"
+      },
+      "period": {
+        "kind": "full_fiscal_year",
+        "label": "Synthetic FY2023",
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "revenue": "100",
+      "operating_income": "-10",
+      "data_kind": "synthetic_example",
+      "source_refs": [],
+      "selection_rationale": "Explicit fictional arithmetic input; not evidence of a full cycle."
+    },
+    {
+      "id": "profit-period",
+      "basis": {
+        "company_id": "synthetic:cycle-margin-demo",
+        "currency": "JPY",
+        "amount_unit": "millions",
+        "scope": "Fictional consolidated company",
+        "accounting_basis": "Synthetic arithmetic fixture",
+        "profit_concept": "pretax_operating_income"
+      },
+      "period": {
+        "kind": "full_fiscal_year",
+        "label": "Synthetic FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "revenue": "300",
+      "operating_income": "90",
+      "data_kind": "synthetic_example",
+      "source_refs": [],
+      "selection_rationale": "Explicit fictional arithmetic input; not evidence of a full cycle."
+    }
+  ],
+  "application_revenue": {
+    "basis": {
+      "company_id": "synthetic:cycle-margin-demo",
+      "currency": "JPY",
+      "amount_unit": "millions",
+      "scope": "Fictional consolidated company",
+      "accounting_basis": "Synthetic arithmetic fixture",
+      "profit_concept": "pretax_operating_income"
+    },
+    "period": {
+      "kind": "full_fiscal_year",
+      "label": "Synthetic FY2025",
+      "start": "2025-01-01",
+      "end": "2025-12-31"
+    },
+    "revenue": "200",
+    "data_kind": "synthetic_example",
+    "source_refs": [],
+    "selection_rationale": "Fictional application amount, not a company forecast."
+  },
+  "assessment": {
+    "cycle_driver": "Fictional two-period demonstration only",
+    "full_cycle_rationale": null,
+    "comparability_rationale": null,
+    "application_rationale": null,
+    "source_refs": [],
+    "excluded_observations": []
+  }
+}

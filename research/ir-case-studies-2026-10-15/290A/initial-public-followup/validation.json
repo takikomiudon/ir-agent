@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "validated_at": "2026-10-15T14:11:15.978747+00:00",
+  "status": "saved_failure_evidence_consistent_no_financial_source_acquired",
+  "files": {
+    "README.md": {
+      "sha256": "e8e5f68ca6d788e26f582af0c6ac02aa210d4b4ac273829c5eb9a5a4ef88b161",
+      "bytes": 2133
+    },
+    "access-guard.json": {
+      "sha256": "52d33c10f699bea4c515c73d9bea3903c014c40e1b7b811bb688a146b96a4104",
+      "bytes": 1329
+    },
+    "capture.json": {
+      "sha256": "d7cd9d5d58bcf4c2798a9e3d5cd7f02c11c9de3cc587c3a565fb2bc529e982c0",
+      "bytes": 2525
+    },
+    "raw/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "review.json": {
+      "sha256": "b0184d2edd24ba9dbcab6e6aa06a2fe21fdda024f99adb464bd918720079f748",
+      "bytes": 2289
+    },
+    "route-quotes.json": {
+      "sha256": "68d631b2a50684e85b63c620885468236bfed8995f1a8300facb0e43ecad3d9c",
+      "bytes": 1556
+    },
+    "sourcebundle.json": {
+      "sha256": "efc4f6d67d595a4629f06d67a601d5a75f66ddc52677cd12dd821efc8f29efea",
+      "bytes": 592
+    },
+    "text/acquisition-status.txt": {
+      "sha256": "b3700b4b0b601f452d27293437b622762614dcb8bef69411d82b3918d0411437",
+      "bytes": 198
+    }
+  },
+  "checks": {
+    "route_snapshot_hash_matches_inventory": true,
+    "saved_route_quote_character_and_byte_offsets_match": true,
+    "selected_host_not_in_central_seven_holds": true,
+    "single_attempt_and_no_retry": true,
+    "no_HTTP_body_fabricated": true,
+    "empty_marker_is_explicitly_not_raw_response": true,
+    "sourcebundle_sources_empty": true,
+    "UA_prepared_header_matches_fixed_value": true,
+    "max_GET_attempts_not_exceeded": true,
+    "no_issuer_financial_claims_or_adoption": true
+  },
+  "source_retrieval_complete": false,
+  "original_first_save_verified": false,
+  "publication_precision": "unknown",
+  "remaining_GET_budget_is_not_permission_to_retry": true,
+  "old_file_changes": 0,
+  "technical_limit": "No wire capture; prepared request configuration is recorded. Actual remote receipt of an HTTP GET is not established due TLS failure.",
+  "notes": [
+    "System python lacked requests and failed before any network code. Project virtualenv requests was then used for the one robots attempt.",
+    "Investment source skill main instructions read; its requested references/access.md and sources.json resource reads failed. Finite user-authorized route and local restrictions controlled the attempt."
+  ]
+}

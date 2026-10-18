@@ -1,0 +1,520 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T12:00:30.073575+00:00",
+  "status": "five_existing_author_practices_project_review_checklist_only",
+  "scope": "現在のRix架空返信試行とruntime gapをレビューするための有限参照。新しい判定算法/API/金融条件ではない。",
+  "path_basis": "repository-root-relative",
+  "sources": {
+    "manifest": {
+      "file": "third_party/anthropic/manifest.json",
+      "sha256": "45ff843e1c334454b63221fec6311f0c6bf525e79b99096e35f8f2542a405fdf"
+    },
+    "thesis": {
+      "file": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+      "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "fixed_commit_url": "https://raw.githubusercontent.com/anthropics/financial-services-plugins/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md",
+      "original_retrieved_at": "2026-10-10T15:53:59.749710+00:00"
+    },
+    "earnings": {
+      "file": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+      "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "fixed_commit_url": "https://raw.githubusercontent.com/anthropics/financial-services-plugins/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/earnings-preview/SKILL.md",
+      "original_retrieved_at": "2026-10-10T15:54:00.103720+00:00"
+    },
+    "policy": {
+      "file": "docs/decision-policy.md",
+      "sha256": "e687e70c70ec9ce4b40b935bb9e908cd2d1328f44dfa488fad639557fbba8de5"
+    },
+    "workflow": {
+      "file": "docs/workflow.md",
+      "sha256": "6415612b8dca5bdd3c9070cdacc94117292968ac1c05dc8cbfe63d4395028ec3"
+    },
+    "operation": {
+      "file": "docs/ir-operation-design.md",
+      "sha256": "b8e626a523869b7d2c71d43b89b64f695765af35d20c1a342c1e5d323f779025"
+    },
+    "observation": {
+      "file": "docs/ir-outcome-observation.md",
+      "sha256": "af3e644dd260f8a2ef380e8b695477fa6f07d893afd7ba820480f819dac919df"
+    },
+    "rix_preflight": {
+      "file": "research/ir-case-studies-2026-10-15/7525/original-product-ratio-question-preflight/preflight-v3.md",
+      "sha256": "33bfce6413d93480468c069411c37f8704af4e6cfaa267d557fddd75ae6d3422"
+    },
+    "harness": {
+      "file": "src/ir_agent/harness.py",
+      "sha256": "5707ac71d6dd4b962bb2281572a7f5eb5939e257d433257034344a2b7b464f99"
+    },
+    "lifecycle": {
+      "file": "src/ir_agent/decision_lifecycle.py",
+      "sha256": "9f3922b8996ad7cc1411ca1957ad7bf4e68c43c41fef49e8b6230916ed6d345a"
+    },
+    "models": {
+      "file": "src/ir_agent/models.py",
+      "sha256": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c"
+    },
+    "information_review": {
+      "file": "src/ir_agent/information_review.py",
+      "sha256": "22df6e4a6e5d717a390e817bb311b091112eb1d44722e0651623548f09b7d9ee"
+    }
+  },
+  "quotes": {
+    "A01": {
+      "source_key": "thesis",
+      "kind": "author_original",
+      "quote": "**Thesis impact**: Does this strengthen, weaken, or neutralize a specific pillar?",
+      "character_start": 1388,
+      "character_end_exclusive": 1469,
+      "byte_start": 1390,
+      "byte_end_exclusive": 1471,
+      "line_start": 30,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "A02": {
+      "source_key": "thesis",
+      "kind": "author_original",
+      "quote": "A thesis should be falsifiable — if nothing could disprove it, it's not a thesis",
+      "character_start": 2339,
+      "character_end_exclusive": 2419,
+      "byte_start": 2341,
+      "byte_end_exclusive": 2423,
+      "line_start": 63,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "A03": {
+      "source_key": "thesis",
+      "kind": "author_original",
+      "quote": "Track disconfirming evidence as rigorously as confirming evidence",
+      "character_start": 2422,
+      "character_end_exclusive": 2487,
+      "byte_start": 2426,
+      "byte_end_exclusive": 2491,
+      "line_start": 64,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "A04": {
+      "source_key": "earnings",
+      "kind": "author_original",
+      "quote": "For each scenario:\n- What would need to happen operationally\n- What management commentary would signal this\n- Historical context — how has the stock moved on similar prints?",
+      "character_start": 1622,
+      "character_end_exclusive": 1795,
+      "byte_start": 1624,
+      "byte_end_exclusive": 1799,
+      "line_start": 45,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "A05": {
+      "source_key": "earnings",
+      "kind": "author_original",
+      "quote": "Consensus estimates change — always note the source and date of estimates",
+      "character_start": 2382,
+      "character_end_exclusive": 2455,
+      "byte_start": 2392,
+      "byte_end_exclusive": 2467,
+      "line_start": 70,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "A06": {
+      "source_key": "thesis",
+      "kind": "author_original",
+      "quote": "- **Date**: When this happened\n- **Data point**: What changed (earnings beat, management departure, competitor move, etc.)",
+      "character_start": 1263,
+      "character_end_exclusive": 1385,
+      "byte_start": 1265,
+      "byte_end_exclusive": 1387,
+      "line_start": 28,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "A07": {
+      "source_key": "thesis",
+      "kind": "author_original",
+      "quote": "Store thesis data in a structured format so it can be referenced across sessions",
+      "character_start": 2651,
+      "character_end_exclusive": 2731,
+      "byte_start": 2655,
+      "byte_end_exclusive": 2735,
+      "line_start": 67,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "D01": {
+      "source_key": "policy",
+      "kind": "project_documentation",
+      "quote": "回答をモデルへ割り当てる解釈にはレビューが必要である。原文引用が存在することは、分岐の意味が正しいことまで証明しない。",
+      "character_start": 3460,
+      "character_end_exclusive": 3519,
+      "byte_start": 6578,
+      "byte_end_exclusive": 6755,
+      "line_start": 41,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "D02": {
+      "source_key": "policy",
+      "kind": "project_documentation",
+      "quote": "6. **保留をそのまま記録する。** 無回答・曖昧な説明・回答拒否は `unresolved` とし、それだけで評価額を下げない。必要な根拠、価格、採用方針が不足する場合も未解決の理由を列挙する。",
+      "character_start": 3359,
+      "character_end_exclusive": 3458,
+      "byte_start": 6323,
+      "byte_end_exclusive": 6576,
+      "line_start": 39,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "D03": {
+      "source_key": "workflow",
+      "kind": "project_documentation",
+      "quote": "public_clarificationかつ明確な分岐の場合だけ、事前に指定したモデル入力を反映し、同じ会社の新しい仮説版を追加する。曖昧な分岐はunresolved、それ以外の情報分類はheld_for_reviewとして価格を維持する。",
+      "character_start": 4666,
+      "character_end_exclusive": 4786,
+      "byte_start": 8318,
+      "byte_end_exclusive": 8588,
+      "line_start": 85,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "D04": {
+      "source_key": "policy",
+      "kind": "project_documentation",
+      "quote": "3. **質問前に回答分岐を固定する。** 明確な回答A、明確な回答B、曖昧・回答不能・無回答を用意する。各分岐に解釈、対象入力、根拠、点検候補を対応付ける。返信を見てから有利な分岐を作らない。",
+      "character_start": 3028,
+      "character_end_exclusive": 3125,
+      "byte_start": 5388,
+      "byte_end_exclusive": 5659,
+      "line_start": 36,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "D05": {
+      "source_key": "observation",
+      "kind": "project_documentation",
+      "quote": "IRの返信を真の事業状態の代わりに使わず、質問時に固定した仮説と、その後に入手する公開資料を別々に記録する。",
+      "character_start": 22,
+      "character_end_exclusive": 76,
+      "byte_start": 54,
+      "byte_end_exclusive": 212,
+      "line_start": 3,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "D06": {
+      "source_key": "operation",
+      "kind": "project_documentation",
+      "quote": "- **入力：** 実際の受信原文、日時、質問ID、公開情報の補足と確認できる根拠、対象期間と用語の定義。",
+      "character_start": 6077,
+      "character_end_exclusive": 6130,
+      "byte_start": 14259,
+      "byte_end_exclusive": 14400,
+      "line_start": 104,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "D07": {
+      "source_key": "workflow",
+      "kind": "project_documentation",
+      "quote": "原文の該当箇所と理由を残す。同じ要求は再登録せず、別の訂正は最新の版を確認して追加する。受信原文・適用済み仮説・過去の判断JSONは書き換えない。",
+      "character_start": 16064,
+      "character_end_exclusive": 16137,
+      "byte_start": 30220,
+      "byte_end_exclusive": 30431,
+      "line_start": 258,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "D08": {
+      "source_key": "rix_preflight",
+      "kind": "current_case_context_not_author_rule",
+      "quote": "質問本文とABCの回答分岐、著者数値ルールのnull、未推定EVSI、formal登録/送信notreadyはv2から完全に維持しました。",
+      "character_start": 33,
+      "character_end_exclusive": 102,
+      "byte_start": 59,
+      "byte_end_exclusive": 210,
+      "line_start": 3,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "C01": {
+      "source_key": "harness",
+      "kind": "read_only_code_observation",
+      "quote": "if request[\"basis_quote\"] not in reply[\"raw_text\"]:\n                raise ValueError(\"basis_quote must be a verbatim excerpt of the reply\")",
+      "character_start": 29718,
+      "character_end_exclusive": 29857,
+      "byte_start": 29718,
+      "byte_end_exclusive": 29857,
+      "line_start": 465,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "C02": {
+      "source_key": "harness",
+      "kind": "read_only_code_observation",
+      "quote": "if information != \"public_clarification\":\n                evaluation[\"status\"] = \"held_for_review\"\n            elif branch[\"action\"] == \"unresolved\":\n                evaluation[\"status\"] = \"unresolved\"",
+      "character_start": 31460,
+      "character_end_exclusive": 31661,
+      "byte_start": 31460,
+      "byte_end_exclusive": 31661,
+      "line_start": 488,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "C03": {
+      "source_key": "lifecycle",
+      "kind": "read_only_code_observation",
+      "quote": "if not changes <= set(question.get('parameter_paths', [])):\n            raise ValueError('Reply branch changes valuation inputs outside precommitted parameter paths')",
+      "character_start": 7361,
+      "character_end_exclusive": 7527,
+      "byte_start": 7361,
+      "byte_end_exclusive": 7527,
+      "line_start": 122,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "C04": {
+      "source_key": "harness",
+      "kind": "read_only_code_observation",
+      "quote": "if current[\"version\"] != expected or question[\"thesis_version\"] != expected:\n                raise ValueError(\"Thesis changed since the question; review and rebase instead of applying stale branches\")",
+      "character_start": 30254,
+      "character_end_exclusive": 30454,
+      "byte_start": 30254,
+      "byte_end_exclusive": 30454,
+      "line_start": 473,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "C05": {
+      "source_key": "harness",
+      "kind": "read_only_code_observation",
+      "quote": "if existing[\"data\"] != json_text(reply):\n                    raise ValueError(\"A saved reply is immutable\")",
+      "character_start": 27021,
+      "character_end_exclusive": 27128,
+      "byte_start": 27021,
+      "byte_end_exclusive": 27128,
+      "line_start": 429,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "C06": {
+      "source_key": "information_review",
+      "kind": "read_only_code_observation",
+      "quote": "if len(history) != expected:\n            raise ValueError('Information review version changed; read the latest review before appending')",
+      "character_start": 7192,
+      "character_end_exclusive": 7328,
+      "byte_start": 7192,
+      "byte_end_exclusive": 7328,
+      "line_start": 142,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    },
+    "C07": {
+      "source_key": "models",
+      "kind": "read_only_code_observation",
+      "quote": "if branch[\"action\"] == \"unresolved\":\n            unresolved = True\n            if \"valuation\" in branch:\n                raise ValueError(\"An unresolved branch must preserve the existing valuation\")",
+      "character_start": 8373,
+      "character_end_exclusive": 8571,
+      "byte_start": 8373,
+      "byte_end_exclusive": 8571,
+      "line_start": 201,
+      "offset_unit": "zero-based Unicode characters / UTF-8 bytes; end exclusive; original line endings preserved"
+    }
+  },
+  "practices": [
+    {
+      "id": "RP01",
+      "name": "情報が変える論点を限定する",
+      "author_quote_ids": [
+        "A01"
+      ],
+      "author_principle": "新しい情報が、どの特定pillarを強める・弱める・中立化するかを記録する。",
+      "project_adaptation": "返信で確認できた会社指標の定義と、まだ確認できない期間・比較可能性・利益橋渡しを分ける。数値契約を用いる場合も、質問前に許可した入力pathだけを候補にする。",
+      "review_prompt_for_Rix_trial": "返信が直接答えるのは売上範囲、グループ内取引、GP/LV共通性のどれか。そこから過去比率の期/定義やEPS・評価倍率まで確認済みに拡張していないか。",
+      "project_evidence_quote_ids": [
+        "D01",
+        "D06",
+        "D08"
+      ],
+      "implementation": {
+        "status": "structural_checks_implemented_semantic_review_required",
+        "code_quote_ids": [
+          "C01",
+          "C03"
+        ],
+        "implemented": "原文内の引用存在と、固定decision contractがある場合の変更許可pathを照合する。",
+        "not_verified_or_automated": "引用の存在は選んだbranch条件の含意を保証しない。回答から入力への財務的橋渡しや適合を自動検証するものではない。"
+      },
+      "not_specified_by_original": [
+        "IRの会社指標定義、JSON入力pathやallowlist",
+        "好意的な語調の自動判定法、KPI→EPS換算式",
+        "このRix定義質問の数値モデルへの採用"
+      ]
+    },
+    {
+      "id": "RP02",
+      "name": "反対根拠と残る不確実性を消さない",
+      "author_quote_ids": [
+        "A02",
+        "A03"
+      ],
+      "author_principle": "反証可能な仮説を置き、支持根拠と同じ厳密さで反対根拠を追跡する。",
+      "project_adaptation": "有利な一節だけでなく、条件・否定・未回答部分をレビューする。曖昧・拒否・無回答は、それだけで仮説の反証や評価額減少に変換しない。返信は状態の確定そのものではない。",
+      "review_prompt_for_Rix_trial": "回答内の留保や定義不足を落としていないか。答えがないことを別範囲である証拠又は非公表の証明にしていないか。",
+      "project_evidence_quote_ids": [
+        "D01",
+        "D02",
+        "D05"
+      ],
+      "implementation": {
+        "status": "explicit_holds_implemented_semantic_completeness_manual",
+        "code_quote_ids": [
+          "C02",
+          "C07"
+        ],
+        "implemented": "選択したunresolved枝は評価を適用せず、unresolved枝にvaluationを指定できない。公開性が不明/疑義の分類ならheld_for_reviewになる。",
+        "not_verified_or_automated": "矛盾・不足をruntimeが自動発見し適切な枝へ選び直す保証はない。反対根拠の十分性も今回採点していない。"
+      },
+      "not_specified_by_original": [
+        "IRのunknown/refused/no-response列挙・公開性分類",
+        "反証数値閾値、無回答からの利益影響又は尤度",
+        "不確実性を0又は正の情報価値へ置換する規則"
+      ]
+    },
+    {
+      "id": "RP03",
+      "name": "事業条件と説明文を区別し事前の条件へ照合する",
+      "author_quote_ids": [
+        "A04"
+      ],
+      "author_principle": "シナリオごとに、必要な事業上の変化と、それを示す経営者コメントを分けて考える。",
+      "project_adaptation": "IRのABCを返信前に固定し、説明文が対象条件を満たすかを意味レビューする。定義の説明だけで事業上の成果や将来利益の実現を確認済みにしない。公開性は別工程で確認する。",
+      "review_prompt_for_Rix_trial": "定義確認A/B/Cのどこまで直接裏付けるか。部分回答を完全なAへ、将来の方針表明を現在/過去の実績へ移していないか。明確でなければ不足を残しているか。",
+      "project_evidence_quote_ids": [
+        "D01",
+        "D03",
+        "D04",
+        "D05",
+        "D08"
+      ],
+      "implementation": {
+        "status": "precommitted_branches_and_guards_implemented_condition_entailment_manual",
+        "code_quote_ids": [
+          "C01",
+          "C02",
+          "C03",
+          "C04"
+        ],
+        "implemented": "保存済みbranch ID、現在の仮説版、公開性分類、固定契約付き変更pathなどを検証する。",
+        "not_verified_or_automated": "branch.conditionの文章を原文と自動照合する意味判定は保証しない。正しい引用を付けた誤った枝選択を、構造検証だけで防げるとはしない。Rixは研究preflightで正式APIへの適用条件は未充足。"
+      },
+      "not_specified_by_original": [
+        "IR前のABC固定と公開性ゲート",
+        "部分回答・AND条件・矛盾を処理する意味判定アルゴリズム",
+        "コメントだけで真の事業状態や売買候補を確定する規則"
+      ]
+    },
+    {
+      "id": "RP04",
+      "name": "説明・予測の出典と時点を維持する",
+      "author_quote_ids": [
+        "A05"
+      ],
+      "author_principle": "推計は変化するため、出典と日付を必ず残す。原文の対象はconsensus estimatesである。",
+      "project_adaptation": "IR返信の話者/原文/受信時点を保持し、会社公表値・著者予想・著者計算を混同しない。対象期間・会計範囲・単位・定義の一致は別途確認し、取得時点から公表時点を推測しない。",
+      "review_prompt_for_Rix_trial": "GP/LV共通性を確認する説明を、別時点の過去比率の定義認証へ広げていないか。会社の指標定義と外部著者の許容停滞幅を区別しているか。",
+      "project_evidence_quote_ids": [
+        "D06",
+        "D08"
+      ],
+      "implementation": {
+        "status": "raw_reply_and_version_times_implemented_financial_meaning_manual",
+        "code_quote_ids": [
+          "C04",
+          "C05"
+        ],
+        "implemented": "受信原文を不変保存し、質問時から仮説版が変わった場合は旧branch適用を拒否する。",
+        "not_verified_or_automated": "受信/評価の時点検証だけで、返信内の値の対象期・連単・内部取引・著者帰属の意味まで一致したとはしない。"
+      },
+      "not_specified_by_original": [
+        "IR文中の会計範囲・単位・期対応の自動抽出/認証",
+        "公表日時不明を受信時刻と同一視する規則",
+        "会社定義の確認から著者解釈や将来予測を認証する規則"
+      ]
+    },
+    {
+      "id": "RP05",
+      "name": "原文・変更理由・訂正を追跡できる形で残す",
+      "author_quote_ids": [
+        "A06",
+        "A07"
+      ],
+      "author_principle": "新情報の日付と変化をログに記録し、仮説データを再参照できる構造形式で保存する。",
+      "project_adaptation": "返信原文・引用・枝選択理由と、旧仮説/新仮説を分ける。後の誤読や公開性訂正は旧原文/過去判断を上書きせず追加し、現在の利用可否を再点検する。",
+      "review_prompt_for_Rix_trial": "どの原文から何を確認し、何が未解決かを追跡できるか。架空返信の解釈又は後の訂正を実返信/当初からの事実として混ぜていないか。",
+      "project_evidence_quote_ids": [
+        "D01",
+        "D07",
+        "D08"
+      ],
+      "implementation": {
+        "status": "immutable_records_and_append_corrections_implemented_no_automatic_model_rollback",
+        "code_quote_ids": [
+          "C01",
+          "C05",
+          "C06"
+        ],
+        "implemented": "reply原文の不変性、原文引用、版を照合した公開性訂正の追記を備える。現在の訂正表示と過去の保存結果は分ける。",
+        "not_verified_or_automated": "訂正によって金融モデルを自動差戻ししない。構造記録があること自体は意味レビューの正しさや再調査完了を証明しない。今回runtimeを実行/再試験していない。"
+      },
+      "not_specified_by_original": [
+        "SQLite不変版/CAS/hash/公開性訂正view",
+        "訂正に伴うモデル自動差戻しや再採点の算法",
+        "構造ログ又は架空試行の成功が運用有効性を証明するという保証"
+      ]
+    }
+  ],
+  "cross_cutting_limits": [
+    "Anthropic原典はIRの各回答を真の状態へ変換する算法・閾値・尤度・公開性保証を指定していない。unknown保持や原文固定、ABC/CAS/path等は本プロジェクトの適応。",
+    "既存8ケースの成績やRix架空回答試行は、これらの原則の有効性、実IR精度、金融採用又は運用収益を証明しない。今回それらの成績を根拠として読取/集計していない。",
+    "実装済みの記述は現docsと指定code箇所のread-only照合による。全挙動の再試験、正しい意味分類の保証ではない。",
+    "Rix v3はresearch preflightで、formal登録/送信notreadyを維持。定義の比較可否を金融入力・EPS・評価額・買売条件へ変換しない。",
+    "この記録は汎用仕様拡張を提案せず、既存のレビュー時に参照する最大5原則に限る。"
+  ],
+  "validation": {
+    "finite_check_count": 39,
+    "checks_passed": [
+      "source_hash_unchanged:manifest",
+      "source_hash_unchanged:thesis",
+      "source_hash_unchanged:earnings",
+      "source_hash_unchanged:policy",
+      "source_hash_unchanged:workflow",
+      "source_hash_unchanged:operation",
+      "source_hash_unchanged:observation",
+      "source_hash_unchanged:rix_preflight",
+      "source_hash_unchanged:harness",
+      "source_hash_unchanged:lifecycle",
+      "source_hash_unchanged:models",
+      "source_hash_unchanged:information_review",
+      "exact_character_and_byte_quote:A01",
+      "exact_character_and_byte_quote:A02",
+      "exact_character_and_byte_quote:A03",
+      "exact_character_and_byte_quote:A04",
+      "exact_character_and_byte_quote:A05",
+      "exact_character_and_byte_quote:A06",
+      "exact_character_and_byte_quote:A07",
+      "exact_character_and_byte_quote:D01",
+      "exact_character_and_byte_quote:D02",
+      "exact_character_and_byte_quote:D03",
+      "exact_character_and_byte_quote:D04",
+      "exact_character_and_byte_quote:D05",
+      "exact_character_and_byte_quote:D06",
+      "exact_character_and_byte_quote:D07",
+      "exact_character_and_byte_quote:D08",
+      "exact_character_and_byte_quote:C01",
+      "exact_character_and_byte_quote:C02",
+      "exact_character_and_byte_quote:C03",
+      "exact_character_and_byte_quote:C04",
+      "exact_character_and_byte_quote:C05",
+      "exact_character_and_byte_quote:C06",
+      "exact_character_and_byte_quote:C07",
+      "principle_refs:RP01",
+      "principle_refs:RP02",
+      "principle_refs:RP03",
+      "principle_refs:RP04",
+      "principle_refs:RP05"
+    ],
+    "author_source_hashes_match_fixed_manifest": true,
+    "old_source_files_unchanged": true,
+    "new_public_GETs": 0,
+    "DB_accesses": 0,
+    "production_changes": 0,
+    "old_file_changes": 0,
+    "IR_questions_or_sends": 0,
+    "new_algorithms_thresholds_scores": 0,
+    "runtime_or_fullsuite_runs": 0
+  }
+}

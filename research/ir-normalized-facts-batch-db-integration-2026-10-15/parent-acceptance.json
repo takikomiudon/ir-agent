@@ -1,0 +1,67 @@
+{
+  "status": "accepted_existing_reported_data_connection_not_financial_adoption",
+  "recorded_at": "2026-10-15T22:30:08.358500+00:00",
+  "evidence": {
+    "freeze-v2.json": {
+      "path": "research/ir-normalized-facts-batch-db-integration-2026-10-15/freeze-v2.json",
+      "sha256": "e0270b8305544234a676888555d61a9e567117462ffcd87a976eeea2a02e3ab3"
+    },
+    "candidate-manifest-v2.json": {
+      "path": "research/ir-normalized-facts-batch-db-integration-2026-10-15/candidate-manifest-v2.json",
+      "sha256": "aa4406e0b03bf69008c21214dbc380766ab23424b7cfbf0c200eddd487f5b2ae"
+    },
+    "parent-index-resolution.json": {
+      "path": "research/ir-normalized-facts-batch-db-integration-2026-10-15/parent-index-resolution.json",
+      "sha256": "9f7cd773098ceb3a364ac5155a7ee20f4f6a58d3d2da10c8e474c7b4abe47d48"
+    },
+    "temp-intake-preflight-v2.json": {
+      "path": "research/ir-normalized-facts-batch-db-integration-2026-10-15/temp-intake-preflight-v2.json",
+      "sha256": "d0d810ad0637d0a94525bd29ae63cf243a4b387a250d97681e22d553ec667b72"
+    },
+    "actual-preapply-v2.json": {
+      "path": "research/ir-normalized-facts-batch-db-integration-2026-10-15/actual-preapply-v2.json",
+      "sha256": "b5dbfbe361f52443e3ee130ac810766f6999027f275defa69801d245e24661db"
+    },
+    "actual-stage-v2.jsonl": {
+      "path": "research/ir-normalized-facts-batch-db-integration-2026-10-15/actual-stage-v2.jsonl",
+      "sha256": "b0c3d59c1d3d2b9587c0dfbd5284207b94f09768e5c958aef1d480b98b22bc4e"
+    },
+    "actual-error-v2.json": {
+      "path": "research/ir-normalized-facts-batch-db-integration-2026-10-15/actual-error-v2.json",
+      "sha256": "416c78882e7b9441e82fb2a13f3025718bd327fc783df9dc6225d6c2c5e6298f"
+    },
+    "actual-completion-v2.json": {
+      "path": "research/ir-normalized-facts-batch-db-integration-2026-10-15/actual-completion-v2.json",
+      "sha256": "d6466ef2358ac87f0ed1633775a3555411c4126d0767b924972617f08106247f"
+    }
+  },
+  "parent_index_resolution": {
+    "parent_entries": 26,
+    "resolved_unique_sources": 28,
+    "facts": 101,
+    "candidate_sources": 25,
+    "candidate_facts": 91,
+    "existing_derived_sources": 1,
+    "out_of_actual_scope_sources": 2
+  },
+  "actual_sources_added": 25,
+  "actual_payload_facts_added": 91,
+  "actual_first_saved_at": "2026-10-15T22:28:52.999091+00:00",
+  "actual_completed_intake_jobs_added": 16,
+  "old_rows_preserved_all_tables": true,
+  "unrelated_tables_exact": 20,
+  "actual_database_main_sha256": "32ca3efada89ec565715957806df02bef7a5462b2fa9a5c44419b42e6dafa3b9",
+  "source_classifications": 149,
+  "source_count": 150,
+  "financial_inputs_adopted": 0,
+  "new_GETs": 0,
+  "no_native_case_or_policy_position_question_changes": true,
+  "code_full_suite_rerun_for_data_only_change": false,
+  "limitations": [
+    "Source and classification connection only, not adopted forecasts, ratios, scenarios or trading thresholds",
+    "8331/9702 remain outside actual company/original scope",
+    "Old retrieval timestamps preserved; actual first save not backdated",
+    "Post-completion verification SQL column typo corrected by read-only recovery; no API operations replayed",
+    "Producer freeze remains immutable; actual result is separate"
+  ]
+}

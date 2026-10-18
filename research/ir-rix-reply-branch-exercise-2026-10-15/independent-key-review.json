@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "recorded_at": "2026-10-15T12:02:19.168238+00:00",
+  "artifact_type": "independent_key_and_preflight_rubric_review",
+  "status": "bounded_review_complete_no_blocking_key_error_identified_not_trial_scoring",
+  "files_read_in_exercise": [
+    "input-cases.json",
+    "answer-key.json",
+    "source-manifest.json",
+    "evaluation-protocol.md",
+    "validation.json"
+  ],
+  "frozen_input_file_SHA256": {
+    "input-cases.json": "b2df1ae3076a4a6e6413acb2018ca3e902421ca1b7e0e675039d0b7b592caad4",
+    "answer-key.json": "673dc460075ebaf5011a88d327c14bfb5ad5e48c73f55fd61eb7d49d1a7530a8",
+    "source-manifest.json": "9919b4caabac751b644c2437f2a99a3f4323f441a8cb3add8d5cd2c159c5b403",
+    "evaluation-protocol.md": "b68dcfcb8cfb80a8f4adb166ecbb78f2644eb7aa5d246d844d68639dcc87b5b9",
+    "validation.json": "2fcffe98bbcf1d810a1d8d988e8b668051e5f3d6cd9138b61de67da2574523b7"
+  },
+  "source_preflight": {
+    "file": "research/ir-case-studies-2026-10-15/7525/original-product-ratio-question-preflight/preflight-v3.json",
+    "SHA256": "fe129aebe825fef5994f3ffe79aacb8a4675f2f8baa7a72938e3222c981bb667",
+    "exact_question_and_rubric_checked": true,
+    "field_checks": [
+      {
+        "field": "question_text",
+        "exact_value_equal": true,
+        "declared_field_JSON_SHA_match": true,
+        "sha256": "9169ded5475c3a4ac6349822cc6fd84e5e36421cf10788a2726d8a10813af308",
+        "hash_serialization_recipe": "json.dumps(value, ensure_ascii=False, indent=2) + newline; preserves parsed key insertion order; UTF-8. This recipe is reproduced here, not claimed to be RFC8785 or models.json_text."
+      },
+      {
+        "field": "scope_of_question",
+        "exact_value_equal": true,
+        "declared_field_JSON_SHA_match": true,
+        "sha256": "0a6bdf7f5a656d4fb5b27e457486380d1785b6fc4d70611ac980c3cfe8b01b71",
+        "hash_serialization_recipe": "json.dumps(value, ensure_ascii=False, indent=2) + newline; preserves parsed key insertion order; UTF-8. This recipe is reproduced here, not claimed to be RFC8785 or models.json_text."
+      },
+      {
+        "field": "reply_interpretations",
+        "exact_value_equal": true,
+        "declared_field_JSON_SHA_match": true,
+        "sha256": "e58b91e73c53514c38134dd85efa316f4ed5cacbaf6c9e986e2f51c6803d367e",
+        "hash_serialization_recipe": "json.dumps(value, ensure_ascii=False, indent=2) + newline; preserves parsed key insertion order; UTF-8. This recipe is reproduced here, not claimed to be RFC8785 or models.json_text."
+      },
+      {
+        "field": "reply_publicness_boundary",
+        "exact_value_equal": true,
+        "declared_field_JSON_SHA_match": true,
+        "sha256": "70406deea4b43ddb2f6dbc2ca46e331a79bb0965e945b1be55bf8c5c7d587cad",
+        "hash_serialization_recipe": "json.dumps(value, ensure_ascii=False, indent=2) + newline; preserves parsed key insertion order; UTF-8. This recipe is reproduced here, not claimed to be RFC8785 or models.json_text."
+      },
+      {
+        "field": "not_asked_again",
+        "exact_value_equal": true,
+        "declared_field_JSON_SHA_match": true,
+        "sha256": "e22d15dbb6238f0525abad7473682784e2e9631edb999e87b5afe3b4ae2e733a",
+        "hash_serialization_recipe": "json.dumps(value, ensure_ascii=False, indent=2) + newline; preserves parsed key insertion order; UTF-8. This recipe is reproduced here, not claimed to be RFC8785 or models.json_text."
+      }
+    ],
+    "research_status_formal_readiness_and_unset_author_rules_match": true,
+    "transitive_public_sources_or_DB_rechecked": false
+  },
+  "case_reviews": [
+    {
+      "case_id": "case-01",
+      "frozen_semantic_branch": "C_scope_unknown_partial_or_no_reply",
+      "independent_assessment": "defensible_under_frozen_rubric",
+      "reason": "「同じ」という結論だけで連単・グループ内取引が未定義。合成公開抜粋はこの欠落を埋めないためC/比較hold。",
+      "meaning_vs_publicness_separate": true,
+      "publicness_fixture_only": true,
+      "expected_comparison_hold": true,
+      "financial_and_formal_application_held": true,
+      "financial_input_changes_empty": true,
+      "evidence_quote_and_rubric_verbatim_match": true,
+      "real_reply_source_ID_URL_or_receipt_inferred": false,
+      "blocking_key_error_identified": false,
+      "grading_interpretation_note": null
+    },
+    {
+      "case_id": "case-02",
+      "frozen_semantic_branch": "A_same_sales_scope_defined",
+      "independent_assessment": "defensible_under_frozen_rubric",
+      "reason": "単体売上＋グループ会社向け売上算入＋両計画共通が明示される。連結優位を要求せずA。比較を進められるのは合成fixtureの計画間売上範囲軸だけ。",
+      "meaning_vs_publicness_separate": true,
+      "publicness_fixture_only": true,
+      "expected_comparison_hold": false,
+      "financial_and_formal_application_held": true,
+      "financial_input_changes_empty": true,
+      "evidence_quote_and_rubric_verbatim_match": true,
+      "real_reply_source_ID_URL_or_receipt_inferred": false,
+      "blocking_key_error_identified": false,
+      "grading_interpretation_note": null
+    },
+    {
+      "case_id": "case-03",
+      "frozen_semantic_branch": "A_same_sales_scope_defined",
+      "independent_assessment": "defensible_under_frozen_rubric",
+      "reason": "連結・分子分母内部消去・両計画共通で意味A。ただし公表参照が供給されず公開性不明なので比較への利用holdを別に保持。非公開重要情報と断定もせず、公開済みと推測もしない。",
+      "meaning_vs_publicness_separate": true,
+      "publicness_fixture_only": true,
+      "expected_comparison_hold": true,
+      "financial_and_formal_application_held": true,
+      "financial_input_changes_empty": true,
+      "evidence_quote_and_rubric_verbatim_match": true,
+      "real_reply_source_ID_URL_or_receipt_inferred": false,
+      "blocking_key_error_identified": false,
+      "grading_interpretation_note": null
+    },
+    {
+      "case_id": "case-04",
+      "frozen_semantic_branch": "B_different_scope_or_reclassification",
+      "independent_assessment": "defensible_under_frozen_rubric",
+      "reason": "GP連結/消去とLV単体/算入の範囲差が整合して明示されB。公開参照があっても単純比較を保留し、過去比率の補正や悪化判定を作らない。",
+      "meaning_vs_publicness_separate": true,
+      "publicness_fixture_only": true,
+      "expected_comparison_hold": true,
+      "financial_and_formal_application_held": true,
+      "financial_input_changes_empty": true,
+      "evidence_quote_and_rubric_verbatim_match": true,
+      "real_reply_source_ID_URL_or_receipt_inferred": false,
+      "blocking_key_error_identified": false,
+      "grading_interpretation_note": null
+    },
+    {
+      "case_id": "case-05",
+      "frozen_semantic_branch": "C_scope_unknown_partial_or_no_reply",
+      "independent_assessment": "defensible_under_frozen_rubric",
+      "reason": "無回答nullをCとして保持。存在しない原文を引用せず、0・悪化・反証・売却へ変換しない。公開性も実返信の状態を捏造せず非該当。",
+      "meaning_vs_publicness_separate": true,
+      "publicness_fixture_only": true,
+      "expected_comparison_hold": true,
+      "financial_and_formal_application_held": true,
+      "financial_input_changes_empty": true,
+      "evidence_quote_and_rubric_verbatim_match": true,
+      "real_reply_source_ID_URL_or_receipt_inferred": false,
+      "blocking_key_error_identified": false,
+      "grading_interpretation_note": null
+    },
+    {
+      "case_id": "case-06",
+      "frozen_semantic_branch": "C_scope_unknown_partial_or_no_reply",
+      "independent_assessment": "defensible_under_frozen_rubric",
+      "reason": "40/55の目標だけはv3で質問対象から除かれた既出説明。連単/内部取引/共通性に回答しないためC。目標差だけを範囲差Bにしない。",
+      "meaning_vs_publicness_separate": true,
+      "publicness_fixture_only": true,
+      "expected_comparison_hold": true,
+      "financial_and_formal_application_held": true,
+      "financial_input_changes_empty": true,
+      "evidence_quote_and_rubric_verbatim_match": true,
+      "real_reply_source_ID_URL_or_receipt_inferred": false,
+      "blocking_key_error_identified": false,
+      "grading_interpretation_note": null
+    },
+    {
+      "case_id": "case-07",
+      "frozen_semantic_branch": "A_same_sales_scope_defined",
+      "independent_assessment": "defensible_under_frozen_rubric",
+      "reason": "連結売上・分子分母内部消去・両計画共通でA。合成公表参照があり、この軸のみ比較可。他の分類・29.3%の版/期間/定義・正常利益/採用は未解決。",
+      "meaning_vs_publicness_separate": true,
+      "publicness_fixture_only": true,
+      "expected_comparison_hold": false,
+      "financial_and_formal_application_held": true,
+      "financial_input_changes_empty": true,
+      "evidence_quote_and_rubric_verbatim_match": true,
+      "real_reply_source_ID_URL_or_receipt_inferred": false,
+      "blocking_key_error_identified": false,
+      "grading_interpretation_note": null
+    },
+    {
+      "case_id": "case-08",
+      "frozen_semantic_branch": "C_scope_unknown_partial_or_no_reply",
+      "independent_assessment": "defensible_under_frozen_rubric",
+      "reason": "共通連結/内部消去と、LV単体/グループ向け算入/範囲差が同じ返答に併存する。全体から整合した定義を特定できずCの曖昧として保留するキーが妥当。ただし部分的にB条件の字面も満たすため採点理由を読む必要がある。",
+      "meaning_vs_publicness_separate": true,
+      "publicness_fixture_only": true,
+      "expected_comparison_hold": true,
+      "financial_and_formal_application_held": true,
+      "financial_input_changes_empty": true,
+      "evidence_quote_and_rubric_verbatim_match": true,
+      "real_reply_source_ID_URL_or_receipt_inferred": false,
+      "blocking_key_error_identified": false,
+      "grading_interpretation_note": "Do not treat a B label with explicit conflict/unknown and comparison hold as proof of misunderstanding without reviewing the full rationale; fixed C key is not changed."
+    }
+  ],
+  "findings": [
+    {
+      "id": "conflicting-reply-case08",
+      "severity": "nonblocking_grading_ambiguity",
+      "frozen_key_preserved": true,
+      "detail": "C is a reasonable whole-response use of v3 C ambiguous. Yet v3 B literally says scope differences are stated, and such a clause appears inside this contradictory fixture. v3 does not separately enumerate precedence for internally contradictory replies. Do not select a convenient clause as an established scope; inspect whether an alternative-label answer explicitly preserves conflict and comparison hold. No new precedence rule or post-trial key edit is adopted."
+    },
+    {
+      "id": "nonenumerated-output-wording",
+      "severity": "nonblocking_scoring_contract_limit",
+      "frozen_key_preserved": true,
+      "detail": "Only semantic_branch_id is explicitly restricted to existing IDs. scope_comparability/publicness use prose output guidance rather than the key exact status strings as input enums. Equivalent semantic wording must not be marked wrong solely for lexical mismatch; score reasons, fixture-only publicness and holds separately."
+    },
+    {
+      "id": "finite-coverage",
+      "severity": "scope_limit",
+      "frozen_key_preserved": true,
+      "detail": "Eight deliberately selected synthetic fixtures cover common scope A for standalone and consolidated, difference B, incomplete/no-reply/target/conflict C and publicness separation. They do not exhaust every v3 variant such as one-plan-only definition, stated reclassification, document-link-only reply, real privacy concern or response impossibility. Do not claim exhaustive, representative or real-IR validation."
+    },
+    {
+      "id": "publicness-label-not-truth",
+      "severity": "interpretation_boundary",
+      "frozen_key_preserved": true,
+      "detail": "The key supported_only_by_supplied_synthetic_public_reference describes the declared fixture reference, not source truth or consistency. case01/06/08 remain scope unresolved and held despite present reference. No actual reply public_clarification status is assigned."
+    }
+  ],
+  "input_leakage_review": {
+    "case_answer_labels_or_expected_fields_seen": false,
+    "expected_branch_distribution_in_input": false,
+    "rubric_explicitly_supplied_as_task_contract": true,
+    "synthetic_public_reference_state_is_intended_evidence_not_label_leak": true,
+    "literal_key_or_trial_artifact_path_supplied_in_input": false,
+    "technical_key_access_isolation_verified": false,
+    "all_actual_sources_for_replies_are_absent_by_fixture_design": true
+  },
+  "global_limits_preserved": {
+    "all_eight_financial_input_changes_empty": true,
+    "all_financial_model_and_formal_applications_held": true,
+    "meaning_A_does_not_certify_historical_29_3_scope_period_vintage": true,
+    "unit_sales_scope_not_product_category_or_numerator_rule_certification": true,
+    "no_forecast_profit_EPS_probability_price_or_trade_changes": true,
+    "no_answer_or_ambiguous_is_not_zero_or_falsification": true,
+    "public_fixture_is_not_real_disclosure_or_response": true
+  },
+  "provenance_limit": "Reviewer read the key and preflight and knows prior issuer work; this is not the fresh blind trial. Creation/freezing chronology in original metadata is kept as recorded; current hash equality is independently checked.",
+  "trial_answers_or_execution_artifacts_opened": [],
+  "fresh_trial_response_seen": false,
+  "trial_scoring_performed": false,
+  "key_or_input_revised": false,
+  "scope": {
+    "GETs": 0,
+    "DB_accesses": 0,
+    "production_changes": 0,
+    "old_files_changed": 0,
+    "new_cases": 0,
+    "financial_or_publicness_rules_adopted": 0,
+    "IR_registration_or_send": 0
+  }
+}

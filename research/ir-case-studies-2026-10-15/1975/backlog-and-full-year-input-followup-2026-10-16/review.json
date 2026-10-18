@@ -1,0 +1,571 @@
+{
+  "artifact_type": "bounded_saved_public_backlog_and_issuer_guidance_review",
+  "company_id": "jp:1975",
+  "company_name": "株式会社朝日工業社",
+  "recorded_at": {
+    "utc": "2026-10-16T08:32:27.805633+00:00",
+    "jst": "2026-10-16T17:32:27.805633+09:00"
+  },
+  "status": "frozen_two_pages_complete_parent_artifact_review_pending",
+  "purpose": "旧残余の公開繰越高stock未確認を2頁限定で前進させ、会社の通期売上・利益説明の依存関係を点検する。投資順位付けではない。",
+  "new_semantic_and_image_pages": [
+    10,
+    13
+  ],
+  "document_total_physical_pages": 17,
+  "full_document_semantic_review": false,
+  "old_closed_meaning_reviews_reissued": false,
+  "new_pdf_page_extraction": {
+    "programs": [
+      "pdftotext -layout -f 10 -l 10",
+      "pdftotext -layout -f 13 -l 13",
+      "pdftoppm -f <10|13> -l <same> -scale-to 1800 -singlefile -png"
+    ],
+    "completed_observed_at": "2026-10-16T08:26:54.414097+00:00",
+    "each_page_exactly_matches_actual_native_content": true,
+    "manual_image_read_completed": true
+  },
+  "source": {
+    "author": {
+      "kind": "issuer",
+      "name": "株式会社朝日工業社"
+    },
+    "source_id": "case-public:b02c62df4645398a714ef96c978579c6d0e31e90754f12b2b389c7495d18a54c",
+    "url": "https://www.asahikogyosha.co.jp/wp-content/uploads/2026/08/98_1st-quarter-financial-results-appendix.pdf",
+    "original_raw": {
+      "file": "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/raw/ffaba5e0bbdc0aa176a16ed6497fc1dfd35c94ac0180d23adc61ed702d4b8443",
+      "bytes": 1069126,
+      "sha256": "ffaba5e0bbdc0aa176a16ed6497fc1dfd35c94ac0180d23adc61ed702d4b8443"
+    },
+    "native_content_utf8_sha256": "4e10f40dc1b1e4b31de3f1b61296133a7adf1e924d0139538cb86dea349f490f",
+    "publication_date": "2026-08-04",
+    "publication_exact_time": null,
+    "original_retrieved_at": "2026-10-16T04:26:06.566587+00:00",
+    "reading_date": "2026-10-16",
+    "guidance_freshness_certified_as_of_reading": false,
+    "financial_input_adoption": false
+  },
+  "backlog_stock": {
+    "concept_raw": "繰越高",
+    "raw_period_labels": [
+      "‘25/3期 1Q",
+      "‘26/3期 1Q",
+      "‘27/3期 1Q"
+    ],
+    "raw_unit": "百万円",
+    "stock_vs_flow": "時点の繰越高として期間受注高と区別。売上/利益/CFではない。",
+    "explicit_calendar_as_of_date_on_page10": null,
+    "current_raw_period_label": "‘27/3期 1Q",
+    "contextual_quarter_end_date_not_explicit_on_page10": "2026-06-30",
+    "contextual_date_basis": "受入済み短信の当第1四半期は2026年4月1日〜6月30日。同じ2027年3月期1Qという文脈対応であり、p10自体に6月30日と印字されているという主張ではない。",
+    "consolidation_basis_explicit_on_page10": null,
+    "equipment_manufacturing_included_explicitly": null,
+    "scope": "6環境施設別表および会社説明の「全体」。施設区分だけでは連結/個別や機器製造販売事業の包含を証明しない。",
+    "rows": [
+      {
+        "row_label": "ビジネス環境施設",
+        "example_facilities_raw": "事務所・官公庁舎 等",
+        "raw_values": {
+          "FY2025_Q1": "18,975",
+          "FY2026_Q1": "19,829",
+          "FY2027_Q1": "20,095",
+          "issuer_YoY_amount": "266",
+          "issuer_YoY_percent": "1.3"
+        },
+        "source_quote_id": "physical-10-full-page"
+      },
+      {
+        "row_label": "交通・通信環境施設",
+        "example_facilities_raw": "駅舎・空港施設 等",
+        "raw_values": {
+          "FY2025_Q1": "4,117",
+          "FY2026_Q1": "2,913",
+          "FY2027_Q1": "544",
+          "issuer_YoY_amount": "△2,369",
+          "issuer_YoY_percent": "△81.3"
+        },
+        "source_quote_id": "physical-10-full-page"
+      },
+      {
+        "row_label": "生活・文化環境施設",
+        "example_facilities_raw": "学校・宿泊施設 等",
+        "raw_values": {
+          "FY2025_Q1": "17,336",
+          "FY2026_Q1": "15,913",
+          "FY2027_Q1": "24,714",
+          "issuer_YoY_amount": "8,801",
+          "issuer_YoY_percent": "55.3"
+        },
+        "source_quote_id": "physical-10-full-page"
+      },
+      {
+        "row_label": "健康・医療環境施設",
+        "example_facilities_raw": "病院・介護施設 等",
+        "raw_values": {
+          "FY2025_Q1": "11,496",
+          "FY2026_Q1": "9,869",
+          "FY2027_Q1": "5,219",
+          "issuer_YoY_amount": "△4,650",
+          "issuer_YoY_percent": "△47.1"
+        },
+        "source_quote_id": "physical-10-full-page"
+      },
+      {
+        "row_label": "流通環境施設",
+        "example_facilities_raw": "倉庫・商業施設 等",
+        "raw_values": {
+          "FY2025_Q1": "2,631",
+          "FY2026_Q1": "2,107",
+          "FY2027_Q1": "215",
+          "issuer_YoY_amount": "△1,892",
+          "issuer_YoY_percent": "△89.8"
+        },
+        "source_quote_id": "physical-10-full-page"
+      },
+      {
+        "row_label": "生産環境施設",
+        "example_facilities_raw": "工場・研究所・ﾃﾞｰﾀｾﾝﾀｰ 等",
+        "raw_values": {
+          "FY2025_Q1": "29,281",
+          "FY2026_Q1": "45,407",
+          "FY2027_Q1": "60,008",
+          "issuer_YoY_amount": "14,601",
+          "issuer_YoY_percent": "32.2"
+        },
+        "source_quote_id": "physical-10-full-page"
+      },
+      {
+        "row_label": "合計",
+        "example_facilities_raw": null,
+        "raw_values": {
+          "FY2025_Q1": "83,837",
+          "FY2026_Q1": "96,038",
+          "FY2027_Q1": "110,795",
+          "issuer_YoY_amount": "14,758",
+          "issuer_YoY_percent": "15.4"
+        },
+        "source_quote_id": "physical-10-full-page"
+      }
+    ],
+    "scope_and_roll_forward_identity_verified": false,
+    "cancelled_or_changed_contract_definition_known": false
+  },
+  "full_year_table": {
+    "title_raw": "2027年3月期 連結業績予想",
+    "entity_basis": "連結",
+    "raw_period_labels": [
+      "‘24/3期 実績",
+      "‘25/3期 実績",
+      "‘26/3期 実績",
+      "’27/3期 予想"
+    ],
+    "current_year_kind": "issuer_guidance",
+    "rows": [
+      {
+        "row_label": "受注高",
+        "raw_unit": "百万円",
+        "raw_values": {
+          "FY2024_actual": "97,586",
+          "FY2025_actual": "93,098",
+          "FY2026_actual": "116,496",
+          "FY2027_issuer_forecast": "115,000",
+          "issuer_YoY_amount_or_pt": "△1,496",
+          "issuer_YoY_percent": "△1.3"
+        },
+        "forecast_kind": "issuer_guidance",
+        "forecast_author": "株式会社朝日工業社",
+        "source_quote_id": "physical-13-full-page"
+      },
+      {
+        "row_label": "次期繰越高",
+        "raw_unit": "百万円",
+        "raw_values": {
+          "FY2024_actual": "88,290",
+          "FY2025_actual": "89,441",
+          "FY2026_actual": "101,114",
+          "FY2027_issuer_forecast": "103,614",
+          "issuer_YoY_amount_or_pt": "2,500",
+          "issuer_YoY_percent": "2.5"
+        },
+        "forecast_kind": "issuer_guidance",
+        "forecast_author": "株式会社朝日工業社",
+        "source_quote_id": "physical-13-full-page"
+      },
+      {
+        "row_label": "売上高",
+        "raw_unit": "百万円",
+        "raw_values": {
+          "FY2024_actual": "91,676",
+          "FY2025_actual": "91,947",
+          "FY2026_actual": "104,823",
+          "FY2027_issuer_forecast": "112,500",
+          "issuer_YoY_amount_or_pt": "7,677",
+          "issuer_YoY_percent": "7.3"
+        },
+        "forecast_kind": "issuer_guidance",
+        "forecast_author": "株式会社朝日工業社",
+        "source_quote_id": "physical-13-full-page"
+      },
+      {
+        "row_label": "売上総利益",
+        "raw_unit": "百万円",
+        "raw_values": {
+          "FY2024_actual": "11,652",
+          "FY2025_actual": "15,357",
+          "FY2026_actual": "21,446",
+          "FY2027_issuer_forecast": "22,050",
+          "issuer_YoY_amount_or_pt": "604",
+          "issuer_YoY_percent": "2.8"
+        },
+        "forecast_kind": "issuer_guidance",
+        "forecast_author": "株式会社朝日工業社",
+        "source_quote_id": "physical-13-full-page"
+      },
+      {
+        "row_label": "売上総利益率",
+        "raw_unit": "%",
+        "raw_values": {
+          "FY2024_actual": "12.7%",
+          "FY2025_actual": "16.7％",
+          "FY2026_actual": "20.5%",
+          "FY2027_issuer_forecast": "19.6%",
+          "issuer_YoY_amount_or_pt": "△0.9pt",
+          "issuer_YoY_percent": "-"
+        },
+        "forecast_kind": "issuer_guidance",
+        "forecast_author": "株式会社朝日工業社",
+        "source_quote_id": "physical-13-full-page"
+      },
+      {
+        "row_label": "営業利益",
+        "raw_unit": "百万円",
+        "raw_values": {
+          "FY2024_actual": "4,568",
+          "FY2025_actual": "7,248",
+          "FY2026_actual": "11,682",
+          "FY2027_issuer_forecast": "12,200",
+          "issuer_YoY_amount_or_pt": "518",
+          "issuer_YoY_percent": "4.4"
+        },
+        "forecast_kind": "issuer_guidance",
+        "forecast_author": "株式会社朝日工業社",
+        "source_quote_id": "physical-13-full-page"
+      },
+      {
+        "row_label": "営業利益率",
+        "raw_unit": "%",
+        "raw_values": {
+          "FY2024_actual": "5.0%",
+          "FY2025_actual": "7.9％",
+          "FY2026_actual": "11.1%",
+          "FY2027_issuer_forecast": "10.8%",
+          "issuer_YoY_amount_or_pt": "△0.3pt",
+          "issuer_YoY_percent": "-"
+        },
+        "forecast_kind": "issuer_guidance",
+        "forecast_author": "株式会社朝日工業社",
+        "source_quote_id": "physical-13-full-page"
+      },
+      {
+        "row_label": "経常利益",
+        "raw_unit": "百万円",
+        "raw_values": {
+          "FY2024_actual": "4,896",
+          "FY2025_actual": "7,582",
+          "FY2026_actual": "12,031",
+          "FY2027_issuer_forecast": "12,400",
+          "issuer_YoY_amount_or_pt": "369",
+          "issuer_YoY_percent": "3.1"
+        },
+        "forecast_kind": "issuer_guidance",
+        "forecast_author": "株式会社朝日工業社",
+        "source_quote_id": "physical-13-full-page"
+      },
+      {
+        "row_label": "経常利益率",
+        "raw_unit": "%",
+        "raw_values": {
+          "FY2024_actual": "5.3%",
+          "FY2025_actual": "8.2％",
+          "FY2026_actual": "11.5%",
+          "FY2027_issuer_forecast": "11.0%",
+          "issuer_YoY_amount_or_pt": "△0.5pt",
+          "issuer_YoY_percent": "-"
+        },
+        "forecast_kind": "issuer_guidance",
+        "forecast_author": "株式会社朝日工業社",
+        "source_quote_id": "physical-13-full-page"
+      },
+      {
+        "row_label": "親会社株主に帰属する当期純利益",
+        "raw_unit": "百万円",
+        "raw_values": {
+          "FY2024_actual": "3,712",
+          "FY2025_actual": "6,229",
+          "FY2026_actual": "9,240",
+          "FY2027_issuer_forecast": "9,250",
+          "issuer_YoY_amount_or_pt": "10",
+          "issuer_YoY_percent": "0.1"
+        },
+        "forecast_kind": "issuer_guidance",
+        "forecast_author": "株式会社朝日工業社",
+        "source_quote_id": "physical-13-full-page"
+      },
+      {
+        "row_label": "親会社株主に帰属する当期純利益率",
+        "raw_unit": "%",
+        "raw_values": {
+          "FY2024_actual": "4.0%",
+          "FY2025_actual": "6.8％",
+          "FY2026_actual": "8.8%",
+          "FY2027_issuer_forecast": "8.2%",
+          "issuer_YoY_amount_or_pt": "△0.6pt",
+          "issuer_YoY_percent": "-"
+        },
+        "forecast_kind": "issuer_guidance",
+        "forecast_author": "株式会社朝日工業社",
+        "source_quote_id": "physical-13-full-page"
+      }
+    ],
+    "net_income_scope": "親会社株主に帰属する当期純利益。営業利益・経常利益・CF・EPSと区別。",
+    "issuer_deltas_percentages_and_dashes_preserved": true,
+    "deltas_or_margins_recalculated": false
+  },
+  "comparison_to_accepted_q1_flow": {
+    "basis": "旧受入済み注記の参照だけであり、新たに旧短信p9/10を再読・再抽出していない。",
+    "references": [
+      {
+        "source_quote_file": {
+          "file": "research/ir-case-studies-2026-10-15/1975/statement-note-followup-2026-10-16/source-quotes.json",
+          "bytes": 25236,
+          "sha256": "015d1089b31e518e96dd58c3734ed3b80959df4a23a5978ea6dd4a2317c8a81a"
+        },
+        "json_pointer": "/quotes/6",
+        "quote_id": "consolidated-orders-q1",
+        "native_source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
+        "original_raw_sha256": "197dbf719ededc450d856e3eb9dda745a2fe92c1ac0325847aa150cfb4487a85",
+        "native_content_utf8_sha256": "5b590ae0edd7df00cc1b165437bc4e81d23fa117addbbbd948ff827668b95c83",
+        "reused_accepted_note_only": true,
+        "new_meaning_review": false,
+        "new_extraction": false
+      },
+      {
+        "source_quote_file": {
+          "file": "research/ir-case-studies-2026-10-15/1975/statement-note-followup-2026-10-16/source-quotes.json",
+          "bytes": 25236,
+          "sha256": "015d1089b31e518e96dd58c3734ed3b80959df4a23a5978ea6dd4a2317c8a81a"
+        },
+        "json_pointer": "/quotes/7",
+        "quote_id": "separate-company-orders-q1",
+        "native_source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
+        "original_raw_sha256": "197dbf719ededc450d856e3eb9dda745a2fe92c1ac0325847aa150cfb4487a85",
+        "native_content_utf8_sha256": "5b590ae0edd7df00cc1b165437bc4e81d23fa117addbbbd948ff827668b95c83",
+        "reused_accepted_note_only": true,
+        "new_meaning_review": false,
+        "new_extraction": false
+      }
+    ],
+    "flow_periods": {
+      "previous": "2025-04-01/2025-06-30",
+      "current": "2026-04-01/2026-06-30"
+    },
+    "raw_unit": "百万円",
+    "consolidated_orders_flow": [
+      "31,261",
+      "36,232"
+    ],
+    "separate_company_orders_flow": [
+      "31,107",
+      "35,156"
+    ],
+    "new_current_backlog_stock": "110,795",
+    "not_comparable_as_same_metric_or_proven_entity_basis": true,
+    "stock_orders_sales_identity_used_or_inferred": false
+  },
+  "answered_now": [
+    {
+      "id": "P1-backlog-stock",
+      "answer": "公開繰越高の存在・Q1ラベル・百万円・6施設区分・当期110,795/前年96,038/公表増減14,758および15.4%を確認。旧「公開残高未確認」はこの範囲で解消。",
+      "quote_ids": [
+        "physical-10-full-page",
+        "backlog-supporting-volume"
+      ]
+    },
+    {
+      "id": "forecast-backlog-dependency",
+      "answer": "会社は豊富な繰越高を売上増加見込みの根拠とし、施工体制を考慮した受注計画を別に示す。予定大型工事は施工・採算・入金の完了保証ではない。",
+      "quote_ids": [
+        "backlog-planned-large-projects",
+        "fy-order-capacity-condition",
+        "fy-backlog-sales-link"
+      ]
+    },
+    {
+      "id": "annual-margin-and-parent-NI",
+      "answer": "FY会社予想はGP21,446→22,050/率20.5%→19.6%、OP11,682→12,200/率11.1%→10.8%、親NI9,240→9,250/公表0.1%。増収・利益額増加と年次利益率低下を同時に示す。Q1高粗利という既答からEPS上方修正を導かない。",
+      "quote_ids": [
+        "physical-13-full-page"
+      ]
+    }
+  ],
+  "still_missing": [
+    {
+      "owner": "public_scope_and_definition_review_before_any_IR",
+      "issue": "p10の厳密な連結/個別範囲、機器事業包含、印字されたcalendar残高日、契約取消/金額変更/為替等の調整定義。未確認であり会社非開示・拒否とはしない。"
+    },
+    {
+      "owner": "public_guidance_update_review",
+      "issue": "2026年8月4日公表のこの予想が読解日の最新会社予想か、以後修正があるかはGET0のため未確認。"
+    },
+    {
+      "owner": "forecast_dependency_and_definition_research",
+      "issue": "どの繰越案件がいつ売上/利益/現金へ変わるか、採算・施工能力・原価・取消条件・入金条件や正常税/再投資/将来CFはこの2頁では確定しない。"
+    },
+    {
+      "owner": "external_author_or_investor_model_if_future_authorized",
+      "issue": "外部著者の1975独自予想、正常利益、EPS分母、税/CF bridge、valuation/倍率/株価/売買判断は作成・採用していない。"
+    }
+  ],
+  "method_authorship": [
+    {
+      "author": "Anthropic",
+      "role": "採用済み公開先行DD/metrics/guidanceの参照方法",
+      "reference": {
+        "id": "anthropic.earnings-preview",
+        "ref": {
+          "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+          "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33"
+        },
+        "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+        "sections": [
+          "Step 1: Gather Context",
+          "Step 2: Key Metrics Framework",
+          "Step 4: Catalyst Checklist"
+        ],
+        "project_adaptation": "会社/四半期/セグメント別売上・利益/当時会社予想を同じ期・定義で比較する。未取得consensus・将来予測/株価反応は補わない。",
+        "author_did_not_state_1975_specific_conditions": true
+      },
+      "new_application": "同業種用metricsのBacklogを会社の開示値で確認し、期間値と区別。予想作者・時点を保持し既答を重複質問に戻さない。",
+      "company_specific_forecast_authored_by_this_author": false
+    },
+    {
+      "author": "Aswath Damodaran",
+      "role": "採用済みnarrativeとnumbers対応の方法参照",
+      "adopted_reference": {
+        "character_end": 1976,
+        "character_start": 1899,
+        "id": "D-narrative",
+        "path": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt",
+        "physical_page": 4,
+        "quote": "Tie your narrative to key numbers that you will be using in\n  your valuation.",
+        "role": "author_valuation_method",
+        "sha256": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106"
+      },
+      "adopted_reference_context": {
+        "file": "research/ir-author-derived-baseline-design-2026-10-16/specification.json",
+        "bytes": 23185,
+        "sha256": "f4e5e9fcef6587a44aab4e07ded81d23fd36559398caac2ce5f300b4852f90a4"
+      },
+      "new_application": "「豊富な繰越高→売上見込み」と各利益/率を同じ会社表に対応付ける。stock→EPS/CFの確定経路や新valuationを作らない。",
+      "company_specific_forecast_authored_by_this_author": false
+    },
+    {
+      "author": "株式会社朝日工業社",
+      "role": "p10の過去/当期繰越高・計画説明、p13のFY会社予想の作者"
+    },
+    {
+      "author": "Codex / audit_manufacturing",
+      "role": "2頁限定の抽出・画像確認・比較・未解決整理。独自予測の作者ではない。"
+    }
+  ],
+  "operations": {
+    "GET": 0,
+    "POST_or_outreach": 0,
+    "DB_or_Store_access": 0,
+    "new_IR_drafts": 0,
+    "new_forecasts": 0,
+    "valuation_or_price": 0,
+    "normalizer_runs": 0,
+    "public_or_shared_code_changes": 0,
+    "shared_document_or_old_file_changes": 0,
+    "further_pages_or_GETs_planned": 0
+  },
+  "dependency_pins": {
+    "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/raw/ffaba5e0bbdc0aa176a16ed6497fc1dfd35c94ac0180d23adc61ed702d4b8443": {
+      "file": "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/raw/ffaba5e0bbdc0aa176a16ed6497fc1dfd35c94ac0180d23adc61ed702d4b8443",
+      "bytes": 1069126,
+      "sha256": "ffaba5e0bbdc0aa176a16ed6497fc1dfd35c94ac0180d23adc61ed702d4b8443"
+    },
+    "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/source-bundle.json": {
+      "file": "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/source-bundle.json",
+      "bytes": 35248,
+      "sha256": "2b0a0e006a7c5019c41a58e01018b5fe9b4b3109d77a2bf5b92add760739f594"
+    },
+    "research/ir-case-studies-2026-10-15/1975/native-case-setup-2026-10-16/actual-inputs/actual-source-snapshots.json": {
+      "file": "research/ir-case-studies-2026-10-15/1975/native-case-setup-2026-10-16/actual-inputs/actual-source-snapshots.json",
+      "bytes": 164256,
+      "sha256": "ccb0f348aead27cde26cf4321102979f919d8deb64457dca1794aad5c95240a2"
+    },
+    "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/01.json": {
+      "file": "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/01.json",
+      "bytes": 1513,
+      "sha256": "7753f0516cfa87103fa42e088699fa346f96dffcc6880d5466fc1b196457d68a"
+    },
+    "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/text/01-full.txt": {
+      "file": "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/text/01-full.txt",
+      "bytes": 28123,
+      "sha256": "4e10f40dc1b1e4b31de3f1b61296133a7adf1e924d0139538cb86dea349f490f"
+    },
+    "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/source-quotes.json": {
+      "file": "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/source-quotes.json",
+      "bytes": 9526,
+      "sha256": "764b119eb721504010721803216d444ef06dcf4e2ba7609452034bfb4e7f13a2"
+    },
+    "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/parent-acceptance.json": {
+      "file": "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/parent-acceptance.json",
+      "bytes": 1162,
+      "sha256": "778b5e0c3346de6f55a636454c0cda93305caf0ca136a9ee24e245da9dd9ff67"
+    },
+    "research/ir-case-studies-2026-10-15/1975/statement-note-followup-2026-10-16/README.md": {
+      "file": "research/ir-case-studies-2026-10-15/1975/statement-note-followup-2026-10-16/README.md",
+      "bytes": 4257,
+      "sha256": "5034a2525deccad55fb4cf329b598eb016361f0663538bc687d5e16dcc9e2353"
+    },
+    "research/ir-case-studies-2026-10-15/1975/statement-note-followup-2026-10-16/source-quotes.json": {
+      "file": "research/ir-case-studies-2026-10-15/1975/statement-note-followup-2026-10-16/source-quotes.json",
+      "bytes": 25236,
+      "sha256": "015d1089b31e518e96dd58c3734ed3b80959df4a23a5978ea6dd4a2317c8a81a"
+    },
+    "research/ir-case-studies-2026-10-15/1975/statement-note-followup-2026-10-16/parent-acceptance.json": {
+      "file": "research/ir-case-studies-2026-10-15/1975/statement-note-followup-2026-10-16/parent-acceptance.json",
+      "bytes": 1182,
+      "sha256": "37405c7575697691be42a30bb47821af83755f13b03a42b7af9cabdacb730801"
+    },
+    "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json": {
+      "file": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
+      "bytes": 44939,
+      "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37"
+    },
+    "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/parent-acceptance.json": {
+      "file": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/parent-acceptance.json",
+      "bytes": 875,
+      "sha256": "f20e55be737a98808628498127d87007b35145052f37941c270d2bb291f79999"
+    },
+    "research/ir-author-derived-baseline-design-2026-10-16/specification.json": {
+      "file": "research/ir-author-derived-baseline-design-2026-10-16/specification.json",
+      "bytes": 23185,
+      "sha256": "f4e5e9fcef6587a44aab4e07ded81d23fd36559398caac2ce5f300b4852f90a4"
+    },
+    "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt": {
+      "file": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt",
+      "bytes": 5841,
+      "sha256": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106"
+    },
+    "third_party/anthropic/skills/earnings-preview/SKILL.md": {
+      "file": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+      "bytes": 2757,
+      "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33"
+    }
+  },
+  "freeze_note": "この2頁で停止。旧manifest/読了範囲/未読の歴史は変更せず、新しい意味確認範囲としてのみ追加。"
+}

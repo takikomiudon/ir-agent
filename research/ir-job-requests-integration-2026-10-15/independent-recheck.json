@@ -1,0 +1,34 @@
+{
+  "all_inputs_fictional": true,
+  "database_scope": "two disposable TemporaryDirectory SQLite files",
+  "lost_acknowledgement": {
+    "claim_original_preserved": true,
+    "claim_retry_no_db_write": true,
+    "renew_original_preserved": true,
+    "renew_retry_no_db_write": true,
+    "later_renew_current_deadline_separate": true,
+    "mismatched_payloads_rejected": 6,
+    "expired_claim_and_renew_valid_now": false,
+    "expired_replay_no_cleanup": true,
+    "reclaimed_generation": 2,
+    "reclaimed_old_claim_and_renew_valid_now": false,
+    "stale_replay_no_db_write": true,
+    "no_job_retry_fixed_null": true,
+    "new_poll_claimed_new_job": true,
+    "different_namespace_is_separate_scope": true
+  },
+  "runtime_clock": {
+    "claim_and_renew_sample_inside_acquired_writer": true,
+    "runtime_samples": [
+      "2026-10-09T10:03:00+09:00",
+      "2026-10-09T10:03:05+09:00"
+    ],
+    "method": "Instrumented real BEGIN IMMEDIATE transaction; no contention-load benchmark."
+  },
+  "limits": [
+    "Same receipt is not exactly-once model analysis or authentication.",
+    "No silent restore-loss detection or deletion/TTL protocol is established.",
+    "Current lease is a read-time check; renew/complete still require fencing.",
+    "No network, real database, repository source/test/doc modification, IR or orders."
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "task": "Judge only what each supplied excerpt establishes about its claim. This is not an investment decision task.",
+  "verdict_enum": [
+    "supported_by_excerpt",
+    "contradicted_by_excerpt",
+    "not_established_by_excerpt"
+  ],
+  "instructions": [
+    "各caseの抜粋だけで主張全体の含意を判定する。外部知識・現在の会社状況・他のcaseの情報を補わない。",
+    "supportedは直接の表示/明確な論理と基本的単位算術で主張全体が支えられる場合。contradictedは抜粋に主張と明示的に両立しない内容がある場合。not_establishedは情報不足/追加の仮定や採用が必要な場合。",
+    "予定や条件付き表現から実施/条件全体成立を補わず、記述がないだけで反対命題を真としない。",
+    "各caseにつきverdict、短い理由、根拠となる当該case内のexcerpt IDを必ず返す。外部ファイル/ツール/ネット/別資料や正解キーを参照しない。",
+    "数値の投資適合性、売買判断、予測成績は評価しない。HTMLタグの基本的な表構造と単位換算の算術は読める。"
+  ],
+  "response_format": {
+    "answers": [
+      {
+        "case_id": "B01",
+        "verdict": "one exact verdict_enum value",
+        "reason": "日本語の短い根拠説明",
+        "excerpt_ids": [
+          "E01"
+        ]
+      }
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "B01",
+      "company_id": "jp:135A",
+      "claim": "拠点立ち上げの遅延だけを確認すれば、継続顧客比率の状態を確認しなくても、この引用の減速見通しが成立したと判定できる。",
+      "excerpts": [
+        {
+          "id": "E01",
+          "source_attribution": {
+            "title": "VRAIN Solution（135A） アナリストレポート — 成長可能性と事業計画 | AENTRO Research",
+            "source_type": "external_author_report"
+          },
+          "text": "もし拠点立ち上げが遅延し、かつ継続顧客比率が45%近辺で頭打ちになれば、FY28時点でCAGR+35-40%への減速が現実味を帯び、バリュエーションの前提は成り立たなくなる。"
+        }
+      ]
+    },
+    {
+      "case_id": "B02",
+      "company_id": "jp:5988",
+      "claim": "当連結会計年度の減損損失423百万円は、連結損益計算書の特別損失と、営業活動によるキャッシュ・フロー計算の正の調整行の両方に表示されている。",
+      "excerpts": [
+        {
+          "id": "E02",
+          "source_attribution": {
+            "title": "20260618_2025-q4_report.pdf",
+            "source_type": "issuer_public_document"
+          },
+          "text": "  ②【連結損益計算書及び連結包括利益計算書】\n   【連結損益計算書】\n                                                        (単位：百万円)\n                              前連結会計年度               当連結会計年度\n                            (自 2024年４月１日          (自 2025年４月１日\n                             至 2025年３月31日)         至 2026年３月31日)\n"
+        },
+        {
+          "id": "E03",
+          "source_attribution": {
+            "title": "20260618_2025-q4_report.pdf",
+            "source_type": "issuer_public_document"
+          },
+          "text": "特別利益\n 減損損失戻入益                                     －                 ※５ 59\n\n 特別利益合計                                      －                     59\n特別損失\n 早期割増退職金                                     －                    325\n 減損損失                                        －                 ※６ 423\n\n 特別損失合計                                      －                    749"
+        },
+        {
+          "id": "E04",
+          "source_attribution": {
+            "title": "20260618_2025-q4_report.pdf",
+            "source_type": "issuer_public_document"
+          },
+          "text": "  ④【連結キャッシュ・フロー計算書】\n                                                    (単位：百万円)\n                           前連結会計年度              当連結会計年度\n                         (自 2024年４月１日         (自 2025年４月１日\n                          至 2025年３月31日)        至 2026年３月31日)\n営業活動によるキャッシュ・フロー\n 税金等調整前当期純利益                         3,402                  763\n 減価償却費                               4,353                4,436\n 減損損失                                   －                   423"
+        }
+      ]
+    },
+    {
+      "case_id": "B03",
+      "company_id": "jp:5988",
+      "claim": "この抜粋だけを根拠に、営業キャッシュ・フローで調整されている423百万円を同じ期の営業利益にも加算し、正常利益として採用できる。",
+      "excerpts": [
+        {
+          "id": "E02",
+          "source_attribution": {
+            "title": "20260618_2025-q4_report.pdf",
+            "source_type": "issuer_public_document"
+          },
+          "text": "  ②【連結損益計算書及び連結包括利益計算書】\n   【連結損益計算書】\n                                                        (単位：百万円)\n                              前連結会計年度               当連結会計年度\n                            (自 2024年４月１日          (自 2025年４月１日\n                             至 2025年３月31日)         至 2026年３月31日)\n"
+        },
+        {
+          "id": "E03",
+          "source_attribution": {
+            "title": "20260618_2025-q4_report.pdf",
+            "source_type": "issuer_public_document"
+          },
+          "text": "特別利益\n 減損損失戻入益                                     －                 ※５ 59\n\n 特別利益合計                                      －                     59\n特別損失\n 早期割増退職金                                     －                    325\n 減損損失                                        －                 ※６ 423\n\n 特別損失合計                                      －                    749"
+        },
+        {
+          "id": "E04",
+          "source_attribution": {
+            "title": "20260618_2025-q4_report.pdf",
+            "source_type": "issuer_public_document"
+          },
+          "text": "  ④【連結キャッシュ・フロー計算書】\n                                                    (単位：百万円)\n                           前連結会計年度              当連結会計年度\n                         (自 2024年４月１日         (自 2025年４月１日\n                          至 2025年３月31日)        至 2026年３月31日)\n営業活動によるキャッシュ・フロー\n 税金等調整前当期純利益                         3,402                  763\n 減価償却費                               4,353                4,436\n 減損損失                                   －                   423"
+        }
+      ]
+    },
+    {
+      "case_id": "B04",
+      "company_id": "jp:1518",
+      "claim": "185.40円は前回予想、229.67円は今回修正予想であり、両方とも2027年3月期通期連結の1株当たり当期純利益の予想値として表示されている。",
+      "excerpts": [
+        {
+          "id": "E05",
+          "source_attribution": {
+            "title": "2027年3月期業績予想の上方修正及び配当予想の修正",
+            "source_type": "issuer_public_document"
+          },
+          "text": "1.       2027 年３月期通期連結業績予想数値の修正について\n                                                             親会社株主\n                                                                          １株当たり\n                        売上高       営業利益          経常利益         に帰属する\n                                                                          当期純利益\n                                                             当期純利益\n     前回予想 （Ａ）           百万円            百万円         百万円         百万円             円 銭\n （2026 年５月 13 日発表）      68,000          9,700      10,000       7,100         185.40\n     今回修正予想 （Ｂ）         71,000         10,000      10,400        8,600        229.67"
+        }
+      ]
+    },
+    {
+      "case_id": "B05",
+      "company_id": "jp:1518",
+      "claim": "この引用は、企業結合が2026年8月21日に実際に完了したことを証明している。",
+      "excerpts": [
+        {
+          "id": "E06",
+          "source_attribution": {
+            "title": "2027年3月期 第1四半期決算短信〔日本基準〕連結",
+            "source_type": "issuer_public_document"
+          },
+          "text": "③ 企業結合日\n    2026年８月21日（予定）"
+        }
+      ]
+    },
+    {
+      "case_id": "B06",
+      "company_id": "jp:7525",
+      "claim": "会社がオリジナル品比率40%以上を目標にしているため、QUICKの「伸び悩み」を否定する閾値も40%と確定している。",
+      "excerpts": [
+        {
+          "id": "E07",
+          "source_attribution": {
+            "title": "中期経営計画 | 経営情報 | 株主・投資家情報 | リックス株式会社",
+            "source_type": "issuer_public_document"
+          },
+          "text": "02\n収益性の向上\n１．事業活動の効率化（営業利益率7.5%以上・ROE11%以上）\n２．新製品・新商品開発（オリジナル品比率40%以上）"
+        },
+        {
+          "id": "E08",
+          "source_attribution": {
+            "title": "リックス QUICK&NOMURA Corporate Research 2026年10月2日",
+            "source_type": "external_author_report"
+          },
+          "text": "同社は、比較的利益率が高い「オリジナル品」の比率を向上させることで営業利益率および ROE の向上につ\n  なげる考え。だが、同社によれば、売上高など他の KPI に比べ伸び悩んでいる様子。動向を注視したい。"
+        }
+      ]
+    },
+    {
+      "case_id": "B07",
+      "company_id": "jp:1721",
+      "claim": "2027年3月期の計画として表示されている親会社株主に帰属する当期純利益378億円は、表示単位だけを百万円へ換算すると37,800百万円となる。",
+      "excerpts": [
+        {
+          "id": "E09",
+          "source_attribution": {
+            "title": "業績予想 | コムシスホールディングス株式会社",
+            "source_type": "issuer_public_document"
+          },
+          "text": "<div class=\"table__caption--right\">（単位：億円）</div>"
+        },
+        {
+          "id": "E10",
+          "source_attribution": {
+            "title": "業績予想 | コムシスホールディングス株式会社",
+            "source_type": "issuer_public_document"
+          },
+          "text": "<th class=\"table__cell--lv1--center-middle\">2026年3月期（実績）</th>\r\n                    <th class=\"table__cell--lv1--center-middle\">2027年3月期（計画）</th>"
+        },
+        {
+          "id": "E11",
+          "source_attribution": {
+            "title": "業績予想 | コムシスホールディングス株式会社",
+            "source_type": "issuer_public_document"
+          },
+          "text": "<tr>\r\n                    <th class=\"table__cell--lv2--left-middle\">親会社株主に帰属する当期純利益</th>\r\n                    <td class=\"table__cell--right-middle\">363</td>\r\n                    <td class=\"table__cell--right-middle\">378</td>\r\n                    <td class=\"table__cell--right-middle\">4.3</td>\r\n                  </tr>"
+        }
+      ]
+    },
+    {
+      "case_id": "B08",
+      "company_id": "jp:8151",
+      "claim": "予想EPS124.53円は会社予想純利益を使わず、QUICK独自の純利益予測から計算した値である。",
+      "excerpts": [
+        {
+          "id": "E12",
+          "source_attribution": {
+            "title": "東陽テクニカ QUICK&NOMURA Corporate Research 2026年9月25日",
+            "source_type": "external_author_report"
+          },
+          "text": "連 26/9 期(予想)      39,000   19.8%   3,600    88.0%    3,700           86.4%       2,600       117.5%      124.53\n注：予想は会社予想。ただし、予想 EPS は会社予想純利益をベースに当研究所で算出している"
+        }
+      ]
+    }
+  ]
+}

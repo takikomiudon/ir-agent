@@ -1,0 +1,72 @@
+{
+  "reviewed_at": "2026-10-15T22:52:35.516473+00:00",
+  "reviewer": "delegated independent counter-review; not result writer",
+  "status": "no_blocking_issue_found_in_bounded_review",
+  "reviewed_result_file": "research/ir-structured-facts-qualitative-review-2026-10-15/2983/result.json",
+  "reviewed_result_sha256": "daaf0e7892922b88c82502a3e5546c5227fbb1b4b58d3a936e3e5a4f27c99208",
+  "worker_packet_file": "research/ir-structured-facts-qualitative-review-2026-10-15/2983/worker-packet.json",
+  "worker_packet_file_sha256": "178e139b10e69234688385ed356f5f24fd2537592477fe9005409fbde71cf387",
+  "canonical_packet_sha256": "a8dd3214d52385bd4b8e216103abf1c02df2faeed744c03923537a40f9fb6ba3",
+  "case_reference": {
+    "path": "research/ir-research-monitoring-integration-2026-10-15/2983-asp-closure-review-checkpoint.json",
+    "sha256": "3680238c05f2321354412cfef0228eaf4b1c3832ecf0a6a64000c9bab8c304e4"
+  },
+  "prior_review": null,
+  "semantic_findings": [
+    "凍結caseのB01販売棟数/ASP、B02上期並み粗利率/mix、B03販管費効率の継続と照合。結果はこれらの将来継続や許容幅をEPS列だけで判定せず、有限ASP探索のclosedを保つ。",
+    "2026年9月10日会社の2026-02-01〜2027-01-31連結修正予想EPS304.27/親会社NI3250百万円と、2026年10月1日Astrisの1/27E308.31/1/28E339.81/1/29E369.46を区別。会社原典の会計基準nullと外部EPSの期間/連結/分割/分母未認証を保持する。",
+    "会社の分割注記をAstris全列へ移植せず、NI/EPSの逆算・倍率/閾値の発明をしていない。9月会社資料は10月著者レポート以前として、独立した予測成功へ昇格していない。"
+  ],
+  "contract_checks": {
+    "five_top_level_fields": true,
+    "pending_each_exactly_once": true,
+    "source_ID_and_snapshot_SHA": true,
+    "all_quotes_direct_content_substrings": true,
+    "same_issue_and_pending_only_observation_evidence": true,
+    "read_state_and_outcome_enum": true,
+    "not_yet_due_management_date_retained": true,
+    "new_fiscal_disclosure_or_forecast_success_claimed": false,
+    "financial_adoption_or_new_action_claimed": false
+  },
+  "source_quote_trace": [
+    {
+      "source_id": "disclosed-facts:4e8f7dcb7903ca58074646fd7ff2e6d784ac23b881165cbbd513b393ae0fd644",
+      "snapshot_sha256": "9903b0f2a093ba9c4beab613b9377c6149621c542afc01bf255655b66f12b05a",
+      "source_content_sha256": "e406b184aba51e73293ef06bbdd20700d39c8daaf051da96ea415c594733bec7",
+      "quote_source_file": "research/ir-structured-facts-qualitative-review-2026-10-15/2983/worker-packet.json",
+      "quote_source_location": "sources[id=disclosed-facts:4e8f7dcb7903ca58074646fd7ff2e6d784ac23b881165cbbd513b393ae0fd644].content",
+      "quote_character_start": 211,
+      "quote_character_end": 892,
+      "quote_exact_substring": true,
+      "fact_ids": [
+        "2983-issuer-revised-FY2027-01-EPS-20260910",
+        "2983-issuer-revised-FY2027-01-parent-NI-20260910"
+      ],
+      "original_source_id": "case-public:c75788675e0b606f2c00bf372044f545e6ac53f77357a50556ae7f52d6a82290"
+    },
+    {
+      "source_id": "disclosed-facts:a3cb5324cb1b7b03aaa770994f45af9f986432d2849604dda37d706e65431da7",
+      "snapshot_sha256": "148b629145c02edac5ccf2a89e298caffa1858bcae3c1bca53533896e48b2f7f",
+      "source_content_sha256": "dc70418733cbbaca89513bc430aa3ab0edc53c6a8670ecc93e287322093367c3",
+      "quote_source_file": "research/ir-structured-facts-qualitative-review-2026-10-15/2983/worker-packet.json",
+      "quote_source_location": "sources[id=disclosed-facts:a3cb5324cb1b7b03aaa770994f45af9f986432d2849604dda37d706e65431da7].content",
+      "quote_character_start": 211,
+      "quote_character_end": 739,
+      "quote_exact_substring": true,
+      "fact_ids": [
+        "2983-astris-1-27e-EPS",
+        "2983-astris-1-28e-EPS",
+        "2983-astris-1-29e-EPS"
+      ],
+      "original_source_id": "case-public:cc1056ccbd3204206ab15aceab33c1b05c85f4dace3f235e12f454bd7169b328"
+    }
+  ],
+  "limits": [
+    "保存済みpacket/resultと凍結caseの限定点検であり、元PDF全文の再監査・金融意味の独立認証ではない。",
+    "leaseの現在有効性・完了権限をこのfile確認で保証しない。rootが実行時に既存APIで確認する。"
+  ],
+  "actual_DB_operations": 0,
+  "Store_connections": 0,
+  "network_requests": 0,
+  "result_edits": 0
+}

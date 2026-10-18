@@ -1,0 +1,44 @@
+{
+  "reviewer": "codex_audit_consumer",
+  "reviewed_at": "2026-10-16T15:33:04.571024+00:00",
+  "status": "ready_for_root_document_acceptance",
+  "findings": [],
+  "scope": "新doc全文を、既読のFAQ/2016年第4稿のmethod v2と、root受入済み5988科目対応の範囲に限って比較。原典本文やp78画像の新規再読/全稿・現在screenの再監査は行わない。",
+  "input_pins_sha256": {
+    "docs/acquirers-multiple-research.md": "73994460afbec9fdbf42682879940f4565c138afbefd5a5b5906e78392e0b09a",
+    "research/ir-acquirers-multiple-method-review-2026-10-16/parent-acceptance.json": "c5a32d9ab6df9d89ed0095107a2136ab9c19a7d3a9f7332ac649a7ab801d0997",
+    "research/ir-acquirers-multiple-method-review-2026-10-16/README.md": "197e27893c6c8a0c19fc33fa89edfcb4fc9bbec06113ecd123b1cd167f8667d2",
+    "research/ir-acquirers-multiple-method-review-2026-10-16/review.json": "b612ff9feea0ff9962224e80fdf5618bf8fb506468322d9bee6e183fbe15b7dd",
+    "research/ir-acquirers-multiple-method-review-2026-10-16/quotes.json": "c69e596dbde0cb50b700195809b2159997f0976750acc7288ec57526a44f0467",
+    "research/ir-acquirers-multiple-method-review-2026-10-16/read-start.json": "8d9961087cc44bb53cb52fe175da8a304c2341f35de322b8b0f3999c43a41a3f",
+    "research/ir-acquirers-multiple-method-review-2026-10-16/independent-review.json": "caedcc66ec5dc27f0f12ff48338d4fe405af0e1c0adaa21036992a659ea57958",
+    "research/ir-case-studies-2026-10-15/5988/operating-earnings-DA-saved-followup-2026-10-16/parent-acceptance.json": "36d5c27c776b841586e7b95e4cc313de1c90c2a3623ea0c168880801095b6105",
+    "research/ir-case-studies-2026-10-15/5988/operating-earnings-DA-saved-followup-2026-10-16/accounting-label-mapping.json": "ed89ff69405e508766284bb8211dc11ad50a5b03bd5a59e3edac9be437f10d46"
+  },
+  "implementation_read_only_pins_sha256": {
+    "src/ir_agent/screening.py": "86ce215935ffe812d02c3772772da655e63903023c3a090c02cb9a3d166a8e42",
+    "src/ir_agent/valuation.py": "853b6eb43eb88cf6334f8d620486d77a060c8d7c9bee8439db3bd0d4317c0c96"
+  },
+  "conclusions": [
+    "4行表は上昇の1年と1日経過後を限定し、画面内の継続例外/外の基本売却、下落の画面内保有/外売却に年数を追加しない。固定366日や利用者の最大保有期限へ移さない。",
+    "quarterlyは入替必要性の点検で強制全面入替ではない。最低20保有という原文の分散ガイドと、12か月段階購入の提案/月2〜3・四半期7〜8の例示を区別する。",
+    "FAQ一般欄30候補/20保有、2022年金融公益組入/業種上位6表示、2023年母集団例を一つの現行ルールへ合成しない。業種6表示を保有上限にしない。",
+    "順位による候補選別と、株主価値/目標株価の推計を分離する。EV・OIADP/OIBDP・Revenue/利益指標、TTM/MRQ未割当と日本科目・税の対応未確定を保持する。",
+    "損益ゼロ/費用控除前後・執行や期間/所属不明は未指定のまま。データ取得不能をscreen外へ変えず、保留というproject適応を著者の未記載ルールにしていない。",
+    "5988は販管費の償却内包と対応候補の受入範囲のみを記す。CF総額との差を原価D&Aに配賦せず、OIADP/比率/EV/順位/新質問を採用済みとはしていない。",
+    "IRは公表科目/期間/重複関係と掲載箇所の確認に限定し、会社へ外部データ項目や母集団・順位を確定させない。現在の閾値screening/1株valuationをこの順位/退出法の実装とせず、金融gateを外していない。"
+  ],
+  "reuse": {
+    "prior_method_independent_review_sha256": "caedcc66ec5dc27f0f12ff48338d4fe405af0e1c0adaa21036992a659ea57958",
+    "term_finding": "先にresolved_v2としたOperating Earnings/Revenueの区別は新docでも維持。新規の用語findingなし。",
+    "5988_acceptance": "原頁の意味受入はrootの36d5c27c…を再利用し、今回はdocの要約がその範囲を超えないことを確認。"
+  },
+  "boundaries": {
+    "GET": 0,
+    "DB_Store": 0,
+    "code_edits": 0,
+    "old_shared_docs_or_sources_edits": 0,
+    "new_financial_method_or_threshold_or_IR_or_send": 0,
+    "output_only": "research/ir-acquirers-multiple-method-review-2026-10-16/independent-document-review.json"
+  }
+}

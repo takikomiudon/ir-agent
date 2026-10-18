@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T16:10:49.412231+00:00",
+  "company_id": "jp:6323",
+  "status": "capture_and_four_page_meaning_checked_one_basis_scope_finding",
+  "findings": [
+    {
+      "id": "6323-PRESENTATION-PERIOD-01",
+      "type": "meaning_overstatement_of_basis_within_declared_read_scope",
+      "status": "pending_separate_period_definition_check",
+      "locations": [
+        {
+          "file": "review.json",
+          "JSONpath": "$.period_entity_site_boundary.quarter_literal",
+          "phrase": "calendar-year labels2026/2027/2028 appear in diagram"
+        },
+        {
+          "file": "quotes.json",
+          "quote_id": "p20-timeline-phase-and-planned-milestones",
+          "field": "layout_note",
+          "phrase": "Horizontal calendar-year labels"
+        },
+        {
+          "file": "validation.json",
+          "JSONpath": "$.checks.calendar_year_Q_literals_not_silently_mapped_to_fiscalperiods",
+          "value": true
+        }
+      ],
+      "observed_support": "指定p20原図は2026年/2027年/2028年軸と2028年Q1→2027年Q4を表示。指定1/17/19/20だけでは暦/会計期basisとQの月範囲は明示されていない。",
+      "overstatement": "年ラベルの存在をcalendar-yearと呼び、暦年basisまで確認したように読める。後者は本4頁の読取根拠を超える。暦年ではないと断定する指摘ではない。",
+      "impact_and_existing_guards": "旧brokerの27.2期Q4/28.2期Q1へ実際に変換した形跡はなく、source metadataはquarter_definition_or_FY_translation_verified:falseを保持。即時の金融更新ではないが、後続比較で未確定basisを確認済みと誤用する余地がある。",
+      "sourcebundle_check": "metadataにcalendar-year/暦年という追加意味ラベルはない。contentには原抽出p2に暦年の1語が機械的に見つかるが本task指定頁外で意味/適用範囲を未読。source自体の推測ラベル修正は要求せず、原sourceを保持する。",
+      "minimum_followup": "元fileは固定し、年軸/年Q literalだけを確認したと限定した新版又は、別公開basis確認の適用範囲付きaddendumで解決する。Q月範囲/旧broker期への対応や予定実施は自動認定しない。"
+    }
+  ],
+  "scope": {
+    "physical_pages_meaning_and_image_read": [
+      1,
+      17,
+      19,
+      20
+    ],
+    "pages_mechanically_reextracted": 29,
+    "whole_PDF_semantically_read": false,
+    "old_broker_report_not_reread": true,
+    "basis_term_search_outside_selected_scope": "p2に暦年という語の位置だけ確認。本文意味は読まず別basis-checkに委ねる。"
+  },
+  "capture_checks": {
+    "raw_entity_bytes": 2743620,
+    "raw_sha256": "2978b5c548e37ae3bb25dfa773114e69faed327bb5cffe8f8ff36b1ad5976627",
+    "PDF_magic": true,
+    "response_status": 200,
+    "declared_GET_limit_and_count": 1,
+    "new_robots_GETs": 0,
+    "literal_saved_route_JSONpath": "$.links[47].href",
+    "literal_request_response_source_URL_equal": true,
+    "raw_text_source_content_byte_exact": true,
+    "reextraction_sha256": "cd152a1de1d2a018d7fcfaa324d0983041aec72af92d4aced31c9878467cc2ff",
+    "configured_prepared_UA": "Codex-IR-Research/0.1",
+    "TLS_verify": true,
+    "complete_at": "2026-10-15T15:58:15.419093+00:00",
+    "source_retrieved_equals_complete": true,
+    "source_id": "case-public:2978b5c548e37ae3bb25dfa773114e69faed327bb5cffe8f8ff36b1ad5976627",
+    "source_ID_contract": "case-public:<saved raw entity SHA256>, not claimed as common stable-ID derivation",
+    "models_json_text_snapshot_sha256": "00bd21bdbac4578eab87f12469357b93bfe79fb9dcb614bd56ad347082a091c6",
+    "source_schema_valid_and_unchanged": true
+  },
+  "robots_reuse_checks": {
+    "saved_capture": "research/ir-case-studies-2026-10-15/6323/initial-public-statement-followup/capture.json",
+    "capture_SHA": "a822bab821d3c911a88a531d9037523e5d1a50fc2d7564db1c34a68256672942",
+    "raw_sha256": "feacc4c413f8c303605fcc2b61be7fda6d35a0c364b9d50a6e069c8d579a858e",
+    "same_exact_host_status200_complete": true,
+    "configured_prepared_fixed_UA_match": true,
+    "saved_rules_target_can_fetch": true,
+    "actual_CRLF_count": 6,
+    "literal_backslash_rn_count": 0,
+    "central7_exact_host_nonmatch": true,
+    "limit": "Saved-rule/path correspondence only, not blanket current permission or packet-level attestation."
+  },
+  "period_time_boundary": {
+    "document_label": "2027年2月期（第42期）第2四半期",
+    "displayed_document_date": "2026-10-08",
+    "published_at": null,
+    "exact_web_publication_time": null,
+    "historical_first_saved_at": null,
+    "quarter_literals": [
+      "2028年Q1",
+      "2027年Q4"
+    ],
+    "basis_for_selected_four_pages": "Not established; preserve raw year/Q labels pending separate public basis review.",
+    "broker_fiscal_period_translation_performed": false
+  },
+  "page_meaning_checks": [
+    {
+      "page": 1,
+      "confirmed": "Company, reporting period and document date as displayed; not an exact publication instant."
+    },
+    {
+      "page": 17,
+      "confirmed": "Company outlook on advanced semi/AP demand, left procurement risks, right supply/procurement response policies. Column-interleaved extraction is clarified by separate manual image quote.",
+      "limit": "Advance ordering/inventory/alternatives and staff/area response do not demonstrate resolved delays, suitable inventory or quantified profit effects."
+    },
+    {
+      "page": 19,
+      "confirmed": "Vietnam hiring/pay/floor-area measures and planned new-factory acceleration are separated from China Shanghai Lingang two-shift/rented building and planned spring2027 operation. Photo is labelled China.",
+      "limit": "August wage increase is described as implemented by company; other measures are not assigned invented completion dates or profit effects."
+    },
+    {
+      "page": 20,
+      "confirmed": "Vietnam RORZE ROBOTECH first-phase construction, completion/operation plans and conditional later capacity expansion. Image is explicitly a completion rendering subject to changes.",
+      "limit": "Year/Q plan is not achieved completion/operation. Area-ratio trial based on all completed-floor area is not actual throughput/utilization/earnings. Basis terminology requires the finding above."
+    }
+  ],
+  "images": [
+    {
+      "physical_page": 1,
+      "file": "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/images/physical-page-01.png",
+      "sha256": "2c5e4cf95499ff77d8ba5cd06a6ac6cf115ad47413d3bb850a435d1c9cceca3c",
+      "visually_read": true
+    },
+    {
+      "physical_page": 17,
+      "file": "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/images/physical-page-17.png",
+      "sha256": "469808969166eea06aace1887aa28adb4ea36a40997da512a5816491b0f06d13",
+      "visually_read": true
+    },
+    {
+      "physical_page": 19,
+      "file": "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/images/physical-page-19.png",
+      "sha256": "4074cbac2a282639a760f75e49004c81b024612743e9c26c5da1ef4be8a439a8",
+      "visually_read": true
+    },
+    {
+      "physical_page": 20,
+      "file": "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/images/physical-page-20.png",
+      "sha256": "8a17ad5c2a493667a95669fdba8c3a56d4274059b5701ac91a6322bf0d00d276",
+      "visually_read": true
+    }
+  ],
+  "text_quote_checks": [
+    {
+      "id": "p1-cover-period-date",
+      "physical_page": 1,
+      "source_character_start": 1,
+      "source_character_end": 105,
+      "source_UTF8_byte_start": 1,
+      "source_UTF8_byte_end": 169,
+      "quote_sha256_utf8": "4c2c467c0f0a64cf82aedf9a5cda8d94f3b0d8810ceebc6deb8d5965c16028e8",
+      "all_offsets_exact": true
+    },
+    {
+      "id": "p17-advanced-demand-outlook",
+      "physical_page": 17,
+      "source_character_start": 13715,
+      "source_character_end": 13757,
+      "source_UTF8_byte_start": 19315,
+      "source_UTF8_byte_end": 19439,
+      "quote_sha256_utf8": "b34ece1071b506d1dd9a412f9970e70ba99e5dc92fa7d16eeba07bf779bb4912",
+      "all_offsets_exact": true
+    },
+    {
+      "id": "p17-procurement-risk-and-supply-response",
+      "physical_page": 17,
+      "source_character_start": 13759,
+      "source_character_end": 14025,
+      "source_UTF8_byte_start": 19441,
+      "source_UTF8_byte_end": 20089,
+      "quote_sha256_utf8": "5caa2beca089a2bed8766c1fbe596852363e0dca3d762a19c922905520b98e8d",
+      "all_offsets_exact": true
+    },
+    {
+      "id": "p19-vietnam-staff-and-pay",
+      "physical_page": 19,
+      "source_character_start": 15477,
+      "source_character_end": 15525,
+      "source_UTF8_byte_start": 22001,
+      "source_UTF8_byte_end": 22119,
+      "quote_sha256_utf8": "0aed223630711a799cf91f760acb1ff01e107ca96b01eafe4b0554e45155534e",
+      "all_offsets_exact": true
+    },
+    {
+      "id": "p19-vietnam-existing-floor-area",
+      "physical_page": 19,
+      "source_character_start": 15527,
+      "source_character_end": 15596,
+      "source_UTF8_byte_start": 22121,
+      "source_UTF8_byte_end": 22304,
+      "quote_sha256_utf8": "8e1ef97dc37eb27c5bf4fd0c3550052595079a2cf5bd804935546f817dbc233c",
+      "all_offsets_exact": true
+    },
+    {
+      "id": "p19-vietnam-operation-plan",
+      "physical_page": 19,
+      "source_character_start": 15647,
+      "source_character_end": 15692,
+      "source_UTF8_byte_start": 22373,
+      "source_UTF8_byte_end": 22466,
+      "quote_sha256_utf8": "2fb7141efc5fde129a9de794174c1ad4707b092e662b43caed8861b7f556e0ae",
+      "all_offsets_exact": true
+    },
+    {
+      "id": "p19-china-separate-expansion",
+      "physical_page": 19,
+      "source_character_start": 15694,
+      "source_character_end": 15767,
+      "source_UTF8_byte_start": 22468,
+      "source_UTF8_byte_end": 22657,
+      "quote_sha256_utf8": "ba8ee9021a00aded4ee05360309b80442305082f613072d71d9471b31cdc8230",
+      "all_offsets_exact": true
+    },
+    {
+      "id": "p20-vietnam-planned-start-and-conditional-growth",
+      "physical_page": 20,
+      "source_character_start": 15824,
+      "source_character_end": 15907,
+      "source_UTF8_byte_start": 22714,
+      "source_UTF8_byte_end": 22925,
+      "quote_sha256_utf8": "5ef490254ed390b224147819a0a4a4c5be9b1c738de8381f65cbe0e860bcef17",
+      "all_offsets_exact": true
+    },
+    {
+      "id": "p20-timeline-phase-and-planned-milestones",
+      "physical_page": 20,
+      "source_character_start": 15932,
+      "source_character_end": 16351,
+      "source_UTF8_byte_start": 22950,
+      "source_UTF8_byte_end": 23491,
+      "quote_sha256_utf8": "262a48130681e4219618bc77d961f798b66c3d3b7499ed211660ecf54a14d5df",
+      "all_offsets_exact": true
+    },
+    {
+      "id": "p20-floor-area-estimate-limit",
+      "physical_page": 20,
+      "source_character_start": 16704,
+      "source_character_end": 16788,
+      "source_UTF8_byte_start": 23922,
+      "source_UTF8_byte_end": 24078,
+      "quote_sha256_utf8": "1db8afa2af3831a8a85c3622d760ce9e285d297cc965f19251ea3a300c6a9c19",
+      "all_offsets_exact": true
+    },
+    {
+      "id": "p20-future-image-caption",
+      "physical_page": 20,
+      "source_character_start": 16800,
+      "source_character_end": 16819,
+      "source_UTF8_byte_start": 24090,
+      "source_UTF8_byte_end": 24147,
+      "quote_sha256_utf8": "14a12d4bfa40bc477a24753b65009ba96a97e9ead729d90547443f26aa16c920",
+      "all_offsets_exact": true
+    }
+  ],
+  "manual_image_quotes": [
+    {
+      "id": "p17-supply-response-image-transcription",
+      "source_id": "case-public:2978b5c548e37ae3bb25dfa773114e69faed327bb5cffe8f8ff36b1ad5976627",
+      "physical_page": 17,
+      "section": "right column supply/procurement response",
+      "representation": "manual_transcription_from_rendered_PDF_image_with_lines_joined",
+      "quote": "半導体関連装置の受注急増に対し、ベトナム、中国の子会社での増員、生産エリアの確保による製品供給体制を増強\n部材の先行手配・在庫確保、代替部品・代替調達先の確保により、納期への影響を緩和",
+      "image_file": "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/images/physical-page-17.png",
+      "image_sha256": "469808969166eea06aace1887aa28adb4ea36a40997da512a5816491b0f06d13",
+      "image_pixel_bbox_zero_based_half_open": [
+        820,
+        508,
+        1550,
+        830
+      ],
+      "source_character_start": null,
+      "source_character_end": null,
+      "limitation": "Image-based right-column reading clarifies layout; not a fabricated continuous source.content quote or numerical causal proof.",
+      "visually_matches_right_response_column": true,
+      "bbox_inside_image": true
+    }
+  ],
+  "financial_input_changes": [],
+  "new_facts_normalized": 0,
+  "independent_forecasts_added": 0,
+  "model_adopted": false,
+  "unchanged_inputs": {
+    "producer_files": {
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/guard.json": "28c723abbdf46616b90779ea8906bd07da9e68046174726bf992f316072f55d9",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/review.json": "a46bc36529829d1c6dabb563e82be2e40fff35225fcf0b2332c1b63b8c50b61f",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/route.json": "19485c58c54721cbc574e954f5a5559f92a95f07d292c210ddcc6d717cdcbf2f",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/quotes.json": "acd65f0c9fd7f7c77d9a0f6024156c94939a417cd0399f23ad40595b266976c7",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/selection.json": "1e260f2bae3f978c2df619d830a57b21553cd8e7af3ceb79c850e2cdb9419330",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/page-candidates.json": "66bbfc176b3372d605057a50cb090867d21ab1cb95958d9058c55caaff49bd78",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/README.md": "b1a5ed1fd383e0d9d58e0a3facfeaba239ae6cf1124f204a4af38d8a1bfafaf5",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/sourcebundle.json": "a79940e0566028d4644b78910e6b439215a8581e05d1c5fa39508af23ba166aa",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/validation.json": "b8bd0b61e1c86b4ad43762373304dd12d14e7d514d4e3392605c987185842c83",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/capture.json": "42b33718d3448864d3c2bbca26951ca1e5d9a3d1565ae7b90bc5452615eeaeef",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/pdfinfo.txt": "d5a492e559748ae184ec46555d7d8c7cf274458f22eb2f3c9cc058793c505426",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/images/physical-page-17.png": "469808969166eea06aace1887aa28adb4ea36a40997da512a5816491b0f06d13",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/images/physical-page-01.png": "2c5e4cf95499ff77d8ba5cd06a6ac6cf115ad47413d3bb850a435d1c9cceca3c",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/images/physical-page-19.png": "4074cbac2a282639a760f75e49004c81b024612743e9c26c5da1ef4be8a439a8",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/images/physical-page-20.png": "8a17ad5c2a493667a95669fdba8c3a56d4274059b5701ac91a6322bf0d00d276",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/text/physical-page-01.txt": "3e3b2d02c36df8f42a2caea2b9649547e76fd4a1749f42daaae1529db4159b35",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/text/physical-page-20.txt": "11fcf5c5e452fafc0464f86bc0cc7f0c1c23ede666e55e9db74babbc5d3027eb",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/text/document-layout.txt": "cd152a1de1d2a018d7fcfaa324d0983041aec72af92d4aced31c9878467cc2ff",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/text/physical-page-17.txt": "2bf25cf827b07b092e1f68116f48353567c5dd9ae2812994a89ab677bf954623",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/text/physical-page-19.txt": "4a4df883acd3c589afbba2fd490711529d23f19ac4c010831b8f9e11f20cb733",
+      "research/ir-case-studies-2026-10-15/6323/quarter-presentation-followup/raw/2978b5c548e37ae3bb25dfa773114e69faed327bb5cffe8f8ff36b1ad5976627": "2978b5c548e37ae3bb25dfa773114e69faed327bb5cffe8f8ff36b1ad5976627"
+    },
+    "protected_inputs": {
+      "research/ir-case-studies-2026-10-15/6323/saved-issuer-route-inventory/routes.json": "030b805fa98e04c6328ef91972e4da7ffc92a539aa4d17a3d8b74185006b4c44",
+      "research/ir-contacts-universe-2026-10-11/evidence/6323/20261011T171443800537Z/01.json": "d71e3206fe6db9bf96047984edcada8ef6725dd734947fcf0a2f8421d826f0bf",
+      "research/ir-source-access-holds-2026-10-15/holds-v3.json": "ec1e9f85d378571c3d0f99eca73ec8e397ea8dd7b155aa4be80c2100d2294551",
+      "research/ir-case-studies-2026-10-15/6323/initial-public-statement-followup/capture.json": "a822bab821d3c911a88a531d9037523e5d1a50fc2d7564db1c34a68256672942",
+      "research/ir-case-studies-2026-10-15/6323/initial-public-statement-followup/raw/feacc4c413f8c303605fcc2b61be7fda6d35a0c364b9d50a6e069c8d579a858e": "feacc4c413f8c303605fcc2b61be7fda6d35a0c364b9d50a6e069c8d579a858e"
+    },
+    "all_matched_at_end": true
+  },
+  "execution": {
+    "GETs": 0,
+    "Store_or_DB_constructors": 0,
+    "DB_accesses": 0,
+    "code_or_old_source_artifact_edits": 0,
+    "index_or_monitor_edits": 0,
+    "IR_drafts_or_sends": 0
+  },
+  "limits": [
+    "Only four meaning pages; no full report audit or target-formula search.",
+    "Source registration state is not independently queried; source/DB-import flags refer to producer artifact context only.",
+    "Separate period-definition check and any later company evidence are outside this frozen result and require a new addendum."
+  ]
+}

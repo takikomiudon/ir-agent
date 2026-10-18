@@ -1,0 +1,69 @@
+{
+  "company_id": "jp:1963",
+  "maximum_GETs": 5,
+  "user_agent": "Codex-IR-Research/0.1",
+  "allowed_requests": [
+    {
+      "role": "issuer_robots",
+      "url": "https://www.jgc.com/robots.txt",
+      "basis": "robots endpoint on selected official host"
+    },
+    {
+      "role": "issuer_root",
+      "url": "https://www.jgc.com/",
+      "basis": "selected CSV official_url"
+    },
+    {
+      "role": "canonical_root",
+      "url": "https://www.jgc.com/jp/",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[1].response_headers.location",
+      "same_host_explicit_redirect_hop": 1,
+      "GET_budget_counted": true
+    },
+    {
+      "role": "results_index",
+      "url": "https://www.jgc.com/jp/ir/ir-library/financial-s-summary.html",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[2].html_visible_text.links[66]",
+      "literal_href": "/jp/ir/ir-library/financial-s-summary.html",
+      "label": "決算短信/ 決算説明会資料"
+    },
+    {
+      "role": "quarter_statement",
+      "url": "https://www.jgc.com/jp/ir/ir-library/assets/pdf/fy26_1q_tanshin.pdf",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[3].html_visible_text.links[91]",
+      "literal_href": "https://www.jgc.com/jp/ir/ir-library/assets/pdf/fy26_1q_tanshin.pdf",
+      "label": "決算短信[PDF:408.9 KB]"
+    }
+  ],
+  "robots_reviews": {
+    "www.jgc.com": {
+      "proceed": true,
+      "branch": "complete404_missingrobots",
+      "raw_file": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/raw/80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880",
+      "raw_sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880",
+      "meaning": "Complete404 missing robots, not parse HTML failure as rules"
+    }
+  },
+  "holds_file": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+  "holds_sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952",
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu"
+  ],
+  "maximum_samehost_explicit_redirect_hops": 1,
+  "no_JS_search_form_externalhost_or_diagnostics": true,
+  "maximum_meaning_image_pages": 4
+}

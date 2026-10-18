@@ -1,0 +1,64 @@
+{
+  "recorded_at": "2026-10-15T17:25:16.161688+00:00",
+  "UA": "Codex-IR-Research/0.1",
+  "maximum_GETs": 4,
+  "maximum_entity_bytes": 10485760,
+  "timeout_seconds": 40,
+  "TLSverify": true,
+  "proxy_CA": "Inherited; no configuration changes or secrets printed.",
+  "central_holds_file": "research/ir-source-access-holds-2026-10-15/holds-v3.json",
+  "central_holds_sha256": "ec1e9f85d378571c3d0f99eca73ec8e397ea8dd7b155aa4be80c2100d2294551",
+  "allowed_requests": [
+    {
+      "role": "issuer_robots",
+      "url": "https://kitahamabank.co.jp/robots.txt"
+    },
+    {
+      "role": "publication_notice",
+      "url": "https://kitahamabank.co.jp/wp-content/uploads/2026/08/260824_PR_ジェイ・フェニックス・リサーチ株式会社によるアナリストレポート公開のお知らせ.pdf"
+    },
+    {
+      "role": "report_robots",
+      "url": "https://j-phoenix.com/robots.txt"
+    },
+    {
+      "role": "author_report",
+      "url": "https://j-phoenix.com/wp-content/uploads/2026/08/2134_kitahama-capital-partners_analystreport_2026-08-24.pdf"
+    }
+  ],
+  "robots_reviews": {
+    "kitahamabank.co.jp": {
+      "reviewed_at": "2026-10-15T17:25:37.581332+00:00",
+      "capture_sequence": 1,
+      "branch": "fresh200_rules",
+      "proceed": true,
+      "UA": "Codex-IR-Research/0.1",
+      "raw_sha256": "a12f6764201b477afcfde15f83e6f48ae1238ee6060d6f67d68762ea3d03d90c",
+      "exact_target": "https://kitahamabank.co.jp/wp-content/uploads/2026/08/260824_PR_ジェイ・フェニックス・リサーチ株式会社によるアナリストレポート公開のお知らせ.pdf",
+      "named_AI_groups_present": false,
+      "reason": "Wildcard disallows wp-admin only with admin-ajax exception; notice path under wp-content does not match deny. Sitemap not followed."
+    },
+    "j-phoenix.com": {
+      "reviewed_at": "2026-10-15T17:29:17.740095+00:00",
+      "capture_sequence": 3,
+      "branch": "redirect301_rules_unknown_stop",
+      "proceed": false,
+      "HTTP_status": 301,
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual_UA": "Codex-IR-Research/0.1",
+      "Location_as_received": "https://www.j-phoenix.com/robots.txt",
+      "redirect_followed": false,
+      "report_GETs": 0,
+      "remaining_budget_unused": 1,
+      "reason": "Fresh report-host robots redirects; rules unknown under zero-follow task. No site permission, no second-host/path inference."
+    }
+  },
+  "old_input_hashes": {
+    "research/ir-case-studies-2026-10-15/2134/parent-target-membership.json": "c73af1542f9038200a06e06eb0c77037a075802203fb3325eac67630bbaa13f8",
+    "research/ir-author-routing-remaining-catalog-2026-10-15/routes.json": "4eed5a57f20cc4092343e4f1ddbedf49d83bf871a51c6cb0bb2286a4867d1981",
+    "research/ir-contacts-universe-2026-10-11/evidence/2134/01.json": "5b33a3ed8ecbfdde983df1061e06432bc4978b6925b557ae4801dc795b56b0a5",
+    "research/ir-source-access-holds-2026-10-15/holds-v3.json": "ec1e9f85d378571c3d0f99eca73ec8e397ea8dd7b155aa4be80c2100d2294551",
+    "research/ir-recovery-2026-10-13/contact-candidates.csv": "d7a55a842a7c126b48c588801cc2c6035d21bad22cb228ef57da68def1e03f31",
+    "research/ir-case-studies-2026-10-15/1723/robots404-handling-clarification/clarification.json": "18e53556e7173517ec4bb6a46b0625472f65be1fd989428c048b5229a8daf64e"
+  }
+}

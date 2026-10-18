@@ -1,0 +1,25 @@
+{
+  "synthetic": true,
+  "company": {"id": "synthetic-company", "name": "架空の選別例", "financial_model": "ordinary_operating_company", "industry": "例示業種。業種名は判定に使用しない", "ir_contact_available": true},
+  "as_of": "2026-10-15T16:00:00+09:00",
+  "policy": {
+    "id": "synthetic-screen-only",
+    "version": 1,
+    "recorded_at": "2026-10-15T08:00:00+09:00",
+    "style": "Synthetic comparison examples, not an adopted investment profile",
+    "supported_models": ["ordinary_operating_company"],
+    "rules": [
+      {"id": "relative-pe", "metric": "pe", "operator": "lt", "comparison": {"kind": "benchmark", "metric": "sector_pe"}, "max_age_seconds": 86400, "source": {"kind": "synthetic_example", "reference": "Independent arithmetic fixture; Anthropic idea-generation supplies only the screening principle", "rationale": "Synthetic peer comparison and one-day freshness limit, not real policy defaults"}},
+      {"id": "liquidity", "metric": "turnover", "operator": "ge", "comparison": {"kind": "value", "value": "100", "unit": "synthetic turnover units", "definition": "synthetic single-session turnover", "period": {"kind": "instant", "end": "2026-10-15"}}, "max_age_seconds": 86400, "source": {"kind": "synthetic_example", "reference": "Independent arithmetic fixture", "rationale": "Arbitrary synthetic threshold and freshness window, not a tradability limit"}}
+    ]
+  },
+  "metrics": {
+    "pe": {"subject_id": "synthetic-company", "value": "12", "unit": "multiple", "definition": "trailing consolidated PE", "period": {"kind": "instant", "end": "2026-10-15"}, "observed_at": "2026-10-15T15:30:00+09:00", "source_id": "synthetic-company-source", "bindings": {"subject_id": ["metadata", "subject_id"], "value": ["metadata", "pe"], "unit": ["metadata", "pe_unit"], "definition": ["metadata", "pe_definition"], "period": ["metadata", "period"], "observed_at": ["metadata", "observed_at"]}},
+    "sector_pe": {"subject_id": "synthetic-sector-benchmark", "value": "15", "unit": "multiple", "definition": "trailing consolidated PE", "period": {"kind": "instant", "end": "2026-10-15"}, "observed_at": "2026-10-15T15:30:00+09:00", "source_id": "synthetic-benchmark-source", "bindings": {"subject_id": ["metadata", "subject_id"], "value": ["metadata", "pe"], "unit": ["metadata", "pe_unit"], "definition": ["metadata", "pe_definition"], "period": ["metadata", "period"], "observed_at": ["metadata", "observed_at"]}},
+    "turnover": {"subject_id": "synthetic-company", "value": "100", "unit": "synthetic turnover units", "definition": "synthetic single-session turnover", "period": {"kind": "instant", "end": "2026-10-15"}, "observed_at": "2026-10-15T15:30:00+09:00", "source_id": "synthetic-company-source", "bindings": {"subject_id": ["metadata", "subject_id"], "value": ["metadata", "turnover"], "unit": ["metadata", "turnover_unit"], "definition": ["metadata", "turnover_definition"], "period": ["metadata", "period"], "observed_at": ["metadata", "observed_at"]}}
+  },
+  "sources": [
+    {"id": "synthetic-company-source", "company_id": "synthetic-company", "title": "Synthetic metrics", "url": "https://example.invalid/company", "source_type": "market_data", "published_at": "2026-10-15T15:30:00+09:00", "retrieved_at": "2026-10-15T15:31:00+09:00", "content": "Synthetic fixture only. No actual market data.", "metadata": {"synthetic": true, "subject_id": "synthetic-company", "pe": "12", "pe_unit": "multiple", "pe_definition": "trailing consolidated PE", "turnover": "100", "turnover_unit": "synthetic turnover units", "turnover_definition": "synthetic single-session turnover", "period": {"kind": "instant", "end": "2026-10-15"}, "observed_at": "2026-10-15T15:30:00+09:00"}},
+    {"id": "synthetic-benchmark-source", "company_id": "synthetic-sector-benchmark", "title": "Synthetic external benchmark", "url": "https://example.invalid/benchmark", "source_type": "market_data", "published_at": "2026-10-15T15:30:00+09:00", "retrieved_at": "2026-10-15T15:31:00+09:00", "content": "Synthetic benchmark only. No actual sector statistics.", "metadata": {"synthetic": true, "subject_id": "synthetic-sector-benchmark", "pe": "15", "pe_unit": "multiple", "pe_definition": "trailing consolidated PE", "period": {"kind": "instant", "end": "2026-10-15"}, "observed_at": "2026-10-15T15:30:00+09:00"}}
+  ]
+}

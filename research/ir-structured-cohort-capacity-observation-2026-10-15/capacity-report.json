@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "method": "project_measurement_adaptation_of_ir_operation_design_section_13",
+  "window": {
+    "started_at": "2026-10-15T22:47:30.438013+00:00",
+    "ended_at": "2026-10-15T22:54:06.866615+00:00",
+    "elapsed_seconds": "396.428602",
+    "semantics": "Terminal events in [start,end); elapsed intervals clipped to window; events exactly at end listed separately"
+  },
+  "input_records": 10,
+  "unique_records": 10,
+  "duplicate_records_ignored": 0,
+  "measurement_mode": "observed_only",
+  "operator_capacity": {
+    "worker_seconds": null,
+    "cost_budget": null,
+    "synthetic": false
+  },
+  "cohorts": {
+    "observed": {
+      "input_unique_records": 10,
+      "outside_window_records": 0,
+      "in_window_records": 10,
+      "terminal_events_in_window": {
+        "cancelled": 0,
+        "completed": 10,
+        "failed": 0,
+        "retry": 0
+      },
+      "terminal_events_exactly_at_window_end": 0,
+      "completed_attempts": 10,
+      "completed_company_coverage": 10,
+      "completed_company_ids": [
+        "jp:135A",
+        "jp:1518",
+        "jp:1721",
+        "jp:2983",
+        "jp:5831",
+        "jp:5988",
+        "jp:6323",
+        "jp:6754",
+        "jp:7525",
+        "jp:8151"
+      ],
+      "coverage_note": "A completed stage/attempt for a company does not establish that all investment analysis or daily monitoring for that company is complete",
+      "carried_in_records": 0,
+      "backlog_at_window_end": {
+        "unfinished_observed_attempts": 0,
+        "company_ids": [],
+        "longest_since_start_seconds": null,
+        "queue_wait_seconds": null,
+        "overdue_attempts": null,
+        "note": "Only supplied started attempts are observable; queued/unsubmitted demand, due dates and queue waiting are not measured"
+      },
+      "record_counts_by_declared_status": {
+        "completed": 10
+      },
+      "usage": {
+        "active_seconds": {
+          "known_whole_attempt_sum": "0",
+          "missing_records": 10,
+          "unallocated_crossing_or_unfinished_records": 0,
+          "worker_total": null,
+          "overlap_prevents_worker_total": true
+        },
+        "tokens": {
+          "value": null,
+          "known_whole_attempt_sum": 0,
+          "missing_records": 10,
+          "unallocated_crossing_or_unfinished_records": 0
+        },
+        "cost": {
+          "value": null,
+          "known_whole_attempt_sums_by_currency": {},
+          "missing_records": 10,
+          "unallocated_crossing_or_unfinished_records": 0
+        }
+      },
+      "stages": {
+        "lease:qualitative_review:author_condition_review": {
+          "attempt_records": 10,
+          "terminal_events_in_window": {
+            "completed": 10
+          },
+          "active_seconds_whole_attempt_samples": {
+            "count": 0,
+            "total": null,
+            "mean": null,
+            "min": null,
+            "p50": null,
+            "p90": null,
+            "max": null
+          },
+          "elapsed_seconds_whole_attempt_samples": {
+            "count": 10,
+            "total": "3960.006894",
+            "mean": "396.0006894",
+            "min": "395.93114",
+            "p50": "395.990073",
+            "p90": "396.048264",
+            "max": "396.07018"
+          },
+          "elapsed_seconds_within_window_samples": {
+            "count": 10,
+            "total": "3960.006894",
+            "mean": "396.0006894",
+            "min": "395.93114",
+            "p50": "395.990073",
+            "p90": "396.048264",
+            "max": "396.07018"
+          },
+          "usage": {
+            "active_seconds": {
+              "value": null,
+              "known_whole_attempt_sum": "0",
+              "missing_records": 10,
+              "unallocated_crossing_or_unfinished_records": 0
+            },
+            "tokens": {
+              "value": null,
+              "known_whole_attempt_sum": 0,
+              "missing_records": 10,
+              "unallocated_crossing_or_unfinished_records": 0
+            },
+            "cost": {
+              "value": null,
+              "known_whole_attempt_sums_by_currency": {},
+              "missing_records": 10,
+              "unallocated_crossing_or_unfinished_records": 0
+            }
+          },
+          "note": "Distributions describe recorded attempts including failures/retries; elapsed is not active work and stages are not a full-company pipeline"
+        }
+      },
+      "worker_intervals": {
+        "sum_record_elapsed_seconds": "3960.006894",
+        "occupied_elapsed_seconds_union_by_worker": "396.428601",
+        "overlapping_same_worker_elapsed_seconds": "3563.578293",
+        "any_worker_occupied_wall_seconds": "396.428601",
+        "maximum_distinct_workers_overlapping": 1,
+        "per_worker_occupied_elapsed_seconds": {
+          "codex-structured-facts-qualitative-review": "396.428601"
+        },
+        "note": "Unioned elapsed/reservation intervals, not active CPU/analyst time or available worker capacity"
+      },
+      "budget_comparison": {
+        "worker_seconds": null,
+        "cost": null,
+        "budget_matches_cohort": true,
+        "note": "Null comparisons mean missing/incomparable measurements or capacity; unused budget is not a company-count estimate"
+      }
+    },
+    "synthetic": {
+      "input_unique_records": 0,
+      "outside_window_records": 0,
+      "in_window_records": 0,
+      "terminal_events_in_window": {
+        "cancelled": 0,
+        "completed": 0,
+        "failed": 0,
+        "retry": 0
+      },
+      "terminal_events_exactly_at_window_end": 0,
+      "completed_attempts": 0,
+      "completed_company_coverage": 0,
+      "completed_company_ids": [],
+      "coverage_note": "A completed stage/attempt for a company does not establish that all investment analysis or daily monitoring for that company is complete",
+      "carried_in_records": 0,
+      "backlog_at_window_end": {
+        "unfinished_observed_attempts": 0,
+        "company_ids": [],
+        "longest_since_start_seconds": null,
+        "queue_wait_seconds": null,
+        "overdue_attempts": null,
+        "note": "Only supplied started attempts are observable; queued/unsubmitted demand, due dates and queue waiting are not measured"
+      },
+      "record_counts_by_declared_status": {},
+      "usage": {
+        "active_seconds": {
+          "known_whole_attempt_sum": null,
+          "missing_records": 0,
+          "unallocated_crossing_or_unfinished_records": 0,
+          "worker_total": null,
+          "overlap_prevents_worker_total": false
+        },
+        "tokens": {
+          "value": null,
+          "known_whole_attempt_sum": null,
+          "missing_records": 0,
+          "unallocated_crossing_or_unfinished_records": 0
+        },
+        "cost": {
+          "value": null,
+          "known_whole_attempt_sums_by_currency": {},
+          "missing_records": 0,
+          "unallocated_crossing_or_unfinished_records": 0
+        }
+      },
+      "stages": {},
+      "worker_intervals": {
+        "sum_record_elapsed_seconds": "0",
+        "occupied_elapsed_seconds_union_by_worker": "0",
+        "overlapping_same_worker_elapsed_seconds": "0",
+        "any_worker_occupied_wall_seconds": "0",
+        "maximum_distinct_workers_overlapping": 0,
+        "per_worker_occupied_elapsed_seconds": {},
+        "note": "Unioned elapsed/reservation intervals, not active CPU/analyst time or available worker capacity"
+      },
+      "budget_comparison": {
+        "worker_seconds": null,
+        "cost": null,
+        "budget_matches_cohort": false,
+        "note": "Null comparisons mean missing/incomparable measurements or capacity; unused budget is not a company-count estimate"
+      }
+    }
+  },
+  "company_upper_bound": null,
+  "capacity_status": "not_estimated",
+  "next_measurements": [
+    "Record actual arrivals/queued_at, deadlines and terminal attempt IDs to measure queue waiting, overdue demand and complete task throughput",
+    "Measure active worker intervals explicitly; do not substitute elapsed, waiting or fetch-only time",
+    "Collect complete token and cost records with currency, including failed and retried attempts",
+    "Separate normal days and earnings peaks, stage mix and repeat investigations; one company need not incur the same daily work",
+    "Measure shared API/DB constraints, same-company exclusion and counter-review work before testing additional workers",
+    "Define monitored, deeply researched, queried and held cohorts separately; count end-to-end completion before estimating coverage capacity"
+  ],
+  "limitations": [
+    "Caller-supplied measurements are summarized; no scheduler, model call, financial analysis or independently verified runtime was executed",
+    "No per-company daily cost or linear scaling with worker count is assumed",
+    "Unknown usage, capacity and queue observations remain null; recorded sums do not establish an operational company upper limit"
+  ]
+}

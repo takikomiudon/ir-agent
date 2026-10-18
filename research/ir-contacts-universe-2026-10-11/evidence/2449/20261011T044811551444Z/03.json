@@ -1,0 +1,71 @@
+{
+  "requested_url": "https://www.prap.co.jp/pr/service/strategic-ir-communication",
+  "retrieved_at": "2026-10-11T04:48:14.577228+00:00",
+  "publication_time": null,
+  "submitted": false,
+  "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+  "url": "https://www.prap.co.jp/pr/service/strategic-ir-communication",
+  "http_status": 200,
+  "byte_count": 294479,
+  "sha256": "d7e168abe5636f744fd394a9957aaa727c70f79d0bb2a7166e6daeb0c8ed93db",
+  "content_type": "text/html; charset=utf-8",
+  "encoding": "utf-8",
+  "text": "戦略IRコミュニケーションチーム サンプル LP プロジェクトチーム 戦略IRコミュニケーションチーム Service サービス 戦略IRコミュニケーションチーム IPO、中期経営計画策定、市場変更などにおけるコミュニケーション戦略立案・実行を専門組織「戦略 IR コミュニケーションチーム」で支援 経営領域のコミュニケーションに精通したチームが中心となり、IPO前後のコミュニケーション、投資家・従業員など各ステークホルダーとのコミュニケーション戦略立案、中期経営計画策定時のコミュニケーション視点からの支援、などを通じ、企業価値のさらなる向上と持続的成長をご支援します。 サービス概要 IPO前後のコミュニケーション ステークホルダーとの双方向コミュニケーションをめざす広報戦略の策定 上場申請から承認・上場のフェーズまでの伴走型コンサルテーション コミュニケーション体制構築サポート メディアリレーション構築 など M&Aコミュニケーション 投資家、顧客、従業員などステークホルダーに向けてのメッセージの策定およびチャネルの提案 伴走型コンサルティング メディアリレーション インターナルコミュニケーションのサポート など 中期経営計画策定時のコミュニケーション視点からの支援 現行の中期経営計画のレビュー メッセージ・骨子に関するコンサルティング 具体的なコンテンツ、スクリプトに関するアドバイス メディアトレーニング（プラップコンサルティングと連携） など お問い合わせはこちら CASES 関連する実績 Project Teams プロジェクトチーム INDUSTRY 関連する業種 ASSIGNMENT 関連する課題 一覧へ戻る © Basic Inc.",
+  "title": "戦略IRコミュニケーションチーム",
+  "headings": [
+    "Service",
+    "戦略IRコミュニケーションチーム",
+    "IPO、中期経営計画策定、市場変更などにおけるコミュニケーション戦略立案・実行を専門組織「戦略 IR コミュニケーションチーム」で支援",
+    "サービス概要",
+    "CASES",
+    "Project Teams",
+    "INDUSTRY",
+    "ASSIGNMENT"
+  ],
+  "links": [
+    {
+      "url": "https://www.prap.co.jp/",
+      "label": "サンプル"
+    },
+    {
+      "url": "https://www.prap.co.jp/pr/lp",
+      "label": "LP"
+    },
+    {
+      "url": "https://www.prap.co.jp/4971259",
+      "label": "プロジェクトチーム"
+    },
+    {
+      "url": "https://www.prap.co.jp/pr/contact",
+      "label": "お問い合わせはこちら"
+    },
+    {
+      "url": "https://www.prap.co.jp/pr/service",
+      "label": "一覧へ戻る"
+    }
+  ],
+  "forms": [],
+  "robots": {
+    "requested_url": "https://www.prap.co.jp/robots.txt",
+    "retrieved_at": "2026-10-11T04:48:11.551479+00:00",
+    "publication_time": null,
+    "submitted": false,
+    "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+    "url": "https://www.prap.co.jp/robots.txt",
+    "http_status": 200,
+    "byte_count": 1610,
+    "sha256": "1f654b2a159f09c8300cae5f622cef655e33d3c6ade880a777d095bec0acf6d3",
+    "content_type": "text/plain",
+    "encoding": "utf-8",
+    "text": "# robots.txt for https://www.prap.co.jp/\n# Updated to align with llms.txt guidance (PRAP corporate site + recruit content + external IR site)\n# Focus:\n# - Block WP internals\n# - Avoid crawling internal search result URLs\n# - Avoid crawling form endpoints / thank-you pages (lead-gen, personal data)\n# - Reduce crawl load from large volumes of PDFs under /topics/wp-content/uploads/\n#\n# Last-Reviewed: 2026-02-10\n\nUser-agent: *\n\n# --- WordPress admin / internals (standard hardening) ---\nDisallow: /wp/wp-admin/\nAllow: /wp/wp-admin/admin-ajax.php\nDisallow: /wp/wp-login.php\nDisallow: /wp/wp-json/\nDisallow: /wp/wp-includes/\n\n# --- Internal search results (WordPress-style query) ---\nDisallow: /?s=\nDisallow: /*?s=\nDisallow: /*&s=\n\n# --- Lead-gen / inquiry forms & thank-you pages (avoid indexing/crawling) ---\n# PR inquiry / document requests / newsletters\nDisallow: /pr/contact\nDisallow: /pr/contact/\nDisallow: /pr/contact_con\nDisallow: /pr/contact/documents\nDisallow: /pr/contact/request_thanks\nDisallow: /pr/contact/newsletter\nDisallow: /pr/contact/newsletter/thanks\n\n# Recruit / other inquiries (forms)\nDisallow: /contact/recruit/\nDisallow: /contact/etc/\n\n# Service-specific document request forms (pattern)\nDisallow: /pr/service/*document-request\n\n# --- PDF crawl reduction (majority of PDFs are stored under /topics/wp-content/uploads/...) ---\n# Note: keep this ON only if you do NOT need PDF SEO/indexing.\nDisallow: /topics/wp-content/uploads/*.pdf$\n\n# --- Sitemaps (keep the one your CMS actually serves) ---\nSitemap: https://www.prap.co.jp/sitemap_index.xml\nSitemap: https://www.prap.co.jp/sitemap.xml\n",
+    "title": "",
+    "headings": [],
+    "links": [],
+    "forms": []
+  },
+  "security_code": "2449",
+  "source_type": "official_public_contact_page",
+  "discovery_parent_url": "https://www.prap.co.jp/",
+  "discovery_link_label": "icon 「 戦略IRコミュニケーションチーム」 IPO、中期経営計画策定、市場変更などにおけるコミュニケーション戦略立案・実行を専門組織「戦略IRコミュニケーションチーム」でご支援",
+  "official_identity_basis": "third_party_unverified"
+}

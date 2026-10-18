@@ -1,0 +1,126 @@
+{
+  "reviewer": "codex_audit_consumer",
+  "reviewed_at": "2026-10-16T15:51:08.852306+00:00",
+  "status": "ready_for_root_acceptance_within_new_worklist_scope",
+  "findings": [],
+  "scope": "新worklist/module/report CLI/14testsと、current_viewへ委譲する既存SELECT経路の必要箇所のみ。実DB、既存運用docsや別taskの再監査は行わない。",
+  "implementation_proof": {
+    "path": "research/ir-research-inquiry-worklist-integration-2026-10-16/implementation.json",
+    "sha256": "a48d8821a19945bf3fa33fc23c031ac6cd85fd52d331db80ef741a28a3faaf28"
+  },
+  "reviewed_new_files": [
+    {
+      "path": "src/ir_agent/research_inquiry_worklist.py",
+      "bytes": 7058,
+      "sha256": "33779ebc114826629acb6150043306c70b9c10030d66b72c7dd501ac5caa0700"
+    },
+    {
+      "path": "scripts/report_research_inquiries.py",
+      "bytes": 878,
+      "sha256": "5bf353504f08d49fe295102a35ccac01e491fca990dd5ee8e09b328700951899"
+    },
+    {
+      "path": "tests/test_research_inquiry_worklist.py",
+      "bytes": 12790,
+      "sha256": "d86d3e70c0fd3783f8c9cd73089b37d0835236288b3b267b67c99c213f81441c"
+    }
+  ],
+  "unchanged_dependency_pins": [
+    {
+      "path": "src/ir_agent/research_inquiries.py",
+      "bytes": 24306,
+      "sha256": "0b7841eef2b8cf0515f479167a2fe681eace7b1bf692903af6b83a3ad415e482"
+    },
+    {
+      "path": "src/ir_agent/store.py",
+      "bytes": 27724,
+      "sha256": "6f3c96ad9575f47196d194f1bec1fd6c5ace37fca42ecf6639bf9ea76dc66d7f"
+    },
+    {
+      "path": "src/ir_agent/qualitative_research.py",
+      "bytes": 31378,
+      "sha256": "2ca2058af8bbda868cbd24ad36408d14afcd075d35ac8a4140fc472997d675a5"
+    },
+    {
+      "path": "src/ir_agent/decision_lifecycle.py",
+      "bytes": 29387,
+      "sha256": "a6813698eb32ea6293d765b616a86340f6695d247e563ebcca3296941f633273"
+    },
+    {
+      "path": "src/ir_agent/information_review.py",
+      "bytes": 16070,
+      "sha256": "22df6e4a6e5d717a390e817bb311b091112eb1d44722e0651623548f09b7d9ee"
+    },
+    {
+      "path": "src/ir_agent/availability.py",
+      "bytes": 14166,
+      "sha256": "4fbb1a7c252391706066f084205345260add06e9bb00e96bd65c5fabdcfa0d4a"
+    },
+    {
+      "path": "tests/test_research_inquiries.py",
+      "bytes": 22505,
+      "sha256": "4aa9e9606cfbdca2a241504c34cc688070a144248cbb12f89135bec13909b0c9"
+    },
+    {
+      "path": "research/ir-next-logic-gap-review-2026-10-16/proposal.md",
+      "bytes": 6565,
+      "sha256": "d6657eaac824311ecd158c282a76ced6a77f87d87490b0e30f1b728a468e622c"
+    }
+  ],
+  "substantive_results": [
+    "ResearchInquiries.current_viewを全保存reply IDに明示して呼び、一覧はLIMITなしの全inquiryをID順で読む。古い未reviewと別のcomparison_noteが並列カテゴリに残る。",
+    "_ReadAdapterは既存Store.source/reply/questionのSELECT実装だけを提供する。DecisionLifecycleのsource_assessments（旧reply_information_reviews）/RecordAvailabilityとcaseの既読sourceチェックを空dict/推定へ置換せず、coreの保留をそのまま投影する。",
+    "未返信/no_response/reply_unreviewedだけの待ち理由と、それ以外のcase/files/源泉/公開性保留を分離する。expired/declined/cancelled等の保存state/closure_reasonも残し、無回答を否定根拠にしない。",
+    "実時計は_report冒頭で1値に固定し、全current_viewへ同じ値を渡す。CLIに履歴as-of機能はなく、current-onlyの境界を広げていない。",
+    "既存パスをmode=ro/query_only/BEGINの一読取snapshotで開き、finally rollbackとclosingで終了する。Store.__init__/migration/書込APIは呼ばず、row_factory変更は自身が開いたconnectionだけに閉じる。",
+    "研究3表の欠落/非対応はunknown/null、依存表欠落も全体unknownと個別view未知へ残す。欠落を既知0件/訂正0件として進めない。",
+    "質問/返信原文・根拠quote/rationale・全reviewを出力せず、必要なID/版/status/reasons/事前固定comparison_noteへ投影する。読取例外文も出力せず、許可された比較注記を投資支持/意味の自動承認/送信readyにしない。"
+  ],
+  "verification": {
+    "producer_focused_tests": {
+      "passed": 14,
+      "evidence": "implementation.jsonおよび固定focused-tests.log。独立に同じDBテストを再実行したものではない。"
+    },
+    "independent_pure_mock_checks": {
+      "real_database_connections": 0,
+      "database_writes": 0,
+      "network_GETs": 0,
+      "checks": [
+        {
+          "id": "all_inquiries_all_reply_ids_and_fixed_clock",
+          "status": "passed",
+          "inquiries": 25,
+          "explicit_current_views": 26
+        },
+        {
+          "id": "unreviewed_and_available_note_concurrent_no_response_separate",
+          "status": "passed"
+        },
+        {
+          "id": "missing_correction_table_unknown_and_no_core_call",
+          "status": "passed"
+        },
+        {
+          "id": "raw_review_and_exception_prose_not_emitted",
+          "status": "passed"
+        },
+        {
+          "id": "readonly_private_connection_rollback_and_close_on_error",
+          "status": "passed"
+        }
+      ]
+    },
+    "pin_checks": "新3files・旧依存8files・implementation/README/logの固定SHAを照合。保存後にもnew/core pinsを再照合。",
+    "fullsuite": "root担当、独立実行なし"
+  },
+  "limits": "純粋mockは全件/明示ID/投影/未知/接続寿命の経路だけを確認。実台帳内容・外部更新・人間の比較意味・IR利用権や金融判断を認証していない。",
+  "boundaries": {
+    "actual_or_temporary_database_connections": 0,
+    "DB_writes": 0,
+    "Store_instance_creation": 0,
+    "GET": 0,
+    "code_or_test_or_old_shared_file_edits": 0,
+    "external_send_or_financial_actions": 0,
+    "new_output_only": "research/ir-research-inquiry-worklist-integration-2026-10-16/independent-code-review.json"
+  }
+}

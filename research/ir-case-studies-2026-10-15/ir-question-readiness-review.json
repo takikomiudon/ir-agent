@@ -1,0 +1,857 @@
+{
+  "schema_version": 1,
+  "artifact_type": "bounded_saved_public_ir_question_readiness_review",
+  "reviewed_at": "2026-10-15T04:56:13.760156+00:00",
+  "status": "research_review_only_no_question_or_model_adoption",
+  "scope": {
+    "company_codes": [
+      "3774",
+      "5988",
+      "1332",
+      "135A"
+    ],
+    "basis": "指定された保存レビュー・関連README/出典索引のみ。現在の公開Webや実DBは確認していない。",
+    "new_get_count": 0,
+    "database_read_or_write": false,
+    "production_code_changed": false,
+    "question_registration_performed": false,
+    "outreach_eligibility_or_send_decision": null,
+    "investment_decision": null,
+    "subjective_priority_scores": null,
+    "new_forecasts_or_thresholds": null,
+    "concurrent_135A_presentation_review_incorporated": true
+  },
+  "method": {
+    "references": [
+      "docs/ir-decision-flow.md",
+      "docs/decision-policy.md",
+      ".agents/skills/jp-equity-ir/SKILL.md"
+    ],
+    "upstream_principles": [
+      "公開決算・Q&A等を先に確認し、公表済みの問いは除く",
+      "仮説の支持根拠と反証・変更なしの条件を併記する",
+      "強気/基本/弱気の前提と出典・時点を区別し、未設定の数値・確率を補わない"
+    ],
+    "attribution_boundary": "会社別の分類とJSONは本プロジェクトの適応。Anthropic原典が当該企業の質問・数値条件・投資判断を推奨したとはしない。"
+  },
+  "input_snapshots": [
+    {
+      "path": ".agents/skills/jp-equity-ir/SKILL.md",
+      "sha256": "99df3aeca65f292b8f8b8321944e94d85173c9e1faa6a85e22cdfe2c7b7af682",
+      "byte_count": 19112
+    },
+    {
+      "path": "docs/ir-decision-flow.md",
+      "sha256": "046d6f28ce2560b5a9c37ddf42bca604b89dc65a4ff6107f6b43b74853f08ff5",
+      "byte_count": 4323
+    },
+    {
+      "path": "docs/decision-policy.md",
+      "sha256": "4d39af5c284e8b02138b608a2a310e50c5e268ce2d2f92220888d13b3a76eca3",
+      "byte_count": 10529
+    },
+    {
+      "path": "docs/workflow.md",
+      "sha256": "3673f3af38749289d3f4a8cdf5657d4b2edfaaba7c84c96c5505cd874a561a22",
+      "byte_count": 49439
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/3774/additional-public-review.json",
+      "sha256": "b013650bb601ec7c7fb4c6b0a9974029506389d781b2dc1fd9362c65643b9e26",
+      "byte_count": 10232
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/3774/README.md",
+      "sha256": "c1695ef7b351d5f0468d7bfa9cfb75eb8bef7552edf9ebd8521e37c065f85861",
+      "byte_count": 13846
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/3774/draft.json",
+      "sha256": "9320eb485feaf6b9e3f9216c9cd4131b54de1447be670f006d2285f92a3e5b52",
+      "byte_count": 26052
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/5988/README.md",
+      "sha256": "6948bd633cf5f5f3cf26fab6ea7084c9fc48a14cb919059eeb0ea06c0b44a714",
+      "byte_count": 8665
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/5988/followup-public-review/research-question-draft.json",
+      "sha256": "c33f931af2d35cd4707d1385ccf10ca9f262057e04d17a7ebe2a5679eab1927b",
+      "byte_count": 3370
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/5988/followup-public-review/review.json",
+      "sha256": "d6e1cc60a458dd7575a942b54521e49caeb425f508fb5f89becb6cb76792464d",
+      "byte_count": 52272
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/5988/followup-public-review/README.md",
+      "sha256": "15da353b7c3dddfdb22f8341b3fe3b2caa133484add063ed13b985202caefeb0",
+      "byte_count": 23629
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1332/README.md",
+      "sha256": "87149d8dd1ac6b36a69dc6b7630d971ce2e311a9ace8ecf3a51d3b3d752f1c29",
+      "byte_count": 13984
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1332/sources.json",
+      "sha256": "c4d6bd52e0c0209ac9529800269b9832e4a8b2a9f7d1a8d19146a25c862098f6",
+      "byte_count": 45517
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1332/statement-calendar-followup/review.json",
+      "sha256": "a930a59b0af2839a7ab6ec95c63d10c9ad64b22ac6d6aa8408ad540970f67169",
+      "byte_count": 52531
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/135A/README.md",
+      "sha256": "293eff7aa36b18379466cceffe0e10d7b85bdd70186a29a63dec90e4ab9abeb3",
+      "byte_count": 10282
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/135A/sources.json",
+      "sha256": "1871fbf3a85295ac3143243c074480e6711e39c044f06f9ad0b6aea523e623cd",
+      "byte_count": 17535
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/135A/library-followup/review.json",
+      "sha256": "de14723f46083b864a6d7b00ff13bc013aa74e08b08269fd9aef63c59f3179cd",
+      "byte_count": 6516
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/135A/library-followup/sources.json",
+      "sha256": "a13ab5a35c267979a429529222f12092be1f37814dedab6b3a51c81a7061c966",
+      "byte_count": 23077
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/135A/library-followup/README.md",
+      "sha256": "375abad567dcf9708772370b36e7f04be73f63721c1049c2dc935d55c7c98091",
+      "byte_count": 6907
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/135A/presentation-followup/README.md",
+      "sha256": "10fd197fca3f6ac08ddbad4bae18432988262bf80164109e6e8a93e1ee733486",
+      "byte_count": 7925
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/135A/presentation-followup/review.json",
+      "sha256": "16a438e5db8fc13f8f88b1c0dbd36af45b545a4431ee89d94e7e552d2bf10b8f",
+      "byte_count": 7110
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/135A/presentation-followup/sources.json",
+      "sha256": "418d5c2717ae39e0ae761d44f7fee5895e9f33633bd5113027f2a5a6e918d4ac",
+      "byte_count": 22972
+    }
+  ],
+  "companies": [
+    {
+      "security_code": "3774",
+      "company_name": "インターネットイニシアティブ（IIJ）",
+      "saved_public_coverage": {
+        "review_artifacts": [
+          "3774/additional-public-review.json",
+          "3774/README.md",
+          "3774/draft.json"
+        ],
+        "latest_document_in_saved_index": "2026-08-07公表・2027年3月期第1四半期（2026年4〜6月、会社略記1Q26）",
+        "coverage_boundary": "初回8資料と追加4取得先。追加の財務ハイライト2 URLは同一本体で、追加の異なる本文は3件。全Web/TDnet/EDINETの最新性は再検証していない。",
+        "locally_sufficient_for": [
+          "管理CAPEXの除外定義が公開済みであること",
+          "IFRS16によるリース支払CFの区分変更の説明が公開済みであること"
+        ],
+        "not_established": [
+          "当四半期の管理CAPEX現金支払と法定取得支出の全額対応表",
+          "全ての最新開示の網羅",
+          "IR回答で変わる採用済み評価入力"
+        ],
+        "existing_artifact_disposition": "3774-capex-public-review-02はclosed_no_send_insufficient_incremental_value。これは既存履歴であり、本レビューで再開・送信判定しない。"
+      },
+      "next_public_checks": [
+        {
+          "id": "same-period-cash-capex-bridge",
+          "availability": "対象Q1資料と追加資料は保存済み、完全な対応表は保存レビューの範囲で未発見",
+          "action": "Q1の管理CAPEX・法定有形/無形取得支出・助成金・リースを、各原文の対象期と連結範囲を付けて対照表にする。既に確認した一般定義を新たな未解決点に戻さない。",
+          "purpose": "管理指標の除外と現金の増減を区別し、助成金の二重控除やリースの二重計上を検出する。差額を維持/成長投資へ補完しない。",
+          "refs": [
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/3774/additional-public-review.json",
+              "reference_id": "definitions-already-public"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/3774/additional-public-review.json",
+              "reference_id": "cash-capex-numeric-bridge"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/3774/additional-public-review.json",
+              "reference_id": "annual-period-scope"
+            }
+          ]
+        },
+        {
+          "id": "period-and-scope-countercheck",
+          "availability": "FY2025有報の連結/単体注記は保存済み",
+          "action": "前年度有報の現金CAPEX・非資金リース・単体助成金収入を、当期Q1の連結CFと混ぜていないか点検する。同額という理由だけで同じ経済事象・認識時期としない。",
+          "purpose": "対応先が公表範囲で不明なら不明のまま残す。",
+          "refs": [
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/3774/additional-public-review.json",
+              "reference_id": "annual-noncash-note"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/3774/additional-public-review.json",
+              "reference_id": "standalone-accrual-vs-consolidated-cash"
+            }
+          ]
+        },
+        {
+          "id": "public-event-monitoring",
+          "availability": "次の資料が実際に公表されたことは本レビューでは未確認",
+          "action": "次の実公表資料で同一定義のCAPEX/CFとSI構築・運用保守構成を比較する。保存caseの発表予定を公表済み資料へ読み替えない。",
+          "purpose": "一般的な運用フェーズの高粗利説明を、SI全体から分離した将来利益率へ外挿しない。",
+          "refs": []
+        }
+      ],
+      "conditional_ir_definition_room": [
+        {
+          "topic": "残る当期Q1の管理指標と法定現金取得支出の公表項目対応",
+          "condition_before_reconsideration": "公開対照を終え、実際に利用するモデルのどのCF分類が変わるかを先に示せた場合にだけ再点検する。",
+          "permitted_scope": "既存公開資料・注記の参照先と集計範囲の説明。新たな非公表内訳や将来投資額の保証ではない。",
+          "limit": "既存閉鎖済み草案の再起票や、質問の現在送信適格性を認定しない。"
+        }
+      ],
+      "not_questions_now": [
+        {
+          "topic": "CAPEXの除外定義とIFRS16のCF分類とは何か",
+          "reason": "追加公開資料・FAQで回答済み"
+        },
+        {
+          "topic": "運用フェーズは構築より高粗利か",
+          "reason": "公開Q&Aに一般的説明がある。将来の個別利益率の保証へ広げない"
+        },
+        {
+          "topic": "未解決差額はすべて維持投資か、助成金が今後も続くか",
+          "reason": "差額分類や将来継続性を支持する根拠が不足し、定義の回答から予測を作れない"
+        }
+      ],
+      "model_change_route": {
+        "status": "conceptual_reconciliation_only",
+        "existing_research_target": "research_model.cash_capex_and_nonrecurring_subsidy_reconciliation",
+        "adopted_canonical_valuation_parameter_path": null,
+        "actual_model_input_change_demonstrated": false,
+        "conditional_path": [
+          "公表対応を確認",
+          "CF分類・重複調整の誤りが実際にあるか点検",
+          "一貫したリース/助成金処理のCF入力へ結合"
+        ],
+        "missing": [
+          "採用する評価モデルと実際の入力path",
+          "質問前後で異なる入力と、その根拠・反証条件",
+          "同じ評価時点・市場価格・保有状態・採用方針での回答別比較",
+          "将来CF・割引率・再投資の根拠"
+        ],
+        "not_allowed": [
+          "定義確認だけによるEPS/PER引上げ",
+          "管理CAPEXを法定現金支出へ単純置換"
+        ]
+      },
+      "counterevidence_or_no_change": "公開対応から既存モデルの集計が正しいと分かる場合、分類修正も質問の寄与も不要となる。未解決という事実だけで価値があるとはしない。"
+    },
+    {
+      "security_code": "5988",
+      "company_name": "パイオラックス",
+      "saved_public_coverage": {
+        "review_artifacts": [
+          "5988/README.md",
+          "5988/followup-public-review/review.json",
+          "5988/followup-public-review/research-question-draft.json"
+        ],
+        "latest_document_in_saved_index": "2026-08-05公表・2027年3月期第1四半期短信。追加取得成功の2026年3月期3Q短信は別の旧年度資料。",
+        "coverage_boundary": "元8資料に限定追加3 URL。追加は1成功/2件503で、通期短信と2Q説明会本文は未確認。公開Q&Aは保存索引内で特定できず、不存在とはしない。",
+        "locally_sufficient_for": [
+          "約6億円を一時費用と呼んでいること",
+          "中国東莞の減損337百万円の特別損失区分",
+          "2027年3月期EPS/DPS予想の対象期と配当方針期限"
+        ],
+        "not_established": [
+          "約6億円と337百万円の包含・重複",
+          "子会社の対象期間と連結調整の対応",
+          "全ての最新説明資料/Q&Aの網羅",
+          "将来費用消失を織り込む採用済みモデル"
+        ],
+        "existing_artifact_disposition": "research-only-china-accounting-bridgeは研究用草案。現在モデル値はnull、全分岐のvaluation_changeもnull。"
+      },
+      "next_public_checks": [
+        {
+          "id": "close-public-coverage-gap",
+          "availability": "通期短信/2Q説明会は503応答のみ。追加3Q本文と有報/中計は保存済み",
+          "action": "まず保存済み有報・中計・3Qの同じ費用項目を期間と会計区分で並べる。通期短信/2Q説明会や公開Q&Aが別の許可された取得枠で得られたら、残る対応関係が公開で説明されているか確認する。本レビューは再GETしない。",
+          "purpose": "通信失敗を非開示・回答拒否とせず、既に答えのある問いを再作成しない。",
+          "refs": [
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/5988/followup-public-review/review.json",
+              "reference_id": "china_period"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/5988/followup-public-review/review.json",
+              "reference_id": "china_overlap"
+            }
+          ]
+        },
+        {
+          "id": "china-cost-period-and-classification",
+          "availability": "中計15頁、有報PDF65/70/79頁、追加3Q7/11頁は保存済み",
+          "action": "約6億円の集計科目・子会社・期間、減損337百万円の区分、12月決算子会社と連結調整を分ける。3Qの重要事項なしをゼロや特定四半期の認識へ変換しない。",
+          "purpose": "営業利益と特別損失の二重調整、別期間の混同を検出する。",
+          "refs": [
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/5988/followup-public-review/review.json",
+              "reference_id": "china-six-hundred-context"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/5988/followup-public-review/review.json",
+              "reference_id": "china-impairment-337"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/5988/followup-public-review/review.json",
+              "reference_id": "group-special-loss-classification"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/5988/followup-public-review/review.json",
+              "reference_id": "subsidiary-closing-and-adjustments"
+            }
+          ]
+        }
+      ],
+      "conditional_ir_definition_room": [
+        {
+          "topic": "約6億円と減損337百万円の集計範囲・包含・対象期間の公開説明への橋渡し",
+          "condition_before_reconsideration": "未取得説明資料/Q&Aの確認を進め、どの採用済み利益/CF入力の二重計上を変えるか先に説明できた場合。",
+          "permitted_scope": "既存研究草案の範囲で、公表済み項目の区分・重複・期間と参照箇所を確認する。",
+          "limit": "約6億円を正確な600百万円へ自動変換せず、減損を営業利益へ足し戻さず、翌期費用消失も仮定しない。"
+        }
+      ],
+      "not_questions_now": [
+        {
+          "topic": "一時費用と呼んでいるか、337百万円は何の損失か",
+          "reason": "公開資料で回答済み"
+        },
+        {
+          "topic": "27.45円EPS/92円DPSの対象年度、年間92円以上/配当性向100%方針の期限",
+          "reason": "2027年3月期までという公表説明がある"
+        },
+        {
+          "topic": "2027年3月期後も同じ配当・EPSが必ず続くか",
+          "reason": "将来保証を求める問いであり、定義確認で解消する未開示入力ではない"
+        },
+        {
+          "topic": "拡販KPIを年度売上へ追加できるかという初期案の即時再起票",
+          "reason": "今回の限定追加は中国費用・配当の2論点だけ。KPI定義の解消を本レビューで確認せず、公開点検と実モデルへの寄与も未了"
+        }
+      ],
+      "model_change_route": {
+        "status": "research_parameters_only",
+        "existing_research_targets": [
+          "prior_period_cost_bridge.china_relocation_scope",
+          "prior_period_cost_bridge.overlap_with_impairment",
+          "prior_period_cost_bridge.period_alignment"
+        ],
+        "adopted_canonical_valuation_parameter_path": null,
+        "actual_model_input_change_demonstrated": false,
+        "conditional_path": [
+          "公表集計範囲と認識期間を確認",
+          "過年度営業利益/特別損失/純利益の橋渡しを整理",
+          "税・非支配・株数・将来事業前提が別途そろった場合にだけモデルへの採否を点検"
+        ],
+        "missing": [
+          "採用する評価モデルと実際の入力path",
+          "質問前後で異なる入力と、その根拠・反証条件",
+          "同じ評価時点・市場価格・保有状態・採用方針での回答別比較",
+          "正常化対象と税/非支配持分/株数・再投資の対応"
+        ],
+        "not_allowed": [
+          "約6億円全額の営業利益/EPS足戻し",
+          "337百万円との差引きによる内訳捏造",
+          "92円の永続外挿"
+        ]
+      },
+      "counterevidence_or_no_change": "公表対応で重複や期間差が既に除かれていると判明すれば修正不要。費用の名称が一時的でも、将来費用が消える根拠とは別である。"
+    },
+    {
+      "security_code": "1332",
+      "company_name": "ニッスイ",
+      "saved_public_coverage": {
+        "review_artifacts": [
+          "1332/README.md",
+          "1332/sources.json",
+          "1332/statement-calendar-followup/review.json"
+        ],
+        "latest_document_in_saved_index": "2026-08-06公表・2027年3月期第1四半期。初回補足資料/Q&Aに加え正式短信とカレンダーを保存済み。",
+        "coverage_boundary": "初回5 GETと追加の短信/カレンダー2 URLの範囲。最新性の全市場横断確認や公開説明の網羅ではない。",
+        "locally_sufficient_for": [
+          "日本基準・連結、1Qは2026-04-01〜06-30という期間",
+          "正式な四半期連結CF計算書を作成していないという注記",
+          "補足資料に会社のCF表示があること",
+          "SA/Yadran、事業損益/在池魚評価、工場稼働率の異なる分母に関する公開回答"
+        ],
+        "not_established": [
+          "補足CFをモデルへ結ぶ定義・範囲の十分性",
+          "在池魚部分指標から日本基準連結への数値橋渡し",
+          "買収/為替除外後の前年比較",
+          "全サイクル・再投資・将来CF"
+        ],
+        "calendar_as_saved": {
+          "next_release_date": "2026-11-06",
+          "status": "scheduled_not_actual",
+          "time": null,
+          "change_possible": true
+        }
+      },
+      "next_public_checks": [
+        {
+          "id": "management-cf-definition",
+          "availability": "正式短信PDF13頁/印刷11頁と補足9頁は保存済み",
+          "action": "正式CF計算書未作成という制約を残したまま、補足CF/設備投資/運転資本の算定範囲と単位を読む。減価償却ののれん含む/除く、取得CF・借入返済・非資金項目との区分を対照する。",
+          "purpose": "補足表示を正式CF値・将来アンレバードFCFに置換せず、欠損をゼロで埋めない。",
+          "refs": [
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/1332/statement-calendar-followup/review.json",
+              "reference_id": "cashflow-not-prepared"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/1332/statement-calendar-followup/review.json",
+              "reference_id": "supplement-cf-source"
+            }
+          ]
+        },
+        {
+          "id": "aquaculture-and-scope-bridge",
+          "availability": "補足27頁、正式短信、公開Q&Aは保存済み",
+          "action": "事業損益・在池魚評価・未実現利益調整、SA/Yadranの比較会社範囲を再照合する。当四半期中の連結範囲変更なしと、前年同期比の新規連結影響を別の比較として扱う。",
+          "purpose": "養殖の経済的回復、評価差額、新規連結、為替を一つの持続利益仮説へ混ぜない。",
+          "refs": [
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/1332/statement-calendar-followup/review.json",
+              "reference_id": "supplement-ifrs-submeasure"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/1332/statement-calendar-followup/review.json",
+              "reference_id": "new-subsidiary-yoy"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/1332/sources.json",
+              "reference_id": "qa-fish-profit-split"
+            }
+          ]
+        },
+        {
+          "id": "event-monitoring",
+          "availability": "次回発表/説明会の予定日は保存済み、開催・公表の実績ではない",
+          "action": "予定変更の有無と実公表後の次の短信/補足/Q&Aを確認し、会社目標と実績、比較期・株数・再投資を更新する。本レビューで11月予定の実現を仮定しない。",
+          "purpose": "四半期の増減や黒字化目標を通期正常利益へ転用しない。",
+          "refs": [
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/1332/statement-calendar-followup/review.json",
+              "reference_id": "calendar-year-and-events"
+            }
+          ]
+        }
+      ],
+      "conditional_ir_definition_room": [
+        {
+          "topic": "補足CFの算定範囲と償却・設備投資・取得CFの公表項目対応",
+          "condition_before_reconsideration": "保存済み注記/補足/公開Q&Aを突き合わせても未解決で、使用するCF入力の分類差が実際に残る場合。",
+          "permitted_scope": "既公表の算定方法や参照注記の場所。正式四半期CFがあるという前提では聞かない。",
+          "limit": "新しい将来CFや維持投資額の非公表内訳を求めない。"
+        },
+        {
+          "topic": "在池魚評価・未実現利益調整・SA/Yadran比較と日本基準連結の橋渡し",
+          "condition_before_reconsideration": "部分指標の既存定義では足りない数値対応と、モデル上の使用目的を先に特定できた場合。",
+          "permitted_scope": "公表範囲での含む/除く項目、比較対象会社、対象期間と参照資料。",
+          "limit": "在池魚評価を全額一時要因として除くことや、会社黒字化目標の達成保証へ広げない。"
+        }
+      ],
+      "not_questions_now": [
+        {
+          "topic": "CF資料が一切ないか、連結はIFRSか",
+          "reason": "正式四半期CF未作成と補足CF表示は両立する。連結全体は日本基準と確認済み"
+        },
+        {
+          "topic": "SA/Yadranの影響、Yadran黒字化の会社目標、稼働率25%と導入済みライン稼働率の分母",
+          "reason": "保存済み公開Q&Aに回答がある。目標を実績や売上4倍へ変換しない"
+        },
+        {
+          "topic": "エルニーニョ/魚粉魚油コストの一般的影響、次回発表予定日",
+          "reason": "公開説明とカレンダーに記載がある。予定日を確定実績にしない"
+        },
+        {
+          "topic": "次期営業利益、魚価、飼料費、将来FCFの保証",
+          "reason": "本件の定義差から予測を特定できず、モデル選択・入力・反証条件も未固定"
+        }
+      ],
+      "model_change_route": {
+        "status": "definition_and_comparability_research_only",
+        "adopted_canonical_valuation_parameter_path": null,
+        "actual_model_input_change_demonstrated": false,
+        "conditional_path": [
+          "部分指標の範囲と期間を照合",
+          "比較損益とCFの公表区分を整理",
+          "長期履歴・税/株数・再投資等を別途そろえて採用モデルの入力を点検"
+        ],
+        "missing": [
+          "採用する評価モデルと実際の入力path",
+          "質問前後で異なる入力と、その根拠・反証条件",
+          "同じ評価時点・市場価格・保有状態・採用方針での回答別比較",
+          "連結開始時期・日本基準への調整・全サイクル/現在規模の再投資"
+        ],
+        "not_allowed": [
+          "四半期の年率換算",
+          "在池魚評価を無根拠に全額除外",
+          "補足CFを直接FCFF化"
+        ]
+      },
+      "counterevidence_or_no_change": "同じ範囲の公開定義で差が解消すればIR確認は不要。収益改善が評価差額・連結範囲・為替による場合、同条件の事業改善仮説を再点検する。"
+    },
+    {
+      "security_code": "135A",
+      "company_name": "VRAIN Solution",
+      "saved_public_coverage": {
+        "review_artifacts": [
+          "135A/README.md",
+          "135A/sources.json",
+          "135A/library-followup/review.json",
+          "135A/library-followup/sources.json",
+          "135A/presentation-followup/README.md",
+          "135A/presentation-followup/review.json",
+          "135A/presentation-followup/sources.json"
+        ],
+        "latest_document_in_saved_index": "2026-10-14公表・2027年2月期第2四半期（中間期）短信、日本基準・非連結。取得した決算短信カテゴリー11件の範囲で最新。",
+        "coverage_boundary": "初期5 GET、library-followup3 GETに加え、別担当のpresentation-followup4 GETの保存結果を追補。中間期説明資料49頁・公式一般FAQ・前四半期会社作成Q&A3頁を含む。全カテゴリー/全Webの網羅ではない。",
+        "locally_sufficient_for": [
+          "中間期2026-03-01〜08-31と通期会社予想2026-03-01〜2027-02-28",
+          "4月14日会社予想から変更なしという公表説明",
+          "中間CF本文が保存済みであること",
+          "製造業DX単一セグメントとの会社説明",
+          "継続顧客売上高の式",
+          "各Qの単価が年度内累計平均であること",
+          "日付不明FAQの保守ストック収入なしという説明",
+          "7月1Q Q&Aが会社作成の想定問答であること"
+        ],
+        "not_established": [
+          "中間期Q&Aを含む全公開資料の網羅",
+          "ホームページ90%リピート指標の厳密定義と売上継続性",
+          "適切な評価モデルと長期履歴",
+          "将来EPS/DPS/希薄化/FCF",
+          "次回発表の確定日・時刻"
+        ],
+        "concurrent_work_notice": "追加資料の内容レビューは本追補へ統合済み。親担当の4source照合・実intake作業は本レビューで確認していない。過去snapshotはprior_scope_snapshotへ保持。"
+      },
+      "next_public_checks": [
+        {
+          "id": "reconcile-saved-presentation-metrics",
+          "availability": "中間期説明資料49頁・FAQ・1Q会社作成Q&Aは追加保存済み",
+          "action": "保存された継続顧客売上高の式、受注ベースの累計顧客数、年度内累計単価、案件構成/粗利率・採用/拠点費用の説明を、対象時点・期間・集計単位付きで並べる。7月の会社想定と10月実績/会社予想を分ける。",
+          "purpose": "既に公開された式・期間を重複質問にせず、継続取引・保守/契約収入・顧客数・売上高を異なる指標として保持する。",
+          "refs": [
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/135A/presentation-followup/sources.json",
+              "reference_id": "presentation-repeat-sales-definition"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/135A/presentation-followup/sources.json",
+              "reference_id": "presentation-unit-price-definition"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/135A/presentation-followup/sources.json",
+              "reference_id": "presentation-margins-company-explanation"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/135A/presentation-followup/sources.json",
+              "reference_id": "faq-stock-revenue"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/135A/presentation-followup/sources.json",
+              "reference_id": "qa-prior-q1-repeat-share"
+            }
+          ]
+        },
+        {
+          "id": "align-reported-financial-meaning",
+          "availability": "中間P/L・CF・株数の本文と会社予想表は保存済み",
+          "action": "半期/通期・実績/会社予想・基本/希薄化後EPS・株数・非連結範囲を対照する。中間CFの運転資本/有形取得と営業費用の説明を区別する。",
+          "purpose": "半期CFの2倍や当期黒字から将来CF/通常事業route/young-loss除外を自動認定しない。",
+          "refs": [
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/135A/library-followup/sources.json",
+              "reference_id": "shares-and-caution"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/135A/library-followup/sources.json",
+              "reference_id": "income-comparison-period-and-table"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/135A/library-followup/sources.json",
+              "reference_id": "cashflow-comparison-period-and-table"
+            }
+          ]
+        },
+        {
+          "id": "repeat-kpi-definition",
+          "availability": "初期の90%会社表示、追加の別指標の式/単価定義は保存済み。90%そのものの定義は追加レビューでも未確定。",
+          "action": "追加資料の継続顧客売上高とホームページのDXコンサル90%を分け、90%の分子・分母・期間・対象サービス/顧客コホートが明示されているか保存本文で照合する。画像/全公開資料の確認済みとはしない。",
+          "purpose": "マーケティング指標をARR、継続売上率、解約率、評価倍率へ転用しない。",
+          "refs": [
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/135A/sources.json",
+              "reference_id": "consulting-and-repeat-claim"
+            }
+          ]
+        }
+      ],
+      "conditional_ir_definition_room": [
+        {
+          "topic": "DXコンサル・リピート率90%以上の分子・分母・期間・対象顧客/サービスと、継続顧客売上高指標との関係",
+          "condition_before_reconsideration": "取得済み追加資料とFAQを照合しても未解決で、実際にモデルへ使う売上分類/KPIへの変更経路を特定できた場合。",
+          "permitted_scope": "既公表KPIの定義・測定範囲・参照先。追加で分かった継続顧客売上高の式や単価の集計期間を再質問しない。",
+          "limit": "90%をARR/継続売上率へ変換せず、新規受注額・個別顧客単価・未公表契約・将来成長率を求めない。"
+        }
+      ],
+      "not_questions_now": [
+        {
+          "topic": "最新短信の所在、正式な対象期/会計基準/範囲、CF本文の有無、単一セグメントか",
+          "reason": "library-followupの本文で回答済み。初期READMEの不足を最新状態として再使用しない"
+        },
+        {
+          "topic": "会社通期予想は4月発表から変更されたか",
+          "reason": "短信に変更なしとの公開説明がある"
+        },
+        {
+          "topic": "何を提供する会社か、カレンダーの一般的な月予定",
+          "reason": "初期公式ページで説明済み。月予定から次回具体日を捏造しない"
+        },
+        {
+          "topic": "AI企業だから高成長/循環/赤字成長か、90%以上リピートだから収益が安定するか",
+          "reason": "事業ラベルや定義未確認の指標からモデル・投資結論を作る問いであり、公開資料先行の確認が未了"
+        },
+        {
+          "topic": "継続顧客売上高の算式、単価は四半期単独か/初回と追加導入で決まるか",
+          "reason": "追加説明資料5/6頁とFAQで公開説明を確認済み"
+        },
+        {
+          "topic": "保守ストック収入・一般的納品期間・営業採用から初売上までの会社説明",
+          "reason": "一般FAQの説明がある。日付/母集団不明の平均を全案件・将来入力へ適用しない"
+        },
+        {
+          "topic": "1Qの継続顧客売上比率や製造業顧客リスクに会社が説明しているか",
+          "reason": "7月の会社作成Q&Aにある。ただし中間期の最新回答・最新予測ではない"
+        },
+        {
+          "topic": "中間期の案件構成/粗利率・採用/拠点費用変動の会社説明があるか",
+          "reason": "追加説明資料7頁に説明がある。一過性や持続性はまだ自動認定しない"
+        }
+      ],
+      "model_change_route": {
+        "status": "business_and_metric_definition_only",
+        "adopted_canonical_valuation_parameter_path": null,
+        "actual_model_input_change_demonstrated": false,
+        "conditional_path": [
+          "KPI・売上認識・サービス範囲を確認",
+          "反復性と案件納品の売上分類を整理",
+          "原価/固定費・税/株数・再投資と履歴がそろった場合に採用モデルを点検"
+        ],
+        "missing": [
+          "採用する評価モデルと実際の入力path",
+          "質問前後で異なる入力と、その根拠・反証条件",
+          "同じ評価時点・市場価格・保有状態・採用方針での回答別比較",
+          "複数期間の事業/収益/再投資・資金調達履歴、予想株数/希薄化の前提"
+        ],
+        "not_allowed": [
+          "リピート率を継続売上率/ARRへ置換",
+          "1期会社予想の恒久外挿",
+          "半期CFの年率換算",
+          "継続顧客売上高を保守ストック/ARRへ置換",
+          "年度内累計平均単価を四半期単独単価として使用",
+          "7月1Q想定を10月中間期の再確認と扱う"
+        ]
+      },
+      "counterevidence_or_no_change": "公開された継続顧客売上高の式・単価期間・FAQのストック収入説明により、同じ定義質問は除く。未確定の90%が売上継続性を意味しなければ、将来売上の根拠に使わない。追加で定義が解けても採用済み評価入力の変更はまだ立証されていない。",
+      "prior_scope_snapshot": {
+        "reviewed_at": "2026-10-15T04:56:13.760156+00:00",
+        "notice": "並行取得の完了連絡前に整理した限定snapshot。以下の追補で現在の確認範囲を更新し、過去の未取得表示を履歴として保持。",
+        "saved_public_coverage": {
+          "review_artifacts": [
+            "135A/README.md",
+            "135A/sources.json",
+            "135A/library-followup/review.json",
+            "135A/library-followup/sources.json"
+          ],
+          "latest_document_in_saved_index": "2026-10-14公表・2027年2月期第2四半期（中間期）短信、日本基準・非連結。取得した決算短信カテゴリー11件の範囲で最新。",
+          "coverage_boundary": "初期5 GETにライブラリ限定3 GETを追加。JS/JSONPは索引/導線、本文は短信PDF1件9頁。説明資料追加は別担当進行中で、このレビューへ未統合。",
+          "locally_sufficient_for": [
+            "中間期2026-03-01〜08-31と通期会社予想2026-03-01〜2027-02-28",
+            "4月14日会社予想から変更なしという公表説明",
+            "中間CF本文が保存済みであること",
+            "製造業DX単一セグメントとの会社説明"
+          ],
+          "not_established": [
+            "補足説明資料/公開Q&Aの網羅",
+            "リピート率の定義・売上継続性",
+            "適切な評価モデルと長期履歴",
+            "将来EPS/DPS/希薄化/FCF",
+            "次回発表の確定日・時刻"
+          ],
+          "concurrent_work_notice": "並行する説明追加の取得結果を受領後、本レビューとの差分を点検する。ここに未反映の結果があることを、資料がない・未取得のままで確定と解釈しない。"
+        },
+        "next_public_checks": [
+          {
+            "id": "receive-presentation-review",
+            "availability": "短信表紙は説明資料/説明会ありを示す。指定library-followup時点の本文は未取得で、別担当が追加中",
+            "action": "別担当の説明資料追加結果を受領し、公開Q&A/FAQとともに受注残・納品/売上認識・製品/コンサル構成・採用/拠点費用の説明が既にあるか点検する。重複取得は行わない。",
+            "purpose": "単一セグメントという事実だけで収益の反復性やモデル適合を確定しない。",
+            "refs": [
+              {
+                "artifact": "research/ir-case-studies-2026-10-15/135A/library-followup/sources.json",
+                "reference_id": "identity-and-interim-period"
+              },
+              {
+                "artifact": "research/ir-case-studies-2026-10-15/135A/library-followup/sources.json",
+                "reference_id": "business-and-observed-interim-results"
+              },
+              {
+                "artifact": "research/ir-case-studies-2026-10-15/135A/library-followup/sources.json",
+                "reference_id": "notes-and-single-segment"
+              }
+            ]
+          },
+          {
+            "id": "align-reported-financial-meaning",
+            "availability": "中間P/L・CF・株数の本文と会社予想表は保存済み",
+            "action": "半期/通期・実績/会社予想・基本/希薄化後EPS・株数・非連結範囲を対照する。中間CFの運転資本/有形取得と営業費用の説明を区別する。",
+            "purpose": "半期CFの2倍や当期黒字から将来CF/通常事業route/young-loss除外を自動認定しない。",
+            "refs": [
+              {
+                "artifact": "research/ir-case-studies-2026-10-15/135A/library-followup/sources.json",
+                "reference_id": "shares-and-caution"
+              },
+              {
+                "artifact": "research/ir-case-studies-2026-10-15/135A/library-followup/sources.json",
+                "reference_id": "income-comparison-period-and-table"
+              },
+              {
+                "artifact": "research/ir-case-studies-2026-10-15/135A/library-followup/sources.json",
+                "reference_id": "cashflow-comparison-period-and-table"
+              }
+            ]
+          },
+          {
+            "id": "repeat-kpi-definition",
+            "availability": "初期事業ページにDXコンサル欄のリピート率90%以上という会社表示が保存済み、定義は指定レビューで未確定",
+            "action": "追加説明/FAQで母集団・期間・リピートの単位（顧客/案件/売上等）と対象サービスを確認する。受注・納品と継続課金/保守を分ける。",
+            "purpose": "マーケティング指標をARR、継続売上率、解約率、評価倍率へ転用しない。",
+            "refs": [
+              {
+                "artifact": "research/ir-case-studies-2026-10-15/135A/sources.json",
+                "reference_id": "consulting-and-repeat-claim"
+              }
+            ]
+          }
+        ],
+        "conditional_ir_definition_room": [
+          {
+            "topic": "リピート率と受注残/納品・売上計上の定義や対象範囲",
+            "condition_before_reconsideration": "並行追加の説明資料と公開Q&A/FAQで未解決で、実際にモデルへ使う売上分類/KPIとの差分を特定できた場合。",
+            "permitted_scope": "公開されたKPIの分母・期間・対象サービス、公開済み会計上の売上認識・参照箇所に限定する。",
+            "limit": "新規受注額・個別顧客単価・未公表契約・将来成長率を求めず、リピート率から将来売上を計算しない。"
+          }
+        ]
+      },
+      "presentation_followup_addendum": {
+        "incorporated_at": "2026-10-15T04:58:17.930219+00:00",
+        "artifacts": [
+          "135A/presentation-followup/README.md",
+          "135A/presentation-followup/review.json",
+          "135A/presentation-followup/sources.json"
+        ],
+        "new_gets_by_this_review": 0,
+        "scope": "別担当が取得した既存4sourceのレビュー/README/引用索引を読んだ追補。新たな取得や実台帳の検証は行っていない。",
+        "publicly_resolved": [
+          {
+            "topic": "継続顧客売上高",
+            "definition": "当該年度の売上高 − 当該年度の新規顧客からの売上高",
+            "refs": [
+              {
+                "artifact": "research/ir-case-studies-2026-10-15/135A/presentation-followup/sources.json",
+                "reference_id": "presentation-repeat-sales-definition"
+              }
+            ],
+            "limit": "ホームページのDXコンサル90%指標の定義や、顧客識別/集約方法までは示さない。"
+          },
+          {
+            "topic": "AIシステム販売単価",
+            "definition": "各Qの数値は年度内累計の平均販売単価。単独四半期平均ではない。",
+            "refs": [
+              {
+                "artifact": "research/ir-case-studies-2026-10-15/135A/presentation-followup/sources.json",
+                "reference_id": "presentation-unit-price-definition"
+              },
+              {
+                "artifact": "research/ir-case-studies-2026-10-15/135A/presentation-followup/sources.json",
+                "reference_id": "faq-first-vs-repeat-price"
+              }
+            ],
+            "limit": "価格/利益率の将来継続や、1Q/2Qの単純差から単独四半期の平均を作らない。"
+          },
+          {
+            "topic": "保守等のストック収入",
+            "definition": "日付不明のFAQは保守サービス等のストック収入なしと説明し、将来提供は可能性のみ・時期未定。",
+            "refs": [
+              {
+                "artifact": "research/ir-case-studies-2026-10-15/135A/presentation-followup/sources.json",
+                "reference_id": "faq-stock-revenue"
+              }
+            ],
+            "limit": "中間期の独立した会計計測や、永久ゼロの将来仮定へ昇格しない。"
+          }
+        ],
+        "qa_time_and_origin": {
+          "document": "2027年2月期第1四半期決算内容に関する質疑応答",
+          "publication_date": "2026-07-14",
+          "origin": "会社が質問を想定して作成した問答",
+          "latest_interim_answer": false,
+          "refs": [
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/135A/presentation-followup/sources.json",
+              "reference_id": "qa-prepared-by-company"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/135A/presentation-followup/sources.json",
+              "reference_id": "selected-category-latest-explicit-qa-is-prior-q1"
+            },
+            {
+              "artifact": "research/ir-case-studies-2026-10-15/135A/presentation-followup/sources.json",
+              "reference_id": "qa-prior-q1-repeat-share"
+            }
+          ],
+          "limit": "選択カテゴリー24件で最新の明示Q&Aが1Qという範囲。実際の投資家返信、10月中間期の再回答、全カテゴリーでの2Q Q&A不存在を主張しない。"
+        },
+        "still_unknown": "90%以上の分母・分子・計測期間・対象顧客コホート/サービス・更新時点。継続顧客売上の式から逆算しない。",
+        "model_input_change_demonstrated": false
+      }
+    }
+  ],
+  "cross_company_conclusion": {
+    "saved_material_is_not_public_exhaustion": true,
+    "canonical_model_input_change_demonstrated_for_any_company": false,
+    "next_review_gate": "保存資料と並行取得結果で公開回答を照合し、残る不明定義が採用モデルのどの入力をどう変えるかを先に固定する。その後も未設定のシナリオ数値/確率/価格条件は補わない。",
+    "ambiguous_or_no_answer": "回答不能・無回答・公開性不明は事実認定や予想変更をせず、未解決を保持する。"
+  },
+  "limitations": [
+    "公開回答の十分性は指定保存資料の局所的な評価であり、最新Web全体の確認済みフラグではない。",
+    "研究用パラメータ名は本番valuation pathや採用済みの予測ではない。資料の定義が解けても売上/利益/CF予測や倍率を自動更新しない。",
+    "価格・保有・採用方針・モデルが不明なので買い/売り、質問の価値点数、EVSI、目標値、現在の送信適格性を判定していない。",
+    "既存caseの閉鎖/研究草案statusは履歴として参照し、変更・再起票していない。135Aは当初の限定snapshotを保持し、別担当追加レビューの追補を時点付きで統合した。実台帳の取り込み結果は確認していない。"
+  ],
+  "updated_at": "2026-10-15T04:58:17.930219+00:00"
+}

@@ -1,0 +1,130 @@
+{
+  "security_code": "212A",
+  "company_name": "フィットイージー",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "サービス業",
+  "investigation_status": "confirmed",
+  "verification_level": "form_fields_verified",
+  "official_url": "https://fiteasy.co.jp/",
+  "contact_url": "https://fiteasy.co.jp/contact/ir-inquiry/",
+  "channels": [
+    "form"
+  ],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "candidate",
+  "attempted_at": "2026-10-11T04:01:47.625832+00:00",
+  "completed_at": "2026-10-11T04:01:51.671314+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/212A/03.json",
+      "url": "https://fiteasy.co.jp/contact/ir-inquiry/",
+      "retrieved_at": "2026-10-11T04:01:50.715543+00:00",
+      "quote": "※こちらはIR（投資家情報）に関するお問い合わせフォームです。",
+      "http_status": 200,
+      "role": "contact_channel"
+    },
+    {
+      "snapshot": "evidence/212A/03.json",
+      "url": "https://fiteasy.co.jp/contact/ir-inquiry/",
+      "retrieved_at": "2026-10-11T04:01:50.715543+00:00",
+      "quote": "非公開情報に関するご質問（業績予測など）",
+      "http_status": 200,
+      "role": "conditions"
+    },
+    {
+      "snapshot": "evidence/212A/03.json",
+      "url": "https://fiteasy.co.jp/contact/ir-inquiry/",
+      "retrieved_at": "2026-10-11T04:01:50.715543+00:00",
+      "quote": "当社は、決算情報の漏洩を防止し公平性を確保するため、決算期日の翌日から決算発表日までの一定期間を「沈黙期間」としております。 当該期間中のご質問・お問い合わせへの対応につきましては差し控えております。",
+      "http_status": 200,
+      "role": "conditions"
+    },
+    {
+      "snapshot": "evidence/212A/03.json",
+      "url": "https://fiteasy.co.jp/contact/ir-inquiry/",
+      "retrieved_at": "2026-10-11T04:01:50.715543+00:00",
+      "quote": "氏名 * ふりがな * メールアドレス *",
+      "http_status": 200,
+      "role": "conditions"
+    },
+    {
+      "snapshot": "evidence/212A/03.json",
+      "url": "https://fiteasy.co.jp/contact/ir-inquiry/",
+      "retrieved_at": "2026-10-11T04:01:50.715543+00:00",
+      "quote": "ご質問・ご意見 *",
+      "http_status": 200,
+      "role": "conditions"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://fiteasy.co.jp/",
+      "final_url": "https://fiteasy.co.jp/",
+      "snapshot": "evidence/212A/01.json",
+      "retrieved_at": "2026-10-11T04:01:48.609458+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://fiteasy.co.jp/ir/",
+      "final_url": "https://fiteasy.co.jp/ir/",
+      "snapshot": "evidence/212A/02.json",
+      "retrieved_at": "2026-10-11T04:01:49.623989+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://fiteasy.co.jp/contact/ir-inquiry/",
+      "final_url": "https://fiteasy.co.jp/contact/ir-inquiry/",
+      "snapshot": "evidence/212A/03.json",
+      "retrieved_at": "2026-10-11T04:01:50.715543+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [
+    "IR専用フォーム。氏名・ふりがな・メール・質問本文が必須表示。JavaScript利用の案内あり。",
+    "非公開情報、重要事実、株式市場の値動き、誹謗中傷、営業・勧誘には回答できない場合がある。",
+    "決算期日の翌日から決算発表日までの一定期間が沈黙期間で、当該期間の質問・問い合わせへの対応を控える。本人・連絡先を確認できない場合も回答しない。"
+  ],
+  "limitations": [
+    "公開ページの保存済みGET証拠による確認。フォーム入力・送信、メール到達、実返信は未検証。",
+    "窓口の確認は投資適性、業績・株価の評価や個人への回答保証を示さない。"
+  ],
+  "discovery": {
+    "security_code": "212A",
+    "official_url": "https://fiteasy.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "フィットイージー",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/212A/01.json",
+      "normalized_name": "フィットイージー",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/212A/02.json",
+      "normalized_name": "フィットイージー",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/212A/03.json",
+      "normalized_name": "フィットイージー",
+      "security_code_observed": false
+    }
+  ],
+  "classification_version": 2,
+  "successful_official_page_count": 3,
+  "manual_review": {
+    "reviewer": "codex_audit_alpha",
+    "reviewed_at": "2026-10-11T04:11:06.696471+00:00",
+    "notes": "IR専用本文と同一formのemail型control/textareaを確認。JS注意文があっても実HTMLに入力欄は保存されている。条件付き回答制限と沈黙期間を記録し全個別回答なしとしない。"
+  }
+}

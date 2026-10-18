@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "status": "calculation_only",
+  "prediction_ref": "synthetic:prediction:one",
+  "observation_ref": "synthetic:observation:one",
+  "definition_ref": "synthetic:signal-definition:v1",
+  "categories": [
+    "synthetic_signal_a",
+    "synthetic_signal_b",
+    "synthetic_signal_c"
+  ],
+  "probabilities": {
+    "synthetic_signal_a": "0.2",
+    "synthetic_signal_b": "0.5",
+    "synthetic_signal_c": "0.3"
+  },
+  "observed_category": "synthetic_signal_b",
+  "brier_loss": {
+    "status": "finite",
+    "value": "0.38",
+    "convention": "multiclass_sum_squared_error"
+  },
+  "log_loss": {
+    "status": "finite",
+    "value": "0.69314718055994530941723212145817656807550013436025525412068000949339362196969472",
+    "unit": "nats"
+  },
+  "arithmetic": {
+    "brier": "exact_decimal",
+    "logarithm": "decimal_ln",
+    "log_precision_digits": 80,
+    "log_rounding": "ROUND_HALF_EVEN"
+  },
+  "verification": {
+    "references_resolved": false,
+    "prior_prediction_verified": false,
+    "observation_eligibility_verified": false,
+    "calibration_verified": false
+  },
+  "limitations": [
+    "References are supplied declarations; this function does not access storage or verify timing, category meaning, state labels or observation eligibility.",
+    "A single score does not establish calibration, independent samples, population accuracy, IR information value or investment performance.",
+    "No probability estimation, default probabilities, score threshold or investment decision is supplied."
+  ]
+}

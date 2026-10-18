@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "company_id": "jp:1332",
+  "recorded_at": "2026-10-15T07:18:47.873323+00:00",
+  "status": "bounded_public_source_review_complete_issue_unresolved",
+  "issue_id": "wc-component-bridge",
+  "inherited_review": "../cashflow-scope-review/review.json",
+  "inherited_question_readiness": "../../ir-question-readiness-review-v2.json",
+  "findings": [
+    {
+      "id": "company-supplement-placement",
+      "status": "confirmed_issuer_explanation",
+      "evidence": [
+        "supp9-period-unit",
+        "supp9-working-capital",
+        "supp9-fcf-financing"
+      ],
+      "finding": "会社Q1補足の連結CF表では「南米養殖会社の取得による長期買掛金返済」を運転資本行の説明に置く。借入金・CPの増減行は別。",
+      "limitation": "運転資本全体▲111億円を長期買掛金単独の返済額としない。正式CF分類や経済的な負債性の立証には足りない。"
+    },
+    {
+      "id": "contractual-nature",
+      "status": "unresolved",
+      "evidence": [
+        "supp9-working-capital",
+        "qa-sa-yadran"
+      ],
+      "finding": "取得によるという表現は確認できるが、契約上の相手方、取得対価の繰延/取得会社の仕入債務等の内容、金利・支払条件、返済額内訳を今回の保存本文で特定できない。",
+      "limitation": "Yadran等の事業説明と当該債務を推測で結び付けない。候補となる法的内容は事実ではない。"
+    },
+    {
+      "id": "statutory-cashflow-classification",
+      "status": "unresolved",
+      "evidence": [
+        "statement13-cf-note",
+        "statement9-liabilities-scope"
+      ],
+      "finding": "当Q1の四半期連結CF計算書は未作成と正式短信が明記。補足CFとの両立は確認できるが、個別返済の正式CF区分との照合は未解決。",
+      "limitation": "連結BSの支払手形及び買掛金/その他/長期借入金の残高から支払額や科目を逆算しない。"
+    },
+    {
+      "id": "annual-document-availability",
+      "status": "explicit_link_confirmed_body_not_obtained",
+      "evidence": [
+        "annual-link-literal",
+        "annual-link-label",
+        "annual-index-period",
+        "robots-exact-body"
+      ],
+      "finding": "公式索引上の第111期（2025年度）有報リンクと第111期（2026年3月期）節見出しを確認。PDFはrobots guardによりHTTP前停止したため本文・注記・CF分類は未読。",
+      "limitation": "リンク表示を年次本文の確認や財務裏付け追加としない。年度値によるQ1 bridgeの補完は0。"
+    },
+    {
+      "id": "valuation-treatment",
+      "status": "not_adopted",
+      "operating_working_capital_treatment": null,
+      "debt_treatment": null,
+      "finding": "補足表での会社説明と評価モデル上のoperating/debt区分は別の判断。契約・会計の根拠が不足し今回はいずれも採用しない。"
+    }
+  ],
+  "publicly_answered_points_not_to_repeat": [
+    "「長期買掛金」が「長期借入金」の誤記かという前提では聞かない。会社は別行に表示している。",
+    "会社補足のどの欄に説明があるか、当Q1正式CFが作成されているかは保存公開資料で回答済み。"
+  ],
+  "remaining_public_evidence_need": "当該長期買掛金の内容・支払条件・対象/個別額・会社の正式CF区分との対応を示す公表説明。今回年次PDF本文は取得していないため既答判定できない。",
+  "ir_candidate_registration": false,
+  "ir_question_sent": false,
+  "model_adopted": false,
+  "financial_inputs_verified": false,
+  "new_normalized_facts": 0,
+  "database_writes": 0,
+  "route_sources_recommended_for_db_ingestion": false,
+  "robots_observation": {
+    "raw_body": "User-Agent: *\r\nDisallow: /",
+    "contains_literal_backslash_r_backslash_n": false,
+    "contains_actual_crlf": true,
+    "parser": "urllib.robotparser.RobotFileParser.parse(raw_text.splitlines()); can_fetch(ir-agent-public-research, annual_url)",
+    "allowed": false,
+    "http_pdf_attempted": false,
+    "interpretation": "今回guardが許可を返さないため停止した取得経路観測。PDFのサーバ拒否/503等を観測したわけではない。原バイトは実CRLFであり、User-Agent * に対するDisallow /を確認した。",
+    "historical_rules_or_awareness_backdated": false
+  },
+  "latest_financial_disclosure_completeness_verified": false,
+  "notes": [
+    "保存済み7原典の限定語句検索であり、全公表資料に説明がないと断定しない。",
+    "同一補足PDFの表・説明文・再引用は独立した財務裏付けではない。",
+    "取得時点のrobots観測を以前のGET時点へ遡及しない。",
+    "予測FCFF/税率/ROIC/買売判断/正式IR質問は作成していない。"
+  ]
+}

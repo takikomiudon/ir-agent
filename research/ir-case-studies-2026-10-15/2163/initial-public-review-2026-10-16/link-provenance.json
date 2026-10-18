@@ -1,0 +1,85 @@
+{
+  "performed_requests": [
+    {
+      "role": "issuer_robots",
+      "url": "https://www.artner.co.jp/robots.txt",
+      "basis": "robots endpoint on selected official host"
+    },
+    {
+      "role": "issuer_root",
+      "url": "https://www.artner.co.jp/ir/",
+      "basis": "selected CSV official_url (IR entry, not guessed corporate domain root)"
+    },
+    {
+      "role": "latest_Japanese_Q2_statement",
+      "url": "https://www.artner.co.jp/asset-ir/download_file/2027_q2.pdf",
+      "literal_anchor": {
+        "url": "https://www.artner.co.jp/asset-ir/download_file/2027_q2.pdf",
+        "href": "https://www.artner.co.jp/asset-ir/download_file/2027_q2.pdf",
+        "label": "2027年1月期 第2四半期決算短信〔日本基準〕（連結）［PDF 170 KB/9 ページ］"
+      },
+      "source_capture_sequence": 2,
+      "source_capture_pointer": "$.html_visible_text.links[433]",
+      "source_raw_sha256": "b4464f1cedbb6484bae5a80a48e6a62a7c828257ab45c324e2827c1b767fa0ce",
+      "host_not_held": true,
+      "robots_can_fetch": true
+    }
+  ],
+  "root_IR_entry_direct_statement_link_avoided_unnecessary_index_GET": true,
+  "unattempted_candidates": [
+    {
+      "capture": "02.json",
+      "source_id": "case-public:8762d25f40e325fb193be63e274436f94ed3cdbb7171d98974234b1325c0061e",
+      "pointer": "$.html_visible_text.links[98]",
+      "literal_anchor": {
+        "url": "https://www.artner.co.jp/ir/other/faq/",
+        "href": "/ir/other/faq/",
+        "label": "よくあるご質問"
+      },
+      "GET_attempted": false,
+      "body_verified": false,
+      "reason": "Preserved next public-reading candidate, no extra GET or meaning from label"
+    },
+    {
+      "capture": "02.json",
+      "source_id": "case-public:8762d25f40e325fb193be63e274436f94ed3cdbb7171d98974234b1325c0061e",
+      "pointer": "$.html_visible_text.links[434]",
+      "literal_anchor": {
+        "url": "https://www.artner.co.jp/asset-ir/download_file/27.2q_supplementation.pdf",
+        "href": "https://www.artner.co.jp/asset-ir/download_file/27.2q_supplementation.pdf",
+        "label": "2027年1月期 第2四半期決算短信〔日本基準〕（連結）【補足説明資料】［PDF 1.18 MB/22 ページ］"
+      },
+      "GET_attempted": false,
+      "body_verified": false,
+      "reason": "Preserved next public-reading candidate, no extra GET or meaning from label"
+    },
+    {
+      "capture": "02.json",
+      "source_id": "case-public:8762d25f40e325fb193be63e274436f94ed3cdbb7171d98974234b1325c0061e",
+      "pointer": "$.html_visible_text.links[428]",
+      "literal_anchor": {
+        "url": "https://www.artner.co.jp/news/news-release/20260616/",
+        "href": "https://www.artner.co.jp/news/news-release/20260616/",
+        "label": "株式分割及び定款の一部変更並びに配当予想の修正に関するお知らせ"
+      },
+      "GET_attempted": false,
+      "body_verified": false,
+      "reason": "Preserved next public-reading candidate, no extra GET or meaning from label"
+    },
+    {
+      "capture": "02.json",
+      "source_id": "case-public:8762d25f40e325fb193be63e274436f94ed3cdbb7171d98974234b1325c0061e",
+      "pointer": "$.html_visible_text.links[404]",
+      "literal_anchor": {
+        "url": "https://www.artner.co.jp/ir/filings-reports/briefings/",
+        "href": "https://www.artner.co.jp/ir/filings-reports/briefings/",
+        "label": "アナリスト・機関投資家向け説明会(2026年9月17日開催)資料・動画を掲載いたしました。"
+      },
+      "GET_attempted": false,
+      "body_verified": false,
+      "reason": "Preserved next public-reading candidate, no extra GET or meaning from label"
+    }
+  ],
+  "public_QA_distinction": "IRFAQ link98 is a candidate body not yet acquired. Statementp2 promises postmeeting mainQA publication; saved root meeting-material notice404 is a label, not verified QA or event completion. Corporate/recruitment FAQ links distinct.",
+  "further_GETs_planned": 0
+}

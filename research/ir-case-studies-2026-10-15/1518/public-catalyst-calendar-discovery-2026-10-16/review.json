@@ -1,0 +1,127 @@
+{
+  "recorded_at": "2026-10-16T11:07:37.717025+00:00",
+  "company_id": "jp:1518",
+  "status": "saved_source_reuse_only",
+  "new_GETs": 0,
+  "new_source_objects": 0,
+  "source_records": [
+    {
+      "source_id": "case-public:33cee2019efecf72b0f431fc9c73c953d6a39b71b4d0a7f583de1c767b7fffb8",
+      "source_snapshot_sha256": "1b918de7056fc8589b9c2fa16325cd053667a33910d84a299eec9a27f29da5cd",
+      "whole_object_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1518/catalyst-calendar-followup/source-bundle.json",
+        "sha256": "6ac2bf0386cb65c477d2bc6b0b353b7fee86781881c97166c672cf97388580a5"
+      },
+      "whole_object_pointer": "$.sources[0]",
+      "url": "https://www.mitsui-matsushima.co.jp/ir/calendar/",
+      "original_retrieved_at": "2026-10-15T11:03:11.705850+00:00",
+      "published_at": null,
+      "first_saved_at": "2026-10-15T11:21:42.343482+00:00",
+      "first_save_basis": "Preserved existing trusted_insert receipt in saved historical report; not re-observed from actual DB now.",
+      "saved_receipt_ref": {
+        "path": "research/ir-research-monitoring-integration-2026-10-15/actual-report-v19.json",
+        "sha256": "a66a199aa4711a149b7ab7cdff1ec93a5a2ebcdd2ff64495405118790cc227eb"
+      },
+      "saved_receipt_pointer": "$.cases[1].sources[0].lineage_checks[0].current_availability.availability.receipt",
+      "reingested": false
+    },
+    {
+      "source_id": "case-public:bd2c9dcf183df604cd98592aa3546c229a5f8e85b0c8327480ddbae5e5bd2468",
+      "source_snapshot_sha256": "51d9069c1224f6e2e8dcd5b06c2f8d69ea4a9065cbcc2cf4f7822eef25e63000",
+      "whole_object_ref": {
+        "path": "research/ir-jpx-earnings-schedule-review-2026-10-15/company-scoped-sources/1518/source-bundle.json",
+        "sha256": "b9b675829766f9396f1df8f0f16b2f0bccc161349761e2b06bb302302caa08f7"
+      },
+      "whole_object_pointer": "$.sources[0]",
+      "url": "https://www.jpx.co.jp/listing/event-schedules/financial-announcement/tvdivq0000001ofb-att/kessan09_1009.xlsx",
+      "original_retrieved_at": "2026-10-15T11:11:18.128793+00:00",
+      "published_at": null,
+      "first_saved_at": "2026-10-15T11:22:31.894248+00:00",
+      "first_save_basis": "Preserved existing trusted_insert receipt in saved historical report; not re-observed from actual DB now.",
+      "saved_receipt_ref": {
+        "path": "research/ir-research-monitoring-integration-2026-10-15/actual-report-v19.json",
+        "sha256": "a66a199aa4711a149b7ab7cdff1ec93a5a2ebcdd2ff64495405118790cc227eb"
+      },
+      "saved_receipt_pointer": "$.cases[1].sources[2].lineage_checks[0].current_availability.availability.receipt",
+      "reingested": false
+    }
+  ],
+  "author_reference": {
+    "original_author": "Anthropic catalyst-calendar",
+    "original_quote": "Earnings dates shift — verify against company IR pages and Bloomberg/FactSet closer to the date",
+    "project_adaptation": "Separate issuer schedule/release/presentation, historical lists, occurrence and outcome; no inferred exact timing, impact grades, position or exit deadline.",
+    "references": [
+      {
+        "path": "third_party/anthropic/skills/catalyst-calendar/SKILL.md",
+        "sha256": "12ac4ae7659ab848a8910dfceadab5b21479f23c8d3e0c57a3f5bf814bcf8186"
+      },
+      {
+        "path": "docs/catalyst-monitor-design.md",
+        "sha256": "00df130938614a0ab5f82d81a83c9ca0e7674b8f3cac14d8c7573449213b80e6"
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/1975/catalyst-schedule-connection-2026-10-16/source-and-mapping.json",
+        "sha256": "8d52570df3e004109c296925ae23720d8e7216ca077ebe780d543d201c3415dd"
+      }
+    ]
+  },
+  "issuer_calendar": {
+    "meaning_scope": "Calendar historical FY2026 and prior-year FY2025 disclosure lists; existing reviewed annual image reused as image-review assertion, not reinterpreted as precise date.",
+    "latest_historical_entry": "2026-08-07 / 2027年3月期第1四半期",
+    "next_concrete_issuer_scheduled_date": null,
+    "next_presentation_date": null,
+    "time": null,
+    "timezone": null,
+    "quiet_period_rule": null,
+    "quiet_period_start": null,
+    "quiet_period_end": null,
+    "current_quiet_period": null,
+    "annual_image_existing_review_ref": {
+      "path": "research/ir-case-studies-2026-10-15/1518/annual-calendar-image-review/review.json",
+      "sha256": "af590c9b359c1d9f7ad53f11b32e3a076c89a6e399b8b2dc97ada29e41514aa6"
+    },
+    "annual_image_known_read_scope": {
+      "annual_month_pattern_visible": true,
+      "specific_calendar_year_visible": false,
+      "specific_day_visible": false,
+      "quiet_or_silent_period_label_visible": false,
+      "diagram_year": null,
+      "next_earnings_target_period": null,
+      "next_earnings_date": null,
+      "next_earnings_time": null,
+      "timezone": null,
+      "quiet_period_rule": null,
+      "current_quiet_period": null,
+      "following_FY2026_section_used_to_date_image": false,
+      "company_has_no_quiet_period_asserted": false
+    },
+    "not_reset_to_unread": true
+  },
+  "separate_existing_jpx_schedule": {
+    "event_request_id": "jp:1518:jpx-20261008-fy2027-q2-release",
+    "source_id": "case-public:bd2c9dcf183df604cd98592aa3546c229a5f8e85b0c8327480ddbae5e5bd2468",
+    "dataset_asof": "2026-10-08",
+    "kind": "earnings_release",
+    "scheduled_date": "2026-11-13",
+    "fiscal_year_end": "2027-03-31",
+    "raw_quarter_label": "第２四半期 / Second quarter",
+    "date_basis": "Existing exact-code XLSX row; Excel1900 serial conversion already disclosed, not literal printed ISO dates.",
+    "time": null,
+    "timezone": null,
+    "scheduled_at": null,
+    "due": null,
+    "occurrence": "not_established",
+    "current_unchanged_schedule_reverified": false,
+    "source_is_company_calendar": false,
+    "new_schedule_registration_or_report": false
+  },
+  "next_public_check_purpose": "Read next Q2 issuer results for existing operating/investment profit drivers, consolidation/acquisition timing and comparable reporting basis; neither event occurrence nor future results guaranteed.",
+  "boundaries": {
+    "management_date": "2027-01-15",
+    "management_date_is_company_event": false,
+    "user_one_year_is_exit_deadline": false,
+    "old_case_conditions_changed": false,
+    "financial_adoption": false,
+    "DB_accesses": 0
+  }
+}

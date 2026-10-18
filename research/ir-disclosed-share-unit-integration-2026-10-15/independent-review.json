@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T15:29:08.258826+00:00",
+  "status": "bounded_independent_share_units_review_pass",
+  "findings": [],
+  "scope": "Five unit factors, one docstring, new8 tests/doc, and legacy test responsibility transfer only; no consumer or broad financial audit.",
+  "production_review": {
+    "code_sha256": "0b65d28b6d8ad17824b364c4997f8f94b7aab987cd431a5657aa1b7ae6d57cca",
+    "old_table_pairs": 14,
+    "new_pairs": [
+      {
+        "raw_unit_label": "shares",
+        "canonical_unit": "shares",
+        "multiplier": "1"
+      },
+      {
+        "raw_unit_label": "株",
+        "canonical_unit": "shares",
+        "multiplier": "1"
+      },
+      {
+        "raw_unit_label": "千株",
+        "canonical_unit": "shares",
+        "multiplier": "1000"
+      },
+      {
+        "raw_unit_label": "万株",
+        "canonical_unit": "shares",
+        "multiplier": "10000"
+      },
+      {
+        "raw_unit_label": "百万株",
+        "canonical_unit": "shares",
+        "multiplier": "1000000"
+      }
+    ],
+    "whole_table_exact_before_plus_five": true,
+    "all_other_production_AST_exact_except_authorized_docstring": true,
+    "schema_version_normalization_version_and_source_identity_algorithm_unchanged": true,
+    "consumer_workflow_and_old_spec_files_unchanged": [
+      "tests/test_disclosed_facts.py",
+      "src/ir_agent/model_inputs.py",
+      "src/ir_agent/valuation.py",
+      "docs/workflow.md",
+      "docs/explicit-equity-bridge-spec.md"
+    ]
+  },
+  "test_review": {
+    "new_methods_read": [
+      "test_exact_scaling_preserves_raw_labels_definition_and_unverified_meaning",
+      "test_zero_fraction_and_sign_not_clamped_or_restricted_to_positive_integers",
+      "test_dimensions_and_unregistered_aliases_are_not_inferred",
+      "test_same_quote_and_source_review_time_guards_remain_required",
+      "test_reproduction_identity_and_arithmetic_tampering_keep_originals_immutable",
+      "test_model_numeric_match_is_not_meaning_probability_or_valuation_adoption",
+      "test_same_numeric_count_does_not_merge_period_end_average_or_net_definitions",
+      "test_legacy52_full_bundle_hashes_and_ids_and_existing_oku_outputs_unchanged"
+    ],
+    "legacy_oku_fixture_loop_and_all_assertions_source_byte_equal": true,
+    "whole_table_assert_responsibility": "Old test now exactly pins currency/ratio14 projection. New test compares whole registry to before14 plus exactly5. No additional pairs can silently bypass both.",
+    "assertions_weakened": false,
+    "old52_fixture_hash_ID_content_request_loop_not_rerun": true,
+    "producer_reported_target_pass": 41,
+    "full_suite_runs": 0
+  },
+  "independent_probe": {
+    "path": "research/ir-disclosed-share-unit-integration-2026-10-15/independent-probe.py",
+    "sha256": "b03564dee4af8a8a091546c7dd3f442263991bbf2ca4494c3ad3dc24a25a15d9",
+    "result": {
+      "status": "bounded_independent_share_unit_probe_pass",
+      "five_factors": [
+        {
+          "label": "shares",
+          "canonical_unit": "shares",
+          "factor": "1",
+          "value": "7.125",
+          "independent_Fraction_equal": true
+        },
+        {
+          "label": "株",
+          "canonical_unit": "shares",
+          "factor": "1",
+          "value": "7.125",
+          "independent_Fraction_equal": true
+        },
+        {
+          "label": "千株",
+          "canonical_unit": "shares",
+          "factor": "1000",
+          "value": "7125.000",
+          "independent_Fraction_equal": true
+        },
+        {
+          "label": "万株",
+          "canonical_unit": "shares",
+          "factor": "10000",
+          "value": "71250.000",
+          "independent_Fraction_equal": true
+        },
+        {
+          "label": "百万株",
+          "canonical_unit": "shares",
+          "factor": "1000000",
+          "value": "7125000.000",
+          "independent_Fraction_equal": true
+        }
+      ],
+      "missing_zero_sign": [
+        {
+          "raw": "0",
+          "normalized": "0"
+        },
+        {
+          "raw": "△2.75",
+          "normalized": "-2750.00"
+        },
+        {
+          "raw": "+0.0001",
+          "normalized": "0.1000"
+        },
+        {
+          "raw": null,
+          "normalized": null
+        },
+        {
+          "raw": "-",
+          "normalized": null
+        }
+      ],
+      "rejected_dimension_or_alias_pairs": [
+        [
+          "株",
+          "JPY"
+        ],
+        [
+          "円",
+          "shares"
+        ],
+        [
+          "million shares",
+          "shares"
+        ]
+      ],
+      "unquoted_numeric_token_rejected": true,
+      "new_reproduction_succeeds": true,
+      "older_build_new_pair_needs_review": true,
+      "later_retrieval_does_not_change_ID_content_metadata": true,
+      "tampered_factor_and_missing_origin_need_review": true,
+      "old_oku_full_outputs_deep_equal_all_four_kinds": [
+        "external_estimate",
+        "general_explanation",
+        "issuer_guidance",
+        "reported_fact"
+      ],
+      "whole_mapping_table_delta_exactly_five": true,
+      "requests_and_original_sources_unchanged": true,
+      "financial_meaning_unreviewed_and_no_valuation_assignment": true,
+      "execution": {
+        "GETs": 0,
+        "Store_or_DB_constructors": 0,
+        "actual_DB_accesses": 0,
+        "producer_tests_rerun": 0,
+        "full_suite_runs": 0,
+        "production_or_old_artifact_edits": 0
+      },
+      "limits": [
+        "Synthetic unit tokens only; no real share definition, period, ownership or valuation denominator adopted.",
+        "Old52 saved fixture loop was reviewed for unchanged assertions, not independently rerun."
+      ]
+    }
+  },
+  "semantic_boundaries": {
+    "unit_conversion_only": true,
+    "raw_token_label_quote_period_definition_scope_preserved": true,
+    "missing_not_zero_sign_and_fraction_not_clamped": true,
+    "reproduction_is_not_semantic_approval": true,
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "valuation_parameter_assignment_created": false,
+    "new_thesis_model_or_forecast": false,
+    "required_further_review": [
+      "issued including treasury versus treasury-excluded",
+      "period-end versus weighted-average or diluted",
+      "target ordinary-share claim and period/date basis",
+      "valuation denominator suitability"
+    ],
+    "author_project_attribution": "Damodaran share denominator principle is an existing cited method reference. These five unit labels/factors are project data shaping, not an author investment rule or actual share-definition adoption."
+  },
+  "freeze_checks": {
+    "start_live_four_files_equal_after_copy_and_SHA": true,
+    "end_live_four_files_equal_after_copy_and_SHA": true,
+    "files": [
+      {
+        "path": "src/ir_agent/disclosed_facts.py",
+        "sha256": "0b65d28b6d8ad17824b364c4997f8f94b7aab987cd431a5657aa1b7ae6d57cca",
+        "bytes": 18471,
+        "live_frozen_copy_manifest_equal": true
+      },
+      {
+        "path": "tests/test_disclosed_share_units.py",
+        "sha256": "555b4d079e796c0ce7512097c6c51b7cf27ad406e2e48fab6275b5c8a005aa3a",
+        "bytes": 12376,
+        "live_frozen_copy_manifest_equal": true
+      },
+      {
+        "path": "docs/disclosed-share-units.md",
+        "sha256": "7896f53a8122b077372cb1e4fc7f31dbcbbd468c4274521e34f72da2e5a3cf59",
+        "bytes": 2770,
+        "live_frozen_copy_manifest_equal": true
+      },
+      {
+        "path": "tests/test_oku_yen_facts.py",
+        "sha256": "b6e1aa420e94281aeca75e9307d45a1e3beaf0eaacc2f7981dbe5a6b6cda7bbc",
+        "bytes": 7758,
+        "live_frozen_copy_manifest_equal": true
+      }
+    ],
+    "before_full_copies_unchanged": [
+      {
+        "path": "src/ir_agent/disclosed_facts.py",
+        "before_copy_sha256": "b26f5b612b701f3d58abda681d375ebe4db072614e86f4de83bab21b422a866d"
+      },
+      {
+        "path": "tests/test_disclosed_facts.py",
+        "before_copy_sha256": "02b2c6b27d014f64090db225619994a73ec72aa58dad63326c336cb4f5a41323"
+      },
+      {
+        "path": "src/ir_agent/model_inputs.py",
+        "before_copy_sha256": "23aa6ef4146a8bc1fb931f8df81a6914e1d345809f7617d0a37f913a25a6ffe2"
+      },
+      {
+        "path": "src/ir_agent/valuation.py",
+        "before_copy_sha256": "fa2df871f55935d7d8fdf130595c8606fbbcba15bc42d8e92e76b2b2d46c92ec"
+      },
+      {
+        "path": "docs/workflow.md",
+        "before_copy_sha256": "6415612b8dca5bdd3c9070cdacc94117292968ac1c05dc8cbfe63d4395028ec3"
+      },
+      {
+        "path": "docs/explicit-equity-bridge-spec.md",
+        "before_copy_sha256": "877723bc70071ecb56480bebe2e662cf1364c08d61c8f450cfc41bf0971872cd"
+      }
+    ],
+    "additional_test_before_scope_hash_checked": true,
+    "implementation_sha256": "12bcb6f03861ccbd318789fa58dee67c359c30bd7e95c957fe0bafca3785898d",
+    "after_manifest_sha256": "e738d14db91f31a59c7c7c011231dd02e89e962ced30c3cab5e7d2390feb164d"
+  },
+  "execution": {
+    "GETs": 0,
+    "Store_or_DB_constructors": 0,
+    "actual_DB_accesses": 0,
+    "production_or_existing_test_edits": 0,
+    "old_artifact_edits": 0,
+    "producer_tests_rerun": 0,
+    "full_suite_runs": 0
+  },
+  "limits": [
+    "Synthetic token arithmetic and a few controls only; no real135A or other issuer fact was extracted, registered or adopted.",
+    "All52 historical fixtures were not re-normalized by this reviewer; their unchanged byte-level loop and producer result were read, and all four current oku kinds were compared to the frozen pre-change module with independent synthetic values.",
+    "No automatic treasury deduction, EPS inverse, market-cap inversion, positive/integer filter or valuation wiring was added.",
+    "Actual database count101 is parent context; no DB was opened or checked."
+  ]
+}

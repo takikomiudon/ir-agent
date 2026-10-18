@@ -1,0 +1,720 @@
+//■tanshin（決算短信）
+
+//////////////
+// 設定項目 //
+//////////////
+
+
+// パス調整処理
+var eirUrl = ('https:' == document.location.protocol ? 'https://ssl4' : 'http://v4') + '.eir-parts.net';
+
+// true:訂正表示 false:訂正非表示
+var teiseiFlg = true;
+
+// 0:メニューリンク、1:プルダウン、それ以外の時は表示しない
+var yearList = 2;
+
+// true:アンカーリンク表示 false:アンカーリンク非表示(yearList;0,1以外のみに使用可能)
+var ancFlg = false;
+
+// 指定されたJSON・Xmlのファイルから取得した
+// データを保持する変数
+var org_data;
+// 年度アップローダのデータ
+var org_data_2;
+
+// 新着情報アイコンを表示するかしないかの切替フラグ
+var NewIconFlg = true;
+// Newアイコンが表示される上限日付(現在の日時から何日前までかを指定する)
+var NewIconLimit = -"●";
+
+// 西暦=true 和暦=false
+var seiwa = true;
+// 半角=true 全角=false
+var z2h = true;
+
+var total = 0;
+
+han = new Array(" ","1","2","3","4","5","6","7","8","9","0");
+zen = new Array("　","１","２","３","４","５","６","７","８","９","０");
+
+function zen2han(text){
+	if(z2h){
+		for(var ii=0;ii<zen.length;ii++){
+			var regex = new RegExp(zen[ii], "g");
+			text = text.replace(regex, han[ii]);
+		}
+	}
+	return text;
+}
+
+// 半角数字を全角数字に変換して返す関数
+function HankakuToZenkakuNum(numStr) {
+	if(z2h){
+		return numStr;
+	}
+	var zenkaku = "０１２３４５６７８９";
+	var hankaku = "0123456789";
+
+	var retStr = "";
+	for ( var i = 0; i < numStr.length; i++) {
+		chr = numStr.charAt(i);
+		zen = hankaku.indexOf(chr, 0);
+		if (zen >= 0) {
+			chr = zenkaku.charAt(zen);
+		}
+		retStr += chr;
+	}
+	return retStr;
+}
+
+// 西暦を和暦に変換して返す関数
+function SeirekiToWareki(ym) {
+	var year = ym.substring(0, 4);
+	var month = new String(new Number(ym.substr(4, 2)));
+	if(seiwa){
+		if (year >= 1989) {
+			return year + "年" + HankakuToZenkakuNum(month) + "月期";
+		}
+		return year + "年" + HankakuToZenkakuNum(month) + "月期";
+	}
+	else{
+		if (year >= 1989) {
+			if ( (year - 1988) == 1){
+				return "平成元年" + HankakuToZenkakuNum(month) + "月期";
+			}
+			else{
+				return year + "年（平成" + (year - 1988) + "年）" + HankakuToZenkakuNum(month) + "月期";
+			}
+		}
+		return "昭和" + (year - 1925) + "年" + HankakuToZenkakuNum(month) + "月期";
+	}
+}
+
+// tanshin_year込み
+function createTyear(data){
+		// tanshin_yearに数字がある場合はイキ、ない場合は設定
+//		if(data.tanshin_year.length > 0){
+			var Tyear = data.tanshin_year;
+//		}
+//		else{
+//			var nen = Number(data.date.substr(0,4));
+//			var tuki = Number(data.date.substr(5,2));
+//			// 書類開示の区切り月判定（表示年度の変わり目）
+//			if(tuki <= Number(kessan) ){
+//			nen = nen-1;
+//			}
+//			
+//			var Tyear = nen +1+ kessan;
+//		}
+	return Tyear;
+}
+
+//------------------------------
+// 年度選択DropDownListの作成
+//------------------------------
+function createSelect(data) {
+	// 年度選択DropDownListの表示領域となる
+	// ルートElementを取得する
+	// ルートElementが見つからない場合は、
+	// 新規作成(<div id='divSelect'>要素)して追加する
+	var elmDiv = document.getElementById('divSelect');
+//	if (null == elmDiv) {
+//		// <div>要素を新規作成
+//		elmDiv = document.createElement('div');
+//		// 新規作成した<div>要素のid属性の設定を行う
+//		elmDiv.id = 'divSelect';
+//		// <body>要素に追加
+//		document.body.appendChild(elmDiv);
+//	}
+
+	// 年度選択DropDownList(<select id='yearSelect' name='yearSelect'>)を取得する
+	var elmSel = document.getElementById('yearSelect');
+	// 年度選択DropDownListが既に存在する場合は
+	// 何も処理をしない
+	if (null != elmSel && undefined != elmSel) {
+		return;
+	}
+
+	// 年度のリストを取得する
+	var arr = GetYearList(data);
+
+	// 年度選択DropDownList(<select id='yearSelect' name='yearSelect'>要素)を新規に作成する
+	elmSel = document.createElement('select');
+	// <select>要素のid属性の設定を行う
+	elmSel.id = 'yearSelect';
+	// <select>要素のname属性の設定を行う
+	elmSel.name = 'yearSelect';
+	elmSel.size = 1;
+	// DropDownList内の項目が切り替えられた時の
+	// イベントハンドラを追加する
+	addEventListenerIR(elmSel, 'change', function(){selIndex()});
+
+	// 各年度の選択項目Element(<option>要素)を新規に作成・追加する
+	for (var year in arr) {
+		elmOpt = document.createElement('option');
+		// Valueの設定
+		elmOpt.value = arr[year];
+		// Textの設定
+		elmOpt.appendChild(document.createTextNode(SeirekiToWareki(arr[year])));
+		// DropDownList(<select>要素)に追加する
+		elmSel.appendChild(elmOpt);
+	}
+
+	// 年度選択DropDownListの表示領域にElementを追加する
+	elmDiv.appendChild(elmSel);
+}
+
+
+//------------------------------
+// 年度メニュー表示
+//------------------------------
+function drawMenuArea(data) {
+	// 年度選択DropDownListの表示領域となる
+	// ルートElementを取得する
+	// ルートElementが見つからない場合は、
+	// 新規作成(<div id='divSelect'>要素)して追加する
+	var elmDivPressLink = document.getElementById('press_link');
+
+	if (null == elmDivPressLink) {
+		return;
+	}
+
+	// プレスリリースの年度リンク作成処理
+	// 年度のリストを取得する
+	var arr = GetYearList(data);
+
+	// ul要素の作成
+	var elmUl = document.createElement('ul');
+	// class属性の設定
+	elmUl.className ='sub';
+	// <div>要素に追加する
+	elmDivPressLink.appendChild(elmUl);
+
+	// 各年度の選択項目Element(<option>要素)を新規に作成・追加する
+	for(var i in arr){
+		// 各年度の選択項目Element(<li>要素)を新規に作成する
+		var elmLi = document.createElement('li');
+		// 各年度のリンクを新規に作成する
+		var elmAYear = CreateAnchorElm(arr[i]);
+		// <li>要素に追加する
+		elmLi.appendChild(elmAYear);
+		// <ul>要素に追加する
+		elmUl.appendChild(elmLi);
+	}
+}
+
+
+//------------------------------
+// 各年度のメニューリンクを作成する
+//------------------------------
+function CreateAnchorElm(year) {
+
+	// 各年度のリンクを新規に作成する
+	var elmAYear = document.createElement('a');
+
+	// hrefの設定
+	elmAYear.href = 'javascript:void(0);';
+
+	// イベントハンドラを追加する
+	addEventListenerIR(elmAYear, 'click', function(){ return YearLink_onclick(year); });
+
+	// Textの設定
+	elmAYear.appendChild(document.createTextNode(SeirekiToWareki(year)));
+
+	return elmAYear;
+}
+
+//------------------------------
+// 年度選択DropDownListの項目が
+// 切り替えられた時のイベントハンドラ
+//------------------------------
+function YearLink_onclick(year) {
+
+	// 表示データの更新を行う
+	drawDataArea(org_data, year);
+
+	return false;
+}
+
+
+//------------------------------
+// JSON/Xmlから取得したデータを表示するメインAPI
+//------------------------------
+function drawDataArea(data, selFy) {
+	// データ表示箇所のルートElementを取得する
+	var elmDiv = document.getElementById('divDataArea');
+	elmDiv.innerHTML = '';
+
+	total = 0;
+	
+	var arr = GetYearList(data);
+
+	if(ancFlg){
+		var elmAncDiv = document.createElement('div');
+		elmAncDiv.id ='ancDiv';
+		var elmAncUl = document.createElement('ul');
+		for(var m in arr){
+			var elmAncLi = document.createElement('li');
+			var elmAnc = document.createElement('a');
+			elmAnc.href = '#ir' + arr[m];
+			elmAnc.appendChild(document.createTextNode(SeirekiToWareki(arr[m])));
+			elmAncLi.appendChild(elmAnc);
+			elmAncUl.appendChild(elmAncLi);
+		}
+		elmAncDiv.appendChild(elmAncUl);
+		elmDiv.appendChild(elmAncDiv);
+	}
+
+	for (var year in arr) {
+		// メニューリンク、プルダウンの場合は、選択した決算期と一致するデータのみ表示
+		if(yearList == 0 || yearList == 1) {
+			if (arr[year] != selFy) {
+				continue;
+			}
+		}		
+		
+		// 決算期表示
+		var elmH3 = document.createElement('h3');
+		elmH3.className ='ttl-cmn-03';
+		elmH3.id = 'ir' + arr[year];
+		elmH3.appendChild(document.createTextNode(SeirekiToWareki(arr[year])));
+		elmDiv.appendChild(elmH3);
+
+		for (var i =0;i<data.item_count;i++) {
+			if (arr[year] == data.item[i].tanshin_year) {
+				// 短信表示
+
+				// 訂正
+				if(teiseiFlg) {			
+					drawTeiseiData(data, data.item[i], selFy, elmDiv);
+				}
+		
+				createData(elmDiv, data.item[i]);
+				total += 1;
+			}
+		}
+	}
+		
+//	}
+
+	// データが１件も存在しない場合
+	if (total == 0) {
+		elmDl.appendChild(document.createTextNode('掲載情報はございません'));
+	}
+}
+
+
+// 適時開示に短信訂正があれば表示する
+function drawTeiseiData(data, tanshinItem, selFy, elm) {
+
+	var q;
+
+	if( zen2han(tanshinItem.tanshin_type).match('第1四半期')){
+		q = '第1四半期';
+	} else if( zen2han(tanshinItem.tanshin_type).match('第2四半期')){
+		q = '第2四半期';
+	} else if( zen2han(tanshinItem.tanshin_type).match('第3四半期')){
+		q = '第3四半期';
+	} else if( zen2han(tanshinItem.tanshin_type).match('個別財務諸表')){
+		q = '個別財務諸表';
+	} else if( zen2han(tanshinItem.tanshin_type).match('個別中間財務諸表')){
+		q = '個別中間財務諸表';
+	} else if( zen2han(tanshinItem.tanshin_type).match('中間決算')){
+		q = '中間決算';
+	} else{
+		q = '通期';
+	}
+			
+	for (x = 0; x < data.item.length; x++) {
+		if (data.item[x].tanshin_year.length == 0) {
+			if (!data.item[x].tanshin_type.match('訂正')){
+				continue;
+			} else if(!data.item[x].tanshin_type.match('短信')
+			 && !data.item[x].tanshin_type.match('財務諸表の概要')
+			  && !data.item[x].tanshin_type.match('業績の概況')){
+				continue;
+			}
+		} else if( data.item[x].tanshin_year.length > 0 ){
+			continue;
+		}
+		
+		var title = zen2han(data.item[x].tanshin_type);
+		var tit = title;
+		if( title.match('年') ){
+			title = title.split('年')[0];
+			if( title.match('平成') ){
+                title = title.split('平成')[1];
+                title = Number(title)+1988;
+            }
+            else if( title.match('令和') && tit.match('元年') ){
+                title = 2019;
+            }
+            else if( title.match('令和') ){
+                title = title.split('令和')[1];
+                title = Number(title)+2018;
+            }
+            else if(title.match(/(\d{4})/)){
+                title = title.match(/(\d{4})/)[1];
+            }
+		}
+		
+		if(title != tanshinItem.tanshin_year.substr(0,4) ){
+			continue;
+		}
+		
+		if(q == '通期'){
+			if(tit.match('第1四半期') || tit.match('第2四半期') || tit.match('第3四半期') || tit.match('個別') || tit.match('中間') ){
+				continue;
+			}
+		} else{
+			if(!tit.match(q) ){
+				continue;
+			}
+		}
+		
+		createData(elm, data.item[x]);
+		
+		total += 1;
+	}
+}
+
+//------------------------------
+// 年月日と加算日からn日後、n日前を求める関数
+//------------------------------
+function GetComputeDate(DaySpan) {
+	myD = new Date();
+	myD = new Date(myD.getFullYear(), myD.getMonth(), myD.getDate() + DaySpan);
+
+	myYear = myD.getFullYear();
+	myMonth = myD.getMonth() + 1;
+	myDate = myD.getDate();
+
+	return myYear.toString() + formatNum(2, myMonth) + formatNum(2, myDate);
+}
+//------------------------------
+// 各表示項目のdateの値(yyyy/MM/dd hh:mm:ss)を
+// yyyyMMddにフォーマットして返す関数
+//------------------------------
+function GetFormatDate(date) {
+	return date.substr(0, 4) + date.substr(5, 2) + date.substr(8, 2);
+}
+//------------------------------
+// 表示桁数のフォーマット関数
+//------------------------------
+function formatNum(keta, num) {
+	var src = new String(num);
+	var cnt = keta - src.length;
+	if (cnt <= 0) return src;
+	while (cnt-- > 0) src = "0" + src; return src;
+}
+
+//------------------------------
+// JSON/Xmlから取得したデータの各項目を表示させる関数
+// 表示データ作成(１データ毎)
+// 【パラメータ】
+// element：
+// item：JSON/Xmlデータの各項目(item)
+//------------------------------
+function createData(element, item) {
+	var elmDl = document.createElement('dl');
+	element.appendChild(elmDl);
+
+	// <dt>要素を新規に作成する
+	var elmDt = document.createElement('dt');
+	// 英語短信の場合はクラス付与
+	if (item.link_tanshin.length > 0) {
+		if(!(item.link_tanshin.match("ir_material_for_fiscal_ym"))){
+			// <dt>要素を新規に作成する
+			var elmDt = document.createElement('dt');
+			// 作成した<dt>要素に各表示項目の「format_date」の値を追加する
+			//	if(item.tanshin_type.match('訂正')){
+			//		elmDt.className = 'teiseiDt';
+			//	}
+			elmDt.appendChild(document.createTextNode(item.format_date));
+			// パラメータで渡されてきた<dl>要素に<dt>要素を追加する
+			elmDl.appendChild(elmDt);
+		}
+	}
+
+	// <dd>要素を新規に作成する
+	var elmDd = document.createElement('dd');
+
+	// 各表示項目の「link_tanshin」の値が設定されている場合は
+	// <dd>要素に<a>要素を追加する
+	// 「link_tanshin」が設定されていない場合は
+	// <dd>要素に各表示項目の「title」の値のみを追加する
+	if (item.link_tanshin.length > 0) {
+		var elmA = document.createElement('a');
+		elmA.href = item.link_tanshin;
+		elmA.target = item.new_target;
+		elmA.appendChild(document.createTextNode( zen2han(item.tanshin_type) ));
+		elmDd.appendChild(elmA);
+	} else {
+		elmDd.appendChild(document.createTextNode( zen2han(item.tanshin_type) ));
+	}
+
+	// ファイルタイプの<img>要素を新規に作成する
+	var elmImg = document.createElement('img');
+	elmImg.setAttribute("src", "/z0y6LaZKWu/wp-content/themes/corporate2017/ir/parts/img/filetype_icon/pdf.gif");
+	elmImg.setAttribute('align', 'absmiddle');
+	elmDd.appendChild(elmImg);
+
+	// ファイルサイズあり
+	if (item.tanshin_size.length > 0) {
+		elmDd.appendChild(document.createTextNode(' [PDF ' + item.tanshin_size + 'KB]'));
+	}
+
+	// 新着情報
+	// 表示切替フラグがtrueで、かつ新着コンテンツの場合に表示
+	var fDate = GetFormatDate(item.date);
+	if (NewIconFlg && fDate >= GetComputeDate(NewIconLimit)) {
+		var elmImg2 = document.createElement('img');
+		elmImg2.setAttribute("src", "/z0y6LaZKWu/wp-content/themes/corporate2017/ir/parts/img/filetype_icon/pdf.gif");
+		elmImg2.setAttribute('align', 'absmiddle');
+		elmDd.appendChild(elmImg2);
+	}
+
+	// コメントが設定されている場合は書き出す
+	if (item.comment.length > 0) {
+		var elmComment = document.createElement('div');
+		elmComment.className = 'comment';
+		elmComment.innerHTML = item.comment;
+		elmDd.appendChild(elmComment);
+	}
+
+	elmDl.appendChild(elmDd);
+}
+
+
+//------------------------------
+// 年度選択DropDownListの項目が
+// 切り替えられた時のイベントハンドラ
+//------------------------------
+function selIndex(index) {
+
+	var year = 0;
+	// 年度選択DropDownList(<select>要素)をIDの値で検索し、
+	// 取得する
+	var elmSel = document.getElementById('yearSelect');
+	if (elmSel != null && elmSel != undefined) {
+		year = elmSel.options[elmSel.selectedIndex].value;
+	}
+	
+	// 表示データの更新を行う
+	drawDataArea(org_data, year);
+}
+
+//------------------------------
+// JSON・Xmlから取得したデータの
+// 年度のリストを取得するためのサポート関数
+//------------------------------
+function GetYearList(data) {
+	// 年度の配列格納用の変数を新規に宣言
+	var arr = new Array();
+
+	// JSON(またはXml)のデータをループして、
+	// 各データの「date」で指定されている値を取得し、
+	// 配列に格納する。
+	for (i = 0; i < data.item.length; i++) {
+		var year = createTyear(data.item[i]);
+		if ((year != "") && (!(year in arr)) ) {
+			arr[year] = year;
+		}
+	}
+	arr.reverse();
+
+	return arr;
+}
+//------------------------------
+// 取得した年度のリストから
+// 最大(または最小)の年度を取得するためのサポート関数
+// 【パラメータ】
+// IsMax：最大(または最小)の切り替えフラグ
+//------------------------------
+function GetMaxOrMinYear(arr, IsMax) {
+	if (IsMax) {
+		// 年度リストを降順に並びかえ
+		arr.reverse();
+	} else {
+		// 年度リストを昇順に並びかえ
+		arr.sort();
+	}
+	return arr[0];
+}
+//------------------------------
+// 【クロスブラウザ対応】
+// 各ブラウザによって、
+// 年度選択DropDownListへのイベントの追加方法が違うため、
+// それをカバーするサポート関数
+// 【パラメータ】
+// Target：イベントの追加対象になるElement
+// type：イベント名から「on」を除いた名前
+// func：イベントが発生した時に実行させる関数
+//------------------------------
+function addEventListenerIR(target, type, func) {
+	if(target.attachEvent) {
+		// 【IE対応】イベント追加処理
+		target.attachEvent("on" + type, func);
+	} else if(target.addEventListener) {
+		// 【FireFox対応】イベント追加処理
+		target.addEventListener(type, func, true);
+	} else {
+		//イベントリスナが使えない場合は on○○ 属性を上書き
+		target["on" + type] = func;
+	}
+}
+
+
+//------------------------------
+// 年度選択DropDownListで
+// 「最新１年分」が指定されている場合に
+// 各データが最新１年のデータかどうか判定するサポート関数
+//------------------------------
+function IsOneYearAgo(CurDate, CompDate) {
+	var y = CompDate.substr(0, 4);
+	var m = CompDate.substr(5, 2);
+	var d = CompDate.substr(8, 2);
+
+	var year = CurDate.getYear();
+	if (year < 2000) year += 1900;
+	var mon = CurDate.getMonth() + 1;
+	var date = CurDate.getDate();
+
+	NewDate = new Date(year - 1, mon, date);
+	if (NewDate <= new Date(y, m, d)) {
+		return true;
+	}
+	return false;
+}
+
+
+
+//------------------------------
+// CallBack関数
+// 【！注意！】
+// この関数の関数名と、
+// JSON・Xmlに記載されているCallBack関数名は
+// 必ず一致するように設定して下さい。
+// また、関数名に「-」が入っている場合は、
+// 「_」などに置き換えて下さい。
+// (「_」は関数名に利用できないため)
+//------------------------------
+
+function eolparts_ir_material_for_fiscal_ym_20(data) {
+	// 取得データが存在しない場合は
+	// 何も処理をせず
+	if (data.item_count <= 0) {
+		org_data_2 = '';
+		return;
+	}
+
+	// グローバル変数にデータを保持しておく
+	org_data_2 = data;
+
+}
+function eolparts_press_1(data) {
+	// 取得データが存在しない場合は
+	// 何も処理をせず
+	if (data.item_count <= 0 || GetYearList(data).length == 0) {
+		org_data = '';
+		document.write('<div style="margin:1em 0;">掲載情報はございません</div>');
+		return;
+	}
+
+	// グローバル変数にデータを保持しておく
+	org_data = data;
+
+	// データの結合
+	var crt_data;
+	for (i=0; i < org_data_2.group.length; i++){
+		for (j=0; j < org_data_2.group[i].item.length; j++){
+			crt_data = {date : org_data_2.group[i].item[j].date,
+				format_date : org_data_2.group[i].item[j].format_date,
+				link_tanshin : org_data_2.group[i].item[j].link,
+				new_target : org_data_2.group[i].item[j].new_target,
+				tanshin_category : "",
+				tanshin_type : org_data_2.group[i].item[j].title,
+				comment : org_data_2.group[i].item[j].comment,
+				tanshin_size : org_data_2.group[i].item[j].file_size,
+				tanshin_year : org_data_2.group[i].fiscal_ym,
+				teisei_item : [],
+				page_num : org_data_2.group[i].page_num,
+				doc_cat : "",
+				type : org_data_2.group[i].type,
+				xbrl_link : "",
+				xbrl_size : "",
+				text : org_data_2.group[i].text,
+				thumbnail_link : "",
+				attachment_count : 0,
+				attachment : []
+			};
+
+			org_data.item.push(crt_data);
+			org_data.item_count = String(Number(org_data.item_count) + Number(1));
+		}
+	}
+	org_data.item.sort(function(a,b){
+		if (a.date > b.date){
+			return -1
+		}
+		if (a.date < b.date){
+			return 1;
+		}
+		return 0;
+	});
+	
+	var yearDiv = document.getElementById('yearList');
+	var fy = '0';
+
+	if(yearList == 0 || yearList == 1) {
+		for (i = 0; i < data.item.length; i++) {
+			if(data.item[i].tanshin_year != '' && data.item[i].tanshin_year != null) {
+				fy = data.item[i].tanshin_year;
+				break;
+			}
+		}
+	}
+
+	switch(yearList){
+		case 0:
+			yearDiv.id = 'press_link';
+			// メニューリンクを生成
+			drawMenuArea(data);
+
+			break;
+		
+		case 1:
+			yearDiv.id = 'divSelect';
+			// プルダウンを生成
+			createSelect(data);
+			break;
+	}
+
+	// 取得データの表示処理
+	drawDataArea(data, fy);
+
+//	if(typeof eirCode == 'undefined'){
+//		alert('eir.jsがリンクされていません');
+//	} else{
+//		var sCode = json.match(/[0-9]{4}/)
+//		if(sCode){
+//			if(sCode[0] != eirCode){
+//				alert('証券コードが間違っています');
+//			}
+//		}
+//	}
+}
+
+// var json = eirPass + 'json/tanshin_test.js';
+// ↓平成元年前後のデータ
+//var json = eirPass + 'json/press_test_r1.js';
+var json = 'http://v4.eir-parts.net/V4Public/EIR/1379/ja/press/press_1.js';
+var json_ym = 'http://v4.eir-parts.net/V4Public/eir/1379/ja/ir_material_for_fiscal_ym/ir_material_for_fiscal_ym_20.js';
+
+if(eirUrl == 'https://ssl4.eir-parts.net'){
+	json = json.replace(/http\:\/\/v4/, 'https://ssl4');	
+	json_ym = json_ym.replace(/http\:\/\/v4/, 'https://ssl4');	
+}
+document.write('<script type="text/javascript" src="'+ json_ym +'" charset="UTF-8"></script>');
+document.write('<script type="text/javascript" src="'+ json +'" charset="UTF-8"></script>');

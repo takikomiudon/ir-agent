@@ -1,0 +1,23 @@
+{
+  "status": "pending_independent_connection_review_and_parent_acceptance_actual_not_executed",
+  "pins_required_in_both_receipts": {
+    "script_sha256": "26086774236936bc41aba208716212ca4e26b1c0abefbddaf8bc7d9a2e60068c",
+    "derived_bundle_sha256": "c814bb0530f31c197249f02cffeeff4d36fc342ea707acd7a951a6ee6c168425",
+    "shadow_completion_sha256": "f2468e335e223bb5a079b9565edcdd81ae6d62dc3f1db3220291e99e0e199d4c",
+    "expected_database_sha256": "2a36bf74a54c61905bb44926692d2ec89570c66315d0ebbd0bbb4b13f4ad93ce"
+  },
+  "independent_review_required_status": "pass",
+  "parent_acceptance_required_status": "accepted",
+  "parent_acceptance_additional_required_field": "independent_review_sha256: SHA256 of the affirmative independent connection review file",
+  "separate_fact_review": "The parent-directory 14-fact review/acceptance establishes extracted fact support; these connection receipts additionally pin the script and successful shadow.",
+  "arguments": {
+    "mode": "actual",
+    "actor": "root",
+    "independent-review": "path to independent connection review",
+    "independent-review-sha256": "SHA256 of same file",
+    "parent-acceptance": "path to parent connection acceptance",
+    "parent-acceptance-sha256": "SHA256 of same file"
+  },
+  "script_cannot_authenticate_actor": true,
+  "no_retries": "Mode journal/completion/error must not already exist. Stop and inspect after any partial failure."
+}

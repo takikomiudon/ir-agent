@@ -1,0 +1,126 @@
+{
+  "recorded_at": "2026-10-15T15:09:49.701373+00:00",
+  "version": 2,
+  "status": "frozen_targeted41pass_independent_review_pending",
+  "scope": "Two reproduced input-boundary fixes only; no native format or financial rule change",
+  "fixes": [
+    {
+      "finding": "P2-output-pin-mismatch-invalid-UTF8",
+      "change": "Decode extracted output only after declared SHA/count match. Tampered non-UTF8 output remains mismatch and output-versus-record/source checks unknown. Matching invalid UTF8 remains validation error."
+    },
+    {
+      "finding": "P2-unknown-profile-common-implementation-bypass",
+      "change": "Validate implementation required shape, nonempty text name/version and nullable lowercase SHA before unsupported profile dispatch. Unknown profile parameters remain uninterpreted; unknown status and no replay retained."
+    }
+  ],
+  "API": "verify_public_capture_binding(binding_path, *, repository_root) -> dict",
+  "CLI": "Existing default retained; --capture-binding opt-in unchanged",
+  "test_command": "PYTHONPATH=src:tests .venv/bin/python -m unittest tests/test_public_capture_binding.py tests/test_case_source_verifier.py tests/test_case_source_bundle.py",
+  "tests": {
+    "count": 41,
+    "new_regression_methods": 2,
+    "seconds": 0.178,
+    "exit_code": 0,
+    "log": "target-v2.log",
+    "log_sha256": "869b1577e2c7f6ee2d4e6efbc7ec170f497a783651090eca85a473cec9096e56",
+    "full_suite_runs": 0
+  },
+  "regression_boundaries": [
+    "API and CLI retain mismatch report for tampered invalid-UTF8 output and do not mutate files",
+    "Output-versus-record/source unknown when output pin fails; direct record/source match remains visible",
+    "Unknown profile name and unknown profile version each reject malformed implementation object/missing fields/name/version/SHA",
+    "Unknown profile-specific parameters stay uninterpreted with valid common implementation; no identity verification or extraction replay",
+    "Existing pin-matched invalid UTF8 test still rejects"
+  ],
+  "legacy_functions_AST_equal": {
+    "_sha": true,
+    "_hash": true,
+    "_relative": true,
+    "_artifact": true,
+    "_comparison": true,
+    "_source_audit": true,
+    "verify_case_source_bundle": true
+  },
+  "models_common_legacy_test_unchanged": {
+    "tests/test_case_source_verifier.py": true,
+    "src/ir_agent/models.py": true,
+    "src/ir_agent/adapters/common.py": true
+  },
+  "legacy_reports": [
+    {
+      "id": "7525-policy",
+      "status": "unknown",
+      "exact_v1_report_equal": true
+    },
+    {
+      "id": "1518-calendar",
+      "status": "unknown",
+      "exact_v1_report_equal": true
+    },
+    {
+      "id": "1332-formal-statement",
+      "status": "matched",
+      "exact_v1_report_equal": true
+    }
+  ],
+  "v1_evidence": {
+    "all_preexisting_research_files_unchanged": true,
+    "file_count": 18,
+    "file_sha256": {
+      "research/ir-public-capture-validation-2026-10-15/independent-review.md": "c9ee9c4c6f13247213a2ec8fab63d482fcc1c95d2834f9057ae3fc2e59a89286",
+      "research/ir-public-capture-validation-2026-10-15/planned-paths-before.json": "245d7632968285e8c6dcfabda23085446caa3d56196c45fbd1737f31e6c75f46",
+      "research/ir-public-capture-validation-2026-10-15/source-after-manifest.json": "44636b9d1afaf43695fc6c5caa83b33663eb220b34e2f34a00ce6831d22b18a5",
+      "research/ir-public-capture-validation-2026-10-15/implementation.json": "20c324dd35fc0e31a12919a72d0d3e9fa710de8f1bd3255dd6f8862321f3e170",
+      "research/ir-public-capture-validation-2026-10-15/independent-review.json": "71f377ce036f40c7e5b78be0959cd67f154bbd54c9275a230e8d0e2cd6cd04b4",
+      "research/ir-public-capture-validation-2026-10-15/independent-probe.py": "46875789c6603b9d20557061ca4a2b431ead17f495ca5c210e426036fc10f28a",
+      "research/ir-public-capture-validation-2026-10-15/legacy-before-reports.json": "ca588c7b2a1a4fc7a259d131b92b3112a60f1f637c591339183b3b45d9c8c401",
+      "research/ir-public-capture-validation-2026-10-15/legacy-after-reports.json": "76abe4438e4280a18b65e175fc561724dc52fc7bdc044effa9738bb3bddcc26d",
+      "research/ir-public-capture-validation-2026-10-15/source-before-manifest.json": "25003f8bc83031671467e14d25035541c3101aa8b9e89447e102e50b08c68cd8",
+      "research/ir-public-capture-validation-2026-10-15/design-v1.md": "8a10dbbe9f988bfdc12bf53060085f3fa70673e85d05e53e6f95c16e0835a160",
+      "research/ir-public-capture-validation-2026-10-15/design-v1.json": "eaa3d97d6ed8cf6841de7cc809e15017c94981068fd7454e3d60613b2ac912be",
+      "research/ir-public-capture-validation-2026-10-15/source-before/tests/test_case_source_verifier.py": "c5b6e0be5fed3b6b8d7cde337b4549d7ce851cd1cdcc52a33435ef881e02ad9a",
+      "research/ir-public-capture-validation-2026-10-15/source-before/scripts/verify_case_source_bundle.py": "d728badabad0fb0883acaec768477c9566e9dc0a01ac43a3c16ea7fb50e5edc3",
+      "research/ir-public-capture-validation-2026-10-15/source-before/src/ir_agent/models.py": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c",
+      "research/ir-public-capture-validation-2026-10-15/source-before/src/ir_agent/adapters/common.py": "a6ca5fdd16778706f8a4de072bcdb27f5dcd78efbc6768039d1116606ebbb095",
+      "research/ir-public-capture-validation-2026-10-15/source-after/tests/test_public_capture_binding.py": "351e56712e0683ee8a745cbdcc1f08614ee239c3c9e58ebd7de30cb0ace46f3f",
+      "research/ir-public-capture-validation-2026-10-15/source-after/scripts/verify_case_source_bundle.py": "5065fb52d6d15d3c71ab66fd097353788e071af85836d7c5535fc5ec895e5389",
+      "research/ir-public-capture-validation-2026-10-15/source-after/docs/public-capture-binding.md": "f79570f4da9617598de1f6d12bbc1b5b984497fd2f72e3381676a714daa0a6af"
+    }
+  },
+  "allowed_changed_files": [
+    {
+      "path": "scripts/verify_case_source_bundle.py",
+      "copy": "research/ir-public-capture-validation-2026-10-15/source-after-v2/scripts/verify_case_source_bundle.py",
+      "sha256": "65ba58f6183be3251247e83d16ae832bb868525ef60ea787e8706df2ad6bfb64",
+      "byte_count": 31766
+    },
+    {
+      "path": "tests/test_public_capture_binding.py",
+      "copy": "research/ir-public-capture-validation-2026-10-15/source-after-v2/tests/test_public_capture_binding.py",
+      "sha256": "4e9506ffb121d9cfd3db75011ed9c706bfbf0e1505a832fb54f8df1224eb46dd",
+      "byte_count": 21811
+    },
+    {
+      "path": "docs/public-capture-binding.md",
+      "copy": "research/ir-public-capture-validation-2026-10-15/source-after-v2/docs/public-capture-binding.md",
+      "sha256": "068db73ac695cc5ddf765f71c4d0458f0eba49ba2a9e99623fc80e27947ac4ab",
+      "byte_count": 8279
+    }
+  ],
+  "manifest": "manifest-v2.json",
+  "manifest_sha256": "f3e7d9d9884b517716cf9f4bb6fb114b3c9e2011df078a8e03555980319ceebd",
+  "execution": {
+    "GETs": 0,
+    "actual_DB_accesses": 0,
+    "external_sends": 0,
+    "old_fixture_changes": 0,
+    "models_common_legacy_test_changes": 0,
+    "full_suite_runs": 0
+  },
+  "limitations": [
+    "Caller-controlled pins, clocks and declared identity remain internal consistency checks only.",
+    "Source-ID derivation, profile replay, citation support, issuer authenticity, financial meaning, public-release time, DB first-save and collection permission remain not_performed.",
+    "Unknown format/version/profile remains unknown, not success. Raw artifact remains required and nonnull.",
+    "Files are assumed stable during audit; no new filesystem locking or race hardening."
+  ]
+}

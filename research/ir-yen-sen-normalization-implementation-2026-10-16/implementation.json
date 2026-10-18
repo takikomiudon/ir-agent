@@ -1,0 +1,267 @@
+{
+  "recorded_at": "2026-10-16T02:45:54.983938+00:00",
+  "status": "frozen_for_independent_review",
+  "implementation_changed_files": [
+    {
+      "file": "src/ir_agent/disclosed_facts.py",
+      "sha256": "d434b41cfa19568d0cef1a2e6710365f447012d75a4b07ca950cc62b6bd9db51",
+      "bytes": 23175
+    },
+    {
+      "file": "tests/test_yen_sen_facts.py",
+      "sha256": "70b17a92f8ccdc10da1184303ab47c6c70556a1d0da34968b682573638070863",
+      "bytes": 14789
+    }
+  ],
+  "before_after_source_and_existing_tests": [
+    {
+      "file": "src/ir_agent/disclosed_facts.py",
+      "before_sha256": "0b65d28b6d8ad17824b364c4997f8f94b7aab987cd431a5657aa1b7ae6d57cca",
+      "after_sha256": "d434b41cfa19568d0cef1a2e6710365f447012d75a4b07ca950cc62b6bd9db51",
+      "changed": true
+    },
+    {
+      "file": "src/ir_agent/model_inputs.py",
+      "before_sha256": "23aa6ef4146a8bc1fb931f8df81a6914e1d345809f7617d0a37f913a25a6ffe2",
+      "after_sha256": "23aa6ef4146a8bc1fb931f8df81a6914e1d345809f7617d0a37f913a25a6ffe2",
+      "changed": false
+    },
+    {
+      "file": "tests/test_disclosed_fact_reproduction.py",
+      "before_sha256": "d69f5dc26b3b0ca8d60c829474e4ae317f0f8f66e91a5776cb1827f9eb197cb8",
+      "after_sha256": "d69f5dc26b3b0ca8d60c829474e4ae317f0f8f66e91a5776cb1827f9eb197cb8",
+      "changed": false
+    },
+    {
+      "file": "tests/test_disclosed_facts.py",
+      "before_sha256": "02b2c6b27d014f64090db225619994a73ec72aa58dad63326c336cb4f5a41323",
+      "after_sha256": "02b2c6b27d014f64090db225619994a73ec72aa58dad63326c336cb4f5a41323",
+      "changed": false
+    },
+    {
+      "file": "tests/test_disclosed_share_units.py",
+      "before_sha256": "555b4d079e796c0ce7512097c6c51b7cf27ad406e2e48fab6275b5c8a005aa3a",
+      "after_sha256": "555b4d079e796c0ce7512097c6c51b7cf27ad406e2e48fab6275b5c8a005aa3a",
+      "changed": false
+    },
+    {
+      "file": "tests/test_external_estimate_facts.py",
+      "before_sha256": "9602641f267b1ea6884b7fc248cb0a60b8041f7d7e369d9f50e90df2e358a7f4",
+      "after_sha256": "9602641f267b1ea6884b7fc248cb0a60b8041f7d7e369d9f50e90df2e358a7f4",
+      "changed": false
+    },
+    {
+      "file": "tests/test_fact_model_pipeline.py",
+      "before_sha256": "e5a0b2d093dff366b79dd1cad1dff09a853317487f6ca206b0ba0af1079c5441",
+      "after_sha256": "e5a0b2d093dff366b79dd1cad1dff09a853317487f6ca206b0ba0af1079c5441",
+      "changed": false
+    },
+    {
+      "file": "tests/test_model_inputs.py",
+      "before_sha256": "09c58c03d2148c296d7558b93e47ad5053abead796950e9866edf943346a426a",
+      "after_sha256": "09c58c03d2148c296d7558b93e47ad5053abead796950e9866edf943346a426a",
+      "changed": false
+    },
+    {
+      "file": "tests/test_oku_yen_facts.py",
+      "before_sha256": "b6e1aa420e94281aeca75e9307d45a1e3beaf0eaacc2f7981dbe5a6b6cda7bbc",
+      "after_sha256": "b6e1aa420e94281aeca75e9307d45a1e3beaf0eaacc2f7981dbe5a6b6cda7bbc",
+      "changed": false
+    }
+  ],
+  "baseline": {
+    "actual_source_count": 171,
+    "normalized_count": 33,
+    "fact_count": 143,
+    "DB_access": "contextlib.closing sqlite URI mode=ro; SELECT sources only, before and final source-row check",
+    "all_source_rows_unchanged_at_final_check": true,
+    "frozen_input": {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/frozen-sources.json",
+      "sha256": "bdf27cb5d78c4e3e7f929d78d1e15f43526507ba26eb819550410982ec5f440b",
+      "bytes": 6538017
+    },
+    "frozen_rows": {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/frozen-source-rows.json",
+      "sha256": "36d76fd1eb8e3c4a018a464ac44ef738377a0f9584cba4ef1b4a96daa38501c9",
+      "bytes": 6736570
+    },
+    "whole_report_before": {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/before-whole-report.json",
+      "sha256": "c12a56bedf1eec487ecc801979ab701ab7d6e0539dff454d34f97d66ea9b1e38",
+      "bytes": 8111535
+    },
+    "whole_report_after": {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/after-whole-report.json",
+      "sha256": "c12a56bedf1eec487ecc801979ab701ab7d6e0539dff454d34f97d66ea9b1e38",
+      "bytes": 8111535
+    },
+    "whole_report_bytes_identical": true,
+    "all33_producer_derived_objects_equal_saved": true,
+    "1904six_bundle": {
+      "file": "research/ir-case-studies-2026-10-15/1904/disclosed-facts-2026-10-16/normalized-bundle.json",
+      "sha256": "07e79894f6727dba572e63852bf7093e3fe805547742c832e48168e14efd0ea0",
+      "bytes": 95710
+    }
+  },
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=tests .venv/bin/python -m unittest test_yen_sen_facts test_disclosed_facts test_disclosed_fact_reproduction test_fact_model_pipeline test_oku_yen_facts test_external_estimate_facts test_disclosed_share_units test_model_inputs -v",
+    "new_test_methods": 11,
+    "total_test_methods": 70,
+    "passed": true,
+    "log": {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/focused-tests.log",
+      "sha256": "ee30b2882a4ff4d881b4f9b09404890de7837f256dd5e0b50cd4dfc15c93db18",
+      "bytes": 13691
+    },
+    "full_suite_run": false
+  },
+  "design_pins": [
+    {
+      "file": "research/ir-yen-sen-normalization-design-2026-10-16/README.md",
+      "sha256": "5cfba875062d0cf21923324648c71112f8707fa1d60616ffecc1fa144ae9e68a",
+      "bytes": 4879
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-design-2026-10-16/design.json",
+      "sha256": "3d2331a08fa3e94dbdc6cb5a46774e5e1e281ded65de00f569d3dd27feb57bdf",
+      "bytes": 15921
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-design-2026-10-16/evidence.json",
+      "sha256": "fd205086aaed00488b057235244ebdc398c3ec70cf55fdbb9316ad3e70399667",
+      "bytes": 28866
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-design-2026-10-16/validation.json",
+      "sha256": "295d6cd5741f6052ea638945d18aaeb76ecd9f31675a3630197e2000fba9ae7b",
+      "bytes": 1113
+    }
+  ],
+  "scope": {
+    "new_actual_numeric_facts": 0,
+    "DB_writes": 0,
+    "GETs": 0,
+    "financial_inputs_adopted": false,
+    "model_inputs_gate_changes": false,
+    "original_research_files_edited": 0,
+    "original_existing_tests_edited": 0,
+    "new_schema_CLI_dependencies": 0
+  },
+  "proof_files": [
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/README.md",
+      "sha256": "fed8fc23a4f405700efec20867265e6bd2607ed08262dbaab1dd0bc645a5ca58",
+      "bytes": 3075
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/after/src/ir_agent/disclosed_facts.py",
+      "sha256": "d434b41cfa19568d0cef1a2e6710365f447012d75a4b07ca950cc62b6bd9db51",
+      "bytes": 23175
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/after/tests/test_yen_sen_facts.py",
+      "sha256": "70b17a92f8ccdc10da1184303ab47c6c70556a1d0da34968b682573638070863",
+      "bytes": 14789
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/after-summary.json",
+      "sha256": "9f9e0d8f14d92a9c200a8c88b66a0f9790f5f63302c1b62b0519bbfd417ce021",
+      "bytes": 374
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/after-whole-report.json",
+      "sha256": "c12a56bedf1eec487ecc801979ab701ab7d6e0539dff454d34f97d66ea9b1e38",
+      "bytes": 8111535
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/before/src/ir_agent/disclosed_facts.py",
+      "sha256": "0b65d28b6d8ad17824b364c4997f8f94b7aab987cd431a5657aa1b7ae6d57cca",
+      "bytes": 18471
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/before/src/ir_agent/model_inputs.py",
+      "sha256": "23aa6ef4146a8bc1fb931f8df81a6914e1d345809f7617d0a37f913a25a6ffe2",
+      "bytes": 11997
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/before/tests/test_disclosed_fact_reproduction.py",
+      "sha256": "d69f5dc26b3b0ca8d60c829474e4ae317f0f8f66e91a5776cb1827f9eb197cb8",
+      "bytes": 8126
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/before/tests/test_disclosed_facts.py",
+      "sha256": "02b2c6b27d014f64090db225619994a73ec72aa58dad63326c336cb4f5a41323",
+      "bytes": 12390
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/before/tests/test_disclosed_share_units.py",
+      "sha256": "555b4d079e796c0ce7512097c6c51b7cf27ad406e2e48fab6275b5c8a005aa3a",
+      "bytes": 12376
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/before/tests/test_external_estimate_facts.py",
+      "sha256": "9602641f267b1ea6884b7fc248cb0a60b8041f7d7e369d9f50e90df2e358a7f4",
+      "bytes": 10345
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/before/tests/test_fact_model_pipeline.py",
+      "sha256": "e5a0b2d093dff366b79dd1cad1dff09a853317487f6ca206b0ba0af1079c5441",
+      "bytes": 3475
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/before/tests/test_model_inputs.py",
+      "sha256": "09c58c03d2148c296d7558b93e47ad5053abead796950e9866edf943346a426a",
+      "bytes": 14954
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/before/tests/test_oku_yen_facts.py",
+      "sha256": "b6e1aa420e94281aeca75e9307d45a1e3beaf0eaacc2f7981dbe5a6b6cda7bbc",
+      "bytes": 7758
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/before-pins.json",
+      "sha256": "6506bc563d0fe1ed4c72e37c677e931c52d90ce8adb397686c7d9daa59faef4c",
+      "bytes": 1255
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/before-summary.json",
+      "sha256": "51ec51df51448f93744f5657d51a05554f4418b449c20b180dc22c71ad2d9522",
+      "bytes": 326
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/before-whole-report.json",
+      "sha256": "c12a56bedf1eec487ecc801979ab701ab7d6e0539dff454d34f97d66ea9b1e38",
+      "bytes": 8111535
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/capture_compatibility.py",
+      "sha256": "e12cb96c73542e6a06c687a8b2c2619ebaa7db393f1e612f9d2980044cdee6a9",
+      "bytes": 4133
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/first-focused.log",
+      "sha256": "0b65a17c664ba13b9c455846c6a66a02500f2b3b73b7d4a4020c3f422ad6a520",
+      "bytes": 2126
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/focused-tests.log",
+      "sha256": "ee30b2882a4ff4d881b4f9b09404890de7837f256dd5e0b50cd4dfc15c93db18",
+      "bytes": 13691
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/frozen-source-rows.json",
+      "sha256": "36d76fd1eb8e3c4a018a464ac44ef738377a0f9584cba4ef1b4a96daa38501c9",
+      "bytes": 6736570
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/frozen-sources.json",
+      "sha256": "bdf27cb5d78c4e3e7f929d78d1e15f43526507ba26eb819550410982ec5f440b",
+      "bytes": 6538017
+    },
+    {
+      "file": "research/ir-yen-sen-normalization-implementation-2026-10-16/module.diff",
+      "sha256": "87eaaa4ee55efc649a1a33e629e63c6cf9805fd3ca7db0a0b503c468a1f14540",
+      "bytes": 10169
+    }
+  ]
+}

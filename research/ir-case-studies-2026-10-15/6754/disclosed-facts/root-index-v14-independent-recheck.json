@@ -1,0 +1,1922 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T14:29:16.363786+00:00",
+  "status": "v14_index_increment_and_all_record_references_independently_matched",
+  "findings": [],
+  "scope": "Index increment and stored artifact/source/fact references only; prior raw financial text, images, calculations and normalization audit were not repeated.",
+  "indices": {
+    "v13": {
+      "path": "research/ir-case-studies-2026-10-15/disclosed-fact-index-v13.json",
+      "sha256": "7f05530361503257fdb99620c7f8986fd2862a8170dca72f164abe18796c14c9",
+      "entries": 17,
+      "facts": 75
+    },
+    "v14": {
+      "path": "research/ir-case-studies-2026-10-15/disclosed-fact-index-v14.json",
+      "sha256": "43f7635995ee35bb77c39895a4c728bc68ec638df4a2ce98157d8808ecb0628e",
+      "entries": 18,
+      "facts": 82,
+      "unique_companies": 15,
+      "unique_original_company_source_pairs": 17
+    }
+  },
+  "increment": {
+    "old_17_entries_deep_exact_unchanged": true,
+    "old_75_fact_records_deep_exact_unchanged": true,
+    "previous_index_path_and_SHA_matched": true,
+    "new_entries": 1,
+    "company_id": "jp:6754",
+    "new_facts": 7,
+    "kind_counts": {
+      "reported_fact": 3,
+      "issuer_guidance": 4
+    },
+    "external_estimate_increment": 0,
+    "new_entry_fields_match_normalized_bundle": true,
+    "existing_normalization_review_reused": {
+      "path": "research/ir-case-studies-2026-10-15/6754/disclosed-facts/independent-recheck.json",
+      "sha256": "34b5af81fce1090b22153d338caeaee791e305d033a88f3de79ed145db8cf7cd",
+      "status": "seven_cited_value_extractions_reproduced_not_financial_adoption",
+      "financial_inputs_verified": false,
+      "model_adopted": false
+    }
+  },
+  "resolution": {
+    "rule": "Per-fact artifact/artifact_sha256/source_id/original_source_id overrides take priority; otherwise inherit enclosing entry. Artifact bytes, derived source identity/company, index fact fields, and stored original references are matched. No raw-source numerical reinterpretation.",
+    "entries_checked": 18,
+    "records_checked": 82,
+    "per_fact_override_records": 5,
+    "unique_artifact_files": 20,
+    "entry_checks": [
+      {
+        "entry_index": 0,
+        "company_id": "jp:3774",
+        "artifact": "research/ir-case-studies-2026-10-15/3774/disclosed-facts-normalized.json",
+        "artifact_sha256": "a627f43a9aecea6986861049e3927f688413e619a51d3ff73716e815a105a331",
+        "entry_source_id": "disclosed-facts:bbc6c518c8f6907c5478a161f712e3ff78d6660ef834820a695f075ee01b1968",
+        "facts": 3,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      },
+      {
+        "entry_index": 1,
+        "company_id": "jp:5988",
+        "artifact": "research/ir-case-studies-2026-10-15/5988/disclosed-facts-normalized.json",
+        "artifact_sha256": "31cd24bb1b73a21152cfb11f1759f84e2970adab4ddf3c08a4a3b5b226a24695",
+        "entry_source_id": "disclosed-facts:350ff4b665b890148361dbb95305956570763182c3078f95d0665ac79a6c15fb",
+        "facts": 3,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      },
+      {
+        "entry_index": 2,
+        "company_id": "jp:8331",
+        "artifact": "research/ir-case-studies-2026-10-15/8331/disclosed-facts-normalized.json",
+        "artifact_sha256": "109b3af7449f6d3059e266c6249ab9d0b7b191a995d0b37cba72749044d2b1c9",
+        "entry_source_id": "disclosed-facts:49fa0ec2c5cd2cdfb2a2393c75dcf78a5e9d903b9c850ed5330ea50ffe874cce",
+        "facts": 3,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      },
+      {
+        "entry_index": 3,
+        "company_id": "jp:5480",
+        "artifact": "research/ir-case-studies-2026-10-15/5480/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "62e5672411e923db21b0529dd9365d816d58c1a2aeb88270f538e546e580180b",
+        "entry_source_id": "disclosed-facts:f2102aa8a0c45411a8e5ac300e20e5eea781c357e9d2799129ab5dcd0c444744",
+        "facts": 2,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      },
+      {
+        "entry_index": 4,
+        "company_id": "jp:1332",
+        "artifact": "research/ir-case-studies-2026-10-15/1332/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "ec2f7e83d410f0a4c5e788f93b9addf3b22030b3e4da228c6063bf63bce461c7",
+        "entry_source_id": "disclosed-facts:4a8c16cd8fa92b58435d877ed5d9344e727d28f79a667ea906da46d392c8342a",
+        "facts": 4,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      },
+      {
+        "entry_index": 5,
+        "company_id": "jp:135A",
+        "artifact": "research/ir-case-studies-2026-10-15/135A/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "cd6ec111de870b91f6a3be37fecfd0cdfe3221b6b19132c8d8c0b02c6b00f36e",
+        "entry_source_id": "disclosed-facts:3a6c2eaebf52cba09b060669bfb00dea510dc16d5be6fb370045e9b2e8171911",
+        "facts": 9,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      },
+      {
+        "entry_index": 6,
+        "company_id": "jp:1379",
+        "artifact": "research/ir-case-studies-2026-10-15/1379/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "85aaa1129c71f436ebbc12d568d2526860b23bd1004885e0af77e7df68f7b05e",
+        "entry_source_id": "disclosed-facts:43b8d8f89d4eb8dc1a97242c8082d63c5ec0e2d155e0d44009f241518a2b1b78",
+        "facts": 5,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      },
+      {
+        "entry_index": 7,
+        "company_id": "jp:1518",
+        "artifact": "research/ir-case-studies-2026-10-15/1518/guidance-revision-facts/bundle.json",
+        "artifact_sha256": "9509005a9d6debeacec85291fa433c28460e189592b583e184a169651bdf30b3",
+        "entry_source_id": "disclosed-facts:d11121f7b4877ed8e14fa3caca52dcf6cbf9427f2b3113b8c8fe784520383f33",
+        "facts": 4,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      },
+      {
+        "entry_index": 8,
+        "company_id": "jp:9702",
+        "artifact": "research/ir-external-estimate-extraction-2026-10-15/9702/bundle.json",
+        "artifact_sha256": "ba16f93e7a6290d7c7522aaed4bd0c0ebe005f7052ca1e2419f4112a09364817",
+        "entry_source_id": "disclosed-facts:8ddc2f01a3d80d2cba579575e77077ff3cc0e4ddfdeb98472a465e751f2284cf",
+        "facts": 4,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      },
+      {
+        "entry_index": 9,
+        "company_id": "jp:1721",
+        "artifact": "research/ir-case-studies-2026-10-15/1721/actual-and-plan-facts/bundle.json",
+        "artifact_sha256": "9645612c537290921007f03a3ae4e32c9c457e96248593fe0e6d050452107277",
+        "entry_source_id": "disclosed-facts:cb587f9b7360d133abce4fd9813667b7fe691011c630f8f2788eb0c68a391200",
+        "facts": 12,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      },
+      {
+        "entry_index": 10,
+        "company_id": "jp:1827",
+        "artifact": "research/ir-case-studies-2026-10-15/1827/eps-dividend-facts/bundle.json",
+        "artifact_sha256": "1fb43baf7c1617c0e759c4f1ab6b3614e824135f8fcec865a6dc42b8f2017c79",
+        "entry_source_id": "disclosed-facts:4c18006d4a191405174e5f7c9f616956f30eece2acd30e0fa7ee32068dfa3fa2",
+        "facts": 3,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      },
+      {
+        "entry_index": 11,
+        "company_id": "jp:1833",
+        "artifact": "research/ir-case-studies-2026-10-15/1833/eps-dividend-facts/bundle.json",
+        "artifact_sha256": "388e3055eff96b39ce871d161a5bdfa4e7f615b10eeb073acdce3100cb3be50f",
+        "entry_source_id": "disclosed-facts:cbcbb3a061e4b117782728462750f95eb85308bef6758e676d7be23777ea4148",
+        "facts": 3,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      },
+      {
+        "entry_index": 12,
+        "company_id": "jp:7525",
+        "artifact": "research/ir-case-studies-2026-10-15/7525/external-parameter-facts/normalized-facts.json",
+        "artifact_sha256": "5d09492511d703456c72a7f0c92597e3f969e4e2719fe3504f83f9c74a6f225a",
+        "entry_source_id": "disclosed-facts:c316527840fec8f703f258d54836f2e7db0e14b0856b342ef2be7478b7f55f4d",
+        "facts": 3,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      },
+      {
+        "entry_index": 13,
+        "company_id": "jp:8151",
+        "artifact": "research/ir-case-studies-2026-10-15/8151/external-estimate-facts/bundle.json",
+        "artifact_sha256": "3dd17da3a229c42f7966b6ab8e2793bd2b670459110b3750606fe8e646f38786",
+        "entry_source_id": "disclosed-facts:71344e71bc460da80f44135eae2f72a11010978560ec2fbfa3474560d3e536b0",
+        "facts": 6,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      },
+      {
+        "entry_index": 14,
+        "company_id": "jp:8151",
+        "artifact": "research/ir-case-studies-2026-10-15/8151/quick-external-parameter-facts/bundle.json",
+        "artifact_sha256": "2e3d3c2f44ea0b4d50a138c6445c00145a074f331a67aa02e7229b62ec6dea14",
+        "entry_source_id": "disclosed-facts:767a77f52004ee70e7a7839195aab5a5664dda9e48ce807df13898bbd43af208",
+        "facts": 3,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      },
+      {
+        "entry_index": 15,
+        "company_id": "jp:3774",
+        "artifact": "research/ir-case-studies-2026-10-15/3774/faq-to-filing-guidance-comparison/faq-normalized.json",
+        "artifact_sha256": "de2de4cca7fc315d63d0f759738e274a8894018fb7cb43e8c9f86db3ace5c977",
+        "entry_source_id": "disclosed-facts:cbec4ac1cb013a68f3cba5a0ba8648738e6b076297c7ddd86a09b6b3ea904937",
+        "facts": 4,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      },
+      {
+        "entry_index": 16,
+        "company_id": "jp:3774",
+        "artifact": "research/ir-case-studies-2026-10-15/3774/faq-to-filing-guidance-comparison/filing-normalized.json",
+        "artifact_sha256": "d273afe49a1f6d94d80c785e90542c6afc2b2ec7e5fa04f3f98a51eeb8aa9c55",
+        "entry_source_id": "disclosed-facts:3b2754828b7a2d6b21d6e3ae1de55b71ee2a1a24f1528f4c6b7e902e3ca76942",
+        "facts": 4,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      },
+      {
+        "entry_index": 17,
+        "company_id": "jp:6754",
+        "artifact": "research/ir-case-studies-2026-10-15/6754/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "2ec58902101391f1523cb61eaa469d0ea804987c8eea89425cef074f51bd8d78",
+        "entry_source_id": "disclosed-facts:d918400f13006de3e28e597c43d9c70b14e668277afab5c695ad98b83f86d1af",
+        "facts": 7,
+        "source_reference_resolved": true,
+        "derived_import_flag": false
+      }
+    ],
+    "record_checks": [
+      {
+        "entry_index": 0,
+        "company_id": "jp:3774",
+        "fact_id": "3774-fy2027-q1-quarter",
+        "artifact": "research/ir-case-studies-2026-10-15/3774/disclosed-facts-normalized.json",
+        "artifact_sha256": "a627f43a9aecea6986861049e3927f688413e619a51d3ff73716e815a105a331",
+        "derived_source_id": "disclosed-facts:bbc6c518c8f6907c5478a161f712e3ff78d6660ef834820a695f075ee01b1968",
+        "original_source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 0,
+        "company_id": "jp:3774",
+        "fact_id": "3774-fy2027-q1-eps-forecast",
+        "artifact": "research/ir-case-studies-2026-10-15/3774/disclosed-facts-normalized.json",
+        "artifact_sha256": "a627f43a9aecea6986861049e3927f688413e619a51d3ff73716e815a105a331",
+        "derived_source_id": "disclosed-facts:bbc6c518c8f6907c5478a161f712e3ff78d6660ef834820a695f075ee01b1968",
+        "original_source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 0,
+        "company_id": "jp:3774",
+        "fact_id": "3774-fy2027-q1-dps-forecast",
+        "artifact": "research/ir-case-studies-2026-10-15/3774/disclosed-facts-normalized.json",
+        "artifact_sha256": "a627f43a9aecea6986861049e3927f688413e619a51d3ff73716e815a105a331",
+        "derived_source_id": "disclosed-facts:bbc6c518c8f6907c5478a161f712e3ff78d6660ef834820a695f075ee01b1968",
+        "original_source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 1,
+        "company_id": "jp:5988",
+        "fact_id": "5988-fy2027-q1-quarter",
+        "artifact": "research/ir-case-studies-2026-10-15/5988/disclosed-facts-normalized.json",
+        "artifact_sha256": "31cd24bb1b73a21152cfb11f1759f84e2970adab4ddf3c08a4a3b5b226a24695",
+        "derived_source_id": "disclosed-facts:350ff4b665b890148361dbb95305956570763182c3078f95d0665ac79a6c15fb",
+        "original_source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 1,
+        "company_id": "jp:5988",
+        "fact_id": "5988-fy2027-q1-eps-forecast",
+        "artifact": "research/ir-case-studies-2026-10-15/5988/disclosed-facts-normalized.json",
+        "artifact_sha256": "31cd24bb1b73a21152cfb11f1759f84e2970adab4ddf3c08a4a3b5b226a24695",
+        "derived_source_id": "disclosed-facts:350ff4b665b890148361dbb95305956570763182c3078f95d0665ac79a6c15fb",
+        "original_source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 1,
+        "company_id": "jp:5988",
+        "fact_id": "5988-fy2027-q1-dps-forecast",
+        "artifact": "research/ir-case-studies-2026-10-15/5988/disclosed-facts-normalized.json",
+        "artifact_sha256": "31cd24bb1b73a21152cfb11f1759f84e2970adab4ddf3c08a4a3b5b226a24695",
+        "derived_source_id": "disclosed-facts:350ff4b665b890148361dbb95305956570763182c3078f95d0665ac79a6c15fb",
+        "original_source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 2,
+        "company_id": "jp:8331",
+        "fact_id": "8331.fy2027.company-guidance.annual-dps",
+        "artifact": "research/ir-case-studies-2026-10-15/8331/disclosed-facts-normalized.json",
+        "artifact_sha256": "109b3af7449f6d3059e266c6249ab9d0b7b191a995d0b37cba72749044d2b1c9",
+        "derived_source_id": "disclosed-facts:49fa0ec2c5cd2cdfb2a2393c75dcf78a5e9d903b9c850ed5330ea50ffe874cce",
+        "original_source_id": "chibabank.8331.05",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 2,
+        "company_id": "jp:8331",
+        "fact_id": "8331.fy2027.company-guidance.interim-dps",
+        "artifact": "research/ir-case-studies-2026-10-15/8331/disclosed-facts-normalized.json",
+        "artifact_sha256": "109b3af7449f6d3059e266c6249ab9d0b7b191a995d0b37cba72749044d2b1c9",
+        "derived_source_id": "disclosed-facts:49fa0ec2c5cd2cdfb2a2393c75dcf78a5e9d903b9c850ed5330ea50ffe874cce",
+        "original_source_id": "chibabank.8331.05",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 2,
+        "company_id": "jp:8331",
+        "fact_id": "8331.fy2027.company-guidance.consolidated-payout-ratio",
+        "artifact": "research/ir-case-studies-2026-10-15/8331/disclosed-facts-normalized.json",
+        "artifact_sha256": "109b3af7449f6d3059e266c6249ab9d0b7b191a995d0b37cba72749044d2b1c9",
+        "derived_source_id": "disclosed-facts:49fa0ec2c5cd2cdfb2a2393c75dcf78a5e9d903b9c850ed5330ea50ffe874cce",
+        "original_source_id": "chibabank.8331.05",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 3,
+        "company_id": "jp:5480",
+        "fact_id": "nyk5480-fy202603-consolidated-operating-income",
+        "artifact": "research/ir-case-studies-2026-10-15/5480/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "62e5672411e923db21b0529dd9365d816d58c1a2aeb88270f538e546e580180b",
+        "derived_source_id": "disclosed-facts:f2102aa8a0c45411a8e5ac300e20e5eea781c357e9d2799129ab5dcd0c444744",
+        "original_source_id": "case-public:7ebd4f421bb0d918ddc742534804347eb60927dfe2b6c6371b56af46358fcf00",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 3,
+        "company_id": "jp:5480",
+        "fact_id": "nyk5480-fy202603-consolidated-revenue",
+        "artifact": "research/ir-case-studies-2026-10-15/5480/revenue-disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "0e251685a8bc95232b39fc678dc1ad6ffc662162dafdf961d731aaaf6350ea27",
+        "derived_source_id": "disclosed-facts:487cb89709ae01cba3c250ed113295e5383cf391599e2c4eda6dcde578c99e6f",
+        "original_source_id": "case-public:7ebd4f421bb0d918ddc742534804347eb60927dfe2b6c6371b56af46358fcf00",
+        "per_fact_override_used": true,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 4,
+        "company_id": "jp:1332",
+        "fact_id": "nissui1332-2027q1-basic-eps",
+        "artifact": "research/ir-case-studies-2026-10-15/1332/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "ec2f7e83d410f0a4c5e788f93b9addf3b22030b3e4da228c6063bf63bce461c7",
+        "derived_source_id": "disclosed-facts:4a8c16cd8fa92b58435d877ed5d9344e727d28f79a667ea906da46d392c8342a",
+        "original_source_id": "case-public:a6203650fe32b00c12d4b6f4c5b3f4fe252431cd4449a1f2716ea658fede985b",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 4,
+        "company_id": "jp:1332",
+        "fact_id": "nissui1332-2027fy-company-eps",
+        "artifact": "research/ir-case-studies-2026-10-15/1332/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "ec2f7e83d410f0a4c5e788f93b9addf3b22030b3e4da228c6063bf63bce461c7",
+        "derived_source_id": "disclosed-facts:4a8c16cd8fa92b58435d877ed5d9344e727d28f79a667ea906da46d392c8342a",
+        "original_source_id": "case-public:a6203650fe32b00c12d4b6f4c5b3f4fe252431cd4449a1f2716ea658fede985b",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 4,
+        "company_id": "jp:1332",
+        "fact_id": "nissui1332-2027q1-consolidated-operating-income",
+        "artifact": "research/ir-case-studies-2026-10-15/1332/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "ec2f7e83d410f0a4c5e788f93b9addf3b22030b3e4da228c6063bf63bce461c7",
+        "derived_source_id": "disclosed-facts:4a8c16cd8fa92b58435d877ed5d9344e727d28f79a667ea906da46d392c8342a",
+        "original_source_id": "case-public:a6203650fe32b00c12d4b6f4c5b3f4fe252431cd4449a1f2716ea658fede985b",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 4,
+        "company_id": "jp:1332",
+        "fact_id": "nissui1332-2027fy-company-operating-income",
+        "artifact": "research/ir-case-studies-2026-10-15/1332/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "ec2f7e83d410f0a4c5e788f93b9addf3b22030b3e4da228c6063bf63bce461c7",
+        "derived_source_id": "disclosed-facts:4a8c16cd8fa92b58435d877ed5d9344e727d28f79a667ea906da46d392c8342a",
+        "original_source_id": "case-public:a6203650fe32b00c12d4b6f4c5b3f4fe252431cd4449a1f2716ea658fede985b",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 5,
+        "company_id": "jp:135A",
+        "fact_id": "vrain135a-2027interim-basic-eps",
+        "artifact": "research/ir-case-studies-2026-10-15/135A/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "cd6ec111de870b91f6a3be37fecfd0cdfe3221b6b19132c8d8c0b02c6b00f36e",
+        "derived_source_id": "disclosed-facts:3a6c2eaebf52cba09b060669bfb00dea510dc16d5be6fb370045e9b2e8171911",
+        "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 5,
+        "company_id": "jp:135A",
+        "fact_id": "vrain135a-2027fy-company-eps",
+        "artifact": "research/ir-case-studies-2026-10-15/135A/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "cd6ec111de870b91f6a3be37fecfd0cdfe3221b6b19132c8d8c0b02c6b00f36e",
+        "derived_source_id": "disclosed-facts:3a6c2eaebf52cba09b060669bfb00dea510dc16d5be6fb370045e9b2e8171911",
+        "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 5,
+        "company_id": "jp:135A",
+        "fact_id": "vrain135a-2027interim-operating-income",
+        "artifact": "research/ir-case-studies-2026-10-15/135A/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "cd6ec111de870b91f6a3be37fecfd0cdfe3221b6b19132c8d8c0b02c6b00f36e",
+        "derived_source_id": "disclosed-facts:3a6c2eaebf52cba09b060669bfb00dea510dc16d5be6fb370045e9b2e8171911",
+        "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 5,
+        "company_id": "jp:135A",
+        "fact_id": "vrain135a-2027fy-company-operating-income",
+        "artifact": "research/ir-case-studies-2026-10-15/135A/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "cd6ec111de870b91f6a3be37fecfd0cdfe3221b6b19132c8d8c0b02c6b00f36e",
+        "derived_source_id": "disclosed-facts:3a6c2eaebf52cba09b060669bfb00dea510dc16d5be6fb370045e9b2e8171911",
+        "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 5,
+        "company_id": "jp:135A",
+        "fact_id": "vrain135a-2027fy-company-annual-dividend",
+        "artifact": "research/ir-case-studies-2026-10-15/135A/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "cd6ec111de870b91f6a3be37fecfd0cdfe3221b6b19132c8d8c0b02c6b00f36e",
+        "derived_source_id": "disclosed-facts:3a6c2eaebf52cba09b060669bfb00dea510dc16d5be6fb370045e9b2e8171911",
+        "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 5,
+        "company_id": "jp:135A",
+        "fact_id": "vrain135a-2027interim-operating-cashflow",
+        "artifact": "research/ir-case-studies-2026-10-15/135A/cashflow-disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "7889e9b548f3d37b3e49f415bb492484c6e741b4de34b007773802fcab9bf400",
+        "derived_source_id": "disclosed-facts:8d3e2fabf17b9e9476c9d99e5237ca7c39fd707df13927c7d19ba994881ab224",
+        "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+        "per_fact_override_used": true,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 5,
+        "company_id": "jp:135A",
+        "fact_id": "vrain135a-2027interim-depreciation-cf-adjustment",
+        "artifact": "research/ir-case-studies-2026-10-15/135A/cashflow-disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "7889e9b548f3d37b3e49f415bb492484c6e741b4de34b007773802fcab9bf400",
+        "derived_source_id": "disclosed-facts:8d3e2fabf17b9e9476c9d99e5237ca7c39fd707df13927c7d19ba994881ab224",
+        "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+        "per_fact_override_used": true,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 5,
+        "company_id": "jp:135A",
+        "fact_id": "vrain135a-2027interim-ppe-acquisition-cashflow",
+        "artifact": "research/ir-case-studies-2026-10-15/135A/cashflow-disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "7889e9b548f3d37b3e49f415bb492484c6e741b4de34b007773802fcab9bf400",
+        "derived_source_id": "disclosed-facts:8d3e2fabf17b9e9476c9d99e5237ca7c39fd707df13927c7d19ba994881ab224",
+        "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+        "per_fact_override_used": true,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 5,
+        "company_id": "jp:135A",
+        "fact_id": "vrain135a-2027interim-receivables-contract-assets-cf-adjustment",
+        "artifact": "research/ir-case-studies-2026-10-15/135A/cashflow-disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "7889e9b548f3d37b3e49f415bb492484c6e741b4de34b007773802fcab9bf400",
+        "derived_source_id": "disclosed-facts:8d3e2fabf17b9e9476c9d99e5237ca7c39fd707df13927c7d19ba994881ab224",
+        "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+        "per_fact_override_used": true,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 6,
+        "company_id": "jp:1379",
+        "fact_id": "hokto1379-2027q1-basic-eps",
+        "artifact": "research/ir-case-studies-2026-10-15/1379/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "85aaa1129c71f436ebbc12d568d2526860b23bd1004885e0af77e7df68f7b05e",
+        "derived_source_id": "disclosed-facts:43b8d8f89d4eb8dc1a97242c8082d63c5ec0e2d155e0d44009f241518a2b1b78",
+        "original_source_id": "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 6,
+        "company_id": "jp:1379",
+        "fact_id": "hokto1379-2027fy-company-eps",
+        "artifact": "research/ir-case-studies-2026-10-15/1379/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "85aaa1129c71f436ebbc12d568d2526860b23bd1004885e0af77e7df68f7b05e",
+        "derived_source_id": "disclosed-facts:43b8d8f89d4eb8dc1a97242c8082d63c5ec0e2d155e0d44009f241518a2b1b78",
+        "original_source_id": "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 6,
+        "company_id": "jp:1379",
+        "fact_id": "hokto1379-2027q1-operating-income",
+        "artifact": "research/ir-case-studies-2026-10-15/1379/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "85aaa1129c71f436ebbc12d568d2526860b23bd1004885e0af77e7df68f7b05e",
+        "derived_source_id": "disclosed-facts:43b8d8f89d4eb8dc1a97242c8082d63c5ec0e2d155e0d44009f241518a2b1b78",
+        "original_source_id": "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 6,
+        "company_id": "jp:1379",
+        "fact_id": "hokto1379-2027fy-company-operating-income",
+        "artifact": "research/ir-case-studies-2026-10-15/1379/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "85aaa1129c71f436ebbc12d568d2526860b23bd1004885e0af77e7df68f7b05e",
+        "derived_source_id": "disclosed-facts:43b8d8f89d4eb8dc1a97242c8082d63c5ec0e2d155e0d44009f241518a2b1b78",
+        "original_source_id": "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 6,
+        "company_id": "jp:1379",
+        "fact_id": "hokto1379-2027fy-company-annual-dividend",
+        "artifact": "research/ir-case-studies-2026-10-15/1379/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "85aaa1129c71f436ebbc12d568d2526860b23bd1004885e0af77e7df68f7b05e",
+        "derived_source_id": "disclosed-facts:43b8d8f89d4eb8dc1a97242c8082d63c5ec0e2d155e0d44009f241518a2b1b78",
+        "original_source_id": "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 7,
+        "company_id": "jp:1518",
+        "fact_id": "1518-fy2027-2026-05-13-previous-eps",
+        "artifact": "research/ir-case-studies-2026-10-15/1518/guidance-revision-facts/bundle.json",
+        "artifact_sha256": "9509005a9d6debeacec85291fa433c28460e189592b583e184a169651bdf30b3",
+        "derived_source_id": "disclosed-facts:d11121f7b4877ed8e14fa3caca52dcf6cbf9427f2b3113b8c8fe784520383f33",
+        "original_source_id": "case-public:bd49125a131f709a6ff532a4da187195a1870d6b07bbcb54fa0a7c0277973997",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 7,
+        "company_id": "jp:1518",
+        "fact_id": "1518-fy2027-2026-07-22-revised-eps",
+        "artifact": "research/ir-case-studies-2026-10-15/1518/guidance-revision-facts/bundle.json",
+        "artifact_sha256": "9509005a9d6debeacec85291fa433c28460e189592b583e184a169651bdf30b3",
+        "derived_source_id": "disclosed-facts:d11121f7b4877ed8e14fa3caca52dcf6cbf9427f2b3113b8c8fe784520383f33",
+        "original_source_id": "case-public:bd49125a131f709a6ff532a4da187195a1870d6b07bbcb54fa0a7c0277973997",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 7,
+        "company_id": "jp:1518",
+        "fact_id": "1518-fy2027-2026-05-13-previous-dps",
+        "artifact": "research/ir-case-studies-2026-10-15/1518/guidance-revision-facts/bundle.json",
+        "artifact_sha256": "9509005a9d6debeacec85291fa433c28460e189592b583e184a169651bdf30b3",
+        "derived_source_id": "disclosed-facts:d11121f7b4877ed8e14fa3caca52dcf6cbf9427f2b3113b8c8fe784520383f33",
+        "original_source_id": "case-public:bd49125a131f709a6ff532a4da187195a1870d6b07bbcb54fa0a7c0277973997",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 7,
+        "company_id": "jp:1518",
+        "fact_id": "1518-fy2027-2026-07-22-revised-dps",
+        "artifact": "research/ir-case-studies-2026-10-15/1518/guidance-revision-facts/bundle.json",
+        "artifact_sha256": "9509005a9d6debeacec85291fa433c28460e189592b583e184a169651bdf30b3",
+        "derived_source_id": "disclosed-facts:d11121f7b4877ed8e14fa3caca52dcf6cbf9427f2b3113b8c8fe784520383f33",
+        "original_source_id": "case-public:bd49125a131f709a6ff532a4da187195a1870d6b07bbcb54fa0a7c0277973997",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 8,
+        "company_id": "jp:9702",
+        "fact_id": "9702-alpha-win-2026-12-newE-eps",
+        "artifact": "research/ir-external-estimate-extraction-2026-10-15/9702/bundle.json",
+        "artifact_sha256": "ba16f93e7a6290d7c7522aaed4bd0c0ebe005f7052ca1e2419f4112a09364817",
+        "derived_source_id": "disclosed-facts:8ddc2f01a3d80d2cba579575e77077ff3cc0e4ddfdeb98472a465e751f2284cf",
+        "original_source_id": "case-public:2d9802ebe8614ea26cbb622ab2e89d6ee9e129fe6d742b515b13687a4d642cf4",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 8,
+        "company_id": "jp:9702",
+        "fact_id": "9702-alpha-win-2027-12-newE-eps",
+        "artifact": "research/ir-external-estimate-extraction-2026-10-15/9702/bundle.json",
+        "artifact_sha256": "ba16f93e7a6290d7c7522aaed4bd0c0ebe005f7052ca1e2419f4112a09364817",
+        "derived_source_id": "disclosed-facts:8ddc2f01a3d80d2cba579575e77077ff3cc0e4ddfdeb98472a465e751f2284cf",
+        "original_source_id": "case-public:2d9802ebe8614ea26cbb622ab2e89d6ee9e129fe6d742b515b13687a4d642cf4",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 8,
+        "company_id": "jp:9702",
+        "fact_id": "9702-alpha-win-2028-12-newE-eps",
+        "artifact": "research/ir-external-estimate-extraction-2026-10-15/9702/bundle.json",
+        "artifact_sha256": "ba16f93e7a6290d7c7522aaed4bd0c0ebe005f7052ca1e2419f4112a09364817",
+        "derived_source_id": "disclosed-facts:8ddc2f01a3d80d2cba579575e77077ff3cc0e4ddfdeb98472a465e751f2284cf",
+        "original_source_id": "case-public:2d9802ebe8614ea26cbb622ab2e89d6ee9e129fe6d742b515b13687a4d642cf4",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 8,
+        "company_id": "jp:9702",
+        "fact_id": "9702-alpha-win-2026-12-CE-eps-republished",
+        "artifact": "research/ir-external-estimate-extraction-2026-10-15/9702/bundle.json",
+        "artifact_sha256": "ba16f93e7a6290d7c7522aaed4bd0c0ebe005f7052ca1e2419f4112a09364817",
+        "derived_source_id": "disclosed-facts:8ddc2f01a3d80d2cba579575e77077ff3cc0e4ddfdeb98472a465e751f2284cf",
+        "original_source_id": "case-public:2d9802ebe8614ea26cbb622ab2e89d6ee9e129fe6d742b515b13687a4d642cf4",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 9,
+        "company_id": "jp:1721",
+        "fact_id": "1721-orders-2026-03-reported_fact",
+        "artifact": "research/ir-case-studies-2026-10-15/1721/actual-and-plan-facts/bundle.json",
+        "artifact_sha256": "9645612c537290921007f03a3ae4e32c9c457e96248593fe0e6d050452107277",
+        "derived_source_id": "disclosed-facts:cb587f9b7360d133abce4fd9813667b7fe691011c630f8f2788eb0c68a391200",
+        "original_source_id": "case-public:c40a0892e6a19ffb1e94b85e4d2d26d5a66c4b7021eaf2c50a47d6a69e0363aa",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 9,
+        "company_id": "jp:1721",
+        "fact_id": "1721-orders-2027-03-issuer_guidance",
+        "artifact": "research/ir-case-studies-2026-10-15/1721/actual-and-plan-facts/bundle.json",
+        "artifact_sha256": "9645612c537290921007f03a3ae4e32c9c457e96248593fe0e6d050452107277",
+        "derived_source_id": "disclosed-facts:cb587f9b7360d133abce4fd9813667b7fe691011c630f8f2788eb0c68a391200",
+        "original_source_id": "case-public:c40a0892e6a19ffb1e94b85e4d2d26d5a66c4b7021eaf2c50a47d6a69e0363aa",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 9,
+        "company_id": "jp:1721",
+        "fact_id": "1721-revenue-2026-03-reported_fact",
+        "artifact": "research/ir-case-studies-2026-10-15/1721/actual-and-plan-facts/bundle.json",
+        "artifact_sha256": "9645612c537290921007f03a3ae4e32c9c457e96248593fe0e6d050452107277",
+        "derived_source_id": "disclosed-facts:cb587f9b7360d133abce4fd9813667b7fe691011c630f8f2788eb0c68a391200",
+        "original_source_id": "case-public:c40a0892e6a19ffb1e94b85e4d2d26d5a66c4b7021eaf2c50a47d6a69e0363aa",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 9,
+        "company_id": "jp:1721",
+        "fact_id": "1721-revenue-2027-03-issuer_guidance",
+        "artifact": "research/ir-case-studies-2026-10-15/1721/actual-and-plan-facts/bundle.json",
+        "artifact_sha256": "9645612c537290921007f03a3ae4e32c9c457e96248593fe0e6d050452107277",
+        "derived_source_id": "disclosed-facts:cb587f9b7360d133abce4fd9813667b7fe691011c630f8f2788eb0c68a391200",
+        "original_source_id": "case-public:c40a0892e6a19ffb1e94b85e4d2d26d5a66c4b7021eaf2c50a47d6a69e0363aa",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 9,
+        "company_id": "jp:1721",
+        "fact_id": "1721-gross_profit-2026-03-reported_fact",
+        "artifact": "research/ir-case-studies-2026-10-15/1721/actual-and-plan-facts/bundle.json",
+        "artifact_sha256": "9645612c537290921007f03a3ae4e32c9c457e96248593fe0e6d050452107277",
+        "derived_source_id": "disclosed-facts:cb587f9b7360d133abce4fd9813667b7fe691011c630f8f2788eb0c68a391200",
+        "original_source_id": "case-public:c40a0892e6a19ffb1e94b85e4d2d26d5a66c4b7021eaf2c50a47d6a69e0363aa",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 9,
+        "company_id": "jp:1721",
+        "fact_id": "1721-gross_profit-2027-03-issuer_guidance",
+        "artifact": "research/ir-case-studies-2026-10-15/1721/actual-and-plan-facts/bundle.json",
+        "artifact_sha256": "9645612c537290921007f03a3ae4e32c9c457e96248593fe0e6d050452107277",
+        "derived_source_id": "disclosed-facts:cb587f9b7360d133abce4fd9813667b7fe691011c630f8f2788eb0c68a391200",
+        "original_source_id": "case-public:c40a0892e6a19ffb1e94b85e4d2d26d5a66c4b7021eaf2c50a47d6a69e0363aa",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 9,
+        "company_id": "jp:1721",
+        "fact_id": "1721-operating_profit-2026-03-reported_fact",
+        "artifact": "research/ir-case-studies-2026-10-15/1721/actual-and-plan-facts/bundle.json",
+        "artifact_sha256": "9645612c537290921007f03a3ae4e32c9c457e96248593fe0e6d050452107277",
+        "derived_source_id": "disclosed-facts:cb587f9b7360d133abce4fd9813667b7fe691011c630f8f2788eb0c68a391200",
+        "original_source_id": "case-public:c40a0892e6a19ffb1e94b85e4d2d26d5a66c4b7021eaf2c50a47d6a69e0363aa",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 9,
+        "company_id": "jp:1721",
+        "fact_id": "1721-operating_profit-2027-03-issuer_guidance",
+        "artifact": "research/ir-case-studies-2026-10-15/1721/actual-and-plan-facts/bundle.json",
+        "artifact_sha256": "9645612c537290921007f03a3ae4e32c9c457e96248593fe0e6d050452107277",
+        "derived_source_id": "disclosed-facts:cb587f9b7360d133abce4fd9813667b7fe691011c630f8f2788eb0c68a391200",
+        "original_source_id": "case-public:c40a0892e6a19ffb1e94b85e4d2d26d5a66c4b7021eaf2c50a47d6a69e0363aa",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 9,
+        "company_id": "jp:1721",
+        "fact_id": "1721-ordinary_profit-2026-03-reported_fact",
+        "artifact": "research/ir-case-studies-2026-10-15/1721/actual-and-plan-facts/bundle.json",
+        "artifact_sha256": "9645612c537290921007f03a3ae4e32c9c457e96248593fe0e6d050452107277",
+        "derived_source_id": "disclosed-facts:cb587f9b7360d133abce4fd9813667b7fe691011c630f8f2788eb0c68a391200",
+        "original_source_id": "case-public:c40a0892e6a19ffb1e94b85e4d2d26d5a66c4b7021eaf2c50a47d6a69e0363aa",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 9,
+        "company_id": "jp:1721",
+        "fact_id": "1721-ordinary_profit-2027-03-issuer_guidance",
+        "artifact": "research/ir-case-studies-2026-10-15/1721/actual-and-plan-facts/bundle.json",
+        "artifact_sha256": "9645612c537290921007f03a3ae4e32c9c457e96248593fe0e6d050452107277",
+        "derived_source_id": "disclosed-facts:cb587f9b7360d133abce4fd9813667b7fe691011c630f8f2788eb0c68a391200",
+        "original_source_id": "case-public:c40a0892e6a19ffb1e94b85e4d2d26d5a66c4b7021eaf2c50a47d6a69e0363aa",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 9,
+        "company_id": "jp:1721",
+        "fact_id": "1721-profit_attributable_to_owners_of_parent-2026-03-reported_fact",
+        "artifact": "research/ir-case-studies-2026-10-15/1721/actual-and-plan-facts/bundle.json",
+        "artifact_sha256": "9645612c537290921007f03a3ae4e32c9c457e96248593fe0e6d050452107277",
+        "derived_source_id": "disclosed-facts:cb587f9b7360d133abce4fd9813667b7fe691011c630f8f2788eb0c68a391200",
+        "original_source_id": "case-public:c40a0892e6a19ffb1e94b85e4d2d26d5a66c4b7021eaf2c50a47d6a69e0363aa",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 9,
+        "company_id": "jp:1721",
+        "fact_id": "1721-profit_attributable_to_owners_of_parent-2027-03-issuer_guidance",
+        "artifact": "research/ir-case-studies-2026-10-15/1721/actual-and-plan-facts/bundle.json",
+        "artifact_sha256": "9645612c537290921007f03a3ae4e32c9c457e96248593fe0e6d050452107277",
+        "derived_source_id": "disclosed-facts:cb587f9b7360d133abce4fd9813667b7fe691011c630f8f2788eb0c68a391200",
+        "original_source_id": "case-public:c40a0892e6a19ffb1e94b85e4d2d26d5a66c4b7021eaf2c50a47d6a69e0363aa",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 10,
+        "company_id": "jp:1827",
+        "fact_id": "1827-q1-basic-eps-20260807",
+        "artifact": "research/ir-case-studies-2026-10-15/1827/eps-dividend-facts/bundle.json",
+        "artifact_sha256": "1fb43baf7c1617c0e759c4f1ab6b3614e824135f8fcec865a6dc42b8f2017c79",
+        "derived_source_id": "disclosed-facts:4c18006d4a191405174e5f7c9f616956f30eece2acd30e0fa7ee32068dfa3fa2",
+        "original_source_id": "case-public:74e73ca9b427ed424b5ac315ff8c47b12e596412c6a31802fe52eede57e16e41",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 10,
+        "company_id": "jp:1827",
+        "fact_id": "1827-annual-company-eps-20260807",
+        "artifact": "research/ir-case-studies-2026-10-15/1827/eps-dividend-facts/bundle.json",
+        "artifact_sha256": "1fb43baf7c1617c0e759c4f1ab6b3614e824135f8fcec865a6dc42b8f2017c79",
+        "derived_source_id": "disclosed-facts:4c18006d4a191405174e5f7c9f616956f30eece2acd30e0fa7ee32068dfa3fa2",
+        "original_source_id": "case-public:74e73ca9b427ed424b5ac315ff8c47b12e596412c6a31802fe52eede57e16e41",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 10,
+        "company_id": "jp:1827",
+        "fact_id": "1827-annual-company-dps-20260807",
+        "artifact": "research/ir-case-studies-2026-10-15/1827/eps-dividend-facts/bundle.json",
+        "artifact_sha256": "1fb43baf7c1617c0e759c4f1ab6b3614e824135f8fcec865a6dc42b8f2017c79",
+        "derived_source_id": "disclosed-facts:4c18006d4a191405174e5f7c9f616956f30eece2acd30e0fa7ee32068dfa3fa2",
+        "original_source_id": "case-public:74e73ca9b427ed424b5ac315ff8c47b12e596412c6a31802fe52eede57e16e41",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 11,
+        "company_id": "jp:1833",
+        "fact_id": "1833-q1-basic-eps-20260807",
+        "artifact": "research/ir-case-studies-2026-10-15/1833/eps-dividend-facts/bundle.json",
+        "artifact_sha256": "388e3055eff96b39ce871d161a5bdfa4e7f615b10eeb073acdce3100cb3be50f",
+        "derived_source_id": "disclosed-facts:cbcbb3a061e4b117782728462750f95eb85308bef6758e676d7be23777ea4148",
+        "original_source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 11,
+        "company_id": "jp:1833",
+        "fact_id": "1833-annual-company-eps-20260807",
+        "artifact": "research/ir-case-studies-2026-10-15/1833/eps-dividend-facts/bundle.json",
+        "artifact_sha256": "388e3055eff96b39ce871d161a5bdfa4e7f615b10eeb073acdce3100cb3be50f",
+        "derived_source_id": "disclosed-facts:cbcbb3a061e4b117782728462750f95eb85308bef6758e676d7be23777ea4148",
+        "original_source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 11,
+        "company_id": "jp:1833",
+        "fact_id": "1833-annual-company-dps-20260807",
+        "artifact": "research/ir-case-studies-2026-10-15/1833/eps-dividend-facts/bundle.json",
+        "artifact_sha256": "388e3055eff96b39ce871d161a5bdfa4e7f615b10eeb073acdce3100cb3be50f",
+        "derived_source_id": "disclosed-facts:cbcbb3a061e4b117782728462750f95eb85308bef6758e676d7be23777ea4148",
+        "original_source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 12,
+        "company_id": "jp:7525",
+        "fact_id": "7525-QUICK-companyNI-derived-EPS-FY27March",
+        "artifact": "research/ir-case-studies-2026-10-15/7525/external-parameter-facts/normalized-facts.json",
+        "artifact_sha256": "5d09492511d703456c72a7f0c92597e3f969e4e2719fe3504f83f9c74a6f225a",
+        "derived_source_id": "disclosed-facts:c316527840fec8f703f258d54836f2e7db0e14b0856b342ef2be7478b7f55f4d",
+        "original_source_id": "case-public:b87e707ca4bec9077ffecb14be83767b1b4311e45b1d25d26a051c7e59a06656",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 12,
+        "company_id": "jp:7525",
+        "fact_id": "7525-QUICK-CAPM-costofequity-2026Aug",
+        "artifact": "research/ir-case-studies-2026-10-15/7525/external-parameter-facts/normalized-facts.json",
+        "artifact_sha256": "5d09492511d703456c72a7f0c92597e3f969e4e2719fe3504f83f9c74a6f225a",
+        "derived_source_id": "disclosed-facts:c316527840fec8f703f258d54836f2e7db0e14b0856b342ef2be7478b7f55f4d",
+        "original_source_id": "case-public:b87e707ca4bec9077ffecb14be83767b1b4311e45b1d25d26a051c7e59a06656",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 12,
+        "company_id": "jp:7525",
+        "fact_id": "7525-QUICK-CAPM-costofequity-trailing12months-average",
+        "artifact": "research/ir-case-studies-2026-10-15/7525/external-parameter-facts/normalized-facts.json",
+        "artifact_sha256": "5d09492511d703456c72a7f0c92597e3f969e4e2719fe3504f83f9c74a6f225a",
+        "derived_source_id": "disclosed-facts:c316527840fec8f703f258d54836f2e7db0e14b0856b342ef2be7478b7f55f4d",
+        "original_source_id": "case-public:b87e707ca4bec9077ffecb14be83767b1b4311e45b1d25d26a051c7e59a06656",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 13,
+        "company_id": "jp:8151",
+        "fact_id": "8151-astris-20250603-eps-9-25E",
+        "artifact": "research/ir-case-studies-2026-10-15/8151/external-estimate-facts/bundle.json",
+        "artifact_sha256": "3dd17da3a229c42f7966b6ab8e2793bd2b670459110b3750606fe8e646f38786",
+        "derived_source_id": "disclosed-facts:71344e71bc460da80f44135eae2f72a11010978560ec2fbfa3474560d3e536b0",
+        "original_source_id": "case-public:9bc7787f756b997532a3d34506a897e458bca6dadaf7c9e4d987993a7c085c88",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 13,
+        "company_id": "jp:8151",
+        "fact_id": "8151-astris-20250603-eps-9-26E",
+        "artifact": "research/ir-case-studies-2026-10-15/8151/external-estimate-facts/bundle.json",
+        "artifact_sha256": "3dd17da3a229c42f7966b6ab8e2793bd2b670459110b3750606fe8e646f38786",
+        "derived_source_id": "disclosed-facts:71344e71bc460da80f44135eae2f72a11010978560ec2fbfa3474560d3e536b0",
+        "original_source_id": "case-public:9bc7787f756b997532a3d34506a897e458bca6dadaf7c9e4d987993a7c085c88",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 13,
+        "company_id": "jp:8151",
+        "fact_id": "8151-astris-20250603-eps-9-27E",
+        "artifact": "research/ir-case-studies-2026-10-15/8151/external-estimate-facts/bundle.json",
+        "artifact_sha256": "3dd17da3a229c42f7966b6ab8e2793bd2b670459110b3750606fe8e646f38786",
+        "derived_source_id": "disclosed-facts:71344e71bc460da80f44135eae2f72a11010978560ec2fbfa3474560d3e536b0",
+        "original_source_id": "case-public:9bc7787f756b997532a3d34506a897e458bca6dadaf7c9e4d987993a7c085c88",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 13,
+        "company_id": "jp:8151",
+        "fact_id": "8151-astris-20250603-dps-9-25E",
+        "artifact": "research/ir-case-studies-2026-10-15/8151/external-estimate-facts/bundle.json",
+        "artifact_sha256": "3dd17da3a229c42f7966b6ab8e2793bd2b670459110b3750606fe8e646f38786",
+        "derived_source_id": "disclosed-facts:71344e71bc460da80f44135eae2f72a11010978560ec2fbfa3474560d3e536b0",
+        "original_source_id": "case-public:9bc7787f756b997532a3d34506a897e458bca6dadaf7c9e4d987993a7c085c88",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 13,
+        "company_id": "jp:8151",
+        "fact_id": "8151-astris-20250603-dps-9-26E",
+        "artifact": "research/ir-case-studies-2026-10-15/8151/external-estimate-facts/bundle.json",
+        "artifact_sha256": "3dd17da3a229c42f7966b6ab8e2793bd2b670459110b3750606fe8e646f38786",
+        "derived_source_id": "disclosed-facts:71344e71bc460da80f44135eae2f72a11010978560ec2fbfa3474560d3e536b0",
+        "original_source_id": "case-public:9bc7787f756b997532a3d34506a897e458bca6dadaf7c9e4d987993a7c085c88",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 13,
+        "company_id": "jp:8151",
+        "fact_id": "8151-astris-20250603-dps-9-27E",
+        "artifact": "research/ir-case-studies-2026-10-15/8151/external-estimate-facts/bundle.json",
+        "artifact_sha256": "3dd17da3a229c42f7966b6ab8e2793bd2b670459110b3750606fe8e646f38786",
+        "derived_source_id": "disclosed-facts:71344e71bc460da80f44135eae2f72a11010978560ec2fbfa3474560d3e536b0",
+        "original_source_id": "case-public:9bc7787f756b997532a3d34506a897e458bca6dadaf7c9e4d987993a7c085c88",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 14,
+        "company_id": "jp:8151",
+        "fact_id": "8151-quick-calculated-eps-from-company-ni-fy26-20260925",
+        "artifact": "research/ir-case-studies-2026-10-15/8151/quick-external-parameter-facts/bundle.json",
+        "artifact_sha256": "2e3d3c2f44ea0b4d50a138c6445c00145a074f331a67aa02e7229b62ec6dea14",
+        "derived_source_id": "disclosed-facts:767a77f52004ee70e7a7839195aab5a5664dda9e48ce807df13898bbd43af208",
+        "original_source_id": "case-public:2469a802adda7396e6c4d0d235d11db39011a5d6077f37c6cd305007561640a4",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 14,
+        "company_id": "jp:8151",
+        "fact_id": "8151-quick-capm-cost-equity-202608",
+        "artifact": "research/ir-case-studies-2026-10-15/8151/quick-external-parameter-facts/bundle.json",
+        "artifact_sha256": "2e3d3c2f44ea0b4d50a138c6445c00145a074f331a67aa02e7229b62ec6dea14",
+        "derived_source_id": "disclosed-facts:767a77f52004ee70e7a7839195aab5a5664dda9e48ce807df13898bbd43af208",
+        "original_source_id": "case-public:2469a802adda7396e6c4d0d235d11db39011a5d6077f37c6cd305007561640a4",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 14,
+        "company_id": "jp:8151",
+        "fact_id": "8151-quick-capm-cost-equity-trailing12m-report20260925",
+        "artifact": "research/ir-case-studies-2026-10-15/8151/quick-external-parameter-facts/bundle.json",
+        "artifact_sha256": "2e3d3c2f44ea0b4d50a138c6445c00145a074f331a67aa02e7229b62ec6dea14",
+        "derived_source_id": "disclosed-facts:767a77f52004ee70e7a7839195aab5a5664dda9e48ce807df13898bbd43af208",
+        "original_source_id": "case-public:2469a802adda7396e6c4d0d235d11db39011a5d6077f37c6cd305007561640a4",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "scope"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 15,
+        "company_id": "jp:3774",
+        "fact_id": "iij-faq-fy2027-revenue",
+        "artifact": "research/ir-case-studies-2026-10-15/3774/faq-to-filing-guidance-comparison/faq-normalized.json",
+        "artifact_sha256": "de2de4cca7fc315d63d0f759738e274a8894018fb7cb43e8c9f86db3ace5c977",
+        "derived_source_id": "disclosed-facts:cbec4ac1cb013a68f3cba5a0ba8648738e6b076297c7ddd86a09b6b3ea904937",
+        "original_source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 15,
+        "company_id": "jp:3774",
+        "fact_id": "iij-faq-fy2027-operating_profit",
+        "artifact": "research/ir-case-studies-2026-10-15/3774/faq-to-filing-guidance-comparison/faq-normalized.json",
+        "artifact_sha256": "de2de4cca7fc315d63d0f759738e274a8894018fb7cb43e8c9f86db3ace5c977",
+        "derived_source_id": "disclosed-facts:cbec4ac1cb013a68f3cba5a0ba8648738e6b076297c7ddd86a09b6b3ea904937",
+        "original_source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 15,
+        "company_id": "jp:3774",
+        "fact_id": "iij-faq-fy2027-profit_before_tax",
+        "artifact": "research/ir-case-studies-2026-10-15/3774/faq-to-filing-guidance-comparison/faq-normalized.json",
+        "artifact_sha256": "de2de4cca7fc315d63d0f759738e274a8894018fb7cb43e8c9f86db3ace5c977",
+        "derived_source_id": "disclosed-facts:cbec4ac1cb013a68f3cba5a0ba8648738e6b076297c7ddd86a09b6b3ea904937",
+        "original_source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 15,
+        "company_id": "jp:3774",
+        "fact_id": "iij-faq-fy2027-profit_attributable_to_owners_of_parent",
+        "artifact": "research/ir-case-studies-2026-10-15/3774/faq-to-filing-guidance-comparison/faq-normalized.json",
+        "artifact_sha256": "de2de4cca7fc315d63d0f759738e274a8894018fb7cb43e8c9f86db3ace5c977",
+        "derived_source_id": "disclosed-facts:cbec4ac1cb013a68f3cba5a0ba8648738e6b076297c7ddd86a09b6b3ea904937",
+        "original_source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 16,
+        "company_id": "jp:3774",
+        "fact_id": "iij-filing-fy2027-revenue",
+        "artifact": "research/ir-case-studies-2026-10-15/3774/faq-to-filing-guidance-comparison/filing-normalized.json",
+        "artifact_sha256": "d273afe49a1f6d94d80c785e90542c6afc2b2ec7e5fa04f3f98a51eeb8aa9c55",
+        "derived_source_id": "disclosed-facts:3b2754828b7a2d6b21d6e3ae1de55b71ee2a1a24f1528f4c6b7e902e3ca76942",
+        "original_source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 16,
+        "company_id": "jp:3774",
+        "fact_id": "iij-filing-fy2027-operating_profit",
+        "artifact": "research/ir-case-studies-2026-10-15/3774/faq-to-filing-guidance-comparison/filing-normalized.json",
+        "artifact_sha256": "d273afe49a1f6d94d80c785e90542c6afc2b2ec7e5fa04f3f98a51eeb8aa9c55",
+        "derived_source_id": "disclosed-facts:3b2754828b7a2d6b21d6e3ae1de55b71ee2a1a24f1528f4c6b7e902e3ca76942",
+        "original_source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 16,
+        "company_id": "jp:3774",
+        "fact_id": "iij-filing-fy2027-profit_before_tax",
+        "artifact": "research/ir-case-studies-2026-10-15/3774/faq-to-filing-guidance-comparison/filing-normalized.json",
+        "artifact_sha256": "d273afe49a1f6d94d80c785e90542c6afc2b2ec7e5fa04f3f98a51eeb8aa9c55",
+        "derived_source_id": "disclosed-facts:3b2754828b7a2d6b21d6e3ae1de55b71ee2a1a24f1528f4c6b7e902e3ca76942",
+        "original_source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 16,
+        "company_id": "jp:3774",
+        "fact_id": "iij-filing-fy2027-profit_attributable_to_owners_of_parent",
+        "artifact": "research/ir-case-studies-2026-10-15/3774/faq-to-filing-guidance-comparison/filing-normalized.json",
+        "artifact_sha256": "d273afe49a1f6d94d80c785e90542c6afc2b2ec7e5fa04f3f98a51eeb8aa9c55",
+        "derived_source_id": "disclosed-facts:3b2754828b7a2d6b21d6e3ae1de55b71ee2a1a24f1528f4c6b7e902e3ca76942",
+        "original_source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 17,
+        "company_id": "jp:6754",
+        "fact_id": "6754-fy2026-1q-communication-revenue",
+        "artifact": "research/ir-case-studies-2026-10-15/6754/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "2ec58902101391f1523cb61eaa469d0ea804987c8eea89425cef074f51bd8d78",
+        "derived_source_id": "disclosed-facts:d918400f13006de3e28e597c43d9c70b14e668277afab5c695ad98b83f86d1af",
+        "original_source_id": "case-public:7fc71674df064d3203d00e97d4637c43ba4126201741b52d2dabc9d5355966c7",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 17,
+        "company_id": "jp:6754",
+        "fact_id": "6754-fy2026-1q-communication-operating-profit",
+        "artifact": "research/ir-case-studies-2026-10-15/6754/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "2ec58902101391f1523cb61eaa469d0ea804987c8eea89425cef074f51bd8d78",
+        "derived_source_id": "disclosed-facts:d918400f13006de3e28e597c43d9c70b14e668277afab5c695ad98b83f86d1af",
+        "original_source_id": "case-public:7fc71674df064d3203d00e97d4637c43ba4126201741b52d2dabc9d5355966c7",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 17,
+        "company_id": "jp:6754",
+        "fact_id": "6754-fy2026-1q-communication-orders",
+        "artifact": "research/ir-case-studies-2026-10-15/6754/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "2ec58902101391f1523cb61eaa469d0ea804987c8eea89425cef074f51bd8d78",
+        "derived_source_id": "disclosed-facts:d918400f13006de3e28e597c43d9c70b14e668277afab5c695ad98b83f86d1af",
+        "original_source_id": "case-public:7fc71674df064d3203d00e97d4637c43ba4126201741b52d2dabc9d5355966c7",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 17,
+        "company_id": "jp:6754",
+        "fact_id": "6754-fy2027march-company-revenue",
+        "artifact": "research/ir-case-studies-2026-10-15/6754/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "2ec58902101391f1523cb61eaa469d0ea804987c8eea89425cef074f51bd8d78",
+        "derived_source_id": "disclosed-facts:d918400f13006de3e28e597c43d9c70b14e668277afab5c695ad98b83f86d1af",
+        "original_source_id": "case-public:7fc71674df064d3203d00e97d4637c43ba4126201741b52d2dabc9d5355966c7",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 17,
+        "company_id": "jp:6754",
+        "fact_id": "6754-fy2027march-company-operating-profit",
+        "artifact": "research/ir-case-studies-2026-10-15/6754/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "2ec58902101391f1523cb61eaa469d0ea804987c8eea89425cef074f51bd8d78",
+        "derived_source_id": "disclosed-facts:d918400f13006de3e28e597c43d9c70b14e668277afab5c695ad98b83f86d1af",
+        "original_source_id": "case-public:7fc71674df064d3203d00e97d4637c43ba4126201741b52d2dabc9d5355966c7",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 17,
+        "company_id": "jp:6754",
+        "fact_id": "6754-fy2027march-company-profit-before-tax",
+        "artifact": "research/ir-case-studies-2026-10-15/6754/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "2ec58902101391f1523cb61eaa469d0ea804987c8eea89425cef074f51bd8d78",
+        "derived_source_id": "disclosed-facts:d918400f13006de3e28e597c43d9c70b14e668277afab5c695ad98b83f86d1af",
+        "original_source_id": "case-public:7fc71674df064d3203d00e97d4637c43ba4126201741b52d2dabc9d5355966c7",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      },
+      {
+        "entry_index": 17,
+        "company_id": "jp:6754",
+        "fact_id": "6754-fy2027march-company-profit-for-year",
+        "artifact": "research/ir-case-studies-2026-10-15/6754/disclosed-facts/normalized-bundle.json",
+        "artifact_sha256": "2ec58902101391f1523cb61eaa469d0ea804987c8eea89425cef074f51bd8d78",
+        "derived_source_id": "disclosed-facts:d918400f13006de3e28e597c43d9c70b14e668277afab5c695ad98b83f86d1af",
+        "original_source_id": "case-public:7fc71674df064d3203d00e97d4637c43ba4126201741b52d2dabc9d5355966c7",
+        "per_fact_override_used": false,
+        "index_fields_equal_derived_fact": [
+          "id",
+          "concept",
+          "kind",
+          "value",
+          "unit",
+          "period"
+        ],
+        "resolved": true
+      }
+    ]
+  },
+  "research_boundaries": {
+    "financial_inputs_verified": false,
+    "model_inputs_adopted": false,
+    "theses_created": 0,
+    "external_sends": 0,
+    "new_independent_forecasts": 0,
+    "derived_sources_imported_into_actual_database": false,
+    "import_status_evidence": "All stored index flags remain false; actual DB was deliberately not opened, so current runtime import status was not independently queried.",
+    "6754_scope": "3 communication-segment quarterly observations and 4 consolidated company forecasts. Orders are not sales/profit, displayed rounding and period labels remain unchanged; no exact calendar dates, parent-owner attribution or current-latest guidance inferred."
+  },
+  "input_hashes_unchanged_at_end": {
+    "research/ir-case-studies-2026-10-15/disclosed-fact-index-v13.json": "7f05530361503257fdb99620c7f8986fd2862a8170dca72f164abe18796c14c9",
+    "research/ir-case-studies-2026-10-15/disclosed-fact-index-v14.json": "43f7635995ee35bb77c39895a4c728bc68ec638df4a2ce98157d8808ecb0628e",
+    "research/ir-case-studies-2026-10-15/3774/disclosed-facts-normalized.json": "a627f43a9aecea6986861049e3927f688413e619a51d3ff73716e815a105a331",
+    "research/ir-case-studies-2026-10-15/5988/disclosed-facts-normalized.json": "31cd24bb1b73a21152cfb11f1759f84e2970adab4ddf3c08a4a3b5b226a24695",
+    "research/ir-case-studies-2026-10-15/8331/disclosed-facts-normalized.json": "109b3af7449f6d3059e266c6249ab9d0b7b191a995d0b37cba72749044d2b1c9",
+    "research/ir-case-studies-2026-10-15/5480/disclosed-facts/normalized-bundle.json": "62e5672411e923db21b0529dd9365d816d58c1a2aeb88270f538e546e580180b",
+    "research/ir-case-studies-2026-10-15/5480/revenue-disclosed-facts/normalized-bundle.json": "0e251685a8bc95232b39fc678dc1ad6ffc662162dafdf961d731aaaf6350ea27",
+    "research/ir-case-studies-2026-10-15/1332/disclosed-facts/normalized-bundle.json": "ec2f7e83d410f0a4c5e788f93b9addf3b22030b3e4da228c6063bf63bce461c7",
+    "research/ir-case-studies-2026-10-15/135A/disclosed-facts/normalized-bundle.json": "cd6ec111de870b91f6a3be37fecfd0cdfe3221b6b19132c8d8c0b02c6b00f36e",
+    "research/ir-case-studies-2026-10-15/135A/cashflow-disclosed-facts/normalized-bundle.json": "7889e9b548f3d37b3e49f415bb492484c6e741b4de34b007773802fcab9bf400",
+    "research/ir-case-studies-2026-10-15/1379/disclosed-facts/normalized-bundle.json": "85aaa1129c71f436ebbc12d568d2526860b23bd1004885e0af77e7df68f7b05e",
+    "research/ir-case-studies-2026-10-15/1518/guidance-revision-facts/bundle.json": "9509005a9d6debeacec85291fa433c28460e189592b583e184a169651bdf30b3",
+    "research/ir-external-estimate-extraction-2026-10-15/9702/bundle.json": "ba16f93e7a6290d7c7522aaed4bd0c0ebe005f7052ca1e2419f4112a09364817",
+    "research/ir-case-studies-2026-10-15/1721/actual-and-plan-facts/bundle.json": "9645612c537290921007f03a3ae4e32c9c457e96248593fe0e6d050452107277",
+    "research/ir-case-studies-2026-10-15/1827/eps-dividend-facts/bundle.json": "1fb43baf7c1617c0e759c4f1ab6b3614e824135f8fcec865a6dc42b8f2017c79",
+    "research/ir-case-studies-2026-10-15/1833/eps-dividend-facts/bundle.json": "388e3055eff96b39ce871d161a5bdfa4e7f615b10eeb073acdce3100cb3be50f",
+    "research/ir-case-studies-2026-10-15/7525/external-parameter-facts/normalized-facts.json": "5d09492511d703456c72a7f0c92597e3f969e4e2719fe3504f83f9c74a6f225a",
+    "research/ir-case-studies-2026-10-15/8151/external-estimate-facts/bundle.json": "3dd17da3a229c42f7966b6ab8e2793bd2b670459110b3750606fe8e646f38786",
+    "research/ir-case-studies-2026-10-15/8151/quick-external-parameter-facts/bundle.json": "2e3d3c2f44ea0b4d50a138c6445c00145a074f331a67aa02e7229b62ec6dea14",
+    "research/ir-case-studies-2026-10-15/3774/faq-to-filing-guidance-comparison/faq-normalized.json": "de2de4cca7fc315d63d0f759738e274a8894018fb7cb43e8c9f86db3ace5c977",
+    "research/ir-case-studies-2026-10-15/3774/faq-to-filing-guidance-comparison/filing-normalized.json": "d273afe49a1f6d94d80c785e90542c6afc2b2ec7e5fa04f3f98a51eeb8aa9c55",
+    "research/ir-case-studies-2026-10-15/6754/disclosed-facts/normalized-bundle.json": "2ec58902101391f1523cb61eaa469d0ea804987c8eea89425cef074f51bd8d78",
+    "research/ir-case-studies-2026-10-15/6754/disclosed-facts/independent-recheck.json": "34b5af81fce1090b22153d338caeaee791e305d033a88f3de79ed145db8cf7cd",
+    "research/ir-case-studies-2026-10-15/6754/disclosed-facts/README.md": "54642fb05c0489d33aa67081bd93e870bd8cc272020666dcb1d742b87f31ac75",
+    "research/ir-case-studies-2026-10-15/6754/disclosed-facts/input.json": "5f0785b4e7482f7155d5c2c539ebefb349c3d11e908c58abd187f9674ce1c897",
+    "research/ir-case-studies-2026-10-15/6754/disclosed-facts/validation.json": "694d4692ad2f131645795321f4f395f05738f6a05809870a052d0a1a58d5ee0e"
+  },
+  "execution": {
+    "GETs": 0,
+    "API_calls": 0,
+    "Store_or_DB_constructors": 0,
+    "DB_accesses": 0,
+    "code_or_old_artifact_edits": 0,
+    "raw_document_or_image_reaudits": 0,
+    "numeric_recalculations": 0,
+    "normalizer_replays": 0
+  },
+  "limits": [
+    "Equality to stored bundles is an index-integrity check, not an independent numerical truth or semantic adoption certification.",
+    "Repeated records/entries may refer to the same original source; the 18 entries and 82 source-bound fact records are not independent forecasts.",
+    "Reuse of the fixed 6754 normalization review preserves its stated read scope and limitations."
+  ]
+}

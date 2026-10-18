@@ -1,0 +1,32 @@
+--- before/docs/ongoing-work.md
++++ after/docs/ongoing-work.md
+@@ -12,14 +12,14 @@
+ 
+ ## 現在の実台帳と実装
+ 
+-実DBは `data/ir-research-2026-10-15.sqlite3`。最新の変更は[4318報告PLの接続](../research/ir-4318-reported-PL-connection-2026-10-16/parent-acceptance.json)。SHA256は `03ec438048a00efedaf91120eef087d34cd80523001d639b0b75fd56808c3d6d`。
++実DBは `data/ir-research-2026-10-15.sqlite3`。最新の変更は[4318後発Q1の接続](../research/ir-4318-subsequent-Q1-connection-2026-10-16/actual-verification.json)。SHA256は `c3bdbbf82f4e88553e8bb1dec89cc42488c4a5147f228cb4da6b4e0d95ccf93d`。
+ 
+ | 項目 | 現在の状態 |
+ |---|---|
+ | 会社 | 1,819社。watch/held:falseを実保有申告としない |
+-| 資料 | 262件（公開261・市場1）、分類261・availability262 |
+-| job | 181件全完了（intake136・定性45）、attempt178・event356・receipt178 |
+-| native監視 | 34case・80版・198既読。4318はv5/config1・5既読 |
++| 資料 | 263件（公開262・市場1）、分類262・availability263 |
++| job | 183件全完了（intake137・定性46）、attempt180・event360・receipt180 |
++| native監視 | 34case・81版・199既読。4318はv6/config1・6既読 |
+ | 研究IR | 7388・135A・7525の3draft、全未送信/no_reply。返信・レビュー各0 |
+ | 金融判断 | 数値thesis・実policy・正式金融質問/返信・明示保有・研究判断記録・送信・注文0 |
+ 
+@@ -39,8 +39,8 @@
+ 
+ ## いま進めること
+ 
+-1. **研究IR3件と次の公開観測を接続する。** [3件の最少action比較](../research/ir-three-inquiry-next-observation-gap-2026-10-16/README.md)は受入済み。会社定義の確認後も、採用する方法がどの入力・条件へ使うかが残る。次は保存済み公式一覧だけで後発公表資料のcoverageを点検し、現在の質問の前提が変わっていないか確認する。 [既存確認パケット](../research/ir-three-draft-review-packet-2026-10-16/README.md)、[質問準備](ir-question-preparation.md)、現在のcase/inquiryを使い、回答で変わる比較、次の公表で検証できる事実、数値判断までに別途足りない入力を区別する。価格待ちだけで完成するとは決めない。新草案・独自順位・分岐の後付けはしない。
+-2. **4318の後発Q1を最小範囲で確認する。** 既存C3は後発資料本文が未取得。保存一覧の2026-07-31公表Q1 literalと完全robots/holdsをGET0で確認済み。単一PDFの新taskを上限1GETで確認中。対象期/年次との区別、会社予想の版、株式basisに必要な最少頁を特定してから有限取得する。年次EPS74.11/BPS345.24をQ1値で置換・年率化しない。
++1. **研究IR3件と次の公開観測を接続する。** [3件の最少action比較](../research/ir-three-inquiry-next-observation-gap-2026-10-16/README.md)は受入済み。会社定義の確認後も、採用する方法がどの入力・条件へ使うかが残る。[保存一覧の後発coverage](../research/ir-three-inquiry-subsequent-public-coverage-2026-10-16/inventory.md)も確認済み。135Aは一覧の最新短信/説明資料を既読、7388/7525は空の静的一覧から後発資料の有無を判定できない。 [既存確認パケット](../research/ir-three-draft-review-packet-2026-10-16/README.md)、[質問準備](ir-question-preparation.md)、現在のcase/inquiryを使い、回答で変わる比較、次の公表で検証できる事実、数値判断までに別途足りない入力を区別する。価格待ちだけで完成するとは決めない。新草案・独自順位・分岐の後付けはしない。
++2. **4318の後発Q1は接続完了。** [単一PDF・限定3頁の読解](../research/ir-case-studies-2026-10-15/4318/subsequent-Q1-public-review-2026-10-16/parent-acceptance.json)を保存/分類し、既存C1〜C3へ比較した。年次74.11/345.24を保持し、Q1 36.77/361.88・予想50.27を別期/当時予想として記録。利益予想2,805百万円不変と自己株取得/処分の注記を結び、EPS表示差を増益予想へ変換しない。四半期財表の千円→百万円変更も記録。Q1未取得gapは解消、元issueは未解決、管理Jan16retain・再queue0。索引v43は新factなしで据置き、そのDB snapshotは当時のまま。7社の残る後発資料coverageをGET0で確認中。
+ 3. **株価は利用可能な正規データ経路が判明してから進める。** 利用者へ既存API契約の有無を任意確認中。新しい有料契約を前提にしない。利用可能になった場合も、同一銘柄/通貨/価格日・精度/株式basisを確認し、明示方針で採用する。
+ 4. **将来の実返信を事前分岐と照合する。** 未送信3件は送信readyではない。受信時は原文・公開根拠・case版・対象期を別に確認し、曖昧/拒否/無回答を悪材料へ変換しない。金融入力が変わる場合は既存の正式金融契約へ進む。
+ 

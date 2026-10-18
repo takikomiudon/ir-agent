@@ -1,0 +1,374 @@
+{
+  "schema_version": 1,
+  "prepared_at": "2026-10-11T07:39:31.852647+00:00",
+  "reviewer": "codex_audit_consumer",
+  "proposal_status": "offline_prepared_not_executed",
+  "scope": "Exactly two successful saved URLs, one per company; finite parser refresh exception to already_fetched only.",
+  "proposed_target_count": 2,
+  "max_company_content_get_attempts": 2,
+  "scheduling_owner": "root",
+  "must_run_without_main_collector_overlap": true,
+  "live_robots_check_required": true,
+  "must_preserve_robots_403_429_transport_circuit_stop_rules": true,
+  "network_requests_in_preparation": 0,
+  "external_messages_sent": 0,
+  "records_updated": 0,
+  "original_evidence_modified": false,
+  "source_snapshots_to_preserve": {
+    "evidence/2752/20261011T044958799080Z/01.json": "73741b1f08db5e96d91b9adff32dc22ed4496a5b2860e5f16edb0f5c71711d33",
+    "evidence/2752/20261011T044958799080Z/02.json": "8da939e50d14fe8ac902b549100e84596748a6ed709228d67f77f72b0c64af27",
+    "evidence/2752/20261011T044958799080Z/07.json": "d3f57e205fe474de90b7542d021d2b990d26e19817ed12019a637ef8bb2d0f5e",
+    "evidence/2752/20261011T044958799080Z/03.json": "440331c4624d10547270da71c737d851b32cbabe942482619ebedc6cb3477e2b",
+    "evidence/2752/20261011T044958799080Z/04.json": "7acd2e1d690923b08c65a0514e03fae57cc674dd8a28466b2bc69c008f2db7f4",
+    "evidence/2752/20261011T044958799080Z/05.json": "488968d3548de43b060fefc28e26635943c978b08d0826bbc595a323c6a45381",
+    "evidence/2784/20261011T045014864195Z/03.json": "20e0daa5ab8092669a6f98f9ba50e570372eaf4d2a64f96e736a09466b117bfd",
+    "evidence/2784/20261011T045014864195Z/04.json": "cb73a8fb807e7cec1fd955bf280db12a9ef2e02ed99ce13976d9486cdd11fd15",
+    "evidence/2784/20261011T045014864195Z/01.json": "5b102a4ff053616d376e845e749167274fa4c6bd0360f7a7a73dac18c69c0e35"
+  },
+  "original_record_hashes_at_preparation": {
+    "2752": "1c3ee62ddd7dd5b5cff112dd46041601c8edd6db601ce42d29ba6faa798c453c",
+    "2784": "58aa43686fff4d3cec7fdf5e1ff56ebe3a53c62fe13162131f60d36686a88301"
+  },
+  "refreshes": [
+    {
+      "security_code": "2752",
+      "company_name": "フジオフードグループ本社",
+      "refresh_kind": "official_ir_parent_after_base_resolution_fix",
+      "target_url": "https://fujiogroup.com/ir/",
+      "target_snapshot": "evidence/2752/20261011T044958799080Z/02.json",
+      "parent_url": "https://www.fujiofood.com/",
+      "parent_snapshot": "evidence/2752/20261011T044958799080Z/01.json",
+      "parent_link": {
+        "url": "https://www.fujiofood.com/ir/",
+        "label": "株主・投資家の皆様へ 公告はこちら"
+      },
+      "parent_to_target_relationship": "Exact saved parent href was fetched, then an observed HTTP 301 redirected to this canonical target URL, whose response was HTTP 200. No URL was repaired or inferred.",
+      "old_target_metadata": {
+        "snapshot": "evidence/2752/20261011T044958799080Z/02.json",
+        "snapshot_json_sha256": "8da939e50d14fe8ac902b549100e84596748a6ed709228d67f77f72b0c64af27",
+        "requested_url": "https://www.fujiofood.com/ir/",
+        "url": "https://fujiogroup.com/ir/",
+        "retrieved_at": "2026-10-11T04:50:02.513389+00:00",
+        "publication_time": null,
+        "http_status": 200,
+        "byte_count": 23368,
+        "sha256": "ad8c66003fe5a3d7450c65a4c6302ff442e9af4330a899cac085eac800f6f578",
+        "content_type": "text/html",
+        "encoding": "UTF-8",
+        "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+        "title": "株主・投資家の皆様へ｜株式会社フジオフードグループ本社",
+        "redirects": [
+          {
+            "requested_url": "https://www.fujiofood.com/ir/",
+            "url": "https://www.fujiofood.com/ir/",
+            "http_status": 301,
+            "redirect_target": "https://fujiogroup.com/ir/",
+            "retrieved_at": "2026-10-11T04:50:00.464828+00:00"
+          }
+        ],
+        "discovery_parent_url": "https://www.fujiofood.com/",
+        "discovery_link_label": "株主・投資家の皆様へ 公告はこちら",
+        "official_identity_basis": "third_party_unverified",
+        "sha256_meaning": "sha256 is the recorded HTTP body byte hash, not a recovered copy of the body bytes",
+        "http_body_bytes_saved": false
+      },
+      "parent_metadata": {
+        "snapshot": "evidence/2752/20261011T044958799080Z/01.json",
+        "snapshot_json_sha256": "73741b1f08db5e96d91b9adff32dc22ed4496a5b2860e5f16edb0f5c71711d33",
+        "requested_url": "https://www.fujiofood.com/",
+        "url": "https://www.fujiofood.com/",
+        "retrieved_at": "2026-10-11T04:49:59.678947+00:00",
+        "publication_time": null,
+        "http_status": 200,
+        "byte_count": 26731,
+        "sha256": "bbf444d06b486e57fc7cba941ec23e02e1b3780b9bb9f9fad73529de2668e593",
+        "content_type": "text/html; charset=UTF-8",
+        "encoding": "utf-8",
+        "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+        "title": "株式会社フジオフードシステム",
+        "redirects": null,
+        "discovery_parent_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+        "discovery_link_label": "discovery seed",
+        "official_identity_basis": "third_party_unverified",
+        "sha256_meaning": "sha256 is the recorded HTTP body byte hash, not a recovered copy of the body bytes",
+        "http_body_bytes_saved": false
+      },
+      "record_identity_status": "name_or_security_code_observed",
+      "identity_and_ir_scope_evidence": [
+        {
+          "snapshot": "evidence/2752/20261011T044958799080Z/02.json",
+          "url": "https://fujiogroup.com/ir/",
+          "retrieved_at": "2026-10-11T04:50:02.513389+00:00",
+          "http_status": 200,
+          "quote": "株主・投資家の皆様へ｜株式会社フジオフードグループ本社",
+          "purpose": "listed_holding_company_and_official_ir_parent_title",
+          "quote_source": "title"
+        },
+        {
+          "snapshot": "evidence/2752/20261011T044958799080Z/07.json",
+          "url": "https://fujiogroup.com/contact/",
+          "retrieved_at": "2026-10-11T04:50:07.788811+00:00",
+          "http_status": 200,
+          "quote": "株主様・投資家様からのお問い合わせ 06-6360-0304",
+          "purpose": "existing_investor_phone_assignment_not_email_form",
+          "quote_source": "visible_text"
+        }
+      ],
+      "exact_saved_parent_link_label": "株主・投資家の皆様へ 公告はこちら",
+      "parent_link_label_source": "saved links array; label is not in the extracted visible text of the original image link",
+      "reason": "旧取得200の正式持株会社IR親ページを1回だけ再取得し、修正後parserでHTMLのbase href/相対href/解決根拠を新snapshotに保存する。旧IR親由来の株式情報・FAQ・問い合わせリンクがir/ir/やir/contact/となり404に達した事実はあるが、原HTML bytes/base属性は未保存でbase未対応が原因とは未確定。現contact07は投資家向け電話を掲載しておりメール/フォーム受付は未実証。既知200親のみ再取得し、404先を推測補正しない。",
+      "parser_cause_status": "suspected_link_resolution_issue_not_proven",
+      "old_failed_descendants": [
+        {
+          "metadata": {
+            "snapshot": "evidence/2752/20261011T044958799080Z/03.json",
+            "snapshot_json_sha256": "440331c4624d10547270da71c737d851b32cbabe942482619ebedc6cb3477e2b",
+            "requested_url": "https://fujiogroup.com/ir/ir/information.html",
+            "url": "https://fujiogroup.com/ir/ir/information.html",
+            "retrieved_at": "2026-10-11T04:50:03.681886+00:00",
+            "publication_time": null,
+            "http_status": 404,
+            "byte_count": 2814,
+            "sha256": "47737d49f136ca1daf9db6c48d4591576dd05b1f467946ed6633d9347a3f5014",
+            "content_type": "text/html",
+            "encoding": "EUC-JP",
+            "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+            "title": "404 File Not Found",
+            "redirects": null,
+            "discovery_parent_url": "https://fujiogroup.com/ir/",
+            "discovery_link_label": "株式情報",
+            "official_identity_basis": "third_party_unverified",
+            "sha256_meaning": "sha256 is the recorded HTTP body byte hash, not a recovered copy of the body bytes",
+            "http_body_bytes_saved": false
+          },
+          "saved_parent_links": [
+            {
+              "url": "https://fujiogroup.com/ir/ir/information.html",
+              "label": "株式情報"
+            },
+            {
+              "url": "https://fujiogroup.com/ir/ir/information.html",
+              "label": "株式情報"
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "snapshot": "evidence/2752/20261011T044958799080Z/04.json",
+            "snapshot_json_sha256": "7acd2e1d690923b08c65a0514e03fae57cc674dd8a28466b2bc69c008f2db7f4",
+            "requested_url": "https://fujiogroup.com/ir/ir/faq.html",
+            "url": "https://fujiogroup.com/ir/ir/faq.html",
+            "retrieved_at": "2026-10-11T04:50:04.068446+00:00",
+            "publication_time": null,
+            "http_status": 404,
+            "byte_count": 2814,
+            "sha256": "47737d49f136ca1daf9db6c48d4591576dd05b1f467946ed6633d9347a3f5014",
+            "content_type": "text/html",
+            "encoding": "EUC-JP",
+            "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+            "title": "404 File Not Found",
+            "redirects": null,
+            "discovery_parent_url": "https://fujiogroup.com/ir/",
+            "discovery_link_label": "よくあるご質問",
+            "official_identity_basis": "third_party_unverified",
+            "sha256_meaning": "sha256 is the recorded HTTP body byte hash, not a recovered copy of the body bytes",
+            "http_body_bytes_saved": false
+          },
+          "saved_parent_links": [
+            {
+              "url": "https://fujiogroup.com/ir/ir/faq.html",
+              "label": "よくあるご質問"
+            },
+            {
+              "url": "https://fujiogroup.com/ir/ir/faq.html",
+              "label": "よくあるご質問"
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "snapshot": "evidence/2752/20261011T044958799080Z/05.json",
+            "snapshot_json_sha256": "488968d3548de43b060fefc28e26635943c978b08d0826bbc595a323c6a45381",
+            "requested_url": "https://fujiogroup.com/ir/contact/",
+            "url": "https://fujiogroup.com/ir/contact/",
+            "retrieved_at": "2026-10-11T04:50:05.262072+00:00",
+            "publication_time": null,
+            "http_status": 404,
+            "byte_count": 2814,
+            "sha256": "47737d49f136ca1daf9db6c48d4591576dd05b1f467946ed6633d9347a3f5014",
+            "content_type": "text/html",
+            "encoding": "EUC-JP",
+            "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+            "title": "404 File Not Found",
+            "redirects": null,
+            "discovery_parent_url": "https://fujiogroup.com/ir/",
+            "discovery_link_label": "お問合せ",
+            "official_identity_basis": "third_party_unverified",
+            "sha256_meaning": "sha256 is the recorded HTTP body byte hash, not a recovered copy of the body bytes",
+            "http_body_bytes_saved": false
+          },
+          "saved_parent_links": [
+            {
+              "url": "https://fujiogroup.com/ir/contact/",
+              "label": "お問合せ"
+            },
+            {
+              "url": "https://fujiogroup.com/ir/contact/",
+              "label": "お問い合わせ"
+            },
+            {
+              "url": "https://fujiogroup.com/ir/contact/",
+              "label": "お問合せ"
+            }
+          ]
+        }
+      ],
+      "expected_new_evidence": [
+        "New HTTP response timestamp/content hash and complete parser metadata",
+        "base_href/base_hrefs/base_url/base_resolution_error plus raw link href and resolved URLs",
+        "Any new exact IR contact/FAQ link discovered from this fetched parent must be reviewed separately before followup fetching"
+      ],
+      "manual_review_after_refresh_required": true,
+      "refresh_may_confirm_ir_reception": false,
+      "already_fetched_exception": "one_attempt_parser_refresh_of_this_known_successful_url_only",
+      "max_company_content_get_attempts": 1,
+      "recursive_followups_in_this_proposal": false
+    },
+    {
+      "security_code": "2784",
+      "company_name": "アルフレッサ　ホールディングス",
+      "refresh_kind": "exact_external_form_after_http_charset_fix",
+      "target_url": "https://reg18.smp.ne.jp/regist/is?SMPFORM=likc-ldtgqi-721d81312ae1e403f8cbff64c037eb5c",
+      "target_snapshot": "evidence/2784/20261011T045014864195Z/04.json",
+      "parent_url": "https://www.alfresa.com/ir/faq/",
+      "parent_snapshot": "evidence/2784/20261011T045014864195Z/03.json",
+      "parent_link": {
+        "url": "https://reg18.smp.ne.jp/regist/is?SMPFORM=likc-ldtgqi-721d81312ae1e403f8cbff64c037eb5c",
+        "label": "お問い合わせ"
+      },
+      "saved_parent_link_occurrence_count": 3,
+      "parent_to_target_relationship": "Official IR FAQ saved text explicitly directs questions not answered above to an exact external form URL. This exact URL was separately fetched with HTTP 200; no new host/path/query is invented.",
+      "old_target_metadata": {
+        "snapshot": "evidence/2784/20261011T045014864195Z/04.json",
+        "snapshot_json_sha256": "cb73a8fb807e7cec1fd955bf280db12a9ef2e02ed99ce13976d9486cdd11fd15",
+        "requested_url": "https://reg18.smp.ne.jp/regist/is?SMPFORM=likc-ldtgqi-721d81312ae1e403f8cbff64c037eb5c",
+        "url": "https://reg18.smp.ne.jp/regist/is?SMPFORM=likc-ldtgqi-721d81312ae1e403f8cbff64c037eb5c",
+        "retrieved_at": "2026-10-11T04:50:19.492884+00:00",
+        "publication_time": null,
+        "http_status": 200,
+        "byte_count": 18822,
+        "sha256": "8c7b5219f016f35a218b5837c4b725e9c093caaa96de7c8349cb98984a7c863b",
+        "content_type": "text/html;charset=Shift_JIS",
+        "encoding": "UTF-8",
+        "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+        "title": "���₢���킹 | �A���t���b�T �z�[���f�B���O�X�������",
+        "redirects": null,
+        "discovery_parent_url": "https://www.alfresa.com/ir/performance/",
+        "discovery_link_label": "お問い合わせ",
+        "official_identity_basis": "third_party_unverified",
+        "sha256_meaning": "sha256 is the recorded HTTP body byte hash, not a recovered copy of the body bytes",
+        "http_body_bytes_saved": false
+      },
+      "parent_metadata": {
+        "snapshot": "evidence/2784/20261011T045014864195Z/03.json",
+        "snapshot_json_sha256": "20e0daa5ab8092669a6f98f9ba50e570372eaf4d2a64f96e736a09466b117bfd",
+        "requested_url": "https://www.alfresa.com/ir/faq/",
+        "url": "https://www.alfresa.com/ir/faq/",
+        "retrieved_at": "2026-10-11T04:50:17.903758+00:00",
+        "publication_time": null,
+        "http_status": 200,
+        "byte_count": 57164,
+        "sha256": "58528a8b9392df97e0d9803a92cf037481e00704b8f03f94016b8b97fa5dab62",
+        "content_type": "text/html; charset=UTF-8",
+        "encoding": "UTF-8",
+        "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+        "title": "よくあるご質問 | 株主・投資家の皆様へ | アルフレッサ ホールディングス株式会社",
+        "redirects": null,
+        "discovery_parent_url": "https://www.alfresa.com/ir/performance/",
+        "discovery_link_label": "よくあるご質問",
+        "official_identity_basis": "third_party_unverified",
+        "sha256_meaning": "sha256 is the recorded HTTP body byte hash, not a recovered copy of the body bytes",
+        "http_body_bytes_saved": false
+      },
+      "record_identity_status": "name_or_security_code_observed",
+      "identity_and_ir_scope_evidence": [
+        {
+          "snapshot": "evidence/2784/20261011T045014864195Z/01.json",
+          "url": "https://www.alfresa.com/",
+          "retrieved_at": "2026-10-11T04:50:15.896828+00:00",
+          "http_status": 200,
+          "quote": "アルフレッサ ホールディングス株式会社",
+          "purpose": "official_company_title_identity",
+          "quote_source": "title"
+        },
+        {
+          "snapshot": "evidence/2784/20261011T045014864195Z/03.json",
+          "url": "https://www.alfresa.com/ir/faq/",
+          "retrieved_at": "2026-10-11T04:50:17.903758+00:00",
+          "http_status": 200,
+          "quote": "よくあるご質問 | 株主・投資家の皆様へ | アルフレッサ ホールディングス株式会社",
+          "purpose": "official_ir_faq_title_and_company_identity",
+          "quote_source": "title"
+        },
+        {
+          "snapshot": "evidence/2784/20261011T045014864195Z/03.json",
+          "url": "https://www.alfresa.com/ir/faq/",
+          "retrieved_at": "2026-10-11T04:50:17.903758+00:00",
+          "http_status": 200,
+          "quote": "IR・財務に関するご質問",
+          "purpose": "ir_financial_questions_in_faq",
+          "quote_source": "visible_text"
+        },
+        {
+          "snapshot": "evidence/2784/20261011T045014864195Z/03.json",
+          "url": "https://www.alfresa.com/ir/faq/",
+          "retrieved_at": "2026-10-11T04:50:17.903758+00:00",
+          "http_status": 200,
+          "quote": "上記以外に関するご質問はこちらへ お問い合わせ",
+          "purpose": "explicit_question_route_from_official_ir_faq",
+          "quote_source": "visible_text"
+        }
+      ],
+      "reason": "旧取得外部フォームはHTTP Content-TypeでShift_JISを指定しているのにUTF-8でデコードされ、保存visible textに置換文字U+FFFDが1190文字残る。元bytesは保存されておらず元snapshotから復号し直せないため、同じ完全一致URLを1回だけ修正後parserで再取得し用途・個人条件・回答制限を読む。現時点では実email/email:cfとtextarea inquiryだけ確認され、IR分類・個人受付等は文字化けで未実証。旧source/hash/引用を保存したまま別時刻の新証拠を追加する。",
+      "parser_cause_status": "observed_http_charset_decode_mismatch",
+      "old_decoded_replacement_character_count": 1190,
+      "original_http_body_bytes_recoverable_from_snapshot": false,
+      "old_structural_controls": [
+        {
+          "form_index": 0,
+          "action": "/regist/Reg2",
+          "method": "post",
+          "relevant_controls": [
+            {
+              "tag": "textarea",
+              "name": "inquiry",
+              "placeholder": "�����R�ɂ��L����������"
+            },
+            {
+              "tag": "input",
+              "type": "text",
+              "name": "email",
+              "placeholder": "*****@*****.co.jp"
+            },
+            {
+              "tag": "input",
+              "type": "text",
+              "name": "email:cf",
+              "placeholder": "*****@*****.co.jp"
+            }
+          ]
+        }
+      ],
+      "expected_new_evidence": [
+        "Preserved HTTP content_type and selected encoding_source=http_charset",
+        "Decoded Japanese form title, category labels, identity and reply conditions",
+        "Actual reply email and question textarea plus explicit IR purpose/individual eligibility before any status promotion"
+      ],
+      "manual_review_after_refresh_required": true,
+      "refresh_may_confirm_ir_reception": false,
+      "already_fetched_exception": "one_attempt_parser_refresh_of_this_known_successful_url_only",
+      "max_company_content_get_attempts": 1,
+      "recursive_followups_in_this_proposal": false
+    }
+  ]
+}

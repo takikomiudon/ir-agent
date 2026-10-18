@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T11:14:33.954846+00:00",
+  "company_id": "jp:1518",
+  "new_GETs_this_company": 1,
+  "combined_task_new_GETs": 2,
+  "new_robots_GETs": 0,
+  "raw_file": "raw/233f97508a2e6ac3bb744b39fd980623b8d3678daafc3866f7129964d01d6b15",
+  "raw_sha256": "233f97508a2e6ac3bb744b39fd980623b8d3678daafc3866f7129964d01d6b15",
+  "http_body_completed_at": "2026-10-15T11:12:18.292857+00:00",
+  "published_at": null,
+  "old_inputs_unchanged": true,
+  "financial_inputs_verified": false,
+  "model_adopted": false,
+  "database_accesses": 0,
+  "question_registration_or_send": false,
+  "prior_phase_modified": false,
+  "limits": [
+    "Schedule is not occurrence, earnings results, investment verification deadline or sale instruction.",
+    "No calendar year or exact day is inferred from neighboring sections, file names, response headers or country.",
+    "Research management date 2027-01-15 remains separate and unchanged."
+  ],
+  "artifact_type": "manual_visual_reading_of_issuer_annual_calendar",
+  "image_url": "https://www.mitsui-matsushima.co.jp/wp/wp-content/themes/mitsui-matsushima_2024/assets/images/page/ir/calendar/calendar-schedule.jpg",
+  "image_format": "JPEG",
+  "image_size_pixels": [
+    770,
+    190
+  ],
+  "view_method": "tools.view_image(detail=original), saved image; no OCR or modified image",
+  "transcription": {
+    "month_header": [
+      "4月",
+      "5月",
+      "6月",
+      "7月",
+      "8月",
+      "9月",
+      "10月",
+      "11月",
+      "12月",
+      "1月",
+      "2月",
+      "3月"
+    ],
+    "rows": [
+      {
+        "row_label": "決算発表",
+        "labels": [
+          "・期末決算",
+          "・第1四半期決算",
+          "・第2四半期決算",
+          "・第3四半期決算"
+        ],
+        "visually_positioned_month_pattern": [
+          {
+            "label": "期末決算",
+            "month_position": "5月付近"
+          },
+          {
+            "label": "第1四半期決算",
+            "month_position": "8月付近"
+          },
+          {
+            "label": "第2四半期決算",
+            "month_position": "11月付近"
+          },
+          {
+            "label": "第3四半期決算",
+            "month_position": "2月付近"
+          }
+        ],
+        "mapping_precision": "Manual reading of approximate horizontal positions, not an exact scheduled month/day claim."
+      },
+      {
+        "row_label": "配当金支払",
+        "labels": [
+          "・期末配当",
+          "・中間配当"
+        ],
+        "exact_month_assignment": null
+      },
+      {
+        "row_label": "株主総会",
+        "labels": [
+          "・招集通知発送",
+          "・定時株主総会"
+        ],
+        "exact_month_assignment": null
+      }
+    ]
+  },
+  "interpretation": {
+    "annual_month_pattern_visible": true,
+    "specific_calendar_year_visible": false,
+    "specific_day_visible": false,
+    "quiet_or_silent_period_label_visible": false,
+    "diagram_year": null,
+    "next_earnings_target_period": null,
+    "next_earnings_date": null,
+    "next_earnings_time": null,
+    "timezone": null,
+    "quiet_period_rule": null,
+    "current_quiet_period": null,
+    "following_FY2026_section_used_to_date_image": false,
+    "company_has_no_quiet_period_asserted": false
+  },
+  "manual_reading_limits": [
+    "The image is 770×190 and its labels span month-column boundaries. Transcription is a human-style visual assertion, not machine-verified semantic extraction.",
+    "Only the four earnings labels are described by approximate placement; dividend/meeting entries are preserved as labels without assigning an exact single month from label or bullet x position.",
+    "No source bundle, scheduled-event request or OCR-derived financial source is manufactured.",
+    "No printed year/day or quiet-period text was found in this single image; this does not rule out an issuer policy elsewhere."
+  ]
+}

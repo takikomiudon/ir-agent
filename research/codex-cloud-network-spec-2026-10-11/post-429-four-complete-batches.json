@@ -1,0 +1,86 @@
+{
+  "observed_at": "2026-10-11T14:02:20.910426+00:00",
+  "observed_at_jst": "2026-10-11T23:02:20.910426+09:00",
+  "analysis_only_actual_GET_count": 0,
+  "scope": "Four completed collection batches after the first recorded HTTP 429 and observed five-minute cooldown; excludes the still-running next batch.",
+  "batches": [
+    {
+      "started_at": "2026-10-11T11:57:07.221196+00:00",
+      "selected_company_count": 30,
+      "completed_in_this_run": 30,
+      "http_get_attempt_count": 229,
+      "configured_global_rps": 0.25,
+      "final_global_rps": 0.25,
+      "common_transport_503_count": 0,
+      "http_429_count": 0,
+      "site_specific_503_count": 1,
+      "source_path": "research/ir-contacts-universe-2026-10-11/collection-runs/20261011T115707221207Z.json",
+      "source_sha256": "38a23e800bd240696a8ec4997e9c0b86073ca2dee696470183bc20938038751e",
+      "completed_at": "2026-10-11T12:12:19.998140+00:00",
+      "all_http_503_count": 1,
+      "ordinary_http_503_count": 0
+    },
+    {
+      "started_at": "2026-10-11T12:12:23.348857+00:00",
+      "selected_company_count": 30,
+      "completed_in_this_run": 30,
+      "http_get_attempt_count": 193,
+      "configured_global_rps": 0.25,
+      "final_global_rps": 0.25,
+      "common_transport_503_count": 0,
+      "http_429_count": 0,
+      "site_specific_503_count": 1,
+      "source_path": "research/ir-contacts-universe-2026-10-11/collection-runs/20261011T121223348869Z.json",
+      "source_sha256": "df7f33e57c0412b32168dee7eb1108f6d8d269165ace41d24ea7db7313cffa68",
+      "completed_at": "2026-10-11T12:25:12.130844+00:00",
+      "all_http_503_count": 1,
+      "ordinary_http_503_count": 0
+    },
+    {
+      "started_at": "2026-10-11T12:25:18.461678+00:00",
+      "selected_company_count": 60,
+      "completed_in_this_run": 60,
+      "http_get_attempt_count": 418,
+      "configured_global_rps": 0.35,
+      "final_global_rps": 0.35,
+      "common_transport_503_count": 0,
+      "http_429_count": 0,
+      "site_specific_503_count": 0,
+      "source_path": "research/ir-contacts-universe-2026-10-11/collection-runs/20261011T122518461690Z.json",
+      "source_sha256": "ad1d999b3af794c08d6b852a67250707d8aa539c0d37e4cb3a7870a75cc77131",
+      "completed_at": "2026-10-11T12:45:13.806037+00:00",
+      "all_http_503_count": 0,
+      "ordinary_http_503_count": 0
+    },
+    {
+      "started_at": "2026-10-11T12:45:16.601686+00:00",
+      "selected_company_count": 100,
+      "completed_in_this_run": 100,
+      "http_get_attempt_count": 692,
+      "configured_global_rps": 0.35,
+      "final_global_rps": 0.27999999999999997,
+      "common_transport_503_count": 0,
+      "http_429_count": 0,
+      "site_specific_503_count": 0,
+      "source_path": "research/ir-contacts-universe-2026-10-11/collection-runs/20261011T124516601696Z.json",
+      "source_sha256": "7b1b7b817814f1e3ce7e5ffec7e61e36eb59dc965afe14234b02aa2afd2ed833",
+      "completed_at": "2026-10-11T13:23:57.353907+00:00",
+      "all_http_503_count": 1,
+      "ordinary_http_503_count": 1
+    }
+  ],
+  "totals": {
+    "completed_in_this_run": 220,
+    "http_get_attempt_count": 1532,
+    "common_transport_503_count": 0,
+    "http_429_count": 0,
+    "site_specific_503_count": 2,
+    "all_http_503_count": 3,
+    "ordinary_http_503_count": 1
+  },
+  "counter_definitions": {
+    "site_specific_503_count": "Sum of site_tls_503 and site_connection_termination_503 signatures; excludes ordinary http_503.",
+    "ordinary_http_503_count": "Total HTTP 503 minus common_transport_503_count and site_specific_503_count."
+  },
+  "interpretation": "Recovery after rest and lower request pressure is consistent with throttling or temporary shared-resource exhaustion; the observations do not identify the limiting layer, quota, or causal effect of any one change."
+}

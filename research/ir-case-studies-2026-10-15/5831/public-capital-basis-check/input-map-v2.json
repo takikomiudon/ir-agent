@@ -1,0 +1,141 @@
+{
+  "recorded_at": "2026-10-15T19:51:47.548491+00:00",
+  "artifact_type": "research_input_mapping_v2_not_runnable_calculator_request",
+  "company_id": "jp:5831",
+  "method_candidate": "financial_regulatory_fcfe",
+  "financial_model_adopted": false,
+  "not_runnable": true,
+  "mapped_candidates": [
+    {
+      "input_path": "rows[0].net_income.value",
+      "value": "115000",
+      "currency": "JPY",
+      "amount_unit": "millions",
+      "entity_scope": "Holding-company consolidated group",
+      "profit_attribution_as_printed": "親会社株主に帰属する当期純利益",
+      "period": {
+        "kind": "full_fiscal_year",
+        "label": "FY2027/3",
+        "start": "2026-04-01",
+        "end": "2027-03-31"
+      },
+      "data_kind": "issuer_guidance",
+      "document_date_as_printed": "2026-08-06",
+      "candidate_scope_limit": "Company guidance as printed, not an independent author forecast, realized earnings or confirmation of current latest guidance. Equity-holder attribution for the intended valuation claim remains unverified.",
+      "source_id": "case-public:a05c0fbcc4be120ba540085f009569f00c4fb11e621765e57bdf7c1fc3e08b0b",
+      "source_snapshot_sha256": "7b087678297078fd1fb408f4af3910b0782d69cb136fbd51f5bb027bca6a566c",
+      "quote": "３．2027年３月期の連結業績予想（2026年４月１日～2027年３月31日）\n                                                                        (％表示は、対前期増減率)\n                                            親会社株主に帰属する                     １株当たり\n                      経常利益\n                                               当期純利益                       当期純利益\n                       百万円          ％             百万円              ％                           円 銭\n       通期          167,000 28.2                  115,000       27.1                        217.91\n(注) 直近に公表されている業績予想からの修正の有無 ： 有\n",
+      "PDF_physical_page": 1,
+      "quote_character_start": 2610,
+      "quote_character_end_exclusive": 3153,
+      "image_path": "research/ir-case-studies-2026-10-15/5831/financial-structure-followup/images/page-1.png",
+      "image_sha256": "9b59bf5ac3a4b648eb205254fcd4ed513c18ae6ce99636014f52e952ed7c8446"
+    }
+  ],
+  "unmapped_required_values": [
+    {
+      "input_path": "basis.equity_scope",
+      "value": null,
+      "reason": "Match intended equity claim to the company net-income attribution and chosen regulatory-capital definition; do not treat the label as certified."
+    },
+    {
+      "input_path": "rows[0].regulatory_capital_reinvestment.value",
+      "value": null,
+      "reason": "Same-period annual forward reinvestment has not been established. Quarter-end capital balances, RWA and the8% disclosure calculation do not supply it."
+    },
+    {
+      "input_path": "rows[0].regulatory_capital_reinvestment.measurement_basis",
+      "value": null,
+      "reason": "Specific required/target capital, buffer and planned risk-asset growth must be sourced for the same holding-company scope."
+    }
+  ],
+  "public_values_not_substituted": {
+    "quarter_parent_net_income": "32,740 million JPY actual is not the annual115,000 million forecast.",
+    "accounting_equity_ratio": "8.0% is not the regulatory ratio or a reinvestment amount.",
+    "regulatory_group_ratio": "16.24% observed at2026-06-end is not a forward target.",
+    "disclosed_required_capital_factor": "8% in the RWA calculation does not determine the complete capital-policy/forecast input.",
+    "historical_required_capital_balances": "June5,677億 andMarch5,544億 are not automatically an annual forward reinvestment prediction.",
+    "other_entity_ratios": "Operating-bank consolidated14.43%/solo13.33% cannot replace holding-group scope."
+  },
+  "conditional_IR_logic": {
+    "author_formula": "FCFE = NetIncome - ReinvestmentInRegulatoryCapital",
+    "what_an_explanation_can_change": "With the same NI, annual period and equity scope, a substantiated different reinvestment amount changes the intermediate FCFE by its negative. No capital amount is currently available to apply this relation.",
+    "company_answerable": "If this definition becomes material to an adopted model, request only the location/definition of an already-published capital operating target/buffer on a stated CET1 basis; do not re-ask published ratios/payouts or request investor assumptions.",
+    "external_author_or_investor_owned": "The chosen financial model, forward risk assumptions, cost of equity, price/exit policy and adoption. Do not ask company IR to validate these choices.",
+    "next_public_check": "Finite29-page literal search and one additionalp17 semantic basis check completed. No same failed URL or new source discovery is required merely to fill the missing forward forecast.",
+    "question_ready": false,
+    "expected_information_value": "unestimated; no numerical response probability or impact invented",
+    "financial_decision_effect": "Unverified; no adopted financial path or current decision changes. No IR draft or invented reinvestment amount added."
+  },
+  "not_calculated": [
+    "FCFE",
+    "terminal_value",
+    "fair_value",
+    "current_price_action",
+    "buy_sell_or_exit_level"
+  ],
+  "new_GETs_semantic_PDF_pages_DB_writes_external_sends_orders": {
+    "new_GETs": 0,
+    "new_semantic_PDF_pages": 1,
+    "DB_writes": 0,
+    "external_sends_orders": 0
+  },
+  "refs": [
+    {
+      "path": "research/ir-case-studies-2026-10-15/5831/financial-structure-followup/source-only-bundle.json",
+      "sha256": "6d568cdc4aa80045203ebc9096abbe2716dbf0bf3a7560b7cadbac3e712d616d"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/5831/financial-structure-followup/quotes.json",
+      "sha256": "debf5313a9b0baebfdd6b560adae3afbfbd8324f78e958106163ec655166ccf3"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/5831/regulatory-capital-followup/source-only-bundle.json",
+      "sha256": "8e0125dd0dcfd8603ef76eba2f08a812bdcd38ea3943e170187865d5b6f9346d"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/5831/regulatory-capital-followup/quotes.json",
+      "sha256": "9cdd875ff552676b14272fe284831a4748f13aa7376add978ff58d9bb7db3e6f"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/5831/regulatory-capital-followup/model-routing-assessment-v2.json",
+      "sha256": "580366ea5dad6a43085e6708525b5263c72e9f03a92e7a1a108688ef99d2dee3"
+    },
+    {
+      "path": "docs/regulatory-fcfe.md",
+      "sha256": "3f4e4b36d15960d8e8ac73ec068fdd6e1224a5051dd26a00f5b8be4d5d2ae38f"
+    },
+    {
+      "path": "research/ir-regulatory-fcfe-integration-2026-10-15/author-evidence.json",
+      "sha256": "36fe8923171883ae91d700ba521d9b8851a5c3b30809479fc63405b298b9c355"
+    }
+  ],
+  "supersedes_for_current_public_evidence_only": {
+    "path": "research/ir-case-studies-2026-10-15/5831/regulatory-fcfe-input-map/input-map.json",
+    "sha256": "24039355fd436324f90683257099e7cb77676c6bf2bb7f793ccac009f1b2feff"
+  },
+  "public_policy_followup_refs": [
+    {
+      "path": "research/ir-case-studies-2026-10-15/5831/capital-policy-followup/review.json",
+      "sha256": "73344eebda380496e839cf1c7695d6a9b2787bb29260ca7dfcf60d5396c73507"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/5831/capital-policy-followup/quotes.json",
+      "sha256": "307867c0f57ce6bea4e7aeb89b7fd6150d21f11d21737228a122f7bda56716ad"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/5831/public-capital-basis-check/quote.json",
+      "sha256": "0ec8f16a03666b21c4fbf666a850679dbce683f8dbb8b3e389a26825f3920ee9"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/5831/public-capital-basis-check/review.json",
+      "sha256": "c61a2517a5e01e85e0d6de60d5a8aa3d13d718535273f49b3d7b82128e9ef78e"
+    }
+  ],
+  "public_policy_resolved": {
+    "dividend": "At least50% by FY2027 and thereafter fromFY2028; company policy, not investor return threshold.",
+    "buybacks": "AnnouncedAugust2026 ceiling300億JPY/10million shares; not completed execution.",
+    "valuation_reserves": "About1.5–2% CET1 contribution as company management guideline, not total CET1 target.",
+    "capital_basis": "Annual forecast/current and fully-implemented estimates are separate; p17 identifies reserve/floor effects but no complete monetary annual reinvestment."
+  }
+}

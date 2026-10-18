@@ -1,0 +1,373 @@
+--- a/scripts/research_ir_universe.py
++++ b/scripts/research_ir_universe.py
+@@ -24,7 +24,7 @@
+ from email.utils import parsedate_to_datetime
+ from html.parser import HTMLParser
+ from pathlib import Path
+-from urllib.parse import urldefrag, urljoin, urlsplit
++from urllib.parse import quote, unquote, urldefrag, urljoin, urlparse, urlsplit, urlunparse
+ from urllib.robotparser import RobotFileParser
+ 
+ import requests
+@@ -106,6 +106,41 @@
+     if isinstance(robots, dict) and transport_failure_observed(robots):
+         return True
+     return any(transport_failure_observed(hop) for hop in page.get("redirects", []) if isinstance(hop, dict))
++
++
++
++def _literal_robots_decision(parser: RobotFileParser, useragent: str, url: str) -> tuple[bool, bool]:
++    """Preserve stdlib group/URI selection; order only simple literal rules.
++
++    The second result proves a FIRST-match block was overridden by a strictly
++    longer Allow. Ties allow fresh reads but do not clear saved denial events.
++    Unsupported pattern semantics remain on the existing stdlib path.
++    """
++    legacy = parser.can_fetch(useragent, url)
++    if parser.disallow_all or parser.allow_all or not parser.mtime():
++        return legacy, False
++    entry = next((e for e in parser.entries if e.applies_to(useragent)), parser.default_entry)
++    if entry is None or any("*" in unquote(r.path) or "$" in unquote(r.path) for r in entry.rulelines):
++        return legacy, False
++    # These are the same transformations used by RobotFileParser.can_fetch.
++    parsed = urlparse(unquote(url))
++    path = quote(urlunparse(("", "", parsed.path, parsed.params, parsed.query, parsed.fragment))) or "/"
++    matching = [r for r in entry.rulelines if r.applies_to(path)]
++    if not matching:
++        return legacy, False
++    best = max(matching, key=lambda r: (len(r.path), r.allowance))
++    disallow_length = max((len(r.path) for r in matching if not r.allowance), default=-1)
++    correction = not legacy and best.allowance and len(best.path) > disallow_length
++    return bool(best.allowance), bool(correction)
++
++
++def robots_can_fetch(parser: RobotFileParser, useragent: str, url: str) -> bool:
++    return _literal_robots_decision(parser, useragent, url)[0]
++
++
++def robots_specific_allow_correction(parser: RobotFileParser, useragent: str, url: str) -> bool:
++    """A saved first-match block has an explicit, strictly longer literal Allow."""
++    return _literal_robots_decision(parser, useragent, url)[1]
+ 
+ 
+ def identity_key(value: str) -> str:
+@@ -515,7 +550,7 @@
+             reason = "redirect_unresolved"
+         if reason:
+             return {**stopped, "error": "robots_unreachable_stopped", "robots_failure_reason": reason}
+-        if parser and not parser.can_fetch(USER_AGENT, url):
++        if parser and not robots_can_fetch(parser, USER_AGENT, url):
+             return {**stopped, "error": "robots_disallowed"}
+         result = self.raw_get(url)
+         result["robots"] = robots_evidence
+--- a/scripts/collect_ir_followups.py
++++ b/scripts/collect_ir_followups.py
+@@ -294,6 +294,59 @@
+     return {origin: robot for origin, (_, robot) in latest.items()}
+ 
+ 
++
++def saved_robots_literal_correction(output: Path, url: str, blocked: list[tuple[str, dict]],
++                                    latest: dict | None, pages: list[tuple[str, dict]]) -> dict | None:
++    """Revisit only a demonstrably incorrect saved literal-rule block.
++
++    Both the latest policy and every historical stop must prove the same
++    origin's first-match error. A changed/unknown policy alone is not enough.
++    The old evidence is never rewritten; fresh dispatch still checks robots.
++    """
++    def qualifies(robot):
++        if not isinstance(robot, dict) or robot.get("http_status") != 200 or robot.get("error") or robot.get("robots_failure_reason"):
++            return False
++        redirects = robot.get("redirects", [])
++        original = (redirects[0].get("requested_url") if redirects else None) or robot.get("requested_url") or robot.get("url")
++        if not safe_url(original) or urlsplit(original).path != "/robots.txt" or origin_key(original) != origin_key(url):
++            return False
++        try:
++            if datetime.fromisoformat(robot.get("retrieved_at", "")).tzinfo is None:
++                return False
++        except (TypeError, ValueError):
++            return False
++        parser = RobotFileParser()
++        parser.parse(robot.get("text", "").splitlines())
++        return research.robots_specific_allow_correction(parser, research.USER_AGENT, url)
++
++    if not blocked or not qualifies(latest):
++        return None
++    # An undated same-origin observation makes "latest" uncertain. Keep the
++    # existing stop rather than use a guessed temporal ordering to clear it.
++    for row in pages:
++        robot = latest_robots([row]).get(origin_key(url))
++        if robot is not None:
++            try:
++                if datetime.fromisoformat(robot.get("retrieved_at", "")).tzinfo is None:
++                    return None
++            except (TypeError, ValueError):
++                return None
++    for _, event in blocked:
++        if event.get("http_get_attempted") is not False or not qualifies(event.get("robots")):
++            return None
++    references = [ref for ref, page in pages if page is latest or page.get("robots") is latest]
++    if not references:
++        return None
++    refs = sorted({*references, *(ref for ref, _ in blocked)})
++    hashes = {ref: file_sha256(evidence_path(output, ref)) for ref in refs}
++    return {"basis": "saved_same_origin_more_specific_literal_allow_corrects_first_match",
++            "source_snapshot_sha256": hashes, "latest_robots_source_snapshots": references,
++            "latest_robots_retrieved_at": latest["retrieved_at"],
++            "latest_robots_text_sha256": hashlib.sha256(latest.get("text", "").encode()).hexdigest(),
++            "historical_stop_snapshots": sorted({ref for ref, _ in blocked}),
++            "historical_events_preserved": True, "financial_ir_reception_verified": False}
++
++
+ def ir_parent(page: dict) -> bool:
+     heading = " ".join([page.get("title", ""), *page.get("headings", [])[:1]])
+     return not OTHER.search(heading) and bool(research.IR.search(heading) or research.IR_PATH.search(urlsplit(page.get("url", "")).path))
+@@ -766,7 +819,7 @@
+     if not official:
+         return [], Counter({"missing_safe_official_url": 1})
+     pages = saved_pages(output, record, proposals)
+-    seen, denied, disallowed, robots = set(), set(), set(), {}
++    seen, denied, disallowed, robots = set(), set(), {}, {}
+     robot_observations = latest_robots(pages)
+     unreachable = set()
+     for origin, robot in robot_observations.items():
+@@ -782,7 +835,7 @@
+             for field in ("url", "final_url"):
+                 if safe_url(fetch.get(field)):
+                     seen.add(url_key(fetch[field]))
+-    for _, page in pages:
++    for reference, page in pages:
+         for response in responses(page):
+             url = response.get("url") or response.get("requested_url")
+             if not safe_url(url):
+@@ -790,7 +843,7 @@
+             if response.get("http_status") in (401, 403, 429):
+                 denied.add(host_key(url))
+             if response.get("error") == "robots_disallowed":
+-                disallowed.add(url_key(url))
++                disallowed.setdefault(url_key(url), []).append((reference, response))
+             if (response.get("error") not in NO_CONTENT_GET and response.get("failure_signature") != "common_transport_503"
+                     and not research.TRANSPORT_FAILURE.search(response.get("text", ""))
+                     and response.get("http_get_attempted") is not False
+@@ -898,7 +951,10 @@
+             if origin in unreachable:
+                 rejected["saved_robots_unreachable_current_route_unconfirmed"] += 1
+                 continue
+-            if host_key(url) in denied or key in disallowed or (origin in robots and not robots[origin].can_fetch(research.USER_AGENT, url)):
++            correction = saved_robots_literal_correction(output, url, disallowed.get(key, []),
++                                                        robot_observations.get(origin), pages) if key in disallowed else None
++            if (host_key(url) in denied or key in disallowed and not correction
++                    or origin in robots and not research.robots_can_fetch(robots[origin], research.USER_AGENT, url)):
+                 rejected["saved_access_denial"] += 1
+                 continue
+             candidate = {"security_code": record["security_code"], "company_name": record.get("company_name"), "url": url,
+@@ -910,6 +966,8 @@
+                          "purpose": "issuer_identity_discovery" if identity_binding else "ir_contact_followup",
+                          "association_basis": identity_binding.get("association_basis", "saved_reviewed_formal_site_transition; current issuer identity and reception require new review") if identity_binding else "official_ir_discovery_link_not_verified_contact" if priority == 3 else "exact_link_in_saved_official_parent; requires human contact review",
+                          "official_url": official}
++            if correction:
++                candidate["robots_literal_allow_correction"] = correction
+             if identity_binding:
+                 candidate["identity_discovery_proof"] = identity_binding
+             if reviewed_ir_binding:
+--- a/tests/test_ir_contact_research.py
++++ b/tests/test_ir_contact_research.py
+@@ -60,6 +60,83 @@
+ 
+     def fields(self, text=""):
+         return '<form>' + text + '<input type="email" name="email"><textarea name="message"></textarea></form>'
++
++    def robots_parser(self, lines):
++        parser = research.RobotFileParser()
++        parser.parse(lines.splitlines())
++        return parser
++
++    def test_actual_6383_literal_allow_permits_only_its_observed_path_without_network(self):
++        # Exact body of saved 6383/20261011T173437506705Z/04.json nested robots.
++        rules = ("User-agent: *\nDisallow: /\nAllow: /products_jp\nAllow: /after_salesservices_jp\n"
++                 "Allow: /others_jp\nAllow: /supplier\nAllow: /training\nAllow: /products_en\n"
++                 "Allow: /after_salesservices_en\nAllow: /others_en\nAllow: /newsletter_input\n"
++                 "Allow: /member/login\nAllow: /logimat_2024")
++        target = "https://inquiry.daifuku.com/others_jp"
++        parser = self.robots_parser(rules)
++        self.assertFalse(parser.can_fetch(research.USER_AGENT, target))
++        self.assertTrue(research.robots_can_fetch(parser, research.USER_AGENT, target))
++        self.assertTrue(research.robots_specific_allow_correction(parser, research.USER_AGENT, target))
++        self.assertFalse(research.robots_can_fetch(parser, research.USER_AGENT, target.replace("others_jp", "private")))
++        fetcher = research.Fetcher()
++        original = {"http_status": 200, "text": rules, "url": "https://inquiry.daifuku.com/robots.txt"}
++        fetcher.robots["https://inquiry.daifuku.com"] = (parser, original)
++        with patch.object(research.requests, "get", side_effect=AssertionError("external GET forbidden")), \
++                patch.object(fetcher, "raw_get", return_value={"http_status": 200, "url": target}) as body:
++            captured = fetcher.capture_one(target)
++        body.assert_called_once_with(target)
++        self.assertIs(original, captured["robots"])
++        self.assertEqual(200, captured["http_status"])
++        self.assertEqual(0, fetcher.http_get_attempt_count)
++
++    def test_literal_robots_rule_order_ties_and_narrower_denial(self):
++        target = "https://issuer.invalid/ir/private/ask"
++        for lines in ("Disallow: /\nAllow: /ir/\nDisallow: /ir/private/",
++                      "Disallow: /ir/private/\nDisallow: /\nAllow: /ir/",
++                      "Allow: /ir/\nDisallow: /ir/private/\nDisallow: /"):
++            with self.subTest(lines=lines):
++                parser = self.robots_parser("User-agent: *\n" + lines)
++                self.assertFalse(research.robots_can_fetch(parser, research.USER_AGENT, target))
++                self.assertTrue(research.robots_can_fetch(parser, research.USER_AGENT, target.replace("private/ask", "public/ask")))
++        for lines in ("Disallow: /ir/\nAllow: /ir/", "Allow: /ir/\nDisallow: /ir/"):
++            parser = self.robots_parser("User-agent: *\n" + lines)
++            self.assertTrue(research.robots_can_fetch(parser, research.USER_AGENT, target))
++            self.assertFalse(research.robots_specific_allow_correction(parser, research.USER_AGENT, target))
++
++    def test_literal_robots_preserves_existing_useragent_group_selection(self):
++        target = "https://issuer.invalid/ir/ask"
++        parser = self.robots_parser("User-agent: ir-agent\nDisallow: /\n\nUser-agent: *\nDisallow: /\nAllow: /ir/")
++        self.assertFalse(research.robots_can_fetch(parser, research.USER_AGENT, target))
++        self.assertTrue(research.robots_can_fetch(parser, "unrelated-bot/1", target))
++        # Stdlib chooses the FIRST matching non-default group, not a new merge.
++        parser = self.robots_parser("User-agent: ir-agent\nDisallow: /\n\nUser-agent: ir-agent-public-research\nAllow: /ir/")
++        self.assertEqual(parser.can_fetch(research.USER_AGENT, target),
++                         research.robots_can_fetch(parser, research.USER_AGENT, target))
++
++    def test_literal_robots_keeps_stdlib_percent_params_query_normalization(self):
++        parser = self.robots_parser("User-agent: *\nDisallow: /\nAllow: /IR情報/\nDisallow: /IR情報/private\nAllow: /ir;ask?kind=IR")
++        for target in ("https://issuer.invalid/IR情報/ask", "https://issuer.invalid/IR%E6%83%85%E5%A0%B1/ask",
++                       "https://issuer.invalid/ir;ask?kind=IR&more=1", "https://issuer.invalid/%69r;ask?kind=IR"):
++            with self.subTest(target=target):
++                self.assertTrue(research.robots_can_fetch(parser, research.USER_AGENT, target))
++        for target in ("https://issuer.invalid/IR情報/private", "https://issuer.invalid/ir;ask?kind=product"):
++            self.assertFalse(research.robots_can_fetch(parser, research.USER_AGENT, target))
++
++    def test_unsupported_robots_patterns_flags_and_unread_keep_legacy_decision(self):
++        target = "https://issuer.invalid/ir/private"
++        for pattern in ("/ir/*", "/ir/private$", "/other%2A", "/ir/%24"):
++            with self.subTest(pattern=pattern):
++                parser = self.robots_parser("User-agent: *\nDisallow: /\nAllow: /ir/\nDisallow: " + pattern)
++                self.assertEqual(parser.can_fetch(research.USER_AGENT, target),
++                                 research.robots_can_fetch(parser, research.USER_AGENT, target))
++                self.assertFalse(research.robots_specific_allow_correction(parser, research.USER_AGENT, target))
++        parser = research.RobotFileParser()
++        self.assertFalse(research.robots_can_fetch(parser, research.USER_AGENT, target))
++        parser.allow_all = True
++        self.assertTrue(research.robots_can_fetch(parser, research.USER_AGENT, target))
++        parser.disallow_all = True
++        self.assertFalse(research.robots_can_fetch(parser, research.USER_AGENT, target))
++        self.assertFalse(research.robots_specific_allow_correction(parser, research.USER_AGENT, target))
+ 
+     def test_anchor_valueless_title_preserves_visible_text_without_ir_promotion(self):
+         for attribute, expected in (("title", "公開窓口"), ('title=""', "公開窓口"),
+--- a/tests/test_ir_followup_collection.py
++++ b/tests/test_ir_followup_collection.py
+@@ -1338,6 +1338,112 @@
+         self.assertTrue(all(task["parent_snapshot_sha256"] for task in plan["selected"]))
+         self.assertEqual([], followups.company_candidates(self.output, {**record, "investigation_status": "confirmed"}, [])[0])
+ 
++    def literal_robots_fixture(self, target="https://inquiry.daifuku.com/others_jp"):
++        # Exact saved 6383 policy; the synthetic issuer parent supplies a bound IR link.
++        rules = ("User-agent: *\nDisallow: /\nAllow: /products_jp\nAllow: /after_salesservices_jp\n"
++                 "Allow: /others_jp\nAllow: /supplier\nAllow: /training\nAllow: /products_en\n"
++                 "Allow: /after_salesservices_en\nAllow: /others_en\nAllow: /newsletter_input\n"
++                 "Allow: /member/login\nAllow: /logimat_2024")
++        record = self.fixture("6383", links=[{"url": target, "href": target, "label": "IRお問い合わせ"}])
++        robot = {"requested_url": "https://inquiry.daifuku.com/robots.txt", "url": "https://inquiry.daifuku.com/robots.txt",
++                 "retrieved_at": "2026-10-11T17:35:34.132724+00:00", "http_status": 200, "text": rules}
++        stopped_ref = self.save("evidence/6383/stopped.json", {"requested_url": target,
++            "retrieved_at": "2026-10-11T17:35:48.960250+00:00", "error": "robots_disallowed",
++            "http_get_attempted": False, "submitted": False, "robots": robot})
++        record["fetches"].append({"url": target, "snapshot": stopped_ref, "error": "robots_disallowed"})
++        self.save("records/6383.json", record)
++        return record, robot, stopped_ref
++
++    def test_actual_6383_saved_literal_block_is_requeued_with_immutable_proof_get_zero(self):
++        record, _, stopped = self.literal_robots_fixture()
++        before = {str(p): p.read_bytes() for p in self.output.rglob("*.json")}
++        with patch.object(self.research.requests, "get", side_effect=AssertionError("planning must not GET")):
++            plan = followups.build_plan(self.output)
++        self.assertEqual(["https://inquiry.daifuku.com/others_jp"], [t["url"] for t in plan["selected"]])
++        proof = plan["selected"][0]["robots_literal_allow_correction"]
++        self.assertEqual([stopped], proof["historical_stop_snapshots"])
++        self.assertEqual(followups.file_sha256(self.output / stopped), proof["source_snapshot_sha256"][stopped])
++        self.assertFalse(proof["financial_ir_reception_verified"])
++        self.assertEqual(before, {str(p): p.read_bytes() for p in self.output.rglob("*.json")})
++        self.assertEqual("provisional", record["investigation_status"])
++
++    def test_saved_literal_correction_does_not_clear_genuine_or_unknown_old_stop(self):
++        for mode in ("genuine_disallow", "missing_robots", "missing_body_flag", "old_robots_404", "missing_time"):
++            with self.subTest(mode=mode):
++                record, robot, stopped = self.literal_robots_fixture()
++                event = followups.read_json(self.output / stopped)
++                if mode == "genuine_disallow": event["robots"]["text"] = "User-agent: *\nDisallow: /"
++                elif mode == "missing_robots": event.pop("robots")
++                elif mode == "missing_body_flag": event.pop("http_get_attempted")
++                elif mode == "old_robots_404": event["robots"]["http_status"] = 404
++                else: event["robots"].pop("retrieved_at")
++                self.save(stopped, event)
++                latest = self.save("evidence/6383/new-policy.json", {"url": record["official_url"] + "ir/status", "http_status": 200,
++                    "text": "テスト会社", "robots": {**robot, "retrieved_at": "2026-10-11T18:00:00+00:00"}})
++                record["fetches"].append({"snapshot": latest, "url": record["official_url"] + "ir/status", "http_status": 200})
++                self.save("records/6383.json", record)
++                self.assertEqual([], followups.build_plan(self.output)["selected"])
++
++    def test_saved_literal_correction_requires_latest_same_origin_success_and_specific_rule(self):
++        modes = [401, 403, 429, 503, 302, None, "transport", "only_allow", "tie", "wildcard", "dollar",
++                 "specific_agent", "naive_time", "narrower_disallow", "other_http", "other_host"]
++        for mode in modes:
++            with self.subTest(mode=mode):
++                target = "https://inquiry.daifuku.com/others_jp/private" if mode == "narrower_disallow" else "https://inquiry.daifuku.com/others_jp"
++                record, robot, stopped = self.literal_robots_fixture(target)
++                latest_robot = {**robot, "retrieved_at": "2026-10-11T18:00:00+00:00"}
++                if mode in (401,403,429,503,302,None): latest_robot["http_status"] = mode
++                elif mode == "transport": latest_robot.update(error="ConnectionError", http_status=None)
++                elif mode == "only_allow": latest_robot["text"] = "User-agent: *\nAllow: /others_jp"
++                elif mode == "tie": latest_robot["text"] = "User-agent: *\nDisallow: /others_jp\nAllow: /others_jp"
++                elif mode in ("wildcard","dollar"): latest_robot["text"] += "\nDisallow: /else" + ("*" if mode == "wildcard" else "$")
++                elif mode == "specific_agent": latest_robot["text"] = "User-agent: ir-agent\nDisallow: /\n\n" + robot["text"]
++                elif mode == "naive_time": latest_robot["retrieved_at"] = "2026-10-11T18:00:00"
++                elif mode == "narrower_disallow": latest_robot["text"] += "\nDisallow: /others_jp/private"
++                else:
++                    # A different origin's newer Allow cannot clear a true block here.
++                    old = followups.read_json(self.output / stopped);old["robots"]["text"] = "User-agent: *\nDisallow: /";self.save(stopped,old)
++                    origin = "http://inquiry.daifuku.com" if mode == "other_http" else "https://www.inquiry.daifuku.com"
++                    latest_robot.update(requested_url=origin+"/robots.txt",url=origin+"/robots.txt")
++                latest = self.save("evidence/6383/new-policy.json", {"url": record["official_url"] + "ir/status", "http_status": 200,
++                    "text": "テスト会社", "robots": latest_robot})
++                record["fetches"].append({"snapshot": latest, "url": record["official_url"] + "ir/status", "http_status": 200})
++                self.save("records/6383.json", record)
++                self.assertEqual([], followups.build_plan(self.output)["selected"])
++
++    def test_literal_allow_correction_retains_denied_post_unbound_and_fetched_stops(self):
++        for mode in ("denied_host", "post_action", "unbound", "product_link", "already_fetched"):
++            with self.subTest(mode=mode):
++                record, _, _ = self.literal_robots_fixture();parent_ref=record["fetches"][0]["snapshot"]
++                parent=followups.read_json(self.output / parent_ref);target="https://inquiry.daifuku.com/others_jp"
++                if mode == "post_action": parent["forms"]=[{"method":"post","action":target}]
++                elif mode == "unbound": parent["links"]=[]
++                elif mode == "product_link": parent["links"][0]["label"]="製品のお問い合わせ"
++                else:
++                    ref=self.save("evidence/6383/extra.json",{"requested_url":target if mode=="already_fetched" else target+"/other",
++                        "url":target if mode=="already_fetched" else target+"/other","http_status":200 if mode=="already_fetched" else 403,"text":""})
++                    record["fetches"].append({"snapshot":ref,"url":target if mode=="already_fetched" else target+"/other","http_status":200 if mode=="already_fetched" else 403})
++                self.save(parent_ref,parent);self.save("records/6383.json",record)
++                self.assertEqual([],followups.build_plan(self.output)["selected"])
++
++    def test_requeued_literal_block_rechecks_fresh_robots_before_body(self):
++        record, _, stopped = self.literal_robots_fixture()
++        old_bytes = (self.output / stopped).read_bytes()
++        plan = followups.build_plan(self.output);calls=[]
++        def reply(url, **kwargs):
++            calls.append(url)
++            if url == followups.PREFLIGHT: return self.response(url,200,"新規上場")
++            self.assertEqual("https://inquiry.daifuku.com/robots.txt",url,"fresh denial must prevent target body GET")
++            return self.response(url,200,"User-agent: *\nDisallow: /", {"Content-Type":"text/plain; charset=utf-8"})
++        state=self.output/"run.json";clock,http=self.network(reply)
++        with clock,http:
++            self.assertEqual(0,followups.collect(self.output,state,plan,6,0.25))
++        self.assertEqual([followups.PREFLIGHT,"https://inquiry.daifuku.com/robots.txt"],calls)
++        self.assertEqual(old_bytes,(self.output/stopped).read_bytes())
++        current=followups.read_json(self.output/"records/6383.json")
++        self.assertEqual("robots_disallowed",current["fetches"][-1]["error"])
++        self.assertEqual(record["investigation_status"],current["investigation_status"])
++
+     def test_saved_denials_robots_post_actions_and_retrieved_urls_are_not_queued(self):
+         root = "https://issuer500a.example/"
+         record = self.fixture(links=[{"url": root + path, "label": "IRお問い合わせ"}

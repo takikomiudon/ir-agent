@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T04:28:57.582263+00:00",
+  "change_reason": "Parent review found heading-only extraction did not support a correct body claim; bounded audit found the same issue in the full-year forecast heading.",
+  "original_artifacts_preserved": [
+    {
+      "file": "review.json",
+      "before_file": "before-quote-fix/review.json",
+      "sha256": "ce98c8cdf49bd17011598a21f76c59ce72c67dfc1a8ee601d45038d417662fcd"
+    },
+    {
+      "file": "sources.json",
+      "before_file": "before-quote-fix/sources.json",
+      "sha256": "48c957b582f28d0c30591598f94a446a4410f9baa5ec0186cab2245938005b2d"
+    },
+    {
+      "file": "README.md",
+      "before_file": "before-quote-fix/README.md",
+      "sha256": "6f1f4e9a3b8e1938260d706f23b24f352d75187c9e713b3dd6ce39f9389d0767"
+    },
+    {
+      "file": "validation.json",
+      "before_file": "before-quote-fix/validation.json",
+      "sha256": "78aeb1aabcad2fca613fa3b1bb6f7056367f72dd14ec6345309eaff9db629715"
+    }
+  ],
+  "quote_changes": [
+    {
+      "quote_id": "cashflow-not-prepared",
+      "source_id": "case-public:a6203650fe32b00c12d4b6f4c5b3f4fe252431cd4449a1f2716ea658fede985b",
+      "pdf_page": 13,
+      "old_character_start": 1657,
+      "old_character_end": 1677,
+      "old_quote": "（キャッシュ・フロー計算書に関する注記）",
+      "new_character_start": 1657,
+      "new_character_end": 2307,
+      "new_quote_length": 650,
+      "reason": "Old span selected only the heading; extend through the remaining same-page explanatory note/table so the stated period/claim has direct textual support."
+    },
+    {
+      "quote_id": "full-year-forecast-period",
+      "source_id": "case-public:a6203650fe32b00c12d4b6f4c5b3f4fe252431cd4449a1f2716ea658fede985b",
+      "pdf_page": 1,
+      "old_character_start": 2469,
+      "old_character_end": 2486,
+      "old_quote": "３．2027年３月期の連結業績予想",
+      "new_character_start": 2469,
+      "new_character_end": 3087,
+      "new_quote_length": 618,
+      "reason": "Old span selected only the heading; extend through the remaining same-page explanatory note/table so the stated period/claim has direct textual support."
+    }
+  ],
+  "bounded_12_quote_review": [
+    {
+      "quote_id": "header-and-quarter",
+      "quote_length": 1579,
+      "pdf_page": 1,
+      "character_start": 15,
+      "character_end": 1594,
+      "exact_page_and_offset_match": true,
+      "body_support_anchors": [
+        "日本基準",
+        "連結",
+        "2026年４月１日～2026年６月30日"
+      ],
+      "body_support_anchors_present": true,
+      "heading_only_defect_remaining": false
+    },
+    {
+      "quote_id": "full-year-forecast-period",
+      "quote_length": 618,
+      "pdf_page": 1,
+      "character_start": 2469,
+      "character_end": 3087,
+      "exact_page_and_offset_match": true,
+      "body_support_anchors": [
+        "2026年４月１日～2027年３月31日",
+        "95.62"
+      ],
+      "body_support_anchors_present": true,
+      "heading_only_defect_remaining": false
+    },
+    {
+      "quote_id": "significant-scope-and-accounting",
+      "quote_length": 366,
+      "pdf_page": 2,
+      "character_start": 0,
+      "character_end": 366,
+      "exact_page_and_offset_match": true,
+      "body_support_anchors": [
+        "連結範囲の重要な変更",
+        "：無",
+        "修正再表示"
+      ],
+      "body_support_anchors_present": true,
+      "heading_only_defect_remaining": false
+    },
+    {
+      "quote_id": "share-count-and-trust",
+      "quote_length": 411,
+      "pdf_page": 2,
+      "character_start": 366,
+      "character_end": 777,
+      "exact_page_and_offset_match": true,
+      "body_support_anchors": [
+        "期中平均株式数",
+        "303,271,745株",
+        "信託"
+      ],
+      "body_support_anchors_present": true,
+      "heading_only_defect_remaining": false
+    },
+    {
+      "quote_id": "bs-comparison",
+      "quote_length": 186,
+      "pdf_page": 8,
+      "character_start": 74,
+      "character_end": 260,
+      "exact_page_and_offset_match": true,
+      "body_support_anchors": [
+        "2026年３月31日",
+        "2026年６月30日"
+      ],
+      "body_support_anchors_present": true,
+      "heading_only_defect_remaining": false
+    },
+    {
+      "quote_id": "new-subsidiary-yoy",
+      "quote_length": 66,
+      "pdf_page": 5,
+      "character_start": 118,
+      "character_end": 184,
+      "exact_page_and_offset_match": true,
+      "body_support_anchors": [
+        "新規連結子会社が損益改善の途上",
+        "増収・減益"
+      ],
+      "body_support_anchors_present": true,
+      "heading_only_defect_remaining": false
+    },
+    {
+      "quote_id": "cashflow-not-prepared",
+      "quote_length": 650,
+      "pdf_page": 13,
+      "character_start": 1657,
+      "character_end": 2307,
+      "exact_page_and_offset_match": true,
+      "body_support_anchors": [
+        "四半期連結キャッシュ・フロー計算書は作成しておりません",
+        "減価償却費",
+        "のれんの償却額",
+        "2025年４月１日",
+        "2026年４月１日"
+      ],
+      "body_support_anchors_present": true,
+      "heading_only_defect_remaining": false
+    },
+    {
+      "quote_id": "self-share-cancellation",
+      "quote_length": 174,
+      "pdf_page": 12,
+      "character_start": 142,
+      "character_end": 316,
+      "exact_page_and_offset_match": true,
+      "body_support_anchors": [
+        "2026年５月28日",
+        "自己株式の消却"
+      ],
+      "body_support_anchors_present": true,
+      "heading_only_defect_remaining": false
+    },
+    {
+      "quote_id": "calendar-year-and-events",
+      "quote_length": 223,
+      "pdf_page": null,
+      "character_start": 2668,
+      "character_end": 2891,
+      "exact_page_and_offset_match": true,
+      "body_support_anchors": [
+        "11月06日（予定）",
+        "11月10日（予定）",
+        "02月05日（予定）",
+        "変更する場合"
+      ],
+      "body_support_anchors_present": true,
+      "heading_only_defect_remaining": false
+    },
+    {
+      "quote_id": "supplement-cf-source",
+      "quote_length": 2051,
+      "pdf_page": 9,
+      "character_start": 0,
+      "character_end": 2051,
+      "exact_page_and_offset_match": true,
+      "body_support_anchors": [
+        "営業CF",
+        "投資CF",
+        "運転資本"
+      ],
+      "body_support_anchors_present": true,
+      "heading_only_defect_remaining": false
+    },
+    {
+      "quote_id": "supplement-yoy-new-acquisition",
+      "quote_length": 2608,
+      "pdf_page": 6,
+      "character_start": 0,
+      "character_end": 2608,
+      "exact_page_and_offset_match": true,
+      "body_support_anchors": [
+        "新規連結効果",
+        "原料高"
+      ],
+      "body_support_anchors_present": true,
+      "heading_only_defect_remaining": false
+    },
+    {
+      "quote_id": "supplement-ifrs-submeasure",
+      "quote_length": 4420,
+      "pdf_page": 27,
+      "character_start": 0,
+      "character_end": 4420,
+      "exact_page_and_offset_match": true,
+      "body_support_anchors": [
+        "IFRS評価",
+        "在池魚",
+        "未実現利益の調整"
+      ],
+      "body_support_anchors_present": true,
+      "heading_only_defect_remaining": false
+    }
+  ],
+  "preserved_file_sha256": {
+    "raw/ac2bc17427bf1a8cf5fc149ac59ec0b3ca147b85f193a71bfb95c05fbd2122b8": "ac2bc17427bf1a8cf5fc149ac59ec0b3ca147b85f193a71bfb95c05fbd2122b8",
+    "manifest.json": "53b00aa1bb186f4661fc44050dc7efdafb86b510adbf1db9db3ab5af4bbb744a",
+    "indicator-period-catalog.json": "092e3103948371ca07830bc6f0f3080fdace740f0fc392e6d0cfe07bd60eaa19",
+    "raw/69c3c5fe82b4d4fac46a0dda7eb2258345628664f4ac9a82cee979f042b9ac31": "69c3c5fe82b4d4fac46a0dda7eb2258345628664f4ac9a82cee979f042b9ac31",
+    "01.txt": "72d28309208a58fb0913db3e13d49f92eefad16c9d37c75015f4c1a7fecb7155",
+    "01.json": "4d421acbbf3e282d24546a2afebbd3f4fb01dfe5f174c1bf0e2e18ab49df5121",
+    "02.json": "26dde56161bf02fddde2a1ac20771e5f281a4497e140a142f99a5b754ba238f0",
+    "02.txt": "866ce9827bdbf89c093c1e7f563289a31f0fff5236d01aeb1394c63b074d069d",
+    "source-bundle.json": "2b4e0c082dc207d992b44dc7598d59f6a699710a07c42e0dfa50f47577a9be0b"
+  },
+  "source_bundle_changed": false,
+  "original_source_content_changed": false,
+  "indicator_catalog_changed": false,
+  "financial_values_changed": false,
+  "actual_db_changed": false,
+  "additional_network_requests": 0,
+  "no_new_citations_or_scope_expansion": true
+}

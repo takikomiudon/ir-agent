@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "company_id": "jp:135A",
+  "reviewed_at": "2026-10-15T04:55:43.068876+00:00",
+  "status": "meaning_review_required",
+  "citations": [
+    {
+      "id": "nonconsolidated-japanese-gaap",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 1,
+      "printed_page": null,
+      "page_text_start": 10,
+      "page_text_end_exclusive": 49,
+      "quote": "2027年２月期      第２四半期（中間期）決算短信〔日本基準〕(非連結)"
+    },
+    {
+      "id": "cf-comparison-and-current-periods",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 113,
+      "page_text_end_exclusive": 363,
+      "quote": "（３）中間キャッシュ・フロー計算書\n                                                   (単位：百万円)\n                           前中間会計期間             当中間会計期間\n                         (自 2025年３月１日        (自 2026年３月１日\n                          至 2025年８月31日)       至 2026年８月31日)"
+    },
+    {
+      "id": "receivables-contract-assets-sign-note",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 626,
+      "page_text_end_exclusive": 685,
+      "quote": "売上債権及び契約資産の増減額（△は増加）                △418                154"
+    },
+    {
+      "id": "operating-cf-reported-net",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 4,
+      "printed_page": 2,
+      "page_text_start": 1767,
+      "page_text_end_exclusive": 1875,
+      "quote": "営業活動によるキャッシュ・フローは223百万円の収入（前年同期は468百万円の支出）となりました。これは主\n に、税引前中間純利益409百万円の計上、法人税等の支払額202百万円を支出したこと等によるものであります。"
+    },
+    {
+      "id": "ppe-cash-expenditure-context",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 5,
+      "printed_page": 3,
+      "page_text_start": 147,
+      "page_text_end_exclusive": 236,
+      "quote": "投資活動によるキャッシュ・フローは111百万円の支出（前年同期は101百万円の支出）となりました。これは主\n に、有形固定資産の取得による支出100百万円等によるものであります。"
+    },
+    {
+      "id": "display-precision",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 1,
+      "printed_page": null,
+      "page_text_start": 564,
+      "page_text_end_exclusive": 574,
+      "quote": "(百万円未満切捨て)"
+    }
+  ],
+  "visual_table_review": {
+    "reviewed_by": "agent:/root/quote_normalization",
+    "pdf_page": 8,
+    "printed_page": 6,
+    "original_raw_sha256": "6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+    "temporary_image": "/tmp/vrain-135a-cashflow-p8.png",
+    "image_sha256": "9738f9225418d9a5cb0c702948018162b1d8aaf6f8e6cd89f0702dacda3ad609",
+    "method": "pdftoppm -f 8 -singlefile -scale-to 1800 -png; visually inspected current/prior columns, unit and triangle signs"
+  },
+  "method_context": {
+    "adopted_research_policy": "research/valuation-model-routing-2026-10-15/routing.json",
+    "scope": "Reported-data collection for later reinvestment review only; no new author formula or model adopted.",
+    "reference_only_route_id": "cyclical_or_commodity_normalization_review",
+    "issuer_route_assigned": false
+  },
+  "limitations": [
+    "All four values are Japanese-GAAP non-consolidated interim reported rows for2026-03-01..08-31; prior-year interim is a separate column.",
+    "The receivables row includes contract assets. Its CF adjustment sign convention differs from a balance-sheet asset delta; positive154 is not asset balance increase+154. No balance-sheet reconciliation or sign-reversed asset delta is computed.",
+    "The PPE amount remains negative as the signed cash outflow in the CF table. No cashflow-to-positive-CAPEX conversion or maintenance/growth split is made.",
+    "Depreciation is an operating-CF adjustment, not a cash receipt. Composition and future persistence are not verified.",
+    "The operating CF includes the reported interest/tax/reconciliation scope; it is not automatically unlevered FCFF.",
+    "No total working capital, net reinvestment, normalized reinvestment, CFO minus CAPEX, future CF or valuation is calculated.",
+    "Dashes in unselected rows are not normalized into zero. Displayed million-yen precision is not single-yen underlying precision."
+  ],
+  "financial_inputs_verified": false,
+  "model_adopted": false
+}

@@ -1,0 +1,925 @@
+{
+  "schema_version": 1,
+  "artifact_type": "saved_public_qa_interpretation_research",
+  "recorded_at": "2026-10-15T12:32:24.262403+00:00",
+  "status": "six_bounded_public_qa_meaning_reviews_complete",
+  "path_basis": "All repository paths are relative to /workspace/ir-agent; offsets refer to exact saved source.content, not raw HTML bytes.",
+  "input_pinned": {
+    "path": "research/ir-public-qa-interpretation-cases-2026-10-15/input-cases.json",
+    "sha256": "5d578b49ce70939b177330b1505c0ef1c4e1198c19c3732f7333456e28e32cd5",
+    "case_count": 6,
+    "selected_source_count": 3,
+    "company_count": 2
+  },
+  "method_basis": {
+    "practices_evidence_path": "research/ir-reply-interpretation-practices-2026-10-15/evidence.json",
+    "practices_evidence_sha256": "962db3543563c6d1861cc050efad386937089db1fcd694e7cc7547a6acbfafdd",
+    "fixed_anthropic_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+    "principles": [
+      {
+        "id": "RP01",
+        "name": "情報が変える論点を限定する",
+        "author_principle": "新しい情報が、どの特定pillarを強める・弱める・中立化するかを記録する。",
+        "author_quotes": [
+          {
+            "quote_id": "A01",
+            "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+            "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+            "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+            "fixed_commit_url": "https://raw.githubusercontent.com/anthropics/financial-services-plugins/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md",
+            "quote": "**Thesis impact**: Does this strengthen, weaken, or neutralize a specific pillar?",
+            "character_start": 1388,
+            "character_end_exclusive": 1469,
+            "original_retrieved_at": "2026-10-10T15:53:59.749710+00:00"
+          }
+        ],
+        "project_adaptation_for_this_review": "回答の対象となる論点と未確認の利益橋渡しを分離し、モデル入力を変更しない。"
+      },
+      {
+        "id": "RP02",
+        "name": "反対根拠と残る不確実性を消さない",
+        "author_principle": "反証可能な仮説を置き、支持根拠と同じ厳密さで反対根拠を追跡する。",
+        "author_quotes": [
+          {
+            "quote_id": "A02",
+            "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+            "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+            "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+            "fixed_commit_url": "https://raw.githubusercontent.com/anthropics/financial-services-plugins/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md",
+            "quote": "A thesis should be falsifiable — if nothing could disprove it, it's not a thesis",
+            "character_start": 2339,
+            "character_end_exclusive": 2419,
+            "original_retrieved_at": "2026-10-10T15:53:59.749710+00:00"
+          },
+          {
+            "quote_id": "A03",
+            "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+            "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+            "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+            "fixed_commit_url": "https://raw.githubusercontent.com/anthropics/financial-services-plugins/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md",
+            "quote": "Track disconfirming evidence as rigorously as confirming evidence",
+            "character_start": 2422,
+            "character_end_exclusive": 2487,
+            "original_retrieved_at": "2026-10-10T15:53:59.749710+00:00"
+          }
+        ],
+        "project_adaptation_for_this_review": "限定・一般論・予想・未回答を残し、部分回答を全面保証/悪材料へ変えない。"
+      },
+      {
+        "id": "RP03",
+        "name": "事業条件と説明文を区別し事前の条件へ照合する",
+        "author_principle": "シナリオごとに、必要な事業上の変化と、それを示す経営者コメントを分けて考える。",
+        "author_quotes": [
+          {
+            "quote_id": "A04",
+            "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+            "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+            "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+            "fixed_commit_url": "https://raw.githubusercontent.com/anthropics/financial-services-plugins/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/earnings-preview/SKILL.md",
+            "quote": "For each scenario:\n- What would need to happen operationally\n- What management commentary would signal this\n- Historical context — how has the stock moved on similar prints?",
+            "character_start": 1622,
+            "character_end_exclusive": 1795,
+            "original_retrieved_at": "2026-10-10T15:54:00.103720+00:00"
+          }
+        ],
+        "project_adaptation_for_this_review": "経営者の説明/見通しと事業上の実現を区別する。本6組に事前投資分岐はなく、枝成立や成績を判定しない。"
+      },
+      {
+        "id": "RP04",
+        "name": "説明・予測の出典と時点を維持する",
+        "author_principle": "推計は変化するため、出典と日付を必ず残す。原文の対象はconsensus estimatesである。",
+        "author_quotes": [
+          {
+            "quote_id": "A05",
+            "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+            "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+            "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+            "fixed_commit_url": "https://raw.githubusercontent.com/anthropics/financial-services-plugins/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/earnings-preview/SKILL.md",
+            "quote": "Consensus estimates change — always note the source and date of estimates",
+            "character_start": 2382,
+            "character_end_exclusive": 2455,
+            "original_retrieved_at": "2026-10-10T15:54:00.103720+00:00"
+          }
+        ],
+        "project_adaptation_for_this_review": "会社説明の作者・対象期・取得/会議/公表時点を分離する。原著のconsensus estimate原則を会社Q&Aの出典管理へ適応する。"
+      },
+      {
+        "id": "RP05",
+        "name": "原文・変更理由・訂正を追跡できる形で残す",
+        "author_principle": "新情報の日付と変化をログに記録し、仮説データを再参照できる構造形式で保存する。",
+        "author_quotes": [
+          {
+            "quote_id": "A06",
+            "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+            "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+            "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+            "fixed_commit_url": "https://raw.githubusercontent.com/anthropics/financial-services-plugins/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md",
+            "quote": "- **Date**: When this happened\n- **Data point**: What changed (earnings beat, management departure, competitor move, etc.)",
+            "character_start": 1263,
+            "character_end_exclusive": 1385,
+            "original_retrieved_at": "2026-10-10T15:53:59.749710+00:00"
+          },
+          {
+            "quote_id": "A07",
+            "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+            "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+            "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+            "fixed_commit_url": "https://raw.githubusercontent.com/anthropics/financial-services-plugins/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md",
+            "quote": "Store thesis data in a structured format so it can be referenced across sessions",
+            "character_start": 2651,
+            "character_end_exclusive": 2731,
+            "original_retrieved_at": "2026-10-10T15:53:59.749710+00:00"
+          }
+        ],
+        "project_adaptation_for_this_review": "元inputを固定し、原文/解釈/未確認を別フィールドへ保存する。誤った公表日ラベルを旧inputへ上書きしない。"
+      }
+    ],
+    "attribution_boundary": "原著は投資研究の原則。公開会社Q&Aの意味範囲/留保/帰属/次公表確認をこの形式で保存するのはプロジェクト適応で、著者自身のIR売買規則とはしない。",
+    "stored_runtime_observations_not_reaudited": "方法evidence内のcode/doc対応は作成時点の保存観察。本レビューでは原則とその適応だけを参照し、runtimeや更新後コードを再監査しない。"
+  },
+  "cases": [
+    {
+      "case_id": "public-qa-01",
+      "company_id": "jp:3774",
+      "source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+      "input_case_reference": {
+        "path": "research/ir-public-qa-interpretation-cases-2026-10-15/input-cases.json",
+        "jsonpath": "$.cases[0]",
+        "sha256": "5d578b49ce70939b177330b1505c0ef1c4e1198c19c3732f7333456e28e32cd5"
+      },
+      "question_text_as_published": "IFRS第16号「リース」適用による影響について教えてください。",
+      "source_kind": "issuer_public_FAQ",
+      "interpretation_status": "meaning_review_only_no_model_change",
+      "question_scope": [
+        "IFRS第16号「リース」適用が同社の財務諸表・会社説明指標へ与えた影響。"
+      ],
+      "directly_answered": [
+        "2020年3月期第1四半期から、一定条件のオペレーティング・リースの使用権資産/その他金融負債を認識し、従来ファイナンス・リースの資産も使用権資産へ組み替える。",
+        "その他金融負債とされたオペレーティング・リース支払のCF区分を、従来の営業活動から財務活動へ変えると説明する。",
+        "資産・負債認識に伴う減価償却費及び償却費の増加と、会社説明指標「設備投資償却額」が除外する償却対象を説明している。"
+      ],
+      "qualifications_or_other_response_functions": [
+        "適用開始は回答に明示された2020年3月期第1四半期。全てのリースを同じ条件で扱うとは述べていない。",
+        "「設備投資償却額」は会社が決算説明資料等に出す指標の説明であり、全D&Aとの同一性を述べていない。",
+        "詳細は2020年3月期決算短信[IFRS]18頁と同決算説明資料15頁という原典への案内。今回その参照先は新たに読んでいない。"
+      ],
+      "not_established_by_answer": [
+        "CF区分の変更だけで総支払現金が減る/増える、経済的FCFが改善するとは言えない。営業CFと財務CFの付替えを別々の現金改善として数えない。",
+        "会社指標「設備投資償却額」をD&A全額や現金設備投資と同一視できず、使用権資産償却を評価へ重ねて加減する根拠にもならない。",
+        "現在の各リース残高、個別支払/利息の扱い、現在の利益/EPSへの数量影響はこの回答では未確認。"
+      ],
+      "next_public_checks_before_repeating_question": [
+        "案内された2020年3月期の短信18頁/説明資料15頁で、当該CF区分と会社調整指標の定義を確認する。",
+        "現在期へ用いる必要がある場合だけ、同じ会計基準・範囲の最新公表注記と会社指標定義を対応付け、期別の変更を確認する。既答の制度説明をそのまま再質問しない。"
+      ],
+      "period_and_measure_boundary": "2020年3月期第1四半期以後という回答の説明。BS認識、CF表示、D&A、会社独自説明指標を分ける。",
+      "method_refs": [
+        "RP01",
+        "RP02",
+        "RP04",
+        "RP05"
+      ],
+      "source_short_quotes": [
+        {
+          "id": "public-qa-01-Q1",
+          "quote": "2020年3月期 第1四半期より",
+          "source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+          "character_start": 1577,
+          "character_end_exclusive": 1593,
+          "offset_unit": "Unicode code points in exact saved source.content; zero-based end-exclusive; original line breaks preserved",
+          "quote_utf8_sha256": "ee2d19f6bbf99473111c0cad5bda9ff01efa087f068a69d1c0f259455591d01e"
+        },
+        {
+          "id": "public-qa-01-Q2",
+          "quote": "従来の営業活動の支出から、財務活動の支出に区分変更されております。",
+          "source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+          "character_start": 1790,
+          "character_end_exclusive": 1823,
+          "offset_unit": "Unicode code points in exact saved source.content; zero-based end-exclusive; original line breaks preserved",
+          "quote_utf8_sha256": "6355402207175f77ab09113e7c32a50c607511784c5bae36622b1b1e40521cbd"
+        },
+        {
+          "id": "public-qa-01-Q3",
+          "quote": "「設備投資償却額」については、設備投資との性質を持たない資産",
+          "source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+          "character_start": 1874,
+          "character_end_exclusive": 1904,
+          "offset_unit": "Unicode code points in exact saved source.content; zero-based end-exclusive; original line breaks preserved",
+          "quote_utf8_sha256": "67149170a978f63ccba39ef6bed2259fed9a79d8912ee04f003d69c73e495c2b"
+        }
+      ],
+      "public_checks_performed_in_this_review": {
+        "original_selected_question_answer_and_context_read": true,
+        "linked_pages_or_latest_filing_checks_performed": false
+      },
+      "attribution": "会社の公表説明を研究過程の根拠として解釈するプロジェクト適応。独立著者の投資規則や本人の採用金融仮説ではない。",
+      "source_published_at": null,
+      "source_retrieved_at_as_stored": "2026-10-15T01:10:54.665155+00:00",
+      "financial_input_changes": [],
+      "investment_decision": null,
+      "branch_selected": null,
+      "question_registration_or_send": false
+    },
+    {
+      "case_id": "public-qa-02",
+      "company_id": "jp:3774",
+      "source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+      "input_case_reference": {
+        "path": "research/ir-public-qa-interpretation-cases-2026-10-15/input-cases.json",
+        "jsonpath": "$.cases[1]",
+        "sha256": "5d578b49ce70939b177330b1505c0ef1c4e1198c19c3732f7333456e28e32cd5"
+      },
+      "question_text_as_published": "2027年3月期の見通しを教えてください。",
+      "source_kind": "issuer_public_FAQ",
+      "interpretation_status": "meaning_review_only_no_model_change",
+      "question_scope": [
+        "2027年3月期の当社グループの見通し。"
+      ],
+      "directly_answered": [
+        "会社は、NWサービスの月額売上積上げと大型サービスインテグレーション案件、SIの期末受注残/更改需要を、売上増加の見通しの理由として説明している。",
+        "会社は、NWサービスの粗利率を当年度と同水準、SIの粗利率を売上規模増加等により若干向上と見込む。",
+        "会社予想として売上収益3,850億円、営業利益385億円、税引前利益370億円、親会社所有者帰属利益250億円と対応する増加率を記載する。"
+      ],
+      "qualifications_or_other_response_functions": [
+        "「見込まれます」「見込んでおります」「予想しております」は会社の予測。実績や独立著者予測ではない。",
+        "税前利益は持分法投資損益等、親会社所有者帰属利益は通常の実効税率を鑑みた説明。各損益段階を同じ利益にしない。",
+        "比較の「当年度」「当連結会計年度」と粗利率の基準期は回答表現を保持し、比較表との対応をこの回答だけで自動認証しない。FAQの公表/改訂時刻は不明。"
+      ],
+      "not_established_by_answer": [
+        "2026年10月15日時点で据置された最新会社計画であること、予想の達成確率、将来実績の確定は確認していない。",
+        "会社予想を第三者の独自予測や市場コンセンサスとして扱えない。記載された粗利率の定性的見通しを営業利益率/EPSの橋渡しへ置換できない。",
+        "当期利益250億円から、未確認の予想株数等を足してEPSを作らない。大型サービスインテグレーション案件の記述を、別の事業区分へ独断で移さない。"
+      ],
+      "next_public_checks_before_repeating_question": [
+        "同じ2027年3月期の正式決算短信・会社計画の修正開示を確認し、当該FAQの数値との一致/変更と公表vintageを特定する。",
+        "その後に同じ対象期・区分の四半期実績/粗利構造/受注残の公表説明と照合する。現会社計画を聞き直す前に、公開済み計画の版と未回答の定義を絞る。"
+      ],
+      "period_and_measure_boundary": "2027年3月期のグループ年次会社予想。粗利率、営業利益、税前利益、親会社所有者帰属利益を分離し、EPSは未設定。",
+      "method_refs": [
+        "RP01",
+        "RP02",
+        "RP03",
+        "RP04",
+        "RP05"
+      ],
+      "source_short_quotes": [
+        {
+          "id": "public-qa-02-Q1",
+          "quote": "ネットワークサービスの粗利率は当年度と同水準と、システムインテグレーションの粗利率は売上規模増加等で若干向上すると見込んでおります。",
+          "source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+          "character_start": 2952,
+          "character_end_exclusive": 3018,
+          "offset_unit": "Unicode code points in exact saved source.content; zero-based end-exclusive; original line breaks preserved",
+          "quote_utf8_sha256": "8416534962e466c5759e68b435be202924bc474306811f27c341ba9c58d7a853"
+        },
+        {
+          "id": "public-qa-02-Q2",
+          "quote": "売上収益は3,850億円",
+          "source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+          "character_start": 3024,
+          "character_end_exclusive": 3036,
+          "offset_unit": "Unicode code points in exact saved source.content; zero-based end-exclusive; original line breaks preserved",
+          "quote_utf8_sha256": "380adb0a266fbd795321995081247cf0586df886397ab6e75a5563ee7fa821fc"
+        },
+        {
+          "id": "public-qa-02-Q3",
+          "quote": "250億円(当連結会計年度比3.4％増)と予想しております。",
+          "source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+          "character_start": 3155,
+          "character_end_exclusive": 3185,
+          "offset_unit": "Unicode code points in exact saved source.content; zero-based end-exclusive; original line breaks preserved",
+          "quote_utf8_sha256": "ec826958ed4506a7562be859c3a3af1c87ccd17538bf61204aa6485486a0ba64"
+        }
+      ],
+      "public_checks_performed_in_this_review": {
+        "original_selected_question_answer_and_context_read": true,
+        "linked_pages_or_latest_filing_checks_performed": false
+      },
+      "attribution": "会社の公表説明を研究過程の根拠として解釈するプロジェクト適応。独立著者の投資規則や本人の採用金融仮説ではない。",
+      "source_published_at": null,
+      "source_retrieved_at_as_stored": "2026-10-15T01:10:54.665155+00:00",
+      "financial_input_changes": [],
+      "investment_decision": null,
+      "branch_selected": null,
+      "question_registration_or_send": false
+    },
+    {
+      "case_id": "public-qa-03",
+      "company_id": "jp:3774",
+      "source_id": "case-public:a7b25f4959a00b9428e6d375aec91b50078fe5c759ecd5f50da9df3a0798684d",
+      "input_case_reference": {
+        "path": "research/ir-public-qa-interpretation-cases-2026-10-15/input-cases.json",
+        "jsonpath": "$.cases[2]",
+        "sha256": "5d578b49ce70939b177330b1505c0ef1c4e1198c19c3732f7333456e28e32cd5"
+      },
+      "question_text_as_published": "メモリを含むコンピュータ部品の価格高騰による業績影響について説明してください。",
+      "source_kind": "issuer_public_earnings_QA_summary",
+      "interpretation_status": "meaning_review_only_no_model_change",
+      "question_scope": [
+        "メモリを含むコンピュータ部品の価格高騰が業績へ与える影響。"
+      ],
+      "directly_answered": [
+        "SIでは案件ごとに仕入原価等へ一定のマージンを織り込んで見積るため、粗利への影響は限定的と会社は説明している。",
+        "NWサービスは機器を自社設備として使い、償却期間が4年程度のものが多いことを、価格上昇の短期的な粗利影響が限定的という想定の理由に挙げる。"
+      ],
+      "qualifications_or_other_response_functions": [
+        "NW説明は「短期的には」「想定しております」と限定する。4年程度の償却期間も「ものが多い」という説明で、全機器一律の期間ではない。",
+        "SIの見積り構造の説明と、NWの設備/償却を通じた影響の説明は異なる経路。価格転嫁の実現額・時差や顧客の受注判断を全て確認したものではない。",
+        "文書は2026年8月7日の会議日表示がある2027年3月期第1四半期説明会の会社公表Q&A要旨。逐語の発言記録とは扱わず、公表日とは認定しない。"
+      ],
+      "not_established_by_answer": [
+        "「限定的」は影響0、数量上限や許容閾値の明示ではない。短期の説明を無期限の利益保証へ広げない。",
+        "粗利への影響という回答から、粗利額/粗利率の一定数値、全社営業利益/EPSの無影響を確定できない。",
+        "将来全ての仕入値上がりを転嫁済み、減価償却や設備投資の現金負担に影響なし、とも言えない。"
+      ],
+      "next_public_checks_before_repeating_question": [
+        "その後の同じ事業区分の決算説明/Q&Aに、仕入価格・見積り・設備投資/償却・粗利への影響の更新や定量開示があるか確認する。",
+        "数量化された説明があれば対象期と粗利の額/率の別を確認する。現状の公開説明を読まずに「価格高騰影響」を同文で再質問せず、数量未開示は0で補わない。"
+      ],
+      "period_and_measure_boundary": "2027年3月期第1四半期説明会の要旨。FY26/1Q26は会社注記の定義に従う。短期のNW粗利想定とSIの見積り説明を分ける。",
+      "method_refs": [
+        "RP01",
+        "RP02",
+        "RP03",
+        "RP04",
+        "RP05"
+      ],
+      "source_short_quotes": [
+        {
+          "id": "public-qa-03-Q1",
+          "quote": "個別案件ごとに仕入価格等の原価に一定のマージンを織り込んで見積りを作成しているため、粗利への影響は限定的です。",
+          "source_id": "case-public:a7b25f4959a00b9428e6d375aec91b50078fe5c759ecd5f50da9df3a0798684d",
+          "character_start": 1028,
+          "character_end_exclusive": 1083,
+          "offset_unit": "Unicode code points in exact saved source.content; zero-based end-exclusive; original line breaks preserved",
+          "quote_utf8_sha256": "daa175220fe49ab1bece013de16456c56b04709cd9738bb2efcb7d0ff020f77a"
+        },
+        {
+          "id": "public-qa-03-Q2",
+          "quote": "償却期間が4年程度のものが多い",
+          "source_id": "case-public:a7b25f4959a00b9428e6d375aec91b50078fe5c759ecd5f50da9df3a0798684d",
+          "character_start": 1117,
+          "character_end_exclusive": 1132,
+          "offset_unit": "Unicode code points in exact saved source.content; zero-based end-exclusive; original line breaks preserved",
+          "quote_utf8_sha256": "eacbc19543aec6627eeef09e6ee7c6b6df3c1e58e701582bbba757482b30fd7d"
+        },
+        {
+          "id": "public-qa-03-Q3",
+          "quote": "粗利への影響は短期的には限定的と想定しております。",
+          "source_id": "case-public:a7b25f4959a00b9428e6d375aec91b50078fe5c759ecd5f50da9df3a0798684d",
+          "character_start": 1144,
+          "character_end_exclusive": 1169,
+          "offset_unit": "Unicode code points in exact saved source.content; zero-based end-exclusive; original line breaks preserved",
+          "quote_utf8_sha256": "ccf4a284e62fccadf4aba1372cb2b913ba36db6f4ab69bbe2f9b7bd9337881f2"
+        }
+      ],
+      "public_checks_performed_in_this_review": {
+        "original_selected_question_answer_and_context_read": true,
+        "linked_pages_or_latest_filing_checks_performed": false
+      },
+      "attribution": "会社の公表説明を研究過程の根拠として解釈するプロジェクト適応。独立著者の投資規則や本人の採用金融仮説ではない。",
+      "source_published_at": null,
+      "source_retrieved_at_as_stored": "2026-10-15T01:10:10.898820+00:00",
+      "financial_input_changes": [],
+      "investment_decision": null,
+      "branch_selected": null,
+      "question_registration_or_send": false,
+      "meeting_and_publication_time_boundary": {
+        "printed_meeting_date": "2026-08-07",
+        "meeting_quote": {
+          "quote": "2026年8月7日：2027年3月期 第1四半期 決算説明会（オンライン開催） (※)主な質疑応答の要旨を記載しております。 略語説明：FY26は2027年3月期、1Q26は2027年3月期 第1四半期、NWサービスはネットワークサービス、SIはシステムインテグレーションを指します。",
+          "character_start": 206,
+          "character_end": 348,
+          "offset_unit": "Unicode code points in exact existing source.content; zero-based end-exclusive; saved newlines/BOM preserved",
+          "quote_utf8_SHA256": "33dda8618ec35b1fd2238f85425d474c7a1c7e510d2b149fe16be8bfdfd4d5ef",
+          "pdf_page": null,
+          "printed_page": null
+        },
+        "publication_date": null,
+        "publication_time": null,
+        "source_scope": "主な質疑応答の要旨。原発言の逐語記録ではない。",
+        "input_label_not_adopted_as_publication_proof": "2026年8月7日公表表示の2027年3月期第1四半期説明会QA要旨。質問と留保は原文のまま。",
+        "reason": "原h2/contextは会議日を示す。元metadata publication_dateやURL日付は独立の公表根拠ではなく、公表表示というlabelを採用しない。旧inputは変更しない。"
+      }
+    },
+    {
+      "case_id": "public-qa-04",
+      "company_id": "jp:3774",
+      "source_id": "case-public:a7b25f4959a00b9428e6d375aec91b50078fe5c759ecd5f50da9df3a0798684d",
+      "input_case_reference": {
+        "path": "research/ir-public-qa-interpretation-cases-2026-10-15/input-cases.json",
+        "jsonpath": "$.cases[3]",
+        "sha256": "5d578b49ce70939b177330b1505c0ef1c4e1198c19c3732f7333456e28e32cd5"
+      },
+      "question_text_as_published": "シンガポール子会社PTC SYSTEM（以下PTC）が獲得したGPU基盤構築案件について、運用フェーズの収益性を教えてください。",
+      "source_kind": "issuer_public_earnings_QA_summary",
+      "interpretation_status": "meaning_review_only_no_model_change",
+      "question_scope": [
+        "PTC SYSTEMが獲得したGPU基盤構築案件について、運用フェーズの収益性。"
+      ],
+      "directly_answered": [
+        "会社は一般的なSIの粗利構造を説明し、ハードウェアを内包する構築の粗利率は高くなく、運用フェーズの粗利率は相対的に高くなる傾向があるとする。",
+        "「このような案件」はハードウェア構成比が高く低利益率でも、多くのエンジニア工数を要さず粗利額を積み上げられるという会社の見方を述べる。"
+      ],
+      "qualifications_or_other_response_functions": [
+        "回答は「一般的に」「傾向」「ものと考えております」という説明。「このような案件」の定性的説明をPTC運用の確定数値として扱わず、その句の全てを運用フェーズの工数へ割当てない。",
+        "粗利率の相対的な高さと、粗利額を積み上げられることは別の指標。低利益率という文言を全社営業利益率の一定値へ置換しない。",
+        "2026年8月7日は印字された会議日。会社の主な質疑応答の要旨であり、公表時刻や発言逐語性の根拠ではない。"
+      ],
+      "not_established_by_answer": [
+        "PTC当該案件の運用粗利率、運用の粗利額、実際の工数、運用開始日/契約期間/認識期は具体的に答えていない。",
+        "相対的に高い運用粗利率から、PTC/全社の営業利益やEPSへの確定寄与、将来利益の保証は導けない。",
+        "案件の構築部分の粗利額と運用部分の粗利額を同じものとして足したり、案件全体/運用のハードウェア比率を数値で補ったりしない。"
+      ],
+      "next_public_checks_before_repeating_question": [
+        "同社の当該案件に関する公開説明と、その後のSI/PTC関連決算説明/Q&Aで、構築/運用の対象範囲・進捗・収益認識期や定量開示を確認する。",
+        "一般SIの粗利構造の説明は既に公開回答がある。案件固有の定義/数値が別途公表されているかを先に確認し、未開示を推定利益率へ置換しない。"
+      ],
+      "period_and_measure_boundary": "2027年3月期第1四半期説明会の要旨。一般SIの粗利率比較/粗利額説明とPTC運用固有の利益率・工数・時点を分離する。",
+      "method_refs": [
+        "RP01",
+        "RP02",
+        "RP03",
+        "RP04",
+        "RP05"
+      ],
+      "source_short_quotes": [
+        {
+          "id": "public-qa-04-Q1",
+          "quote": "一般的に、SIの粗利構造において",
+          "source_id": "case-public:a7b25f4959a00b9428e6d375aec91b50078fe5c759ecd5f50da9df3a0798684d",
+          "character_start": 1443,
+          "character_end_exclusive": 1459,
+          "offset_unit": "Unicode code points in exact saved source.content; zero-based end-exclusive; original line breaks preserved",
+          "quote_utf8_sha256": "bf53553918349958d45aa43b77b02dad94074eac2bcef788a551fcf3d8f91776"
+        },
+        {
+          "id": "public-qa-04-Q2",
+          "quote": "運用フェーズの粗利率は相対的に高くなる傾向があります。",
+          "source_id": "case-public:a7b25f4959a00b9428e6d375aec91b50078fe5c759ecd5f50da9df3a0798684d",
+          "character_start": 1501,
+          "character_end_exclusive": 1528,
+          "offset_unit": "Unicode code points in exact saved source.content; zero-based end-exclusive; original line breaks preserved",
+          "quote_utf8_sha256": "a5135dd1a02f6b640ca5507a8302e441d3774b5833caf3971633773bd5196ff1"
+        },
+        {
+          "id": "public-qa-04-Q3",
+          "quote": "多くのエンジニア工数を要さずに粗利額を積み上げられるものと考えております。",
+          "source_id": "case-public:a7b25f4959a00b9428e6d375aec91b50078fe5c759ecd5f50da9df3a0798684d",
+          "character_start": 1566,
+          "character_end_exclusive": 1603,
+          "offset_unit": "Unicode code points in exact saved source.content; zero-based end-exclusive; original line breaks preserved",
+          "quote_utf8_sha256": "c4a16a60cc73b916021bc7154a8f5faa545ce93d6248c464c6a7acdad7f243d3"
+        }
+      ],
+      "public_checks_performed_in_this_review": {
+        "original_selected_question_answer_and_context_read": true,
+        "linked_pages_or_latest_filing_checks_performed": false
+      },
+      "attribution": "会社の公表説明を研究過程の根拠として解釈するプロジェクト適応。独立著者の投資規則や本人の採用金融仮説ではない。",
+      "source_published_at": null,
+      "source_retrieved_at_as_stored": "2026-10-15T01:10:10.898820+00:00",
+      "financial_input_changes": [],
+      "investment_decision": null,
+      "branch_selected": null,
+      "question_registration_or_send": false,
+      "meeting_and_publication_time_boundary": {
+        "printed_meeting_date": "2026-08-07",
+        "meeting_quote": {
+          "quote": "2026年8月7日：2027年3月期 第1四半期 決算説明会（オンライン開催） (※)主な質疑応答の要旨を記載しております。 略語説明：FY26は2027年3月期、1Q26は2027年3月期 第1四半期、NWサービスはネットワークサービス、SIはシステムインテグレーションを指します。",
+          "character_start": 206,
+          "character_end": 348,
+          "offset_unit": "Unicode code points in exact existing source.content; zero-based end-exclusive; saved newlines/BOM preserved",
+          "quote_utf8_SHA256": "33dda8618ec35b1fd2238f85425d474c7a1c7e510d2b149fe16be8bfdfd4d5ef",
+          "pdf_page": null,
+          "printed_page": null
+        },
+        "publication_date": null,
+        "publication_time": null,
+        "source_scope": "主な質疑応答の要旨。原発言の逐語記録ではない。",
+        "input_label_not_adopted_as_publication_proof": "2026年8月7日公表表示の2027年3月期第1四半期説明会QA要旨。質問と留保は原文のまま。",
+        "reason": "原h2/contextは会議日を示す。元metadata publication_dateやURL日付は独立の公表根拠ではなく、公表表示というlabelを採用しない。旧inputは変更しない。"
+      }
+    },
+    {
+      "case_id": "public-qa-05",
+      "company_id": "jp:7525",
+      "source_id": "case-public:3a86e6f23ceaff7e27209688d3160f1e6184e79adf7087851ff3e8e6211f56b6",
+      "input_case_reference": {
+        "path": "research/ir-public-qa-interpretation-cases-2026-10-15/input-cases.json",
+        "jsonpath": "$.cases[4]",
+        "sha256": "5d578b49ce70939b177330b1505c0ef1c4e1198c19c3732f7333456e28e32cd5"
+      },
+      "question_text_as_published": "決算発表はいつですか？",
+      "source_kind": "issuer_public_FAQ",
+      "interpretation_status": "meaning_review_only_no_model_change",
+      "question_scope": [
+        "決算発表の日程。対象年度や四半期は質問に特定されていない。"
+      ],
+      "directly_answered": [
+        "日程の確認先としてIRカレンダーを案内し、掲載は開催日の約6カ月前を目処にするという運用説明をしている。"
+      ],
+      "qualifications_or_other_response_functions": [
+        "具体的な発表日はこの回答にない。URLへの案内と掲載時期の目安である。",
+        "「約」「目処」は正確に6カ月前までの掲載を一律に確約する表現ではない。リンク先は本レビューで読んでいない。"
+      ],
+      "not_established_by_answer": [
+        "現在の次回発表日、対象期、時刻、timezone、due/実施済み状態は解決していない。",
+        "リンクがあることから最新予定の存在/変更なし/6カ月前の掲載実績を確認済みにはしない。管理再点検日と会社発表日も別。"
+      ],
+      "next_public_checks_before_repeating_question": [
+        "案内されたIRカレンダーの対象年度・期・年月日と過去予定/今後予定の区別を確認する。保存済みページを使う場合はその取得時点を残す。",
+        "そこで同じ期の公表予定が解決すれば同じ日付質問を重ねない。記載がなければ未確認を保持し、目安から開催日や掲載日を逆算しない。"
+      ],
+      "period_and_measure_boundary": "対象期不特定のFAQ。日付/時刻/掲載期限を新設しない。",
+      "method_refs": [
+        "RP01",
+        "RP02",
+        "RP04",
+        "RP05"
+      ],
+      "source_short_quotes": [
+        {
+          "id": "public-qa-05-Q1",
+          "quote": "IRカレンダーをご覧ください。",
+          "source_id": "case-public:3a86e6f23ceaff7e27209688d3160f1e6184e79adf7087851ff3e8e6211f56b6",
+          "character_start": 1113,
+          "character_end_exclusive": 1128,
+          "offset_unit": "Unicode code points in exact saved source.content; zero-based end-exclusive; original line breaks preserved",
+          "quote_utf8_sha256": "0e02752e88d08d6a65c7796ab1950bdf59b11da9994310aa83f42e6f241068fe"
+        },
+        {
+          "id": "public-qa-05-Q2",
+          "quote": "開催日の約6カ月前を目処に掲載しています。",
+          "source_id": "case-public:3a86e6f23ceaff7e27209688d3160f1e6184e79adf7087851ff3e8e6211f56b6",
+          "character_start": 1128,
+          "character_end_exclusive": 1149,
+          "offset_unit": "Unicode code points in exact saved source.content; zero-based end-exclusive; original line breaks preserved",
+          "quote_utf8_sha256": "414de2f9271fbf949b4f57e853c156e3df7f256e6cc8180b6c0eaa58d84ccb9a"
+        }
+      ],
+      "public_checks_performed_in_this_review": {
+        "original_selected_question_answer_and_context_read": true,
+        "linked_pages_or_latest_filing_checks_performed": false
+      },
+      "attribution": "会社の公表説明を研究過程の根拠として解釈するプロジェクト適応。独立著者の投資規則や本人の採用金融仮説ではない。",
+      "source_published_at": null,
+      "source_retrieved_at_as_stored": "2026-10-15T10:48:50.997945+00:00",
+      "financial_input_changes": [],
+      "investment_decision": null,
+      "branch_selected": null,
+      "question_registration_or_send": false,
+      "next_announcement_date": null,
+      "next_announcement_time": null,
+      "next_announcement_timezone": null,
+      "due": null
+    },
+    {
+      "case_id": "public-qa-06",
+      "company_id": "jp:7525",
+      "source_id": "case-public:3a86e6f23ceaff7e27209688d3160f1e6184e79adf7087851ff3e8e6211f56b6",
+      "input_case_reference": {
+        "path": "research/ir-public-qa-interpretation-cases-2026-10-15/input-cases.json",
+        "jsonpath": "$.cases[5]",
+        "sha256": "5d578b49ce70939b177330b1505c0ef1c4e1198c19c3732f7333456e28e32cd5"
+      },
+      "question_text_as_published": "売買単位株式数は何株ですか？",
+      "source_kind": "issuer_public_FAQ",
+      "interpretation_status": "meaning_review_only_no_model_change",
+      "question_scope": [
+        "会社株式の売買単位株式数。"
+      ],
+      "directly_answered": [
+        "保存された会社FAQは売買単位を100株と明示しており、質問の単位数に直接答えている。"
+      ],
+      "qualifications_or_other_response_functions": [
+        "この回答には価格・口座保有・資金配分の説明はなく、FAQの公表/改訂日は不明。単位の説明を投資推奨と読まない。"
+      ],
+      "not_established_by_answer": [
+        "利用者が100株を実際に保有すること、既存持分の増減、本人の投資予算/資金配分を示す情報ではない。",
+        "未確認の現在価格/費用を使って必要資金や投資可能性を補完しない。最適保有量や購入判断にも変換しない。"
+      ],
+      "next_public_checks_before_repeating_question": [
+        "必要なら最新の会社の株式基本情報/単元変更の公表と照合する。同じ売買単位の質問は既にこのFAQで直接答えられている。",
+        "本人の実保有・予算は会社公開FAQで分からない別の入力。必要な場面でも利用者の明示情報/保有記録から確認し、会社IRへ同じ単位質問を送ることで代替しない。"
+      ],
+      "period_and_measure_boundary": "会社が示す売買単位100株と、利用者固有の保有/予算を区別する。",
+      "method_refs": [
+        "RP01",
+        "RP04",
+        "RP05"
+      ],
+      "source_short_quotes": [
+        {
+          "id": "public-qa-06-Q1",
+          "quote": "「100株」です。",
+          "source_id": "case-public:3a86e6f23ceaff7e27209688d3160f1e6184e79adf7087851ff3e8e6211f56b6",
+          "character_start": 1313,
+          "character_end_exclusive": 1322,
+          "offset_unit": "Unicode code points in exact saved source.content; zero-based end-exclusive; original line breaks preserved",
+          "quote_utf8_sha256": "9c29d442841b2e02c541e9df16794f05271b4104143ea299a6214aae4c1aa76d"
+        }
+      ],
+      "public_checks_performed_in_this_review": {
+        "original_selected_question_answer_and_context_read": true,
+        "linked_pages_or_latest_filing_checks_performed": false
+      },
+      "attribution": "会社の公表説明を研究過程の根拠として解釈するプロジェクト適応。独立著者の投資規則や本人の採用金融仮説ではない。",
+      "source_published_at": null,
+      "source_retrieved_at_as_stored": "2026-10-15T10:48:50.997945+00:00",
+      "financial_input_changes": [],
+      "investment_decision": null,
+      "branch_selected": null,
+      "question_registration_or_send": false
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "case-public:a7b25f4959a00b9428e6d375aec91b50078fe5c759ecd5f50da9df3a0798684d",
+      "company_id": "jp:3774",
+      "title": "決算説明会等での主な質疑応答内容 | 株主・投資家向け情報 | インターネットイニシアティブ（IIJ）",
+      "url": "https://www.iij.ad.jp/ir/library/questions/20260807.html",
+      "content_reference": {
+        "path": "data/case-source-bundle.json",
+        "jsonpath": "$.sources[7].content",
+        "content_sha256": "ce3ca678a67b95b410618042b99138afe989961ab177c47f36a10d018de86e14"
+      },
+      "saved_extraction_reference": {
+        "path": "research/ir-case-studies-2026-10-15/3774/evidence/6a87d55ee3151370.json",
+        "jsonpath": "$.text",
+        "sha256": "77c01e71461dd88a5ec28e2d034a38d249a1ba7b8b5b0767545e10e3d8fb70b5"
+      },
+      "raw_reference": {
+        "path": "research/ir-case-studies-2026-10-15/3774/evidence/a48e391c51fd8d03c7c64396fb616b274d3e0043695e14fb4a88c576c7da684e.raw",
+        "sha256": "a48e391c51fd8d03c7c64396fb616b274d3e0043695e14fb4a88c576c7da684e",
+        "byte_count": 16780
+      },
+      "source_published_at_as_stored": null,
+      "publication_time_used": null,
+      "source_retrieved_at_as_stored": "2026-10-15T01:10:10.898820+00:00",
+      "original_http_body_completed_at": "2026-10-15T01:10:11.427943+00:00",
+      "clock_note": "取得申告時刻、HTTP本文完了、公表日時は別。03/04の日付ラベル/URLから公表日を認定しない。"
+    },
+    {
+      "source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+      "company_id": "jp:3774",
+      "title": "決算・財務情報について | 株主・投資家向け情報 | インターネットイニシアティブ(IIJ)",
+      "url": "https://www.iij.ad.jp/ir/faq/kessan/index.html",
+      "content_reference": {
+        "path": "data/case-source-bundle.json",
+        "jsonpath": "$.sources[3].content",
+        "content_sha256": "2325e1d0e734eb31d3fbd2001eaa9c7a13521eadaede6e935d6a1d8bc2d7c839"
+      },
+      "saved_extraction_reference": {
+        "path": "research/ir-case-studies-2026-10-15/3774/evidence/3f8e02d9d7390f80.json",
+        "jsonpath": "$.text",
+        "sha256": "619ff51671b3d218cf4d3cb96e2405463050491a99d0b3af9e8635c5505b6538"
+      },
+      "raw_reference": {
+        "path": "research/ir-case-studies-2026-10-15/3774/evidence/0e5d120d1acbad92f9fa7b96166c320a5f867764c81b4b9e828acec677267c5a.raw",
+        "sha256": "0e5d120d1acbad92f9fa7b96166c320a5f867764c81b4b9e828acec677267c5a",
+        "byte_count": 31313
+      },
+      "source_published_at_as_stored": null,
+      "publication_time_used": null,
+      "source_retrieved_at_as_stored": "2026-10-15T01:10:54.665155+00:00",
+      "original_http_body_completed_at": "2026-10-15T01:10:55.385031+00:00",
+      "clock_note": "取得申告時刻、HTTP本文完了、公表日時は別。03/04の日付ラベル/URLから公表日を認定しない。"
+    },
+    {
+      "source_id": "case-public:3a86e6f23ceaff7e27209688d3160f1e6184e79adf7087851ff3e8e6211f56b6",
+      "company_id": "jp:7525",
+      "title": "よくあるご質問 | IRサポート | 株主・投資家情報 | リックス株式会社",
+      "url": "https://www.rix.co.jp/ir/support/faq/",
+      "content_reference": {
+        "path": "research/ir-case-studies-2026-10-15/7525/public-definition-faq-review/source-bundle.json",
+        "jsonpath": "$.sources[0].content",
+        "content_sha256": "6c67241afc15c61509ca17ffc2f7529eb93ede922807ab460aba9fcd1ea4b11f"
+      },
+      "saved_extraction_reference": {
+        "path": "research/ir-case-studies-2026-10-15/7525/public-definition-faq-review/01.txt",
+        "jsonpath": null,
+        "sha256": "6c67241afc15c61509ca17ffc2f7529eb93ede922807ab460aba9fcd1ea4b11f"
+      },
+      "raw_reference": {
+        "path": "research/ir-case-studies-2026-10-15/7525/public-definition-faq-review/raw/eda35fb1a2a5b14e61a71022017e0cfff6156418d0854c72d22b30ccc70fe497",
+        "sha256": "eda35fb1a2a5b14e61a71022017e0cfff6156418d0854c72d22b30ccc70fe497",
+        "byte_count": 53545
+      },
+      "source_published_at_as_stored": null,
+      "publication_time_used": null,
+      "source_retrieved_at_as_stored": "2026-10-15T10:48:50.997945+00:00",
+      "original_http_body_completed_at": "2026-10-15T10:48:50.997945+00:00",
+      "clock_note": "取得申告時刻、HTTP本文完了、公表日時は別。03/04の日付ラベル/URLから公表日を認定しない。"
+    }
+  ],
+  "limits": [
+    "This is not an answer key, accuracy test, prospectively committed hypothesis evaluation, or investment performance.",
+    "Company FAQ wording does not establish actual investor utterances; earnings Q&A is issuer-written summary, not verbatim speech.",
+    "No linked/latest pages were newly reviewed; next public checks are proposed work, not completed acquisition or current confirmation.",
+    "Meeting date, publication, stored retrieval and original body completion remain separate; the original source clocks and files are not overwritten.",
+    "No threshold, forecast, probability, EPS/gross-profit bridge, financial input adoption or buy/sell judgment is created."
+  ],
+  "validation": {
+    "input_snapshots": [
+      {
+        "path": "research/ir-public-qa-interpretation-cases-2026-10-15/input-cases.json",
+        "sha256": "5d578b49ce70939b177330b1505c0ef1c4e1198c19c3732f7333456e28e32cd5",
+        "byte_count": 30733
+      },
+      {
+        "path": "research/ir-public-qa-interpretation-cases-2026-10-15/source-manifest.json",
+        "sha256": "4ef28d25f1dd3dc2f7df891912100398f7d0237bfed52cce8dd2b0183af66fb1",
+        "byte_count": 17916
+      },
+      {
+        "path": "research/ir-public-qa-interpretation-cases-2026-10-15/README.md",
+        "sha256": "3b72c3d76f4a4eb4e1edd65b20ba4b8598670828c760e9b02f7666121f186e05",
+        "byte_count": 2789
+      },
+      {
+        "path": "research/ir-public-qa-interpretation-cases-2026-10-15/validation.json",
+        "sha256": "386cf140a91e5979225845b776c4ef3fc3a7eccf4777589d821a0ffbc7503cad",
+        "byte_count": 1251
+      },
+      {
+        "path": "research/ir-reply-interpretation-practices-2026-10-15/evidence.json",
+        "sha256": "962db3543563c6d1861cc050efad386937089db1fcd694e7cc7547a6acbfafdd",
+        "byte_count": 26591
+      },
+      {
+        "path": "research/ir-reply-interpretation-practices-2026-10-15/README.md",
+        "sha256": "ecf2aef802257d6701780c3cc15e07030c0bdde48332407923138206f35dc601",
+        "byte_count": 3126
+      },
+      {
+        "path": "data/case-source-bundle.json",
+        "sha256": "09dc53022739abfdc8d4e88957de1ec01c33b26566c4e63564330a3a72d2118d",
+        "byte_count": 1935265
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/3774/evidence/6a87d55ee3151370.json",
+        "sha256": "77c01e71461dd88a5ec28e2d034a38d249a1ba7b8b5b0767545e10e3d8fb70b5",
+        "byte_count": 20702
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/3774/evidence/a48e391c51fd8d03c7c64396fb616b274d3e0043695e14fb4a88c576c7da684e.raw",
+        "sha256": "a48e391c51fd8d03c7c64396fb616b274d3e0043695e14fb4a88c576c7da684e",
+        "byte_count": 16780
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/3774/evidence/3f8e02d9d7390f80.json",
+        "sha256": "619ff51671b3d218cf4d3cb96e2405463050491a99d0b3af9e8635c5505b6538",
+        "byte_count": 36451
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/3774/evidence/0e5d120d1acbad92f9fa7b96166c320a5f867764c81b4b9e828acec677267c5a.raw",
+        "sha256": "0e5d120d1acbad92f9fa7b96166c320a5f867764c81b4b9e828acec677267c5a",
+        "byte_count": 31313
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/7525/public-definition-faq-review/source-bundle.json",
+        "sha256": "8ad25c00fe7b8f1c047618f9c9eb6144fa9e72e17e4404a824e20b304bec589e",
+        "byte_count": 8531
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/7525/public-definition-faq-review/01.txt",
+        "sha256": "6c67241afc15c61509ca17ffc2f7529eb93ede922807ab460aba9fcd1ea4b11f",
+        "byte_count": 5423
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/7525/public-definition-faq-review/01.json",
+        "sha256": "59b5b9a415eb1ef2b4be6e2aff82a401974d91f23c53239bcb87c51186d0aca6",
+        "byte_count": 31598
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/7525/public-definition-faq-review/raw/eda35fb1a2a5b14e61a71022017e0cfff6156418d0854c72d22b30ccc70fe497",
+        "sha256": "eda35fb1a2a5b14e61a71022017e0cfff6156418d0854c72d22b30ccc70fe497",
+        "byte_count": 53545
+      },
+      {
+        "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+        "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+        "byte_count": 2736
+      },
+      {
+        "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+        "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+        "byte_count": 2757
+      },
+      {
+        "path": "third_party/anthropic/manifest.json",
+        "sha256": "45ff843e1c334454b63221fec6311f0c6bf525e79b99096e35f8f2542a405fdf",
+        "byte_count": 4591
+      }
+    ],
+    "original_18_qa_spans_exact": true,
+    "qa_span_checks": [
+      {
+        "case_id": "public-qa-01",
+        "span": "question_quote",
+        "exact_quote_and_sha_matched": true
+      },
+      {
+        "case_id": "public-qa-01",
+        "span": "answer_quote",
+        "exact_quote_and_sha_matched": true
+      },
+      {
+        "case_id": "public-qa-01",
+        "span": "question_and_answer_source_span",
+        "exact_quote_and_sha_matched": true
+      },
+      {
+        "case_id": "public-qa-02",
+        "span": "question_quote",
+        "exact_quote_and_sha_matched": true
+      },
+      {
+        "case_id": "public-qa-02",
+        "span": "answer_quote",
+        "exact_quote_and_sha_matched": true
+      },
+      {
+        "case_id": "public-qa-02",
+        "span": "question_and_answer_source_span",
+        "exact_quote_and_sha_matched": true
+      },
+      {
+        "case_id": "public-qa-03",
+        "span": "question_quote",
+        "exact_quote_and_sha_matched": true
+      },
+      {
+        "case_id": "public-qa-03",
+        "span": "answer_quote",
+        "exact_quote_and_sha_matched": true
+      },
+      {
+        "case_id": "public-qa-03",
+        "span": "question_and_answer_source_span",
+        "exact_quote_and_sha_matched": true
+      },
+      {
+        "case_id": "public-qa-04",
+        "span": "question_quote",
+        "exact_quote_and_sha_matched": true
+      },
+      {
+        "case_id": "public-qa-04",
+        "span": "answer_quote",
+        "exact_quote_and_sha_matched": true
+      },
+      {
+        "case_id": "public-qa-04",
+        "span": "question_and_answer_source_span",
+        "exact_quote_and_sha_matched": true
+      },
+      {
+        "case_id": "public-qa-05",
+        "span": "question_quote",
+        "exact_quote_and_sha_matched": true
+      },
+      {
+        "case_id": "public-qa-05",
+        "span": "answer_quote",
+        "exact_quote_and_sha_matched": true
+      },
+      {
+        "case_id": "public-qa-05",
+        "span": "question_and_answer_source_span",
+        "exact_quote_and_sha_matched": true
+      },
+      {
+        "case_id": "public-qa-06",
+        "span": "question_quote",
+        "exact_quote_and_sha_matched": true
+      },
+      {
+        "case_id": "public-qa-06",
+        "span": "answer_quote",
+        "exact_quote_and_sha_matched": true
+      },
+      {
+        "case_id": "public-qa-06",
+        "span": "question_and_answer_source_span",
+        "exact_quote_and_sha_matched": true
+      }
+    ],
+    "original_context_spans_exact": true,
+    "source_content_equals_saved_extractions": true,
+    "raw_sha_and_byte_counts_match_manifest": true,
+    "raw_html_reparsed_this_review": false,
+    "method_author_quotes_and_fixed_source_hashes_matched": true,
+    "old_input_files_unchanged": true
+  },
+  "execution": {
+    "new_GETs": 0,
+    "DB_accesses": 0,
+    "production_changes": 0,
+    "old_artifact_changes": 0,
+    "formal_questions_or_sends": 0,
+    "runtime_or_tests": 0,
+    "financial_input_changes": 0
+  }
+}

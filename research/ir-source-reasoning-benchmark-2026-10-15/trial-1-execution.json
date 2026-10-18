@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "trial_id": "trial-1",
+  "started_at": "2026-10-15T11:40:18+00:00",
+  "start_clock_source": "clock__curr_time",
+  "finished_at": "2026-10-15T11:42:08.851132+00:00",
+  "finish_clock_source": "datetime.now(timezone.utc)",
+  "input_file": "research/ir-source-reasoning-benchmark-2026-10-15/input-cases.json",
+  "input_sha256": "2cdf502ba703c36e998d0422a0745182eaabc0256dc35b2751d99e9b642f0a4c",
+  "model_name": null,
+  "context_fork": "none",
+  "technical_isolation": false,
+  "isolation_note": "新しい評価担当コンテキスト。読取制限は手順上の制約であり、ファイルアクセスを技術的に隔離した試験ではない。必須運用文書に関連実例があるため、完全なsource-only・情報隔離試験とは主張しない。",
+  "evaluation_input_files_read": [
+    "research/ir-source-reasoning-benchmark-2026-10-15/input-cases.json"
+  ],
+  "mandatory_operational_files_read": [
+    "AGENTS.md",
+    ".agents/skills/jp-equity-ir/SKILL.md",
+    "docs/workflow.md"
+  ],
+  "mandatory_operational_skill_resources_read": [
+    "skill://plugin_connector_1p_ed5feb9070a08191b08c81c47947bc16/setup/SKILL.md",
+    "skill://plugin_connector_1p_c5b7d5df5d7081918f2c4be5a633ed5d/cloud-environment-runtime/SKILL.md"
+  ],
+  "operational_path_existence_checks": [
+    "/AGENTS.md",
+    "/workspace/AGENTS.md",
+    "/workspace/ir-agent/AGENTS.md",
+    "/workspace/ir-agent/research/AGENTS.md",
+    "/workspace/ir-agent/research/ir-source-reasoning-benchmark-2026-10-15/AGENTS.md"
+  ],
+  "possible_related_example_exposure": {
+    "present": true,
+    "files": [
+      ".agents/skills/jp-equity-ir/SKILL.md",
+      "docs/workflow.md"
+    ],
+    "description": "必須運用文書には135Aの条件付きCAGR・継続顧客比率、5988の減損のP/L区分とCFO調整、1518の旧修正予想、会社予想と外部予想の帰属、予定と実施の区別に関係する説明・実例への参照が含まれていた。参照先の研究ファイルは開いていない。これらの運用文書は回答の引用根拠に用いず、各case内の抜粋だけを根拠とした。"
+  },
+  "answer_key_or_other_research_files_read": false,
+  "prior_root_chat_received": false,
+  "external_get_count": 0,
+  "database_operation_count": 0,
+  "code_change_count": 0,
+  "external_question_send_count": 0,
+  "investment_decision_count": 0,
+  "other_tool_observations": [
+    "cloud_environment_environment_status: 環境の運用状態のみ。評価根拠として不使用。"
+  ],
+  "output_files": [
+    "research/ir-source-reasoning-benchmark-2026-10-15/trial-1-answers.json",
+    "research/ir-source-reasoning-benchmark-2026-10-15/trial-1-execution.json"
+  ],
+  "existing_files_modified": false
+}

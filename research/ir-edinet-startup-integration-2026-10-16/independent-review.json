@@ -1,0 +1,152 @@
+{
+  "reviewed_at": "2026-10-16T17:11:31.342850+00:00",
+  "reviewer": "codex_audit_manufacturing",
+  "status": "independent_final_review_complete_no_material_findings",
+  "findings": [],
+  "review_scope": [
+    "起動script全文・新10tests全文・固定proofを読解。",
+    "既存ordinary-code helperとparse_edinet_packageのinstance呼出経路を確認。",
+    "キー入力直前の準備状態で停止する最終task。追加資料調査へ拡張しない。"
+  ],
+  "static_conclusions": {
+    "unconfigured_and_check": "キーなし/空白と--checkはPath(output)/exists/mkdir/client作成より前に戻り、GET/DB/出力dir0。実環境を使わないinjected proofも確認。",
+    "request_selection": "6814 ordinary・2026-10-09/type2一覧1GET、docType160/xbrlFlag1/訂正以外の候補が厳密に1件のときだけtype1 ZIP1GET。docIDはA-Z0-9に限定。返却periodを保持し日付補完しない。",
+    "transport": "固定HTTPS endpoint、verify=True、automaticredirect False、HTTPAdapter retry0。stream/read/byte/ZIP展開上限あり。implementationの40秒はchunk間で検査するsoft deadlineとの明示を維持し、独立hard wallとは認定しない。",
+    "credentials": "keyは要求paramsだけへ入り、receiptはpublic params/date/typeと認証なしendpointのみ。headers・response URL・例外本文を保存しない。HTTP/parser診断はquiet内で抑制、停止理由は固定code。raw/decodedJSON/ZIP展開member/parser戻り値・診断の反射checkを確認。",
+    "once_only": "出力dirをexclusiveに作成し、既存dirはclient作成前に停止。各fileはxbで新規専用。失敗/不確実な既出力を自動再送せず上書きしない。",
+    "parser_and_adoption": "既存parse_edinet_packageをsource=instanceで1回使用しcandidateのみ保存。財務・意味採用/DB ingest/IR/価格/定期起動を呼ばない。実API/実提出物のparse成功は未検証。"
+  },
+  "producer_focused_evidence_read_not_rerun": {
+    "new_startup_tests": 10,
+    "existing_adapter_tests": 24,
+    "both_logs_OK": true,
+    "full_suite_owned_by_ROOT": true
+  },
+  "independent_memory_only_mock_review": {
+    "cases": 17,
+    "all_expected": true,
+    "actual_filesystem_fixture_writes": 0,
+    "method": "明示のsynthetic environ・mock client/parserを注入。Path.exists/mkdir/openとfsyncをin-memory state/BytesIOへ置換し、socket/SQLite接続は失敗mock。実OS environmentの参照・変更はしていない。",
+    "case_results": [
+      {
+        "case": "normal missing key",
+        "status": "needs_configuration",
+        "mock_GETs": 0
+      },
+      {
+        "case": "normal whitespace key",
+        "status": "needs_configuration",
+        "mock_GETs": 0
+      },
+      {
+        "case": "check configured synthetic key",
+        "status": "configuration_present_not_tested",
+        "mock_GETs": 0
+      },
+      {
+        "case": "unique ordinary candidate",
+        "status": "candidate_bundle_saved_meaning_review_required",
+        "mock_GETs": 2
+      },
+      {
+        "case": "zero candidate",
+        "status": "no_unique_document_zero",
+        "mock_GETs": 1
+      },
+      {
+        "case": "multiple candidates",
+        "status": "no_unique_document_multiple",
+        "mock_GETs": 1
+      },
+      {
+        "case": "nonordinary suffix",
+        "status": "no_unique_document_zero",
+        "mock_GETs": 1
+      },
+      {
+        "case": "amendment",
+        "status": "no_unique_document_zero",
+        "mock_GETs": 1
+      },
+      {
+        "case": "boolean xbrlFlag",
+        "status": "no_unique_document_zero",
+        "mock_GETs": 1
+      },
+      {
+        "case": "unsafe docID",
+        "reason_code": "invalid_docID",
+        "mock_GETs": 1
+      },
+      {
+        "case": "302 Location with reflected synthetic key",
+        "reason_code": "http_status_not_200",
+        "mock_GETs": 1
+      },
+      {
+        "case": "exception containing credential URL",
+        "reason_code": "transport_failed",
+        "mock_GETs": 1
+      },
+      {
+        "case": "partial response exception",
+        "reason_code": "transport_failed",
+        "mock_GETs": 1
+      },
+      {
+        "case": "fully Unicode-escaped JSON key reflection",
+        "reason_code": "secret_reflection",
+        "mock_GETs": 1
+      },
+      {
+        "case": "compressed ZIP key reflection",
+        "reason_code": "secret_reflection",
+        "mock_GETs": 2
+      },
+      {
+        "case": "parser printing key then raising credential exception",
+        "reason_code": "startup_or_parse_failed",
+        "mock_GETs": 2
+      },
+      {
+        "case": "existing output sentinel",
+        "status": "existing_output_stop",
+        "mock_GETs": 0
+      }
+    ],
+    "assertions": [
+      "キーなし/空白/check/既存出力でclient作成・file open0。",
+      "成功候補の要求先/固定date/type2/type1/instance引数を完全比較、periodStart:null保持。",
+      "全mock要求でTLS verify=True/redirect=False。",
+      "保存予定bytes/stdout/stderr/resultにsynthetic key値・URLencode値なし。",
+      "反射時のlisting/ZIP保存、parser失敗時のcandidate保存なし。",
+      "成功でもfinancial_inputs_verified/DB_ingested/external_sendはfalse。"
+    ]
+  },
+  "input_pins": {
+    "scripts/start_edinet_research.py": "51599ebf51f4de34cfdda4a3cc460d51ad12d395fba84d3310bc24c46a5dccad",
+    "tests/test_edinet_startup.py": "3823442197b586e0d6fcd15a7282a7f1da27dfc7f3a9f7f34f8110c9cc656095",
+    "src/ir_agent/adapters/edinet.py": "5a8878371aec1d28322cf8e500edbef7d317843ebdee2357a2f158dbc9a32f8c",
+    "src/ir_agent/adapters/common.py": "a6ca5fdd16778706f8a4de072bcdb27f5dcd78efbc6768039d1116606ebbb095",
+    "research/ir-edinet-startup-integration-2026-10-16/start_edinet_research.py": "51599ebf51f4de34cfdda4a3cc460d51ad12d395fba84d3310bc24c46a5dccad",
+    "research/ir-edinet-startup-integration-2026-10-16/test_edinet_startup.py": "3823442197b586e0d6fcd15a7282a7f1da27dfc7f3a9f7f34f8110c9cc656095",
+    "research/ir-edinet-startup-integration-2026-10-16/README.md": "bfe13456bb4eb5f08402d939cdbdfa20c745cefef97314c6dec4b230d2319186",
+    "research/ir-edinet-startup-integration-2026-10-16/implementation.json": "602fee23f476b4733298d3e97521136abd79d2421c82e1257b1e6a2943c0d79a",
+    "research/ir-edinet-startup-integration-2026-10-16/manifest.json": "8c7fe5b73afed1e8b2868914b99a4c687de6d4bf34e80dd6a5e7bc5f9e38e231",
+    "research/ir-edinet-startup-integration-2026-10-16/startup-tests.log": "600d19a27cfd73dc2338607e3c9f3f55e615a42dd8fb6e30b2ad5566777e84a6",
+    "research/ir-edinet-startup-integration-2026-10-16/adapter-tests.log": "20e862475aaf11d6b22a82e77c2e0992b9ed91cefa9e1a7b9e7f42ec4ee48f51",
+    "research/ir-edinet-startup-integration-2026-10-16/injected-empty-check.json": "c3cfdc719cd67d51cb300fe803ba78b668c4964c0a392353ef725397aad7863c"
+  },
+  "source_and_code_pins_unchanged_before_after": true,
+  "operations": {
+    "real_GET_or_POST": 0,
+    "real_API_key_read": 0,
+    "real_environment_read_or_change": 0,
+    "DB_connection_write_or_Store": 0,
+    "production_code_or_test_or_oldproof_edits": 0,
+    "full_suite_or_producer_focused_suite_rerun": 0,
+    "authorized_new_review_file": 1,
+    "new_investment_research_or_adoption": 0
+  },
+  "stop": "本1fileを保存して終了。実キー入力・実起動・追加調査は実施していない。"
+}

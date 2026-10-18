@@ -1,0 +1,12 @@
+--- failed-shadow-initial/prepare_connection.py
++++ prepare_connection.py
+@@ -82,7 +82,8 @@
+ 
+ 
+ def schema(connection):
+-    return list(connection.execute('SELECT type,name,tbl_name,sql FROM sqlite_master ORDER BY type,name'))
++    return [tuple(row) for row in connection.execute(
++        'SELECT type,name,tbl_name,sql FROM sqlite_master ORDER BY type,name')]
+ 
+ 
+ def summary(connection):

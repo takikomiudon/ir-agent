@@ -1,0 +1,75 @@
+{
+  "security_code": "387A",
+  "company_name": "フラー",
+  "market": "グロース（内国株式）",
+  "jpx_sector": "情報・通信業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.fuller-inc.com/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T09:06:21.752550+00:00",
+  "completed_at": "2026-10-11T09:06:54.392303+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/387A/20261011T090621752619Z/01.json",
+      "url": "https://www.fuller-inc.com/",
+      "retrieved_at": "2026-10-11T09:06:38.246197+00:00",
+      "quote": "フラー株式会社",
+      "role": "company_identity_manual"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.fuller-inc.com/",
+      "final_url": "https://www.fuller-inc.com/",
+      "snapshot": "evidence/387A/20261011T090621752619Z/01.json",
+      "retrieved_at": "2026-10-11T09:06:38.246197+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "保存homeは会社名だけのshellで窓口を判定できない。",
+    "保存済み公式ページ・実フォーム欄を手動点検。送信・配信成功・回答実績は未確認。"
+  ],
+  "discovery": {
+    "security_code": "387A",
+    "official_url": "https://www.fuller-inc.com/",
+    "discovery_url": "https://www.jpx.co.jp/listing/stocks/new/00-archives-01.html",
+    "discovered_at": "2026-10-11T03:59:12.667702+00:00",
+    "discovery_type": "official_jpx_listing_link",
+    "seed_company_name": "フラー（株）",
+    "source_data_as_of": "2025-06-19",
+    "listing_date": "2025-07-24",
+    "discovery_snapshot": "/tmp/ir-all-seeds/jpx-ipo-2025.html",
+    "discovery_row_text": "2025/07/24 （2025/06/19） フラー（株） 代表者インタビュー 387A 1,110～1,170 60 100"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/387A/20261011T090621752619Z/01.json",
+      "normalized_name": "フラー",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 2,
+  "previous_attempts": [
+    "attempts/387A/20261011T045047419459Z.json",
+    "attempts/387A/20261011T090654392408Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_services",
+    "reviewed_at": "2026-10-11T09:22:23.029520+00:00",
+    "notes": "フラーofficialhomeの保存本文は会社名のみでlinks/formsなしの空に近いshell。HTTP200だけでIRメール/フォーム受付を認定せずunconfirmed維持。実リンク未保存のため宛先/経路を推測して追加候補を作らない。",
+    "attempted_at_reviewed": "2026-10-11T09:06:21.752550+00:00",
+    "saved_evidence_only": true
+  }
+}

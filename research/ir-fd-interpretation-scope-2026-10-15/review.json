@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T12:17:31.324689+00:00",
+  "status": "finite_search_closed_FSA_primary_QA_unidentified",
+  "research_question": "日本のFDルールとIR個別回答の情報の区別を、金融庁公式一次資料で確認する。",
+  "saved_source_search": {
+    "roots": [
+      "research",
+      "docs",
+      "third_party",
+      ".agents"
+    ],
+    "file_suffixes": [
+      ".json",
+      ".md",
+      ".txt"
+    ],
+    "patterns_checked": [
+      "fsa\\.go\\.jp",
+      "フェア.?ディスクロージャー",
+      "フェア・ディスクロージャー",
+      "FDルール"
+    ],
+    "FSA_URL_search_command": [
+      "rg",
+      "-l",
+      "fsa\\.go\\.jp",
+      "research",
+      "docs",
+      "third_party",
+      ".agents",
+      "-g",
+      "*.json",
+      "-g",
+      "*.md",
+      "-g",
+      "*.txt"
+    ],
+    "FSA_URL_matching_file_count": 209,
+    "distinct_saved_FSA_URL_count": 17,
+    "matching_file_inventory_sha256": "b722f171f6f13ea10fc134cec7cbc94b42e16b2f4cb36ff3576f8ca2d61e9149",
+    "inventory_hash_definition": "Sorted file/SHA objects, UTF-8 canonical JSON with sorted keys and compact separators; snapshot before creating this output directory. Individual 209-file inventory is not duplicated in this small report.",
+    "finding": "保存会社ページ等の金融庁リンクは見つかったが、この有限検索ではFD公式Q&Aの保存原典又は実URLを特定できなかった。",
+    "limits": [
+      "指定した保存root/拡張子と検索語だけ。全workspace、Git履歴、rawバイナリ、data/又は外部Webの網羅検索ではない。",
+      "金融庁リンクの存在をFD公式資料の本文取得又は内容確認としない。検索不一致を公表資料の不存在としない。"
+    ]
+  },
+  "search_tool_availability": {
+    "observed_exposed_tool_count": 46,
+    "name_filter": "search|browse|fetch|web|browser (case-insensitive)",
+    "matching_callable_tool_names": [],
+    "web_search_invocations": 0,
+    "site_fsa_search_executed": false,
+    "limit": "この担当contextで確認したcallable tool一覧にWeb検索toolがなかった。未導入/別contextの全機能が存在しないという主張ではない。"
+  },
+  "access_scope": {
+    "central_holds": {
+      "file": "research/ir-source-access-holds-2026-10-15/holds-v3.json",
+      "sha256": "ec1e9f85d378571c3d0f99eca73ec8e397ea8dd7b155aa4be80c2100d2294551"
+    },
+    "index_version": 3,
+    "exact_hosts_consulted": [
+      "contents.xj-storage.jp",
+      "ssl4.eir-parts.net",
+      "web.fisco.jp",
+      "sharedresearch.jp",
+      "www.toyo.co.jp",
+      "www.xj-storage.jp",
+      "www.investors.com"
+    ],
+    "new_public_GET_budget": 4,
+    "new_public_GETs": 0,
+    "unused_GETs": 4,
+    "robots_GETs": 0,
+    "stop_reason": "公式Q&A入口未特定かつ利用可能Web検索tool不在。URL推測/記憶補完/別site探索へ進まない。",
+    "retries": 0,
+    "redirects_followed": 0,
+    "JavaScript": 0,
+    "UA_changed": false,
+    "proxy_or_TLS_changed": false,
+    "diagnostic_requests": 0
+  },
+  "official_FSA_evidence": {
+    "sources": [],
+    "quotes": [],
+    "publication_date": null,
+    "revision_date": null,
+    "GET_completed_at": null
+  },
+  "unconfirmed": {
+    "applicable_persons": null,
+    "material_information_scope": null,
+    "supplement_to_published_information_scope": null,
+    "explanations_not_immediately_material_scope": null,
+    "publication_method_scope": null,
+    "qualifications_and_exceptions": null
+  },
+  "existing_project_boundary": {
+    "description": "public_clarification / unclear / potential_nonpublic は現在のプロジェクトの利用/保留分類であり、FD上の重要/非重要の法的自動判定ではない。本調査は分類を変更しない。",
+    "workflow": {
+      "file": "docs/workflow.md",
+      "sha256": "6415612b8dca5bdd3c9070cdacc94117292968ac1c05dc8cbfe63d4395028ec3"
+    },
+    "company_IR_policy_treated_as_FSA_definition": false,
+    "Rix_example": {
+      "existing_preflight": {
+        "file": "research/ir-case-studies-2026-10-15/7525/original-product-ratio-question-preflight/preflight-v3.md",
+        "sha256": "33bfce6413d93480468c069411c37f8704af4e6cfaa267d557fddd75ae6d3422"
+      },
+      "FD_legal_classification": null,
+      "question_changed": false,
+      "status": "既存の定義質問について、今回FD上の評価は行っていない。"
+    }
+  },
+  "conclusion": "対象者・情報区分・重要性境界・公表方法は今回未確認。原文のない推測ルールや一般的な法的警告を追加せず、この有限検索で終了する。",
+  "activity_counts": {
+    "new_GETs": 0,
+    "DB_accesses": 0,
+    "production_changes": 0,
+    "old_file_changes": 0,
+    "policy_changes": 0,
+    "question_changes": 0,
+    "IR_sends": 0,
+    "financial_rules_adopted": 0
+  },
+  "validation": {
+    "existing_ref_hashes_unchanged": true,
+    "official_quotes_count": 0,
+    "official_quote_limit": 5,
+    "inferred_statute_numbers": [],
+    "new_legal_classifier_or_checklist": false
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "security_code": "6098",
+  "company_name": "リクルートホールディングス",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "サービス業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://recruit-holdings.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T16:25:19.109286+00:00",
+  "completed_at": "2026-10-11T16:26:38.790559+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/6098/20261011T162519109375Z/01.json",
+      "url": "https://recruit-holdings.com/ja/",
+      "retrieved_at": "2026-10-11T16:26:22.505079+00:00",
+      "http_status": 200,
+      "quote": "リクルートホールディングス - Recruit Holdings",
+      "role": "issuer_identity",
+      "snapshot_json_sha256": "9e4423c17590f433fbaa601360af5e937e1010a176185c1ff1c53e134d76626b"
+    },
+    {
+      "snapshot": "evidence/6098/20261011T162519109375Z/01.json",
+      "url": "https://recruit-holdings.com/ja/",
+      "retrieved_at": "2026-10-11T16:26:22.505079+00:00",
+      "http_status": 200,
+      "quote": "IR情報",
+      "role": "financial_information_route",
+      "snapshot_json_sha256": "9e4423c17590f433fbaa601360af5e937e1010a176185c1ff1c53e134d76626b",
+      "source_link_url": "https://recruit-holdings.com/ja/ir/",
+      "source_link_href": "/ja/ir/",
+      "source_link_label": "IR情報",
+      "source_link_index": 22
+    },
+    {
+      "snapshot": "evidence/6098/20261011T162519109375Z/01.json",
+      "url": "https://recruit-holdings.com/ja/",
+      "retrieved_at": "2026-10-11T16:26:22.505079+00:00",
+      "http_status": 200,
+      "quote": "お問い合わせ",
+      "role": "general_contact_route",
+      "snapshot_json_sha256": "9e4423c17590f433fbaa601360af5e937e1010a176185c1ff1c53e134d76626b",
+      "source_link_url": "https://recruit-holdings.com/ja/contact/",
+      "source_link_href": "/ja/contact/",
+      "source_link_label": "お問い合わせ",
+      "source_link_index": 31
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://recruit-holdings.co.jp/",
+      "final_url": "https://recruit-holdings.com/ja/",
+      "snapshot": "evidence/6098/20261011T162519109375Z/01.json",
+      "retrieved_at": "2026-10-11T16:26:22.505079+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [
+    "元seed recruit-holdings.co.jp から recruit-holdings.com/ja/ への保存301と、取得済homeのリクルートホールディングス本文を照合。原sourceの別host/third_party_unverified取得metadataを変更しない。",
+    "同homeに /ja/ir/ と一般 /ja/contact/ のactualリンクがあるが、リンク先は未取得。2つのnative GET formはサイト内検索で、質問を送るフォームではない。"
+  ],
+  "limitations": [
+    "IRニュース、IRメニュー、一般お問い合わせと検索フォームだけでは同issuer金融IR受付を実証しない。",
+    "返信先/質問欄・公開IRメール・個人/会社名/返信条件は保存資料にない。redirect後homeの企業名確認をchannel確認に置き換えない。窓口不存在の判定ではない。",
+    "保存済み資料のみで監査。追加GET・フォーム送信・メール送信0。送信成功・回答実績・現在の稼働/到達性・投資提案の承認は確認していない。"
+  ],
+  "discovery": {
+    "security_code": "6098",
+    "official_url": "https://recruit-holdings.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "リクルートホールディングス",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/6098/20261011T162519109375Z/01.json",
+      "normalized_name": "リクルート",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "旧公式seedの保存301先homeは確認したが、金融IR/受付頁が未取得で、保存フォームは検索のみ。金融IR受付の実証が不足する。",
+  "http_get_attempt_count": 5,
+  "previous_attempts": [
+    "attempts/6098/20261011T045047571804Z.json",
+    "attempts/6098/20261011T162638790713Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_consumer_61_batch14",
+    "reviewed_at": "2026-10-11T16:47:53.680175+00:00",
+    "reviewed_at_jst": "2026-10-12T01:47:53.680175+09:00",
+    "notes": "旧co.jp→com/ja保存301と同社home本文を照合。原取得時別host未検証metadataは保持。金融IR・genericお問い合わせリンク先は未取得、native forms0/1は検索のみ。IRメール/質問フォーム/個人条件を推論しない。 保存済み資料だけを使用。新GET/送信0、送信・回答実績や投資提案の承認は推論しない。"
+  }
+}

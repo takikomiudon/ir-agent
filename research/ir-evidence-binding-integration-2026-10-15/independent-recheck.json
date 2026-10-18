@@ -1,0 +1,68 @@
+{
+  "all_inputs_fictional": true,
+  "database_scope": "memory plus one disposable SQLite copy",
+  "base_mapping_population_readonly": {
+    "baseline_binding_status": "matched",
+    "bad_sha_and_reply_quote_status": "mismatch",
+    "unmapped_population_preserved": true,
+    "no_prediction_population_preserved": true,
+    "raw_sources_and_reply_preserved": true,
+    "caller_transaction_preserved": true,
+    "script_database_bytes_unchanged": true,
+    "script_database_sha256": "2beae10dc9134fb9e70bfd50bae7d330dad19b18088f16fde9fe47092790164b",
+    "matched_does_not_approve_semantics_or_independence": true,
+    "score_and_score_request_null": true
+  },
+  "lineage": {
+    "shared_and_cycle": {
+      "shared_dag": "matched",
+      "shared_parent_visits": 1,
+      "configured_cycle": "mismatch"
+    },
+    "future": {
+      "binding_status": "mismatch",
+      "second_parent_status": "mismatch",
+      "second_parent_reasons": [
+        "effective_time_after_as_of",
+        "first_saved_after_knowledge_at"
+      ],
+      "root_historical_receipt_matched": true
+    },
+    "held": {
+      "binding_status": "held",
+      "second_parent_status": "held",
+      "second_parent_reasons": [
+        "source_information_held_for_review"
+      ],
+      "root_historical_receipt_matched": true
+    },
+    "synthetic": {
+      "binding_status": "mismatch",
+      "second_parent_status": "mismatch",
+      "second_parent_reasons": [
+        "synthetic_source_in_real_observation"
+      ],
+      "root_historical_receipt_matched": true
+    }
+  },
+  "receipt_and_publicity_clocks": {
+    "trusted_first_save_known": true,
+    "legacy_usage_before_presence": "unknown",
+    "legacy_historical_after_presence": "matched",
+    "legacy_first_save_still_null": true,
+    "reply_historical_publicity": "matched",
+    "reply_current_publicity": "held"
+  },
+  "missing_tables": {
+    "all_tables_explicit_unknown": true,
+    "observation_count": 0,
+    "unscored": true
+  },
+  "score_function_called": false,
+  "limits": [
+    "Mechanical binding agreement does not validate state truth, signal meaning, independence, training or calibration.",
+    "No scorer input or score is generated, including for fully matched bindings.",
+    "Finite synthetic configurations only; not a broad malformed-input or performance audit.",
+    "No production source/tests/docs, actual DB, network, financial hypothesis or threshold changed."
+  ]
+}

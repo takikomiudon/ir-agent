@@ -1,0 +1,107 @@
+{
+  "security_code": "166A",
+  "company_name": "タスキホールディングス",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "不動産業",
+  "investigation_status": "confirmed",
+  "verification_level": "form_fields_verified",
+  "official_url": "https://tasuki-holdings.co.jp/",
+  "contact_url": "https://tasuki-holdings.co.jp/en/inquiry/",
+  "channels": [
+    "email",
+    "form"
+  ],
+  "public_ir_emails": [
+    "ir@tasuki-holdings.co.jp"
+  ],
+  "individual_access": "not_stated",
+  "outreach_suitability": "candidate",
+  "attempted_at": "2026-10-11T03:59:04.372231+00:00",
+  "completed_at": "2026-10-11T03:59:11.157698+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/166A/03.json",
+      "url": "https://tasuki-holdings.co.jp/en/inquiry/",
+      "retrieved_at": "2026-10-11T03:59:08.712281+00:00",
+      "quote": "For IR inquiries, you may also contact us at ir@tasuki-holdings.co.jp.",
+      "http_status": 200,
+      "role": "contact_channel"
+    },
+    {
+      "snapshot": "evidence/166A/03.json",
+      "url": "https://tasuki-holdings.co.jp/en/inquiry/",
+      "retrieved_at": "2026-10-11T03:59:08.712281+00:00",
+      "quote": "Type of inquiry * Inquiries about Investor Relations Inquiries about Business Subject * Your company * Name * First name Last name Email address * Please enter again for confirmation. Phone number * Details of Inquiry *",
+      "http_status": 200,
+      "role": "conditions"
+    },
+    {
+      "snapshot": "evidence/166A/03.json",
+      "url": "https://tasuki-holdings.co.jp/en/inquiry/",
+      "retrieved_at": "2026-10-11T03:59:08.712281+00:00",
+      "quote": "Please kindly understand that it may take some time for us to reply.",
+      "http_status": 200,
+      "role": "conditions"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://tasuki-holdings.co.jp/",
+      "final_url": "https://tasuki-holdings.co.jp/",
+      "snapshot": "evidence/166A/01.json",
+      "retrieved_at": "2026-10-11T03:59:05.957783+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://tasuki-holdings.co.jp/en/ir-information/",
+      "final_url": "https://tasuki-holdings.co.jp/en/ir-information/",
+      "snapshot": "evidence/166A/02.json",
+      "retrieved_at": "2026-10-11T03:59:07.491366+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://tasuki-holdings.co.jp/en/inquiry",
+      "final_url": "https://tasuki-holdings.co.jp/en/inquiry/",
+      "snapshot": "evidence/166A/03.json",
+      "retrieved_at": "2026-10-11T03:59:08.712281+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [
+    "公式英文問い合わせフォームにInvestor Relationsの選択肢があり、IRメール ir@tasuki-holdings.co.jp も案内。",
+    "英文フォームはYour company、氏名、メール、電話、問い合わせ内容等が必須表示。所属のない個人の記入方法は未確認。返信に時間がかかる場合がある。"
+  ],
+  "limitations": [
+    "公開ページの保存済みGET証拠による確認。フォーム入力・送信、メール到達、実返信は未検証。",
+    "窓口の確認は投資適性、業績・株価の評価や個人への回答保証を示さない。",
+    "所属を求める欄が必須表示だが、所属のない個人の記入方法・利用可否は未確認。"
+  ],
+  "discovery": {
+    "security_code": "166A",
+    "official_url": "https://tasuki-holdings.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "タスキホールディングス",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/166A/01.json",
+      "normalized_name": "タスキ",
+      "security_code_observed": false
+    }
+  ],
+  "classification_version": 2,
+  "successful_official_page_count": 3,
+  "manual_review": {
+    "reviewer": "codex_audit_alpha",
+    "reviewed_at": "2026-10-11T04:11:06.686336+00:00",
+    "notes": "和文トップでタスキホールディングスの同一性を確認。英文フォームのIR選択肢とemail/detail textarea、IR用途付きメールを確認。Your company必須は個人利用の未確認条件として記録。"
+  }
+}

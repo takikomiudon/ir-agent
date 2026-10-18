@@ -1,0 +1,11 @@
+--- research/ir-graham-number-valuation-integration-2026-10-16/before-docs__research-baseline.md
++++ docs/research-baseline.md
+@@ -49,7 +49,7 @@
+ 
+ [通期原本の追加保存と比較](../research/ir-case-studies-2026-10-15/1975/annual-earnings-book-input-discovery-2026-10-16/actual-connection/actual-verification.json)で、1975はnative v3・既読7となった。会社表示のFY2026年3月期実績EPS358.13円・BPS1,965.51円から、保存済みcribleの別式 `sqrt(22.5 × EPS × BVPS)` を[独立算術](../research/ir-case-studies-2026-10-15/1975/graham-number-annual-arithmetic-2026-10-16/parent-acceptance.json)で再現すると3,979.69円。丸め総額/別の平均・期末株数から計算するlaneは3,979.53円で、会社直接表示と置換しない。OCIを含む普通株式純資産と日本基準「株主資本」を区別した。
+ 
+-これは価格表示を知った後の方法探索であり、事前固定された成績検証ではない。NCAVとGraham Numberの目的・期間・入力・版を別々に保持し、望む判定を得るための切替や二つの境界の合成はしない。どちらも原Grahamの全適格条件、1年以内の到達予測や売買規則を実装したものではない。同式の再利用を既存valuationに追加する実装を進めている。
++これは価格表示を知った後の方法探索であり、事前固定された成績検証ではない。NCAVとGraham Numberの目的・期間・入力・版を別々に保持し、望む判定を得るための切替や二つの境界の合成はしない。どちらも原Grahamの全適格条件、1年以内の到達予測や売買規則を実装したものではない。同式は[既存valuationの新method](graham-number-valuation-spec.md)から再利用でき、全1,573テストの受入を完了した。
+ 
+ [既存質問の整理](../research/ir-case-studies-2026-10-15/1975/ir-question-disposition-after-public-review-2026-10-16/parent-acceptance.json)では、公開既答を除き、繰越高のscope/取消変更をC2の条件付き比較論点として残した。現NCAVや採用済みforward EPSへ回答を変換する経路はなく、優先IRは0。この文脈を次の正当な年次資料レビューで実際に引き継いだ。数値評価に直結しない定義研究を一律禁止するのではなく、比較に使う目的を先に具体化する。
+ 

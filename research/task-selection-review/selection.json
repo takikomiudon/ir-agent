@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T13:05:01.836305+00:00",
+  "status": "finite_dependency_resolution_selection_only",
+  "economic_priority_estimated": false,
+  "scope": {
+    "monitor_version": 9,
+    "monitor_company_count": 6,
+    "backlog_version": 2,
+    "backlog_task_count": 19,
+    "selected_task_count": 1,
+    "new_GETs": 0,
+    "database_accesses": 0,
+    "production_changes": 0,
+    "tests_run": 0,
+    "existing_file_changes": 0
+  },
+  "selection_basis": "保存資料の未精読箇所から既存著者pillarと数値入力の間を一段だけ具体化する依存解消順。収益性・投資順位・情報価値の推計ではない。最大3件を埋めず、実行可能な1件だけに限定。",
+  "monitor_findings": [
+    {
+      "company_id": "jp:135A",
+      "status": "no_new_trigger_in_checked_scope",
+      "new_saved_sources": 0,
+      "pending_issue_review_sources": 0,
+      "source_count": 15,
+      "meaning_review_required": true,
+      "management_review_due": false
+    },
+    {
+      "company_id": "jp:1518",
+      "status": "no_new_trigger_in_checked_scope",
+      "new_saved_sources": 0,
+      "pending_issue_review_sources": 0,
+      "source_count": 6,
+      "meaning_review_required": true,
+      "management_review_due": false
+    },
+    {
+      "company_id": "jp:1721",
+      "status": "no_new_trigger_in_checked_scope",
+      "new_saved_sources": 0,
+      "pending_issue_review_sources": 0,
+      "source_count": 5,
+      "meaning_review_required": true,
+      "management_review_due": false
+    },
+    {
+      "company_id": "jp:7525",
+      "status": "no_new_trigger_in_checked_scope",
+      "new_saved_sources": 0,
+      "pending_issue_review_sources": 0,
+      "source_count": 10,
+      "meaning_review_required": true,
+      "management_review_due": false
+    },
+    {
+      "company_id": "jp:8151",
+      "status": "no_new_trigger_in_checked_scope",
+      "new_saved_sources": 0,
+      "pending_issue_review_sources": 0,
+      "source_count": 5,
+      "meaning_review_required": true,
+      "management_review_due": false
+    },
+    {
+      "company_id": "jp:9765",
+      "status": "no_new_trigger_in_checked_scope",
+      "new_saved_sources": 0,
+      "pending_issue_review_sources": 0,
+      "source_count": 3,
+      "meaning_review_required": true,
+      "management_review_due": false
+    }
+  ],
+  "selected_tasks": [
+    {
+      "id": "7525-saved-Q1-operating-profit-bridge",
+      "company_id": "jp:7525",
+      "existing_backlog_refs": [
+        "investor-model-adoption-gap",
+        "7525-public-basis"
+      ],
+      "existing_issue_id": "7525-author-watch-original-product-ratio",
+      "recommended": true,
+      "task": "保存済QUICK PDF p63図表6-(1)-2/3を画像で有限精読し、p61–62本文と対応する現期の営業増減要因・分類変更だけを出典付き表へ記録する。",
+      "exact_read_scope": {
+        "pdf_pages_to_render": [
+          63
+        ],
+        "context_text_pages": [
+          61,
+          62
+        ],
+        "not_in_scope": "全96頁再読、別PDF/appendix取得、会社原典の取得、他社展開、株価算定"
+      },
+      "blocker_quotes": {
+        "backlog_model_gap": {
+          "file": "research/ir-issue-owner-backlog-2026-10-15/backlog-v2.json",
+          "jsonpath": "$.tasks[18].company_specific_gaps.7525",
+          "quote": "売上構成比→利益/税後EPSの感応度や数量関係、公正倍率/評価式の採用は未確認。会社NI換算EPSを独自予測にしない。"
+        },
+        "formal_missing": {
+          "file": "research/ir-case-studies-2026-10-15/7525/original-product-ratio-question-preflight/preflight-v3.json",
+          "jsonpath": "$.formal_API_readiness.actual_missing_for_this_candidate",
+          "quote": "金融評価へ対応した対象parameter/回答後判断の契約"
+        }
+      },
+      "source": {
+        "id": "case-public:b87e707ca4bec9077ffecb14be83767b1b4311e45b1d25d26a051c7e59a06656",
+        "url": "https://www.nomura-ir.co.jp/ja/qnresearch/report_7525/main/00/teaserItems1/00/link/qnresearch_7525.pdf",
+        "retrieved_at": "2026-10-15T09:22:11.560623+00:00",
+        "published_at": null,
+        "source_bundle": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/source-bundle.json",
+        "source_snapshot_sha256": "1470109a966edcd4768cc7de48e7a338ece1318648a2e7fced61dcec1535e525",
+        "source_snapshot_hash_method": "SHA256 canonical JSON sorted keys, ensure_ascii=False, compact separators; sourceID not recomputed",
+        "raw_file": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/raw/301a29465db9ba9b7d62e9c285ded59540e65a6dedb07d4c885db295e74764b8",
+        "raw_sha256": "301a29465db9ba9b7d62e9c285ded59540e65a6dedb07d4c885db295e74764b8",
+        "raw_byte_count": 8039547,
+        "role": "QUICKレポート内の会社資料転載。会社一次本文を直接取得済みとしない。"
+      },
+      "why_not_duplicate": "既存作業は比率の定義/長期目標/質問ABC、EPSと資本コストtoken、当時PERの用途区分。保存された精読scopeにp63画像の増益要因金額/連結営業利益との対応表はなく、p63 pdftotextは見出し・出所のみ。原PDF全頁再抽出は意味の精読ではない。全研究内に未読であるという不存在証明はしない。",
+      "evidence_of_limited_prior_reading": {
+        "independent_review": {
+          "file": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/independent-recheck.json",
+          "jsonpath": "$.limited_meaning_review.close_read_physical_pages"
+        },
+        "product_review": {
+          "file": "research/ir-case-studies-2026-10-15/7525/author-original-product-review/case-record.json",
+          "jsonpath": "$.reading_scope"
+        },
+        "already_complete_do_not_repeat": "preflight-v3の質問文/ABC/FAQ/静粛規則/JPX予定の反映は完了済み。"
+      },
+      "minimal_deliverable": "1つの現期営業増減表：原表ラベル/対象期/単位/正負/数値/転載出所/画像領域/合計又は未整合、著者pillarとの対応、残存欠損の一覧。原文の数量がなければnull/図から特定不能で終了。新previewや新questionは作らない。",
+      "acceptance_conditions": [
+        "p63画像とp61–62本文だけで各金額/単位/対象期/前年対比/再分類の支持範囲を記録し、判読不能を補完しない。",
+        "営業利益増減の合計照合は原表にある構成要因だけ。残差をオリジナル品固有寄与へ配賦しない。業界segmentと商品分類を同一視しない。",
+        "会社転載の現期説明・QUICK定性見解・将来独自予測を別欄に置き、後続会社原典未照合を保持する。",
+        "この資料で公表済みの説明を質問候補から外せるか、なお必要な会社固有定義/数量根拠は何かを明示する。過去寄与を将来感応度にしない。",
+        "比率A回答からEPS・fairPE・価格への対応は既存根拠がなければnullのまま。金融thesis/方針/正式登録/送信/モデル採用0で終了。"
+      ],
+      "author_method_refs": [
+        "AT03",
+        "EP01",
+        "DM01"
+      ],
+      "author_rule_boundary": "QUICKの注視論点と既存Anthropic/Damodaran原則を用いたproject適応。著者の新しい数値反証・利益感応度・IR送信規則ではない。",
+      "can_complete_offline_now": true,
+      "requires_code": false,
+      "remaining_after_completion": [
+        "商品の売上比率の同範囲性",
+        "オリジナル品比率と税後EPS/CFの予測数量関係",
+        "採用評価式/対象期/公正倍率又はDCF未来入力",
+        "価格と鮮度policy/費用/上昇余地・下落幅/退出条件の明示採用",
+        "事前state/prior/返信尤度/費用に基づくEVSI"
+      ]
+    }
+  ],
+  "not_selected": [
+    {
+      "company_id": "jp:135A",
+      "reason": "既存KPI対応・モデルmapping・当期CF→将来basis表は作成済み。著者近辺幅/AND/CAGR基準や未来数値を新資料なしに補えず、同義previewを追加しない。"
+    },
+    {
+      "company_id": "jp:1518",
+      "reason": "会社予想版/投資収益区分の対応は保存済み。未確認の取得完了/連結開始を既読news一覧から推定せず、既知negative routeを再開しない。"
+    },
+    {
+      "company_id": "jp:1721",
+      "reason": "表示差の原raw精度確認は完了済み、正式原表/著者意味は追加根拠待ち。SR hold/同一raw再点検を再開しない。"
+    },
+    {
+      "company_id": "jp:8151",
+      "reason": "著者間のEPS主体/株基準比較は完了済み。公式本文はknown hold。日次株数をEPSから逆算して検証済みにせず、古いAstris予測を現在へ移さない。"
+    },
+    {
+      "company_id": "jp:9765",
+      "reason": "会社正式本文・p25年度差は既知provider hold/追加根拠待ち。既読レポートの年度差を補正しない。"
+    },
+    {
+      "scope": "new_author_or_formula_search",
+      "reason": "既存10例とnegative routingを再探索しない。今回の数値bridgeの現期根拠を先に読む。"
+    }
+  ],
+  "author_methods": [
+    {
+      "id": "AT03",
+      "source_artifact": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+      "source_sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+      "quote": "**Thesis impact**: Does this strengthen, weaken, or neutralize a specific pillar?",
+      "location": {
+        "character_start": 1388,
+        "character_end_exclusive": 1469,
+        "offset_unit": "Unicode code points",
+        "line_start": 30
+      },
+      "evidence_kind": "preserved_author_text",
+      "fixed_commit_url": "https://raw.githubusercontent.com/anthropics/financial-services-plugins/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md",
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26"
+    },
+    {
+      "id": "EP01",
+      "source_artifact": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+      "source_sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+      "quote": "Review the company's prior quarter earnings call for any guidance or commentary",
+      "location": {
+        "character_start": 675,
+        "character_end_exclusive": 754,
+        "offset_unit": "Unicode code points",
+        "line_start": 15
+      },
+      "evidence_kind": "preserved_author_text",
+      "fixed_commit_url": "https://raw.githubusercontent.com/anthropics/financial-services-plugins/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/earnings-preview/SKILL.md",
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26"
+    },
+    {
+      "id": "DM01",
+      "source_artifact": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt",
+      "source_sha256": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106",
+      "quote": "Tie your narrative to key numbers that you will be using in your valuation.",
+      "location": {
+        "character_start": 1590,
+        "character_end_exclusive": 1665,
+        "offset_unit": "Unicode code points",
+        "normalization": "Whitespace collapsed; offsets refer to the normalized selected text, not original PDF bytes"
+      },
+      "evidence_kind": "preserved_author_text",
+      "original_url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/eqprojspr25.pdf",
+      "original_page_or_slide": "slide4",
+      "original_raw_file": "research/ir-policy-adoption-2026-10-15/evidence/454e360e2efebcc9616e6eddd46b0dcc7f477d15aca75412a377b2d4db9e0dce.raw",
+      "original_raw_sha256": "454e360e2efebcc9616e6eddd46b0dcc7f477d15aca75412a377b2d4db9e0dce"
+    }
+  ],
+  "short_primary_quotes": [
+    {
+      "id": "author-pillar",
+      "file": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/report.pdf.txt",
+      "file_sha256": "e548061378e9a4879a3031d0214d92178e25a8029b7a4baa08c1e56d569cd6c1",
+      "pdf_page": 45,
+      "page_character_start": 556,
+      "page_character_end_exclusive": 660,
+      "offset_unit": "Unicode code points in unmodified saved pdftotext page",
+      "quote": "同社は、比較的利益率が高い「オリジナル品」の比率を向上させることで営業利益率および ROE の向上につ\n  なげる考え。だが、同社によれば、売上高など他の KPI に比べ伸び悩んでいる様子。動向を注視したい。"
+    },
+    {
+      "id": "chart-bounded-target",
+      "file": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/report.pdf.txt",
+      "file_sha256": "e548061378e9a4879a3031d0214d92178e25a8029b7a4baa08c1e56d569cd6c1",
+      "pdf_page": 63,
+      "page_character_start": 19,
+      "page_character_end_exclusive": 66,
+      "offset_unit": "Unicode code points in unmodified saved pdftotext page",
+      "quote": "図表6-(1)-2．「電子・半導体」「工作機械」が伸長、「自動車」も復調し、販管費の増加を吸収"
+    },
+    {
+      "id": "chart-source-role",
+      "file": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/report.pdf.txt",
+      "file_sha256": "e548061378e9a4879a3031d0214d92178e25a8029b7a4baa08c1e56d569cd6c1",
+      "pdf_page": 63,
+      "page_character_start": 75,
+      "page_character_end_exclusive": 98,
+      "offset_unit": "Unicode code points in unmodified saved pdftotext page",
+      "quote": "（出所）会社資料（27/3期1Q決算説明資料）"
+    },
+    {
+      "id": "classification-change",
+      "file": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/report.pdf.txt",
+      "file_sha256": "e548061378e9a4879a3031d0214d92178e25a8029b7a4baa08c1e56d569cd6c1",
+      "pdf_page": 61,
+      "page_character_start": 434,
+      "page_character_end_exclusive": 556,
+      "offset_unit": "Unicode code points in unmodified saved pdftotext page",
+      "quote": "なお、今期 1Q より「食品・医薬品・化粧品」セグメントを新設し、報告セグメントとして開示した。これまで「高\n  機能材」セグメントに含めていた医薬品・化粧品業界向けの業績数値と「その他」に含めていた食品業界向けの\n  業績数値を集約している。"
+    }
+  ],
+  "input_files": {
+    "research/ir-research-monitoring-integration-2026-10-15/actual-report-v9.json": "94f235e2a01034a056dfc7578f7b2f1778de0ed293e6dfda24cbb1568d1d8943",
+    "research/ir-research-monitoring-integration-2026-10-15/actual-case-requests-v9.json": "06f4e5218f0a6099aa72ca1cc9e9806866ade7f0a3ecc6a8249f11a4e6c15858",
+    "research/ir-issue-owner-backlog-2026-10-15/backlog-v2.json": "ce11ae06552bac75303568a44085266ae5665439946c836d8d787db6ad8d4393",
+    "research/ir-author-to-question-readiness-2026-10-15/readiness.json": "a1a802f4297933f3b9f01817bf6f54ca4057a259dd83903a1d6f5e8cd532c4e8",
+    "research/ir-author-source-capabilities-2026-10-15/capabilities-v2.json": "2408b3885b4236b329013a5ec43852825ae190d526384bd0bf794b95c7f88083",
+    "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/source-bundle.json": "f2feb89d3464ea4c9167764d2dac2a0ad6853b97efc7576fd572ffdc33719e13",
+    "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/report.pdf.txt": "e548061378e9a4879a3031d0214d92178e25a8029b7a4baa08c1e56d569cd6c1",
+    "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/review.json": "d30a9d72c0f59dc7ec22b4c3d026c02c007cdd8fa05dc9799685184999fa68c2",
+    "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/independent-recheck.json": "c59dcef2259083a00ffe1c463f1067c73a33399439af84416b542e5ef717d7fd",
+    "research/ir-case-studies-2026-10-15/7525/author-original-product-review/case-record.json": "ccec4fc4179bd510a39268ec8ae5af07c83bdafad1a3e75e6c0c3fa9617cd61a",
+    "research/ir-case-studies-2026-10-15/7525/original-product-ratio-question-preflight/preflight-v3.json": "fe129aebe825fef5994f3ffe79aacb8a4675f2f8baa7a72938e3222c981bb667",
+    "research/ir-case-studies-2026-10-15/7525/public-definition-faq-review/review.json": "fd482eb931f25b656a93c2b3cd3511388d39bdea4f73e45962418d57ab9c4930",
+    "research/ir-case-studies-2026-10-15/8151/cross-author-comparison/comparison.json": "b881f2bd18d4a66256cf0f76b077dd96e3aca713fad327aab22b709280ef6fea",
+    "research/ir-case-studies-2026-10-15/135A/model-input-mapping.json": "798b5483521412f762c4187a29881ef3645773f651b85106ed6a8511c6b28d82",
+    "research/ir-case-studies-2026-10-15/1518/author-condition-followup/case-record.json": "763cb8ad2f001b7ed0eb7395508e1960a5c3b0c7715b00ab963b679c46dc1a1e"
+  },
+  "limitations": [
+    "監視v9のsource集合/時点に限定。新保存トリガーなしは新しい公開情報なしという主張ではない。",
+    "今回p63画像の金融数値は未精読。図に必要な数量分解があることは未確定で、得られなければその不足を保持して有限終了する。",
+    "引用の一致やsource保存は、因果感応度/将来予測/会社定義/適合性の独立検証ではない。",
+    "EVSI、確率、将来利益、公正倍率、売買閾値は未推定・未採用。"
+  ],
+  "validation": {
+    "backlog_count_19": true,
+    "monitor_count_6": true,
+    "selected_count_at_most_3": true,
+    "quoted_spans_exact": true,
+    "source_content_equals_preserved_text": true,
+    "raw_hash_matches_metadata": true,
+    "input_files_unchanged": true
+  }
+}

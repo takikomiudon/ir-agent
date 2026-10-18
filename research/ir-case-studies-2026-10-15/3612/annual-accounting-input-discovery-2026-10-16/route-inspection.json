@@ -1,0 +1,73 @@
+{
+  "recorded_at": "2026-10-16T10:20:53.488835+00:00",
+  "routes": [
+    {
+      "capture": "02.json",
+      "url": "https://corp.world.co.jp/ir/library/",
+      "title": "IRライブラリー | 株主・投資家情報 | 株式会社ワールド（WORLD）",
+      "status": 200,
+      "static_anchor_count": 116,
+      "static_PDF_anchor_count": 0,
+      "static_PDF_anchors": [],
+      "whole_body_saved": true,
+      "new_annual_financial_body_obtained": false,
+      "empty_EIR_containers": [],
+      "robots_allowed": {
+        "ir-agent-public-research/0.1": true,
+        "*": true,
+        "GPTBot": true
+      }
+    },
+    {
+      "capture": "03.json",
+      "url": "https://corp.world.co.jp/ir/library/statements/",
+      "title": "決算短信 | 株主・投資家情報 | 株式会社ワールド（WORLD）",
+      "status": 200,
+      "static_anchor_count": 108,
+      "static_PDF_anchor_count": 0,
+      "static_PDF_anchors": [],
+      "whole_body_saved": true,
+      "new_annual_financial_body_obtained": false,
+      "empty_EIR_containers": [
+        {
+          "literal": "<div class=\"eir\" data-area-name=\"area_tanshin_005\"></div>",
+          "character_start": 11653,
+          "character_end": 11710
+        }
+      ],
+      "robots_allowed": {
+        "ir-agent-public-research/0.1": true,
+        "*": true,
+        "GPTBot": true
+      }
+    },
+    {
+      "capture": "04.json",
+      "url": "https://corp.world.co.jp/ir/library/securities/",
+      "title": "有価証券報告書 | 株主・投資家情報 | 株式会社ワールド（WORLD）",
+      "status": 200,
+      "static_anchor_count": 108,
+      "static_PDF_anchor_count": 0,
+      "static_PDF_anchors": [],
+      "whole_body_saved": true,
+      "new_annual_financial_body_obtained": false,
+      "empty_EIR_containers": [
+        {
+          "literal": "<div class=\"eir\" data-area-name=\"area_yuho_006\"></div>",
+          "character_start": 11666,
+          "character_end": 11720
+        }
+      ],
+      "robots_allowed": {
+        "ir-agent-public-research/0.1": true,
+        "*": true,
+        "GPTBot": true
+      }
+    }
+  ],
+  "static_discovery_stopped": true,
+  "JS_feed_or_search_accessed": false,
+  "same_route_retry": false,
+  "remaining_GET_budget_unused": 1,
+  "stop_reason": "Statements and root-authorized securities-report static pages contain no actual PDF anchors. End collection here; do not consume residual budget on another route."
+}

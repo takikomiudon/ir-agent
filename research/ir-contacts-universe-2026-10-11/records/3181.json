@@ -1,0 +1,84 @@
+{
+  "security_code": "3181",
+  "company_name": "買取王国",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "小売業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.okoku.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T06:42:28.132469+00:00",
+  "completed_at": "2026-10-11T06:42:44.364478+00:00",
+  "manual_review_required": false,
+  "evidence": [],
+  "fetches": [
+    {
+      "url": "https://www.okoku.jp/",
+      "final_url": "https://okoku.jp/",
+      "snapshot": "evidence/3181/20261011T064228132510Z/01.json",
+      "retrieved_at": "2026-10-11T06:42:42.064196+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "保存済み公式ページ・実フォーム欄を手動点検。送信・配信成功・回答実績は未確認。"
+  ],
+  "discovery": {
+    "security_code": "3181",
+    "official_url": "https://www.okoku.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "買取王国",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/3181/20261011T064228132510Z/01.json",
+      "normalized_name": "買取王国",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "ir_channel_not_verified_in_saved_scope",
+  "http_get_attempt_count": 5,
+  "previous_attempts": [
+    "attempts/3181/20261011T045047380695Z.json",
+    "attempts/3181/20261011T064244364640Z.json"
+  ],
+  "manual_followup_candidates": [
+    {
+      "url": "https://okoku.co.jp/company/",
+      "quote": "企業情報",
+      "source_link_label": "企業情報",
+      "method": "GET",
+      "reason": "通販seedからリンクされた公開企業頁でIR親を探す。IR窓口URLはまだ未確認。",
+      "parent_snapshot": "evidence/3181/20261011T064228132510Z/01.json",
+      "IR_channel_verified": false
+    },
+    {
+      "url": "https://okoku.co.jp/inc/contact/",
+      "quote": "お問い合わせ",
+      "source_link_label": "お問い合わせ",
+      "method": "GET",
+      "reason": "公式storeが示す会社側の一般問い合わせ頁。IR用途は未確認。",
+      "parent_snapshot": "evidence/3181/20261011T064228132510Z/01.json",
+      "IR_channel_verified": false
+    }
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_services",
+    "reviewed_at": "2026-10-11T07:05:47.129185+00:00",
+    "notes": "買取王国の保存頁は通販storeで質問実欄/IR用途なし。企業情報と企業向け一般contactは別公式公開リンクがあるため次候補に保存。store検索/カートformを質問formと誤認しない。",
+    "attempted_at_reviewed": "2026-10-11T06:42:28.132469+00:00",
+    "saved_evidence_only": true
+  }
+}

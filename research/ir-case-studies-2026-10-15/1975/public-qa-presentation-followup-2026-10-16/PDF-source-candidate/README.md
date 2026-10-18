@@ -1,0 +1,1 @@
+既存build_case_source_bundle.pyによるPDF原source候補1件。会社/数値thesis更新なし。原PDF4,023,645bytesと44頁全文は保存同一、意味確認と6引用は新しい物理33頁だけ。連結繰越高117,864百万円の公表stockは確認したが、旧施設表110,795との範囲対応・取消変更・stock/flowの増減式・未来CF/価値は未確認。financial_inputs_verified=false、金融採用/分類/実DB保存0。原取得完了08:43:18.719794UTCを維持し、表紙8月6日をexact公表時刻や開催実証にしない。旧2GETphase/pinsは不変。root受入/実投入を待つ。

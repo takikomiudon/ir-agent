@@ -1,0 +1,343 @@
+{
+  "review": "Explicit decimal-string g=0 algebraic extension independent review",
+  "result": "no_actionable_findings_within_scope",
+  "checks": [
+    {
+      "name": "zero token -0E+1000",
+      "pass": true,
+      "request_sha256": "d24060f4f3f708216df019240ed9e961bbb5b9af205c2b778b47d5dd4496c733"
+    },
+    {
+      "name": "zero token 00.000e+1000",
+      "pass": true,
+      "request_sha256": "9804598d94f39475434b061cc624ea9c8f76d1d6b64def8c094b0639abe78b49"
+    },
+    {
+      "name": "zero token +.0e-999",
+      "pass": true,
+      "request_sha256": "9c1556b4c3c82ad8fb7f32d6ca39c1867e1130d0443c64eaaee4430ff5bbd78c"
+    },
+    {
+      "name": "zero token 0.",
+      "pass": true,
+      "request_sha256": "0305ddb60880282e42eb73de47af240494a8d75b897f328543adcfd7a59086fd"
+    },
+    {
+      "name": "zero token -0000.000",
+      "pass": true,
+      "request_sha256": "3b9ef5f56739fe9b24a8b1bd40c9d9b2f4ecdc7d9c5aadd19a7bcd2c773a76d6"
+    },
+    {
+      "name": "zero token +0e0",
+      "pass": true,
+      "request_sha256": "9c426e1d8cadd6ccd1c48bf4abf61319d37f32b80b16b6778db79fa5c14183b2"
+    },
+    {
+      "name": "zero extreme 1e-1000/1e1000",
+      "pass": true
+    },
+    {
+      "name": "zero extreme 999999999999/1e-1000",
+      "pass": true
+    },
+    {
+      "name": "reject growth token None",
+      "pass": true,
+      "error": "growth.value must be an explicit finite decimal string; missing values are not zero"
+    },
+    {
+      "name": "reject growth token 0",
+      "pass": true,
+      "error": "growth.value must be an explicit finite decimal string; missing values are not zero"
+    },
+    {
+      "name": "reject growth token 0.0",
+      "pass": true,
+      "error": "growth.value must be an explicit finite decimal string; missing values are not zero"
+    },
+    {
+      "name": "reject growth token False",
+      "pass": true,
+      "error": "growth.value must be an explicit finite decimal string; missing values are not zero"
+    },
+    {
+      "name": "reject growth token ''",
+      "pass": true,
+      "error": "growth.value must be an explicit finite decimal string; missing values are not zero"
+    },
+    {
+      "name": "reject growth token ' 0'",
+      "pass": true,
+      "error": "growth.value must be an explicit finite decimal string; missing values are not zero"
+    },
+    {
+      "name": "reject growth token '0 '",
+      "pass": true,
+      "error": "growth.value must be an explicit finite decimal string; missing values are not zero"
+    },
+    {
+      "name": "reject growth token 'NaN'",
+      "pass": true,
+      "error": "growth.value must be an explicit finite decimal string; missing values are not zero"
+    },
+    {
+      "name": "reject growth token 'Infinity'",
+      "pass": true,
+      "error": "growth.value must be an explicit finite decimal string; missing values are not zero"
+    },
+    {
+      "name": "reject growth token '0e1001'",
+      "pass": true,
+      "error": "growth.value exceeds the supported decimal resource range"
+    },
+    {
+      "name": "reject growth token '-.0e-1000'",
+      "pass": true,
+      "error": "growth.value exceeds the supported decimal resource range"
+    },
+    {
+      "name": "reject growth token '٠'",
+      "pass": true,
+      "error": "growth.value must be an explicit finite decimal string; missing values are not zero"
+    },
+    {
+      "name": "reject missing value",
+      "pass": true,
+      "error": "growth must contain exactly ['basis', 'concept', 'data_kind', 'period', 'rationale', 'source_refs', 'unit', 'value']; unknown fields are rejected"
+    },
+    {
+      "name": "reject missing growth",
+      "pass": true,
+      "error": "stable reinvestment request must contain exactly ['assessment', 'basis', 'growth', 'method', 'nopat_next', 'roc_new']; unknown fields are rejected"
+    },
+    {
+      "name": "reject null growth",
+      "pass": true,
+      "error": "growth must contain exactly ['basis', 'concept', 'data_kind', 'period', 'rationale', 'source_refs', 'unit', 'value']; unknown fields are rejected"
+    },
+    {
+      "name": "reject domain ('100', '0', '-0e1000')",
+      "pass": true,
+      "error": "ROC_new=0 is an undefined denominator; no substitute is supplied"
+    },
+    {
+      "name": "reject domain ('100', '0', '-1e-1000')",
+      "pass": true,
+      "error": "Nonpositive NOPAT or negative ROC_new is outside the initial positive author-example scope"
+    },
+    {
+      "name": "reject domain ('0', '0', '.1')",
+      "pass": true,
+      "error": "Nonpositive NOPAT or negative ROC_new is outside the initial positive author-example scope"
+    },
+    {
+      "name": "reject domain ('-0', '0', '.1')",
+      "pass": true,
+      "error": "Nonpositive NOPAT or negative ROC_new is outside the initial positive author-example scope"
+    },
+    {
+      "name": "reject domain ('-1e-1000', '0', '.1')",
+      "pass": true,
+      "error": "Nonpositive NOPAT or negative ROC_new is outside the initial positive author-example scope"
+    },
+    {
+      "name": "reject domain ('100', '-1e-1000', '.1')",
+      "pass": true,
+      "error": "Negative growth is outside the initial positive author-example scope"
+    },
+    {
+      "name": "old positive entire JSON 0",
+      "pass": true,
+      "result_sha256": "c0826c0174b777344d947552c0a36e98a4642e2aa8854dd95a7254e911617478"
+    },
+    {
+      "name": "old positive entire JSON 1",
+      "pass": true,
+      "result_sha256": "4a50002a7ffe4f8cc74ab1049968ce30858e10c6156f94fdb09ba3e36fe9b869"
+    },
+    {
+      "name": "old positive entire JSON 2",
+      "pass": true,
+      "result_sha256": "15fba8e6bc0509043629485c86ed759f3c87f80bebaf12aa935f3d3ad465f372"
+    },
+    {
+      "name": "old positive entire JSON 3",
+      "pass": true,
+      "result_sha256": "4160b00a85475181a1ef5cb78371b2d46a4ea25e63bba18089ebf2c317aad549"
+    },
+    {
+      "name": "old positive entire JSON 4",
+      "pass": true,
+      "result_sha256": "d0328b3a2f350d6ea68836ead65ccea744ef559f01bf51efc27feb7a2b322720"
+    },
+    {
+      "name": "old positive entire JSON 5",
+      "pass": true,
+      "result_sha256": "94ee55ad7d155ada2614fca7f9d55e8bb81ea9d86b9a04377171a09ec6169b7b"
+    },
+    {
+      "name": "old positive entire JSON 6",
+      "pass": true,
+      "result_sha256": "2db9444b704181e0e49c45bac17421d55fd3ae028acfc2a5aaa4bf534b9575e2"
+    },
+    {
+      "name": "ambient context isolated",
+      "pass": true
+    },
+    {
+      "name": "saved PDF bytes pinned",
+      "pass": true
+    },
+    {
+      "name": "saved extracted text pinned",
+      "pass": true
+    },
+    {
+      "name": "original PDF to stored text replay",
+      "pass": true
+    },
+    {
+      "name": "p21 quote whitespace-exact",
+      "pass": true
+    },
+    {
+      "name": "p17 positive example and stated assumption",
+      "pass": true
+    },
+    {
+      "name": "p21 positive example and tax footnote",
+      "pass": true
+    },
+    {
+      "name": "freeze src/ir_agent/stable_reinvestment.py",
+      "pass": true
+    },
+    {
+      "name": "freeze tests/test_stable_reinvestment.py",
+      "pass": true
+    },
+    {
+      "name": "freeze docs/cyclical-reinvestment-spec.md",
+      "pass": true
+    }
+  ],
+  "check_count": 46,
+  "failed_checks": 0,
+  "findings": [],
+  "files_reviewed": [
+    {
+      "path": "src/ir_agent/stable_reinvestment.py",
+      "before_sha256": "8e95ffbb61155f7a42ff1b2d00f27071daa431cb7c37841d32e79372216a93a9",
+      "after_sha256": "6f2798d4522f803ea61ea16b8b9791a0cf98a1137f8f11d43193ff6911c7ae56",
+      "before_bytes": 14945,
+      "after_bytes": 15674
+    },
+    {
+      "path": "tests/test_stable_reinvestment.py",
+      "before_sha256": "7e324059ac58bec8e08d2a26e9fe1f2e7fa05132e467d8f5fb9c12327090779c",
+      "after_sha256": "33bf0fdce8fd07379e744cb74a5e947d9d35e7a3e14755bb902fabd86971859f",
+      "before_bytes": 18112,
+      "after_bytes": 21611
+    },
+    {
+      "path": "docs/cyclical-reinvestment-spec.md",
+      "before_sha256": "6d10c16d0d020ad6afd6e3ed63ddba24ba6b81499b6f71b163cde05432bd31b7",
+      "after_sha256": "4739e0f6a71a477f2565c10c9d1994fc15ec1bbbfadbfe305530de150ff6cecf",
+      "before_bytes": 25491,
+      "after_bytes": 26480
+    }
+  ],
+  "source_review": {
+    "saved_source_path": "research/valuation-model-routing-2026-10-15/sources.json",
+    "source_id": "damodaran.cyclical-commodity.2009",
+    "url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/commodity.pdf",
+    "pdf_sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+    "text_sha256": "bc0de814b9bac9a6923a09919084071f4342e1fbfe5f9665c678d32ce096ea5b",
+    "pdf_pages_reviewed": [
+      17,
+      21
+    ],
+    "quote": "New investments are expected to generate a return on capital that reflects the normalized operating income and current capital invested; this return on capital is used to compute a reinvestment rate.",
+    "quoted_sentence_character_range_in_saved_text": [
+      43825,
+      44042
+    ],
+    "supports": "Positive author examples use g/ROC and the next-period after-tax operating-income numerator. R=NOPAT*r and FCFF=NOPAT-R are algebraic decomposition.",
+    "not_supported_by_selected_pages": "Zero-growth economic suitability, zero maintenance/gross capital spending, verified normalization, adoption, current-company forecasts or investment action."
+  },
+  "manual_contract_review": [
+    "Only prior zero-growth rejection removed; conditional zero-branch explanation added. Positive inputs retain full old JSON including historical positive-only limitation.",
+    "Zero-branch notes explicitly distinguish model reinvestment zero from gross/maintenance spending and economic suitability.",
+    "Missing/null/JSON-number zero are rejected. ROC=0 remains undefined even with explicit zero growth; negative g/nonpositive NOPAT/negative ROC remain unsupported.",
+    "No financial default, source validation/adoption flag, tax/NOL calculation, valuation/action, DB integration or current-company forecast introduced.",
+    "Tests/docs and README-implementation correctly separate the original positive examples from this local algebraic extension; original discrepancies remain declared."
+  ],
+  "execution": {
+    "command": ".venv/bin/python /tmp/ir_zero_growth_independent_review.py",
+    "network_requests": 0,
+    "real_db_operations": 0,
+    "implementation_files_edited": 0,
+    "full_suite_run": false,
+    "producer_focused_tests": {
+      "tests_run": 26,
+      "result": "PASS",
+      "independently_repeated": false
+    }
+  },
+  "limits": [
+    "Finite focused independent checks; not a full-suite run. Root owns full-suite verification.",
+    "Original-document review scoped to saved PDF pages17/21 and byte/text replay; not a new full-document economic validation.",
+    "No real companies, forecasts, maintenance spending or model applicability are certified."
+  ],
+  "reproduction": {
+    "runner": "Existing .venv/bin/python; no package installation. Independent runner /tmp/ir_zero_growth_independent_review.py remains available in this workspace.",
+    "fixture": "tests/test_stable_reinvestment.py::request/author_example; change only the indicated numeric value fields unless a shape test explicitly removes one.",
+    "zero_tokens": [
+      "-0E+1000",
+      "00.000e+1000",
+      "+.0e-999",
+      "0.",
+      "-0000.000",
+      "+0e0"
+    ],
+    "zero_token_nopat": "12345678901234567890.00123456789",
+    "zero_token_roc": "1e-1000",
+    "positive_replays": [
+      {
+        "fixture": "author_example(toyota)"
+      },
+      {
+        "fixture": "author_example(exxon)"
+      },
+      {
+        "nopat": "100",
+        "g": "1e-1000",
+        "roc": "1e1000"
+      },
+      {
+        "nopat": "1e-1000",
+        "g": "1e1000",
+        "roc": "1e-1000"
+      },
+      {
+        "nopat": "256 repeated 9 digits followed by e1000",
+        "g": "1e-1000",
+        "roc": "3e1000"
+      },
+      {
+        "nopat": "1.000000000000000000001",
+        "g": ".03000000000000000000001",
+        "roc": ".07"
+      },
+      {
+        "nopat": "100",
+        "g": ".2",
+        "roc": ".01"
+      }
+    ],
+    "comparison": "Dynamically import preserved before module as ir_agent._independent_before_stable; compare models.json_text of complete old/new result.",
+    "resource_boundary_note": "Zero syntax remains subject to existing decimal tuple exponent range. -.0e-1000 has coefficient exponent -1001 and is deliberately rejected; +.0e-999 has exponent -1000 and succeeds. This is unchanged decimal resource validation, not a numerical-zero fallback.",
+    "source_replay": "Decode saved raw_pdf_base64 with validate=True into tempfile; pdftotext -layout <temp.pdf> - stdout must equal saved extracted_text exactly. Review saved text pages17/21 split by form-feed.",
+    "execution_error_note": "Initial independent runner attempted +.0e-1000 as a successful boundary; existing exponent validation correctly rejected it before arithmetic. Runner expectation was corrected to +.0e-999 and explicit -.0e-1000 rejection. No implementation change."
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T11:18:36.014300+00:00",
+  "revision": 2,
+  "status": "limited_unconfirmed_vs_unpublished_wording_correction_checked",
+  "parent_v1_files": [
+    {
+      "file": "research/ir-issue-owner-backlog-2026-10-15/backlog.json",
+      "sha256": "32f6406cfe08c3fa0ca95cc0aa23cb1322aeed2e502aa766c5cd40a183d6c7f5",
+      "unchanged": true
+    },
+    {
+      "file": "research/ir-issue-owner-backlog-2026-10-15/README.md",
+      "sha256": "1964b8ff7599906bf4f2a9fe746d24e6aefa607d04fad8cd9ab0bcccedb37d93",
+      "unchanged": true
+    },
+    {
+      "file": "research/ir-issue-owner-backlog-2026-10-15/validation.json",
+      "sha256": "511c8d178f82d3da034b2ffd877faf9f9b88c0f0d77c10a56e67731a0fc5a98e",
+      "unchanged": true
+    }
+  ],
+  "JSON_changes": [
+    {
+      "path": "/tasks/0/completion_condition",
+      "task_id": "135A-public-basis",
+      "before": "顧客単位・売上コホート・期間/実績予想を対応付け、確認できた項目と未公開/意味不一致を分けて旧論点へ追記できる。無変化なら同義previewを増やさない。",
+      "after": "顧客単位・売上コホート・期間/実績予想を対応付け、確認できた項目と未取得・未確認/意味不一致を分けて旧論点へ追記できる。無変化なら同義previewを増やさない。"
+    },
+    {
+      "path": "/tasks/16/completion_condition",
+      "task_id": "9765-company-definition",
+      "before": "公開で既知の受注比率/国交省単価/スライド一般論は再質問しない。実現価格や稼働率未開示を埋めず、将来受注/利益の保証を求めない。新草案は作らない。",
+      "after": "公開で既知の受注比率/国交省単価/スライド一般論は再質問しない。実現価格や稼働率の未取得・未確認部分を埋めず、将来受注/利益の保証を求めない。新草案は作らない。"
+    }
+  ],
+  "exact_changed_JSON_paths": [
+    "/tasks/0/completion_condition",
+    "/tasks/16/completion_condition"
+  ],
+  "finite_strong_word_scan": {
+    "task_count": 19,
+    "terms": [
+      "未公開",
+      "未公表",
+      "非公開",
+      "未開示",
+      "非公表",
+      "非開示"
+    ],
+    "matching_field_count": 4,
+    "matching_fields_and_disposition": [
+      {
+        "task_id": "135A-public-basis",
+        "path": "/tasks/0/completion_condition",
+        "original_text": "顧客単位・売上コホート・期間/実績予想を対応付け、確認できた項目と未公開/意味不一致を分けて旧論点へ追記できる。無変化なら同義previewを増やさない。",
+        "disposition": "narrowed_to_unacquired_or_unconfirmed",
+        "reason": "Previously could be read as asserting nonpublication beyond reviewed source scope."
+      },
+      {
+        "task_id": "135A-company-definition",
+        "path": "/tasks/1/unresolved_point",
+        "original_text": "初回は既存preflight-v2の1社単位と比較期間の範囲変更有無だけ。受注ベースの既知説明、未公表足元社数や顧客名を求めない。",
+        "disposition": "unchanged_request_scope_limit",
+        "reason": "Says not to request unpublished current customer counts/names; does not assert that all current figures are unpublished."
+      },
+      {
+        "task_id": "7525-public-basis",
+        "path": "/tasks/9/completion_condition",
+        "original_text": "同じ対象の定義が見つかれば既存草案を廃止/限定。未確認ならその範囲を残し、全社非公表や現在の受付を断定しない。",
+        "disposition": "unchanged_explicit_no_absence_inference",
+        "reason": "Explicitly prohibits declaring all-company nonpublication; preserves uncertainty."
+      },
+      {
+        "task_id": "9765-company-definition",
+        "path": "/tasks/16/completion_condition",
+        "original_text": "公開で既知の受注比率/国交省単価/スライド一般論は再質問しない。実現価格や稼働率未開示を埋めず、将来受注/利益の保証を求めない。新草案は作らない。",
+        "disposition": "narrowed_to_unacquired_or_unconfirmed",
+        "reason": "Previously could be read as asserting nonpublication beyond reviewed source scope."
+      }
+    ],
+    "README_semantic_strong_word_matches": 0,
+    "scope": "All string leaves of the19saved tasks and the original README only; not a new search of all company sources."
+  },
+  "README_change": "Only navigation references point to backlog-v2.json (and validation-v2.json if present); narrative/table content unchanged.",
+  "README_unified_diff": [
+    "--- README.md",
+    "+++ README-v2.md",
+    "@@ -24,6 +24,6 @@",
+    " | 8151 Astris | 既存E予測を別著者/別時点として保持。後のQUICKを改訂版や成否ラベルへしない。 |",
+    " | 9765 | SIRの会社予想再処理と、上振れ/EPS改定への定性見方は別。会社基準を著者の買い条件にしない。 |",
+    " ",
+    "-方法の原則は保存原典から参照した。Anthropic thesis-trackerは “Does this strengthen, weaken, or neutralize a specific pillar?”（AT03）、earnings-previewは会社前四半期コメントの確認（EP01）を求める。Damodaranは “Tie your narrative to key numbers that you will be using in your valuation.”（slide4、DM01）。固定commit URL・短引用・頁/offset・SHAは[backlog.json](backlog.json)に保存した。**IRの答えの所有者、公開→条件付き草案→必要時の数値根拠という具体的な依存設計は本プロジェクトの適応**で、原著が6社の質問や閾値を指定したものではない。数値評価の不足は定性的な資料比較を止める理由ではない。",
+    "+方法の原則は保存原典から参照した。Anthropic thesis-trackerは “Does this strengthen, weaken, or neutralize a specific pillar?”（AT03）、earnings-previewは会社前四半期コメントの確認（EP01）を求める。Damodaranは “Tie your narrative to key numbers that you will be using in your valuation.”（slide4、DM01）。固定commit URL・短引用・頁/offset・SHAは[backlog-v2.json](backlog-v2.json)に保存した。**IRの答えの所有者、公開→条件付き草案→必要時の数値根拠という具体的な依存設計は本プロジェクトの適応**で、原著が6社の質問や閾値を指定したものではない。数値評価の不足は定性的な資料比較を止める理由ではない。",
+    " ",
+    "-各タスクの必要資料・完了条件・次依存と根拠file/hashは[backlog.json](backlog.json)。既存ready判定、管理日、preflightを変更していない。具体的な次回決算日は補わず、一般年間表・会社予定・研究管理日を分ける。新calendarの受信/登録・具体日確認は別作業で、このbacklogが確認済みへ昇格するものではない。情報価値は未推定で、0とも正とも判定していない。新GET/DB/production/旧file変更・新IR草案/送信・モデル採用は0。これはIR送信の実行計画でも売買判断でもない。",
+    "+各タスクの必要資料・完了条件・次依存と根拠file/hashは[backlog-v2.json](backlog-v2.json)。既存ready判定、管理日、preflightを変更していない。具体的な次回決算日は補わず、一般年間表・会社予定・研究管理日を分ける。新calendarの受信/登録・具体日確認は別作業で、このbacklogが確認済みへ昇格するものではない。情報価値は未推定で、0とも正とも判定していない。新GET/DB/production/旧file変更・新IR草案/送信・モデル採用は0。これはIR送信の実行計画でも売買判断でもない。"
+  ],
+  "timestamp_boundary": {
+    "backlog_v2_recorded_at": "2026-10-15T11:04:44.028405+00:00",
+    "meaning": "Original map creation time retained for a limited copy/diff. This validation.recorded_at is the new revision creation/check time; no retrospective research or registration proof."
+  },
+  "old_source_input_sha256_unchanged": {
+    "research/ir-research-monitoring-integration-2026-10-15/actual-case-requests-v8.json": "0ac22d89bb1296e50ce30d90f978df9557ef36b69b378071da92a9b807717ab3",
+    "research/ir-research-monitoring-integration-2026-10-15/actual-report-v8.json": "105bf6cd4c2a9a954add40a72b05a0b32d3e745c9c2854b4a3b4663790c1da57",
+    "research/ir-case-studies-2026-10-15/135A/author-condition-followup/case-record-v2.json": "2e566e72a04a89938357220715a10603a51ce1ce744207599ac921de6e81328b",
+    "research/ir-case-studies-2026-10-15/135A/customer-counting-question-preflight-v2.json": "65e835dcab6ffae969f06bf03e99f4457938ba44d43fc4e135a75cbb8c32a8e6",
+    "research/ir-case-studies-2026-10-15/135A/current-cashflow-to-forecast-basis.json": "0b91d6e74f6c75436e0650ebf1309e7cae2affc65b66e6828cc35b578ad6e0d3",
+    "research/ir-case-studies-2026-10-15/1518/author-condition-followup/case-record.json": "763cb8ad2f001b7ed0eb7395508e1960a5c3b0c7715b00ab963b679c46dc1a1e",
+    "research/ir-case-studies-2026-10-15/1518/acquisition-completion-followup/review.json": "ee3f82e61d16a762dc9eccc6ff18e18cda630dffaad619a899546d3e5cd2b63e",
+    "research/ir-case-studies-2026-10-15/1518/acquisition-completion-followup/actual-intake.json": "24c1728d5617b027188996a11911b688661dd9d81c95fe6537026070e788e84d",
+    "research/ir-case-studies-2026-10-15/1518/guidance-revision-facts/request.json": "4fb14dbc8f5942cf81f6603260dfe3871641258a6ea8426510e96303e5e32457",
+    "research/ir-case-studies-2026-10-15/1721/author-conditions/case-record.json": "ac18df211f0b4d4b57b1f9fed309f3831f8f1dc3da8ba33654d290ff11436dec",
+    "research/ir-case-studies-2026-10-15/1721/plan-display-precision-review/review.json": "1cb06685f4e40bd19c5482edb2e7b3b8262e72e5410a4f11977aa6f84f90e018",
+    "research/ir-case-studies-2026-10-15/1721/initial-public-review/review.json": "3c25ee8bd4405994efe247a2cb26844b431a14ba355baaed63db4a2689a1e2c6",
+    "research/ir-case-studies-2026-10-15/7525/author-original-product-review/case-record.json": "ccec4fc4179bd510a39268ec8ae5af07c83bdafad1a3e75e6c0c3fa9617cd61a",
+    "research/ir-case-studies-2026-10-15/7525/issuer-plan-comparison/case-record.json": "fef277d6073874556cabb46ef53af01e3a74d688c6d3ebfecab4c55b07b92999",
+    "research/ir-case-studies-2026-10-15/7525/original-product-ratio-question-preflight/preflight-v2.json": "e00183fb5fed2b3bc5646d49569297909177b55482cc8626ac5fca255e11198f",
+    "research/ir-case-studies-2026-10-15/7525/public-definition-faq-review/review.json": "fd482eb931f25b656a93c2b3cd3511388d39bdea4f73e45962418d57ab9c4930",
+    "research/ir-case-studies-2026-10-15/7525/public-definition-faq-review/actual-intake.json": "d48b0f4e7c7797bec5ee88cb722af30937f0493ca6550849c949846a472e5c87",
+    "research/ir-case-studies-2026-10-15/7525/external-parameter-facts/README.md": "37c710230667d4e00aeda94093cdfa1d2e8e32e3e24ce3ef21879446753fa9df",
+    "research/ir-case-studies-2026-10-15/8151/author-forecast-conditions/case-record.json": "61231f215816f9d96512153a46f1b6dbf2b266b14142264dadb2fea3e1e2ade2",
+    "research/ir-case-studies-2026-10-15/8151/cross-author-comparison/comparison.json": "b881f2bd18d4a66256cf0f76b077dd96e3aca713fad327aab22b709280ef6fea",
+    "research/ir-case-studies-2026-10-15/8151/issuer-annual-followup/review.json": "d3bea11204ee6a1eb89b81e93d700c90a6d3c0024d55eda0b2273eaae93bf1eb",
+    "research/ir-case-studies-2026-10-15/9765/author-conditions/case-record.json": "7539172394a70518add4031880e4f56730576b2574a30aa4a6bfdaab64da2acf",
+    "research/ir-case-studies-2026-10-15/9765/author-conditions/independent-recheck.json": "2eed874ec4f8f7c9b8f1036621f915ea7967f2821b27ec9a85cf59954d14da2c",
+    "research/ir-case-studies-2026-10-15/9765/issuer-financial-followup/review.json": "60b604eca5477343c76ea04d6f118e29cac380cb656296fcc66082358e8a54e5",
+    "research/ir-decision-scope-2026-10-15/source-quotes.json": "a0eb1634cd187b1d42d86ef7d2fa7b0afe0917633eb655f4971123f58ab6435e",
+    "third_party/anthropic/manifest.json": "45ff843e1c334454b63221fec6311f0c6bf525e79b99096e35f8f2542a405fdf",
+    "third_party/anthropic/skills/thesis-tracker/SKILL.md": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+    "third_party/anthropic/skills/earnings-preview/SKILL.md": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+    "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106",
+    "research/ir-policy-adoption-2026-10-15/evidence/454e360e2efebcc9616e6eddd46b0dcc7f477d15aca75412a377b2d4db9e0dce.raw": "454e360e2efebcc9616e6eddd46b0dcc7f477d15aca75412a377b2d4db9e0dce"
+  },
+  "new_v2_artifact_sha256": {
+    "backlog-v2.json": "ce11ae06552bac75303568a44085266ae5665439946c836d8d787db6ad8d4393",
+    "README-v2.md": "3d01dcb8f601ab54ce9db0af0bd8b321345b584b0354b4dac14218b794b7e3cb"
+  },
+  "checks": {
+    "19_tasks_scanned": true,
+    "two_completion_strings_only_changed": true,
+    "owner_fields_identical": true,
+    "dependencies_and_next_dependencies_identical": true,
+    "existing_issues_and_evidence_identical": true,
+    "existing_ready_and_cases_identical": true,
+    "original_values_and_nulls_identical": true,
+    "no_new_IR_question_or_date": true,
+    "v1_three_files_unchanged": true,
+    "all30_parent_source_hashes_unchanged": true,
+    "README_navigation_only": true
+  },
+  "scope": {
+    "GETs": 0,
+    "database_accesses": 0,
+    "production_changes": 0,
+    "old_artifact_edits": 0,
+    "new_IR_drafts": 0,
+    "external_sends": 0,
+    "orders": 0,
+    "new_financial_or_priority_values": 0
+  },
+  "limits": [
+    "This correction separates lack of acquisition/verification from a claim that no public disclosure exists.",
+    "Parent v1 source/selector/method checks are referenced unchanged; this is not a new financial, readiness or whole-source audit."
+  ]
+}

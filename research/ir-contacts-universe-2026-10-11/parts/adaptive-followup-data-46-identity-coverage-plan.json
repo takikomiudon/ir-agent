@@ -1,0 +1,273 @@
+{
+  "format": "finite_issuer_identity_followup_coverage_review",
+  "reviewer": "codex_audit_data_46_batch03",
+  "status": "proposal_only_closed",
+  "reviewed_at_utc": "2026-10-11T13:03:50.625533+00:00",
+  "reviewed_at_jst": "2026-10-11T22:03:50.625533+09:00",
+  "scope_security_codes": [
+    "462A",
+    "463A",
+    "464A",
+    "4651"
+  ],
+  "helper_source_path": "scripts/collect_ir_followups.py",
+  "helper_source_sha256": "43f7a7dc258cb9147592153154dd3eff34e88035f9840c8e58843fc1d5a8540d",
+  "completed_audit_part": "parts/adaptive-audit-data-46-batch03.json",
+  "completed_audit_sha256": "ca5f279be2550ed8568b26bc926ed394b7f3c4186bdbe33c603539e99faf8481",
+  "normal_plan": {
+    "format": "ir_followup_plan",
+    "output": "/workspace/ir-agent/research/ir-contacts-universe-2026-10-11",
+    "plan_only": true,
+    "http_get_attempt_count": 0,
+    "writes": 0,
+    "selected_company_count": 0,
+    "selected_url_count": 0,
+    "max_links_per_company": 3,
+    "rejected_counts": {
+      "already_fetched": 35,
+      "per_company_limit": 0
+    },
+    "selected": []
+  },
+  "coverage": [
+    {
+      "security_code": "462A",
+      "company_name": "ＦＵＮＤＩＮＮＯ",
+      "record_path": "records/462A.json",
+      "record_sha256": "84204ecb0873a99ef534cea4a15e6686d0c8b7135adeb673e875b516b666902f",
+      "investigation_status": "unconfirmed",
+      "identity_status": "name_or_security_code_observed",
+      "normal_plan": {
+        "selected_url_count": 0,
+        "rejections": {
+          "already_fetched": 1,
+          "per_company_limit": 0
+        },
+        "proposal_row_count": 6
+      },
+      "decision": "Service contact includes platform investee/issuer support, not demonstrated own listed-equity IR. The captured operating-company link warrants one finite identity-only discovery.",
+      "witnesses": [
+        {
+          "snapshot": "evidence/462A/20261011T122843060528Z/01.json",
+          "snapshot_sha256": "859900c3f874cd4828c7f128f934719f7d8274eec0a7a37feb342797d18afdeb",
+          "url": "https://fundinno.com/",
+          "retrieved_at": "2026-10-11T12:28:53.613568+00:00",
+          "title": "日本初の株式投資型クラウドファンディング - FUNDINNO",
+          "http_status": 200,
+          "form_count": 0
+        },
+        {
+          "snapshot": "evidence/462A/20261011T122843060528Z/05.json",
+          "snapshot_sha256": "80d56d3e46fb25a6f7b7624c3bffd807eb20027ffe467ec8a586c6e92493950b",
+          "url": "https://fundinno.com/contact",
+          "retrieved_at": "2026-10-11T12:29:39.545865+00:00",
+          "title": "FUNDINNO",
+          "http_status": 200,
+          "form_count": 1
+        }
+      ],
+      "finite_discovery_proposed": true
+    },
+    {
+      "security_code": "463A",
+      "company_name": "インテリックスホールディングス",
+      "record_path": "records/463A.json",
+      "record_sha256": "f2be6fefc05cbf956df2da3feb74d9df90e5ba4f3ba80c62daff8767423c68f9",
+      "investigation_status": "provisional",
+      "identity_status": "name_or_security_code_observed",
+      "normal_plan": {
+        "selected_url_count": 0,
+        "rejections": {
+          "already_fetched": 34,
+          "per_company_limit": 0
+        },
+        "proposal_row_count": 3
+      },
+      "decision": "Current holding-company name and official IR contact parent are already captured. The exact dedicated contact returned HTTP200 with no question controls; normal plan rejects it as already_fetched. No new issuer-identity URL is needed and newsletters/legacy English sites are not question forms.",
+      "witnesses": [
+        {
+          "snapshot": "evidence/463A/20261011T122950973731Z/01.json",
+          "snapshot_sha256": "3f9493326140ab57d3c53488536f08766ce7fe65f2ee3c99d4aed3e3ed3f65f2",
+          "url": "https://www.intellex-hd.co.jp/",
+          "retrieved_at": "2026-10-11T12:30:02.600201+00:00",
+          "title": "株式会社インテリックスホールディングス",
+          "http_status": 200,
+          "form_count": 0
+        },
+        {
+          "snapshot": "evidence/463A/20261011T122950973731Z/02.json",
+          "snapshot_sha256": "0632842367e01799f49f5c0046b550d0af06b78531cbba1c430a9472f55d8873",
+          "url": "https://www.intellex-hd.co.jp/ir/inquiry/",
+          "retrieved_at": "2026-10-11T12:30:13.565658+00:00",
+          "title": "お問い合わせ｜株式会社インテリックスホールディングス",
+          "http_status": 200,
+          "form_count": 0
+        }
+      ],
+      "finite_discovery_proposed": false
+    },
+    {
+      "security_code": "464A",
+      "company_name": "ＱＰＳホールディングス",
+      "record_path": "records/464A.json",
+      "record_sha256": "c7700e70e6698296a08f34ca87d29837fd81b6244942ce16ed062fb3a97b0ce0",
+      "investigation_status": "confirmed",
+      "identity_status": "name_or_security_code_observed",
+      "normal_plan": {
+        "selected_url_count": 0,
+        "rejections": {},
+        "proposal_row_count": 6
+      },
+      "decision": "Current QPS Holdings title, investment category, email/question controls and personal company-field instruction are already verified. Confirmed companies are excluded at company_candidates line622; following the operating subsidiary i-qps.net would add no evidence for this holding issuer reception.",
+      "witnesses": [
+        {
+          "snapshot": "evidence/464A/20261011T123118922773Z/01.json",
+          "snapshot_sha256": "e9f0fde7cffdc2432d665a5399bcd2f1a73659b355bb2942544445a5c2a9fb5a",
+          "url": "https://qpshd.com/",
+          "retrieved_at": "2026-10-11T12:31:31.355416+00:00",
+          "title": "ホーム | 株式会社QPSホールディングス",
+          "http_status": 200,
+          "form_count": 0
+        },
+        {
+          "snapshot": "evidence/464A/20261011T123118922773Z/03.json",
+          "snapshot_sha256": "7535c29656b7899f2fcaf5978b2ddbc8397cf6c1a85ddd45e4c12f720f02f5f3",
+          "url": "https://qpshd.com/contact/",
+          "retrieved_at": "2026-10-11T12:31:54.662270+00:00",
+          "title": "お問い合わせ | 株式会社QPSホールディングス",
+          "http_status": 200,
+          "form_count": 1
+        }
+      ],
+      "finite_discovery_proposed": false
+    },
+    {
+      "security_code": "4651",
+      "company_name": "サニックスホールディングス",
+      "record_path": "records/4651.json",
+      "record_sha256": "25601df080d3748ae1da2491ba6e8562decc21adb3821eb241ed9f10822dd172",
+      "investigation_status": "unconfirmed",
+      "identity_status": "unverified",
+      "normal_plan": {
+        "selected_url_count": 0,
+        "rejections": {
+          "per_company_limit": 0
+        },
+        "proposal_row_count": 4
+      },
+      "decision": "Captured seed is operating Sanix, not verified holding issuer. Transition notice plus captured holding link warrants one identity-only discovery; keep U until new review.",
+      "witnesses": [
+        {
+          "snapshot": "evidence/4651/20261011T123147281914Z/06.json",
+          "snapshot_sha256": "16d436da9be42f1c9245ec39d1ba19a156348c2d136a0a3ac9a9441c64d67e50",
+          "url": "https://sanix.jp/customeroffice/formlist",
+          "retrieved_at": "2026-10-11T12:33:53.326235+00:00",
+          "title": "お問い合わせ一覧 | 株式会社サニックス",
+          "http_status": 200,
+          "form_count": 0
+        }
+      ],
+      "finite_discovery_proposed": true
+    }
+  ],
+  "finite_discovery_proposals": [
+    {
+      "security_code": "462A",
+      "company_name": "ＦＵＮＤＩＮＮＯ",
+      "kind": "official_operator_company_info_discovery",
+      "purpose": "issuer_identity_discovery",
+      "method": "GET",
+      "target_url": "https://corp.fundinno.com/company/",
+      "url": "https://corp.fundinno.com/company/",
+      "official_seed_url": "https://fundinno.com/",
+      "source_record_path": "records/462A.json",
+      "source_record_sha256": "84204ecb0873a99ef534cea4a15e6686d0c8b7135adeb673e875b516b666902f",
+      "source_audit_part": "parts/adaptive-audit-data-46-batch03.json",
+      "source_audit_sha256": "ca5f279be2550ed8568b26bc926ed394b7f3c4186bdbe33c603539e99faf8481",
+      "source_audit_row_pointer": "/records/4",
+      "source_audit_final_hash_pointer": "/final_record_sha256/462A",
+      "parent_snapshot": "evidence/462A/20261011T122843060528Z/01.json",
+      "parent_snapshot_sha256": "859900c3f874cd4828c7f128f934719f7d8274eec0a7a37feb342797d18afdeb",
+      "parent_url": "https://fundinno.com/",
+      "parent_requested_url": "https://fundinno.com/",
+      "parent_retrieved_at": "2026-10-11T12:28:53.613568+00:00",
+      "source_link_index": 41,
+      "source_link_pointer": "/links/41",
+      "source_link": {
+        "url": "https://corp.fundinno.com/company/",
+        "href": "https://corp.fundinno.com/company/",
+        "label": "運営会社"
+      },
+      "quote": "運営会社",
+      "quote_is_exact_source_text": true,
+      "source_link_label_present_in_text": true,
+      "ir_transition_quote": null,
+      "identity_status_before": "name_or_security_code_observed",
+      "current_issuer_identity_verified": false,
+      "IR_purpose_verified": false,
+      "current_issuer_reception_verified": false,
+      "contact_classification_after_this_proposal": "unconfirmed",
+      "runnable_by_current_helper": false,
+      "normal_plan_missing_reason": "These company-info/holding links have no IR-intake label and their codes are outside the existing finite identity discovery allowlist.",
+      "required_new_review": "Inspect fetched public corporate page for current issuer name/code before any new financial IR contact investigation. This proposal never establishes reception."
+    },
+    {
+      "security_code": "4651",
+      "company_name": "サニックスホールディングス",
+      "kind": "official_holding_company_transition_discovery",
+      "purpose": "issuer_identity_discovery",
+      "method": "GET",
+      "target_url": "https://hd.sanix.jp/",
+      "url": "https://hd.sanix.jp/",
+      "official_seed_url": "https://sanix.jp/",
+      "source_record_path": "records/4651.json",
+      "source_record_sha256": "25601df080d3748ae1da2491ba6e8562decc21adb3821eb241ed9f10822dd172",
+      "source_audit_part": "parts/adaptive-audit-data-46-batch03.json",
+      "source_audit_sha256": "ca5f279be2550ed8568b26bc926ed394b7f3c4186bdbe33c603539e99faf8481",
+      "source_audit_row_pointer": "/records/15",
+      "source_audit_final_hash_pointer": "/final_record_sha256/4651",
+      "parent_snapshot": "evidence/4651/20261011T123147281914Z/06.json",
+      "parent_snapshot_sha256": "16d436da9be42f1c9245ec39d1ba19a156348c2d136a0a3ac9a9441c64d67e50",
+      "parent_url": "https://sanix.jp/customeroffice/formlist",
+      "parent_requested_url": "https://sanix.jp/customeroffice/formlist/",
+      "parent_retrieved_at": "2026-10-11T12:33:53.326235+00:00",
+      "source_link_index": 99,
+      "source_link_pointer": "/links/99",
+      "source_link": {
+        "url": "https://hd.sanix.jp/",
+        "href": "https://hd.sanix.jp/",
+        "label": "株式会社サニックスホールディングス"
+      },
+      "quote": "2025年4月1日、サニックスグループは、 ホールディングス体制に移行いたしました（事業ごとに分社）。",
+      "quote_is_exact_source_text": true,
+      "source_link_label_present_in_text": false,
+      "ir_transition_quote": "IR情報、採用情報、 グループ全体に関することは",
+      "identity_status_before": "unverified",
+      "current_issuer_identity_verified": false,
+      "IR_purpose_verified": false,
+      "current_issuer_reception_verified": false,
+      "contact_classification_after_this_proposal": "unconfirmed",
+      "runnable_by_current_helper": false,
+      "normal_plan_missing_reason": "These company-info/holding links have no IR-intake label and their codes are outside the existing finite identity discovery allowlist.",
+      "required_new_review": "Inspect fetched public corporate page for current issuer name/code before any new financial IR contact investigation. This proposal never establishes reception.",
+      "ambiguity_note": "Another captured link102 has the same company label but target https://s.sanix.jp/. Only the literal index99/href https://hd.sanix.jp/ is proposed; no normalization or automatic alternative selection."
+    }
+  ],
+  "proposed_company_count": 2,
+  "proposed_url_count": 2,
+  "network_get_count": 0,
+  "submission_count": 0,
+  "record_writes": 0,
+  "helper_code_writes": 0,
+  "existing_source_writes": 0,
+  "automatic_proposal_ingestion": false,
+  "filename_exclusion_reason": "The -plan suffix is explicitly ignored by proposal_rows; this document does not alter normal plans.",
+  "implementation_constraints_if_authorized": [
+    "Bind the two exact company/code + current record SHA + completed audit SHA + immutable source SHA + index/raw href/label.",
+    "Follow only these two public hrefs with no general URL search, POST actions, form values, session/auth URLs or other-company expansion.",
+    "Keep current classification; attach source-bound evidence as review_pending. No automatic issuer or contact verification.",
+    "Preserve same-run own record lineage/archive and detect external record/source/audit writes before preflight.",
+    "Retain aggregate preflight/robots/redirect GET budget, origin/global pacing, current permission/robots denial rules and common503 stop/resume guards.",
+    "Run only after the parent initial collector and fixed parser-refresh phase; do not add targets to the fixed parser-refresh list."
+  ]
+}

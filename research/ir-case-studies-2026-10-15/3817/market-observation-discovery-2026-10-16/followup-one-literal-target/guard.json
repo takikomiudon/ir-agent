@@ -1,0 +1,52 @@
+{
+  "company_id": "jp:3817",
+  "maximum_GETs": 1,
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu"
+  ],
+  "holds_v8_file": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+  "holds_v8_SHA256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952",
+  "allowed_requests": [
+    {
+      "role": "literal_stock_body",
+      "url": "https://finance.yahoo.co.jp/quote/3817.T",
+      "parent_capture_pointer": "$.GETs[3].response_headers.location"
+    }
+  ],
+  "robots_reviews": {
+    "stocks.finance.yahoo.co.jp": {
+      "proceed": true,
+      "branch": "fresh_robots200",
+      "raw_file": "research/ir-case-studies-2026-10-15/3817/market-observation-discovery-2026-10-16/raw/e678e8702fe38cf087e80f4b3081fbb1896ec07b9d37cf81e2e358b2a198f4ba",
+      "raw_sha256": "e678e8702fe38cf087e80f4b3081fbb1896ec07b9d37cf81e2e358b2a198f4ba",
+      "observed_complete_at": "2026-10-16T10:00:57.893231+00:00",
+      "policy_url": "https://finance.yahoo.co.jp/robots.txt",
+      "redirect_provenance": "stocks.finance.yahoo.co.jp/robots.txt explicit301 Location to finance.yahoo.co.jp/robots.txt; manual counted GETs1/2",
+      "UA": "Codex-IR-Research/0.1",
+      "literal_path_allowed": true
+    },
+    "finance.yahoo.co.jp": {
+      "proceed": true,
+      "branch": "fresh_robots200",
+      "raw_file": "research/ir-case-studies-2026-10-15/3817/market-observation-discovery-2026-10-16/raw/e678e8702fe38cf087e80f4b3081fbb1896ec07b9d37cf81e2e358b2a198f4ba",
+      "raw_sha256": "e678e8702fe38cf087e80f4b3081fbb1896ec07b9d37cf81e2e358b2a198f4ba",
+      "observed_complete_at": "2026-10-16T10:00:57.893231+00:00",
+      "policy_url": "https://finance.yahoo.co.jp/robots.txt",
+      "redirect_provenance": "Actual host freshrobots200 GET2, held exacthost false",
+      "UA": "Codex-IR-Research/0.1",
+      "literal_path_allowed": true
+    }
+  },
+  "rules": "Normal TLS/proxy fixedUA; freshrobots at each actual host; no auto redirects/retries/JS/API/search/provider substitution; all GETs counted including redirect entities"
+}

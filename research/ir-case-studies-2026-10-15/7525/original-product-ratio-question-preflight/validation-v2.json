@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T10:41:19.013101+00:00",
+  "company_id": "jp:7525",
+  "research_revision": 2,
+  "status": "limited_information_value_wording_correction_checked_not_send_approval",
+  "reason": "Unknown is a separate epistemic state, not an observed nonzero or positive economic value. No zero fill, positive proof or new estimate.",
+  "immutable_v1_files": [
+    {
+      "file": "research/ir-case-studies-2026-10-15/7525/original-product-ratio-question-preflight/preflight.md",
+      "sha256": "7501d78afe474d6d009beae7b3d79a7c3d996a9fd27b00c37a95676b7ad0d838",
+      "unchanged": true
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/7525/original-product-ratio-question-preflight/preflight.json",
+      "sha256": "ef09fff1032f98182e090e0499dacd27e98c927c39bf903c59fd2a43c1405f2e",
+      "unchanged": true
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/7525/original-product-ratio-question-preflight/validation.json",
+      "sha256": "1c4363ff2ff1a3e7db512a308a781c2db4b76352b48ad661d58588d88a157bd6",
+      "unchanged": true
+    }
+  ],
+  "new_v2_files": {
+    "preflight-v2.md": {
+      "file": "research/ir-case-studies-2026-10-15/7525/original-product-ratio-question-preflight/preflight-v2.md",
+      "sha256": "148ddf3db6109bdb56a8e23f6d83207270e8d7cca1888e859aa3b730a5607869"
+    },
+    "preflight-v2.json": {
+      "file": "research/ir-case-studies-2026-10-15/7525/original-product-ratio-question-preflight/preflight-v2.json",
+      "sha256": "e00183fb5fed2b3bc5646d49569297909177b55482cc8626ac5fca255e11198f"
+    }
+  },
+  "semantic_json_differences": [
+    {
+      "path": "/research_information_value/status",
+      "before": "unknown_not_zero",
+      "after": "unknown_not_estimated"
+    },
+    {
+      "path": "/research_information_value/reason",
+      "before": "算定範囲が解ければ研究上の比較可否へ影響し得るが、現行の数値thesis/評価式/回答尤度や費用を設定しておらず、金銭的情報価値や順位は推定していない。",
+      "after": "算定範囲が解ければ研究上の比較可否へ影響し得るが、現行の数値thesis/評価式/回答尤度や費用を設定しておらず、金銭的情報価値や順位は推定していない。情報価値は未推定で、0とも正とも判定していない。数値を0で埋めない。"
+    }
+  ],
+  "markdown_semantic_difference": {
+    "before": "情報価値は**未推定であり0ではない**。",
+    "after": "情報価値は**未推定で、0とも正とも判定していない**。数値を0で埋めない。"
+  },
+  "markdown_navigation_only_differences": [
+    {
+      "before": "[preflight.json](preflight.json)",
+      "after": "[preflight-v2.json](preflight-v2.json)"
+    },
+    {
+      "before": "[validation.json](validation.json)",
+      "after": "[validation-v2.json](validation-v2.json)"
+    }
+  ],
+  "markdown_unified_diff": [
+    "--- preflight.md",
+    "+++ preflight-v2.md",
+    "@@ -14,7 +14,7 @@",
+    " | B：売上範囲が別、または範囲に関係する変更/再分類が明示される。 | そのままの単純比較を保留。会社公表の対象期/範囲・対応資料があれば参照し、自分で過去値/目標を補正しない。変更を悪化・反証としない。 |",
+    " | C：部分回答、共通性不明、既出説明だけ、曖昧、回答不能、無回答。 | 確認できた部分だけ残し、売上範囲の比較可否は未解決。無回答を0や悪化の証拠にしない。資料案内だけなら本文/版を読んでから解消範囲を判断する。 |",
+    " ",
+    "-公表済みの同一定義が見つかれば草案を廃止して掲載箇所を参照する。返答の公開性は受信後に別途確認し、質問の性質だけで公開補足と認定しない。会社の目標達成保証、著者の許容停滞幅、OEM等の追加分類を求めない。EPS/価格/売買の回答分岐や入力path、数値priorityは作らない。情報価値は**未推定であり0ではない**。",
+    "+公表済みの同一定義が見つかれば草案を廃止して掲載箇所を参照する。返答の公開性は受信後に別途確認し、質問の性質だけで公開補足と認定しない。会社の目標達成保証、著者の許容停滞幅、OEM等の追加分類を求めない。EPS/価格/売買の回答分岐や入力path、数値priorityは作らない。情報価値は**未推定で、0とも正とも判定していない**。数値を0で埋めない。",
+    " ",
+    " 旧窓口は [2026-10-13集約CSV](../../../ir-recovery-2026-10-13/all-companies.csv) の7525行で、公式フォーム **https://www.rix.co.jp/ir/contact/**、手動確認 **2026-10-12T06:17:54.490476+00:00**、当時個人受付explicit。元フォーム本文受信完了は2026-10-12T06:05:13.838661Zで、別の準備時刻と混同しない。初期10/11のprovisional recordと後続確認も分けて保存する。**現在の受付・個人条件・静粛期間はunknown**。今回の草案は送信許可ではなく、フォームへの入力・送信もしていない。",
+    " ",
+    "@@ -22,4 +22,4 @@",
+    " ",
+    " 次に必要なのは、公開注記が既答になっていないかの確認、草案の範囲レビュー、将来登録時の重複/入力不足確認、実際の送信検討時の現在窓口/静粛期間の確認である。数値thesisを新設しなくても公開比較・草案レビューは継続できる。返信期限・管理日・発表日は追加していない。",
+    " ",
+    "-[preflight.json](preflight.json)に原著者引用/公表範囲/歴史的窓口とA/B/Cを保存し、[validation.json](validation.json)で限定照合と旧入力不変を記録した。135Aの[先行preflight](../../135A/customer-counting-question-preflight-v2.md)から、定義と比較範囲、部分回答、公開性の境界を参照し、同社の数字・窓口を流用していない。新規はこの3ファイルだけ。GET/DB/code/旧変更・正式登録/送信・モデル/方針採用は0。",
+    "+[preflight-v2.json](preflight-v2.json)に原著者引用/公表範囲/歴史的窓口とA/B/Cを保存し、[validation-v2.json](validation-v2.json)で限定照合と旧入力不変を記録した。135Aの[先行preflight](../../135A/customer-counting-question-preflight-v2.md)から、定義と比較範囲、部分回答、公開性の境界を参照し、同社の数字・窓口を流用していない。新規はこの3ファイルだけ。GET/DB/code/旧変更・正式登録/送信・モデル/方針採用は0。"
+  ],
+  "timestamp_boundary": {
+    "v2_json_recorded_at": "2026-10-15T10:35:13.402288+00:00",
+    "meaning": "Copied original draft first-record time is retained unchanged for narrow diff. New revision creation/check time is this validation.recorded_at, not a retrospective registration."
+  },
+  "checks": {
+    "exactly_two_JSON_value_paths_changed": true,
+    "all_other_JSON_content_identical": true,
+    "question_and_single_issue_identical": true,
+    "ABC_interpretations_identical": true,
+    "contact_history_and_current_unknowns_identical": true,
+    "formal_notready_and_payload_null_identical": true,
+    "estimate_priority_and_decision_distinguishing_null": true,
+    "author_rules_and_dates_unchanged": true,
+    "MD_only_information_value_phrase_and_v2_links_changed": true,
+    "immutable_v1_three_hashes_unchanged": true,
+    "independent_finding_reference_and_limited_response_recorded": true
+  },
+  "scope": {
+    "GETs": 0,
+    "DB_accesses": 0,
+    "production_code_changes": 0,
+    "old_file_changes": 0,
+    "new_question_wordings": 0,
+    "formal_question_registrations": 0,
+    "external_sends": 0,
+    "orders": 0,
+    "models_or_thresholds_created": 0,
+    "new_response_or_management_dates": 0
+  },
+  "inherited_source_review": "Original v1 validation remains the source/quote/public scope review. This v2 validation checks only the bounded wording revision and does not re-certify all public sources or current contact eligibility.",
+  "independent_review_reference": {
+    "json": {
+      "file": "research/ir-case-studies-2026-10-15/7525/original-product-ratio-question-preflight/independent-recheck.json",
+      "sha256": "17b3b3bf9c78b5b36bd5ef2ada8e5a0511852d1ae1b80febb445243601f59e98",
+      "finding_jsonpath": "$.findings[0]"
+    },
+    "markdown": {
+      "file": "research/ir-case-studies-2026-10-15/7525/original-product-ratio-question-preflight/independent-recheck.md",
+      "sha256": "f323ef96c844fb45543ccb7db41de6544735b591969490a0a8eefbdb81221430"
+    },
+    "status_as_recorded": "wording_correction_needed_no_branch_logic_defect_found",
+    "response": "This v2 corrects the sole information-value wording/label finding; no A/B/C, null numeric, notready, contact or other policy logic change. The independent review itself stays unchanged."
+  }
+}

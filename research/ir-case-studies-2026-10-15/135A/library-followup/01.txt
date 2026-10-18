@@ -1,0 +1,343 @@
+//========================================================
+//
+// ■XJStorageLoaderクラス定義
+//
+//========================================================
+(function($) {
+
+(function() {
+
+	/*========================================================
+	 コンストラクタ
+	========================================================*/
+	XjStorageLoaderLibraryKessan = function(s)
+	{
+		var defaults = {
+			domain:'//www.xj-storage.jp',
+			company:'AS06543',
+			documents_results:'1,2,3,4,16,17,18,19,20,21',
+			documents_presen:'13,98,120',
+			documents_securities:'1030,1040,1120,1130,1140,1150,1160,1170',
+			documents_meeting:'34,91,96',
+			documents_others:'90,92,93,95,97,110,111,112,113,114,115,116,117,118,119',
+			documents_disclosure:'13,0,5,6,8,9,15,24,25,28',
+
+			display_id_results:'xj-mainlist-results',
+			display_id_presen:'xj-mainlist-presen',
+			display_id_securities:'xj-mainlist-securities',
+			display_id_meeting:'xj-mainlist-meeting',
+			display_id_others:'xj-mainlist-others',
+			display_id_disclosure:'xj-mainlist-disclosure'
+		};
+
+		this.settings = $.extend(defaults, s);
+		this.xjlist_results = [];
+		this.xjlist_presen = [];
+		this.xjlist_securities = [];
+		this.xjlist_meeting = [];
+		this.xjlist_others = [];
+		this.xjlist_disclosure = [];
+
+		//this.fdate;
+		//this.pdate;
+		//this.documents;
+
+		//initメソッド実行
+		XjStorageLoaderLibraryKessan.prototype.init.call(this);
+ 	};
+
+	/*========================================================
+	 初期設定
+	========================================================*/
+	XjStorageLoaderLibraryKessan.prototype.init = function()
+	{
+
+		$.ajaxSetup({scriptCharset:'utf-8'});
+
+		var self = this;
+
+		var xjurl ;
+
+		this.xjlist_results.length = 0;
+		xjurl = this.createUrl ( self.settings.documents_results ) ;
+		this.prepareList ( self.xjlist_results, xjurl,
+				self.settings.display_id_results ) ;
+
+		this.xjlist_presen.length = 0;
+		xjurl = this.createUrl ( self.settings.documents_presen ) ;
+		this.prepareList ( self.xjlist_presen, xjurl,
+				self.settings.display_id_presen ) ;
+
+		this.xjlist_securities.length = 0 ;
+		xjurl = this.createUrl ( self.settings.documents_securities ) ;
+		this.prepareList ( self.xjlist_securities, xjurl,
+				self.settings.display_id_securities ) ;
+
+		this.xjlist_meeting.length = 0 ;
+		xjurl = this.createUrl ( self.settings.documents_meeting ) ;
+		this.prepareList ( self.xjlist_meeting, xjurl,
+				self.settings.display_id_meeting ) ;
+				
+		this.xjlist_others.length = 0 ;
+		xjurl = this.createUrl ( self.settings.documents_others ) ;
+		this.prepareList ( self.xjlist_others, xjurl,
+				self.settings.display_id_others ) ;
+
+
+		this.xjlist_disclosure.length = 0;
+		xjurl = this.createUrl ( self.settings.documents_disclosure ) ;
+		this.prepareList ( self.xjlist_disclosure, xjurl, self.settings.display_id_disclosure ) ;
+
+		//this.show();
+	};
+
+	/*========================================================
+	 情報取得用URL生成
+	========================================================*/
+	XjStorageLoaderLibraryKessan.prototype.createUrl = function ( code )
+	{
+		var self = this;
+		var xjurl;
+
+		xjurl = self.settings.domain + '/public-list/GetList2.aspx?company=';
+		xjurl+= self.settings.company;
+
+		if(self.settings.len && self.settings.len > 0){
+			xjurl+= '&len=' + self.settings.len;
+		}
+		else {
+			xjurl+= '&len=10000';
+		}
+
+		if (code && code.length > 0) {
+			xjurl+= '&doctype=' + code;
+		}
+
+		//xjurl+= '&filetype=PDF-GENERAL';
+		xjurl+= '&output=json&callback=?';
+
+		//clipboardData.setData('text',xjurl);
+
+		return xjurl;
+	}
+
+	/*============================================
+	 空白除去
+	============================================*/
+	XjStorageLoaderLibraryKessan.prototype.spaceTrim = function(str) {
+		return str.replace(/[ 　\t\r\n]+/g, "");
+	}
+
+	/*============================================
+	 全角英数を半角に変換
+	============================================*/
+	XjStorageLoaderLibraryKessan.prototype.zen2han = function(str){
+		return str.replace(/[０-ｚ]/g,function($0){
+			return String.fromCharCode(parseInt($0.charCodeAt(0))-65248);
+		});
+	}
+
+	/*========================================================
+	 年度振り分け情報込みの情報格納
+	========================================================*/
+	XjStorageLoaderLibraryKessan.prototype.prepareList = function(xjlist, xjurl, display_id)
+	{
+		var self = this;
+
+		$.ajax({
+			url: xjurl,
+			dataType: 'json',
+
+			success : function(data, dataType){
+
+				if ( undefined == data.items )
+				{
+					return ;
+				}
+
+				$.each(data.items, function(i,item)
+				{
+					var onelist = {};
+
+					// ファイル関連のプロパティ生成
+					if (item.files)
+					{
+						$.each(item.files, function(j,file) {
+							if ( file.type == 'PDF-GENERAL')
+							{
+								onelist.url = file.url;
+								onelist.size = parseInt(file.size);
+								onelist.page = file.page	;
+							}
+							else if ( file.type == 'HTML-GENERAL')
+							{
+								onelist.url = file.url ;
+							}
+						});
+					}
+					
+					if ( !onelist.url )
+					{
+						onelist.url = '' ;
+					}
+
+					if ( !onelist.size )
+					{
+						onelist.size = 0 ;
+					}
+
+					if ( !onelist.page )
+					{
+						onelist.page = 0 ;
+					}
+					
+
+					//ファイルサイズの生成
+					if (onelist.size > 0)
+					{
+						if (onelist.size > 1000000)
+						{
+							onelist.size = parseInt(onelist.size/1000000) + 'M';
+						}
+						else if (onelist.size > 1000)
+						{
+							onelist.size = parseInt(onelist.size/1000) + 'K';
+						}
+					}
+					else
+					{
+						onelist.size = '－';
+					}
+
+					//ページ数の生成
+					if (onelist.page > 0)
+					{
+						onelist.page = onelist.page ;
+					}
+					else
+					{
+						onelist.page = '－' ;
+					}
+
+					//タイトル文
+					onelist.title = item.title;
+					
+					//disclosureItemCode
+          var e = 0;
+          var itemCodes = '';
+          var iCodes = '';
+          if (item.disclosureItemCodes) {
+            $.each(item.disclosureItemCodes, function (e, disclosureItemCode) {
+              itemCodes = disclosureItemCode.itemCode;
+              iCodes += itemCodes;
+              e++;
+            });
+          }
+
+          var regexp = '11321';
+					var regexp2 = '11322';
+          var res;
+					if (item.disclosureCode == '13') {
+						//disclosureItemCode【11321】または【11322】は表示
+						if (((res = iCodes.includes(regexp)) == false) && ((res = iCodes.includes(regexp2)) == false)) {
+							if (display_id == 'xj-mainlist-presen') {
+								return ;
+							}
+						}
+						//disclosureItemCode【11321】または【11322】は非表示
+						else if (((res = iCodes.includes(regexp)) == true) || ((res = iCodes.includes(regexp2)) == true)) {
+							if (display_id == 'xj-mainlist-disclosure') {
+								return ;
+							}
+						}
+					}
+
+					// 日付関連
+					onelist.date = item.publishDate.split(' ')[0].split('/');
+					onelist.date_format = onelist.date[0] + '.' + onelist.date[1] + '.' + onelist.date[2] ;
+							
+					//XJ-Storageリストに格納
+					xjlist.push(onelist);
+				});
+			},
+			complete : function(XMLHttpRequest, textStatus)
+			{
+				self.show(xjlist, display_id);
+			}
+		});
+	}
+
+	/*========================================================
+	 表示処理
+	========================================================*/
+	XjStorageLoaderLibraryKessan.prototype.show = function(xjlist, display_id)
+	{
+		var self = this;
+		var cont = '';
+
+		/*メイン出力内容
+		-----------------------------------------------*/
+
+		$('#' + display_id).empty();
+		
+		cont += '' ;
+
+		for ( var i = 0; i < xjlist.length; i++ )
+		{
+			
+			//最新1件ずつ表示
+			if ( 0 < i )
+			{
+				break ;
+			}
+
+			var xj_data = xjlist[ i ] ;
+
+
+			cont += '<dl>' ;
+			
+			cont += '<dt class="xj-list__date">' + xj_data.date_format + '</dt>' ;
+			
+			cont += '<dd class="xj-list__title">' ;
+
+			if ( xj_data.url != '' )
+			{
+				cont += '<a href="' + xj_data.url + '" target="_blank" rel="noopener noreferrer">';
+			}
+
+			cont += xj_data.title ;
+			
+			if ( xj_data.url != '' && xj_data.size != '－' )
+			{
+				cont += '<span class="xj-list__icon-pdf">（' + xj_data.size + 'B）</span>' ;
+			}
+			else if ( xj_data.url != '' )
+			{
+				cont += '<span class="xj-list__icon-blank"></span>' ;
+			}
+			
+			if ( xj_data.url != '' )
+			{
+				cont += '</a>' ;
+			}
+			
+			cont += '</dd>' ;
+			
+			cont += '</dl>' ;
+
+		}
+
+		if ( cont == '' )
+		{
+			cont += '<dl><dd class="no-data">ただいま掲載する事項はございません。</dd></dl>' ;
+		}
+
+		$( '#' + display_id ).html ( cont ) ;
+	}
+
+}());
+
+$(function(){
+	var xj_storage_loader = new XjStorageLoaderLibraryKessan();
+});
+})(jQuery);

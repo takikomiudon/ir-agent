@@ -1,0 +1,50 @@
+{
+  "reason": "Prehandoff correction: row parser retained the preceding section heading on ordinary/pretax/tax/net rows. Numeric displays, exactquotes, differences and source pins unchanged.",
+  "changes": [
+    {
+      "path": "/rows/16/PL_section",
+      "before": "営業外費用",
+      "after": "ordinary_income"
+    },
+    {
+      "path": "/rows/19/PL_section",
+      "before": "特別利益",
+      "after": "pretax_income"
+    },
+    {
+      "path": "/rows/20/PL_section",
+      "before": "特別利益",
+      "after": "income_tax"
+    },
+    {
+      "path": "/rows/21/PL_section",
+      "before": "特別利益",
+      "after": "income_tax"
+    },
+    {
+      "path": "/rows/22/PL_section",
+      "before": "特別利益",
+      "after": "income_tax"
+    },
+    {
+      "path": "/rows/23/PL_section",
+      "before": "特別利益",
+      "after": "net_income_attribution"
+    },
+    {
+      "path": "/rows/24/PL_section",
+      "before": "特別利益",
+      "after": "net_income_attribution"
+    }
+  ],
+  "before": {
+    "signed-PL-rows.json": "f4b108eb060706640df77549aa77ce69766ff6406c2c5014f7be53610487192e",
+    "review.json": "3ca7575e5c4ac4ed3abf2ac1ab43283326fa409dbade6dfeda23af55598a99bf",
+    "manifest.json": "e6276ee59c253ce2b0970ea893bc73c53a9b4400819a77c562d97da2a9f8bdc9"
+  },
+  "after": {
+    "signed-PL-rows.json": "186938930f2d82e4dafeea2a90588f59cb3ce4cb73b6d03075ce5eac5114a30e",
+    "review.json": "f9d23a7312ae806d4bbc52a27b4b6d63bb5aca8b874f310276160d177c478327"
+  },
+  "old_sources_or_financial_adoptions": 0
+}

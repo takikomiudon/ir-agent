@@ -1,0 +1,437 @@
+{
+  "requested_url": "https://gianluca.statistica.it/software/bcea/",
+  "retrieved_at": "2026-10-15T01:04:58.962352+00:00",
+  "publication_time": null,
+  "submitted": false,
+  "http_get_attempted": true,
+  "http_get_started_at": "2026-10-15T01:05:01.427799+00:00",
+  "http_response_received_at": "2026-10-15T01:05:02.101715+00:00",
+  "http_get_completed_at": "2026-10-15T01:05:02.128880+00:00",
+  "host_wait_seconds": 0.4649401900242083,
+  "global_wait_seconds": 2.0004700539866462,
+  "wait_seconds": 2.4654102440108545,
+  "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+  "global_rps_at_dispatch": 1.0,
+  "url": "https://gianluca.statistica.it/software/bcea/",
+  "http_status": 200,
+  "response_headers": {
+    "date": "Thu, 15 Oct 2026 01:05:02 GMT",
+    "server": "envoy"
+  },
+  "retry_after_seconds": null,
+  "byte_count": 47866,
+  "sha256": "62eab194248b37ef7fd3b0b93f9689f9dc09e0a80cd87c575147637df141bd19",
+  "content_type": "text/html; charset=UTF-8",
+  "encoding": "utf-8",
+  "encoding_source": "http_charset",
+  "http_charset": "utf-8",
+  "html_meta_charset": "utf-8",
+  "text": "BCEA: An R package to perform Bayesian Cost-Effectiveness Analysis – Gianluca Baio’s webpage Research Publications Talks Books BMHTA BMHE BCEA book BMPR R for HTA Software BCEA survHE blendR bmhe SWSamp bmeta INLA Blog Teaching Summer school BCEA BCEA CEAC plots Set bcea() survHE Tutorial blendR SWSamp Tutorial bmeta BCEAweb INLA BCEA: An R package to perform Bayesian Cost-Effectiveness Analysis BCEA Bayesian statistics Health economics Author Gianluca Baio Published March 11, 2018 Code Go to project site BCEA is a R library specifically designed to post-process the result of a Bayesian health economic evaluation. Typically, this consists in the estimation of a set of relevant parameters that can be combined to produce an estimation of suitable measures of cost ( \\(c\\) ) and clinical benefits ( \\(e\\) ) associated with an intervention. Within the Bayesian framework, this amounts to estimating a posterior distribution for the pair \\((e,c)\\) . Health economic evaluations then proceed by computing some relevant summaries of the resulting decision process: is the innovative intervention \\(t=1\\) more “cost-effective” than the standard intervention \\(t=0\\) ? BCEA provides a set of functions that can be used to produce a standardised analysis. The package has been created to complement my book on Bayesian methods in health economics where it features heavily (some discussion of the package in the blog can be found here , here , here and here ). A discussion of the changes in release 2.0 is here. . BCEA produces a synthesis of the decision process given the current evidence and uncertainty, as well as several indicators that can be used to perform Probabilistic Sensitivity Analysis to parameter and model uncertainty. These include the Cost-Effectiveness Acceptability Curve and the analysis of the Expected Value of Information, that can be used to prioritize research. Examples of the output of the function are given below. library (BCEA) data (Vaccine) ints = c ( \"Standard care\" , \"Vaccination\" ) m <- bcea (eff,cost, ref= 2 , interventions= ints) summary (m) Cost-effectiveness analysis summary Reference intervention: Vaccination Comparator intervention: Standard care Optimal decision: choose Standard care for k < 20100 and Vaccination for k >= 20100 Analysis for willingness to pay parameter k = 25000 Expected net benefit Standard care -36.054 Vaccination -34.826 EIB CEAC ICER Vaccination vs Standard care 1.2284 0.529 20098 Optimal intervention (max expected net benefit) for k = 25000: Vaccination EVPI 2.4145 Installation There are two ways of installing BCEA . A “stable” version (as of 7 August 2026: 2.4.83) is packaged and available from CRAN . So you can simply type on your R terminal install.packages ( \"BCEA\" ) Alternatively, you can install BCEA using the r-universe repository and the following command on your R terminal. install.packages ( 'BCEA' , repos = c ( 'https://giabaio.r-universe.dev' , 'https://cloud.r-project.org' ) ) This uses the “development” version — this will usually be updated more frequently and may be continuously tested. The latest changes with respect to the CRAN version can be found here . A third way to install BCEA is to use the R package remotes , which downloads the relevant code directly from the GitHub repository . On Windows machines, you need to install a few dependencies, including Rtools first, e.g. by running pkgs <- c ( \"MASS\" , \"Rtools\" , \"devtools\" ) repos <- c ( \"https://cran.rstudio.com\" , \"https://www.math.ntnu.no/inla/R/stable\" ) install.packages (pkgs, repos= repos, dependencies = \"Depends\" ) before installing the package using devtools : devtools :: install_github ( \"giabaio/BCEA\" ) Under Linux or MacOS, it is sufficient to install the package via devtools : install.packages ( \"devtools\" ) devtools : install_github ( \"giabaio/BCEA\" ) Note We recommend using the r-universe version, as it will fix minor issues that may become known quicker than the stable version on CRAN. The r-universe has fewer overheads in the installation, in comparison to the remotes / install_github process. Last updated: 7 August 2026 Relevant publications Baio, G. 2020. “ survHE: Survival Analysis for Health Economic Evaluation and Cost-Effectiveness Modelling .” Journal of Statistical Software 95 (October): 1–47. https://doi.org/10.18637/jss.v095.i14 . Baio, G. 2026. Bayesian Models in Health Technology Assessment . CRC Press. Baio, G, A Berardi, and A Heath. 2017. Bayesian Cost-Effectiveness Analysis with the R Package BCEA . Springer. https://doi.org/10.1007/978-3-319-55718-2 . Baio, G, and AP Dawid. 2011. “ Probabilistic Sensitivity Analysis in Health Economics .” Statistical Methods in Medical Research , ahead of print, September. https://doi.org/10.1177/0962280211419832 . Baio, G, A Heath, A Berardi, and N Green. 2025. Bayesian Cost-Effectiveness Analysis with the R Package BCEA (2nd Edition) . Springer. https://doi.org/10.1007/978-3-032-00877-0 . CEAC plots",
+  "title": "BCEA: An R package to perform Bayesian Cost-Effectiveness Analysis – Gianluca Baio’s webpage",
+  "headings": [
+    "BCEA: An R package to perform Bayesian Cost-Effectiveness Analysis",
+    "Installation",
+    "Relevant publications"
+  ],
+  "base_href": null,
+  "base_hrefs": [],
+  "base_url": "https://gianluca.statistica.it/software/bcea/",
+  "base_resolution_error": null,
+  "links": [
+    {
+      "url": "https://gianluca.statistica.it/",
+      "href": "/",
+      "label": ""
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/",
+      "href": "/research/",
+      "label": "Research"
+    },
+    {
+      "url": "https://gianluca.statistica.it/publications/",
+      "href": "/publications/",
+      "label": "Publications"
+    },
+    {
+      "url": "https://gianluca.statistica.it/talks/",
+      "href": "/talks/",
+      "label": "Talks"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/",
+      "href": "#",
+      "label": "Books"
+    },
+    {
+      "url": "https://gianluca.statistica.it/books/bmhta/",
+      "href": "/books/bmhta/",
+      "label": "BMHTA"
+    },
+    {
+      "url": "https://gianluca.statistica.it/books/bmhe/",
+      "href": "/books/bmhe/",
+      "label": "BMHE"
+    },
+    {
+      "url": "https://gianluca.statistica.it/books/bcea/",
+      "href": "/books/bcea/",
+      "label": "BCEA book"
+    },
+    {
+      "url": "https://gianluca.statistica.it/books/bmpr/",
+      "href": "/books/bmpr/",
+      "label": "BMPR"
+    },
+    {
+      "url": "https://gianluca.statistica.it/books/r-hta/",
+      "href": "/books/r-hta/",
+      "label": "R for HTA"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/",
+      "href": "#",
+      "label": "Software"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/",
+      "href": "/software/bcea/",
+      "label": "BCEA"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/survhe/",
+      "href": "/software/survhe/",
+      "label": "survHE"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/blendr/",
+      "href": "/software/blendr/",
+      "label": "blendR"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bmhe_utils/",
+      "href": "/software/bmhe_utils/",
+      "label": "bmhe"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/swsamp/",
+      "href": "/software/swsamp/",
+      "label": "SWSamp"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bmeta/",
+      "href": "/software/bmeta/",
+      "label": "bmeta"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/inla/",
+      "href": "/software/inla/",
+      "label": "INLA"
+    },
+    {
+      "url": "https://gianluca.statistica.it/blog/",
+      "href": "/blog/",
+      "label": "Blog"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/",
+      "href": "#",
+      "label": "Teaching"
+    },
+    {
+      "url": "https://gianluca.statistica.it/teaching/summer-school/",
+      "href": "/teaching/summer-school/",
+      "label": "Summer school"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/",
+      "href": "/software/bcea/",
+      "label": "BCEA"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/",
+      "href": "/software/bcea/",
+      "label": "BCEA"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/ceac",
+      "href": "/software/bcea/ceac",
+      "label": "CEAC plots"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/set-bcea-parameters",
+      "href": "/software/bcea/set-bcea-parameters",
+      "label": "Set bcea()"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/survhe/",
+      "href": "/software/survhe/",
+      "label": "survHE"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/survhe/tutorial",
+      "href": "/software/survhe/tutorial",
+      "label": "Tutorial"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/blendr/",
+      "href": "/software/blendr/",
+      "label": "blendR"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/swsamp/",
+      "href": "/software/swsamp/",
+      "label": "SWSamp"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/swsamp/tutorial",
+      "href": "/software/swsamp/tutorial",
+      "label": "Tutorial"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bmeta/",
+      "href": "/software/bmeta/",
+      "label": "bmeta"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bceaweb/",
+      "href": "/software/bceaweb/",
+      "label": "BCEAweb"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/inla/",
+      "href": "/software/inla/",
+      "label": "INLA"
+    },
+    {
+      "url": "https://github.com/giabaio/BCEA",
+      "href": "https://github.com/giabaio/BCEA",
+      "label": "Code"
+    },
+    {
+      "url": "https://gianluca.statistica.it/books/bcea/",
+      "href": "/books/bcea/",
+      "label": "Go to project site"
+    },
+    {
+      "url": "https://gianluca.statistica.it/blog2012-05-13-bcea-on-cran/",
+      "href": "../../blog2012-05-13-bcea-on-cran/",
+      "label": "here"
+    },
+    {
+      "url": "https://gianluca.statistica.it/blog/2012-07-17-the-bcea-supremacy/",
+      "href": "../../blog/2012-07-17-the-bcea-supremacy/",
+      "label": "here"
+    },
+    {
+      "url": "https://gianluca.statistica.it/blog/2012-08-06-a-bunch-of-r-and-jags-scripts/",
+      "href": "../../blog/2012-08-06-a-bunch-of-r-and-jags-scripts/",
+      "label": "here"
+    },
+    {
+      "url": "https://gianluca.statistica.it/blog/2012-08-31-another-bunch-of-r-and-jags-scripts/",
+      "href": "../../blog/2012-08-31-another-bunch-of-r-and-jags-scripts/",
+      "label": "here"
+    },
+    {
+      "url": "https://gianluca.statistica.it/blog/2013-07-28-bcea-2-0/",
+      "href": "../../blog/2013-07-28-bcea-2-0/",
+      "label": "here."
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/#cb1-1",
+      "href": "#cb1-1",
+      "label": ""
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/#cb1-2",
+      "href": "#cb1-2",
+      "label": ""
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/#cb1-3",
+      "href": "#cb1-3",
+      "label": ""
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/#cb1-4",
+      "href": "#cb1-4",
+      "label": ""
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/#cb1-5",
+      "href": "#cb1-5",
+      "label": ""
+    },
+    {
+      "url": "https://cran.r-project.org/",
+      "href": "https://cran.r-project.org/",
+      "label": "CRAN"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/#cb3-1",
+      "href": "#cb3-1",
+      "label": ""
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/#cb4-1",
+      "href": "#cb4-1",
+      "label": ""
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/#cb4-2",
+      "href": "#cb4-2",
+      "label": ""
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/#cb4-3",
+      "href": "#cb4-3",
+      "label": ""
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/#cb4-4",
+      "href": "#cb4-4",
+      "label": ""
+    },
+    {
+      "url": "https://github.com/giabaio/BCEA/blob/main/NEWS.md",
+      "href": "https://github.com/giabaio/BCEA/blob/main/NEWS.md",
+      "label": "here"
+    },
+    {
+      "url": "https://github.com/giabaio/BCEA/",
+      "href": "https://github.com/giabaio/BCEA/",
+      "label": "GitHub repository"
+    },
+    {
+      "url": "https://cran.r-project.org/bin/windows/Rtools/",
+      "href": "https://cran.r-project.org/bin/windows/Rtools/",
+      "label": "Rtools"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/#cb5-1",
+      "href": "#cb5-1",
+      "label": ""
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/#cb5-2",
+      "href": "#cb5-2",
+      "label": ""
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/#cb5-3",
+      "href": "#cb5-3",
+      "label": ""
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/#cb6-1",
+      "href": "#cb6-1",
+      "label": ""
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/#cb7-1",
+      "href": "#cb7-1",
+      "label": ""
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/#cb7-2",
+      "href": "#cb7-2",
+      "label": ""
+    },
+    {
+      "url": "https://doi.org/10.18637/jss.v095.i14",
+      "href": "https://doi.org/10.18637/jss.v095.i14",
+      "label": "https://doi.org/10.18637/jss.v095.i14"
+    },
+    {
+      "url": "https://doi.org/10.1007/978-3-319-55718-2",
+      "href": "https://doi.org/10.1007/978-3-319-55718-2",
+      "label": "https://doi.org/10.1007/978-3-319-55718-2"
+    },
+    {
+      "url": "https://doi.org/10.1177/0962280211419832",
+      "href": "https://doi.org/10.1177/0962280211419832",
+      "label": "https://doi.org/10.1177/0962280211419832"
+    },
+    {
+      "url": "https://doi.org/10.1007/978-3-032-00877-0",
+      "href": "https://doi.org/10.1007/978-3-032-00877-0",
+      "label": "https://doi.org/10.1007/978-3-032-00877-0"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/ceac",
+      "href": "/software/bcea/ceac",
+      "label": "CEAC plots"
+    },
+    {
+      "url": "https://mas.to/@gianlubaio",
+      "href": "https://mas.to/@gianlubaio",
+      "label": ""
+    },
+    {
+      "url": "https://twitter.com/gianlubaio",
+      "href": "https://twitter.com/gianlubaio",
+      "label": ""
+    },
+    {
+      "url": "https://github.com/giabaio",
+      "href": "https://github.com/giabaio",
+      "label": ""
+    },
+    {
+      "url": "mailto:g.baio@ucl.ac.uk",
+      "href": "mailto:g.baio@ucl.ac.uk",
+      "label": ""
+    },
+    {
+      "url": "https://www.linkedin.com/in/gianluca-baio/",
+      "href": "https://www.linkedin.com/in/gianluca-baio/",
+      "label": ""
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/",
+      "href": "#",
+      "label": ""
+    }
+  ],
+  "unresolved_links": [],
+  "forms": [],
+  "http_get_elapsed_seconds": 0.7011183159775101,
+  "failure_signature": null,
+  "robots": {
+    "requested_url": "https://gianluca.statistica.it/robots.txt",
+    "retrieved_at": "2026-10-15T01:04:55.706529+00:00",
+    "publication_time": null,
+    "submitted": false,
+    "http_get_attempted": true,
+    "http_get_started_at": "2026-10-15T01:04:58.427157+00:00",
+    "http_response_received_at": "2026-10-15T01:04:58.961871+00:00",
+    "http_get_completed_at": "2026-10-15T01:04:58.962269+00:00",
+    "host_wait_seconds": 1.8129940144717693e-06,
+    "global_wait_seconds": 2.7206026379717514,
+    "wait_seconds": 2.720604450965766,
+    "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+    "global_rps_at_dispatch": 1.0,
+    "url": "https://gianluca.statistica.it/robots.txt",
+    "http_status": 200,
+    "response_headers": {
+      "date": "Thu, 15 Oct 2026 01:04:58 GMT",
+      "server": "envoy"
+    },
+    "retry_after_seconds": null,
+    "byte_count": 52,
+    "sha256": "24d18e3b114a349bd1732191e68a453ac154383d03ef4939af0f1301b464fa98",
+    "content_type": "text/plain; charset=UTF-8",
+    "encoding": "utf-8",
+    "encoding_source": "http_charset",
+    "http_charset": "utf-8",
+    "html_meta_charset": null,
+    "text": "Sitemap: https://gianluca.statistica.it/sitemap.xml\n",
+    "title": "",
+    "headings": [],
+    "links": [],
+    "forms": [],
+    "http_get_elapsed_seconds": 0.5351355260354467,
+    "failure_signature": null
+  }
+}

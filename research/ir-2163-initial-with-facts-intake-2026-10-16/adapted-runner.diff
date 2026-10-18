@@ -1,0 +1,96 @@
+--- research/ir-1975-initial-with-facts-intake-2026-10-16/run_once.py
++++ research/ir-2163-initial-with-facts-intake-2026-10-16/run_once.py
+@@ -22,14 +22,14 @@
+ HERE = Path(__file__).resolve().parent
+ ROOT = HERE.parents[1]
+ DB = ROOT / 'data/ir-research-2026-10-15.sqlite3'
+-EXPECTED = 'ac2c17f7a7750ac3ffa0ceafd850f2916c3c31de79faa287468aa24f313c1f89'
+-COMPANY = 'jp:1975'
+-DELTAS = {'sources': 4, 'record_availability': 4, 'source_classifications': 4,
++EXPECTED = '28185d10772c7e29c57bfb93b967c5e4d94739f6d6b8fd66ce86faa2365dbb64'
++COMPANY = 'jp:2163'
++DELTAS = {'sources': 5, 'record_availability': 5, 'source_classifications': 5,
+           'jobs': 1, 'job_attempts': 1, 'job_attempt_events': 2, 'job_request_receipts': 1}
+-BASE_COUNTS = {'companies': 1819, 'sources': 186, 'source_classifications': 185, 'record_availability': 186,
+-               'jobs': 106, 'job_attempts': 103, 'job_attempt_events': 206,
+-               'job_request_receipts': 103, 'qualitative_case_versions': 42}
+-BASE_CASE_STATE = {'current_cases': 21, 'reviewed_sources': 125}
++BASE_COUNTS = {'companies': 1819, 'sources': 190, 'source_classifications': 189, 'record_availability': 190,
++               'jobs': 107, 'job_attempts': 104, 'job_attempt_events': 208,
++               'job_request_receipts': 104, 'qualitative_case_versions': 43}
++BASE_CASE_STATE = {'current_cases': 22, 'reviewed_sources': 129}
+ PREPARED = ('source-bundle.json', 'classification-requests.json', 'classification-evidence.json',
+             'input-pins.json', 'prepared-code-pins.json', 'source-map.json')
+ 
+@@ -93,13 +93,13 @@
+     bundle = load(HERE / 'source-bundle.json')
+     requests = load(HERE / 'classification-requests.json')
+     sources = bundle['sources']
+-    assert len(sources) == len({s['id'] for s in sources}) == 4
++    assert len(sources) == len({s['id'] for s in sources}) == 5
+     assert all(s['company_id'] == COMPANY for s in sources)
+     assert bundle == {'schema_version': 1, 'companies': [], 'sources': sources, 'theses': []}
+     assert set(requests) == {COMPANY}
+     request = requests[COMPANY]
+     assert {item['source_id'] for item in request['classifications']} == {source['id'] for source in sources}
+-    assert len(request['classifications']) == 4
++    assert len(request['classifications']) == 5
+     source_by_id = {source['id']: source for source in sources}
+     assert all(item['expected_version'] == 0 and item['basis_quote'] in source_by_id[item['source_id']]['content']
+                for item in request['classifications'])
+@@ -116,17 +116,17 @@
+         before, old_schema, old_case_state = snapshot(origin), schema(origin), case_state(origin)
+         assert all(sum(before[table].values()) == count for table, count in BASE_COUNTS.items())
+         assert old_case_state == BASE_CASE_STATE
+-        assert origin.execute("SELECT COUNT(*) FROM jobs WHERE status='completed'").fetchone()[0] == 106
++        assert origin.execute("SELECT COUNT(*) FROM jobs WHERE status='completed'").fetchone()[0] == 107
+         assert origin.execute("SELECT COUNT(*) FROM jobs WHERE status IN ('pending','leased')").fetchone()[0] == 0
+         assert origin.execute('SELECT COUNT(*) FROM sources WHERE company_id=?', (COMPANY,)).fetchone()[0] == 0
+         assert origin.execute('SELECT 1 FROM companies WHERE id=?', (COMPANY,)).fetchone()
+         for source in sources:
+             assert not origin.execute('SELECT 1 FROM sources WHERE id=?', (source['id'],)).fetchone()
+         if stage == 'shadow':
+-            fd, name = tempfile.mkstemp(prefix='ir-1975-four-source-shadow-', suffix='.sqlite3')
++            fd, name = tempfile.mkstemp(prefix='ir-2163-five-source-shadow-', suffix='.sqlite3')
+             os.close(fd); backup = Path(name)
+         else:
+-            backup = ROOT / 'data/backups/ir-research-before-1975-initial-with-facts-2026-10-16.sqlite3'
++            backup = ROOT / 'data/backups/ir-research-before-2163-initial-with-facts-2026-10-16.sqlite3'
+             assert not backup.exists(), 'Existing backup: stop and inspect the prior run'
+             backup.parent.mkdir(parents=True, exist_ok=True)
+         with closing(sqlite3.connect(backup)) as copied:
+@@ -153,21 +153,21 @@
+             assert snapshot(store.connection) == before and schema(store.connection) == old_schema
+             harness = Harness(store)
+             added = invoke('ingest', lambda: harness.ingest(bundle, now=clock()))
+-            assert added == {'companies': 0, 'sources_added': 4, 'theses_added': 0}
++            assert added == {'companies': 0, 'sources_added': 5, 'theses_added': 0}
+             boundary = clock()
+             queued = invoke('queue', lambda: Intake(store).queue(boundary.isoformat(), company_id=COMPANY, new_only=True, now=boundary))
+             assert queued['jobs_created'] == len(queued['selected']) == 1 and not queued['skipped']
+             assert queued['deferred_count'] == 0 and queued['selected'][0]['company_id'] == COMPANY
+-            assert queued['selected'][0]['source_count'] == 4
++            assert queued['selected'][0]['source_count'] == 5
+             job_id = queued['selected'][0]['job_id']
+             packet = store.job(job_id)['packet']
+             assert packet['kind'] == 'intake' and packet['stage'] == 'source_classification'
+             assert packet['company'] == store.company(COMPANY)
+             assert {s['id'] for s in packet['sources']} == set(source_by_id)
+             assert all(store.source(source['id']) == source for source in sources)
+-            worker = 'codex-1975-initial-facts-' + stage
++            worker = 'codex-2163-initial-facts-' + stage
+             claim = invoke('claim', lambda: harness.claim(worker, now=clock(), measurement_synthetic=False,
+-                caller_namespace=worker, request_id='1975-initial-four-20261016-1'))
++                caller_namespace=worker, request_id='2163-initial-five-20261016-1'))
+             claimed, lease = claim['original_response'], claim['current_lease']
+             assert not claim['replayed'] and claimed['job_id'] == lease['job_id'] == job_id
+             assert claimed['company_id'] == COMPANY and claimed['worker'] == lease['worker'] == worker
+@@ -184,7 +184,7 @@
+                 assert not (before[table] - after[table]) and delta == DELTAS.get(table, 0), table
+                 comparisons[table] = {'before': sum(before[table].values()), 'after': sum(after[table].values()),
+                     'delta': delta, 'old_rows_preserved': True, 'entire_table_equal': before[table] == after[table]}
+-            assert store.connection.execute("SELECT COUNT(*) FROM jobs WHERE status='completed'").fetchone()[0] == 107
++            assert store.connection.execute("SELECT COUNT(*) FROM jobs WHERE status='completed'").fetchone()[0] == 108
+             assert store.connection.execute("SELECT COUNT(*) FROM jobs WHERE status IN ('pending','leased')").fetchone()[0] == 0
+             assert all(store.source(source['id']) == source for source in sources)
+             store.close(); store = None

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T12:01:21.575765+00:00",
+  "status": "three_synthetic_cases_confirmed_one_gap",
+  "old_inputs_unchanged_count": 18,
+  "matches_parent_code_baseline": true,
+  "db_dump_identical_on_rollback_control": true,
+  "production_and_real_db_unchanged_by_this_task": true,
+  "output_files": [
+    {
+      "path": "README.md",
+      "sha256": "c2f217692a612e487b81d0ad39c6454282b1741c9d0964059965eaf67e9196dc",
+      "byte_count": 3914
+    },
+    {
+      "path": "review.json",
+      "sha256": "28236371bea5b1b4b5818e291c2de95e427003bc7123f4c89fa14c50adf7dec8",
+      "byte_count": 13880
+    },
+    {
+      "path": "reproduce.py",
+      "sha256": "0bcb5734e290e715d72f01e98702f2501a59503a2e6a6c4c5aced011b7e0cb53",
+      "byte_count": 8105
+    },
+    {
+      "path": "reproduction.json",
+      "sha256": "7dd4143669e6e673fef84730ff081898f5a75ef5aab72893f1061f2f4bec032a",
+      "byte_count": 27074
+    }
+  ],
+  "limits": [
+    "新しい財務数値や投資方針は作らず、既存合成fixtureだけを使用。",
+    "最大3件を埋める目的の探索はせず、この1件で有限終了。",
+    "reproduce.pyのassertionは修正前checkpointの観測を固定する。修正後にはbug-path assertionが失敗することを期待する。",
+    "コード引用line/hashはこの保存checkpointのもの。修正後の行番号ではない。"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "recorded_at": "2026-10-16T13:37:17.436387+00:00",
+  "maximum_GETs": 5,
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu"
+  ],
+  "holds_ref": {
+    "file": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+    "sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952"
+  },
+  "allowed_requests": [
+    {
+      "role": "fresh_robots",
+      "url": "https://www.asb-j.jp/robots.txt"
+    },
+    {
+      "role": "official_entry",
+      "url": "https://www.asb-j.jp/jp/"
+    },
+    {
+      "role": "fasf_robots",
+      "url": "https://www.fasf-j.jp/robots.txt"
+    },
+    {
+      "role": "robots_literal_redirect_foundation_entry",
+      "url": "https://www.fasf-j.jp/"
+    },
+    {
+      "role": "foundation_canonical_entry",
+      "url": "https://www.fasf-j.jp/jp/"
+    }
+  ],
+  "robots_reviews": {
+    "www.fasf-j.jp": {
+      "branch": "fresh_robots200",
+      "proceed": true,
+      "raw_file": "research/ir-asbj-per-share-definition-discovery-2026-10-16/raw/ecb10b3fa066ae95c696c65e10e5e325db0e04442b87733c1a84941f91b4cbd4",
+      "raw_sha256": "ecb10b3fa066ae95c696c65e10e5e325db0e04442b87733c1a84941f91b4cbd4",
+      "observed_at": "2026-10-16T13:37:47.859580+00:00",
+      "actual_UA": "Codex-IR-Research/0.1",
+      "exact_path_checked": "/",
+      "no_policy_transfer_to_asbj_origin": true
+    }
+  },
+  "fixed_UA": "Codex-IR-Research/0.1",
+  "scope": "New official Japanese BPS general-definition investigation; max5GET each URL once, no auto redirects/retries/JS/API/search/provider. Follow only real literal links. Not issuer fact/model certification.",
+  "transport_provenance": [
+    {
+      "capture_pointer": "$.GETs[0].response_headers.location",
+      "literal_location": "https://www.fasf-j.jp/",
+      "meaning": "ASBJrobots302 points at new-host homepage; do not treat redirected HTML as robots rules or assume ASBJ origin permission. Check destination-host robots before literal destination."
+    },
+    {
+      "capture_pointer": "$.GETs[2].response_headers.location",
+      "literal_location": "/jp/",
+      "resolved_by_RFC_urljoin": "https://www.fasf-j.jp/jp/",
+      "samehost_rules_exact_path_checked": "/jp/"
+    }
+  ]
+}

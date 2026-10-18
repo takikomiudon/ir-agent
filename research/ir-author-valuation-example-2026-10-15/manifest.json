@@ -1,0 +1,58 @@
+{
+  "recorded_at": "2026-10-15T05:57:30.743042+00:00",
+  "new_GET_count": 0,
+  "original_source_manifest": "research/published-rating-policies-2026-10-15/sources.json",
+  "original_source_manifest_sha256": "a47b717e3f73da5f5eff7d7e4c099ca43444c2af2590a6a1cd8bccb193eced73",
+  "original_policy_profiles_sha256": "2c8f2e67fce829f8725fbc50e2ae4ecde58571abf148d0954c755f4085ad51d7",
+  "original_pdf_sha256": "0da22eb3eb8dab2280bb66626d8fbfb50dcb560053055caadcde5f3a87bf6c69",
+  "retrieved_at_preserved": "2026-10-15T01:20:49.875615+00:00",
+  "publication_date": "2026-04-17",
+  "publication_time": null,
+  "generation": {
+    "PDF": "base64.b64decode(validate=True) from existing source only",
+    "images": "pdftoppm -f 1 -l 2 -scale-to 2200 -png",
+    "text": "pdftotext -layout; only Sample watermark letters and page separators, no Japanese report body",
+    "fontconfig_warning": "No writable cache directories warning emitted; both PNGs were generated and visually inspected. No dependency/config alteration."
+  },
+  "files": {
+    "original.txt": {
+      "sha256": "97f95b0cf4d207b3e7c284739d7e52a765f2acd76055f177a988139b05105207",
+      "bytes": 33
+    },
+    "page-2.png": {
+      "sha256": "0f44d15fe19d54a53c189f15f6fddfbe6143ab9008acd439b2b32d4688f411c6",
+      "bytes": 1191085
+    },
+    "source-quotes.json": {
+      "sha256": "2ec783599684934f1517f57e6dd14a84faeeaea4148a4b591926bbbc8920c423",
+      "bytes": 8598
+    },
+    "README.md": {
+      "sha256": "9dd2e9dfbc01620dd09042cd617871ae7c9ba0d379cf726ad807de4509dc1f65",
+      "bytes": 3508
+    },
+    "original.pdf": {
+      "sha256": "0da22eb3eb8dab2280bb66626d8fbfb50dcb560053055caadcde5f3a87bf6c69",
+      "bytes": 3855577
+    },
+    "page-1.png": {
+      "sha256": "6bc0df60a54878ab93df815f1bdbeb7e36c76bff2ded30cee7298cce1b614c1f",
+      "bytes": 1392788
+    },
+    "result.json": {
+      "sha256": "95486a9da55fde245adb2b73e08a19184170c684b738151369b757eea68dbf5f",
+      "bytes": 6913
+    }
+  },
+  "manual_visual_quotes": 14,
+  "reused_prior_quotes": 1,
+  "DB_access": false,
+  "validation": {
+    "original_source_manifest_unchanged": true,
+    "original_policy_profiles_unchanged": true,
+    "restored_PDF_SHA_matches_original": true,
+    "two_rendered_pages_exist_and_manually_read": true,
+    "text_layer_contains_only_watermark": true,
+    "no_GET_or_DB": true
+  }
+}

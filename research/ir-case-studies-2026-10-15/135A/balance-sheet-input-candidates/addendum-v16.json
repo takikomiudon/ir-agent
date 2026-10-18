@@ -1,0 +1,52 @@
+{
+  "recorded_at": "2026-10-15T15:28:10.223867+00:00",
+  "status": "v16_resolves_v15_stale_layout_note_finding_metadata_only",
+  "company_id": "jp:135A",
+  "fixed_input_sha256": {
+    "research/ir-case-studies-2026-10-15/disclosed-fact-index-v15.json": "eb5af446d45df0dca9454ecf00eb395b953868f34c52a383a2ce0a87b9a3ee8b",
+    "research/ir-case-studies-2026-10-15/135A/balance-sheet-input-candidates/root-index-v15-recheck.json": "f230157febc2a9c187dba773de7c2db5dad0c6155785a601e784152e4e31d89e",
+    "research/ir-case-studies-2026-10-15/135A/balance-sheet-input-candidates/root-index-v15-independent-recheck.json": "9793c7bb98180c65f2083245f57a8ce3957e7b5160414a2e7831179727271973",
+    "research/ir-case-studies-2026-10-15/135A/balance-sheet-input-candidates/root-index-v15-independent-recheck.md": "cf9e116557d8e272c98aa759af8ee37e93ed784d8f1a199b072918e1dfb74c1d",
+    "research/ir-case-studies-2026-10-15/disclosed-fact-index-v16.json": "eb1a0626190b976dcf99027f4704b452531fda804a18b940bc4212b88f5d145d",
+    "research/ir-case-studies-2026-10-15/135A/balance-sheet-input-candidates/root-index-v16-correction.json": "33075314c4928b7a4170416e2c0b8dbb658e2389164141284d7015d36aa55f56"
+  },
+  "actual_changed_top_level_fields": [
+    "layout_note",
+    "previous_index",
+    "previous_index_sha256",
+    "recorded_at",
+    "revision_basis"
+  ],
+  "all_other_top_level_fields_deep_equal": true,
+  "nineteen_entries_and_all_84_fact_records_deep_equal_v15": true,
+  "counts": {
+    "derived_entries": 19,
+    "fact_records": 84,
+    "unique_companies": 15,
+    "original_company_source_pairs": 17
+  },
+  "layout_note_verified": {
+    "text": "19 derived-artifact entries for17 unique company/original-source pairs across15 companies. Compared with v14, the prior18 entries and82 fact records are preserved; two new135A display facts refer to the same cash balance and are not additive or independent assets. Compared with v15, all19 entries and84 fact records are exactly unchanged; only the stale explanatory label and revision metadata are corrected.",
+    "v14_baseline18_entries82_records_then_two_new_135A_display_records": true,
+    "v15_all19_entries84_records_unchanged": true,
+    "same_cash_balance_non_additive_limit_preserved": true,
+    "matches_recomputed_current_counts": true
+  },
+  "version_chain": {
+    "previous_index_path_SHA_match_preserved_v15": true,
+    "parent_correction_index_path_SHA_match_v16": true,
+    "parent_correction_declares_its_own_explanation_update_omission": true,
+    "v15_and_original_parent_check_and_independent_review_retained": true,
+    "v16_does_not_claim_data_or_financial_adoption_change": true
+  },
+  "resolved_prior_finding": "v15-layout-note-still-describes-v14",
+  "scope": {
+    "source_or_reference_reaudit": false,
+    "GETs": 0,
+    "DB_or_Store_accesses": 0,
+    "code_or_test_changes": 0,
+    "old_files_modified": 0,
+    "financial_or_IR_adoptions": 0
+  },
+  "limit": "Only the explanatory/version metadata correction is checked. Existing v15 source/reference audit is reused; parent DB conclusions are not independently reverified."
+}

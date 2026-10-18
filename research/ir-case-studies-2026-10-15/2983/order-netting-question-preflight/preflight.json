@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "record_type": "research_question_preflight",
+  "recorded_at": "2026-10-15T19:08:04.224778+00:00",
+  "company_id": "jp:2983",
+  "company_name": "アールプランナー",
+  "parent_issue_id": "2983-author-watch-volume-margin-leverage",
+  "child_issue_id": "2983-B01-volume",
+  "candidate_id": "2983-order-netting-definition-candidate",
+  "status": "research_preflight_not_ready_for_registration_or_send",
+  "question_text": "2027年1月期第2四半期決算説明資料p14・p62/63の「受注棟数」は、契約取消や契約変更を差し引いた数値でしょうか。商品区分で扱いが異なる場合を含め、公表済みの算定ルールまたは掲載箇所をご教示ください。",
+  "question_count": 1,
+  "external_basis": {
+    "author_premise": "Astrisの販売棟数増を含む売上成長の見方。受注と販売を混同せずに次の公表観測を比較する。",
+    "author_quote_id": "author-revision-and-operating-assumptions",
+    "author_original_quote": "FY1/27 第 2 四半期決算および会社予想の修正を受け、当社は業績予想を引き上げる。\n\n                 •       当社の業績予想は、修正後の会社予想および開示された事業動向と整合的な注\n                         文住宅・分譲住宅の販売棟数の伸び、上期並みの売上総利益率、ならびに販管\n                         費の効率化による営業レバレッジの持続を前提としている。",
+    "report_date": "2026-10-01",
+    "issuer_document_date": "2026-09-10",
+    "project_adaptation": "契約取消/変更の控除有無という会社側の集計定義だけを研究草案へ落とした。著者がこのIR質問や回答後の売買規則を指定したものではない。"
+  },
+  "publicly_answered_excluded": [
+    "受注高と受注棟数の実数",
+    "累計1Q–2Qと会計期間2Qの区別",
+    "注文住宅/分譲住宅/土地/中古の区分",
+    "受注単価上昇という会社説明",
+    "会社原EPS304.27円と株式分割注記",
+    "販売ASPの市場仮定単価と会社実績の混同を避けるための完了済みASP探索"
+  ],
+  "remaining_scope": "保存済み抽出本文2本の指定語検索では控除/取消規則を特定しなかった。全公式資料の不開示や当日の最新状態を意味しない。",
+  "answer_branches": [
+    {
+      "id": "A",
+      "condition": "回答の対象が引用資料の各受注系列/対象期に明確に対応し、取消/変更控除後の純額系列であると公表済み根拠から確認できる。",
+      "interpretation": "当該定義の範囲で純額系列とラベル付けし、同じ取消を二重控除しない。将来の販売化率・引渡時期・取消率は推定しない。",
+      "permitted_change": "Series-definition/comparability annotation only.",
+      "valuation_inputs_changed": [],
+      "buy_sell_action": null
+    },
+    {
+      "id": "B",
+      "condition": "総額系列、後期調整、商品別の異なる取扱い等が、対象期と系列を特定した説明で確認できる。",
+      "interpretation": "公表された違いを系列ごとに保持する。非公表の取消数を0とせず、純額への一律補正や将来販売量への換算を保留する。",
+      "permitted_change": "Series-definition/comparability annotation only.",
+      "valuation_inputs_changed": [],
+      "buy_sell_action": null
+    },
+    {
+      "id": "C",
+      "condition": "回答なし、一般論、対象期/系列不明、説明非開示、またはA/Bへ明確に対応しない。",
+      "interpretation": "既存の比較保留を維持する。悪材料や著者予測の反証とは扱わない。",
+      "permitted_change": "Unresolved reason only.",
+      "valuation_inputs_changed": [],
+      "buy_sell_action": null
+    }
+  ],
+  "financial_input_paths_assigned": null,
+  "EPS_fair_multiple_current_price_exit_rule": null,
+  "EVSI": "unestimated; neither zero nor positive asserted",
+  "financial_decision_effect": "unverified; no answer branch currently changes an adopted financial model or decision",
+  "duplicate_check": {
+    "saved_company_JSON_files_scanned": 98,
+    "nonempty_prior_question_fields": [],
+    "field_scan_is_not_all_prose_semantic_search": true,
+    "actual_company_formal_counts": {
+      "theses": 0,
+      "questions": 0
+    }
+  },
+  "prerequisites_before_formal_question": [
+    "確認対象に必要な他の既公表注記/FAQの位置と当該定義の要否を絞る。現行窓口・受付条件の確認は未実施。",
+    "既存著者条件との比較に必要か、公開情報のみでは足りないかを再点検する。",
+    "金融判断を変える質問として採用するには金融入力/価格/出典付き方針と回答別の変更経路を別に用意する。定義不明だけでIRを必須にしない。"
+  ],
+  "ready_for_registration": false,
+  "ready_to_send": false,
+  "formal_question_payload_created": false,
+  "financial_inputs_verified": false,
+  "independent_semantic_review_completed": false,
+  "new_GETs_DB_writes_external_sends_orders": 0,
+  "input_refs": [
+    {
+      "path": "research/ir-case-studies-2026-10-15/2983/author-conditions/case-record.json",
+      "sha256": "4f0d47ffcc9350a55e5ad7b878cdff92748b400f3e6dd6aaa98c2d006e6945a4"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2983/first-author-report/quotes.json",
+      "sha256": "e563a1fa7afafed752e057a8f9a546f059e923181f417bb122281dfab88de515"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2983/public-order-definition-check/review.json",
+      "sha256": "514823d0a645fd3ee91f3479e5506cca031f86401a6159fe2ec5beebc2912192"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2983/public-order-definition-check/quotes.json",
+      "sha256": "533f8acf4684840362857eedf24d064478d6ae5f207333d2724c6b6ecaa87daa"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2983/public-order-definition-check/independent-recheck.json",
+      "sha256": "994ea25760b62f1a494e40d880128ff55fdf7928263fdd7f0aa9a399d8fc3ebf"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2983/public-asp-scope-check/review.json",
+      "sha256": "06b5d99cc5c85a142f512af81ae937148a4b0a6a4c8f1a7ba09a2a91a0360adb"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2983/public-asp-scope-check/independent-recheck.json",
+      "sha256": "f216f4c04c346d354f71fe26b9f3d2a8004044453631f27d419adefa32170a91"
+    },
+    {
+      "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+      "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b"
+    },
+    {
+      "path": "docs/decision-policy.md",
+      "sha256": "e687e70c70ec9ce4b40b935bb9e908cd2d1328f44dfa488fad639557fbba8de5"
+    }
+  ]
+}

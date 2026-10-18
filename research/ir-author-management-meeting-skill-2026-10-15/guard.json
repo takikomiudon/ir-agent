@@ -1,0 +1,73 @@
+{
+  "UA": "Codex-IR-Research/0.1",
+  "canonical_repository": "https://github.com/anthropics/financial-services",
+  "explicit_allowed_urls": [
+    "https://api.github.com/robots.txt",
+    "https://api.github.com/repos/anthropics/financial-services/git/trees/574ed3624aebd0418c7e96cd101262f30210ab26?recursive=1",
+    "https://api.github.com/repos/anthropics/financial-services/git/blobs/4e5ffb62176ae0351f48ac3929a6a91b8e36022f"
+  ],
+  "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+  "hold_ref": {
+    "api.github.com_held": false,
+    "host_count": 10,
+    "path": "research/ir-source-access-holds-2026-10-15/holds-v6.json",
+    "sha256": "0659560fae8a4ced3fb27eb388dc393547dece9d9057079e774ca02b9e6e0c2e",
+    "version": 6
+  },
+  "limits": {
+    "actual_DB": 0,
+    "clone": 0,
+    "execution_of_upstream_instructions": 0,
+    "other_host": 0,
+    "redirect": 0,
+    "retry": 0,
+    "shared_docs_third_party_code_edit": 0
+  },
+  "local_search": {
+    "archive_skill_path_inventory": {
+      "count": 22,
+      "matching_path_count": 0,
+      "not_substituted_for_complete_recursive_tree": true,
+      "path": "/workspace/research/ir-strategy-2026-10-11/anthropic-skill-evidence.json"
+    },
+    "locations": [
+      "third_party/anthropic",
+      "research",
+      "/workspace/research/ir-strategy-2026-10-11",
+      "/tmp"
+    ],
+    "old_manifest_tree_summary": {
+      "checked_at": "2026-10-10T17:08:24.574716+00:00",
+      "results": [
+        {
+          "name": "notice",
+          "status": 404,
+          "url": "https://raw.githubusercontent.com/anthropics/financial-services-plugins/574ed3624aebd0418c7e96cd101262f30210ab26/NOTICE"
+        },
+        {
+          "name": "tree",
+          "result": {
+            "notice_paths": [],
+            "truncated": false
+          },
+          "status": 200,
+          "url": "https://api.github.com/repos/anthropics/financial-services-plugins/git/trees/574ed3624aebd0418c7e96cd101262f30210ab26?recursive=1"
+        }
+      ]
+    },
+    "saved_recursive_tree_body_found": false
+  },
+  "manifest_ref": {
+    "path": "third_party/anthropic/manifest.json",
+    "sha256": "45ff843e1c334454b63221fec6311f0c6bf525e79b99096e35f8f2542a405fdf"
+  },
+  "maximum_GETs": 3,
+  "recorded_at": "2026-10-15T22:38:29.985659+00:00",
+  "robots_decision": {
+    "basis": "docs/data-sources.md complete404 branch; response JSON body is not parsed as robots rules or explicit permission",
+    "canonical_repository_basis": "third_party/anthropic/manifest.json canonical_repository; standard REST route constructed for fixed commit; no HTML filename inference",
+    "status": "complete404_missing_robots",
+    "target_url": "https://api.github.com/repos/anthropics/financial-services/git/trees/574ed3624aebd0418c7e96cd101262f30210ab26?recursive=1"
+  },
+  "selection_rule": "Only SKILL.md paths explicitly containing management-meeting / meeting-prep / management-contact. Multiple matches: return paths and wait before any blob. Zero: finite stop."
+}

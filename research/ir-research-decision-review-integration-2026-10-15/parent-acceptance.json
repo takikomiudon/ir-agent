@@ -1,0 +1,45 @@
+{
+  "status": "accepted_offline",
+  "recorded_at": "2026-10-15T21:07:27.180186+00:00",
+  "code_sha256": {
+    "src/ir_agent/research_decisions.py": "913f467e2f768404742d5330a4e6f2433c4ea8ddd4b07d1abdb9a6276be791fa",
+    "src/ir_agent/decision.py": "a37bbc586c0aa7c00a924ecc54db7e7132417fa89e350915b9fe2215646b064b",
+    "src/ir_agent/store.py": "00a88a2a3378a4d38fd754ff1c1425272638033280949da49f223940ef9efef5",
+    "src/ir_agent/harness.py": "159207b515b2aad5cf1cbe2ec98acee369247ce6d91524e1b47a7a862d6dcb99",
+    "src/ir_agent/cli.py": "149e43c4a0a645127f1180fca0567fcf29d06b4e0ea4dad96006e4820ddcc37f",
+    "tests/test_research_decisions.py": "4042f61e8923e2ff95f26638323372f7c0f30292ab8be113decfd7c6e32b8ea9",
+    "scripts/demo_ir_policy_workflow.py": "066bcd365fc5affe00b016cac56f07f2cd448ff84d30c3455335229a302445e1"
+  },
+  "independent_review": {
+    "path": "research/ir-research-decision-review-integration-2026-10-15/independent-review.json",
+    "sha256": "2b6f49e20089a7fa0e3ad341707dbc253838dfa970ab61cc63d3e27863bc8133",
+    "checks": 63,
+    "resolved_findings": 2,
+    "unresolved_actionable_findings": 0
+  },
+  "full_suite": {
+    "path": "research/ir-research-decision-review-integration-2026-10-15/parent-full-suite.json",
+    "sha256": "e25aa75b70f1bb202e18b7bd27c7b55f426e2f0e1b4a432f70936925907cfb2b",
+    "test_count": 1480,
+    "unittest_seconds": "36.669"
+  },
+  "synthetic_demo": {
+    "path": "research/ir-research-decision-review-integration-2026-10-15/parent-demo.json",
+    "sha256": "285285eb4a7aae9c67d4efa0319e4d4023a5e4568cf9ef294031befe485e4fe9",
+    "baseline": "hold_review",
+    "after_reply": "exit_review",
+    "synthetic": true,
+    "external_sends_orders": 0,
+    "causal_effect_established": false
+  },
+  "actual_database_main_sha256": "a2d49996f1d4558db2c8b6f6f79c0f2fbb1d540e937e406dbc408f1d956c094d",
+  "actual_database_unchanged": true,
+  "actual_research_price_review_records_created": 0,
+  "live_API_or_auth_or_external_sends_orders": 0,
+  "financial_strategy_or_real_forecast_adoption": 0,
+  "limits": [
+    "No strategy performance or financial-input semantic validation",
+    "Prior IR origins are supported but never called public-only",
+    "Baseline/question ID binding is a separate pending task"
+  ]
+}

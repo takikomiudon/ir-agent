@@ -1,0 +1,34 @@
+{
+  "recorded_at": {
+    "utc": "2026-10-16T04:44:17.396144+00:00",
+    "jst": "2026-10-16T13:44:17.396144+09:00"
+  },
+  "kind": "local artifact generation assertion; no source-data discrepancy",
+  "first_failed_driver": {
+    "file": "/tmp/2163-statement-note-followup-artifacts-first-failed.py",
+    "sha256": "4c172b4badeba3548e4d3834619c9e03bbdeeeb257559036d1a5b3a71e4e52aa"
+  },
+  "first_error": "AssertionError: original CF label その他 appears in both operating and investing sections",
+  "resolution": "Preserve all 37 rows in original order with section+label keys; duplicate labels are retained, not merged or dropped.",
+  "duplicate_label_observations": [
+    {
+      "category": "operating_profit_to_cash_bridge",
+      "label": "その他",
+      "display": "△44,416",
+      "row_index": 16
+    },
+    {
+      "category": "investing_actual_cash",
+      "label": "その他",
+      "display": "△11,468",
+      "row_index": 28
+    }
+  ],
+  "source_quotes_reused_byte_exact_without_rewrite": {
+    "file": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/source-quotes.json",
+    "sha256": "c880633196de4e2bf88aae4c3a4cca7caf340346e41d808686c10e832c1be458",
+    "bytes": 31981
+  },
+  "original_sources_and_initial_history_unchanged": true,
+  "raw_financial_values_changed": false
+}

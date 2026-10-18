@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T15:06:48.854009+00:00",
+  "status": "bounded_independent_review_complete_two_P2_contract_discrepancies",
+  "reviewed_code_sha256": "5065fb52d6d15d3c71ab66fd097353788e071af85836d7c5535fc5ec895e5389",
+  "findings": [
+    {
+      "id": "NCB-01",
+      "priority": "P2",
+      "title": "Unpinned non-UTF8 output suppresses the established artifact-mismatch report",
+      "location": "scripts/verify_case_source_bundle.py:488",
+      "related_lines": [
+        486,
+        489,
+        490,
+        492
+      ],
+      "spec_basis": [
+        "design-v1.md validation order 2/6: pin equality before trusting contents",
+        "docs/public-capture-binding.md: artifacts must match SHA/count before trusted; mismatch wins unknown"
+      ],
+      "reproduction": "Preserve a valid binding/transport pin and output SHA/count, overwrite only text.txt with b\"\\xff\". Control is an equally unpinned valid UTF8 tamper.",
+      "observed": "UTF8 tamper returns mismatch/extracted_text_sha_mismatch. NonUTF8 tamper raises ValueError Native saved extraction must be valid UTF-8; CLIexit2/stdout absent loses the structured known-mismatch report.",
+      "impact": "Audit result classification and diagnostics differ according to bytes that failed the pin. No false matched result or financial adoption was observed.",
+      "minimal_fix": "Validate/decode output UTF8 only after output_check.status==matched. Otherwise keep trusted_output=None and preserve artifact mismatch with unknown content checks. Pinned nonUTF8 remains a ValueError.",
+      "coverage_gap": "Existing UTF8 test pins nonUTF8 and correctly expects error; transport-tamper test checks pin-before-parse but no corresponding mismatched-output nonUTF8 case."
+    },
+    {
+      "id": "NCB-02",
+      "priority": "P2",
+      "title": "Unsupported profile bypasses native-v1 shared implementation validation",
+      "location": "scripts/verify_case_source_bundle.py:321",
+      "related_lines": [
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        328,
+        479
+      ],
+      "spec_basis": [
+        "design-v1.json $.strict_required_schema.native_record.implementation_required_keys",
+        "design-v1.json recognized-v1 exact-field/type contract",
+        "docs/public-capture-binding.md implementation name/version/nullable SHA and malformed schema ValueError"
+      ],
+      "reproduction": "Use pinned v1 artifacts; set extraction.implementation=[] with an unknown profile name. Second case uses known plain profile/version2 and implementation={name:\"\",version:3,sha256:\"not-SHA\"}. Re-pin transport to those intentionally malformed records.",
+      "observed": "Known profile+implementation=[] rejects. Unknown name and unsupported version both return normal unknown/all_declared_bindings_agree:null; required common implementation validation is skipped.",
+      "impact": "A recognized native-v1 record with malformed common schema can be accepted as completed unknown merely by unsupported profile selection. It is not promoted to matched or implementation-verified.",
+      "minimal_fix": "Validate implementation exact keys, nonempty name/version and nullable SHA before unsupported profile dispatch. Continue to leave unsupported profile-specific parameter meaning unknown and do not replay an extractor.",
+      "coverage_gap": "Existing unknown profile/version tests retain valid implementation, while known-schema tests do not combine invalid shared implementation with unsupported profiles."
+    }
+  ],
+  "other_reviewed_boundaries": [
+    {
+      "topic": "failed raw nullable",
+      "result": "No defect: raw:null is absent from the frozen nullable list. Its rejection agrees with schema. A failed capture with nonnull raw and no extraction returns mismatch."
+    },
+    {
+      "topic": "scope",
+      "result": "Source-ID derivation, implementation identity, raw-to-output replay, citations, authenticity, financial meaning, current GET permission and DBfirstsave remain explicitly not_performed."
+    },
+    {
+      "topic": "pointer/path",
+      "result": "Read strict RFC6901 index/escape/empty-root handling, missing node unknown and within-case legacy path checks; new tests cover duplicate/nonfinite sibling JSON and escape targets. No new filesystem race or broad fuzz review."
+    },
+    {
+      "topic": "bytes/time",
+      "result": "Aware instants, status/complete/error, source retrieval=body completion and Content-Length versus actual entity bytes are separated. Caller declarations are not historical authenticity."
+    },
+    {
+      "topic": "secrets/read-only",
+      "result": "All independent calls omitted synthetic secret URL/error values; per-audit full fixture hashes were unchanged. Network, sqlite connect and extraction-tool entrypoints were guarded."
+    }
+  ],
+  "test_review": {
+    "new_tests_read": 19,
+    "producer_reported_target_pass": 39,
+    "producer_tests_rerun": 0,
+    "full_suite_runs": 0,
+    "new_tests_dont_cover_two_combinations": true
+  },
+  "legacy_compatibility": {
+    "seven_functions_AST_exact": {
+      "_sha": true,
+      "_hash": true,
+      "_relative": true,
+      "_artifact": true,
+      "_comparison": true,
+      "_source_audit": true,
+      "verify_case_source_bundle": true
+    },
+    "three_saved_full_report_objects_exact": true,
+    "report_metadata_not_equated": "After examples contain an additional exact_before_report_equal flag; report/bundle/id values were compared explicitly.",
+    "statuses": {
+      "7525-policy": "unknown",
+      "1518-calendar": "unknown",
+      "1332-formal-statement": "matched"
+    },
+    "reports_were_compared_not_rerun": true,
+    "default_API_body_and_opt_in_dispatch_preserved": true,
+    "before_files": [
+      {
+        "path": "scripts/verify_case_source_bundle.py",
+        "copy_sha256": "d728badabad0fb0883acaec768477c9566e9dc0a01ac43a3c16ea7fb50e5edc3",
+        "unchanged_live": false
+      },
+      {
+        "path": "tests/test_case_source_verifier.py",
+        "copy_sha256": "c5b6e0be5fed3b6b8d7cde337b4549d7ce851cd1cdcc52a33435ef881e02ad9a",
+        "unchanged_live": true
+      },
+      {
+        "path": "src/ir_agent/models.py",
+        "copy_sha256": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c",
+        "unchanged_live": true
+      },
+      {
+        "path": "src/ir_agent/adapters/common.py",
+        "copy_sha256": "a6ca5fdd16778706f8a4de072bcdb27f5dcd78efbc6768039d1116606ebbb095",
+        "unchanged_live": true
+      }
+    ]
+  },
+  "freeze_checks": {
+    "start_live_after_copy_and_SHA_equal": true,
+    "end_live_after_copy_and_SHA_equal": true,
+    "files": [
+      {
+        "path": "scripts/verify_case_source_bundle.py",
+        "sha256": "5065fb52d6d15d3c71ab66fd097353788e071af85836d7c5535fc5ec895e5389",
+        "bytes": 31753,
+        "live_copy_and_manifest_equal": true
+      },
+      {
+        "path": "tests/test_public_capture_binding.py",
+        "sha256": "351e56712e0683ee8a745cbdcc1f08614ee239c3c9e58ebd7de30cb0ace46f3f",
+        "bytes": 18823,
+        "live_copy_and_manifest_equal": true
+      },
+      {
+        "path": "docs/public-capture-binding.md",
+        "sha256": "f79570f4da9617598de1f6d12bbc1b5b984497fd2f72e3381676a714daa0a6af",
+        "bytes": 7864,
+        "live_copy_and_manifest_equal": true
+      }
+    ],
+    "design_hashes": {
+      "design-v1.json": "eaa3d97d6ed8cf6841de7cc809e15017c94981068fd7454e3d60613b2ac912be",
+      "design-v1.md": "8a10dbbe9f988bfdc12bf53060085f3fa70673e85d05e53e6f95c16e0835a160"
+    },
+    "implementation_sha256": "20c324dd35fc0e31a12919a72d0d3e9fa710de8f1bd3255dd6f8862321f3e170",
+    "after_manifest_sha256": "44636b9d1afaf43695fc6c5caa83b33663eb220b34e2f34a00ce6831d22b18a5"
+  },
+  "independent_probe": {
+    "path": "research/ir-public-capture-validation-2026-10-15/independent-probe.py",
+    "sha256": "46875789c6603b9d20557061ca4a2b431ead17f495ca5c210e426036fc10f28a",
+    "result": {
+      "status": "two_contract_discrepancies_reproduced",
+      "baseline": {
+        "status": "matched",
+        "all_declared_bindings_agree": true,
+        "artifact_status": "matched",
+        "profile_status": "recognized",
+        "reason_codes": [],
+        "secret_omitted": true,
+        "files_unchanged_by_audit": true
+      },
+      "untrusted_output": {
+        "UTF8_tamper": {
+          "status": "mismatch",
+          "all_declared_bindings_agree": false,
+          "artifact_status": "mismatch",
+          "profile_status": "recognized",
+          "reason_codes": [
+            "extracted_text_sha_mismatch",
+            "extracted_text_byte_count_mismatch",
+            "extraction_record_text_bytes_unspecified",
+            "extraction_source_content_bytes_unspecified"
+          ],
+          "secret_omitted": true,
+          "files_unchanged_by_audit": true
+        },
+        "non_UTF8_tamper": {
+          "exception": "ValueError",
+          "message": "Native saved extraction must be valid UTF-8",
+          "secret_omitted": true,
+          "files_unchanged_by_audit": true
+        },
+        "non_UTF8_tamper_CLI": {
+          "CLI_exit": 2,
+          "stdout_present": false,
+          "error_contains_UTF8_label": true,
+          "secret_omitted": true,
+          "files_unchanged_by_audit": true
+        },
+        "pinned_non_UTF8_control": {
+          "exception": "ValueError",
+          "message": "Native saved extraction must be valid UTF-8",
+          "secret_omitted": true,
+          "files_unchanged_by_audit": true
+        }
+      },
+      "implementation_schema": {
+        "known_profile_bad_implementation": {
+          "exception": "ValueError",
+          "message": "Native extraction implementation must contain exactly its required fields",
+          "secret_omitted": true,
+          "files_unchanged_by_audit": true
+        },
+        "unknown_name_bad_implementation": {
+          "status": "unknown",
+          "all_declared_bindings_agree": null,
+          "artifact_status": "matched",
+          "profile_status": "unknown",
+          "reason_codes": [
+            "unsupported_extraction_profile"
+          ],
+          "secret_omitted": true,
+          "files_unchanged_by_audit": true
+        },
+        "unknown_version_bad_implementation": {
+          "status": "unknown",
+          "all_declared_bindings_agree": null,
+          "artifact_status": "matched",
+          "profile_status": "unknown",
+          "reason_codes": [
+            "unsupported_extraction_profile"
+          ],
+          "secret_omitted": true,
+          "files_unchanged_by_audit": true
+        }
+      },
+      "failed_capture_contract_controls": {
+        "nonnull_raw_failed_capture": {
+          "status": "mismatch",
+          "all_declared_bindings_agree": false,
+          "artifact_status": "matched",
+          "profile_status": "unknown",
+          "reason_codes": [
+            "successful_complete_response_mismatch",
+            "transport_time_order_unspecified",
+            "source_retrieved_completion_instant_unspecified",
+            "failed_capture_has_no_successful_extraction_unspecified"
+          ],
+          "secret_omitted": true,
+          "files_unchanged_by_audit": true
+        },
+        "raw_null_failed_capture": {
+          "exception": "ValueError",
+          "message": "raw artifact must contain exactly its required fields",
+          "secret_omitted": true,
+          "files_unchanged_by_audit": true
+        }
+      },
+      "execution": {
+        "synthetic_temporary_fixture_roots": 1,
+        "GETs": 0,
+        "Store_or_DB_constructors": 0,
+        "real_DB_accesses": 0,
+        "production_or_test_edits": 0,
+        "producer_tests_rerun": 0,
+        "full_suite_runs": 0
+      },
+      "limits": [
+        "No false matched result was found in these discrepancies.",
+        "Failure raw:null is not in the frozen v1 nullable list, so its rejection is a control, not a reported bug.",
+        "The audit is an internal declaration check, not authenticity, extraction replay, historical occurrence or financial certification."
+      ]
+    }
+  },
+  "execution": {
+    "GETs": 0,
+    "Store_or_DB_constructors": 0,
+    "actual_DB_accesses": 0,
+    "production_or_test_edits": 0,
+    "old_artifact_edits": 0,
+    "producer_tests_rerun": 0,
+    "full_suite_runs": 0
+  },
+  "limits": [
+    "Bounded native-binding review and one synthetic fixture; not a broad fuzz/performance/restore/authentication audit.",
+    "Findings affect validation/result semantics; no false matched result was reproduced.",
+    "Production fixes are left to parent/producer and all v1 source/design artifacts are preserved."
+  ]
+}

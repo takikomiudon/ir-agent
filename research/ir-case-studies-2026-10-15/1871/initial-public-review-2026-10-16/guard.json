@@ -1,0 +1,53 @@
+{
+  "company_id": "jp:1871",
+  "maximum_GETs": 5,
+  "user_agent": "Codex-IR-Research/0.1",
+  "allowed_requests": [
+    {
+      "role": "issuer_robots",
+      "url": "https://www.psc.co.jp/robots.txt",
+      "basis": "robots endpoint for selected CSV official host"
+    },
+    {
+      "role": "issuer_root",
+      "url": "https://www.psc.co.jp/",
+      "basis": "selected CSV official_url"
+    },
+    {
+      "role": "results_index",
+      "url": "https://www.psc.co.jp/about/ir/library/financial_report.html",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[1].html_visible_text.links[60]",
+      "literal_href": "/about/ir/library/financial_report.html",
+      "label": "IR情報の決算短信に2027年3月期 第１四半期決算短信〔日本基準〕（連結）を追加しました。"
+    }
+  ],
+  "robots_reviews": {
+    "www.psc.co.jp": {
+      "proceed": true,
+      "branch": "complete404_missingrobots",
+      "raw_file": "research/ir-case-studies-2026-10-15/1871/initial-public-review-2026-10-16/raw/eb251747eda6d23e1307971d892c85c9e09fe539bd03d0b9ccadb46ab8a16589",
+      "raw_sha256": "eb251747eda6d23e1307971d892c85c9e09fe539bd03d0b9ccadb46ab8a16589",
+      "meaning": "Missing robots HTTP404, not parsed issuer404 HTML as rule permission"
+    }
+  },
+  "holds_file": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+  "holds_sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952",
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu"
+  ],
+  "no_feed_JS_form_host_bypass": true,
+  "maximum_PDF_full_text_pages": 20,
+  "maximum_semantic_image_PDF_pages": 4
+}

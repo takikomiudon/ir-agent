@@ -1,0 +1,129 @@
+{
+  "company_id": "jp:4318",
+  "as_of": "2026-10-16T10:43:45.912661+00:00",
+  "synthetic": false,
+  "status": "source_values_matched",
+  "required_paths": [
+    "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+    "scenarios.reported_annual_reference.inputs.eps_jpy"
+  ],
+  "missing_paths": [],
+  "inputs": [
+    {
+      "path": "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+      "value": "345.24",
+      "status": "source_value_matched",
+      "reason_codes": [],
+      "meaning_review_status": "unreviewed",
+      "meaning_checks": [
+        "unit_not_verified",
+        "period_not_verified",
+        "definition_not_verified",
+        "authorship_and_forecast_status_not_verified"
+      ],
+      "source_id": "disclosed-facts:6359dbeaa58c711f166fabfc6028785046120736fdaa2227c488596f1e08a10b",
+      "kind": "reported_fact",
+      "author": "株式会社クイック",
+      "unit": "JPY-per-share",
+      "period": "{\"as_of_date\": \"2026-03-31\", \"date_basis\": \"Financial-position row at annual end from exact p1 duration end; reviewer asserts stock instant, not duration\", \"label\": \"2026年3月期\", \"period_kind\": \"instant\"}",
+      "recorded_at": "2026-10-16T10:43:45.912661+00:00",
+      "reference": "research/ir-case-studies-2026-10-15/4318/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json#/sources/1/content (JSON text)/facts/1/value; fact_id=4318-reported-BPS-at-20260331",
+      "value_path": [
+        "content",
+        "facts",
+        1,
+        "value"
+      ],
+      "rationale": "Direct issuer annual reported per-share candidate, already split adjusted. Meaning/model adoption not certified. Direct consolidated BPS at annual end. Not individual282.57, total net assets divided by inferred shares or current October BPS.",
+      "missing_meaning_fields": [],
+      "source_lineage_ids": [
+        "disclosed-facts:6359dbeaa58c711f166fabfc6028785046120736fdaa2227c488596f1e08a10b",
+        "case-public:7304bcc072a7a497d7bdfede25cf02938f6c4fee91df789d9fc96cafb8c682db"
+      ],
+      "normalization_checks": [
+        {
+          "source_id": "disclosed-facts:6359dbeaa58c711f166fabfc6028785046120736fdaa2227c488596f1e08a10b",
+          "applicable": true,
+          "status": "reproduced",
+          "reason_codes": [],
+          "financial_inputs_verified": false,
+          "meaning_review_required": true,
+          "original_content_sha256_status": "matched",
+          "original_snapshot_sha256_status": "matched_supplied_snapshot",
+          "original_source_id": "case-public:7304bcc072a7a497d7bdfede25cf02938f6c4fee91df789d9fc96cafb8c682db"
+        }
+      ],
+      "source_fact_id": "4318-reported-BPS-at-20260331",
+      "source_fact_kind": "reported_fact",
+      "source_value": "345.24"
+    },
+    {
+      "path": "scenarios.reported_annual_reference.inputs.eps_jpy",
+      "value": "74.11",
+      "status": "source_value_matched",
+      "reason_codes": [],
+      "meaning_review_status": "unreviewed",
+      "meaning_checks": [
+        "unit_not_verified",
+        "period_not_verified",
+        "definition_not_verified",
+        "authorship_and_forecast_status_not_verified"
+      ],
+      "source_id": "disclosed-facts:6359dbeaa58c711f166fabfc6028785046120736fdaa2227c488596f1e08a10b",
+      "kind": "reported_fact",
+      "author": "株式会社クイック",
+      "unit": "JPY-per-share",
+      "period": "{\"date_basis\": \"Exact dates in p1 consolidated annual earnings heading\", \"end_date\": \"2026-03-31\", \"label\": \"2026年3月期\", \"period_kind\": \"annual_reported_duration\", \"start_date\": \"2025-04-01\"}",
+      "recorded_at": "2026-10-16T10:43:45.912661+00:00",
+      "reference": "research/ir-case-studies-2026-10-15/4318/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json#/sources/1/content (JSON text)/facts/0/value; fact_id=4318-reported-annual-EPS-FY2026",
+      "value_path": [
+        "content",
+        "facts",
+        0,
+        "value"
+      ],
+      "rationale": "Direct issuer annual reported per-share candidate, already split adjusted. Meaning/model adoption not certified. Direct annual consolidated basic EPS. Not issuer guide50.00, individual66.80, diluted dash zero or reconstructed NI/shares.",
+      "missing_meaning_fields": [],
+      "source_lineage_ids": [
+        "disclosed-facts:6359dbeaa58c711f166fabfc6028785046120736fdaa2227c488596f1e08a10b",
+        "case-public:7304bcc072a7a497d7bdfede25cf02938f6c4fee91df789d9fc96cafb8c682db"
+      ],
+      "normalization_checks": [
+        {
+          "source_id": "disclosed-facts:6359dbeaa58c711f166fabfc6028785046120736fdaa2227c488596f1e08a10b",
+          "applicable": true,
+          "status": "reproduced",
+          "reason_codes": [],
+          "financial_inputs_verified": false,
+          "meaning_review_required": true,
+          "original_content_sha256_status": "matched",
+          "original_snapshot_sha256_status": "matched_supplied_snapshot",
+          "original_source_id": "case-public:7304bcc072a7a497d7bdfede25cf02938f6c4fee91df789d9fc96cafb8c682db"
+        }
+      ],
+      "source_fact_id": "4318-reported-annual-EPS-FY2026",
+      "source_fact_kind": "reported_fact",
+      "source_value": "74.11"
+    }
+  ],
+  "aggregation": "unweighted",
+  "expected_value_available": false,
+  "unset_probability_paths": [
+    "scenarios.reported_annual_reference.probability"
+  ],
+  "meaning_review_required": true,
+  "financial_inputs_verified": false,
+  "source_snapshot_sha256": {
+    "case-public:7304bcc072a7a497d7bdfede25cf02938f6c4fee91df789d9fc96cafb8c682db": "cad8d5782fdc58295e5a5e260adc2cb7fcd245d843bae31a26be1e76b1e81f5e",
+    "disclosed-facts:6359dbeaa58c711f166fabfc6028785046120736fdaa2227c488596f1e08a10b": "fe5a3398332a834294339a36b46ce1cd86d7fa132a8341df05348075b287dac9"
+  },
+  "limitations": [
+    "Numerical equality with a saved field does not verify units, periods, accounting definitions, authorship, or the meaning of a forecast.",
+    "Missing unit or period labels remain explicit meaning-review tasks; supplied labels are not automatically verified.",
+    "Explicit assumptions and synthetic examples are recorded declarations, not recommended or empirically validated inputs.",
+    "Audit status concerns only configured numerical paths; unset probabilities are neither audited nor supplied and do not produce an expected value.",
+    "This standalone audit reads only supplied source snapshots and does not consult live database classification corrections.",
+    "Known disclosed-fact normalization is replayed against its supplied original; unknown providers are not inferred to use that contract, and whole-snapshot commitments are reported separately from content reproduction.",
+    "No values, scenario probabilities, costs, or trading conditions are inferred; saved timestamps are supplied records, not independent proof of collection."
+  ]
+}

@@ -1,0 +1,3066 @@
+{
+  "schema_version": 1,
+  "record_type": "research_issue_answer_owner_backlog",
+  "recorded_at": "2026-10-15T17:26:41.938577+00:00",
+  "status": "research_dependency_map_only_no_readiness_or_investment_decision",
+  "monitoring_baseline": {
+    "file": "research/ir-research-monitoring-integration-2026-10-15/actual-case-requests-v8.json",
+    "sha256": "0ac22d89bb1296e50ce30d90f978df9557ef36b69b378071da92a9b807717ab3",
+    "company_count": 6,
+    "source_inventory_entry_count": 35,
+    "report_ref": "monitor-report",
+    "DB_rechecked_here": false,
+    "source_import_note": "1518ニュース一覧・7525FAQは保存済み親actual-intake参照で取り込み済み。未登録資料とは記載しない。"
+  },
+  "owner_categories": {
+    "company_public": "会社が公表した原表/注記・公表版（確認作業は研究担当）",
+    "issuer_definition_conditional": "会社が定める公表指標/会計・集計範囲。会社IRは公開補足の候補で回答保証はない。",
+    "external_author": "外部著者/データ提供者の用語・解釈・予測仕様。外部事実の検証と著者の意図は別。",
+    "investor": "研究担当/利用者による出典付きモデル適合・評価式/採用方針"
+  },
+  "author_method_sources": [
+    {
+      "id": "AT03",
+      "source_artifact": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+      "source_sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+      "quote": "**Thesis impact**: Does this strengthen, weaken, or neutralize a specific pillar?",
+      "location": {
+        "character_start": 1388,
+        "character_end_exclusive": 1469,
+        "offset_unit": "Unicode code points",
+        "line_start": 30
+      },
+      "evidence_kind": "preserved_author_text",
+      "fixed_commit_url": "https://raw.githubusercontent.com/anthropics/financial-services-plugins/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md",
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26"
+    },
+    {
+      "id": "EP01",
+      "source_artifact": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+      "source_sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+      "quote": "Review the company's prior quarter earnings call for any guidance or commentary",
+      "location": {
+        "character_start": 675,
+        "character_end_exclusive": 754,
+        "offset_unit": "Unicode code points",
+        "line_start": 15
+      },
+      "evidence_kind": "preserved_author_text",
+      "fixed_commit_url": "https://raw.githubusercontent.com/anthropics/financial-services-plugins/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/earnings-preview/SKILL.md",
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26"
+    },
+    {
+      "id": "DM01",
+      "source_artifact": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt",
+      "source_sha256": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106",
+      "quote": "Tie your narrative to key numbers that you will be using in your valuation.",
+      "location": {
+        "character_start": 1590,
+        "character_end_exclusive": 1665,
+        "offset_unit": "Unicode code points",
+        "normalization": "Whitespace collapsed; offsets refer to the normalized selected text, not original PDF bytes"
+      },
+      "evidence_kind": "preserved_author_text",
+      "original_url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/eqprojspr25.pdf",
+      "original_page_or_slide": "slide4",
+      "original_raw_file": "research/ir-policy-adoption-2026-10-15/evidence/454e360e2efebcc9616e6eddd46b0dcc7f477d15aca75412a377b2d4db9e0dce.raw",
+      "original_raw_sha256": "454e360e2efebcc9616e6eddd46b0dcc7f477d15aca75412a377b2d4db9e0dce"
+    }
+  ],
+  "author_vs_project_boundary": "Anthropicは会社/期/出典・既存pillarへの情報影響、Damodaranは評価に用いる数字と説明の対応を求める。会社IRの順序、答えの所有者、以下のDAGや研究草案statusはproject適応で、原著がこの6社や具体質問/閾値を指定したものではない。",
+  "sequence": [
+    {
+      "stage": "public_comparison_first",
+      "meaning": "既存著者論点に同じ期/定義/版の利用可能な公開根拠を対応し、既答を除く。単なる収集再試行/同義previewを作らない。",
+      "source_principles": [
+        "EP01",
+        "AT03"
+      ]
+    },
+    {
+      "stage": "conditional_research_preflight",
+      "meaning": "公開で残る会社固有定義だけを条件付き研究草案の対象へ。135A/7525は既存草案を使い、他4社に今回新質問を作らない。著者の意味は並行して別所有者として保持。",
+      "source_principles": [
+        "AT03"
+      ],
+      "project_adaptation": true
+    },
+    {
+      "stage": "numeric_evidence_and_adoption_when_needed",
+      "meaning": "数値評価が必要になった会社/モデルだけ、説明→数量→利益/CF/株基準→評価と方針の適合を確認。不足は未設定で保持し、APIを通すために補わない。",
+      "source_principles": [
+        "DM01"
+      ],
+      "project_adaptation": true
+    }
+  ],
+  "cases": [
+    {
+      "company_id": "jp:135A",
+      "issue_id": "135A-author-condition-case-monitor",
+      "published_reuse_not_new_questions": [
+        "受注ベースの累計社数、継続売上の差引式、年度内累計AI平均単価、累計/単独/通期予想の別、金沢営業開始は既存会社引用で確認済み。",
+        "同じ説明を新たなIR質問へ戻さない。"
+      ],
+      "forecast_origin": "会社通期予想とAENTROの将来の条件付き見方を分離。KPI社数/単価/比率自体はEPS予測ではない。",
+      "existing_state_reference": "135A-preflight",
+      "existing_state_selected": "draft_only_not_registered_or_sent",
+      "financial_bridge_gap": "顧客/単価/継続売上/拠点→利益→税後EPSの数量関係は未確認。中間CFOを将来FCFFや年率値へ置換しない。",
+      "task_ids": [
+        "135A-public-basis",
+        "135A-company-definition",
+        "135A-author-boundary"
+      ],
+      "evidence_refs": [
+        "monitor-135A",
+        "135A-kpi",
+        "135A-preflight",
+        "135A-cf"
+      ]
+    },
+    {
+      "company_id": "jp:1518",
+      "issue_id": "1518-existing-business-and-investment-profit-drivers",
+      "published_reuse_not_new_questions": [
+        "会社の7月修正と8月据置の版、投資配当/売却益のP/L区分・セグメント利益外、四半期CF未作成、分割/自己株等の四半期注記は既知。",
+        "山洋の年次予想への包含と当時の実施予定は既知。最新の限定ニュース一覧は取り込み済みだが実施完了/連結開始は未確認。"
+      ],
+      "forecast_origin": "FISCOの掲載通期値と既存EPS/DPS4factsは会社予想の版別参照。FISCO独自EPS予測にしない。投資益の将来重要性は著者の定性見方。",
+      "existing_state_reference": "1518-conditions",
+      "existing_state_selected": "1518-existing-business-and-investment-profit-drivers",
+      "financial_bridge_gap": "営業/営業外/特別/OCI/税後現金と予想版の差を分けた将来利益/CF、株基準・評価モデルの採用が不足。四半期投資益を恒常利益にしない。",
+      "task_ids": [
+        "1518-public-basis",
+        "1518-company-definition",
+        "1518-author-boundary"
+      ],
+      "evidence_refs": [
+        "monitor-1518",
+        "1518-conditions",
+        "1518-acquisition",
+        "1518-ingest",
+        "1518-EPS-DPS"
+      ]
+    },
+    {
+      "company_id": "jp:1721",
+      "issue_id": "1721-author-condition-case-monitor",
+      "published_reuse_not_new_questions": [
+        "会社HTMLの事業別とグループ別は別表で、グループ間取引未消去の注記がある。Q1季節性/据置説明とSRの強み3/弱み3は既存引用にある。",
+        "SRの通期数値は会社計画再掲。旧会社HTMLとSRの純利益表示差は単位算術と経済的同一性を分離し、原raw精度点検後も原因は未選択。"
+      ],
+      "forecast_origin": "SR会社計画再掲をSR独自NI/EPS予測としない。合理化/寡占優位/IT遅れ等はSRの解釈である。",
+      "existing_state_reference": "1721-conditions",
+      "existing_state_selected": "See referenced existing record; not recomputed.",
+      "financial_bridge_gap": "会社計画の同版・単位/精度整合と、事業mix/合理化→税後EPSへの根拠付き橋渡し・公正評価の採用が不足。",
+      "task_ids": [
+        "1721-public-basis",
+        "1721-company-definition",
+        "1721-author-boundary"
+      ],
+      "evidence_refs": [
+        "monitor-1721",
+        "1721-conditions",
+        "1721-precision",
+        "1721-issuer"
+      ]
+    },
+    {
+      "company_id": "jp:7525",
+      "issue_id": "7525-author-watch-original-product-ratio",
+      "published_reuse_not_new_questions": [
+        "会社GP/LVの比率目標の掲載、自社/グループ/専売仕入品という既存外部説明、メーカー機能の会社説明は既知。",
+        "GP/LV・空の静的説明資料入口・最新FAQ10問の限定確認でも連単/内部取引/共通性は未解決。FAQは取り込み済みでpreflight-v2を変更しない。"
+      ],
+      "forecast_origin": "QUICK予想EPSは会社純利益予想由来の換算。比率目標も会社目標で、著者独自EPS/許容停滞幅の代替ではない。",
+      "existing_state_reference": "7525-preflight",
+      "existing_state_selected": "research_preflight_not_ready_for_registration_or_send",
+      "financial_bridge_gap": "売上構成比→利益/税後EPSの感応度や数量関係、公正倍率/評価式の採用は未確認。会社NI換算EPSを独自予測にしない。",
+      "task_ids": [
+        "7525-public-basis",
+        "7525-company-definition",
+        "7525-author-boundary"
+      ],
+      "evidence_refs": [
+        "monitor-7525",
+        "7525-conditions",
+        "7525-plan",
+        "7525-preflight",
+        "7525-FAQ",
+        "7525-FAQ-ingest",
+        "7525-EPS"
+      ]
+    },
+    {
+      "company_id": "jp:8151",
+      "issue_id": "8151-astris-20250603-forecast-conditions-monitor",
+      "published_reuse_not_new_questions": [
+        "Astris2025の著者E6facts/4条件とQUICK2026の会社NI由来EPSは別作者/別時点。EPSがQUICK算出であることは原注記に回答済み。",
+        "QUICK表紙株数は自己株式含む、EPS分母は除く。CAPM直近/平均/WACCと市場PERは各役割を分離済み。"
+      ],
+      "forecast_origin": "Astris Eは既存著者予測。QUICK EPSは会社NIの著者計算で、独自利益予測候補は確認範囲で0。後報をAstrisの改訂にしない。",
+      "existing_state_reference": "8151-hold",
+      "existing_state_selected": "issuer_body_acquisition_held_by_AI_specific_robots",
+      "financial_bridge_gap": "古い独自予測の金融適合・新会社NI換算の株基準、事業前提→税後EPS/FCFと評価式の対応が未確認。資本コストだけでDCFを完成させない。",
+      "task_ids": [
+        "8151-public-basis",
+        "8151-company-definition",
+        "8151-author-boundary"
+      ],
+      "evidence_refs": [
+        "monitor-8151",
+        "8151-conditions",
+        "8151-comparison",
+        "8151-hold"
+      ]
+    },
+    {
+      "company_id": "jp:9765",
+      "issue_id": "9765-sessa-author-conditions-monitor",
+      "published_reuse_not_new_questions": [
+        "民間比率は受注高で官公庁/民間/連結子会社を別区分。国交省日額は外部基準/全職種単純平均で会社実現単価ではない。",
+        "SIRのEPSは会社予想再処理、利益率は会社基準。人員純増は著者観察点、複数改善要因をformalAND/ORや十分条件にしていない。"
+      ],
+      "forecast_origin": "会社EPSをSIRが再処理した表示と、利益率上振れ/EPS引上げカタリストという定性解釈を分離。独自点EPS予測にしない。",
+      "existing_state_reference": "9765-conditions",
+      "existing_state_selected": "See referenced existing record; not recomputed.",
+      "financial_bridge_gap": "価格/案件mix/賃金/人員→利益率→税後EPSの数量bridgeと、公正倍率/価格条件の採用が不足。国交省単価上昇を会社EPSへ線形換算しない。",
+      "task_ids": [
+        "9765-public-basis",
+        "9765-company-definition",
+        "9765-author-boundary"
+      ],
+      "evidence_refs": [
+        "monitor-9765",
+        "9765-conditions",
+        "9765-recheck",
+        "9765-issuer"
+      ]
+    },
+    {
+      "company_id": "jp:6754",
+      "company_name": "アンリツ",
+      "issue_id": "6754-author-watch-communications-recovery",
+      "task_ids": [
+        "6754-public-definition-residual",
+        "6754-author-specification-residual",
+        "6754-investor-input-adoption"
+      ],
+      "published_reuse_not_new_questions": [
+        "5QのDC/光通信/モバイル/PQA等は既答。通信の受注・売上/利益、通期据置とPQA需要背景は既存公表比較済み。",
+        "PQA自動化/省人化投資・北米食肉X線需要という会社帰属は公開説明済み。数量/地域/費用寄与の独立分解ではない。"
+      ],
+      "financial_bridge_gap": "通信/DC・PQAの受注/需要/mix/費用から将来同期間税後EPS/CFへ移す根拠と、公正評価式・採用方針が未採用。会社の通期据置やQ1増益だけでIR回答の金融path/価格条件を作らない。",
+      "existing_state_selected": "research_only_financial_inputs_unadopted_no_new_IR",
+      "evidence_refs": [
+        "v4-6754-case",
+        "v4-6754-notes",
+        "v4-6754-checkpoint",
+        "v4-capabilities"
+      ],
+      "no_old19_dependency_added": true
+    },
+    {
+      "company_id": "jp:6323",
+      "company_name": "ローツェ",
+      "issue_id": "6323-author-watch-demand-supply-factory",
+      "task_ids": [
+        "6323-public-definition-residual",
+        "6323-author-specification-residual",
+        "6323-investor-input-adoption"
+      ],
+      "published_reuse_not_new_questions": [
+        "会社の先端/AP受注見通し、在庫/先行手配/代替調達・増員等の供給施策、工場前倒し計画と条件付き拡張は公表済み。",
+        "一般FY/国内連結と海外子会社Q月範囲、AP用途図/Tape Frame Sorter/PLP EFEMの製品例は既答。工場工程固有の年/Q割当や実稼働、AP採用/mix/利益効果とは別。"
+      ],
+      "financial_bridge_gap": "需要/在庫/供給/工場の説明→将来売上・費用/税・再投資/株数→EPS/CFの対応と選択評価式/方針は未採用。4500目標からPEを逆算せず、設備床面積やAP写真を利益へ換算しない。",
+      "existing_state_selected": "research_only_financial_inputs_unadopted_no_new_IR",
+      "evidence_refs": [
+        "v4-6323-case",
+        "v4-6323-presentation",
+        "v4-6323-factory-basis",
+        "v4-6323-AP",
+        "v4-6323-AP-parent",
+        "v4-6323-checkpoint",
+        "v4-capabilities"
+      ],
+      "no_old19_dependency_added": true
+    },
+    {
+      "company_id": "jp:1723",
+      "company_name": "日本電技",
+      "issue_id": "1723-author-watch-margin-capacity",
+      "task_ids": [
+        "1723-public-definition-residual",
+        "1723-author-specification-residual",
+        "1723-investor-input-adoption"
+      ],
+      "published_reuse_not_new_questions": [
+        "一般事業モデル、特命/新設→既設循環、追加原価/価格転嫁/季節性/人員確保リスクは著者公開章で説明済み。会社原典の同定義認証ではない。",
+        "会社短信/説明カテゴリ各1GET200・staticempty eir/PDF0で有限確認は完了。個別PDF未特定を非公表/全資料不存在にしない。",
+        "author3sourceは親が16:56:50.577804UTCに実保存。旧caseのfile-only末尾は担当入力範囲に限るという後続checkpointを採用。"
+      ],
+      "financial_bridge_gap": "1Qと通期の粗利/営業利益を分けた将来税後EPS/CF・施工/追加原価感応度と評価式/方針が未採用。参考市場PER14.7をfairPEにせず、1Q増益を年率化しない。",
+      "existing_state_selected": "research_only_financial_inputs_unadopted_no_new_IR",
+      "evidence_refs": [
+        "v4-1723-case",
+        "v4-1723-checkpoint",
+        "v4-1723-primary-stop",
+        "v4-1723-author-import",
+        "v4-capabilities"
+      ],
+      "no_old19_dependency_added": true
+    },
+    {
+      "company_id": "jp:2983",
+      "company_name": "アールプランナー",
+      "issue_id": "2983-author-watch-volume-margin-leverage",
+      "task_ids": [
+        "2983-public-definition-residual",
+        "2983-author-specification-residual",
+        "2983-investor-input-adoption"
+      ],
+      "published_reuse_not_new_questions": [
+        "Sept10会社原表のEPS304.27/親会社NI3250百万円、期/日本基準連結、会社split日/1対2と会社EPS/DPS/株数注記の明示範囲は確認済み。著者のEPSbasisは別。",
+        "粗利/SGA構成比・分譲mixと累計の商品/地域販売数、単価寄与の会社説明は既答。",
+        "p14/15/62/63は完了済み。受注高/棟数、商品に土地/中古を含む区分、地域、累計1Q–2Qと2Q単独の表示は公開で解消。4頁を次の未実施読取へ戻さない。",
+        "会社原本3sourceは親17:21:13.605908UTCに実保存。比較/4頁producer記録は基礎6頁の独立原本点検と区別し、追加意味点検の未了をpassとしない。"
+      ],
+      "financial_bridge_gap": "独自EPS3期を直接値の候補として使える比較範囲を踏まえ、選択対象期/評価式・fairPE・採用方針と価格条件の出典が未採用。正確な将来分母の保証をEPS採用の一律必須条件にしない。市場PER5.2と12monthforward peer6.1をfairPEへ逆算/平均で補わない。",
+      "existing_state_selected": "research_only_financial_inputs_unadopted_no_new_IR",
+      "evidence_refs": [
+        "v4-2983-case",
+        "v4-2983-comparison",
+        "v4-2983-comparison-validation",
+        "v4-2983-orders",
+        "v4-2983-orders-validation",
+        "v4-2983-original-independent",
+        "v4-2983-NI-correction",
+        "v4-2983-EPS-facts",
+        "v4-2983-EPS-index",
+        "v4-2983-issuer-import",
+        "v4-2983-checkpoint",
+        "v4-capabilities"
+      ],
+      "no_old19_dependency_added": true
+    }
+  ],
+  "tasks": [
+    {
+      "id": "135A-public-basis",
+      "company_ids": [
+        "jp:135A"
+      ],
+      "existing_issue_ids": [
+        "135A-author-condition-case-monitor"
+      ],
+      "answer_owner_class": "company_public",
+      "answer_owner": "会社が公表した原表/注記・公表版（確認作業は研究担当）",
+      "unresolved_point": "次に実際に保存された同定義の顧客/売上コホート/拠点資料を既存5観測へ対応させる。既読KPIの再抽出や半期の年率化はしない。",
+      "necessary_materials": [
+        "既存KPI比較と、その後に利用可能になった会社説明/定義注記・同じ期間の原表"
+      ],
+      "completion_condition": "顧客単位・売上コホート・期間/実績予想を対応付け、確認できた項目と未取得・未確認/意味不一致を分けて旧論点へ追記できる。無変化なら同義previewを増やさない。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "135A-company-definition",
+          "when": "会社定義の未解決が残る場合"
+        },
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該会社で数値評価を実際に検討する場合"
+        }
+      ],
+      "work_state": "unresolved_public_source_or_meaning_gap",
+      "evidence_refs": [
+        "monitor-135A",
+        "135A-kpi",
+        "135A-preflight",
+        "135A-cf"
+      ],
+      "method_principles": [
+        "EP01",
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "有限公開確認は完了したが不足残存",
+          "次の同定義根拠は状態未確認"
+        ],
+        "completed_scope": [
+          "保存15本文の関連語句/定義点検と、原表KPI比較を実施済み。受注ベースは既答。",
+          "CF原表30行の現在実績→予測/安定期への不足整理も保存済みで、将来FCFFへの転用はしていない。"
+        ],
+        "remaining_gap": [
+          "累計の1社単位・入口/除外・重複・過去値変更と比較期間の一貫性。",
+          "新しい同定義顧客/売上コホート/拠点資料がこの整理後に出たかは今回Webで確認していない。"
+        ],
+        "restart_evidence_required": [
+          "同じ指標/期間の新たな会社原表又は定義注記が実際に保存され、既存15本文と区別できること。管理日到来時も、既読資料を未試行へ戻さず差分/未確認範囲を点検する。"
+        ],
+        "attempt_evidence_refs": [
+          "135A-definition-review",
+          "135A-company-comparison",
+          "135A-cf",
+          "monitor-v10"
+        ],
+        "explicitly_not_performed_scope": [],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "135A-company-definition",
+      "company_ids": [
+        "jp:135A"
+      ],
+      "existing_issue_ids": [
+        "135A-author-condition-case-monitor"
+      ],
+      "answer_owner_class": "issuer_definition_conditional",
+      "answer_owner": "会社が定める公表指標/会計・集計範囲。会社IRは公開補足の候補で回答保証はない。",
+      "unresolved_point": "初回は既存preflight-v2の1社単位と比較期間の範囲変更有無だけ。受注ベースの既知説明、未公表足元社数や顧客名を求めない。",
+      "necessary_materials": [
+        "会社公表の顧客集計単位/変更注記、既存customer-counting-question-preflight-v2"
+      ],
+      "completion_condition": "公開で解けたら草案を廃止。残る場合は既存A/B/部分/無回答の研究解釈を保ち、明示範囲だけ比較可とし、正式登録/送信へ自動移行しない。",
+      "depends_on": [
+        {
+          "task_id": "135A-public-basis",
+          "relation": "conditional",
+          "when": "利用可能な公開根拠を先に点検しても会社固有の定義が残る場合だけ。公開で解けたら草案対象から除外。"
+        }
+      ],
+      "next_dependencies": [
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該定義/著者解釈を選択モデルへ使う場合だけ。未定義は保留でき、他社研究を止めない。"
+        }
+      ],
+      "work_state": "conditional_definition_backlog_no_new_question",
+      "evidence_refs": [
+        "monitor-135A",
+        "135A-kpi",
+        "135A-preflight",
+        "135A-cf"
+      ],
+      "method_principles": [
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "会社定義の根拠待ち",
+          "研究草案は作成済み・正式確認は未実施"
+        ],
+        "completed_scope": [
+          "customer-counting-question-preflight-v2で1社単位/期間一貫性の研究質問を限定済み。",
+          "公開受注基準と会社系列/著者目安の別軸を整理済み。"
+        ],
+        "remaining_gap": [
+          "1社の集約/更新規程と期間変更の公表根拠。会社系列の定義が解けても著者の単位/許容幅は別。"
+        ],
+        "restart_evidence_required": [
+          "同じ対象の公表定義/注記又は正当に利用可能な公開補足の原文と対象期間。公表で解ければ既存草案を除く。"
+        ],
+        "attempt_evidence_refs": [
+          "135A-definition-review",
+          "135A-preflight"
+        ],
+        "explicitly_not_performed_scope": [
+          "正式question登録・実送信/実返信による確認。現草案を返信待ちとしない。"
+        ],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "135A-author-boundary",
+      "company_ids": [
+        "jp:135A"
+      ],
+      "existing_issue_ids": [
+        "135A-author-condition-case-monitor"
+      ],
+      "answer_owner_class": "external_author",
+      "answer_owner": "外部著者/データ提供者の用語・解釈・予測仕様。外部事実の検証と著者の意図は別。",
+      "unresolved_point": "AENTROの近傍/近辺/前後の幅、頭打ち期間、CAGR基準期/FYラベルと著者の拠点条件の対応は著者側。明示AND条件を片側だけで成立させない。",
+      "necessary_materials": [
+        "保存AENTRO原文を引用する既存条件比較、著者が公表した定義/改訂が実際に入手できた場合はその原文"
+      ],
+      "completion_condition": "著者自身の定義が見つかれば原文/版で対応し、なければ未定義を維持。会社KPIやIR回答から著者の許容幅を作らない。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該定義/著者解釈を選択モデルへ使う場合だけ。未定義は保留でき、他社研究を止めない。"
+        }
+      ],
+      "work_state": "author_meaning_unresolved_no_company_guarantee",
+      "evidence_refs": [
+        "monitor-135A",
+        "135A-kpi",
+        "135A-preflight",
+        "135A-cf"
+      ],
+      "method_principles": [
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "著者定義待ち",
+          "既存著者条件の読取/公開値比較は完了"
+        ],
+        "completed_scope": [
+          "AENTROの明示AND条件と、会社KPIを同じ論点で照合済み。曖昧な幅とCAGR基準を未定義のまま保持。"
+        ],
+        "remaining_gap": [
+          "近傍/近辺/前後の許容幅、頭打ち期間、CAGR基準期/FY、著者の拠点条件との対応。"
+        ],
+        "restart_evidence_required": [
+          "同じclaimについて著者が定義/訂正した原文と版が実際に得られること。会社IRや現KPIから著者の意図を補完しない。"
+        ],
+        "attempt_evidence_refs": [
+          "135A-kpi",
+          "135A-preflight"
+        ],
+        "explicitly_not_performed_scope": [],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "1518-public-basis",
+      "company_ids": [
+        "jp:1518"
+      ],
+      "existing_issue_ids": [
+        "1518-existing-business-and-investment-profit-drivers"
+      ],
+      "answer_owner_class": "company_public",
+      "answer_owner": "会社が公表した原表/注記・公表版（確認作業は研究担当）",
+      "unresolved_point": "山洋の実際の完了/連結開始・比較範囲と、既存事業/投資収益を別々に追える後続原表が不足。既読ニュース一覧や予定日を実施証拠へ再解釈しない。",
+      "necessary_materials": [
+        "後続の実施/連結範囲を明示する公表資料が利用可能になった場合の本文、同範囲の事業別実績と投資収益/税/OCI注記"
+      ],
+      "completion_condition": "完了事実・実際の範囲/期が原文で確認できる、又は限定取得範囲では未確認と記録する。利益区分/期/会社予想版を混ぜない。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "1518-company-definition",
+          "when": "会社定義の未解決が残る場合"
+        },
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該会社で数値評価を実際に検討する場合"
+        }
+      ],
+      "work_state": "unresolved_public_source_or_meaning_gap",
+      "evidence_refs": [
+        "monitor-1518",
+        "1518-conditions",
+        "1518-acquisition",
+        "1518-ingest",
+        "1518-EPS-DPS"
+      ],
+      "method_principles": [
+        "EP01",
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "有限公開確認は完了したが不足残存",
+          "取得実施/連結開始の状態未確認"
+        ],
+        "completed_scope": [
+          "会社Q1/7月予想修正の既存比較、旧新EPS/DPSの別版構造化は完了。",
+          "公式ニュース一覧の追補は1GETで終了。山洋7月告知はあったが、完了を示す新href/本文は得られなかった。"
+        ],
+        "remaining_gap": [
+          "実際の取得完了日、連結開始/対象範囲、同範囲の既存事業/投資収益の後続原表。"
+        ],
+        "restart_evidence_required": [
+          "予定/取得告知とは別に、実施又は連結開始を明示する新しい会社原文が保存されること。旧一覧/予定日を再解釈して解決済みにしない。"
+        ],
+        "attempt_evidence_refs": [
+          "1518-public-followup",
+          "1518-conditions",
+          "1518-EPS-DPS",
+          "monitor-v10"
+        ],
+        "explicitly_not_performed_scope": [
+          "新完了hrefがなかったため追加本文GET。これは元の限定確認の完了であり、未完了又は全社非公表の判定ではない。"
+        ],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "1518-company-definition",
+      "company_ids": [
+        "jp:1518"
+      ],
+      "existing_issue_ids": [
+        "1518-existing-business-and-investment-profit-drivers"
+      ],
+      "answer_owner_class": "issuer_definition_conditional",
+      "answer_owner": "会社が定める公表指標/会計・集計範囲。会社IRは公開補足の候補で回答保証はない。",
+      "unresolved_point": "公開原表を読んでも残る会社固有の連結対象/事業区分や、開示投資収益の公表帰属範囲だけが定義候補。既知の利益区分を再質問しない。",
+      "necessary_materials": [
+        "会社の連結/セグメント・投資収益帰属の公表注記、対象期/範囲の比較表"
+      ],
+      "completion_condition": "公表定義で特定できる範囲だけを対応付ける。全連結配当/売却益をMMIへ一括帰属させず、将来運用益/通期EPS分母/取引完了の保証を求めない。今回新草案は作らない。",
+      "depends_on": [
+        {
+          "task_id": "1518-public-basis",
+          "relation": "conditional",
+          "when": "利用可能な公開根拠を先に点検しても会社固有の定義が残る場合だけ。公開で解けたら草案対象から除外。"
+        }
+      ],
+      "next_dependencies": [
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該定義/著者解釈を選択モデルへ使う場合だけ。未定義は保留でき、他社研究を止めない。"
+        }
+      ],
+      "work_state": "conditional_definition_backlog_no_new_question",
+      "evidence_refs": [
+        "monitor-1518",
+        "1518-conditions",
+        "1518-acquisition",
+        "1518-ingest",
+        "1518-EPS-DPS"
+      ],
+      "method_principles": [
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "会社定義の根拠待ち",
+          "P後に残る場合だけ・新質問草案未作成"
+        ],
+        "completed_scope": [
+          "営業/営業外/特別/OCIと投資事業帰属を分けて公開比較済み。既知P/L区分を再質問しない整理を保存。"
+        ],
+        "remaining_gap": [
+          "正式な連結開始/事業範囲、公開注記でも残る投資収益帰属の対応。"
+        ],
+        "restart_evidence_required": [
+          "Pの同じ期/範囲の原表・注記を確認してもなお会社固有の定義が残ること。既知区分/将来利益保証を問い直す根拠にはしない。"
+        ],
+        "attempt_evidence_refs": [
+          "1518-conditions",
+          "1518-public-followup"
+        ],
+        "explicitly_not_performed_scope": [
+          "このtaskの新IR質問草案・登録・送信。返信待ちではない。"
+        ],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "1518-author-boundary",
+      "company_ids": [
+        "jp:1518"
+      ],
+      "existing_issue_ids": [
+        "1518-existing-business-and-investment-profit-drivers"
+      ],
+      "answer_owner_class": "external_author",
+      "answer_owner": "外部著者/データ提供者の用語・解釈・予測仕様。外部事実の検証と著者の意図は別。",
+      "unresolved_point": "FISCOの重要性が増す/可能性という解釈に、観測期間・重要性最低値・反復性の数値規則はない。",
+      "necessary_materials": [
+        "既存FISCO6月レポートの著者記述、後続の著者公表説明が実際に得られた場合はその版"
+      ],
+      "completion_condition": "著者が示した範囲のみを採り、未定義は未解決。会社へ将来投資益の継続や著者の確信を保証させない。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該定義/著者解釈を選択モデルへ使う場合だけ。未定義は保留でき、他社研究を止めない。"
+        }
+      ],
+      "work_state": "author_meaning_unresolved_no_company_guarantee",
+      "evidence_refs": [
+        "monitor-1518",
+        "1518-conditions",
+        "1518-acquisition",
+        "1518-ingest",
+        "1518-EPS-DPS"
+      ],
+      "method_principles": [
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "著者定義待ち",
+          "既存著者条件と会社予想帰属の整理は完了"
+        ],
+        "completed_scope": [
+          "FISCOの既存事業＋投資利益という定性的観測条件を抽出済み。会社計画と著者の可能性表現を分離。"
+        ],
+        "remaining_gap": [
+          "重要性が増す/可能性の観測期間・重要性最低値・反復性の規則。"
+        ],
+        "restart_evidence_required": [
+          "同じ見方を定義/改訂した著者原文と日付が実際に得られること。会社の将来運用益から著者規則を作らない。"
+        ],
+        "attempt_evidence_refs": [
+          "1518-conditions"
+        ],
+        "explicitly_not_performed_scope": [],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "1721-public-basis",
+      "company_ids": [
+        "jp:1721"
+      ],
+      "existing_issue_ids": [
+        "1721-author-condition-case-monitor"
+      ],
+      "answer_owner_class": "company_public",
+      "answer_owner": "会社が公表した原表/注記・公表版（確認作業は研究担当）",
+      "unresolved_point": "未取得の正式原表/同版予想と、表示精度・事業区分/内部消去の対応が必要。精度原因の有限raw点検は完了済みなので新根拠なしに繰り返さない。",
+      "necessary_materials": [
+        "許可範囲で利用可能な正式会社原表/予想公表版と精度注記、同定義事業別・グループ別表"
+      ],
+      "completion_condition": "原表/公表版/精度で対応が確認されるか、原因不明を維持。表示差を切捨て/改訂/転記と自己決定せず値を上書きしない。SR追加取得保留も維持。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "1721-company-definition",
+          "when": "会社定義の未解決が残る場合"
+        },
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該会社で数値評価を実際に検討する場合"
+        }
+      ],
+      "work_state": "unresolved_public_source_or_meaning_gap",
+      "evidence_refs": [
+        "monitor-1721",
+        "1721-conditions",
+        "1721-precision",
+        "1721-issuer"
+      ],
+      "method_principles": [
+        "EP01",
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "有限公開確認は完了したが不足残存",
+          "正式本文の取得経路は限定確認で終了"
+        ],
+        "completed_scope": [
+          "正式短信入口は静的領域が空で実PDF hrefなしの結果を保存。会社計画HTMLの事業区分/グループ未消去注記を確認済み。",
+          "原HTMLの表示精度/代替数値/埋込JSON点検も完了し、NI表示差の原因は未特定。"
+        ],
+        "remaining_gap": [
+          "正式原表/同版の予想とCF有無、NI表示差の精度/版/転載原因、事業区分との対応。"
+        ],
+        "restart_evidence_required": [
+          "許可された範囲で実際に得られた正式会社原表又は原因を明示する新注記。既読rawの同じ数値検索だけを再実行しない。"
+        ],
+        "attempt_evidence_refs": [
+          "1721-issuer-attempt",
+          "1721-precision",
+          "1721-conditions",
+          "monitor-v10"
+        ],
+        "explicitly_not_performed_scope": [
+          "元限定taskではJS取得/実行・別経路探索を行っていない。その未実施範囲を今回の自動再開候補にしない。"
+        ],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "1721-company-definition",
+      "company_ids": [
+        "jp:1721"
+      ],
+      "existing_issue_ids": [
+        "1721-author-condition-case-monitor"
+      ],
+      "answer_owner_class": "issuer_definition_conditional",
+      "answer_owner": "会社が定める公表指標/会計・集計範囲。会社IRは公開補足の候補で回答保証はない。",
+      "unresolved_point": "会社自身の表示精度/予想版公表日、事業区分と報告セグメント・内部消去/再分類、公開合理化指標の定義に限る。",
+      "necessary_materials": [
+        "会社表固有の注記/公表日、事業/顧客区分と消去/費用定義の公表説明"
+      ],
+      "completion_condition": "既知の未消去注記は再質問せず、残った定義範囲だけを特定。ITという同名グループを事業へ置換せず、SRの同業優位/合理化評価の保証を求めない。新草案は未作成。",
+      "depends_on": [
+        {
+          "task_id": "1721-public-basis",
+          "relation": "conditional",
+          "when": "利用可能な公開根拠を先に点検しても会社固有の定義が残る場合だけ。公開で解けたら草案対象から除外。"
+        }
+      ],
+      "next_dependencies": [
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該定義/著者解釈を選択モデルへ使う場合だけ。未定義は保留でき、他社研究を止めない。"
+        }
+      ],
+      "work_state": "conditional_definition_backlog_no_new_question",
+      "evidence_refs": [
+        "monitor-1721",
+        "1721-conditions",
+        "1721-precision",
+        "1721-issuer"
+      ],
+      "method_principles": [
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "会社定義の根拠待ち",
+          "P後に残る場合だけ・新質問草案未作成"
+        ],
+        "completed_scope": [
+          "未消去のグループ別表と事業区分/セグメントが別という公開上の区別は整理済み。"
+        ],
+        "remaining_gap": [
+          "会社固有の表示精度/予想元公表版、区分・消去/再分類と合理化指標の定義。"
+        ],
+        "restart_evidence_required": [
+          "正式原表/公表注記の新根拠をPで対応づけ、それでも残る会社固有定義を特定できること。SRの相対評価を会社へ保証させない。"
+        ],
+        "attempt_evidence_refs": [
+          "1721-conditions",
+          "1721-precision",
+          "1721-issuer-attempt"
+        ],
+        "explicitly_not_performed_scope": [
+          "新IR質問草案・登録・送信。返信待ちではない。"
+        ],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "1721-author-boundary",
+      "company_ids": [
+        "jp:1721"
+      ],
+      "existing_issue_ids": [
+        "1721-author-condition-case-monitor"
+      ],
+      "answer_owner_class": "external_author",
+      "answer_owner": "外部著者/データ提供者の用語・解釈・予測仕様。外部事実の検証と著者の意図は別。",
+      "unresolved_point": "SR6claimの構造的評価・相対同業比較、合理化実行力/キャリア依存等の許容幅や数値反証は未定義。外部市場/顧客投資の事実と著者の判断を分ける。",
+      "necessary_materials": [
+        "既存SR6連続引用と、必要なら利用可能な同業/顧客投資の公表事実。著者の新規公表説明は取得制約内に限る。"
+      ],
+      "completion_condition": "SR自身の意図と外部観測のどちらを確認したか分ける。Q1一回の増減で構造的claimを成立/反証認定せず、未定義はnull。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該定義/著者解釈を選択モデルへ使う場合だけ。未定義は保留でき、他社研究を止めない。"
+        }
+      ],
+      "work_state": "author_meaning_unresolved_no_company_guarantee",
+      "evidence_refs": [
+        "monitor-1721",
+        "1721-conditions",
+        "1721-precision",
+        "1721-issuer"
+      ],
+      "method_principles": [
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "著者定義待ち",
+          "既知host保留で追加取得停止"
+        ],
+        "completed_scope": [
+          "SR強み3/弱み3のclaimと会社計画転載を分け、外部市場/著者解釈の必要部分を整理済み。"
+        ],
+        "remaining_gap": [
+          "構造評価・合理化実行力・相対優位/依存の許容幅や反証規則。",
+          "SR追加取得は保存済みAI個別規則を踏まえたproject holdのまま。"
+        ],
+        "restart_evidence_required": [
+          "著者の同じclaimを定義/改訂する利用可能な原文。対象hostの追加取得は既存保留を変える具体的根拠と別途の範囲確認がない限り再開しない。"
+        ],
+        "attempt_evidence_refs": [
+          "1721-conditions",
+          "1721-external-hold",
+          "known-host-holds"
+        ],
+        "explicitly_not_performed_scope": [],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "7525-public-basis",
+      "company_ids": [
+        "jp:7525"
+      ],
+      "existing_issue_ids": [
+        "7525-author-watch-original-product-ratio"
+      ],
+      "answer_owner_class": "company_public",
+      "answer_owner": "会社が公表した原表/注記・公表版（確認作業は研究担当）",
+      "unresolved_point": "比率固有の売上範囲/内部取引/GP-LV共通性を明示する公表注記が必要。既読FAQやGP/LVを同義再調査せず、新しい根拠の有無を区別する。",
+      "necessary_materials": [
+        "比率算定範囲を明示する会社公表資料/注記が利用可能となった場合の原文。既存GP/LV/FAQと説明資料入口の限定結果。"
+      ],
+      "completion_condition": "同じ対象の定義が見つかれば既存草案を廃止/限定。未確認ならその範囲を残し、全社非公表や現在の受付を断定しない。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "7525-company-definition",
+          "when": "会社定義の未解決が残る場合"
+        },
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該会社で数値評価を実際に検討する場合"
+        }
+      ],
+      "work_state": "unresolved_public_source_or_meaning_gap",
+      "evidence_refs": [
+        "monitor-7525",
+        "7525-conditions",
+        "7525-plan",
+        "7525-preflight",
+        "7525-FAQ",
+        "7525-FAQ-ingest",
+        "7525-EPS"
+      ],
+      "method_principles": [
+        "EP01",
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "有限公開確認は完了したが不足残存",
+          "既知host保留で動的本文経路停止"
+        ],
+        "completed_scope": [
+          "GP/LV/FAQ10問/静的説明入口を点検済み。loader JSと正確data hostのrobotsを確認し、データ/PDF前で停止済み。",
+          "既存QUICK61–63頁＋既存66頁をcase-v2へ統合済み。個別自社製品/費用要因・業界再分類・会社計画の利益段階差は読取済みで、新しい会社発表/独立原典は増えていない。"
+        ],
+        "remaining_gap": [
+          "全オリジナル品比率の同一定義最新系列、売上分母の連単/内部取引、GP/LVの共通性。",
+          "p63表示棒の合計差と未表示の全社調整は原因不明。業界分類/個別製品販売からratio定義を作らない。"
+        ],
+        "restart_evidence_required": [
+          "比率固有の売上範囲を明示する公表注記又は同じ範囲の新原表。datahost再取得は保留を変える具体的根拠がなければ再開しない。既読追加頁の同義previewを作らない。"
+        ],
+        "attempt_evidence_refs": [
+          "7525-case-v2",
+          "7525-case-v2-independent",
+          "7525-case-v2-checkpoint",
+          "7525-quarter-read",
+          "7525-loader-stop",
+          "7525-FAQ",
+          "monitor-v10"
+        ],
+        "explicitly_not_performed_scope": [],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "7525-company-definition",
+      "company_ids": [
+        "jp:7525"
+      ],
+      "existing_issue_ids": [
+        "7525-author-watch-original-product-ratio"
+      ],
+      "answer_owner_class": "issuer_definition_conditional",
+      "answer_owner": "会社が定める公表指標/会計・集計範囲。会社IRは公開補足の候補で回答保証はない。",
+      "unresolved_point": "既存preflight-v2の1問、比率算定に使う売上の連単/グループ内取引とGP-LV共通性だけ。三分類/OEM等へ拡大しない。",
+      "necessary_materials": [
+        "原会社算定定義または公表掲載場所、既存preflight-v2とA/B/C"
+      ],
+      "completion_condition": "Aは対象GP/LVの売上範囲だけ比較可、B別範囲/再分類とC不明は比較保留。過去実績の期/分類や目標達成を認証せずnotreadyを維持。情報価値は未推定で0/正のどちらとも判定しない。",
+      "depends_on": [
+        {
+          "task_id": "7525-public-basis",
+          "relation": "conditional",
+          "when": "利用可能な公開根拠を先に点検しても会社固有の定義が残る場合だけ。公開で解けたら草案対象から除外。"
+        }
+      ],
+      "next_dependencies": [
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該定義/著者解釈を選択モデルへ使う場合だけ。未定義は保留でき、他社研究を止めない。"
+        }
+      ],
+      "work_state": "conditional_definition_backlog_no_new_question",
+      "evidence_refs": [
+        "monitor-7525",
+        "7525-conditions",
+        "7525-plan",
+        "7525-preflight",
+        "7525-FAQ",
+        "7525-FAQ-ingest",
+        "7525-EPS"
+      ],
+      "method_principles": [
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "会社定義の根拠待ち",
+          "既存preflight-v3維持・実返信未受信"
+        ],
+        "completed_scope": [
+          "連単/内部取引/GP-LV共通性だけの既存1問とABCを保持。FAQ/新case-v2でも定義は直接解決していない。",
+          "公開費用・業界再分類・会社計画の利益差は再質問を除けるが、ratioの定義回答とは別。"
+        ],
+        "remaining_gap": [
+          "対象GP/LVの売上算定範囲と共通性。現窓口・送信適格/現在quiet等、formal登録に必要な別要件も未確認のまま。"
+        ],
+        "restart_evidence_required": [
+          "同じratio算定範囲を示す公表原文が得られれば既存草案を除去/限定する。研究上の明確化を正式登録/送信又はEPS適用へ昇格しない。"
+        ],
+        "attempt_evidence_refs": [
+          "7525-current-preflight",
+          "7525-case-v2",
+          "7525-FAQ",
+          "7525-loader-stop"
+        ],
+        "explicitly_not_performed_scope": [
+          "正式question登録・送信・実IR返信確認。研究草案を返信待ちとは呼ばない。"
+        ],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "7525-author-boundary",
+      "company_ids": [
+        "jp:7525"
+      ],
+      "existing_issue_ids": [
+        "7525-author-watch-original-product-ratio"
+      ],
+      "answer_owner_class": "external_author",
+      "answer_owner": "外部著者/データ提供者の用語・解釈・予測仕様。外部事実の検証と著者の意図は別。",
+      "unresolved_point": "QUICKの伸び悩みを注視という言葉に、許容停滞幅・反証期間・最低進捗・公正倍率はない。",
+      "necessary_materials": [
+        "QUICK原文の既存注視引用、後続の著者公表定義/改訂が実際に得られた場合の原文"
+      ],
+      "completion_condition": "会社の売上範囲が解けても著者許容幅は別。長期会社目標を数カ月〜1年の達成義務へ変換しない。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該定義/著者解釈を選択モデルへ使う場合だけ。未定義は保留でき、他社研究を止めない。"
+        }
+      ],
+      "work_state": "author_meaning_unresolved_no_company_guarantee",
+      "evidence_refs": [
+        "monitor-7525",
+        "7525-conditions",
+        "7525-plan",
+        "7525-preflight",
+        "7525-FAQ",
+        "7525-FAQ-ingest",
+        "7525-EPS"
+      ],
+      "method_principles": [
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "著者定義待ち",
+          "追加頁読取と既存論点への統合は完了"
+        ],
+        "completed_scope": [
+          "著者のratio伸び悩み注視と会社長期目標を区別済み。case-v2の事業/費用説明を同じ論点へ対応づけた。"
+        ],
+        "remaining_gap": [
+          "停滞の許容幅・反証期間・最低進捗・目標倍率/価格。追加の四半期説明もこれらを定義していない。"
+        ],
+        "restart_evidence_required": [
+          "著者が同じratio注視の許容幅等を実際に定義した原文/版。会社目標又は比率定義の回答から著者の規則を補わない。"
+        ],
+        "attempt_evidence_refs": [
+          "7525-conditions",
+          "7525-case-v2",
+          "7525-case-v2-check"
+        ],
+        "explicitly_not_performed_scope": [],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "8151-public-basis",
+      "company_ids": [
+        "jp:8151"
+      ],
+      "existing_issue_ids": [
+        "8151-astris-20250603-forecast-conditions-monitor"
+      ],
+      "answer_owner_class": "company_public",
+      "answer_owner": "会社が公表した原表/注記・公表版（確認作業は研究担当）",
+      "unresolved_point": "正式会社実績/予想/株式調整の本文はrobots保留で未確認。年次ラベル一致やQUICKのQ3紹介だけでは旧著者予測の成否を判定できない。",
+      "necessary_materials": [
+        "取得許可と利用可能性を満たす会社正式資料の同じ期/版/会計/連結/株式基準の原文。既存holdを回避する別経路は計画しない。"
+      ],
+      "completion_condition": "利用可能な一次根拠で対応を確認するか、アクセス/意味不足を保留として維持。異なる株基準を補正してEPS誤差や最新会社値を作らない。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "8151-company-definition",
+          "when": "会社定義の未解決が残る場合"
+        },
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該会社で数値評価を実際に検討する場合"
+        }
+      ],
+      "work_state": "unresolved_public_source_or_meaning_gap",
+      "evidence_refs": [
+        "monitor-8151",
+        "8151-conditions",
+        "8151-comparison",
+        "8151-hold"
+      ],
+      "method_principles": [
+        "EP01",
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "既知host保留で停止",
+          "著者資料の有限比較は完了したが一次不足残存"
+        ],
+        "completed_scope": [
+          "会社hostのrobotsでAI個別禁止を確認し、短信入口/本文0で有限終了。",
+          "Astris独自EとQUICK会社NI由来EPSの作者/期/株基準比較は完了しており、会社一次本文の代替ではない。"
+        ],
+        "remaining_gap": [
+          "同じ期/版/会計/連結/株式基準の正式会社実績・予想・株式調整本文。"
+        ],
+        "restart_evidence_required": [
+          "保存holdを変更できる具体的な根拠と範囲確認、又は正当に利用可能となった対象原文そのもの。未読を業績0/旧予測の失敗と扱わず、UA/別host/転載で回避しない。"
+        ],
+        "attempt_evidence_refs": [
+          "8151-issuer-hold",
+          "8151-comparison",
+          "monitor-v10"
+        ],
+        "explicitly_not_performed_scope": [
+          "robots停止後の会社短信入口/PDF GET。意図的に未実行で、自動再試行対象ではない。"
+        ],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "8151-company-definition",
+      "company_ids": [
+        "jp:8151"
+      ],
+      "existing_issue_ids": [
+        "8151-astris-20250603-forecast-conditions-monitor"
+      ],
+      "answer_owner_class": "issuer_definition_conditional",
+      "answer_owner": "会社が定める公表指標/会計・集計範囲。会社IRは公開補足の候補で回答保証はない。",
+      "unresolved_point": "会社公表の受注/受注残/売上計上、納入と検収の会計定義、連結/株式・分割の事実の公表範囲に限る。",
+      "necessary_materials": [
+        "公表会社注記/予想版・株式/自己株/分割情報。公開確認後に残る会社固有定義のみ。"
+      ],
+      "completion_condition": "定義を明示された範囲だけ記録。納入=検収=計上を補わず、QUICK日次分母/算定日/平均窓や著者EPS感応度を会社へ保証させない。新草案は作らない。",
+      "depends_on": [
+        {
+          "task_id": "8151-public-basis",
+          "relation": "conditional",
+          "when": "利用可能な公開根拠を先に点検しても会社固有の定義が残る場合だけ。公開で解けたら草案対象から除外。"
+        }
+      ],
+      "next_dependencies": [
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該定義/著者解釈を選択モデルへ使う場合だけ。未定義は保留でき、他社研究を止めない。"
+        }
+      ],
+      "work_state": "conditional_definition_backlog_no_new_question",
+      "evidence_refs": [
+        "monitor-8151",
+        "8151-conditions",
+        "8151-comparison",
+        "8151-hold"
+      ],
+      "method_principles": [
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "会社定義の根拠待ち",
+          "Pの一次本文不足で条件付き待機"
+        ],
+        "completed_scope": [
+          "会社の公表値/株式事実と、QUICK独自計算の分母/日付/平均窓を別の所有者へ分ける整理は完了。"
+        ],
+        "remaining_gap": [
+          "受注/受注残/売上計上・納入/検収の会社定義と、同じ連結/株基準の一次対応。"
+        ],
+        "restart_evidence_required": [
+          "Pの正式原文が得られた後も残る公表会社定義を特定できること。QUICKの計算仕様や著者EPS感応度を会社へ保証させない。"
+        ],
+        "attempt_evidence_refs": [
+          "8151-conditions",
+          "8151-comparison",
+          "8151-issuer-hold"
+        ],
+        "explicitly_not_performed_scope": [
+          "このtaskの新IR草案・登録・送信。返信待ちではない。"
+        ],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "8151-author-boundary",
+      "company_ids": [
+        "jp:8151"
+      ],
+      "existing_issue_ids": [
+        "8151-astris-20250603-forecast-conditions-monitor"
+      ],
+      "answer_owner_class": "external_author",
+      "answer_owner": "外部著者/データ提供者の用語・解釈・予測仕様。外部事実の検証と著者の意図は別。",
+      "unresolved_point": "Astrisの納入/成長/mix/費用とEPSの数量感応度、QUICKの日次分母/計算日・CAPM平均窓・採用multipleは著者/データ提供者側。",
+      "necessary_materials": [
+        "既存Astris/QUICK原注記、著者または提供者が公表する定義/算定仕様が利用可能ならその原文"
+      ],
+      "completion_condition": "会社転載・著者換算・独自予測を維持して対応。定義がなければ未設定で、2媒体の平均/多数決/共通確率や投資先順位を作らない。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該定義/著者解釈を選択モデルへ使う場合だけ。未定義は保留でき、他社研究を止めない。"
+        }
+      ],
+      "work_state": "author_meaning_unresolved_no_company_guarantee",
+      "evidence_refs": [
+        "monitor-8151",
+        "8151-conditions",
+        "8151-comparison",
+        "8151-hold"
+      ],
+      "method_principles": [
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "著者定義待ち",
+          "出所/比較の有限確認は完了"
+        ],
+        "completed_scope": [
+          "既存6E予測/4条件を保持し、QUICK EPSは会社NI由来の著者計算と原注記で確認済み。",
+          "日次分母の自己株除外と表紙株数の自己株含む差、資本コスト推計/市場PERと公正倍率の別を整理済み。"
+        ],
+        "remaining_gap": [
+          "Astrisの事業前提→EPS感応度、QUICKの正確な計算日/日次分母・平均窓・採用multiple。"
+        ],
+        "restart_evidence_required": [
+          "同じ予測/計算に対応する著者又は提供者の公表仕様/改訂原文。原注記で既答のEPS出所を会社へ再質問しない。"
+        ],
+        "attempt_evidence_refs": [
+          "8151-conditions",
+          "8151-comparison"
+        ],
+        "explicitly_not_performed_scope": [],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "9765-public-basis",
+      "company_ids": [
+        "jp:9765"
+      ],
+      "existing_issue_ids": [
+        "9765-sessa-author-conditions-monitor"
+      ],
+      "answer_owner_class": "company_public",
+      "answer_owner": "会社が公表した原表/注記・公表版（確認作業は研究担当）",
+      "unresolved_point": "正式会社短信未取得で予想の期/版・株基準/利益率整合が不足。入口HTMLはindexのみ、既知禁止hostへ進まず、p25本文と表年ラベルの差は未補正。",
+      "necessary_materials": [
+        "許可範囲で利用可能な会社正式原表/予想版・受注/人員定義の注記。既存E-IR停止記録を尊重。"
+      ],
+      "completion_condition": "同じ期/範囲の基準が会社原典で対応するか未確認を維持。SIRの表年を自己訂正しない。入口取得を正式本文取得としない。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "9765-company-definition",
+          "when": "会社定義の未解決が残る場合"
+        },
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該会社で数値評価を実際に検討する場合"
+        }
+      ],
+      "work_state": "unresolved_public_source_or_meaning_gap",
+      "evidence_refs": [
+        "monitor-9765",
+        "9765-conditions",
+        "9765-recheck",
+        "9765-issuer"
+      ],
+      "method_principles": [
+        "EP01",
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "既知host保留で動的本文経路停止",
+          "有限入口確認は完了したが不足残存"
+        ],
+        "completed_scope": [
+          "公式短信入口HTML1GETはindexのみ、実PDF hrefなし。既知ssl4の禁止を踏まえscript/API/PDFへ進まず終了。",
+          "SESSA原文/指定頁の独立意味確認は完了済みだが、正式会社短信と同一視していない。"
+        ],
+        "remaining_gap": [
+          "会社正式原表の期/版/株基準と利益率。SESSA本文/表の年度差の原因。"
+        ],
+        "restart_evidence_required": [
+          "既存保留を変える具体的根拠と範囲確認、又は正当に利用可能になった正式会社原文。元の入口を未処理として取り直さない。"
+        ],
+        "attempt_evidence_refs": [
+          "9765-issuer-stop",
+          "9765-recheck",
+          "9765-conditions",
+          "monitor-v10"
+        ],
+        "explicitly_not_performed_scope": [
+          "既知禁止配信先script/API/PDF GETとJS実行。元の限定停止に属し、自動再試行しない。"
+        ],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "9765-company-definition",
+      "company_ids": [
+        "jp:9765"
+      ],
+      "existing_issue_ids": [
+        "9765-sessa-author-conditions-monitor"
+      ],
+      "answer_owner_class": "issuer_definition_conditional",
+      "answer_owner": "会社が定める公表指標/会計・集計範囲。会社IRは公開補足の候補で回答保証はない。",
+      "unresolved_point": "受注の官民/子会社bucketの正確な範囲、従業員/技術職/資格者の数え方、公開された契約/価格/mix/原価の定義だけ。",
+      "necessary_materials": [
+        "会社原表の連単/消去/人員計数・公開単価/費用/受注注記、公開Q&Aが利用可能ならその範囲"
+      ],
+      "completion_condition": "公開で既知の受注比率/国交省単価/スライド一般論は再質問しない。実現価格や稼働率の未取得・未確認部分を埋めず、将来受注/利益の保証を求めない。新草案は作らない。",
+      "depends_on": [
+        {
+          "task_id": "9765-public-basis",
+          "relation": "conditional",
+          "when": "利用可能な公開根拠を先に点検しても会社固有の定義が残る場合だけ。公開で解けたら草案対象から除外。"
+        }
+      ],
+      "next_dependencies": [
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該定義/著者解釈を選択モデルへ使う場合だけ。未定義は保留でき、他社研究を止めない。"
+        }
+      ],
+      "work_state": "conditional_definition_backlog_no_new_question",
+      "evidence_refs": [
+        "monitor-9765",
+        "9765-conditions",
+        "9765-recheck",
+        "9765-issuer"
+      ],
+      "method_principles": [
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "会社定義の根拠待ち",
+          "Pの一次本文不足で条件付き待機"
+        ],
+        "completed_scope": [
+          "受注の官民/子会社bucket、国交省一般日額と会社実現価格、人数/資格者の区別を既存著者記録で整理済み。"
+        ],
+        "remaining_gap": [
+          "会社一次原表の範囲/消去・人数計数・契約/実現価格/mix/費用の定義。"
+        ],
+        "restart_evidence_required": [
+          "Pの会社原表/公開Q&Aを同範囲で読んだ後、なお残る会社固有定義が特定されること。未確認実現価格/稼働率を埋めない。"
+        ],
+        "attempt_evidence_refs": [
+          "9765-conditions",
+          "9765-recheck",
+          "9765-issuer-stop"
+        ],
+        "explicitly_not_performed_scope": [
+          "新IR草案・登録・送信。返信待ちではない。"
+        ],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "9765-author-boundary",
+      "company_ids": [
+        "jp:9765"
+      ],
+      "existing_issue_ids": [
+        "9765-sessa-author-conditions-monitor"
+      ],
+      "answer_owner_class": "external_author",
+      "answer_owner": "外部著者/データ提供者の用語・解釈・予測仕様。外部事実の検証と著者の意図は別。",
+      "unresolved_point": "SIRの上振れ余地・需要捕捉という評価には最低人員増/利益率上振れ幅/許容期間や機械的十分条件がない。",
+      "necessary_materials": [
+        "保存SIR原文/独立再確認、著者が後続公表する解釈/改訂が実際に得られた場合の版"
+      ],
+      "completion_condition": "定性の要因列挙を定量規則へ強化せず、会社基準値を著者の買い/反証閾値にしない。著者の見方を会社保証にしない。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "investor-model-adoption-gap",
+          "when": "当該定義/著者解釈を選択モデルへ使う場合だけ。未定義は保留でき、他社研究を止めない。"
+        }
+      ],
+      "work_state": "author_meaning_unresolved_no_company_guarantee",
+      "evidence_refs": [
+        "monitor-9765",
+        "9765-conditions",
+        "9765-recheck",
+        "9765-issuer"
+      ],
+      "method_principles": [
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "著者定義待ち",
+          "既存著者構造の有限確認/独立点検は完了"
+        ],
+        "completed_scope": [
+          "上振れ/需要捕捉の著者定性と会社EPS基準・受注比率・一般単価を分離し、要因列挙をformal AND/ORにしない整理は完了。"
+        ],
+        "remaining_gap": [
+          "人員純増/利益率上振れの最低値・許容期間・機械的十分条件。本文と表年ラベルの原因未確認も保持。"
+        ],
+        "restart_evidence_required": [
+          "著者が同じ定性見方/年ラベルを定義・訂正した原文/版。会社基準値から著者の売買/反証閾値を生成しない。"
+        ],
+        "attempt_evidence_refs": [
+          "9765-conditions",
+          "9765-recheck"
+        ],
+        "explicitly_not_performed_scope": [],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "id": "investor-model-adoption-gap",
+      "company_ids": [
+        "jp:135A",
+        "jp:1518",
+        "jp:1721",
+        "jp:7525",
+        "jp:8151",
+        "jp:9765"
+      ],
+      "existing_issue_ids": [
+        "135A-author-condition-case-monitor",
+        "1518-existing-business-and-investment-profit-drivers",
+        "1721-author-condition-case-monitor",
+        "7525-author-watch-original-product-ratio",
+        "8151-astris-20250603-forecast-conditions-monitor",
+        "9765-sessa-author-conditions-monitor"
+      ],
+      "answer_owner_class": "investor",
+      "answer_owner": "研究担当/利用者による出典付きモデル適合・評価式/採用方針",
+      "unresolved_point": "KPI/事業説明から将来利益・税後EPS/CF、同じ株基準/期間の評価式と採用方針への根拠付き対応が不足。会社IRへ将来結果や著者許容幅を保証させない。",
+      "company_specific_gaps": {
+        "135A": "顧客/単価/継続売上/拠点→利益→税後EPSの数量関係は未確認。中間CFOを将来FCFFや年率値へ置換しない。",
+        "1518": "営業/営業外/特別/OCI/税後現金と予想版の差を分けた将来利益/CF、株基準・評価モデルの採用が不足。四半期投資益を恒常利益にしない。",
+        "1721": "会社計画の同版・単位/精度整合と、事業mix/合理化→税後EPSへの根拠付き橋渡し・公正評価の採用が不足。",
+        "7525": "売上構成比→利益/税後EPSの感応度や数量関係、公正倍率/評価式の採用は未確認。会社NI換算EPSを独自予測にしない。",
+        "8151": "古い独自予測の金融適合・新会社NI換算の株基準、事業前提→税後EPS/FCFと評価式の対応が未確認。資本コストだけでDCFを完成させない。",
+        "9765": "価格/案件mix/賃金/人員→利益率→税後EPSの数量bridgeと、公正倍率/価格条件の採用が不足。国交省単価上昇を会社EPSへ線形換算しない。"
+      },
+      "necessary_materials": [
+        "実際に選ぶ会社/モデルに適合する将来予測の出典、期間/単位/税/NCI/再投資/株数・希薄化の対応",
+        "モデルの適用理由と明示的な目標評価/退出・利用者又は外部方針の採用根拠。必要な価格根拠も別確認。"
+      ],
+      "completion_condition": "選択したモデルの各入力と前提を出典へ対応し、作者/実績・会社予想・著者換算/独自予測を保つ。足りなければ数値評価/方針採用は未解決のままにし、qualitativeな公開比較の継続は妨げない。欠損予測/倍率/確率/閾値を作らない。",
+      "depends_on": [
+        {
+          "task_id": "135A-public-basis",
+          "relation": "model_specific",
+          "when": "その会社のその原表/入力を数値評価へ使う場合だけ。他5社の完了を必須にしない。"
+        },
+        {
+          "task_id": "1518-public-basis",
+          "relation": "model_specific",
+          "when": "その会社のその原表/入力を数値評価へ使う場合だけ。他5社の完了を必須にしない。"
+        },
+        {
+          "task_id": "1721-public-basis",
+          "relation": "model_specific",
+          "when": "その会社のその原表/入力を数値評価へ使う場合だけ。他5社の完了を必須にしない。"
+        },
+        {
+          "task_id": "7525-public-basis",
+          "relation": "model_specific",
+          "when": "その会社のその原表/入力を数値評価へ使う場合だけ。他5社の完了を必須にしない。"
+        },
+        {
+          "task_id": "8151-public-basis",
+          "relation": "model_specific",
+          "when": "その会社のその原表/入力を数値評価へ使う場合だけ。他5社の完了を必須にしない。"
+        },
+        {
+          "task_id": "9765-public-basis",
+          "relation": "model_specific",
+          "when": "その会社のその原表/入力を数値評価へ使う場合だけ。他5社の完了を必須にしない。"
+        }
+      ],
+      "next_dependencies": [],
+      "work_state": "unresolved_numeric_evidence_and_adoption_no_implementation_proposal",
+      "evidence_refs": [
+        "135A-cf",
+        "1518-conditions",
+        "1721-precision",
+        "7525-EPS",
+        "8151-comparison",
+        "9765-conditions",
+        "method-Damodaran-text"
+      ],
+      "method_principles": [
+        "DM01",
+        "AT03"
+      ],
+      "project_adaptation": true,
+      "operational_progress": {
+        "labels": [
+          "投資家入力未採用",
+          "本人保有状態は未確認",
+          "必要な技術修正は完了・金融採用と別"
+        ],
+        "completed_scope": [
+          "6社の既存公開/著者比較と不足整理、7525 case-v2の費用/業界分類/利益段階差への限定対応は保存済み。",
+          "保有宣言receiptの主修正は親が受入済み、全1351件成功。これは新判断の入力資格の修正で、旧metadataを本人申告へ移していない。"
+        ],
+        "remaining_gap": [
+          "各社KPI/事業説明→将来税後EPS/CF、期間/株基準/評価式の適合と方針採用は未完。会社/著者待ちから独立に投資家側が持つ不足。",
+          "実企業の保有申告登録は受入記録時点0。窓口台帳held:falseを非保有の本人確認としない。既存current表示も保有再検証ではない。"
+        ],
+        "restart_evidence_required": [
+          "実際に選択する会社/モデルに適合する将来入力の出典・式・前提・採用記録と、判断に必要なら利用者の明示保有申告が得られること。コード成功/静的整理で欠損を埋めない。"
+        ],
+        "attempt_evidence_refs": [
+          "holding-accepted",
+          "holding-fullsuite",
+          "holding-scope",
+          "current-view-boundary",
+          "7525-case-v2",
+          "135A-cf",
+          "8151-comparison",
+          "method-Damodaran-text"
+        ],
+        "explicitly_not_performed_scope": [
+          "実企業の数値thesis/売買方針採用・保有申告・正式IR送信。この版では実行せず、未採用を未実装codeの作業へ戻さない。"
+        ],
+        "underlying_issue_resolved": false,
+        "interpretation": "状態は保存済み範囲の事実記録。新enum/API/job指示や送信適格の変更ではない。"
+      }
+    },
+    {
+      "company_ids": [
+        "jp:6754"
+      ],
+      "existing_issue_ids": [
+        "6754-author-watch-communications-recovery"
+      ],
+      "evidence_refs": [
+        "v4-6754-case",
+        "v4-6754-notes",
+        "v4-6754-checkpoint",
+        "v4-capabilities"
+      ],
+      "project_adaptation": true,
+      "financial_paths": null,
+      "priority": null,
+      "numeric_threshold": null,
+      "buy_sell_or_take_profit_rule": null,
+      "new_IR_draft": null,
+      "id": "6754-public-definition-residual",
+      "answer_owner_class": "company_public",
+      "answer_owner": "会社が公表する原表/注記・会社指標定義（確認は研究担当）。公開で残る必要な定義だけ条件付き会社補足候補。",
+      "unresolved_point": "既存27.3期1Qの先行受注と持続最終需要/売上/利益、PQA需要・mix・費用/棚卸圧縮の寄与を同一視しないため、次に実際に保存される同定義の後続観測を対応する。既読5Qや利益値を再質問しない。",
+      "necessary_materials": [
+        "既存5Q/説明/ノートの固定比較と、その後に実際に保存された同区分受注・売上/利益・費用/棚卸の公表原表/注記"
+      ],
+      "completion_condition": "対象期/事業と連結/受注・売上・利益段階を対応し、新しく確かめた部分と未取得・未確認を旧論点へ記録する。新根拠がなければ既読資料を未処理に戻さず終了。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "6754-investor-input-adoption",
+          "when": "この会社の当該入力を数値評価へ採用する場合だけ。公開比較は他社や著者待ちで全体停止しない。"
+        }
+      ],
+      "work_state": "bounded_public_definition_or_new_evidence_gap",
+      "method_principles": [
+        "EP01",
+        "AT03"
+      ],
+      "conditional_issuer_definition_scope": "新公表原表を点検しても前倒し受注/受注残/計上・費用区分の公表定義が不明で比較に必要な場合だけ、会社の公開説明所在を対象にする。最終需要や将来利益の保証は求めない。",
+      "operational_progress": {
+        "underlying_issue_resolved": false,
+        "interpretation": "保存範囲の試行/不足記録。新enum/API/job・ready計算・送信指示ではない。",
+        "labels": [
+          "既存有限公開比較は完了・次の同定義公表根拠待ち"
+        ],
+        "completed_scope": [
+          "5QのDC/光通信/モバイル/PQA等は既答。通信の受注・売上/利益、通期据置とPQA需要背景は既存公表比較済み。",
+          "PQA自動化/省人化投資・北米食肉X線需要という会社帰属は公開説明済み。数量/地域/費用寄与の独立分解ではない。"
+        ],
+        "remaining_gap": [
+          "既存27.3期1Qの先行受注と持続最終需要/売上/利益、PQA需要・mix・費用/棚卸圧縮の寄与を同一視しないため、次に実際に保存される同定義の後続観測を対応する。既読5Qや利益値を再質問しない。"
+        ],
+        "restart_evidence_required": [
+          "新しく保存された同じ事業区分/利益概念の原表・注記又は管理日に点検すべき具体差分。既知5Q/ノートの再読や同義previewだけでは再開しない。"
+        ],
+        "explicitly_not_performed_scope": [
+          "本backlogのGET/新原文読取・IR草案/登録/送信。"
+        ]
+      }
+    },
+    {
+      "company_ids": [
+        "jp:6754"
+      ],
+      "existing_issue_ids": [
+        "6754-author-watch-communications-recovery"
+      ],
+      "evidence_refs": [
+        "v4-6754-case",
+        "v4-6754-notes",
+        "v4-6754-checkpoint",
+        "v4-capabilities"
+      ],
+      "project_adaptation": true,
+      "financial_paths": null,
+      "priority": null,
+      "numeric_threshold": null,
+      "buy_sell_or_take_profit_rule": null,
+      "new_IR_draft": null,
+      "id": "6754-author-specification-residual",
+      "answer_owner_class": "external_author",
+      "answer_owner": "外部著者/提供者が定める解釈・予測/計算仕様。会社の公表事実確認とは別。",
+      "unresolved_point": "旧26.3期Q3/Q4以降の回復継続やPQA費用改善という著者見方の許容幅/期間・数量/EPS感応度は未定義。新会社Q1を同じ期の予測成績へしない。",
+      "necessary_materials": [
+        "固定Iwai著者引用と、同じ見方について実際に得られた著者の定義/改訂原文"
+      ],
+      "completion_condition": "同じclaim/forecastの著者自身の明示仕様・版を得た場合だけ対応する。なければ未定義を保持し、会社IRや投資家の逆算で著者の意味/分母/許容幅を補わない。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "6754-investor-input-adoption",
+          "when": "当該著者のその予測/条件を金融評価へ採用する場合だけ。著者仕様がなくても定性公開比較は継続可能。"
+        }
+      ],
+      "work_state": "external_author_specification_unknown_no_company_guarantee",
+      "method_principles": [
+        "AT03"
+      ],
+      "operational_progress": {
+        "underlying_issue_resolved": false,
+        "interpretation": "保存範囲の試行/不足記録。新enum/API/job・ready計算・送信指示ではない。",
+        "labels": [
+          "既存著者条件の限定抽出は完了・著者の追加仕様は根拠待ち"
+        ],
+        "completed_scope": [
+          "固定caseと出典/限定訂正を再利用。新しい著者定義や売買条件は作らない。"
+        ],
+        "remaining_gap": [
+          "旧26.3期Q3/Q4以降の回復継続やPQA費用改善という著者見方の許容幅/期間・数量/EPS感応度は未定義。新会社Q1を同じ期の予測成績へしない。"
+        ],
+        "restart_evidence_required": [
+          "同じclaim/予測に対応する著者の公表注記・改訂原文と対象期/版が実際に得られること。"
+        ],
+        "explicitly_not_performed_scope": [
+          "外部著者への連絡/依頼・新GET・会社IRへの代替保証要求。"
+        ]
+      }
+    },
+    {
+      "company_ids": [
+        "jp:6754"
+      ],
+      "existing_issue_ids": [
+        "6754-author-watch-communications-recovery"
+      ],
+      "evidence_refs": [
+        "v4-6754-case",
+        "v4-6754-notes",
+        "v4-6754-checkpoint",
+        "v4-capabilities"
+      ],
+      "project_adaptation": true,
+      "financial_paths": null,
+      "priority": null,
+      "numeric_threshold": null,
+      "buy_sell_or_take_profit_rule": null,
+      "new_IR_draft": null,
+      "id": "6754-investor-input-adoption",
+      "answer_owner_class": "investor",
+      "answer_owner": "利用者/研究担当による出典付き入力適合・評価式・金融方針の採用判断。",
+      "unresolved_point": "通信/DC・PQAの受注/需要/mix/費用から将来同期間税後EPS/CFへ移す根拠と、公正評価式・採用方針が未採用。会社の通期据置やQ1増益だけでIR回答の金融path/価格条件を作らない。",
+      "necessary_materials": [
+        "実際に選択する評価方式に必要な将来入力、実績/会社予想/外部予想/明示仮定の由来と対象期/通貨/税・株基準。",
+        "選択方式の式・適用理由と、利用者又は外部方針の明示採用根拠。判断に使う場合だけ価格根拠等も別途必要。"
+      ],
+      "completion_condition": "当該一社で実際に使う入力pathを出典へ対応し、採用か未設定を明示する。足りなければ金融評価・回答分岐・価格条件は未解決のまま。独自予測/倍率/割引率/確率/閾値を埋めず、コードや追加監査自体を目的にしない。",
+      "depends_on": [
+        {
+          "task_id": "6754-public-definition-residual",
+          "relation": "model_specific",
+          "when": "その会社の公表事実/定義を選択入力へ使う場合だけ。"
+        },
+        {
+          "task_id": "6754-author-specification-residual",
+          "relation": "model_specific",
+          "when": "その外部著者の未確認仕様を評価入力/反証条件へ採用する場合だけ。別の根拠付き方式を妨げない。"
+        }
+      ],
+      "next_dependencies": [],
+      "work_state": "investor_financial_input_and_policy_not_adopted",
+      "method_principles": [
+        "DM01",
+        "AT03"
+      ],
+      "operational_progress": {
+        "underlying_issue_resolved": false,
+        "interpretation": "保存範囲の試行/不足記録。新enum/API/job・ready計算・送信指示ではない。",
+        "labels": [
+          "投資家入力/方針未採用・会社IRへ評価責任を移さない"
+        ],
+        "completed_scope": [
+          "既存著者/会社研究と評価器・保存基盤は参照できるが、この会社の入力適合/価格条件を採用済みとはしない。"
+        ],
+        "remaining_gap": [
+          "通信/DC・PQAの受注/需要/mix/費用から将来同期間税後EPS/CFへ移す根拠と、公正評価式・採用方針が未採用。会社の通期据置やQ1増益だけでIR回答の金融path/価格条件を作らない。"
+        ],
+        "restart_evidence_required": [
+          "実際の方式/対象期と必要入力・株基準・評価/採用方針の出典が得られること。financialthesisを完成させるための仮値埋めはしない。"
+        ],
+        "explicitly_not_performed_scope": [
+          "実企業の数値thesis/売買方針採用・モデル計算・注文・正式IR送信。"
+        ]
+      }
+    },
+    {
+      "company_ids": [
+        "jp:6323"
+      ],
+      "existing_issue_ids": [
+        "6323-author-watch-demand-supply-factory"
+      ],
+      "evidence_refs": [
+        "v4-6323-case",
+        "v4-6323-presentation",
+        "v4-6323-factory-basis",
+        "v4-6323-AP",
+        "v4-6323-AP-parent",
+        "v4-6323-checkpoint",
+        "v4-capabilities"
+      ],
+      "project_adaptation": true,
+      "financial_paths": null,
+      "priority": null,
+      "numeric_threshold": null,
+      "buy_sell_or_take_profit_rule": null,
+      "new_IR_draft": null,
+      "id": "6323-public-definition-residual",
+      "answer_owner_class": "company_public",
+      "answer_owner": "会社が公表する原表/注記・会社指標定義（確認は研究担当）。公開で残る必要な定義だけ条件付き会社補足候補。",
+      "unresolved_point": "工場工程の年/Qの固有basis・実行状態、AP実受注/mix/納入、供給施策の実測効果に必要な同対象の会社公表根拠は未確認。一般p2定義や製品説明の再質問をせず、最初に新しい固有basis/実行注記があるかを確認する。",
+      "necessary_materials": [
+        "既存工場basis/供給/AP比較と、新しく実際に保存された工場工程注記・進捗又はAP/供給実績の定義付き原表"
+      ],
+      "completion_condition": "最初の限定対象を工場固有basis又は新公表進捗の一件に定め、既存原文との対応/未確認を記録する。計画を実施へ、用途/写真を採用・シェア・利益へ変換しない。新固有根拠がなければ不足を維持して終了。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "6323-investor-input-adoption",
+          "when": "この会社の当該入力を数値評価へ採用する場合だけ。公開比較は他社や著者待ちで全体停止しない。"
+        }
+      ],
+      "work_state": "bounded_public_definition_or_new_evidence_gap",
+      "method_principles": [
+        "EP01",
+        "AT03"
+      ],
+      "conditional_issuer_definition_scope": "新資料点検後も工程年/Qの会社表記や公表KPI範囲が比較に不可欠で不明な場合だけ、公開定義の所在を確認対象にする。能力充足・納期・採用・利益の将来保証を要求しない。",
+      "operational_progress": {
+        "underlying_issue_resolved": false,
+        "interpretation": "保存範囲の試行/不足記録。新enum/API/job・ready計算・送信指示ではない。",
+        "labels": [
+          "既存供給/工場/AP公開確認は完了・固有basis/実行根拠待ち"
+        ],
+        "completed_scope": [
+          "会社の先端/AP受注見通し、在庫/先行手配/代替調達・増員等の供給施策、工場前倒し計画と条件付き拡張は公表済み。",
+          "一般FY/国内連結と海外子会社Q月範囲、AP用途図/Tape Frame Sorter/PLP EFEMの製品例は既答。工場工程固有の年/Q割当や実稼働、AP採用/mix/利益効果とは別。"
+        ],
+        "remaining_gap": [
+          "工場工程の年/Qの固有basis・実行状態、AP実受注/mix/納入、供給施策の実測効果に必要な同対象の会社公表根拠は未確認。一般p2定義や製品説明の再質問をせず、最初に新しい固有basis/実行注記があるかを確認する。"
+        ],
+        "restart_evidence_required": [
+          "同工程の年/Q明示注記や完了/稼働の公表原文、又は定義付きAP実績/供給効果の新原表が実際に保存されること。既読p2/17/19/20/24/25を未試行へ戻さない。"
+        ],
+        "explicitly_not_performed_scope": [
+          "本backlogのGET/新原文読取・IR草案/登録/送信。"
+        ]
+      }
+    },
+    {
+      "company_ids": [
+        "jp:6323"
+      ],
+      "existing_issue_ids": [
+        "6323-author-watch-demand-supply-factory"
+      ],
+      "evidence_refs": [
+        "v4-6323-case",
+        "v4-6323-presentation",
+        "v4-6323-factory-basis",
+        "v4-6323-AP",
+        "v4-6323-AP-parent",
+        "v4-6323-checkpoint",
+        "v4-capabilities"
+      ],
+      "project_adaptation": true,
+      "financial_paths": null,
+      "priority": null,
+      "numeric_threshold": null,
+      "buy_sell_or_take_profit_rule": null,
+      "new_IR_draft": null,
+      "id": "6323-author-specification-residual",
+      "answer_owner_class": "external_author",
+      "answer_owner": "外部著者/提供者が定める解釈・予測/計算仕様。会社の公表事実確認とは別。",
+      "unresolved_point": "April著者B01/B02/B03の需要継続・供給確保・工場時期と、後続会社計画の同一性/許容幅は未認証。旧著者EPSと現在会社EPSの期/株basis・因果bridgeを会社に保証させない。",
+      "necessary_materials": [
+        "固定April著者3論点・手動画像引用と、その著者による実際の定義/改訂・予測株基準が得られた場合の原文"
+      ],
+      "completion_condition": "同じclaim/forecastの著者自身の明示仕様・版を得た場合だけ対応する。なければ未定義を保持し、会社IRや投資家の逆算で著者の意味/分母/許容幅を補わない。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "6323-investor-input-adoption",
+          "when": "当該著者のその予測/条件を金融評価へ採用する場合だけ。著者仕様がなくても定性公開比較は継続可能。"
+        }
+      ],
+      "work_state": "external_author_specification_unknown_no_company_guarantee",
+      "method_principles": [
+        "AT03"
+      ],
+      "operational_progress": {
+        "underlying_issue_resolved": false,
+        "interpretation": "保存範囲の試行/不足記録。新enum/API/job・ready計算・送信指示ではない。",
+        "labels": [
+          "既存著者条件の限定抽出は完了・著者の追加仕様は根拠待ち"
+        ],
+        "completed_scope": [
+          "固定caseと出典/限定訂正を再利用。新しい著者定義や売買条件は作らない。"
+        ],
+        "remaining_gap": [
+          "April著者B01/B02/B03の需要継続・供給確保・工場時期と、後続会社計画の同一性/許容幅は未認証。旧著者EPSと現在会社EPSの期/株basis・因果bridgeを会社に保証させない。"
+        ],
+        "restart_evidence_required": [
+          "同じclaim/予測に対応する著者の公表注記・改訂原文と対象期/版が実際に得られること。"
+        ],
+        "explicitly_not_performed_scope": [
+          "外部著者への連絡/依頼・新GET・会社IRへの代替保証要求。"
+        ]
+      }
+    },
+    {
+      "company_ids": [
+        "jp:6323"
+      ],
+      "existing_issue_ids": [
+        "6323-author-watch-demand-supply-factory"
+      ],
+      "evidence_refs": [
+        "v4-6323-case",
+        "v4-6323-presentation",
+        "v4-6323-factory-basis",
+        "v4-6323-AP",
+        "v4-6323-AP-parent",
+        "v4-6323-checkpoint",
+        "v4-capabilities"
+      ],
+      "project_adaptation": true,
+      "financial_paths": null,
+      "priority": null,
+      "numeric_threshold": null,
+      "buy_sell_or_take_profit_rule": null,
+      "new_IR_draft": null,
+      "id": "6323-investor-input-adoption",
+      "answer_owner_class": "investor",
+      "answer_owner": "利用者/研究担当による出典付き入力適合・評価式・金融方針の採用判断。",
+      "unresolved_point": "需要/在庫/供給/工場の説明→将来売上・費用/税・再投資/株数→EPS/CFの対応と選択評価式/方針は未採用。4500目標からPEを逆算せず、設備床面積やAP写真を利益へ換算しない。",
+      "necessary_materials": [
+        "実際に選択する評価方式に必要な将来入力、実績/会社予想/外部予想/明示仮定の由来と対象期/通貨/税・株基準。",
+        "選択方式の式・適用理由と、利用者又は外部方針の明示採用根拠。判断に使う場合だけ価格根拠等も別途必要。"
+      ],
+      "completion_condition": "当該一社で実際に使う入力pathを出典へ対応し、採用か未設定を明示する。足りなければ金融評価・回答分岐・価格条件は未解決のまま。独自予測/倍率/割引率/確率/閾値を埋めず、コードや追加監査自体を目的にしない。",
+      "depends_on": [
+        {
+          "task_id": "6323-public-definition-residual",
+          "relation": "model_specific",
+          "when": "その会社の公表事実/定義を選択入力へ使う場合だけ。"
+        },
+        {
+          "task_id": "6323-author-specification-residual",
+          "relation": "model_specific",
+          "when": "その外部著者の未確認仕様を評価入力/反証条件へ採用する場合だけ。別の根拠付き方式を妨げない。"
+        }
+      ],
+      "next_dependencies": [],
+      "work_state": "investor_financial_input_and_policy_not_adopted",
+      "method_principles": [
+        "DM01",
+        "AT03"
+      ],
+      "operational_progress": {
+        "underlying_issue_resolved": false,
+        "interpretation": "保存範囲の試行/不足記録。新enum/API/job・ready計算・送信指示ではない。",
+        "labels": [
+          "投資家入力/方針未採用・会社IRへ評価責任を移さない"
+        ],
+        "completed_scope": [
+          "既存著者/会社研究と評価器・保存基盤は参照できるが、この会社の入力適合/価格条件を採用済みとはしない。"
+        ],
+        "remaining_gap": [
+          "需要/在庫/供給/工場の説明→将来売上・費用/税・再投資/株数→EPS/CFの対応と選択評価式/方針は未採用。4500目標からPEを逆算せず、設備床面積やAP写真を利益へ換算しない。"
+        ],
+        "restart_evidence_required": [
+          "実際の方式/対象期と必要入力・株基準・評価/採用方針の出典が得られること。financialthesisを完成させるための仮値埋めはしない。"
+        ],
+        "explicitly_not_performed_scope": [
+          "実企業の数値thesis/売買方針採用・モデル計算・注文・正式IR送信。"
+        ]
+      }
+    },
+    {
+      "company_ids": [
+        "jp:1723"
+      ],
+      "existing_issue_ids": [
+        "1723-author-watch-margin-capacity"
+      ],
+      "evidence_refs": [
+        "v4-1723-case",
+        "v4-1723-checkpoint",
+        "v4-1723-primary-stop",
+        "v4-1723-author-import",
+        "v4-capabilities"
+      ],
+      "project_adaptation": true,
+      "financial_paths": null,
+      "priority": null,
+      "numeric_threshold": null,
+      "buy_sell_or_take_profit_rule": null,
+      "new_IR_draft": null,
+      "id": "1723-public-definition-residual",
+      "answer_owner_class": "company_public",
+      "answer_owner": "会社が公表する原表/注記・会社指標定義（確認は研究担当）。公開で残る必要な定義だけ条件付き会社補足候補。",
+      "unresolved_point": "27.3期1Q会社原資料の粗利/営業利益・通期予想、受注/繰越・施工体制・事業譲受寄与の同期間比較は未完了。既知empty eir経路を取り直さず、具体的で利用可能な原文根拠が得られるまで待機。",
+      "necessary_materials": [
+        "既存2カテゴリ停止結果と、別途実際に保存される同期間会社原表/注記・実リンクの来歴"
+      ],
+      "completion_condition": "入手できた一つの正式原表について期/会計範囲/利益概念/実績予想と株basisを明示し、著者の定性説明との対応範囲を記録する。原本がなければ不足保持で停止、迂回やJS/APIを追加しない。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "1723-investor-input-adoption",
+          "when": "この会社の当該入力を数値評価へ採用する場合だけ。公開比較は他社や著者待ちで全体停止しない。"
+        }
+      ],
+      "work_state": "bounded_public_definition_or_new_evidence_gap",
+      "method_principles": [
+        "EP01",
+        "AT03"
+      ],
+      "conditional_issuer_definition_scope": "原本が得られた後も、公表粗利/営業利益・既設/受注/繰越・施工指標の定義が比較に必要で残る場合だけ。一般リスクの存在や将来利益/施工成功は尋ね直さない。",
+      "operational_progress": {
+        "underlying_issue_resolved": false,
+        "interpretation": "保存範囲の試行/不足記録。新enum/API/job・ready計算・送信指示ではない。",
+        "labels": [
+          "同期間原本は有限試行済み未特定・具体的原文根拠待ち"
+        ],
+        "completed_scope": [
+          "一般事業モデル、特命/新設→既設循環、追加原価/価格転嫁/季節性/人員確保リスクは著者公開章で説明済み。会社原典の同定義認証ではない。",
+          "会社短信/説明カテゴリ各1GET200・staticempty eir/PDF0で有限確認は完了。個別PDF未特定を非公表/全資料不存在にしない。",
+          "author3sourceは親が16:56:50.577804UTCに実保存。旧caseのfile-only末尾は担当入力範囲に限るという後続checkpointを採用。"
+        ],
+        "remaining_gap": [
+          "27.3期1Q会社原資料の粗利/営業利益・通期予想、受注/繰越・施工体制・事業譲受寄与の同期間比較は未完了。既知empty eir経路を取り直さず、具体的で利用可能な原文根拠が得られるまで待機。"
+        ],
+        "restart_evidence_required": [
+          "新しく保存された同期間正式原本又は新たな実リンクの具体証拠と、既存アクセス制約に従う有限範囲。既存カテゴリが未処理だからという再試行はしない。"
+        ],
+        "explicitly_not_performed_scope": [
+          "本backlogのGET/新原文読取・IR草案/登録/送信。"
+        ]
+      }
+    },
+    {
+      "company_ids": [
+        "jp:1723"
+      ],
+      "existing_issue_ids": [
+        "1723-author-watch-margin-capacity"
+      ],
+      "evidence_refs": [
+        "v4-1723-case",
+        "v4-1723-checkpoint",
+        "v4-1723-primary-stop",
+        "v4-1723-author-import",
+        "v4-capabilities"
+      ],
+      "project_adaptation": true,
+      "financial_paths": null,
+      "priority": null,
+      "numeric_threshold": null,
+      "buy_sell_or_take_profit_rule": null,
+      "new_IR_draft": null,
+      "id": "1723-author-specification-residual",
+      "answer_owner_class": "external_author",
+      "answer_owner": "外部著者/提供者が定める解釈・予測/計算仕様。会社の公表事実確認とは別。",
+      "unresolved_point": "ENVALITHの本物/通期定着・下期採算の解釈/許容幅、個別report本文・独自EPS/評価式は未確認。年なしJuly22 previewの事業譲受から条件/期限を新造しない。",
+      "necessary_materials": [
+        "固定公開章/entry引用と、実際に利用可能となる著者の同claim定義・個別report本文・改訂"
+      ],
+      "completion_condition": "同じclaim/forecastの著者自身の明示仕様・版を得た場合だけ対応する。なければ未定義を保持し、会社IRや投資家の逆算で著者の意味/分母/許容幅を補わない。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "1723-investor-input-adoption",
+          "when": "当該著者のその予測/条件を金融評価へ採用する場合だけ。著者仕様がなくても定性公開比較は継続可能。"
+        }
+      ],
+      "work_state": "external_author_specification_unknown_no_company_guarantee",
+      "method_principles": [
+        "AT03"
+      ],
+      "operational_progress": {
+        "underlying_issue_resolved": false,
+        "interpretation": "保存範囲の試行/不足記録。新enum/API/job・ready計算・送信指示ではない。",
+        "labels": [
+          "既存著者条件の限定抽出は完了・著者の追加仕様は根拠待ち"
+        ],
+        "completed_scope": [
+          "固定caseと出典/限定訂正を再利用。新しい著者定義や売買条件は作らない。"
+        ],
+        "remaining_gap": [
+          "ENVALITHの本物/通期定着・下期採算の解釈/許容幅、個別report本文・独自EPS/評価式は未確認。年なしJuly22 previewの事業譲受から条件/期限を新造しない。"
+        ],
+        "restart_evidence_required": [
+          "同じclaim/予測に対応する著者の公表注記・改訂原文と対象期/版が実際に得られること。"
+        ],
+        "explicitly_not_performed_scope": [
+          "外部著者への連絡/依頼・新GET・会社IRへの代替保証要求。"
+        ]
+      }
+    },
+    {
+      "company_ids": [
+        "jp:1723"
+      ],
+      "existing_issue_ids": [
+        "1723-author-watch-margin-capacity"
+      ],
+      "evidence_refs": [
+        "v4-1723-case",
+        "v4-1723-checkpoint",
+        "v4-1723-primary-stop",
+        "v4-1723-author-import",
+        "v4-capabilities"
+      ],
+      "project_adaptation": true,
+      "financial_paths": null,
+      "priority": null,
+      "numeric_threshold": null,
+      "buy_sell_or_take_profit_rule": null,
+      "new_IR_draft": null,
+      "id": "1723-investor-input-adoption",
+      "answer_owner_class": "investor",
+      "answer_owner": "利用者/研究担当による出典付き入力適合・評価式・金融方針の採用判断。",
+      "unresolved_point": "1Qと通期の粗利/営業利益を分けた将来税後EPS/CF・施工/追加原価感応度と評価式/方針が未採用。参考市場PER14.7をfairPEにせず、1Q増益を年率化しない。",
+      "necessary_materials": [
+        "実際に選択する評価方式に必要な将来入力、実績/会社予想/外部予想/明示仮定の由来と対象期/通貨/税・株基準。",
+        "選択方式の式・適用理由と、利用者又は外部方針の明示採用根拠。判断に使う場合だけ価格根拠等も別途必要。"
+      ],
+      "completion_condition": "当該一社で実際に使う入力pathを出典へ対応し、採用か未設定を明示する。足りなければ金融評価・回答分岐・価格条件は未解決のまま。独自予測/倍率/割引率/確率/閾値を埋めず、コードや追加監査自体を目的にしない。",
+      "depends_on": [
+        {
+          "task_id": "1723-public-definition-residual",
+          "relation": "model_specific",
+          "when": "その会社の公表事実/定義を選択入力へ使う場合だけ。"
+        },
+        {
+          "task_id": "1723-author-specification-residual",
+          "relation": "model_specific",
+          "when": "その外部著者の未確認仕様を評価入力/反証条件へ採用する場合だけ。別の根拠付き方式を妨げない。"
+        }
+      ],
+      "next_dependencies": [],
+      "work_state": "investor_financial_input_and_policy_not_adopted",
+      "method_principles": [
+        "DM01",
+        "AT03"
+      ],
+      "operational_progress": {
+        "underlying_issue_resolved": false,
+        "interpretation": "保存範囲の試行/不足記録。新enum/API/job・ready計算・送信指示ではない。",
+        "labels": [
+          "投資家入力/方針未採用・会社IRへ評価責任を移さない"
+        ],
+        "completed_scope": [
+          "既存著者/会社研究と評価器・保存基盤は参照できるが、この会社の入力適合/価格条件を採用済みとはしない。"
+        ],
+        "remaining_gap": [
+          "1Qと通期の粗利/営業利益を分けた将来税後EPS/CF・施工/追加原価感応度と評価式/方針が未採用。参考市場PER14.7をfairPEにせず、1Q増益を年率化しない。"
+        ],
+        "restart_evidence_required": [
+          "実際の方式/対象期と必要入力・株基準・評価/採用方針の出典が得られること。financialthesisを完成させるための仮値埋めはしない。"
+        ],
+        "explicitly_not_performed_scope": [
+          "実企業の数値thesis/売買方針採用・モデル計算・注文・正式IR送信。"
+        ]
+      }
+    },
+    {
+      "company_ids": [
+        "jp:2983"
+      ],
+      "existing_issue_ids": [
+        "2983-author-watch-volume-margin-leverage"
+      ],
+      "evidence_refs": [
+        "v4-2983-case",
+        "v4-2983-comparison",
+        "v4-2983-comparison-validation",
+        "v4-2983-orders",
+        "v4-2983-orders-validation",
+        "v4-2983-original-independent",
+        "v4-2983-NI-correction",
+        "v4-2983-EPS-facts",
+        "v4-2983-EPS-index",
+        "v4-2983-issuer-import",
+        "v4-2983-checkpoint",
+        "v4-capabilities"
+      ],
+      "project_adaptation": true,
+      "financial_paths": null,
+      "priority": null,
+      "numeric_threshold": null,
+      "buy_sell_or_take_profit_rule": null,
+      "new_IR_draft": null,
+      "id": "2983-public-definition-residual",
+      "answer_owner_class": "company_public",
+      "answer_owner": "会社が公表する原表/注記・会社指標定義（確認は研究担当）。公開で残る必要な定義だけ条件付き会社補足候補。",
+      "unresolved_point": "販売ASP実数/算式、受注単価の土地建物・商品分母、取消/変更純額・契約計上と販売/引渡対応、費用分類は限定読取で未確認。既知の受注/販売値・会社EPS/splitを再照会しない。",
+      "necessary_materials": [
+        "固定comparisonと4頁受注定義check",
+        "同じ保存説明PDFのmechanical単価hit p44/48（未精読・ASP定義がある保証なし）。comparison.next_public_work_before_IRに来歴。",
+        "取消/計上/費用は、別途実在する保存注記/具体hitが特定された場合だけその原文"
+      ],
+      "completion_condition": "初回は保存p44/48の最大2頁に限定し、実際の単価概念/分母・ASP定義の有無を記録して終了する。関係なければ不足を保持し、全PDF不存在としない。取消/計上/費用の別範囲へ自動拡大しない。公開確認後も必要な定義が残る場合だけ条件付き研究候補として保持し、IR草案は作らない。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "2983-investor-input-adoption",
+          "when": "この会社の当該入力を数値評価へ採用する場合だけ。公開比較は他社や著者待ちで全体停止しない。"
+        }
+      ],
+      "work_state": "bounded_public_definition_or_new_evidence_gap",
+      "method_principles": [
+        "EP01",
+        "AT03"
+      ],
+      "conditional_issuer_definition_scope": "公開注記の確認後なお必要な受注/販売/引渡計上、土地建物/商品分母、費用分類の公表定義・資料所在だけ。会社に著者EPS分母・公正倍率・将来利益保証を求めない。",
+      "operational_progress": {
+        "underlying_issue_resolved": false,
+        "interpretation": "保存範囲の試行/不足記録。新enum/API/job・ready計算・送信指示ではない。",
+        "labels": [
+          "同期間原表/7追加頁の有限比較は完了・p44/48の限定定義確認は未実施",
+          "取消/計上/費用の次具体注記は未特定"
+        ],
+        "completed_scope": [
+          "Sept10会社原表のEPS304.27/親会社NI3250百万円、期/日本基準連結、会社split日/1対2と会社EPS/DPS/株数注記の明示範囲は確認済み。著者のEPSbasisは別。",
+          "粗利/SGA構成比・分譲mixと累計の商品/地域販売数、単価寄与の会社説明は既答。",
+          "p14/15/62/63は完了済み。受注高/棟数、商品に土地/中古を含む区分、地域、累計1Q–2Qと2Q単独の表示は公開で解消。4頁を次の未実施読取へ戻さない。",
+          "会社原本3sourceは親17:21:13.605908UTCに実保存。比較/4頁producer記録は基礎6頁の独立原本点検と区別し、追加意味点検の未了をpassとしない。"
+        ],
+        "remaining_gap": [
+          "販売ASP実数/算式、受注単価の土地建物・商品分母、取消/変更純額・契約計上と販売/引渡対応、費用分類は限定読取で未確認。既知の受注/販売値・会社EPS/splitを再照会しない。"
+        ],
+        "restart_evidence_required": [
+          "p44/48の既存mechanical単価hitを対象に一度の最大2頁読取を行う具体範囲（本v4では実行しない）。",
+          "取消/計上/費用の別確認には既存保存原文の具体的な注記/hitを先に特定する。既読p14/15/62/63や公表数値を再取得しない。"
+        ],
+        "explicitly_not_performed_scope": [
+          "本backlogのGET/新原文読取・IR草案/登録/送信。"
+        ]
+      }
+    },
+    {
+      "company_ids": [
+        "jp:2983"
+      ],
+      "existing_issue_ids": [
+        "2983-author-watch-volume-margin-leverage"
+      ],
+      "evidence_refs": [
+        "v4-2983-case",
+        "v4-2983-comparison",
+        "v4-2983-comparison-validation",
+        "v4-2983-orders",
+        "v4-2983-orders-validation",
+        "v4-2983-original-independent",
+        "v4-2983-NI-correction",
+        "v4-2983-EPS-facts",
+        "v4-2983-EPS-index",
+        "v4-2983-issuer-import",
+        "v4-2983-checkpoint",
+        "v4-capabilities"
+      ],
+      "project_adaptation": true,
+      "financial_paths": null,
+      "priority": null,
+      "numeric_threshold": null,
+      "buy_sell_or_take_profit_rule": null,
+      "new_IR_draft": null,
+      "id": "2983-author-specification-residual",
+      "answer_owner_class": "external_author",
+      "answer_owner": "外部著者/提供者が定める解釈・予測/計算仕様。会社の公表事実確認とは別。",
+      "unresolved_point": "著者自身が直接公表したEPS308.31/339.81/369.46について、対象期label・円/株・分割前後の比較単位・会社転載との区分を固定資料の範囲で同定し、そのまま入力候補として扱える範囲を点検する。未開示の将来分母精密値や全将来期の保証を必須にしない。",
+      "necessary_materials": [
+        "固定Oct1著者EPS/FYlabel/円単位・既存注記、会社転載との区分と会社原本のsplit注記を分けたcomparison。",
+        "比較上本当に必要なbasisに曖昧さが残り、既存資料に明示注記がある場合だけその著者注記。将来発行株数の精密値を新たに要求しない。"
+      ],
+      "completion_condition": "固定資料で同定できる対象期・1株単位・split前後と転載区分、なお未確認の比較範囲を列挙し、3EPSを直接値の候補として使える範囲/比較保留を区別できればこの有限taskは完了する。将来分母精密値の未開示自体を予測の欠陥・自動不適格や永久未了の理由にしない。fairPE/価格条件・金融採用は別investor taskで判断する。",
+      "depends_on": [],
+      "next_dependencies": [
+        {
+          "task_id": "2983-investor-input-adoption",
+          "when": "当該著者のその予測/条件を金融評価へ採用する場合だけ。著者仕様がなくても定性公開比較は継続可能。"
+        }
+      ],
+      "work_state": "bounded_direct_EPS_basis_review_without_precision_denominator_requirement",
+      "method_principles": [
+        "AT03"
+      ],
+      "operational_progress": {
+        "underlying_issue_resolved": false,
+        "interpretation": "保存範囲の試行/不足記録。新enum/API/job・ready計算・送信指示ではない。",
+        "labels": [
+          "直接著者EPSの固定注記による比較basis点検・金融採用とは別",
+          "将来分母精密値の保証待ちは作らない"
+        ],
+        "completed_scope": [
+          "独自EPS3期・円/株・raw期label、会社転載304.27との別は既存抽出/比較で確認済み。会社split注記は著者EPSbasisへ自動適用しない。"
+        ],
+        "remaining_gap": [
+          "将来数量/粗利/効率やモデル適合を独自採用せず、直接EPSを候補として扱う際に本当に必要な比較単位/basisの確認範囲を限定する。精密な将来分母の再構成はしない。"
+        ],
+        "restart_evidence_required": [
+          "まず既存固定資料だけで候補範囲/比較保留を整理する。追加著者仕様が必要なのは、具体的な比較目的に必要な曖昧さを特定できた場合だけ。開示されない精密将来分母を恒久要求しない。"
+        ],
+        "explicitly_not_performed_scope": [
+          "外部著者への連絡/依頼・新GET・会社IRへの代替保証要求。"
+        ]
+      },
+      "bounded_task_completion_does_not_require_financial_adoption": true
+    },
+    {
+      "company_ids": [
+        "jp:2983"
+      ],
+      "existing_issue_ids": [
+        "2983-author-watch-volume-margin-leverage"
+      ],
+      "evidence_refs": [
+        "v4-2983-case",
+        "v4-2983-comparison",
+        "v4-2983-comparison-validation",
+        "v4-2983-orders",
+        "v4-2983-orders-validation",
+        "v4-2983-original-independent",
+        "v4-2983-NI-correction",
+        "v4-2983-EPS-facts",
+        "v4-2983-EPS-index",
+        "v4-2983-issuer-import",
+        "v4-2983-checkpoint",
+        "v4-capabilities"
+      ],
+      "project_adaptation": true,
+      "financial_paths": null,
+      "priority": null,
+      "numeric_threshold": null,
+      "buy_sell_or_take_profit_rule": null,
+      "new_IR_draft": null,
+      "id": "2983-investor-input-adoption",
+      "answer_owner_class": "investor",
+      "answer_owner": "利用者/研究担当による出典付き入力適合・評価式・金融方針の採用判断。",
+      "unresolved_point": "独自EPS3期を直接値の候補として使える比較範囲を踏まえ、選択対象期/評価式・fairPE・採用方針と価格条件の出典が未採用。正確な将来分母の保証をEPS採用の一律必須条件にしない。市場PER5.2と12monthforward peer6.1をfairPEへ逆算/平均で補わない。",
+      "necessary_materials": [
+        "実際に選択する評価方式に必要な将来入力、実績/会社予想/外部予想/明示仮定の由来と対象期/通貨/税・株基準。",
+        "選択方式の式・適用理由と、利用者又は外部方針の明示採用根拠。判断に使う場合だけ価格根拠等も別途必要。"
+      ],
+      "completion_condition": "当該一社で実際に使う入力pathを出典へ対応し、採用か未設定を明示する。足りなければ金融評価・回答分岐・価格条件は未解決のまま。独自予測/倍率/割引率/確率/閾値を埋めず、コードや追加監査自体を目的にしない。",
+      "depends_on": [
+        {
+          "task_id": "2983-public-definition-residual",
+          "relation": "model_specific",
+          "when": "その会社の公表事実/定義を選択入力へ使う場合だけ。"
+        },
+        {
+          "task_id": "2983-author-specification-residual",
+          "relation": "model_specific",
+          "when": "その外部著者の未確認仕様を評価入力/反証条件へ採用する場合だけ。別の根拠付き方式を妨げない。"
+        }
+      ],
+      "next_dependencies": [],
+      "work_state": "investor_financial_input_and_policy_not_adopted",
+      "method_principles": [
+        "DM01",
+        "AT03"
+      ],
+      "operational_progress": {
+        "underlying_issue_resolved": false,
+        "interpretation": "保存範囲の試行/不足記録。新enum/API/job・ready計算・送信指示ではない。",
+        "labels": [
+          "投資家入力/方針未採用・会社IRへ評価責任を移さない"
+        ],
+        "completed_scope": [
+          "既存著者/会社研究と評価器・保存基盤は参照できるが、この会社の入力適合/価格条件を採用済みとはしない。"
+        ],
+        "remaining_gap": [
+          "独自EPS3期を直接値の候補として使える比較範囲を踏まえ、選択対象期/評価式・fairPE・採用方針と価格条件の出典が未採用。正確な将来分母の保証をEPS採用の一律必須条件にしない。市場PER5.2と12monthforward peer6.1をfairPEへ逆算/平均で補わない。"
+        ],
+        "restart_evidence_required": [
+          "実際の方式/対象期と必要入力・株基準・評価/採用方針の出典が得られること。financialthesisを完成させるための仮値埋めはしない。"
+        ],
+        "explicitly_not_performed_scope": [
+          "実企業の数値thesis/売買方針採用・モデル計算・注文・正式IR送信。"
+        ]
+      }
+    }
+  ],
+  "evidence_registry": {
+    "monitor-135A": {
+      "file": "research/ir-research-monitoring-integration-2026-10-15/actual-case-requests-v8.json",
+      "sha256": "0ac22d89bb1296e50ce30d90f978df9557ef36b69b378071da92a9b807717ab3",
+      "jsonpath": "$[0].issue_id",
+      "selected_value_type": "str"
+    },
+    "monitor-1518": {
+      "file": "research/ir-research-monitoring-integration-2026-10-15/actual-case-requests-v8.json",
+      "sha256": "0ac22d89bb1296e50ce30d90f978df9557ef36b69b378071da92a9b807717ab3",
+      "jsonpath": "$[1].issue_id",
+      "selected_value_type": "str"
+    },
+    "monitor-1721": {
+      "file": "research/ir-research-monitoring-integration-2026-10-15/actual-case-requests-v8.json",
+      "sha256": "0ac22d89bb1296e50ce30d90f978df9557ef36b69b378071da92a9b807717ab3",
+      "jsonpath": "$[2].issue_id",
+      "selected_value_type": "str"
+    },
+    "monitor-7525": {
+      "file": "research/ir-research-monitoring-integration-2026-10-15/actual-case-requests-v8.json",
+      "sha256": "0ac22d89bb1296e50ce30d90f978df9557ef36b69b378071da92a9b807717ab3",
+      "jsonpath": "$[3].issue_id",
+      "selected_value_type": "str"
+    },
+    "monitor-8151": {
+      "file": "research/ir-research-monitoring-integration-2026-10-15/actual-case-requests-v8.json",
+      "sha256": "0ac22d89bb1296e50ce30d90f978df9557ef36b69b378071da92a9b807717ab3",
+      "jsonpath": "$[4].issue_id",
+      "selected_value_type": "str"
+    },
+    "monitor-9765": {
+      "file": "research/ir-research-monitoring-integration-2026-10-15/actual-case-requests-v8.json",
+      "sha256": "0ac22d89bb1296e50ce30d90f978df9557ef36b69b378071da92a9b807717ab3",
+      "jsonpath": "$[5].issue_id",
+      "selected_value_type": "str"
+    },
+    "monitor-report": {
+      "file": "research/ir-research-monitoring-integration-2026-10-15/actual-report-v8.json",
+      "sha256": "105bf6cd4c2a9a954add40a72b05a0b32d3e745c9c2854b4a3b4663790c1da57",
+      "jsonpath": "$.status",
+      "selected_value_type": "str"
+    },
+    "135A-kpi": {
+      "file": "research/ir-case-studies-2026-10-15/135A/author-condition-followup/case-record-v2.json",
+      "sha256": "2e566e72a04a89938357220715a10603a51ce1ce744207599ac921de6e81328b",
+      "jsonpath": "$.remaining_definition_issues_that_could_matter",
+      "selected_value_type": "list"
+    },
+    "135A-preflight": {
+      "file": "research/ir-case-studies-2026-10-15/135A/customer-counting-question-preflight-v2.json",
+      "sha256": "65e835dcab6ffae969f06bf03e99f4457938ba44d43fc4e135a75cbb8c32a8e6",
+      "jsonpath": "$.status",
+      "selected_value_type": "str"
+    },
+    "135A-cf": {
+      "file": "research/ir-case-studies-2026-10-15/135A/current-cashflow-to-forecast-basis.json",
+      "sha256": "0b91d6e74f6c75436e0650ebf1309e7cae2affc65b66e6828cc35b578ad6e0d3"
+    },
+    "1518-conditions": {
+      "file": "research/ir-case-studies-2026-10-15/1518/author-condition-followup/case-record.json",
+      "sha256": "763cb8ad2f001b7ed0eb7395508e1960a5c3b0c7715b00ab963b679c46dc1a1e",
+      "jsonpath": "$.prior_issue.id",
+      "selected_value_type": "str"
+    },
+    "1518-acquisition": {
+      "file": "research/ir-case-studies-2026-10-15/1518/acquisition-completion-followup/review.json",
+      "sha256": "ee3f82e61d16a762dc9eccc6ff18e18cda630dffaad619a899546d3e5cd2b63e"
+    },
+    "1518-ingest": {
+      "file": "research/ir-case-studies-2026-10-15/1518/acquisition-completion-followup/actual-intake.json",
+      "sha256": "24c1728d5617b027188996a11911b688661dd9d81c95fe6537026070e788e84d",
+      "jsonpath": "$.ingest",
+      "selected_value_type": "dict"
+    },
+    "1518-EPS-DPS": {
+      "file": "research/ir-case-studies-2026-10-15/1518/guidance-revision-facts/request.json",
+      "sha256": "4fb14dbc8f5942cf81f6603260dfe3871641258a6ea8426510e96303e5e32457",
+      "jsonpath": "$.facts",
+      "selected_value_type": "list"
+    },
+    "1721-conditions": {
+      "file": "research/ir-case-studies-2026-10-15/1721/author-conditions/case-record.json",
+      "sha256": "ac18df211f0b4d4b57b1f9fed309f3831f8f1dc3da8ba33654d290ff11436dec",
+      "jsonpath": "$.possible_company_IR_definition_topics",
+      "selected_value_type": "dict"
+    },
+    "1721-precision": {
+      "file": "research/ir-case-studies-2026-10-15/1721/plan-display-precision-review/review.json",
+      "sha256": "1cb06685f4e40bd19c5482edb2e7b3b8262e72e5410a4f11977aa6f84f90e018",
+      "jsonpath": "$.conclusion",
+      "selected_value_type": "dict"
+    },
+    "1721-issuer": {
+      "file": "research/ir-case-studies-2026-10-15/1721/initial-public-review/review.json",
+      "sha256": "3c25ee8bd4405994efe247a2cb26844b431a14ba355baaed63db4a2689a1e2c6"
+    },
+    "7525-conditions": {
+      "file": "research/ir-case-studies-2026-10-15/7525/author-original-product-review/case-record.json",
+      "sha256": "ccec4fc4179bd510a39268ec8ae5af07c83bdafad1a3e75e6c0c3fa9617cd61a",
+      "jsonpath": "$.claim.id",
+      "selected_value_type": "str"
+    },
+    "7525-plan": {
+      "file": "research/ir-case-studies-2026-10-15/7525/issuer-plan-comparison/case-record.json",
+      "sha256": "fef277d6073874556cabb46ef53af01e3a74d688c6d3ebfecab4c55b07b92999",
+      "jsonpath": "$.remaining_definition_bridge",
+      "selected_value_type": "list"
+    },
+    "7525-preflight": {
+      "file": "research/ir-case-studies-2026-10-15/7525/original-product-ratio-question-preflight/preflight-v2.json",
+      "sha256": "e00183fb5fed2b3bc5646d49569297909177b55482cc8626ac5fca255e11198f",
+      "jsonpath": "$.status",
+      "selected_value_type": "str"
+    },
+    "7525-FAQ": {
+      "file": "research/ir-case-studies-2026-10-15/7525/public-definition-faq-review/review.json",
+      "sha256": "fd482eb931f25b656a93c2b3cd3511388d39bdea4f73e45962418d57ab9c4930",
+      "jsonpath": "$.question_disposition",
+      "selected_value_type": "dict"
+    },
+    "7525-FAQ-ingest": {
+      "file": "research/ir-case-studies-2026-10-15/7525/public-definition-faq-review/actual-intake.json",
+      "sha256": "d48b0f4e7c7797bec5ee88cb722af30937f0493ca6550849c949846a472e5c87",
+      "jsonpath": "$.ingest",
+      "selected_value_type": "dict"
+    },
+    "7525-EPS": {
+      "file": "research/ir-case-studies-2026-10-15/7525/external-parameter-facts/README.md",
+      "sha256": "37c710230667d4e00aeda94093cdfa1d2e8e32e3e24ce3ef21879446753fa9df"
+    },
+    "8151-conditions": {
+      "file": "research/ir-case-studies-2026-10-15/8151/author-forecast-conditions/case-record.json",
+      "sha256": "61231f215816f9d96512153a46f1b6dbf2b266b14142264dadb2fea3e1e2ade2",
+      "jsonpath": "$.conditions",
+      "selected_value_type": "list"
+    },
+    "8151-comparison": {
+      "file": "research/ir-case-studies-2026-10-15/8151/cross-author-comparison/comparison.json",
+      "sha256": "b881f2bd18d4a66256cf0f76b077dd96e3aca713fad327aab22b709280ef6fea",
+      "jsonpath": "$.numeric_reference_rows",
+      "selected_value_type": "list"
+    },
+    "8151-hold": {
+      "file": "research/ir-case-studies-2026-10-15/8151/issuer-annual-followup/review.json",
+      "sha256": "d3bea11204ee6a1eb89b81e93d700c90a6d3c0024d55eda0b2273eaae93bf1eb",
+      "jsonpath": "$.status",
+      "selected_value_type": "str"
+    },
+    "9765-conditions": {
+      "file": "research/ir-case-studies-2026-10-15/9765/author-conditions/case-record.json",
+      "sha256": "7539172394a70518add4031880e4f56730576b2574a30aa4a6bfdaab64da2acf",
+      "jsonpath": "$.author_condition_structures",
+      "selected_value_type": "list"
+    },
+    "9765-recheck": {
+      "file": "research/ir-case-studies-2026-10-15/9765/author-conditions/independent-recheck.json",
+      "sha256": "2eed874ec4f8f7c9b8f1036621f915ea7967f2821b27ec9a85cf59954d14da2c",
+      "jsonpath": "$.reviews",
+      "selected_value_type": "list"
+    },
+    "9765-issuer": {
+      "file": "research/ir-case-studies-2026-10-15/9765/issuer-financial-followup/review.json",
+      "sha256": "60b604eca5477343c76ea04d6f118e29cac380cb656296fcc66082358e8a54e5"
+    },
+    "method-quotes": {
+      "file": "research/ir-decision-scope-2026-10-15/source-quotes.json",
+      "sha256": "a0eb1634cd187b1d42d86ef7d2fa7b0afe0917633eb655f4971123f58ab6435e"
+    },
+    "anthropic-manifest": {
+      "file": "third_party/anthropic/manifest.json",
+      "sha256": "45ff843e1c334454b63221fec6311f0c6bf525e79b99096e35f8f2542a405fdf"
+    },
+    "method-thesis": {
+      "file": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+      "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b"
+    },
+    "method-earnings": {
+      "file": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+      "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33"
+    },
+    "method-Damodaran-text": {
+      "file": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt",
+      "sha256": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106"
+    },
+    "monitor-v10": {
+      "file": "research/ir-research-monitoring-integration-2026-10-15/actual-case-requests-v10.json",
+      "sha256": "58f0611e090cba75f69e969a0ab325389b086036a982061026852d8426a6c489"
+    },
+    "monitor-report-v10": {
+      "file": "research/ir-research-monitoring-integration-2026-10-15/actual-report-v10.json",
+      "sha256": "75403fb84f0aa2008f59e7b04f374a7e78f2ee28d8748749bc09b74f2dfadc8f"
+    },
+    "7525-case-v2": {
+      "file": "research/ir-case-studies-2026-10-15/7525/author-original-product-review/case-record-v2.json",
+      "sha256": "fa1c84d7c32ec3a58cf962424afc8748401c76f1f54605a29de7bc32463da69a"
+    },
+    "7525-case-v2-check": {
+      "file": "research/ir-case-studies-2026-10-15/7525/author-original-product-review/validation-v2.json",
+      "sha256": "55a908a6ad08bce3d4b70f416c2a62b3483dcb80a27df8892162146285c0ed73"
+    },
+    "7525-case-v2-independent": {
+      "file": "research/ir-case-studies-2026-10-15/7525/author-original-product-review/independent-record-v2.json",
+      "sha256": "45600dccc54239f46070c4db0ef863da136501f1e8b20040053471d53d683474"
+    },
+    "7525-case-v2-checkpoint": {
+      "file": "research/ir-research-monitoring-integration-2026-10-15/7525-profit-interpretation-review-checkpoint.json",
+      "sha256": "72e9bf2efd62484578120f3981c520ce36356c124c13c984b73519624385bfc6"
+    },
+    "7525-quarter-read": {
+      "file": "research/ir-case-studies-2026-10-15/7525/quarter-profit-bridge-review/review.json",
+      "sha256": "40b69e3cd7eb8baa030ef5044ce9bbb33c9a5846bf671a09cc4d84867d9c9339"
+    },
+    "7525-current-preflight": {
+      "file": "research/ir-case-studies-2026-10-15/7525/original-product-ratio-question-preflight/preflight-v3.json",
+      "sha256": "fe129aebe825fef5994f3ffe79aacb8a4675f2f8baa7a72938e3222c981bb667"
+    },
+    "7525-loader-stop": {
+      "file": "research/ir-case-studies-2026-10-15/7525/issuer-loader-followup/review.json",
+      "sha256": "1f656105c9781412e510b6810ea711141ad8b3d21c831c64813dc5d8cda3da18"
+    },
+    "7525-public-definition-limit": {
+      "file": "research/ir-case-studies-2026-10-15/7525/public-definition-faq-review/README.md",
+      "sha256": "b6071ac740547b4591fcaeea05f8d238aecda17ad19fd612ab598c1a712a4a8a"
+    },
+    "135A-definition-review": {
+      "file": "research/ir-case-studies-2026-10-15/135A/customer-counting-definition-review.json",
+      "sha256": "a56a16dd37aa19238f14b73581017d40fdab6b6033cdaf4747e6744f9bf9e539"
+    },
+    "135A-company-comparison": {
+      "file": "research/ir-case-studies-2026-10-15/135A/author-condition-followup/case-record-v2.json",
+      "sha256": "2e566e72a04a89938357220715a10603a51ce1ce744207599ac921de6e81328b"
+    },
+    "1518-public-followup": {
+      "file": "research/ir-case-studies-2026-10-15/1518/acquisition-completion-followup/review.json",
+      "sha256": "ee3f82e61d16a762dc9eccc6ff18e18cda630dffaad619a899546d3e5cd2b63e"
+    },
+    "1721-issuer-attempt": {
+      "file": "research/ir-case-studies-2026-10-15/1721/initial-public-review/review.json",
+      "sha256": "3c25ee8bd4405994efe247a2cb26844b431a14ba355baaed63db4a2689a1e2c6"
+    },
+    "1721-external-hold": {
+      "file": "research/ir-case-studies-2026-10-15/1721/external-report-review/review.json",
+      "sha256": "1f9800496b7769c3b26fed450ea53c42eca11328b4ac335e7033d4de6f5e0ba3"
+    },
+    "8151-issuer-hold": {
+      "file": "research/ir-case-studies-2026-10-15/8151/issuer-annual-followup/review.json",
+      "sha256": "d3bea11204ee6a1eb89b81e93d700c90a6d3c0024d55eda0b2273eaae93bf1eb"
+    },
+    "9765-issuer-stop": {
+      "file": "research/ir-case-studies-2026-10-15/9765/issuer-financial-followup/review.json",
+      "sha256": "60b604eca5477343c76ea04d6f118e29cac380cb656296fcc66082358e8a54e5"
+    },
+    "holding-accepted": {
+      "file": "research/ir-catalog-position-boundary-review-2026-10-15/parent-acceptance.json",
+      "sha256": "18828ede36c107d6afabd245e00adad2b950279d7f92a4337361cda014361d44"
+    },
+    "holding-fullsuite": {
+      "file": "research/ir-catalog-position-boundary-review-2026-10-15/parent-full-suite.json",
+      "sha256": "456edf5f88878dadd8a1d857b89bd011c1a37b07d2687a1f322a5d9696e4656b"
+    },
+    "holding-scope": {
+      "file": "research/ir-catalog-position-boundary-review-2026-10-15/README-v3.md",
+      "sha256": "3b436ca97e555dde8533194b0b809d269bdb8d5b9ed474a7dad7f27671466187"
+    },
+    "current-view-boundary": {
+      "file": "research/ir-current-position-view-boundary-review-2026-10-15/review.json",
+      "sha256": "bded02cbbb2a29be72db725fc418687ae747c6d54578b2451cd3258f7d38fb3f"
+    },
+    "known-host-holds": {
+      "file": "research/ir-source-access-holds-2026-10-15/holds-v3.json",
+      "sha256": "ec1e9f85d378571c3d0f99eca73ec8e397ea8dd7b155aa4be80c2100d2294551"
+    },
+    "1379-old-task-list": {
+      "file": "research/ir-case-studies-2026-10-15/1379/adoption-prerequisites.json",
+      "sha256": "274679fe65d56a522424ef3726ff390703b884379287112d34b656fd8bf60219"
+    },
+    "1379-already-attempted-negative": {
+      "file": "research/ir-case-studies-2026-10-15/1379/annual-cashflow-followup/review.json",
+      "sha256": "0393c6d53026676c2d69a1b46f59e754666a5f02c39641d25661dd603691535c"
+    },
+    "v4-capabilities": {
+      "file": "research/ir-author-source-capabilities-2026-10-15/capabilities-v5.json",
+      "sha256": "7a89e78e638ae03591bb086e82ef7b9aa90abe1e55c1c751eb0762adcccd9ad9",
+      "scope": "固定12例のsource能力。2983会社原本は当時入力外という履歴を保つ。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-monitor-v16": {
+      "file": "research/ir-research-monitoring-integration-2026-10-15/actual-report-v16.json",
+      "sha256": "9f9aa71f9fae12f800f8b34596ee0ad22143f6e1bd24295ece5f8671fcc14457",
+      "scope": "親10case/54source時点の研究report。後続会社原本保存は別receipt。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-6754-case": {
+      "file": "research/ir-case-studies-2026-10-15/6754/author-condition-followup/case-record-v2.json",
+      "sha256": "1d4ba0eb3a682686a7bf01977e72b6952288696afb3df6c4f8db885824184f90",
+      "scope": "著者Q3→会社Q1の後続観測、5Q既答、説明資料追補。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-6754-notes": {
+      "file": "research/ir-case-studies-2026-10-15/6754/author-condition-followup/notes-observation-addendum.json",
+      "sha256": "7018b081fb109b94d0d8588f7607c5ee0a031287e366af0640ebfae011999b57",
+      "scope": "PQA需要背景の公開解決と費用/棚卸寄与未確認を分けた固定追補。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-6754-checkpoint": {
+      "file": "research/ir-research-monitoring-integration-2026-10-15/6754-notes-review-checkpoint.json",
+      "sha256": "df25f4a3cd3de83a1236fc780cf941db2da23c552aca9c75a1c1d827942a8832",
+      "scope": "親の既存同論点レビュー/実保存と研究管理の帰属。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-6323-case": {
+      "file": "research/ir-case-studies-2026-10-15/6323/author-condition-followup/case-record.json",
+      "sha256": "29954e4b72ce5cd358bb9dbd7c0399fb5967ef10c1125b3fb061c13ee1631797",
+      "scope": "April著者3論点と後続会社中間期の限定比較。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-6323-presentation": {
+      "file": "research/ir-case-studies-2026-10-15/6323/author-condition-followup/presentation-addendum.json",
+      "sha256": "802d41c31d9f1d35c367fe546c70950681bd22e90f77835c67ae2015d65f9ca8",
+      "scope": "供給施策と工場計画の公開説明。AP頁は別固定recordで補う。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-6323-factory-basis": {
+      "file": "research/ir-case-studies-2026-10-15/6323/factory-period-definition-check/review.json",
+      "sha256": "52c75db1e3b92b3d7eef4b863d8e795254f4f02edc36ef1d8583e45270feba7c",
+      "scope": "一般FY/Q定義は公開済み、工場工程の固有年/Q割当は未確認。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-6323-AP": {
+      "file": "research/ir-case-studies-2026-10-15/6323/advanced-packaging-public-check/review.json",
+      "sha256": "64a5e482d150c6e1857ad19abbc1e617101aa4ae2d3785e1b6f241e3e69f52c8",
+      "scope": "p24/25のAP用途/製品例。実採用/mix/利益を推定しない。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-6323-AP-parent": {
+      "file": "research/ir-case-studies-2026-10-15/6323/advanced-packaging-public-check/parent-limited-recheck.json",
+      "sha256": "d0d9e8d841d9a9e6cd5f18bfc966248ab3f441a6e2c1a2b889363f715d26f821",
+      "scope": "親の2頁限定意味確認、不一致0。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-6323-checkpoint": {
+      "file": "research/ir-research-monitoring-integration-2026-10-15/6323-combined-public-review-checkpoint.json",
+      "sha256": "4dec4a2e2fb6ab6005a2f65b0c50fb2ce3a53f041f7711f8248812b797e90cc0",
+      "scope": "親の既存複合公開比較チェックポイント。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-1723-case": {
+      "file": "research/ir-case-studies-2026-10-15/1723/author-conditions/case-record.json",
+      "sha256": "6ab43cb5312bdae4f9d353b7a5791f1ca281e601bac4086ee008b51bd97cfaae",
+      "scope": "2定性条件とteaserのみの事業譲受を区別。file-only末尾は後続checkpointで限定。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-1723-checkpoint": {
+      "file": "research/ir-research-monitoring-integration-2026-10-15/1723-author-condition-review-checkpoint.json",
+      "sha256": "292e0b1ed41bcdda4ec56a145cba36f3497d931998ce8b1842c1ad7bbe010229",
+      "scope": "実保存がcase完成前だったことを限定補足、旧case不変。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-1723-primary-stop": {
+      "file": "research/ir-case-studies-2026-10-15/1723/issuer-first-quarter-followup/review.json",
+      "sha256": "3658601d177193f358dcd7faef478dd7925a91a5ebaa719560a5e95d59243338",
+      "scope": "2カテゴリ200/staticempty eir/PDF0という完了した有限試行。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-1723-author-import": {
+      "file": "research/ir-case-studies-2026-10-15/1723/actual-author-import/actual-import.json",
+      "sha256": "149d30cbcd20abceb27de860939ba28ec646863d220990753d42968b93006a21",
+      "scope": "親実source3件の保存receipt。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-2983-case": {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-conditions/case-record.json",
+      "sha256": "4f0d47ffcc9350a55e5ad7b878cdff92748b400f3e6dd6aaa98c2d006e6945a4",
+      "scope": "著者3事業前提と独自EPS3期、会社転載の別。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-2983-comparison": {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-issuer-comparison/comparison.json",
+      "sha256": "b046b622c3b450804e68cd1c6c2d6e157f245b4faf79b705953c69d17ffaf260",
+      "scope": "固定producer比較。Sept10会社原表はOct1著者より前、事後予測成績ではない。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-2983-comparison-validation": {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-issuer-comparison/validation.json",
+      "sha256": "571c40a49fde5896ccfec25062c639c751852a7930eb6453bbc54a6e49bb00ef",
+      "scope": "同比較のproducer有限検証。追加3頁の独立点検を先取りしない。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-2983-orders": {
+      "file": "research/ir-case-studies-2026-10-15/2983/public-order-definition-check/review.json",
+      "sha256": "514823d0a645fd3ee91f3479e5506cca031f86401a6159fe2ec5beebc2912192",
+      "scope": "p14/15/62/63確認済み。累計/単独・商品/地域受注は既答。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-2983-orders-validation": {
+      "file": "research/ir-case-studies-2026-10-15/2983/public-order-definition-check/validation.json",
+      "sha256": "d0ee629abbf929b9150f36ad95d959e0ad39c5da93edde73e710d512878557ee",
+      "scope": "固定4頁producer確認、意味独立はこのrecordで代行しない。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-2983-original-independent": {
+      "file": "research/ir-case-studies-2026-10-15/2983/issuer-quarter-followup/independent-recheck.json",
+      "sha256": "991fffca2006ceb2be5f9debdc1cb060328860e2583cea524cbda47cb3740112",
+      "scope": "基礎3原本の指定6頁独立確認findings[]。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-2983-NI-correction": {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/addendum-unit-label-correction.json",
+      "sha256": "4f6e30dca970f981876c17b0e1cc2a13f4328c350a34f8d5c5a96e7044067372",
+      "scope": "NI英語keyのみの限定訂正解消、原数値/EPS/旧記録不変。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-2983-EPS-facts": {
+      "file": "research/ir-case-studies-2026-10-15/2983/disclosed-facts/independent-recheck.json",
+      "sha256": "92f9ad9d2d82dd6a85eac023768607347b192cb7e2e9e0ac1c15b37591be2140",
+      "scope": "著者3EPSの抽出独立点検、適合/採用は未確認。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-2983-EPS-index": {
+      "file": "research/ir-case-studies-2026-10-15/2983/disclosed-facts/root-index-v19-independent-recheck.json",
+      "sha256": "d4098d929278f5ee4fdf87060a34f2027aa2710e30767e3094c6531e4d593c1d",
+      "scope": "3EPSと索引投影の独立点検d409…を再利用。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-2983-issuer-import": {
+      "file": "research/ir-case-studies-2026-10-15/2983/actual-issuer-import/actual-import.json",
+      "sha256": "6c48e170b3404d2cc0490fccc021846d083755c50d45bf045a439f1e29f1340f",
+      "scope": "親17:21UTC会社原本3source実保存receipt。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-2983-coverage": {
+      "file": "research/ir-case-studies-2026-10-15/2983/actual-issuer-import/coverage-summary.json",
+      "sha256": "e8622c8f58cb983c008b619910c55761264c9b276803f4c773889fb9535c5300",
+      "scope": "親保存coverage。金融採用/独立予測成績ではない。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    },
+    "v4-2983-checkpoint": {
+      "file": "research/ir-research-monitoring-integration-2026-10-15/2983-author-condition-review-checkpoint.json",
+      "sha256": "b4f4a8b531e3be3463a3dc6bfe202633c83b68772e7368665c8a8abc8edcf324",
+      "scope": "author-only研究時点の履歴。後続会社比較/保存は別record。",
+      "kind": "fixed_research_or_parent_receipt_reused_no_new_primary_read"
+    }
+  },
+  "dependency_semantics": {
+    "conditional": "前段の公開確認で未解決が残る場合だけ次候補になる。完了しても送信許可ではない。",
+    "model_specific": "当該会社の選択入力を採用する場合だけ必要。他社/全著者の解釈完了を全体停止条件にしない。",
+    "parallel_author_work": "著者の定義が公表されなければnullを保持。会社へ代わりの定義/保証を求めず、外部連絡の実行計画を作らない。"
+  },
+  "readiness_boundary": {
+    "existing_ready_statuses_modified": false,
+    "readiness_recalculated": false,
+    "new_question_payloads": 0,
+    "new_question_registrations": 0,
+    "existing_preflight_refs": [
+      "135A-preflight",
+      "7525-preflight"
+    ],
+    "current_contact_and_quiet_period_not_reverified": true
+  },
+  "economic_information_value": {
+    "estimate": null,
+    "priority": null,
+    "judgment": "未推定。0とも正とも判定していない。"
+  },
+  "not_created": {
+    "buy_sell_profit_taking_thresholds": null,
+    "probabilities": null,
+    "new_falsification_windows": null,
+    "new_forecasts": null,
+    "IR_send_schedule": null,
+    "new_response_or_management_dates": null
+  },
+  "scope": {
+    "GETs": 0,
+    "database_accesses": 0,
+    "production_changes": 0,
+    "old_artifact_edits": 0,
+    "new_IR_drafts": 0,
+    "external_sends": 0,
+    "orders": 0,
+    "model_adoptions": 0
+  },
+  "limits": [
+    "既存会社別レビュー/比較の未解決点を所有者へ割り当てる成果で、全原典再読・全Web最新性・投資適格性の再判定ではない。",
+    "Reference hashes identify the saved input versions. Parent ingestion records are reused without opening actual DB.",
+    "Author forecast/calculation/republication categories remain case-specific; no averaging, vote, new probability, KPI-to-EPS coefficient or company guarantee."
+  ],
+  "calendar_boundary": {
+    "next_specific_company_earnings_dates": {
+      "jp:135A": null,
+      "jp:1518": null,
+      "jp:1721": null,
+      "jp:7525": null,
+      "jp:8151": null,
+      "jp:9765": null
+    },
+    "new_calendar_received_or_registered_verified_here": false,
+    "note": "一般年間表・会社の具体予定・既存研究管理日を分離。年/FYなし一般表からJan15等を予定日へ補わず、新calendarの受信/登録・具体日点検は親の別作業に委ねる。"
+  },
+  "operational_update_v3": {
+    "version": 3,
+    "recorded_at": "2026-10-15T13:52:02.055810+00:00",
+    "previous": {
+      "file": "research/ir-issue-owner-backlog-2026-10-15/backlog-v2.json",
+      "sha256": "ce11ae06552bac75303568a44085266ae5665439946c836d8d787db6ad8d4393"
+    },
+    "status": "19_existing_tasks_attempt_scope_recorded_not_all_issues_resolved",
+    "reading_rule": "v2の記述/旧work_state/完了条件/根拠は履歴としてそのまま保持。現在の試行状況は各task.operational_progressを読む。これは新enum/API/ready計算ではない。",
+    "monitor_snapshot": {
+      "reference": "monitor-v10",
+      "report_reference": "monitor-report-v10",
+      "companies": 6,
+      "source_inventory_entries": 44,
+      "case_issue_ids_unchanged": true,
+      "DB_rechecked_here": false,
+      "original_v8_baseline_retained_as_history": true
+    },
+    "recent_completed_work": {
+      "7525": "既存QUICK追加頁の解釈とcase-v2/独立点検/monitor v10 checkpointを参照。新会社発表・独立原典・ratio回答・金融採用ではない。",
+      "holding_declarations": "parent受入/1351成功を参照。実申告0と金融未採用は別。実装/全suiteをこの版で再実行していない。"
+    },
+    "selection_boundaries": [
+      "未解決は未試行を意味しない。有限確認済み/knownnegative/host停止の同じ経路を自動で再試行しない。",
+      "P→Cの条件付き順序とowner/DAGを維持する。会社定義待ちは実IR返信待ちではない。",
+      "新しく保存された同対象の原文/定義・意味の差分など、各taskのrestart_evidence_requiredを満たす根拠を先に確認する。",
+      "著者定義/投資家入力の不足を会社へ将来利益や評価保証として渡さない。",
+      "全19件を埋めるために新route/閾値/期限/優先数値を作らない。"
+    ],
+    "known_negative_outside_19_example": {
+      "company_id": "jp:1379",
+      "original_task_list_ref": "1379-old-task-list",
+      "original_task_id": "annual-interim-and-capital-definitions",
+      "attempt_ref": "1379-already-attempted-negative",
+      "attempt_status": "completed_bounded_followup_stopped_by_current_robots_no_annual_body",
+      "meaning": "元adoption-prereqのnext2は別のannual-cashflow-followupで既に有限試行済み。robotsでfeed/PDF前に停止し、年間CF/CBの不足は残った。未取得を理由に同じnext2を未処理として取り直さない。",
+      "new_backlog_task_created": false
+    },
+    "concrete_unread_saved_original_candidate": {
+      "status": "not_identified_in_this_bounded_existing_record_review",
+      "candidate": null,
+      "limit": "今回読んだ既存完了/停止記録から、次に精読すべき未読箇所を新たに特定していない。全保存原典を全頁精読済み、又は未読原文が存在しないという主張ではない。"
+    },
+    "new_source_GETs": 0,
+    "new_route_candidates": 0,
+    "financial_or_question_readiness_recomputed": false,
+    "calendar_boundary": "既存管理日/会社予定/実施状態は更新せず、日付を追加しない。monitorのno_new_triggerは保存済み範囲の報告で、Web更新確認や19課題の解決ではない。",
+    "stability": "このv3をstableにした後は編集せず、補足/訂正は別版で追加する。"
+  },
+  "record_revision": 4,
+  "operational_update_v4": {
+    "version": 4,
+    "recorded_at": "2026-10-15T17:26:41.938577+00:00",
+    "previous": {
+      "file": "research/ir-issue-owner-backlog-2026-10-15/backlog-v3.json",
+      "sha256": "b6baa40efcf925fbb570803ea87c07252d133513a09236f8f90086c9476598bb"
+    },
+    "status": "old19_unchanged_plus12_residual_tasks_for4_uncovered_cases",
+    "old_record_boundary": "v3の6case/19task、owner/DAG/完了条件/operational_progressは全object不変の履歴として保持。既存6社の最新状態へ再計算していない。新4社の差分だけ追加。",
+    "counts": {
+      "old_cases": 6,
+      "added_cases": 4,
+      "total_cases": 10,
+      "old_tasks": 19,
+      "added_tasks": 12,
+      "total_tasks": 31
+    },
+    "owner_split": "会社の公表事実/定義、外部著者の予測仕様/解釈、投資家の評価/採用を各社3taskに分ける。会社の定義確認は公開確認後になお必要な場合だけで、IR草案や送信計画ではない。",
+    "new_dependency_boundary": "新12taskは新4社各々の内側の条件付き/方式別依存のみ。旧共有investor-model-adoption-gapは元6社のまま、新旧19taskへの依存や他社全完了条件を追加しない。",
+    "completed_public_scope_is_history_not_new_work": true,
+    "known_negative_not_untried": true,
+    "current_review_status": {
+      "2983_basis_originals": {
+        "reference": "v4-2983-original-independent",
+        "scope": "指定6頁基礎原本独立findings[]。全頁/外部著者basisの認証ではない。"
+      },
+      "2983_additional3comparison_and4orderpages": {
+        "references": [
+          "v4-2983-comparison",
+          "v4-2983-orders"
+        ],
+        "status_as_parent_dispatch": "producer記録はstable。追加意味独立点検は親が進行中と報告、結果をこのbacklogで先取りしない。",
+        "not_a_global_readiness_block": true
+      },
+      "unreviewed2issuer_normalizedfacts": "親が固定と報告したが未監査のため本v4入力に含めず採用しない。"
+    },
+    "2983_parent_actual_issuer_save": {
+      "reference": "v4-2983-issuer-import",
+      "recorded_at": "2026-10-15T17:21:13.683776+00:00",
+      "first_saved_at": "2026-10-15T17:21:13.605908+00:00",
+      "source_receipts": [
+        {
+          "basis": "trusted_insert",
+          "entity_id": "case-public:5821dbeed9379e81fd7f06f757447eb0b6413ed466b63dc5f38a51fde1f4a119",
+          "entity_type": "source",
+          "first_saved_at": "2026-10-15T17:21:13.605908+00:00",
+          "presence_observed_at": "2026-10-15T17:21:13.605908+00:00",
+          "snapshot_sha256": "4b1f40a6cb38714666db538acffa1ccd84e837b93b5f85ba5d16d1cbcdf16039",
+          "version": 0
+        },
+        {
+          "basis": "trusted_insert",
+          "entity_id": "case-public:ec93c3fdcda6b748dd239f3e505272a4a729eb52446e7243f8fb84b033c9f490",
+          "entity_type": "source",
+          "first_saved_at": "2026-10-15T17:21:13.605908+00:00",
+          "presence_observed_at": "2026-10-15T17:21:13.605908+00:00",
+          "snapshot_sha256": "e2ae63a32d0ed037ac0fc6106c836a6447f3191ca83405206a23687239c537f2",
+          "version": 0
+        },
+        {
+          "basis": "trusted_insert",
+          "entity_id": "case-public:c75788675e0b606f2c00bf372044f545e6ac53f77357a50556ae7f52d6a82290",
+          "entity_type": "source",
+          "first_saved_at": "2026-10-15T17:21:13.605908+00:00",
+          "presence_observed_at": "2026-10-15T17:21:13.605908+00:00",
+          "snapshot_sha256": "7ef99b5908f785202235e7be697d16db8f3d455141e70ebb66712d6af243dbae",
+          "version": 0
+        }
+      ],
+      "parent_actual_counts": {
+        "companies": 1819,
+        "decision_policies": 0,
+        "job_attempt_events": 82,
+        "job_attempts": 41,
+        "job_request_receipts": 41,
+        "jobs": 44,
+        "position_declarations": 0,
+        "questions": 0,
+        "replies": 0,
+        "source_classifications": 110,
+        "sources": 111,
+        "theses": 0
+      },
+      "public_market_counts_as_reported_by_parent": {
+        "public_disclosure": 110,
+        "market_data": 1
+      },
+      "first_dispatch_preparing_unregistered_status_superseded_by_this_receipt": true,
+      "new_own_DB_recheck": false
+    },
+    "1723_case_DB_wording_qualification": {
+      "reference": "v4-1723-checkpoint",
+      "scope": "file-only末尾は担当入力範囲へ限定。case完成直前に親実保存3件がある。旧case/著者条件を改変しない。"
+    },
+    "monitor_baseline_reference": {
+      "ref": "v4-monitor-v16",
+      "as_of": "2026-10-15T17:07:23.406190+00:00",
+      "cases": 10,
+      "case_source_sum": 54,
+      "historical_scope_only": "後続2983会社原本保存3件をこの旧monitor inventoryへ後付けせず、monは親solewriterの後続checkpointを参照。"
+    },
+    "dates_readiness_and_actions": "既存研究管理日・会社予定・売却期限・ready判定は変更しない。未設定fairPE/discount rate・著者分母を会社IRへ要求しない。金融閾値/確率/優先数値/売買判断/IR草案0。",
+    "next_concrete_saved_reading_candidate": {
+      "company_id": "jp:2983",
+      "task_id": "2983-public-definition-residual",
+      "evidence_refs": [
+        "v4-2983-comparison",
+        "v4-2983-orders"
+      ],
+      "saved_document": "research/ir-case-studies-2026-10-15/2983/issuer-quarter-followup/text/03.txt",
+      "physical_pages": [
+        44,
+        48
+      ],
+      "state": "existing_mechanical_unit_price_hits_not_yet_meaning_read_in_fixed_order_check",
+      "limit": "最大2頁。販売ASP/分母定義に関係する保証はない。既読p14/15/62/63は再読しない。取消/計上/費用の別範囲へ自動拡大しない。"
+    },
+    "new_GET_DB_code_oldfile_index_monitor_changes": 0,
+    "financial_or_question_readiness_recomputed": false,
+    "stability": "stable後は別版のみ。",
+    "direct_author_EPS_boundary": {
+      "scope": "new_tasks_only; old19objects_unchanged",
+      "principle": "直接公表EPSは対象期・円/株・split前後・会社転載との区分を点検して入力候補の範囲を整理する。精密将来分母や全将来期保証の未開示自体は欠陥・自動不適格・永久タスクにしない。",
+      "valuation_policy_gap_is_separate": "公正倍率・評価式/価格条件と金融採用は投資家側の別task。会社IRに著者分母の承認を要求しない。"
+    }
+  }
+}

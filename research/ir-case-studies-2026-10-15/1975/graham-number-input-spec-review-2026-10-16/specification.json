@@ -1,0 +1,236 @@
+{
+  "recorded_at": "2026-10-16T09:21:53.863336+00:00",
+  "purpose": "IR後forward earnings入力への誤接続を避け、maintainer historical Graham Number screenの必要入力を特定する。計算・金融採用はしない。",
+  "method_author": "maxgfr/crible maintainers",
+  "Graham_original_verified": false,
+  "commit": "00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7",
+  "specifications": [
+    {
+      "topic": "EPS入力",
+      "rule": "c.net_income / c.shares_outstanding。providerの報告実績列のmappingであり、会社forecast EPSを渡す列/ルートはこの3fileにない。",
+      "upstream_candidates": {
+        "net_income": [
+          "NetIncome",
+          "NetIncomeCommonStockholders"
+        ],
+        "shares_outstanding": [
+          "BasicAverageShares",
+          "OrdinarySharesNumber",
+          "ShareIssued"
+        ]
+      },
+      "caveat": "加重平均というコメントだけで全実値が加重平均と保証されない。NIの株主帰属と平均株数の期間/分割基準を原典で確認する。"
+    },
+    {
+      "topic": "BVPS入力",
+      "rule": "c.total_equity / price_shares(c)。period end sharesを優先、欠損または平均と2倍超等の単位問題時は平均fallback。",
+      "upstream_candidates": {
+        "total_equity": [
+          "StockholdersEquity",
+          "CommonStockEquity"
+        ],
+        "shares_outstanding_end": [
+          "OrdinarySharesNumber",
+          "ShareIssued"
+        ]
+      },
+      "caveat": "日本基準の連結純資産合計を自動で同一株主範囲と扱わず、NCI/優先株/普通株持分を点検する。"
+    },
+    {
+      "topic": "期間",
+      "rule": "build_canonicalの既定freqはannual。一方Graham計算関数はfrequency/TTMを検証せず、その行のnet_incomeを使う。Q1年率化の処理はない。",
+      "annual_route_requirement": "歴史的な通期実績で使う場合、同一年度NI/年間加重平均株数と同年度末持分/期末株数のbasisを別途固定する。TTMへ無断転換しない。"
+    },
+    {
+      "topic": "guard",
+      "rule": "EPS>0かつBVPS>0だけに平方根を適用。負値/欠損を正常値へ補完しない。"
+    },
+    {
+      "topic": "upstreamAPI制約",
+      "rule": "graham_number自体もif price is not None block内。純式に価格が不要でも、このコードを価格なしで呼んで同値を得る実装ではない。価格を作ったり取得して無理に呼ばない。"
+    },
+    {
+      "topic": "forwardとの分離",
+      "rule": "現IR定義回答でforward EPS条件を更新する処理とは別のhistorical screen。forward357.49やQ1annualizationを混ぜず、fairvalue/合否/原Graham採用へ昇格しない。"
+    }
+  ],
+  "saved_1975_locations_only": [
+    {
+      "source": "既存12頁Q1短信",
+      "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
+      "native_content_utf8_sha256": "5b590ae0edd7df00cc1b165437bc4e81d23fa117addbbbd948ff827668b95c83",
+      "physical_page": 1,
+      "meaning_read_previously": true,
+      "location": "Q1実績EPS59.78、会社FY予想EPS357.49、当Q1末と前年度末のBPSの所在がある。ここから通期実績EPSへ変換しない。"
+    },
+    {
+      "source": "同短信",
+      "physical_page": 2,
+      "meaning_read_previously": true,
+      "location": "期中平均株数は当Q1/前年Q1。通期2026/3の年間加重平均株数の欄ではない。"
+    },
+    {
+      "source": "保存17頁8/4説明資料",
+      "physical_page": 11,
+      "meaning_read_previously": false,
+      "location": "1株当たり純資産額という行の機械的位置だけ。表の意味・範囲は未読/未採用。"
+    },
+    {
+      "source": "同17頁",
+      "physical_page": 13,
+      "meaning_read_previously": true,
+      "location": "通期実績NIの既知表はあるが、年間加重平均株数/EPS分母はこれだけでは揃わない。"
+    },
+    {
+      "source": "保存44頁8/6個人説明資料",
+      "meaning_scope_approved_pages": [
+        33
+      ],
+      "location": "EPS/BPS文字列の機械的位置検索で通期実績EPSを直接確認せず、他43頁読了とはしない。"
+    }
+  ],
+  "current_input_sufficiency": "annual-route requirements not yet bound; annual actual EPS/weighted average and year-end common equity basis still require the annual original.",
+  "single_literal_followup": {
+    "purpose": "2026年3月期 通期決算短信の実際のhrefを特定する入口。PDF URLは未確認なので推測しない。",
+    "url": "https://www.asahikogyosha.co.jp/ir/library/summary",
+    "parent_url": "https://www.asahikogyosha.co.jp/ir/library/",
+    "parent_capture": {
+      "file": "research/ir-case-studies-2026-10-15/1975/public-qa-and-calendar-discovery-2026-10-16/capture.json",
+      "sha256": "80d85d2e8f14de5d37afcef4544e35f6cdc4310bd8f7732c37ac0181ad32cd8b",
+      "bytes": 94829
+    },
+    "json_pointer": "/GETs/0/html_visible_text/links/80",
+    "source_link_index": 80,
+    "raw_href": "https://www.asahikogyosha.co.jp/ir/library/summary",
+    "label": "決算短信・説明資料 決算内容の要点をまとめた共通形式の書類を掲載しております。",
+    "is_annual_PDF_URL": false,
+    "GET_performed_here": false
+  },
+  "positive_quotes": [
+    {
+      "file": {
+        "file": "research/ir-transparent-metric-formula-review-2026-10-15/upstream-INDICATORS.md",
+        "sha256": "fb82b2d47596026ea75fa561169062c52622dcb153caffe37af5491111ad084f",
+        "bytes": 53818
+      },
+      "line_start": 210,
+      "quote": "EPS  = net_income / shares_outstanding            (weighted average)",
+      "unicode_start": 12966,
+      "unicode_end_exclusive": 13034,
+      "utf8_start": 13359,
+      "utf8_end_exclusive": 13427
+    },
+    {
+      "file": {
+        "file": "research/ir-transparent-metric-formula-review-2026-10-15/upstream-INDICATORS.md",
+        "sha256": "fb82b2d47596026ea75fa561169062c52622dcb153caffe37af5491111ad084f",
+        "bytes": 53818
+      },
+      "line_start": 211,
+      "quote": "BVPS = total_equity / shares_outstanding_end      (period-end count, average as fallback)",
+      "unicode_start": 13035,
+      "unicode_end_exclusive": 13124,
+      "utf8_start": 13428,
+      "utf8_end_exclusive": 13517
+    },
+    {
+      "file": {
+        "file": "research/ir-transparent-metric-core-review-2026-10-15/upstream-extras.py",
+        "sha256": "3038a489679aa163f5a4d930ac7cb4dcf320d72a62122ccd45e9d9242b593631",
+        "bytes": 7912
+      },
+      "line_start": 105,
+      "quote": "eps = c[\"net_income\"] / c[\"shares_outstanding\"]\n        bvps = c[\"total_equity\"] / shares",
+      "unicode_start": 5720,
+      "unicode_end_exclusive": 5809,
+      "utf8_start": 5759,
+      "utf8_end_exclusive": 5848
+    },
+    {
+      "file": {
+        "file": "research/ir-transparent-metric-core-review-2026-10-15/upstream-extras.py",
+        "sha256": "3038a489679aa163f5a4d930ac7cb4dcf320d72a62122ccd45e9d9242b593631",
+        "bytes": 7912
+      },
+      "line_start": 109,
+      "quote": "out[\"graham_number\"] = np.sqrt(graham_base.where((eps > 0) & (bvps > 0)))",
+      "unicode_start": 5939,
+      "unicode_end_exclusive": 6012,
+      "utf8_start": 5982,
+      "utf8_end_exclusive": 6055
+    },
+    {
+      "file": {
+        "file": "research/ir-transparent-metric-core-review-2026-10-15/upstream-canonical.py",
+        "sha256": "2933aa8ff2ac2407a56293efcd0bcd7c923c41ec2250fe69bea88ec499ff9ede",
+        "bytes": 9518
+      },
+      "line_start": 27,
+      "quote": "\"net_income\": [\"NetIncome\", \"NetIncomeCommonStockholders\"]",
+      "unicode_start": 1198,
+      "unicode_end_exclusive": 1256,
+      "utf8_start": 1200,
+      "utf8_end_exclusive": 1258
+    },
+    {
+      "file": {
+        "file": "research/ir-transparent-metric-core-review-2026-10-15/upstream-canonical.py",
+        "sha256": "2933aa8ff2ac2407a56293efcd0bcd7c923c41ec2250fe69bea88ec499ff9ede",
+        "bytes": 9518
+      },
+      "line_start": 35,
+      "quote": "\"shares_outstanding\": [\"BasicAverageShares\", \"OrdinarySharesNumber\", \"ShareIssued\"]",
+      "unicode_start": 1522,
+      "unicode_end_exclusive": 1605,
+      "utf8_start": 1526,
+      "utf8_end_exclusive": 1609
+    },
+    {
+      "file": {
+        "file": "research/ir-transparent-metric-core-review-2026-10-15/upstream-canonical.py",
+        "sha256": "2933aa8ff2ac2407a56293efcd0bcd7c923c41ec2250fe69bea88ec499ff9ede",
+        "bytes": 9518
+      },
+      "line_start": 53,
+      "quote": "\"total_equity\": [\"StockholdersEquity\", \"CommonStockEquity\"]",
+      "unicode_start": 2487,
+      "unicode_end_exclusive": 2546,
+      "utf8_start": 2493,
+      "utf8_end_exclusive": 2552
+    },
+    {
+      "file": {
+        "file": "research/ir-transparent-metric-core-review-2026-10-15/upstream-canonical.py",
+        "sha256": "2933aa8ff2ac2407a56293efcd0bcd7c923c41ec2250fe69bea88ec499ff9ede",
+        "bytes": 9518
+      },
+      "line_start": 149,
+      "quote": "def build_canonical(frames: dict[tuple[str, str], pd.DataFrame], freq: str = \"annual\")",
+      "unicode_start": 6628,
+      "unicode_end_exclusive": 6714,
+      "utf8_start": 6650,
+      "utf8_end_exclusive": 6736
+    },
+    {
+      "file": {
+        "file": "research/ir-transparent-metric-core-review-2026-10-15/upstream-extras.py",
+        "sha256": "3038a489679aa163f5a4d930ac7cb4dcf320d72a62122ccd45e9d9242b593631",
+        "bytes": 7912
+      },
+      "line_start": 99,
+      "quote": "if price is not None:",
+      "unicode_start": 5409,
+      "unicode_end_exclusive": 5430,
+      "utf8_start": 5448,
+      "utf8_end_exclusive": 5469
+    }
+  ],
+  "operations": {
+    "GET": 0,
+    "DB_or_Store_access": 0,
+    "old_NCAV_or_other_file_changes": 0,
+    "upstream_import_execution": 0,
+    "Graham_number_or_threshold_calculation": 0,
+    "financial_adoption_IR_price_forecast": 0
+  }
+}

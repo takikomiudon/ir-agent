@@ -1,0 +1,9 @@
+# 3023 会社一次資料の保存URL棚卸し
+
+著者元URL参照先のlibrary01旧06snapshotから開始し、既存evidence JSONは最大5件だけ確認した。2026/3通期短信、2027/3第1四半期短信の保存resolved PDF URL、決算関連資料library02入口、2026/3説明会資料の告知に結びつくevent03入口を記録。個別説明PDF/Q&Aは未特定で、会社2027/3予想が本文にあるとは未読で断定しない。
+
+日付は保存visibletextの告知表示と位置で保持し、filenameから補わない。retrieved_atと存在する本文完了時計を別に残す。旧linkはurl/labelのみで原href/元HTML位置未保存。今回棚卸しでliteralhrefを復元していない。5件中の旧home503と後続home200を保持し、失敗を全ルートへ一般化しない。
+
+対象hostはwww.rasaco.co.jpで中央7holdにexact一致なし。ただし許可認証やGET開始ではなく、既知hold一致URLは候補外というルールを記録。author条件は大型案件反動減の1論点のまま増やさない。本文未読・予測/金融採用/正式IR/DB保存の認定0。GET/JS/API/推測/StoreDB/旧file/code/index/mon変更0。保存不足は限定範囲の未特定であり非公表とはしない。
+
+3files固定。routesは根拠snapshot SHA/JSONpathと日付quote、validationは旧input不変・quote位置を記録。producer棚卸しで独立点検済とは主張しない。

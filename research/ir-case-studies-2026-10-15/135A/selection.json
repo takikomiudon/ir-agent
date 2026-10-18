@@ -1,0 +1,103 @@
+{
+  "recorded_at": "2026-10-15T04:30:00.422800+00:00",
+  "ledger_file": "research/ir-recovery-2026-10-13/contact-candidates.csv",
+  "ledger_sha256": "d7a55a842a7c126b48c588801cc2c6035d21bad22cb228ef57da68def1e03f31",
+  "ledger_rows": 1819,
+  "db_file": "data/ir-research-2026-10-15.sqlite3",
+  "db_access": "read-only URI mode=ro",
+  "public_source_count_query": "select company_id,count(*) from sources where json_extract(data,'$.source_type')='public_disclosure' group by company_id",
+  "observed_public_source_counts": {
+    "jp:1332": 5,
+    "jp:3774": 12,
+    "jp:5480": 8,
+    "jp:5988": 9
+  },
+  "eligible_count": 1815,
+  "sort": "security_code ascending (lexicographic ticker order)",
+  "selected_security_code": "135A",
+  "selected_company_snapshot": {
+    "held": false,
+    "id": "jp:135A",
+    "ir_contact": {
+      "channel_status": "confirmed",
+      "channels": [
+        "form"
+      ],
+      "conditions": [
+        "IR専用フォーム。会社名は必須だが、入力欄のplaceholderに個人の方は「個人」と入力する案内がある。",
+        "氏名・ふりがな・メールアドレス・電話番号等が必須表示。電話・手紙で回答する場合がある。"
+      ],
+      "contact_url": "https://vrain.co.jp/ir/inquiry/",
+      "imported_at": "2026-10-15T01:21:57.622048+00:00",
+      "individual_access": "explicit",
+      "limitations": [
+        "公開ページの保存済みGET証拠による確認。フォーム入力・送信、メール到達、実返信は未検証。",
+        "窓口の確認は投資適性、業績・株価の評価や個人への回答保証を示さない。"
+      ],
+      "outreach_suitability": "candidate",
+      "provenance": {
+        "catalog_path": "/workspace/ir-agent/research/ir-recovery-2026-10-13/contact-candidates.csv",
+        "catalog_sha256": "d7a55a842a7c126b48c588801cc2c6035d21bad22cb228ef57da68def1e03f31",
+        "csv_line_number": 3,
+        "csv_row_number": 3,
+        "reference_scope": "Original references from confirmed candidate observations for the selected contact URL; not independent re-verification.",
+        "review_source": "previous_saved_review",
+        "source_record": "/workspace/ir-agent/research/ir-contacts-universe-2026-10-11/records/135A.json",
+        "source_references": [
+          {
+            "http_status": 200,
+            "quote": "IRについてのお問い合わせ 下記のお問い合わせフォームに必要事項を入力のうえ下の「上記の内容で送信する」をクリックして下さい。",
+            "retrieved_at": "2026-10-11T03:58:51.081065+00:00",
+            "role": "contact_channel",
+            "snapshot": "evidence/135A/06.json",
+            "url": "https://vrain.co.jp/ir/inquiry/"
+          },
+          {
+            "http_status": 200,
+            "quote": "会社名 必須",
+            "retrieved_at": "2026-10-11T03:58:51.081065+00:00",
+            "role": "conditions",
+            "snapshot": "evidence/135A/06.json",
+            "url": "https://vrain.co.jp/ir/inquiry/"
+          },
+          {
+            "http_status": 200,
+            "quote": "お問い合せの内容によりましては、電話やお手紙でお返事する場合もございますので、お電話番号・ご住所は、よくご確認してくださいますようお願いします。",
+            "retrieved_at": "2026-10-11T03:58:51.081065+00:00",
+            "role": "conditions",
+            "snapshot": "evidence/135A/06.json",
+            "url": "https://vrain.co.jp/ir/inquiry/"
+          },
+          {
+            "extraction_scope": "form_control_attribute",
+            "field_path": "forms.0.controls.2.placeholder",
+            "quote": "個人の方は「個人」と入力してください",
+            "retrieved_at": "2026-10-11T03:58:51.081065+00:00",
+            "role": "individual_access",
+            "snapshot": "evidence/135A/06.json",
+            "url": "https://vrain.co.jp/ir/inquiry/"
+          }
+        ]
+      },
+      "public_ir_emails": [],
+      "verified_at": "2026-10-11T04:11:06.674846+00:00"
+    },
+    "name": "ＶＲＡＩＮ　Ｓｏｌｕｔｉｏｎ",
+    "security_code": "135A",
+    "status": "watch"
+  },
+  "ledger_row": {
+    "security_code": "135A",
+    "company_name": "ＶＲＡＩＮ　Ｓｏｌｕｔｉｏｎ",
+    "market": "グロース（内国株式）",
+    "jpx_sector": "情報・通信業",
+    "official_url": "https://vrain.co.jp/",
+    "contact_url": "https://vrain.co.jp/ir/inquiry/",
+    "individual_access": "explicit"
+  },
+  "research_sample_only": true,
+  "investment_selection": false,
+  "status_changed": false,
+  "current_contact_revalidated": false,
+  "current_send_eligibility": null
+}

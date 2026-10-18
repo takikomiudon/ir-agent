@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T12:55:00.683291+00:00",
+  "status": "independent_finite_code_review_completed_no_blocking_findings",
+  "fixed_scope": {
+    "primary": [
+      "source-before/cli.py",
+      "source-after/cli.py",
+      "source-after/test_pure_cli_db_boundary.py"
+    ],
+    "primary_path_base": "this directory",
+    "background": [
+      "review.json",
+      "reproduction.json",
+      "implementation.json"
+    ],
+    "live_current_file_checks": [
+      {
+        "production_or_test_path": "src/ir_agent/cli.py",
+        "snapshot_path": "research/ir-pure-cli-db-boundary-2026-10-15/source-after/cli.py",
+        "sha256": "2eed88fd33a8a005ec8597254323fe02bd04383f37c434d9f78b11bc39eacca2",
+        "byte_count": 23073,
+        "current_bytes_equal_snapshot": true
+      },
+      {
+        "production_or_test_path": "tests/test_pure_cli_db_boundary.py",
+        "snapshot_path": "research/ir-pure-cli-db-boundary-2026-10-15/source-after/test_pure_cli_db_boundary.py",
+        "sha256": "7dadfeda4cddce8b90111b53c8d992939b7d29935f2ef622c99ac88ab1d57186",
+        "byte_count": 9157,
+        "current_bytes_equal_snapshot": true
+      }
+    ],
+    "other_files": "Harness/contacts/test fixture helper were read only to confirm the existing contacts dry-run contract. Their SHA is in probe source inputs."
+  },
+  "findings": [],
+  "blocking_findings": 0,
+  "assessment": [
+    {
+      "topic": "exact12 plus2 conditional routes",
+      "conclusion": "Explicit file-command frozenset has exactly12 commands. The unchanged parser has36 top commands, leaving22 always-DB commands plus observations/contacts conditional routes. Observations bypasses only summarize with truthy FILE; contacts bypasses only explicit import --dry-run. No normal rejected-row import was added to the pure classification.",
+      "evidence": [
+        "independent-probe.json structural_checks",
+        "PCDB-I01",
+        "PCDB-I02"
+      ]
+    },
+    {
+      "topic": "before Store and Harness",
+      "conclusion": "Both main and run check the same pure predicate before Store/Harness construction. Pure returns do not execute ObservationStore or Harness. The two pure differential probes forbidden both Store and Harness construction after the change.",
+      "evidence": [
+        "PCDB-I01",
+        "PCDB-I02",
+        "P01-normalize-facts-clock-and-output",
+        "P02-contacts-dryrun-with-rejected-row"
+      ]
+    },
+    {
+      "topic": "unchanged financial/library calculations",
+      "conclusion": "The11 original if branches covering12 pure commands are AST-identical after moving. Existing calculators, load_json, arguments, Decimal/money validation, JSON output and error formatting were not rewritten. normalize-facts still passes cli.now_iso(); default clocks remain runtime samples rather than fixed/time-independent values.",
+      "evidence": [
+        "PCDB-I04",
+        "independent-probe.json structural_checks",
+        "P01-normalize-facts-clock-and-output"
+      ]
+    },
+    {
+      "topic": "decision/ir-plan snapshot boundary",
+      "conclusion": "Both original branches already called evaluate(load_json(FILE)) without consuming Store state. The change does not bypass a former live correction, historical availability, PIT or saved decision check. File results still cannot certify persisted state. Stateful decision-review/reply/question/PIT routes remain DB-backed.",
+      "evidence": [
+        "PCDB-I03",
+        "independent-probe.json structural_checks"
+      ]
+    },
+    {
+      "topic": "conditional file-summary and dry-run semantics",
+      "conclusion": "Observation FILE still loads the same records key and same as_of expression, skipping only unused registry construction. No-FILE remains the unchanged ObservationStore path, including the same falsy-file behavior. Contacts explicit dry-run reuses the existing builder and identical result selection; normal import still goes through Harness.",
+      "evidence": [
+        "PCDB-I06",
+        "P02-contacts-dryrun-with-rejected-row",
+        "P03-observations-without-file-still-stateful",
+        "independent-probe.json structural_checks"
+      ]
+    },
+    {
+      "topic": "normal DB output/exception/close",
+      "conclusion": "After removing relocated pure if statements and the new early guard, remaining run statements are AST-identical. Parser and main result serialization/return, caught exception classes/error message, and finally close are unchanged. No-FILE observation probe opens and closes one memory Store on both sides and produces identical output. Store constructor failures still leave store None as before.",
+      "evidence": [
+        "PCDB-I05",
+        "independent-probe.json structural_checks",
+        "P03-observations-without-file-still-stateful"
+      ]
+    },
+    {
+      "topic": "new regression test scope",
+      "conclusion": "Read all184 lines of the fixed new test module. Seven tests cover successful14 pure routes, bad JSON/missing-file failures, impossible/non-SQLite path handling, conditional stateful branches and close/error behavior. The module was not rerun here; its target success is a prior implementation record. Root will run the full suite once.",
+      "evidence": [
+        "source-after/test_pure_cli_db_boundary.py",
+        "implementation.json target_tests"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "PCDB-I01",
+      "file": "research/ir-pure-cli-db-boundary-2026-10-15/source-after/cli.py",
+      "sha256": "2eed88fd33a8a005ec8597254323fe02bd04383f37c434d9f78b11bc39eacca2",
+      "character_start": 16045,
+      "character_end_exclusive": 16142,
+      "line_start": 240,
+      "quote": "if _runs_without_store(args):\n        return _run_file_command(args)\n    harness = Harness(store)",
+      "meaning": "run also dispatches pure routes before Harness, including direct run callers."
+    },
+    {
+      "id": "PCDB-I02",
+      "file": "research/ir-pure-cli-db-boundary-2026-10-15/source-after/cli.py",
+      "sha256": "2eed88fd33a8a005ec8597254323fe02bd04383f37c434d9f78b11bc39eacca2",
+      "character_start": 22644,
+      "character_end_exclusive": 22712,
+      "line_start": 362,
+      "quote": "if not _runs_without_store(args):\n            store = Store(args.db)",
+      "meaning": "main avoids Store startup for exactly the allowlisted pure/conditional routes."
+    },
+    {
+      "id": "PCDB-I03",
+      "file": "research/ir-pure-cli-db-boundary-2026-10-15/source-before/cli.py",
+      "sha256": "57254a8e24df6b7be8c772e637821a0546b66ece40088238bf3a5643a4c13979",
+      "character_start": 14862,
+      "character_end_exclusive": 15106,
+      "line_start": 212,
+      "quote": "if args.command in {\"decision\", \"ir-plan\"}:\n        from .decision import evaluate_decision, evaluate_ir_plan\n        evaluate = evaluate_decision if args.command == \"decision\" else evaluate_ir_plan\n        return evaluate(load_json(args.file))",
+      "meaning": "Before also uses the supplied snapshot only; there was no DB live/PIT lookup in this branch."
+    },
+    {
+      "id": "PCDB-I04",
+      "file": "research/ir-pure-cli-db-boundary-2026-10-15/source-after/cli.py",
+      "sha256": "2eed88fd33a8a005ec8597254323fe02bd04383f37c434d9f78b11bc39eacca2",
+      "character_start": 15321,
+      "character_end_exclusive": 15390,
+      "line_start": 226,
+      "quote": "return normalize_disclosed_facts(load_json(args.file), now=now_iso())",
+      "meaning": "The same explicit trusted runtime clock is still passed; DB independence is not time independence."
+    },
+    {
+      "id": "PCDB-I05",
+      "file": "research/ir-pure-cli-db-boundary-2026-10-15/source-after/cli.py",
+      "sha256": "2eed88fd33a8a005ec8597254323fe02bd04383f37c434d9f78b11bc39eacca2",
+      "character_start": 23008,
+      "character_end_exclusive": 23072,
+      "line_start": 370,
+      "quote": "finally:\n        if store is not None:\n            store.close()",
+      "meaning": "Store-backed success/error retains the same close contract."
+    },
+    {
+      "id": "PCDB-I06",
+      "file": "research/ir-pure-cli-db-boundary-2026-10-15/source-after/cli.py",
+      "sha256": "2eed88fd33a8a005ec8597254323fe02bd04383f37c434d9f78b11bc39eacca2",
+      "character_start": 15709,
+      "character_end_exclusive": 15920,
+      "line_start": 233,
+      "quote": "catalog = build_contact_bundle(args.file, imported_at=args.imported_at or now_iso())\n        return {\"summary\": catalog[\"summary\"], \"rejected_rows\": catalog[\"rejected_rows\"],\n                \"status\": \"dry_run\"}",
+      "meaning": "Explicit dry-run keeps the original builder, timestamp expression, summary and rejected rows; normal import stays in Harness."
+    }
+  ],
+  "independent_probes": {
+    "script": {
+      "file": "research/ir-pure-cli-db-boundary-2026-10-15/independent-probe.py",
+      "sha256": "c9ec75bd930a58f640b51ebc045bcb94ec30301472edb912500c6a6ff0e460d5"
+    },
+    "result": {
+      "file": "research/ir-pure-cli-db-boundary-2026-10-15/independent-probe.json",
+      "sha256": "f3313281878eb3de9f22a22201ca87f86f58811f277600caa5ab8bc43986ef04"
+    },
+    "count": 3,
+    "main_invocations": 6,
+    "summaries": [
+      {
+        "id": "P01-normalize-facts-clock-and-output",
+        "exit_code": 0,
+        "same_exit_stdout_stderr": true,
+        "before_Store_close": [
+          1,
+          1
+        ],
+        "after_Store_close": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "P02-contacts-dryrun-with-rejected-row",
+        "exit_code": 0,
+        "same_exit_stdout_stderr": true,
+        "before_Store_close": [
+          1,
+          1
+        ],
+        "after_Store_close": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "P03-observations-without-file-still-stateful",
+        "exit_code": 0,
+        "same_exit_stdout_stderr": true,
+        "before_Store_close": [
+          1,
+          1
+        ],
+        "after_Store_close": [
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "current_two_files_byte_equal_frozen_after": true,
+    "old12_inputs_hash_unchanged": true,
+    "probe_count": 3,
+    "AST_checks": "parser / moved11branches / remainingDBrun / main output-except-finally / exact12 /36top+8conditional predicate cases",
+    "blocker_file_unchanged": true,
+    "actual_DB_accesses": 0,
+    "GETs": 0,
+    "code_or_tests_edited": 0,
+    "old_files_edited": 0,
+    "targeted_test_suites_rerun": 0,
+    "full_suites_rerun": 0
+  },
+  "limits": [
+    "Finite review of the two frozen source snapshots and fixed test module, not proof of all future parser extensions or every DB route at runtime.",
+    "Differential before Store was replaced with :memory: solely to compare outputs without opening any persistent DB. It is not a claim that original CLI succeeded on an impossible path.",
+    "Default runtime timestamps naturally occur after a different amount of startup work; the same trusted-clock expression and fixed-clock behavior are preserved, not identical wall-clock microseconds across separate runs.",
+    "No actual research DB file was opened, hashed, migrated or queried by this review; actual DB unchanged proof in the parent artifacts was not independently rerun.",
+    "No new financial rule or source-meaning guarantee follows from avoiding Store startup."
+  ],
+  "required_changes": [],
+  "next_step": "No blocking fix requested within the frozen scope; parent may proceed with its planned single full-suite run."
+}

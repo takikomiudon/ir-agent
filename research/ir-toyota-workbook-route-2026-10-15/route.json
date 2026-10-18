@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T12:33:22.427724+00:00",
+  "status": "finite_single_PDF_route_check_closed_no_workbook_route_identified",
+  "purpose": "Toyota著者表示3943円と既存表示入力再計算3944.09円の精度差について、元workbookへ到達する実リンクが同PDF内にあるかだけを確認する。",
+  "source": {
+    "source_id": "damodaran.cyclical-commodity.2009",
+    "author": "Aswath Damodaran",
+    "title": "Ups and Downs: Valuing Cyclical and Commodity Companies",
+    "original_url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/commodity.pdf",
+    "publication_label": "2009-09",
+    "publication_precision": "month",
+    "retrieved_at_as_saved": "2026-10-15T01:26:14.401821+00:00",
+    "new_GET_completed_at": null,
+    "raw_reference": {
+      "file": "research/valuation-model-routing-2026-10-15/sources.json",
+      "sha256": "a9b8c046d3ff5b23eb65fdaabdd4ee8ef55c66498b52cbcad9fc5099c3cc7538",
+      "json_pointer": "/sources/2/raw_pdf_base64",
+      "encoding": "base64"
+    },
+    "raw_sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+    "raw_bytes": 670511,
+    "PDF_header": "%PDF-1.3",
+    "physical_pages": 40,
+    "saved_text_reference": {
+      "file": "research/valuation-model-routing-2026-10-15/sources.json",
+      "sha256": "a9b8c046d3ff5b23eb65fdaabdd4ee8ef55c66498b52cbcad9fc5099c3cc7538",
+      "json_pointer": "/sources/2/extracted_text"
+    },
+    "text_utf8_sha256": "bc0de814b9bac9a6923a09919084071f4342e1fbfe5f9665c678d32ce096ea5b"
+  },
+  "prior_research_context": [
+    {
+      "ref": {
+        "file": "research/ir-toyota-author-valuation-readiness-2026-10-15/readiness.json",
+        "sha256": "10e9287e2fd2f3e1f597eb58002432436d87e15663aa259244007576a5e6d4f7"
+      },
+      "confirmed_previously": "著者の表示FCFF/明示n+1/単一r/gと株主価値調整9群を確認し、表示算術と著者表示の不一致を保存した。今回その算術を再計算していない。"
+    },
+    {
+      "ref": {
+        "file": "docs/explicit-equity-bridge-spec.md",
+        "sha256": "877723bc70071ecb56480bebe2e662cf1364c08d61c8f450cfc41bf0971872cd"
+      },
+      "confirmed_previously": "後の別method equity bridgeは明示9入力を扱うが、未表示精度/丸め手順/原表不整合の理由は未確認のまま保持している。今回金融code又は入力は変更していない。"
+    },
+    {
+      "ref": {
+        "file": "research/ir-value-price-policy-scope-review-2026-10-15/review.json",
+        "sha256": "b33566fbfc1dcc5444a9a366a70da7bf46b09c2288f5e011c154172c3a56b1f3"
+      },
+      "confirmed_previously": "値と歴史的価格の比較と、明示購入規則を区別した。今回は買い規則を探索していない。"
+    }
+  ],
+  "inspection": {
+    "PDFs_inspected": 1,
+    "physical_page_range": [
+      1,
+      40
+    ],
+    "mode": "全40頁を対象にリンク/表計算語の有限検索。全本文の再精読や数値再計算ではない。",
+    "URI_object_enumeration": {
+      "tool": "pdfinfo version 26.05.0",
+      "command": [
+        "pdfinfo",
+        "-f",
+        "1",
+        "-l",
+        "40",
+        "-url",
+        "/tmp/ir-toyota-workbook-route-commodity.pdf"
+      ],
+      "returncode": 0,
+      "stdout": "Page  Type          URL\n",
+      "stdout_utf8_sha256": "d46a33a46fcbee0276471af335f718713a1c431bd5b979ba6d61bc73fc7657e8",
+      "stderr": "",
+      "URL_rows": [],
+      "note": "pdfinfo -url enumerates URLs in PDF objects and does not scan text content. 本文検索は別に実施。"
+    },
+    "text_search": {
+      "extraction_command": [
+        "pdftotext",
+        "-layout",
+        "/tmp/ir-toyota-workbook-route-commodity.pdf",
+        "/tmp/ir-toyota-workbook-route-commodity.txt"
+      ],
+      "returncode": 0,
+      "reextracted_sha256": "bc0de814b9bac9a6923a09919084071f4342e1fbfe5f9665c678d32ce096ea5b",
+      "equals_saved_text": true,
+      "regex": "https?://|www\\.|\\.xls(?:x|m|b)?\\b|\\.xlt(?:x|m)?\\b|spread[\\s-]*sheet|work[\\s-]*book|Excel|worksheet|\\b[A-Za-z0-9.-]+\\.(?:com|edu|org|net)/",
+      "flags": [
+        "IGNORECASE"
+      ],
+      "matches": [],
+      "end_exclusive_offsets_if_found": true
+    },
+    "raw_name_token_scan_supplement": {
+      "counts": {
+        "/Annots": 0,
+        "/URI": 0,
+        "/GoToR": 0,
+        "/Launch": 0,
+        "/EmbeddedFiles": 0,
+        "/ObjStm": 0
+      },
+      "note": "原PDF bytes内の名前token検索を補助として実施。これ単独を全PDF構造の形式検証とはしない。"
+    }
+  },
+  "routes": [],
+  "route_count": 0,
+  "workbook_retrieved": false,
+  "workbook_quote_or_annotation_position": null,
+  "conclusion": "この保存commodity.pdf内の本文・URL object列挙では、Toyota元Excel/workbookの明示href/URI/表計算URLは未特定。ここで終了する。",
+  "limits": [
+    "著者サイト全体/他版/別資料にもworkbookがないという結論ではない。",
+    "ファイル名やdirectoryを推測せず、URL補完・検索・取得はしない。",
+    "3943と3944.09の差を丸め又は誤植と断定しない。未表示精度/手順の不足は未解決のまま。",
+    "現在のToyota価格/予測/買い条件/当時の前向き成績へ転用しない。"
+  ],
+  "activity_counts": {
+    "new_GETs": 0,
+    "external_searches": 0,
+    "DB_accesses": 0,
+    "production_changes": 0,
+    "old_file_changes": 0,
+    "numeric_recalculations": 0,
+    "buy_rule_searches": 0,
+    "IR_or_model_adoptions": 0,
+    "orders": 0
+  },
+  "path_basis": "repository-root-relative; /tmp commands restore only the same saved PDF for offline tools"
+}

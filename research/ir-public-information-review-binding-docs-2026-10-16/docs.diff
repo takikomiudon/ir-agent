@@ -1,0 +1,26 @@
+--- before/docs/workflow.md
++++ after/docs/workflow.md
+@@ -202,6 +202,12 @@
+ 
+ 方針の記録日時は質問作成以前でなければならない。許可していない倍率・確率・入力の変更は保留する。異なる明確な回答が異なる判断を生むなら `decision_distinguishing`、どの明確な回答でも判断が同じなら `no_decision_change`、設定・点検が足りなければ `needs_review`。これは情報価値の金銭的な推定や質問の送信許可を表さない。曖昧・無回答の分岐は評価額を変更しない。
+ 
++任意の `question.public_information_review` は `{reviewed_at, reviewer, rationale, sources: [{source_id, source_snapshot_sha256, scope, basis_quote}]}` を持つ。`sources` は非空・ID重複なし、`scope` は読んだ頁・表・対象期などの非空文字列、`basis_quote` は保存本文の逐語引用。根拠は `ir-plan.sources` へ渡し、レビュー専用sourceを仮説の `evidence_ids` や評価入力へ自動追加しない。`source_snapshot_sha256` は `ir_agent.models.json_text` を使った `hashlib.sha256(json_text(source).encode("utf-8")).hexdigest()` の小文字64桁で、本文/PDFのSHAや別のJSON表現のSHAとは区別する。原典の全連鎖について同社・公開性・時点を照合し、market_dataはレビュー根拠にしない。
++
++`reviewed_at` は自己申告で、`reviewed_at <= created_at <= as_of` が必要。保存経路では全レビュー根拠の実first-save/legacy known-byをその時点へ照合し、レビュー時・判定境界・現在の公開性訂正も確認する。IR返信由来なら保存返信/質問のID・同社・本文一致を確認して訂正へ結ぶ。不正参照はエラー、時点/公開性不足は下書きに理由を残す。newfieldがある場合だけサーバーが `public_information_review_check` を計算し、固定契約付きでは `decision_contract.preflight`、契約なしでは質問の同名fieldへ保存する。この派生checkを新規requestで指定せず、再送には元requestを使う。変更retryは拒否し、新しい既送信記録では再確認して不足時に止める。`mark-sent` は外部で既送信の記録であり、同一送信のretryは元の履歴を保つ。
++
++この任意fieldを使わない旧経路は従来どおりで、同名の余剰JSONもこの機能の確認結果として参照しない。引用存在・確認範囲の固定は、意味上の「答えがない」、実読、全公表資料の最新性、送信準備や金融判断の完了を保証しない。`public_answer_status` の意味レビューと既存の方針・回答分岐の点検は残る。[実装の受入記録](../research/ir-public-information-review-binding-integration-2026-10-16/parent-acceptance.json)を参照する。
++
+ 架空の返信を既存ハーネスへ取り込み、価格条件付きレビューまで通す実行例は `.venv/bin/python scripts/demo_ir_decision.py`。メモリ内DBのみを使い、架空の送信済み状態を記録する。外部への送信や注文は行わない。
+ 
+ 
+--- before/docs/ir-question-preparation.md
++++ after/docs/ir-question-preparation.md
+@@ -14,6 +14,8 @@
+ 
+ [5988の減損/CFO対応](../research/ir-case-studies-2026-10-15/5988/cashflow-oneoff-bridge-review.md)と[税効果注記](../research/ir-case-studies-2026-10-15/5988/tax-basis-review/tax-basis-review.md)のように公開資料で解けた過去の区分を、原文に一時費用の質問例があるという理由で再質問しない。残るcash範囲・将来税/NOLも、判断価値や採用入力がなければ質問優先を確定しない。
+ 
++公開資料の確認範囲・時点・引用は、任意の [`question.public_information_review`](workflow.md#出典付き方針で判断を点検する) として不変質問へ固定できる。読んだ資料のID/native JSON SHA、頁・表・対象期のscope、逐語quoteと、残る問いの理由を保存し、実保存来歴と現在の公開性訂正も別に照合する。これは本プロジェクトの参照固定であり、未回答の意味・実読・全資料の最新性や送信準備完了の認証ではない。レビュー根拠を評価入力へ自動採用せず、未導入の旧経路・外部既送信記録は区別する。
++
+ PEのCIM/data roomや非公開顧客情報の要求、第三者への連絡、買収手続き、身振り・自信の評価は採用しない。会議向けの15–20問・60–90分をメール/フォームの数値条件へ移さず、公式受付条件を確認する。原文の外部操作は実行しない。
+ 
+ ## 日本IR協議会の企業向け指針を準備へ適応する

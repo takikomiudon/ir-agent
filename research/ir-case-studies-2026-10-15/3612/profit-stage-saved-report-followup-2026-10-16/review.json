@@ -1,0 +1,157 @@
+{
+  "recorded_at": "2026-10-16T13:04:19.952824+00:00",
+  "company_id": "jp:3612",
+  "source_id": "case-public:5304377b63a7df6f4b648f1e486e7813c5bc96b42acfb84f3b1666a65043a3cf",
+  "source_native_sha256": "82ba3b28b1acbb67b4f11c5c83802f38f37f03d698b27f4985fd5628bab0081d",
+  "purpose": "Public-first follow-up for same-year business/operating/pre-tax/parent-profit comparison definitions",
+  "status": "bounded_two_new_pages_do_not_resolve_actual_profit_stage_adjustments",
+  "reading_scope": {
+    "new_physical_pages": [
+      23,
+      62
+    ],
+    "printed_pages": [
+      22,
+      61
+    ],
+    "new_image_count": 2,
+    "full_native_and_images_read": [
+      23,
+      62
+    ],
+    "already_read_not_reread": [
+      1,
+      2,
+      4,
+      5,
+      10,
+      20,
+      21,
+      22,
+      63,
+      66
+    ],
+    "all_text_locator_only_other_pages": true,
+    "full_original_pages": 67
+  },
+  "new_public_findings": [
+    {
+      "quote_refs": [
+        "p62-financial-actual-chart-context",
+        "p62-chart-current-prior-visual"
+      ],
+      "finding": "p62は年度別売上収益・事業利益等の実績チャート。FY2026/2とFY2025/2の値を表示するが、事業→営業→税前→親帰属の科目明細・調整表ではない。",
+      "limit": "同じ利益名称の表示だけで利益定義/IFRS18組替/取得範囲が全て解けたとはしない。原表示を別単位や精度へ換算しない。"
+    },
+    {
+      "quote_refs": [
+        "p62-comparison-notes-exact",
+        "p62-notes-visual"
+      ],
+      "finding": "ROICとnetD/Eの比較では、全期間のIFRS16リースを有利子負債に含めるという範囲を明示。2024/2の12カ月換算注記はROE・ROICに限定される。",
+      "limit": "売上/事業利益・全ての年度や利益指標へ換算注記を拡張しない。IFRS16負債注記はIFRS18利益表示の科目橋渡しや現行実効税率の認証ではない。"
+    },
+    {
+      "quote_refs": [
+        "p23-tax-after-interest-label-native",
+        "p23-management-label-visual",
+        "p23-VISION-W-strategy-context-native"
+      ],
+      "finding": "p23の「税引後」はVISION-Wの経営指標/資本政策・TSR同期化図にある税引後金利率のラベル。周辺はROE/ROIC・レバレッジ・還元の目標/方針である。",
+      "limit": "FY2026/2の税引後利益・税額・営業から親利益への実績調整表として扱わず、会社目標や配当方針を投資policy/必要利回りへ採用しない。"
+    }
+  ],
+  "prior_scope_kept_separate": {
+    "earnings_driver_ref": {
+      "path": "research/ir-case-studies-2026-10-15/3612/earnings-drivers-saved-report-review-2026-10-16/review.json",
+      "sha256": "fc1a0509442ef7c13bfa4be07c7f2a0aba6d32770fd17b18aec2c450e0ff1dc1"
+    },
+    "singlepage5_followup_ref": {
+      "path": "research/ir-case-studies-2026-10-15/3612/parent-profit-bridge-saved-report-followup-2026-10-16/review.json",
+      "sha256": "6544b1c4f608d1b95c1b7d550347baa011da9e73d92e54f5c4285309dd71e536"
+    },
+    "accepted_IFRS18_and_comparison_note_ref": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/3612/annual-per-share-saved-report-review-2026-10-16/quotes.json",
+        "sha256": "b4ccc16789e196963549f1a1fd7fa5d3ca99c86e501adc85751dc9e17bd72464"
+      },
+      "quote_id": "IFRS18-and-comparison-basis",
+      "physical_page": 63,
+      "new_reading": false
+    },
+    "known_prior": "p63の事業/営業/税引前/親帰属の見出し・呼称変更等は既読として参照するだけ。p5一般的成長構造説明の未解決を過去に遡って解消扱いにしない。"
+  },
+  "specific_unresolved_series": [
+    {
+      "series": "同年同表示版の事業利益→営業利益",
+      "remaining": "調整科目・定義/対象範囲の公開対応。会社の計画/管理指標図だけでは事業利益との差を構成する具体項目を特定できない。"
+    },
+    {
+      "series": "営業利益→税引前当期利益",
+      "remaining": "両表示を結ぶ実際の公表科目系列と取得取込/比較版の対応。金融費用等の有無・額・符号を推測/0補完しない。"
+    },
+    {
+      "series": "税引前当期利益→親会社所有者帰属利益",
+      "remaining": "同じ対象期・取込範囲における調整系列と注記の所在。税/非支配等を含むはずという一般論から当社の科目・額・税率を作らない。"
+    },
+    {
+      "series": "既存/取得事業と表示変更の比較範囲",
+      "remaining": "取得時点・取込期間・同表示版の対応の公表確認が先。来期見通しやIFRS16負債比較注記で当期親利益増の寄与を埋めない。"
+    }
+  ],
+  "bounded_locator_result": {
+    "tax_before_literal_page": "税引前当期利益は保存テキストでは既読p63の1行のみ",
+    "unmatched_literal_terms": [
+      "IFRS18",
+      "税前",
+      "税金",
+      "法人所得税",
+      "法人税",
+      "金融収益",
+      "金融費用",
+      "連結損益",
+      "損益計算書",
+      "非支配",
+      "非経常",
+      "調整後"
+    ],
+    "meaning": "抽出テキストのliteral所在結果と選択2頁の限定読解で、追加の実績利益調整表/定義説明を確認できなかった。全PDFの画像/他の表現/他の公開資料での不存在は認定しない。",
+    "next_source_search_or_GET": false
+  },
+  "question_preparation_disposition": {
+    "existing_issue_id": "3612-profit-measure-and-acquisition-scope-comparability",
+    "preparation_ref": {
+      "path": "research/ir-3612-7388-earnings-driver-question-preparation-2026-10-16/preparation.json",
+      "sha256": "d64bc9053515a751f2bb7324e18351eaa939d138b387123085b7440622734d31"
+    },
+    "public_check_progress": "計画図の「税引後」と実績科目を区別できたが、必要な利益段階の公開比較はなお未解決。未読の同年正式P/L・注記を読んだことにしない。",
+    "formal_question_text_created": false,
+    "definition_resolution_not_company_profit_support": true
+  },
+  "termination": "Maximum2newpages reached; no additional source/library/JS/price/provider exploration. Original67page source/native/classification remains unchanged.",
+  "operations": {
+    "GET": 0,
+    "DB_Store_CLI": 0,
+    "normalizer_or_numeric_calculation": 0,
+    "financial_thesis_or_IR_draft": 0,
+    "new_original_or_derived_source": 0,
+    "oldfile_sharedcode_docs_index_edits": 0
+  },
+  "financial_inputs_verified": false,
+  "forecast_tax_CF_normal_profit_adopted": false,
+  "input_pins": {
+    "research/ir-case-studies-2026-10-15/3612/integrated-report-business-review-2026-10-16/source-only-bundle.json": "189ef8c5f93214425efc2b3633a64b8970efba6113cbad1cc62b1ce040bea645",
+    "research/ir-case-studies-2026-10-15/3612/integrated-report-business-review-2026-10-16/full.txt": "d12776e8e4825d10c2729df39215e9feecd3560c3414de3b14b799f887b96b0c",
+    "research/ir-case-studies-2026-10-15/3612/integrated-report-business-review-2026-10-16/raw/a441fc34cd621a7797fe63c1523b18ddfc3524452157989a121042c7acc68050": "a441fc34cd621a7797fe63c1523b18ddfc3524452157989a121042c7acc68050",
+    "research/ir-case-studies-2026-10-15/3612/integrated-report-business-review-2026-10-16/review.json": "ddeab416556adf95fda7d6bbf3929706e4850c280d1088c2453ecbc69b6e44c9",
+    "research/ir-case-studies-2026-10-15/3612/integrated-report-business-review-2026-10-16/manifest.json": "374db5bad7b6fa385cc530fd887db705fd48cab8a71ca156c27f96d54632e6b6",
+    "research/ir-case-studies-2026-10-15/3612/earnings-drivers-saved-report-review-2026-10-16/review.json": "fc1a0509442ef7c13bfa4be07c7f2a0aba6d32770fd17b18aec2c450e0ff1dc1",
+    "research/ir-case-studies-2026-10-15/3612/earnings-drivers-saved-report-review-2026-10-16/quotes.json": "aa3776b65cd58d4a1ac741b438c2b1c9e34d78b9fafd6fca8061c31dea3c851f",
+    "research/ir-case-studies-2026-10-15/3612/earnings-drivers-saved-report-review-2026-10-16/parent-acceptance.json": "1b21fa64ceb3a8a01eb98f3e952fff3538e18a473deec384dd181da007ab8358",
+    "research/ir-case-studies-2026-10-15/3612/parent-profit-bridge-saved-report-followup-2026-10-16/review.json": "6544b1c4f608d1b95c1b7d550347baa011da9e73d92e54f5c4285309dd71e536",
+    "research/ir-case-studies-2026-10-15/3612/parent-profit-bridge-saved-report-followup-2026-10-16/parent-acceptance.json": "1a22c885912b98875f13eb9ff1de81e6de5ceb0848381f4041f646ecde81fc5c",
+    "research/ir-case-studies-2026-10-15/3612/annual-per-share-saved-report-review-2026-10-16/quotes.json": "b4ccc16789e196963549f1a1fd7fa5d3ca99c86e501adc85751dc9e17bd72464",
+    "research/ir-3612-7388-earnings-driver-question-preparation-2026-10-16/preparation.json": "d64bc9053515a751f2bb7324e18351eaa939d138b387123085b7440622734d31",
+    "research/ir-3612-7388-earnings-driver-question-preparation-2026-10-16/parent-acceptance.json": "f00b875576a66b9595fc9098866bada3e30fa61ff381241215517d136f25c2c7"
+  }
+}

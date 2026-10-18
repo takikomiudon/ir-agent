@@ -1,0 +1,320 @@
+{
+  "schema_version": 1,
+  "case_id": "7388-public-earnings-driver-comparability-monitor",
+  "company_id": "jp:7388",
+  "company_name": "FPパートナー",
+  "issue_id": "7388-quality-support-rate-comparability",
+  "recorded_at": "2026-10-16T12:18:47.448003+00:00",
+  "preparation_status": "file_only_not_registered_or_bootstrapped",
+  "purpose": "Anthropic DD/JIRAに沿う公表業績の比較定義の継続点検。会社固有投資thesis・将来利益見通し支持・金融入力認定ではない。",
+  "question_preparation_ref": {
+    "path": "research/ir-3612-7388-earnings-driver-question-preparation-2026-10-16/preparation.json",
+    "sha256": "d64bc9053515a751f2bb7324e18351eaa939d138b387123085b7440622734d31"
+  },
+  "question_parent_acceptance_ref": {
+    "path": "research/ir-3612-7388-earnings-driver-question-preparation-2026-10-16/parent-acceptance.json",
+    "sha256": "f00b875576a66b9595fc9098866bada3e30fa61ff381241215517d136f25c2c7"
+  },
+  "one_remaining_issue": "公表された業務品質支援金の「料率低下」が比較している料率・対象・期間の定義",
+  "conditions": [
+    {
+      "id": "C1",
+      "topic": "公表された業務品質支援金の「料率低下」が比較している料率・対象・期間の定義",
+      "status": "comparison_definition_unresolved",
+      "known_public_answers": [
+        "FY2025/11減収について、営業社員純減・提携集客減→新規契約減少という会社説明がある。原価減と販管費増の理由も公表済み。",
+        "p30は業務品質支援金の料率低下と減少を述べ、手数料率/支払率は保険会社・商品で異なると注記する。例示ANP約率は普遍料率ではない。",
+        "p31の改善命令受領→提携集客の一時停止という会社説明は、p30支援金料率低下と同じ因果とは未確認。「一時的」は将来回復保証ではない。",
+        "追加p32で期末営業社員2,518→2,333と年間採用681→491は公表既答。純減を退職者数/平均へ変えず、単純照会を追加しない。"
+      ],
+      "company_definition_scope": "既公表説明の料率定義、対象系列・比較期・公表箇所。",
+      "public_document_check_first": {
+        "first_owner": "public_document_check",
+        "candidate_ref": "7388-public-next",
+        "scope": "同年度の決算短信/説明資料・収益認識や支援金説明の公表注記。現phaseはその実URL/本文を確認していない。全44頁や全公式資料での不存在は未認定。",
+        "consequence": "公表で比較対象が特定できれば下記暫定文は取り下げ、資料参照を記録する。"
+      },
+      "on_new_saved_source": "Read the new frozen source, identify exact period/version/series/perimeter and publicly answerable definitions, remove newly answered parts and retain unresolved scope. Do not infer a whole-report absence or force different populations into one bridge.",
+      "resolution_means": "比較対象の定義/対応が特定できることだけ。会社の将来利益・EPS・CF・投資thesisを支持/反証したことにならない。",
+      "author_or_investor_forecast_gaps_not_filled": "将来契約数、商品/評価構成、料率、持続利益/税/CF/価値の予測・採用。定義回答だけでは埋まらない。",
+      "supports_or_counterevidence_for_future_company_earnings_assessed": false
+    }
+  ],
+  "baseline_case_observation": {
+    "issue_id": "7388-quality-support-rate-comparability",
+    "outcome": "unresolved",
+    "rationale": "Source-bound public comparison definitions remain unresolved; accepted explanations/display facts are not future-earnings support.",
+    "evidence_source_ids": [
+      "case-public:b6787509990806d3699dc95e63bc3308cffb8f94efa4fbbf1e7016927bada2a3",
+      "disclosed-facts:a8a491987616800597cbb9c680fc6b2ab4ff1e1549f9a0c189997b8586cfadbd"
+    ]
+  },
+  "prior_unresolved_research_carried_verbatim": {
+    "source_ref": {
+      "path": "research/ir-case-studies-2026-10-15/7388/earnings-drivers-saved-report-review-2026-10-16/meaning-review.json",
+      "sha256": "d40e05061987b944e7d57a26fad620ef50060e27d83d12a59d7ccc6ff36425b2"
+    },
+    "historical_items": [
+      {
+        "id": "D1-agent-population",
+        "already_public": "営業社員の純減を会社が減収要因に挙げる。",
+        "remaining_company_definition": "期末・期中平均人員、採用・退職・異動の定義、雇用区分・稼働開始日と生産性の比較母集団。",
+        "source_quote_ids": [
+          "issuer-sales-highlight"
+        ],
+        "next_public_check_ids": [
+          "P1"
+        ]
+      },
+      {
+        "id": "D2-lead-vs-contract-populations",
+        "already_public": "提携企業集客/自社集客/自己開拓を区別し、自社集客はTVCM・Web広告・マネードクタープレミア・契約譲受などと説明。",
+        "remaining_company_definition": "見込顧客の重複・再訪・獲得時点、自己開拓を含む分母、年度跨ぎ、図の名/件の関係と成約までのラグ。",
+        "source_quote_ids": [
+          "company-lead-definitions-and-rounding",
+          "new-contract-flow-definitions",
+          "physical-31-full-native-and-visual-context"
+        ],
+        "not_inferred": "123,598名を全経路のユニーク成約母集団とせず、契約数を割って成約率を作らない。",
+        "next_public_check_ids": [
+          "P2",
+          "P3"
+        ]
+      },
+      {
+        "id": "D3-contract-category",
+        "already_public": "純新規契約126,507件、追加新契約101,604件、総新規契約228,111件を会社が区分。純新規は既契約のない顧客、追加新契約は既契約者からの追加契約。",
+        "remaining_company_definition": "商品・生保損保・一時払い等の対象範囲と計上/取消/受領時点が平準払い165,363件とどう異なるか。",
+        "source_quote_ids": [
+          "new-contract-flow-definitions",
+          "physical-30-full-native-and-visual-context",
+          "physical-31-full-native-and-visual-context"
+        ],
+        "not_inferred": "平準払い件数と全新規契約を同一指標にせず、差を一時払い件数と断定しない。"
+      },
+      {
+        "id": "D4-stock-continuing-revenue",
+        "already_public": "保有契約/保有顧客は増加し、生命保険継続手数料も増加。生命保険の手数料受け取り期間は保険会社・商品により5〜10年、一時払いでは継続手数料なし。",
+        "remaining_company_definition": "保有契約の譲受・自社獲得・失効・解約・満了別変動、継続手数料の対象コホート/認識時点/有償残存期間、保有件数から収益までの対応。",
+        "source_quote_ids": [
+          "physical-30-full-native-and-visual-context",
+          "life-fee-duration-and-single-premium-limitation",
+          "physical-31-full-native-and-visual-context"
+        ],
+        "not_inferred": "保有増=顧客churnなし/定額継続収益/将来利益保証とはしない。"
+      },
+      {
+        "id": "D5-quality-rates",
+        "already_public": "初年度約70%・継続約5%・支援金約20%（条件あり）のANP例、料率は保険会社・商品で異なる。",
+        "remaining_company_definition": "FY2025実現料率・商品構成・品質評価条件・適用日別の寄与と、ANPから会計収益への橋渡し。",
+        "source_quote_ids": [
+          "physical-30-full-native-and-visual-context",
+          "fee-rates-vary",
+          "quality-support-rate-decrease"
+        ],
+        "not_inferred": "例示約率を全契約へ一律適用せず、支援金を補助金/無条件の固定収益とも見なさない。"
+      },
+      {
+        "id": "D6-returned-fees",
+        "already_public": "戻入額の負のシリーズを会社が表示。",
+        "remaining_company_definition": "戻入対象、過年度/当年度帰属、保険会社・商品別条件、損益/現金/外交員報酬への反映時点。",
+        "source_quote_ids": [
+          "physical-30-full-native-and-visual-context"
+        ],
+        "not_inferred": "損失が一時的、翌期消滅、当期現金流出額と断定しない。"
+      },
+      {
+        "id": "D7-expense-bridge",
+        "already_public": "原価減少と給料手当・広告宣伝等による販管費増加の説明がある。",
+        "remaining_company_definition": "費目別・拠点別・人員コホート別の額、営業活動との期間対応、反復性。",
+        "source_quote_ids": [
+          "issuer-sales-and-expense-explanation"
+        ],
+        "next_public_check_ids": [
+          "P1",
+          "P3"
+        ]
+      }
+    ],
+    "historical_recorded_at": "2026-10-16T12:06:22.602985+00:00",
+    "not_rewritten_or_new_independent_issue_scope": true
+  },
+  "accepted_followup_progress_kept_separate": {
+    "source_ref": {
+      "path": "research/ir-case-studies-2026-10-15/7388/salesforce-basis-saved-report-review-2026-10-16/meaning-review.json",
+      "sha256": "3be3a812bb3aaeb1dd325c76149c3c0983d975da99bb2db8a8144bb506d067c7"
+    },
+    "recorded_at": "2026-10-16T12:08:47.193163+00:00",
+    "followup_disposition": {
+      "four_requested_bases": {
+        "end_of_period_salesforce": {
+          "status": "directly_disclosed",
+          "current_display": "2,333名",
+          "prior_display": "2,518名",
+          "definition": "営業社員数（期末時点）",
+          "exact_day_endpoint": null
+        },
+        "hiring": {
+          "status": "annual_series_directly_disclosed_detailed_counting_definition_unknown",
+          "current_display": "491名",
+          "prior_display": "681名",
+          "quarterly_counts": null,
+          "offer_vs_join_date_vs_active_basis": null
+        },
+        "retirements": {
+          "status": "not_disclosed_on_selected_page",
+          "value": null,
+          "net_decrease_is_not_retirement_count": true,
+          "no_opening_plus_hiring_minus_closing_reconstruction": true
+        },
+        "average_salesforce": {
+          "status": "not_disclosed_on_selected_page",
+          "value": null,
+          "endpoint_not_average": true,
+          "no_average_or_productivity_reconstruction": true
+        }
+      },
+      "resolved_vs_prior": [
+        "Previously unread P1 now has one-page full-native/image review; FY2025/11 and comparative end-of-period headcounts and hiring series are available publicly.",
+        "Do not ask the company merely to supply FY2025/11 end salesforce2,333 or displayed hiring491: these are already disclosed.",
+        "The185 decrease is a net period-end change and cannot be labeled as retirees; no retirement reconstruction is performed."
+      ],
+      "still_unresolved_on_this_page": [
+        "Retirement/gross departure count, transfers or reclassifications, employment and active-sales scope, and join-date/offer-date counting basis.",
+        "Annual/quarterly average salesforce and contribution of new vs experienced cohorts, time to start revenue production.",
+        "Q3/Q4 absolute hiring counts despite qualitative statement of slight Q4 improvement.",
+        "Exact day as-of dates are not stated for staffing graph; shareholder register dates in lower-page shareholder-benefit discussion are not reused as staffing dates.",
+        "No assertion that these items are absent from the entire44-page report or other issuer disclosures."
+      ]
+    }
+  },
+  "display_facts_context_only": {
+    "derived_source_id": "disclosed-facts:a8a491987616800597cbb9c680fc6b2ab4ff1e1549f9a0c189997b8586cfadbd",
+    "concepts_and_raw_values": [
+      {
+        "concept": "reported_annual_earnings_per_share",
+        "raw_value": "88.79",
+        "unit": "JPY-per-share",
+        "period": {
+          "date_basis": "p42 annual column and separately accepted p2 month range only; no day endpoints inferred",
+          "date_precision": "fiscal_year_label_and_month_range_only",
+          "end_date": null,
+          "fiscal_year_end_month": "2025-11",
+          "label": "2025年11月期（原列2025.11）",
+          "period_kind": "annual_reported_duration",
+          "raw_column_label": "2025.11",
+          "start_date": null
+        }
+      },
+      {
+        "concept": "reported_book_value_per_share",
+        "raw_value": "508.60",
+        "unit": "JPY-per-share",
+        "period": {
+          "as_of_date": null,
+          "date_basis": "p42 annual BPS column only; no exact day endpoint is explicitly supplied by the selected page or inferred from a calendar",
+          "date_precision": "fiscal_year_label_and_month_only",
+          "end_date": null,
+          "label": "2025.11列のBPS（年度ラベル・月まで）",
+          "period_kind": "instant",
+          "position_month": "2025-11",
+          "raw_column_label": "2025.11",
+          "start_date": null
+        }
+      }
+    ],
+    "unconfirmed_scopes_remain_null": {
+      "BPS_period_end_share_denominator": null,
+      "EPS_annual_average_share_denominator": null,
+      "accounting_basis": null,
+      "basic_or_diluted": null,
+      "common_equity_OCI_NCI_preferred_treasury_mapping": null,
+      "consolidation_scope": null,
+      "ordinary_profit_or_equity_attribution": null,
+      "ordinary_share_attribution": null,
+      "publication_date": null,
+      "share_class_of_denominator": null
+    },
+    "Graham_input_fit_or_seven_company_cohort_admission": false,
+    "calculation_or_financial_adoption": false,
+    "BPS_for_7388": "508.60 display only"
+  },
+  "author_and_project_boundary": {
+    "method_ref": {
+      "path": "research/ir-3612-7388-earnings-driver-native-preparation-2026-10-16/author-method-references.json",
+      "sha256": "279cddd74c6e5edeff064d64a7aafd1740ffbda9393e21336884e532086784fc"
+    },
+    "issuer_explanations_not_author_forecasts": true,
+    "DD_JIRA_are_procedural_references_not_trading_rules": true,
+    "precise_definition_answer_not_company_future_profit_support": true
+  },
+  "source_reading_boundary": {
+    "source_count": 2,
+    "source_ids": [
+      "case-public:b6787509990806d3699dc95e63bc3308cffb8f94efa4fbbf1e7016927bada2a3",
+      "disclosed-facts:a8a491987616800597cbb9c680fc6b2ab4ff1e1549f9a0c189997b8586cfadbd"
+    ],
+    "accepted_limited_reading_physical_pages": [
+      1,
+      2,
+      4,
+      7,
+      42,
+      29,
+      30,
+      31,
+      32
+    ],
+    "scope_note": "Accepted initial business scope4pages1/2/4/7 (plus separately disclosed incidentalp3prefix), per-share physical42, earnings-driver3pages29/30/31 and singlepage32 staffing follow-up. No full44-page financial certification or new page reading in this preparation.",
+    "new_meaning_pages_this_preparation": [],
+    "reading_evidence_ref": {
+      "path": "research/ir-3612-7388-earnings-driver-native-preparation-2026-10-16/7388/reading-evidence.json",
+      "sha256": "1a3fac726145179939b33fadfbecdd8866022157da1dc2f5bdf1a69dc26c7437"
+    },
+    "bootstrap_reviews_are_candidates_not_actual_native_reads": true,
+    "actual_declared_review_time": "2026-10-16T12:18:47.448003+00:00",
+    "original_and_derived_not_independent_sources": true
+  },
+  "management_review": {
+    "date": "2027-01-16",
+    "timezone": "Asia/Tokyo",
+    "basis_ref": {
+      "path": "research/ir-3612-7388-earnings-driver-native-preparation-2026-10-16/management-basis.json",
+      "sha256": "02613b181ad6b729fcaca41c2fe520e8fe43150862f15bf965d0d2c96d1738ff"
+    },
+    "basis_quote": "2026-10-16の公表業績比較定義caseの準備に対応し、次回の内部研究管理日は2027-01-16（Asia/Tokyo）とする。新しい保存公表資料があれば先に点検する。"
+  },
+  "execution_boundary": {
+    "new_case_registered": false,
+    "actual_case_version": null,
+    "DB_or_Store_or_CLI": 0,
+    "GET_or_POST": 0,
+    "financial_thesis": null,
+    "forecast_price_multiple_tax_probability": null,
+    "investment_action": null,
+    "formal_IR_question": null,
+    "send_ready": false,
+    "source_ingestion_reclassification_or_index_change": false,
+    "future_registration_and_queue_owner": "root",
+    "expected_registration_version": 0
+  },
+  "source_storage_provenance": {
+    "original_source_id": "case-public:b6787509990806d3699dc95e63bc3308cffb8f94efa4fbbf1e7016927bada2a3",
+    "original_source_snapshot_sha256": "a194f46b4637c672103503f0383d8de215f8cc76bfe048ac582f763449821f44",
+    "original_actual_DB_first_saved_at": "2026-10-16T11:36:55.470908+00:00",
+    "derived_source_id": "disclosed-facts:a8a491987616800597cbb9c680fc6b2ab4ff1e1549f9a0c189997b8586cfadbd",
+    "derived_source_snapshot_sha256": "f3bbb6163a9c87fa46061b71e222efd3d16d6b7277984eea1b8e543c21782d11",
+    "derived_actual_DB_first_saved_at": "2026-10-16T12:03:42.697046+00:00",
+    "root_accepted_worker_validation_ref": {
+      "path": "research/ir-3612-7388-displayed-facts-connection-2026-10-16/index-connection/worker-validation.json",
+      "sha256": "beda5178f43c97346d445e38865d240aef2716af3cb598b21fea278fd163709c"
+    },
+    "root_source_whole_acceptance_ref": {
+      "path": "research/ir-3612-7388-displayed-facts-connection-2026-10-16/index-connection/parent-acceptance.json",
+      "sha256": "ad1b1cc5824bf5201cb0311312fd81178a4a4c707429e8a4a80fb7374928c91d"
+    },
+    "original_availability_json_pointer": "/source_checks/29/availability",
+    "derived_availability_json_pointer": "/source_checks/77/availability",
+    "scope": "Known storage provenance from fixed root accepted receipts, separate from unknown accounting/shareholder/date meanings. Historical file-only null declarations inside unchanged source content are not rewritten or treated as current storage unknowns."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "recorded_at": "2026-10-15T21:25:08.203414+00:00",
+  "scope": "Explicit finite-decimal zero growth with positive supplied NOPAT and ROC; algebra only",
+  "files": [
+    {
+      "path": "src/ir_agent/stable_reinvestment.py",
+      "before_sha256": "8e95ffbb61155f7a42ff1b2d00f27071daa431cb7c37841d32e79372216a93a9",
+      "after_sha256": "6f2798d4522f803ea61ea16b8b9791a0cf98a1137f8f11d43193ff6911c7ae56",
+      "before_bytes": 14945,
+      "after_bytes": 15674
+    },
+    {
+      "path": "tests/test_stable_reinvestment.py",
+      "before_sha256": "7e324059ac58bec8e08d2a26e9fe1f2e7fa05132e467d8f5fb9c12327090779c",
+      "after_sha256": "33bf0fdce8fd07379e744cb74a5e947d9d35e7a3e14755bb902fabd86971859f",
+      "before_bytes": 18112,
+      "after_bytes": 21611
+    },
+    {
+      "path": "docs/cyclical-reinvestment-spec.md",
+      "before_sha256": "6d10c16d0d020ad6afd6e3ed63ddba24ba6b81499b6f71b163cde05432bd31b7",
+      "after_sha256": "4739e0f6a71a477f2565c10c9d1994fc15ec1bbbfadbfe305530de150ff6cecf",
+      "before_bytes": 25491,
+      "after_bytes": 26480
+    }
+  ],
+  "focused_verification": {
+    "command": ".venv/bin/python -m unittest discover -s tests -p 'test_stable_reinvestment*.py' -v",
+    "exit_code": 0,
+    "tests_run": 26,
+    "result": "OK",
+    "duration_seconds": 0.054,
+    "output_note": "Test summary transcribed from tool execution, not a second test run"
+  },
+  "initial_command_environment_error": {
+    "command": "uv run python -m unittest discover -s tests -p 'test_stable_reinvestment*.py' -v",
+    "exit_code": 2,
+    "before_tests_started": true,
+    "reason": "uv default /home/agent/.cache/uv is read-only; reused existing .venv python without installation or network"
+  },
+  "positive_replay_file": "positive-replay.json",
+  "positive_replays_whole_result_equal": 5,
+  "network_requests": 0,
+  "actual_db_operations": 0,
+  "full_suite_run_by_child": false,
+  "independent_review_complete": false,
+  "economic_applicability_verified": false,
+  "author_zero_growth_economic_rule_claimed": false
+}

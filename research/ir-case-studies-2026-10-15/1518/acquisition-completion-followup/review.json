@@ -1,0 +1,105 @@
+{
+  "reviewed_at": "2026-10-15T10:48:23.047518+00:00",
+  "company_id": "jp:1518",
+  "purpose": "Check a new public issuer news listing for explicit Sanyo completion after the previously disclosed Aug21 schedule; not investment selection or accounting forecast.",
+  "status": "completion_not_verified_in_the_captured_listing",
+  "GET_count": 1,
+  "GET_limit": 3,
+  "same_day_robots_reused": {
+    "path": "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/01.json",
+    "snapshot_sha256": "776ffa7a76e554ff8a84ed1e33d11c9abcd7c3583bc939ece1b563c65cb6882c",
+    "raw_path": "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/raw/f114c9853f69bd965889c33d05493bcbde94516c513784773ad5c1f842a9e846",
+    "raw_sha256": "f114c9853f69bd965889c33d05493bcbde94516c513784773ad5c1f842a9e846",
+    "URL": "https://www.mitsui-matsushima.co.jp/robots.txt",
+    "body": "User-agent: *\nDisallow: /wp/wp-admin/\nAllow: /wp/wp-admin/admin-ajax.php\n\nSitemap: https://www.mitsui-matsushima.co.jp/wp-sitemap.xml\n\nSitemap: https://www.mitsui-matsushima.co.jp/sitemap.xml\n",
+    "body_completed_at": "2026-10-15T07:53:16.132860+00:00",
+    "UA": "ir-agent-public-research/0.1",
+    "old_producer": "/tmp/fetch_issuer1518_quarter.py",
+    "old_producer_sha256": "4598c83c5d9b159eefc94b0f237fe74c77df794578228232b43904a1ae90f326",
+    "UA_implementation": "research_ir_universe.USER_AGENT for old Fetcher and current requests; no per-response wire header independently saved for old request",
+    "exact_new_path_allowed": true,
+    "no_new_AI_denial_detected_in_saved_rules": true
+  },
+  "entry_provenance": {
+    "official_old_snapshot": "research/ir-contacts-universe-2026-10-11/evidence/1518/01.json",
+    "snapshot_sha256": "6a7aa33ad67140ce7eac12ba88af7abaa584d56ee650347cb889bcd12ea0b6c6",
+    "JSONpath": "$.links[46]",
+    "original_href": null,
+    "legacy_original_href_not_retained": true,
+    "resolved_url": "https://www.mitsui-matsushima.co.jp/news/",
+    "label": "ニュースリリース",
+    "old_retrieved_at": "2026-10-11T03:59:01.064349+00:00"
+  },
+  "source_id": "case-public:cd2408d3d8faf81e8a4459c8b2d6244775f3f89323f887fbd50eb3d9306b8995",
+  "source_retrieved_at": "2026-10-15T10:46:27.083197+00:00",
+  "published_at": null,
+  "captured_listing": {
+    "title": "ニュースリリースの一覧 | 三井松島ホールディングス株式会社",
+    "url": "https://www.mitsui-matsushima.co.jp/news/",
+    "body_characters": 3692,
+    "links": 202,
+    "first_displayed_news_date": "2026.08.07",
+    "first_displayed_date_scope": "Visible first entries only; not a claim of all company disclosures being current as of retrieval.",
+    "Sanyo_links": [
+      {
+        "url": "https://www.mitsui-matsushima.co.jp/wp/wp-content/uploads/2026/07/c4b9af59862fd2ff45faf864f8fd327c.pdf",
+        "href": "https://www.mitsui-matsushima.co.jp/wp/wp-content/uploads/2026/07/c4b9af59862fd2ff45faf864f8fd327c.pdf",
+        "label": "2026.07.22 その他開示資料 株式会社山洋の株式取得（子会社化）に関するお知らせ",
+        "JSONpath": "$.GETs[0].links[129]",
+        "displayed_date": "2026.07.22",
+        "date_precision": "day",
+        "body_fetched": false,
+        "company_acquisition_completion_explicit_in_title": false
+      }
+    ],
+    "pattern_counts": {
+      "山洋": {
+        "raw_HTML_count": 1,
+        "visible_text_count": 1
+      },
+      "取得完了": {
+        "raw_HTML_count": 0,
+        "visible_text_count": 0
+      },
+      "完了": {
+        "raw_HTML_count": 0,
+        "visible_text_count": 0
+      },
+      "8月21": {
+        "raw_HTML_count": 0,
+        "visible_text_count": 0
+      },
+      "2026.08.21": {
+        "raw_HTML_count": 0,
+        "visible_text_count": 0
+      },
+      "2026年8月21": {
+        "raw_HTML_count": 0,
+        "visible_text_count": 0
+      }
+    },
+    "direct_completed_acquisition_statement_found": false,
+    "static_visible_news_entries_exist": true,
+    "not_treated_as_empty_JS_index": true
+  },
+  "excluded": {
+    "Kounan": "株式会社コウナンの株式取得（子会社化） is a different target and does not support Sanyo completion.",
+    "old_July22_notice": "A stock-acquisition/子会社化 title without completion text is not an executed transaction; no GET was spent reopening this notice.",
+    "previous_Aug21_schedule": "Preserved as schedule in old quarter source. It was not converted to an actual completion date."
+  },
+  "conclusion": {
+    "acquisition_completed": null,
+    "actual_completion_date": null,
+    "consideration_or_price": null,
+    "consolidation_start_or_scope": null,
+    "same_as_planned_terms": null,
+    "reason": "Captured news index exposes only the previously known July22 Sanyo announcement; no explicit later completion notice or body is linked for this target in this displayed scope.",
+    "not_evidence_transaction_failed_or_not_completed": true,
+    "not_evidence_company_never_published_completion": true,
+    "business_or_investment_profit_model_changed": false
+  },
+  "stopping_reason": "One explicitly saved news entry inspected. No actual completion notice to follow; no pagination, category, API, guessed article or other host explored. Unused2GET are not a requirement to broaden scope.",
+  "forecast_EPSbridge_price_threshold_IRdraft_created": false,
+  "DB_access": false,
+  "old_files_or_code_changed": false
+}

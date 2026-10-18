@@ -1,0 +1,88 @@
+{
+  "security_code": "593A",
+  "company_name": "ティアフォー",
+  "market": "グロース（内国株式）",
+  "jpx_sector": "情報・通信業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.tier4.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T15:39:06.969125+00:00",
+  "completed_at": "2026-10-11T15:40:59.563794+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/593A/20261011T153906969178Z/01.json",
+      "url": "https://tier4.co.jp/",
+      "retrieved_at": "2026-10-11T15:40:43.468110+00:00",
+      "quote": "お問い合わせ 製品、サービス、採用、広報、IRに関するお問い合わせ サービス 採用 広報 IR",
+      "role": "unverified_IR_contact_discovery_link",
+      "source_link_url": "https://tier4.co.jp/ir/contact?hsLang=ja"
+    },
+    {
+      "snapshot": "evidence/593A/20261011T153906969178Z/01.json",
+      "url": "https://tier4.co.jp/",
+      "retrieved_at": "2026-10-11T15:40:43.468110+00:00",
+      "quote": "IR 決算短信、財務データ、株式情報、経営戦略などのIR情報",
+      "role": "issuer_financial_IR_scope"
+    },
+    {
+      "snapshot": "evidence/593A/20261011T153906969178Z/01.json",
+      "url": "https://tier4.co.jp/",
+      "retrieved_at": "2026-10-11T15:40:43.468110+00:00",
+      "quote": "株式会社ティアフォー｜TIER IV, Inc.",
+      "role": "issuer_identity"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.tier4.jp/",
+      "final_url": "https://tier4.co.jp/",
+      "snapshot": "evidence/593A/20261011T153906969178Z/01.json",
+      "retrieved_at": "2026-10-11T15:40:43.468110+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "現ティアフォーへのtier4.jp→tier4.co.jp公式301 chainを確認。財務IRの独立contact?hsLang=ja実hrefはあるが本体未取得、メール/formタイプ・native欄未確認。",
+    "サービス/採用/広報/各製品Pilot.Auto・Web.Auto・Edge.Autoの別窓口を金融IRへ移さない。query/原seedURL/redirecttraceを保全。窓口不存在や個人拒否ではない。"
+  ],
+  "discovery": {
+    "security_code": "593A",
+    "official_url": "https://www.tier4.jp/",
+    "discovery_url": "https://www.jpx.co.jp/listing/stocks/new/index.html",
+    "discovered_at": "2026-10-11T03:58:42.612048+00:00",
+    "discovery_type": "official_jpx_listing_link",
+    "seed_company_name": "（株）ティアフォー",
+    "source_data_as_of": "2026-06-29",
+    "listing_date": "2026-07-22",
+    "discovery_snapshot": "/tmp/ir-all-seeds/jpx-new-listings.html",
+    "discovery_row_text": "2026/07/22 （2026/06/29） （株）ティアフォー 代表者インタビュー 593A 1,015～1,085 17,449.6 100"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/593A/20261011T153906969178Z/01.json",
+      "normalized_name": "ティアフォー",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 7,
+  "previous_attempts": [
+    "attempts/593A/20261011T045047558250Z.json",
+    "attempts/593A/20261011T154059564058Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "ir_operations_59_batch13",
+    "reviewed_at": "2026-10-11T16:06:33.029628+00:00",
+    "notes": "現JPXティアフォーとTIERIV公式title/301移行を照合。問い合わせ用途別サービス・採用・広報・IRのうちIRexactqueryだけ提案、本体未取得でUを保持。動的URLや外部受付は推定しない。"
+  }
+}

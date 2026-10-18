@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "case_id": "5480-cyclical-normalization-monitor",
+  "company_id": "jp:5480",
+  "company_name": "日本冶金工業株式会社",
+  "issue_id": "5480-cyclical-normalization-input-basis",
+  "recorded_at": "2026-10-16T09:24:57.871715+00:00",
+  "status": "prepare_only_not_registered",
+  "purpose": "金融値が未完成でも、既存Damodaran循環正常化条件に対する新保存開示の比較を継続できるようにする。",
+  "author_method": {
+    "author": "Aswath Damodaran",
+    "source_id": "damodaran.cyclical-commodity.2009",
+    "title": "Ups and Downs: Valuing Cyclical and Commodity Companies",
+    "publication_label": "September2009",
+    "source_ref": {
+      "path": "research/valuation-model-routing-2026-10-15/sources.json",
+      "sha256": "a9b8c046d3ff5b23eb65fdaabdd4ee8ef55c66498b52cbcad9fc5099c3cc7538",
+      "json_pointer": "/sources/2"
+    },
+    "adopted_reference": "docs/cyclical-normalization-spec.md; research/valuation-model-routing-2026-10-15/routing.json",
+    "new_author_policy_or_financial_threshold_adopted": false,
+    "author_did_not_analyze_or_recommend_5480_here": true
+  },
+  "author_conditions": [
+    {
+      "id": "C1",
+      "author_refs": [
+        "D1-complete-cycle",
+        "D2-scale-margin"
+      ],
+      "author_condition": "正常化期間は一巡を覆う根拠が必要で、規模変化には比較可能な過去利益率と現在規模の対応を点検する。固定年数や足元利益を正常値としない。",
+      "current_comparison": "June2026表示メッセージにFY2025-04-01～2026-03-31の連結売上/OPがあり、派生2件は同原典の表示を構造化しただけ。前年比変化額から前年実額を逆算せず、1年から全サイクル/正常窓/正常率を認定しない。",
+      "status": "unresolved",
+      "future_saved_public_checks": "新たに正当に保存される正式財務表等があれば、年度/通期か累計か・会計/連結/事業範囲・実績/予想・表示単位・履歴の比較可能性を元論点へ比較する。全サイクルとする根拠は別に必要。",
+      "does_not_create": "固定窓、正常率、予測、過去年の逆算、別会社/業種平均代入は作らない。"
+    },
+    {
+      "id": "C2",
+      "author_refs": [
+        "D2-scale-margin"
+      ],
+      "author_condition": "過去平均の現在適合性を点検するため、会社が説明する需要・製品/規模・コストの変化を分けて読む（会社別への研究適応）。",
+      "current_comparison": "会社概要はステンレス等/フェロニッケル、会社メッセージは需要低迷・安価な輸入材・原料価格の比較的安定・固定費増を説明。June2026当時の説明で、Octoberの実績、底/天井/反転や在庫評価効果の検証ではない。",
+      "status": "unresolved",
+      "future_saved_public_checks": "新保存資料の数量/製品mix/輸入競争/価格転嫁・在庫評価方法/償却・設備規模の説明が何を支持/反証/未解決にするか同じ期間と範囲で比較。既公表の事業内容/当年要因を再質問しない。",
+      "does_not_create": "ニッケル感応度・在庫益・回復確率・現在局面・数値反証条件を推定しない。"
+    },
+    {
+      "id": "C3",
+      "author_refs": [
+        "D3-other-inputs"
+      ],
+      "author_condition": "利益だけでなくROC、再投資、資金調達条件にも正常化との整合が必要。",
+      "current_comparison": "保存messageと2factsだけでは設備投資/減価償却額/非現金運転資本・投下資本/税・financing条件が揃わない。定性的な固定費増を金額や正常再投資へ置換しない。",
+      "status": "unresolved",
+      "future_saved_public_checks": "新しく保存される公表BS/CF/注記等があれば、営業利益とCF・税/納税、維持/成長投資、運転資本残高/増分、資本時点/負債満期・金利等の不足定義を比較する。",
+      "does_not_create": "ROC/WACC/g/税率/将来CF・資金余剰・存続確率や通常DCF入力を自動生成しない。"
+    }
+  ],
+  "accepted_current_known": {
+    "period": "FY2025-04-01 to2026-03-31/第144期, consolidatedreportedannual",
+    "revenue_raw": "150,866百万円",
+    "operating_income_raw": "10,973百万円",
+    "accounting_standard": null,
+    "source_publication_month": "2026-06",
+    "latest_statement_or_current_guidance_confirmed": false,
+    "formal_financial_statement_independently_reconciled": false,
+    "derived_facts_are_independent_evidence": false,
+    "normalization_or_model_adopted": false
+  },
+  "read_scope": {
+    "declared_source_ids": [
+      "case-public:7ebd4f421bb0d918ddc742534804347eb60927dfe2b6c6371b56af46358fcf00",
+      "case-public:91f0c36851e32c4a00119d864fcabf7f5ba973e2f3d70b111d269ea6445ed265",
+      "disclosed-facts:f2102aa8a0c45411a8e5ac300e20e5eea781c357e9d2799129ab5dcd0c444744",
+      "disclosed-facts:487cb89709ae01cba3c250ed113295e5383cf391599e2c4eda6dcde578c99e6f"
+    ],
+    "source_count": 4,
+    "meaning_scope": "Saved会社概要/株主messageの本文と派生売上1・OP1の全fact/declaration/reviewをhandoff時点で再確認。PDF全冊読了や最新財務調査を主張しない。",
+    "other_6_sources": "Inventory/classification/metadata only; no native reviewed bootstrap claim.",
+    "reviewed_at": "2026-10-16T09:24:57.871715+00:00",
+    "references": "reading-evidence.json; review-manifest.json; actual-readonly-source-inventory.json"
+  },
+  "next_public_confirmation": {
+    "trigger": "Only genuinely newly saved public evidence or a separately rooted valid management-review event; existing closed route searches are not restarted.",
+    "comparison_focus": [
+      "期間/会計・連結範囲の揃う正式表と履歴の追加があるか",
+      "需要/規模/製品mix/在庫・固定費の説明が旧messageとどう比較できるか",
+      "税・ROC・再投資・financingの対象範囲と時点が明示されるか"
+    ],
+    "closed_routes_not_reopened": [
+      "annual-input-followup archived503feed path",
+      "completedfull-cycle/original-route discovery"
+    ],
+    "not_a_fresh_GET_plan": true
+  },
+  "management_review": null,
+  "management_reason": "この準備票では管理日を新作しない。nullでは期日到来起票はなく、新保存資料による監視準備のみ。rootは受入後actual-inputsの別根拠に既存Anthropicquarterly適応の管理日を設定する方針で、prepare-onlyを上書きしない。",
+  "native_state": {
+    "actually_registered": false,
+    "case_version": null,
+    "config_revision": null,
+    "actual_first_save": null,
+    "copied_DB_preflight_executed": false,
+    "bootstrap_declared_sources": 4,
+    "other_source_pending_count_or_queue_result": "Not executed or certified; rootcopypreflight will inspect. Public-disclosure source eligibility is not limited to financial_content=true."
+  },
+  "financial_and_IR_boundary": {
+    "financial_thesis": null,
+    "normalization_window": null,
+    "normal_profit": null,
+    "forecast": null,
+    "valuation": null,
+    "financial_policy": null,
+    "price_or_exit": null,
+    "IR_draft": null,
+    "financial_answer_branches": null,
+    "IR_value": "unproven",
+    "send_ready": false
+  }
+}

@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="ja" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+	<link rel="stylesheet" media="print" type="text/css" href="css/printV2.css" />
+	<link rel="stylesheet" media="all" type="text/css" href="css/colorV2.css" />
+	<link rel="stylesheet" media="screen,tv" type="text/css" href="css/commonV2.css" />
+	<link rel="stylesheet" media="screen,tv" type="text/css" href="css/styleV2.css" />
+	<link rel="stylesheet" media="screen,tv" type="text/css" href="css/tabletV2.css" />
+	<link rel="stylesheet" media="screen,tv" type="text/css" href="css/smartV2.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" media="screen,tv" type="text/css" href="css/styleIE8V2.css" /><![endif]-->
+	<link rel="stylesheet" media="screen,tv" type="text/css" href="css/lang_ja.css" />
+	<title>朝日工業社 (1975) チャート</title>
+	<script language="javascript" type="text/javascript" src="../../parts/js/jquery-1.7.1.js"></script>
+	<script language="javascript" type="text/javascript" src="../../parts/js/controlBtn.js"></script>
+	<script language="javascript" type="text/javascript" src="../../parts/js/accordion.js"></script>
+	<script language="javascript" type="text/javascript" src="../../parts/js/highstock.js"></script>
+	<script language="javascript" type="text/javascript" src="../../parts/js/ui/jquery.ui.core.js"></script>
+	<script language="javascript" type="text/javascript" src="../../parts/js/ui/jquery.ui.widget.js"></script>
+	<script language="javascript" type="text/javascript" src="../../parts/js/ui/jquery.ui.datepicker.js"></script>
+	<link rel="stylesheet" href="../../parts/js/ui-themes/base/jquery.ui.all.css">
+	<script language="javascript" type="text/javascript">
+		$(function(){
+			$("#toggle").click(function(){
+				$("#contentsmainNavi").slideToggle();
+				return false;
+			});
+			$(window).resize(function(){
+				var win = $(window).width();
+				var p = 599;
+				if(win > p){
+					$("#contentsmainNavi").show();
+				} else {
+					$("#contentsmainNavi").hide();
+				}
+			});
+			$('.datepicker').datepicker({
+				//入力形式
+				dateFormat: 'yy/mm/dd',
+				changeMonth: true,
+				changeYear: true,
+				minDate:'2025/10/17',maxDate:'2026/10/16',
+				//カレンダーアイコン表示
+				showOn: 'both',
+				buttonImageOnly: true,
+				buttonImage: 'img/calendar.gif',
+				//入力月名
+				monthNamesShort: ['01','02','03','04','05','06','07','08','09','10','11','12']
+			});
+		});
+	</script>
+	<script>
+		var term_val = 0;
+		var graph_val = 1;
+		var avg0_val = 0;
+		var avg1_val = 0;
+		var highlow_val = 0;
+		var document_val = 0;
+		var nikkei_val = 0;
+		var topix_val = 0;
+		var other_val = 0;
+		var pc_val = window.innerWidth >= 600 ? 0 : 1;
+		pc_val = 0;
+		var degit = 0;
+var stockName ='朝日工業社';
+var lng_val = 0;
+var day_str ='日';
+var week_str ='週';
+var month_str ='ヶ月';
+var avg_str ='平均';
+var close_str ='終値';
+var candle_str ='4本値';
+var open_str ='始値';
+var high_str ='高値';
+var low_str ='安値';
+var volume_str ='出来高';
+var nikkei_str ='日経平均';
+var topix_str ='TOPIX';
+var other_str ='電気機器';
+var minDate='20260716';
+var maxDate='20261016';
+var nowDate='20261016';
+var cType = 0;
+var min_array= new Array('20251017','20231017','20161017');
+var ea_array = new Array(20260804,'2027年３月期　第１四半期決算短信〔日本基準〕（連結）','20260803507621',20260514,'剰余金の配当（増配）に関するお知らせ','20260513531248',20260514,'2026年３月期　決算短信〔日本基準〕（連結）','20260513531184',20260212,'2026年３月期　第３四半期決算短信〔日本基準〕（連結）','20260209552475',20260212,'業績予想の修正、配当予想の修正（増配）に関するお知らせ','20260209552372',20251113,'2026年３月期　第２四半期（中間期）決算短信〔日本基準〕（連結）','20251112598852',20250806,'2026年３月期　第１四半期決算短信〔日本基準〕（連結）','20250805530449',20250515,'2025年３月期　決算短信〔日本基準〕（連結）','20250514551921',20250425,'業績予想の修正、配当予想の修正（増配）に関するお知らせ','20250424523375',20250206,'業績予想の修正、配当予想の修正（増配）に関するお知らせ','20250204562937',20250206,'2025年３月期　第３四半期決算短信〔日本基準〕（連結）','20250204562934',20241112,'業績予想の修正、配当予想の修正（増配）に関するお知らせ','20241031507288',20241112,'2025年３月期　第２四半期（中間期）決算短信〔日本基準〕（連結）','20241031507119',20240808,'2025年３月期　第１四半期決算短信〔日本基準〕（連結）','20240725554438',20240515,'2024年３月期　決算短信〔日本基準〕（連結）','20240507583307',20240208,'2024年３月期　第３四半期決算短信〔日本基準〕（連結）','20240131523460',20231108,'2024年３月期　第２四半期決算短信〔日本基準〕（連結）','20231026571852',20230808,'2024年３月期　第１四半期決算短信〔日本基準〕（連結）','20230727528635',20230512,'2023年３月期　決算短信〔日本基準〕（連結）','20230502558067',20230428,'業績予想及び配当予想（増配）の修正に関するお知らせ','20230427555401',20230209,'配当予想の修正（増配）に関するお知らせ','20230201598710',20230209,'2023年３月期　第３四半期決算短信〔日本基準〕（連結）','20230201598645',20221110,'2023年３月期　第２四半期決算短信〔日本基準〕（連結）','20221025549264',20220809,'2023年３月期　第１四半期決算短信〔日本基準〕（連結）','',20220513,'2022年３月期　決算短信〔日本基準〕（連結）','',20220428,'業績予想の修正に関するお知らせ','',20220210,'2022年３月期　第３四半期決算短信〔日本基準〕（連結）','',20211111,'2022年３月期　第２四半期決算短信〔日本基準〕（連結）','');
+var td_array = new Array(20260722,'譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ','20260721597107',20260626,'譲渡制限付株式報酬としての自己株式の処分に関するお知らせ','20260625581002',20260604,'独立役員届出書','20260604563013',20260528,'（訂正）「中期経営計画策定に関するお知らせ」の一部訂正について','20260528551994',20260526,'2026年3月期決算および第19次中期経営計画説明会 「ログミーFinance書き起こし」公開のお知らせ','20260525546876',20260514,'当社の株券等の大規模買付行為に関する対応方針（買収防衛策）の更新について','20260513531377',20260514,'中期経営計画策定に関するお知らせ','20260513531336',20251218,'Oishii Farm Corporationへの出資について','20251217521687',20251128,'従業員持株会向け譲渡制限付株式インセンティブとしての自己株式の処分の払込完了及び一部失権に関するお知らせ','20251125508738',20250806,'従業員持株会向け譲渡制限付株式インセンティブとしての自己株式の処分に関するお知らせ','20250806532163',20250722,'譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ','20250718517259',20250627,'譲渡制限付株式報酬としての自己株式の処分に関するお知らせ','20250626501062',20250625,'従業員持株会向け譲渡制限付株式インセンティブ制度の導入に関するお知らせ','20250625599989',20250605,'独立役員届出書','20250605582133',20240722,'譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ','20240719551802',20240627,'譲渡制限付株式報酬としての自己株式の処分に関するお知らせ','20240626538524',20240624,'定款 2024/04/01','20240624534722',20240621,'（訂正・数値データ訂正）「2024年３月期　決算短信〔日本基準〕（連結）」の一部訂正について','20240620532921',20240605,'独立役員届出書','20240523505458',20240208,'資本コストや株価を意識した経営の実現に向けた対応','20240208530444',20240208,'業績予想の修正、配当予想の修正（増配）、株式分割および株式分割に伴う定款の一部変更のお知らせ','20240207528213',20230721,'譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ','20230721525301',20230629,'譲渡制限付株式報酬としての自己株式の処分に関するお知らせ','20230627512242',20230629,'定款 2023/06/29','20230629514435',20230607,'独立役員届出書','20230502558408',20230512,'当社の株券等の大規模買付行為に関する対応方針（買収防衛策）の更新について','20230512570401',20230512,'中期経営計画策定に関するお知らせ','20230511567929',20230324,'リスク管理委員会設置に関するお知らせ','20230324536001',20230127,'上場維持基準の適合に向けた計画に基づく進捗状況について','20230124592655',20220722,'譲渡制限付株式報酬としての自己株式の処分の払込完了に関するお知らせ','',20220629,'定款 2022/06/29','',20220629,'譲渡制限付株式報酬としての自己株式の処分に関するお知らせ','',20220607,'独立役員届出書','',20220513,'定款一部変更に関するお知らせ','',20220210,'サステナビリティ委員会設置に関するお知らせ','',20220210,'業績予想の修正、配当予想の修正（増配）、株式分割および株式分割に伴う定款の一部変更のお知らせ','',20211209,'新市場区分の上場維持基準の適合に向けた計画書','',20211111,'新市場区分における上場維持基準への適合状況に関する一次判定結果と「プライム市場」選択申請に関するお知らせ','');
+var en_array = new Array();
+
+		var avg0_str = "5" + day_str;
+		var avg1_str = "25" + day_str;
+
+		function parseNum(strPrice){
+			if(strPrice == null){
+				return(null);
+			}
+			return(parseFloat(strPrice.split(',').join('').trim()));
+		}
+
+		function parseUtc(data){
+			var tmp_dt = new Date(data);
+			var tmpY = tmp_dt.getFullYear();
+			var tmpM = tmp_dt.getMonth() + 1;
+			var tmpD = tmp_dt.getDate();
+			var tmp_str = tmpY + "/" + (tmpM < 10 ? "0" : "") + tmpM + "/" + (tmpD < 10 ? "0" : "") + tmpD;
+			return(tmp_str);
+		}
+
+		var ea_data = new Array();
+		var td_data = new Array();
+		var en_data = new Array();
+
+		var dl_flg = false;
+
+		jQuery(function() {
+
+			function execDownload(){
+				if(dl_flg){
+					return false;
+				}
+				dl_flg = true;
+				$("#linkarea").css("background-color","#ccc");
+				setTimeout(function(){dl_flg = false;$("#linkarea").css("background-color","#fff")}, 3000);
+				return true;
+			}
+
+
+			Highcharts.setOptions({
+				global: {useUTC: false},
+				lang  : {
+					// ☆M, K表記削除
+					// numericSymbols: null,
+					rangeSelectorZoom : '',
+					thousandsSep      : ','
+				}
+			});
+			function setPcData(olhc_data, volume_data, avg0_data, avg1_data, high_data, low_data){
+				var tmp_date = null;
+				if(olhc_data.length > 0){
+					tmp_date = olhc_data[0][0];
+				}
+
+				$('#chart_pc').highcharts('StockChart', {
+					chart: {zoomType : 'x'},
+					rangeSelector: {enabled: false},
+					scrollbar    : {enabled: false},
+					navigator    : {enabled : false},
+					credits      : {enabled: false},
+					title: {text: ''},
+					xAxis        : [{
+						dateTimeLabelFormats:{
+							day  : '%Y/%m/%d',
+							week : '%Y/%m/%d',
+							month: '%Y/%m',
+							year : '%Y/%m'
+						},
+						tickPixelInterval: 150,
+						labels:{
+							autoRotation:0
+						}
+					}],
+					yAxis: [{
+						// 高値安値
+						labels: {align: 'left',x: 3},
+						title: {text: ''},
+						lineWidth: 2,
+						opposite: false,
+						height: '60%',
+						maxPadding:0.05,
+						plotLines: [
+							high_data == null ? {}: {value:parseNum(high_data),width:1,zIndex:1,color:'#e25009',dashStyle:'dash',label:{text:high_data,align:'right',y:-2,x:-10,style:{color:'#e25009'}}},
+							low_data  == null ? {}: {value:parseNum(low_data), width:1,zIndex:2,color:'#2583bf',dashStyle:'dash',label:{text:low_data, align:'right',y:-4,x:-10,style:{color:'#2583bf'}}}
+						]
+					},{
+						labels: {align: 'left',x: 3},
+						title: {text: ''},
+						opposite: false,
+						top: '67%',
+						height: '30%',
+						lineWidth: 2
+					}],
+					tooltip : {
+						backgroundColor: " rgba(255, 255, 255, 0.75)",
+						headerFormat: '<b>{point.key}</b><br/>',
+						xDateFormat : '%Y/%m/%d'
+					},
+					plotOptions: {
+						// ローソク足配色
+						candlestick:{ 
+							color: '#1d82c1',
+							lineColor: '#1d82c1',
+							upColor: '#ffffff',
+							upLineColor: '#e44f00'
+						},
+						flags:{
+							// useHTML : true,
+							point:{
+								events: {
+									click: function (e){
+										e.preventDefault();
+										// alert(url);
+										// window.open(url, '_blank');
+										var tmp_str = this.text;
+										$("#linkarea").html(tmp_str);
+										$("#linkarea a").click(function (){
+											return(execDownload());
+										});
+										$(".disclosureList").scrollTop(0); // 常にリスト最上部を表示
+									}
+								}
+							}
+						},
+						series: {
+							dataGrouping: {
+								 enabled:false
+							}
+						}
+					},
+					series: [(graph_val == 0 ? {
+						// 面チャート
+						type: 'area',
+						name: close_str,
+						color: '#306bac',
+						id: 'dataseries',
+						tooltip :{
+							pointFormatter:function() {
+								var s = "" + close_str + ": <span style=\"font-weight:bold\">" + Highcharts.numberFormat(this.y, degit) + "</span><br />";
+								$("#pc_chartPriceD").html("<li><span class=\"stockData\">" + parseUtc(this.x) + "</span></li>")
+								$("#pc_chartPrice0").html("<li><span class=\"stockTitle\">" + close_str + "</span><span class=\"stockData\">" + Highcharts.numberFormat(this.y, degit) + "</span></li>");
+								$("#pc_chartPrice1").html("<li><span class=\"stockTitle\">" + volume_str + "</span><span class=\"stockData\">" + "-" + "</span></li>");
+								return s;
+							}
+						},
+						fillColor: {
+							linearGradient: {x1: 0,y1: 0,x2: 0,y2: 1},
+							stops: [
+								[0, '#dddddd'],
+								[1, Highcharts.Color('#ffffff').setOpacity(0.5).get('rgba')]
+							]
+						},
+						threshold: null,
+						data: olhc_data
+					} : {
+						// ローソク足
+						type: 'candlestick',
+						name: candle_str,
+						color : '#1d82c1',
+						id: 'dataseries',
+						tooltip :{
+							pointFormatter:function() {
+								var s = "" + open_str + ": <span style=\"font-weight:bold\">" + Highcharts.numberFormat(this.open, degit) + "</span><br />" + high_str + ": <span style=\"font-weight:bold\">" + Highcharts.numberFormat(this.high, degit) + "</span><br />" + low_str + ": <span style=\"font-weight:bold\">" + Highcharts.numberFormat(this.low, degit) + "</span><br />" + close_str + ": <span style=\"font-weight:bold\">" + Highcharts.numberFormat(this.close, degit) + "</span><br />";
+								$("#pc_chartPriceD").html("<li><span class=\"stockData\">" + parseUtc(this.x) + "</span></li>")
+								$("#pc_chartPrice0").html("<li><span class=\"stockTitle\">" + open_str + "</span><span class=\"stockData\">" + Highcharts.numberFormat(this.open, degit) + "</span></li><li><span class=\"stockTitle\">" + high_str + "</span><span class=\"stockData\">" + Highcharts.numberFormat(this.high, degit) + "</span></li><li><span class=\"stockTitle\">" + low_str + "</span><span class=\"stockData\">" + Highcharts.numberFormat(this.low, degit) + "</span></li><li><span class=\"stockTitle\">" + close_str + "</span><span class=\"stockData\">" + Highcharts.numberFormat(this.close, degit) + "</span></li>");
+								$("#pc_chartPrice1").html("<li><span class=\"stockTitle\">" + volume_str + "</span><span class=\"stockData\">" + "-" + "</span></li>");
+								return s;
+							}
+						},
+						data: olhc_data
+					}),{
+						// 出来高
+						type: 'column',
+						name: volume_str,
+						color: '#5fcddc',
+						tooltip :{
+							pointFormatter:function() {
+								var s = "出来高: <span style=\"font-weight:bold\">" + Highcharts.numberFormat(this.y, 0) + "</span>";
+								$("#pc_chartPrice1").html("<li><span class=\"stockTitle\">" + volume_str + "</span><span class=\"stockData\">" + Highcharts.numberFormat(this.y, 0) + "</span></li>");
+								return s;
+							}
+						},
+						data: volume_data,
+						yAxis: 1
+					},{
+						// 移動平均線（5日）
+						type: 'line',
+						name: avg0_str + avg_str,
+						color: '#00ff00',
+						tooltip :{
+							pointFormatter:function() {
+								var s = "<br />" + avg0_str + avg_str + ": <span style=\"font-weight:bold\">" + Highcharts.numberFormat(this.y, 2) + "</span>";
+								return s;	
+							}
+						},
+						lineWidth: 1.0,
+						data: avg0_data
+					},{
+						// ★移動平均線（25日）
+						type: 'line',
+						name: avg1_str +  + avg_str,
+						color: '#0000ff',
+						tooltip :{
+							pointFormatter:function() {
+								var s = "<br />" + avg1_str + avg_str + ": <span style=\"font-weight:bold\">" + Highcharts.numberFormat(this.y, 2) + "</span>";
+								return s;
+							}
+						},
+						lineWidth: 1.0,
+						data: avg1_data
+					},{
+						type: 'line',
+						name: high_str,
+						color: '#ffffff',
+						tooltip :{
+							enabled:false
+						},
+						data: (graph_val == 0 ? [[tmp_date,(high_data == null ? null : parseNum(high_data))]] : [])
+					},{
+						type: 'line',
+						name: low_str,
+						color: '#ffffff',
+						tooltip :{
+							enabled:false
+						},
+						data: (graph_val == 0 ? [[tmp_date,(low_data == null ? null : parseNum(low_data))]] : [])
+					},{
+						type: 'flags',
+						name: "決算情報",
+						showInLegend : false,
+						onSeries: 'dataseries',
+						shape : 'circlepin',
+						color : '#c30000',
+						title : '決',
+						width : 15,
+						height : 15,
+		
+						data:ea_data
+		
+					},{
+						type: 'flags',
+						name: "適時開示",
+						showInLegend : false,
+						// onSeries: 'dataseries',
+						shape : 'squarepin',
+						color : '#000000',
+						title : '適',
+						y : -22,
+						width : 15,
+						height : 15,
+		
+						data:td_data
+		
+					},{
+						type: 'flags',
+						name: "Information",
+						showInLegend : false,
+						// onSeries: 'dataseries',
+						shape : 'squarepin',
+						color : '#c30000',
+						title : 'T',
+						y : -22,
+						width : 15,
+						height : 15,
+		
+						data:en_data
+		
+					}]
+				});
+				flagVisible();
+			}
+
+			function setCpData(olhc_data, nk_data, tp_data, ot_data){
+				$('#chart_pc').highcharts('StockChart', {
+					chart: {zoomType : 'x'},
+					rangeSelector: {enabled: false},
+					scrollbar    : {enabled: false},
+					navigator    : {enabled : false},
+					credits      : {enabled: false},
+					title: {text: ''},
+					xAxis        : [{
+						dateTimeLabelFormats:{
+							day  : '%Y/%m/%d',
+							week : '%Y/%m/%d',
+							month: '%Y/%m',
+							year : '%Y/%m'
+						},
+						tickPixelInterval: 150,
+						labels:{
+							autoRotation:0
+						}
+					}],
+					yAxis: [{
+						labels: {align: 'left',x: 3},
+						title: {text: ''},
+						lineWidth: 2,
+						opposite: false,
+					}],
+					tooltip : {
+						backgroundColor: " rgba(255, 255, 255, 0.75)",
+						headerFormat: '<b>{point.key}</b><br/>',
+						xDateFormat : '%Y/%m/%d'
+					},
+					plotOptions: {
+						series: {
+							compare: 'percent',
+							dataGrouping: {
+								 enabled:false
+							}
+						}
+					},
+					// 指数比較
+					series: [{
+						name: stockName,
+						color : '#306bac',
+						tooltip : {
+							pointFormatter:function() {
+								var s = stockName + ": <span style=\"font-weight:bold\">" + Highcharts.numberFormat(this.y, degit) + "</span>";
+								$("#pc_chartPriceD").html("<li><span class=\"stockData\">" + parseUtc(this.x) + "</span></li>")
+								$("#pc_chartPrice0").html("<li><span class=\"stockTitle meigara\">" + stockName + "</span><span class=\"stockData meigara\">" + Highcharts.numberFormat(this.y, degit) + "</span></li>");
+								$("#pc_chartPrice1,#pc_chartPrice2,#pc_chartPrice3").html("");
+								return s;
+							}
+						},
+						lineWidth: 1.5,
+						data: olhc_data
+					},{
+						name: nikkei_str,
+						color : '#8faadc',
+						tooltip : {
+							pointFormatter:function() {
+								var s = "<br />" + nikkei_str + ": <span style=\"font-weight:bold\">" + Highcharts.numberFormat(this.y, 2) + "</span>";
+								$("#pc_chartPriceD").html("<li><span class=\"stockData\">" + parseUtc(this.x) + "</span></li>")
+								$("#pc_chartPrice1").html("<li><span class=\"stockTitle Nikkei225\">" + nikkei_str + "</span><span class=\"stockData Nikkei225\">" + Highcharts.numberFormat(this.y, 2) + "</span></li>");
+								return s;
+							}
+						},
+						lineWidth: 1.0,
+		
+						data: nk_data
+		
+					},{
+						name: topix_str,
+						color : '#f09150',
+						tooltip : {
+							pointFormatter:function() {
+								var s = "<br />TOPIX: <span style=\"font-weight:bold\">" + Highcharts.numberFormat(this.y, 2) + "</span>";
+								$("#pc_chartPriceD").html("<li><span class=\"stockData\">" + parseUtc(this.x) + "</span></li>")
+								$("#pc_chartPrice2").html("<li><span class=\"stockTitle TOPIX\">" + topix_str + "</span><span class=\"stockData TOPIX\">" + Highcharts.numberFormat(this.y, 2) + "</span></li>");
+								return s;
+							}
+						},
+						lineWidth: 1.0,
+		
+						data: tp_data
+		
+
+					},{
+						name: other_str,
+						color : '#aa0000',
+						tooltip : {
+							pointFormatter:function() {
+								var s = "<br />" + other_str + ": <span style=\"font-weight:bold\">" + Highcharts.numberFormat(this.y, 2) + "</span>";
+								$("#pc_chartPriceD").html("<li><span class=\"stockData\">" + parseUtc(this.x) + "</span></li>")
+								$("#pc_chartPrice3").html("<li><span class=\"stockTitle TOPIX\">" + other_str + "</span><span class=\"stockData TOPIX\" style=\"color:#aa0000\">" + Highcharts.numberFormat(this.y, 2) + "</span></li>");
+								return s;
+							}
+						},
+						lineWidth: 1.0,
+		
+
+					}]
+				});
+				if(olhc_data.length){
+					$("#pc_chartPriceD").html("<li><span class=\"stockData\">" + parseUtc(olhc_data[olhc_data.length-1][0]) + "</span></li>")
+					$("#pc_chartPrice0").html("<li><span class=\"stockTitle meigara\">" + stockName + "</span><span class=\"stockData meigara\">" + Highcharts.numberFormat(olhc_data[olhc_data.length-1][1], degit) + "</span></li>");
+				}
+
+			// 指数比較
+			
+				if(nk_data.length){
+					$("#pc_chartPrice1").html("<li><span class=\"stockTitle Nikkei225\">" + nikkei_str + "</span><span class=\"stockData Nikkei225\">" + Highcharts.numberFormat(nk_data[nk_data.length-1][1], 2) + "</span></li>");
+				}
+			
+			
+				if(tp_data.length){
+					$("#pc_chartPrice2").html("<li><span class=\"stockTitle TOPIX\">" + topix_str + "</span><span class=\"stockData TOPIX\">" + Highcharts.numberFormat(tp_data[tp_data.length-1][1], 2) + "</span></li>");
+				}
+			
+			
+
+			}
+
+			function setPcChartData(){
+				$("#pc_termNavi a,#sp_termNavi a").removeClass("naviCur");
+				$("#pc_t" + term_val + ",#sp_t" + term_val).addClass("naviCur");
+				$(".avg0").html(avg0_str);
+				$(".avg1").html(avg1_str);
+				$("#linkarea").html("");
+				var tmp_str = "./chartV2.aspx?m=json";
+				tmp_str += "&t=" + term_val;
+				tmp_str += "&g=" + graph_val;
+				tmp_str += "&a0=" + avg0_val;
+				tmp_str += "&a1=" + avg1_val;
+				tmp_str += "&h=" + highlow_val;
+				tmp_str += "&n=" + nikkei_val;
+				tmp_str += "&p=" + topix_val;
+				tmp_str += "&o=" + other_val;
+				tmp_str += "&s=" + pc_val;
+		
+				$.getJSON(tmp_str, function(data){
+					// alert("Parse");
+					$("#pc_chartPriceD").html("<ul><li><span class=\"stockTitle\">&nbsp;</span><span class=\"stockData\"></span></li></ul>");
+					$("#pc_chartPrice0").html("<li><span class=\"stockTitle\">&nbsp;</span><span class=\"stockData\"></span></li>");
+					$("#pc_chartPrice1").html("");
+					$("#pc_chartPrice2").html("");
+					$("#pc_chartPrice3").html("");
+					calcFlagData(data.data);
+					if(nikkei_val + topix_val + other_val > 0){
+						setCpData(data.data, data.nk, data.tp, data.ot);
+					}else{
+						setPcData(data.data, data.volume, data.avg0, data.avg1, data.high, data.low);
+					}
+				});
+			}
+			setPcChartData();
+
+			var timer = false;
+			/*
+			$(window).resize(function() {
+				if (timer !== false) {
+					clearTimeout(timer);
+				}
+				timer = setTimeout(function() {
+					var tmpSize = window.innerWidth >= 600 ? 0 : 1;
+					if(tmpSize != pc_val){
+						pc_val = tmpSize;
+						setPcChartData();
+					}
+				}, 200);
+			});
+			*/
+
+			var ohlc_timer = false;
+
+			function comma(num){
+				var s = String(num).split('.');
+				var ret = String(s[0]).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
+				if(s.length > 1){
+					ret += '.' + s[1];
+				}
+				return(ret);
+			}
+
+			function setOhlcJson(){
+				$.getJSON("./chartV2.aspx?m=ohlc", function(data){
+					$(".calc_lt").html(data.date);
+					$(".calc_lp").html(data.price);
+					$(".calc_lc").html("<span class=\"" + data.cclass + "\">" + data.change + "</span>");
+					$(".calc_lo").html(data.open);
+					$(".calc_lh").html(data.high);
+					$(".calc_ll").html(data.low);
+					$(".calc_lv").html(data.volume);
+					$(".calc_ln").html(data.prev);
+		
+				});
+				setOhlcTimer();
+			}
+
+			function setOhlcTimer(){
+				if (ohlc_timer !== false) {
+					clearTimeout(ohlc_timer);
+				}
+				ohlc_timer = setTimeout(setOhlcJson, 1000 * 60);
+			}
+			setOhlcTimer();
+
+			var beforePrint = function () {
+				var pc_chart = $('#chart_pc').highcharts();
+				if(pc_chart != undefined && pc_chart != null){
+					pc_chart.oldhasUserSize = pc_chart.hasUserSize;
+					pc_chart.resetParams = [pc_chart.chartWidth, pc_chart.chartHeight, false];
+					pc_chart.setSize(800, 380, false);	// ☆チャートの印刷幅設定【print.cssの印刷幅に合わせて変更】
+				}
+			};
+			var afterPrint = function () {
+				var pc_chart = $('#chart_pc').highcharts();
+				if(pc_chart != undefined && pc_chart != null){
+					pc_chart.setSize(null, null, false);
+					pc_chart.hasUserSize = pc_chart.oldhasUserSize;
+					pc_chart.reflow();
+				}
+			};
+
+			if (window.matchMedia) {
+				var mediaQueryList = window.matchMedia('print');
+				mediaQueryList.addListener(function (mql) {
+					if (mql.matches) {
+						beforePrint();
+					} else {
+						afterPrint();
+					}
+				});
+			}
+
+			window.onbeforeprint = beforePrint;
+			window.onafterprint = afterPrint;
+
+			function setCandleChartSetting(){
+				if(nikkei_val + topix_val + other_val > 0){
+					nikkei_val = 0;
+					topix_val = 0;
+					other_val = 0;
+					$("#pc_nk,#sp_nk").removeClass("naviCur");
+					$("#pc_tp,#sp_tp").removeClass("naviCur");
+					$("#pc_ot,#sp_ot").removeClass("naviCur");
+				}
+				if(graph_val == 0){
+					$("#pc_g0,#sp_g0").addClass("naviCur");
+				}else{
+					$("#pc_g1,#sp_g1").addClass("naviCur");
+				}
+			}
+			function setCompareChartSetting(){
+				avg0_val = 0;
+				avg1_val = 0;
+				highlow_val = 0;
+				document_val = 0;
+				$("#pc_a0,#sp_a0").removeClass("naviCur");
+				$("#pc_a1,#sp_a1").removeClass("naviCur");
+				$("#pc_h,#sp_h").removeClass("naviCur");
+				$("#pc_g0,#sp_g0").removeClass("naviCur");
+				$("#pc_g1,#sp_g1").removeClass("naviCur");
+				$("#pc_d,#sp_d").removeClass("naviCur");
+			}
+
+			$("#pc_t0,#sp_t0").click(function() {
+				avg0_str = "5" + day_str;
+				avg1_str = "25" + day_str;
+				term_val = 0;
+				setDateType(0);
+				setPcChartData();
+			});
+			$("#pc_t1,#sp_t1").click(function() {
+				avg0_str = "13" + week_str;
+				avg1_str = "26" + week_str;
+				term_val = 1;
+				setDateType(1);
+				setPcChartData();
+			});
+			$("#pc_t2,#sp_t2").click(function() {
+				avg0_str = "13" + week_str;
+				avg1_str = "26" + week_str;
+				term_val = 2;
+				setDateType(1);
+				setPcChartData();
+			});
+			$("#pc_t3,#sp_t3").click(function() {
+				avg0_str = "12" + month_str;
+				avg1_str = "24" + month_str;
+				term_val = 3;
+				setDateType(2);
+				setPcChartData();
+			});
+			$("#pc_t4,#sp_t4").click(function() {
+				avg0_str = "12" + month_str;
+				avg1_str = "24" + month_str;
+				term_val = 4;
+				setDateType(2);
+				setPcChartData();
+			});
+			$("#pc_a0,#sp_a0").click(function() {
+				if(avg0_val ==0){
+					$("#pc_a0,#sp_a0").addClass("naviCur");
+					avg0_val = 1;
+				}else{
+					$("#pc_a0,#sp_a0").removeClass("naviCur");
+					avg0_val = 0;
+				}
+				setCandleChartSetting();
+				setPcChartData();
+			});
+			$("#pc_a1,#sp_a1").click(function() {
+				if(avg1_val ==0){
+					$("#pc_a1,#sp_a1").addClass("naviCur");
+					avg1_val = 1;
+				}else{
+					$("#pc_a1,#sp_a1").removeClass("naviCur");
+					avg1_val = 0;
+				}
+				setCandleChartSetting();
+				setPcChartData();
+			});
+			$("#pc_h,#sp_h").click(function() {
+				if(highlow_val ==0){
+					$("#pc_h,#sp_h").addClass("naviCur");
+					highlow_val = 1;
+				}else{
+					$("#pc_h,#sp_h").removeClass("naviCur");
+					highlow_val = 0;
+				}
+				setCandleChartSetting();
+				setPcChartData();
+			});
+			$("#pc_d,#sp_d").click(function() {
+				if(document_val ==0){
+					$("#pc_d,#sp_d").addClass("naviCur");
+					document_val = 1;
+				}else{
+					$("#pc_d,#sp_d").removeClass("naviCur");
+					document_val = 0;
+				}
+				if(nikkei_val + topix_val + other_val > 0){
+					nikkei_val = 0;
+					topix_val = 0;
+					other_val = 0;
+					$("#pc_nk,#sp_nk").removeClass("naviCur");
+					$("#pc_tp,#sp_tp").removeClass("naviCur");
+					$("#pc_ot,#sp_ot").removeClass("naviCur");
+					setCandleChartSetting();
+					setPcChartData();
+				}else{
+					flagVisible();
+				}
+			});
+			$("#pc_g0,#sp_g0").click(function() {
+				graph_val = 0;
+				$("#pc_g0,#sp_g0").addClass("naviCur");
+				$("#pc_g1,#sp_g1").removeClass("naviCur");
+				setCandleChartSetting();
+				setPcChartData();
+			});
+			$("#pc_g1,#sp_g1").click(function() {
+				graph_val = 1;
+				$("#pc_g1,#sp_g1").addClass("naviCur");
+				$("#pc_g0,#sp_g0").removeClass("naviCur");
+				setCandleChartSetting();
+				setPcChartData();
+			});
+
+		// 指数比較
+		
+			$("#pc_nk,#sp_nk").click(function() {
+				if(nikkei_val ==0){
+					$("#pc_nk,#sp_nk").addClass("naviCur");
+					nikkei_val = 1;
+					setCompareChartSetting();
+				}else{
+					$("#pc_nk,#sp_nk").removeClass("naviCur");
+					nikkei_val = 0;
+					if(nikkei_val + topix_val + other_val == 0){
+						setCandleChartSetting();
+					}
+				}
+				setPcChartData();
+			});
+		
+		
+			$("#pc_tp,#sp_tp").click(function() {
+				if(topix_val ==0){
+					$("#pc_tp,#sp_tp").addClass("naviCur");
+					topix_val = 1;
+					setCompareChartSetting();
+				}else{
+					$("#pc_tp,#sp_tp").removeClass("naviCur");
+					topix_val = 0;
+					if(nikkei_val + topix_val + other_val == 0){
+						setCandleChartSetting();
+					}
+				}
+				setPcChartData();
+			});
+		
+		
+
+		
+		$("#pc_t5,#sp_t5").click(function() {
+			avg0_str = "12" + month_str;
+			avg1_str = "24" + month_str;
+			term_val = 5;
+			setDateType(2);
+			setPcChartData();
+		});
+		
+
+		function setDateStr(tmp_str){
+			var ret_str = "" + tmp_str;
+			if(ret_str.length >= 8){
+				var tmp_y = ret_str.substring(0,4);
+				var tmp_m = ret_str.substring(4,6);
+				var tmp_d = ret_str.substring(6,8);
+				ret_str = tmp_y + "/" + tmp_m + "/" + tmp_d;
+			}
+			return(ret_str);
+		}
+
+		function setDateType(tgt_val){
+			cType = tgt_val;
+			$(".termSelectItem").removeClass("current");
+			$(".tSelect input").prop("checked", false);
+			$("#pc_t_" + tgt_val + ",#sp_t_" + tgt_val).prop("checked", true);
+		
+		}
+
+
+		$("#pc_t_0,#sp_t_0").click(function() {
+			term_val = 6;
+			setDateType(0);
+			setPcChartData();
+		});
+		$("#pc_t_1,#sp_t_1").click(function() {
+			term_val = 6;
+			setDateType(1);
+			setPcChartData();
+		});
+		$("#pc_t_2,#sp_t_2").click(function() {
+			term_val = 6;
+			setDateType(2);
+			setPcChartData();
+		});
+
+
+		
+
+		function parseUtcVal(data){
+			var tmp_dt = new Date(data);
+			var tmpY = tmp_dt.getFullYear();
+			var tmpM = tmp_dt.getMonth() + 1;
+			var tmpD = tmp_dt.getDate();
+			var tmp_val = tmpY * 10000 + tmpM  * 100 + tmpD;
+			return(tmp_val);
+		}
+
+
+		
+
+		
+
+		function flagVisible(){
+			var pc_chart = $('#chart_pc').highcharts();
+			if(pc_chart != null){
+				var series = pc_chart.series;
+				var series_len = series.length;
+				if(document_val == 0){
+					pc_chart.series[series_len - 3].hide();
+					pc_chart.series[series_len - 2].hide();
+					pc_chart.series[series_len - 1].hide();
+				}else{
+					pc_chart.series[series_len - 3].show();
+					pc_chart.series[series_len - 2].show();
+					pc_chart.series[series_len - 1].show();
+				}
+			}
+		}
+
+
+		function parseUtcMonth(data){
+			var tmp_dt = new Date(data);
+			var tmpY = tmp_dt.getFullYear();
+			var tmpM = tmp_dt.getMonth();
+			var tmp_val = tmpY * 12 + tmpM;
+			return(tmp_val);
+		}
+
+		function diffDay(maxVal, minVal){
+			var max_dt = new Date(maxVal);
+			var min_dt = new Date(minVal);
+			return(max_dt.getDate() <min_dt.getDate());
+		}
+
+
+		function setDateVal(tmp_dt){
+			var tmpY = tmp_dt.getFullYear();
+			var tmpM = tmp_dt.getMonth() + 1;
+			var tmpD = tmp_dt.getDate();
+			var tmp_val = tmpY * 10000 + tmpM  * 100 + tmpD;
+			return(tmp_val);
+		}
+
+
+		function getOfs(tgt_data, tgt_date){
+			var ofs = 0;
+			for(var i=0;i<tgt_data.length;i++){
+				var t_date = parseUtcVal(tgt_data[i][0]);
+				if(t_date > tgt_date){
+					break;
+				}else{
+					ofs++;
+				}
+			}
+			if(ofs > 0){
+				ofs--;
+			}
+			if(ofs >= tgt_data.length){
+				ofs = tgt_data.length - 1;
+			}
+			return(ofs);
+		}
+
+
+		function getX(ofs, tgt_data, tgt_width){
+			return(Math.round(ofs * (tgt_width) / tgt_data.length));
+		}
+
+
+		function getUtcVal(tgt_date){
+			var tmpD = tgt_date % 100;
+			var tmpM = ((tgt_date - tmpD) / 100) % 100;
+			var tmpY = (tgt_date - tmpD - tmpM * 100) / 10000;
+			return(Date.UTC(tmpY, tmpM - 1, tmpD));
+		}
+
+		function calcFlagArray(t_array, tgt_data, minDate, maxDate, width){
+			var t_data = new Array();
+			var tgtX, tgt_date, tmp_str;
+			tgtX = -1;
+			tgt_date = 0;
+			tmp_str = "";
+			for(var j=t_array.length/3 - 1;j>=0;j--){
+				if(t_array[3*j] >= minDate && t_array[3*j] <= maxDate){
+					var ofs = getOfs(tgt_data, t_array[3*j]);
+					var t_x = getX(ofs, tgt_data, width);
+					if(tgtX < 0 || t_x - tgtX > 20){
+						if(tgt_date > 0){
+							t_data.push({x:tgt_date, text:tmp_str});
+						}
+						tgt_date = tgt_data[ofs][0];
+						tmp_str = "";
+						tgtX = t_x;
+					}
+					tmp_str += "<tr><th>" + t_array[3*j] + "</th><td>" + (t_array[3*j + 2].length > 0 ? "<a href=\"./chartV2.aspx?fl=" + t_array[3*j + 2] + "\" target=\"_blank\">" + t_array[3*j + 1] + "</a>" : t_array[3*j + 1]) +"</td></tr>";
+				}
+			}
+			if(tgt_date > 0){
+				t_data.push({x:tgt_date, text:tmp_str});
+			}
+			return(t_data);
+		}
+
+		function parseDateVal(tmp_val){
+			var tmpD = tmp_val % 100;
+			var tmpM = ((tmp_val - tmpD) / 100) % 100;
+			var tmpY = ((tmp_val - tmp_val % 10000) / 10000);
+			var tmp_dt = new Date(tmpY, tmpM-1, tmpD);
+			return(tmp_dt);
+		}
+
+
+		function calcFlagData(tgt_data){
+			var chart = $("#chart_pc").highcharts();
+			var width = $("#chart_pc").innerWidth();
+			if(chart != null){
+				// width = chart.chartWidth;
+			}
+			// alert(width);
+			ea_data = new Array();
+			td_data = new Array();
+			en_data = new Array();
+			if(tgt_data.length > 0){
+				minDate = parseUtcVal(tgt_data[0][0]);
+				maxDate = parseUtcVal(tgt_data[tgt_data.length-1][0]);
+				var tmpMaxDate = maxDate;
+				if(cType == 1){
+					var t_date = parseDateVal(tmpMaxDate);
+					t_date.setDate(t_date.getDate() + 6);
+					tmpMaxDate = setDateVal(t_date);
+				}else if(cType == 2){
+					tmpMaxDate = tmpMaxDate + 100 - (tmpMaxDate % 100);
+				}
+				// alert(tmpMaxDate + ":" + maxDate);
+				ea_data = calcFlagArray(ea_array, tgt_data, minDate, tmpMaxDate, width);
+				td_data = calcFlagArray(td_array, tgt_data, minDate, tmpMaxDate, width);
+				en_data = calcFlagArray(en_array, tgt_data, minDate, tmpMaxDate, width);
+			}
+			setLimit(tgt_data);
+		}
+
+
+
+		
+		
+		
+			function setLimit(tgt_data){
+			}
+		
+
+		});
+	</script>
+	<style>
+		.l_jp{display:inline;}
+.l_en{display:none !important;}
+.l_kr{display:none !important;}
+.l_zn{display:none !important;}
+
+		.highcharts-tooltip{visibility:hidden;}
+		.termSelect li{
+			display:inline-block;
+			padding : 10px;
+			text-align : center;
+		}
+		.termSelect li a.current{
+			color : red;
+		}
+	</style>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+	
+
+	<!--// contentsNavi //-->
+
+	<!--// navi //-->
+
+	<div id="container">
+
+<!--// PC・タブレット表示用ここから //-->
+		<div class="stockBoard">
+			<div class="stockBoardLeft">
+				<ul class="stockPriceWrap">
+					<li class="stockTime calc_lt">2026/10/16 15:30</li>
+					<li class="stockPrice calc_lp">3,860</li>
+					<li class="stockChange calc_lc"><span class="priceUp">+160 (+4.32%)</span></li>
+				</ul>
+			</div><!--// stockBoardLeft //-->
+			<div class="stockBoardRight">
+				<div class="stockPriceWrapR">
+					<ul>
+						<li>
+							<span class="stockTitle">
+								<span class="l_jp">始値</span>
+								<span class="l_en">Open</span>
+								<span class="l_kr">시가</span>
+								<span class="l_zn">开盘价</span>
+							</span>
+							<span class="stockData calc_lo">3,770</span>
+						</li>
+						<li>
+							<span class="stockTitle">
+								<span class="l_jp">高値</span>
+								<span class="l_en">High</span>
+								<span class="l_kr">고가</span>
+								<span class="l_zn">最高价</span>
+							</span>
+							<span class="stockData calc_lh">3,860</span>
+						</li>
+						<li>
+							<span class="stockTitle">
+								<span class="l_jp">安値</span>
+								<span class="l_en">Low</span>
+								<span class="l_kr">저가</span>
+								<span class="l_zn">最低价</span>
+							</span>
+							<span class="stockData calc_ll">3,755</span>
+						</li>
+						<li class="volume">
+							<span class="stockTitle">
+								<span class="l_jp">出来高</span>
+								<span class="l_en">Volume</span>
+								<span class="l_kr">거래량</span>
+								<span class="l_zn">成交量</span>
+							</span>
+							<span class="stockData calc_lv">55,700</span>
+						</li>
+						<li>
+							<span class="stockTitle">
+								<span class="l_jp">前日終値</span>
+								<span class="l_en">Previous</span>
+								<span class="l_kr">전일종가</span>
+								<span class="l_zn">昨日收盘价</span>
+							</span>
+							<span class="stockData calc_ln">3,700</span>
+						</li>
+					</ul>
+				</div>
+				<div class="cf"></div>
+			</div><!--// stockBoardRight //-->
+			<div class="cf"></div>
+		</div><!--// stockBoard //-->
+<!--// PC・タブレット表示用ここまで //-->
+
+<!--// スマフォ表示用ここから //-->
+		<div class="stockBoardSp">
+			<div class="stockBoardLeft">
+				<ul class="stockPriceWrap">
+					<li class="stockTime calc_lt">2026/10/16 15:30</li>
+					<li class="stockPrice calc_lp">3,860</li>
+				</ul>
+			</div><!--// stockBoardLeft //-->
+			<div class="stockBoardRight">
+				<div class="stockPriceWrapR">
+					<div class="stockChange calc_lc"><span class="priceUp">+160 (+4.32%)</span></div>
+				</div>
+				<div class="cf"></div>
+			</div><!--// stockBoardRight //-->
+			<div class="cf"></div>
+		</div><!--// stockBoardSp //-->
+<!--// スマフォ表示用ここまで //-->
+
+		<div class="chartPrice">
+			<ul id="pc_chartPriceD">
+				<li>
+					<span class="stockTitle">&nbsp;</span>
+					<span class="stockData"></span>
+				</li>
+			</ul>
+			<ul id="pc_chartPrice0">
+				<li>
+					<span class="stockTitle">&nbsp;</span>
+					<span class="stockData"></span>
+				</li>
+			</ul>
+			<ul id="pc_chartPrice1">
+				<li>
+					<span class="stockTitle">&nbsp;</span>
+					<span class="stockData"></span>
+				</li>
+			</ul>
+			<ul id="pc_chartPrice2">
+				<li>
+					<span class="stockTitle">&nbsp;</span>
+					<span class="stockData"></span>
+				</li>
+			</ul>
+			<ul id="pc_chartPrice3">
+				<li>
+					<span class="stockTitle">&nbsp;</span>
+					<span class="stockData"></span>
+				</li>
+			</ul>
+		</div>
+		<div id="chart_pc"></div>
+
+<!--// PC・タブレット表示用ここから //-->
+		<div id="chart">
+			<div class="navi">
+				<ul class="mainNavi" id="pc_termNavi">
+					<li class="term">
+						<a href="javascript:void(0)" id="pc_t0">
+							<span class="l_jp">日足3ヶ月</span>
+							<span class="l_en">3 months</span>
+							<span class="l_kr">일간3개월</span>
+							<span class="l_zn">日K线(3个月)</span>
+						</a>
+					</li>
+					<li class="term">
+						<a href="javascript:void(0)" id="pc_t1">
+							<span class="l_jp">週足6ヶ月</span>
+							<span class="l_en">6 months</span>
+							<span class="l_kr">주간6개월</span>
+							<span class="l_zn">周K线(6个月)</span>
+						</a>
+					</li>
+					<li class="term">
+						<a href="javascript:void(0)" id="pc_t2">
+							<span class="l_jp">週足1年</span>
+							<span class="l_en">1 year</span>
+							<span class="l_kr">주간1년</span>
+							<span class="l_zn">周K线(1年)</span>
+						</a>
+					</li>
+					<li class="term">
+						<a href="javascript:void(0)" id="pc_t3">
+							<span class="l_jp">月足3年</span>
+							<span class="l_en">3 years</span>
+							<span class="l_kr">월간3년</span>
+							<span class="l_zn">月K线(3年)</span>
+						</a>
+					</li>
+					<li class="term">
+						<a href="javascript:void(0)" id="pc_t4">
+							<span class="l_jp">月足5年</span>
+							<span class="l_en">5 years</span>
+							<span class="l_kr">월간5년</span>
+							<span class="l_zn">月K线(5年)</span>
+						</a>
+					</li>
+					<li id="pc_term5" class="term">
+						<a href="javascript:void(0)" id="pc_t5">
+							<span class="l_jp">月足10年</span>
+							<span class="l_en">10 years</span>
+							<span class="l_kr">월간10년</span>
+							<span class="l_zn">月K线(10年)</span>
+						</a>
+					</li>
+				</ul>
+				<div class="cf"></div>
+			</div><!--// navi //-->
+			
+			<div class="navi" style="margin-top:1px;">
+				<ul class="mainNavi">
+					<li class="type">
+						<a href="javascript:void(0)" id="pc_g0">
+							<span class="l_jp">面チャート</span>
+							<span class="l_en">Mountain</span>
+							<span class="l_kr">선차트</span>
+							<span class="l_zn">面积图</span>
+						</a>
+					</li>
+					<li class="type">
+						<a href="javascript:void(0)" id="pc_g1" class="naviCur">
+							<span class="l_jp">ローソク足</span>
+							<span class="l_en">Candle</span>
+							<span class="l_kr">봉차트</span>
+							<span class="l_zn">K线图</span>
+						</a>
+					</li>
+					<!--// 指数比較 //-->
+					<li id="pc_lnk_nk" class="type">
+						<a href="javascript:void(0)" id="pc_nk">
+							<span class="l_jp">日経平均</span>
+							<span class="l_en">Nikkei<span style="font-size:10px;"> 225</span></span>
+							<span class="l_kr">닛케이</span>
+							<span class="l_zn">日经<span style="font-size:10px;">225</span></span>
+							<span class="Nikkei225">■</span>
+						</a>
+					</li>
+					<li id="pc_lnk_tp" class="type">
+						<a href="javascript:void(0)" id="pc_tp">
+							<span class="l_jp">TOPIX</span>
+							<span class="l_en">Topix</span>
+							<span class="l_kr">TOPIX</span>
+							<span class="l_zn">TOPIX</span>
+							<span class="TOPIX">■</span>
+						</a>
+					</li>
+					
+					<!--// 指数比較 //-->
+				</ul>
+				<div class="cf"></div>
+				<ul class="mainNavi" style="margin-top:1px;">
+					<li class="type">
+						<a href="javascript:void(0)" id="pc_a0">
+							<span class="l_jp"><span class="avg0">5日</span>平均</span>
+							<span class="l_en"><span class="avg0">5d</span> MA</span>
+							<span class="l_kr"><span class="avg0">5일</span>평균</span>
+							<span class="l_zn"><span class="avg0">5日</span>平均</span>
+							<span class="d5MA">■</span>
+						</a>
+					</li>
+					<li class="type">
+						<a href="javascript:void(0)" id="pc_a1">
+							<span class="l_jp"><span class="avg1">25日</span>平均</span>
+							<span class="l_en"><span class="avg1">25d</span> MA</span>
+							<span class="l_kr"><span class="avg1">25일</span>평균</span>
+							<span class="l_zn"><span class="avg1">25日</span>平均</span>
+							<span class="d25MA">■</span>
+						</a>
+					</li>
+					<li class="type">
+						<a href="javascript:void(0)" id="pc_h">
+							<span class="l_jp">高値安値</span>
+							<span class="l_en">High/Low</span>
+							<span class="l_kr">고가저가</span>
+							<span class="l_zn">高低</span>
+						</a>
+					</li>
+					<li id="disclosureBtnPc" class="type">
+						<a href="javascript:void(0)" id="pc_d">
+							<span class="l_jp">開示資料</span>
+							<span class="l_en">Document</span>
+							<span class="l_kr"></span>
+							<span class="l_zn"></span>
+						</a>
+					</li>
+				</ul>
+			</div><!--// navi //-->
+		</div>
+<!--// PC・タブレット表示用ここまで //-->
+
+<!--// スマフォ表示用ここから //-->
+		<div id="chartSp">
+			<div class="navi">
+				<ul class="mainNavi" id="sp_termNavi">
+					<li class="term">
+						<a href="javascript:void(0)" id="sp_t0">
+							<span class="l_jp">3m</span>
+							<span class="l_en">3m</span>
+							<span class="l_kr">3개월</span>
+							<span class="l_zn">3个月</span>
+						</a>
+					</li>
+					<li class="term">
+						<a href="javascript:void(0)" id="sp_t1">
+							<span class="l_jp">6m</span>
+							<span class="l_en">6m</span>
+							<span class="l_kr">6개월</span>
+							<span class="l_zn">6个月</span>
+						</a>
+					</li>
+					<li class="term">
+						<a href="javascript:void(0)" id="sp_t2">
+							<span class="l_jp">1yr</span>
+							<span class="l_en">1yr</span>
+							<span class="l_kr">1년</span>
+							<span class="l_zn">1年</span>
+						</a>
+					</li>
+					<li class="term">
+						<a href="javascript:void(0)" id="sp_t3">
+							<span class="l_jp">3yr</span>
+							<span class="l_en">3yr</span>
+							<span class="l_kr">3년</span>
+							<span class="l_zn">3年</span>
+						</a>
+					</li>
+					<li class="term">
+						<a href="javascript:void(0)" id="sp_t4">
+							<span class="l_jp">5yr</span>
+							<span class="l_en">5yr</span>
+							<span class="l_kr">5년</span>
+							<span class="l_zn">5年</span>
+						</a>
+					</li>
+ 					<li id="sp_term5" class="term">
+						<a href="javascript:void(0)" id="sp_t5">
+							<span class="l_jp">10yr</span>
+							<span class="l_en">10yr</span>
+							<span class="l_kr">10년</span>
+							<span class="l_zn">10年</span>
+						</a>
+					</li>
+				</ul>
+				<div class="cf"></div>
+			</div><!--// navi //-->
+			
+			<div class="cf"></div>
+			<div>
+				<ul class="mainNavi" style="margin-top:1px;">
+					<li class="type" style="width:50%;">
+						<a href="javascript:void(0)" id="sp_g0">
+							<span class="l_jp">面チャート</span>
+							<span class="l_en">Mountain</span>
+							<span class="l_kr">선차트</span>
+							<span class="l_zn">面积图</span>
+						</a>
+					</li>
+					<li class="type" style="width:50%;">
+						<a href="javascript:void(0)" id="sp_g1" class="naviCur">
+							<span class="l_jp">ローソク足</span>
+							<span class="l_en">Candle</span>
+							<span class="l_kr">봉차트</span>
+							<span class="l_zn">K线图</span>
+						</a>
+					</li>
+				</ul>
+				<div class="cf"></div>
+				<ul class="mainNavi" style="margin-top:1px;">
+					<li class="type">
+						<a href="javascript:void(0)" id="sp_a0">
+							<span class="l_jp"><span class="avg0">5日</span>平均</span>
+							<span class="l_en"><span class="avg0">5d</span> MA</span>
+							<span class="l_kr"><span class="avg0">5일</span>평균</span>
+							<span class="l_zn"><span class="avg0">5日</span>平均</span>
+							<span class="d5MA">■</span>
+						</a>
+					</li>
+					<li class="type">
+						<a href="javascript:void(0)" id="sp_a1">
+							<span class="l_jp"><span class="avg1">25日</span>平均</span>
+							<span class="l_en"><span class="avg1">25d</span> MA</span>
+							<span class="l_kr"><span class="avg1">25일</span>평균</span>
+							<span class="l_zn"><span class="avg1">25日</span>平均</span>
+							<span class="d25MA">■</span>
+						</a>
+					</li>
+					<li class="type">
+						<a href="javascript:void(0)" id="sp_h">
+							<span class="l_jp">高値安値</span>
+							<span class="l_en">High/Low</span>
+							<span class="l_kr">고가저가</span>
+							<span class="l_zn">高低</span>
+						</a>
+					</li>
+					<li id="disclosureBtnSp" class="type">
+						<a href="javascript:void(0)" id="sp_d">
+							<span class="l_jp">開示資料</span>
+							<span class="l_en">Document</span>
+							<span class="l_kr"></span>
+							<span class="l_zn"></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="cf"></div>
+			<div id="sp_lnk_cp">
+				<ul class="mainNavi" style="margin-top:1px;">
+					<!--// 指数比較 //-->
+					<li id="sp_lnk_nk" class="type" style="width:50%;">
+						<a href="javascript:void(0)" id="sp_nk">
+							<span class="l_jp">日経平均</span>
+							<span class="l_en">Nikkei<span style="font-size:10px;"> 225</span></span>
+							<span class="l_kr">닛케이</span>
+							<span class="l_zn">日经<span style="font-size:10px;">225</span></span>
+							<span class="Nikkei225">■</span>
+						</a>
+					</li>
+					<li id="sp_lnk_tp" class="type" style="width:50%;">
+						<a href="javascript:void(0)" id="sp_tp">
+							<span class="l_jp">TOPIX</span>
+							<span class="l_en">Topix</span>
+							<span class="l_kr">TOPIX</span>
+							<span class="l_zn">TOPIX</span>
+							<span class="TOPIX">■</span>
+						</a>
+					</li>
+					
+					<!--// 指数比較 //-->
+				</ul>
+				<div class="cf"></div>
+			</div>
+			<div class="stockBoard2Sp">
+				<div class="stockPriceWrapSp">
+					<ul>
+						<li>
+							<span class="stockTitle">
+								<span class="l_jp">始値</span>
+								<span class="l_en">Open</span>
+								<span class="l_kr">시가</span>
+								<span class="l_zn">开盘价</span>
+							</span>
+							<span class="stockData calc_lo">3,770</span>
+						</li>
+						<li>
+							<span class="stockTitle">
+								<span class="l_jp">高値</span>
+								<span class="l_en">High</span>
+								<span class="l_kr">고가</span>
+								<span class="l_zn">最高价</span>
+							</span>
+							<span class="stockData calc_lh">3,860</span>
+						</li>
+						<li>
+							<span class="stockTitle">
+								<span class="l_jp">安値</span>
+								<span class="l_en">Low</span>
+								<span class="l_kr">저가</span>
+								<span class="l_zn">最低价</span>
+							</span>
+							<span class="stockData calc_ll">3,755</span>
+						</li>
+					</ul>
+				</div>
+				<div class="cf"></div>
+			</div><!--// stockBoard2Sp //-->
+			<div class="stockBoard2Sp">
+				<div class="stockPriceWrapSp">
+					<ul class="vol">
+						<li>
+							<span class="stockTitle">
+								<span class="l_jp">出来高</span>
+								<span class="l_en">Volume</span>
+								<span class="l_kr">거래량</span>
+								<span class="l_zn">成交量</span>
+							</span>
+							<span class="stockData calc_lv">55,700</span>
+						</li>
+						<li>
+							<span class="stockTitle">
+								<span class="l_jp">前日終値</span>
+								<span class="l_en">Previous</span>
+								<span class="l_kr">전일종가</span>
+								<span class="l_zn">昨日收盘价</span>
+							</span>
+							<span class="stockData calc_ln">3,700</span>
+						</li>
+					</ul>
+				</div>
+				<div class="cf"></div>
+			</div><!--// stockBoard2Sp //-->
+		</div>
+<!--// スマフォ表示用ここまで //-->
+
+		<div class="cf"></div>
+
+<!--// 適時開示ここから //-->
+		<div id="disclosureWrap" class="disclosureWrap">
+			<div class="title">
+				<span class="l_jp">開示資料</span>
+				<span class="l_en">Timely Disclosure</span>
+				<span class="l_kr"></span>
+				<span class="l_zn"></span>
+			</div>
+			<div class="child">
+				<div class="disclosureList">
+					<table id="linkarea"></table>
+				</div>
+			</div>
+		</div>
+<!--// 適時開示ここまで //-->
+
+		<div class="cf"></div>
+
+<!--// 詳細情報アコーディオンここから //-->
+		
+<!--// 詳細情報アコーディオンここまで //-->
+
+		<div id="footer">
+			<div class="realtime" style="margin-bottom:10px; border-bottom:1px #aaa dotted;">
+				<span class="l_jp">リアルタイム株価情報提供：ストックウェザー株式会社&nbsp;&nbsp;&nbsp;&nbsp;<a href="/stocks/ir/contents/guide/disclaimer.html" target="_blank" style="text-decoration: underline;">免責事項はこちら&gt;&gt;</a><br><br>日経平均株価は日本経済新聞社の著作物です。TOPIXは東京証券取引所の著作物です。グラフに表示される指数はそれぞれ終値です。</span>
+				<span class="l_en">Real-Time Stock Price Information(Trading Volume is delayed by 15 minutes) : provided by StockWeather.com,Inc.&nbsp;&nbsp;&nbsp;&nbsp;<a href="/stocks/ir/contents/guide/disclaimer_en.html" target="_blank" style="text-decoration: underline;">Disclaimer&gt;&gt;</a><br><br>Nikkei 225 is owned by Nikkei Inc. TOPIX is owned by Tokyo Stock Exchange, Inc. The comparison graph above shows closing prices.</span>
+				<span class="l_kr">Real-Time Stock Price Information(Trading Volume is delayed by 15 minutes) : provided by StockWeather.com,Inc.&nbsp;&nbsp;&nbsp;&nbsp;<a href="/stocks/ir/contents/guide/disclaimer_en.html" target="_blank" style="text-decoration: underline;">Disclaimer&gt;&gt;</a><br><br>Nikkei 225 is owned by Nikkei Inc. TOPIX is owned by Tokyo Stock Exchange, Inc. The comparison graph above shows closing prices.</span>
+				<span class="l_zn">Real-Time Stock Price Information(Trading Volume is delayed by 15 minutes) : provided by StockWeather.com,Inc.&nbsp;&nbsp;&nbsp;&nbsp;<a href="/stocks/ir/contents/guide/disclaimer_en.html" target="_blank" style="text-decoration: underline;">Disclaimer&gt;&gt;</a><br><br>Nikkei 225 is owned by Nikkei Inc. TOPIX is owned by Tokyo Stock Exchange, Inc. The comparison graph above shows closing prices.</span>
+			</div>
+			<div class="copyright">Copyright&copy; StockWeather.com Inc. All rights reserved.</div>
+		</div><!--// footer //-->
+
+	</div>
+
+</div>
+
+</body>
+
+</html>

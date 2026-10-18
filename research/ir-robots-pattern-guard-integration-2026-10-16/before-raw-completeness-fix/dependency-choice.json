@@ -1,0 +1,36 @@
+{
+  "inspected_at": "2026-10-16T14:29:45.148020+00:00",
+  "comparison": [
+    {
+      "name": "Protego",
+      "version": "0.7.0",
+      "source": "https://pypi.org/pypi/Protego/json",
+      "summary": "Pure-Python robots.txt parser with support for modern conventions",
+      "requires_python": ">=3.10",
+      "requires_dist": null,
+      "project": "https://github.com/scrapy/protego",
+      "selected": true
+    },
+    {
+      "name": "robotexclusionrulesparser",
+      "version": "1.7.1",
+      "source": "https://pypi.org/pypi/robotexclusionrulesparser/json",
+      "summary": "A robots.txt parser alternative to Python's robotparser module",
+      "requires_python": null,
+      "requires_dist": null,
+      "project": "http://nikitathespider.com/python/rerp/",
+      "selected": false
+    }
+  ],
+  "choice": "Protego is a maintained Scrapy-project pure-Python parser providing pattern and URL matching with no transitive dependencies. Pin 0.7.0; do not implement a wildcard matcher. Old stdlib group/literal rules remain the permission upper bound.",
+  "installed_license_expression": "BSD-3-Clause",
+  "installed_wheel_kind": "py3-none-any",
+  "install_command": "UV_CACHE_DIR=/tmp/ir-robots-uv-cache uv add 'protego==0.7.0'",
+  "dependency_changes": "One package added, no existing locked package versions changed. PyPI official metadata/package endpoints only.",
+  "initial_local_attempts": [
+    "Installed uv did not support --exact; explicit == version used.",
+    "Default uv cache path read-only; task-specific /tmp cache used. No network/TLS/proxy/UA changes."
+  ],
+  "package_metadata_HTTP_reads": 2,
+  "website_research_GETs": 0
+}

@@ -1,0 +1,368 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T12:19:08.724207+00:00",
+  "status": "v2_original_source_and_correction_dependency_guards_accepted",
+  "blocking_findings": [],
+  "resolved_prior_issue": "ADJ01 original source metadata unclear/null without correction-row legacy financial apply",
+  "basis": "Explicit stable root notification, original full byte copies saved12:15:31, unchanged current code; independent finite memory checks.",
+  "checkpoint": {
+    "manifest_path": "research/ir-reply-runtime-gap-review-2026-10-15/source-snapshots-v2.json",
+    "manifest_sha256": "c060ffb510babb9c154e4713d38d6f84e1fb33cb2c22610e06cc00e477759277",
+    "manifest_recorded_at": "2026-10-15T12:15:31.967328+00:00",
+    "implementation_sha256": "c7a77ce8cc2129e7ca2b2ad2385e8ae6ab33e686dbc6c5efdd86765d44a4fed1",
+    "all_five_snapshots_SHA_and_current_byte_equal": true,
+    "files": [
+      {
+        "production_path": "src/ir_agent/harness.py",
+        "snapshot_path": "research/ir-reply-runtime-gap-review-2026-10-15/source-snapshots-v2/src/ir_agent/harness.py",
+        "sha256": "5f75ba6452a61f47eb96c0ae06629d7251c90c84b53c46c7181953bff4b5b7bd"
+      },
+      {
+        "production_path": "src/ir_agent/decision_lifecycle.py",
+        "snapshot_path": "research/ir-reply-runtime-gap-review-2026-10-15/source-snapshots-v2/src/ir_agent/decision_lifecycle.py",
+        "sha256": "6663f44f66cc20a097f0fff47b58751c161525c7339cf6a5b1356f5eeb14d9b3"
+      },
+      {
+        "production_path": "src/ir_agent/information_review.py",
+        "snapshot_path": "research/ir-reply-runtime-gap-review-2026-10-15/source-snapshots-v2/src/ir_agent/information_review.py",
+        "sha256": "22df6e4a6e5d717a390e817bb311b091112eb1d44722e0651623548f09b7d9ee"
+      },
+      {
+        "production_path": "src/ir_agent/decision.py",
+        "snapshot_path": "research/ir-reply-runtime-gap-review-2026-10-15/source-snapshots-v2/src/ir_agent/decision.py",
+        "sha256": "2c441f1d94a38453427dd8be3f589565dd7170a4c8cd7ec248be71d1ec516934"
+      },
+      {
+        "production_path": "tests/test_dependency_information_gates.py",
+        "snapshot_path": "research/ir-reply-runtime-gap-review-2026-10-15/source-snapshots-v2/tests/test_dependency_information_gates.py",
+        "sha256": "44910ea257fb8a07f5ee492659a90860a20b65edf601ed61a931784212816c33"
+      }
+    ]
+  },
+  "acceptance": [
+    {
+      "id": "V2-01",
+      "condition": "Source snapshot hold and reply correction hold have separate fields/identity.",
+      "result": "accepted",
+      "evidence": "Fixed code and independent case1: source_id/hash/null status without invented reply_id/version; actual correction reply_id/version1 separate."
+    },
+    {
+      "id": "V2-02",
+      "condition": "Missing/null IR is held, missing/null ordinary public classification is not an IR hold.",
+      "result": "accepted",
+      "evidence": "Fixed predicate; producer missing-field tests reviewed, independent explicit-null type contrast cases1/2."
+    },
+    {
+      "id": "V2-03",
+      "condition": "Second original parent and existing DAG closure are not missed.",
+      "result": "accepted",
+      "evidence": "Existing sources_for/source_origins reuse; independent case1 places null IR in second parent. Preserved old shared-DAG target test reviewed."
+    },
+    {
+      "id": "V2-04",
+      "condition": "Original unclear/null metadata is not rewritten or auto-released by public reply correction.",
+      "result": "accepted",
+      "evidence": "Source gate is independent of correction rows. Independent case1 after public version2 still holds and model/source remain byte-equivalent; producer unclear case reviewed."
+    },
+    {
+      "id": "V2-05",
+      "condition": "Original-public source corrected to nonpublic can recover only through explicit new evaluation after genuine public review.",
+      "result": "accepted",
+      "evidence": "Independent case3: backdated new attempt holds; public correction alone and original-request retry write0; new CAS request applies; successful replay write0."
+    },
+    {
+      "id": "V2-06",
+      "condition": "No source/new financial version on held legacy application; incoming public reply remains public.",
+      "result": "accepted",
+      "evidence": "Unconditional prewrite predicate; independent case1 uses legacy, version3 unchanged; saved adjacent recheck independently attributed."
+    },
+    {
+      "id": "V2-07",
+      "condition": "Historical/runtime distinction and trusted current hold remain.",
+      "result": "accepted",
+      "evidence": "Frozen runtime sampling and dual cutoff code retained; independent case3 recorded17:08/current17:10 sees17:09 correction. Producer post-writer-clock test read."
+    },
+    {
+      "id": "V2-08",
+      "condition": "Atomic rollback, idempotency and original financial state persist.",
+      "result": "accepted",
+      "evidence": "Independent injected view error on dual source/correction hold rolls back full memory dump; original source/model unchanged; case3 checks total_changes+dump on retries."
+    },
+    {
+      "id": "V2-09",
+      "condition": "Unknown metadata/publicity fields are not financial verification or caller send authorization.",
+      "result": "preserved_limitation",
+      "evidence": "Source snapshot gate only reuses existing classification contract; source type itself and semantics are inputs requiring review. Synthetic type/null contrast is not a real-IR relabelling permission."
+    },
+    {
+      "id": "V2-10",
+      "condition": "Review uses fixed complete bytes; current code remains exactly the snapshot.",
+      "result": "accepted",
+      "evidence": "All five original snapshots verified by SHA, exact byte equality at probe start/end and finalization; snapshot quotes include exact offsets."
+    }
+  ],
+  "fixed_snapshot_evidence": [
+    {
+      "production_path": "src/ir_agent/decision_lifecycle.py",
+      "fixed_snapshot_path": "research/ir-reply-runtime-gap-review-2026-10-15/source-snapshots-v2/src/ir_agent/decision_lifecycle.py",
+      "snapshot_sha256": "6663f44f66cc20a097f0fff47b58751c161525c7339cf6a5b1356f5eeb14d9b3",
+      "line": 61,
+      "character_start": 2665,
+      "character_end": 2932,
+      "quote": "classification = source.get('metadata', {}).get('information_status')\n            if ((source['source_type'] == 'ir_reply' and classification != 'public_clarification')\n                    or classification not in (None, 'public_disclosure', 'public_clarification')):",
+      "offset_unit": "UTF8 decoded fixed snapshot Unicode characters, end exclusive",
+      "claim": "Source classification predicate matches existing pure _check_source_origins; None IR holds, None other public source passes this gate."
+    },
+    {
+      "production_path": "src/ir_agent/decision_lifecycle.py",
+      "fixed_snapshot_path": "research/ir-reply-runtime-gap-review-2026-10-15/source-snapshots-v2/src/ir_agent/decision_lifecycle.py",
+      "snapshot_sha256": "6663f44f66cc20a097f0fff47b58751c161525c7339cf6a5b1356f5eeb14d9b3",
+      "line": 66,
+      "character_start": 3078,
+      "character_end": 3253,
+      "quote": "'information_status': classification, 'classification_origin': 'source_snapshot_metadata',\n                    'source_sha256': sha256(json_text(source).encode()).hexdigest(),",
+      "offset_unit": "UTF8 decoded fixed snapshot Unicode characters, end exclusive",
+      "claim": "Original metadata hold keyed by source ID and snapshot SHA; no fabricated reply ID/version."
+    },
+    {
+      "production_path": "src/ir_agent/decision_lifecycle.py",
+      "fixed_snapshot_path": "research/ir-reply-runtime-gap-review-2026-10-15/source-snapshots-v2/src/ir_agent/decision_lifecycle.py",
+      "snapshot_sha256": "6663f44f66cc20a097f0fff47b58751c161525c7339cf6a5b1356f5eeb14d9b3",
+      "line": 60,
+      "character_start": 2609,
+      "character_end": 2652,
+      "quote": "for source in self.sources_for(thesis, {}):",
+      "offset_unit": "UTF8 decoded fixed snapshot Unicode characters, end exclusive",
+      "claim": "All thesis original parents are inspected through existing closure traversal."
+    },
+    {
+      "production_path": "src/ir_agent/harness.py",
+      "fixed_snapshot_path": "research/ir-reply-runtime-gap-review-2026-10-15/source-snapshots-v2/src/ir_agent/harness.py",
+      "snapshot_sha256": "5f75ba6452a61f47eb96c0ae06629d7251c90c84b53c46c7181953bff4b5b7bd",
+      "line": 495,
+      "character_start": 31982,
+      "character_end": 32363,
+      "quote": "if dependency_holds:\n                    evaluation['dependency_information_holds'] = dependency_holds\n                    reasons.append('dependency_information_held_for_review')\n                if source_holds:\n                    evaluation['dependency_source_information_holds'] = source_holds\n                    reasons.append('dependency_source_information_held_for_review')",
+      "offset_unit": "UTF8 decoded fixed snapshot Unicode characters, end exclusive",
+      "claim": "Two identities/reasons coexist; reply own status remains separate."
+    },
+    {
+      "production_path": "src/ir_agent/harness.py",
+      "fixed_snapshot_path": "research/ir-reply-runtime-gap-review-2026-10-15/source-snapshots-v2/src/ir_agent/harness.py",
+      "snapshot_sha256": "5f75ba6452a61f47eb96c0ae06629d7251c90c84b53c46c7181953bff4b5b7bd",
+      "line": 506,
+      "character_start": 32674,
+      "character_end": 32769,
+      "quote": "elif dependency_holds or source_holds:\n                evaluation[\"status\"] = \"held_for_review\"",
+      "offset_unit": "UTF8 decoded fixed snapshot Unicode characters, end exclusive",
+      "claim": "Guard before financial-write else; applies to legacy too."
+    },
+    {
+      "production_path": "src/ir_agent/harness.py",
+      "fixed_snapshot_path": "research/ir-reply-runtime-gap-review-2026-10-15/source-snapshots-v2/src/ir_agent/harness.py",
+      "snapshot_sha256": "5f75ba6452a61f47eb96c0ae06629d7251c90c84b53c46c7181953bff4b5b7bd",
+      "line": 450,
+      "character_start": 28560,
+      "character_end": 28678,
+      "quote": "with self.store.transaction():\n            current_time = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)",
+      "offset_unit": "UTF8 decoded fixed snapshot Unicode characters, end exclusive",
+      "claim": "RG01 default runtime remains sampled after writer acquisition."
+    },
+    {
+      "production_path": "src/ir_agent/decision_lifecycle.py",
+      "fixed_snapshot_path": "research/ir-reply-runtime-gap-review-2026-10-15/source-snapshots-v2/src/ir_agent/decision_lifecycle.py",
+      "snapshot_sha256": "6663f44f66cc20a097f0fff47b58751c161525c7339cf6a5b1356f5eeb14d9b3",
+      "line": 124,
+      "character_start": 7236,
+      "character_end": 7381,
+      "quote": "historical = self.dependency_information_holds(thesis, as_of=as_of)\n        current = self.dependency_information_holds(thesis, as_of=checked_at)",
+      "offset_unit": "UTF8 decoded fixed snapshot Unicode characters, end exclusive",
+      "claim": "Historical/current correction cutoffs remain separate."
+    },
+    {
+      "production_path": "src/ir_agent/information_review.py",
+      "fixed_snapshot_path": "research/ir-reply-runtime-gap-review-2026-10-15/source-snapshots-v2/src/ir_agent/information_review.py",
+      "snapshot_sha256": "22df6e4a6e5d717a390e817bb311b091112eb1d44722e0651623548f09b7d9ee",
+      "line": 112,
+      "character_start": 5420,
+      "character_end": 5570,
+      "quote": "if boundary is None or (timestamp(row['first_saved_at']) <= boundary and\n                                timestamp(value['recorded_at']) <= boundary):",
+      "offset_unit": "UTF8 decoded fixed snapshot Unicode characters, end exclusive",
+      "claim": "Current classification review respects trusted first-save as well as declared record clock."
+    },
+    {
+      "production_path": "src/ir_agent/decision.py",
+      "fixed_snapshot_path": "research/ir-reply-runtime-gap-review-2026-10-15/source-snapshots-v2/src/ir_agent/decision.py",
+      "snapshot_sha256": "2c441f1d94a38453427dd8be3f589565dd7170a4c8cd7ec248be71d1ec516934",
+      "line": 288,
+      "character_start": 16897,
+      "character_end": 17078,
+      "quote": "if ((source[\"source_type\"] == \"ir_reply\" and classification != \"public_clarification\")\n                or classification not in (None, \"public_disclosure\", \"public_clarification\")):",
+      "offset_unit": "UTF8 decoded fixed snapshot Unicode characters, end exclusive",
+      "claim": "Pure predicate unchanged; new source gate copies its classification semantics, not a new financial rule."
+    }
+  ],
+  "independent_probes": {
+    "schema_version": 1,
+    "status": "v2_three_finite_memory_probes_passed",
+    "checkpoint_before_and_after": {
+      "manifest_sha256": "c060ffb510babb9c154e4713d38d6f84e1fb33cb2c22610e06cc00e477759277",
+      "source_sha256": {
+        "src/ir_agent/harness.py": "5f75ba6452a61f47eb96c0ae06629d7251c90c84b53c46c7181953bff4b5b7bd",
+        "src/ir_agent/decision_lifecycle.py": "6663f44f66cc20a097f0fff47b58751c161525c7339cf6a5b1356f5eeb14d9b3",
+        "src/ir_agent/information_review.py": "22df6e4a6e5d717a390e817bb311b091112eb1d44722e0651623548f09b7d9ee",
+        "src/ir_agent/decision.py": "2c441f1d94a38453427dd8be3f589565dd7170a4c8cd7ec248be71d1ec516934",
+        "tests/test_dependency_information_gates.py": "44910ea257fb8a07f5ee492659a90860a20b65edf601ed61a931784212816c33"
+      }
+    },
+    "cases": [
+      {
+        "case": "explicit_null_IR_second_parent_and_distinct_correction_holds",
+        "source_type": "ir_reply",
+        "original_status": null,
+        "before_and_after_thesis_version": 3,
+        "held_applied": false,
+        "incoming_status": "public_clarification",
+        "source_hold_key": [
+          "original-source-snapshot"
+        ],
+        "source_hash_exact": true,
+        "source_hold_has_reply_id_or_version": false,
+        "correction_reply_id": "demo-reply-cost",
+        "correction_version": 1,
+        "public_reconfirmation_still_source_held": true,
+        "old_source_and_model_unchanged": true,
+        "injected_hold_failure_full_dump_rollback": true
+      },
+      {
+        "case": "explicit_null_public_disclosure_classification_is_not_an_IR_hold",
+        "source_type": "public_disclosure",
+        "original_status": null,
+        "applied": true,
+        "after_thesis_version": 4,
+        "old_source_unchanged": true,
+        "scope": "Synthetic type/null classification contrast only; not assertion that relabelling real IR text public is valid."
+      },
+      {
+        "case": "RG01_backdated_new_attempt_and_explicit_public_reassessment_recovery",
+        "original_source_status": "public_clarification",
+        "initial_held": true,
+        "incoming_status": "public_clarification",
+        "old_model_stays_until_new_request": true,
+        "public_correction_alone_did_not_apply": true,
+        "old_request_retry_no_writes": true,
+        "new_CAS_request_applies": true,
+        "reviewed_correction_version": 2,
+        "after_thesis_version": 3,
+        "immutable_original_source": true,
+        "successful_request_retry_no_writes": true
+      }
+    ],
+    "execution": {
+      "memory_cases": 3,
+      "actual_DB_accesses": 0,
+      "new_GETs": 0,
+      "production_test_or_old_file_edits": 0,
+      "full_suite_runs": 0,
+      "new_financial_rule": 0
+    }
+  },
+  "producer_target_test_result_attributed_not_rerun": {
+    "new_adjacent_regression_tests": 8,
+    "dependency_module_tests": 20,
+    "other_existing_related_tests": 91,
+    "total_target_tests": 111,
+    "passed": true,
+    "elapsed_seconds": "0.704",
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=tests .venv/bin/python -m unittest test_dependency_information_gates test_decision test_decision_lifecycle test_information_review test_source_provenance test_information_research test_workflow",
+    "full_suite_run": false
+  },
+  "saved_producer_adjacent_recheck_attributed": {
+    "schema_version": 1,
+    "recorded_at": "2026-10-15T12:14:20.004844+00:00",
+    "status": "original_unclear_source_gap_closed_in_legacy_apply",
+    "saved_probe_sha256": "f54c83db00491207b3d2f1b42f9f4848f769ddeb632fe7a01d2589de47675ebd",
+    "before_thesis_version": 3,
+    "after_thesis_version": 3,
+    "original_source_immutable": true,
+    "original_thesis_immutable": true,
+    "incoming_reply_information_status": "public_clarification",
+    "applied": false,
+    "status_detail": "held_for_review",
+    "reply_correction_rows": 0,
+    "dependency_source_information_holds": {
+      "independent-original-unclear": {
+        "source_id": "independent-original-unclear",
+        "source_type": "ir_reply",
+        "information_status": "unclear",
+        "classification_origin": "source_snapshot_metadata",
+        "source_sha256": "38fb32d560197b29ce87e8c1bc03292b7bb0de138b766cd2788c85bd99a67953",
+        "reason_code": "source_information_held_for_review"
+      }
+    },
+    "reply_correction_hold_field_absent": true,
+    "new_reply_source_not_created": true,
+    "decision_review_not_added": true,
+    "retry_no_writes_db_dump_and_total_changes_identical": true,
+    "execution": {
+      "memory_db_cases": 1,
+      "actual_db_accesses": 0,
+      "new_gets": 0,
+      "old_artifact_changes": 0
+    }
+  },
+  "parent_full_suite_v2": {
+    "status": "not_read_at_review_finalization",
+    "full_suite_rerun_by_reviewer": false
+  },
+  "references": [
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/source-snapshots-v2.json",
+      "sha256": "c060ffb510babb9c154e4713d38d6f84e1fb33cb2c22610e06cc00e477759277"
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/implementation-v2.json",
+      "sha256": "c7a77ce8cc2129e7ca2b2ad2385e8ae6ab33e686dbc6c5efdd86765d44a4fed1"
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/adjacent-source-gap-recheck.json",
+      "sha256": "456c3bedd1944b47dec7c7cb41948b9302c88b119f82444a6c00c1c7aa1404e5"
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/independent-implementation-review.json",
+      "sha256": "39d2aa1c6466eaf205a6cf8a5f93a49ab4ea28e16381dd60237cc030e597d2ca"
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/independent-probe.py",
+      "sha256": "f54c83db00491207b3d2f1b42f9f4848f769ddeb632fe7a01d2589de47675ebd"
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/independent-probe-v2.py",
+      "sha256": "9339d31b85829a049f065d16545dcbc9cf60a13f987e92ec1a7d6a8515c40008"
+    }
+  ],
+  "prior_checkpoint_files_preserved": {
+    "research/ir-reply-runtime-gap-review-2026-10-15/independent-implementation-review.json": "39d2aa1c6466eaf205a6cf8a5f93a49ab4ea28e16381dd60237cc030e597d2ca",
+    "research/ir-reply-runtime-gap-review-2026-10-15/independent-implementation-review.md": "7c8d9467ed076b27967038f8a5cfba9378739be958eb7a9442a4c627a1f8da73",
+    "research/ir-reply-runtime-gap-review-2026-10-15/independent-probe.py": "f54c83db00491207b3d2f1b42f9f4848f769ddeb632fe7a01d2589de47675ebd",
+    "research/ir-reply-runtime-gap-review-2026-10-15/root-review-preparation.json": "42d5592b162c27bb86e5c3a53e40099b82f016dae7676abefdbb52b4476cd7d4",
+    "research/ir-reply-runtime-gap-review-2026-10-15/implementation.json": "82d517a49c0cfbb69c0edc1a6187bf3a724cf9b3918e4a5d33cccb00260d1c46",
+    "research/ir-reply-runtime-gap-review-2026-10-15/reproduction.json": "7dd4143669e6e673fef84730ff081898f5a75ef5aab72893f1061f2f4bec032a"
+  },
+  "limitations": [
+    "Source snapshot publicity gate is intentionally separate from reply assessment history; public reaffirmation does not mutate old source metadata. Replacing inadequate evidence requires separate reviewed source/thesis workflow, not implicit release.",
+    "Null classification accepted for non-IR sources only by this pre-existing classification predicate. It does not validate true source_type, content meaning, source/date availability, financing model or investment policy.",
+    "Existing pure/lineage/time/policy/quote guards remain separate. The new helper is not a general replacement for those validators.",
+    "Independent runtime checks are three synthetic memory cases, not actual data adoption, performance/EVSI validation, user outreach, actualDB verification or a rerun of producer111/full suite.",
+    "Previous RG01 independent review and defect reproductions remain historical immutable checkpoint records; v2 evidence is a new supplement."
+  ],
+  "execution": {
+    "new_GETs": 0,
+    "actual_DB_accesses": 0,
+    "production_test_or_old_file_edits": 0,
+    "memory_probe_cases": 3,
+    "full_suite_runs": 0,
+    "new_financial_rule": 0,
+    "IR_sends_or_orders": 0
+  }
+}

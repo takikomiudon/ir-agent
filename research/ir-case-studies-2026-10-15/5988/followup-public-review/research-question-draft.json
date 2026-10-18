@@ -1,0 +1,50 @@
+{
+  "id": "research-only-china-accounting-bridge",
+  "status": "research_draft_not_send_ready",
+  "research_only": true,
+  "external_send_eligible": false,
+  "based_on_existing_issue_id": "5988-china-oneoff-scope",
+  "question": "2026年5月12日公表「中期経営計画の見直し」15ページでは、中国FY25の生産再配置による「一時費用（約6億円）」が営業利益の計画未達の要因として説明されています。一方、2026年3月期有価証券報告書76ページでは中国東莞の固定資産減損337百万円が示され、連結損益計算書では減損は特別損失に区分されています。公表済みのこれらの額を重複して調整しないため、約6億円の集計範囲と連結損益区分の対応、337百万円との包含・重複の有無について、既に公表されている範囲または参照可能な資料をご教示いただけますでしょうか。あわせて、約6億円のFY25表示が、在外子会社の12月決算と連結上の調整を含むどの対象期間を指す説明なのか、公表済みの説明箇所があればご教示ください。",
+  "evidence_ids": [
+    "china-six-hundred-context",
+    "china-impairment-337",
+    "group-special-loss-classification",
+    "subsidiary-closing-and-adjustments"
+  ],
+  "target_research_parameters": [
+    "prior_period_cost_bridge.china_relocation_scope",
+    "prior_period_cost_bridge.overlap_with_impairment",
+    "prior_period_cost_bridge.period_alignment"
+  ],
+  "current_model_parameter_values": null,
+  "branches": [
+    {
+      "id": "scope_excludes_impairment",
+      "condition": "営業費用の範囲と減損を含まない対応が公開根拠に結び付いて説明される",
+      "research_action": "過年度の費用区分・期間だけを整理。将来費用消失、EPS加算、倍率上昇を仮定しない。",
+      "decision": "unresolved",
+      "valuation_change": null
+    },
+    {
+      "id": "scope_overlaps_impairment",
+      "condition": "約6億円と337百万円に包含・重複があると公開根拠で説明される",
+      "research_action": "約6億円全額の営業利益への足戻しを採用せず、明示区分だけ整理して二重計上を除く。",
+      "decision": "unresolved",
+      "valuation_change": null
+    },
+    {
+      "id": "scope_unresolved",
+      "condition": "説明が曖昧/未回答/範囲未確認/公開性不明",
+      "research_action": "加算・正常化・予想変更を保留。無回答を業績悪化や売却条件に変換しない。",
+      "decision": "unresolved",
+      "valuation_change": null
+    }
+  ],
+  "why_not_send_ready": [
+    "通期短信と2Q説明会資料の本文確認は503で保留。専用公開Q&Aがないと断定できない。",
+    "過年度会計区分を変えることが、既存の採用済みモデル/評価入力/判断をどこまで変えるか未設定。",
+    "現時点価格・評価日、保有状態、採用済み数値判断方針、正常化/税・非支配持分・株数の入力が不足。",
+    "回答尤度/状態確率/効用・調査費用を設定していないのでIRの情報価値を数値立証していない。",
+    "窓口受付の過去確認だけで、沈黙期間や現在送信適格性を確認したことにはならない。"
+  ]
+}

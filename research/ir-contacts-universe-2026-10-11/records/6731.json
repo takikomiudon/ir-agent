@@ -1,0 +1,146 @@
+{
+  "security_code": "6731",
+  "company_name": "ピクセラ",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "電気機器",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.pixela.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T18:51:25.245405+00:00",
+  "completed_at": "2026-10-11T18:52:45.674116+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/6731/20261011T185125245438Z/01.json",
+      "url": "https://www.pixela.co.jp/",
+      "retrieved_at": "2026-10-11T18:51:41.843311+00:00",
+      "quote": "株式会社ピクセラ | PIXELA CORPORATION [ Japan ]",
+      "role": "company_identity"
+    },
+    {
+      "snapshot": "evidence/6731/20261011T185125245438Z/01.json",
+      "url": "https://www.pixela.co.jp/",
+      "retrieved_at": "2026-10-11T18:51:41.843311+00:00",
+      "quote": "ピクセラグループのウェブサイト公開に伴い、「 プレスリリース 」「 IR情報 」を移行しました。",
+      "role": "financial_ir_information_migration",
+      "source_link_url": "https://pixela-group.jp/ir/",
+      "source_link_index": 30,
+      "source_link_label": "IR情報"
+    },
+    {
+      "snapshot": "evidence/6731/20261011T185125245438Z/02.json",
+      "url": "https://www.pixela.co.jp/support/form.html",
+      "retrieved_at": "2026-10-11T18:51:57.669937+00:00",
+      "quote": "お問い合わせフォーム - サポート情報 | 株式会社ピクセラ",
+      "role": "product_support_contact_not_financial_ir"
+    },
+    {
+      "snapshot": "evidence/6731/20261011T185125245438Z/02.json",
+      "url": "https://www.pixela.co.jp/support/form.html",
+      "retrieved_at": "2026-10-11T18:51:57.669937+00:00",
+      "quote": "製品に関係のないご質問には、回答しない場合があります。",
+      "role": "outreach_condition"
+    },
+    {
+      "snapshot": "evidence/6731/20261011T185125245438Z/03.json",
+      "url": "https://www.pixela.co.jp/support/form_request.html",
+      "retrieved_at": "2026-10-11T18:52:13.834206+00:00",
+      "quote": "本ページは、株式会社ピクセラ（以下、当社）に対するお客様のご意見・ご要望をお寄せいただく場とさせていただきます。お寄せいただいたご意見・ご要望は、お客様に一層のご満足を提供するため、当社の企業活動に反映させていただきます。 できるだけ具体的な内容を入力されるようお願いします。 投稿された文書の著作権につきましては、当社に帰属します。 お客様の個人情報は、入力されないようお願いします。 入力されたお客様の個人情報は、削除させていただきます。当社では収集・保管・利用はいたしません。 ※ お客様への直接の返答はいたしかねますので、あらかじめご了承ください。",
+      "role": "general_product_feedback_policy_not_financial_ir"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.pixela.co.jp/",
+      "final_url": "https://www.pixela.co.jp/",
+      "snapshot": "evidence/6731/20261011T185125245438Z/01.json",
+      "retrieved_at": "2026-10-11T18:51:41.843311+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.pixela.co.jp/support/form.html",
+      "final_url": "https://www.pixela.co.jp/support/form.html",
+      "snapshot": "evidence/6731/20261011T185125245438Z/02.json",
+      "retrieved_at": "2026-10-11T18:51:57.669937+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.pixela.co.jp/support/form_request.html",
+      "final_url": "https://www.pixela.co.jp/support/form_request.html",
+      "snapshot": "evidence/6731/20261011T185125245438Z/03.json",
+      "retrieved_at": "2026-10-11T18:52:13.834206+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.pixela.co.jp/sitemap.html",
+      "final_url": "https://www.pixela.co.jp/sitemap.html",
+      "snapshot": "evidence/6731/20261011T185125245438Z/04.json",
+      "retrieved_at": "2026-10-11T18:52:29.660952+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [
+    "製品に関係のないご質問には、回答しない場合があります。"
+  ],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "現ピクセラ製品site正式名01とsupport問い合わせ02/一般ご意見ご要望03/siteマップ04を照合。01はIR情報をpixela-group.jpへ移行した公開案内/actual30 /ir/を実観測、移行target未取得・その金融IR質問受付/現法的発行体未確認、U保持。02embeddedformzuは製品supportで『製品に関係のないご質問』回答制限、03feedbackは個人情報非入力/当社帰属/直接返答不可だが金融IR受付ではないためIRのno_individual_replyへ転用0。未取得support/feedbackiframe、privacy管理者、group A-Stage/Re・De/会員フォームをIRnative/mail借用0。原ピクセラidentity観測は維持するがグループ移行のissuer確認は推定0、IR返信/個人/会社条件not_stated、Uは保存範囲未確認で不存在/受付拒否ではない。"
+  ],
+  "discovery": {
+    "security_code": "6731",
+    "official_url": "https://www.pixela.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ピクセラ",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/6731/20261011T185125245438Z/01.json",
+      "normalized_name": "ピクセラ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6731/20261011T185125245438Z/02.json",
+      "normalized_name": "ピクセラ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6731/20261011T185125245438Z/03.json",
+      "normalized_name": "ピクセラ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6731/20261011T185125245438Z/04.json",
+      "normalized_name": "ピクセラ",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 4,
+  "unconfirmed_reason": "product_support_and_feedback_only_ir_information_migration_target_uncaptured",
+  "http_get_attempt_count": 5,
+  "previous_attempts": [
+    "attempts/6731/20261011T045047612932Z.json",
+    "attempts/6731/20261011T185245674351Z.json"
+  ],
+  "automatic_conditions_before_review": [],
+  "outreach_reason": "保存公式原文で現発行体の金融IR受付・実IRメール又は同native formの返信質問欄を確認する。一般顧客・製品・採用・保守・個人情報・株式事務・他社の窓口をIR受付に借用しない。",
+  "route_type": null,
+  "ir_url": "https://pixela-group.jp/ir/",
+  "manual_review": {
+    "reviewer": "codex_audit_data_67_batch21",
+    "reviewed_at": "2026-10-11T20:44:26.028660+00:00",
+    "notes": "現ピクセラ製品site正式名01とsupport問い合わせ02/一般ご意見ご要望03/siteマップ04を照合。01はIR情報をpixela-group.jpへ移行した公開案内/actual30 /ir/を実観測、移行target未取得・その金融IR質問受付/現法的発行体未確認、U保持。02embeddedformzuは製品supportで『製品に関係のないご質問』回答制限、03feedbackは個人情報非入力/当社帰属/直接返答不可だが金融IR受付ではないためIRのno_individual_replyへ転用0。未取得support/feedbackiframe、privacy管理者、group A-Stage/Re・De/会員フォームをIRnative/mail借用0。原ピクセラidentity観測は維持するがグループ移行のissuer確認は推定0、IR返信/個人/会社条件not_stated、Uは保存範囲未確認で不存在/受付拒否ではない。"
+  }
+}

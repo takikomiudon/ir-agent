@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-15T14:53:20.819326+00:00",
+  "company_id": "jp:6754",
+  "existing_issue_id": "6754-author-watch-communications-recovery",
+  "existing_comparison_id": "PQA-demand-and-cost",
+  "status": "notes_add_demand_narrative_cost_continuity_still_unresolved",
+  "source_id": "case-public:b0ecd188347a2df19a9f8c77b5a786c2f3846ebae00139ae2adb9e34267c77e6",
+  "source_scope": "One newly acquired note-bearing issuer PDF representation of the same FY2026 1Q presentation, not a second independent forecast",
+  "period_verification": {
+    "cover": "2027年3月期第1四半期 業績概要",
+    "slide8": "2027年3月期（4-6月）の状況",
+    "footer": "Financial Results FY2026 1Q",
+    "same_period_as_existing_notes_free_presentation": true,
+    "notes_variant_verified": "p6/p7 contain speaker-note text below slide; p1/p8 explicitly mark no notes. p6 image visually checked."
+  },
+  "bounded_read": {
+    "physical_pages_interpreted": [
+      1,
+      6,
+      7,
+      8
+    ],
+    "max_authorized_physical_pages": 4,
+    "full_PDF_mechanically_extracted_pages": 20,
+    "whole_PDF_read": false,
+    "images_viewed": [
+      6
+    ]
+  },
+  "newly_resolved_public_portion": [
+    {
+      "id": "pqa-demand-background-explanation",
+      "status": "qualitative_issuer_narrative_supported",
+      "observation": "p6ノートは食品市場の品質保証プロセスの自動化・省人化投資需要、品質検査への関心の高まりを需要好調の背景として説明し、特に北米の食肉市場でX線検査機需要を獲得したとして増収増益につなげる。",
+      "quote_ids": [
+        "notes6-pqa-demand-to-results-narrative"
+      ],
+      "limit": "会社による需要背景から業績結果への定性的説明。需要/mix/コストの数量別又は金額別寄与を分解した説明ではない。"
+    }
+  ],
+  "already_resolved_not_renormalized": [
+    "PQA全地域好調の会社説明",
+    "同1QのPQA営業利益率9.8%表示。表示額から再計算せず、新factにも再登録しない。"
+  ],
+  "remaining_unresolved": [
+    {
+      "id": "inventory-reduction-and-cost-continuity",
+      "status": "not_established_in_selected_pages",
+      "reason": "確認した表紙とp6–8のノート・本文には、旧著者が述べた棚卸資産圧縮やコスト改善の継続/消失効果を特定する説明は確認できない。資料全体に記述がないとの主張や、継続/消失の否定にはしない。"
+    },
+    {
+      "id": "profit-contribution-decomposition",
+      "status": "not_established_in_selected_pages",
+      "reason": "需要好調から増収増益への定性的なつながりは説明されるが、需要量、製品mix、棚卸、費用率の利益寄与額・構成比や地域配賦は分からない。"
+    },
+    {
+      "id": "old-to-current-period-condition-test",
+      "status": "not_performed",
+      "reason": "旧26.3期Q3累計と今回27.3期Q1を同じ系列とみなさず、著者条件の支持/反証は確定しない。"
+    }
+  ],
+  "publication_and_firstsave": "Current acquisition completion/local artifact save is observed; earlier system storage and original first-save unknown. No historical date is inferred.",
+  "numeric_normalization_and_model": {
+    "new_normalized_facts": 0,
+    "displayed_margin_recomputed": false,
+    "financial_input_adoption": false,
+    "forecast_model_created": false,
+    "independent_forecasts_added": 0
+  },
+  "execution": {
+    "new_GETs": 1,
+    "fresh_robots_GETs": 0,
+    "other_PDF_GETs": 0,
+    "retries": 0,
+    "redirects_followed": 0,
+    "diagnosis_or_configuration_changes": 0,
+    "actual_DB_accesses": 0,
+    "production_code_or_verifier_changes": 0,
+    "old_case_monitor_index_changes": 0,
+    "IR_registered_or_sent": 0
+  }
+}

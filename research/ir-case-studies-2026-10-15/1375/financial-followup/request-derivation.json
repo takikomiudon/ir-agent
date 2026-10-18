@@ -1,0 +1,68 @@
+{
+  "initial_301_snapshot": "../04.json",
+  "initial_301_snapshot_sha256": "4c883a2981290eaea9cbc535679340a2f782615ea3cf4b6d21475dced101829e",
+  "initial_requested_url": "https://www.yukiguni-factory.co.jp/ir/library/results",
+  "literal_response_location": "https://www.yukiguni-factory.co.jp/ir/library/results/",
+  "request_basis": "Parent permits this recorded Location as a new explicit URL in separate followup; initial301 and this request remain separate. No slash guessing or automatic redirect.",
+  "get_cap": 3,
+  "redirects_followed_automatically": 0,
+  "retry_count": 0,
+  "javascript_execution": false,
+  "config_reference": {
+    "source_raw_sha256": "8b5439f7f1de0bff6869309889a3656face3a4fc6b8031964731aaab7ec1448e",
+    "html_lang": "<html lang=\"ja\"",
+    "html_lang_character_start": 16,
+    "html_lang_character_end": 31,
+    "branch_condition": "const isEnglish = lang === 'en';",
+    "reference_quote": "script1.src = 'https://www.yukiguni-factory.co.jp/wp-content/themes/ai-yukiguni/assets/js/ir/eir/' + (isEnglish ? 'eire_v5.js' : 'eir_v5.js');",
+    "reference_character_start": 46750,
+    "reference_character_end": 46892,
+    "constructed_url": "https://www.yukiguni-factory.co.jp/wp-content/themes/ai-yukiguni/assets/js/ir/eir/eir_v5.js",
+    "javascript_execution": false,
+    "path_or_company_id_guessed": false
+  },
+  "core_reference": {
+    "config_source": "02.txt",
+    "literal_evidence": [
+      {
+        "quote": "var eirCode = '1375';",
+        "character_start": 53,
+        "character_end": 74
+      },
+      {
+        "quote": "var uniCodeEir = '20250305';",
+        "character_start": 75,
+        "character_end": 103
+      },
+      {
+        "quote": "var eirLanguage = 'jp';",
+        "character_start": 161,
+        "character_end": 184
+      },
+      {
+        "quote": "var eirUrl = ('https:' == document.location.protocol ? 'https://ssl4' : 'http://v4') + '.eir-parts.net';",
+        "character_start": 702,
+        "character_end": 806
+      },
+      {
+        "quote": "var eirPass = eirUrl + '/Custom/' + eirLevel + '/v5parts/' + eirCode + '/' + eirLanguage + '/' + uniCodeEir + '/';",
+        "character_start": 937,
+        "character_end": 1051
+      },
+      {
+        "quote": "var eirPassCore = eirPass + 'core/';",
+        "character_start": 1339,
+        "character_end": 1375
+      },
+      {
+        "source": "01.txt",
+        "quote": "scriptLoader.setSrc(eirPassCore + 'eir_common.js');",
+        "character_start": 47092,
+        "character_end": 47143
+      }
+    ],
+    "static_public_https_condition": "Saved page uses HTTPS official hostname (not file/demo/aspdev and no overrides); interpret explicit branches statically, no JavaScript execution",
+    "constructed_url": "https://ssl4.eir-parts.net/Custom/public/v5parts/1375/jp/20250305/core/eir_common.js",
+    "endpoint_company_id_guessed": false
+  }
+}

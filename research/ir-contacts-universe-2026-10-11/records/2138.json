@@ -1,0 +1,92 @@
+{
+  "security_code": "2138",
+  "company_name": "クルーズ",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "情報・通信業",
+  "investigation_status": "confirmed",
+  "verification_level": "form_fields_verified",
+  "official_url": "https://crooz.co.jp/",
+  "contact_url": "https://crooz.co.jp/contact-form/",
+  "channels": [
+    "form"
+  ],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "candidate",
+  "attempted_at": "2026-10-11T04:01:47.630351+00:00",
+  "completed_at": "2026-10-11T04:01:52.936257+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/2138/03.json",
+      "url": "https://crooz.co.jp/contact-form/",
+      "retrieved_at": "2026-10-11T04:01:51.767599+00:00",
+      "quote": "す。本窓口では対応しかねますの で、ご了承ください。 配当・株式情報など IRページ 、よくあるご質問の FAQ にまとめておりますので、ご覧いただきますようお願い申し上げます。 当社のIR情報について 東京証券取引所が重要事実と定める事項や、それ以外で当社が重要と捉え、正確な情報を広く公平にお伝えすべきと判断したものは、随時Tdnet(東京証券取引事務所の提供する適時情報伝達シ",
+      "role": "contact_channel"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://crooz.co.jp/",
+      "final_url": "https://crooz.co.jp/",
+      "snapshot": "evidence/2138/01.json",
+      "retrieved_at": "2026-10-11T04:01:48.991131+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://crooz.co.jp/ir/ir_news",
+      "final_url": "https://crooz.co.jp/ir/ir_news/",
+      "snapshot": "evidence/2138/02.json",
+      "retrieved_at": "2026-10-11T04:01:49.861387+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://crooz.co.jp/contact",
+      "final_url": "https://crooz.co.jp/contact-form/",
+      "snapshot": "evidence/2138/03.json",
+      "retrieved_at": "2026-10-11T04:01:51.767599+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "公開 GET の保存本文と非 hidden 入力欄を点検。送信、JavaScript・CAPTCHA の動作、実際の返信は未検証。"
+  ],
+  "discovery": {
+    "security_code": "2138",
+    "official_url": "https://crooz.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "クルーズ",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/2138/01.json",
+      "normalized_name": "クルーズ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/2138/02.json",
+      "normalized_name": "クルーズ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/2138/03.json",
+      "normalized_name": "クルーズ",
+      "security_code_observed": false
+    }
+  ],
+  "classification_version": 2,
+  "successful_official_page_count": 3,
+  "manual_review": {
+    "reviewer": "ir_operations",
+    "reviewed_at": "2026-10-11T04:15:43.401508+00:00",
+    "notes": "実フォーム本文の「当社のIR情報について」選択肢と、返信メール入力・問い合わせ本文 textarea を確認。ナビゲーションや個人情報方針のIR語からは推定していない。"
+  }
+}

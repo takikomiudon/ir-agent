@@ -1,0 +1,2291 @@
+{
+  "schema_version": 1,
+  "reviewer": "codex_audit_consumer_52_batch08",
+  "scope": "固定4社のみ保存済み原source監査。全旧quote/condition/取得attempt/GET/fields/times履歴を保持。金融IR同一native質問+返信欄又は公開IRmailの完全一致根拠のみ。",
+  "security_codes": [
+    "5243",
+    "5244",
+    "5246",
+    "5247"
+  ],
+  "frozen_at_utc": "2026-10-11T14:14:14.204417+00:00",
+  "frozen_at_jst": "2026-10-11T23:14:14.204417+09:00",
+  "network_requests": 0,
+  "external_messages_sent": 0,
+  "original_evidence_modified": false,
+  "freeze": {
+    "5243": {
+      "original_record_sha256": "87e0c2dc29d0279525051b369249a7a4f71459817fdc7a9d3f151ea8dcc19fa7",
+      "original_record": {
+        "security_code": "5243",
+        "company_name": "ｎｏｔｅ",
+        "market": "グロース（内国株式）",
+        "jpx_sector": "情報・通信業",
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "official_url": "https://note.jp/",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "attempted_at": "2026-10-11T14:08:54.320488+00:00",
+        "completed_at": "2026-10-11T14:10:30.225099+00:00",
+        "manual_review_required": true,
+        "evidence": [],
+        "fetches": [
+          {
+            "url": "https://note.jp/",
+            "final_url": "https://note.jp/?gs=a8b9aa5992f4be4b7f19dddd3679206b",
+            "snapshot": "evidence/5243/20261011T140854320531Z/01.json",
+            "retrieved_at": "2026-10-11T14:09:57.927855+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://ir.note.jp/",
+            "final_url": null,
+            "snapshot": "evidence/5243/20261011T140854320531Z/02.json",
+            "retrieved_at": "2026-10-11T14:10:30.224273+00:00",
+            "http_status": null,
+            "error": "robots_access_denied_stopped"
+          }
+        ],
+        "conditions": [],
+        "limitations": [
+          "https://ir.note.jp/: robots_access_denied_stopped",
+          "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。"
+        ],
+        "discovery": {
+          "security_code": "5243",
+          "official_url": "https://note.jp/",
+          "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+          "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+          "discovery_type": "third_party_unverified",
+          "seed_company_name": "ｎｏｔｅ",
+          "source_data_as_of": "2024-10-08"
+        },
+        "identity_status": "name_or_security_code_observed",
+        "identity_matches": [
+          {
+            "snapshot": "evidence/5243/20261011T140854320531Z/01.json",
+            "normalized_name": "note",
+            "security_code_observed": false
+          }
+        ],
+        "successful_official_page_count": 1,
+        "unconfirmed_reason": "official_channel_not_demonstrated",
+        "http_get_attempt_count": 6,
+        "previous_attempts": [
+          "attempts/5243/20261011T045047530936Z.json",
+          "attempts/5243/20261011T141030225413Z.json"
+        ]
+      },
+      "source_snapshots": {
+        "evidence/5243/20261011T140854320531Z/01.json": {
+          "snapshot_json_sha256": "c135dbb4a18a3b8fae5584606fe826eb7961bbc1c6a028bbea7e2b7b8f2592da",
+          "url": "https://note.jp/?gs=a8b9aa5992f4be4b7f19dddd3679206b",
+          "requested_url": "https://note.jp/",
+          "retrieved_at": "2026-10-11T14:09:57.927855+00:00",
+          "http_status": 200,
+          "content_sha256": "3b15ef44fbf5bec971ebe24252776364cbd9e108042f26a2b27df5f8af4015f8",
+          "http_get_attempted": true,
+          "http_get_started_at": "2026-10-11T14:10:13.438494+00:00",
+          "http_response_received_at": "2026-10-11T14:10:14.182479+00:00",
+          "http_get_completed_at": "2026-10-11T14:10:14.658330+00:00"
+        },
+        "evidence/5243/20261011T140854320531Z/02.json": {
+          "snapshot_json_sha256": "56e24c18ab6e769f44311520fcb53e6a9d8c4b92b2efc50324824b85e220af50",
+          "url": null,
+          "requested_url": "https://ir.note.jp/",
+          "retrieved_at": "2026-10-11T14:10:30.224273+00:00",
+          "http_status": null,
+          "content_sha256": null,
+          "http_get_attempted": false,
+          "http_get_started_at": null,
+          "http_response_received_at": null,
+          "http_get_completed_at": null
+        }
+      }
+    },
+    "5244": {
+      "original_record_sha256": "451dd2ad93576b0b31e86a93763b930a996eb3dd230757ff9d9c464fdad39efa",
+      "original_record": {
+        "security_code": "5244",
+        "company_name": "ｊｉｇ．ｊｐ",
+        "market": "グロース（内国株式）",
+        "jpx_sector": "情報・通信業",
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "official_url": "https://www.jig.jp/",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "attempted_at": "2026-10-11T14:09:06.445269+00:00",
+        "completed_at": "2026-10-11T14:11:10.433864+00:00",
+        "manual_review_required": true,
+        "evidence": [],
+        "fetches": [
+          {
+            "url": "https://www.jig.jp/",
+            "final_url": "https://www.jig.jp/",
+            "snapshot": "evidence/5244/20261011T140906445305Z/01.json",
+            "retrieved_at": "2026-10-11T14:09:22.202075+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.jig.jp/ir/performance",
+            "final_url": "https://www.jig.jp/ir/performance",
+            "snapshot": "evidence/5244/20261011T140906445305Z/02.json",
+            "retrieved_at": "2026-10-11T14:09:37.884780+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.jig.jp/contact_list",
+            "final_url": "https://www.jig.jp/contact_list",
+            "snapshot": "evidence/5244/20261011T140906445305Z/03.json",
+            "retrieved_at": "2026-10-11T14:09:54.466996+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.jig.jp/ir/performance/",
+            "final_url": "https://www.jig.jp/ir/performance",
+            "snapshot": "evidence/5244/20261011T140906445305Z/04.json",
+            "retrieved_at": "2026-10-11T14:10:57.502766+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.jig.jp/ir",
+            "final_url": "https://www.jig.jp/ir",
+            "snapshot": "evidence/5244/20261011T140906445305Z/05.json",
+            "retrieved_at": "2026-10-11T14:11:01.643416+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.jig.jp/contact?leadgrid_form_key_mokuteki=IRについて",
+            "final_url": "https://www.jig.jp/contact?leadgrid_form_key_mokuteki=IR%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6",
+            "snapshot": "evidence/5244/20261011T140906445305Z/06.json",
+            "retrieved_at": "2026-10-11T14:11:05.993390+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.youtube.com/embed/XvgcrK3xcrw?si=PGb9y8qCTz87H3ff",
+            "final_url": null,
+            "snapshot": "evidence/5244/20261011T140906445305Z/07.json",
+            "retrieved_at": "2026-10-11T14:11:10.433542+00:00",
+            "http_status": null,
+            "error": "robots_unreachable_stopped"
+          }
+        ],
+        "conditions": [],
+        "limitations": [
+          "https://www.youtube.com/embed/XvgcrK3xcrw?si=PGb9y8qCTz87H3ff: robots_unreachable_stopped",
+          "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。"
+        ],
+        "discovery": {
+          "security_code": "5244",
+          "official_url": "https://www.jig.jp/",
+          "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+          "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+          "discovery_type": "third_party_unverified",
+          "seed_company_name": "ｊｉｇ．ｊｐ",
+          "source_data_as_of": "2024-10-08"
+        },
+        "identity_status": "name_or_security_code_observed",
+        "identity_matches": [
+          {
+            "snapshot": "evidence/5244/20261011T140906445305Z/01.json",
+            "normalized_name": "jigjp",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5244/20261011T140906445305Z/02.json",
+            "normalized_name": "jigjp",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5244/20261011T140906445305Z/03.json",
+            "normalized_name": "jigjp",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5244/20261011T140906445305Z/04.json",
+            "normalized_name": "jigjp",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5244/20261011T140906445305Z/05.json",
+            "normalized_name": "jigjp",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5244/20261011T140906445305Z/06.json",
+            "normalized_name": "jigjp",
+            "security_code_observed": false
+          }
+        ],
+        "successful_official_page_count": 6,
+        "unconfirmed_reason": "official_channel_not_demonstrated",
+        "http_get_attempt_count": 11,
+        "previous_attempts": [
+          "attempts/5244/20261011T045047531029Z.json",
+          "attempts/5244/20261011T141110434242Z.json"
+        ]
+      },
+      "source_snapshots": {
+        "evidence/5244/20261011T140906445305Z/01.json": {
+          "snapshot_json_sha256": "d2492715380f9ebe24bfd993d6d4f3c2874d6dba93bc524432eb83c272eef3e5",
+          "url": "https://www.jig.jp/",
+          "requested_url": "https://www.jig.jp/",
+          "retrieved_at": "2026-10-11T14:09:22.202075+00:00",
+          "http_status": 200,
+          "content_sha256": "1b7c625c4fec538cedf2042755515a61dbfb2a7c725365f1052b3ca6840fcc1c",
+          "http_get_attempted": true,
+          "http_get_started_at": "2026-10-11T14:09:37.436946+00:00",
+          "http_response_received_at": "2026-10-11T14:09:37.875623+00:00",
+          "http_get_completed_at": "2026-10-11T14:09:37.880555+00:00"
+        },
+        "evidence/5244/20261011T140906445305Z/02.json": {
+          "snapshot_json_sha256": "825f92f6313113edcba960d172a2b819ff873c1a7a4a596f25e47011dfbd0e73",
+          "url": "https://www.jig.jp/ir/performance",
+          "requested_url": "https://www.jig.jp/ir/performance",
+          "retrieved_at": "2026-10-11T14:09:37.884780+00:00",
+          "http_status": 200,
+          "content_sha256": "48d19ce755d468f72a2b4a945034c39632792a626d5617800127b0155177e427",
+          "http_get_attempted": true,
+          "http_get_started_at": "2026-10-11T14:09:53.437734+00:00",
+          "http_response_received_at": "2026-10-11T14:09:54.189217+00:00",
+          "http_get_completed_at": "2026-10-11T14:09:54.463671+00:00"
+        },
+        "evidence/5244/20261011T140906445305Z/03.json": {
+          "snapshot_json_sha256": "b4dff137bbc87b6d483432b10a83c6650b2641b64ffc828f2fb300fe315be604",
+          "url": "https://www.jig.jp/contact_list",
+          "requested_url": "https://www.jig.jp/contact_list",
+          "retrieved_at": "2026-10-11T14:09:54.466996+00:00",
+          "http_status": 200,
+          "content_sha256": "c322ff973079b44b1769f13aa85a93ff2ec78a2aea1429eb7d4a97b52d509e93",
+          "http_get_attempted": true,
+          "http_get_started_at": "2026-10-11T14:10:09.438336+00:00",
+          "http_response_received_at": "2026-10-11T14:10:10.272000+00:00",
+          "http_get_completed_at": "2026-10-11T14:10:10.407475+00:00"
+        },
+        "evidence/5244/20261011T140906445305Z/04.json": {
+          "snapshot_json_sha256": "fdab896df3ad85c9e10bc0fa4262363654aa5ff84370440fd82ef0e258cc85b7",
+          "url": "https://www.jig.jp/ir/performance",
+          "requested_url": "https://www.jig.jp/ir/performance/",
+          "retrieved_at": "2026-10-11T14:10:57.502766+00:00",
+          "http_status": 200,
+          "content_sha256": "48d19ce755d468f72a2b4a945034c39632792a626d5617800127b0155177e427",
+          "http_get_attempted": true,
+          "http_get_started_at": "2026-10-11T14:11:01.440784+00:00",
+          "http_response_received_at": "2026-10-11T14:11:01.635598+00:00",
+          "http_get_completed_at": "2026-10-11T14:11:01.639917+00:00"
+        },
+        "evidence/5244/20261011T140906445305Z/05.json": {
+          "snapshot_json_sha256": "c520868ca881e92dd89067594f521cd3f69fa1605d5fb99d21d8504903171855",
+          "url": "https://www.jig.jp/ir",
+          "requested_url": "https://www.jig.jp/ir",
+          "retrieved_at": "2026-10-11T14:11:01.643416+00:00",
+          "http_status": 200,
+          "content_sha256": "ac740f8c58c598cedc51998adb984bdbe9e26148945d7247246c91ead2f50caa",
+          "http_get_attempted": true,
+          "http_get_started_at": "2026-10-11T14:11:05.440937+00:00",
+          "http_response_received_at": "2026-10-11T14:11:05.985531+00:00",
+          "http_get_completed_at": "2026-10-11T14:11:05.990077+00:00"
+        },
+        "evidence/5244/20261011T140906445305Z/06.json": {
+          "snapshot_json_sha256": "cb038e31fbe8cace386d44f65dbf536cf4190f0db487946a8a7b95decc83a8ce",
+          "url": "https://www.jig.jp/contact?leadgrid_form_key_mokuteki=IR%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6",
+          "requested_url": "https://www.jig.jp/contact?leadgrid_form_key_mokuteki=IRについて",
+          "retrieved_at": "2026-10-11T14:11:05.993390+00:00",
+          "http_status": 200,
+          "content_sha256": "e8e631c9c63807cd408377475dc70d412c6da187a781011e086512db74557feb",
+          "http_get_attempted": true,
+          "http_get_started_at": "2026-10-11T14:11:09.441106+00:00",
+          "http_response_received_at": "2026-10-11T14:11:10.286423+00:00",
+          "http_get_completed_at": "2026-10-11T14:11:10.428729+00:00"
+        },
+        "evidence/5244/20261011T140906445305Z/07.json": {
+          "snapshot_json_sha256": "8b0df564391df6a4ce754b3028aafe150274a5adacc699749c6fa78c5eda25c9",
+          "url": null,
+          "requested_url": "https://www.youtube.com/embed/XvgcrK3xcrw?si=PGb9y8qCTz87H3ff",
+          "retrieved_at": "2026-10-11T14:11:10.433542+00:00",
+          "http_status": null,
+          "content_sha256": null,
+          "http_get_attempted": false,
+          "http_get_started_at": null,
+          "http_response_received_at": null,
+          "http_get_completed_at": null
+        }
+      }
+    },
+    "5246": {
+      "original_record_sha256": "b1673b1efffc189c584aff30571bb0c66b8e050109c8f204fee733e825a5b777",
+      "original_record": {
+        "security_code": "5246",
+        "company_name": "ＥＬＥＭＥＮＴＳ",
+        "market": "グロース（内国株式）",
+        "jpx_sector": "情報・通信業",
+        "investigation_status": "confirmed",
+        "verification_level": "form_fields_verified",
+        "official_url": "https://elementsinc.jp/",
+        "contact_url": "https://elementsinc.jp/ir-contact/",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "attempted_at": "2026-10-11T14:09:14.534068+00:00",
+        "completed_at": "2026-10-11T14:10:34.835114+00:00",
+        "manual_review_required": true,
+        "evidence": [
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "quote": "氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 ",
+            "role": "contact_channel"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "quote": "切に情報開示することとしております。下記の内容に該当するようなお問い合わせについては、回答を差し控えておりますので、何卒ご理解賜りますようお願い申し上げます。 非公開情報（足元の業績動向など） 「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMEN",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "quote": "下記の内容に該当するようなお問い合わせについては、回答を差し控えておりますので、何卒ご理解賜りますようお願い申し上げます。 非公開情報（足元の業績動向など） 「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "quote": "回答を差し控えておりますので、何卒ご理解賜りますようお願い申し上げます。 非公開情報（足元の業績動向など） 「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企業です Liquid | ポラリファイ | X",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "quote": "おりますので、何卒ご理解賜りますようお願い申し上げます。 非公開情報（足元の業績動向など） 「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企業です Liquid | ポラリファイ | X PLACE |",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "quote": "還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企業です Liquid | ポラリファイ | X PLACE | IDEAL Company | Careers | Contact 情報セキュリティ方針 | 個人情報保護方針 | LIQUID eKYCサー",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "quote": "策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企業です Liquid | ポラリファイ | X PLACE | IDEAL Company | Careers | Contact 情報セキュリティ方針 | 個人情報保護方針 | LIQUID eKYCサービス特約 ©",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "quote": "価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企業です Liquid | ポラリファイ | X PLACE | IDEAL Company | Careers | Contact 情報セキュリティ方針 | 個人情報保護方針 | LIQUID eKYCサービス特約 © 2026 ",
+            "role": "conditions"
+          }
+        ],
+        "fetches": [
+          {
+            "url": "https://elementsinc.jp/",
+            "final_url": "https://elementsinc.jp/",
+            "snapshot": "evidence/5246/20261011T140914534105Z/01.json",
+            "retrieved_at": "2026-10-11T14:09:29.624305+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://ir.elementsinc.jp/",
+            "final_url": "https://ir.elementsinc.jp/",
+            "snapshot": "evidence/5246/20261011T140914534105Z/02.json",
+            "retrieved_at": "2026-10-11T14:10:02.135261+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://elementsinc.jp/ir-contact/",
+            "final_url": "https://elementsinc.jp/ir-contact/",
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "http_status": 200,
+            "error": null
+          }
+        ],
+        "conditions": [
+          "切に情報開示することとしております。下記の内容に該当するようなお問い合わせについては、回答を差し控えておりますので、何卒ご理解賜りますようお願い申し上げます。 非公開情報（足元の業績動向など） 「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMEN",
+          "下記の内容に該当するようなお問い合わせについては、回答を差し控えておりますので、何卒ご理解賜りますようお願い申し上げます。 非公開情報（足元の業績動向など） 「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企",
+          "回答を差し控えておりますので、何卒ご理解賜りますようお願い申し上げます。 非公開情報（足元の業績動向など） 「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企業です Liquid | ポラリファイ | X",
+          "おりますので、何卒ご理解賜りますようお願い申し上げます。 非公開情報（足元の業績動向など） 「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企業です Liquid | ポラリファイ | X PLACE |",
+          "還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企業です Liquid | ポラリファイ | X PLACE | IDEAL Company | Careers | Contact 情報セキュリティ方針 | 個人情報保護方針 | LIQUID eKYCサー",
+          "策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企業です Liquid | ポラリファイ | X PLACE | IDEAL Company | Careers | Contact 情報セキュリティ方針 | 個人情報保護方針 | LIQUID eKYCサービス特約 ©",
+          "価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企業です Liquid | ポラリファイ | X PLACE | IDEAL Company | Careers | Contact 情報セキュリティ方針 | 個人情報保護方針 | LIQUID eKYCサービス特約 © 2026 "
+        ],
+        "limitations": [
+          "自動抽出。個人の利用条件・会社名必須・返信条件は人の点検が必要。送信・回答実績は未確認。"
+        ],
+        "discovery": {
+          "security_code": "5246",
+          "official_url": "https://elementsinc.jp/",
+          "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+          "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+          "discovery_type": "third_party_unverified",
+          "seed_company_name": "ＥＬＥＭＥＮＴＳ",
+          "source_data_as_of": "2024-10-08"
+        },
+        "identity_status": "name_or_security_code_observed",
+        "identity_matches": [
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/01.json",
+            "normalized_name": "elements",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/02.json",
+            "normalized_name": "elements",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "normalized_name": "elements",
+            "security_code_observed": false
+          }
+        ],
+        "successful_official_page_count": 3,
+        "http_get_attempt_count": 5,
+        "previous_attempts": [
+          "attempts/5246/20261011T045047531122Z.json",
+          "attempts/5246/20261011T141034835324Z.json"
+        ]
+      },
+      "source_snapshots": {
+        "evidence/5246/20261011T140914534105Z/01.json": {
+          "snapshot_json_sha256": "4bd45363e031fe5c70d70b1e04f38554025ec31b15fcc8fc3522fe0884abd819",
+          "url": "https://elementsinc.jp/",
+          "requested_url": "https://elementsinc.jp/",
+          "retrieved_at": "2026-10-11T14:09:29.624305+00:00",
+          "http_status": 200,
+          "content_sha256": "4d74ecbc8b150bdec0093acdb81d0b9d2f4287a660ab8f5592b5888a954031cb",
+          "http_get_attempted": true,
+          "http_get_started_at": "2026-10-11T14:09:45.437307+00:00",
+          "http_response_received_at": "2026-10-11T14:09:45.746244+00:00",
+          "http_get_completed_at": "2026-10-11T14:09:45.751878+00:00"
+        },
+        "evidence/5246/20261011T140914534105Z/02.json": {
+          "snapshot_json_sha256": "571e54603ee1f4ac997573b5ce45fe2bdf7c08990c5c609ba4a47712c7366926",
+          "url": "https://ir.elementsinc.jp/",
+          "requested_url": "https://ir.elementsinc.jp/",
+          "retrieved_at": "2026-10-11T14:10:02.135261+00:00",
+          "http_status": 200,
+          "content_sha256": "bd8f607fc8c70e692084fb3be9975ba051b8fb60df0bb581afc2afba1ccc7f9d",
+          "http_get_attempted": true,
+          "http_get_started_at": "2026-10-11T14:10:17.438696+00:00",
+          "http_response_received_at": "2026-10-11T14:10:18.242486+00:00",
+          "http_get_completed_at": "2026-10-11T14:10:18.252711+00:00"
+        },
+        "evidence/5246/20261011T140914534105Z/03.json": {
+          "snapshot_json_sha256": "fc506d579ee265073556f462795903d463b7c2b7a7bf46383520816a077e9dcb",
+          "url": "https://elementsinc.jp/ir-contact/",
+          "requested_url": "https://elementsinc.jp/ir-contact/",
+          "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+          "http_status": 200,
+          "content_sha256": "4257af1558d18e47db583de00990cec2a8ade59975fc32857811fa2d8009e66d",
+          "http_get_attempted": true,
+          "http_get_started_at": "2026-10-11T14:10:33.439355+00:00",
+          "http_response_received_at": "2026-10-11T14:10:34.828420+00:00",
+          "http_get_completed_at": "2026-10-11T14:10:34.832439+00:00"
+        }
+      }
+    },
+    "5247": {
+      "original_record_sha256": "79a4eb5c49a58097ceb0f8ed63a8f2b6ffdb9b83e9ec1d4b2a7cfd45be53b01c",
+      "original_record": {
+        "security_code": "5247",
+        "company_name": "ＢＴＭ",
+        "market": "グロース（内国株式）",
+        "jpx_sector": "情報・通信業",
+        "investigation_status": "confirmed",
+        "verification_level": "ir_email_verified",
+        "official_url": "https://www.b-tm.co.jp/",
+        "contact_url": "https://www.b-tm.co.jp/ir/contact.html",
+        "channels": [
+          "email"
+        ],
+        "public_ir_emails": [
+          "ir@b-tm.co.jp"
+        ],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "attempted_at": "2026-10-11T14:09:18.492960+00:00",
+        "completed_at": "2026-10-11T14:10:54.071945+00:00",
+        "manual_review_required": true,
+        "evidence": [
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "quote": " よくあるご質問 もご参照ください。 お問い合わせいただいた個人情報につきましては、厳重にお取り扱いいたします。 当社の個人情報の取り扱いについては、 プライバシーポリシー をご確認ください。 また、当社から回答した内容について、その一部または全部を転載、二次利用することはご遠慮ください。 お問い合わせ 上記ご理解のほど、 何卒よろしくお願いいたします。 お問い合わせ先：株式会社BTM IR担当 ir@b-tm.co.jp ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+            "role": "contact_channel"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/02.json",
+            "url": "https://www.b-tm.co.jp/ir",
+            "retrieved_at": "2026-10-11T14:10:06.831077+00:00",
+            "quote": " トップ IR IR News IRニュース IRニュース一覧 IR Movie IRムービー TOP MESSAGE 代表より挨拶 FOR INVESTOR 個人投資家の 皆様へ MANAGEMENT 経営情報 コーポレート・ ガバナンス ディスクロージャー ポリシー IR LIBRARY IRライブラリ 決算短信 有価証券報告書 決算説明資料 その他 STOCK 株式について 株式情報 株主総会 株価情報 株主還元 FINANCE 業績・財務情報 業績ハイライト 主な財務指標 キャッシュ・フローの 状況 IR CALEN",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/02.json",
+            "url": "https://www.b-tm.co.jp/ir",
+            "retrieved_at": "2026-10-11T14:10:06.831077+00:00",
+            "quote": "ィスクロージャー ポリシー IR LIBRARY IRライブラリ 決算短信 有価証券報告書 決算説明資料 その他 STOCK 株式について 株式情報 株主総会 株価情報 株主還元 FINANCE 業績・財務情報 業績ハイライト 主な財務指標 キャッシュ・フローの 状況 IR CALENDAR IRカレンダー FAQ よくあるご質問 お問い合わせ 電子公告 免責事項 ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/04.json",
+            "url": "https://www.b-tm.co.jp/ir/faq.html",
+            "retrieved_at": "2026-10-11T14:10:38.593596+00:00",
+            "quote": "位性や成長戦略を教えてください。 A 当社は日本全国のビジネスパートナーとのネットワークを有し、案件に最適なエンジニアを早く供給出来ることにあります。 詳細は 個人投資家の皆様へ をご覧ください。 Q 経営体制について教えてください。 A 経営陣 をご覧ください。 決算・財務情報に関するご質問 Q 決算はいつですか？ A 決算日は3月31日です。 Q 決算発表はいつですか？ A 当社の決算期は毎年3月31日です。各四半期の決算発表予定のタイミングは下記となります。 第1四半期 8月中旬 第2四半期 11月中旬 第3四半期 2",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/04.json",
+            "url": "https://www.b-tm.co.jp/ir/faq.html",
+            "retrieved_at": "2026-10-11T14:10:38.593596+00:00",
+            "quote": "せ窓口はどこですか？ A 株式情報 をご覧ください。 Q 株主優待制度や配当はありますか？株主還元について教えてください。 A 株主還元 をご覧ください。 Q 株価の状況を教えてください。 A 株価情報 をご覧ください。 ※株価については市場の売買により決定されるものであり、当社は株価や出来高等についてコメントを差し控える方針です。 ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/04.json",
+            "url": "https://www.b-tm.co.jp/ir/faq.html",
+            "retrieved_at": "2026-10-11T14:10:38.593596+00:00",
+            "quote": " をご覧ください。 Q 株主優待制度や配当はありますか？株主還元について教えてください。 A 株主還元 をご覧ください。 Q 株価の状況を教えてください。 A 株価情報 をご覧ください。 ※株価については市場の売買により決定されるものであり、当社は株価や出来高等についてコメントを差し控える方針です。 ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/04.json",
+            "url": "https://www.b-tm.co.jp/ir/faq.html",
+            "retrieved_at": "2026-10-11T14:10:38.593596+00:00",
+            "quote": "待制度や配当はありますか？株主還元について教えてください。 A 株主還元 をご覧ください。 Q 株価の状況を教えてください。 A 株価情報 をご覧ください。 ※株価については市場の売買により決定されるものであり、当社は株価や出来高等についてコメントを差し控える方針です。 ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/04.json",
+            "url": "https://www.b-tm.co.jp/ir/faq.html",
+            "retrieved_at": "2026-10-11T14:10:38.593596+00:00",
+            "quote": " A 株主還元 をご覧ください。 Q 株価の状況を教えてください。 A 株価情報 をご覧ください。 ※株価については市場の売買により決定されるものであり、当社は株価や出来高等についてコメントを差し控える方針です。 ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "quote": "。 お問い合わせ内容によってはお答えできない場合もございます。 下記に該当するご質問は、IRからの回答を差し控えておりますので、あらかじめご了承ください。 ・ 非公開情報に関するご質問（業績動向など） ・ 金融商品取引法 第166条にある「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） ・ 株式市場の値動きに関するご質問（株価動向、売買手口など） ・ 誹謗中傷に該当するメッセージ（根拠のない悪口、名誉を棄損する言葉など） ・ 営業や勧誘のお問い合わせ（○○サービスのご案内など） ・ 当社サイト以外に記載",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "quote": "質問は、IRからの回答を差し控えておりますので、あらかじめご了承ください。 ・ 非公開情報に関するご質問（業績動向など） ・ 金融商品取引法 第166条にある「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） ・ 株式市場の値動きに関するご質問（株価動向、売買手口など） ・ 誹謗中傷に該当するメッセージ（根拠のない悪口、名誉を棄損する言葉など） ・ 営業や勧誘のお問い合わせ（○○サービスのご案内など） ・ 当社サイト以外に記載されている内容についてのお問い合わせ なお、皆様からよくお寄せいただくご質問をFA",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "quote": "らかじめご了承ください。 ・ 非公開情報に関するご質問（業績動向など） ・ 金融商品取引法 第166条にある「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） ・ 株式市場の値動きに関するご質問（株価動向、売買手口など） ・ 誹謗中傷に該当するメッセージ（根拠のない悪口、名誉を棄損する言葉など） ・ 営業や勧誘のお問い合わせ（○○サービスのご案内など） ・ 当社サイト以外に記載されている内容についてのお問い合わせ なお、皆様からよくお寄せいただくご質問をFAQにまとめましたので、 よくあるご質問 もご参",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "quote": "問（業績動向など） ・ 金融商品取引法 第166条にある「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） ・ 株式市場の値動きに関するご質問（株価動向、売買手口など） ・ 誹謗中傷に該当するメッセージ（根拠のない悪口、名誉を棄損する言葉など） ・ 営業や勧誘のお問い合わせ（○○サービスのご案内など） ・ 当社サイト以外に記載されている内容についてのお問い合わせ なお、皆様からよくお寄せいただくご質問をFAQにまとめましたので、 よくあるご質問 もご参照ください。 お問い合わせいただいた個人情報につきま",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "quote": "お取り扱いいたします。 当社の個人情報の取り扱いについては、 プライバシーポリシー をご確認ください。 また、当社から回答した内容について、その一部または全部を転載、二次利用することはご遠慮ください。 お問い合わせ 上記ご理解のほど、 何卒よろしくお願いいたします。 お問い合わせ先：株式会社BTM IR担当 ir@b-tm.co.jp ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "quote": "扱いいたします。 当社の個人情報の取り扱いについては、 プライバシーポリシー をご確認ください。 また、当社から回答した内容について、その一部または全部を転載、二次利用することはご遠慮ください。 お問い合わせ 上記ご理解のほど、 何卒よろしくお願いいたします。 お問い合わせ先：株式会社BTM IR担当 ir@b-tm.co.jp ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+            "role": "conditions"
+          }
+        ],
+        "fetches": [
+          {
+            "url": "https://www.b-tm.co.jp/",
+            "final_url": "https://www.b-tm.co.jp/",
+            "snapshot": "evidence/5247/20261011T140918493002Z/01.json",
+            "retrieved_at": "2026-10-11T14:09:35.141230+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.b-tm.co.jp/ir/",
+            "final_url": "https://www.b-tm.co.jp/ir",
+            "snapshot": "evidence/5247/20261011T140918493002Z/02.json",
+            "retrieved_at": "2026-10-11T14:10:06.831077+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.b-tm.co.jp/contact/",
+            "final_url": "https://www.b-tm.co.jp/contact/",
+            "snapshot": "evidence/5247/20261011T140918493002Z/03.json",
+            "retrieved_at": "2026-10-11T14:10:22.606427+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.b-tm.co.jp/ir/faq.html",
+            "final_url": "https://www.b-tm.co.jp/ir/faq.html",
+            "snapshot": "evidence/5247/20261011T140918493002Z/04.json",
+            "retrieved_at": "2026-10-11T14:10:38.593596+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "final_url": "https://www.b-tm.co.jp/ir/contact.html",
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "http_status": 200,
+            "error": null
+          }
+        ],
+        "conditions": [
+          " トップ IR IR News IRニュース IRニュース一覧 IR Movie IRムービー TOP MESSAGE 代表より挨拶 FOR INVESTOR 個人投資家の 皆様へ MANAGEMENT 経営情報 コーポレート・ ガバナンス ディスクロージャー ポリシー IR LIBRARY IRライブラリ 決算短信 有価証券報告書 決算説明資料 その他 STOCK 株式について 株式情報 株主総会 株価情報 株主還元 FINANCE 業績・財務情報 業績ハイライト 主な財務指標 キャッシュ・フローの 状況 IR CALEN",
+          "ィスクロージャー ポリシー IR LIBRARY IRライブラリ 決算短信 有価証券報告書 決算説明資料 その他 STOCK 株式について 株式情報 株主総会 株価情報 株主還元 FINANCE 業績・財務情報 業績ハイライト 主な財務指標 キャッシュ・フローの 状況 IR CALENDAR IRカレンダー FAQ よくあるご質問 お問い合わせ 電子公告 免責事項 ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+          "位性や成長戦略を教えてください。 A 当社は日本全国のビジネスパートナーとのネットワークを有し、案件に最適なエンジニアを早く供給出来ることにあります。 詳細は 個人投資家の皆様へ をご覧ください。 Q 経営体制について教えてください。 A 経営陣 をご覧ください。 決算・財務情報に関するご質問 Q 決算はいつですか？ A 決算日は3月31日です。 Q 決算発表はいつですか？ A 当社の決算期は毎年3月31日です。各四半期の決算発表予定のタイミングは下記となります。 第1四半期 8月中旬 第2四半期 11月中旬 第3四半期 2",
+          "せ窓口はどこですか？ A 株式情報 をご覧ください。 Q 株主優待制度や配当はありますか？株主還元について教えてください。 A 株主還元 をご覧ください。 Q 株価の状況を教えてください。 A 株価情報 をご覧ください。 ※株価については市場の売買により決定されるものであり、当社は株価や出来高等についてコメントを差し控える方針です。 ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+          " をご覧ください。 Q 株主優待制度や配当はありますか？株主還元について教えてください。 A 株主還元 をご覧ください。 Q 株価の状況を教えてください。 A 株価情報 をご覧ください。 ※株価については市場の売買により決定されるものであり、当社は株価や出来高等についてコメントを差し控える方針です。 ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+          "待制度や配当はありますか？株主還元について教えてください。 A 株主還元 をご覧ください。 Q 株価の状況を教えてください。 A 株価情報 をご覧ください。 ※株価については市場の売買により決定されるものであり、当社は株価や出来高等についてコメントを差し控える方針です。 ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+          " A 株主還元 をご覧ください。 Q 株価の状況を教えてください。 A 株価情報 をご覧ください。 ※株価については市場の売買により決定されるものであり、当社は株価や出来高等についてコメントを差し控える方針です。 ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+          "。 お問い合わせ内容によってはお答えできない場合もございます。 下記に該当するご質問は、IRからの回答を差し控えておりますので、あらかじめご了承ください。 ・ 非公開情報に関するご質問（業績動向など） ・ 金融商品取引法 第166条にある「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） ・ 株式市場の値動きに関するご質問（株価動向、売買手口など） ・ 誹謗中傷に該当するメッセージ（根拠のない悪口、名誉を棄損する言葉など） ・ 営業や勧誘のお問い合わせ（○○サービスのご案内など） ・ 当社サイト以外に記載",
+          "質問は、IRからの回答を差し控えておりますので、あらかじめご了承ください。 ・ 非公開情報に関するご質問（業績動向など） ・ 金融商品取引法 第166条にある「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） ・ 株式市場の値動きに関するご質問（株価動向、売買手口など） ・ 誹謗中傷に該当するメッセージ（根拠のない悪口、名誉を棄損する言葉など） ・ 営業や勧誘のお問い合わせ（○○サービスのご案内など） ・ 当社サイト以外に記載されている内容についてのお問い合わせ なお、皆様からよくお寄せいただくご質問をFA",
+          "らかじめご了承ください。 ・ 非公開情報に関するご質問（業績動向など） ・ 金融商品取引法 第166条にある「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） ・ 株式市場の値動きに関するご質問（株価動向、売買手口など） ・ 誹謗中傷に該当するメッセージ（根拠のない悪口、名誉を棄損する言葉など） ・ 営業や勧誘のお問い合わせ（○○サービスのご案内など） ・ 当社サイト以外に記載されている内容についてのお問い合わせ なお、皆様からよくお寄せいただくご質問をFAQにまとめましたので、 よくあるご質問 もご参",
+          "問（業績動向など） ・ 金融商品取引法 第166条にある「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） ・ 株式市場の値動きに関するご質問（株価動向、売買手口など） ・ 誹謗中傷に該当するメッセージ（根拠のない悪口、名誉を棄損する言葉など） ・ 営業や勧誘のお問い合わせ（○○サービスのご案内など） ・ 当社サイト以外に記載されている内容についてのお問い合わせ なお、皆様からよくお寄せいただくご質問をFAQにまとめましたので、 よくあるご質問 もご参照ください。 お問い合わせいただいた個人情報につきま",
+          "お取り扱いいたします。 当社の個人情報の取り扱いについては、 プライバシーポリシー をご確認ください。 また、当社から回答した内容について、その一部または全部を転載、二次利用することはご遠慮ください。 お問い合わせ 上記ご理解のほど、 何卒よろしくお願いいたします。 お問い合わせ先：株式会社BTM IR担当 ir@b-tm.co.jp ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+          "扱いいたします。 当社の個人情報の取り扱いについては、 プライバシーポリシー をご確認ください。 また、当社から回答した内容について、その一部または全部を転載、二次利用することはご遠慮ください。 お問い合わせ 上記ご理解のほど、 何卒よろしくお願いいたします。 お問い合わせ先：株式会社BTM IR担当 ir@b-tm.co.jp ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc."
+        ],
+        "limitations": [
+          "自動抽出。個人の利用条件・会社名必須・返信条件は人の点検が必要。送信・回答実績は未確認。"
+        ],
+        "discovery": {
+          "security_code": "5247",
+          "official_url": "https://www.b-tm.co.jp/",
+          "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+          "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+          "discovery_type": "third_party_unverified",
+          "seed_company_name": "ＢＴＭ",
+          "source_data_as_of": "2024-10-08"
+        },
+        "identity_status": "name_or_security_code_observed",
+        "identity_matches": [
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/01.json",
+            "normalized_name": "btm",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/02.json",
+            "normalized_name": "btm",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/03.json",
+            "normalized_name": "btm",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/04.json",
+            "normalized_name": "btm",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "normalized_name": "btm",
+            "security_code_observed": false
+          }
+        ],
+        "successful_official_page_count": 5,
+        "http_get_attempt_count": 7,
+        "previous_attempts": [
+          "attempts/5247/20261011T045047531295Z.json",
+          "attempts/5247/20261011T141054072215Z.json"
+        ]
+      },
+      "source_snapshots": {
+        "evidence/5247/20261011T140918493002Z/01.json": {
+          "snapshot_json_sha256": "740a462d36686f8451e4a86f8252aca8956fee417b00783f9800df018a1851fb",
+          "url": "https://www.b-tm.co.jp/",
+          "requested_url": "https://www.b-tm.co.jp/",
+          "retrieved_at": "2026-10-11T14:09:35.141230+00:00",
+          "http_status": 200,
+          "content_sha256": "90dac1294ed1fd39196f00661e78e4a897291e0b7f70ac2aa788c186e1b60fe5",
+          "http_get_attempted": true,
+          "http_get_started_at": "2026-10-11T14:09:49.437546+00:00",
+          "http_response_received_at": "2026-10-11T14:09:50.629114+00:00",
+          "http_get_completed_at": "2026-10-11T14:09:50.632300+00:00"
+        },
+        "evidence/5247/20261011T140918493002Z/02.json": {
+          "snapshot_json_sha256": "7d76f5377b35d2806f76472e31d0cf33669b529ca17c5f3de82fed07a269b350",
+          "url": "https://www.b-tm.co.jp/ir",
+          "requested_url": "https://www.b-tm.co.jp/ir/",
+          "retrieved_at": "2026-10-11T14:10:06.831077+00:00",
+          "http_status": 200,
+          "content_sha256": "9a0bec402e5989f85f028fdde543e5983cfd80ae4fa82d29015317f0987f9b02",
+          "http_get_attempted": true,
+          "http_get_started_at": "2026-10-11T14:10:21.438871+00:00",
+          "http_response_received_at": "2026-10-11T14:10:22.600002+00:00",
+          "http_get_completed_at": "2026-10-11T14:10:22.603344+00:00"
+        },
+        "evidence/5247/20261011T140918493002Z/03.json": {
+          "snapshot_json_sha256": "006fd74f3496a4a1824c629ff869fe92f23de346911935f99caf374d85fe5b22",
+          "url": "https://www.b-tm.co.jp/contact/",
+          "requested_url": "https://www.b-tm.co.jp/contact/",
+          "retrieved_at": "2026-10-11T14:10:22.606427+00:00",
+          "http_status": 200,
+          "content_sha256": "daf0b07cbcf325e323983e117353120087aa1779caec4c80da3dbbc2a6398649",
+          "http_get_attempted": true,
+          "http_get_started_at": "2026-10-11T14:10:37.439527+00:00",
+          "http_response_received_at": "2026-10-11T14:10:38.588315+00:00",
+          "http_get_completed_at": "2026-10-11T14:10:38.590936+00:00"
+        },
+        "evidence/5247/20261011T140918493002Z/04.json": {
+          "snapshot_json_sha256": "8ba556d0017d39ded992b8705770084a28ec3f0ff20701b495927191037f20ca",
+          "url": "https://www.b-tm.co.jp/ir/faq.html",
+          "requested_url": "https://www.b-tm.co.jp/ir/faq.html",
+          "retrieved_at": "2026-10-11T14:10:38.593596+00:00",
+          "http_status": 200,
+          "content_sha256": "f3bd7cd4eefc4c03e78ee987bf189dad52c97bf8aa34d31122e158f210b31160",
+          "http_get_attempted": true,
+          "http_get_started_at": "2026-10-11T14:10:45.439889+00:00",
+          "http_response_received_at": "2026-10-11T14:10:46.802767+00:00",
+          "http_get_completed_at": "2026-10-11T14:10:46.806038+00:00"
+        },
+        "evidence/5247/20261011T140918493002Z/05.json": {
+          "snapshot_json_sha256": "d24f6c2abfdfad4ccc865998e7a114580ef74cabbee9b5eb3a269c00bc648254",
+          "url": "https://www.b-tm.co.jp/ir/contact.html",
+          "requested_url": "https://www.b-tm.co.jp/ir/contact.html",
+          "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+          "http_status": 200,
+          "content_sha256": "76798163c090683363b9644d795fe7e0e14f9e79948083bffe6f496cf69ddc5e",
+          "http_get_attempted": true,
+          "http_get_started_at": "2026-10-11T14:10:53.440227+00:00",
+          "http_response_received_at": "2026-10-11T14:10:54.065153+00:00",
+          "http_get_completed_at": "2026-10-11T14:10:54.067902+00:00"
+        }
+      }
+    }
+  },
+  "reviews": [
+    {
+      "security_code": "5243",
+      "new_evidence": [
+        {
+          "snapshot": "evidence/5243/20261011T140854320531Z/01.json",
+          "url": "https://note.jp/?gs=a8b9aa5992f4be4b7f19dddd3679206b",
+          "retrieved_at": "2026-10-11T14:09:57.927855+00:00",
+          "http_status": 200,
+          "quote": "note株式会社",
+          "role": "issuer_identity",
+          "snapshot_json_sha256": "c135dbb4a18a3b8fae5584606fe826eb7961bbc1c6a028bbea7e2b7b8f2592da"
+        },
+        {
+          "snapshot": "evidence/5243/20261011T140854320531Z/01.json",
+          "url": "https://note.jp/?gs=a8b9aa5992f4be4b7f19dddd3679206b",
+          "retrieved_at": "2026-10-11T14:09:57.927855+00:00",
+          "http_status": 200,
+          "quote": "[note]投資家向け質問箱を開設しました 28 note IR（5243） 3か月前",
+          "role": "ir_question_box_announcement_link_only",
+          "snapshot_json_sha256": "c135dbb4a18a3b8fae5584606fe826eb7961bbc1c6a028bbea7e2b7b8f2592da",
+          "source_link_url": "https://note.com/note_ir/n/nee66bbe1398e"
+        }
+      ],
+      "todos": [
+        {
+          "security_code": "5243",
+          "target_url": "https://note.com/note_ir/n/nee66bbe1398e",
+          "parent_url": "https://note.jp/?gs=a8b9aa5992f4be4b7f19dddd3679206b",
+          "parent_snapshot": "evidence/5243/20261011T140854320531Z/01.json",
+          "parent_retrieved_at": "2026-10-11T14:09:57.927855+00:00",
+          "parent_snapshot_json_sha256": "c135dbb4a18a3b8fae5584606fe826eb7961bbc1c6a028bbea7e2b7b8f2592da",
+          "source_link_url": "https://note.com/note_ir/n/nee66bbe1398e",
+          "source_link_href": "https://note.com/note_ir/n/nee66bbe1398e",
+          "source_link_label": "[note]投資家向け質問箱を開設しました",
+          "quote": "[note]投資家向け質問箱を開設しました 28 note IR（5243） 3か月前",
+          "reason": "公式ホームのIR5243記事一覧にある質問箱開設通知の実href。通知記事本文のIR質問受付先/実質問欄/返信先と個人・公開回答方針を点検する候補。robots403で停止したir.note.jpの再取得や迂回は候補にしない。",
+          "requires_current_robots_and_host_policy_check": true,
+          "ir_contact_acceptance_demonstrated": false,
+          "network_requests_performed": 0
+        }
+      ],
+      "reviewed_at_utc": "2026-10-11T14:17:36.934645+00:00",
+      "reviewed_at_jst": "2026-10-11T23:17:36.934645+09:00",
+      "investigation_status": "unconfirmed",
+      "verification_level": "none",
+      "contact_url": null,
+      "individual_access": "not_stated",
+      "outreach_suitability": "unconfirmed",
+      "reviewed_record_sha256": "f97d1c0270aa3546ab734b7cc666aaeb61a770b8c8c3fe976d6cb3f099f96c7e",
+      "notes": "note公式ホーム01の最新IR記事一覧とnote IR（5243）の同一性を確認。実hrefの質問箱開設通知は金融IRに関する有力な追加点検先だが未取得の通知記事であって質問/返信先の受付フォームではないためUを維持。開設の3か月前表示は公開本文の相対時刻であり実受付継続やメール返信条件を保証しない。IRサイト02のrobots403は正当な停止で本文なし。help-noteのフィードバック、クリエイター向け質問箱、採用、ニュースの投資免責は金融IR受付に借用しない。 保存された公開本文・native controls・実hrefのみを個別点検。追加GET/メール/フォーム送信は0件。窓口不存在・返信実績・人間の投資判断承認を示すレビューではない。",
+      "validation": {
+        "security_code": "5243",
+        "terminal": true,
+        "investigation_status": "unconfirmed",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "unconfirmed",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      "issues": [],
+      "old_evidence_preserved": true,
+      "old_conditions_preserved_in_frozen_record": true,
+      "non_review_fields_unchanged": true,
+      "source_snapshots_unchanged": true,
+      "saved_at_utc": "2026-10-11T14:18:29.355165+00:00"
+    },
+    {
+      "security_code": "5244",
+      "new_evidence": [
+        {
+          "snapshot": "evidence/5244/20261011T140906445305Z/05.json",
+          "url": "https://www.jig.jp/ir",
+          "retrieved_at": "2026-10-11T14:11:01.643416+00:00",
+          "http_status": 200,
+          "quote": "IR情報｜株式会社jig.jp",
+          "role": "issuer_and_ir_identity",
+          "snapshot_json_sha256": "c520868ca881e92dd89067594f521cd3f69fa1605d5fb99d21d8504903171855"
+        },
+        {
+          "snapshot": "evidence/5244/20261011T140906445305Z/05.json",
+          "url": "https://www.jig.jp/ir",
+          "retrieved_at": "2026-10-11T14:11:01.643416+00:00",
+          "http_status": 200,
+          "quote": "お問い合わせ 詳細はこちら 電子公告 詳細はこちら",
+          "role": "ir_contact_route",
+          "snapshot_json_sha256": "c520868ca881e92dd89067594f521cd3f69fa1605d5fb99d21d8504903171855",
+          "source_link_url": "https://www.jig.jp/contact?leadgrid_form_key_mokuteki=IRについて"
+        },
+        {
+          "snapshot": "evidence/5244/20261011T140906445305Z/06.json",
+          "url": "https://www.jig.jp/contact?leadgrid_form_key_mokuteki=IR%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6",
+          "retrieved_at": "2026-10-11T14:11:05.993390+00:00",
+          "http_status": 200,
+          "quote": "お問い合わせフォーム｜株式会社jig.jp",
+          "role": "contact_landing_title",
+          "snapshot_json_sha256": "cb038e31fbe8cace386d44f65dbf536cf4190f0db487946a8a7b95decc83a8ce"
+        }
+      ],
+      "todos": [
+        {
+          "security_code": "5244",
+          "target_url": "https://www.jig.jp/ir/faq/",
+          "parent_url": "https://www.jig.jp/ir",
+          "parent_snapshot": "evidence/5244/20261011T140906445305Z/05.json",
+          "parent_retrieved_at": "2026-10-11T14:11:01.643416+00:00",
+          "parent_snapshot_json_sha256": "c520868ca881e92dd89067594f521cd3f69fa1605d5fb99d21d8504903171855",
+          "source_link_url": "https://www.jig.jp/ir/faq/",
+          "source_link_href": "/ir/faq/",
+          "source_link_label": "詳細はこちら",
+          "quote": "FAQ 詳細はこちら",
+          "reason": "公式IR親の実FAQ href。金融IRの質問受付/個人条件/返信方針の記載があるかを追加点検できる。取得済みfieldlessフォームを推測URLで再取得する提案ではない。",
+          "requires_current_robots_and_host_policy_check": true,
+          "ir_contact_acceptance_demonstrated": false,
+          "network_requests_performed": 0
+        }
+      ],
+      "reviewed_at_utc": "2026-10-11T14:17:36.934645+00:00",
+      "reviewed_at_jst": "2026-10-11T23:17:36.934645+09:00",
+      "investigation_status": "provisional",
+      "verification_level": "official_form_link_only",
+      "contact_url": "https://www.jig.jp/contact?leadgrid_form_key_mokuteki=IR%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6",
+      "individual_access": "not_stated",
+      "outreach_suitability": "candidate",
+      "reviewed_record_sha256": "19dae6087f7c4d97ca95c528b4e9007796fe83e6d51ea2ed5d101c23a00de101",
+      "notes": "jig.jpのIR親05には実お問い合わせ見出しと詳細hrefがあり、その同じhrefはleadgrid_form_key_mokuteki=IRについての用件を指定する。06のrequested_urlは同じ未エンコードquery、保存finalURLはUTF8パーセント表記。公式IRから実問い合わせ画面への金融IR導線はPに復元できるが、06に実native form/fieldsがないためCにしない。03の製品/配信者サポートと採用を借用せず個人not_stated。埋込YouTube停止は受付根拠ではない。 保存された公開本文・native controls・実hrefのみを個別点検。追加GET/メール/フォーム送信は0件。窓口不存在・返信実績・人間の投資判断承認を示すレビューではない。",
+      "validation": {
+        "security_code": "5244",
+        "terminal": true,
+        "investigation_status": "provisional",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "candidate",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      "issues": [],
+      "old_evidence_preserved": true,
+      "old_conditions_preserved_in_frozen_record": true,
+      "non_review_fields_unchanged": true,
+      "source_snapshots_unchanged": true,
+      "saved_at_utc": "2026-10-11T14:18:29.360390+00:00"
+    },
+    {
+      "security_code": "5246",
+      "new_evidence": [
+        {
+          "snapshot": "evidence/5246/20261011T140914534105Z/02.json",
+          "url": "https://ir.elementsinc.jp/",
+          "retrieved_at": "2026-10-11T14:10:02.135261+00:00",
+          "http_status": 200,
+          "quote": "IRについてのお問い合わせ",
+          "role": "official_ir_parent_link",
+          "snapshot_json_sha256": "571e54603ee1f4ac997573b5ce45fe2bdf7c08990c5c609ba4a47712c7366926",
+          "source_link_url": "https://elementsinc.jp/ir-contact/"
+        },
+        {
+          "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+          "url": "https://elementsinc.jp/ir-contact/",
+          "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+          "http_status": 200,
+          "quote": "IRについてのお問い合わせ 下記のお問い合わせフォームに必要事項を入力し、送信してください。",
+          "role": "contact_channel",
+          "snapshot_json_sha256": "fc506d579ee265073556f462795903d463b7c2b7a7bf46383520816a077e9dcb"
+        },
+        {
+          "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+          "url": "https://elementsinc.jp/ir-contact/",
+          "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+          "http_status": 200,
+          "quote": "氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー",
+          "role": "form_fields_and_individual_access",
+          "snapshot_json_sha256": "fc506d579ee265073556f462795903d463b7c2b7a7bf46383520816a077e9dcb"
+        },
+        {
+          "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+          "url": "https://elementsinc.jp/ir-contact/",
+          "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+          "http_status": 200,
+          "quote": "IRに関するお問い合わせの際のお願い お問い合わせの内容により、回答にお時間をいただく場合やお答えしかねる場合がございます。また、回答にあたっては、原則、電子メールでの回答とさせていただきます。 なお、当社は、皆様へお知らせすべき重要な事象について、適時開示規則に従い、公平に適時、適切に情報開示することとしております。下記の内容に該当するようなお問い合わせについては、回答を差し控えておりますので、何卒ご理解賜りますようお願い申し上げます。 非公開情報（足元の業績動向など） 「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等",
+          "role": "conditions",
+          "snapshot_json_sha256": "fc506d579ee265073556f462795903d463b7c2b7a7bf46383520816a077e9dcb"
+        },
+        {
+          "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+          "url": "https://elementsinc.jp/ir-contact/",
+          "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+          "http_status": 200,
+          "quote": "株式会社ELEMENTSは東京証券取引所グロース市場上場企業です",
+          "role": "issuer_identity",
+          "snapshot_json_sha256": "fc506d579ee265073556f462795903d463b7c2b7a7bf46383520816a077e9dcb"
+        }
+      ],
+      "todos": [],
+      "reviewed_at_utc": "2026-10-11T14:17:36.934645+00:00",
+      "reviewed_at_jst": "2026-10-11T23:17:36.934645+09:00",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "contact_url": "https://elementsinc.jp/ir-contact/",
+      "individual_access": "explicitly_allowed",
+      "outreach_suitability": "candidate",
+      "reviewed_record_sha256": "07eab4a833113e17ac3d8bb36637c872abd9f272dc68d51289fee4e8a7720600",
+      "notes": "ELEMENTS公式IR親02の実リンクがIR専用フォーム03へ一致する。03の同一post formにemail your-email・質問textarea your-message・職種radio-jobtype4欄があり、同一フォームの職種必須 個人投資家/機関投資家/アナリスト/その他の実表示を完全引用したので個人explicitly_allowed。privacyの個人情報文言やナビInvestor Relationsから推論しない。表示フォームに会社欄はない。原則メール回答と質問内容を限定した不回答を保全し、個別質問を一律受け付けないとは解釈しない。製品eKYC/LIQUID等の子会社customer窓口と採用を借用しない。 保存された公開本文・native controls・実hrefのみを個別点検。追加GET/メール/フォーム送信は0件。窓口不存在・返信実績・人間の投資判断承認を示すレビューではない。",
+      "validation": {
+        "security_code": "5246",
+        "terminal": true,
+        "investigation_status": "confirmed",
+        "official_get_attempted": true,
+        "channel_verified": true,
+        "outreach_suitability": "candidate",
+        "individual_access": "explicitly_allowed",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      "issues": [],
+      "old_evidence_preserved": true,
+      "old_conditions_preserved_in_frozen_record": true,
+      "non_review_fields_unchanged": true,
+      "source_snapshots_unchanged": true,
+      "saved_at_utc": "2026-10-11T14:18:29.370694+00:00"
+    },
+    {
+      "security_code": "5247",
+      "new_evidence": [
+        {
+          "snapshot": "evidence/5247/20261011T140918493002Z/04.json",
+          "url": "https://www.b-tm.co.jp/ir/faq.html",
+          "retrieved_at": "2026-10-11T14:10:38.593596+00:00",
+          "http_status": 200,
+          "quote": "東京証券取引所グロース市場、証券コードは5247です。なお、業種は情報・通信業です。",
+          "role": "issuer_identity",
+          "snapshot_json_sha256": "8ba556d0017d39ded992b8705770084a28ec3f0ff20701b495927191037f20ca"
+        },
+        {
+          "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+          "url": "https://www.b-tm.co.jp/ir/contact.html",
+          "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+          "http_status": 200,
+          "quote": "当社株主、投資家の皆様からのお問い合わせはメールによるお問い合わせに限定させていただいております。",
+          "role": "contact_channel",
+          "snapshot_json_sha256": "d24f6c2abfdfad4ccc865998e7a114580ef74cabbee9b5eb3a269c00bc648254"
+        },
+        {
+          "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+          "url": "https://www.b-tm.co.jp/ir/contact.html",
+          "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+          "http_status": 200,
+          "quote": "お問い合わせ先：株式会社BTM IR担当 ir@b-tm.co.jp",
+          "role": "public_ir_email",
+          "snapshot_json_sha256": "d24f6c2abfdfad4ccc865998e7a114580ef74cabbee9b5eb3a269c00bc648254"
+        },
+        {
+          "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+          "url": "https://www.b-tm.co.jp/ir/contact.html",
+          "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+          "http_status": 200,
+          "quote": "迅速な対応を心がけておりますが、内容によっては回答に時間を要する場合もございます。 お問い合わせ内容によってはお答えできない場合もございます。",
+          "role": "reply_conditions",
+          "snapshot_json_sha256": "d24f6c2abfdfad4ccc865998e7a114580ef74cabbee9b5eb3a269c00bc648254"
+        },
+        {
+          "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+          "url": "https://www.b-tm.co.jp/ir/contact.html",
+          "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+          "http_status": 200,
+          "quote": "下記に該当するご質問は、IRからの回答を差し控えておりますので、あらかじめご了承ください。 ・ 非公開情報に関するご質問（業績動向など） ・ 金融商品取引法 第166条にある「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） ・ 株式市場の値動きに関するご質問（株価動向、売買手口など） ・ 誹謗中傷に該当するメッセージ（根拠のない悪口、名誉を棄損する言葉など） ・ 営業や勧誘のお問い合わせ（○○サービスのご案内など） ・ 当社サイト以外に記載されている内容についてのお問い合わせ",
+          "role": "conditions",
+          "snapshot_json_sha256": "d24f6c2abfdfad4ccc865998e7a114580ef74cabbee9b5eb3a269c00bc648254"
+        },
+        {
+          "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+          "url": "https://www.b-tm.co.jp/ir/contact.html",
+          "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+          "http_status": 200,
+          "quote": "また、当社から回答した内容について、その一部または全部を転載、二次利用することはご遠慮ください。",
+          "role": "answer_reuse_conditions",
+          "snapshot_json_sha256": "d24f6c2abfdfad4ccc865998e7a114580ef74cabbee9b5eb3a269c00bc648254"
+        },
+        {
+          "snapshot": "evidence/5247/20261011T140918493002Z/02.json",
+          "url": "https://www.b-tm.co.jp/ir",
+          "retrieved_at": "2026-10-11T14:10:06.831077+00:00",
+          "http_status": 200,
+          "quote": "お問い合わせ",
+          "role": "official_ir_parent_link",
+          "snapshot_json_sha256": "7d76f5377b35d2806f76472e31d0cf33669b529ca17c5f3de82fed07a269b350",
+          "source_link_url": "https://www.b-tm.co.jp/ir/contact.html"
+        }
+      ],
+      "todos": [],
+      "reviewed_at_utc": "2026-10-11T14:17:36.934645+00:00",
+      "reviewed_at_jst": "2026-10-11T23:17:36.934645+09:00",
+      "investigation_status": "confirmed",
+      "verification_level": "ir_email_verified",
+      "contact_url": "https://www.b-tm.co.jp/ir/contact.html",
+      "individual_access": "not_stated",
+      "outreach_suitability": "candidate",
+      "reviewed_record_sha256": "3b7d90f7bd93027258575016c52de06c1c6e0a38da9edd59a3add8538d744661",
+      "notes": "BTM公式IR FAQ04の証券コード5247で現発行体を拘束し、IR親02の実問い合わせ先05で本文の株式会社BTM IR担当とir@b-tm.co.jpを完全一致確認。メールリンクhrefはcontact/entry6でmailtoでないが、例示/製品宛先ではなくIR担当の実公開本文から宛先を採用。05の株主/投資家は受付の対象だが個人という明示はないためnav FOR INVESTORから個人explicitに格上げせずnot_stated。メール限定・内容別回答拒否・返信遅延・回答の転載二次利用を控える指示を保持し、一般contact03のIRカテゴリ/採用/顧客フォームへ受付条件を借用しない。 保存された公開本文・native controls・実hrefのみを個別点検。追加GET/メール/フォーム送信は0件。窓口不存在・返信実績・人間の投資判断承認を示すレビューではない。",
+      "validation": {
+        "security_code": "5247",
+        "terminal": true,
+        "investigation_status": "confirmed",
+        "official_get_attempted": true,
+        "channel_verified": true,
+        "outreach_suitability": "candidate",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      "issues": [],
+      "old_evidence_preserved": true,
+      "old_conditions_preserved_in_frozen_record": true,
+      "non_review_fields_unchanged": true,
+      "source_snapshots_unchanged": true,
+      "saved_at_utc": "2026-10-11T14:18:29.379810+00:00"
+    }
+  ],
+  "proposed_reviews": [
+    {
+      "security_code": "5243",
+      "proposed_record": {
+        "security_code": "5243",
+        "company_name": "ｎｏｔｅ",
+        "market": "グロース（内国株式）",
+        "jpx_sector": "情報・通信業",
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "official_url": "https://note.jp/",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "attempted_at": "2026-10-11T14:08:54.320488+00:00",
+        "completed_at": "2026-10-11T14:10:30.225099+00:00",
+        "manual_review_required": false,
+        "evidence": [
+          {
+            "snapshot": "evidence/5243/20261011T140854320531Z/01.json",
+            "url": "https://note.jp/?gs=a8b9aa5992f4be4b7f19dddd3679206b",
+            "retrieved_at": "2026-10-11T14:09:57.927855+00:00",
+            "http_status": 200,
+            "quote": "note株式会社",
+            "role": "issuer_identity",
+            "snapshot_json_sha256": "c135dbb4a18a3b8fae5584606fe826eb7961bbc1c6a028bbea7e2b7b8f2592da"
+          },
+          {
+            "snapshot": "evidence/5243/20261011T140854320531Z/01.json",
+            "url": "https://note.jp/?gs=a8b9aa5992f4be4b7f19dddd3679206b",
+            "retrieved_at": "2026-10-11T14:09:57.927855+00:00",
+            "http_status": 200,
+            "quote": "[note]投資家向け質問箱を開設しました 28 note IR（5243） 3か月前",
+            "role": "ir_question_box_announcement_link_only",
+            "snapshot_json_sha256": "c135dbb4a18a3b8fae5584606fe826eb7961bbc1c6a028bbea7e2b7b8f2592da",
+            "source_link_url": "https://note.com/note_ir/n/nee66bbe1398e"
+          }
+        ],
+        "fetches": [
+          {
+            "url": "https://note.jp/",
+            "final_url": "https://note.jp/?gs=a8b9aa5992f4be4b7f19dddd3679206b",
+            "snapshot": "evidence/5243/20261011T140854320531Z/01.json",
+            "retrieved_at": "2026-10-11T14:09:57.927855+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://ir.note.jp/",
+            "final_url": null,
+            "snapshot": "evidence/5243/20261011T140854320531Z/02.json",
+            "retrieved_at": "2026-10-11T14:10:30.224273+00:00",
+            "http_status": null,
+            "error": "robots_access_denied_stopped"
+          }
+        ],
+        "conditions": [],
+        "limitations": [
+          "公式noteホームのIR記事一覧に投資家向け質問箱の開設案内への実リンクがある。ただし記事本文や受付画面の実質問/返信先欄は未取得なのでメール/フォーム受付は未確認。",
+          "https://ir.note.jp/ はrobots.txt取得403 AccessDeniedにより停止。対象本文GET未実行で、迂回や当該URL再取得候補は作らない。",
+          "note顧客/クリエイター向けフィードバックフォーム、製品の質問箱、個人投資家イベント告知、投資情報の免責事項からIRメール/フォーム/個人受付条件を推論しない。",
+          "現時点の個人受付範囲・匿名質問/メール返信の有無・回答の公開方針・個別回答条件は未確認。"
+        ],
+        "discovery": {
+          "security_code": "5243",
+          "official_url": "https://note.jp/",
+          "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+          "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+          "discovery_type": "third_party_unverified",
+          "seed_company_name": "ｎｏｔｅ",
+          "source_data_as_of": "2024-10-08"
+        },
+        "identity_status": "name_or_security_code_observed",
+        "identity_matches": [
+          {
+            "snapshot": "evidence/5243/20261011T140854320531Z/01.json",
+            "normalized_name": "note",
+            "security_code_observed": false
+          }
+        ],
+        "successful_official_page_count": 1,
+        "unconfirmed_reason": "official_channel_not_demonstrated",
+        "http_get_attempt_count": 6,
+        "previous_attempts": [
+          "attempts/5243/20261011T045047530936Z.json",
+          "attempts/5243/20261011T141030225413Z.json"
+        ],
+        "manual_review": {
+          "reviewer": "codex_audit_consumer_52_batch08",
+          "reviewed_at": "2026-10-11T14:17:36.934645+00:00",
+          "reviewed_at_jst": "2026-10-11T23:17:36.934645+09:00",
+          "notes": "note公式ホーム01の最新IR記事一覧とnote IR（5243）の同一性を確認。実hrefの質問箱開設通知は金融IRに関する有力な追加点検先だが未取得の通知記事であって質問/返信先の受付フォームではないためUを維持。開設の3か月前表示は公開本文の相対時刻であり実受付継続やメール返信条件を保証しない。IRサイト02のrobots403は正当な停止で本文なし。help-noteのフィードバック、クリエイター向け質問箱、採用、ニュースの投資免責は金融IR受付に借用しない。 保存された公開本文・native controls・実hrefのみを個別点検。追加GET/メール/フォーム送信は0件。窓口不存在・返信実績・人間の投資判断承認を示すレビューではない。",
+          "stopped_source": {
+            "snapshot": "evidence/5243/20261011T140854320531Z/02.json",
+            "snapshot_json_sha256": "56e24c18ab6e769f44311520fcb53e6a9d8c4b92b2efc50324824b85e220af50",
+            "requested_url": "https://ir.note.jp/",
+            "http_get_attempted": false,
+            "error": "robots_access_denied_stopped",
+            "robots_url": "https://ir.note.jp/robots.txt",
+            "robots_http_status": 403,
+            "robots_retrieved_at": "2026-10-11T14:10:14.666433+00:00",
+            "robots_content_sha256": "a824bc7739e226e1b40ea0f8c4e4f4c6f796fc3b4abfa6e9abe3bd119a30d938"
+          }
+        }
+      },
+      "new_evidence": [
+        {
+          "snapshot": "evidence/5243/20261011T140854320531Z/01.json",
+          "url": "https://note.jp/?gs=a8b9aa5992f4be4b7f19dddd3679206b",
+          "retrieved_at": "2026-10-11T14:09:57.927855+00:00",
+          "http_status": 200,
+          "quote": "note株式会社",
+          "role": "issuer_identity",
+          "snapshot_json_sha256": "c135dbb4a18a3b8fae5584606fe826eb7961bbc1c6a028bbea7e2b7b8f2592da"
+        },
+        {
+          "snapshot": "evidence/5243/20261011T140854320531Z/01.json",
+          "url": "https://note.jp/?gs=a8b9aa5992f4be4b7f19dddd3679206b",
+          "retrieved_at": "2026-10-11T14:09:57.927855+00:00",
+          "http_status": 200,
+          "quote": "[note]投資家向け質問箱を開設しました 28 note IR（5243） 3か月前",
+          "role": "ir_question_box_announcement_link_only",
+          "snapshot_json_sha256": "c135dbb4a18a3b8fae5584606fe826eb7961bbc1c6a028bbea7e2b7b8f2592da",
+          "source_link_url": "https://note.com/note_ir/n/nee66bbe1398e"
+        }
+      ],
+      "todos": [
+        {
+          "security_code": "5243",
+          "target_url": "https://note.com/note_ir/n/nee66bbe1398e",
+          "parent_url": "https://note.jp/?gs=a8b9aa5992f4be4b7f19dddd3679206b",
+          "parent_snapshot": "evidence/5243/20261011T140854320531Z/01.json",
+          "parent_retrieved_at": "2026-10-11T14:09:57.927855+00:00",
+          "parent_snapshot_json_sha256": "c135dbb4a18a3b8fae5584606fe826eb7961bbc1c6a028bbea7e2b7b8f2592da",
+          "source_link_url": "https://note.com/note_ir/n/nee66bbe1398e",
+          "source_link_href": "https://note.com/note_ir/n/nee66bbe1398e",
+          "source_link_label": "[note]投資家向け質問箱を開設しました",
+          "quote": "[note]投資家向け質問箱を開設しました 28 note IR（5243） 3か月前",
+          "reason": "公式ホームのIR5243記事一覧にある質問箱開設通知の実href。通知記事本文のIR質問受付先/実質問欄/返信先と個人・公開回答方針を点検する候補。robots403で停止したir.note.jpの再取得や迂回は候補にしない。",
+          "requires_current_robots_and_host_policy_check": true,
+          "ir_contact_acceptance_demonstrated": false,
+          "network_requests_performed": 0
+        }
+      ],
+      "reviewed_at_utc": "2026-10-11T14:17:36.934645+00:00",
+      "reviewed_at_jst": "2026-10-11T23:17:36.934645+09:00"
+    },
+    {
+      "security_code": "5244",
+      "proposed_record": {
+        "security_code": "5244",
+        "company_name": "ｊｉｇ．ｊｐ",
+        "market": "グロース（内国株式）",
+        "jpx_sector": "情報・通信業",
+        "investigation_status": "provisional",
+        "verification_level": "official_form_link_only",
+        "official_url": "https://www.jig.jp/",
+        "contact_url": "https://www.jig.jp/contact?leadgrid_form_key_mokuteki=IR%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "attempted_at": "2026-10-11T14:09:06.445269+00:00",
+        "completed_at": "2026-10-11T14:11:10.433864+00:00",
+        "manual_review_required": false,
+        "evidence": [
+          {
+            "snapshot": "evidence/5244/20261011T140906445305Z/05.json",
+            "url": "https://www.jig.jp/ir",
+            "retrieved_at": "2026-10-11T14:11:01.643416+00:00",
+            "http_status": 200,
+            "quote": "IR情報｜株式会社jig.jp",
+            "role": "issuer_and_ir_identity",
+            "snapshot_json_sha256": "c520868ca881e92dd89067594f521cd3f69fa1605d5fb99d21d8504903171855"
+          },
+          {
+            "snapshot": "evidence/5244/20261011T140906445305Z/05.json",
+            "url": "https://www.jig.jp/ir",
+            "retrieved_at": "2026-10-11T14:11:01.643416+00:00",
+            "http_status": 200,
+            "quote": "お問い合わせ 詳細はこちら 電子公告 詳細はこちら",
+            "role": "ir_contact_route",
+            "snapshot_json_sha256": "c520868ca881e92dd89067594f521cd3f69fa1605d5fb99d21d8504903171855",
+            "source_link_url": "https://www.jig.jp/contact?leadgrid_form_key_mokuteki=IRについて"
+          },
+          {
+            "snapshot": "evidence/5244/20261011T140906445305Z/06.json",
+            "url": "https://www.jig.jp/contact?leadgrid_form_key_mokuteki=IR%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6",
+            "retrieved_at": "2026-10-11T14:11:05.993390+00:00",
+            "http_status": 200,
+            "quote": "お問い合わせフォーム｜株式会社jig.jp",
+            "role": "contact_landing_title",
+            "snapshot_json_sha256": "cb038e31fbe8cace386d44f65dbf536cf4190f0db487946a8a7b95decc83a8ce"
+          }
+        ],
+        "fetches": [
+          {
+            "url": "https://www.jig.jp/",
+            "final_url": "https://www.jig.jp/",
+            "snapshot": "evidence/5244/20261011T140906445305Z/01.json",
+            "retrieved_at": "2026-10-11T14:09:22.202075+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.jig.jp/ir/performance",
+            "final_url": "https://www.jig.jp/ir/performance",
+            "snapshot": "evidence/5244/20261011T140906445305Z/02.json",
+            "retrieved_at": "2026-10-11T14:09:37.884780+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.jig.jp/contact_list",
+            "final_url": "https://www.jig.jp/contact_list",
+            "snapshot": "evidence/5244/20261011T140906445305Z/03.json",
+            "retrieved_at": "2026-10-11T14:09:54.466996+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.jig.jp/ir/performance/",
+            "final_url": "https://www.jig.jp/ir/performance",
+            "snapshot": "evidence/5244/20261011T140906445305Z/04.json",
+            "retrieved_at": "2026-10-11T14:10:57.502766+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.jig.jp/ir",
+            "final_url": "https://www.jig.jp/ir",
+            "snapshot": "evidence/5244/20261011T140906445305Z/05.json",
+            "retrieved_at": "2026-10-11T14:11:01.643416+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.jig.jp/contact?leadgrid_form_key_mokuteki=IRについて",
+            "final_url": "https://www.jig.jp/contact?leadgrid_form_key_mokuteki=IR%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6",
+            "snapshot": "evidence/5244/20261011T140906445305Z/06.json",
+            "retrieved_at": "2026-10-11T14:11:05.993390+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.youtube.com/embed/XvgcrK3xcrw?si=PGb9y8qCTz87H3ff",
+            "final_url": null,
+            "snapshot": "evidence/5244/20261011T140906445305Z/07.json",
+            "retrieved_at": "2026-10-11T14:11:10.433542+00:00",
+            "http_status": null,
+            "error": "robots_unreachable_stopped"
+          }
+        ],
+        "conditions": [
+          "公式IR親のお問い合わせ節から用件IRについてを指定した問い合わせURLへの実導線あり。"
+        ],
+        "limitations": [
+          "取得済みの問い合わせ06はIR用queryを持つ公式ページだが、保存されたnative forms/controlsは0件。実質問/返信先欄は未確認。",
+          "個人受付条件・会社名必須・返信条件・フォーム動作は未確認。ふわっち/ライバー事務所/ブラウザ/IchigoJamのサポートをIRに借用しない。",
+          "停止したYouTube埋め込みは動画でありIR受付フォームではない。再取得候補にしない。"
+        ],
+        "discovery": {
+          "security_code": "5244",
+          "official_url": "https://www.jig.jp/",
+          "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+          "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+          "discovery_type": "third_party_unverified",
+          "seed_company_name": "ｊｉｇ．ｊｐ",
+          "source_data_as_of": "2024-10-08"
+        },
+        "identity_status": "name_or_security_code_observed",
+        "identity_matches": [
+          {
+            "snapshot": "evidence/5244/20261011T140906445305Z/01.json",
+            "normalized_name": "jigjp",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5244/20261011T140906445305Z/02.json",
+            "normalized_name": "jigjp",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5244/20261011T140906445305Z/03.json",
+            "normalized_name": "jigjp",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5244/20261011T140906445305Z/04.json",
+            "normalized_name": "jigjp",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5244/20261011T140906445305Z/05.json",
+            "normalized_name": "jigjp",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5244/20261011T140906445305Z/06.json",
+            "normalized_name": "jigjp",
+            "security_code_observed": false
+          }
+        ],
+        "successful_official_page_count": 6,
+        "unconfirmed_reason": "ir_form_fields_or_eligibility_not_fully_demonstrated",
+        "http_get_attempt_count": 11,
+        "previous_attempts": [
+          "attempts/5244/20261011T045047531029Z.json",
+          "attempts/5244/20261011T141110434242Z.json"
+        ],
+        "manual_review": {
+          "reviewer": "codex_audit_consumer_52_batch08",
+          "reviewed_at": "2026-10-11T14:17:36.934645+00:00",
+          "reviewed_at_jst": "2026-10-11T23:17:36.934645+09:00",
+          "notes": "jig.jpのIR親05には実お問い合わせ見出しと詳細hrefがあり、その同じhrefはleadgrid_form_key_mokuteki=IRについての用件を指定する。06のrequested_urlは同じ未エンコードquery、保存finalURLはUTF8パーセント表記。公式IRから実問い合わせ画面への金融IR導線はPに復元できるが、06に実native form/fieldsがないためCにしない。03の製品/配信者サポートと採用を借用せず個人not_stated。埋込YouTube停止は受付根拠ではない。 保存された公開本文・native controls・実hrefのみを個別点検。追加GET/メール/フォーム送信は0件。窓口不存在・返信実績・人間の投資判断承認を示すレビューではない。"
+        }
+      },
+      "new_evidence": [
+        {
+          "snapshot": "evidence/5244/20261011T140906445305Z/05.json",
+          "url": "https://www.jig.jp/ir",
+          "retrieved_at": "2026-10-11T14:11:01.643416+00:00",
+          "http_status": 200,
+          "quote": "IR情報｜株式会社jig.jp",
+          "role": "issuer_and_ir_identity",
+          "snapshot_json_sha256": "c520868ca881e92dd89067594f521cd3f69fa1605d5fb99d21d8504903171855"
+        },
+        {
+          "snapshot": "evidence/5244/20261011T140906445305Z/05.json",
+          "url": "https://www.jig.jp/ir",
+          "retrieved_at": "2026-10-11T14:11:01.643416+00:00",
+          "http_status": 200,
+          "quote": "お問い合わせ 詳細はこちら 電子公告 詳細はこちら",
+          "role": "ir_contact_route",
+          "snapshot_json_sha256": "c520868ca881e92dd89067594f521cd3f69fa1605d5fb99d21d8504903171855",
+          "source_link_url": "https://www.jig.jp/contact?leadgrid_form_key_mokuteki=IRについて"
+        },
+        {
+          "snapshot": "evidence/5244/20261011T140906445305Z/06.json",
+          "url": "https://www.jig.jp/contact?leadgrid_form_key_mokuteki=IR%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6",
+          "retrieved_at": "2026-10-11T14:11:05.993390+00:00",
+          "http_status": 200,
+          "quote": "お問い合わせフォーム｜株式会社jig.jp",
+          "role": "contact_landing_title",
+          "snapshot_json_sha256": "cb038e31fbe8cace386d44f65dbf536cf4190f0db487946a8a7b95decc83a8ce"
+        }
+      ],
+      "todos": [
+        {
+          "security_code": "5244",
+          "target_url": "https://www.jig.jp/ir/faq/",
+          "parent_url": "https://www.jig.jp/ir",
+          "parent_snapshot": "evidence/5244/20261011T140906445305Z/05.json",
+          "parent_retrieved_at": "2026-10-11T14:11:01.643416+00:00",
+          "parent_snapshot_json_sha256": "c520868ca881e92dd89067594f521cd3f69fa1605d5fb99d21d8504903171855",
+          "source_link_url": "https://www.jig.jp/ir/faq/",
+          "source_link_href": "/ir/faq/",
+          "source_link_label": "詳細はこちら",
+          "quote": "FAQ 詳細はこちら",
+          "reason": "公式IR親の実FAQ href。金融IRの質問受付/個人条件/返信方針の記載があるかを追加点検できる。取得済みfieldlessフォームを推測URLで再取得する提案ではない。",
+          "requires_current_robots_and_host_policy_check": true,
+          "ir_contact_acceptance_demonstrated": false,
+          "network_requests_performed": 0
+        }
+      ],
+      "reviewed_at_utc": "2026-10-11T14:17:36.934645+00:00",
+      "reviewed_at_jst": "2026-10-11T23:17:36.934645+09:00"
+    },
+    {
+      "security_code": "5246",
+      "proposed_record": {
+        "security_code": "5246",
+        "company_name": "ＥＬＥＭＥＮＴＳ",
+        "market": "グロース（内国株式）",
+        "jpx_sector": "情報・通信業",
+        "investigation_status": "confirmed",
+        "verification_level": "form_fields_verified",
+        "official_url": "https://elementsinc.jp/",
+        "contact_url": "https://elementsinc.jp/ir-contact/",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "explicitly_allowed",
+        "outreach_suitability": "candidate",
+        "attempted_at": "2026-10-11T14:09:14.534068+00:00",
+        "completed_at": "2026-10-11T14:10:34.835114+00:00",
+        "manual_review_required": false,
+        "evidence": [
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "quote": "氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 ",
+            "role": "contact_channel"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "quote": "切に情報開示することとしております。下記の内容に該当するようなお問い合わせについては、回答を差し控えておりますので、何卒ご理解賜りますようお願い申し上げます。 非公開情報（足元の業績動向など） 「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMEN",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "quote": "下記の内容に該当するようなお問い合わせについては、回答を差し控えておりますので、何卒ご理解賜りますようお願い申し上げます。 非公開情報（足元の業績動向など） 「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "quote": "回答を差し控えておりますので、何卒ご理解賜りますようお願い申し上げます。 非公開情報（足元の業績動向など） 「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企業です Liquid | ポラリファイ | X",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "quote": "おりますので、何卒ご理解賜りますようお願い申し上げます。 非公開情報（足元の業績動向など） 「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企業です Liquid | ポラリファイ | X PLACE |",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "quote": "還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企業です Liquid | ポラリファイ | X PLACE | IDEAL Company | Careers | Contact 情報セキュリティ方針 | 個人情報保護方針 | LIQUID eKYCサー",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "quote": "策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企業です Liquid | ポラリファイ | X PLACE | IDEAL Company | Careers | Contact 情報セキュリティ方針 | 個人情報保護方針 | LIQUID eKYCサービス特約 ©",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "quote": "価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等 氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー 株式会社ELEMENTSは東京証券取引所グロース市場上場企業です Liquid | ポラリファイ | X PLACE | IDEAL Company | Careers | Contact 情報セキュリティ方針 | 個人情報保護方針 | LIQUID eKYCサービス特約 © 2026 ",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/02.json",
+            "url": "https://ir.elementsinc.jp/",
+            "retrieved_at": "2026-10-11T14:10:02.135261+00:00",
+            "http_status": 200,
+            "quote": "IRについてのお問い合わせ",
+            "role": "official_ir_parent_link",
+            "snapshot_json_sha256": "571e54603ee1f4ac997573b5ce45fe2bdf7c08990c5c609ba4a47712c7366926",
+            "source_link_url": "https://elementsinc.jp/ir-contact/"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "http_status": 200,
+            "quote": "IRについてのお問い合わせ 下記のお問い合わせフォームに必要事項を入力し、送信してください。",
+            "role": "contact_channel",
+            "snapshot_json_sha256": "fc506d579ee265073556f462795903d463b7c2b7a7bf46383520816a077e9dcb"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "http_status": 200,
+            "quote": "氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー",
+            "role": "form_fields_and_individual_access",
+            "snapshot_json_sha256": "fc506d579ee265073556f462795903d463b7c2b7a7bf46383520816a077e9dcb"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "http_status": 200,
+            "quote": "IRに関するお問い合わせの際のお願い お問い合わせの内容により、回答にお時間をいただく場合やお答えしかねる場合がございます。また、回答にあたっては、原則、電子メールでの回答とさせていただきます。 なお、当社は、皆様へお知らせすべき重要な事象について、適時開示規則に従い、公平に適時、適切に情報開示することとしております。下記の内容に該当するようなお問い合わせについては、回答を差し控えておりますので、何卒ご理解賜りますようお願い申し上げます。 非公開情報（足元の業績動向など） 「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等",
+            "role": "conditions",
+            "snapshot_json_sha256": "fc506d579ee265073556f462795903d463b7c2b7a7bf46383520816a077e9dcb"
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "url": "https://elementsinc.jp/ir-contact/",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "http_status": 200,
+            "quote": "株式会社ELEMENTSは東京証券取引所グロース市場上場企業です",
+            "role": "issuer_identity",
+            "snapshot_json_sha256": "fc506d579ee265073556f462795903d463b7c2b7a7bf46383520816a077e9dcb"
+          }
+        ],
+        "fetches": [
+          {
+            "url": "https://elementsinc.jp/",
+            "final_url": "https://elementsinc.jp/",
+            "snapshot": "evidence/5246/20261011T140914534105Z/01.json",
+            "retrieved_at": "2026-10-11T14:09:29.624305+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://ir.elementsinc.jp/",
+            "final_url": "https://ir.elementsinc.jp/",
+            "snapshot": "evidence/5246/20261011T140914534105Z/02.json",
+            "retrieved_at": "2026-10-11T14:10:02.135261+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://elementsinc.jp/ir-contact/",
+            "final_url": "https://elementsinc.jp/ir-contact/",
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+            "http_status": 200,
+            "error": null
+          }
+        ],
+        "conditions": [
+          "同一IRフォームの職種必須radioに個人投資家・機関投資家・アナリスト・その他を表示。会社欄は保存controlsにない。",
+          "氏名・ふりがな・メールアドレス・職種・お問い合わせ内容は表示上必須。住所/郵便番号欄もあり、本文は電話/手紙で返す場合にも言及。",
+          "原則電子メール回答だが、内容によって時間がかかる/回答できない場合がある。",
+          "非公開の業績動向、重要事実に該当し得る株主還元/株価対策、値動き、意見/感想、自社サービス紹介には回答を差し控える。"
+        ],
+        "limitations": [
+          "公開された個人投資家選択と質問/返信欄を確認したが、送信/動作/回答実績は未検証。",
+          "IR受付は未公開の重要事実や株価予測を得る経路ではなく、明示除外事項を質問設計に反映する必要がある。"
+        ],
+        "discovery": {
+          "security_code": "5246",
+          "official_url": "https://elementsinc.jp/",
+          "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+          "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+          "discovery_type": "third_party_unverified",
+          "seed_company_name": "ＥＬＥＭＥＮＴＳ",
+          "source_data_as_of": "2024-10-08"
+        },
+        "identity_status": "name_or_security_code_observed",
+        "identity_matches": [
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/01.json",
+            "normalized_name": "elements",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/02.json",
+            "normalized_name": "elements",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "normalized_name": "elements",
+            "security_code_observed": false
+          }
+        ],
+        "successful_official_page_count": 3,
+        "http_get_attempt_count": 5,
+        "previous_attempts": [
+          "attempts/5246/20261011T045047531122Z.json",
+          "attempts/5246/20261011T141034835324Z.json"
+        ],
+        "unconfirmed_reason": null,
+        "manual_review": {
+          "reviewer": "codex_audit_consumer_52_batch08",
+          "reviewed_at": "2026-10-11T14:17:36.934645+00:00",
+          "reviewed_at_jst": "2026-10-11T23:17:36.934645+09:00",
+          "notes": "ELEMENTS公式IR親02の実リンクがIR専用フォーム03へ一致する。03の同一post formにemail your-email・質問textarea your-message・職種radio-jobtype4欄があり、同一フォームの職種必須 個人投資家/機関投資家/アナリスト/その他の実表示を完全引用したので個人explicitly_allowed。privacyの個人情報文言やナビInvestor Relationsから推論しない。表示フォームに会社欄はない。原則メール回答と質問内容を限定した不回答を保全し、個別質問を一律受け付けないとは解釈しない。製品eKYC/LIQUID等の子会社customer窓口と採用を借用しない。 保存された公開本文・native controls・実hrefのみを個別点検。追加GET/メール/フォーム送信は0件。窓口不存在・返信実績・人間の投資判断承認を示すレビューではない。",
+          "form_field_binding": {
+            "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+            "snapshot_json_sha256": "fc506d579ee265073556f462795903d463b7c2b7a7bf46383520816a077e9dcb",
+            "form_index": 0,
+            "method": "post",
+            "action": "/ir-contact/#wpcf7-f13517-p13515-o1",
+            "reply_control_name": "your-email",
+            "question_control_name": "your-message",
+            "individual_choice_control_name": "radio-jobtype",
+            "individual_choice_label": "個人投資家"
+          }
+        }
+      },
+      "new_evidence": [
+        {
+          "snapshot": "evidence/5246/20261011T140914534105Z/02.json",
+          "url": "https://ir.elementsinc.jp/",
+          "retrieved_at": "2026-10-11T14:10:02.135261+00:00",
+          "http_status": 200,
+          "quote": "IRについてのお問い合わせ",
+          "role": "official_ir_parent_link",
+          "snapshot_json_sha256": "571e54603ee1f4ac997573b5ce45fe2bdf7c08990c5c609ba4a47712c7366926",
+          "source_link_url": "https://elementsinc.jp/ir-contact/"
+        },
+        {
+          "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+          "url": "https://elementsinc.jp/ir-contact/",
+          "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+          "http_status": 200,
+          "quote": "IRについてのお問い合わせ 下記のお問い合わせフォームに必要事項を入力し、送信してください。",
+          "role": "contact_channel",
+          "snapshot_json_sha256": "fc506d579ee265073556f462795903d463b7c2b7a7bf46383520816a077e9dcb"
+        },
+        {
+          "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+          "url": "https://elementsinc.jp/ir-contact/",
+          "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+          "http_status": 200,
+          "quote": "氏名 必須 ふりがな 必須 メールアドレス 必須 職種 必須 個人投資家 機関投資家 アナリスト その他 郵便番号 住所 お問い合わせ内容 必須 プライバシーポリシー",
+          "role": "form_fields_and_individual_access",
+          "snapshot_json_sha256": "fc506d579ee265073556f462795903d463b7c2b7a7bf46383520816a077e9dcb"
+        },
+        {
+          "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+          "url": "https://elementsinc.jp/ir-contact/",
+          "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+          "http_status": 200,
+          "quote": "IRに関するお問い合わせの際のお願い お問い合わせの内容により、回答にお時間をいただく場合やお答えしかねる場合がございます。また、回答にあたっては、原則、電子メールでの回答とさせていただきます。 なお、当社は、皆様へお知らせすべき重要な事象について、適時開示規則に従い、公平に適時、適切に情報開示することとしております。下記の内容に該当するようなお問い合わせについては、回答を差し控えておりますので、何卒ご理解賜りますようお願い申し上げます。 非公開情報（足元の業績動向など） 「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） 株価の値動きに関するご質問 ご意見、ご感想等 自社製品やサービスのご紹介等",
+          "role": "conditions",
+          "snapshot_json_sha256": "fc506d579ee265073556f462795903d463b7c2b7a7bf46383520816a077e9dcb"
+        },
+        {
+          "snapshot": "evidence/5246/20261011T140914534105Z/03.json",
+          "url": "https://elementsinc.jp/ir-contact/",
+          "retrieved_at": "2026-10-11T14:10:18.257375+00:00",
+          "http_status": 200,
+          "quote": "株式会社ELEMENTSは東京証券取引所グロース市場上場企業です",
+          "role": "issuer_identity",
+          "snapshot_json_sha256": "fc506d579ee265073556f462795903d463b7c2b7a7bf46383520816a077e9dcb"
+        }
+      ],
+      "todos": [],
+      "reviewed_at_utc": "2026-10-11T14:17:36.934645+00:00",
+      "reviewed_at_jst": "2026-10-11T23:17:36.934645+09:00"
+    },
+    {
+      "security_code": "5247",
+      "proposed_record": {
+        "security_code": "5247",
+        "company_name": "ＢＴＭ",
+        "market": "グロース（内国株式）",
+        "jpx_sector": "情報・通信業",
+        "investigation_status": "confirmed",
+        "verification_level": "ir_email_verified",
+        "official_url": "https://www.b-tm.co.jp/",
+        "contact_url": "https://www.b-tm.co.jp/ir/contact.html",
+        "channels": [
+          "email"
+        ],
+        "public_ir_emails": [
+          "ir@b-tm.co.jp"
+        ],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "attempted_at": "2026-10-11T14:09:18.492960+00:00",
+        "completed_at": "2026-10-11T14:10:54.071945+00:00",
+        "manual_review_required": false,
+        "evidence": [
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "quote": " よくあるご質問 もご参照ください。 お問い合わせいただいた個人情報につきましては、厳重にお取り扱いいたします。 当社の個人情報の取り扱いについては、 プライバシーポリシー をご確認ください。 また、当社から回答した内容について、その一部または全部を転載、二次利用することはご遠慮ください。 お問い合わせ 上記ご理解のほど、 何卒よろしくお願いいたします。 お問い合わせ先：株式会社BTM IR担当 ir@b-tm.co.jp ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+            "role": "contact_channel"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/02.json",
+            "url": "https://www.b-tm.co.jp/ir",
+            "retrieved_at": "2026-10-11T14:10:06.831077+00:00",
+            "quote": " トップ IR IR News IRニュース IRニュース一覧 IR Movie IRムービー TOP MESSAGE 代表より挨拶 FOR INVESTOR 個人投資家の 皆様へ MANAGEMENT 経営情報 コーポレート・ ガバナンス ディスクロージャー ポリシー IR LIBRARY IRライブラリ 決算短信 有価証券報告書 決算説明資料 その他 STOCK 株式について 株式情報 株主総会 株価情報 株主還元 FINANCE 業績・財務情報 業績ハイライト 主な財務指標 キャッシュ・フローの 状況 IR CALEN",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/02.json",
+            "url": "https://www.b-tm.co.jp/ir",
+            "retrieved_at": "2026-10-11T14:10:06.831077+00:00",
+            "quote": "ィスクロージャー ポリシー IR LIBRARY IRライブラリ 決算短信 有価証券報告書 決算説明資料 その他 STOCK 株式について 株式情報 株主総会 株価情報 株主還元 FINANCE 業績・財務情報 業績ハイライト 主な財務指標 キャッシュ・フローの 状況 IR CALENDAR IRカレンダー FAQ よくあるご質問 お問い合わせ 電子公告 免責事項 ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/04.json",
+            "url": "https://www.b-tm.co.jp/ir/faq.html",
+            "retrieved_at": "2026-10-11T14:10:38.593596+00:00",
+            "quote": "位性や成長戦略を教えてください。 A 当社は日本全国のビジネスパートナーとのネットワークを有し、案件に最適なエンジニアを早く供給出来ることにあります。 詳細は 個人投資家の皆様へ をご覧ください。 Q 経営体制について教えてください。 A 経営陣 をご覧ください。 決算・財務情報に関するご質問 Q 決算はいつですか？ A 決算日は3月31日です。 Q 決算発表はいつですか？ A 当社の決算期は毎年3月31日です。各四半期の決算発表予定のタイミングは下記となります。 第1四半期 8月中旬 第2四半期 11月中旬 第3四半期 2",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/04.json",
+            "url": "https://www.b-tm.co.jp/ir/faq.html",
+            "retrieved_at": "2026-10-11T14:10:38.593596+00:00",
+            "quote": "せ窓口はどこですか？ A 株式情報 をご覧ください。 Q 株主優待制度や配当はありますか？株主還元について教えてください。 A 株主還元 をご覧ください。 Q 株価の状況を教えてください。 A 株価情報 をご覧ください。 ※株価については市場の売買により決定されるものであり、当社は株価や出来高等についてコメントを差し控える方針です。 ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/04.json",
+            "url": "https://www.b-tm.co.jp/ir/faq.html",
+            "retrieved_at": "2026-10-11T14:10:38.593596+00:00",
+            "quote": " をご覧ください。 Q 株主優待制度や配当はありますか？株主還元について教えてください。 A 株主還元 をご覧ください。 Q 株価の状況を教えてください。 A 株価情報 をご覧ください。 ※株価については市場の売買により決定されるものであり、当社は株価や出来高等についてコメントを差し控える方針です。 ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/04.json",
+            "url": "https://www.b-tm.co.jp/ir/faq.html",
+            "retrieved_at": "2026-10-11T14:10:38.593596+00:00",
+            "quote": "待制度や配当はありますか？株主還元について教えてください。 A 株主還元 をご覧ください。 Q 株価の状況を教えてください。 A 株価情報 をご覧ください。 ※株価については市場の売買により決定されるものであり、当社は株価や出来高等についてコメントを差し控える方針です。 ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/04.json",
+            "url": "https://www.b-tm.co.jp/ir/faq.html",
+            "retrieved_at": "2026-10-11T14:10:38.593596+00:00",
+            "quote": " A 株主還元 をご覧ください。 Q 株価の状況を教えてください。 A 株価情報 をご覧ください。 ※株価については市場の売買により決定されるものであり、当社は株価や出来高等についてコメントを差し控える方針です。 ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "quote": "。 お問い合わせ内容によってはお答えできない場合もございます。 下記に該当するご質問は、IRからの回答を差し控えておりますので、あらかじめご了承ください。 ・ 非公開情報に関するご質問（業績動向など） ・ 金融商品取引法 第166条にある「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） ・ 株式市場の値動きに関するご質問（株価動向、売買手口など） ・ 誹謗中傷に該当するメッセージ（根拠のない悪口、名誉を棄損する言葉など） ・ 営業や勧誘のお問い合わせ（○○サービスのご案内など） ・ 当社サイト以外に記載",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "quote": "質問は、IRからの回答を差し控えておりますので、あらかじめご了承ください。 ・ 非公開情報に関するご質問（業績動向など） ・ 金融商品取引法 第166条にある「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） ・ 株式市場の値動きに関するご質問（株価動向、売買手口など） ・ 誹謗中傷に該当するメッセージ（根拠のない悪口、名誉を棄損する言葉など） ・ 営業や勧誘のお問い合わせ（○○サービスのご案内など） ・ 当社サイト以外に記載されている内容についてのお問い合わせ なお、皆様からよくお寄せいただくご質問をFA",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "quote": "らかじめご了承ください。 ・ 非公開情報に関するご質問（業績動向など） ・ 金融商品取引法 第166条にある「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） ・ 株式市場の値動きに関するご質問（株価動向、売買手口など） ・ 誹謗中傷に該当するメッセージ（根拠のない悪口、名誉を棄損する言葉など） ・ 営業や勧誘のお問い合わせ（○○サービスのご案内など） ・ 当社サイト以外に記載されている内容についてのお問い合わせ なお、皆様からよくお寄せいただくご質問をFAQにまとめましたので、 よくあるご質問 もご参",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "quote": "問（業績動向など） ・ 金融商品取引法 第166条にある「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） ・ 株式市場の値動きに関するご質問（株価動向、売買手口など） ・ 誹謗中傷に該当するメッセージ（根拠のない悪口、名誉を棄損する言葉など） ・ 営業や勧誘のお問い合わせ（○○サービスのご案内など） ・ 当社サイト以外に記載されている内容についてのお問い合わせ なお、皆様からよくお寄せいただくご質問をFAQにまとめましたので、 よくあるご質問 もご参照ください。 お問い合わせいただいた個人情報につきま",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "quote": "お取り扱いいたします。 当社の個人情報の取り扱いについては、 プライバシーポリシー をご確認ください。 また、当社から回答した内容について、その一部または全部を転載、二次利用することはご遠慮ください。 お問い合わせ 上記ご理解のほど、 何卒よろしくお願いいたします。 お問い合わせ先：株式会社BTM IR担当 ir@b-tm.co.jp ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "quote": "扱いいたします。 当社の個人情報の取り扱いについては、 プライバシーポリシー をご確認ください。 また、当社から回答した内容について、その一部または全部を転載、二次利用することはご遠慮ください。 お問い合わせ 上記ご理解のほど、 何卒よろしくお願いいたします。 お問い合わせ先：株式会社BTM IR担当 ir@b-tm.co.jp ブログ プライバシーポリシー 情報セキュリティ基本方針 サイトマップ ©2022 BTM, Inc.",
+            "role": "conditions"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/04.json",
+            "url": "https://www.b-tm.co.jp/ir/faq.html",
+            "retrieved_at": "2026-10-11T14:10:38.593596+00:00",
+            "http_status": 200,
+            "quote": "東京証券取引所グロース市場、証券コードは5247です。なお、業種は情報・通信業です。",
+            "role": "issuer_identity",
+            "snapshot_json_sha256": "8ba556d0017d39ded992b8705770084a28ec3f0ff20701b495927191037f20ca"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "http_status": 200,
+            "quote": "当社株主、投資家の皆様からのお問い合わせはメールによるお問い合わせに限定させていただいております。",
+            "role": "contact_channel",
+            "snapshot_json_sha256": "d24f6c2abfdfad4ccc865998e7a114580ef74cabbee9b5eb3a269c00bc648254"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "http_status": 200,
+            "quote": "お問い合わせ先：株式会社BTM IR担当 ir@b-tm.co.jp",
+            "role": "public_ir_email",
+            "snapshot_json_sha256": "d24f6c2abfdfad4ccc865998e7a114580ef74cabbee9b5eb3a269c00bc648254"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "http_status": 200,
+            "quote": "迅速な対応を心がけておりますが、内容によっては回答に時間を要する場合もございます。 お問い合わせ内容によってはお答えできない場合もございます。",
+            "role": "reply_conditions",
+            "snapshot_json_sha256": "d24f6c2abfdfad4ccc865998e7a114580ef74cabbee9b5eb3a269c00bc648254"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "http_status": 200,
+            "quote": "下記に該当するご質問は、IRからの回答を差し控えておりますので、あらかじめご了承ください。 ・ 非公開情報に関するご質問（業績動向など） ・ 金融商品取引法 第166条にある「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） ・ 株式市場の値動きに関するご質問（株価動向、売買手口など） ・ 誹謗中傷に該当するメッセージ（根拠のない悪口、名誉を棄損する言葉など） ・ 営業や勧誘のお問い合わせ（○○サービスのご案内など） ・ 当社サイト以外に記載されている内容についてのお問い合わせ",
+            "role": "conditions",
+            "snapshot_json_sha256": "d24f6c2abfdfad4ccc865998e7a114580ef74cabbee9b5eb3a269c00bc648254"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "http_status": 200,
+            "quote": "また、当社から回答した内容について、その一部または全部を転載、二次利用することはご遠慮ください。",
+            "role": "answer_reuse_conditions",
+            "snapshot_json_sha256": "d24f6c2abfdfad4ccc865998e7a114580ef74cabbee9b5eb3a269c00bc648254"
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/02.json",
+            "url": "https://www.b-tm.co.jp/ir",
+            "retrieved_at": "2026-10-11T14:10:06.831077+00:00",
+            "http_status": 200,
+            "quote": "お問い合わせ",
+            "role": "official_ir_parent_link",
+            "snapshot_json_sha256": "7d76f5377b35d2806f76472e31d0cf33669b529ca17c5f3de82fed07a269b350",
+            "source_link_url": "https://www.b-tm.co.jp/ir/contact.html"
+          }
+        ],
+        "fetches": [
+          {
+            "url": "https://www.b-tm.co.jp/",
+            "final_url": "https://www.b-tm.co.jp/",
+            "snapshot": "evidence/5247/20261011T140918493002Z/01.json",
+            "retrieved_at": "2026-10-11T14:09:35.141230+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.b-tm.co.jp/ir/",
+            "final_url": "https://www.b-tm.co.jp/ir",
+            "snapshot": "evidence/5247/20261011T140918493002Z/02.json",
+            "retrieved_at": "2026-10-11T14:10:06.831077+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.b-tm.co.jp/contact/",
+            "final_url": "https://www.b-tm.co.jp/contact/",
+            "snapshot": "evidence/5247/20261011T140918493002Z/03.json",
+            "retrieved_at": "2026-10-11T14:10:22.606427+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.b-tm.co.jp/ir/faq.html",
+            "final_url": "https://www.b-tm.co.jp/ir/faq.html",
+            "snapshot": "evidence/5247/20261011T140918493002Z/04.json",
+            "retrieved_at": "2026-10-11T14:10:38.593596+00:00",
+            "http_status": 200,
+            "error": null
+          },
+          {
+            "url": "https://www.b-tm.co.jp/ir/contact.html",
+            "final_url": "https://www.b-tm.co.jp/ir/contact.html",
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+            "http_status": 200,
+            "error": null
+          }
+        ],
+        "conditions": [
+          "公式IRお問い合わせは当社株主・投資家の皆様の受付をメールに限定。IR担当の実公開メール ir@b-tm.co.jp を掲示。",
+          "内容により回答が遅れる/答えられない場合がある。非公開情報・金商法166条の重要事実・株式の値動き・誹謗中傷・営業勧誘・当社サイト以外の記載への質問は不回答。",
+          "当社からの回答の一部/全部の転載・二次利用を遠慮するよう明示。",
+          "個人による受付を名指しした条件や必須会社名の指示は保存されたIRメール案内で未確認。"
+        ],
+        "limitations": [
+          "実公開IRメールを確認したが送信/回答実績は未確認。顧客/クラウド/採用フォームをIRメール受付へ借用しない。",
+          "メールの見えるリンク先はmailtoではなく一般問い合わせ内entry6。メール宛先はIR担当の完全一致公開本文から採用し、未取得entry6のnativeフォーム欄は確認済みにしない。",
+          "回答内容の転載/二次利用制約は今後の資料保存・共有方針でも確認する必要がある。"
+        ],
+        "discovery": {
+          "security_code": "5247",
+          "official_url": "https://www.b-tm.co.jp/",
+          "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+          "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+          "discovery_type": "third_party_unverified",
+          "seed_company_name": "ＢＴＭ",
+          "source_data_as_of": "2024-10-08"
+        },
+        "identity_status": "name_or_security_code_observed",
+        "identity_matches": [
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/01.json",
+            "normalized_name": "btm",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/02.json",
+            "normalized_name": "btm",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/03.json",
+            "normalized_name": "btm",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/04.json",
+            "normalized_name": "btm",
+            "security_code_observed": false
+          },
+          {
+            "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+            "normalized_name": "btm",
+            "security_code_observed": false
+          }
+        ],
+        "successful_official_page_count": 5,
+        "http_get_attempt_count": 7,
+        "previous_attempts": [
+          "attempts/5247/20261011T045047531295Z.json",
+          "attempts/5247/20261011T141054072215Z.json"
+        ],
+        "unconfirmed_reason": null,
+        "manual_review": {
+          "reviewer": "codex_audit_consumer_52_batch08",
+          "reviewed_at": "2026-10-11T14:17:36.934645+00:00",
+          "reviewed_at_jst": "2026-10-11T23:17:36.934645+09:00",
+          "notes": "BTM公式IR FAQ04の証券コード5247で現発行体を拘束し、IR親02の実問い合わせ先05で本文の株式会社BTM IR担当とir@b-tm.co.jpを完全一致確認。メールリンクhrefはcontact/entry6でmailtoでないが、例示/製品宛先ではなくIR担当の実公開本文から宛先を採用。05の株主/投資家は受付の対象だが個人という明示はないためnav FOR INVESTORから個人explicitに格上げせずnot_stated。メール限定・内容別回答拒否・返信遅延・回答の転載二次利用を控える指示を保持し、一般contact03のIRカテゴリ/採用/顧客フォームへ受付条件を借用しない。 保存された公開本文・native controls・実hrefのみを個別点検。追加GET/メール/フォーム送信は0件。窓口不存在・返信実績・人間の投資判断承認を示すレビューではない。"
+        }
+      },
+      "new_evidence": [
+        {
+          "snapshot": "evidence/5247/20261011T140918493002Z/04.json",
+          "url": "https://www.b-tm.co.jp/ir/faq.html",
+          "retrieved_at": "2026-10-11T14:10:38.593596+00:00",
+          "http_status": 200,
+          "quote": "東京証券取引所グロース市場、証券コードは5247です。なお、業種は情報・通信業です。",
+          "role": "issuer_identity",
+          "snapshot_json_sha256": "8ba556d0017d39ded992b8705770084a28ec3f0ff20701b495927191037f20ca"
+        },
+        {
+          "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+          "url": "https://www.b-tm.co.jp/ir/contact.html",
+          "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+          "http_status": 200,
+          "quote": "当社株主、投資家の皆様からのお問い合わせはメールによるお問い合わせに限定させていただいております。",
+          "role": "contact_channel",
+          "snapshot_json_sha256": "d24f6c2abfdfad4ccc865998e7a114580ef74cabbee9b5eb3a269c00bc648254"
+        },
+        {
+          "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+          "url": "https://www.b-tm.co.jp/ir/contact.html",
+          "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+          "http_status": 200,
+          "quote": "お問い合わせ先：株式会社BTM IR担当 ir@b-tm.co.jp",
+          "role": "public_ir_email",
+          "snapshot_json_sha256": "d24f6c2abfdfad4ccc865998e7a114580ef74cabbee9b5eb3a269c00bc648254"
+        },
+        {
+          "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+          "url": "https://www.b-tm.co.jp/ir/contact.html",
+          "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+          "http_status": 200,
+          "quote": "迅速な対応を心がけておりますが、内容によっては回答に時間を要する場合もございます。 お問い合わせ内容によってはお答えできない場合もございます。",
+          "role": "reply_conditions",
+          "snapshot_json_sha256": "d24f6c2abfdfad4ccc865998e7a114580ef74cabbee9b5eb3a269c00bc648254"
+        },
+        {
+          "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+          "url": "https://www.b-tm.co.jp/ir/contact.html",
+          "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+          "http_status": 200,
+          "quote": "下記に該当するご質問は、IRからの回答を差し控えておりますので、あらかじめご了承ください。 ・ 非公開情報に関するご質問（業績動向など） ・ 金融商品取引法 第166条にある「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） ・ 株式市場の値動きに関するご質問（株価動向、売買手口など） ・ 誹謗中傷に該当するメッセージ（根拠のない悪口、名誉を棄損する言葉など） ・ 営業や勧誘のお問い合わせ（○○サービスのご案内など） ・ 当社サイト以外に記載されている内容についてのお問い合わせ",
+          "role": "conditions",
+          "snapshot_json_sha256": "d24f6c2abfdfad4ccc865998e7a114580ef74cabbee9b5eb3a269c00bc648254"
+        },
+        {
+          "snapshot": "evidence/5247/20261011T140918493002Z/05.json",
+          "url": "https://www.b-tm.co.jp/ir/contact.html",
+          "retrieved_at": "2026-10-11T14:10:46.808833+00:00",
+          "http_status": 200,
+          "quote": "また、当社から回答した内容について、その一部または全部を転載、二次利用することはご遠慮ください。",
+          "role": "answer_reuse_conditions",
+          "snapshot_json_sha256": "d24f6c2abfdfad4ccc865998e7a114580ef74cabbee9b5eb3a269c00bc648254"
+        },
+        {
+          "snapshot": "evidence/5247/20261011T140918493002Z/02.json",
+          "url": "https://www.b-tm.co.jp/ir",
+          "retrieved_at": "2026-10-11T14:10:06.831077+00:00",
+          "http_status": 200,
+          "quote": "お問い合わせ",
+          "role": "official_ir_parent_link",
+          "snapshot_json_sha256": "7d76f5377b35d2806f76472e31d0cf33669b529ca17c5f3de82fed07a269b350",
+          "source_link_url": "https://www.b-tm.co.jp/ir/contact.html"
+        }
+      ],
+      "todos": [],
+      "reviewed_at_utc": "2026-10-11T14:17:36.934645+00:00",
+      "reviewed_at_jst": "2026-10-11T23:17:36.934645+09:00"
+    }
+  ],
+  "todos": [
+    {
+      "security_code": "5243",
+      "target_url": "https://note.com/note_ir/n/nee66bbe1398e",
+      "parent_url": "https://note.jp/?gs=a8b9aa5992f4be4b7f19dddd3679206b",
+      "parent_snapshot": "evidence/5243/20261011T140854320531Z/01.json",
+      "parent_retrieved_at": "2026-10-11T14:09:57.927855+00:00",
+      "parent_snapshot_json_sha256": "c135dbb4a18a3b8fae5584606fe826eb7961bbc1c6a028bbea7e2b7b8f2592da",
+      "source_link_url": "https://note.com/note_ir/n/nee66bbe1398e",
+      "source_link_href": "https://note.com/note_ir/n/nee66bbe1398e",
+      "source_link_label": "[note]投資家向け質問箱を開設しました",
+      "quote": "[note]投資家向け質問箱を開設しました 28 note IR（5243） 3か月前",
+      "reason": "公式ホームのIR5243記事一覧にある質問箱開設通知の実href。通知記事本文のIR質問受付先/実質問欄/返信先と個人・公開回答方針を点検する候補。robots403で停止したir.note.jpの再取得や迂回は候補にしない。",
+      "requires_current_robots_and_host_policy_check": true,
+      "ir_contact_acceptance_demonstrated": false,
+      "network_requests_performed": 0
+    },
+    {
+      "security_code": "5244",
+      "target_url": "https://www.jig.jp/ir/faq/",
+      "parent_url": "https://www.jig.jp/ir",
+      "parent_snapshot": "evidence/5244/20261011T140906445305Z/05.json",
+      "parent_retrieved_at": "2026-10-11T14:11:01.643416+00:00",
+      "parent_snapshot_json_sha256": "c520868ca881e92dd89067594f521cd3f69fa1605d5fb99d21d8504903171855",
+      "source_link_url": "https://www.jig.jp/ir/faq/",
+      "source_link_href": "/ir/faq/",
+      "source_link_label": "詳細はこちら",
+      "quote": "FAQ 詳細はこちら",
+      "reason": "公式IR親の実FAQ href。金融IRの質問受付/個人条件/返信方針の記載があるかを追加点検できる。取得済みfieldlessフォームを推測URLで再取得する提案ではない。",
+      "requires_current_robots_and_host_policy_check": true,
+      "ir_contact_acceptance_demonstrated": false,
+      "network_requests_performed": 0
+    }
+  ],
+  "issues": [],
+  "status": "closed",
+  "pending_security_codes": [],
+  "prospective_validation": {
+    "validated_at_utc": "2026-10-11T14:17:36.934645+00:00",
+    "canonical_sha256": "16c1faa789b6c04a723f925576047b6119e7b904bd2799b711594ac5d8fb25fd",
+    "evaluated": {
+      "5243": {
+        "security_code": "5243",
+        "terminal": true,
+        "investigation_status": "unconfirmed",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "unconfirmed",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      "5244": {
+        "security_code": "5244",
+        "terminal": true,
+        "investigation_status": "provisional",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "candidate",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      "5246": {
+        "security_code": "5246",
+        "terminal": true,
+        "investigation_status": "confirmed",
+        "official_get_attempted": true,
+        "channel_verified": true,
+        "outreach_suitability": "candidate",
+        "individual_access": "explicitly_allowed",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      "5247": {
+        "security_code": "5247",
+        "terminal": true,
+        "investigation_status": "confirmed",
+        "official_get_attempted": true,
+        "channel_verified": true,
+        "outreach_suitability": "candidate",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      }
+    },
+    "issues": [],
+    "error_count": 0,
+    "warning_count": 0
+  },
+  "closed_at_utc": "2026-10-11T14:18:29.395042+00:00",
+  "closed_at_jst": "2026-10-11T23:18:29.395042+09:00",
+  "summary": {
+    "selected_company_count": 4,
+    "reviewed_company_count": 4,
+    "pending_company_count": 0,
+    "confirmed": 2,
+    "provisional": 1,
+    "unconfirmed": 1,
+    "source_snapshot_count": 17,
+    "old_quote_count_preserved": 22,
+    "old_condition_count_preserved_in_frozen_record": 20,
+    "new_exact_quote_count": 17,
+    "source_bound_todo_count": 2,
+    "network_requests": 0,
+    "external_messages_sent": 0,
+    "source_modified_count": 0,
+    "code_modified_count": 0,
+    "other_record_modified_count": 0,
+    "human_investment_approval_inferred": false
+  },
+  "final_validation": {
+    "validated_at_utc": "2026-10-11T14:18:29.395042+00:00",
+    "canonical_sha256": "16c1faa789b6c04a723f925576047b6119e7b904bd2799b711594ac5d8fb25fd",
+    "evaluated": {
+      "5243": {
+        "security_code": "5243",
+        "terminal": true,
+        "investigation_status": "unconfirmed",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "unconfirmed",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      "5244": {
+        "security_code": "5244",
+        "terminal": true,
+        "investigation_status": "provisional",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "candidate",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      "5246": {
+        "security_code": "5246",
+        "terminal": true,
+        "investigation_status": "confirmed",
+        "official_get_attempted": true,
+        "channel_verified": true,
+        "outreach_suitability": "candidate",
+        "individual_access": "explicitly_allowed",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      "5247": {
+        "security_code": "5247",
+        "terminal": true,
+        "investigation_status": "confirmed",
+        "official_get_attempted": true,
+        "channel_verified": true,
+        "outreach_suitability": "candidate",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      }
+    },
+    "issues": [],
+    "error_count": 0,
+    "warning_count": 0
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "security_code": "6072",
+  "company_name": "地盤ネットホールディングス",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "サービス業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://jiban-holdings.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T16:16:03.974247+00:00",
+  "completed_at": "2026-10-11T16:17:23.420235+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/6072/20261011T161603974294Z/01.json",
+      "url": "https://erth-grp.co.jp/",
+      "retrieved_at": "2026-10-11T16:17:08.286837+00:00",
+      "quote": "株式会社ERTH Group",
+      "role": "saved_scope_review"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://jiban-holdings.jp/",
+      "final_url": "https://erth-grp.co.jp/",
+      "snapshot": "evidence/6072/20261011T161603974294Z/01.json",
+      "retrieved_at": "2026-10-11T16:17:08.286837+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "旧seedの実301移転先は取得済みだが会社名14字だけで現JPX発行体の同一性と金融IR受付は未確認。実リンクなしのため追加URLを推測しない。"
+  ],
+  "discovery": {
+    "security_code": "6072",
+    "official_url": "https://jiban-holdings.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "地盤ネットホールディングス",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "unverified",
+  "identity_matches": [],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "issuer_unverified",
+  "http_get_attempt_count": 5,
+  "previous_attempts": [
+    "attempts/6072/20261011T045047568963Z.json",
+    "attempts/6072/20261011T161723420385Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_manufacturing",
+    "reviewed_at": "2026-10-11T16:29:45.335648+00:00",
+    "notes": "旧公式seed jiban-holdings.jpの保存HTTP301はerth-grp.co.jpへredirectするが、現物抽出本文は『株式会社ERTH Group』14字だけ、links/forms0。JPX地盤ネットホールディングスの会社名/証券コード/正式移行案内をこの本文では実証できず旧identity unverifiedを保持し、IR受付もU/outreach未確認とする。redirectがあるだけで現JPX発行体同一性やIRメール/フォームを確認済みにしない。元seed・redirect・GET/time全履歴を保全、金融IR窓口なしとは断定しない。",
+    "saved_evidence_only": true,
+    "attempted_at_reviewed": "2026-10-11T16:16:03.974247+00:00",
+    "reviewed_snapshot_count": 1,
+    "original_evidence_sha256": {
+      "evidence/6072/20261011T161603974294Z/01.json": "5444e2954373b720726d2f51397dc589dbdcfe6132db0b772d8a2525f34cf579",
+      "evidence/6072/01.json": "7d69bd035af47a7fe7e70d04002c31954dcafb0816540202fca9e8b95871693d",
+      "evidence/6072/20261011T045059485260Z/01.json": "1bea17c470fe91e78bfca958e2e861ffc79e4e3b46b1930b3a18e21291b1ccbe"
+    },
+    "original_attempt_sha256": {
+      "attempts/6072/20261011T045047568963Z.json": "f8d7b9bc5d72cfa5f8a58d6ed34172a397969b77fc33c48bdd3a53cb31658e33",
+      "attempts/6072/20261011T161723420385Z.json": "93c5e92459d95edeca7a8be3fe7aecd8746334baced94d311d7cf7c5a056e1d4"
+    },
+    "recursive_reference_sha256_frozen": true
+  },
+  "previous_classification_before_manual_review": {
+    "investigation_status": "unconfirmed",
+    "verification_level": "none",
+    "contact_url": null,
+    "channels": [],
+    "public_ir_emails": [],
+    "individual_access": "not_stated",
+    "outreach_suitability": "unconfirmed",
+    "limitations": [
+      "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。"
+    ],
+    "unconfirmed_reason": "official_channel_not_demonstrated",
+    "identity_status": "unverified",
+    "identity_matches": []
+  },
+  "previous_conditions_before_manual_review": []
+}

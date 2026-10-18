@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T14:10:52.491171+00:00",
+  "status": "minimal_model_routing_documentation_correction_frozen",
+  "edited_document": "docs/model-routing-inputs.md",
+  "before": {
+    "file": "research/ir-model-routing-documentation-followup-2026-10-15/source-before.md",
+    "sha256": "102b4606a66b2ccad20bf5d21baedf28352f300aac2368f793537884e4b4ee42",
+    "bytes": 14911
+  },
+  "after": {
+    "file": "research/ir-model-routing-documentation-followup-2026-10-15/source-after.md",
+    "sha256": "9eae0551887923d1f0a36478c8182f0d8d733e79b6c7c501d3cb6b120db88cb3",
+    "bytes": 16220,
+    "current_document_byte_equal": true
+  },
+  "change_scope": [
+    {
+      "id": "MRD01",
+      "operation": "replace_status_prose",
+      "before": "`eps_multiple`、`dcf`、`dcf_explicit_terminal`、`dividend_discount`",
+      "after": "`eps_multiple`、`dcf`、`dcf_explicit_terminal`、`dcf_explicit_terminal_equity_bridge`、`dividend_discount`",
+      "before_character_start": 794,
+      "after_character_start": 794,
+      "reason": "Correct the implementation-name list to include the already implemented equity bridge; template/schema not modified."
+    },
+    {
+      "id": "MRD02",
+      "operation": "replace_status_prose",
+      "before": "現在の通常評価器には `eps_multiple` と `dcf` がある。前者は正のEPSとPER、後者は会社全体の年末アンレバードFCF予測と、現金・負債・株数による株主価値への調整を入力する。この通常DCF欄へ、銀行の株主CFや配当をそのまま入れない。",
+      "after": "現在の評価器は上記5つのmethodに対応する。`eps_multiple` は正のEPSとPER、従来の `dcf` は会社全体の年末アンレバードFCF予測と、現金・負債・株数による株主価値への調整を入力する。この通常DCF欄へ、銀行の株主CFや配当をそのまま入れない。",
+      "before_character_start": 6043,
+      "after_character_start": 6081,
+      "reason": "Remove the obsolete two-method-only status while retaining EPS/legacy DCF meaning."
+    },
+    {
+      "id": "MRD03",
+      "operation": "replace_status_prose",
+      "before": "- 規制資本再投資FCFE、配当割引、株主超過収益等の金融機関用評価。",
+      "after": "- 規制資本再投資FCFE、株主超過収益等の金融機関用専用処理。DDMの実装を、規制資本FCFEやその終価・株価換算までの実装と取り違えない。",
+      "before_character_start": 6211,
+      "after_character_start": 6846,
+      "reason": "DDM is implemented; regulatory-capital FCFE/excess-return dedicated processing remains outside the implementation."
+    },
+    {
+      "id": "MRD04",
+      "operation": "insert_scope_followup",
+      "after": "\n\n2026-10-15の実装状況の追補：次は [valuation.py](../src/ir_agent/valuation.py) に実装済みの純計算であり、配当割引を未実装とは扱わない。\n\n- [`dividend_discount`](financial-equity-valuation-spec.md)：明示した将来の年末DPS列と終価翌期DPSを、予測期・安定期の株主資本コストで扱うDDM。会社全体FCF・WACC・現金/負債/株数の調整とは別の1株価値計算である。\n- [`dcf_explicit_terminal`](explicit-terminal-fcff-spec.md)：明示した終価翌期FCFFを使う、既存と同じ単一割引率の別method。翌期額へ税・再投資・成長を再適用しない。\n- [`dcf_explicit_terminal_equity_bridge`](explicit-equity-bridge-spec.md)：明示終価DCFに、現金・非営業資産・負債・少数持分を分けた株主価値調整を持つ別method。\n\nこれらの計算成功は、予測の妥当性、分配の持続性、規制資本、希薄化、簿価/時価・持分範囲や重複排除の確認ではない。各仕様の入力範囲と適用上の不足を別に記録する。旧method・研究ラベル・24項目の事実契約は変更しない。",
+      "after_character_start": 6217,
+      "reason": "Link the three existing specifications and distinguish pure calculation from forecast/capital/dilution/applicability verification."
+    }
+  ],
+  "supporting_refs": {
+    "src/ir_agent/valuation.py": {
+      "file": "src/ir_agent/valuation.py",
+      "sha256": "fa2df871f55935d7d8fdf130595c8606fbbcba15bc42d8e92e76b2b2d46c92ec"
+    },
+    "docs/financial-equity-valuation-spec.md": {
+      "file": "docs/financial-equity-valuation-spec.md",
+      "sha256": "b151921f5086d2c1de0cf7f15b746134cbfd1a0f62652ae2eb1d81d3730e5c79"
+    },
+    "docs/explicit-terminal-fcff-spec.md": {
+      "file": "docs/explicit-terminal-fcff-spec.md",
+      "sha256": "b9f95fafd9a14a46e337bb9d345c10313c7af51843f542bcf482fd46b3ae8ffb"
+    },
+    "docs/explicit-equity-bridge-spec.md": {
+      "file": "docs/explicit-equity-bridge-spec.md",
+      "sha256": "877723bc70071ecb56480bebe2e662cf1364c08d61c8f450cfc41bf0971872cd"
+    },
+    "examples/model-routing-assessment.template.json": {
+      "file": "examples/model-routing-assessment.template.json",
+      "sha256": "3866113ad05c51015cabe3662eda90948b70ec7eaa170eaf3bcaaac90825b375"
+    }
+  },
+  "implemented_pure_calculations": {
+    "accepted_method_names": [
+      "eps_multiple",
+      "dcf",
+      "dividend_discount",
+      "dcf_explicit_terminal",
+      "dcf_explicit_terminal_equity_bridge"
+    ],
+    "dividend_discount": "Explicit future year-end DPS and terminal-next DPS with forecast/stable equity costs; no inferred FCFE/capital/dilution model.",
+    "dcf_explicit_terminal": "Explicit terminal-next company-wide FCFF; same single discount rate; no repeated tax/reinvestment/growth.",
+    "dcf_explicit_terminal_equity_bridge": "Separate cash/non-operating assets/debt/minority interests before per-share value; applicability remains external."
+  },
+  "not_implemented_as_dedicated_processing": [
+    "regulatory-capital reinvestment FCFE and FCFE terminal/per-share valuation",
+    "financial shareholder excess-return dedicated engine",
+    "automatic acquisition and internally consistent full-cycle earnings/reinvestment/ROC/financing normalization",
+    "young-growth revenue/margin transition, funding/dilution and survival/failure adjustment"
+  ],
+  "unchanged_boundaries": [
+    "24facts/research labels/task dependency and input-field contracts",
+    "financial PER is not categorically banned",
+    "no numerical investment criteria, forecasts, probabilities or policy adoption added",
+    "explicit arrays and calculator success do not verify inputs or dedicated financial/growth applicability"
+  ],
+  "diff_unified": "--- source-before.md\n+++ source-after.md\n@@ -8,7 +8,7 @@\n \n 1社・1評価時点につきテンプレートを複製する。`company.security_code` は英数字の証券コード文字列、`company.name` は対象主体、`as_of` は評価対象のタイムゾーン付き日時、`assessment_recorded_at` は実際の記録日時とする。未設定の値を現在時刻や架空企業で埋めない。\n \n-`requested_valuation_method` は点検しようとする方法を記録する欄で、選択が未定なら `null`。現在の評価器の実装名を使う場合は `eps_multiple`、`dcf`、`dcf_explicit_terminal`、`dividend_discount`。研究上の点検ラベルを新しい計算methodとして渡さない。`cycle-margin` と `stable-reinvestment` は別の中間計算であり、この欄へ新しいvaluation methodとして投入しない。\n+`requested_valuation_method` は点検しようとする方法を記録する欄で、選択が未定なら `null`。現在の評価器の実装名を使う場合は `eps_multiple`、`dcf`、`dcf_explicit_terminal`、`dcf_explicit_terminal_equity_bridge`、`dividend_discount`。研究上の点検ラベルを新しい計算methodとして渡さない。`cycle-margin` と `stable-reinvestment` は別の中間計算であり、この欄へ新しいvaluation methodとして投入しない。\n \n `company_source_registry` には**会社についての根拠**を登録する。著者の評価方法の出典は別の `adopted_research_policy` と `method_reference_ids` に保持する。Damodaran論文が存在しても、その会社が金融仲介を行う証拠にはならない。\n \n@@ -89,11 +89,19 @@\n \n ## モデルの実装状況と禁止する取り違え\n \n-現在の通常評価器には `eps_multiple` と `dcf` がある。前者は正のEPSとPER、後者は会社全体の年末アンレバードFCF予測と、現金・負債・株数による株主価値への調整を入力する。この通常DCF欄へ、銀行の株主CFや配当をそのまま入れない。\n+現在の評価器は上記5つのmethodに対応する。`eps_multiple` は正のEPSとPER、従来の `dcf` は会社全体の年末アンレバードFCF予測と、現金・負債・株数による株主価値への調整を入力する。この通常DCF欄へ、銀行の株主CFや配当をそのまま入れない。\n+\n+2026-10-15の実装状況の追補：次は [valuation.py](../src/ir_agent/valuation.py) に実装済みの純計算であり、配当割引を未実装とは扱わない。\n+\n+- [`dividend_discount`](financial-equity-valuation-spec.md)：明示した将来の年末DPS列と終価翌期DPSを、予測期・安定期の株主資本コストで扱うDDM。会社全体FCF・WACC・現金/負債/株数の調整とは別の1株価値計算である。\n+- [`dcf_explicit_terminal`](explicit-terminal-fcff-spec.md)：明示した終価翌期FCFFを使う、既存と同じ単一割引率の別method。翌期額へ税・再投資・成長を再適用しない。\n+- [`dcf_explicit_terminal_equity_bridge`](explicit-equity-bridge-spec.md)：明示終価DCFに、現金・非営業資産・負債・少数持分を分けた株主価値調整を持つ別method。\n+\n+これらの計算成功は、予測の妥当性、分配の持続性、規制資本、希薄化、簿価/時価・持分範囲や重複排除の確認ではない。各仕様の入力範囲と適用上の不足を別に記録する。旧method・研究ラベル・24項目の事実契約は変更しない。\n \n 次は研究方針として必要でも、専用エンジンとして実装済みとはしていない。\n \n-- 規制資本再投資FCFE、配当割引、株主超過収益等の金融機関用評価。\n+- 規制資本再投資FCFE、株主超過収益等の金融機関用専用処理。DDMの実装を、規制資本FCFEやその終価・株価換算までの実装と取り違えない。\n - 履歴を取得し、利益・再投資・資本収益・資金調達を整合的に正常化する処理。\n - 若い成長企業の売上・利益率の移行、追加資金・希薄化、同じ価値範囲での生存・失敗調整。\n \n",
+  "validation": {
+    "checks": [
+      "source_before_full_bytes_match_preedit_SHA",
+      "source_after_full_bytes_match_current_document",
+      "three_replacements_plus_one_insertion_exactly_recover_before_bytes",
+      "all_other_document_bytes_preserved",
+      "24facts_template_unchanged",
+      "fact_contract_tasks_research_labels_sections_byte_identical",
+      "five_methods_match_current_valuation_AST",
+      "three_spec_refs_and_valuation_and_template_SHA_unchanged",
+      "regulatory_capital_FCFE_and_growth_processing_still_not_claimed_implemented",
+      "no_engine_or_test_execution"
+    ],
+    "finite_check_count": 10,
+    "all_passed": true,
+    "supporting_reference_files_unchanged": true,
+    "template_fact_count": 24,
+    "production_changes": 0,
+    "test_changes_or_runs": 0,
+    "DB_accesses": 0,
+    "GETs": 0,
+    "other_docs_changed": 0,
+    "old_research_files_changed": 0
+  },
+  "stability": "These snapshots and review are fixed at completion; later corrections must be saved separately. No old code/results are reinterpreted."
+}

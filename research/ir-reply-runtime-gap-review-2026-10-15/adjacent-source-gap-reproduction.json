@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "status": "three_finite_memory_probes_complete",
+  "cases": [
+    {
+      "case": "backdated_public_new_reply_on_current_corrected_dependency",
+      "applied": false,
+      "own_information_status": "public_clarification",
+      "dependency_reply_ids": [
+        "demo-reply-cost"
+      ],
+      "thesis_unchanged": true,
+      "old_source_and_new_reply_unchanged": true,
+      "exact_request_retry_no_new_write": true,
+      "status": "held_for_review"
+    },
+    {
+      "case": "original_metadata_unclear_no_correction_contracted_question",
+      "correction_hold_rows": {},
+      "pure_preflight": "needs_review",
+      "notes": "Pure source-publicity guards already hold; correction overlay alone is not a complete source-publicity validator."
+    },
+    {
+      "case": "original_metadata_unclear_no_correction_legacy_question",
+      "before_thesis_version": 3,
+      "after_thesis_version": 4,
+      "applied": true,
+      "own_information_status": "public_clarification",
+      "action": "unresolved",
+      "decision_status": "missing_decision_contract",
+      "dependency_hold": null,
+      "source_metadata_status": "unclear",
+      "review_classification_rows": 0,
+      "classification": "adjacent pre-existing legacy source-publicity gap, not a regression of the new classification-correction gate"
+    }
+  ],
+  "execution": {
+    "memory_SQLite_cases": 3,
+    "actual_DB_accesses": 0,
+    "new_GETs": 0,
+    "production_or_existing_test_or_research_edits": 0,
+    "full_suite_runs": 0
+  }
+}

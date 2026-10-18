@@ -1,0 +1,115 @@
+{
+  "recorded_at": "2026-10-16T06:30:02.022700+00:00",
+  "company_id": "jp:2410",
+  "status": "finite_initial_public_review_frozen_awaiting_root_acceptance",
+  "source_id": "case-public:cbc52b87ce1c1931be5fcf21632fc68104c14c1b0e7f03a9bdc2b7de5a7f6d3c",
+  "native_source_SHA": "5584ae0700043dc236d8e35f75b553da85546f1172415f404324bb175c20f8a9",
+  "reviewer": "Codex initial-public-review worker; issuer is original author",
+  "financial_inputs_verified": false,
+  "findings": [
+    {
+      "id": "F1",
+      "basis_quote_ids": [
+        "Q1-cover-accounting-issuer-publication",
+        "Q2-reported-cumulative-period-summary-EPS",
+        "Q8-actual-thousand-yen-precision"
+      ],
+      "meaning": "日本基準非連結、Q3累計2025-10-01〜2026-06-30。売上14243525/営業1323906/経常1336744/四半期純利益915373千円はp4本文の表示値。p1は百万円未満切捨で14243/1323/1336/915、基本EPS173.51円。精度/単位を混ぜず、Q3単四半期や連結親会社NIに変えない。"
+    },
+    {
+      "id": "F2",
+      "basis_quote_ids": [
+        "Q7-company-plan-miss-vs-YoY-growth",
+        "Q4-issuer-FY-guidance-period",
+        "Q12-dated-guide-unchanged",
+        "Q6-guidance-uncertainty-and-no-review"
+      ],
+      "meaning": "前年同期比は増収増益・会社表現で過去最高だが、期初想定より採用回復が遅れ当時会社計画比は売上/利益未達。YoY増と計画未達は別基準。通期2025-10-01〜2026-09-30の会社予想は売上20000/営業1890/経常1900/純利益1272百万円、EPS242.32円、2025-11-12公表から据置という7/31時点観測。旧原版未読、現在10/16の最新guideや達成実績/保証にせず、進捗率・残期逆算を生成しない。"
+    },
+    {
+      "id": "F3",
+      "basis_quote_ids": [
+        "Q9-single-segment-business-type-measure",
+        "Q10-newgraduate-placement-exit-plan",
+        "Q11-IT-staffing-business-ordinary-profit-and-mechanism"
+      ],
+      "meaning": "人材サービス単一セグメントで5つの事業種類別記載、利益は事業別経常利益で全社営業利益と異なる。新卒紹介売上118650/経常△48277千円、2026/9末終了予定は当時の予定で現在の実施確認ではない。IT派遣売上6906442/事業別経常266089千円、登録/稼働/採用/退職抑制の会社説明を保持し正常利益/将来改善は推定しない。"
+    },
+    {
+      "id": "F4",
+      "basis_quote_ids": [
+        "Q3-dividend-reported-vs-guidance-ordinary-special",
+        "Q5-historical-share-denominators"
+      ],
+      "meaning": "当期中間配当0.00円表示は支払確認と区別。期末/年計160.00円は会社予想、普通140円+特別20円を原文の内訳として保持し継続DPSへ置換しない。6/16通知原版未取得。発行済5497921/自己211294/累計平均5275528株はQ3当時で現在株数ではない。EPSから現在分母を逆算しない。"
+    }
+  ],
+  "known_do_not_reask": [
+    "当時日本基準非連結の累計対象期/表示単位とFY会社予想期間",
+    "YoY増益と会社計画未達の比較軸",
+    "単一セグメントと事業種類別経常利益",
+    "当時の新卒紹介終了予定と特別配当内訳"
+  ],
+  "remaining_owners": {
+    "public_unread_or_updates": [
+      "未読短信6/7/8/9のBS/PL/CF/segment/subsequent-note scopeを会社未回答/不存在にしない",
+      "7/31後の通知・実施・guide/株式basisを未確認、説明補足の作成有表記から内容読了にしない",
+      "保存root10/1監理銘柄告知はliteral所在のみ。本文・指定理由・現在指定/上場/株式流動性は未取得未確認で、この初回レビューは現状の投資可能性を認定しない。"
+    ],
+    "company_definition": "同条件比較に必要な定義が公開未読を除いて残る場合だけ会社確認候補。今回新IR問を作成しない。",
+    "author_forecast_investor_valuation": "正常利益/将来売上利益・税/再投資/CF、倍率/価格/リスクは未採用。"
+  },
+  "saved_later_notice_locator": {
+    "snapshot": "research/ir-contacts-universe-2026-10-11/evidence/2410/20261011T044759605050Z/01.json",
+    "pointer": "/links/81",
+    "value": {
+      "url": "https://cdc.type.jp/uploads/ir/irnews/common/20261001_1.pdf",
+      "label": "IRニュース 2026.10.01 2026.10.01 当社株式の監理銘柄（審査中）指定に関するお知らせ"
+    },
+    "body_obtained": false,
+    "independent_event_or_current_status_confirmation": false
+  },
+  "external_author_candidate": {
+    "file": "research/ir-contacts-universe-2026-10-11/evidence/2410/20261011T044759605050Z/02.json",
+    "sha256": "2d03c631b17f98d2eba3b876657953a096bfbc3c4398a0f078142fc8327d921e",
+    "pointer": "/links/73",
+    "value": {
+      "url": "https://sharedresearch.jp/ja/2410",
+      "label": "シェアードリサーチ社による当社の調査レポートはこちら SharedResearch"
+    },
+    "raw_href_available": false,
+    "status": "Existing saved candidate only; exacthost sharedresearch.jp held; body0; authorship/forecast/valuation unverified; not reopened."
+  },
+  "boundaries": {
+    "source_count": 1,
+    "full_PDF_text_pages": 9,
+    "semantic_image_pages": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "full_document_read": false,
+    "first_saved_at": null,
+    "actual_DB_saved": false,
+    "financial_thesis": null,
+    "model": null,
+    "financial_branches": null,
+    "IR_value": "unproven",
+    "send_ready": false,
+    "investment_ranking": false
+  },
+  "operations": {
+    "new_GETs": 3,
+    "maximum_GETs": 4,
+    "unused_GETs": 1,
+    "retries": 0,
+    "redirect_follow": 0,
+    "DB_write": 0,
+    "Store": 0,
+    "new_financial_facts": 0,
+    "model_or_forecast_adoption": 0,
+    "IR_draft_or_send": 0
+  },
+  "stop": "Necessary initial original acquired; no fourth GET, no next pages, author source or notice expansion. Await root image/meaning acceptance."
+}

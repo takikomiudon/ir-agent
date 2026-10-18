@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "projection_version": 1,
+  "capacity_request": {
+    "schema_version": 1,
+    "window": {
+      "started_at": "2026-10-15T00:00:00+00:00",
+      "ended_at": "2026-10-15T03:21:46.649063+00:00"
+    },
+    "measurements": []
+  },
+  "audit": {
+    "as_of": "2026-10-15T03:21:46.649063+00:00",
+    "measurement_scope": "lease_ownership",
+    "table_status": {
+      "jobs": "present",
+      "job_attempts": "present",
+      "job_attempt_events": "present"
+    },
+    "ledger_status": "available",
+    "snapshot": {
+      "database_path": "/workspace/ir-agent/data/ir-research-2026-10-15.sqlite3",
+      "read_only": true,
+      "query_only": true,
+      "sqlite_data_version": 2,
+      "committed_snapshot_sha256": "98ac4ba8434f95df76c0f97d3ff332a3f896de45d8860b0de06d73f7430a20ce",
+      "write_count": 0
+    },
+    "counts": {
+      "stored_header_rows_current_snapshot": 0,
+      "not_yet_visible_headers": 0,
+      "projected_attempts": 0,
+      "excluded_attempts": 0,
+      "unmeasured_jobs_current_snapshot": 3,
+      "orphan_events": 0
+    },
+    "exclusion_counts": {},
+    "attempts": [],
+    "orphan_events": [],
+    "unmeasured_jobs": [
+      {
+        "job_id": "intake-4918ebc6411f6a97b00d4cae",
+        "company_id": "jp:3774",
+        "current_snapshot_status": "completed",
+        "current_snapshot_completed_at": "2026-10-15T01:47:17.740814+00:00",
+        "current_attempts_counter": 1,
+        "reason": "no_saved_attempt_header"
+      },
+      {
+        "job_id": "intake-91ec86a03c71260a4ddbcd6f",
+        "company_id": "jp:5988",
+        "current_snapshot_status": "completed",
+        "current_snapshot_completed_at": "2026-10-15T01:47:17.780127+00:00",
+        "current_attempts_counter": 1,
+        "reason": "no_saved_attempt_header"
+      },
+      {
+        "job_id": "intake-a2947b4baf6233e686b1d78e",
+        "company_id": "jp:5480",
+        "current_snapshot_status": "completed",
+        "current_snapshot_completed_at": "2026-10-15T02:51:37.576454+00:00",
+        "current_attempts_counter": 1,
+        "reason": "no_saved_attempt_header"
+      }
+    ],
+    "limitations": [
+      "Elapsed intervals measure lease ownership, not active analysis, process termination, model usage or complete company research. Active seconds, tokens and cost remain null.",
+      "Only saved and observed events visible at as_of are projected. Passing a planned lease deadline does not append an expiry or supply a terminal event.",
+      "Job status/counters and unmeasured-job inventory describe the current committed DB snapshot, not reconstructed job states at historical as_of.",
+      "first_saved_at is the recording operation time, not proof of the exact outer-transaction commit time. Data version/fingerprint identify this read; they do not reconstruct past concurrent visibility.",
+      "No company-count limit, worker-scaling estimate, operator budget, likelihood, model execution or financial analysis is supplied."
+    ]
+  }
+}

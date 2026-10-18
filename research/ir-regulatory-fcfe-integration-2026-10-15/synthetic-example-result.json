@@ -1,0 +1,129 @@
+{
+  "status": "intermediate_only",
+  "adoption": "unresolved",
+  "request": {
+    "assessment": {
+      "capital_definition_rationale": null,
+      "capital_target_and_buffer_rationale": null,
+      "equity_claim_scope_rationale": null,
+      "forecast_comparability_rationale": null,
+      "source_refs": []
+    },
+    "basis": {
+      "amount_unit": "millions",
+      "company_id": "illustrative-bank",
+      "currency": "USD",
+      "entity_scope": "consolidated group",
+      "equity_scope": "common equity holders"
+    },
+    "method": "financial_regulatory_fcfe",
+    "rows": [
+      {
+        "net_income": {
+          "basis": {
+            "amount_unit": "millions",
+            "company_id": "illustrative-bank",
+            "currency": "USD",
+            "entity_scope": "consolidated group",
+            "equity_scope": "common equity holders"
+          },
+          "concept": "net_income_to_equity_holders",
+          "data_kind": "synthetic_example",
+          "measurement_basis": "Net income under supplied income accounting",
+          "period": {
+            "end": "2030-12-31",
+            "kind": "full_fiscal_year",
+            "label": "illustrative-year1",
+            "start": "2030-01-01"
+          },
+          "rationale": "Illustrative explicit input, not a real forecast.",
+          "source_refs": [],
+          "value": "15"
+        },
+        "period": {
+          "end": "2030-12-31",
+          "kind": "full_fiscal_year",
+          "label": "illustrative-year1",
+          "start": "2030-01-01"
+        },
+        "regulatory_capital_reinvestment": {
+          "basis": {
+            "amount_unit": "millions",
+            "company_id": "illustrative-bank",
+            "currency": "USD",
+            "entity_scope": "consolidated group",
+            "equity_scope": "common equity holders"
+          },
+          "concept": "regulatory_capital_reinvestment",
+          "data_kind": "synthetic_example",
+          "measurement_basis": "Explicit capital-policy reinvestment, not a total capital balance",
+          "period": {
+            "end": "2030-12-31",
+            "kind": "full_fiscal_year",
+            "label": "illustrative-year1",
+            "start": "2030-01-01"
+          },
+          "rationale": "Illustrative explicit input, not a real forecast.",
+          "source_refs": [],
+          "value": "10"
+        }
+      }
+    ]
+  },
+  "request_sha256": "8c2d014fb706ca0fd8f0bc906100e224f4c981d3baba80d15a50bc233f477661",
+  "basis": {
+    "amount_unit": "millions",
+    "company_id": "illustrative-bank",
+    "currency": "USD",
+    "entity_scope": "consolidated group",
+    "equity_scope": "common equity holders"
+  },
+  "arithmetic": [
+    {
+      "period": {
+        "end": "2030-12-31",
+        "kind": "full_fiscal_year",
+        "label": "illustrative-year1",
+        "start": "2030-01-01"
+      },
+      "net_income": "15",
+      "regulatory_capital_reinvestment": "10",
+      "fcfe": "5",
+      "working_precision_digits": 80
+    }
+  ],
+  "calculation": {
+    "formula": "FCFE = NetIncome - ReinvestmentInRegulatoryCapital",
+    "rounding": "ROUND_HALF_UP",
+    "display_quantization": null,
+    "author_reference": {
+      "author": "Aswath Damodaran",
+      "title": "Valuing Financial Service Firms",
+      "year": 2009,
+      "source_id": "damodaran.financial-services.2009",
+      "pdf_page": 22,
+      "pdf_sha256": "2e1b2d45a8d04ab14b8ed48825b64e7765dd896d59e1db34cce32ded23d07472"
+    },
+    "project_adaptation": "Strict metadata and an initial explicit annual-row scope; not a universal investor rule."
+  },
+  "assessment_fields_unset": [
+    "assessment.capital_definition_rationale",
+    "assessment.capital_target_and_buffer_rationale",
+    "assessment.equity_claim_scope_rationale",
+    "assessment.forecast_comparability_rationale"
+  ],
+  "verification": {
+    "source_references": "unverified",
+    "basis_and_equity_attribution": "unverified",
+    "annual_period_and_comparability": "unverified",
+    "required_capital_and_policy": "unverified",
+    "forward_reinvestment_and_forecast": "unverified",
+    "funding_and_distribution": "unverified"
+  },
+  "limitations": [
+    "Measurement definitions for income and capital remain distinct. Equal metadata does not prove equivalent accounting, regulatory or equity claims.",
+    "Values and source/quote references are caller declarations. Empty references or written rationales do not verify a forecast or adopt an input.",
+    "Signed NI, reinvestment and FCFE are retained. Negative reinvestment is not certified releasable capital; negative FCFE is not clamped or a sell instruction.",
+    "No capital ratio/RWA/balance-difference calibration, terminal value, discounting, equity/share value, automatic growth/dilution, IR action or order is performed."
+  ]
+}

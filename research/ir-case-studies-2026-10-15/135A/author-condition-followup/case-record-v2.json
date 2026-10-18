@@ -1,0 +1,947 @@
+{
+  "record_type": "135A_author_conditions_vs_latest_saved_issuer_KPIs",
+  "recorded_at": "2026-10-15T06:00:18.725090+00:00",
+  "company_id": "jp:135A",
+  "company_name": "株式会社VRAIN Solution",
+  "status": "completed_single_case_KPI_reconciliation_no_investment_adoption",
+  "research_only": true,
+  "scope": {
+    "new_GETs": 0,
+    "database_reads_or_writes": 0,
+    "production_or_registry_changes": false,
+    "new_normalizer_calls": 0,
+    "existing_artifacts_modified": false,
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "model_adopted": false,
+    "price_or_trade_decisions": null,
+    "IR_question_registered": false
+  },
+  "attribution_and_time": {
+    "author": "株式会社AENTRO / AENTRO Research",
+    "author_report_display_date": "2026-05-11",
+    "author_report_published_at": null,
+    "individual_author": null,
+    "author_revision_history_verified": false,
+    "sponsored_report": true,
+    "sponsorship_note": "既存外部調査の保存原典が対象会社委託/報酬を開示。著者の責任帰属と独立検証は別。",
+    "issuer_interim_material_date": "2026-10-14",
+    "issuer_prepared_Q1_QA_date": "2026-07-14",
+    "FAQ_publication_or_update_date": null,
+    "comparison_recorded_at": "2026-10-15T06:00:18.725090+00:00",
+    "point_in_time_limit": "著者表示5/11と会社10/14の資料を双方10/15保存後に照合。5月又は8月末に保存済みだったという前向き検証ではない。",
+    "author_period_wording_limit": "著者本文のFY27 Q1（2026年4-7月期）という既存確認の不整合を正式期へ自動訂正しない。以下の最新期は会社の正式短信に従う。",
+    "latest_scope": "保存済み10/14中間説明49頁と正式短信の範囲。全公開資料/全改訂版の網羅は未確認。"
+  },
+  "issuer_period_basis": {
+    "accounting_basis": "日本基準",
+    "reporting_scope": "非連結",
+    "interim_cumulative_start": "2026-03-01",
+    "interim_cumulative_end": "2026-08-31",
+    "current_full_year_company_forecast_start": "2026-03-01",
+    "current_full_year_company_forecast_end": "2027-02-28",
+    "quote_id": "statement-period-basis-sales-denominator",
+    "period_caution": "会社のQ2累計とQ2単独を原資料の列として区別する。年間に外挿せず、著者FY28/FY29の厳密開始終了日・CAGR基準期は補わない。"
+  },
+  "latest_observed_KPIs": [
+    {
+      "id": "cumulative-customer-count",
+      "concept": "累計取引社数",
+      "author_related_quote_id": "author-monitoring-benchmarks",
+      "issuer_quote_ids": [
+        "issuer-customer-repeat-values-graph-and-formula"
+      ],
+      "reported_current": {
+        "raw_value": "394",
+        "raw_unit": "社",
+        "period_label": "FY27 2Q",
+        "measurement": "期末累計ストックの受注ベース。年度内売上計上済み顧客数/継続顧客社数ではない。"
+      },
+      "reported_comparisons": [
+        {
+          "period_label": "FY27 1Q",
+          "raw_value": "358",
+          "raw_unit": "社"
+        },
+        {
+          "period_label": "FY26 4Q",
+          "raw_value": "337",
+          "raw_unit": "社"
+        },
+        {
+          "period_label": "前期末より",
+          "raw_value": "＋57",
+          "raw_unit": "社",
+          "directly_published": true
+        }
+      ],
+      "comparability": "著者FY26基準337社・受注ベースと最新図のFY26 4Q337社が表示上対応。FY27中間394という観測点までは比較可能。顧客IDの集約（法人/工場/グループ）と除外/重複の完全定義は未確認。",
+      "not_created": [
+        "半年増分の年率化",
+        "FY29までの新規ペース/達成確率",
+        "未公表のQ2増分社数",
+        "社数から売上/EPSへの係数"
+      ]
+    },
+    {
+      "id": "continuing-customer-sales-share",
+      "concept": "継続顧客売上高と売上高全体に占める割合",
+      "issuer_quote_ids": [
+        "issuer-customer-repeat-values-graph-and-formula",
+        "issuer-cumulative-income-and-kanazawa-start",
+        "statement-period-basis-sales-denominator",
+        "qa-prior-q1-repeat-share-and-outlook"
+      ],
+      "reported_current": {
+        "raw_sales": "1,084",
+        "raw_sales_unit": "百万円",
+        "raw_share": "57.5",
+        "raw_share_unit": "％",
+        "period_label": "FY27 2Q / 中間累計の文脈"
+      },
+      "published_definition": "当該年度の売上高 ‒ 当該年度の新規顧客からの売上高",
+      "denominator_reference": {
+        "reported_raw_sales": "1,884",
+        "raw_unit": "百万円",
+        "period_label": "2027年2月期2Q実績（累計）/正式中間期",
+        "quote_ids": [
+          "issuer-cumulative-income-and-kanazawa-start",
+          "statement-period-basis-sales-denominator"
+        ],
+        "formal_precision": "百万円未満切捨て",
+        "exact_unrounded_denominator": null
+      },
+      "published_series_context": [
+        {
+          "period_label": "FY26 4Q",
+          "continuing_sales_raw": "1,476",
+          "sales_unit": "百万円",
+          "share_raw": "45.0%",
+          "share_attribution": "著者のFY26実績表。会社の当該値に関する全数再認証は今回していない。"
+        },
+        {
+          "period_label": "FY27 1Q",
+          "continuing_sales_raw": "513",
+          "sales_unit": "百万円",
+          "share_raw": "79.1%",
+          "attribution": "7/14当時の「現在の取引社数358社」という質問文。図p5のFY27 1Q358社の表示とは別途対応を確認し、Q&Aが明示しない正確な期末日は指定しない。当時の通期５割程度想定と分離。"
+        },
+        {
+          "period_label": "FY27 2Q",
+          "continuing_sales_raw": "1,084",
+          "sales_unit": "百万円",
+          "share_raw": "57.5%",
+          "attribution": "10/14会社説明p5。"
+        }
+      ],
+      "ratio_recalculation_performed": false,
+      "why_no_recalculation": "公表57.5%をそのまま保持。分母として同中間累計売上1,884の表示を確認したが、表示単位の比算術だけでは非丸め比率、分子の事業/顧客範囲、対象顧客の分類時点まで認証できない。新規顧客売上差額/単独Q2比率も算出しない。",
+      "meaning_limits": [
+        "売上金額ベースの比率であり、顧客社数の継続率/維持率・DXコンサルのリピート90%以上・ARRとは別。",
+        "「当該年度の新規顧客」の厳密な定義/同年度再受注/顧客ID集約・AI/DX事業の包含範囲は式だけでは全て確定しない。",
+        "Q1 79.1%から中間57.5%への表示変化を解約や維持率悪化と扱わない。Q1の会社説明はリピート先行と新規顧客増を区別している。",
+        "7月時点の通期５割程度という会社想定を、10月の新たな通期比率予測にしない。"
+      ]
+    },
+    {
+      "id": "AI-system-unit-price",
+      "concept": "AIシステム販売単価",
+      "issuer_quote_ids": [
+        "issuer-ai-price-cumulative-graph-and-mix",
+        "faq-price-mix-not-first-repeat"
+      ],
+      "reported_current": {
+        "raw_value": "20",
+        "raw_unit": "百万円",
+        "period_label": "FY27 2Q",
+        "aggregation": "年度内累計の平均販売単価",
+        "reported_change_from_previous_year_end": "+7.5％"
+      },
+      "reported_comparisons": [
+        {
+          "period_label": "FY26 4Q",
+          "raw_value": "18",
+          "raw_unit": "百万円",
+          "aggregation": "同年度の累計平均"
+        },
+        {
+          "period_label": "FY27 1Q",
+          "raw_value": "22",
+          "raw_unit": "百万円",
+          "aggregation": "同年度の累計平均"
+        }
+      ],
+      "company_explanation": "Phoenix Vision／Eyeの機器単体販売の増加で1Qに比べ低下。FAQは初回/追加導入ではなく案件構成によって単価が変わると説明。",
+      "author_monitoring_label": "18-20百万円レンジ維持（作者設定の監視目安）",
+      "comparison_result": "最新の公表累計平均20百万円という表示は著者の記載レンジと数値表示上並べられる。ただしFY29までの維持、Q2単独単価、利益率や案件当たり将来収益は未確認。",
+      "standalone_Q2_average": null,
+      "unrounded_values_or_weighted_denominator": null,
+      "not_created": [
+        "Q1/Q2累計平均から重みを知らず単独Q2平均を逆算",
+        "丸め表示18/20から会社表示+7.5%を再計算",
+        "顧客単価/ARR/売上継続率との同一視"
+      ]
+    },
+    {
+      "id": "operating-profit-margin",
+      "concept": "営業利益率",
+      "issuer_quote_ids": [
+        "issuer-cumulative-income-and-kanazawa-start",
+        "issuer-quarter-only-income",
+        "issuer-medium-term-policy"
+      ],
+      "reported_periods": [
+        {
+          "period_label": "FY27 2Q実績（累計）",
+          "raw_value": "21.7",
+          "raw_unit": "%",
+          "kind": "reported_actual"
+        },
+        {
+          "period_label": "FY27 2Q実績（単独）",
+          "raw_value": "35.7",
+          "raw_unit": "%",
+          "kind": "reported_actual"
+        },
+        {
+          "period_label": "FY27 通期業績予想",
+          "raw_value": "30.1",
+          "raw_unit": "%",
+          "kind": "issuer_guidance"
+        },
+        {
+          "period_label": "FY26 通期実績",
+          "raw_value": "27.9",
+          "raw_unit": "%",
+          "kind": "reported_prior_actual"
+        }
+      ],
+      "author_labels": [
+        "FY27で30%到達",
+        "FY29で35%近傍"
+      ],
+      "company_medium_term_policy": "営業利益率30〜40%（会社方針）",
+      "comparison_result": "同じ営業利益率の概念でも期間と実績/予想が違う。35.7%単独Q2でFY29近傍35の達成とせず、中間21.7%だけでFY27通期未達とも判断しない。FY27会社予想30.1%は将来会社予想のまま。",
+      "author_neighborhood_tolerance": null,
+      "future_margin_estimate_created": false
+    },
+    {
+      "id": "office-opening-and-contribution",
+      "concept": "営業所開設/営業開始と受注/売上寄与",
+      "issuer_quote_ids": [
+        "issuer-cumulative-income-and-kanazawa-start",
+        "issuer-office-plan",
+        "issuer-office-plan-and-hiring",
+        "faq-sales-person-first-revenue-lag"
+      ],
+      "author_quote_ids": [
+        "author-office-half-year-context",
+        "author-monitoring-benchmarks"
+      ],
+      "reported_kanazawa": {
+        "place": "金沢",
+        "status": "開設済",
+        "operating_start_literal": "金沢営業所：7/1営業開始",
+        "calendar_date": "2026-07-01",
+        "date_interpretation": "FY27 company presentation/current year context; original literal 7/1 retained.",
+        "order_or_sales_contribution": null
+      },
+      "reported_planned_offices": [
+        "宇都宮",
+        "長野",
+        "広島",
+        "福岡"
+      ],
+      "planned_status_literal": "４営業所を今後開設予定",
+      "company_status_scope": "10/14開示資料の記載。個々の基準日/実開設日/遅延月数は未確認。",
+      "author_milestones": [
+        "FY27上期中に開所",
+        "下期から案件寄与"
+      ],
+      "new_public_resolution": "金沢は7月開所だけでなく7/1営業開始まで本文で確認できる。場所を単に開所したかという追加質問は不要。",
+      "unresolved": [
+        "他4営業所の営業開始/初受注/売上寄与の公表実績",
+        "金沢及び他営業所に帰属する受注/売上と集計基準",
+        "著者の開所/立上げ/案件寄与と会社の開設/営業開始の同一マイルストーン判定"
+      ],
+      "lag_limit": "FAQの営業社員の初売上まで平均約1年は母集団/測定期不明の従業員一般説明で、営業所開設からの売上寄与ラグに代入しない。p7費用負担は確認できても営業所別収益寄与ではない。"
+    }
+  ],
+  "author_three_candidate_reconciliation": [
+    {
+      "candidate_id": "FY29-margin-monitoring-yardstick",
+      "author_raw": "FY29で35%近傍",
+      "company_KPI_refs": [
+        "operating-profit-margin"
+      ],
+      "same_target_period_actual_available": false,
+      "result": "FY29目安はまだ同対象期実績で判定できない。現在の21.7/35.7/30.1を正しく区別した観測記録まで。",
+      "author_approximation_width": null,
+      "adopted": false,
+      "model_input_path": null,
+      "next_public_KPI": "同社が公表する次期の累計/単独/通期実績営業利益率と費用/案件構成の説明を別記。最終的には著者FY29対象期との対応が必要。"
+    },
+    {
+      "candidate_id": "FY29-customer-count-monitoring",
+      "author_raw": "FY29までに550-600社ペース（毎期+70社前後）",
+      "company_KPI_refs": [
+        "cumulative-customer-count"
+      ],
+      "current_reconciled_baseline": "著者FY26 337社と会社FY26 4Q337社/受注ベースが表示上対応。最新FY27 2Q394社、会社公表前期末+57社。",
+      "result": "実際の増加観測は得られたが、半期を年率化せず、年ごとの+70前後やFY29到達を達成/未達と認定しない。",
+      "author_approximation_width": null,
+      "adopted": false,
+      "model_input_path": null,
+      "next_public_KPI": "同じ受注ベース・同じ顧客ID集計の次期末/年度末累計取引社数。売上認識済み顧客数や拠点数とは別に記録。"
+    },
+    {
+      "candidate_id": "FY28-conditional-slowdown",
+      "author_raw": "拠点立上げが遅延し、かつ継続顧客比率が45%近辺で頭打ち→FY28時点でCAGR+35-40%",
+      "operator": "AND",
+      "office_evidence": "上期中に5拠点という著者目安に対し、10/14会社資料は金沢のみ開設済/他4予定という異なる状況を示す。開所/営業開始/受注寄与の区別を残す。",
+      "ratio_evidence": "最新公表の中間売上比率57.5%は、著者の45%近辺頭打ちを支持する証拠ではない。「近辺」の幅と「頭打ち」の観測期間は未設定。",
+      "current_conjunction_result": "not_established",
+      "office_delay_alone_sufficient": false,
+      "ratio_neighborhood_tolerance": null,
+      "plateau_observation_window": null,
+      "conditional_CAGR_value_applied": null,
+      "result_limit": "将来の頭打ち/減速が永久に否定されたとも、会社通期達成が保証されたとも判断しない。CAGRの基準/終点と同対象期の条件確認がない。",
+      "adopted": false,
+      "model_input_path": null,
+      "next_public_KPI": "拠点別の開設/営業開始/初受注/公表売上寄与と、同定義・同対象期の継続顧客売上/総売上/公表比率を別々に追う。"
+    }
+  ],
+  "remaining_definition_issues_that_could_matter": [
+    {
+      "id": "customer-counting-unit",
+      "clarification_owner": "会社の公表定義",
+      "difference": "社数が法人/グループ/事業所をどの単位で集約し、再受注を重複しないか。受注ベースは既に公開解決済み。",
+      "what_changes": "337→394→将来550-600という著者の同一母集団比較が可能かが変わる。直ちにEPSや買い判断は変えない。",
+      "next_public_observation": "顧客数定義注記/集計方法改訂と同基準の年度末社数",
+      "IR_status": "potential_definition_issue_only_after_public_notes_check",
+      "model_input_path": null
+    },
+    {
+      "id": "continuing-sales-cohort-and-scope",
+      "clarification_owner": "会社の公表定義と著者の用語対応",
+      "difference": "当年度新規顧客の分類時点・同年度追加導入の扱い・AI/DX等の包含範囲。差引式自体は公開済み。著者の条件文の継続顧客比率はKPI表の売上比率という文脈で扱い、顧客社数比率と同定しない。",
+      "what_changes": "著者45%近辺/50%以上の監視と最新公表57.5%を、同じ売上コホートとして比較できるかが変わる。ARR/顧客維持率には変換しない。",
+      "next_public_observation": "継続売上と総売上・期・分子分母の範囲注記。公表されない単独Q2/新規顧客売上を推計しない。",
+      "IR_status": "potential_definition_issue_only; no question registered",
+      "model_input_path": null
+    },
+    {
+      "id": "AI-price-weighting-and-recognition",
+      "clarification_owner": "会社の公表定義",
+      "difference": "年度内累計平均は公開済みだが、案件/販売単位の数え方・機器単体/装置込みの重みや計上時点は未確認。",
+      "what_changes": "著者18-20という監視帯と公表20の同範囲比較、単価変化を数量/構成のどちらと読むかが変わる。将来利益の係数は作れない。",
+      "next_public_observation": "同じ年度内累計の販売単価と機器単体/装置込み構成の会社説明、定義注記",
+      "IR_status": "potential_definition_issue_only_after_public_followup",
+      "model_input_path": null
+    },
+    {
+      "id": "office-stage-and-contribution",
+      "clarification_owner": "会社の公表マイルストーン/著者の条件対応",
+      "difference": "金沢7/1営業開始は解決済み。他営業所の開設/営業開始/初受注/売上寄与と、既存営業組織からの案件帰属方法は別。",
+      "what_changes": "拠点遅延というAND片側の意味と「下期から案件寄与」という著者の目安を検証できるかが変わる。単に採用/費用発生だけでは収益寄与としない。",
+      "next_public_observation": "同名営業所の営業開始と、公開されれば同拠点の受注/売上寄与。非開示ならnullを維持。",
+      "IR_status": "potential_definition_issue_only; not requesting unpublished current orders",
+      "model_input_path": null
+    },
+    {
+      "id": "author-nearby-period-and-tolerance",
+      "clarification_owner": "AENTRO（会社IRに自作解釈の保証を求めない）",
+      "difference": "35%近傍/45%近辺/+70社前後の幅、頭打ちの長さ、CAGR基準期と著者FYラベル。",
+      "what_changes": "著者の条件判定そのものに必要。会社の実KPIと独立した著者側の曖昧さであり、会社IRだけでは解消できない。",
+      "next_public_observation": "著者の公表改訂/定義説明があれば原文で確認。今回は取得しない。",
+      "IR_status": "not_a_company_IR_definition_request",
+      "model_input_path": null
+    }
+  ],
+  "publicly_resolved_do_not_reask": [
+    {
+      "topic": "最新累計取引社数394社、受注ベース、前期末+57社という表示",
+      "quote_ids": [
+        "issuer-customer-repeat-values-graph-and-formula"
+      ]
+    },
+    {
+      "topic": "継続顧客売上の差引式、公表1,084百万円/57.5%、同中間総売上1,884という表示",
+      "quote_ids": [
+        "issuer-customer-repeat-values-graph-and-formula",
+        "statement-period-basis-sales-denominator"
+      ]
+    },
+    {
+      "topic": "AI単価が年度内累計平均で、20百万円、機器単体構成増で1Q比低下したという会社説明",
+      "quote_ids": [
+        "issuer-ai-price-cumulative-graph-and-mix",
+        "faq-price-mix-not-first-repeat"
+      ]
+    },
+    {
+      "topic": "中間21.7/Q2単独35.7/会社通期予想30.1の区別",
+      "quote_ids": [
+        "issuer-cumulative-income-and-kanazawa-start",
+        "issuer-quarter-only-income"
+      ]
+    },
+    {
+      "topic": "金沢7/1営業開始と、他4営業所が公表資料上は今後開設予定",
+      "quote_ids": [
+        "issuer-cumulative-income-and-kanazawa-start",
+        "issuer-office-plan"
+      ]
+    },
+    {
+      "topic": "Q1の79.1%に関する当時の会社説明と通期５割程度想定の存在",
+      "quote_ids": [
+        "qa-prior-q1-repeat-share-and-outlook"
+      ]
+    },
+    {
+      "topic": "FAQの保守ストック収入/平均営業社員初売上ラグは、継続売上比率/営業所寄与と別の一般説明",
+      "quote_ids": [
+        "faq-no-maintenance-stock-revenue",
+        "faq-sales-person-first-revenue-lag"
+      ]
+    }
+  ],
+  "next_observation_record": {
+    "scheduled_date": null,
+    "target": "今後公表される同年度の次回決算説明/正式短信と、公開されれば同対象期Q&A。日付や公表済みとは認定しない。",
+    "fields_to_retain": [
+      "実公表日/取得日・正確な対象期・累計/単独・実績/会社予想",
+      "受注ベースの期末累計取引社数と集計方法の変更",
+      "継続顧客売上/全体売上/公表比率とコホート定義",
+      "年度内累計AI単価/案件構成と未丸め値の有無",
+      "各営業所の営業開始と公表受注/売上寄与の区別",
+      "累計/単独/通期実績営業利益率と会社予想の改訂有無"
+    ],
+    "missing_or_ambiguous": "null/unresolved。0や作者の条件成立として扱わない。"
+  },
+  "adoption_boundary": {
+    "author_condition_adoption": false,
+    "valuation_method": null,
+    "valuation_input_path": null,
+    "route": null,
+    "stock_price": null,
+    "independent_EPS_or_FCFF_reestimated": false,
+    "probabilities": null,
+    "trade_or_profit_take_rule": null,
+    "formal_IR_questions": [],
+    "definition_followup_is_not_ready_to_send_question": true,
+    "reason": "実KPIとの照合は完成したが、将来モデルへの写像/方針・仮説版/回答分岐を設定していない。定義が未解決でも公開調査を尽くしたとは断定せず、未公開足元実績や著者の将来成長保証を会社に求めない。"
+  },
+  "source_provenance": [
+    {
+      "key": "presentation",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "url": "https://contents.xj-storage.jp/xcontents/AS06543/add89fe1/7c75/426d/908b/a7cb51fa85bb/140120260831528813.pdf",
+      "published_at": null,
+      "publication_date": "2026-10-14",
+      "original_retrieved_at": "2026-10-15T04:51:16.281339+00:00",
+      "document_kind": "issuer_interim_earnings_presentation",
+      "raw_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/93eb46606d41dc10c91870d9481310fcf5fda5c107d318ef7424e1a6ce89fb99",
+      "raw_sha256": "93eb46606d41dc10c91870d9481310fcf5fda5c107d318ef7424e1a6ce89fb99",
+      "saved_text_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/03.txt",
+      "saved_text_sha256": "73bccf42aec37efb174f09c8160dbd20878f97f4b5a4622f0b02bc0210c63818",
+      "transport_snapshot_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/03.json",
+      "transport_snapshot_sha256": "aaf30a8f8194132baf4b822dc15d714bba5e60417983a3b4ed94aba94f1da638",
+      "attribution": "株式会社VRAIN Solution（会社作成の資料/想定問答/一般FAQ）",
+      "raw_text_snapshot_hashes_match": true,
+      "raw_text_reextraction_matches": true,
+      "financial_inputs_verified": false
+    },
+    {
+      "key": "statement",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "url": "https://contents.xj-storage.jp/xcontents/AS06543/0e4abefd/2c7d/4512/9376/0761580b1ba5/140120260831528808.pdf",
+      "published_at": null,
+      "publication_date": "2026-10-14",
+      "original_retrieved_at": "2026-10-15T04:42:37.094960+00:00",
+      "document_kind": "issuer_interim_financial_statement",
+      "raw_file": "research/ir-case-studies-2026-10-15/135A/library-followup/raw/6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+      "raw_sha256": "6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+      "saved_text_file": "research/ir-case-studies-2026-10-15/135A/library-followup/03.txt",
+      "saved_text_sha256": "3ecc1fb61cc34cf0abd0cdae3c36fed637e5257b94062cb2ed00f71e3ba52b2b",
+      "transport_snapshot_file": "research/ir-case-studies-2026-10-15/135A/library-followup/03.json",
+      "transport_snapshot_sha256": "04a2fa967b8e0acef2629141247a8f3a2e69095ac7bba95782790bde4febca38",
+      "attribution": "株式会社VRAIN Solution（会社作成の資料/想定問答/一般FAQ）",
+      "raw_text_snapshot_hashes_match": true,
+      "raw_text_reextraction_matches": true,
+      "financial_inputs_verified": false
+    },
+    {
+      "key": "qa",
+      "source_id": "case-public:c3c890386f935535dda16bb42e78ede9f85f4551f5640f170648e4d59fc6c63b",
+      "url": "https://contents.xj-storage.jp/xcontents/AS06543/716abbe4/683a/4898/b4c1/de6c6a8fff61/140120260630584501.pdf",
+      "published_at": null,
+      "publication_date": "2026-07-14",
+      "original_retrieved_at": "2026-10-15T04:51:16.938567+00:00",
+      "document_kind": "issuer_prior_quarter_prepared_questions_and_answers",
+      "raw_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/1cd0433a17587f9b2d4169740a2205d4f5871aeefdce1c08f74b80844e31beba",
+      "raw_sha256": "1cd0433a17587f9b2d4169740a2205d4f5871aeefdce1c08f74b80844e31beba",
+      "saved_text_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/04.txt",
+      "saved_text_sha256": "2a34cf7b7c665856900a638ea5df9eddad71183275c2d81f24a9fac99a73448d",
+      "transport_snapshot_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/04.json",
+      "transport_snapshot_sha256": "7ceba600be7b290ab0157c7150ca3c5c132a00f85341c7e5b9cea5dfd68b27a0",
+      "attribution": "株式会社VRAIN Solution（会社作成の資料/想定問答/一般FAQ）",
+      "raw_text_snapshot_hashes_match": true,
+      "raw_text_reextraction_matches": true,
+      "financial_inputs_verified": false
+    },
+    {
+      "key": "faq",
+      "source_id": "case-public:4b047af4dcd2099052131b9bd5a6cc0ad83a3cbeb84291ba7888219fd1df6532",
+      "url": "https://vrain.co.jp/ir/faq/",
+      "published_at": null,
+      "publication_date": null,
+      "original_retrieved_at": "2026-10-15T04:50:52.443178+00:00",
+      "document_kind": "issuer_ir_faq",
+      "raw_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/e88cf537930d5f0364dad6c918920473cee30c89b47f951bedd32e5ce41ae763",
+      "raw_sha256": "e88cf537930d5f0364dad6c918920473cee30c89b47f951bedd32e5ce41ae763",
+      "saved_text_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/02.visible.txt",
+      "saved_text_sha256": "c4a87b43ed157d61f87b258102e89eb54c5e369b96ca8a00b2c8cc6f760cf017",
+      "transport_snapshot_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/02.json",
+      "transport_snapshot_sha256": "40318a884cc071e567a8315ca3abc7af205189026d60d04f4856286e7ac734ca",
+      "attribution": "株式会社VRAIN Solution（会社作成の資料/想定問答/一般FAQ）",
+      "raw_text_snapshot_hashes_match": true,
+      "raw_text_reextraction_matches": true,
+      "financial_inputs_verified": false
+    },
+    {
+      "key": "author",
+      "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+      "url": "https://research.aentroinc.com/ja/report/VRAIN_Solution/Initiation",
+      "published_at": null,
+      "publication_date": "2026-05-11",
+      "original_retrieved_at": "2026-10-15T05:43:16.598131+00:00",
+      "document_kind": "sponsored_external_company_initiation_report",
+      "raw_file": "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/raw/0cfe0cdb8d1eff0d6814dd514e99e4684b4ff73b888cc318398061aee0247ad5",
+      "raw_sha256": "0cfe0cdb8d1eff0d6814dd514e99e4684b4ff73b888cc318398061aee0247ad5",
+      "saved_text_file": "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/02.visible.txt",
+      "saved_text_sha256": "01f71124b8560b08217782c3f6b7b5f4061885eb1ded3ad3ad35b1770c9888b1",
+      "transport_snapshot_file": "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/02.json",
+      "transport_snapshot_sha256": "18461a56789f69d9dda5da2819b48e06e1610bec5ba525af5b2292cdfa74451b",
+      "attribution": "AENTRO Research / 株式会社AENTRO（対象会社委託・報酬を開示する外部著者）",
+      "raw_text_snapshot_hashes_match": true,
+      "raw_text_reextraction_matches": true,
+      "financial_inputs_verified": false
+    }
+  ],
+  "quotes": [
+    {
+      "id": "author-monitoring-benchmarks",
+      "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+      "source_key": "author",
+      "pdf_page": null,
+      "source_text_start": 40459,
+      "source_text_end_exclusive": 40713,
+      "offset_unit": "Unicode code points in exact saved source.content, end exclusive",
+      "quote": "投資家が四半期ごとに追うべきKPIは以下に整理できる。 KPI FY26実績 中計達成の閾値（目安） 累計取引社数 337社 FY29までに550-600社ペース（毎期+70社前後） 継続顧客売上比率 45.0% 50%以上への押し上げ AIシステム販売単価 18百万円 18-20百万円レンジ維持 営業利益率 27.9% FY27で30%到達、FY29で35%近傍 下期偏重度（4Q売上比率） 50%超 四半期平準化の進展 新拠点立ち上げスピード FY27中に5拠点開設完了 上期中に開所、下期から案件寄与",
+      "purpose": "Author-proposed monitoring yardsticks in summary/evaluation section, not explicitly labelled company numerical forecast; period/formula gaps remain.",
+      "existing_quote_origin": "../external-forecast-discovery/sources.json"
+    },
+    {
+      "id": "author-conditional-slowdown",
+      "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+      "source_key": "author",
+      "pdf_page": null,
+      "source_text_start": 40863,
+      "source_text_end_exclusive": 40950,
+      "offset_unit": "Unicode code points in exact saved source.content, end exclusive",
+      "quote": "もし拠点立ち上げが遅延し、かつ継続顧客比率が45%近辺で頭打ちになれば、FY28時点でCAGR+35-40%への減速が現実味を帯び、バリュエーションの前提は成り立たなくなる。",
+      "purpose": "Author conditional FY28 slowdown narrative, no base/endpoint definition/probability or price target.",
+      "existing_quote_origin": "../external-forecast-discovery/sources.json"
+    },
+    {
+      "id": "author-office-half-year-context",
+      "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+      "source_key": "author",
+      "pdf_page": null,
+      "source_text_start": 36145,
+      "source_text_end_exclusive": 36263,
+      "offset_unit": "Unicode code points in exact saved source.content, end exclusive",
+      "quote": "最後に、FY27上期中に順次開設される宇都宮・長野・金沢・広島・福岡の5拠点は、仙台（FY26/9開設）・札幌（FY26/12開設）で検証可能なリードタイムと比較しつつ、FY28以降の成長ドライバーとして早期の受注獲得ペースが問われる。",
+      "purpose": "Named five offices and FY27 upper-half opening language, distinct from order contribution and whole hypothesis validity.",
+      "existing_quote_origin": "../external-forecast-discovery/sources.json"
+    },
+    {
+      "id": "issuer-customer-repeat-values-graph-and-formula",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "source_key": "presentation",
+      "pdf_page": 5,
+      "printed_page": "5",
+      "page_text_start": 0,
+      "page_text_end_exclusive": 2907,
+      "source_text_start": 1688,
+      "source_text_end_exclusive": 4595,
+      "offset_unit": "Unicode code points in exact saved text, end exclusive",
+      "quote": "主要KPI-① 2027年２月期 2Q実績\n\n\n\n                          累計取引社数                              ※１                                              継続顧客売上高                                  ※２\n\n\n\n\n                                394社                                                                            1,084百万円\n                                （前期末より＋57社）                                                                   （売上高全体に占める割合 57.5％）\n                      食品を中心に機械、化学が伸長                                                                          当期もリピート案件の獲得に注力\n\n\n                                                                                      (社)                                                                              (百万円)\n                                                                                                                                                       1,476\n                                                                                394\n                                                                          358\n                                                                    337                                                                                              1,084\n                                                              311\n                                                        282\n                                                  251                                                                           852\n                                            233\n                                      214                                                                                 657                    688\n                                197\n                    169   180                                                                           546         520                                        513\n                                                                                                                                           446\n              103                                                                                 303         252\n         52                                                                                 159\n    19                                                                                                                                86\n\n   FY21 FY22 FY23 FY24 FY25 FY25 FY25 FY25 FY26 FY26 FY26 FY26 FY27 FY27                    FY22 FY23 FY24 FY25 FY25 FY25 FY25 FY26 FY26 FY26 FY26 FY27 FY27\n                        1Q   2Q   3Q   4Q   1Q   2Q   3Q   4Q   1Q   2Q                                     1Q   2Q   3Q   4Q   1Q   2Q   3Q   4Q   1Q   2Q\n\n\n\n※1 受注ベース\n※２ 算出式：当該年度の売上高 ‒ 当該年度の新規顧客からの売上高\n\n                                                                                                                          2026 © VRAIN Solution, Inc. All rights reserved.     5\n",
+      "purpose": "期別graphの数値/ラベルを画像確認。394/358/337、1,084/513/1,476、57.5%、受注ベースと当年度売上差引式を保持。"
+    },
+    {
+      "id": "issuer-ai-price-cumulative-graph-and-mix",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "source_key": "presentation",
+      "pdf_page": 6,
+      "printed_page": "6",
+      "page_text_start": 0,
+      "page_text_end_exclusive": 3177,
+      "source_text_start": 4596,
+      "source_text_end_exclusive": 7773,
+      "offset_unit": "Unicode code points in exact saved text, end exclusive",
+      "quote": "主要KPI-② 2027年２月期 ２Q実績\n\n\n\n                                受注残                                                                             AIシステム販売単価                                               ※\n\n\n\n\n                    1,308百万円                                                                                                  20百万円\n                           （前期末より＋3.1％）                                                                                       （前期末より+7.5％）\n                   今期売上予想に向けて順調に進捗                                                                              Phoenix Vision／Eyeの機器単体販売が\n                                                                                                                増加したため、販売単価は１Qに比べて低下\n                                                                                       (百万円)\n                                                                                                                                                                                  (百万円)\n\n                                                                                                                                             28\n                                                                             1,386\n                                                               1,262 1,269           1,308\n                                                       1,126                                                                                                             22\n                                                                                                                                       21\n                                                                                                                                                                                20\n                                                                                                                              19                    19     19\n                                                                                                                18     18                                         18\n                                                                                                         16\n\n                                                 574                                               10\n                                     458\n                         358   376         389\n                   304\n             213\n       163\n 102\n\n\n FY21 FY22 FY23 FY24 FY25 FY25 FY25 FY25 FY26 FY26 FY26 FY26 FY27 FY27                            FY23   FY24   FY25   FY25   FY25    FY25   FY26   FY26   FY26   FY26   FY27   FY27\n                      1Q   2Q   3Q   4Q   1Q   2Q   3Q   4Q   1Q   2Q                                            1Q     2Q     3Q      4Q     1Q     2Q     3Q     4Q     1Q     2Q\n\n\n\n                                                                                               ※各Qの数値は年度内累計の平均販売単価\n\n\n                                                                                                                                     2026 © VRAIN Solution, Inc. All rights reserved.     6\n",
+      "purpose": "年度内累計平均という注記、FY27Q1 22/2Q20/FY26期末18百万円、+7.5%の会社表示、機器単体構成増の説明。2Q単独単価を作らない。"
+    },
+    {
+      "id": "issuer-cumulative-income-and-kanazawa-start",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "source_key": "presentation",
+      "pdf_page": 7,
+      "printed_page": "7",
+      "page_text_start": 0,
+      "page_text_end_exclusive": 1691,
+      "source_text_start": 7774,
+      "source_text_end_exclusive": 9465,
+      "offset_unit": "Unicode code points in exact saved text, end exclusive",
+      "quote": "損益計算書\n\n売上高\n旺盛な需要を背景に、営業プロセスの分業\n                                                                                                              (百万円)\n体制が定着・機能したことで、前期比\n+80.0％と大幅に伸長。                             2027年2月期                              2026年2月期\n\n                                      ２Q実績（累計）    通期業績予想       ２Q実績（累計）              前期比                通期実績\n\n売上原価／売上総利益              売上高               1,884      4,823            1,047              +80.0%               3,278\nフィジカルAI領域向けや大型装置が一定     売上総利益             1,436      3,858               841             +70.6%               2,585\nの割合を占める案件構成となり、売上総利\n                         売上総利益率           76.2%      80.0%            80.4%                -4.2%               78.9%\n益率は前期比で－4.2％となった。\n                        販管費               1,026      2,408              746              +37.6%                1,670\n特にフィジカルAI領域においては、中長期\n                        営業利益               409       1,449                95           +328.1%                      914\n的な競争優位性の源泉となる知見・ノウハ\nウの蓄積を優先し、戦略的な受注を推進し      営業利益率            21.7%      30.1%              9.1%             +12.6%                27.9%\n\nたことによる低下と位置づけ。          経常利益               409       1,449                95           +327.4%                      912\n\n                        税前中間（当期）純利益        409             -              95           +327.4%                      912\n販管費／営業利益                中間（当期）純利益          267        972                 61           +336.2%                      652\n将来の成長に向けた人員増・採用強化・拠\n点開設（金沢営業所：7/1営業開始）による\n販管費の増加をこなしつつ、増益を達成。\n                                                                 2026 © VRAIN Solution, Inc. All rights reserved.     7\n",
+      "purpose": "同2Q累計売上1,884、営業利益率21.7、通期予想30.1、前年中間9.1/前年通期27.9を画像確認。金沢営業所7/1営業開始の本文も保持。"
+    },
+    {
+      "id": "issuer-quarter-only-income",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "source_key": "presentation",
+      "pdf_page": 8,
+      "printed_page": "8",
+      "page_text_start": 0,
+      "page_text_end_exclusive": 1586,
+      "source_text_start": 9466,
+      "source_text_end_exclusive": 11052,
+      "offset_unit": "Unicode code points in exact saved text, end exclusive",
+      "quote": "損益計算書／四半期別\n\n売上高\n前期比で45.2%の増加。\n当期１Q比では90.6%の増加。\n                                                                                                        (百万円)\n\n                                              2027年2月期                                2026年2月期\n売上原価／売上総利益\n                                 １Ｑ実績          ２Ｑ実績       当期１Q比               ２Ｑ実績                 前期２Q比\n売上総利益率はフィジカルAI向けや大型\n装置が一定の割合を占める案件構成と     売上高               648       1,236      +90.6%                     851             +45.2%\n\nなり前期比で-5.9％。          売上総利益             496        940       +89.4%                     697             +34.8%\n当期１Q比では-0.5%。\n                      売上総利益率       76.5%          76.0%        -0.5%                 81.9%                    -5.9%\n\n\n販管費／営業利益              販管費               527        499         -5.4%                    373             +33.8%\n\n販管費は前期比で33.8％の増加。     営業利益              -31        440                -                 324             +35.9%\n当期１Q比では主に採用効率化により販\n                      営業利益率               -       35.7%               -              38.1%                    -2.4%\n管費が-5.4%の減少。\n                      経常利益              -31         441               -               324                +36.1%\n営業利益率は前期比で-2.4％。\n                      税前四半期純利益          -31         441               -               324                +36.1%\n\n                      四半期純利益            -20        287                -                210              +36.5%\n\n\n\n                                                           2026 © VRAIN Solution, Inc. All rights reserved.      8\n",
+      "purpose": "会社が独立に公表したQ2単独35.7%と売上1,236、Q1との比較。累計21.7/将来FY29目安とは別。"
+    },
+    {
+      "id": "issuer-office-plan",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "source_key": "presentation",
+      "pdf_page": 17,
+      "printed_page": "17",
+      "page_text_start": 0,
+      "page_text_end_exclusive": 214,
+      "source_text_start": 22654,
+      "source_text_end_exclusive": 22868,
+      "offset_unit": "Unicode code points in exact saved text, end exclusive",
+      "quote": "2027年2月期 通期業績予想\n\n・前期に続き、中期経営方針に基づき売上高50％増を計画\n・継続顧客獲得増に向けた営業基盤の更なる拡充（７月に金沢を開設済、宇都宮・長野・広島・福岡の４営業所を今後開設予定）\n・提供価値の向上に向けたアフターフォロー体制と内製化の強化、および海外展開を見据えた戦略的採用・拠点準備の本格始動\n⇒特に地方で顕著な、日本の製造業が抱える「人手不足」、「技能承継」等の社会課題解決に資する事業展開を加速",
+      "purpose": "７月金沢開設済・４営業所今後開設予定という最新公表文言。開所/受注/売上寄与は別。"
+    },
+    {
+      "id": "issuer-office-plan-and-hiring",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "source_key": "presentation",
+      "pdf_page": 47,
+      "printed_page": "47",
+      "page_text_start": 0,
+      "page_text_end_exclusive": 129,
+      "source_text_start": 51484,
+      "source_text_end_exclusive": 51613,
+      "offset_unit": "Unicode code points in exact saved text, end exclusive",
+      "quote": "人事戦略｜国内拠点の更なる拡大\n\nFY２６は、仙台、札幌の２拠点を開設。FY２７は、7月に金沢を開設済、宇都宮・長野・広島・福岡の４営業所を今後開設予定。\n各拠点の現地採用を行い、製造業営業経験者の採用を計画。加えてサポート人員を増やすことで営業効率を向上。",
+      "purpose": "既設/予定の営業所と現地採用/サポート体制の会社説明。支店別の受注/売上実績はこの頁にない。"
+    },
+    {
+      "id": "issuer-medium-term-policy",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "source_key": "presentation",
+      "pdf_page": 20,
+      "printed_page": "20",
+      "page_text_start": 0,
+      "page_text_end_exclusive": 105,
+      "source_text_start": 26036,
+      "source_text_end_exclusive": 26141,
+      "offset_unit": "Unicode code points in exact saved text, end exclusive",
+      "quote": "中期経営方針\n売上高CAGR+50％、営業利益率30％～40％を中期経営方針に設定\n強い市場ニーズを背景に、新規顧客の継続的な獲得と既存顧客の高いリピート率が見込まれることから、来期以降も+50％の成長を目指す",
+      "purpose": "CAGR+50%/営業利益率30〜40%は会社中期方針。著者が選ぶFY29 35%近傍と区別。"
+    },
+    {
+      "id": "statement-period-basis-sales-denominator",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "source_key": "statement",
+      "pdf_page": 1,
+      "printed_page": null,
+      "page_text_start": 10,
+      "page_text_end_exclusive": 1096,
+      "source_text_start": 10,
+      "source_text_end_exclusive": 1096,
+      "offset_unit": "Unicode code points in exact saved text, end exclusive",
+      "quote": "2027年２月期      第２四半期（中間期）決算短信〔日本基準〕(非連結)\n                                                           2026年10月14日\n上 場 会 社 名   株式会社ＶＲＡＩＮ Ｓｏｌｕｔｉｏｎ           上場取引所                         東\nコ ー ド 番 号   135A               URL https://vrain.co.jp/\n代   表   者 (役職名) 代表取締役社長           (氏名) 南塲 勇佑\n問合せ先責任者 (役職名) 取締役 コーポレート部部長 (氏名) 菊地 佳宏                 (TEL) 03-6280-4915\n半期報告書提出予定日       2026年10月14日 配当支払開始予定日              －\n決算補足説明資料作成の有無           ：有\n決算説明会開催の有無              ：有\n                                                                                       (百万円未満切捨て)\n１．2027年２月期第２四半期（中間期）の業績（2026年３月１日～2026年８月31日）\n（１）経営成績(累計)                          (％表示は、対前年中間期増減率)\n                       売上高                   営業利益                経常利益                      中間純利益\n                      百万円           ％        百万円           ％      百万円             ％            百万円        ％\n 2027年２月期中間期          1,884      80.0           409    328.1          409      327.4            267    336.2\n 2026年２月期中間期          1,047      29.5            95   △49.7            95     △49.5              61   △51.4",
+      "purpose": "正式中間期2026-03-01..08-31、日本基準・非連結、売上1,884百万円。原表の百万円未満切捨てを保持。"
+    },
+    {
+      "id": "qa-prior-q1-repeat-share-and-outlook",
+      "source_id": "case-public:c3c890386f935535dda16bb42e78ede9f85f4551f5640f170648e4d59fc6c63b",
+      "source_key": "qa",
+      "pdf_page": 1,
+      "printed_page": null,
+      "page_text_start": 1085,
+      "page_text_end_exclusive": 1544,
+      "source_text_start": 1085,
+      "source_text_end_exclusive": 1544,
+      "offset_unit": "Unicode code points in exact saved text, end exclusive",
+      "quote": "質問４．当第１四半期は、継続顧客からの売上高が 513 百万円と売上高全体の 79.1％を占めており、リ\n      ピート案件の獲得が順調と見受けられますが、現在の取引社数 358 社に対する別ラインや別工場\n      への横展開の余地をどのように見積もっていますか。また、継続顧客の売上比率は今後もこの高\n      い水準（約８割）を維持する想定ですか。\n回答４．既存顧客における潜在需要は、顧客ごとの工場数、ライン数、投資計画等に依存するため、現時\n      点で一律の具体的な数値としての算出は困難ですが、横展開の余地は極めて大きいと認識してお\n      ります。市場の人手不足を背景とした製造業の自動化・省人化ニーズは根強く、主要顧客におけ\n      る深耕余地は多分に残されています。なお、当第１四半期はリピート案件が先行して寄与したた\n      め約８割となりましたが、今後は新規顧客の開拓・獲得が順調に進むことにより、通期ベースで\n      は５割程度に推移していくものと想定しております",
+      "purpose": "7/14会社作成想定問答のQ1 513百万円/79.1%、358社、リピート先行・通期５割程度という当時想定。10/14最新予測ではない。"
+    },
+    {
+      "id": "faq-price-mix-not-first-repeat",
+      "source_id": "case-public:4b047af4dcd2099052131b9bd5a6cc0ad83a3cbeb84291ba7888219fd1df6532",
+      "source_key": "faq",
+      "pdf_page": null,
+      "source_text_start": 1479,
+      "source_text_end_exclusive": 1630,
+      "offset_unit": "Unicode code points in exact saved source.content, end exclusive",
+      "quote": "AIシステムを初回に導入する場合と追加で導入する場合で、単価は変わりますか。 単価の変動につきましては、初回導入か追加導入によっては変わらず、案件構成により異なります。 「Phoenix Vision／Eye」の機器単体販売のみであると単価は低くなり、装置・制御・排出機構を含むと単価が大きくなります。",
+      "purpose": "初回/追加導入だけで単価差を決めず案件構成が変えるという会社一般説明。公表/更新日時不明。"
+    },
+    {
+      "id": "faq-no-maintenance-stock-revenue",
+      "source_id": "case-public:4b047af4dcd2099052131b9bd5a6cc0ad83a3cbeb84291ba7888219fd1df6532",
+      "source_key": "faq",
+      "pdf_page": null,
+      "source_text_start": 1069,
+      "source_text_end_exclusive": 1216,
+      "offset_unit": "Unicode code points in exact saved source.content, end exclusive",
+      "quote": "2025年にカスタマーサポート専門部署が創設されていますが、保守サービス等のストック収入による売上はありますか。 保守サービス等のストック収入はありません。将来、国内営業所の開設を進めて全国エリアを網羅する段階において保守サービスを提供する可能性はありますが、その時期については未定であります。",
+      "purpose": "保守ストック収入の会社一般説明。継続顧客売上比率をARR/契約維持率と同一視しない。"
+    },
+    {
+      "id": "faq-sales-person-first-revenue-lag",
+      "source_id": "case-public:4b047af4dcd2099052131b9bd5a6cc0ad83a3cbeb84291ba7888219fd1df6532",
+      "source_key": "faq",
+      "pdf_page": null,
+      "source_text_start": 1973,
+      "source_text_end_exclusive": 2188,
+      "offset_unit": "Unicode code points in exact saved source.content, end exclusive",
+      "quote": "従業員の採用について新規従業員を採用した場合、仕事を任せられるレベルになるまでにどれくらいの期間がかかりますか。 営業社員の場合、これまでに獲得した製造業の知見・営業スキルに加えてAI外観検査プロダクト「Phoenix Vision／Eye」に対する理解や製造ラインへの実装の提案力を備える必要があるため、初めて売上を上げるまでに平均で約１年かかります。他の職種はスキルセットで採用しておりますので早期に活躍いただいております 。",
+      "purpose": "営業社員の初売上まで平均約１年という一般説明。営業所別の開設→売上寄与ラグには転用しない。"
+    }
+  ],
+  "saved_ledger_reference": {
+    "file": "../external-forecast-discovery/actual-intake.json",
+    "sha256": "aec0f8116315b8cd33017172c1c165d86a64cf8db0caf6a1b478d86be4eebba4",
+    "use": "親の取得/取込記録を参照する保存artifact。実DBへ接続せず、現在台帳件数/状態を再認定しない。"
+  },
+  "verification": {
+    "verified_at": "2026-10-15T06:00:18.725090+00:00",
+    "raw_text_snapshot_hash_checks": 5,
+    "stable_source_ID_checks": 5,
+    "raw_to_saved_text_reextractions": {
+      "PDF": 3,
+      "HTML_visible_text": 2
+    },
+    "quote_offsets_verified": 15,
+    "images_viewed": [
+      {
+        "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+        "pdf_page": 5,
+        "temporary_image_file": "/tmp/135a-author-kpi-p5.png",
+        "sha256": "ebb8ee2356a832e65e2d2e01daf9bd9f9f1288aee0a0b6e2ca6993e125284268",
+        "image_viewed": true,
+        "render_command": [
+          "pdftoppm",
+          "-f",
+          "5",
+          "-l",
+          "5",
+          "-scale-to",
+          "2000",
+          "-png",
+          "-singlefile",
+          "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/93eb46606d41dc10c91870d9481310fcf5fda5c107d318ef7424e1a6ce89fb99",
+          "/tmp/135a-author-kpi-p5"
+        ],
+        "retention": "temporary; renderable from preserved raw"
+      },
+      {
+        "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+        "pdf_page": 6,
+        "temporary_image_file": "/tmp/135a-author-kpi-p6.png",
+        "sha256": "16a15e7548db23ae4327e53673a00d6da156e1d827c253ca74c3ae54b5281b73",
+        "image_viewed": true,
+        "render_command": [
+          "pdftoppm",
+          "-f",
+          "6",
+          "-l",
+          "6",
+          "-scale-to",
+          "2000",
+          "-png",
+          "-singlefile",
+          "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/93eb46606d41dc10c91870d9481310fcf5fda5c107d318ef7424e1a6ce89fb99",
+          "/tmp/135a-author-kpi-p6"
+        ],
+        "retention": "temporary; renderable from preserved raw"
+      },
+      {
+        "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+        "pdf_page": 7,
+        "temporary_image_file": "/tmp/135a-author-kpi-p7.png",
+        "sha256": "b38df1b5465947155376704a5b7e694e8b24d95f1605b26369c88c84e49e58d2",
+        "image_viewed": true,
+        "render_command": [
+          "pdftoppm",
+          "-f",
+          "7",
+          "-l",
+          "7",
+          "-scale-to",
+          "2000",
+          "-png",
+          "-singlefile",
+          "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/93eb46606d41dc10c91870d9481310fcf5fda5c107d318ef7424e1a6ce89fb99",
+          "/tmp/135a-author-kpi-p7"
+        ],
+        "retention": "temporary; renderable from preserved raw"
+      },
+      {
+        "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+        "pdf_page": 8,
+        "temporary_image_file": "/tmp/135a-author-kpi-p8.png",
+        "sha256": "f3157fc79111930e00e048ff1719ba28fe41a1df637aed37268f8361046a39fc",
+        "image_viewed": true,
+        "render_command": [
+          "pdftoppm",
+          "-f",
+          "8",
+          "-l",
+          "8",
+          "-scale-to",
+          "2000",
+          "-png",
+          "-singlefile",
+          "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/93eb46606d41dc10c91870d9481310fcf5fda5c107d318ef7424e1a6ce89fb99",
+          "/tmp/135a-author-kpi-p8"
+        ],
+        "retention": "temporary; renderable from preserved raw"
+      },
+      {
+        "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+        "pdf_page": 17,
+        "temporary_image_file": "/tmp/135a-author-kpi-p17.png",
+        "sha256": "d4cc78080dd36703f8c627790e0c652fb029f99c7bc43a180622b33d9da7c435",
+        "image_viewed": true,
+        "render_command": [
+          "pdftoppm",
+          "-f",
+          "17",
+          "-l",
+          "17",
+          "-scale-to",
+          "2000",
+          "-png",
+          "-singlefile",
+          "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/93eb46606d41dc10c91870d9481310fcf5fda5c107d318ef7424e1a6ce89fb99",
+          "/tmp/135a-author-kpi-p17"
+        ],
+        "retention": "temporary; renderable from preserved raw"
+      },
+      {
+        "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+        "pdf_page": 47,
+        "temporary_image_file": "/tmp/135a-author-kpi-p47.png",
+        "sha256": "e4315f06e08acb3304a2e3be49736c989568617a27d9b4b3a65b5932e13f39ca",
+        "image_viewed": true,
+        "render_command": [
+          "pdftoppm",
+          "-f",
+          "47",
+          "-l",
+          "47",
+          "-scale-to",
+          "2000",
+          "-png",
+          "-singlefile",
+          "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/93eb46606d41dc10c91870d9481310fcf5fda5c107d318ef7424e1a6ce89fb99",
+          "/tmp/135a-author-kpi-p47"
+        ],
+        "retention": "temporary; renderable from preserved raw"
+      }
+    ],
+    "original_artifact_hashes": {
+      "presentation-followup/source-bundle.json": "4fd50c80f02e4e1d6ed78689f3c8a2df185187a2f89324f0c0f33418b850e8cf",
+      "library-followup/source-bundle.json": "a8db4fa1d594e9f9e82baa8f85bce3d16cc2f5866c46f1d409e74f1d9ce74de2",
+      "external-forecast-discovery/source-bundle.json": "199178e927dbe28570bfe30e8ce354e12e30b41d6e1930bf84a34f3f51a07527",
+      "external-forecast-discovery/forecast-candidates.json": "85435c0b504f4f5e33366498e2b439d5ef6eee157c2815fc9fa40013e8c489ca",
+      "external-forecast-discovery/actual-intake.json": "aec0f8116315b8cd33017172c1c165d86a64cf8db0caf6a1b478d86be4eebba4",
+      "presentation-followup/sources.json": "418d5c2717ae39e0ae761d44f7fee5895e9f33633bd5113027f2a5a6e918d4ac"
+    },
+    "original_artifacts_unchanged": true,
+    "normalizer_calls": 0,
+    "new_GETs": 0,
+    "database_accesses": 0,
+    "new_registry_or_production_code": false,
+    "scope_comparability_not_guaranteed_by_arithmetic": true,
+    "evidence_dependence": "同じ説明PDFの表/グラフ/説明・同会社の短信/FAQ/想定問答は独立した別の投資裏付けに数えない。AENTROの報酬関係を保持し、観測との一致だけで外部予測を検証済みにしない。"
+  },
+  "research_review_cadence": {
+    "recorded_at": "2026-10-15T06:00:58.542071+00:00",
+    "actual_case_review_at": "2026-10-15T06:00:18.725090+00:00",
+    "source_file": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+    "source_sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+    "source_quote": "Review theses at least quarterly, even when nothing dramatic has happened",
+    "early_recheck_trigger": "新しい正式資料又は当該期の公開Q&Aが保存された時は前倒しで同定義/同対象期の比較を行う。",
+    "no_change_review_rule": "変化がなくても著者の少なくとも四半期レビューを目安に再点検する。",
+    "project_management_review_date": "2027-01-15",
+    "date_basis": "2026-10-15実レビューから3カ月後という親の指定を、この会社別研究管理へ適用した日。著者がこの日付を指定したものではない。",
+    "not_a_company_earnings_date": true,
+    "not_a_sale_deadline": true,
+    "scheduler_registry_or_DB_setting_added": false,
+    "forward_test_claim": false
+  },
+  "revision_provenance": {
+    "artifact_revision": 2,
+    "corrected_at": "2026-10-15T06:06:51.929737+00:00",
+    "original_analysis_recorded_at": "2026-10-15T06:00:18.725090+00:00",
+    "top_level_recorded_at_semantics": "元の実照合記録時刻を保持。v2作成/修正時刻はこのcorrected_at。新しいKPI/資料の追加照合日を偽装しない。",
+    "supersedes": {
+      "json_path": "case-record.json",
+      "json_sha256": "e13658aa268218a9abb76f16ed782fdc4be7ba54c52527b15439821a2f329e2b",
+      "markdown_path": "case-record.md",
+      "markdown_sha256": "47ca964c978ff99773597aac3ff13af4b26b4d020eaf5f8e02c4b44830b5ad97"
+    },
+    "triggering_review": {
+      "path": "independent-review.json",
+      "sha256": "4c56560ebb515631baeffee29a05cc9e7766f3ef57f5d07cc87c3fe6bcf08974",
+      "finding_id": "prior_year_end_mislabels_358"
+    },
+    "prior_parent_recheck": {
+      "path": "root-recheck.json",
+      "sha256": "9a508eac38e91c5a5f649c53c39c4be7898f04e29b2310cf8fb52a5b7aa3d897",
+      "scope": "v1への親確認の履歴。v2の再確認済みという意味へ付け替えない。"
+    },
+    "corrections": [
+      {
+        "json_pointer": "/latest_observed_KPIs/1/published_series_context/1/attribution",
+        "before": "7/14会社想定問答。前期末取引358社への質問文と当時の通期５割程度想定を分離。",
+        "after": "7/14当時の「現在の取引社数358社」という質問文。図p5のFY27 1Q358社の表示とは別途対応を確認し、Q&Aが明示しない正確な期末日は指定しない。当時の通期５割程度想定と分離。",
+        "reason": "原Q&Aは「現在の取引社数 358 社」と表示。前期末FY26 4Qは337社であり、358を前期末とした帰属を訂正する。",
+        "basis_quote_ids": [
+          "qa-prior-q1-repeat-share-and-outlook",
+          "issuer-customer-repeat-values-graph-and-formula"
+        ]
+      }
+    ],
+    "business_values_periods_ids_quotes_management_date_AND_and_nonadoption_unchanged": true,
+    "new_GETs": 0,
+    "database_accesses": 0,
+    "code_or_original_sources_changed": false,
+    "finite_recheck": {
+      "two_correction_basis_quotes_match_saved_sources": true,
+      "restoring_one_field_and_removing_revision_provenance_equals_v1": true,
+      "all_15_original_quotes_unchanged": true,
+      "old_record_and_reviews_retained": true
+    }
+  }
+}

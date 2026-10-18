@@ -1,0 +1,135 @@
+{
+  "prepared_at": "2026-10-16T16:33:30.472054+00:00",
+  "company_id": "jp:4318",
+  "status": "proposal_only_no_HTTP_or_DB",
+  "purpose": "既存C3の後発Q1本文未取得を埋める単一資料task。C1の対象期/実績対予想、C2の普通株・分割/ESOP basis、C3の後発公表を年次候補へ比較できるか点検する。新投資予測ではない。",
+  "case_basis": {
+    "case_id": "4318-reported-annual-per-share-basis-monitor",
+    "issue_id": "4318-annual-EPS-BPS-and-common-share-basis",
+    "case_context_file": "research/ir-case-studies-2026-10-15/4318/native-case-setup-2026-10-16/prepare-only/case-context.json",
+    "case_context_SHA256": "3fbe503830239ce96a1be0d586a268540bdfd9b766882c0ef70c500dcbad9f7c",
+    "annual_review_file": "research/ir-case-studies-2026-10-15/4318/annual-accounting-input-discovery-2026-10-16/review.json",
+    "annual_review_SHA256": "7b9d5cb5382afdee5f258631cb607eb8e50f4a2e40e5ab94932d6add90ae2245",
+    "existing_annual_candidates": {
+      "EPS_JPY": "74.11",
+      "BPS_JPY": "345.24",
+      "period": "2025-04-01/2026-03-31",
+      "split": "2025-12-01 ordinary1-to3 already adjusted; no repeated adjustment"
+    },
+    "live_case_or_DB_currentness_checked": false
+  },
+  "selected_literal": {
+    "url": "https://919.jp/wp/wp-content/uploads/2026/07/47_1Q_tanshin.pdf",
+    "href": "/wp/wp-content/uploads/2026/07/47_1Q_tanshin.pdf",
+    "host": "919.jp",
+    "listing_day": "2026-07-31",
+    "listing_day_precision": "date only; no publication time/timezone inferred",
+    "listed_title": "2027年3月期 第1四半期決算短信〔日本基準〕（連結）",
+    "PDF_body_retrieved_or_read_in_this_phase": false
+  },
+  "parent_evidence": {
+    "index_url": "https://919.jp/ir/short/",
+    "capture_file": "research/ir-case-studies-2026-10-15/4318/annual-accounting-input-discovery-2026-10-16/capture.json",
+    "capture_SHA256": "90fe4214e0003c09931cc2b3fdcf3b8dd9b9eb09e54555f9d1778fc36d2db023",
+    "link_pointer": "$.GETs[1].html_visible_text.links[38]",
+    "link_object": {
+      "url": "https://919.jp/wp/wp-content/uploads/2026/07/47_1Q_tanshin.pdf",
+      "href": "/wp/wp-content/uploads/2026/07/47_1Q_tanshin.pdf",
+      "label": "PDF/約256KB"
+    },
+    "index_HTTP_completed_at": "2026-10-16T10:20:08.122683+00:00",
+    "saved_text_file": "research/ir-case-studies-2026-10-15/4318/annual-accounting-input-discovery-2026-10-16/text/02.txt",
+    "saved_text_SHA256": "87a9ddd1b64ba109bb1e0c9120e3f3cf9fa74ab8c5d5eea2837f98761f80f211",
+    "listing_quote": "2026年7月31日 2027年3月期 第1四半期決算短信〔日本基準〕（連結） PDF/約256KB",
+    "character_span": [
+      915,
+      965
+    ],
+    "UTF8_byte_span": [
+      2123,
+      2223
+    ],
+    "raw_file": "research/ir-case-studies-2026-10-15/4318/annual-accounting-input-discovery-2026-10-16/raw/7877cb9d7c4773f572b13f551e00dc4e5c865af1f2c8019cccfa077ad0cb57b7",
+    "raw_SHA256": "7877cb9d7c4773f572b13f551e00dc4e5c865af1f2c8019cccfa077ad0cb57b7",
+    "same_HTML_row_quote": "<tr class=\"u_table_row\"><th class=\"u_table_cell is_table_th\">2026年7月31日</th><td class=\"u_table_cell\">2027年3月期 第1四半期決算短信〔日本基準〕（連結）</td><td class=\"u_table_cell\"><a href=\"/wp/wp-content/uploads/2026/07/47_1Q_tanshin.pdf\" target=\"_blank\">PDF/約256KB</a></td></tr>",
+    "raw_character_span": [
+      16309,
+      16567
+    ],
+    "raw_UTF8_byte_span": [
+      18157,
+      18465
+    ]
+  },
+  "access_precheck": {
+    "holds_file": "research/ir-source-access-holds-2026-10-15/holds-v9.json",
+    "holds_SHA256": "4fb00a614863759398832cd1368b77535505cc885c4cd21433edafaccc22ec65",
+    "version": 9,
+    "exact_host_count": 13,
+    "selected_host_held": false,
+    "saved_robots_url": "https://919.jp/robots.txt",
+    "capture_pointer": "$.GETs[0]",
+    "robots_file": "research/ir-case-studies-2026-10-15/4318/annual-accounting-input-discovery-2026-10-16/text/01.txt",
+    "robots_SHA256": "74e716bb997054a35b38c738258cd1f0a87f20f2479eef6112d01081cc02118c",
+    "observed_HTTP_status": 200,
+    "complete_body": true,
+    "bytes": 73,
+    "observed_HTTP_completed_at": "2026-10-16T10:19:58.406167+00:00",
+    "rules_verbatim": "User-agent: *\nDisallow: /wp/wp-admin/\nAllow: /wp/wp-admin/admin-ajax.php\n",
+    "exact_path_result": "/wp/wp-content/uploads/2026/07/47_1Q_tanshin.pdf is outside saved /wp/wp-admin/ Disallow prefix. This is saved-rule precheck, not fresh policy authentication or body GET permission execution."
+  },
+  "proposed_execution_if_separately_assigned": {
+    "maximum_GETs": 2,
+    "scope": "Only selected exact Q1 PDF; fresh same-host robots1 + PDF1, or saved rule reuse if separately accepted. No index refresh, sibling PDF, search, market price, IR/contact/privacy or alternate-host route.",
+    "normal_UA_TLS_proxy": true,
+    "stop": "robots unknown/denied, held exact redirect host, incomplete/nonPDF response or exhausted budget => stop; no retries or bypass.",
+    "old_phase_closed": true,
+    "old_unused_GET_budget_reopened": false
+  },
+  "minimum_meaning_read_plan": [
+    {
+      "priority": 1,
+      "page": "physical1, provisional until actual PDF layout observed",
+      "scope": "Company/code, Japanese consolidated basis, Q1 cumulative target dates, reported quarterly EPS and period-end equity/BPS if displayed, source date and forecast/revision labels. Q1 EPS is not annual EPS74.11 and June values are not March BPS345.24 replacements.",
+      "conditions": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "priority": 2,
+      "page": "physical2 only if it contains remaining summary; otherwise actual summary page selected by heading",
+      "scope": "Issued/treasury/average shares, ESOP notes, split adjustment, consolidation changes and full-year guidance/revision flag; inspect what is actually printed, without certifying unchanged basis from silence.",
+      "conditions": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "priority": 3,
+      "page": "At most one additional note page if the first2 leave C2 unresolved; physical number unknown before retrieval",
+      "scope": "Use TOC as locator only to select per-share or treasury/ESOP note. If absent or several separate notes would be needed, keep residual unknown and stop; no full-document semantic review.",
+      "conditions": [
+        "C2"
+      ]
+    }
+  ],
+  "boundaries": [
+    "Target PDF unacquired here: page count, exact note page and numerical content unknown. First2 meaning pages plus optional1 are a proposed cap, not completed reading.",
+    "Do not annualize Q1, infer normalized EPS/tax/NCI, reconstruct BPS from total net assets, or adopt market price/value/target/sell thresholds.",
+    "Compare later disclosure to original annual inputs with date and target-period labels; do not backdate later evidence or treat July listing as current October guarantee.",
+    "Already accepted annual page1/2/19 and later PL/CF distinction may be reused; old records remain unchanged."
+  ],
+  "operations": {
+    "GET": 0,
+    "DB": 0,
+    "Store": 0,
+    "old_file_edits": 0,
+    "financial_calculation_or_adoption": 0,
+    "IR_messages": 0,
+    "orders": 0,
+    "new_output_files": 1
+  }
+}

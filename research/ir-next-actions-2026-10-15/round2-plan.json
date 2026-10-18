@@ -1,0 +1,173 @@
+{
+  "purpose": "実企業の公開情報からIRの問い・判断入力へ進む次タスクを3件に限定する。計算器の追加を目的にしない。",
+  "scope": {
+    "date": "2026-10-15",
+    "holding_horizon": "数カ月〜1年",
+    "new_GETs": 0,
+    "DB_accesses": 0,
+    "production_or_docs_changes": 0,
+    "full_suite_runs": 0,
+    "method": "指定docsと保存済みcase/著者手順・現コード入口だけを限定読取。並行作業中のsnapshotでありDB現在件数の独立確認ではない。"
+  },
+  "main_finding": "予定監視、安定期再投資、明示終価FCFFの算術は既に存在する。実企業への採用0を解消する主作業は、会社公表の実績/予想と独立した予測・モデル採用・実行方針を分けて1件の適用根拠を作ること。新しい算術や監査gateを足しても未知の予測・方針は得られない。",
+  "inspected_documents": [
+    "docs/ongoing-work.md",
+    "docs/ir-decision-flow.md",
+    "docs/explicit-terminal-fcff-spec.md",
+    "docs/cyclical-reinvestment-spec.md",
+    "docs/decision-policy.md",
+    "research/ir-case-studies-2026-10-15/1379/README.md",
+    "research/ir-case-studies-2026-10-15/1379/review.json",
+    "research/ir-case-studies-2026-10-15/1379/disclosed-facts/README.md",
+    "research/ir-case-studies-2026-10-15/1332/cashflow-scope-review/README.md",
+    "research/ir-case-studies-2026-10-15/1332/cashflow-scope-review/review.json",
+    "research/ir-case-studies-2026-10-15/135A/model-input-mapping.md",
+    "research/ir-case-studies-2026-10-15/135A/model-input-mapping.json",
+    "research/ir-case-studies-2026-10-15/135A/presentation-followup/review.json",
+    "research/ir-case-studies-2026-10-15/ir-question-readiness-review.md",
+    "third_party/anthropic/skills/earnings-preview/SKILL.md",
+    "research/published-rating-policies-2026-10-15/README.md"
+  ],
+  "zero_adoption_reasons": {
+    "public_actual_data": {
+      "1379": "Q1基本EPS14.44円・営業利益418百万円、通期会社予想EPS167.22円/OI7260百万円、年間DPS62円の5項目は既に構造化。実績が全くないことが理由ではない。正式Q1 CFは未作成、全サイクル/季節性・再投資・株数/資金条件の適合は未確認。",
+      "1332": "正式1Qと補足・Q&Aはあり、CFの有無やD&Aののれん包含差等8問は公開解決済み。ただし設備取得と現金支出、WC/買収関連買掛金、在池魚評価のCF調整、期間/集計範囲等5bridgeは残る。",
+      "135A": "中間実績/会社予想9公表値と対応表は既存。CF部品4件は全アンレバードCFの再構成や将来FCFFではなく、現在の非連結CF定義・税/利息/投資範囲・全WC等の対応が不足。"
+    },
+    "independent_forecast_needed": {
+      "all_cases": "会社の1期予想を会社予想のまま使う研究は可能だが、独立した強気/基本/弱気の将来値・倍率・割引率・将来株数・配当列は与えられていない。自己設定しないという条件下では、根拠ある外部予測/採用済み前提が必要な箇所はnullのまま。",
+      "important_distinction": "会社予想の採用が常に禁止、全モデルに必ず独立予測が必要、というルールではない。会社予想をどの期間・用途の入力として使うかの明示採用と、残る入力の充足がないことが問題。"
+    },
+    "current_to_stable_bridge": {
+      "all_cases": "現在のOI/CFO/設備支出から安定期NOPAT_next・新規投資ROC・g・年次FCFF列を導く根拠がない。安定期は直近翌年度と同義ではなく、n+1期と税/再投資後FCFFの対応、単一rの適合が必要。",
+      "already_available_code": "cycle-margin、stable-reinvestment、dcf_explicit_terminalは既存。著者例/合成値の成功は現企業の正常化/安定期移行の採用ではない。"
+    },
+    "execution_policy_not_adopted": {
+      "all_cases": "現在価格/保有状態、出典付き採用policy、許可入力pathと回答分岐・検証期限が未充足。価格取得だけではこの不足を埋めない。",
+      "policy_evidence_limit": "保存された岩井コスモの定義は半年TOPIX相対・概数の部分確認。現コードの絶対価格上昇余地/手数料/下落条件/価格鮮度へ自動転用できない。",
+      "probability_limit": "現buy条件は期待評価を使い、unweightedなら買いは既存仕様上unresolved。シナリオ範囲は信頼区間ではない。IR尤度・事前確率・効用も未設定で、完全情報や均等確率を補ってはいけない。"
+    }
+  },
+  "tasks": [
+    {
+      "rank": 1,
+      "id": "1379-company-forecast-conditions-preview",
+      "title": "1379の会社通期予想を支える事業条件と反証を、次回公開資料で検証できるpreviewへ落とす",
+      "source_basis": [
+        {
+          "source": "Anthropic earnings-preview, Steps1–3 / Important Notes",
+          "saved_path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+          "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+          "verified_procedure": [
+            "Review the company's prior quarter earnings call for any guidance or commentary",
+            "What would need to happen operationally",
+            "always note the source and date of estimates"
+          ]
+        },
+        {
+          "source": "Anthropic thesis-tracker",
+          "saved_path": "docs/decision-policy.md",
+          "verified_procedure": "A thesis should be falsifiable / Track disconfirming evidence as rigorously as confirming evidence"
+        },
+        {
+          "source": "Damodaran2025 project p4 / p8",
+          "saved_path": "research/ir-policy-adoption-2026-10-15/README.md",
+          "verified_procedure": "事業説明を主要評価入力へ結び、新情報後に説明・評価を再点検。"
+        }
+      ],
+      "existing_gap": "1379の5値抽出と公開解決一覧は済んでいるが、国内きのこ価格、販売量/構成、化成品価格改定、費用抑制等の会社説明を、通期予想の成立条件・代替説明・反証・次回の確認欄へ並べる会社別previewは未保存。",
+      "minimum_artifact": "1379専用earnings-preview-candidate.{json,md} 1組。原文・頁・対象期・会社の説明/会社予想・記録者の検証仮説を区別し、公開で解決済みの問いを除く。残る問いは、どの予測入力の不確実性を減らすか、実入力へまだ結べない理由、次に必要な公表指標を付す。",
+      "code_needed": false,
+      "work_type": "既存研究の会社別適用記録。新しいpreview生成器/選別器/監査APIは不要。",
+      "no_invented_parameters": "Bull/Base/Bearは成立条件の記述欄に留め、数値予測・確率・株価反応・倍率・採用routeを独自設定しない。会社予想は会社予想のまま。",
+      "acceptance_conditions": [
+        "Q1実績、前年同期、中間会社予想、通期会社予想の行・期・EPS基本/希薄化後を分ける。既存5値を再抽出しない。",
+        "Q1を4倍せず、季節性を一律の係数で補わない。会社の利益要因説明を数量感応度や予測達成保証へ変換しない。",
+        "各残論点に観測可能な公表指標/比較範囲・反証候補・追加で必要な資料を記録し、現行モデルpathが未立証ならnull。",
+        "カレンダーの年度ラベル不整合は保持し、11/13予定を確定時刻/実施済みや2027FY帰属の認定にしない。",
+        "公開で答えがある問いを聞き直さず、質問を作れない場合は不送信・次回公開確認を完成結果として残す。"
+      ],
+      "why_not_reinvention": "既存normalizer/質問準備レビューをもう一度作らず、新たに得た1379の具体的な利益要因を前向きな検証項目へ接続する。"
+    },
+    {
+      "rank": 2,
+      "id": "135a-one-cashflow-basis-and-stable-boundary",
+      "title": "135Aの既存CF対応表を起点に、現在CFと将来FCFFの間で必要な橋を1件だけ具体化する",
+      "source_basis": [
+        {
+          "source": "Damodaran financial-services2009 p14, ET-Q06",
+          "saved_path": "docs/explicit-terminal-fcff-spec.md",
+          "verified_procedure": "会社全体価値は税引後・負債支払前の期待CFをWACCで割り引く。CFO/配当をそのまま同じFCFFへしない。"
+        },
+        {
+          "source": "Damodaran cyclical2009 p10/14/17/21/24, CR-Q01/02/09/10",
+          "saved_path": "docs/cyclical-reinvestment-spec.md",
+          "verified_procedure": "利益と再投資・資本収益・資金条件を分け、回復と成長を二重計上せず、税/NOLと安定期の適用を区別する。"
+        },
+        {
+          "source": "Damodaran young-growth2009 p39–40, ET-Q01/02",
+          "saved_path": "docs/explicit-terminal-fcff-spec.md",
+          "verified_procedure": "終価のFCFFは予測最終年nの直後n+1期。最終予測CFへ無条件に成長を掛けるだけでは同じにならない。"
+        }
+      ],
+      "existing_gap": "135Aの9公表値とpossible_input_identifiersは既に整理済み。未実装算術のせいでtarget pathがnullなのではなく、中間CFOからの税/利息・投資・WC・期間の対応と、将来化・安定期移行の根拠がない。1332も同じ問題を持つが、今回その5bridgeを再レビューしない。",
+      "minimum_artifact": "135A専用current-cashflow-to-forecast-basis.{json,md} 1組。保存中間短信のCF/注記から、現CFOの利益起点、支払税/利息の扱い、設備支出とその他投資、WC調整の符号・範囲を行単位で対応付ける。実績部品が揃う部分と欠ける部分を区分し、現在実績→予測各期→安定n+1期の必要入力を別列にする。計算式が保存原典で確認できない調整は実行せず不足として残す。",
+      "code_needed": false,
+      "work_type": "既存model-input-mappingの未解決理由に対する1件の会計/期間適用記録。部品算術や自動forecast importerの追加は、全入力と式の意味が揃うまで不要。",
+      "specific_ir_value": "会計上の定義/集計範囲に関する問いと、独立した将来予測が必要な問いを分ける。会社の公表定義を確認できれば実在の入力分類が変わる場合だけIRの余地を残し、会社に将来利益・ROC・恒久成長を保証させる問いにしない。",
+      "acceptance_conditions": [
+        "既存4CF事実の再抽出で終わらず、これらが現在実績FCFFのどの工程へ直接入らないか、追加でどの既存原文行/注記が必要かを具体化する。",
+        "CFO223百万円を将来アンレバードFCFFとせず、半期を2倍しない。取得支出の負号、WC調整の符号、税/利息の概念を保存する。",
+        "実績、会社予想、独立予測、明示仮定を分け、後二者がなければ空欄。計算成功や原典の式を根拠に金融入力verified/model_adoptedをtrueにしない。",
+        "安定期NOPAT_next/ROC_new/g/n/rは未設定のまま。現在利益/過去ROIC/日本企業という情報から埋めない。単一rが適合しない場合も年別率を自己生成しない。",
+        "中間量のnextがDCFのn+1期であることを説明できなければ、既存stable-reinvestment→terminal_fcffの転記は行わない。",
+        "1332の既に公開解決したD&A包含/CF有無等を再質問せず、未解決5bridgeは参照のみで今回の作業範囲を拡げない。"
+      ],
+      "why_not_reinvention": "既存9値の一覧では未説明の、CFOと予測FCFFの意味の違いを実際の1つの財務表に結ぶ。新しい汎用監査層ではなく、未採用となる具体的理由を解く。"
+    },
+    {
+      "rank": 3,
+      "id": "single-case-forecast-and-execution-source-plan",
+      "title": "1社の評価/IR比較を完成させるため、独立予測と実行方針の調達・採用条件を具体的に分ける",
+      "source_basis": [
+        {
+          "source": "Anthropic earnings-preview",
+          "saved_path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+          "verified_procedure": "estimateには出典と日付を付し、Bull/Base/Bearの事業条件と株価への含意を分ける。"
+        },
+        {
+          "source": "Damodaran2025 project/ValIntro",
+          "saved_path": "research/ir-policy-adoption-2026-10-15/README.md",
+          "verified_procedure": "There are no precise valuations. 事業説明と数値、期間内に価格差が修正される触媒を対応させる。"
+        },
+        {
+          "source": "保存公開レーティング原典の適用限界",
+          "saved_path": "research/published-rating-policies-2026-10-15/README.md",
+          "verified_procedure": "半年のTOPIX相対・概数の部分定義であり、絶対価格の買い/利確/費用/リスク条件ではない。新たな投資規則として採用しない。"
+        }
+      ],
+      "existing_gap": "全社をwatchのまま増やす、会計factを増やす、評価関数を増やすだけでは、期間に対応した評価入力・価格/費用/リスク/鮮度方針は生まれない。現decisionのbuy条件には期待評価が必要で、未確率のままの新規買いは意図的にunresolved。",
+      "minimum_artifact": "1379 previewを対象にした1件のadoption-prerequisites packet。まずEPS倍率/DCF/DDMのうち、会社公表値をどの期間のどの入力候補として扱えるかを既存契約で比較し、最終methodは適合が立証できるまで未採用。必要な独立予測/倍率/割引率/株数/安定期等の各項目に、探すべき一次の予測資料/利用者設定の種類、必要な日付/対象期/単位、既存資料で充足済みか、未解決なら誰のどの追加根拠が必要かを1社分だけ記録する。実行policyの各必須項目はこれと別欄にする。",
+      "code_needed": false,
+      "work_type": "実際の利用に必要な入力の調達・採用計画と適用記録。既存policy/valuation/model-inputs/ir-planをそのまま使う。資料が揃う前の新しいpolicy gateや平均確率推定は作らない。",
+      "completion_boundary": "この限定作業で未来値や方針採用そのものを完成できるとは約束しない。保存資料で未充足ならnull/needs_external_estimate/needs_policy_adoptionを明示した具体的な次の資料要求で完了する。外部予測の取得や利用者方針採用は別の有限taskで、今回GETや採用処理はしない。",
+      "acceptance_conditions": [
+        "数値予測不足と実行policy不足を同じneeds_dataに潰さない。会社予想の期間/用途の明示採用、独立予測が必要な箇所、価格取得が必要な箇所を別項目にする。",
+        "公開レーティングの15%程度等を絶対上昇余地へ変換しない。費用0、下落許容率、price max-age、target scenarioを黙って置かない。",
+        "確率がない比較はunweightedの個別評価範囲まで。平均/均等確率、IRのP(signal|state)、売買損益からの尤度を作らない。",
+        "出典が未確定のEPS倍率や将来CFを、モデルに数値を入れてよいという自己承認の形にしない。現行codeのpolicy_not_configured等はそのまま保持する。",
+        "IRの質問前固定にはbaseline入力path・仮説版・反証・明確/曖昧/無回答枝が必要と示す。まだpathがない問いは登録しない。",
+        "出典付き外部予測や利用者/外部policyの明示採用で不足を解ける場合は、コード不要と結論する。現codeが適合する方針を表現できない場合だけ、原文と不一致項目を添えて別仕様案へ切り出し、自動拡張しない。"
+      ],
+      "why_not_reinvention": "既存policy-profilesの再調査ではなく、会社別の最初の研究/IR比較を完成させるために残る外部依存を具体化する。無期限の監査整備や方針の捏造を避ける。"
+    }
+  ],
+  "not_selected": [
+    "監視の変更/実施/結果/自動job拡張",
+    "年別WACC・新税/NOL・自動正常化の計算器追加",
+    "valuation/source binding等の汎用監査強制接続",
+    "全社再GETや取得エラーの診断再開",
+    "既存135A9値対応表/1332公開解決8問/1379公表5値の再作成"
+  ],
+  "recommendation": "最初は1379の会社別previewを完成し、公開の成立条件・反証・次回確認を実際に示す。金融算術の追加は後回しにし、135Aの具体的なCF基準と、1社の予測/実行方針の不足を別々に解く。独自の数値設定が禁止されたまま根拠がない箇所は、採用0が正しい状態である。"
+}

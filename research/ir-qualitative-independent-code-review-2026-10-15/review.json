@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-15T19:52:45.870965+00:00",
+  "review_role": "independent coding agent; separate from original implementation author",
+  "status": "review_complete_one_P2_fixed",
+  "scope": [
+    "src/ir_agent/qualitative_research.py",
+    "src/ir_agent/harness.py",
+    "src/ir_agent/cli.py",
+    "src/ir_agent/store.py",
+    "tests/test_qualitative_research_integration.py",
+    "tests/test_qualitative_prior_review.py",
+    "tests/test_qualitative_worker_view.py",
+    "tests/test_qualitative_recovery.py",
+    "docs/qualitative-research-jobs.md"
+  ],
+  "reviewed_file_sha256": {
+    "src/ir_agent/qualitative_research.py": "f528b674341e1482bdfc8eea634dc33cf964e7806657ce1d49f6fc2bb9ce3fc8",
+    "src/ir_agent/harness.py": "ea6eb15ba4945c81f68f700d52fe23c4cddc36c9927195d857ef6aff5ab1b847",
+    "src/ir_agent/cli.py": "547cdaeaf9e37044bd76334ffe3d0bad963ef34e343818b9f3dc282f016aaa52",
+    "src/ir_agent/store.py": "84c023046d43400742f729c95fb4789e75237433ef74ec4d7c40d712b927e47e",
+    "tests/test_qualitative_research_integration.py": "14df8319496075a23c2a6c49ddcd48ad89d5b105250732a1b3d8c0cb49904447",
+    "tests/test_qualitative_prior_review.py": "40654c7a010c8d028b43ee7b7492cd2708aaebabd634f6d6060d1b4ae5fe1a8f",
+    "tests/test_qualitative_worker_view.py": "93ab509433ff468b9e6cc331bc8477c98c3c8f630432a80fc4f583e4c7da22f6",
+    "tests/test_qualitative_recovery.py": "65789455dd8a39e3e3729b487ca27139a2fa8476de856e138dec62cebec52542",
+    "docs/qualitative-research-jobs.md": "be1dec9753f8c1f951d9df7268b6a7cb169a92d92eee3b4556b3881bb8de4969"
+  },
+  "findings": [
+    {
+      "id": "QR-REQUEUE-01",
+      "severity": "P2",
+      "status": "fixed_and_focused_tests_passed",
+      "description": "A superseded job permanently consumed its trigger signature after exact evidence restoration, preventing resumed qualitative monitoring.",
+      "code_location": "src/ir_agent/qualitative_research.py:329",
+      "reproduction_file": "research/ir-qualitative-independent-code-review-2026-10-15/finding-before-fix.json",
+      "fix": "Resolve only superseded jobs via deterministic signature chain; each retry freezes a fresh packet at current as_of/queue_saved_at and links supersedes_job_id. Never rewrite prior job/attempt or bypass current evidence checks.",
+      "regression_file": "tests/test_qualitative_recovery.py"
+    }
+  ],
+  "checks": [
+    {
+      "area": "case-CAS",
+      "result": "reviewed",
+      "evidence": "register exact retry retains original version; new config requires latest version; company/issue/synthetic immutable; complete advances version without config revision."
+    },
+    {
+      "area": "source-time-binding",
+      "result": "reviewed",
+      "evidence": "Queue, claim and complete delegate source DAG, historical/current publicity, actual availability and classification checks; pending source snapshot SHA is checked against saved immutable source."
+    },
+    {
+      "area": "pending-arrival",
+      "result": "reviewed",
+      "evidence": "Source arriving during lease remains outside frozen packet; next queue only includes unreviewed source after prior completion."
+    },
+    {
+      "area": "prior-review",
+      "result": "reviewed",
+      "evidence": "New packets freeze prior result summary/observation/hash/chronology for same case version; mismatched historical result fences claim; old packets do not receive reconstructed prior fields."
+    },
+    {
+      "area": "company-exclusion",
+      "result": "reviewed",
+      "evidence": "Harness claim shares one active lease per company across intake and review; excluded companies do not queue or complete."
+    },
+    {
+      "area": "lease-generation",
+      "result": "reviewed",
+      "evidence": "Completion reloads under write transaction, checks owner/attempt/unexpired lease; old same-name worker generation cannot complete new generation."
+    },
+    {
+      "area": "atomicity",
+      "result": "reviewed",
+      "evidence": "Case version, result, job completion and attempt journal share transaction/savepoints; injected journal failure is rolled back."
+    },
+    {
+      "area": "completion-retry",
+      "result": "reviewed",
+      "evidence": "Exact completed request returns original result; changed result is rejected; completed financial records are not created."
+    },
+    {
+      "area": "queue-new-limit",
+      "result": "reviewed",
+      "evidence": "Existing active/completed trigger does not consume new-job limit; candidate ordering and deferred count remain unchanged by fix."
+    },
+    {
+      "area": "worker-projection",
+      "result": "reviewed",
+      "evidence": "Worker view deepcopies frozen case/new source content and source SHA; it omits large proof text by reference, preserves original packet and marks completion authorization unchecked."
+    },
+    {
+      "area": "financial-boundary",
+      "result": "reviewed",
+      "evidence": "Result requires exact five fields; no generated valuation/action/thesis/classification/IR dispatch/order calls; financial_inputs_verified and meaning_review_verified remain false."
+    },
+    {
+      "area": "superseded-recovery",
+      "result": "reviewed",
+      "evidence": "QR-REQUEUE-01 reproduced and fixed: only superseded chain admits fresh packet; old packets/jobs/attempts untouched, retained evidence holds continue to reject, repeated pending/leased polling does not duplicate."
+    }
+  ],
+  "verification": {
+    "focused_command": ".venv/bin/python -m unittest discover -s tests -p test_qualitative*.py -v",
+    "focused_tests": 30,
+    "unittest_seconds": 0.256,
+    "passed": true,
+    "log_path": "research/ir-qualitative-independent-code-review-2026-10-15/focused-tests.log",
+    "log_sha256": "ff43d2315439f38f82264b73b1404231a43418627e7aa5fa38bfba039adcb4bd",
+    "prior_full_suite_1421": "Reported by parent before review; not independently rerun by this reviewer. Parent will run full suite after fix."
+  },
+  "mutated_paths": [
+    "src/ir_agent/qualitative_research.py",
+    "tests/test_qualitative_recovery.py",
+    "research/ir-qualitative-independent-code-review-2026-10-15"
+  ],
+  "isolation": {
+    "test_db": "memory",
+    "test_files": "temporary directories",
+    "real_database_reads": 0,
+    "real_database_writes": 0,
+    "network_requests": 0,
+    "external_messages_orders": 0,
+    "shared_readme_docs_edits": 0
+  },
+  "limits": [
+    "Manual code review plus focused regression tests is not a proof of all possible behavior.",
+    "Direct database corruption, arbitrary packet rewriting and concurrent hostile filesystem replacement are not certified.",
+    "This review checks workflow contracts, not financial semantics, author independence, investment quality, full-document reading or realized returns.",
+    "Full-suite acceptance and real database application are delegated to the parent; no claims that tests write the production database."
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "company_id": "jp:1950",
+  "maximum_GETs": 5,
+  "user_agent": "Codex-IR-Research/0.1",
+  "allowed_requests": [
+    {
+      "role": "issuer_robots",
+      "url": "https://www.densetsuko.co.jp/robots.txt",
+      "basis": "robots endpoint on selected official host"
+    },
+    {
+      "role": "issuer_root",
+      "url": "https://www.densetsuko.co.jp/",
+      "basis": "selected CSV official_url"
+    },
+    {
+      "role": "results_index",
+      "url": "https://www.densetsuko.co.jp/company/ir/irlibrary/",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[1].html_visible_text.links[36]",
+      "literal_href": "https://www.densetsuko.co.jp/company/ir/irlibrary/",
+      "label": "IR資料集"
+    },
+    {
+      "role": "quarter_results_index",
+      "url": "https://www.densetsuko.co.jp/company/ir/irlibrary/financial-information",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[2].html_visible_text.links[107]",
+      "literal_href": "https://www.densetsuko.co.jp/company/ir/irlibrary/financial-information",
+      "label": "決算情報"
+    },
+    {
+      "role": "canonical_results_index",
+      "url": "https://www.densetsuko.co.jp/company/ir/irlibrary/financial-information/",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[3].response_headers.location",
+      "same_host_explicit_redirect_hop": 1,
+      "GET_budget_counted": true
+    }
+  ],
+  "robots_reviews": {
+    "www.densetsuko.co.jp": {
+      "proceed": true,
+      "branch": "fresh_robots200",
+      "raw_file": "research/ir-case-studies-2026-10-15/1950/initial-public-review-2026-10-16/raw/cd26e4e20829aa74788070a707ef0c928cd61e0ecceab998daa5a379435e763f",
+      "raw_sha256": "cd26e4e20829aa74788070a707ef0c928cd61e0ecceab998daa5a379435e763f",
+      "root_parser_allowed": true,
+      "AI_specific_hold_observed": false
+    }
+  },
+  "holds_file": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+  "holds_sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952",
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu"
+  ],
+  "maximum_samehost_explicit_redirect_hops": 1,
+  "no_JS_search_form_externalhost_or_diagnostics": true,
+  "maximum_meaning_image_pages": 4
+}

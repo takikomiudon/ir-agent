@@ -1,0 +1,16 @@
+--- before/research/ir-four-company-public-QA-connection-2026-10-16/README.md
++++ research/ir-four-company-public-QA-connection-2026-10-16/README.md
+@@ -1,3 +1,13 @@
++# 4社の公開Q&A：実保存と既存条件比較の完了
++
++4318・6200・6814・7187の原4sourceを全オブジェクト同一で保存し、intake4件を完了した。既存native3caseの定性比較3件もrootが完了し、4318v4/config1・既読4、6200/6814各v5/config1・既読6へ進んだ。全case unresolved・内部管理Jan16retain、他caseと旧管理日不変・再queue0。7187のFAQ保存を新case登録とはしない。
++
++[読取専用の最終照合](actual-verification.json)では261資料（公開260/市場1）・260分類/261availability、全179job完了（intake135/定性44）、176attempt/352event/176request receipt。native34case/79版/197既読は旧194＋既存3case各1sourceの比較である。Jan15=12case/Jan16=22case、公開資料あり55社/財務内容41社、legacy28/trusted233を実測した。[検証script](verify-actual.py)はバックアップと旧27tableのschema/全旧行を照合し、原4source・来歴/分類snapshot・worker request/completion/case-afterを全体一致で確認した。DB/backupの照合前後SHAは不変、Store/DB書込/GETは0。
++
++4318の当時費用増見通し・ROE目標、6200のQ2会社説明、6814/7187の限定一般FAQを会社年度実績の訂正・予想実現や新たな投資家予測にしない。4318の一時利益/CFに関する既存読解は固定file/SHA/時刻でsummaryとcase観測へ手動引継ぎした。金融thesis・policy・正式質問・返信・明示保有・RDR・送信・注文は0。Graham7社集合・参考値・索引v42は不変で、索引の255資料/native32case snapshotは当時の履歴として保持する。新core変更/fullsuite再実行0、既存1,585testsの受入を保持した。成功した保存・completeは再実行しない。
++
++## 接続前の準備記録（以下は当時のfile-only状態）
++
+ # 4社の公表Q&A原典：接続準備のみ
+ 
+ 4318・6200・6814・7187の指定producer bundleから、新原典sourceを各1個、**全オブジェクト同一**で集約した。`source-bundle.json`はschema1、companies/thesesは空。6200のproducerに含まれるcompany stubは追加せず、旧原典・正規化facts・archive7FAQも加えていない。

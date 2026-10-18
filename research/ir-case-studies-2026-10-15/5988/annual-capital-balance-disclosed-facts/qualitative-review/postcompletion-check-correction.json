@@ -1,0 +1,12 @@
+{
+  "recorded_at": "2026-10-16T00:50:33.400728+00:00",
+  "cause": "Root verification incorrectly expected job_attempts row to be rewritten on completion. Attempts are immutable rows and completion appends an event. The successful completion was not rerun.",
+  "journal_success_already_saved": true,
+  "actual_changed_tables_observed_at_failure": [
+    "jobs",
+    "job_attempt_events",
+    "qualitative_case_versions"
+  ],
+  "corrected_verification": "All rows from prequeue backup retained, with only job+1/attempt+1/events+2/requestreceipt+1/caseversion+1. Completion and final case equal saved successful response.",
+  "product_or_writer_result_finding": false
+}

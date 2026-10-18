@@ -1,0 +1,118 @@
+{
+  "recorded_at": "2026-10-15T23:13:03.147856+00:00",
+  "status": "finite_closed_four_GETs_selected_summary_not_implementation_confirmation",
+  "fixed_repository": "crdcj/MagicFormula",
+  "fixed_commit": "ac05a3bd3e146aa924b2b5e11ebffa3484c2c81d",
+  "tree_git_sha": "29a99eee92d232d496df34942ed9cf4f8e38d0d7",
+  "tree_scope": "Literal nonrecursive root tree, truncated:false; src/data/other subtrees not read",
+  "README_git_blob_sha": "7358c99a52cc1443be500ecf77cfba270ca21485",
+  "selected_notebook_git_blob_sha": "66a68cb6e13983358843255ec33b54c35f43591f",
+  "author_commit_date_as_reported": "2023-02-05T01:17:57Z",
+  "commit_date_not_http_or_source_firstsave": true,
+  "findings": [
+    {
+      "topic": "source_authorship_and_market",
+      "location": [
+        "README.source.md:heading/authors",
+        "selected-code.source:cells0–3"
+      ],
+      "finding": "保存READMEはBrazilian listed companies向けbacktestとし、Felipe Costa/Carlos Carvalhoを著者として表示する。B3/CVM公表データを使うと作者は説明する。Greenblatt原典の直接取得/著者承認・日本株適合の根拠ではない。",
+      "status": "maintainer_description_only"
+    },
+    {
+      "topic": "actual_implementation",
+      "location": [
+        "selected-code.source:all10cells"
+      ],
+      "finding": "9 markdownセルと空codeセル1、全出力0。選択notebookは各工程の要約であり、ここに実行可能ranking/年次入替/売却処理や独自module呼出はない。src subtreeは未読で、repository全体に実装がないとは結論しない。",
+      "status": "unverified_in_selected_scope"
+    },
+    {
+      "topic": "metrics_and_denominators",
+      "location": [
+        "selected-code.source:cell0"
+      ],
+      "finding": "Greenblatt式としてEBIT/(NWC+net fixed assets)とEBIT/EVを説明した後、当projectのROICにはDamodaran定義を採用したと注記。実際のROIC分子/税処理/平均資本やEV負債・現金等の定義・会計field mappingは選択fileでは未確認。冒頭式を実装式と認証しない。",
+      "status": "described_but_code_unverified"
+    },
+    {
+      "topic": "sign_zero_missing",
+      "location": [
+        "selected-code.source:cells1,3"
+      ],
+      "finding": "財務工程で負のROIC、EBIT、NetDebt値を持つcompaniesのcasesをfilter outしたと作者は説明する。どのcompany-year/行が除外されるか、複数符号条件の組合せ、NetDebtのfield定義/構成、net cashの同定や会社全期間の除外は未確認。負NetDebt除外をGreenblatt原典要件にしない。0分母/0指標・欠損/NaN/無限/同順位の処理も未確認。",
+      "status": "negative_filter_described_other_boundaries_unknown"
+    },
+    {
+      "topic": "universe_and_exclusions",
+      "location": [
+        "selected-code.source:cells2,3,5"
+      ],
+      "finding": "CVM2448社から公益/金融/外国企業及び作者独自の国有会社除外で1443社と説明。国有企業除外は本に明記されない旨を作者自身が区別する。財務1108→375、価格511→最終rank可能192という異なる工程の母集団を単一current universeへ統合しない。最低流動性filterの数値は未確認。",
+      "status": "historical_counts_and_filters_described"
+    },
+    {
+      "topic": "point_in_time_data",
+      "location": [
+        "selected-code.source:cells3,4,5,7"
+      ],
+      "finding": "2011年以降の年次監査済連結財務、未調整日次価格でranking、後段で配当調整価格を使うという説明。年100日目は大半の財務公表後という選択理由であり、全社の公表日時/利用可能version/修正履歴や上場廃止を含む当時universe、look-ahead/survivorshipの除去を認証しない。",
+      "status": "PIT_and_bias_controls_unverified"
+    },
+    {
+      "topic": "selection_and_allocation",
+      "location": [
+        "README.source.md:2022table",
+        "selected-code.source:cells1,5"
+      ],
+      "finding": "毎年上位30銘柄、2022構成30行、2011–2022の11rebalanceで113の異なる会社と作者説明。ランキング合成/順位方向/同順位と銘柄class選択の実装、等配分/資金額/端株・売買制約の処理は未確認。113/11等から選択数を再推計しない。",
+      "status": "30_described_equal_weight_unknown"
+    },
+    {
+      "topic": "rebalance_sale_and_holding",
+      "location": [
+        "selected-code.source:cells4,8",
+        "quotes.json:NB03"
+      ],
+      "finding": "年の100日目からの最初の取引日に初期構成し、翌年以降も年次rebalanceするとの作者説明。暦日/営業日の実コード変換、休日/市場/時間zoneや公表遅延例外は未確認。30銘柄を説明するが等配分は書かれた範囲で未確認。全既保有を一度売るのか、rank外だけ入れ替えるのか、継続銘柄を保有/再等配分するか、税lot/売買日の実装は未確認。Bookの段階的購入と異なる作者simulationの適応で、年次入替を強制利確・全銘柄固定1年保有・利用者の数カ月〜1年退出期限にしない。",
+      "status": "annual_rebalance_described_sell_execution_unverified"
+    },
+    {
+      "topic": "cost_and_dividends",
+      "location": [
+        "selected-code.source:cells7,8",
+        "quotes.json:NB04"
+      ],
+      "finding": "手数料・rebalance当日のbid-ask spread・税費用をsimulationに含めず、配当調整価格で同一銘柄への再投資相当の総returnを扱うと作者説明。現実の費用0・税0を採用しない。結果/IBOV比較は再計算・実行・価格検証していない。",
+      "status": "costs_explicitly_omitted_not_assumed_zero"
+    },
+    {
+      "topic": "links_license_and_reuse",
+      "location": [
+        "tree.json:root",
+        "selected-code.source:cells2–8",
+        "source-reference.json:unread_next_source_candidate"
+      ],
+      "finding": "README/selected notebookの詳細工程linkは別repository AlgebraQuant/MagicFormula/main/src/...を指すが未取得、同一物・移転/alias・固定commit対応は未確認。root treeにはsrc等のsubtreeがあり未読。検索license metadataはnull、選択README/notebook/root treeの範囲でlicense本文は未取得のためlicense不明・移植0。",
+      "status": "license_and_linked_implementation_unverified"
+    },
+    {
+      "topic": "investment_or_IR_adoption",
+      "location": [
+        "guard.json",
+        "current_finite_review"
+      ],
+      "finding": "日本株会計/通貨・universe・定期運用への適合、IR回答分岐、買売価格/保有期間のproject採用、現在の銘柄評価はいずれも0。GreenblattやDamodaranがこのBrazil実装を承認したとはしない。4GETで有限終了し、旧candidate/primaryclosed経路を再開しない。",
+      "status": "not_adopted"
+    }
+  ],
+  "additional_GETs_authorized_or_planned": 0,
+  "code_execution_import_install": 0,
+  "source_transplant_or_dependency": 0,
+  "actual_DB_access": 0,
+  "shared_edits": 0,
+  "policy_financial_adoption": 0,
+  "generated_English_quote_words_total": 64,
+  "source_reference_file": "research/ir-brazil-magic-formula-maintainer-review-2026-10-15/source-reference.json",
+  "source_reference_sha256": "14f7b32d87f718ebc5390d97f2adca6d9a83885554f32109e30471d7f450fbfa"
+}

@@ -1,0 +1,143 @@
+{
+  "recorded_at": "2026-10-16T13:40:37.813477+00:00",
+  "purpose": "New ASBJ/Japan GAAP general per-share-net-assets definition source discovery. Not reopened publisher/price/old company route, not issuer BPS certification.",
+  "status": "finite_official_foundation_entry_obtained_ASBJ_definition_body_not_obtained",
+  "GETs": {
+    "maximum": 5,
+    "actual": 4,
+    "remaining_unused": 1,
+    "reason_unused": "Original www.asb-j.jp robots literal redirects through FASF homepage to200HTML, not an established original-host robots rule. Destination-host robots are allowed for FASF but not transferred. Do not guess allow/empty policy for original host.",
+    "requests": [
+      {
+        "sequence": 1,
+        "URL": "https://www.asb-j.jp/robots.txt",
+        "HTTP_status": 302,
+        "complete_body": true,
+        "body_completed_at": "2026-10-16T13:37:18.875327+00:00",
+        "raw": {
+          "file": "research/ir-asbj-per-share-definition-discovery-2026-10-16/raw/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "JSON_pointer": "$"
+        },
+        "redirect_Location": "https://www.fasf-j.jp/"
+      },
+      {
+        "sequence": 2,
+        "URL": "https://www.fasf-j.jp/robots.txt",
+        "HTTP_status": 200,
+        "complete_body": true,
+        "body_completed_at": "2026-10-16T13:37:47.859580+00:00",
+        "raw": {
+          "file": "research/ir-asbj-per-share-definition-discovery-2026-10-16/raw/ecb10b3fa066ae95c696c65e10e5e325db0e04442b87733c1a84941f91b4cbd4",
+          "sha256": "ecb10b3fa066ae95c696c65e10e5e325db0e04442b87733c1a84941f91b4cbd4",
+          "JSON_pointer": "$"
+        },
+        "redirect_Location": null
+      },
+      {
+        "sequence": 3,
+        "URL": "https://www.fasf-j.jp/",
+        "HTTP_status": 302,
+        "complete_body": true,
+        "body_completed_at": "2026-10-16T13:37:58.408128+00:00",
+        "raw": {
+          "file": "research/ir-asbj-per-share-definition-discovery-2026-10-16/raw/bb9483a6d7cde8fd67488ff2ada340edd1025cceec2facfde06dda9eb5122ca5",
+          "sha256": "bb9483a6d7cde8fd67488ff2ada340edd1025cceec2facfde06dda9eb5122ca5",
+          "JSON_pointer": "$"
+        },
+        "redirect_Location": "/jp/"
+      },
+      {
+        "sequence": 4,
+        "URL": "https://www.fasf-j.jp/jp/",
+        "HTTP_status": 200,
+        "complete_body": true,
+        "body_completed_at": "2026-10-16T13:38:22.359300+00:00",
+        "raw": {
+          "file": "research/ir-asbj-per-share-definition-discovery-2026-10-16/raw/b4af7739f5848c299f2547a61dc85c33c579172356c1c58ccb426a4226e2236f",
+          "sha256": "b4af7739f5848c299f2547a61dc85c33c579172356c1c58ccb426a4226e2236f",
+          "JSON_pointer": "$"
+        },
+        "redirect_Location": null
+      }
+    ]
+  },
+  "authority_observed": {
+    "body_URL": "https://www.fasf-j.jp/jp/",
+    "title": "公益財団法人 財務会計基準機構",
+    "source_statement": "取得本文の主体表示は公益財団法人財務会計基準機構。ASBJ企業会計基準委員会への明示リンクを含む。",
+    "limit": "ASBJ自身の基準一覧/本文を取得したこと、文書の現行適用/完全性を確認したこととは分ける。"
+  },
+  "route": [
+    {
+      "from": "https://www.asb-j.jp/robots.txt",
+      "literal_Location": "https://www.fasf-j.jp/",
+      "role": "robots redirect, not fetched ASBJ homepage and not robots permission"
+    },
+    {
+      "from": "https://www.fasf-j.jp/robots.txt",
+      "status": 200,
+      "role": "Fresh destination-host robots allowed target / and /jp/, /wp-admin/ denied."
+    },
+    {
+      "from": "https://www.fasf-j.jp/",
+      "literal_Location": "/jp/",
+      "resolved": "https://www.fasf-j.jp/jp/",
+      "role": "Same-host real redirect normal read within budget"
+    },
+    {
+      "from": "https://www.fasf-j.jp/jp/",
+      "status": 200,
+      "role": "Foundation identity and actualASBJlink observed"
+    }
+  ],
+  "literal_next_candidate": {
+    "capture_ref": {
+      "file": "research/ir-asbj-per-share-definition-discovery-2026-10-16/capture.json",
+      "sha256": "e03d4e2625a7b59305513c6bd8578b316d632e659d576fef60f8c2bfd6e0117c",
+      "JSON_pointer": "$.GETs[3].html_visible_text.links[0]"
+    },
+    "url": "https://www.asb-j.jp/jp/",
+    "href": "https://www.asb-j.jp/jp/",
+    "label": "ASBJ 企業会計基準委員会",
+    "body_requested_in_this_task": false,
+    "kind": "Official-labelled ASBJ homepage entry only; no guessed standard/guidance URL.",
+    "limitation": "Same known entry URL gains source-labelled provenance; unresolved original-host robots handling remains. No new task/network followup automatically authorized."
+  },
+  "definition_result": {
+    "BPS_numerator_ordinary_equity": null,
+    "NCI_stock_acquisition_rights_deduction": null,
+    "treasury_stock_and_denominator": null,
+    "standard_No2_or_guidance_No4_body": null,
+    "PDF_received": false,
+    "new_meaning_PDF_pages": [],
+    "guidance_version_or_publication_date": null,
+    "current_law_or_complete_standard_scope_verified": false,
+    "explanation": "BPSの分子/分母の一般定義は本文未取得。基準/適用指針/規則のタイトル候補を、このFASF入口で該当原本確認済みへ昇格しない。"
+  },
+  "usefulness_and_limits": {
+    "usable": "FASF主体とASBJ入口の実literalを一次ページで確認し、robotsredirectと新host規則の違いを保存。",
+    "not_usable_yet": "日本ordinaryBPSとprovider total_equityの同値根拠、3817当期BPS分母/優先株ゼロ/調整額・金融採用の根拠にはならない。",
+    "absence_scope": "この有限4GET範囲で未取得。公式文書/サイトに定義がないとは認定しない。"
+  },
+  "clock": {
+    "retrieved_body_completed_at": "2026-10-16T13:38:22.359300+00:00",
+    "published_at": null,
+    "actual_DB_first_saved_at": null,
+    "HTTP_date_not_publication": true
+  },
+  "boundaries": {
+    "DB_Store": 0,
+    "code_oldfile_or_shared_docs": 0,
+    "financial_calc_adoption_gate_rate_assumption": 0,
+    "IRdraft_form_input_POST_contact": 0,
+    "JS_feed_API_search_provider_or_bypass": 0,
+    "retries_autoRedirect": 0
+  },
+  "holds_index": {
+    "file": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+    "sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952"
+  },
+  "fixed_UA": "Codex-IR-Research/0.1",
+  "ordinary_proxy_CA_TLSverify_kept": true
+}

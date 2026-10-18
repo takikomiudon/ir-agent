@@ -1,0 +1,34 @@
+{
+  "status": "accepted_offline_algebra_only",
+  "recorded_at": "2026-10-15T21:29:37.325510+00:00",
+  "implementation": {
+    "path": "research/ir-explicit-zero-growth-boundary-2026-10-15/implementation-receipt.json",
+    "sha256": "3fb6f9c2b53efd3ffdcb2014a979bfa88a6bebfa8d4cd136b9c334afe0d84569"
+  },
+  "independent_review": {
+    "path": "research/ir-explicit-zero-growth-boundary-2026-10-15/independent-review.json",
+    "sha256": "710ff3172d6a065e8c11514a9e8666bef8aeed0e0279bf0be77f7b114576189b",
+    "checks": 46,
+    "actionable_findings": 0,
+    "independent_positive_whole_JSON_replays": 7
+  },
+  "full_suite": {
+    "path": "research/ir-explicit-zero-growth-boundary-2026-10-15/parent-full-suite.json",
+    "sha256": "35e6b429463036fb5aa22dea45102a204f23e3772a257a7507a2f0580a35644b",
+    "test_count": 1501,
+    "unittest_seconds": "37.560"
+  },
+  "code_sha256": {
+    "src/ir_agent/stable_reinvestment.py": "6f2798d4522f803ea61ea16b8b9791a0cf98a1137f8f11d43193ff6911c7ae56",
+    "tests/test_stable_reinvestment.py": "33bf0fdce8fd07379e744cb74a5e947d9d35e7a3e14755bb902fabd86971859f"
+  },
+  "actual_database_unchanged": true,
+  "actual_database_main_sha256": "a2d49996f1d4558db2c8b6f6f79c0f2fbb1d540e937e406dbc408f1d956c094d",
+  "actual_database_writes": 0,
+  "new_live_API_auth_or_external_sends_orders": 0,
+  "limits": [
+    "Explicit finite-decimal g=0 is accepted only with positive NOPAT and positive ROC; no missing-value defaults",
+    "The author formula supports algebra, not verified zero-growth economic applicability or zero gross capex/maintenance spending",
+    "No new negative-growth/loss model, forecast adoption, valuation, IR action, financial threshold or strategy-performance claim"
+  ]
+}

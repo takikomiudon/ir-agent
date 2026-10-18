@@ -1,0 +1,624 @@
+{
+  "record_type": "135A_single_horizon_and_sales_ramp_bridge_review",
+  "recorded_at": "2026-10-15T06:20:35.906950+00:00",
+  "company_id": "jp:135A",
+  "status": "completed_period_and_operating_stage_review_no_repricing_forecast",
+  "research_only": true,
+  "scope": {
+    "new_GETs": 0,
+    "database_accesses": 0,
+    "code_or_registry_changes": false,
+    "new_normalizer_calls": 0,
+    "existing_artifacts_modified": false,
+    "KPI_inventory_repeated": false,
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "model_adopted": false,
+    "formal_IR_question_registration": false
+  },
+  "research_horizon": {
+    "user_preference": "数カ月〜1年",
+    "anchor_record_date": "2026-10-15",
+    "maximum_research_horizon_end": "2027-10-15",
+    "minimum_holding_days": null,
+    "fixed_sale_instruction": false,
+    "purpose": "ユーザーの期間内に観測できる検証証拠と、最終業績/価値評価/株価修正時期を混同しない。1年後の自動売却や一律保有期限を作らない。"
+  },
+  "four_distinct_clocks": [
+    {
+      "clock": "final_operating_outcome_period",
+      "meaning": "著者FY28/FY29の利益率/顧客数/CAGRという事業の対象期。長期将来利益/CFを現在の価値評価で使うこと自体を1年保有に不適合とはしない。",
+      "date_or_period": "著者原文ラベルを以下に保持。"
+    },
+    {
+      "clock": "observable_progress_or_disconfirmation",
+      "meaning": "新拠点の営業開始・初受注/公表売上寄与、同期間KPIや説明の更新を公表後に確認する時点。最終FY29到達より前に証拠が得られる可能性はある。",
+      "date_or_period": null
+    },
+    {
+      "clock": "market_repricing_catalyst_and_timing",
+      "meaning": "新情報によって市場が期待/価格をいつ変えるか。著者がカタリストと呼ぶこと、決算予定があることだけでは価格差修正を保証しない。",
+      "date_or_period": null
+    },
+    {
+      "clock": "user_holding_and_research_window",
+      "meaning": "実記録10/15から最大2027-10-15までの研究horizon。管理再点検日とも別。",
+      "date_or_period": "2026-10-15〜2027-10-15"
+    }
+  ],
+  "fiscal_label_mapping": {
+    "issuer_explicit_FY27": {
+      "start": "2026-03-01",
+      "interim_end": "2026-08-31",
+      "full_year_end": "2027-02-28",
+      "quote_ids": [
+        "issuer-current-interim-period",
+        "issuer-current-full-year-period"
+      ]
+    },
+    "author_convention_quote_id": "author-fiscal-label-convention",
+    "mapping_status": "会社の正式FY27と、著者が2月末FYラベルを同じ対応で使うという条件付き暦対応を分ける。",
+    "conditional_year_month_mapping": {
+      "FY28": {
+        "fiscal_start_month": "2027-03",
+        "fiscal_end_month": "2028-02"
+      },
+      "FY29": {
+        "fiscal_start_month": "2028-03",
+        "fiscal_end_month": "2029-02"
+      }
+    },
+    "exact_author_target_dates": null,
+    "known_author_wording_inconsistency": "既存v2で保持するFY27 Q1（2026年4-7月期）表現を会社正式期へ自動修正しない。",
+    "not_inferred": "著者の「FY28時点」をFY28末又は特定日に固定しない。"
+  },
+  "author_condition_horizon_fit": [
+    {
+      "id": "FY29-operating-margin",
+      "author_condition_raw": "FY29で35%近傍",
+      "quote_id": "author-FY29-margin-target",
+      "final_outcome_window_fit": "同じ2月期ラベル対応ならFY29対象期そのものは研究窓の後。",
+      "what_can_be_observed_within_window": "次の公表資料の累計/単独/通期実績の利益率、会社予想と案件/費用構成の説明を、将来FY29に向かう支持/反証の材料として区別して記録できる。",
+      "what_cannot_be_claimed": "FY29最終成果を1年内に観測済みとすること、近傍幅の創作、1年内の利益修正/株価修正の保証。",
+      "valuation_relevance": "長期目標が期間外だから価値評価に無関係とはしない。現資料では採用する将来利益/CFへの写像と再評価時期の根拠が不足。",
+      "valuation_input_path": null
+    },
+    {
+      "id": "FY29-customer-pace",
+      "author_condition_raw": "FY29までに550-600社ペース（毎期+70社前後）",
+      "quote_id": "author-FY29-customer-target",
+      "final_outcome_window_fit": "著者の最終FY29目安は研究窓より後。同社数への早期到達日が指定されたわけではない。",
+      "what_can_be_observed_within_window": "同じ受注ベース/顧客集計の年度末又は四半期末社数と拠点の公表状況。既存v2に実表照合済みの値を再一覧しない。",
+      "what_cannot_be_claimed": "途中経過を年率化して最終到達日や達成確率を作ること、社数の増加で1年内株価上昇を保証すること。",
+      "valuation_input_path": null
+    },
+    {
+      "id": "FY28-conditional-CAGR",
+      "author_condition_raw": "拠点立上げ遅延 AND 継続顧客比率45%近辺で頭打ちならFY28時点でCAGR+35-40%",
+      "quote_id": "author-FY28-conditional-timepoint",
+      "final_outcome_window_fit": "FY28が通常の2月期対応ならその一部は窓に重なる一方、年度末は窓外。「時点」は年度末とは書かれておらず、CAGRの基準/終点も未特定なので内/外を一律判定しない。",
+      "what_can_be_observed_within_window": "両条件の前提となる公表営業所状況と同定義の売上比率を別々に追う。",
+      "condition_operator": "AND",
+      "current_conjunction_status_from_v2": "not_established",
+      "nearby_tolerance": null,
+      "plateau_duration": null,
+      "CAGR_base_end_dates": null,
+      "conditional_CAGR_applied": false,
+      "what_cannot_be_claimed": "遅延だけでAND全体成立、FY28減速の発生/否定、具体的減速時点や株価反応を自己予測すること。",
+      "valuation_input_path": null
+    },
+    {
+      "id": "FY27-office-ramp",
+      "author_condition_raw": "上期中に開所、下期から案件寄与",
+      "quote_id": "author-FY27-office-and-contribution",
+      "final_outcome_window_fit": "会社の正式FY27に対応させる場合、上期は既に過去、下期は実記録日を含みFY27末までの部分が研究窓内。これは会社の個別営業所の確約日や実際の寄与日の認定ではない。",
+      "what_can_be_observed_within_window": "同名拠点の開設/営業開始、公開されれば人員配置/初受注/売上計上・帰属基準。公表されない寄与は未確認のまま。",
+      "author_relative_time_warning": "報告内の中期（6-12カ月）は5/11表示の叙述として保持。10/15からの6〜12カ月にリセットしない。改訂履歴/相対時間の正確な起点も未確認。",
+      "valuation_input_path": null
+    }
+  ],
+  "company_four_office_plan_status": {
+    "quote_ids": [
+      "issuer-office-plan-current-year",
+      "issuer-office-plan-in-forecast",
+      "issuer-kanazawa-operating-start"
+    ],
+    "author_named_offices": [
+      "宇都宮",
+      "長野",
+      "金沢",
+      "広島",
+      "福岡"
+    ],
+    "issuer_four_planned": [
+      "宇都宮",
+      "長野",
+      "広島",
+      "福岡"
+    ],
+    "company_literal": "FY27は、7月に金沢を開設済、宇都宮・長野・広島・福岡の４営業所を今後開設予定。",
+    "plan_period_context": "10/14のFY27方針・通期業績予想ページの文脈。会社FY27通期対象期末は2027-02-28。",
+    "individual_office_committed_dates": null,
+    "matching_upper_half_company_commitment_verified": false,
+    "plan_deadline_limit": "年度計画の文脈と、各営業所の厳密な開所期限/契約上保証を区別する。著者の上期中5拠点を会社の既公約に置換しない。",
+    "source_publication_date": "2026-10-14",
+    "exact_status_as_of_date_in_office_sentence": null,
+    "kanazawa_operating_start_literal": "金沢営業所：7/1営業開始",
+    "kanazawa_customer_order_or_revenue_contribution": null,
+    "opening_is_revenue_recognition": false,
+    "meaning": "開設済・営業開始の公表と、その営業所に帰属する受注/売上計上は別。費用増の会社説明から収益寄与を復元しない。"
+  },
+  "sales_ramp_stage_bridge": {
+    "hiring_to_first_sales": {
+      "source_quote_id": "faq-hiring-to-first-sales",
+      "start": "新規採用営業社員についての説明",
+      "end": "初めて売上を上げるまで",
+      "reported_average_literal": "平均で約１年",
+      "is_time_to_first_order": false,
+      "population": "営業社員。全職種/営業所のコホートではない。",
+      "FAQ_publication_update_date": null,
+      "cohort_sample_measurement_period": null
+    },
+    "order_to_delivery": {
+      "source_quote_id": "faq-order-to-delivery",
+      "start": "AIシステム受注",
+      "end": "納品",
+      "reported_average_literal": "約３カ月",
+      "is_delivery_to_revenue_recognition": false,
+      "cohort_or_product_mix": null
+    },
+    "author_open_to_case_contribution": {
+      "source_quote_ids": [
+        "author-FY27-office-and-contribution",
+        "author-relative-midterm-catalyst"
+      ],
+      "start": "開所/立上げ",
+      "end_raw": "案件寄与",
+      "end_definition": "受注・売上・利益のどこへの寄与か厳密な定義は未確認。初受注を別途カタリストとして挙げる箇所もある。",
+      "staff_hiring_dates_or_assignment": null,
+      "office_specific_order_and_revenue_amounts": null
+    },
+    "company_Q1_backlog_timing": {
+      "source_quote_id": "qa-prior-backlog-sales-timing",
+      "publication_date": "2026-07-14",
+      "kind": "issuer_outlook_at_that_date",
+      "meaning": "特定時点受注残について、2Qと下期に分けて売上計上を見込むと答える。平均納期の一律適用や拠点別の実売上を説明するものではない。",
+      "current_realization_verified": false,
+      "new_forecast_applied": false
+    },
+    "contradiction_assessment": "直接の矛盾は立証できない。営業社員/案件/営業所という母集団、採用/開所/初受注/納品/初売上という段階が違い、同じ人員・案件・開始時点に結び付ける公表資料が足りない。かといって著者の下期寄与が実現済み又は実現可能と確認したことにもならない。",
+    "averages_added": false,
+    "employee_average_assigned_to_every_office": false,
+    "reasons_not_to_chain": [
+      "採用→初売上という平均時間の中に、受注→納品の工程が含まれる可能性があり、独立した連続区間と確認されていない。",
+      "営業所の営業開始前にどの人員がいつ採用/配置されたか、既存案件をどう引き継ぐかは未確認。経験者採用の会社方針はあるが、実際の各拠点の立上り速度は推測しない。",
+      "納品を売上計上とする固有の会計認識条件/検収・帰属時点を、FAQの平均納期だけから確定できない。"
+    ]
+  },
+  "within_window_evidence_and_catalyst_boundary": {
+    "potential_public_observations": [
+      "四営業所の開設/営業開始/公開されれば初受注・売上寄与の状況更新",
+      "同対象期の売上比率/社数/年度内累計単価・実績利益率と費用説明",
+      "実際の会社予想又は著者条件の改訂が公表された場合の原文"
+    ],
+    "guaranteed_disclosures_or_numbers": null,
+    "market_repricing_event": null,
+    "repricing_date": null,
+    "profit_revision_timing_predicted": false,
+    "interpretation": "期間内に観測され得る事業の証拠を候補として置く。公表される保証、株価が反応する方向/幅/時期、価格差が修正される触媒の成立は別途不足している。長期成果を割り引く評価と保有期間を同じ時計にしない。"
+  },
+  "announcement_schedule_vs_research_management": {
+    "issuer_calendar_quote_id": "issuer-generic-calendar",
+    "issuer_raw_schedule": [
+      {
+        "event": "通期決算発表",
+        "month_phrase": "４月中旬"
+      },
+      {
+        "event": "第１四半期決算発表",
+        "month_phrase": "７月中旬"
+      },
+      {
+        "event": "第２四半期決算発表",
+        "month_phrase": "10月中旬"
+      },
+      {
+        "event": "第３四半期決算発表",
+        "month_phrase": "１月中旬"
+      }
+    ],
+    "calendar_specific_year": null,
+    "confirmed_next_announcement_date": null,
+    "confirmed_next_announcement_time": null,
+    "calendar_change_caution": true,
+    "management_review_date": "2027-01-15",
+    "management_source": "author-condition-followup/case-record-v2.json / research_review_cadence",
+    "management_meaning": "10/15実レビューから3カ月後という研究管理日。会社の1月中旬という一般予定を1/15に確定したものでも、売却期限でもない。",
+    "early_comparison_trigger": "新たな正式資料/当該期の公開Q&Aが保存された時は前倒しで比較。変化がなくても少なくとも四半期を目安に点検。",
+    "scheduler_or_database_changed": false
+  },
+  "resolved_public_definition_points_do_not_reask": [
+    {
+      "point": "約1年の終点は初受注ではなく初売上",
+      "quote_id": "faq-hiring-to-first-sales",
+      "changes_misunderstanding": "初受注まで1年→さらに納期3カ月と足す誤った営業所ラグを防ぐ。"
+    },
+    {
+      "point": "約3カ月は受注→納品の平均",
+      "quote_id": "faq-order-to-delivery",
+      "changes_misunderstanding": "開所→売上又は採用→初受注の日程と取り違えない。"
+    },
+    {
+      "point": "金沢7/1営業開始と四営業所今後予定という現在保存の会社説明",
+      "quote_id": "issuer-kanazawa-operating-start",
+      "changes_misunderstanding": "開設状況の再質問は不要。受注/売上寄与が同時に確定したという意味ではない。"
+    },
+    {
+      "point": "正式FY27中間と通期の期間、一般決算カレンダー",
+      "quote_id": "issuer-current-full-year-period",
+      "changes_misunderstanding": "FYラベル/管理日を確定発表日や株価修正日にしない。"
+    }
+  ],
+  "remaining_conditioned_definition_questions": [
+    {
+      "owner": "会社の公表資料・必要なら公表定義の補足",
+      "topic": "営業所別に開設/営業開始/初受注/売上寄与を区別する基準と、案件の帰属",
+      "misunderstanding_it_would_change": "開所が即時の受注・売上寄与と同義という誤解、費用発生から収益寄与を推測する誤解。",
+      "public_evidence_to_check_first": "同名営業所の公表開設更新、実際の受注/売上寄与の開示又は集計注記。未開示の足元実績を求めない。",
+      "why_no_financial_input_or_IR_registration_now": "採用する仮説版/許可入力path/基準数値/回答分岐がなく、最新の公開回答がないと断定する調査でもない。",
+      "valuation_input_path": null
+    },
+    {
+      "owner": "会社の公表定義",
+      "topic": "営業社員の初売上平均の母集団/測定時点と、現在の営業所への適用関係",
+      "misunderstanding_it_would_change": "一般的な採用ラグを新営業所全体の寄与遅れへ割り当てる誤解。",
+      "public_evidence_to_check_first": "配置/採用/営業体制の公表説明。同一人員/案件への対応がなければ平均値の転用をしない。",
+      "why_no_financial_input_or_IR_registration_now": "平均の定義が精密になっても将来売上/利益を確定する係数ではなく、予測への写像は未立証。",
+      "valuation_input_path": null
+    },
+    {
+      "owner": "AENTRO（会社IRに著者予測の保証を求めない）",
+      "topic": "案件寄与の段階、FY28時点/CAGR基準・終点、相対6〜12カ月の起点と改訂状況",
+      "misunderstanding_it_would_change": "長期事業条件を10/15から1年内の利益/株価触媒として扱う誤解。",
+      "public_evidence_to_check_first": "著者が公表改訂/用語説明を出せば原文比較。今回はGETしない。",
+      "why_no_financial_input_or_IR_registration_now": "期間/条件が曖昧な外部叙述を未設定の将来EPS/FCFFや株価反応へ変換しない。",
+      "valuation_input_path": null
+    }
+  ],
+  "prior_case_reference": {
+    "file": "author-condition-followup/case-record-v2.json",
+    "sha256": "2e566e72a04a89938357220715a10603a51ce1ce744207599ac921de6e81328b",
+    "use": "KPI照合と358社帰属訂正はv2に残す。本記録はhorizonと営業立上りbridgeのみ。旧版/親確認/独立レビューも変更しない。"
+  },
+  "sources": [
+    {
+      "key": "author",
+      "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+      "url": "https://research.aentroinc.com/ja/report/VRAIN_Solution/Initiation",
+      "published_at": null,
+      "publication_date": "2026-05-11",
+      "original_retrieved_at": "2026-10-15T05:43:16.598131+00:00",
+      "attribution": "AENTRO Research/株式会社AENTRO（対象会社委託・報酬開示のある外部著者）",
+      "raw_file": "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/raw/0cfe0cdb8d1eff0d6814dd514e99e4684b4ff73b888cc318398061aee0247ad5",
+      "raw_sha256": "0cfe0cdb8d1eff0d6814dd514e99e4684b4ff73b888cc318398061aee0247ad5",
+      "saved_text_file": "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/02.visible.txt",
+      "saved_text_sha256": "01f71124b8560b08217782c3f6b7b5f4061885eb1ded3ad3ad35b1770c9888b1",
+      "transport_snapshot_file": "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/02.json",
+      "transport_snapshot_sha256": "18461a56789f69d9dda5da2819b48e06e1610bec5ba525af5b2292cdfa74451b",
+      "hashes_and_raw_reextraction_match": true
+    },
+    {
+      "key": "presentation",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "url": "https://contents.xj-storage.jp/xcontents/AS06543/add89fe1/7c75/426d/908b/a7cb51fa85bb/140120260831528813.pdf",
+      "published_at": null,
+      "publication_date": "2026-10-14",
+      "original_retrieved_at": "2026-10-15T04:51:16.281339+00:00",
+      "attribution": "株式会社VRAIN Solution（会社の正式資料/FAQ/想定問答/カレンダー）",
+      "raw_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/93eb46606d41dc10c91870d9481310fcf5fda5c107d318ef7424e1a6ce89fb99",
+      "raw_sha256": "93eb46606d41dc10c91870d9481310fcf5fda5c107d318ef7424e1a6ce89fb99",
+      "saved_text_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/03.txt",
+      "saved_text_sha256": "73bccf42aec37efb174f09c8160dbd20878f97f4b5a4622f0b02bc0210c63818",
+      "transport_snapshot_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/03.json",
+      "transport_snapshot_sha256": "aaf30a8f8194132baf4b822dc15d714bba5e60417983a3b4ed94aba94f1da638",
+      "hashes_and_raw_reextraction_match": true
+    },
+    {
+      "key": "faq",
+      "source_id": "case-public:4b047af4dcd2099052131b9bd5a6cc0ad83a3cbeb84291ba7888219fd1df6532",
+      "url": "https://vrain.co.jp/ir/faq/",
+      "published_at": null,
+      "publication_date": null,
+      "original_retrieved_at": "2026-10-15T04:50:52.443178+00:00",
+      "attribution": "株式会社VRAIN Solution（会社の正式資料/FAQ/想定問答/カレンダー）",
+      "raw_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/e88cf537930d5f0364dad6c918920473cee30c89b47f951bedd32e5ce41ae763",
+      "raw_sha256": "e88cf537930d5f0364dad6c918920473cee30c89b47f951bedd32e5ce41ae763",
+      "saved_text_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/02.visible.txt",
+      "saved_text_sha256": "c4a87b43ed157d61f87b258102e89eb54c5e369b96ca8a00b2c8cc6f760cf017",
+      "transport_snapshot_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/02.json",
+      "transport_snapshot_sha256": "40318a884cc071e567a8315ca3abc7af205189026d60d04f4856286e7ac734ca",
+      "hashes_and_raw_reextraction_match": true
+    },
+    {
+      "key": "qa",
+      "source_id": "case-public:c3c890386f935535dda16bb42e78ede9f85f4551f5640f170648e4d59fc6c63b",
+      "url": "https://contents.xj-storage.jp/xcontents/AS06543/716abbe4/683a/4898/b4c1/de6c6a8fff61/140120260630584501.pdf",
+      "published_at": null,
+      "publication_date": "2026-07-14",
+      "original_retrieved_at": "2026-10-15T04:51:16.938567+00:00",
+      "attribution": "株式会社VRAIN Solution（会社の正式資料/FAQ/想定問答/カレンダー）",
+      "raw_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/1cd0433a17587f9b2d4169740a2205d4f5871aeefdce1c08f74b80844e31beba",
+      "raw_sha256": "1cd0433a17587f9b2d4169740a2205d4f5871aeefdce1c08f74b80844e31beba",
+      "saved_text_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/04.txt",
+      "saved_text_sha256": "2a34cf7b7c665856900a638ea5df9eddad71183275c2d81f24a9fac99a73448d",
+      "transport_snapshot_file": "research/ir-case-studies-2026-10-15/135A/presentation-followup/04.json",
+      "transport_snapshot_sha256": "7ceba600be7b290ab0157c7150ca3c5c132a00f85341c7e5b9cea5dfd68b27a0",
+      "hashes_and_raw_reextraction_match": true
+    },
+    {
+      "key": "statement",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "url": "https://contents.xj-storage.jp/xcontents/AS06543/0e4abefd/2c7d/4512/9376/0761580b1ba5/140120260831528808.pdf",
+      "published_at": null,
+      "publication_date": "2026-10-14",
+      "original_retrieved_at": "2026-10-15T04:42:37.094960+00:00",
+      "attribution": "株式会社VRAIN Solution（会社の正式資料/FAQ/想定問答/カレンダー）",
+      "raw_file": "research/ir-case-studies-2026-10-15/135A/library-followup/raw/6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+      "raw_sha256": "6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+      "saved_text_file": "research/ir-case-studies-2026-10-15/135A/library-followup/03.txt",
+      "saved_text_sha256": "3ecc1fb61cc34cf0abd0cdae3c36fed637e5257b94062cb2ed00f71e3ba52b2b",
+      "transport_snapshot_file": "research/ir-case-studies-2026-10-15/135A/library-followup/03.json",
+      "transport_snapshot_sha256": "04a2fa967b8e0acef2629141247a8f3a2e69095ac7bba95782790bde4febca38",
+      "hashes_and_raw_reextraction_match": true
+    },
+    {
+      "key": "calendar",
+      "source_id": "case-public:decc7b41b89118944070d42554aef7998516b16bba1bd993c6afcd6c5076d98c",
+      "url": "https://vrain.co.jp/ir/calendar/",
+      "published_at": null,
+      "publication_date": null,
+      "original_retrieved_at": "2026-10-15T04:31:04.492114+00:00",
+      "attribution": "株式会社VRAIN Solution（会社の正式資料/FAQ/想定問答/カレンダー）",
+      "raw_file": "research/ir-case-studies-2026-10-15/135A/raw/68c649899100272a34559aa50ec2ea947c99801cfed03b9933a39db205303f40",
+      "raw_sha256": "68c649899100272a34559aa50ec2ea947c99801cfed03b9933a39db205303f40",
+      "saved_text_file": "research/ir-case-studies-2026-10-15/135A/05.txt",
+      "saved_text_sha256": "d59baed319f648c2af82ec86494898a02fe5d0515c8ba244449331812deb69fa",
+      "transport_snapshot_file": "research/ir-case-studies-2026-10-15/135A/05.json",
+      "transport_snapshot_sha256": "4e9a11db4a6f151655c8054afc12e0629907787ffbaf62d48fea9b70238991b3",
+      "hashes_and_raw_reextraction_match": true
+    }
+  ],
+  "quotes": [
+    {
+      "id": "author-fiscal-label-convention",
+      "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+      "source_key": "author",
+      "pdf_page": null,
+      "source_text_start": 1677,
+      "source_text_end_exclusive": 1707,
+      "page_text_start": null,
+      "page_text_end_exclusive": null,
+      "offset_unit": "Unicode code points in exact saved text; end exclusive",
+      "quote": "決算期 2月末（第5期=FY2025、第6期=FY2026）",
+      "supports": "著者の2月期ラベル対応の手掛かり。別箇所のFY27 Q1不整合を修正する根拠ではない。"
+    },
+    {
+      "id": "author-FY29-margin-target",
+      "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+      "source_key": "author",
+      "pdf_page": null,
+      "source_text_start": 40609,
+      "source_text_end_exclusive": 40642,
+      "page_text_start": null,
+      "page_text_end_exclusive": null,
+      "offset_unit": "Unicode code points in exact saved text; end exclusive",
+      "quote": "営業利益率 27.9% FY27で30%到達、FY29で35%近傍",
+      "supports": "年度ラベル付きの著者監視目安であり、株価反映日や達成保証ではない。"
+    },
+    {
+      "id": "author-FY29-customer-target",
+      "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+      "source_key": "author",
+      "pdf_page": null,
+      "source_text_start": 40510,
+      "source_text_end_exclusive": 40550,
+      "page_text_start": null,
+      "page_text_end_exclusive": null,
+      "offset_unit": "Unicode code points in exact saved text; end exclusive",
+      "quote": "累計取引社数 337社 FY29までに550-600社ペース（毎期+70社前後）",
+      "supports": "FY29までという目安。1年内の社数達成日を著者が約束したものではない。"
+    },
+    {
+      "id": "author-FY28-conditional-timepoint",
+      "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+      "source_key": "author",
+      "pdf_page": null,
+      "source_text_start": 40863,
+      "source_text_end_exclusive": 40950,
+      "page_text_start": null,
+      "page_text_end_exclusive": null,
+      "offset_unit": "Unicode code points in exact saved text; end exclusive",
+      "quote": "もし拠点立ち上げが遅延し、かつ継続顧客比率が45%近辺で頭打ちになれば、FY28時点でCAGR+35-40%への減速が現実味を帯び、バリュエーションの前提は成り立たなくなる。",
+      "supports": "FY28時点は年度末/特定日/特定CAGR基準を明記しない。AND条件を保持。"
+    },
+    {
+      "id": "author-FY27-office-and-contribution",
+      "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+      "source_key": "author",
+      "pdf_page": null,
+      "source_text_start": 40672,
+      "source_text_end_exclusive": 40713,
+      "page_text_start": null,
+      "page_text_end_exclusive": null,
+      "offset_unit": "Unicode code points in exact saved text; end exclusive",
+      "quote": "新拠点立ち上げスピード FY27中に5拠点開設完了 上期中に開所、下期から案件寄与",
+      "supports": "著者の開所/案件寄与の二段階。案件寄与の会計/受注上の意味は未定義。"
+    },
+    {
+      "id": "author-relative-midterm-catalyst",
+      "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+      "source_key": "author",
+      "pdf_page": null,
+      "source_text_start": 47182,
+      "source_text_end_exclusive": 47290,
+      "page_text_start": null,
+      "page_text_end_exclusive": null,
+      "offset_unit": "Unicode code points in exact saved text; end exclusive",
+      "quote": "中期（6-12カ月）のカタリストは、新拠点5カ所（宇都宮・長野・金沢・広島・福岡）の立ち上げ進捗である。各拠点の開設時期・人員配置・初受注のタイミングは、中期方針「売上CAGR+50%」を支える最大の構造要因となる。",
+      "supports": "開設/配置/初受注を挙げる著者の相対時間。5/11表示の報告であり10/15から6〜12カ月へリセットしない。"
+    },
+    {
+      "id": "issuer-current-interim-period",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "source_key": "statement",
+      "pdf_page": 1,
+      "source_text_start": 10,
+      "source_text_end_exclusive": 620,
+      "page_text_start": 10,
+      "page_text_end_exclusive": 620,
+      "offset_unit": "Unicode code points in exact saved text; end exclusive",
+      "quote": "2027年２月期      第２四半期（中間期）決算短信〔日本基準〕(非連結)\n                                                           2026年10月14日\n上 場 会 社 名   株式会社ＶＲＡＩＮ Ｓｏｌｕｔｉｏｎ           上場取引所                         東\nコ ー ド 番 号   135A               URL https://vrain.co.jp/\n代   表   者 (役職名) 代表取締役社長           (氏名) 南塲 勇佑\n問合せ先責任者 (役職名) 取締役 コーポレート部部長 (氏名) 菊地 佳宏                 (TEL) 03-6280-4915\n半期報告書提出予定日       2026年10月14日 配当支払開始予定日              －\n決算補足説明資料作成の有無           ：有\n決算説明会開催の有無              ：有\n                                                                                       (百万円未満切捨て)\n１．2027年２月期第２四半期（中間期）の業績（2026年３月１日～2026年８月31日）",
+      "supports": "正式FY27上期の実績期間。"
+    },
+    {
+      "id": "issuer-current-full-year-period",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "source_key": "statement",
+      "pdf_page": 1,
+      "source_text_start": 2388,
+      "source_text_end_exclusive": 2425,
+      "page_text_start": 2388,
+      "page_text_end_exclusive": 2425,
+      "offset_unit": "Unicode code points in exact saved text; end exclusive",
+      "quote": "３．2027年２月期の業績予想（2026年３月１日～2027年２月28日）",
+      "supports": "会社のFY27通期予想対象期であり、営業所別の保証期限ではない。"
+    },
+    {
+      "id": "issuer-office-plan-current-year",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "source_key": "presentation",
+      "pdf_page": 47,
+      "source_text_start": 51501,
+      "source_text_end_exclusive": 51613,
+      "page_text_start": 17,
+      "page_text_end_exclusive": 129,
+      "offset_unit": "Unicode code points in exact saved text; end exclusive",
+      "quote": "FY２６は、仙台、札幌の２拠点を開設。FY２７は、7月に金沢を開設済、宇都宮・長野・広島・福岡の４営業所を今後開設予定。\n各拠点の現地採用を行い、製造業営業経験者の採用を計画。加えてサポート人員を増やすことで営業効率を向上。",
+      "supports": "FY27計画の文脈で金沢済/他4営業所今後予定、現地採用/経験者/サポート体制の説明。各営業所の個別日程ではない。"
+    },
+    {
+      "id": "issuer-office-plan-in-forecast",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "source_key": "presentation",
+      "pdf_page": 17,
+      "source_text_start": 22699,
+      "source_text_end_exclusive": 22757,
+      "page_text_start": 45,
+      "page_text_end_exclusive": 103,
+      "offset_unit": "Unicode code points in exact saved text; end exclusive",
+      "quote": "・継続顧客獲得増に向けた営業基盤の更なる拡充（７月に金沢を開設済、宇都宮・長野・広島・福岡の４営業所を今後開設予定）",
+      "supports": "通期予想ページの会社公表状況。上期中5拠点を会社コミットに付け替えない。"
+    },
+    {
+      "id": "issuer-kanazawa-operating-start",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "source_key": "presentation",
+      "pdf_page": 7,
+      "source_text_start": 9283,
+      "source_text_end_exclusive": 9344,
+      "page_text_start": 1509,
+      "page_text_end_exclusive": 1570,
+      "offset_unit": "Unicode code points in exact saved text; end exclusive",
+      "quote": "将来の成長に向けた人員増・採用強化・拠\n点開設（金沢営業所：7/1営業開始）による\n販管費の増加をこなしつつ、増益を達成。",
+      "supports": "金沢営業所7/1営業開始という明示と費用の説明。支店別の初受注/売上寄与の説明ではない。"
+    },
+    {
+      "id": "faq-hiring-to-first-sales",
+      "source_id": "case-public:4b047af4dcd2099052131b9bd5a6cc0ad83a3cbeb84291ba7888219fd1df6532",
+      "source_key": "faq",
+      "pdf_page": null,
+      "source_text_start": 1973,
+      "source_text_end_exclusive": 2188,
+      "page_text_start": null,
+      "page_text_end_exclusive": null,
+      "offset_unit": "Unicode code points in exact saved text; end exclusive",
+      "quote": "従業員の採用について新規従業員を採用した場合、仕事を任せられるレベルになるまでにどれくらいの期間がかかりますか。 営業社員の場合、これまでに獲得した製造業の知見・営業スキルに加えてAI外観検査プロダクト「Phoenix Vision／Eye」に対する理解や製造ラインへの実装の提案力を備える必要があるため、初めて売上を上げるまでに平均で約１年かかります。他の職種はスキルセットで採用しておりますので早期に活躍いただいております 。",
+      "supports": "営業社員が初めて売上を上げるまで平均約1年。初受注までではない。FAQ更新日/母集団/測定期間は未確認。"
+    },
+    {
+      "id": "faq-order-to-delivery",
+      "source_id": "case-public:4b047af4dcd2099052131b9bd5a6cc0ad83a3cbeb84291ba7888219fd1df6532",
+      "source_key": "faq",
+      "pdf_page": null,
+      "source_text_start": 1631,
+      "source_text_end_exclusive": 1677,
+      "page_text_start": null,
+      "page_text_end_exclusive": null,
+      "offset_unit": "Unicode code points in exact saved text; end exclusive",
+      "quote": "AIシステムにおいて受注から納品に至るまでの平均期間を教えてください。 約３カ月となります。",
+      "supports": "受注から納品の平均。採用→初受注又は納品→売上認識の日程とは異なる。"
+    },
+    {
+      "id": "qa-prior-backlog-sales-timing",
+      "source_id": "case-public:c3c890386f935535dda16bb42e78ede9f85f4551f5640f170648e4d59fc6c63b",
+      "source_key": "qa",
+      "pdf_page": 2,
+      "source_text_start": 1593,
+      "source_text_end_exclusive": 1751,
+      "page_text_start": 16,
+      "page_text_end_exclusive": 174,
+      "offset_unit": "Unicode code points in exact saved text; end exclusive",
+      "quote": "質問５．当第１四半期末時点の受注残は 1,386 百万円と順調に積み上がっていますが、この受注残が売上\n    計上される時期を教えてください。\n回答５．当第１四半期末時点の受注残高 1,386 百万円のうち当第２四半期において約 1,000 百万円、下期に\n    約 386 百万円の売上計上を見込んでおります。",
+      "supports": "7/14当時の特定受注残の売上見込みを第2四半期/下期に分ける会社回答。予想であり現拠点の実売上ではない。"
+    },
+    {
+      "id": "issuer-generic-calendar",
+      "source_id": "case-public:decc7b41b89118944070d42554aef7998516b16bba1bd993c6afcd6c5076d98c",
+      "source_key": "calendar",
+      "pdf_page": null,
+      "source_text_start": 516,
+      "source_text_end_exclusive": 616,
+      "page_text_start": null,
+      "page_text_end_exclusive": null,
+      "offset_unit": "Unicode code points in exact saved text; end exclusive",
+      "quote": "４月中旬 通期決算発表 ５月下旬 定時株主総会 ７月中旬 第１四半期決算発表 10月中旬 第２四半期決算発表 １月中旬 第３四半期決算発表 ※都合により予告なく変更する場合があります。ご了承ください。",
+      "supports": "月の中旬等の一般カレンダーで年/実日/時刻はない。管理日Jan15と同一視しない。"
+    }
+  ],
+  "verification": {
+    "verified_at": "2026-10-15T06:20:35.906950+00:00",
+    "raw_text_snapshot_sets_checked": 6,
+    "source_IDs_recomputed": 6,
+    "raw_reextractions_match": {
+      "PDF": 3,
+      "visible_HTML": 3
+    },
+    "exact_quote_offsets_checked": 15,
+    "original_artifact_hashes": {
+      "author-condition-followup/case-record.json": "e13658aa268218a9abb76f16ed782fdc4be7ba54c52527b15439821a2f329e2b",
+      "author-condition-followup/case-record.md": "47ca964c978ff99773597aac3ff13af4b26b4d020eaf5f8e02c4b44830b5ad97",
+      "author-condition-followup/case-record-v2.json": "2e566e72a04a89938357220715a10603a51ce1ce744207599ac921de6e81328b",
+      "author-condition-followup/case-record-v2.md": "33b7bcaf95da6af3854d9a4e1f0c11eca4cab91f22d240a0fff17edc3c240dae",
+      "author-condition-followup/root-recheck.json": "9a508eac38e91c5a5f649c53c39c4be7898f04e29b2310cf8fb52a5b7aa3d897",
+      "author-condition-followup/independent-review.json": "4c56560ebb515631baeffee29a05cc9e7766f3ef57f5d07cc87c3fe6bcf08974",
+      "presentation-followup/source-bundle.json": "4fd50c80f02e4e1d6ed78689f3c8a2df185187a2f89324f0c0f33418b850e8cf",
+      "library-followup/source-bundle.json": "a8db4fa1d594e9f9e82baa8f85bce3d16cc2f5866c46f1d409e74f1d9ce74de2",
+      "external-forecast-discovery/source-bundle.json": "199178e927dbe28570bfe30e8ce354e12e30b41d6e1930bf84a34f3f51a07527",
+      "source-bundle.json": "7d0ff134aa227c9c518e59c1ee76480be292749392462da7b649d99099c51921"
+    },
+    "original_artifacts_unchanged": true,
+    "no_new_forecast_or_probability_or_tolerance_or_annualization": true,
+    "new_GETs": 0,
+    "database_accesses": 0,
+    "new_normalizer_registry_or_production_code": false
+  },
+  "adoption_boundary": {
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "model_adopted": false,
+    "valuation_input_path": null,
+    "stock_price_or_price_target": null,
+    "trade_or_exit_rule": null,
+    "IR_question_registered": false
+  }
+}

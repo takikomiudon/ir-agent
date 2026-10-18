@@ -1,0 +1,97 @@
+{
+  "prepared_at": "2026-10-16T16:00:25.351063+00:00",
+  "status": "prepare_only_historical_join_completed",
+  "input_pins": {
+    "research/ir-recovery-2026-10-13/contact-candidates.csv": "d7a55a842a7c126b48c588801cc2c6035d21bad22cb228ef57da68def1e03f31",
+    "research/ir-recovery-2026-10-13/individual-contact-candidates.csv": "cdc596da1342d418f9646a286299d87213c8b8c0f6496e49abeaf04e8c1a24d3",
+    "research/ir-contacts-2026-10-11/evidence/jpx-listing-universe.csv": "e8734cd291f9ed279e1302d630a7f6b950d2613502f9d02b749c2c97aab5fd5c",
+    "research/ir-contacts-2026-10-11/evidence/jpx-data-2026-09.xlsx": "a26fdf4420cb6a152a1811ce0c6e293e642c8a99f1cc2ad9c47a5d55f2722c82",
+    "research/ir-contacts-2026-10-11/evidence/jpx-listing-manifest.json": "830405287fb9936cca65b80488d13a487914da5e83d987c10530e7f711b41f28",
+    "research/ir-contacts-universe-2026-10-11/listing-deltas.json": "6ac91084390a79a2668f3fd3917a5ef14e978c0443d62f4bade3d5e53a8b575c",
+    "research/ir-contacts-universe-2026-10-11/evidence/delta-jpx-new-2026.json": "ff42a1c741dc1d70c32adfa6bfc8a5d9fbc98d6ea7373c916f42b3985bed2fa8",
+    "research/ir-SBI-S-stock-service-overview-2026-10-16/text/01-cp932-visible.txt": "bfda4f0aba564d4fc994f5cfb442b0a7a47c210f009cf3b271e61dd3e09916c8",
+    "research/ir-SBI-S-stock-service-overview-2026-10-16/parent-acceptance.json": "1637ae6505987b6e0698e97e9e5f3f24151c687d069ccbbb2005865f6f6ddfba"
+  },
+  "market_source_inventory": {
+    "official_month_end_XLSX": {
+      "path": "research/ir-contacts-2026-10-11/evidence/jpx-data-2026-09.xlsx",
+      "sha256": "a26fdf4420cb6a152a1811ce0c6e293e642c8a99f1cc2ad9c47a5d55f2722c82",
+      "rows_excluding_header": 4447,
+      "date": "2026-09-30",
+      "manifest": "research/ir-contacts-2026-10-11/evidence/jpx-listing-manifest.json",
+      "source_url": "https://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/data_j.xlsx",
+      "retrieved_at": "2026-10-11T03:35:46.810573+00:00",
+      "XLSX_CSV_all_4447_rows_exact": true,
+      "formula_cells_encountered": 0
+    },
+    "supplement_for_two_missing_codes": {
+      "codes": [
+        "640A",
+        "641A"
+      ],
+      "snapshot_file": "research/ir-contacts-universe-2026-10-11/evidence/delta-jpx-new-2026.json",
+      "source_url": "https://www.jpx.co.jp/listing/stocks/new/index.html",
+      "retrieved_at": "2026-10-11T03:58:30.950721+00:00",
+      "effective_date_label": "2026-10-01",
+      "no_company_URL_or_code_pattern_market_inference": true
+    }
+  },
+  "counts": {
+    "IR_catalog": 1819,
+    "individual_explicit": 343,
+    "direct_month_end_matches": 1817,
+    "official_new_listing_table_matches": 2,
+    "unmatched": 0,
+    "IR_duplicate_codes": 0,
+    "official_duplicate_codes": 0,
+    "market_disagreements_for_1817_direct_matches": 0,
+    "historical_buy_route_market_candidates": 1819,
+    "individual_explicit_historical_candidates": 343,
+    "by_market": {
+      "Prime": 702,
+      "Growth": 362,
+      "Standard": 755
+    },
+    "explicit_by_market": {
+      "Growth": 53,
+      "Prime": 167,
+      "Standard": 123
+    },
+    "route_market_excluded": 0,
+    "unknown": 0
+  },
+  "SBI_source": {
+    "parent_acceptance": "research/ir-SBI-S-stock-service-overview-2026-10-16/parent-acceptance.json",
+    "parent_acceptance_sha256": "1637ae6505987b6e0698e97e9e5f3f24151c687d069ccbbb2005865f6f6ddfba",
+    "quotes": [
+      {
+        "path": "research/ir-SBI-S-stock-service-overview-2026-10-16/text/01-cp932-visible.txt",
+        "sha256": "bfda4f0aba564d4fc994f5cfb442b0a7a47c210f009cf3b271e61dd3e09916c8",
+        "quote": "【東証 (プライム・スタンダード・グロース) 上場銘柄】 取引：買付・売却共に可",
+        "character_start": 3049,
+        "character_end": 3089,
+        "UTF8_byte_start": 7603,
+        "UTF8_byte_end": 7713
+      },
+      {
+        "path": "research/ir-SBI-S-stock-service-overview-2026-10-16/text/01-cp932-visible.txt",
+        "sha256": "bfda4f0aba564d4fc994f5cfb442b0a7a47c210f009cf3b271e61dd3e09916c8",
+        "quote": "取引をご希望の銘柄がS株対象かどうかの確認は、個別銘柄画面内の「取扱情報」よりご確認ください。",
+        "character_start": 3154,
+        "character_end": 3201,
+        "UTF8_byte_start": 7868,
+        "UTF8_byte_end": 8007
+      }
+    ],
+    "source_view": "Official service overview; detailed meaning review is separate; no rule changes/adoption beyond parent instructed category matching."
+  },
+  "interpretation": "Original JPX survey universe was restricted to TSE Prime/Standard/Growth domestic ordinary stocks, so every existing IR candidate matches this historical market category. This join does not further narrow the universe and says nothing about stocks outside the initial universe.",
+  "limits": [
+    "Historical monthly data and later observed new-listing labels are different time bases; not a single current listing snapshot.",
+    "Current listing status and issuer-specific SBI S-stock availability remain unverified for all1819.",
+    "Monthly10000JPY, execution affordability, minimum allocations, number of holdings, fees, IR-readiness and investment merit were not evaluated.",
+    "Exclusion, if any future source establishes it, would apply only to SBI new-buy route, not permanent investment exclusion.",
+    "No DB, Store, network or existing shared-data changes were needed.",
+    "The new listing table is saved HTML text with reported raw hash; no raw byte reconstruction or independent execution confirmation is claimed."
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T12:48:40.996021+00:00",
+  "status": "minimal_pure_CLI_DB_boundary_fix_target_tests_passed_frozen",
+  "original_issue": "PCDB01",
+  "old_review_preserved": true,
+  "before_code": {
+    "recorded_at": "2026-10-15T12:41:09.243929+00:00",
+    "source_path": "src/ir_agent/cli.py",
+    "snapshot_path": "research/ir-pure-cli-db-boundary-2026-10-15/source-before/cli.py",
+    "sha256": "57254a8e24df6b7be8c772e637821a0546b66ece40088238bf3a5643a4c13979",
+    "actual_db_main_sha256": "6a2b7b6b7bd4657aad45f65371243317f9c20b31c16c0ea02b98ca4852c0e8a1",
+    "last_full_suite": {
+      "tests": 1332,
+      "seconds": "37.939"
+    },
+    "database_opened": false
+  },
+  "changes": [
+    "Explicit twelve file-input commands and two conditional routes run before Store and Harness construction.",
+    "Existing eleven calculation branch ASTs moved intact into a small explicit helper; no dispatch registry or dynamic plugin framework.",
+    "Observation file-summary skips registry construction; explicit contacts dry-run uses existing catalog builder/result.",
+    "Remaining stateful/PIT/current-review command branches, parser, error handling and Store close contract preserved."
+  ],
+  "file_only_allowlist": [
+    "value",
+    "cycle-margin",
+    "decision",
+    "ir-plan",
+    "information-value",
+    "screen",
+    "capacity",
+    "stable-reinvestment",
+    "model-inputs",
+    "score-probabilities",
+    "normalize-quote",
+    "normalize-facts"
+  ],
+  "conditional_file_only_routes": [
+    {
+      "command": "observations",
+      "operation": "summarize",
+      "condition": "args.file is truthy (the existing file-input branch); no-file summarize is DB-backed",
+      "function": "summarize_observations(load_json(file).get(\"records\"), as_of=...)",
+      "implementation_boundary": "Current run creates ObservationStore(store.connection) before choosing input; it must skip registry construction for explicit file input. No evidence binding/firstsave is read from DB in this file branch."
+    },
+    {
+      "command": "contacts",
+      "operation": "import",
+      "condition": "args.dry_run is True",
+      "function": "build_contact_bundle -> existing summary/rejected_rows/dry_run status",
+      "implementation_boundary": "Current Harness method returns before Store access in explicit dry-run. Normal imports and schema-dependent state merge remain DB-backed."
+    }
+  ],
+  "semantics": [
+    "decision FILE and ir-plan FILE were already supplied-snapshot calculations; this does not remove or bypass an existing live/PIT check.",
+    "normalize-facts still uses trusted cli.now_iso and existing normalization/IDs/metadata; this is DB independence, not time independence.",
+    "Stateful registry/IR/current-view/PIT routes continue using Store/Harness.",
+    "Existing --db argument remains accepted; file-only commands ignore its path without opening it."
+  ],
+  "target_tests": {
+    "new_test_module": "tests/test_pure_cli_db_boundary.py",
+    "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests -p 'test_pure_cli_db_boundary.py' -v",
+    "tests": 7,
+    "subtest_scope": "14 successful file-only routes, 13 duplicate-JSON routes plus dryrun failure, unusable/nonSQLite DB paths, two conditional DB branches, saved status/PIT/current/registry DB dependence, success/error close.",
+    "exit_code": 0,
+    "elapsed_seconds": "0.307",
+    "run_count": 1,
+    "full_suite_run": false,
+    "runner_evidence": "Tool execution returned Ran7tests / OK / process exit0; no separately captured raw runner logfile."
+  },
+  "structural_preservation_checks": {
+    "original_parser_AST_unchanged": true,
+    "all_eleven_existing_file_branches_AST_unchanged": true,
+    "remaining_DB_run_statements_AST_unchanged": true,
+    "main_output_exception_and_finally_AST_unchanged": true,
+    "all_other_reviewed_inputs_unchanged": true
+  },
+  "frozen_files": [
+    {
+      "production_or_test_path": "src/ir_agent/cli.py",
+      "snapshot_path": "research/ir-pure-cli-db-boundary-2026-10-15/source-after/cli.py",
+      "sha256": "2eed88fd33a8a005ec8597254323fe02bd04383f37c434d9f78b11bc39eacca2",
+      "byte_count": 23073
+    },
+    {
+      "production_or_test_path": "tests/test_pure_cli_db_boundary.py",
+      "snapshot_path": "research/ir-pure-cli-db-boundary-2026-10-15/source-after/test_pure_cli_db_boundary.py",
+      "sha256": "7dadfeda4cddce8b90111b53c8d992939b7d29935f2ef622c99ac88ab1d57186",
+      "byte_count": 9157
+    }
+  ],
+  "old_evidence_file_sha256": {
+    "research/ir-pure-cli-db-boundary-2026-10-15/review.json": "52f2069cf0509a8d98ecccf038c4b50488ef03e69095bf5c9270ca859f922d0a",
+    "research/ir-pure-cli-db-boundary-2026-10-15/README.md": "e204857a5bb75fa71172e1436822b62c9bf1eb3a93b1f04829d3f497f7495701",
+    "research/ir-pure-cli-db-boundary-2026-10-15/reproduce.py": "8d120df68e7dc7004d61f0a9978d451354dfda6b086c7cd748ddf3f8f4724732",
+    "research/ir-pure-cli-db-boundary-2026-10-15/reproduction.json": "7d4b2dd52e1570721f2ba990586e6d01f071e1dd3737c0f086b30ba0fb6a6042",
+    "research/ir-pure-cli-db-boundary-2026-10-15/parent-before-change.json": "8a84a4f07054c97cdc8a73d27c09cfe82f273f571db52ab9dff112fa1886b50e",
+    "research/ir-pure-cli-db-boundary-2026-10-15/source-before/cli.py": "57254a8e24df6b7be8c772e637821a0546b66ece40088238bf3a5643a4c13979"
+  },
+  "actual_DB_unchanged_proof": "No actual DB was opened by this agent; root owns the before/after actualDB hash check. Only temporary/memory databases used in tests.",
+  "execution": {
+    "actual_DB_accesses": 0,
+    "new_GETs": 0,
+    "existing_test_or_docs_or_other_production_edits": 0,
+    "old_review_repro_edits": 0,
+    "full_suite_runs": 0,
+    "new_financial_rule_or_default": 0,
+    "IR_or_orders": 0
+  }
+}

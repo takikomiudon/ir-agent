@@ -1,0 +1,95 @@
+{
+  "security_code": "5255",
+  "company_name": "モンスターラボ",
+  "market": "グロース（内国株式）",
+  "jpx_sector": "情報・通信業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://monstar-lab.com/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T14:12:34.989718+00:00",
+  "completed_at": "2026-10-11T14:13:39.784705+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/5255/20261011T141234989751Z/01.json",
+      "url": "https://monstar-lab.com/americas",
+      "retrieved_at": "2026-10-11T14:13:06.992261+00:00",
+      "http_status": 200,
+      "quote": "Monstarlab | Americas | AI & Digital Partners",
+      "role": "regional_site_scope",
+      "snapshot_json_sha256": "90bd12e00bb4c9915e76487914f5ac381b7b7d18d52a5b536bd71b354e664931"
+    },
+    {
+      "snapshot": "evidence/5255/20261011T141234989751Z/02.json",
+      "url": "https://monstar-lab.com/americas/contact",
+      "retrieved_at": "2026-10-11T14:13:23.491406+00:00",
+      "http_status": 200,
+      "quote": "Contact us Please feel free to contact us if you have any questions about our services or would like to discuss your project. Our representative will contact you shortly.",
+      "role": "sales_support_scope_only",
+      "snapshot_json_sha256": "d75e4b208876e1b5791225bd0520ace777a07b008c2b86971dd77d969de9e45c"
+    },
+    {
+      "snapshot": "evidence/5255/20261011T141234989751Z/02.json",
+      "url": "https://monstar-lab.com/americas/contact",
+      "retrieved_at": "2026-10-11T14:13:23.491406+00:00",
+      "http_status": 200,
+      "quote": "Japan (Japanese)",
+      "role": "regional_followup_link_only",
+      "snapshot_json_sha256": "d75e4b208876e1b5791225bd0520ace777a07b008c2b86971dd77d969de9e45c",
+      "source_link_url": "https://monstar-lab.com/jp_ja"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://monstar-lab.com/",
+      "final_url": "https://monstar-lab.com/americas",
+      "snapshot": "evidence/5255/20261011T141234989751Z/01.json",
+      "retrieved_at": "2026-10-11T14:13:06.992261+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://monstar-lab.com/americas/contact",
+      "final_url": "https://monstar-lab.com/americas/contact",
+      "snapshot": "evidence/5255/20261011T141234989751Z/02.json",
+      "retrieved_at": "2026-10-11T14:13:23.491406+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "JPX公式サイトseedのドメインはAmericasサイトへリダイレクトし、保存2ページは米州地域の営業/顧客プロジェクト窓口。日本の現上場発行体の金融IR受付との同一性/用途を実証できない。",
+    "実email/textareaがあるが質問用途はservices/projectで、IR用件や株主・投資家の入力区分がない。inside_sales@monstar-lab.comは同じ営業の代替メールでIR宛先ではない。",
+    "日本語地域サイトへの実hrefは取得候補に保持できるが、未取得の日本IR窓口/個人条件を推論しない。"
+  ],
+  "discovery": {
+    "security_code": "5255",
+    "official_url": "https://monstar-lab.com/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "モンスターラボホールディングス",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "unverified",
+  "identity_matches": [],
+  "successful_official_page_count": 2,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 4,
+  "previous_attempts": [
+    "attempts/5255/20261011T045047531926Z.json",
+    "attempts/5255/20261011T141339784841Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_consumer_52_batch09",
+    "reviewed_at": "2026-10-11T14:24:35.824360+00:00",
+    "reviewed_at_jst": "2026-10-11T23:24:35.824360+09:00",
+    "notes": "モンスターラボ5255の保存公式seedホームはAmericasへredirectして米州AI/デジタル営業サイトになり、02のnative reply/question欄はサービス相談・プロジェクト用。inside_salesは明示的な同営業代替でIRへ採用しない。Group CEOが現れるだけでは日本の現上場発行体の金融IR窓口との同一性/受信用途にならない。顧客のlead_source checkboxは投資家区分でなく、個人や日本株IR受付は未実証のままU維持。 保存された公開本文・native controls・実hrefのみを個別点検。追加GET/メール/フォーム送信は0件。窓口不存在・返信実績・人間の投資判断承認を示すレビューではない。"
+  }
+}

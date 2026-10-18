@@ -1,0 +1,121 @@
+{
+  "security_code": "2820",
+  "company_name": "やまみ",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "食料品",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.yamami.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T04:50:47.809795+00:00",
+  "completed_at": "2026-10-11T04:50:59.933027+00:00",
+  "manual_review_required": false,
+  "evidence": [],
+  "fetches": [
+    {
+      "url": "https://www.yamami.co.jp/",
+      "final_url": "https://www.yamami.co.jp/",
+      "snapshot": "evidence/2820/20261011T045047809827Z/01.json",
+      "retrieved_at": "2026-10-11T04:50:48.360231+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.yamami.co.jp/IR/",
+      "final_url": "https://www.yamami.co.jp/IR/",
+      "snapshot": "evidence/2820/20261011T045047809827Z/02.json",
+      "retrieved_at": "2026-10-11T04:50:50.752556+00:00",
+      "http_status": 404,
+      "error": null
+    },
+    {
+      "url": "https://www.yamami.co.jp/contact",
+      "final_url": "https://www.yamami.co.jp/contact/",
+      "snapshot": "evidence/2820/20261011T045047809827Z/03.json",
+      "retrieved_at": "2026-10-11T04:50:53.736648+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "http://www.yamami.co.jp/IR/",
+      "final_url": null,
+      "snapshot": "evidence/2820/20261011T045047809827Z/04.json",
+      "retrieved_at": "2026-10-11T04:50:59.902379+00:00",
+      "http_status": null,
+      "error": "environment_circuit_breaker_open"
+    },
+    {
+      "url": "http://www.yamami.co.jp/IR/news.php",
+      "final_url": null,
+      "snapshot": "evidence/2820/20261011T045047809827Z/05.json",
+      "retrieved_at": "2026-10-11T04:50:59.914042+00:00",
+      "http_status": null,
+      "error": "environment_circuit_breaker_open"
+    },
+    {
+      "url": "http://www.yamami.co.jp/IR/manaegment.php",
+      "final_url": null,
+      "snapshot": "evidence/2820/20261011T045047809827Z/06.json",
+      "retrieved_at": "2026-10-11T04:50:59.924516+00:00",
+      "http_status": null,
+      "error": "environment_circuit_breaker_open"
+    },
+    {
+      "url": "http://www.yamami.co.jp/IR/highlight.php",
+      "final_url": null,
+      "snapshot": "evidence/2820/20261011T045047809827Z/07.json",
+      "retrieved_at": "2026-10-11T04:50:59.928697+00:00",
+      "http_status": null,
+      "error": "environment_circuit_breaker_open"
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "http://www.yamami.co.jp/IR/: environment_circuit_breaker_open",
+    "http://www.yamami.co.jp/IR/news.php: environment_circuit_breaker_open",
+    "http://www.yamami.co.jp/IR/manaegment.php: environment_circuit_breaker_open",
+    "http://www.yamami.co.jp/IR/highlight.php: environment_circuit_breaker_open",
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。"
+  ],
+  "discovery": {
+    "security_code": "2820",
+    "official_url": "https://www.yamami.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "やまみ",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/2820/20261011T045047809827Z/01.json",
+      "normalized_name": "やまみ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/2820/20261011T045047809827Z/02.json",
+      "normalized_name": "やまみ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/2820/20261011T045047809827Z/03.json",
+      "normalized_name": "やまみ",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 2,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "previous_attempts": [
+    "attempts/2820/20261011T045047360160Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_adaptive_old_audit_12",
+    "reviewed_at": "2026-10-11T06:51:39.605221+00:00",
+    "notes": "一般contact実フォームはあるがIR用途未明示。HTTPS大文字IRは404、HTTP IR後続は回路停止なので窓口不存在とは扱わない。原トップのHTTP IRリンクを追加候補とする。 保存された公開本文・リンク・フォーム controls に基づく Codex 個別監査。追加 GET・送信 0 件。IR 窓口の不存在は判定していない。"
+  }
+}

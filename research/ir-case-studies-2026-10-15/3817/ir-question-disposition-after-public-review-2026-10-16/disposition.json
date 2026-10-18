@@ -1,0 +1,490 @@
+{
+  "artifact_type": "file_only_IR_disposition",
+  "company_id": "jp:3817",
+  "recorded_at": "2026-10-16T10:18:08.633035+00:00",
+  "case_id": "3817-reported-annual-per-share-basis-monitor",
+  "issue_id": "3817-annual-EPS-BPS-and-common-share-basis",
+  "preserved_conditions": [
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "conclusion": {
+    "currently_prioritized_IR_questions": 0,
+    "new_question_texts": 0,
+    "IR_value": "unproven",
+    "reason": "報告年次2表示は公開確認済み。未知だけで質問優先にせず、未読公開資料/価格提供元/方法採用者の確認を先にする。既定の数値投資仮説・回答別許可入力変更はない。"
+  },
+  "native_saved_reference": {
+    "ref": "native_v2",
+    "version": 2,
+    "config_revision": 1,
+    "observation_ref": "native_result",
+    "outcome": "unresolved",
+    "management": {
+      "basis_quote": "2026-10-16の研究case登録に対応し、次回の内部研究管理日は2027-01-16（Asia/Tokyo）とする。新しい公表資料を実保存した場合は前倒しで点検する。",
+      "basis_ref": {
+        "path": "research/ir-case-studies-2026-10-15/3817/native-case-setup-2026-10-16/actual-inputs/management-basis.json",
+        "sha256": "fa6df4d6e445684c7e807ca745dfc74641cb7713bc073f60911a4b636b684f8e"
+      },
+      "date": "2027-01-16",
+      "timezone": "Asia/Tokyo"
+    },
+    "limits": "保存snapshot参照のみ。管理日は内部研究管理で会社予定/反証・売却期限ではない。"
+  },
+  "actual_model_inputs": {
+    "ref": "actual_audit",
+    "pointers": [
+      "/required_paths",
+      "/inputs",
+      "/limitations",
+      "/source_snapshot_sha256"
+    ],
+    "status": "source_values_matched",
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "paths": [
+      {
+        "path": "scenarios.reported_annual_reference.inputs.eps_jpy",
+        "value": "443.34",
+        "unit": "JPY-per-share",
+        "period": {
+          "start": "2025-04-01",
+          "end": "2026-03-31"
+        },
+        "condition": "C1",
+        "normalized_pointer": "/sources/1/content (JSON text)/facts/0"
+      },
+      {
+        "path": "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+        "value": "2659.88",
+        "unit": "JPY-per-share",
+        "as_of": "2026-03-31",
+        "condition": "C2",
+        "normalized_pointer": "/sources/1/content (JSON text)/facts/1"
+      }
+    ],
+    "limits": "Graham純式はEPS/BVPSの2項目のみ。数値一致は意味/金融採用の認証ではなく、派生2factsは同一原典の再表現。別社の値・成長率/PER/税率を追加しない。"
+  },
+  "dispositions": [
+    {
+      "id": "D1",
+      "owner": "public_answered",
+      "conditions": [
+        "C1",
+        "C2"
+      ],
+      "remove_from_questions": "年次連結EPS/BPS表示・期間・日本基準・EPS普通株利益と期中平均・個別との違い・当時希薄化注記。",
+      "quote_ids": [
+        "identity-and-consolidated-actual",
+        "share-counts",
+        "individual-results-distinct",
+        "per-share-basis-and-dilution"
+      ],
+      "effect": "2候補値を保持。会社予想435.34/個別253.08・699.68/純資産総額を代用しない。"
+    },
+    {
+      "id": "D2",
+      "owner": "public_unread_or_update_first",
+      "conditions": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "remaining": "BPS詳細分子/調整、後日訂正/株式基準・最新期。",
+      "evidence": {
+        "ref": "annual_review",
+        "pointers": [
+          "/unread_meaning_pages",
+          "/remaining_unknowns",
+          "/periods/issuer_guide_at_publication/current_validity"
+        ]
+      },
+      "next": "必要な定義を選び未読保存注記/BS又は後日公式公表を先に確認。今回は追加読解しない。",
+      "limits": "未読≠非公表。詳細全項目を研究/純式計算の一律必須条件にしない。会社予想435.34の現在維持は未確認。5月時点scope変更なし/後発事象なしは現在保証ではない。",
+      "potential_paths": [
+        "scenarios.reported_annual_reference.inputs.eps_jpy",
+        "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy"
+      ]
+    },
+    {
+      "id": "D3",
+      "owner": "company_public_definition_if_still_material_after_public_check",
+      "conditions": [
+        "C2",
+        "C3"
+      ],
+      "topic_not_question": "表示BPSの普通株帰属範囲/調整・対象日/株式基準の公表注記所在。",
+      "priority_now": 0,
+      "effects_are_research_only_not_precommitted_branches": [
+        {
+          "if": "同じ対象日/普通株basisを公開注記で説明",
+          "then": "C2の根拠/比較可能性を補足。説明だけで表示値は変更しない。",
+          "potential_paths": [
+            "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy"
+          ]
+        },
+        {
+          "if": "異なる対象範囲/基準又は訂正所在",
+          "then": "C2/C3対応を保留し原本と日付を確認。新しく根拠づけた同定義表示だけがBPS候補変更を支え得る。EPSは独立のEPS訂正/基準変更が根拠づけられた場合だけ再検討。",
+          "potential_paths": [
+            "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+            "scenarios.reported_annual_reference.inputs.eps_jpy"
+          ]
+        },
+        {
+          "if": "不明/回答不能/無回答",
+          "then": "未解決維持。0/否定/正常値/売却へ変換しない。",
+          "potential_paths": []
+        }
+      ],
+      "numeric_changes_authorized": [],
+      "why_not_now": "公開未読が先行し数値仮説/変更許可は未固定。定義研究の将来価値を0と断定しない。"
+    },
+    {
+      "id": "D4",
+      "owner": "market_provider_and_researcher",
+      "conditions": [
+        "C3"
+      ],
+      "observation": {
+        "price_raw": "4,820",
+        "time_raw": "15:30",
+        "currency": null,
+        "date": null,
+        "timezone": null,
+        "market_observed_at": null,
+        "HTTP_body_completed_at": "2026-10-16T10:02:43.847879+00:00"
+      },
+      "quote_ids": [
+        "main-market-price-and-label",
+        "other-date-context-not-price-clock",
+        "provider-delay-scope"
+      ],
+      "next": "価格採用時だけ同boardの通貨/価格日/時計精度/対象株式と財務期を確認。HTTP時計・他欄日付・配当円表示で補完しない。会社IRへ転嫁しない。",
+      "IR_priority": 0
+    },
+    {
+      "id": "D5",
+      "owner": "method_author_adopter_and_investor",
+      "conditions": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "remaining": "日本原典mapping/latestperiod対応、金融採用、リスク/退出条件。将来利益を別途採用するなら予測者が定義する。",
+      "next": "手法と候補period/basisの適合を別途判断。22.5/投資家倍率/買売価格を会社に保証させず、会社guideを報告2inputへ混入しない。",
+      "limits": "正値guardは式の定義域で、負/0なら本式適用保留。会社永久除外/売却ではない。原著Graham全基準や3817推奨ではない。"
+    }
+  ],
+  "procedure_attribution": [
+    {
+      "ref": "DD",
+      "lines": [
+        69,
+        100
+      ],
+      "adopted": "既知/目的→優先度、資料比較、非誘導、follow-up。",
+      "limits": "PE非公開情報要求・身体反応・会議問数や金融閾値は移植しない。"
+    },
+    {
+      "ref": "JIRA",
+      "pointers": [
+        "/source",
+        "/reading_scope/semantic_pages",
+        "/question_method_dimensions"
+      ],
+      "adopted": "2018年会社向け指針の資料/FAQ/一貫性を公開先行と事後照合へproject適応。",
+      "limits": "既読9/14/25頁。現在法令/投資家義務/返信・公開性保証でない。"
+    },
+    {
+      "ref": "question_method",
+      "lines": [
+        7,
+        33
+      ],
+      "adopted": "既答除外、未知だけで優先しない、主体分離。"
+    },
+    {
+      "ref": "decision_flow",
+      "lines": [
+        28,
+        53
+      ],
+      "adopted": "会社定義/著者予測/市場/投資家の担当と変更範囲・公開性。"
+    },
+    {
+      "ref": "decision_policy",
+      "adopted": "著者方針→仮説→質問前固定、数値未完成研究、前後評価別保存。"
+    },
+    {
+      "ref": "maintainer",
+      "section": "5. Graham Number / lines205–230",
+      "fixed_commit": "00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7",
+      "adopted": "maxgfr/cribleの2項正値式、平均/期末分母、latestperiod価格。日本原典適合は別確認。"
+    },
+    {
+      "ref": "formula",
+      "adopted": "純式出力名で公正価値/退出価格を採用しない。"
+    },
+    {
+      "ref": "prior_procedure",
+      "adopted": "整理方法だけ。1975の財務/市場/計算値の転用なし。"
+    }
+  ],
+  "formal_financial_state": {
+    "numeric_investment_hypothesis": null,
+    "financial_policy": null,
+    "adopted_price": null,
+    "valuation_adoption": null,
+    "forecast": null,
+    "financial_answer_branches": null,
+    "precommit": null,
+    "formal_question": null,
+    "send_ready": false,
+    "IR_value": "unproven"
+  },
+  "source_identity": [
+    {
+      "id": "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e",
+      "native_json_sha256": "cdb77fd2cb0d201dd8fbcba84a200665e0912216981ea79e200a601558d7a616"
+    },
+    {
+      "id": "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf",
+      "native_json_sha256": "2bd0faef543ce9659035c844d7d1722975b37e23fc2035a2a66a85c1e78940ce"
+    }
+  ],
+  "native_SHA_domain": "models.json_text(source) UTF8。normalizer compact SHAと別。",
+  "provenance": {
+    "annual": {
+      "path": "research/ir-case-studies-2026-10-15/3817/annual-accounting-input-discovery-2026-10-16/source-only-bundle.json",
+      "sha256": "4eaf46d582b3223512ad40772663e6924f71d8758270547dd8e119acab396067"
+    },
+    "annual_quotes": {
+      "path": "research/ir-case-studies-2026-10-15/3817/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+      "sha256": "31b902a7215c387666b893bd71069f4fc9ddea9bf06b45917756db6cc2976a4a"
+    },
+    "annual_review": {
+      "path": "research/ir-case-studies-2026-10-15/3817/annual-accounting-input-discovery-2026-10-16/review.json",
+      "sha256": "5c37209318827d0a332d6cbeb1ffccc18548cd0c1ba2c992ef7559b7efc7faf3"
+    },
+    "annual_acceptance": {
+      "path": "research/ir-case-studies-2026-10-15/3817/annual-accounting-input-discovery-2026-10-16/parent-acceptance.json",
+      "sha256": "6dce250c22f452ede769b17f9499e70d5f596e2f1255854f4a356b71f52efc92"
+    },
+    "normalized": {
+      "path": "research/ir-case-studies-2026-10-15/3817/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json",
+      "sha256": "9cb688305dc2a0582ee66f363f88efae03a5b677859adf1f07dd633d86fc2749"
+    },
+    "normalization_acceptance": {
+      "path": "research/ir-case-studies-2026-10-15/3817/annual-per-share-disclosed-facts-2026-10-16/parent-acceptance.json",
+      "sha256": "d69bcfb3a76f2142df856d70a554f110c4a35acbe782404a36bcea318eb42533"
+    },
+    "conditions": {
+      "path": "research/ir-case-studies-2026-10-15/3817/native-case-setup-2026-10-16/prepare-only/case-context.json",
+      "sha256": "8c648e6b063b66ac668df32faadcdb35a2ab110725ccaa6a6f7f78734b3f6ed5"
+    },
+    "native_v2": {
+      "path": "research/ir-graham-number-two-company-input-connection-2026-10-16/qualitative-reviews/3817/case-after.json",
+      "sha256": "4b03632465c82b70ce3f0279fe4e4e20955cb9fd11d3d222e59c377b49f766f1"
+    },
+    "native_result": {
+      "path": "research/ir-graham-number-two-company-input-connection-2026-10-16/qualitative-reviews/3817/worker-result/result.json",
+      "sha256": "ead581dc6106f6680e5e0af566ecb69321a9c4fb16afc2a25ae1e65789a378be"
+    },
+    "native_acceptance": {
+      "path": "research/ir-graham-number-two-company-input-connection-2026-10-16/qualitative-reviews/parent-result-acceptance.json",
+      "sha256": "864f3fe018d213924b296290305e67f44f43e35c5572d56e6528d51e7f98237f"
+    },
+    "actual_audit": {
+      "path": "research/ir-graham-number-two-company-input-connection-2026-10-16/actual-input-audits/3817/result.json",
+      "sha256": "78900141445db2bed4303b61572133dbf3d565084c9e95bd14d84e91195d0d68"
+    },
+    "source_binding": {
+      "path": "research/ir-graham-number-two-company-input-connection-2026-10-16/actual-input-audits/3817/native-source-binding.json",
+      "sha256": "0744063185b6fbbe7e5b54cb4a20b3bdc4582eebb1134e014c059ffefb3932ce"
+    },
+    "market": {
+      "path": "research/ir-case-studies-2026-10-15/3817/market-observation-discovery-2026-10-16/followup-one-literal-target/review.json",
+      "sha256": "505152b59a0fc38d393b5c91e971875848c543fe3ec6bed6c63a504168f9d17d"
+    },
+    "market_quotes": {
+      "path": "research/ir-case-studies-2026-10-15/3817/market-observation-discovery-2026-10-16/followup-one-literal-target/source-quotes.json",
+      "sha256": "d4312693583ff13caff95e68182f3abc6810732b4d75e1ea01acdbb5f609085d"
+    },
+    "market_acceptance": {
+      "path": "research/ir-case-studies-2026-10-15/3817/market-observation-discovery-2026-10-16/followup-one-literal-target/parent-acceptance.json",
+      "sha256": "4ad0b06135ab11e40d3cb4c50bba96bf6f128fcbfe10005485470d19ecd22c58"
+    },
+    "DD": {
+      "path": "third_party/anthropic/skills/dd-meeting-prep/SKILL.md",
+      "sha256": "a74eecadece794106d515ce3d00e07b3857ed123e841e8962e26363d2413d94f"
+    },
+    "JIRA": {
+      "path": "research/ir-jira-dialogue-best-practices-2026-10-15/review.json",
+      "sha256": "1dcbd63edd10ae382021ef7566ca4e5ab5899a32d1cf8b85185b5fa431414106"
+    },
+    "question_method": {
+      "path": "docs/ir-question-preparation.md",
+      "sha256": "c5e881e0a0874edfc28dcc67d8d48c69600a4916254131477f71b961218d7a7f"
+    },
+    "decision_flow": {
+      "path": "docs/ir-decision-flow.md",
+      "sha256": "651839dd83d79e1c56af64d6a15f6f51151724b8aa77b36ad33ddc385bc473d7"
+    },
+    "decision_policy": {
+      "path": "docs/decision-policy.md",
+      "sha256": "dba0621171ba45f63f2e2f583004f905a2913706a4dd6701b6852649adc9dd70"
+    },
+    "formula": {
+      "path": "docs/graham-number-valuation-spec.md",
+      "sha256": "4ef4791993d6db68aea2a500e8aa0c99636ebe5f211e73efe77d9855a20841c1"
+    },
+    "maintainer": {
+      "path": "research/ir-transparent-metric-formula-review-2026-10-15/upstream-INDICATORS.md",
+      "sha256": "fb82b2d47596026ea75fa561169062c52622dcb153caffe37af5491111ad084f"
+    },
+    "prior_procedure": {
+      "path": "research/ir-case-studies-2026-10-15/1975/ir-question-disposition-after-public-review-2026-10-16/disposition.json",
+      "sha256": "e70c54688ce2f1de405c428e5bfd6ef04f7f8b4908675d5cb97f88da2aea5c72"
+    }
+  },
+  "quote_refs": [
+    {
+      "ref": "annual_quotes",
+      "pointer": "/0",
+      "quote_id": "identity-and-consolidated-actual",
+      "page": 1,
+      "Unicode_span": [
+        0,
+        3200
+      ],
+      "UTF8_span": [
+        0,
+        4426
+      ]
+    },
+    {
+      "ref": "annual_quotes",
+      "pointer": "/1",
+      "quote_id": "then-issuer-guide",
+      "page": 1,
+      "Unicode_span": [
+        3869,
+        4471
+      ],
+      "UTF8_span": [
+        5277,
+        6101
+      ]
+    },
+    {
+      "ref": "annual_quotes",
+      "pointer": "/2",
+      "quote_id": "share-counts",
+      "page": 2,
+      "Unicode_span": [
+        4663,
+        4930
+      ],
+      "UTF8_span": [
+        6545,
+        6966
+      ]
+    },
+    {
+      "ref": "annual_quotes",
+      "pointer": "/3",
+      "quote_id": "individual-results-distinct",
+      "page": 2,
+      "Unicode_span": [
+        4930,
+        6051
+      ],
+      "UTF8_span": [
+        6966,
+        8495
+      ]
+    },
+    {
+      "ref": "annual_quotes",
+      "pointer": "/4",
+      "quote_id": "consolidated-PL-basis",
+      "page": 9,
+      "Unicode_span": [
+        17045,
+        19527
+      ],
+      "UTF8_span": [
+        28991,
+        32139
+      ]
+    },
+    {
+      "ref": "annual_quotes",
+      "pointer": "/5",
+      "quote_id": "per-share-basis-and-dilution",
+      "page": 18,
+      "Unicode_span": [
+        33832,
+        35383
+      ],
+      "UTF8_span": [
+        54100,
+        56667
+      ]
+    },
+    {
+      "ref": "market_quotes",
+      "pointer": "/0",
+      "quote_id": "main-market-price-and-label",
+      "page": null,
+      "Unicode_span": [
+        283,
+        367
+      ],
+      "UTF8_span": [
+        693,
+        857
+      ]
+    },
+    {
+      "ref": "market_quotes",
+      "pointer": "/1",
+      "quote_id": "other-date-context-not-price-clock",
+      "page": null,
+      "Unicode_span": [
+        521,
+        695
+      ],
+      "UTF8_span": [
+        1207,
+        1459
+      ]
+    },
+    {
+      "ref": "market_quotes",
+      "pointer": "/2",
+      "quote_id": "provider-delay-scope",
+      "page": null,
+      "Unicode_span": [
+        4187,
+        4319
+      ],
+      "UTF8_span": [
+        9739,
+        10101
+      ]
+    }
+  ],
+  "worker_receipt": {
+    "status": "prepared_root_review_pending_not_acceptance",
+    "reference_SHA_checked": 23,
+    "nonempty_Unicode_UTF8_exact_quote_refs": 9,
+    "original_object_unchanged": true,
+    "exactly_two_actual_input_paths": true,
+    "GET_DB_Store_shared_old_code_changes_calculation_formal_question_send": 0,
+    "local_validation_limit": "市場quote相対path基準と派生contentのJSON文字列を確認して読み方を訂正。いずれも成果生成前に停止し、同じ保存bytesで検証。取得/原文変更なし。"
+  },
+  "stop": "file-onlyで停止。正当jobへの将来利用は手動contextで自動同梱/受領保証なし。新API/質問/探索/DB jobを作成しない。"
+}

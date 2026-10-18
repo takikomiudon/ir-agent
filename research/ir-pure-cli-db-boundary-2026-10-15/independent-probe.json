@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "status": "three_differential_memory_temp_probes_passed",
+  "fixed_cli_now": "2026-10-15T12:30:00+00:00",
+  "structural_checks": {
+    "parser_AST_equal": true,
+    "eleven_moved_branch_ASTs_equal": true,
+    "remaining_DB_run_AST_equal": true,
+    "main_result_error_finally_AST_equal": true,
+    "pure_allowlist_exact12": true,
+    "top_command_matrix": [
+      {
+        "command": "init",
+        "without_store": false
+      },
+      {
+        "command": "ingest",
+        "without_store": false
+      },
+      {
+        "command": "daily",
+        "without_store": false
+      },
+      {
+        "command": "claim",
+        "without_store": false
+      },
+      {
+        "command": "packet",
+        "without_store": false
+      },
+      {
+        "command": "complete",
+        "without_store": false
+      },
+      {
+        "command": "renew",
+        "without_store": false
+      },
+      {
+        "command": "thesis",
+        "without_store": false
+      },
+      {
+        "command": "thesis-view",
+        "without_store": false
+      },
+      {
+        "command": "value",
+        "without_store": true
+      },
+      {
+        "command": "cycle-margin",
+        "without_store": true
+      },
+      {
+        "command": "decision",
+        "without_store": true
+      },
+      {
+        "command": "ir-plan",
+        "without_store": true
+      },
+      {
+        "command": "policy",
+        "without_store": false
+      },
+      {
+        "command": "decision-review",
+        "without_store": false
+      },
+      {
+        "command": "contacts",
+        "without_store": false
+      },
+      {
+        "command": "information-value",
+        "without_store": true
+      },
+      {
+        "command": "observations",
+        "without_store": false
+      },
+      {
+        "command": "predictions",
+        "without_store": false
+      },
+      {
+        "command": "evaluation-protocol",
+        "without_store": false
+      },
+      {
+        "command": "screen",
+        "without_store": true
+      },
+      {
+        "command": "capacity",
+        "without_store": true
+      },
+      {
+        "command": "stable-reinvestment",
+        "without_store": true
+      },
+      {
+        "command": "model-inputs",
+        "without_store": true
+      },
+      {
+        "command": "score-probabilities",
+        "without_store": true
+      },
+      {
+        "command": "intake",
+        "without_store": false
+      },
+      {
+        "command": "source-classification",
+        "without_store": false
+      },
+      {
+        "command": "quote",
+        "without_store": false
+      },
+      {
+        "command": "normalize-quote",
+        "without_store": true
+      },
+      {
+        "command": "normalize-facts",
+        "without_store": true
+      },
+      {
+        "command": "company",
+        "without_store": false
+      },
+      {
+        "command": "question",
+        "without_store": false
+      },
+      {
+        "command": "reply",
+        "without_store": false
+      },
+      {
+        "command": "sync",
+        "without_store": false
+      },
+      {
+        "command": "status",
+        "without_store": false
+      },
+      {
+        "command": "inbox",
+        "without_store": false
+      }
+    ],
+    "conditional_guard_cases": 8,
+    "decision_and_ir_plan_before": "Both already evaluate(load_json(args.file)); no live DB validation removed."
+  },
+  "probes": [
+    {
+      "id": "P01-normalize-facts-clock-and-output",
+      "comparison": "same exit/stdout/stderr at fixed CLI clock",
+      "before": {
+        "exit_code": 0,
+        "Store_calls": 1,
+        "actual_Store_paths": [
+          ":memory:"
+        ],
+        "close_calls": 1
+      },
+      "after": {
+        "exit_code": 0,
+        "Store_calls": 0,
+        "actual_Store_paths": [],
+        "close_calls": 0
+      },
+      "stdout_sha256": "8e47938cf30a5f98dbb4437e65e43fa1b873df0dc64857b759a1bc7e307216dc",
+      "stderr": "",
+      "focus": {
+        "derived_source_id": "disclosed-facts:971177d39d05cf44549e4bd08b1d660d94fd814a8ba6c35624f69fdc60ca9193",
+        "derived_retrieved_at": "2026-10-15T12:30:00+00:00",
+        "financial_inputs_verified": false
+      }
+    },
+    {
+      "id": "P02-contacts-dryrun-with-rejected-row",
+      "comparison": "same exit/stdout/stderr at fixed CLI clock",
+      "before": {
+        "exit_code": 0,
+        "Store_calls": 1,
+        "actual_Store_paths": [
+          ":memory:"
+        ],
+        "close_calls": 1
+      },
+      "after": {
+        "exit_code": 0,
+        "Store_calls": 0,
+        "actual_Store_paths": [],
+        "close_calls": 0
+      },
+      "stdout_sha256": "c594c3a346f74f2286d0e15ba57be16bc4740137dbda9ddc51559949d1eced69",
+      "stderr": "",
+      "focus": {
+        "status": "dry_run",
+        "rejected_rows": [
+          {
+            "row_number": 3,
+            "line_number": 3,
+            "security_code": "130B",
+            "reason_codes": [
+              "invalid_contact_row"
+            ],
+            "reasons": [
+              "channels must be valid JSON"
+            ]
+          }
+        ],
+        "summary": {
+          "catalog_path": "/tmp/ir-pure-cli-independent-o7cgurq8/catalog.csv",
+          "catalog_sha256": "e8fb9af147dc97252a38e0e9258be999af059800c3d21d3d45fddcea77183970",
+          "imported_at": "2026-10-15T12:30:00+00:00",
+          "input_rows": 2,
+          "accepted_rows": 1,
+          "rejected_rows": 1,
+          "duplicate_codes": [],
+          "individual_access_explicit": 1,
+          "individual_access_not_stated": 0,
+          "financial_sources_created": 0,
+          "theses_created": 0
+        }
+      }
+    },
+    {
+      "id": "P03-observations-without-file-still-stateful",
+      "comparison": "same exit/stdout/stderr at fixed CLI clock",
+      "before": {
+        "exit_code": 0,
+        "Store_calls": 1,
+        "actual_Store_paths": [
+          ":memory:"
+        ],
+        "close_calls": 1
+      },
+      "after": {
+        "exit_code": 0,
+        "Store_calls": 1,
+        "actual_Store_paths": [
+          ":memory:"
+        ],
+        "close_calls": 1
+      },
+      "stdout_sha256": "e5209180ad833a3e780b8c12a3e44a13184781f2a90e1922d75ce207d46434cc",
+      "stderr": "",
+      "focus": {
+        "record_count": 0
+      }
+    }
+  ],
+  "source_hashes_unchanged": {
+    "research/ir-pure-cli-db-boundary-2026-10-15/review.json": "52f2069cf0509a8d98ecccf038c4b50488ef03e69095bf5c9270ca859f922d0a",
+    "research/ir-pure-cli-db-boundary-2026-10-15/reproduction.json": "7d4b2dd52e1570721f2ba990586e6d01f071e1dd3737c0f086b30ba0fb6a6042",
+    "research/ir-pure-cli-db-boundary-2026-10-15/implementation.json": "ee465497fbb5ec41c02e5c3583400235221319436d21352e007d40b5addbd9fe",
+    "research/ir-pure-cli-db-boundary-2026-10-15/source-before/cli.py": "57254a8e24df6b7be8c772e637821a0546b66ece40088238bf3a5643a4c13979",
+    "research/ir-pure-cli-db-boundary-2026-10-15/source-after/cli.py": "2eed88fd33a8a005ec8597254323fe02bd04383f37c434d9f78b11bc39eacca2",
+    "research/ir-pure-cli-db-boundary-2026-10-15/source-after/test_pure_cli_db_boundary.py": "7dadfeda4cddce8b90111b53c8d992939b7d29935f2ef622c99ac88ab1d57186",
+    "src/ir_agent/cli.py": "2eed88fd33a8a005ec8597254323fe02bd04383f37c434d9f78b11bc39eacca2",
+    "tests/test_pure_cli_db_boundary.py": "7dadfeda4cddce8b90111b53c8d992939b7d29935f2ef622c99ac88ab1d57186",
+    "src/ir_agent/harness.py": "5f75ba6452a61f47eb96c0ae06629d7251c90c84b53c46c7181953bff4b5b7bd",
+    "src/ir_agent/contacts.py": "97b4a5fe86e82255e53c8a91eaa1c1c76a9f8d2b4f136e16c10386ae2e8b9ead",
+    "tests/test_contacts.py": "9e828627d7a01c702da9154305fec7111f56c5692dced897bc4956eea92f7faf",
+    "examples/disclosed-facts.json": "dd3c3c0cef6cbc49b2b4c2135b3e11975256c5c764867bc8434a746e89985064"
+  },
+  "scope": {
+    "probe_count": 3,
+    "main_invocations": 6,
+    "real_research_DB_accesses": 0,
+    "persistent_SQLite_DBs_created": 0,
+    "SQLite_memory_Store_opens": 4,
+    "new_GETs": 0,
+    "production_or_test_edits": 0,
+    "fullsuite_runs": 0
+  },
+  "limit": "Before Store constructor was deliberately mapped to :memory: to compare calculation/output without opening a persistent DB. The supplied impossible path was not used for a real before-Store connection. After pure Store/Harness construction was forbidden."
+}

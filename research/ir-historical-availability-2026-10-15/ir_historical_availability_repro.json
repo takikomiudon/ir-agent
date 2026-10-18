@@ -1,0 +1,26 @@
+{
+  "all_inputs_are_fictional": true,
+  "database": ":memory:",
+  "contract_mode_under_test": "synthetic:false; explicit user policy and observed position",
+  "processing_time": "2026-10-09T09:00:00+00:00",
+  "historical_as_of": "2026-10-09T08:30:00+00:00",
+  "before_late_processing": {
+    "thesis_version": 1,
+    "daily_job_id": "research-f168d68763914894a803ddb0"
+  },
+  "after_late_processing": {
+    "thesis_version": 2,
+    "daily_job_id": "research-e9f189be96dd3e242c748ba1",
+    "packet_thesis_version": 2
+  },
+  "review": {
+    "evaluation_time": "2026-10-09T17:20:00+09:00",
+    "actual_first_saved_at": "2026-10-09T09:00:00+00:00",
+    "candidate_action": "buy_review",
+    "candidate_at_actual_processing_time": "buy_review"
+  },
+  "derived_reply_source_retrieved_at": "2026-10-09T16:00:00+09:00",
+  "existing_frozen_contract_blocks_earlier_send": true,
+  "finding": "The same 17:30 thesis/daily lookup changes from version 1 to version 2 after processing at 18:00.",
+  "not_a_finding": "The review honestly stores first_saved_at=18:00. This does not show a decision was stored at 17:20; the current candidate is not itself the defect."
+}

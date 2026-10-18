@@ -1,0 +1,111 @@
+{
+  "security_code": "2991",
+  "company_name": "ランドネット",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "不動産業",
+  "investigation_status": "confirmed",
+  "verification_level": "form_fields_verified",
+  "official_url": "https://landnet.co.jp/",
+  "contact_url": "https://landnet.co.jp/ir/contact/",
+  "channels": [
+    "form"
+  ],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "candidate",
+  "attempted_at": "2026-10-11T06:27:49.145113+00:00",
+  "completed_at": "2026-10-11T06:27:57.595528+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/2991/20261011T062749145161Z/02.json",
+      "url": "https://landnet.co.jp/ir/contact/",
+      "retrieved_at": "2026-10-11T06:27:55.155027+00:00",
+      "quote": "IR専用お問い合わせ | 株式会社ランドネット 東証スタンダード 市場に上場しております 市場レポート お知らせ サービス Sell 不動産の売却 ランドネットの売却の特徴 DMが届いたお客様へ リースバック お客様Myページ Buy 不動産の購入 住まいを探す Investments 不動産投資 ランドネットの不動産投資 投資物件を探す 不動産投資セミナー 不動産投資無料相談",
+      "role": "contact_channel"
+    },
+    {
+      "snapshot": "evidence/2991/20261011T062749145161Z/02.json",
+      "quote": "当社のIRに関するご質問は下記フォームよりお問い合わせください。",
+      "role": "ir_form_scope",
+      "url": "https://landnet.co.jp/ir/contact/",
+      "retrieved_at": "2026-10-11T06:27:55.155027+00:00",
+      "http_status": 200
+    },
+    {
+      "snapshot": "evidence/2991/20261011T062749145161Z/02.json",
+      "quote": "また、お問い合わせ内容によっては、回答を差し控える場合もございますので、あらかじめご了承下さい。",
+      "role": "reply_scope_condition",
+      "url": "https://landnet.co.jp/ir/contact/",
+      "retrieved_at": "2026-10-11T06:27:55.155027+00:00",
+      "http_status": 200
+    },
+    {
+      "snapshot": "evidence/2991/20261011T062749145161Z/02.json",
+      "quote": "お名前 例）鈴木 太郎 メールアドレス 例）example@landnet.co.jp 電話番号 ※ハイフン無しで入力して下さい 例）09012349876 お問い合わせ内容",
+      "role": "ir_form_fields_with_example_excluded",
+      "url": "https://landnet.co.jp/ir/contact/",
+      "retrieved_at": "2026-10-11T06:27:55.155027+00:00",
+      "http_status": 200
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://landnet.co.jp/",
+      "final_url": "https://landnet.co.jp/",
+      "snapshot": "evidence/2991/20261011T062749145161Z/01.json",
+      "retrieved_at": "2026-10-11T06:27:51.540279+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://landnet.co.jp/ir/contact/",
+      "final_url": "https://landnet.co.jp/ir/contact/",
+      "snapshot": "evidence/2991/20261011T062749145161Z/02.json",
+      "retrieved_at": "2026-10-11T06:27:55.155027+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [
+    "IR専用フォーム。氏名/メール/電話/質問と個人情報同意を表示。必須属性/欄別表示の詳細は保存抽出では未確認。",
+    "質問内容により回答を差し控える場合がある。"
+  ],
+  "limitations": [
+    "IR専用の実type=email/質問textareaは確認済み。個人投資家の明示受付・各欄必須性・送信/回答実績は未確認。",
+    "「個人の方」タブは物件問い合わせへの別導線でIR個人受付の証拠にしない。example@landnet.co.jp は入力例で公開IRメールに含めない。"
+  ],
+  "discovery": {
+    "security_code": "2991",
+    "official_url": "https://landnet.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ランドネット",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/2991/20261011T062749145161Z/01.json",
+      "normalized_name": "ランドネット",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/2991/20261011T062749145161Z/02.json",
+      "normalized_name": "ランドネット",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 2,
+  "http_get_attempt_count": 3,
+  "previous_attempts": [
+    "attempts/2991/20261011T045047367880Z.json",
+    "attempts/2991/20261011T062757595755Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_adaptive_audit_123",
+    "reviewed_at": "2026-10-11T06:38:18.934128+00:00",
+    "notes": "ランドネット会社名一致。IR専用title/本文とactual同formのemail(type=email)・content textareaを確認しconfirmed維持。入力例メールを除外。「個人の方/法人の方」は別物件窓口リンク、IRは別の株主投資家向けタブで個人投資家明示と解釈しない。必須欄のvisual対応は未保存なので不明を残す。"
+  }
+}

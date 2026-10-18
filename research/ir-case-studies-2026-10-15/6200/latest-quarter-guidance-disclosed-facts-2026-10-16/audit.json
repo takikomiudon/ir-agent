@@ -1,0 +1,91 @@
+{
+  "audited_at": "2026-10-16T11:32:46.620307+00:00",
+  "audit_scope": "offline normalization/source/value/period audit only; not audit_model_inputs or valuation request/execution",
+  "facts": [
+    {
+      "fact_id": "6200-reported-Q3-cumulative-EPS-FY2026",
+      "kind": "reported_fact",
+      "value": "36.63",
+      "unit": "JPY-per-share",
+      "period": {
+        "end_date": "2026-06-30",
+        "label": "2026年９月期第３四半期",
+        "observed_in_source_disclosure_date": "2026-08-03",
+        "period_kind": "Q3_nine_month_cumulative_reported",
+        "start_date": "2025-10-01"
+      },
+      "source_raw_token_Unicode_UTF8_and_quoted_unit_period_exact": true,
+      "value_path": [
+        "sources",
+        1,
+        "content",
+        "facts",
+        0,
+        "value"
+      ],
+      "path_is_two_stage_parse_content_then_fact": true,
+      "financial_inputs_verified": false
+    },
+    {
+      "fact_id": "6200-issuer-FY2026-EPS-guide-observed-20260803",
+      "kind": "issuer_guidance",
+      "value": "52.39",
+      "unit": "JPY-per-share",
+      "period": {
+        "end_date": "2026-09-30",
+        "label": "通期",
+        "observed_in_source_disclosure_date": "2026-08-03",
+        "period_kind": "annual_issuer_guidance",
+        "previous_forecast_referenced_date": null,
+        "start_date": "2025-10-01"
+      },
+      "source_raw_token_Unicode_UTF8_and_quoted_unit_period_exact": true,
+      "value_path": [
+        "sources",
+        1,
+        "content",
+        "facts",
+        1,
+        "value"
+      ],
+      "path_is_two_stage_parse_content_then_fact": true,
+      "financial_inputs_verified": false
+    },
+    {
+      "fact_id": "6200-issuer-FY2026-annual-DPS-guide-observed-20260803",
+      "kind": "issuer_guidance",
+      "value": "35.00",
+      "unit": "JPY-per-share",
+      "period": {
+        "dividend_record_date": null,
+        "end_date": null,
+        "fiscal_year_end_month": "2026-09",
+        "label": "2026年９月期(予想)",
+        "observed_in_source_disclosure_date": "2026-08-03",
+        "period_kind": "annual_issuer_dividend_guidance_label_only",
+        "start_date": null
+      },
+      "source_raw_token_Unicode_UTF8_and_quoted_unit_period_exact": true,
+      "value_path": [
+        "sources",
+        1,
+        "content",
+        "facts",
+        2,
+        "value"
+      ],
+      "path_is_two_stage_parse_content_then_fact": true,
+      "financial_inputs_verified": false
+    }
+  ],
+  "expected_fact_count": 3,
+  "separate_dividend_component_fact_count": 0,
+  "source_original_native_SHA256": "bd3398d450ee96834ccad470210712988a757e0e23a64dcbab18e48856987e55",
+  "source_original_whole_unchanged": true,
+  "financial_model_or_forecast_adoption": false,
+  "model_input_audit_prepared_or_executed": false,
+  "annual_Graham_EPS_substitution_from_cumulative": false,
+  "DPS_exact_dates_and_recorddate_still_null": true,
+  "derived_source_id": "disclosed-facts:a4b5f5b2639c5d29b6fc7c7e506acfa775d8d8ad67dffc37596ecbf48fea2258",
+  "DPS_token_explicitly_selected_total_rightmost_column": true
+}

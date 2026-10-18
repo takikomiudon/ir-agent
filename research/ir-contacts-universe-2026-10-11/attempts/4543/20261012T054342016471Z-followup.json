@@ -1,0 +1,269 @@
+{
+  "security_code": "4543",
+  "company_name": "テルモ",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "精密機器",
+  "investigation_status": "provisional",
+  "verification_level": "official_form_link_only",
+  "outreach_suitability": "candidate",
+  "attempted_at": "2026-10-11T12:04:36.307828+00:00",
+  "completed_at": "2026-10-11T12:04:36.307830+00:00",
+  "manual_review_required": true,
+  "limitations": [
+    "investigation_error:TypeError",
+    "同一取得attemptの保存済みHTTP200本文3件をオフラインで復元。公開IR専用リンクまでを確認し、リンク先フォーム本体のメール・質問欄と個人利用条件は未確認。窓口不存在・受付拒否の判定ではない。",
+    "元fallbackのattempted/completedは例外catch後の時刻であり、本文GET開始時刻ではない。原値は履歴と現レコードで維持し、実GET時刻は各source metadataを参照する。",
+    "実GET5回のうち保存元資料で4回を識別できる（本文3・共有robots1）。残1回のURL/応答/raw HTML/tracebackは保存されておらず補完しない。",
+    "保存された3成功ページの現分類器再解析ではTypeErrorは再現せず、未保存の原HTML由来と断定できない。"
+  ],
+  "fetches": [
+    {
+      "url": "https://www.terumo.co.jp/",
+      "final_url": "https://www.terumo.co.jp/",
+      "snapshot": "evidence/4543/20261011T120315958445Z/01.json",
+      "retrieved_at": "2026-10-11T12:03:32.834810+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.terumo.co.jp/investors",
+      "final_url": "https://www.terumo.co.jp/investors",
+      "snapshot": "evidence/4543/20261011T120315958445Z/02.json",
+      "retrieved_at": "2026-10-11T12:03:48.243484+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.terumo.co.jp/inquiry",
+      "final_url": "https://www.terumo.co.jp/inquiry",
+      "snapshot": "evidence/4543/20261011T120315958445Z/03.json",
+      "retrieved_at": "2026-10-11T12:04:05.139742+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "requested_url": "https://www.terumo.co.jp/inquiry/investors/",
+      "url": "https://www.terumo.co.jp/inquiry/investors/",
+      "http_status": 200,
+      "retrieved_at": "2026-10-12T05:43:36.652782+00:00",
+      "http_get_attempted": true,
+      "http_get_started_at": "2026-10-12T05:43:38.110366+00:00",
+      "http_response_received_at": "2026-10-12T05:43:39.756475+00:00",
+      "http_get_completed_at": "2026-10-12T05:43:39.773857+00:00",
+      "http_get_elapsed_seconds": 1.6635451700130943,
+      "host_wait_seconds": 2.464003046043217e-06,
+      "global_wait_seconds": 1.457471572997747,
+      "wait_seconds": 1.457474037000793,
+      "global_rps_at_dispatch": 0.35,
+      "response_headers": {
+        "date": "Mon, 12 Oct 2026 05:43:39 GMT",
+        "server": "envoy",
+        "x-request-id": "v-92a5010e-c3d9-11f1-98b0-1b1c2b7e4f26",
+        "via": "varnish",
+        "cf-ray": "a493c9c50b1eeae4-ORD"
+      },
+      "retry_after_seconds": null,
+      "failure_signature": null,
+      "final_url": "https://www.terumo.co.jp/inquiry/investors",
+      "snapshot": "evidence/4543/20261012T052052261156Z/followup-0252.json",
+      "discovery_parent_url": "https://www.terumo.co.jp/inquiry",
+      "discovery_parent_snapshot": "evidence/4543/20261011T120315958445Z/03.json",
+      "discovery_link_label": "お問い合わせフォーム",
+      "explicit_ir_link": true,
+      "binding_evidence": {
+        "snapshot": "evidence/4543/20261011T120315958445Z/03.json",
+        "url": "https://www.terumo.co.jp/inquiry",
+        "retrieved_at": "2026-10-11T12:04:05.139742+00:00",
+        "quote": "株式・IR情報に関するお問い合わせ メールでのお問い合わせ 株式・IR情報に関するお問い合わせ お問い合わせフォーム",
+        "source_link_url": "https://www.terumo.co.jp/inquiry/investors/"
+      },
+      "purpose": "ir_contact_followup"
+    }
+  ],
+  "evidence": [
+    {
+      "snapshot": "evidence/4543/20261011T120315958445Z/03.json",
+      "url": "https://www.terumo.co.jp/inquiry",
+      "retrieved_at": "2026-10-11T12:04:05.139742+00:00",
+      "quote": "テルモ株式会社 ファーマシューティカルソリューション事業",
+      "role": "company_identity"
+    },
+    {
+      "snapshot": "evidence/4543/20261011T120315958445Z/03.json",
+      "url": "https://www.terumo.co.jp/inquiry",
+      "retrieved_at": "2026-10-11T12:04:05.139742+00:00",
+      "quote": "株式・IR情報に関するお問い合わせ メールでのお問い合わせ 株式・IR情報に関するお問い合わせ お問い合わせフォーム",
+      "role": "contact_channel",
+      "source_link_url": "https://www.terumo.co.jp/inquiry/investors/",
+      "source_link_index": 143,
+      "source_link_label": "お問い合わせフォーム"
+    },
+    {
+      "snapshot": "evidence/4543/20261011T120315958445Z/03.json",
+      "url": "https://www.terumo.co.jp/inquiry",
+      "retrieved_at": "2026-10-11T12:04:05.139742+00:00",
+      "quote": "メールでのお問い合わせに関する注意事項は、各お問い合わせフォームにてご確認ください 。",
+      "role": "outreach_condition"
+    }
+  ],
+  "http_get_attempt_count": 5,
+  "previous_attempts": [
+    "attempts/4543/20261011T045047491958Z.json",
+    "attempts/4543/20261011T120436309586Z.json",
+    "attempts/4543/20261012T054339777366Z-followup.json"
+  ],
+  "official_url": "https://www.terumo.co.jp/",
+  "ir_url": "https://www.terumo.co.jp/investors",
+  "contact_url": "https://www.terumo.co.jp/inquiry/investors/",
+  "channels": [
+    "form"
+  ],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_reason": "保存済み公式お問い合わせ一覧が株式・IR専用フォームを明示している。本体の実質問欄と利用条件は保存範囲で未確認。",
+  "route_type": "officially_linked_form",
+  "successful_official_page_count": 4,
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/4543/20261011T120315958445Z/01.json",
+      "normalized_name": "テルモ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/4543/20261011T120315958445Z/02.json",
+      "normalized_name": "テルモ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/4543/20261011T120315958445Z/03.json",
+      "normalized_name": "テルモ",
+      "security_code_observed": false
+    }
+  ],
+  "conditions": [
+    "メールでのお問い合わせに関する注意事項は、各お問い合わせフォームにてご確認ください 。"
+  ],
+  "discovery": {
+    "security_code": "4543",
+    "official_url": "https://www.terumo.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "テルモ",
+    "source_data_as_of": "2026-03-31"
+  },
+  "exception_record_history": [
+    {
+      "record_sha256": "79f4d4e09d2c08876c5a611d6fd3aa6397892721d580cac57400bc750d57a0ff",
+      "preserved_at": "2026-10-11T12:27:39.473932+00:00",
+      "reason": "Offline schema/provenance repair of investigation_error:TypeError fallback",
+      "record": {
+        "security_code": "4543",
+        "company_name": "テルモ",
+        "market": "プライム（内国株式）",
+        "jpx_sector": "精密機器",
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "outreach_suitability": "unconfirmed",
+        "attempted_at": "2026-10-11T12:04:36.307828+00:00",
+        "completed_at": "2026-10-11T12:04:36.307830+00:00",
+        "manual_review_required": true,
+        "limitations": [
+          "investigation_error:TypeError"
+        ],
+        "fetches": [],
+        "evidence": [],
+        "http_get_attempt_count": 5,
+        "previous_attempts": [
+          "attempts/4543/20261011T045047491958Z.json",
+          "attempts/4543/20261011T120436309586Z.json"
+        ]
+      }
+    }
+  ],
+  "http_get_source_reconciliation": {
+    "recorded_http_get_attempt_count": 5,
+    "identified_actual_get_count": 4,
+    "identified_company_content_get_count": 3,
+    "identified_unique_robots_get_count": 1,
+    "redirect_get_count_in_saved_latest_evidence": 0,
+    "unmatched_actual_get_count": 1,
+    "cached_robots_occurrences": 3,
+    "actual_events": [
+      {
+        "snapshot": "evidence/4543/20261011T120315958445Z/01.json",
+        "json_pointer": "/robots",
+        "requested_url": "https://www.terumo.co.jp/robots.txt",
+        "final_url": "https://www.terumo.co.jp/robots.txt",
+        "http_get_started_at": "2026-10-11T12:03:31.246107+00:00",
+        "http_get_completed_at": "2026-10-11T12:03:32.832937+00:00",
+        "http_status": 200,
+        "http_get_attempted": true,
+        "source_file_sha256": "f4eaaeed27c046032e98f18360b17273609eb08359fd7fca4fd150b246bd98e4",
+        "response_body_sha256": "4d44e6822f3d6a5b5cf81c82bbcbfcc5024f8579f37743f52accd320aefb5a43",
+        "kind": "robots"
+      },
+      {
+        "snapshot": "evidence/4543/20261011T120315958445Z/01.json",
+        "json_pointer": "",
+        "requested_url": "https://www.terumo.co.jp/",
+        "final_url": "https://www.terumo.co.jp/",
+        "http_get_started_at": "2026-10-11T12:03:47.246851+00:00",
+        "http_get_completed_at": "2026-10-11T12:03:48.235710+00:00",
+        "http_status": 200,
+        "http_get_attempted": true,
+        "source_file_sha256": "f4eaaeed27c046032e98f18360b17273609eb08359fd7fca4fd150b246bd98e4",
+        "response_body_sha256": "abb645a7d2c5936c46898296a60e71b4e845b12df165eb305055cb59654e23c0",
+        "kind": "company_content"
+      },
+      {
+        "snapshot": "evidence/4543/20261011T120315958445Z/02.json",
+        "json_pointer": "",
+        "requested_url": "https://www.terumo.co.jp/investors",
+        "final_url": "https://www.terumo.co.jp/investors",
+        "http_get_started_at": "2026-10-11T12:04:03.247743+00:00",
+        "http_get_completed_at": "2026-10-11T12:04:05.132712+00:00",
+        "http_status": 200,
+        "http_get_attempted": true,
+        "source_file_sha256": "52b0df98cd687f301e8e42e519dcb5ea4b54c104e31e2c09d09035742d47f44b",
+        "response_body_sha256": "35e7ba1cc28df87b903cc1b18a57875fea4fbd270692ee75fa411f2ce8529252",
+        "kind": "company_content"
+      },
+      {
+        "snapshot": "evidence/4543/20261011T120315958445Z/03.json",
+        "json_pointer": "",
+        "requested_url": "https://www.terumo.co.jp/inquiry",
+        "final_url": "https://www.terumo.co.jp/inquiry",
+        "http_get_started_at": "2026-10-11T12:04:19.248425+00:00",
+        "http_get_completed_at": "2026-10-11T12:04:20.565157+00:00",
+        "http_status": 200,
+        "http_get_attempted": true,
+        "source_file_sha256": "6614bcd9466a4c58efcb849c1213e63e7b09fef81de5520113a147c526b63c2b",
+        "response_body_sha256": "82807028326fa099dafccf6d14ac3549d5b3f813f3c0ce93c42b0a1b96fc5ef8",
+        "kind": "company_content"
+      }
+    ],
+    "caveat": "Three identical nested robots objects are one cached GET. The fifth counted GET has no saved response or URL; no fabricated fetch/source is added."
+  },
+  "followup_completed_at": "2026-10-12T05:43:39.780667+00:00",
+  "followup_http_get_attempt_count": 3,
+  "previous_manual_review": [
+    {
+      "reviewer": "codex_audit_data_4543_exception_repair",
+      "reviewed_at": "2026-10-11T12:27:39.473932+00:00",
+      "notes": "例外fallbackを元record SHA guardで補修。最新の同一取得attemptのHTTP200保存3件とIR専用公開リンクを読取りで復元しP保持。検索フォーム・製品/治験/採用/報道窓口はIRの実欄として扱わない。元fallbackの時刻・GET5・previous_attempts2は変更せず履歴全文を保持。第5GETの応答資料とtraceback未保存のため実TypeError原因を断定しない。"
+    }
+  ],
+  "followup_review_pending": [
+    {
+      "snapshot": "evidence/4543/20261012T052052261156Z/followup-0252.json",
+      "url": "https://www.terumo.co.jp/inquiry/investors",
+      "parent_url": "https://www.terumo.co.jp/inquiry",
+      "parent_snapshot": "evidence/4543/20261011T120315958445Z/03.json",
+      "discovery_link_label": "お問い合わせフォーム",
+      "explicit_ir_link": true,
+      "purpose": "ir_contact_followup"
+    }
+  ]
+}

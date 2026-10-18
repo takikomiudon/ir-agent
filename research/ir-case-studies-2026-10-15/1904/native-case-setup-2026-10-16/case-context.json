@@ -1,0 +1,163 @@
+{
+  "case_id": "1904-earnings-and-event-basis-monitor",
+  "company_id": "jp:1904",
+  "issue_id": "1904-quarter-guidance-share-and-perimeter-basis",
+  "status": "research_only_no_financial_thesis",
+  "synthetic": false,
+  "recorded_at": "2026-10-16T02:03:13.638722+00:00",
+  "purpose": "Compare new public material with the saved August Q1/guidance basis and later September notice headlines without silently treating historical per-share or consolidation bases as current.",
+  "author_method_references": [
+    {
+      "id": "anthropic.earnings-preview",
+      "ref": {
+        "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+        "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sections": [
+        "Step1 company/reporting quarter",
+        "Step2 key financial/operational metrics and forward guidance",
+        "Step4 narrative/strategic/M&A change"
+      ],
+      "project_adaptation": "Track issuer actuals, annual guidance, metrics and strategic changes with explicit periods/units/perimeter. No missing consensus, forecast, scenario/stock reaction or financial threshold is supplied."
+    },
+    {
+      "id": "anthropic.thesis-tracker",
+      "ref": {
+        "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+        "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "project_adaptation": "Keep original questions separate from supporting/disconfirming subsequent observations; adapt at least quarterly to an internal research date without creating a financial thesis."
+    },
+    {
+      "id": "anthropic.dd-meeting-prep",
+      "ref": {
+        "path": "third_party/anthropic/skills/dd-meeting-prep/SKILL.md",
+        "sha256": "a74eecadece794106d515ce3d00e07b3857ed123e841e8962e26363d2413d94f"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sections": [
+        "Step1 what already known/key concerns",
+        "Step3 discrepancies and follow-up",
+        "neutral specific questions"
+      ],
+      "project_adaptation": "Public evidence first: retain answered facts, compare definition differences, and check unread saved material before considering a residual. No private-equity information requests, meeting lengths or automatic questions are imported."
+    }
+  ],
+  "source_ids": [
+    "case-public:edde5a3d6f888b51b4f2100cf94143a13cdbbd2981eceae9b2e6bcaa2b649eb7",
+    "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29"
+  ],
+  "source_review_manifest": "research/ir-case-studies-2026-10-15/1904/native-case-setup-2026-10-16/review-manifest.json",
+  "prior_review_refs": [
+    {
+      "path": "research/ir-case-studies-2026-10-15/1904/initial-public-review-2026-10-16/review.json",
+      "sha256": "550414748bf092573c3c88f73f4c820630b040540ec24f7b2ce9c15619a0f6d3"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1904/initial-public-review-2026-10-16/source-quotes.json",
+      "sha256": "f564ef1228d55e607abe0a3854f6f10f365ffac904300170862120678ac74c70"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1904/initial-public-review-2026-10-16/parent-acceptance.json",
+      "sha256": "5f01595ba1389e351ba02da96cb7e23efb9bb80ccf05783a804f5a53f45a8255"
+    }
+  ],
+  "reading_scope": {
+    "homepage": "Saved visible business/notice headlines only; notice bodies not obtained.",
+    "PDF_full_text_saved_pages": 12,
+    "prior_image_and_semantic_review_pages": [
+      1,
+      2,
+      4,
+      7
+    ],
+    "new_page_meaning_review_in_this_task": false,
+    "other_pages_unreviewed": true,
+    "handoff_at": "2026-10-16T02:03:13.638722+00:00",
+    "handoff_not_original_first_read_or_whole_book_read": true
+  },
+  "review_questions": [
+    {
+      "id": "quarter-annual-profit-and-units",
+      "established_scope": "Q1 consolidated actual cumulative2026-04-01–2026-06-30: revenue14,276/OP553/parent NI364 in million JPY summary, truncated below million. Prior comparableQ1 is separate. Detailed p7 PL uses thousand JPY and distinct operating/nonoperating/special/tax lines; prior fixed-asset gain183,609 thousand has current dash. Issuer FY2026-04-01–2027-03-31 forecast64,000/3,700/5,300 million is unchanged from2026-05-13 as stated2026-08-06. Annual management is the publicly stated reason for omitting interim guidance.",
+      "future_review": "Compare future actual cumulative duration with the corresponding prior duration, separately from annual issuer forecast and its prior version; retain operating vs ordinary vs parent profit and each table unit. Examine an actual new issuer explanation of the operating/NI bridge rather than inferring it from the Q1 rows. Keep quarter-only vs cumulative and prior-year vs prior-guidance comparison distinct.",
+      "do_not_infer": "Do not annualize Q1, change a dash to0, treat FX/asset gains as operating improvement or normalCF, allocate an unexplained annual NI forecast to an invented one-off, or call a carried Q1 item in later cumulative results a recurrence. Tax/CF/model fit and whole-book reading remain unverified.",
+      "evidence_quote_ids": [
+        "actual-table",
+        "issuer-guidance-table",
+        "guidance-unchanged",
+        "quarter-PL-units-periods-oneoffs"
+      ]
+    },
+    {
+      "id": "historical-share-trust-vs-later-split",
+      "established_scope": "The AugustQ1 statement distinguishes company totals/EPS and period-end/average shares, with stock-compensation trust shares included in the relevant treasury-share deductions. Saved homepage has a2026-09-10 stock-split/bylaw/shareholder-benefit/dividend-forecast-revision notice headline, but the linked notice body is not obtained.",
+      "future_review": "If an eligible actual notice or later statement is saved, check its explicit publication/target/effective dates, split ratio, share/trust convention and EPS/DPS comparison basis before updating what is current. Keep the August historical basis as historical and any revised per-share basis separately sourced.",
+      "do_not_infer": "Headline date is not split effective date or proof of implementation. Split ratio/revised DPS are unknown. Do not adjust historical EPS a second time, reconstruct EPS from company totals, reuse August EPS/DPS/share count as the current October basis, or imply a share-price action.",
+      "evidence_quote_ids": [
+        "scope-quarter-treatment-and-share-basis",
+        "actual-table",
+        "issuer-guidance-table",
+        "later-split-notice"
+      ]
+    },
+    {
+      "id": "quarter-perimeter-vs-later-acquisition-and-strategy",
+      "established_scope": "Statement2 says no material consolidation change within the Q1 cumulative period and that quarter-specific accounting treatment applies; detailed treatment remains unread. Statement4 discloses three growth strategies and regional results. Homepage has a2026-09-30 Unity acquisition/subsidiary notice headline; body not obtained.",
+      "future_review": "Compare explicit new public perimeter, acquisition timing/accounting/contribution and strategic commentary against the same entity/period definitions. Check saved unread notes/CF/orders before labeling details an unanswered IR issue. Record newly confirmed definitions and residual gaps separately.",
+      "do_not_infer": "Q1 no-material-change is not current group-scope assurance. A subsidiary notice headline is not proof of completion/date/price/goodwill/contribution or organic growth. Region/strategy labels and quarterly treatment flag do not establish cashflow/normal profits or financial applicability.",
+      "evidence_quote_ids": [
+        "scope-quarter-treatment-and-share-basis",
+        "strategy-and-regions",
+        "business",
+        "later-subsidiary-notice"
+      ]
+    }
+  ],
+  "comparison_protocol": {
+    "supports": "Only actual explicit new evidence can support a tracked definition/relationship on its stated period/entity/unit/share basis.",
+    "counterevidence": "Record an actual public correction or contradiction to a specific saved observation; do not invent a numerical falsification condition.",
+    "unchanged": "Newly reviewed material may leave the tracked historical definitions unchanged without completing financial valuation.",
+    "unresolved": "Unread, absent or ambiguous evidence remains unresolved; no response/unclear information is not deterioration, zero, success probability or a sell signal."
+  },
+  "already_answered_not_to_reask": [
+    "Q1 display values and their periods/units/OP-vs-NI distinction",
+    "August forecast unchanged and public reason for omitted interim forecast",
+    "Q1 no-material-scope-change and stock-trust share definitions",
+    "Public PL nonoperating/special-line presentation and stated growth strategies"
+  ],
+  "later_notice_limits": [
+    {
+      "date": "2026-09-10",
+      "topic": "Stock split/bylaw/shareholder benefit/dividend forecast revision",
+      "body_obtained": false,
+      "implication": "August per-share guidance/share count cannot be assumed current, split ratio/effective date and revised DPS unknown"
+    },
+    {
+      "date": "2026-09-30",
+      "topic": "Unity shares acquisition/subsidiary",
+      "body_obtained": false,
+      "implication": "Q1 no-material-change statement does not certify current group perimeter or acquisition contribution"
+    }
+  ],
+  "management_review": {
+    "date": "2027-01-16",
+    "timezone": "Asia/Tokyo",
+    "purpose": "internal research management only, not an issuer event or sale/holding deadline"
+  },
+  "IR_boundary": "No draft/branch/question/send readiness. Unread saved material or unobtained linked notice text is not proof of company nonresponse. Recheck public answers before a new question; normal tax/valuation assumptions and future guarantees are not questions for the issuer.",
+  "closed_route_boundary": "No new GET or automatically reopened finite route; original snapshots and chronology stay unchanged. New source means genuinely new saved evidence, not repackaged additional page reading.",
+  "financial_inputs_verified": false,
+  "financial_input_adoption": false,
+  "financial_thesis_or_investment_action": null,
+  "new_IR_questions": 0,
+  "unadopted": [
+    "model eligibility/normal profit/future CF/tax/reinvestment",
+    "independent forecast/consensus/probabilities/multiples/discount rate/valuation/price",
+    "current post-split EPS/DPS/share basis",
+    "completed acquisition or current group perimeter/contribution",
+    "issuer event/sale/falsification date and external sending"
+  ]
+}

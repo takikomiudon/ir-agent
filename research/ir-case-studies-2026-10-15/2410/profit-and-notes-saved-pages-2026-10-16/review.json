@@ -1,0 +1,101 @@
+{
+  "recorded_at": "2026-10-16T06:39:24.061629+00:00",
+  "company_id": "jp:2410",
+  "status": "finite_two_saved_pages_review_frozen_awaiting_root_acceptance",
+  "source_reference": "source-reference.json",
+  "source_native_SHA256": "5584ae0700043dc236d8e35f75b553da85546f1172415f404324bb175c20f8a9",
+  "new_meaning_pages": [
+    8,
+    9
+  ],
+  "source_same_not_new_disclosure": true,
+  "findings": [
+    {
+      "id": "PL-levels",
+      "quote_ids": [
+        "P1-PL-two-cumulative-periods-thousand-yen"
+      ],
+      "meaning": "p8非連結累計PL、前2024/10/1〜2025/6/30・当2025/10/1〜2026/6/30、単位千円。全20行40tokenを原符号/桁のまま保持。当期営業利益1323906、営業外収益14971・費用2133、経常1336744、固定資産除却損/特別損失2591、税前1334152、法人税等344482・調整74296・計418778、四半期純利益915373を別段階とする。",
+      "limits": "親会社NI/NCI連結へ変更しない。普通利益/除却損/税各段階を足戻し・相殺して正常利益を作らず、丸め差を再計算しない。費用は原文の正表示でCFの符号へ転換しない。"
+    },
+    {
+      "id": "business-ordinary-vs-PL",
+      "quote_ids": [
+        "P1-PL-two-cumulative-periods-thousand-yen",
+        "P5-single-segment-both-periods"
+      ],
+      "prior_ref": {
+        "file": "research/ir-case-studies-2026-10-15/2410/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "695ca5a7dcce0655f112145d2c9662f2a0a203012976aa3f10b197ba7ce8500e",
+        "JSON_pointer": "/quotes/8",
+        "prior_review": "research/ir-case-studies-2026-10-15/2410/initial-public-review-2026-10-16/review.json#/findings/2"
+      },
+      "meaning": "既読p4/5の5事業種類別利益は事業別経常利益。新p9は前/当とも人材サービス単一セグメントでsegment情報省略と明示。全社営業利益とは利益段階が異なり、全社経常利益との比較でも本2頁には事業別配賦/調整の計算表はない。",
+      "limits": "事業別利益をOPへ読み替えず、5表示額の独自和で調整項目や端数差を埋めない。省略を会社が全情報を非開示/未回答という意味へ広げない。"
+    },
+    {
+      "id": "CF-depreciation",
+      "quote_ids": [
+        "P4-no-Q3-CF-and-depreciation"
+      ],
+      "meaning": "当Q3累計CF計算書は作成していない。減価償却費（無形固定資産に係る償却費含む）は前386456/当357058千円と表示。",
+      "limits": "CF非作成はCFゼロ/資料全体に現金情報なしを意味しない。償却費を営業CF・現金流入・維持投資又は独自EBITDA/FCFへ変換しない。"
+    },
+    {
+      "id": "tax-limited-definition",
+      "quote_ids": [
+        "P1-PL-two-cumulative-periods-thousand-yen"
+      ],
+      "meaning": "法人税等の表示額/調整額は確認できた。本2頁に簡便税率/見積実効税率の具体計算法や繰越欠損金(NOL)額/期限/税率差異表の説明は見当たらない。",
+      "limits": "既読p2の四半期特有会計処理無を将来正常税・現金納税・NOL無しの証明へ広げない。税負担率/税率を算出せず、PL当期税金や調整額を支払税金/将来税へ置換しない。未読有報/別注記等に記載がないとの主張ではない。"
+    },
+    {
+      "id": "treasury-disposal",
+      "quote_ids": [
+        "P3-restricted-stock-treasury-disposal"
+      ],
+      "meaning": "1/9取締役会決議に基づく譲渡制限付報酬として自己株25042株を処分した旨。Q3累計で自己株31127千円減・その他資本剰余金31227千円増、Q3末自己株262638/その他資本剰余金48093千円。",
+      "limits": "取得/消却/現在株数/現金収入/現在EPS分母とはしない。期末簿価と株数を混同・逆算しない。初期p2の歴史株数と当時文脈だけで参照。"
+    },
+    {
+      "id": "old-no-events-vs-later-listing",
+      "quote_ids": [
+        "P2-no-going-concern-note",
+        "P6-no-subsequent-event-note-asof-old-report"
+      ],
+      "meaning": "7/31短信の継続企業の前提及び重要後発事象は該当事項なしとの注記。既受入の7/31FYguideと、年度終了後の10/1監理指定告知は別公表時点/論点として保持。",
+      "limits": "当時の該当なしを現在の指定解除/審査結果や将来上場継続保証にしない。10/16現在の監理/市場区分は未確認、再GET0。"
+    }
+  ],
+  "known_do_not_reask": [
+    "当期非連結PLの利益段階・期間・千円表示",
+    "Q3累計CF計算書非作成と無形償却を含む減価償却費の表示",
+    "自己株処分の当時決議/累計処理・簿価",
+    "人材サービス単一セグメントという省略理由"
+  ],
+  "remaining_owner": {
+    "public_unread_or_update": "BS物理6/7、年次税/NOL・会計方針や後日開示は今回未読。現在指定/審査/市場は旧listingnotice以降未確認。",
+    "company_definition": "事業別ordinary配賦/比較定義等が研究上必要で公開未読を除いて残る場合だけ会社確認候補。今回IR問0。",
+    "author_investor": "正常利益、将来税/NOL利用、CF/再投資、予測/倍率/価格/保有期限は未採用。"
+  },
+  "boundaries": {
+    "new_source_count": 0,
+    "new_financial_facts": 0,
+    "original_source_object_changed": false,
+    "actual_DB_access": false,
+    "financial_inputs_verified": false,
+    "financial_branches": null,
+    "IR_value": "unproven",
+    "send_ready": false
+  },
+  "operations": {
+    "GET": 0,
+    "DB": 0,
+    "Store": 0,
+    "shared_code_or_docs": 0,
+    "old_files_changed": 0,
+    "IR": 0,
+    "financial_adoption": 0
+  },
+  "stop": "Exactly saved physical8/9, no further pages or new-source creation."
+}

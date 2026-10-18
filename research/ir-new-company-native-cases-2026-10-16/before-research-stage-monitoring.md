@@ -1,0 +1,58 @@
+# 数値評価前の研究を継続する
+
+数値thesisが未完成の会社は、会社別の研究ファイルで継続する。日次workerは通常のjobに加えて、この段階の新しい保存資料と既存管理日を点検する。[研究点検レポート](../scripts/report_research_monitoring.py)で、明示した研究一覧と保存DBを読み取れる。通常のdailyとは別の読取専用レポートで、自動起票はしない。明示したcaseを実jobへつなぐ場合は、[定性レビューjob](qualitative-research-jobs.md)のopt-in台帳を使う。通常dailyの金融thesis要件を外したり、intake分類で研究を代用したりしない。
+
+```bash
+.venv/bin/python scripts/report_research_monitoring.py \
+  --db data/research.sqlite3 \
+  --cases path/to/case-requests.json \
+  --research-root .
+```
+
+[入力契約](../research/ir-research-monitoring-integration-2026-10-15/contract.md)に従って、前回研究の固定file/hash、資料inventoryと論点に対する確認状態、既存管理日・timezone・根拠を明示する。新保存、以前からある未列挙資料、既存未確認資料、管理日、根拠不足は別々に表示する。`reviewed`は担当者の確認記録で、仮説を支持することや金融入力の妥当性を意味しない。日時やfileが不足すれば保留し、現在作成した一覧を過去の事前仮説と扱わない。既存DBはread-onlyで開き、欠損DBを新規作成しない。
+
+登録済caseの現在進捗は`qualitative show`／`qualitative queue`から読む。固定manifestを渡す読取専用レポートは、そのファイルが記録した範囲を点検する。台帳の完了結果を外部manifestへ自動転記しないため、両者の時点を区別し、旧manifestだけで再精読を要求しない。
+
+## 採用する既存手順
+
+固定した[Anthropic thesis-tracker](../third_party/anthropic/skills/thesis-tracker/SKILL.md)のStep 2は、新しいデータがどのpillarを強めるか・弱めるか等を記録する。Important Notesには次の指示がある。
+
+> Review theses at least quarterly, even when nothing dramatic has happened
+
+本プロジェクトでは、この更新・反証・定期レビューを会社別研究にも適用する。日次の起動は利用者の希望であり、著者が全社を毎日再分析することや個別の売買期限を指定した意味ではない。
+
+## 日次workerの作業
+
+1. [継続作業の最新状態](ongoing-work.md)と[会社別の研究一覧](../research/ir-case-studies-2026-10-15/README.md)を読み、今回担当する会社・前回の研究ファイル・既存の論点ID・管理日・未取得の資料を明示する。一覧は現時点の限られた研究対象で、窓口台帳1,819社の調査完了を意味しない。
+2. 新しい公開資料が保存されていれば、通常のingestとintakeによる分類を行う。保存された原文と時点を確認してから、同じ会社の前回研究・著者条件・定義の問いへ対応付ける。**資料分類の完了と、条件への影響を点検したことを分ける。** intakeの結果へ分類以外の内容を混ぜない。
+3. 資料の変化がなくても、研究ファイルに既に記録された管理日の到来を別枠で確認する。日付がない場合は未設定と記録し、会社の発表予定や売却期限を代用しない。管理日や時計のtimezoneを曖昧にしたまま期日到来を判定しない。
+4. 新しい根拠又は管理日の到来があれば、会社別の旧記録を残して比較結果を追記する。支持・反証候補・変更なし・未取得を区別し、回答済みの質問を除く。変化も期日到来もない場合は、同義のpreviewや仮の予測を作らない。
+5. `daily`のselectedだけでなくskipped等も読む。jobが空なら、今回の研究対象、新しい保存資料の有無、管理日の到来、確認できていない範囲を報告する。これだけで全社のWeb更新を監視したことにはしない。
+
+数値モデルと根拠が揃った会社は[通常の仮説・質問・返信処理](workflow.md)へ進む。数値thesisを登録するためにEPS、倍率、確率や価格を補わない。
+
+担当を分ける場合は[研究段階の依頼テンプレート](../.agents/skills/jp-equity-ir/references/roles.md#数値仮説前の研究担当に渡す依頼)を使い、会社・旧論点・固定研究・manifest・reportを同じ時点で渡す。資料の関連確認と次版inventoryの登録担当を分け、未登録の研究資料がreportの対象外であることも返す。
+
+## 接続されている範囲
+
+| 機能 | 現在行うこと | この段階で別途必要なこと |
+|---|---|---|
+| `intake` | 保存済みの未分類公開資料を分類する | 著者条件や前回の定性研究との比較 |
+| `daily` | activeで利用可能な数値thesisがある会社の新資料・再点検日を起票する | 数値thesis前の研究管理日の点検 |
+| 研究点検レポート | 明示した研究一覧の新保存・未確認・管理日と保存来歴を表示する | 著者条件への影響の比較、研究記録と次回inventoryの更新 |
+| `qualitative` | 明示caseの新保存・管理日から定性reviewを起票し、独立したcase進捗を保存 | 凍結資料に対する担当workerの比較、必要時の設定改版 |
+| `inbox` | 質問・返信の作業を表示する | 会社別研究ファイルの点検 |
+| 公開材料の予定レポート | 明示した予定日と原典の対応を表示する | 実施/結果確認、研究管理日との区別 |
+| 外部の起動基盤 | このリポジトリの外でworkerを起動する必要がある | 起動設定、永続DB、取得・分類・比較を行う担当 |
+
+`daily`はWebを巡回せず、watchや数値thesisのない会社をskipする。statusだけをactiveへ変えてもthesis要件は残る。架空thesisやintake jobで研究管理を代用しない。外部の定時起動や自動Web取得が設定済みとも主張しない。
+
+## 実データで行った限定確認
+
+[135Aの手作業確認](../research/ir-research-monitoring-2026-10-15/135A-manual-check.json)では、記録済みの管理日2027-01-15は未到来で、前回研究時刻より後に実DBへ保存された同社の資料は0件だった。保存15資料の初回保存時刻はすべて既知で、DBは読取専用・前後hash一致。Web上の新資料の有無、前回以前の全資料の意味確認、他社はこの確認の範囲外である。
+
+この会社はwatch・数値thesis0のため、通常dailyに自動で研究が戻らないという静的な到達経路も確認した。将来日を実行したテストや、自動スケジューラの設置を表す記録ではない。
+
+[1518の実施記録](../research/ir-research-monitoring-2026-10-15/1518-manual-review.json)では、会社資料3件の取り込み・intake分類後、既存の著者論点を会社別ファイルで比較した。数値research jobやthesisは作らず、分類後の研究を担当workerの別枠作業として完了した。[親の管理日](../research/ir-case-studies-2026-10-15/1518/author-condition-followup/review-cadence.json)は同じ四半期レビュー手順から2027-01-15とした。これは会社の公表予定や売却日ではなく、新しい保存資料があれば前倒しする。DB保存順と研究JSONの申告日時だけから、過去に未見の情報で事前仮説を検証したとは扱わない。
+
+後続の[実レポートv6](../research/ir-research-monitoring-integration-2026-10-15/actual-report-v6.json)では6社30保存sourceを点検した。7525では、v5後に会社本文2件を実保存すると[確認待ちへ戻り](../research/ir-research-monitoring-integration-2026-10-15/actual-new-source-trigger-validation.json)、[旧著者論点との比較](../research/ir-case-studies-2026-10-15/7525/issuer-plan-comparison/case-record.md)を完了してv6へ反映した。会社目標の裏付けは増えたが、比率定義・著者の反証幅・金融入力の採用は未解決のままである。

@@ -1,0 +1,180 @@
+--- before/src/ir_agent/stable_reinvestment.py
++++ src/ir_agent/stable_reinvestment.py
+@@ -23,10 +23,11 @@
+ declarations and 52/53-week comparability remain unverified; dates are not
+ inferred and no day-count threshold certifies annual applicability.
+ 
+-Values are explicit positive finite decimal strings. ROC=0 is undefined
+-division; zero growth is mathematically defined with nonzero ROC but outside
+-this initial positive author-example scope. Negative/zero NOPAT and negative
+-rates are also out of scope, not company exclusion rules. r>1 and negative
++Values are explicit finite decimal strings: positive NOPAT and ROC, and
++nonnegative growth. Explicit zero growth extends only the algebraic domain;
++the cited positive author examples do not establish its economic applicability.
++ROC=0 remains undefined, including 0/0. Negative/zero NOPAT and negative
++rates remain out of scope, not company exclusion rules. r>1 and negative
+ FCFF are retained; no cap, funding guarantee or valuation is added.
+ 
+ data_kind is reported_fact/issuer_guidance/author_estimate/explicit_assumption/
+@@ -202,8 +203,6 @@
+         raise ValueError("ROC_new=0 is an undefined denominator; no substitute is supplied")
+     if roc < 0 or nopat <= 0:
+         raise ValueError("Nonpositive NOPAT or negative ROC_new is outside the initial positive author-example scope")
+-    if growth == 0:
+-        raise ValueError("Zero growth is mathematically defined with nonzero ROC, but unsupported in this initial author-example scope")
+     if growth < 0:
+         raise ValueError("Negative growth is outside the initial positive author-example scope")
+     assessment = value["assessment"]
+@@ -229,7 +228,7 @@
+                           "fcff": _ratio(fcff), "basis": dict(value["basis"])}
+     except DecimalException as error:
+         raise ValueError("Stable-reinvestment arithmetic exceeds the supported decimal range") from error
+-    return {
++    result = {
+         "status": "intermediate_only", "adoption": "unresolved", "request": value,
+         "request_sha256": digest, "arithmetic": arithmetic,
+         "calculation": {
+@@ -259,3 +258,15 @@
+             "No capex/D&A/working-capital parts, financing cash flows, DCF, terminal value, stock price, IR action or probability is generated, and intermediate arithmetic does not adopt a normalized forecast.",
+         ],
+     }
++    if growth == 0:
++        result["calculation"]["project_adaptation"] = (
++            "Explicit zero growth with positive NOPAT and positive ROC extends only the algebraic domain of g/ROC; "
++            "the cited positive author examples do not establish zero-growth economic applicability. "
++            "Strict metadata, isolated Decimal arithmetic and unresolved adoption remain local API rules."
++        )
++        result["limitations"][2] = (
++            "Explicit zero growth gives reinvestment rate and modeled reinvestment amount zero, and FCFF equal to "
++            "the supplied next-period NOPAT. This does not establish zero gross capex or maintenance spending, "
++            "a normalized forecast, or economic applicability; ROC=0 remains an undefined denominator."
++        )
++    return result
+--- before/tests/test_stable_reinvestment.py
++++ tests/test_stable_reinvestment.py
+@@ -97,7 +97,7 @@
+         value["growth"]["value"] = "2"
+         self.assertEqual(calculate_stable_reinvestment(value)["adoption"], "unresolved")
+ 
+-    def test_zero_roc_and_zero_growth_have_different_reasons(self):
++    def test_zero_roc_remains_undefined_including_explicit_zero_growth(self):
+         value = request()
+         value["roc_new"]["value"] = "0"
+         with self.assertRaisesRegex(ValueError, "undefined denominator"):
+@@ -106,8 +106,67 @@
+         with self.assertRaisesRegex(ValueError, "undefined denominator"):
+             calculate_stable_reinvestment(value)
+         value["roc_new"]["value"] = ".1"
+-        with self.assertRaisesRegex(ValueError, "mathematically defined.*unsupported"):
+-            calculate_stable_reinvestment(value)
++        result = calculate_stable_reinvestment(value)
++        self.assertEqual(result["arithmetic"]["reinvestment_rate"], "0")
++        self.assertEqual(result["arithmetic"]["reinvestment_amount"], "0")
++        self.assertEqual(result["arithmetic"]["fcff"], "100")
++
++    def test_explicit_decimal_zero_preserves_declarations_without_economic_adoption(self):
++        for token in ("0", "0.00", "+0", "-0", "0e-1000"):
++            value = author_example("toyota")
++            value["growth"]["value"] = token
++            value["growth"]["data_kind"] = "explicit_assumption"
++            value["growth"]["rationale"] = "Synthetic zero-growth boundary, not the author's positive forecast."
++            before = deepcopy(value)
++            with self.subTest(token=token):
++                result = calculate_stable_reinvestment(value)
++                self.assertEqual(value, before)
++                self.assertEqual(result["request"], before)
++                self.assertEqual(result["request_sha256"], sha256(json_text(before).encode()).hexdigest())
++                self.assertEqual(result["arithmetic"]["reinvestment_rate"], "0")
++                self.assertEqual(result["arithmetic"]["reinvestment_amount"], "0")
++                self.assertEqual(result["arithmetic"]["fcff"], "999.5670265")
++                self.assertEqual(result["status"], "intermediate_only")
++                self.assertEqual(result["adoption"], "unresolved")
++                self.assertEqual(set(result["verification"].values()), {"unverified"})
++                self.assertIn("do not establish zero-growth economic applicability", result["calculation"]["project_adaptation"])
++                self.assertTrue(any("zero gross capex or maintenance spending" in item for item in result["limitations"]))
++                self.assertEqual(set(result["arithmetic"]), {"reinvestment_rate", "reinvestment_amount", "fcff", "basis"})
++
++    def test_zero_growth_does_not_fill_missing_values_or_expand_other_sign_boundaries(self):
++        value = request()
++        del value["growth"]["value"]
++        with self.assertRaisesRegex(ValueError, "exactly"):
++            calculate_stable_reinvestment(value)
++        for missing in (None, "", 0):
++            value = request()
++            value["growth"]["value"] = missing
++            with self.subTest(missing=missing), self.assertRaises(ValueError):
++                calculate_stable_reinvestment(value)
++        for key, number in (("nopat_next", "0"), ("nopat_next", "-1"), ("roc_new", "-.1")):
++            value = request()
++            value["growth"]["value"] = "0"
++            value[key]["value"] = number
++            with self.subTest(key=key, number=number), self.assertRaisesRegex(ValueError, "scope"):
++                calculate_stable_reinvestment(value)
++
++    def test_zero_growth_keeps_precise_nopat_and_ignores_ambient_decimal_traps(self):
++        value = request()
++        value["growth"]["value"] = "0"
++        value["roc_new"]["value"] = "1e-1000"
++        value["nopat_next"]["value"] = "123456789." + "1234567890" * 20 + "1"
++        expected = calculate_stable_reinvestment(value)
++        with localcontext() as context:
++            context.prec = 2
++            context.rounding = ROUND_DOWN
++            context.Emin, context.Emax = -2, 2
++            context.traps[Inexact] = context.traps[Rounded] = True
++            context.clear_flags()
++            flags = context.flags.copy()
++            actual = calculate_stable_reinvestment(value)
++            self.assertEqual(context.flags, flags)
++        self.assertEqual(actual, expected)
++        self.assertEqual(actual["arithmetic"]["fcff"], value["nopat_next"]["value"])
+ 
+     def test_initial_positive_scope_rejects_losses_and_negative_rates_without_adjustment(self):
+         for key, number in (("nopat_next", "0"), ("nopat_next", "-1"), ("growth", "-.01"), ("roc_new", "-.1")):
+--- before/docs/cyclical-reinvestment-spec.md
++++ docs/cyclical-reinvestment-spec.md
+@@ -122,16 +122,16 @@
+ 
+ 著者のToyota/Exxon安定期例では、正の税引後営業利益、正の成長率、正の将来投資ROCを用いる。短期の赤字・悪化・回復はp23–25で別の明示経路を置き、終盤から安定期の再投資率へ移る。景気回復を表す高いEPS成長率、売上だけの成長率、株価上昇率を同じgへ転用しない。
+ 
+-| 入力・結果 | 数式上の性質 | 初回実装を検討する場合の提案 |
++| 入力・結果 | 数式上の性質 | 純算術APIの範囲 |
+ |---|---|---|
+ | `ROC=0` | 除算できない。`g=0`でも0/0は未定義。 | 数式上の入力エラー。代替ROCや再投資率0を補わない。 |
+ | 正NOPAT・正g・正ROC_new | 保存例にある安定期の符号範囲。 | 外部の適合は未検証のまま、実装済みの純算術範囲とする。 |
+-| `g=0`, `ROC≠0` | 代数上は `r=0`。式そのもののエラーではない。 | 当該原典でゼロ成長時の再投資・資本維持の適用説明を確認していないため、初回APIでは未対応scopeの検証エラーを返す。代数境界と経済的適用の拡張は未実装。gross capexや維持投資が0との意味にしない。 |
++| 明示 `g=0`、正NOPAT・正ROC_new | 代数上は `r=0`、`R_next=0`、`FCFF_next=NOPAT_next`。 | 純算術の定義域拡張として受け付ける。当該原典p17/p21は正成長例で、ゼロ成長時の再投資・資本維持の適用説明は確認していない。gross capexや維持投資が0との意味にしない。 |
+ | 負g | 代数上は符号付き比率を計算できる。 | 縮小・資本回収の持続性を当例から確定できず、初回APIでは対象外。勝手な負額/clampや除外銘柄判定へ変えない。 |
+ | 負/0 NOPAT、負ROC_new | 数値の掛算・除算が可能な場合はある。 | 赤字回復/NOLと安定期の式の意味を確認できないため、初回対象外。赤字だけで企業を投資対象外にしない。 |
+ | `r>1`, `FCFF<0` | 正g・正ROCでも起こり得る。数式は定義される。 | 金融上の上限を新設して1へclampしない。符号を保存し、資金調達・成長持続の外部点検を未解決として残す。 |
+ 
+-正の符号への限定は**当初の著者例再現というプロジェクトの機能範囲**であり、原典が指定した万能の金融閾値でも、成長0の企業の価値否定でもない。ROC0の分母未定義と、g0の未確認の経済的適用は別の理由で返す。g0かつROC0は分母未定義を先に返す。
++正の符号への限定は**当初の著者例再現というプロジェクトの機能範囲**であり、原典が指定した万能の金融閾値でも、成長0の企業の価値否定でもない。明示g0は正NOPAT・正ROCの場合だけ既存式の代数境界として受け付け、経済適合は未検証に保つ。欠損やnullを0へ補わず、g0かつROC0は分母未定義を先に返す。負成長・非正NOPAT・非正ROCへの範囲拡張は行わない。
+ 
+ ## 著者例の単位・算術・不一致
+ 
+@@ -172,11 +172,13 @@
+ 
+ 返値の `arithmetic.reinvestment_rate / reinvestment_amount / fcff` が中間計算値、`calculation`が精度・式・p17/p21の著者参照とproject adaptation、`verification`はすべてunverifiedである。`period_dates_incomplete`と`assessment_fields_unset`は不足の場所を示す。上流cycle-margin結果の税引前利益を自動取り込みする機能はない。
+ 
++明示ゼロ成長は有限decimal文字列（符号付きゼロを含む）として保持し、算術結果のゼロは文字列`"0"`へ表示する。正入力の既存成功結果は、当初のpositive scopeを説明する注記も含めて互換維持する。その従来結果中の「zero unsupported」は当初契約の履歴であり、現在のゼロ入力受付はこの段落と上表の限定に従う。ゼロ入力時だけ`calculation.project_adaptation`と該当`limitations`を差し替え、純代数の拡張、経済適合未確認、gross capex/維持投資0を認定しない旨を返す。新しい財務予測・正常利益採用・IR・valuationへの接続は追加しない。
++
+ 金融モデルへ組み込む前には、回復期間の明示cash-flow列、WACCと資本構成の正常化、通貨/名目実質/時点、低迷期の資金繰り・借換・存続、commodityの資源寿命、企業価値から株主価値への範囲の橋渡しが別途必要である。FCFFに利息・借入返済を重ねたり、FCFE/配当と取り違えたりしない。
+ 
+ ## 有限の受入条件
+ 
+-対象21テストで、著者例と合成入力の算術、厳格入力、符号範囲、Decimal ambient設定からの独立性、精度、入力不変を確認した。実企業への適用や税/NOL・資本/将来投資ROIのレビューを完了したという報告ではない。
++対象のfocusedテストで、著者例と合成入力の算術、明示ゼロと欠損の区別、厳格入力、符号範囲、Decimal ambient設定からの独立性、精度、入力不変を確認する。実企業への適用や税/NOL・資本/将来投資ROIのレビューを完了したという報告ではない。
+ 
+ | ケース | 必要な結果 |
+ |---|---|
+@@ -185,7 +187,8 @@
+ | NOPATに既に成長が入っている | 計算器内で`×(1+g)`を繰り返さない。gは再投資率の計算にのみ使用する。 |
+ | 別会社・期間・scope・通貨/単位、ROCとgの年次基準が不一致 | 拒否/対象外または整合保留。日数による年率化やFX変換を自動実行しない。 |
+ | ROC0、欠損、非有限値、bool、率とpercentの混同 | 通常の入力エラー。0/0の0化、率の既定補完、暗黙percent変換をしない。 |
+-| g0・負g、非正NOPAT/ROC | 上記初期範囲では対象外。g0を除算未定義と誤説明せず、未確認の経済的範囲として区別する。 |
++| 明示g0、正NOPAT・正ROC | `r=R_next=0`、`FCFF_next=明示NOPAT_next`のみ計算。ゼロ成長の経済適合、gross capex/維持投資、予測採用は認定しない。 |
++| 負g、非正NOPAT/ROC | 従来どおり対象外。特にg0/ROC0を0へ補完せず、分母未定義を返す。 |
+ | 正入力でr>1/負FCFF | 数式結果の符号を保持。1/0へのclampや、存続/調達可能性を検証済みとする処理をしない。 |
+ | 税/NOL根拠が未解決 | 税引後入力が数値として存在しても、その意味の適合は未検証のまま。税率・税損失の便益を補わない。 |
+ | 過去の平均ROC、またはWACCだけがある | ROC_newへ自動コピーしない。明示された仮定とその未検証性を保つ。 |

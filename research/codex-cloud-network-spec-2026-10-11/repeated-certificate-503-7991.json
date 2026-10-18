@@ -1,0 +1,50 @@
+{
+  "compared_at_utc": "2026-10-12T00:15:27.898475+00:00",
+  "compared_at_jst": "2026-10-12T09:15:27.898475+09:00",
+  "security_code": "7991",
+  "same_URL_and_dispatch_RPS": true,
+  "dispatch_gap_seconds": 2685.834698,
+  "events": [
+    {
+      "snapshot": "evidence/7991/20261011T231026165904Z/01.json",
+      "snapshot_sha256": "6ba10377ba33f639f8ed3959ccac644c0d65c58c0c485342d892d6bbe4958acc",
+      "body_GET_attempted": false,
+      "requested_url": "https://www.mamiya-op.co.jp/robots.txt",
+      "url": "https://www.mamiya-op.co.jp/robots.txt",
+      "http_status": 503,
+      "http_get_started_at": "2026-10-11T23:10:40.944664+00:00",
+      "http_response_received_at": "2026-10-11T23:10:41.928509+00:00",
+      "failure_signature": "site_tls_503",
+      "global_rps_at_dispatch": 0.25,
+      "retry_after_seconds": null,
+      "response_headers": {
+        "date": "Sun, 11 Oct 2026 23:10:41 GMT",
+        "server": "envoy"
+      },
+      "text": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end",
+      "dispatch_at_jst": "2026-10-12T08:10:40.944664+09:00"
+    },
+    {
+      "snapshot": "evidence/7991/20261011T235519303270Z/01.json",
+      "snapshot_sha256": "4217aff3006fc873c528654892308e47ae3672957b99e2a2a5c233d3462e42a9",
+      "body_GET_attempted": false,
+      "requested_url": "https://www.mamiya-op.co.jp/robots.txt",
+      "url": "https://www.mamiya-op.co.jp/robots.txt",
+      "http_status": 503,
+      "http_get_started_at": "2026-10-11T23:55:26.779362+00:00",
+      "http_response_received_at": "2026-10-11T23:55:27.760842+00:00",
+      "failure_signature": "site_tls_503",
+      "global_rps_at_dispatch": 0.25,
+      "retry_after_seconds": null,
+      "response_headers": {
+        "date": "Sun, 11 Oct 2026 23:55:27 GMT",
+        "server": "envoy"
+      },
+      "text": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end",
+      "dispatch_at_jst": "2026-10-12T08:55:26.779362+09:00"
+    }
+  ],
+  "conclusion": "Both saved responses explicitly report certificate verification failure despite the time gap. They differ from the earlier common tunnel/Invalid argument signature. This does not identify the failing TLS hop or prove the absence of simultaneous rate limiting.",
+  "network_GETs": 0,
+  "source_record_changes": 0
+}

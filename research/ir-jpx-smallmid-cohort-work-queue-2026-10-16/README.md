@@ -1,0 +1,14 @@
+# JPX公表予定×固定343：23社の作業棚卸し
+
+fixed343.csvの原PDF公表順をそのまま保ち、1社1行・次task1つ・ownerをJSON/CSVへ保存した。投資順位ではない。会社名は元CSVの表示だけを用い、現在JPX構成・全dataset研究完了・現在の受付/到達性は認証していない。
+
+実DBをro/query_only/closingで確認した時点はJSONのrecorded_at。216sources/215classes、28heads/55versions/165reads、数値thesis/policyは0。会社別publicsource・派生・native監視を保存したが、保存数は全冊精読や金融入力採用ではない。mainSHA前後不変。
+
+1518/5480は既存監視を継続し閉じた探索を再開しない。1975/3817はrootの索引finalize/disposition、2929は担当agentの年次調査を優先し重複taskを作らない。進行中2929ファイルはpin/受入・結論へ先取り0。2471の動的一覧/held、5480の503feedはfiniteclosedで、代替route/診断を次taskにしない。
+
+その他17社は保存contact recordから参照される成功captureのlinksだけをGET0で点検し、最大1公式literalを選んだ（17社とも保存導線あり。7388は公式rootが明示するIR subdomain）。rawHTMLのhref独立再抽出/現在robots・本文・年度・財務数値の認証は0。各候補の保存先fetch状態を保持し、既存error/heldを未試行へ戻さない。次taskはGET0で既保存本文と次literalの照合だけとする。ないものはnot establishedで、未調査・資料不存在・投資除外へ変えない。保存年次/外部予測/現株価を推定していない。
+
+JSONには元CSV/公表scope/保存record・captureのpath/SHA/JSONpointer、DB観測、既存凍結proofと閉鎖routeの根拠を保持。CSVは比較用の要約でJSONが詳細根拠。ownerはroot依頼にある現在担当又は未割当の役割であり、外部連絡やジョブ実行ではない。新GET/DBwrite/Store/API/共有docs/code/金融採用/IR0。
+
+- work-queue.json SHA256: `d84d06ae83753d9d59dd065b2b76fdee420c16195b9e17bdf3fec1c3b2dcaafd`
+- work-queue.csv SHA256: `c9d675b38a8444849d680bc75e95a253a7d0d2c0a7d0ee86560b1c6e8b0d625b`

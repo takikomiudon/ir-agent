@@ -1,0 +1,17 @@
+{
+  "accepted_at": "2026-10-16T16:10:14.472198+00:00",
+  "status": "accepted_fixed_crible_provider_source_and_root_static_read",
+  "manifest_SHA256": "b1cc599b2ffbc869c4dbc63fdc3bc6cba5fcb337b928793805dedac68b19d963",
+  "provider_source_SHA256": "7cabe16117ff95d3b7b8d092e6565e5eb2875aae3ea9dd982227e94b9cdd7bf7",
+  "Git_blob_SHA1": "939798cc1d289bf9f0508ad8fabb47f273c73e1c",
+  "new_GET": 1,
+  "root_full_3722B_code_read": true,
+  "contract_findings": [
+    "history(period=1y,auto_adjust=False)のpricesを返す。",
+    "get_infoのcurrencyはquoted_in、financialCurrencyは財務通貨で別。",
+    "プロフィールはstatementsがある時だけ呼び、失敗は{}。価格が返ってもquote通貨が無い場合がある。",
+    "requests_per_fetch=8は論理呼出し予算であり、HTTP全数やno-retry保証ではない。価格専用経路として丸ごと実行しない。",
+    "このfileだけでYahoo HTTP literal・version・観測epoch意味・1975symbol・データ権利は確定しない。"
+  ],
+  "code_import_execute_install_stock_price_request_DB_Store_or_financial_adoption": 0
+}

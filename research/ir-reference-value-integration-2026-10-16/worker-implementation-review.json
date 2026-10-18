@@ -1,0 +1,79 @@
+{
+  "stable_at": "2026-10-16T10:26:33.194222+00:00",
+  "files_changed": [
+    {
+      "file": "/workspace/ir-agent/src/ir_agent/valuation.py",
+      "sha256": "853b6eb43eb88cf6334f8d620486d77a060c8d7c9bee8439db3bd0d4317c0c96",
+      "bytes": 31388
+    },
+    {
+      "file": "/workspace/ir-agent/src/ir_agent/cli.py",
+      "sha256": "5bc85f52f666089f956211c39fce5fc0a2a8bc706e224c845171e7909a017c1c",
+      "bytes": 27539
+    },
+    {
+      "file": "/workspace/ir-agent/tests/test_reference_value.py",
+      "sha256": "0fc4021d50c4daa67b5d59382c2021cd4f7f49b0b1c8cdd1cade5f2051a5358e",
+      "bytes": 12711
+    },
+    {
+      "file": "/workspace/ir-agent/docs/reference-value-spec.md",
+      "sha256": "287dfe00b2b39ac83e7ec0e01f760e617e829293faee8ce8f6d4e105985bcece",
+      "bytes": 2318
+    }
+  ],
+  "diff": {
+    "file": "/tmp/ir-reference-value-implementation.diff",
+    "sha256": "fd20331fffea2b8b0d68dd75d209fd75734ac46eec147fe36adb52e60529a856",
+    "bytes": 22625
+  },
+  "old_valuation_baseline": {
+    "file": "/tmp/ir-valuation-before-reference-value-f9d179dd.py",
+    "sha256": "f9d179ddd3e73aee8d6a5f406141fbca969af39603730c9e36813532de7a4460",
+    "bytes": 27326
+  },
+  "cli_baseline_provenance": "Reconstructed by exact inverse of this task own four additive CLI edits; no Git-tracked baseline exists for generated source files. Root can compare separately to its saved baseline.",
+  "legacy_module_prefix_unchanged_except_optional_price_precision_branch": true,
+  "legacy_calculate_valuation_body_exactly_unchanged": true,
+  "focused_new_tests": {
+    "count": 12,
+    "log": {
+      "file": "/tmp/ir-reference-value-focused-tests-final.log",
+      "sha256": "532018f5f702166be5c364087e4b826f623295aa65bd9d1d4be37e25176f073a",
+      "bytes": 2212
+    }
+  },
+  "existing_valuation_tests": {
+    "count": 86,
+    "log": {
+      "file": "/tmp/ir-reference-value-existing-valuation-tests.log",
+      "sha256": "35f872e0f879f3e445460461bf3574e05f477594990c1911cd2c3b251c2a4702",
+      "bytes": 16150
+    },
+    "run_before_new_only_validation_isolation": "Only the new reference function later gained localcontext around parsing; legacy prefix was not changed again."
+  },
+  "legacy_compatibility": {
+    "cases": 111,
+    "results": 84,
+    "errors": 27,
+    "proof": {
+      "file": "/tmp/ir-reference-value-compatibility.json",
+      "sha256": "6edd8f049307f34aa88f083fe72f4467bc730071489b2e95ab1a02ff809ab6e5",
+      "bytes": 19211
+    },
+    "measured_version": "827b349a2eaafe5dd2f1aac6e363d5ba44429d7c3bb51eec19c7adb029ef23ed; final legacy prefix source identical to that version, final extra change affects new function only"
+  },
+  "source_flags_legacy_behavior": "Old malformed-decimal flag behavior retained; new entrypoint isolates validation to preserve caller flags even on invalid numeric text.",
+  "unchanged_scopes": [
+    "models",
+    "calculate_valuation body",
+    "shared README",
+    "old Graham spec/template",
+    "old research artifacts",
+    "DB/Store",
+    "ongoing/index"
+  ],
+  "new_spec_uses_existing_template": "examples/valuation-graham-number.template.json, no template values invented",
+  "GET_or_real_DB_mutations": 0,
+  "full_suite_or_root_acceptance_run_here": false
+}

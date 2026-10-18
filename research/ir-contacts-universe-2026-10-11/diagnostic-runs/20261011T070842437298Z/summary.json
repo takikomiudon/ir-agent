@@ -1,0 +1,99 @@
+{
+  "format": "bounded_transport_isolation_diagnosis",
+  "started_at": "2026-10-11T07:08:42.438035+00:00",
+  "completed_at": "2026-10-11T07:09:15.674728+00:00",
+  "global_rps": 0.25,
+  "maximum_actual_GETs": 12,
+  "network_collector_count": 1,
+  "main_runner_paused": true,
+  "company_records_changed": 0,
+  "IR_messages_sent": 0,
+  "results": [
+    {
+      "case": "healthy_before",
+      "security_code": "3001",
+      "url": "https://www.katakura.co.jp/",
+      "snapshot": "diagnostic-runs/20261011T070842437298Z/01-healthy_before-3001.json",
+      "http_status": 200,
+      "error": null,
+      "failure_signature": null,
+      "http_get_started_at": "2026-10-11T07:08:50.438410+00:00",
+      "http_get_completed_at": "2026-10-11T07:08:51.473737+00:00"
+    },
+    {
+      "case": "suspect_robots",
+      "security_code": "3004",
+      "url": "https://www.shinyei.co.jp/robots.txt",
+      "snapshot": "diagnostic-runs/20261011T070842437298Z/02-suspect_robots-3004.json",
+      "http_status": 503,
+      "error": null,
+      "failure_signature": "site_tls_503",
+      "http_get_started_at": "2026-10-11T07:08:54.438575+00:00",
+      "http_get_completed_at": "2026-10-11T07:08:55.457512+00:00"
+    },
+    {
+      "case": "healthy_middle",
+      "security_code": "3053",
+      "url": "https://www.pepper-fs.co.jp/",
+      "snapshot": "diagnostic-runs/20261011T070842437298Z/03-healthy_middle-3053.json",
+      "http_status": 200,
+      "error": null,
+      "failure_signature": null,
+      "http_get_started_at": "2026-10-11T07:09:02.438884+00:00",
+      "http_get_completed_at": "2026-10-11T07:09:03.364353+00:00"
+    },
+    {
+      "case": "suspect_robots",
+      "security_code": "2736",
+      "url": "https://www.festaria.jp/robots.txt",
+      "snapshot": "diagnostic-runs/20261011T070842437298Z/04-suspect_robots-2736.json",
+      "http_status": 503,
+      "error": null,
+      "failure_signature": "site_tls_503",
+      "http_get_started_at": "2026-10-11T07:09:06.439052+00:00",
+      "http_get_completed_at": "2026-10-11T07:09:07.016722+00:00"
+    },
+    {
+      "case": "healthy_after",
+      "security_code": "3001",
+      "url": "https://www.katakura.co.jp/",
+      "snapshot": "diagnostic-runs/20261011T070842437298Z/05-healthy_after-3001.json",
+      "http_status": 200,
+      "error": null,
+      "failure_signature": null,
+      "http_get_started_at": "2026-10-11T07:09:10.439205+00:00",
+      "http_get_completed_at": "2026-10-11T07:09:11.528411+00:00"
+    },
+    {
+      "case": "healthy_after",
+      "security_code": "3053",
+      "url": "https://www.pepper-fs.co.jp/",
+      "snapshot": "diagnostic-runs/20261011T070842437298Z/06-healthy_after-3053.json",
+      "http_status": 200,
+      "error": null,
+      "failure_signature": null,
+      "http_get_started_at": "2026-10-11T07:09:14.439365+00:00",
+      "http_get_completed_at": "2026-10-11T07:09:15.672876+00:00"
+    }
+  ],
+  "statistics": {
+    "configured_global_rps": 0.25,
+    "final_global_rps": 0.25,
+    "minimum_global_rps": 0.25,
+    "http_get_attempt_count": 9,
+    "http_status_counts": {
+      "302": 1,
+      "200": 5,
+      "503": 2,
+      "404": 1
+    },
+    "common_transport_503_count": 0,
+    "site_specific_503_count": 2,
+    "http_429_count": 0,
+    "rate_adjustments": []
+  },
+  "limitations": [
+    "A near-time control comparison does not establish the internal tunnel failure cause.",
+    "robots resource probes do not establish the IR intake status."
+  ]
+}

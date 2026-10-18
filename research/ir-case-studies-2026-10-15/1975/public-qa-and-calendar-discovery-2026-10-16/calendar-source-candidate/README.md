@@ -1,0 +1,1 @@
+既存build_case_source_bundle.pyだけで作成したcalendar原source候補1件。公開2GET記録は不変、追加GET/DB/Store0。source-only-bundle.jsonは会社更新を含まない。publication時刻/実DBfirstsave未知、calendar掲載を実施確認にしない。元7短引用と本文/原rawをそのまま接続し、評価/予測/売買条件はない。root受入・実保存前であり、catalyst担当はこのsourceID/nativeSHAを同一原sourceとして参照する。別の原sourceを重複生成しない。

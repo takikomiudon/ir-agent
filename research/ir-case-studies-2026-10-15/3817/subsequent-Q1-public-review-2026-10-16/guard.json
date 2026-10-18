@@ -1,0 +1,59 @@
+{
+  "recorded_at": "2026-10-16T16:47:12.807859+00:00",
+  "company_id": "jp:3817",
+  "maximum_GETs": 2,
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu",
+    "query1.finance.yahoo.com"
+  ],
+  "holds_v9_file": "research/ir-source-access-holds-2026-10-15/holds-v9.json",
+  "holds_v9_SHA256": "4fb00a614863759398832cd1368b77535505cc885c4cd21433edafaccc22ec65",
+  "allowed_requests": [
+    {
+      "role": "subsequent_Q1_statement_PDF",
+      "url": "https://www.sra-hd.co.jp/Portals/0/ir/settlement/tanshin/tanshin2608.pdf",
+      "literal_capture": "research/ir-case-studies-2026-10-15/3817/annual-accounting-input-discovery-2026-10-16/capture.json",
+      "literal_pointer": "$.GETs[0].html_visible_text.links[37]",
+      "literal_capture_SHA256": "c1f56dd29b86d6ad08f9f963b9b8917c45fa66bd5c2a32a9433225e25159652a",
+      "actual_link": {
+        "url": "https://www.sra-hd.co.jp/Portals/0/ir/settlement/tanshin/tanshin2608.pdf",
+        "href": "/Portals/0/ir/settlement/tanshin/tanshin2608.pdf",
+        "label": "決算短信"
+      }
+    }
+  ],
+  "robots_reviews": {
+    "www.sra-hd.co.jp": {
+      "proceed": true,
+      "branch": "complete404_missingrobots",
+      "raw_file": "research/ir-case-studies-2026-10-15/3817/external-author-research-discovery-2026-10-16/raw/4ad74b57fef3ec0b96059ec61116fc73cc1f8c5bbb4d39c1b077fea3231ec44f",
+      "raw_sha256": "4ad74b57fef3ec0b96059ec61116fc73cc1f8c5bbb4d39c1b077fea3231ec44f",
+      "capture_file": "research/ir-case-studies-2026-10-15/3817/external-author-research-discovery-2026-10-16/capture.json",
+      "capture_pointer": "$.GETs[0]",
+      "observed_complete_at": "2026-10-16T09:20:50.035208+00:00",
+      "HTTP_status": 404,
+      "complete_body": true,
+      "bytes": 9960,
+      "interpretation": "Saved exact-host complete404 reused as missing robots under existing project contract, not affirmative permission/rule text."
+    }
+  },
+  "network_runtime_observation": {
+    "running": true,
+    "observations_current": true,
+    "network_policy_mode": "unrestricted",
+    "network_policy_state": "unknown",
+    "not_claimed_enforced_or_ready": true
+  },
+  "rules": "fixed normalUA/TLS/proxy; no redirect/retry/JS/childURL; stop failure; only selected PDF 1GET; no source or financial adoption"
+}

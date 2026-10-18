@@ -1,0 +1,57 @@
+{
+  "recorded_at": "2026-10-16T00:09:47.580886+00:00",
+  "kind": "finite_memory_only_negative_checks_of_independent_research_validator",
+  "checks": [
+    {
+      "case": "duplicate fact ID",
+      "rejected": true,
+      "reason": "duplicate fact IDs"
+    },
+    {
+      "case": "missing fact",
+      "rejected": true,
+      "reason": "exact 14 facts required"
+    },
+    {
+      "case": "wrong unit on both input and normalized fact",
+      "rejected": true,
+      "reason": "unit/conversion differs"
+    },
+    {
+      "case": "wrong annual period on both copies",
+      "rejected": true,
+      "reason": "annual duration differs"
+    },
+    {
+      "case": "unapproved accounting basis backfill",
+      "rejected": true,
+      "reason": "unexpected accounting-basis assertion"
+    },
+    {
+      "case": "nonfinite normalized number",
+      "rejected": true,
+      "reason": "normalized value: explicit integer string required"
+    },
+    {
+      "case": "normalized value inconsistent with original display",
+      "rejected": true,
+      "reason": "amount differs"
+    },
+    {
+      "case": "changed original source content",
+      "rejected": true,
+      "reason": "origin object SHA differs"
+    },
+    {
+      "case": "bad quote offset",
+      "rejected": true,
+      "reason": "source quote offset differs"
+    }
+  ],
+  "count": 9,
+  "all_rejected": true,
+  "original_files_modified": false,
+  "upstream_import_execution": false,
+  "original_product_tests_executed": false,
+  "scope": "Calls own research bind helper on copies; immutable manifest/file SHA gate is separately exercised by normal script runs."
+}

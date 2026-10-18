@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T12:32:54.477666+00:00",
+  "artifact_type": "independent_extraction_review_v2_correction_followup",
+  "status": "identified_date_role_issue_resolved_in_separate_v2",
+  "prior_independent_review": {
+    "file": "independent-extraction-review.json",
+    "sha256": "341ae18c1a38b3b546e003cce5496cea1243f685cdc33621f5326e4e7e9c81d1",
+    "markdown_sha256": "035baec68430efee6e2d7268d099499cfba6bb3f0e4dc857d7867016ca417ffb",
+    "unchanged": true
+  },
+  "v2_file_SHA256": {
+    "input-cases-v2.json": "fd6affd7f2759c28a341c52eb4c8de1e2c5d40e411d8ede9e0eaa1ec07bc1692",
+    "source-manifest-v2.json": "cd1b5616526a2b033bb37b4389818f76d3375b3ff56b20ae298179c45107b730",
+    "README-v2.md": "449b0ee7f42f5ec187f7a48da54185f81eac0c2bc39f8c451b24afe3996babe5",
+    "validation-v2.json": "1037f294c59b71f22032770428c0edec970a5b462e373b6344db9c8dd08702fd"
+  },
+  "original4_file_SHA256_unchanged": {
+    "input-cases.json": "5d578b49ce70939b177330b1505c0ef1c4e1198c19c3732f7333456e28e32cd5",
+    "source-manifest.json": "4ef28d25f1dd3dc2f7df891912100398f7d0237bfed52cce8dd2b0183af66fb1",
+    "README.md": "3b72c3d76f4a4eb4e1edd65b20ba4b8598670828c760e9b02f7666121f186e05",
+    "validation.json": "386cf140a91e5979225845b776c4ef3fc3a7eccf4777589d821a0ffbc7503cad"
+  },
+  "protected20_files_unchanged": true,
+  "actual_case_differences": [
+    "/cases/2/time_or_scope_label_from_question_or_document",
+    "/cases/3/time_or_scope_label_from_question_or_document"
+  ],
+  "checks": {
+    "only_two_case_scope_labels_changed": true,
+    "new_labels_use_meeting_date_display_not_publication": true,
+    "all_other_case_fields_and_all18_spans_unchanged": true,
+    "all18_spans_offset_SHA_rechecked_against_original_source_content": true,
+    "all_original_candidate_source_fields_preserved": true,
+    "legacy_metadata_date_kept_as_unverified_derived_label": true,
+    "actual_publication_date_and_time_remain_null": true,
+    "new_h2_quote_matches_original_raw_byte_preserving_decode_offset": true,
+    "source_snapshot_publication_time_null_preserved": true,
+    "new_manifest_and_validation_hash_links_match": true,
+    "revision_clock_separate_from_original_extraction_creation": true,
+    "original_QA_summary_FAQ_and_legacy_clock_boundaries_unchanged": true
+  },
+  "conclusion": "The v1 publication-wording finding is resolved within v2. The source h2 supports the displayed meeting-date context, not independently verified publication. This followup neither edits the original source metadata nor certifies full public posting chronology.",
+  "scope": {
+    "pairs": 6,
+    "selected_sources": 3,
+    "verbatim_spans": 18,
+    "GETs": 0,
+    "DB_accesses": 0,
+    "production_or_old_file_changes": 0,
+    "interpretation_output_or_answer_key_created": 0,
+    "financial_adoption_or_IR_send": 0
+  },
+  "limits": [
+    "Original 2026-08-07 publication metadata remains an unchanged historical declaration, now explicitly marked not independently verified in v2.",
+    "Exact source span agreement is extraction fidelity, not verbatim speech, actual private reply, financial adoption or investment performance."
+  ]
+}

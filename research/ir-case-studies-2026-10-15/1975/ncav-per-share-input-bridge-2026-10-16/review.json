@@ -1,0 +1,161 @@
+{
+  "recorded_at": "2026-10-16T09:07:14.996822+00:00",
+  "company_id": "jp:1975",
+  "status": "frozen_one_page_period_end_share_bridge_parent_review_pending",
+  "new_purpose": "既受入済み会社全体NCAV screen ceilingを、原典普通株の期末株式分母へ明示対応する。元EPS抽出やNCAV会計入力taskの再発行ではない。",
+  "new_semantic_render_page": 2,
+  "page_already_initially_reviewed": true,
+  "new_read_purpose": "普通株/期末/自己株式/期中平均の区分と分母mappingの確認だけ。",
+  "source": {
+    "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
+    "snapshot": {
+      "file": "research/ir-case-studies-2026-10-15/1975/native-case-setup-2026-10-16/actual-inputs/actual-source-snapshots.json",
+      "bytes": 164256,
+      "sha256": "ccb0f348aead27cde26cf4321102979f919d8deb64457dca1794aad5c95240a2"
+    },
+    "snapshot_pointer": "/sources/1",
+    "source_native_snapshot_sha256": "2aae3878ce397e408f088338e4b9728e4a3c4e594a247fdbb3adfff34c27dfce",
+    "native_content_utf8_sha256": "5b590ae0edd7df00cc1b165437bc4e81d23fa117addbbbd948ff827668b95c83",
+    "url": "https://www.asahikogyosha.co.jp/wp-content/uploads/2026/08/98_1st-quarter-financial-results.pdf",
+    "original_retrieved_at": "2026-10-16T04:18:59.234370+00:00",
+    "publication_day": "2026-08-04",
+    "publication_exact_time": null,
+    "original_raw_sha256": "197dbf719ededc450d856e3eb9dda745a2fe92c1ac0325847aa150cfb4487a85",
+    "new_physical_page": 2,
+    "page_text_matches_native": true,
+    "manual_image_read": true
+  },
+  "date_context": {
+    "file": {
+      "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/source-quotes.json",
+      "bytes": 7813,
+      "sha256": "46860885bcedfaad51dce9cc39457a02b56169c767ce1a07d7c49a3f4bf85e2d"
+    },
+    "quote_id": "statement-consolidation-unit-dates",
+    "physical_pdf_page": 5,
+    "use": "既受入済みBSの同一Q1対象日確認だけ。新p5再抽出・画像再読はしない。"
+  },
+  "denominator_mapping": {
+    "issuer_source_fields": [
+      "期末発行済株式数（自己株式を含む）",
+      "期末自己株式数"
+    ],
+    "project_field": "shares_outstanding_end",
+    "calculation": "27,200,000 - 1,324,717 = 25,875,283 common shares",
+    "field_mapping_is_project_judgment": true,
+    "upstream_provider_mapping_or_parsing_certified": false,
+    "EPS_weighted_average_shares_25875312_used": false,
+    "fallback_to_average": false,
+    "reason": "期末の公表両欄が存在し、普通株という同じ単位。平均株式数はEPS用の別期間量として区別し、欠損や単位問題としての平均fallbackを使わない。",
+    "display_label": "期末普通株数（会社表示自己株式控除後）",
+    "JPX_free_float_mapping": false,
+    "other_ownership_haircuts_or_trust_adjustments": false
+  },
+  "authorship": {
+    "method_author": "maxgfr/crible maintainers; period-end price_shares and price × shares rule",
+    "maintainer_Graham_attribution_is_Graham_original_verification": false,
+    "issuer_share_counts_author": "株式会社朝日工業社",
+    "project_calculation_author": "Codex / audit_manufacturing; explicit historical field mapping only",
+    "upstream_fixed_commit": "00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7",
+    "upstream_function_run": false
+  },
+  "boundary_interpretation": {
+    "company_ceiling_JPY": "14358000000",
+    "end_common_shares": "25875283",
+    "exact_fraction_JPY_per_share": "14358000000/25875283",
+    "reference_2dp_only": "554.89",
+    "rounded_display_is_action_threshold": false,
+    "as_of": "2026-06-30 via same-Q1 statement context, not present-date outstanding shares",
+    "market_price_or_cap_comparison": null
+  },
+  "unresolved_claims": [
+    "p2には信託保有分・追加の自己株式取扱いに関する説明を確認できない。信託保有ゼロ/不存在とせず、報告自己株式から別の信託分を二重控除しない。",
+    "優先株を別控除しないmaintainer式の注意を継承する。NCI/優先請求/普通株帰属・簿価回収性・清算費用は認証せず、haircutやzero調整を発明しない。",
+    "p5のNCAVは百万円未満切捨ての公表入力に対する算術。分数exactはその表示値に対してであり、元帳円単位の清算保証ではない。",
+    "2026年6月末以降の自己株式売買・消却・分割・増資等のcorporate actionsと現在株数は未確認。",
+    "554.89はhistorical screen境界の参考表示で、fair value・buy price・発注・exit・呼値にしない。価格観測/対応価格日時/比較合否はnull。",
+    "平均株数を用いるEPS、会社予想EPS357.49、Q1年率化、成長率/Beta/PE/CFは使わない。"
+  ],
+  "operations": {
+    "GET": 0,
+    "DB_or_Store_access": 0,
+    "normalizer": 0,
+    "upstream_import_or_run": 0,
+    "shared_code_or_docs_changed": 0,
+    "IR_or_forecast_or_order": 0,
+    "further_pages_planned": 0,
+    "old_NCAV_folder_changed": 0
+  },
+  "old_NCAV_all_files_pre_post_pins": {
+    "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/README.md": {
+      "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/README.md",
+      "bytes": 2274,
+      "sha256": "d6a0d40764561dfee02bf3310fee78b1cb7342f0f8ce5a44028546397fcc4b5b"
+    },
+    "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/calculation.json": {
+      "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/calculation.json",
+      "bytes": 1783,
+      "sha256": "8f30a5d9e4e83336a3e8894688edf36fac56aa70a9ad9590579334bce2ac24bb"
+    },
+    "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/images/physical-5.png": {
+      "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/images/physical-5.png",
+      "bytes": 256638,
+      "sha256": "309f65555fcf8f62448d51c42133ad1319c3c82ddb6e7ab9f4b965c2f56b54c5"
+    },
+    "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/inputs.json": {
+      "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/inputs.json",
+      "bytes": 2145,
+      "sha256": "6407bf097c4e8c758f28a1cc8f9d22e22dfb88ab5519b3ba00bf377e308ef186"
+    },
+    "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/manifest.json": {
+      "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/manifest.json",
+      "bytes": 4741,
+      "sha256": "6229f9e7534fa039bc60303a2fceda9f671210a06b881d025507cbac162c3c6c"
+    },
+    "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/parent-acceptance.json": {
+      "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/parent-acceptance.json",
+      "bytes": 760,
+      "sha256": "51cab0047dba6d3128f7901ff7fe9a5d1d772477cd949a6f271ff4b45ce59bff"
+    },
+    "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/reproduce.py": {
+      "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/reproduce.py",
+      "bytes": 1768,
+      "sha256": "a6d388149149b9f64c09e51af29cd84558255cb9e187adcf1009f50a97a5ee24"
+    },
+    "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/review.json": {
+      "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/review.json",
+      "bytes": 5789,
+      "sha256": "059046bc0031bde4d636a29d03db2708eb290d14ccf6df2c7c7e46f9e33c56f2"
+    },
+    "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/source-quotes.json": {
+      "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/source-quotes.json",
+      "bytes": 7813,
+      "sha256": "46860885bcedfaad51dce9cc39457a02b56169c767ce1a07d7c49a3f4bf85e2d"
+    },
+    "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/text/physical-5.txt": {
+      "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/text/physical-5.txt",
+      "bytes": 3001,
+      "sha256": "728665631b06dbe6297d40024ef5090def019e81027a9c405340df37e4ae7bfb"
+    },
+    "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/validation.json": {
+      "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/validation.json",
+      "bytes": 2360,
+      "sha256": "2975bc995dd98a274daa92302e196c800c08fbe44f9b056da6e972f6eeea9001"
+    }
+  },
+  "replay": {
+    "command": ".venv/bin/python -B research/ir-case-studies-2026-10-15/1975/ncav-per-share-input-bridge-2026-10-16/reproduce.py",
+    "stdout": {
+      "file": "research/ir-case-studies-2026-10-15/1975/ncav-per-share-input-bridge-2026-10-16/calculation.json",
+      "bytes": 1067,
+      "sha256": "8c385f30efcb9820a878fcf792bd1ca21ee047e0a3acf29da9a593ba87ebbf61"
+    },
+    "dependencies": "Python stdlib only; reads inputs.json, stdout only"
+  },
+  "wording_clarification": {
+    "recorded_at": "2026-10-16T09:08:19.287837+00:00",
+    "reason": "root requested explicit denominator name; no JPX free-float interpretation",
+    "new_label": "期末普通株数（会社表示自己株式控除後）",
+    "numerical_values_unchanged": true
+  }
+}

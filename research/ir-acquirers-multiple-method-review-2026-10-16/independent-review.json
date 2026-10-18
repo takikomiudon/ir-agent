@@ -1,0 +1,151 @@
+{
+  "reviewer": "codex_audit_consumer",
+  "initial_input_freeze_at": "2026-10-16T15:19:49.831705+00:00",
+  "independent_source_check_completed_at": "2026-10-16T15:21:04.770372+00:00",
+  "final_v2_recheck_completed_at": "2026-10-16T15:27:13.266450+00:00",
+  "status": "accepted_within_two_source_method_scope",
+  "unresolved_findings": [],
+  "findings": [
+    {
+      "id": "AM-R01-operating-earnings-revenue-label",
+      "reported_by": "root",
+      "status": "resolved_v2",
+      "before": "READMEの営業収益という訳語とreview内の収益という表現が、分母Operating Earningsと式のRevenueを混同させ得た。",
+      "after": "READMEの2箇所とreviewの2箇所だけを訂正し、Operating Earnings（原典の利益指標）とRevenue（売上高）を明示。",
+      "evidence": "訂正前4fullbytesは初回freeze SHAと一致。指定4置換の適用で現4filesをbytes完全再現し、条件/数値/引用/時刻/原典pinsに変更なし。"
+    }
+  ],
+  "producer_initial_inputs": [
+    {
+      "path": "research/ir-acquirers-multiple-method-review-2026-10-16/README.md",
+      "sha256": "7667f10d12bcd37ad1f50a591b4a78e319e37ef0c4d33f944017b1ee7bbc07ac",
+      "bytes": 2466
+    },
+    {
+      "path": "research/ir-acquirers-multiple-method-review-2026-10-16/quotes.json",
+      "sha256": "c69e596dbde0cb50b700195809b2159997f0976750acc7288ec57526a44f0467",
+      "bytes": 5652
+    },
+    {
+      "path": "research/ir-acquirers-multiple-method-review-2026-10-16/read-start.json",
+      "sha256": "8d9961087cc44bb53cb52fe175da8a304c2341f35de322b8b0f3999c43a41a3f",
+      "bytes": 1280
+    },
+    {
+      "path": "research/ir-acquirers-multiple-method-review-2026-10-16/review.json",
+      "sha256": "a43ad4ad5fbacf4d3fbb4b0d8b0c18dd22d446e37743e377fb9105bec746d8f8",
+      "bytes": 15025
+    }
+  ],
+  "producer_final_inputs_sha256": {
+    "research/ir-acquirers-multiple-method-review-2026-10-16/README.md": "197e27893c6c8a0c19fc33fa89edfcb4fc9bbec06113ecd123b1cd167f8667d2",
+    "research/ir-acquirers-multiple-method-review-2026-10-16/review.json": "b612ff9feea0ff9962224e80fdf5618bf8fb506468322d9bee6e183fbe15b7dd",
+    "research/ir-acquirers-multiple-method-review-2026-10-16/quotes.json": "c69e596dbde0cb50b700195809b2159997f0976750acc7288ec57526a44f0467",
+    "research/ir-acquirers-multiple-method-review-2026-10-16/read-start.json": "8d9961087cc44bb53cb52fe175da8a304c2341f35de322b8b0f3999c43a41a3f"
+  },
+  "correction_evidence": {
+    "receipt": {
+      "path": "research/ir-acquirers-multiple-method-review-2026-10-16/terminology-correction-receipt.json",
+      "sha256": "615695faf271518df60717b1deeebabdc6b4e0c55fcd855ac27202c75dbf035c"
+    },
+    "diff": {
+      "path": "research/ir-acquirers-multiple-method-review-2026-10-16/terminology-correction.diff",
+      "sha256": "e8a0e6ce6fc9aed200ca476558d3d1f1b43e3f04942063849c560451d4882a5f"
+    }
+  },
+  "source_inputs": [
+    {
+      "file": "research/ir-acquirers-multiple-author-method-discovery-2026-10-16/text/03.txt",
+      "sha256": "6cc853e77fe2b33a93b5f0d89575a205a4472b73250d0e6a21e3df0bb48e7f69"
+    },
+    {
+      "file": "research/ir-acquirers-multiple-author-method-discovery-2026-10-16/raw/4e1dc1f0dfa7a0ab0a34afb226ed628e89dda854aca8a0365edf67975c2686c9",
+      "sha256": "4e1dc1f0dfa7a0ab0a34afb226ed628e89dda854aca8a0365edf67975c2686c9"
+    },
+    {
+      "file": "research/ir-acquirers-multiple-author-method-discovery-2026-10-16/capture.json",
+      "sha256": "266fed598de566eb6a1882656a73780ad0cede4ab39904fdd8d971ed33c71fd5"
+    },
+    {
+      "file": "research/ir-acquirers-multiple-author-method-discovery-2026-10-16/acquisition-review.json",
+      "sha256": "f83270140e9784b92bee6d9cf196f2b55f9a0ab7452efdc1a55231309014e56a"
+    },
+    {
+      "file": "research/ir-acquirers-multiple-author-method-discovery-2026-10-16/parent-acceptance.json",
+      "sha256": "75dcbeac8c61a88827ec2d14e169a50c47f7ae2692b6a5df10b42fd029244ce8"
+    },
+    {
+      "file": "research/ir-acquirers-multiple-four-steps-author-source-2026-10-16/text/01.txt",
+      "sha256": "ec2decfbe16eafd8475bd3b510b0e685bed87595b6ad14fd4605bc0183b66824"
+    },
+    {
+      "file": "research/ir-acquirers-multiple-four-steps-author-source-2026-10-16/raw/744a8283b77a7253697d4f26225ee7eba149f1490c6ef23c1a551aa0fab9df0d",
+      "sha256": "744a8283b77a7253697d4f26225ee7eba149f1490c6ef23c1a551aa0fab9df0d"
+    },
+    {
+      "file": "research/ir-acquirers-multiple-four-steps-author-source-2026-10-16/capture.json",
+      "sha256": "cadd215677f8b4889efb7c410456c137b5de8fca60559ae2a4359bedecc3acde"
+    },
+    {
+      "file": "research/ir-acquirers-multiple-four-steps-author-source-2026-10-16/acquisition-review.json",
+      "sha256": "8f86a02c33b06d5f323a943f0f249cd717d14ca74565f070a7f1932b14e8549f"
+    },
+    {
+      "file": "research/ir-acquirers-multiple-four-steps-author-source-2026-10-16/parent-acceptance.json",
+      "sha256": "502655c6f78d40d37f7731ffd2a01f97ebae3b940c27821bd17b7f705e4eb7fa"
+    }
+  ],
+  "reading_scope": {
+    "FAQ_UTF8_Unicode_halfopen_spans": [
+      [
+        1084,
+        3900
+      ],
+      [
+        3900,
+        5200
+      ],
+      [
+        5200,
+        7400
+      ],
+      [
+        10000,
+        14900
+      ]
+    ],
+    "article_2016_UTF8_Unicode_halfopen_spans": [
+      [
+        643,
+        2720
+      ]
+    ],
+    "article_scope": "第4稿の主本文・免責のみ。コメント/広告/関連記事/第1〜3稿の意味読解0。",
+    "final_recheck": "既済み条件照合は再実施せず、用語訂正4置換と条件/quotes/read-start/source SHA不変のみ確認。",
+    "blind_review": false
+  },
+  "semantic_results": [
+    "FAQのEV/Operating EarningsとOIADP、別比率のOIBDPを区別する。日本のOP/EBIT/EBITDAへの自動同一視や、COGS/SG&A内のD&Aの重複控除をしない。",
+    "TTM又は直近四半期という総括説明から各構成値の時点を補完していない。一般欄の30候補/最低20保有、2022年の業種上位6と金融・公益組入、2023年の母集団例は別記録で、現在の同一規則へ合成しない。",
+    "第4稿のwinnerの1年と1日後売却には画面内なら画面を離れるまで保有する例外を残す。loserの画面内保有/画面外売却には原文にない年数を追加しない。",
+    "quarterlyは少なくともその頻度で入替必要性を点検する指示。売却後は未保有の次順位へ補充し、四半期強制全面入替とはしない。12か月の段階購入と月2〜3/四半期7〜8は提案・例として保持する。",
+    "税目的の1年と1日を固定366日、日本の税制/口座又は利用者の数カ月〜1年の退出期限へ移していない。原文が適用法域/詳細税率を一意に記すとも認定しない。",
+    "損益ゼロ、費用控除前後/執行、membership不明、欠損/負値/同順位、現在版や日本適合を原文の未定義箇所へ勝手に補っていない。FAQ個人著作者/過去版同一性や宣伝成績も独立認証しない。"
+  ],
+  "verification": {
+    "nonempty_exact_quote_Unicode_UTF8_matches": 15,
+    "source10pins_unchanged": true,
+    "before4fullbytes_preserved": true,
+    "term_replacement_count": 4,
+    "quote_and_read_start_SHA_unchanged": true
+  },
+  "boundaries": {
+    "GET": 0,
+    "DB_Store": 0,
+    "code_or_shared_docs_or_old_source_edits": 0,
+    "complete_strategy_or_current_reproduction_or_Japan_fit_certification": 0,
+    "financial_method_or_individual_forecast_or_price_rule_adoption": 0,
+    "IR_creation_or_send": 0,
+    "output_only": "research/ir-acquirers-multiple-method-review-2026-10-16/independent-review.json"
+  }
+}

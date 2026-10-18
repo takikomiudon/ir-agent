@@ -1,0 +1,157 @@
+{
+  "recorded_at": "2026-10-16T09:13:46.495064+00:00",
+  "company_id": "jp:1975",
+  "purpose": "Market comparison input discovery only; no numericNCAV screen, model, investment action or order.",
+  "routes": [
+    {
+      "sequence": 1,
+      "role": "official-stock-entry",
+      "url": "https://www.asahikogyosha.co.jp/ir/stock/",
+      "HTTP_status": 200,
+      "complete_body": true,
+      "retrieved_at_complete": "2026-10-16T09:08:04.463560+00:00",
+      "raw_entity_file": "research/ir-case-studies-2026-10-15/1975/market-comparison-input-discovery-2026-10-16/raw/e2f4daf2fd5c84d2f6590b69b8d08b995dc1b584302b7c4baa480deb04b80f05",
+      "raw_sha256": "e2f4daf2fd5c84d2f6590b69b8d08b995dc1b584302b7c4baa480deb04b80f05",
+      "text_file": "research/ir-case-studies-2026-10-15/1975/market-comparison-input-discovery-2026-10-16/text/01.txt"
+    },
+    {
+      "sequence": 2,
+      "role": "official-price-page",
+      "url": "https://www.asahikogyosha.co.jp/ir/stock/price/",
+      "HTTP_status": 200,
+      "complete_body": true,
+      "retrieved_at_complete": "2026-10-16T09:08:42.425529+00:00",
+      "raw_entity_file": "research/ir-case-studies-2026-10-15/1975/market-comparison-input-discovery-2026-10-16/raw/caff388a5c6af88f576f8e5c8edb2be6905fc6355a4938b1bc56d436542f8f86",
+      "raw_sha256": "caff388a5c6af88f576f8e5c8edb2be6905fc6355a4938b1bc56d436542f8f86",
+      "text_file": "research/ir-case-studies-2026-10-15/1975/market-comparison-input-discovery-2026-10-16/text/02.txt"
+    },
+    {
+      "sequence": 3,
+      "role": "provider-robots",
+      "url": "https://parts.stockweather.co.jp/robots.txt",
+      "HTTP_status": 404,
+      "complete_body": true,
+      "retrieved_at_complete": "2026-10-16T09:09:35.665726+00:00",
+      "raw_entity_file": "research/ir-case-studies-2026-10-15/1975/market-comparison-input-discovery-2026-10-16/raw/dd97137d218a6b1016d75f3956c825a01fc0c140bdc942734a3be8c639c264ac",
+      "raw_sha256": "dd97137d218a6b1016d75f3956c825a01fc0c140bdc942734a3be8c639c264ac",
+      "text_file": "research/ir-case-studies-2026-10-15/1975/market-comparison-input-discovery-2026-10-16/text/03.txt"
+    },
+    {
+      "sequence": 4,
+      "role": "provider-quote-HTML",
+      "url": "https://parts.stockweather.co.jp/stocks/ir/contents/1975_02/chartV2.aspx",
+      "HTTP_status": 200,
+      "complete_body": true,
+      "retrieved_at_complete": "2026-10-16T09:10:20.511958+00:00",
+      "raw_entity_file": "research/ir-case-studies-2026-10-15/1975/market-comparison-input-discovery-2026-10-16/raw/daf5879eb64de231ace68d14b69fa725d277c666401eb61b18d814760993ada4",
+      "raw_sha256": "daf5879eb64de231ace68d14b69fa725d277c666401eb61b18d814760993ada4",
+      "text_file": "research/ir-case-studies-2026-10-15/1975/market-comparison-input-discovery-2026-10-16/text/04.txt"
+    }
+  ],
+  "provider_path": {
+    "official_stock_literal_pointer": "initial-public-review-2026-10-16/02.json /html_visible_text/links/62",
+    "official_price_literal_pointer": "capture.json /GETs/0/html_visible_text/links/100",
+    "provider_embedded_HTML_literal_pointer": "capture.json /GETs/1/html_visible_text/links/78",
+    "provider_embedded_URL": "https://parts.stockweather.co.jp/stocks/ir/contents/1975_02/chartV2.aspx",
+    "raw_HTML_element": "iframe id=ChartInner, src literal exact, no URL construction or JS/API route discovery",
+    "provider_name": "ストックウェザー株式会社 / StockWeather.com,Inc."
+  },
+  "quote_input_candidate": {
+    "security_name_raw": "朝日工業社",
+    "security_code_raw": "1975",
+    "raw_price": "3,860",
+    "parsed_display_value": "3860",
+    "raw_date_time": "2026/10/16 15:30",
+    "date": "2026-10-16",
+    "time": "15:30",
+    "precision": "minute label",
+    "timezone": null,
+    "instant_UTC": null,
+    "currency_explicit": null,
+    "quote_label_in_raw_DOM": "stockPrice calc_lp paired with stockTime calc_lt",
+    "independent_closing_price_confirmation": false,
+    "current_thesis_price_adopted": false,
+    "source_retrieved_at_complete": "2026-10-16T09:10:20.511958+00:00",
+    "quote_ids": [
+      "provider-company-code",
+      "provider-dated-price",
+      "same-static-board-raw-DOM"
+    ],
+    "paired_static_board_count": 2,
+    "paired_boards": [
+      {
+        "ordinal": 1,
+        "raw_date_time": "2026/10/16 15:30",
+        "raw_price": "3,860",
+        "unicode_start": 34291,
+        "unicode_end": 34390,
+        "utf8_start": 37881,
+        "utf8_end": 37980
+      },
+      {
+        "ordinal": 2,
+        "raw_date_time": "2026/10/16 15:30",
+        "raw_price": "3,860",
+        "unicode_start": 36361,
+        "unicode_end": 36460,
+        "utf8_start": 40085,
+        "utf8_end": 40184
+      }
+    ],
+    "two_layout_blocks_are_one_provider_observation": true,
+    "provider_says_realtime": true,
+    "provider_realtime_claim_quote_id": "provider-identity-realtime-claim",
+    "independently_verified_update_latency": null,
+    "volume_delay_minutes_as_provider_English_variant": 15,
+    "price_delay_minutes_not_inferred_from_volume": null,
+    "not_a_statement_that_source_time_is_UTC_or_JST": true
+  },
+  "marketcap_and_share_inputs": {
+    "provider_market_cap": null,
+    "provider_market_cap_unit": null,
+    "provider_market_cap_denominator": null,
+    "ordinary_shares_dated": null,
+    "treasury_shares_dated": null,
+    "cancellation_or_disposal_quantities": null,
+    "missing_is_zero": false,
+    "official_share_info_unfetched_locator": {
+      "capture_pointer": "/GETs/0/html_visible_text/links/99",
+      "url": "https://www.asahikogyosha.co.jp/ir/stock/info/",
+      "href": "https://www.asahikogyosha.co.jp/ir/stock/info/",
+      "label": "株式状況",
+      "fetched": false
+    },
+    "provider_script_corporate_action_titles": "Static script contains news titles; no announcementbody/quantity read or actionverification inferred.",
+    "financial_date_basis": "June30financial inputs and laterquote date require separate share/action/currency/definitionreview; this phase neither reviewed the NCAVsource nor supplied a sharebridge.",
+    "marketcap_recalculated": false,
+    "NCAV_pass_fail": null
+  },
+  "limits": {
+    "raw_entity_is_not_wire_capture": true,
+    "official_pages_and_quote_UTF8_strict_decodable": true,
+    "provider_quote_raw_replacement_character_count": 0,
+    "provider_robots_HTTP404": "Complete404 uses existing missingrobotscontract docs/data-sources.md; not positivepermission and not otherHTTPerror waiver.",
+    "robots404_declared_charset": "shift_jis",
+    "robots404_correct_decoded_text": "research/ir-case-studies-2026-10-15/1975/market-comparison-input-discovery-2026-10-16/text/03-shift_jis-404.txt",
+    "robots404_UTF8replacement_helper_text_not_rule_or_quote_evidence": true,
+    "indices_close_clause_not_stock_close_confirmation": true,
+    "provider_disclaimer_body_not_fetched": true,
+    "browser_or_JS_execution": false,
+    "published_at_exact_time": null,
+    "actual_database_first_save": null
+  },
+  "local_processing_notes": [
+    "Preflight first encountered integerGETcount in a savedJSON; type guard fixed offline, no HTTP involved.",
+    "StrictUTF8 preview of shift_jis404body failed before guard update. Subsequent quote-helper invocation failed on unaddedrole beforeHTTP. Corrected declaredcharset/guard offline; total dispatches remained4, retry0."
+  ],
+  "disposition": {
+    "next_task": "Root compare saved sharebridge to dated providerquote, confirm currency/measurementbasis before using any value. Do not infer current shares or adopt price simply from displayed date.",
+    "raw_price_is_fair_value_or_exit_target": false,
+    "financial_inputs_adopted": false,
+    "IR_question_or_send": false,
+    "new_forecasts": false,
+    "DB_or_Store": 0,
+    "shared_or_old_files_edited": 0,
+    "stop_reason": "4GETcap reached after successful directembeddedquoteHTML; no otherprovider, shareholderinfo, disclaimer, JS/API, search or diagnostics."
+  }
+}

@@ -1,0 +1,70 @@
+--- research/ir-2410-initial-with-listing-intake-2026-10-16/run_once.py
++++ research/ir-2410-facts-with-qa-intake-2026-10-16/run_once.py
+@@ -22,14 +22,14 @@
+ HERE = Path(__file__).resolve().parent
+ ROOT = HERE.parents[1]
+ DB = ROOT / 'data/ir-research-2026-10-15.sqlite3'
+-EXPECTED = '206575b65cfba0876b277656bc253f02cd43cc4116d107058c42d61d33b86c5b'
++EXPECTED = '412e8cb69f2fdc2bf1efa6f812603e70062a67cea2a501423dba2edadb3d13b5'
+ COMPANY = 'jp:2410'
+ DELTAS = {'sources': 2, 'record_availability': 2, 'source_classifications': 2,
+           'jobs': 1, 'job_attempts': 1, 'job_attempt_events': 2, 'job_request_receipts': 1}
+-BASE_COUNTS = {'companies': 1819, 'sources': 205, 'source_classifications': 204, 'record_availability': 205,
+-               'jobs': 114, 'job_attempts': 111, 'job_attempt_events': 222,
+-               'job_request_receipts': 111, 'qualitative_case_versions': 46}
+-BASE_CASE_STATE = {'current_cases': 24, 'reviewed_sources': 142}
++BASE_COUNTS = {'companies': 1819, 'sources': 208, 'source_classifications': 207, 'record_availability': 208,
++               'jobs': 116, 'job_attempts': 113, 'job_attempt_events': 226,
++               'job_request_receipts': 113, 'qualitative_case_versions': 47}
++BASE_CASE_STATE = {'current_cases': 25, 'reviewed_sources': 144}
+ PREPARED = ('source-bundle.json', 'classification-requests.json', 'classification-evidence.json',
+             'input-pins.json', 'prepared-code-pins.json', 'source-map.json')
+ 
+@@ -116,17 +116,22 @@
+         before, old_schema, old_case_state = snapshot(origin), schema(origin), case_state(origin)
+         assert all(sum(before[table].values()) == count for table, count in BASE_COUNTS.items())
+         assert old_case_state == BASE_CASE_STATE
+-        assert origin.execute("SELECT COUNT(*) FROM jobs WHERE status='completed'").fetchone()[0] == 114
++        assert origin.execute("SELECT COUNT(*) FROM jobs WHERE status='completed'").fetchone()[0] == 116
+         assert origin.execute("SELECT COUNT(*) FROM jobs WHERE status IN ('pending','leased')").fetchone()[0] == 0
+-        assert origin.execute('SELECT COUNT(*) FROM sources WHERE company_id=?', (COMPANY,)).fetchone()[0] == 0
++        assert origin.execute('SELECT COUNT(*) FROM sources WHERE company_id=?', (COMPANY,)).fetchone()[0] == 3
+         assert origin.execute('SELECT 1 FROM companies WHERE id=?', (COMPANY,)).fetchone()
+         for source in sources:
+             assert not origin.execute('SELECT 1 FROM sources WHERE id=?', (source['id'],)).fetchone()
++        original_ref = load(HERE / 'source-map.json')['existing_original']
++        existing_original = load(ROOT / original_ref['path'])['sources'][0]
++        assert existing_original['id'] == original_ref['source_id'] and existing_original['company_id'] == COMPANY
++        original_row = origin.execute('SELECT data FROM sources WHERE id=?', (existing_original['id'],)).fetchone()
++        assert original_row and json.loads(original_row[0]) == existing_original
+         if stage == 'shadow':
+-            fd, name = tempfile.mkstemp(prefix='ir-2410-initial-with-listing-two-source-shadow-', suffix='.sqlite3')
++            fd, name = tempfile.mkstemp(prefix='ir-2410-facts-with-qa-two-source-shadow-', suffix='.sqlite3')
+             os.close(fd); backup = Path(name)
+         else:
+-            backup = ROOT / 'data/backups/ir-research-before-2410-initial-with-listing-2026-10-16.sqlite3'
++            backup = ROOT / 'data/backups/ir-research-before-2410-facts-with-qa-2026-10-16.sqlite3'
+             assert not backup.exists(), 'Existing backup: stop and inspect the prior run'
+             backup.parent.mkdir(parents=True, exist_ok=True)
+         with closing(sqlite3.connect(backup)) as copied:
+@@ -165,9 +170,9 @@
+             assert packet['company'] == store.company(COMPANY)
+             assert {s['id'] for s in packet['sources']} == set(source_by_id)
+             assert all(store.source(source['id']) == source for source in sources)
+-            worker = 'codex-2410-initial-with-listing-' + stage
++            worker = 'codex-2410-facts-with-qa-' + stage
+             claim = invoke('claim', lambda: harness.claim(worker, now=clock(), measurement_synthetic=False,
+-                caller_namespace=worker, request_id='2410-initial-with-listing-two-20261016-1'))
++                caller_namespace=worker, request_id='2410-facts-with-qa-two-20261016-1'))
+             claimed, lease = claim['original_response'], claim['current_lease']
+             assert not claim['replayed'] and claimed['job_id'] == lease['job_id'] == job_id
+             assert claimed['company_id'] == COMPANY and claimed['worker'] == lease['worker'] == worker
+@@ -184,7 +189,7 @@
+                 assert not (before[table] - after[table]) and delta == DELTAS.get(table, 0), table
+                 comparisons[table] = {'before': sum(before[table].values()), 'after': sum(after[table].values()),
+                     'delta': delta, 'old_rows_preserved': True, 'entire_table_equal': before[table] == after[table]}
+-            assert store.connection.execute("SELECT COUNT(*) FROM jobs WHERE status='completed'").fetchone()[0] == 115
++            assert store.connection.execute("SELECT COUNT(*) FROM jobs WHERE status='completed'").fetchone()[0] == 117
+             assert store.connection.execute("SELECT COUNT(*) FROM jobs WHERE status IN ('pending','leased')").fetchone()[0] == 0
+             assert all(store.source(source['id']) == source for source in sources)
+             store.close(); store = None

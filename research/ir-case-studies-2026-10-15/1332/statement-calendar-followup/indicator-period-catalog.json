@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "company_id": "jp:1332",
+  "research_only": true,
+  "financial_inputs_verified": false,
+  "catalog": [
+    {
+      "id": "quarter_eps",
+      "indicator": "1株当たり四半期純利益",
+      "kind": "reported_fact",
+      "display_unit": "円/株",
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2026-06-30",
+        "period_type": "quarter_cumulative",
+        "label": "2027年3月期第1四半期連結累計期間"
+      },
+      "source_kind": "formal_financial_statement",
+      "evidence_ids": [
+        "header-and-quarter",
+        "share-count-and-trust"
+      ],
+      "availability": "printed_in_statement",
+      "value": null,
+      "adopted_for_model": false,
+      "remaining_meaning_checks": [
+        "基本/潜在株式調整後の列、税・非支配・期中平均株数、自己株式消却/信託株による比較。四半期を年率換算しない。"
+      ]
+    },
+    {
+      "id": "forecast_eps",
+      "indicator": "会社通期予想1株当たり当期純利益",
+      "kind": "issuer_guidance",
+      "display_unit": "円/株",
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "period_type": "fiscal_year",
+        "label": "2027年3月期連結通期会社予想"
+      },
+      "source_kind": "formal_financial_statement",
+      "evidence_ids": [
+        "full-year-forecast-period"
+      ],
+      "availability": "printed_in_statement",
+      "value": null,
+      "adopted_for_model": false,
+      "remaining_meaning_checks": [
+        "将来期中平均株数・費用/為替等の前提。会社予想をシナリオ/翌期予想へ自動採用しない。"
+      ]
+    },
+    {
+      "id": "quarter_operating_profit",
+      "indicator": "営業利益",
+      "kind": "reported_fact",
+      "display_unit": "百万円",
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2026-06-30",
+        "period_type": "quarter_cumulative",
+        "label": "2027年3月期第1四半期連結累計期間"
+      },
+      "source_kind": "formal_financial_statement",
+      "evidence_ids": [
+        "header-and-quarter"
+      ],
+      "availability": "printed_in_statement",
+      "value": null,
+      "adopted_for_model": false,
+      "remaining_meaning_checks": [
+        "新規連結/為替/在池魚評価などの内訳と前年比較。"
+      ]
+    },
+    {
+      "id": "balance_sheet_working_capital",
+      "indicator": "現預金/売掛/棚卸/買掛等の貸借対照表項目",
+      "kind": "reported_fact",
+      "display_unit": "百万円",
+      "target_period": {
+        "as_of_date": "2026-06-30",
+        "comparison_as_of_date": "2026-03-31",
+        "period_type": "balance_sheet_snapshot"
+      },
+      "source_kind": "formal_financial_statement",
+      "evidence_ids": [
+        "bs-comparison"
+      ],
+      "availability": "printed_in_statement",
+      "value": null,
+      "adopted_for_model": false,
+      "remaining_meaning_checks": [
+        "残高差だけで営業CFを計算しない。連結変更/非資金/為替などを要する。"
+      ]
+    },
+    {
+      "id": "depreciation",
+      "indicator": "減価償却費（のれんを除く無形固定資産償却を含む）",
+      "kind": "reported_fact",
+      "display_unit": "百万円",
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2026-06-30",
+        "period_type": "quarter_cumulative",
+        "label": "2027年3月期第1四半期連結累計期間"
+      },
+      "source_kind": "formal_financial_statement",
+      "evidence_ids": [
+        "cashflow-not-prepared"
+      ],
+      "availability": "printed_in_note",
+      "value": null,
+      "adopted_for_model": false,
+      "remaining_meaning_checks": [
+        "のれん償却と区別。補足資料の減価償却（のれん償却含む）との範囲差を照合してからモデルへ使う。"
+      ]
+    },
+    {
+      "id": "goodwill_amortization",
+      "indicator": "のれんの償却額",
+      "kind": "reported_fact",
+      "display_unit": "百万円",
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2026-06-30",
+        "period_type": "quarter_cumulative",
+        "label": "2027年3月期第1四半期連結累計期間"
+      },
+      "source_kind": "formal_financial_statement",
+      "evidence_ids": [
+        "cashflow-not-prepared"
+      ],
+      "availability": "printed_in_note",
+      "value": null,
+      "adopted_for_model": false,
+      "remaining_meaning_checks": [
+        "減価償却費との二重計上を避け、買収・税/CFの扱いを別途確認。"
+      ]
+    },
+    {
+      "id": "operating_cf",
+      "indicator": "営業キャッシュ・フロー",
+      "kind": "reported_fact",
+      "display_unit": "補足資料では億円",
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2026-06-30",
+        "period_type": "quarter_cumulative",
+        "label": "2027年3月期第1四半期連結累計期間"
+      },
+      "source_kind": "management_supplement_only",
+      "evidence_ids": [
+        "cashflow-not-prepared",
+        "supplement-cf-source"
+      ],
+      "availability": "formal_quarterly_cf_statement_not_prepared",
+      "value": null,
+      "adopted_for_model": false,
+      "remaining_meaning_checks": [
+        "正式CF計算書の値として未検証。補足独自定義/運転資本/買収返済/通貨/範囲を確認。"
+      ]
+    },
+    {
+      "id": "investing_cf",
+      "indicator": "投資キャッシュ・フロー",
+      "kind": "reported_fact",
+      "display_unit": "補足資料では億円",
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2026-06-30",
+        "period_type": "quarter_cumulative",
+        "label": "2027年3月期第1四半期連結累計期間"
+      },
+      "source_kind": "management_supplement_only",
+      "evidence_ids": [
+        "cashflow-not-prepared",
+        "supplement-cf-source"
+      ],
+      "availability": "formal_quarterly_cf_statement_not_prepared",
+      "value": null,
+      "adopted_for_model": false,
+      "remaining_meaning_checks": [
+        "正式CF計算書の値として未検証。取得CF/売却/設備投資額との区分を確認。"
+      ]
+    },
+    {
+      "id": "fixed_asset_acquisition",
+      "indicator": "設備投資額（固定資産取得額）",
+      "kind": "reported_fact",
+      "display_unit": "補足資料では億円",
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2026-06-30",
+        "period_type": "quarter_cumulative",
+        "label": "2027年3月期第1四半期連結累計期間"
+      },
+      "source_kind": "management_supplement_only",
+      "evidence_ids": [
+        "supplement-cf-source"
+      ],
+      "availability": "management_supplement_field_only",
+      "value": null,
+      "adopted_for_model": false,
+      "remaining_meaning_checks": [
+        "維持/成長、現金/非現金取得、投資CFとの範囲を別途点検。"
+      ]
+    }
+  ],
+  "note": "Concept/period candidates only. All values null; this is not normalize-facts or valuation input."
+}

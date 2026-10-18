@@ -1,0 +1,132 @@
+{
+  "company_id": "jp:1375",
+  "status": "initial_public_sources_saved_financial_body_unobtained",
+  "research_sample_only": true,
+  "investment_selection": false,
+  "selection_basis": "1819 historical confirmed-contact ledger plus read-only DB sources0, security_code ascending coverage order",
+  "get_limit": 5,
+  "get_count": 5,
+  "http_statuses": [
+    200,
+    200,
+    200,
+    301,
+    200
+  ],
+  "retry_count": 0,
+  "redirect_follow_count": 0,
+  "javascript_executed": false,
+  "source_bundle_count": 4,
+  "failed_transport_count": 1,
+  "financial_body_count": 0,
+  "verified_public_facts": [
+    {
+      "item": "Company identity/code",
+      "status": "supported",
+      "answer": "Official host title ユキグニファクトリー株式会社; FAQ code1375",
+      "quote_ids": [
+        "faq-code"
+      ]
+    },
+    {
+      "item": "Business description",
+      "status": "supported_public_description",
+      "answer": "茸事業、その他食品事業; root describes mushroom production/new product development. No segment financials or revenue-recognition facts.",
+      "quote_ids": [
+        "faq-business",
+        "root-business-origin-and-product-story"
+      ]
+    },
+    {
+      "item": "Fiscal year-end",
+      "status": "supported_partial_period_information",
+      "answer": "毎年3月末。正式最新会計期間の開始日・終了日・比較対象期は未確認。",
+      "quote_ids": [
+        "faq-year-end"
+      ]
+    },
+    {
+      "item": "Incorporation history",
+      "status": "supported_faq_statement",
+      "answer": "1983年7月と公式FAQに記載。会社再編/上場/比較可能財務履歴は別確認。",
+      "quote_ids": [
+        "faq-company-founding"
+      ]
+    }
+  ],
+  "public_answers_do_not_send_questions": [
+    {
+      "topic": "What is company code/business/fiscal year-end?",
+      "quote_ids": [
+        "faq-code",
+        "faq-business",
+        "faq-year-end"
+      ]
+    },
+    {
+      "topic": "Where does company post financial results and general announcement schedule?",
+      "quote_ids": [
+        "library-category-body",
+        "faq-announcement-schedule-pointer",
+        "faq-latest-material-pointer"
+      ]
+    },
+    {
+      "topic": "What are stated dividend record dates?",
+      "quote_ids": [
+        "faq-dividend-record-dates"
+      ],
+      "limit": "No dividend amount, payment date or policy inferred."
+    }
+  ],
+  "unresolved": [
+    {
+      "item": "Latest official statements and presentations",
+      "status": "needs_data",
+      "reason": "Explicit result URL returned301; no redirect followed. No fiscal-release PDF or latest financial period/date obtained.",
+      "publication_date": null,
+      "period_start": null,
+      "period_end": null,
+      "basis": null,
+      "scope": null,
+      "unit": null,
+      "actual_or_forecast_values": null
+    },
+    {
+      "item": "Public earnings Q&A",
+      "status": "unknown",
+      "reason": "Fetched generic IR FAQ is not a results-conference Q&A. Product Q&A links are also distinct; body not fetched."
+    },
+    {
+      "item": "Exact next scheduled event",
+      "status": "unknown",
+      "reason": "Calendar is only a link; no calendar GET or inferred date."
+    },
+    {
+      "item": "Model-specific input facts",
+      "status": "needs_data",
+      "reason": "Revenue recognition/segment mix, actual earnings/cash/reinvestment/tax/shares, long history and normalization/funding constraints not obtained. Business sector/establishment age do not establish a valuation route."
+    },
+    {
+      "item": "Current contact eligibility",
+      "status": "unknown",
+      "reason": "Historical contact ledger is not present eligibility; contact URL not fetched or submitted."
+    }
+  ],
+  "model_routing": {
+    "ordinary_model_review": "needs_data",
+    "financial_equity_review": null,
+    "cyclical_normalization_review": null,
+    "young_loss_review": null,
+    "sector_only_classification_or_exclusion": false,
+    "rationale": "Saved Damodaran routing requires observation of business/earnings/reinvestment/funding and cycle history. Generic food business and 1983founding do not settle this."
+  },
+  "financial_inputs_verified": false,
+  "financial_values_automatically_adopted": false,
+  "predictions_probabilities_thresholds_modelvalues": [],
+  "questions_created": [],
+  "company_state_modified": false,
+  "DB_mutations": 0,
+  "DB_selection_access": "read-only URI mode=ro only",
+  "adopted_workflow": "Existing jp-equity-ir public-information-first / saved Anthropic and Damodaran routing; no new financial policy."
+}

@@ -1,0 +1,56 @@
+{
+  "recorded_at": "2026-10-15T22:14:07.216402+00:00",
+  "files": [
+    {
+      "path": "scripts/research_ir_universe.py",
+      "before_sha256": "4e4cd3a65a69f6e7fb61ce73a85fda7b5fba95352a8544e719f49a4a2fe86bdf",
+      "after_sha256": "373e06e6bd2b3fe7bf8e9b86de9d124118371eec9534ebea9a1ef07161e154f6",
+      "after_bytes": 73326
+    },
+    {
+      "path": "scripts/collect_ir_followups.py",
+      "before_sha256": "589b42b8bf89fd8e6affd6c0348db4c6a30c3bd7a48634613a0d181b12723362",
+      "after_sha256": "fa3df311c8c11632ae0f4a430ce9eaddbe965c4d77e3593d7ef3954b9cdd9bae",
+      "after_bytes": 136706
+    },
+    {
+      "path": "tests/test_ir_raw_entity_preservation.py",
+      "before_sha256": null,
+      "after_sha256": "37f260be63ff2bf897545fd57ce47f09a5f0ce8ccc8875416807992722cc545c",
+      "after_bytes": 10888
+    }
+  ],
+  "focused_tests": {
+    "contact": {
+      "count": 79,
+      "exit": 0,
+      "log": "focused-contact-tests.log"
+    },
+    "followup": {
+      "count": 76,
+      "exit": 0,
+      "log": "focused-followup-tests.log"
+    },
+    "new_raw_preservation": {
+      "count": 11,
+      "exit": 0,
+      "log": "focused-raw-tests.log"
+    }
+  },
+  "focused_total": 166,
+  "new_GETs": 0,
+  "actual_DB_operations": 0,
+  "old_capture_changes": 0,
+  "full_suite_run_by_child": false,
+  "independent_review_completed": false,
+  "error_contract": "Raw storage failure isolated from legacy error/failure_signature; no network retry",
+  "raw_bytes_contract": "Complete iter_content response entity, may be content-decoded; not wire/gzip transfer bytes",
+  "artifact_hashes": {
+    "focused-followup-tests.log": "809c45bdc4cf6b7ef2e08e54fb9bf954678a21ceaa2d9097692a92ab75a0050f",
+    "before-files.json": "8a602dc298c10082cdc31810cafa2538b820f03d3b7244446076ed93304de36a",
+    "implementation.patch": "a6f6f4557325d6ab4161cd1e7460750645c04cd0b99ab94c5cb72792cdcfeb5f",
+    "README.md": "1e800a47cdf22f1e67c5c0bbd1dfdb73e7b0480e19c70fd62107d6abf252b101",
+    "focused-raw-tests.log": "28203b0a3c660c1731ab337ab52803b02f47836bcbb9ddd90fded218d2f4d5da",
+    "focused-contact-tests.log": "61c47d942586597493055284b9586a99dd53a076d386710a918d3063d66702e9"
+  }
+}

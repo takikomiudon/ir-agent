@@ -1,0 +1,166 @@
+{
+  "security_code": "5838",
+  "company_name": "楽天銀行",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "銀行業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.rakuten-bank.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T15:17:48.592174+00:00",
+  "completed_at": "2026-10-11T15:19:56.216178+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/5838/20261011T151748592227Z/01.json",
+      "url": "https://www.rakuten-bank.co.jp/",
+      "retrieved_at": "2026-10-11T15:18:03.944547+00:00",
+      "quote": "楽天銀行（旧イーバンク銀行）- ネット銀行",
+      "role": "company_identity"
+    },
+    {
+      "snapshot": "evidence/5838/20261011T151748592227Z/02.json",
+      "url": "https://www.rakuten-bank.co.jp/support/contact/contact.html",
+      "retrieved_at": "2026-10-11T15:18:20.648265+00:00",
+      "quote": "メールによるお問い合わせ お急ぎでないお客さまは、 こちらからお問い合わせください。 口座開設事務処理状況の確認 口座開設事務処理状況の確認 その他個人口座のお問い合わせ その他個人口座のお問い合わせ",
+      "role": "observed_customer_account_contact"
+    },
+    {
+      "snapshot": "evidence/5838/20261011T151748592227Z/02.json",
+      "url": "https://www.rakuten-bank.co.jp/support/contact/contact.html",
+      "retrieved_at": "2026-10-11T15:18:20.648265+00:00",
+      "quote": "文章で検索できます(200文字以内)",
+      "role": "observed_search_form",
+      "form_index": 3
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.rakuten-bank.co.jp/",
+      "final_url": "https://www.rakuten-bank.co.jp/",
+      "snapshot": "evidence/5838/20261011T151748592227Z/01.json",
+      "retrieved_at": "2026-10-11T15:18:03.944547+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.rakuten-bank.co.jp/support/contact/contact.html",
+      "final_url": "https://www.rakuten-bank.co.jp/support/contact/contact.html",
+      "snapshot": "evidence/5838/20261011T151748592227Z/02.json",
+      "retrieved_at": "2026-10-11T15:18:20.648265+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.rakuten-bank.co.jp/support/contact/howto/password.html?scid=top_z_221014_CO1178",
+      "final_url": "https://www.rakuten-bank.co.jp/support/contact/howto/password.html?scid=top_z_221014_CO1178",
+      "snapshot": "evidence/5838/20261011T151748592227Z/03.json",
+      "retrieved_at": "2026-10-11T15:18:36.728234+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.rakuten-bank.co.jp/support/contact/contact.html?scid=top_z_221014_CO1189",
+      "final_url": "https://www.rakuten-bank.co.jp/support/contact/contact.html?scid=top_z_221014_CO1189",
+      "snapshot": "evidence/5838/20261011T151748592227Z/04.json",
+      "retrieved_at": "2026-10-11T15:18:51.738504+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.rakuten-bank.co.jp/support/contact/contact.html?l-id=smp_top_1214_03_CO800",
+      "final_url": "https://www.rakuten-bank.co.jp/support/contact/contact.html?l-id=smp_top_1214_03_CO800",
+      "snapshot": "evidence/5838/20261011T151748592227Z/05.json",
+      "retrieved_at": "2026-10-11T15:19:08.571619+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.rakuten-bank.co.jp/business/howto/contact.html",
+      "final_url": "https://www.rakuten-bank.co.jp/business/howto/contact.html",
+      "snapshot": "evidence/5838/20261011T151748592227Z/06.json",
+      "retrieved_at": "2026-10-11T15:19:23.681362+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.rakuten-bank.co.jp/smallbusiness/howto/contact.html",
+      "final_url": "https://www.rakuten-bank.co.jp/smallbusiness/howto/contact.html",
+      "snapshot": "evidence/5838/20261011T151748592227Z/07.json",
+      "retrieved_at": "2026-10-11T15:19:39.487900+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "保存7ページは楽天銀行の口座ログイン/個人・法人・個人事業主の顧客サポート。その他個人口座のお問い合わせメール案内は株主IR用途を明示しない。native textarea keywordは公開文章検索200文字のGET検索、返信mail欄はなくIR質問formへ昇格しない。javascript inquiry4/inquiry4SPなどは実行せずURLを推測しない。トップの実会社情報/corp/リンクは一般会社案内で、IR受付routeとして採用しない。金融IRのメールフォームは保存範囲未実証のUであり、IR窓口不存在・投資不適とは判定しない。"
+  ],
+  "discovery": {
+    "security_code": "5838",
+    "official_url": "https://www.rakuten-bank.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "楽天銀行",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/5838/20261011T151748592227Z/01.json",
+      "normalized_name": "楽天銀行",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/5838/20261011T151748592227Z/02.json",
+      "normalized_name": "楽天銀行",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/5838/20261011T151748592227Z/03.json",
+      "normalized_name": "楽天銀行",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/5838/20261011T151748592227Z/04.json",
+      "normalized_name": "楽天銀行",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/5838/20261011T151748592227Z/05.json",
+      "normalized_name": "楽天銀行",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/5838/20261011T151748592227Z/06.json",
+      "normalized_name": "楽天銀行",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/5838/20261011T151748592227Z/07.json",
+      "normalized_name": "楽天銀行",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 7,
+  "unconfirmed_reason": "saved_bank_account_support_pages_without_bound_financial_ir_reception",
+  "http_get_attempt_count": 8,
+  "previous_attempts": [
+    "attempts/5838/20261011T045047551671Z.json",
+    "attempts/5838/20261011T151956216948Z.json"
+  ],
+  "automatic_conditions_before_review": [],
+  "outreach_reason": "保存済み公式資料に限定して現発行体の金融IR用途・実質問返信欄又は公開IR宛先・利用条件を監査。送信・回答実績は未確認。",
+  "ir_url": null,
+  "manual_review": {
+    "reviewer": "codex_audit_data_58_batch09",
+    "reviewed_at": "2026-10-11T15:45:24.791264+00:00",
+    "notes": "保存7ページは楽天銀行の口座ログイン/個人・法人・個人事業主の顧客サポート。その他個人口座のお問い合わせメール案内は株主IR用途を明示しない。native textarea keywordは公開文章検索200文字のGET検索、返信mail欄はなくIR質問formへ昇格しない。javascript inquiry4/inquiry4SPなどは実行せずURLを推測しない。トップの実会社情報/corp/リンクは一般会社案内で、IR受付routeとして採用しない。金融IRのメールフォームは保存範囲未実証のUであり、IR窓口不存在・投資不適とは判定しない。"
+  }
+}

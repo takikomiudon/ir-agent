@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "companies": [
+    {"id": "demo-services", "name": "サンプル業務支援（架空）", "status": "active", "held": true, "screening_reason": "継続課金売上と採用費の仮説を検証するデモ"},
+    {"id": "demo-materials", "name": "サンプル機能素材（架空）", "status": "watch", "held": false},
+    {"id": "demo-binary", "name": "サンプル開発企業（架空）", "status": "excluded", "screening_reason": "商用売上がなく二者択一イベントが価値を支配する、という架空の選別例"}
+  ],
+  "sources": [
+    {
+      "id": "demo-public-q2", "company_id": "demo-services", "title": "第2四半期説明資料（架空）",
+      "url": "https://example.invalid/services/q2", "source_type": "public_disclosure",
+      "published_at": "2026-10-01T15:00:00+09:00", "retrieved_at": "2026-10-01T15:05:00+09:00",
+      "content": "架空の資料。売上は成長しているが、採用費の増加で営業利益率が低下。",
+      "requires_research": true, "metadata": {"synthetic": true, "currency": "JPY"}
+    },
+    {
+      "id": "demo-public-update", "company_id": "demo-services", "title": "採用施策の補足（架空）",
+      "url": "https://example.invalid/services/update", "source_type": "public_disclosure",
+      "published_at": "2026-10-08T15:00:00+09:00", "retrieved_at": "2026-10-08T15:05:00+09:00",
+      "content": "架空の資料。新規部署の採用計画について説明。一時費用と継続費用の内訳は未説明。",
+      "requires_research": true, "metadata": {"synthetic": true}
+    }
+  ],
+  "theses": [
+    {
+      "company_id": "demo-services", "version": 1, "recorded_at": "2026-10-01T16:00:00+09:00",
+      "statement": "採用費の一部は一時的で、既存事業の成長によって利益率が回復するという架空の仮説。",
+      "pillars": ["継続課金売上の成長", "採用費が一時的である可能性"],
+      "invalidation_conditions": ["費用増加が恒常的で利益率回復を妨げる", "既存顧客売上が縮小する"],
+      "exit_conditions": ["仮説が否定された場合は売却を検討", "評価額に達した場合は利確を検討"],
+      "current_price_jpy": "1000", "next_review_date": "2026-10-08",
+      "evidence_ids": ["demo-public-q2"],
+      "valuation": {"scenarios": [
+        {"name": "bear", "probability": "0.25", "method": "eps_multiple", "inputs": {"eps_jpy": "45", "pe": "15"}},
+        {"name": "base", "probability": "0.50", "method": "eps_multiple", "inputs": {"eps_jpy": "65", "pe": "20"}},
+        {"name": "bull", "probability": "0.25", "method": "eps_multiple", "inputs": {"eps_jpy": "80", "pe": "23"}}
+      ]}
+    }
+  ]
+}

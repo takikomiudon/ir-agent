@@ -1,0 +1,104 @@
+{
+  "company_id": "jp:1866",
+  "recorded_at": "2026-10-16T00:59:24.423087+00:00",
+  "status": "finite_initial_research_completed_financial_body_obtained",
+  "GETs": 4,
+  "GET_cap_per_company": 5,
+  "batch_GETs": 8,
+  "batch_cap": 10,
+  "further_GETs_planned": 0,
+  "http_statuses": [
+    404,
+    200,
+    200,
+    200
+  ],
+  "source_count": 3,
+  "financial_body_count": 1,
+  "current_contact_revalidated": false,
+  "next_public_event_date": null,
+  "IR_question_drafts": [],
+  "formal_IR_send_readiness": false,
+  "financial_inputs_adopted": false,
+  "valuation_or_price_action": null,
+  "author_method": {
+    "Anthropic": "Public evidence first; distinguish issuer actuals, issuer guidance, explanations and unresolved investor assumptions.",
+    "Damodaran": "Check operating-earnings/cash-flow/reinvestment and comparability before routing; no construction-industry blanket exclusion or automatic cycle normalization.",
+    "local_references": [
+      "docs/workflow.md",
+      "docs/model-routing-inputs.md"
+    ]
+  },
+  "model_fit": {
+    "ordinary_business": "needs_model_specific_data",
+    "financial_equity": null,
+    "cyclical_normalization": null,
+    "young_loss": null,
+    "selected_method": null,
+    "future_normalized_profit_FCFF_tax_reinvestment_cost_of_capital_fair_multiple": null
+  },
+  "evidence_boundary": {
+    "accounting_basis": "Japanese_GAAP",
+    "consolidation": "consolidated",
+    "actual_period": {
+      "start": "2026-04-01",
+      "end": "2026-06-30"
+    },
+    "issuer_guidance_period": {
+      "start": "2026-04-01",
+      "end": "2027-03-31"
+    },
+    "amount_unit": "JPY millions; amounts below one million truncated per statement",
+    "share_basis": "Company amounts in financial-observations are not per-share. EPS, period-end/average shares and applicable issuer notes retained in original quotations.",
+    "financial_inputs_verified": false,
+    "source_publication_day_in_metadata_only": "No exact release clock available; published_at=null retained, source.retrieved_at is actual completion time.",
+    "PDF_scope": "Statement text original pages1–4 (p3 contents); image+semantic reading1,2,4 only; all remaining pages unreviewed. Presentation1–3 text/images only when present.",
+    "generic_byte_verifier": "unknown for reused provider; successful schema/offset checks are not a supported generic byte-verifier result."
+  },
+  "DB_writes": 0,
+  "external_send_or_orders": 0,
+  "thresholds_forecasts_probabilities_fair_values_created": false,
+  "public_answers": [
+    {
+      "issue": "Q1 earnings change",
+      "answer": "Reported revenue20,497m/OP1,205m/parent profit1,082m; construction and hotel segment results explained on statement p4.",
+      "quote_ids": [
+        "actual-table",
+        "construction-and-hotel"
+      ]
+    },
+    {
+      "issue": "Full-year forecast change",
+      "answer": "Issuer maintains revenue86,000m/OP5,000m/parent profit3,500m; explicitly unchanged from2026-05-12.",
+      "quote_ids": [
+        "issuer-guidance-table",
+        "guidance-unchanged"
+      ]
+    },
+    {
+      "issue": "Separate quarter presentation/meeting",
+      "answer": "Statement front explicitly says both none for this release; do not generalize to all periods or public Q&A existence.",
+      "quote_ids": [
+        "no-quarter-presentation"
+      ]
+    },
+    {
+      "issue": "Share split and comparable EPS/shares",
+      "answer": "2025-10-01 1-to-4 split; prior fiscal-year opening assumed split for EPS and average share count.",
+      "quote_ids": [
+        "actual-table",
+        "share-count-split-basis"
+      ]
+    }
+  ],
+  "remaining_public_review": [
+    "Why construction segment profitability improved: detailed cost/mix recognition not established by aggregate segment figures",
+    "Operating cash conversion and uncompleted-construction advances versus cash/deposits: statement body, CF note and orders not read",
+    "Forecast assumptions and duration of labor/material-cost effects, normal earning power and comparable cycle history",
+    "Specific next disclosure date/public earnings Q&A not obtained"
+  ],
+  "next_saved_source_work": [
+    "Within already saved11-page PDF, inspect issuer-indexed segment notes/quarterly-CF note/order appendix if needed; no new GET required."
+  ],
+  "readiness": "Do not ask generic Q1 results/forecast/split questions already answered. Detailed drivers are unreviewed public disclosure, not proven absent public answers."
+}

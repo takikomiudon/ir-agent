@@ -1,0 +1,102 @@
+{
+  "A_and_B_inputs_not_mixed_or_equalized": true,
+  "B_end_common_shares_after_reported_treasury_subtraction": "25875683",
+  "calculation_recorded_at": "2026-10-16T09:33:30.300905+00:00",
+  "company_id": "jp:1975",
+  "exclusions": [
+    "No future company forecastEPS357.48 or priorQ1guide357.49",
+    "No standaloneEPS357.13",
+    "No annualization or mixed A/B inputs",
+    "No stockholders-capital44745 substitution for ordinarycommon netassets50858 includingOCI",
+    "No original Graham rule certification, recovery/liquidation or fairvalue assurance",
+    "No latestshareprice, margin of safety, pass/fail, buy/hold/exit adoption or financial branch"
+  ],
+  "execution": {
+    "GET_DB_Store_normalizer_upstream_import_run": 0,
+    "current_price_MOS_passfail_valuation_adoption_trade_IR": 0,
+    "production_shared_or_old_artifact_edits": 0
+  },
+  "formula": "sqrt(22.5 * EPS * BVPS)",
+  "independent_arithmetic_not_upstream_execution": true,
+  "lanes": [
+    {
+      "BVPS_Decimal60_reference": "1965.51",
+      "BVPS_exact": {
+        "denominator": "100",
+        "numerator": "196551"
+      },
+      "EPS_Decimal60_reference": "358.13",
+      "EPS_exact": {
+        "denominator": "100",
+        "numerator": "35813"
+      },
+      "basis": "Unmodified annual issuer EPS/BPS printed to two decimals.",
+      "fair_value_certified": false,
+      "financial_adopted": false,
+      "lane": "A_direct_issuer_display",
+      "margin_of_safety": null,
+      "price_JPY": null,
+      "radicand_Decimal60_reference": "15837932.16675",
+      "radicand_exact_JPY_squared_per_share_squared": {
+        "denominator": "4000",
+        "numerator": "63351728667"
+      },
+      "reference_2dp_JPY_per_share_ROUND_HALF_UP": "3979.69",
+      "screen_pass": null,
+      "sqrt_Decimal60_JPY_per_share": "3979.68995862114866833731552861620930236481372293476293651401",
+      "sqrt_correct_60sig_rounding_verified_by_exact_Fraction_midpoints": true
+    },
+    {
+      "BVPS_Decimal60_reference": "1965.47468911255405316257738974464944558178425667063551520553",
+      "BVPS_exact": {
+        "denominator": "25875683",
+        "numerator": "50858000000"
+      },
+      "EPS_Decimal60_reference": "358.106763950787294232492910241818568463560369533625236853325",
+      "EPS_exact": {
+        "denominator": "8600787",
+        "numerator": "3080000000"
+      },
+      "basis": "Annual common NI and ordinary common net assets from truncated-million-JPY displays; exact p2 share counts, different EPS/BPS denominators.",
+      "fair_value_certified": false,
+      "financial_adopted": false,
+      "lane": "B_rounded_amount_share_formula",
+      "margin_of_safety": null,
+      "price_JPY": null,
+      "radicand_Decimal60_reference": "15836620.0622687198141480091425708143427825440843117078941431",
+      "radicand_exact_JPY_squared_per_share_squared": {
+        "denominator": "24727915329169",
+        "numerator": "391606600000000000000"
+      },
+      "reference_2dp_JPY_per_share_ROUND_HALF_UP": "3979.53",
+      "screen_pass": null,
+      "sqrt_Decimal60_JPY_per_share": "3979.52510511853911763850496178240582108794677823198529552961",
+      "sqrt_correct_60sig_rounding_verified_by_exact_Fraction_midpoints": true
+    }
+  ],
+  "method_author": "maxgfr/crible maintainers, commit00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7; not Graham-original certification",
+  "numeric_algorithm": {
+    "exact_radicand": "fractions.Fraction",
+    "rational_to_decimal_guard_precision": 120,
+    "sqrt_rounding": "ROUND_HALF_EVEN",
+    "sqrt_significant_digits": 60,
+    "two_decimal_reference_only": "ROUND_HALF_UP"
+  },
+  "period": {
+    "accounting_standard": "Japanese GAAP",
+    "comparative_end": "2025-03-31",
+    "comparative_start": "2024-04-01",
+    "end": "2026-03-31",
+    "financial_scope": "consolidated",
+    "kind": "annual_actual",
+    "start": "2025-04-01"
+  },
+  "precision_limit": "Exact on specified displayed inputs; B truncated reported money and A printed per-share precision do not recover hidden ledger values. Any difference is preserved, not repaired.",
+  "source_inputs_sha256": "78ff6076a0034865ddbe495506bbba35d19f7358aa46911d7dbf73e0c639ec67",
+  "validation": {
+    "all13_existing_quote_Unicode_UTF8_spans_exact": true,
+    "caller_Decimal_context_unchanged": true,
+    "originals_or_method_source_modified": false,
+    "pinned_files_unchanged": true
+  }
+}

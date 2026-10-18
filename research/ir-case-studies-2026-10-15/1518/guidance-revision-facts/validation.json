@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T08:17:10.251430+00:00",
+  "status": "token_unit_arithmetic_reproduced_guidance_meaning_unverified",
+  "original_source_id": "case-public:bd49125a131f709a6ff532a4da187195a1870d6b07bbcb54fa0a7c0277973997",
+  "derived_source_id": "disclosed-facts:d11121f7b4877ed8e14fa3caca52dcf6cbf9427f2b3113b8c8fe784520383f33",
+  "source_snapshot_identical_to_selected_source_bundle_entry": true,
+  "original_source_stable_id_reproduced": true,
+  "original_retrieved_at": "2026-10-15T07:53:42.037552+00:00",
+  "original_published_at": null,
+  "original_source_publication_date": "2026-07-22",
+  "derived_retrieved_at": "2026-10-15T08:17:10.251430+00:00",
+  "review_recorded_at": "2026-10-15T08:17:10.251430+00:00",
+  "source_evidence": {
+    "source_bundle": "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/source-bundle.json",
+    "sourcebook": "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/sources.json",
+    "parent_review": "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/root-recheck.json",
+    "actual_parent_intake_record": "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/actual-intake.json",
+    "raw_file": "1518/issuer-quarter-followup/raw/1ac81e4918af0194f1eb2d5c691f9f21e32f7e28baaf6576518719111f6d556a",
+    "raw_sha256": "1ac81e4918af0194f1eb2d5c691f9f21e32f7e28baaf6576518719111f6d556a",
+    "raw_byte_count": 207591,
+    "text_file": "1518/issuer-quarter-followup/04.pdf.txt",
+    "text_sha256": "cf154ea01ac400bd827f5367b41674e81f092db78b221b49c969eb2ad28657e2",
+    "transport_snapshot": "1518/issuer-quarter-followup/04.json",
+    "transport_snapshot_sha256": "d873cbf33a0d4e00856679348450248002e56f1e2b1ccc781434313b5088daa1",
+    "raw_text_snapshot_sourcebook_match": true,
+    "fresh_pdf_layout_text_byte_identical": true,
+    "actual_database_recheck_performed": false
+  },
+  "quote": {
+    "pdf_page": 1,
+    "page_character_start": 556,
+    "page_character_end_exclusive": 2048,
+    "sha256": "42171e2c8315e96d1590cb06902f2d09fae48b73b6867ae2d541fa5faec6b3f5",
+    "length_characters": 1492,
+    "exact_continuous_page_substring": true,
+    "contains_notice_FY_EPS_DPS_headers_units_and_old_new_rows": true,
+    "visual_page": "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/revision-1.png",
+    "visual_page_sha256": "7481cc2fada41a1fcd8d99bf7ecaea060d68a0e1d57a8b736bba20f16f3bbb8f",
+    "viewed_in_this_task": true
+  },
+  "facts": [
+    {
+      "id": "1518-fy2027-2026-05-13-previous-eps",
+      "kind": "issuer_guidance",
+      "concept": "issuer_forecast_eps",
+      "raw_value": "185.40",
+      "value": "185.40",
+      "unit": "JPY-per-share",
+      "guidance_version": "previous",
+      "version_reference_announcement_date": "2026-05-13",
+      "raw_compound_notation": null,
+      "financial_inputs_verified": false,
+      "meaning_review_required": true
+    },
+    {
+      "id": "1518-fy2027-2026-07-22-revised-eps",
+      "kind": "issuer_guidance",
+      "concept": "issuer_forecast_eps",
+      "raw_value": "229.67",
+      "value": "229.67",
+      "unit": "JPY-per-share",
+      "guidance_version": "revised",
+      "version_reference_announcement_date": "2026-07-22",
+      "raw_compound_notation": null,
+      "financial_inputs_verified": false,
+      "meaning_review_required": true
+    },
+    {
+      "id": "1518-fy2027-2026-05-13-previous-dps",
+      "kind": "issuer_guidance",
+      "concept": "issuer_forecast_annual_dps",
+      "raw_value": "74",
+      "value": "74",
+      "unit": "JPY-per-share",
+      "guidance_version": "previous",
+      "version_reference_announcement_date": "2026-05-13",
+      "raw_compound_notation": "74 円 00 銭",
+      "financial_inputs_verified": false,
+      "meaning_review_required": true
+    },
+    {
+      "id": "1518-fy2027-2026-07-22-revised-dps",
+      "kind": "issuer_guidance",
+      "concept": "issuer_forecast_annual_dps",
+      "raw_value": "130",
+      "value": "130",
+      "unit": "JPY-per-share",
+      "guidance_version": "revised",
+      "version_reference_announcement_date": "2026-07-22",
+      "raw_compound_notation": "130 円 00 銭",
+      "financial_inputs_verified": false,
+      "meaning_review_required": true
+    }
+  ],
+  "DPS_compound_amount_boundary": {
+    "raw_literals": [
+      "74 円 00 銭",
+      "130 円 00 銭"
+    ],
+    "normalizer_raw_numeric_tokens": [
+      "74",
+      "130"
+    ],
+    "normalizer_checks": "Exact numeric-token, quote, raw unit and period-label presence plus explicit1x yen-unit conversion only. It does not parse or validate the full yen/sen compound notation.",
+    "human_meaning_review": "Annual total column and literal00sen were visually checked; token74/130 equals the displayed whole amount only in these exact cases.",
+    "new_sen_parser_added": false,
+    "generalizes_to_nonzero_sen": false,
+    "financial_or_share_basis_certification": false
+  },
+  "reproduction": {
+    "source_id": "disclosed-facts:d11121f7b4877ed8e14fa3caca52dcf6cbf9427f2b3113b8c8fe784520383f33",
+    "applicable": true,
+    "status": "reproduced",
+    "reason_codes": [],
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "original_content_sha256_status": "matched",
+    "original_snapshot_sha256_status": "matched_supplied_snapshot",
+    "fact_kinds": [
+      {
+        "id": "1518-fy2027-2026-05-13-previous-eps",
+        "kind": "issuer_guidance"
+      },
+      {
+        "id": "1518-fy2027-2026-07-22-revised-eps",
+        "kind": "issuer_guidance"
+      },
+      {
+        "id": "1518-fy2027-2026-05-13-previous-dps",
+        "kind": "issuer_guidance"
+      },
+      {
+        "id": "1518-fy2027-2026-07-22-revised-dps",
+        "kind": "issuer_guidance"
+      }
+    ],
+    "original_source_id": "case-public:bd49125a131f709a6ff532a4da187195a1870d6b07bbcb54fa0a7c0277973997"
+  },
+  "fixed_now_bundle_replay_equal": true,
+  "caller_input_unchanged": true,
+  "old_new_same_FY_separate_fact_IDs_and_descriptors": true,
+  "May13_historical_system_availability_claimed": false,
+  "additional_split_conversion": false,
+  "single_year_DPS_extended_to_DDM": false,
+  "financial_inputs_verified": false,
+  "meaning_review_required": true,
+  "model_adopted": false,
+  "valuation": null,
+  "probabilities": null,
+  "shares_derived": null,
+  "execution": {
+    "GET_calls": 0,
+    "database_accesses": 0,
+    "old_file_edits": 0,
+    "production_changes": 0,
+    "full_tests": 0,
+    "direct_normalizer_calls": 2,
+    "reproduction_calls": 1,
+    "reproduction_internally_reruns_normalizer": true,
+    "IR_questions_created": 0,
+    "external_sends": 0,
+    "orders": 0
+  },
+  "original_input_hashes_unchanged": {
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/02.txt": "4312d80548c302e2c2c402b09456309b406a67f2404c8fc3423b06862a969efb",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/03.json": "4ed4ae42eac744a8234cccca743beb8defd1c28dabbf338eb7db8af1f6c6b452",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/review.json": "d262f068c0fe2c4a05144456c24f0ab096c04f286aa251e817515f002b2dbcad",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/sources.json": "bac8190879c1cd9e11a8e719ed8e694b2e52a78c9a49aff1cff9cc4943d30d0e",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/02.pdf.txt": "7144f70b83dfb1c4c308fad3910d66884544ccd1bb1db6495f3f3513097b00b5",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/03.pdf.txt": "cf2bdd7604ec46421f8c5200a19cc0676ea0859a9a4c38b2f3f33229dddd96d2",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/actual-intake.json": "ea896c09435dbe4cf363ba2ce5f6f049b92a289bbbf5f764634d6e5875fa84de",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/byte-verifier-result.json": "3898ad309110e20fa3e538455e07d68b6cd9143dea8976e635564603a4db5566",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/04.pdf.txt": "cf154ea01ac400bd827f5367b41674e81f092db78b221b49c969eb2ad28657e2",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/01.json": "776ffa7a76e554ff8a84ed1e33d11c9abcd7c3583bc939ece1b563c65cb6882c",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/root-recheck.json": "168fefcb15e1b18f3f88f42581f0adfbc00ba725e6dd2db0076b285c30cdd26b",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/revision-1.png": "7481cc2fada41a1fcd8d99bf7ecaea060d68a0e1d57a8b736bba20f16f3bbb8f",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/04.txt": "b2ce1f28be954ee3bcb49a72fa1cdf17784357dc2e32377ce57e59da633b2e00",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/01.txt": "f114c9853f69bd965889c33d05493bcbde94516c513784773ad5c1f842a9e846",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/statement-01.png": "9759a5960684b709e46669b92794e4d48af2f6ef0cda71ecfd27279259983283",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/02.json": "4f1757b23fb782758c87f9ffb50d59fddfc5f4167dc278ae03ebf669b5d9e1a1",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/README.md": "13a93a9a419cb73cf6a345c17eb68f60d773e16801b644471486a95185ff56ed",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/transport-manifest.json": "a4a9dd376e458a59e93bab38805c0ffa0e86193fd61fff00d7a155e971160786",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/validation.json": "1a614c142e952ecdfabd842e9595912eb0fde19dfd1457dd340df7d5f959e80b",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/04.json": "d873cbf33a0d4e00856679348450248002e56f1e2b1ccc781434313b5088daa1",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/source-bundle.json": "e8f0688afce7fe8fcd0971b6e4cdf93098b17d45ca78dc2a5ef718c54df89e91",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/03.txt": "ccd9d8be1be5c51389d564289d9ad442462f33810a541d9d079a5fdbf54d9fa1",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/raw/77d13ad4b3104dc74956326dc606fbb5983c11e8caf1fc0a8f2503200c9e8555": "77d13ad4b3104dc74956326dc606fbb5983c11e8caf1fc0a8f2503200c9e8555",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/raw/f114c9853f69bd965889c33d05493bcbde94516c513784773ad5c1f842a9e846": "f114c9853f69bd965889c33d05493bcbde94516c513784773ad5c1f842a9e846",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/raw/1ac81e4918af0194f1eb2d5c691f9f21e32f7e28baaf6576518719111f6d556a": "1ac81e4918af0194f1eb2d5c691f9f21e32f7e28baaf6576518719111f6d556a",
+    "research/ir-case-studies-2026-10-15/1518/issuer-quarter-followup/raw/99ea435f35bd0fe355a587d5fd8d715764bbface9818a75e6d068db1609eab74": "99ea435f35bd0fe355a587d5fd8d715764bbface9818a75e6d068db1609eab74"
+  },
+  "created_artifact_hashes": {
+    "request.json": "4fb14dbc8f5942cf81f6603260dfe3871641258a6ea8426510e96303e5e32457",
+    "bundle.json": "9509005a9d6debeacec85291fa433c28460e189592b583e184a169651bdf30b3"
+  }
+}

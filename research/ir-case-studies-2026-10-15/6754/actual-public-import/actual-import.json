@@ -1,0 +1,65 @@
+{
+  "recorded_at": "2026-10-15T14:22:48.574323+00:00",
+  "recovery_started_at": "2026-10-15T14:22:48.393713+00:00",
+  "status": "completed_after_local_result_shape_error",
+  "initial_local_errors": [
+    "Import and queue/claim succeeded; parent wrongly looked for packet in the claim operation response.",
+    "During inspection parent wrongly used id instead of job_id in that operation response. No further import or new lease generation."
+  ],
+  "recovery": "Loaded existing immutable job through Store.job using persisted job id; completed the original attempt 1.",
+  "source_additions_verified_against_backup": 2,
+  "company_or_thesis_ingest_additions": 0,
+  "job_id": "intake-4ba64ea596154dc930aa8824",
+  "generation": 1,
+  "actual_counts": {
+    "companies": 1819,
+    "sources": 100,
+    "source_classifications": 99,
+    "jobs": 38,
+    "job_attempts": 35,
+    "job_attempt_events": 70,
+    "job_request_receipts": 35,
+    "theses": 0,
+    "questions": 0,
+    "replies": 0,
+    "decision_policies": 0,
+    "position_declarations": 0
+  },
+  "source_availability_counts": {
+    "legacy_presence": 28,
+    "trusted_insert": 72
+  },
+  "new_source_first_save_receipts": [
+    {
+      "entity_type": "source",
+      "entity_id": "case-public:65bdda374f8c3ce9530c869814a23bcf8df06401ecedbb9f7557c4583abb03b5",
+      "version": 0,
+      "snapshot_sha256": "6d566e9a1236bef3b889ed6cf8c96cf22ad469f203fe2d1405b1a71bf648eb25",
+      "first_saved_at": "2026-10-15T14:21:18.724723+00:00",
+      "presence_observed_at": "2026-10-15T14:21:18.724723+00:00",
+      "basis": "trusted_insert"
+    },
+    {
+      "entity_type": "source",
+      "entity_id": "case-public:7fc71674df064d3203d00e97d4637c43ba4126201741b52d2dabc9d5355966c7",
+      "version": 0,
+      "snapshot_sha256": "536383dcea25a9a0a23e9f578269d527b5edd93821b434b1a7aa10bd254bbaa2",
+      "first_saved_at": "2026-10-15T14:21:18.724723+00:00",
+      "presence_observed_at": "2026-10-15T14:21:18.724723+00:00",
+      "basis": "trusted_insert"
+    }
+  ],
+  "old_98_source_records_unchanged": true,
+  "all_1819_company_metadata_records_unchanged": true,
+  "old_97_classifications_unchanged": true,
+  "backup_path": "data/ir-research-before-6754-public-20261015T142118Z.sqlite3",
+  "backup_sha256": "5c5f11001674a965adac09d29c4db56cd9d35beda26a564afa470679aac9a666",
+  "database_main_sha256_before_initial_import": "6a2b7b6b7bd4657aad45f65371243317f9c20b31c16c0ea02b98ca4852c0e8a1",
+  "schema_note": "Current Store schema created position_declarations. No actual declarations or historical reclassification.",
+  "measurement_scope": "One source-classification lease only. Includes local handling/recovery; not full research throughput or active work time.",
+  "financial_inputs_verified": false,
+  "forecast_or_model_adopted": false,
+  "external_sends": 0,
+  "orders": 0,
+  "database_main_sha256_after": "32ab5dc5af81d9d0943d0ea5cd06cd828efe34a009d8ab6d640d95f7add5f4ae"
+}

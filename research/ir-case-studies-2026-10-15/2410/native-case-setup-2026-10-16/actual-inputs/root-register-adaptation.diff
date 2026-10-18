@@ -1,0 +1,58 @@
+--- 2341/root-register_once.py
++++ 2410/root-register_once.py
+@@ -16,7 +16,7 @@
+ HERE = Path(__file__).resolve().parent
+ ROOT = HERE.parents[4]
+ DB = ROOT / 'data/ir-research-2026-10-15.sqlite3'
+-EXPECTED = 'a3fe66a1c0ff08e78709281b46869c71bd8b883275f6cf5fd6bfc9d250cc4544'
++EXPECTED = 'a11f53fb245bad768e591012c8823094b5b37ca9d2e00f29723cea75ba57bece'
+ SPEC = importlib.util.spec_from_file_location('checks', ROOT / 'research/ir-case-studies-2026-10-15/5988/annual-capital-balance-disclosed-facts/actual-connection/shadow_preflight.py')
+ CHECKS = importlib.util.module_from_spec(SPEC)
+ SPEC.loader.exec_module(CHECKS)  # Pure helpers, never its main.
+@@ -57,16 +57,16 @@
+         assert previous['input_files_sha256'] == inputs
+         assert previous['runner_sha256'] == digest(Path(__file__))
+         assert previous['execution_code_sha256'] == digest(code_file)
+-    with tempfile.TemporaryDirectory(prefix='ir-2341-native-', dir='/tmp') as directory:
++    with tempfile.TemporaryDirectory(prefix='ir-2410-native-', dir='/tmp') as directory:
+         if stage == 'actual':
+-            backup = ROOT / 'data/backups/ir-research-before-2341-native-case-2026-10-16.sqlite3'
++            backup = ROOT / 'data/backups/ir-research-before-2410-native-case-2026-10-16.sqlite3'
+             assert not backup.exists()
+         else:
+             backup = Path(directory) / 'copy.sqlite3'
+         with closing(CHECKS.readonly()) as origin:
+             before, schema = CHECKS.snapshot(origin), CHECKS.schema(origin)
+-            assert CHECKS.state(origin) == {'current_cases': 24, 'reviewed_sources': 142}
+-            assert sum(before['qualitative_case_versions'].values()) == 46
++            assert CHECKS.state(origin) == {'current_cases': 25, 'reviewed_sources': 144}
++            assert sum(before['qualitative_case_versions'].values()) == 47
+             assert origin.execute("SELECT COUNT(*) FROM jobs WHERE status!='completed'").fetchone()[0] == 0
+             with closing(sqlite3.connect(backup)) as copied:
+                 origin.backup(copied)
+@@ -85,14 +85,14 @@
+                 event('register', 'succeeded', registered)
+                 save(stage + '-case.json', registered)
+                 assert registered['version'] == registered['config_revision'] == 1
+-                assert len(registered['record']['reviewed_sources']) == 2
++                assert len(registered['record']['reviewed_sources']) == 5
+                 assert registered['record']['bootstrap_meaning_verified'] is False
+                 after = CHECKS.snapshot(store.connection)
+                 assert CHECKS.schema(store.connection) == schema
+                 for table in before:
+                     assert not (before[table] - after[table])
+                     assert sum(after[table].values()) - sum(before[table].values()) == (1 if table == 'qualitative_case_versions' else 0), table
+-                assert CHECKS.state(store.connection) == {'current_cases': 25, 'reviewed_sources': 144}
++                assert CHECKS.state(store.connection) == {'current_cases': 26, 'reviewed_sources': 149}
+                 queue = service.queue_cases([request['case_id']], now().isoformat(), now=now())
+                 assert queue['jobs_created'] == 0
+                 assert CHECKS.snapshot(store.connection) == after
+@@ -105,7 +105,7 @@
+                     'backup_file': str(backup), 'DB_main_before_sha256': EXPECTED, 'DB_main_after_sha256': digest(DB),
+                     'input_files_sha256': inputs, 'runner_sha256': digest(Path(__file__)), 'execution_code_sha256': digest(code_file),
+                     'old_rows_all_preserved': True, 'only_delta': {'qualitative_case_versions': 1},
+-                    'case_state': {'current_cases': 25, 'reviewed_sources': 144}, 'initial_queue': queue,
++                    'case_state': {'current_cases': 26, 'reviewed_sources': 149}, 'initial_queue': queue,
+                     'financial_inputs_adopted': False, 'actual_DB_writes': stage == 'actual'}
+                 save(stage + '-completion.json', result)
+                 event('verification', 'succeeded', {'old_rows_preserved': True})

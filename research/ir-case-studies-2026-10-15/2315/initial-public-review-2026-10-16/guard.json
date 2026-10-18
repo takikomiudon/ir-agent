@@ -1,0 +1,74 @@
+{
+  "company_id": "jp:2315",
+  "maximum_GETs": 5,
+  "user_agent": "Codex-IR-Research/0.1",
+  "allowed_requests": [
+    {
+      "role": "issuer_robots",
+      "url": "https://www.caica.jp/robots.txt",
+      "basis": "robots endpoint on selected official host"
+    },
+    {
+      "role": "issuer_root",
+      "url": "https://www.caica.jp/",
+      "basis": "selected CSV official_url (IR entry, not guessed corporate domain root)"
+    },
+    {
+      "role": "IR_static_library",
+      "url": "https://www.caica.jp/ir-library/",
+      "literal_anchor": {
+        "url": "https://www.caica.jp/ir-library/",
+        "href": "https://www.caica.jp/ir-library/",
+        "label": "IR ライブラリー 矢印"
+      },
+      "source_capture_sequence": 2,
+      "source_capture_pointer": "$.html_visible_text.links[25]",
+      "source_raw_sha256": "78c8f174dc306420babe23d842b5b3f9b98f7e7f7aa84a97c4a5bc2510138520",
+      "host_not_held": true,
+      "robots_branch": "complete404_missingrobots"
+    },
+    {
+      "role": "latest_Japanese_Q3_statement",
+      "url": "https://www.caica.jp/wp-content/uploads/2026/09/20260914_1_tanshin.pdf",
+      "literal_anchor": {
+        "url": "https://www.caica.jp/wp-content/uploads/2026/09/20260914_1_tanshin.pdf",
+        "href": "https://www.caica.jp/wp-content/uploads/2026/09/20260914_1_tanshin.pdf",
+        "label": "第３四半期決算短信（連結）"
+      },
+      "source_capture_sequence": 3,
+      "source_capture_pointer": "$.html_visible_text.links[64]",
+      "source_raw_sha256": "f31c90c6e0a4d30d86a6a3e40cdaf7e7db8bced7c6e147da7af3c4e15bde9b3f",
+      "host_not_held": true,
+      "robots_branch": "complete404_missingrobots"
+    }
+  ],
+  "robots_reviews": {
+    "www.caica.jp": {
+      "proceed": true,
+      "branch": "complete404_missingrobots",
+      "raw_file": "research/ir-case-studies-2026-10-15/2315/initial-public-review-2026-10-16/raw/5ce956817ce233937d5a860abc30dfffca659aa6fc09dc572e03e458fadca715",
+      "raw_sha256": "5ce956817ce233937d5a860abc30dfffca659aa6fc09dc572e03e458fadca715",
+      "meaning": "Existingcomplete404missingrobotsbranch; HTMLbody not parsed as permissionrules; no robotsretry",
+      "observed_at": "2026-10-16T04:49:11.614248+00:00"
+    }
+  },
+  "holds_file": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+  "holds_sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952",
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu"
+  ],
+  "maximum_samehost_explicit_redirect_hops": 1,
+  "no_JS_search_form_externalhost_or_diagnostics": true,
+  "maximum_meaning_image_pages": 4
+}

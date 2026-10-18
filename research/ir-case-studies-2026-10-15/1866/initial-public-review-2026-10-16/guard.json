@@ -1,0 +1,63 @@
+{
+  "company_id": "jp:1866",
+  "maximum_GETs": 5,
+  "batch_maximum_GETs": 10,
+  "batch_companies": [
+    "1866",
+    "1870"
+  ],
+  "user_agent": "Codex-IR-Research/0.1",
+  "allowed_requests": [
+    {
+      "role": "issuer_robots",
+      "url": "https://www.kitano.co.jp/robots.txt",
+      "basis": "robots endpoint for CSV official host"
+    },
+    {
+      "role": "issuer_root",
+      "url": "https://www.kitano.co.jp/",
+      "basis": "selected CSV official_url"
+    },
+    {
+      "role": "results_index",
+      "url": "https://www.kitano.co.jp/ir/library/earnings-release/",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[1].html_visible_text.links[20]",
+      "literal_href": "/ir/library/earnings-release/",
+      "label": "決算短信"
+    },
+    {
+      "role": "latest_quarter_statement",
+      "url": "https://www.kitano.co.jp/wp-content/uploads/2026/08/令和９年３月期-第１四半期決算短信〔日本基準〕（連結）-1.pdf",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[2].html_visible_text.links[47]",
+      "literal_href": "/wp-content/uploads/2026/08/令和９年３月期-第１四半期決算短信〔日本基準〕（連結）-1.pdf",
+      "label": "第1四半期 決算短信"
+    }
+  ],
+  "robots_reviews": {
+    "www.kitano.co.jp": {
+      "proceed": true,
+      "branch": "complete404_missingrobots",
+      "raw_file": "research/ir-case-studies-2026-10-15/1866/initial-public-review-2026-10-16/raw/80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880",
+      "raw_sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880",
+      "scope": "Missing robots response404; not parsed permission from failure HTML, no assertion about all site access conditions"
+    }
+  },
+  "holds_file": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+  "holds_sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952",
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu"
+  ]
+}

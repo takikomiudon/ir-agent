@@ -1,0 +1,263 @@
+{
+  "recorded_at": "2026-10-16T08:12:46.781119+00:00",
+  "purpose": "Historical-results-based research candidate selection source discovery, limited to JPX-Nikkei Mid and Small Cap Index; no numeric screening or policy adoption.",
+  "source": {
+    "title": "JPX日経中小型株指数算出要領",
+    "authors": [
+      "株式会社ＪＰＸ総研",
+      "株式会社 日本経済新聞社"
+    ],
+    "version_label": "2026年8月3日版",
+    "printed_issue_date": "2026-08-03",
+    "all_clause_effective_date": null,
+    "effective_date_limit": "Cover edition/issue date is not a separately verified effective date for every historical clause. Change-history pages were used only as front-matter/version locators, not fully reviewed methodology.",
+    "source_url": "https://www.jpx.co.jp/markets/indices/line-up/files/cal2_1_jpxsmall.pdf",
+    "retrieved_at": "2026-10-16T08:09:47.897553+00:00",
+    "raw_entity_file": "research/ir-jpx-smallmid-selection-method-discovery-2026-10-16/raw/87249f72fbb21bb0a9372f5750b5acf2128578427cf5d137b4e40cc2a379aa59",
+    "raw_sha256": "87249f72fbb21bb0a9372f5750b5acf2128578427cf5d137b4e40cc2a379aa59",
+    "text_file": "research/ir-jpx-smallmid-selection-method-discovery-2026-10-16/methodology-full.txt",
+    "text_sha256": "2fa6f3d0d860728a3fe55333802b08d48ef1a65b779f32b0209fbaa25687c627",
+    "page_count": 22,
+    "meaning_and_image_review_physical_pages": [
+      11,
+      12,
+      13,
+      14
+    ],
+    "printed_pages": [
+      10,
+      11,
+      12,
+      13
+    ],
+    "locator_only": [
+      "cover physical1 edition/authors/issue",
+      "TOC physical2",
+      "front matter physical3/4 edition history locator",
+      "first headings physical15/16 to locate unreviewed data definitions"
+    ],
+    "not_reviewed": "Other pages not semantically reviewed; no full-book or complete index replication claim.",
+    "publication_time": null,
+    "actual_database_first_save": null
+  },
+  "discovery_result": {
+    "historical_results_selection_workflow_found": true,
+    "complete_machine_reproducible_policy_confirmed": false,
+    "forecast_values_required_by_read_selection_clauses": false,
+    "meaning": "Read selection clauses use historical ROE/cumulative operating profit, corporate disclosures and market size/liquidity; no company EPS forecast or target price is required in these clauses. Missing data definitions do not license surrogate inputs.",
+    "implementation_or_investment_adoption": false
+  },
+  "rules": [
+    {
+      "id": "S1",
+      "physical_pages": [
+        11
+      ],
+      "clause": "III.1(1)",
+      "paraphrase_ja": "定期入替基準日は毎年6月最終営業日、公表は8月第5営業日、入替後算出は8月最終営業日。初期選定の2016-06-30とは区別。",
+      "quote_ids": [
+        "P1-schedule"
+      ]
+    },
+    {
+      "id": "S2",
+      "physical_pages": [
+        11
+      ],
+      "clause": "III.1(2)①",
+      "paraphrase_ja": "基準日時点の東証Prime/Standard/Growth上場普通株。重複上場外国株は原則、直近1年の東証売買代金が最大の場合のみ。普通株同等として算出者が特に必要と認める例外あり。2016初期選定の旧市場列挙を現在母集団に使わない。",
+      "quote_ids": []
+    },
+    {
+      "id": "S3",
+      "physical_pages": [
+        11,
+        12
+      ],
+      "clause": "III.1(2)②(a)–(i)",
+      "paraphrase_ja": "以下をいずれか満たす銘柄を除外: 上場3年未経過（明記のテクニカル上場例外あり）、直近期短信又は内部統制報告未開示（算出者のやむを得ない事情例外）、参照決算期間のいずれかの期首又は期末に債務超過、参照期間全期営業赤字（OP非開示時はIII.4(1)③の代替利益）、参照期間全期最終赤字、直近期財務諸表等にGC注記（その後提出の四半期含む）、直近期内部統制報告に開示すべき重要不備又は評価結果表明不能、基準日時点で整理/特別注意指定、基準日から1年以内の公表措置/改善報告徴求（再提出含む）/上場契約違約金徴求/RRI75以上の該当かつ程度が大きい場合。(f)–(i)は必要に応じ基準日後から選定までの状況も勘案。決算期間の正確な定義は未読III.4(1)①へ参照されており、今回独自補完しない。",
+      "quote_ids": [
+        "P3-exclusion-financial-period-ref"
+      ]
+    },
+    {
+      "id": "S4",
+      "physical_pages": [
+        11,
+        12
+      ],
+      "clause": "III.1(2)③",
+      "paraphrase_ja": "②後の集合で基準日時価総額順位上位20%を大型株として除外。ただし既存構成銘柄はPDF上14%。HTML概要18%と不一致のため採用境界は未解決。時価総額は指数用上場株式数ベースで、浮動株時価総額と同一視しない。",
+      "quote_ids": [
+        "P2-marketcap-basis",
+        "P4-existing-largecap-PDF",
+        "H1-existing-largecap-HTML"
+      ]
+    },
+    {
+      "id": "S5",
+      "physical_pages": [
+        12
+      ],
+      "clause": "III.1(2)④",
+      "paraphrase_ja": "③後の集合から直近1年売買代金合計150億円以下、及び基準日時価総額100億円以下の銘柄を除外。候補500未満の場合は500を超えるまで両閾値を10億円刻みで下げる（500に達したら停止とは読み替えない）。合併/株式交換前は原則存続/親会社の売買代金、株式移転等テクニカル上場前は算出者が主体とみなす会社の売買代金を使用。",
+      "quote_ids": [
+        "P5-liquidity-floors",
+        "P6-liquidity-relaxation"
+      ]
+    },
+    {
+      "id": "S6",
+      "physical_pages": [
+        12
+      ],
+      "clause": "III.1(2)⑤",
+      "paraphrase_ja": "④の集合を3年平均ROEと3年累積営業利益でそれぞれ順位化。各1位は候補数と同点、最下位1点。ROE順位点0.7＋累積OP順位点0.3が総合スコア。財務値そのものの70/30加重平均ではない。詳細データ定義はIII.4参照で今回は未読。",
+      "quote_ids": [
+        "P7-quant-weight"
+      ]
+    },
+    {
+      "id": "S7",
+      "physical_pages": [
+        13
+      ],
+      "clause": "III.1(2)⑥",
+      "paraphrase_ja": "④の集合に独立社外取締役（独立役員指定人数が取締役総数の過半数）/女性役員（有報役員状況による30%以上）、IFRS採用又は適用開示、決算情報及びCG報告のTDnet英文開示の状況を勘案した定性加点。定量のみの選定との差異が最大10銘柄程度の規模、項目は将来変更可能。今回4頁には各項目の具体加点数が示されず、均等点や独自点数を補わない。",
+      "quote_ids": [
+        "P8-qualitative-scale",
+        "P9-qualitative-female"
+      ]
+    },
+    {
+      "id": "S8",
+      "physical_pages": [
+        13
+      ],
+      "clause": "III.1(2)⑦",
+      "paraphrase_ja": "定量＋定性の最終点降順。ただし3年平均ROEと直近ROEの両方が④集合の下位10%若しくは負に該当する銘柄、又は3年累積OP負の銘柄はそれらを除いた銘柄の後順位。最終点同点は3年平均ROE順位点の高い方優先。ROEも同点の残余処理を今回の本文から補わない。",
+      "quote_ids": [
+        "P10-ranking-tie"
+      ]
+    },
+    {
+      "id": "S9",
+      "physical_pages": [
+        13,
+        14
+      ],
+      "clause": "III.1(2)⑧",
+      "paraphrase_ja": "初期選定は上位200。定期入替は既存構成で最終順位250以内を維持。200未満なら最終順位上位から、3年平均又は直近ROEが④集合中央値超、かつ最終順位200以内の2条件を満たす銘柄を追加。なお不足すれば最終順位200以内の未採用を3年平均ROEの高い順に200まで追加。250以内維持は②～④の除外を飛び越える規則ではない。",
+      "quote_ids": [
+        "P11-incumbent-retention",
+        "P12-addition-median"
+      ]
+    },
+    {
+      "id": "S10",
+      "physical_pages": [
+        14
+      ],
+      "clause": "III.1(2)⑨及び末尾",
+      "paraphrase_ja": "将来の組織再編等による上場廃止見込みは必要に応じ調整。著しく不適当なら算出者が非採用可能。指数コンサルテーションで決定された場合は投資機能性/安定性から新規追加を見送る。機械ルールのみで完全一致を保証しない。",
+      "quote_ids": []
+    },
+    {
+      "id": "S11",
+      "physical_pages": [
+        14
+      ],
+      "clause": "III.2",
+      "paraphrase_ja": "上場廃止、整理銘柄又は特別注意銘柄指定で非定期除外。算出者が継続を著しく不適当と認める裁量除外あり。詳細の指数修正日はIV参照で未読、ここから株式の実売却日を生成しない。",
+      "quote_ids": [
+        "P13-irregular-exclusion"
+      ]
+    },
+    {
+      "id": "S12",
+      "physical_pages": [
+        14
+      ],
+      "clause": "III.3",
+      "paraphrase_ja": "株式移転等で旧構成が上場廃止され新設等会社が遅滞なく上場する場合、算出者が主体とみなす会社が旧構成なら追加。スピンオフ対象が権利落日～効力発生日に新規上場する場合も追加。構成不足の穴埋めを目的とした非定期追加は行わない（続きは未読次頁）；特殊コーポレートアクション追加まで禁止した規則ではない。",
+      "quote_ids": [
+        "P14-no-deficit-topup"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "D1",
+      "topic": "Incumbent large-cap exclusion",
+      "PDF": "14%",
+      "HTML": "18%",
+      "PDF_quote": "P4-existing-largecap-PDF",
+      "HTML_quote": "H1-existing-largecap-HTML",
+      "HTML_page_update_label": "2026/08/07",
+      "resolved": false,
+      "handling": "Preserve both labelled versions. Do not decide a numerical production threshold or attribute an unverified reason for discrepancy."
+    }
+  ],
+  "remaining_for_possible_replication": [
+    {
+      "topic": "Financial data definitions",
+      "location": "III.4, physical15–16 onward",
+      "status": "Saved full PDF, not meaning/image reviewed",
+      "needs": "Applicable latest fiscal periods, precise ROE/equity/profit basis, irregular-period adjustments and OP alternatives must be read before mapping data."
+    },
+    {
+      "topic": "Exact qualitative scoring",
+      "location": "III.1(2)⑥ physical13",
+      "status": "Criteria and approximate turnover scale stated; exact per-item points not established in read pages",
+      "needs": "Do not invent scores or label a quantitative-only adaptation exact index reproduction."
+    },
+    {
+      "topic": "Original universe and status/data availability",
+      "status": "Not acquired or screened",
+      "needs": "A fixed343-company contact list is not the index-wide population for percentile ranks, thresholds, medians or membership buffers. RepRisk and calculator judgements are not automatically available as public inputs."
+    },
+    {
+      "topic": "Residual tie and boundary mechanics",
+      "status": "Do not infer",
+      "needs": "PDF supplies score tie preference but no invented final tie ordering or rounded percentile method."
+    }
+  ],
+  "horizon_boundaries": {
+    "index_reconstitution": "Annual June reference / August publication and effective index calculation.",
+    "internal_research_monitoring": "Existing author quarterly review is a separate management practice.",
+    "user_holding_horizon": "A few months to one year; not imposed by index rules.",
+    "profit_taking_price_or_order_rule": null,
+    "IR_effectiveness_or_answer_likelihood": null,
+    "company_exclusion_as_investment_recommendation": false
+  },
+  "operations": {
+    "new_GETs": 3,
+    "GET_budget": 4,
+    "budget_exhaustion_not_pursued": true,
+    "PDFs_acquired": 1,
+    "additional_hosts": 0,
+    "redirect_followed": 0,
+    "retries": 0,
+    "DB_access": 0,
+    "Store_initializations": 0,
+    "company_screening": 0,
+    "formal_policy_adoption": 0,
+    "financial_input_adoption": 0,
+    "IR_contact": 0
+  },
+  "stop_reason": "Target methodology acquired in3GET; prescribed4selection pages read and visually checked. Other indices, constituent data, data-definition pages and implementation are outside this finite phase.",
+  "unacquired_official_constituent_locator": {
+    "capture_file": "research/ir-jpx-smallmid-selection-method-discovery-2026-10-16/capture.json",
+    "capture_sha256": "36a97a5d315b512d015ae6b49bf4525b17903ad9004adf5a6a3c4f676491f09b",
+    "pointer": "/GETs/1/html_visible_text/links/58",
+    "url": "https://www.jpx.co.jp/markets/indices/line-up/files/mei2_1_jpxsmall.pdf",
+    "href": "https://www.jpx.co.jp/markets/indices/line-up/files/mei2_1_jpxsmall.pdf",
+    "label": "構成銘柄一覧",
+    "new_GETs_for_this_link": 0,
+    "contents_read": false,
+    "constituent_effective_date": null,
+    "constituent_count": null,
+    "current_membership_confirmed": false,
+    "boundary": "HTML label only. Future use could intersect official externally-selected research candidates with IR-contact universe; membership is not fair value, a buy recommendation or an exit-price rule."
+  }
+}

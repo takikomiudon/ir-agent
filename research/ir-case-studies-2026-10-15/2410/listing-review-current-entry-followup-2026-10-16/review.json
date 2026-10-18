@@ -1,0 +1,92 @@
+{
+  "recorded_at": "2026-10-16T06:57:12.401461+00:00",
+  "status": "finite_current_entry_and_issuer_result_frozen_awaiting_root_acceptance",
+  "company_id": "jp:2410",
+  "source_id": "case-public:fa3d34504d48af08ce1888f2abd909489f5a8217b682f22bf87a5fe3cc7e3c4b",
+  "source_native_SHA256": "22527bba42e134b829fc5b327f1eae2023cf5462d4f56c6bc052a9253580e996",
+  "public_resolution_of_old_residual": {
+    "old_residual": "10/1後の審査結果を未確認",
+    "result": "Company-published result now located and read, not still wholly unknown",
+    "new_evidence": "Current IRtop links58 and issuer Oct15 two-page notice",
+    "old_records_preserved": true
+  },
+  "findings": [
+    {
+      "id": "current-entry",
+      "evidence": "link-selection.json",
+      "meaning": "10/16取得の現在IRtopに10/15適合/解除告知が先頭で明示された。同host /uploads/en/..pdf をliteralのまま取得し日本語正式本文を確認。既存10/1/財務一覧や他一覧は再GETしない。",
+      "limits": "見える当該一覧範囲の確認で全サイト/全更新の最新性や現在取引所状態は認定しない。"
+    },
+    {
+      "id": "issuer-reported-compliance",
+      "quote_ids": [
+        "R1-formal-publication-date",
+        "R2-formal-title",
+        "R3-received-compliance-report-and-Sep30-scope",
+        "R5-historical-compliance-table-and-units",
+        "R6-table-basis-footnotes"
+      ],
+      "meaning": "会社は取引所の適合状況報告を受領し、2026/9期末時点でPrimeすべての上場維持基準に適合した旨を10/15公表。表の流通株式時価総額は2025/9/30 76.44億円・2026/9/30 102.41億円、Prime基準100億円で、基準日時点の分布状況によるものと注記。",
+      "limits": "基準日時点の会社報告であり、現在時価総額/浮動株価値/換金能力や投資閾値へ採用しない。数値を再計算・現在株価逆算・財務入力化しない。"
+    },
+    {
+      "id": "received-notice-vs-effective-date",
+      "quote_ids": [
+        "R4-notification-release-date-and-continuation-decision"
+      ],
+      "meaning": "会社は10/15当日に取引所から10/16付で監理銘柄（審査中）指定を解除する旨の通知を受領したと明示。受領したという会社報告と解除の効力日を別に記録する。",
+      "limits": "効力日は日付精度で時計時刻不明。10/16の到来だけから取引所独立現状・実施時刻・今後の継続上場/売買保証を主張しない。一方、会社が解除通知を受領したという新しい公表既答を全未確認のまま扱わない。"
+    },
+    {
+      "id": "withdrawal-and-Prime-decision",
+      "quote_ids": [
+        "R4-notification-release-date-and-continuation-decision"
+      ],
+      "meaning": "Standard市場への変更申請を取り下げ、Prime上場を継続することとしたとの会社決定が公表された。10/1の条件分岐のみだった状態から、会社の公表上は適合確認側の結果・対応が具体化した。",
+      "limits": "別途の申請取下完了書類/取引所現在一覧は未取得。申請承認によるStandard移行やTOB/整理/上場廃止等へ読み替えない。他資料/現時点に別イベントが無いという断定ではない。"
+    },
+    {
+      "id": "efforts-vs-return",
+      "quote_ids": [
+        "R7-company-efforts-and-future-aspiration"
+      ],
+      "meaning": "会社は中計/ガバナンス/IR/株主還元等の取組みを進めたと説明し、今後も継続適合を目指す意向を記載。",
+      "limits": "個別施策の因果効果/IR超過収益/継続適合保証/配当持続や通常業績の改善確定にはしない。"
+    }
+  ],
+  "decision_relevance_boundary": {
+    "normal_earnings_research": "上場制度の会社公表結果という事前確認を更新する材料であり、通常業績仮説/数カ月〜1年の価値検証との適合を自動認定しない。7/31Q3/FYguideはそれぞれ当時期間のまま。",
+    "automatic_exclusion": false,
+    "speculation_recommendation": false,
+    "model_forecast_or_price_adoption": null,
+    "IR_branches": null,
+    "IR_value": "unproven",
+    "send_ready": false
+  },
+  "remaining": "取引所独立の現在指定/市場状況、申請取下完了の別証憑は未確認。会社公表の解除通知/適合結果/Prime継続決定は公開既答として将来の同じ問いから除外する。今回これ以上追跡しない。",
+  "prior_files_pinned_unchanged": {
+    "initial-public-review-2026-10-16/source-bundle.json": {
+      "file": "research/ir-case-studies-2026-10-15/2410/initial-public-review-2026-10-16/source-bundle.json",
+      "sha256": "730f35c69bc3204372b1110c168ba4aefcef4e3728ea66a52d1651e7e977af02"
+    },
+    "listing-notice-public-followup-2026-10-16/source-bundle.json": {
+      "file": "research/ir-case-studies-2026-10-15/2410/listing-notice-public-followup-2026-10-16/source-bundle.json",
+      "sha256": "c36b4ec01b87d2ff5fa56dd20fbe1ce8b85be5450b971e5edc889b99b0690205"
+    },
+    "profit-and-notes-saved-pages-2026-10-16/review.json": {
+      "file": "research/ir-case-studies-2026-10-15/2410/profit-and-notes-saved-pages-2026-10-16/review.json",
+      "sha256": "d57c83718c95f7870a01c290d08bb99a249c4f5c4b446aec29f6be2c849eb713"
+    }
+  },
+  "operations": {
+    "new_GETs": 2,
+    "robots_reGETs": 0,
+    "retries_redirects_JS_otherhost": 0,
+    "DB": 0,
+    "Store": 0,
+    "code_shared_old_changes": 0,
+    "financial_adoption": 0,
+    "IR": 0
+  },
+  "stop": "Current entry+one uniquely selected post-Oct1 result PDF. Two meaning image pages complete, no further chain."
+}

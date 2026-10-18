@@ -1,0 +1,169 @@
+{
+  "recorded_at": "2026-10-15T23:21:52.368476+00:00",
+  "status": "finite_static_input_definition_review_completed_inputs_still_unverified",
+  "fixed_repository": "crdcj/MagicFormula",
+  "fixed_commit": "ac05a3bd3e146aa924b2b5e11ebffa3484c2c81d",
+  "git_blob_sha": "98d7b92a2839aad0265b2a4402d68a2b0557e8f7",
+  "source_file": "research/ir-brazil-magic-formula-financial-definitions-2026-10-15/2_magic_financials.ipynb.source",
+  "source_file_sha256": "3189fb03f2b8dbc6755b42eefb5e7ac94995d03199b64e60ee80bb859f7b48f6",
+  "findings": [
+    {
+      "topic": "tax_rate",
+      "cells": [
+        1
+      ],
+      "actual_field": "TAX_RATE",
+      "definition": "0.34の定数宣言がある。選択notebookの後続セルでこの変数への参照はなく、税額/NOPAT/ROIC算定へ使う処理を示さない。",
+      "limits": "ブラジルの適用税率/限界税率/正常税率として採用しない。"
+    },
+    {
+      "topic": "EBIT_and_NOPAT",
+      "cells": [
+        2,
+        13,
+        14
+      ],
+      "actual_field": "ebit",
+      "definition": "外部既処理featherのebit列を読み、正値を要求して出力へ残す。売上等からのEBIT再構成、税額、NOPATという新列/式はこのfileにない。",
+      "limits": "営業利益との差、税/非経常/会計分類と期間の対応は未認証。"
+    },
+    {
+      "topic": "ROIC_and_Damodaran",
+      "cells": [
+        2,
+        13,
+        14
+      ],
+      "actual_field": "roic",
+      "definition": "外部入力roic列に正値条件を課し、そのまま出力する。ROICの分子・分母の計算、Damodaran式の具体化は選択fileで行わない。",
+      "limits": "前phase summaryのDamodaran参照は作者記述。NOPAT/平均投下資本という特定式を実装済みと認定しない。"
+    },
+    {
+      "topic": "invested_capital_and_average",
+      "cells": [
+        12,
+        13,
+        14
+      ],
+      "actual_field": "invested_capital",
+      "definition": "欠損行を表示する診断セルがあり、後に正値条件を課す。期首期末平均・ローリング平均や投下資本構成式は示さず、出力の明示4指標には残さない。",
+      "limits": "期末/平均/運転資本+固定資産・有形/無形等の定義や金融向け適合は不明。"
+    },
+    {
+      "topic": "cash",
+      "cells": [
+        13,
+        14
+      ],
+      "actual_field": "total_cash",
+      "definition": "外部入力の総現金列について厳密な正値を要求する。現金構成や預金・短期投資等の加算式はなく、出力の明示4指標には残さない。",
+      "limits": "総現金を評価加算用余剰現金や現在残高へ読み替えず、0現金の会社もこの正値条件を通らないという選別だけを記録する。"
+    },
+    {
+      "topic": "debt_and_net_debt",
+      "cells": [
+        2,
+        13,
+        14
+      ],
+      "actual_field": "net_debt",
+      "definition": "既処理純負債列を出力に保持する。純負債を構成するgross debt/cashの引算式や、純負債の負・0・欠損の直接filterは選択fileに見当たらない。",
+      "limits": "summaryの負NetDebt除外という説明と、このfileの直接filterは対応未確認。upstreamに処理がないと一般化せず、net cash企業除外を独自に補わない。"
+    },
+    {
+      "topic": "equity_and_revenue",
+      "cells": [
+        11,
+        13,
+        14
+      ],
+      "actual_field": [
+        "total_equity",
+        "revenue"
+      ],
+      "definition": "売上はcell11と13で正値、総自己資本はcell13で正値を要求する。利益/負債と合わせて投下資本へ組み替える式は示さない。",
+      "limits": "非支配持分/親会社持分・総額純額・連結内部消去など企業会計とのfield対応は未認証。"
+    },
+    {
+      "topic": "shares",
+      "cells": [
+        13,
+        14
+      ],
+      "actual_field": "shares_outstanding",
+      "definition": "外部入力株数列に正値条件を課し、出力へ保持する。",
+      "limits": "期末/期中平均/自己株控除/basic/diluted/分割調整や株数尺度はこのfileでは定義しない。金額単位のコメントを株数millionへそのまま適用しない。"
+    },
+    {
+      "topic": "units",
+      "cells": [
+        2,
+        14
+      ],
+      "actual_field": "input dataset monetary scale",
+      "definition": "入力読込セルのコメントは金額単位を百万BRLと説明する。コードは既処理入力を読み、独立に単位変換・元資料との照合はしない。",
+      "limits": "金額各field/株数/ROICの尺度や後段価格との整合の独立検証ではない。日本円/日本企業へ転用しない。"
+    },
+    {
+      "topic": "period_entity_and_document",
+      "cells": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        14
+      ],
+      "actual_field": [
+        "cia_id",
+        "CD_CVM",
+        "doc_tp",
+        "dem_tp",
+        "per_ref"
+      ],
+      "definition": "含有会社PSVのCVMコード一覧を使い、財務入力をDFP・CON・per_ref=0の組で選ぶ。作者コメントは監査済み連結の当期12カ月を意図する。出力はその時点の先頭5列と株数/純負債/EBIT/ROICを選ぶ。",
+      "limits": "12カ月の開始終了差や当期/前期の具体対応、期間と期末残高/平均の区別、公表/受付日、監査範囲の実確認は行わない。先頭5列は位置依存でschema未取得。会社PSV・feather・元会計原本も取得しない。"
+    },
+    {
+      "topic": "negative_zero_missing_infinite",
+      "cells": [
+        11,
+        12,
+        13
+      ],
+      "actual_field": [
+        "revenue",
+        "roic",
+        "invested_capital",
+        "ebit",
+        "total_cash",
+        "total_equity",
+        "shares_outstanding"
+      ],
+      "definition": "最終filterは列挙7列すべてについて厳密な正値を要求する。この条件は0と負値を通さない。欠損投下資本の表示診断は削除処理ではなく、欠損を0へ補完する処理もない。",
+      "limits": "数値NaNは通常の正値比較を満たさないが実dtype/nullable挙動を実行認証しない。全必要列への欠損検査や有限性/正無限除外は明示されない。未filterの純負債を欠損0や正値へ補完しない。"
+    },
+    {
+      "topic": "input_definition_gap",
+      "cells": [
+        2,
+        14,
+        15
+      ],
+      "actual_field": "processed feather -> magic_financials.csv",
+      "definition": "このfileは既処理財務の選別・列縮約とCSV出力で、会計原票から入力fieldを作る処理ではない。実入力としてどの列を要求するかは精密化できるが、各列の経済定義・計算根拠までは埋まらない。",
+      "limits": "author実装の把握と日本企業のfinancial meaning/adoptionを分ける。license未確認・移植0、追加sourceへ追跡しない。"
+    }
+  ],
+  "key_gap": "Damodaran-labelled ROIC is a precomputed input; this selected file does not show NOPAT or invested-capital average construction. Fixed tax-rate declaration is unused here.",
+  "summary_negative_netdebt_vs_selected_filter": "Selected summary describes negative NetDebt exclusions. This file passes net_debt through and filters seven other fields strictly positive; linkage to an upstream rule remains unverified, not proof that repository-wide exclusion is absent.",
+  "field_names_are_technical_references_not_generated_prose_quotes": true,
+  "new_verbatim_English_quote_words": 0,
+  "previous_repo_quote_words": 64,
+  "cumulative_repo_quote_words": 64,
+  "cached_outputs_not_execution_verification": true,
+  "financial_meaning_policy_adoption_and_actual_DB": 0,
+  "maintainer_execution_import_install": 0,
+  "additional_GETs_planned": 0
+}

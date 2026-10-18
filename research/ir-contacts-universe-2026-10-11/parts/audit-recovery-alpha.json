@@ -1,0 +1,688 @@
+{
+  "reviewer": "codex_audit_it",
+  "updated_at": "2026-10-11T04:29:08.038893+00:00",
+  "code_scope": [
+    "137A",
+    "147A",
+    "151A",
+    "156A",
+    "160A",
+    "167A",
+    "177A",
+    "186A",
+    "190A",
+    "192A",
+    "195A",
+    "206A",
+    "208A",
+    "215A",
+    "218A"
+  ],
+  "review_scope": "offline_saved_evidence_only",
+  "reviewed_company_count": 15,
+  "reviewed_http200_body_page_count": 75,
+  "result_status_counts": {
+    "provisional": 6,
+    "unconfirmed": 7,
+    "confirmed": 2
+  },
+  "recovered_confirmed": [
+    "156A",
+    "192A"
+  ],
+  "recovered_provisional": [
+    "137A",
+    "167A",
+    "177A",
+    "190A",
+    "208A",
+    "218A"
+  ],
+  "unchanged_unconfirmed": [
+    "147A",
+    "151A",
+    "160A",
+    "186A",
+    "195A",
+    "206A",
+    "215A"
+  ],
+  "new_get_count": 0,
+  "submission_count": 0,
+  "previous_record_rows_modified": 0,
+  "evidence_original_files_modified": 0,
+  "limitations": [
+    "HTTP200にはtitleやJavaScript表示枠だけのものがある。成功取得と窓口確認は区別する。",
+    "実入力欄がない公式IR案内はprovisional、IR指定がない一般窓口はunconfirmed。",
+    "個人受付条件は明示されなければnot_statedのまま。窓口不存在・受付拒否を推測しない。"
+  ],
+  "reviews": [
+    {
+      "security_code": "137A",
+      "company_name": "Ｃｏｃｏｌｉｖｅ",
+      "before_status": "unconfirmed",
+      "status": "provisional",
+      "record": "records/137A.json",
+      "notes": "Cocolive公式IR FAQの「IRお問い合わせ」リンクが外部campage.jp/cocolive-ir/formを直接指定し、取得済み対象の会社名・IR用見出しが一致する。対象はHTTP200だが保存されたフォーム欄はなく、入力メール／質問textareaは確認できないので provisional。一般KASIKA問い合わせフォームと混同していない。 保存済み証拠のみの監査で、新たなGET・入力・送信は行っていない。",
+      "snapshots_reviewed": [
+        "evidence/137A/01.json",
+        "evidence/137A/02.json",
+        "evidence/137A/03.json",
+        "evidence/137A/04.json",
+        "evidence/137A/05.json",
+        "evidence/137A/06.json",
+        "evidence/137A/07.json"
+      ],
+      "evidence": [
+        {
+          "snapshot": "evidence/137A/02.json",
+          "url": "https://cocolive.co.jp/ir/faq/",
+          "retrieved_at": "2026-10-11T03:58:43.314587+00:00",
+          "quote": "IRお問い合わせ",
+          "role": "ir_binding",
+          "source_link_url": "https://campage.jp/cocolive-ir/form"
+        },
+        {
+          "snapshot": "evidence/137A/03.json",
+          "url": "https://campage.jp/cocolive-ir/form",
+          "retrieved_at": "2026-10-11T03:58:46.288266+00:00",
+          "quote": "IR（投資家情報）に関する お問い合わせ",
+          "role": "contact_channel"
+        },
+        {
+          "snapshot": "evidence/137A/03.json",
+          "url": "https://campage.jp/cocolive-ir/form",
+          "retrieved_at": "2026-10-11T03:58:46.288266+00:00",
+          "quote": "お電話でのお問い合わせは承っておりませんのでご了承ください。",
+          "role": "conditions"
+        },
+        {
+          "snapshot": "evidence/137A/03.json",
+          "url": "https://campage.jp/cocolive-ir/form",
+          "retrieved_at": "2026-10-11T03:58:46.288266+00:00",
+          "quote": "お問い合わせの内容によっては返信に時間がかかる場合や、 回答を差し控えさせていただく場合もございます。",
+          "role": "conditions"
+        },
+        {
+          "snapshot": "evidence/137A/03.json",
+          "url": "https://campage.jp/cocolive-ir/form",
+          "retrieved_at": "2026-10-11T03:58:46.288266+00:00",
+          "quote": "また、土・日、祝日、年末年始休業期間等は、 翌営業日以降の対応とさせていただきます。",
+          "role": "conditions"
+        }
+      ]
+    },
+    {
+      "security_code": "147A",
+      "company_name": "ソラコム",
+      "before_status": "unconfirmed",
+      "status": "unconfirmed",
+      "record": "records/147A.json",
+      "notes": "ソラコムのHTTP200本文はコーポレートサイトtitleの短い文字列のみ。IR用問い合わせ案内・実フォーム・公開メールは保存本文から実証できない。HTTP200を窓口確認成功とは扱わない。 保存済み証拠のみの監査で、新たなGET・入力・送信は行っていない。 保存範囲での未確認であり、窓口不存在やIR受付拒否を意味しない。",
+      "snapshots_reviewed": [
+        "evidence/147A/01.json"
+      ],
+      "evidence": [
+        {
+          "snapshot": "evidence/147A/01.json",
+          "url": "https://soracom.com/ja/",
+          "retrieved_at": "2026-10-11T03:58:56.982498+00:00",
+          "quote": "株式会社ソラコム コーポレートサイト",
+          "role": "audit_scope"
+        }
+      ]
+    },
+    {
+      "security_code": "151A",
+      "company_name": "ダイブグループ",
+      "before_status": "unconfirmed",
+      "status": "unconfirmed",
+      "record": "records/151A.json",
+      "notes": "保存HTTP200本文は「Dive｜株式会社ダイブ」のtitle相当のみ。現在のJPX社名ダイブグループとの会社同一性の詳しい説明もIR受付本文も未取得。IR用メール・フォーム・専用案内を保存範囲で確認できない。 保存済み証拠のみの監査で、新たなGET・入力・送信は行っていない。 保存範囲での未確認であり、窓口不存在やIR受付拒否を意味しない。",
+      "snapshots_reviewed": [
+        "evidence/151A/01.json"
+      ],
+      "evidence": [
+        {
+          "snapshot": "evidence/151A/01.json",
+          "url": "https://dive.design/",
+          "retrieved_at": "2026-10-11T03:59:00.850047+00:00",
+          "quote": "Dive｜株式会社ダイブ",
+          "role": "audit_scope"
+        }
+      ]
+    },
+    {
+      "security_code": "156A",
+      "company_name": "マテリアルグループ",
+      "before_status": "unconfirmed",
+      "status": "confirmed",
+      "record": "records/156A.json",
+      "notes": "マテリアルグループ公式専用IR問い合わせ頁が埋込iframeで外部bvg23jを直接指定し、保存フォームの取得URL・form actionと完全一致する。実text input（姓196434、名196437、会社196440、部署196446、メール196452、電話196455）と質問textarea196983を確認。別の一般問い合わせフォームbvg24jをIR用として採用していない。単に会社欄があるだけで個人受付／個人不可を推測しない。 保存済み証拠のみの監査で、新たなGET・入力・送信は行っていない。",
+      "snapshots_reviewed": [
+        "evidence/156A/01.json",
+        "evidence/156A/02.json",
+        "evidence/156A/03.json",
+        "evidence/156A/04.json",
+        "evidence/156A/05.json",
+        "evidence/156A/06.json",
+        "evidence/156A/07.json"
+      ],
+      "evidence": [
+        {
+          "snapshot": "evidence/156A/02.json",
+          "url": "https://materialgroup.jp/ir/",
+          "retrieved_at": "2026-10-11T03:59:04.398198+00:00",
+          "quote": "IRお問い合わせ",
+          "role": "ir_binding",
+          "source_link_url": "https://materialgroup.jp/ir/ir-contact/"
+        },
+        {
+          "snapshot": "evidence/156A/04.json",
+          "url": "https://materialgroup.jp/ir/ir-contact/",
+          "retrieved_at": "2026-10-11T03:59:06.235352+00:00",
+          "quote": "IRお問い合わせ",
+          "role": "ir_binding",
+          "source_link_url": "https://go.materialprmenu.jp/l/1122733/2026-02-18/bvg23j"
+        },
+        {
+          "snapshot": "evidence/156A/06.json",
+          "url": "https://go.materialprmenu.jp/l/1122733/2026-02-18/bvg23j",
+          "retrieved_at": "2026-10-11T03:59:09.655208+00:00",
+          "quote": "姓 名 会社・団体名 部署 メールアドレス 電話番号 お問い合わせ内容 Comments",
+          "role": "contact_channel"
+        }
+      ]
+    },
+    {
+      "security_code": "160A",
+      "company_name": "アズパートナーズ",
+      "before_status": "unconfirmed",
+      "status": "unconfirmed",
+      "record": "records/160A.json",
+      "notes": "アズパートナーズの公式IR FAQと一般inquiryを確認。一般頁はフォーム記入を案内するが実入力controlsは保存されておらず、IR質問用のカテゴリーや専用ルートも確認できない。不動産用地フォームなどの別用途は採用しない。 保存済み証拠のみの監査で、新たなGET・入力・送信は行っていない。 保存範囲での未確認であり、窓口不存在やIR受付拒否を意味しない。",
+      "snapshots_reviewed": [
+        "evidence/160A/01.json",
+        "evidence/160A/02.json",
+        "evidence/160A/03.json",
+        "evidence/160A/04.json",
+        "evidence/160A/05.json",
+        "evidence/160A/06.json",
+        "evidence/160A/07.json"
+      ],
+      "evidence": [
+        {
+          "snapshot": "evidence/160A/04.json",
+          "url": "https://www.as-partners.co.jp/inquiry/",
+          "retrieved_at": "2026-10-11T03:59:07.488447+00:00",
+          "quote": "お問い合わせをご希望の方は、 必要事項をご入力いただいたうえで「確認する」ボタンを押してください。",
+          "role": "audit_scope"
+        }
+      ]
+    },
+    {
+      "security_code": "167A",
+      "company_name": "リョーサン菱洋ホールディングス",
+      "before_status": "unconfirmed",
+      "status": "provisional",
+      "record": "records/167A.json",
+      "notes": "リョーサン菱洋ホールディングス公式問い合わせ一覧のIR見出しに「お問い合わせフォーム」を明示。text/headings/links出現順の第1フォームf=1は一般、第2f=7はIR、第3f=8は採用に対応する。保存範囲にはf=7実フォーム本文がないため provisional。取り扱いメーカー別の製品専用注意事項をIR窓口の条件として転用していない。 保存済み証拠のみの監査で、新たなGET・入力・送信は行っていない。",
+      "snapshots_reviewed": [
+        "evidence/167A/01.json",
+        "evidence/167A/02.json",
+        "evidence/167A/03.json",
+        "evidence/167A/04.json"
+      ],
+      "evidence": [
+        {
+          "snapshot": "evidence/167A/03.json",
+          "url": "https://www.rr-hds.co.jp/contact/",
+          "retrieved_at": "2026-10-11T03:59:08.353648+00:00",
+          "quote": "お問い合わせ お問い合わせフォーム IR お問い合わせフォーム 採用 お問い合わせフォーム",
+          "role": "ir_binding",
+          "source_link_url": "https://form.rr-hds.co.jp/m?f=7"
+        }
+      ]
+    },
+    {
+      "security_code": "177A",
+      "company_name": "コージンバイオ",
+      "before_status": "unconfirmed",
+      "status": "provisional",
+      "record": "records/177A.json",
+      "notes": "コージンバイオの公式問い合わせ一覧で製品・細胞加工・採用とは別の「IR・取材について」を確認し、そのお問い合わせリンクはcontact/contactir/に対応する。公式IRその他頁にもIRに関するお問い合わせの別ルートを明記する。IR用案内は確認できるが対象フォーム本体の入力欄は保存範囲にないので provisional。 保存済み証拠のみの監査で、新たなGET・入力・送信は行っていない。",
+      "snapshots_reviewed": [
+        "evidence/177A/01.json",
+        "evidence/177A/02.json",
+        "evidence/177A/03.json",
+        "evidence/177A/04.json",
+        "evidence/177A/05.json",
+        "evidence/177A/06.json",
+        "evidence/177A/07.json"
+      ],
+      "evidence": [
+        {
+          "snapshot": "evidence/177A/05.json",
+          "url": "https://kohjin-bio.jp/contact/",
+          "retrieved_at": "2026-10-11T03:59:19.395894+00:00",
+          "quote": "IR・取材について お問い合わせ",
+          "role": "ir_binding",
+          "source_link_url": "https://kohjin-bio.jp/contact/contactir/"
+        },
+        {
+          "snapshot": "evidence/177A/04.json",
+          "url": "https://kohjin-bio.jp/ir/otheririnformation/",
+          "retrieved_at": "2026-10-11T03:59:18.145561+00:00",
+          "quote": "IRに関するお問い合わせ",
+          "role": "ir_binding",
+          "source_link_url": "https://kohjin-bio.jp/ir/otheririnformation/inquiry/"
+        }
+      ]
+    },
+    {
+      "security_code": "186A",
+      "company_name": "アストロスケールホールディングス",
+      "before_status": "unconfirmed",
+      "status": "unconfirmed",
+      "record": "records/186A.json",
+      "notes": "アストロスケールの一般contact実フォームにはemail入力とmessage textareaがあるが、リクエストタイプの具体的IR選択肢は保存本文に存在しない。IRはグローバルnavのみで、一般問い合わせや公正な研究活動用フォームをIR受付と推測しない。 保存済み証拠のみの監査で、新たなGET・入力・送信は行っていない。 保存範囲での未確認であり、窓口不存在やIR受付拒否を意味しない。",
+      "snapshots_reviewed": [
+        "evidence/186A/01.json",
+        "evidence/186A/02.json",
+        "evidence/186A/03.json",
+        "evidence/186A/04.json",
+        "evidence/186A/05.json",
+        "evidence/186A/06.json",
+        "evidence/186A/07.json"
+      ],
+      "evidence": [
+        {
+          "snapshot": "evidence/186A/03.json",
+          "url": "https://www.astroscale.com/ja/contact",
+          "retrieved_at": "2026-10-11T03:59:36.110550+00:00",
+          "quote": "Eメール * 会社名 名 * 姓 * リクエストタイプ 件名 * お問い合わせ内容 *",
+          "role": "audit_scope"
+        }
+      ]
+    },
+    {
+      "security_code": "190A",
+      "company_name": "Ｃｈｏｒｄｉａ　Ｔｈｅｒａｐｅｕｔｉｃｓ",
+      "before_status": "unconfirmed",
+      "status": "provisional",
+      "record": "records/190A.json",
+      "notes": "Chordia Therapeuticsの公式問い合わせ一覧が一般contact1とIR専用contact2を別に示し、IRお問い合わせリンクは保存対象contact2と完全一致する。対象本文にはIR用見出ししかなく実入力欄がないので provisional。IRカテゴリを一般フォームから推測していない。 保存済み証拠のみの監査で、新たなGET・入力・送信は行っていない。",
+      "snapshots_reviewed": [
+        "evidence/190A/01.json",
+        "evidence/190A/02.json",
+        "evidence/190A/03.json",
+        "evidence/190A/04.json",
+        "evidence/190A/06.json",
+        "evidence/190A/07.json"
+      ],
+      "evidence": [
+        {
+          "snapshot": "evidence/190A/04.json",
+          "url": "https://www.chordiatherapeutics.com/ja/contact.html",
+          "retrieved_at": "2026-10-11T03:59:47.023809+00:00",
+          "quote": "IRお問い合わせ",
+          "role": "ir_binding",
+          "source_link_url": "https://www.chordiatherapeutics.com/ja/contact/contact2.html"
+        },
+        {
+          "snapshot": "evidence/190A/07.json",
+          "url": "https://www.chordiatherapeutics.com/ja/contact/contact2.html",
+          "retrieved_at": "2026-10-11T03:59:49.619027+00:00",
+          "quote": "IRお問い合わせ",
+          "role": "contact_channel"
+        }
+      ]
+    },
+    {
+      "security_code": "192A",
+      "company_name": "インテグループ",
+      "before_status": "unconfirmed",
+      "status": "confirmed",
+      "record": "records/192A.json",
+      "notes": "インテグループ公式IRサイトの「IRお問い合わせ」公開リンクが外部ma.integroup.jpの38zf9bフォームを直接指定し、取得URL・form actionが完全一致する。保存実フォームのメールアドレス入力欄とご意見・質問textareaを確認。M&A一般問い合わせ／譲渡相談の別フォームは採用していない。privacy内のinfo@integroup.co.jpは個人情報窓口でIRメールに採用しない。個人受付の明示は未確認。 保存済み証拠のみの監査で、新たなGET・入力・送信は行っていない。",
+      "snapshots_reviewed": [
+        "evidence/192A/01.json",
+        "evidence/192A/02.json",
+        "evidence/192A/03.json",
+        "evidence/192A/04.json",
+        "evidence/192A/05.json",
+        "evidence/192A/06.json",
+        "evidence/192A/07.json"
+      ],
+      "evidence": [
+        {
+          "snapshot": "evidence/192A/02.json",
+          "url": "https://www.integroup.jp/ir/",
+          "retrieved_at": "2026-10-11T03:59:47.490414+00:00",
+          "quote": "IRお問い合わせ",
+          "role": "ir_binding",
+          "source_link_url": "https://ma.integroup.jp/l/830143/2024-04-30/38zf9b"
+        },
+        {
+          "snapshot": "evidence/192A/04.json",
+          "url": "https://ma.integroup.jp/l/830143/2024-04-30/38zf9b",
+          "retrieved_at": "2026-10-11T03:59:50.535864+00:00",
+          "quote": "お名前 電話番号 （例） 090-0000-0000 メールアドレス （例）●●●@●●● ご意見・質問 個人情報取扱いに関する同意 同意する",
+          "role": "contact_channel"
+        },
+        {
+          "snapshot": "evidence/192A/04.json",
+          "url": "https://ma.integroup.jp/l/830143/2024-04-30/38zf9b",
+          "retrieved_at": "2026-10-11T03:59:50.535864+00:00",
+          "quote": "下記の「個人情報利用等同意書」をお読みいただき、同意いただける方のみ送信してください。",
+          "role": "conditions"
+        },
+        {
+          "snapshot": "evidence/192A/04.json",
+          "url": "https://ma.integroup.jp/l/830143/2024-04-30/38zf9b",
+          "retrieved_at": "2026-10-11T03:59:50.535864+00:00",
+          "quote": "確認のため、ご登録内容を記載した自動返信メールをお送りしますので、ご本人様しか見ることができないメールアドレスをご記入お願いいたします。",
+          "role": "conditions"
+        }
+      ]
+    },
+    {
+      "security_code": "195A",
+      "company_name": "ＭＵＳＣＡＴ　ＧＲＯＵＰ",
+      "before_status": "unconfirmed",
+      "status": "unconfirmed",
+      "record": "records/195A.json",
+      "notes": "MUSCAT GROUPの公式ホームに一般Contactの外部form.runリンクはあるが対象フォーム本体は未取得。IR案内と一般Contactを結合してIRカテゴリ・IR用フォーム受付と推測しない。 保存済み証拠のみの監査で、新たなGET・入力・送信は行っていない。 保存範囲での未確認であり、窓口不存在やIR受付拒否を意味しない。",
+      "snapshots_reviewed": [
+        "evidence/195A/01.json"
+      ],
+      "evidence": [
+        {
+          "snapshot": "evidence/195A/01.json",
+          "url": "https://muscatgroup.co.jp:443/",
+          "retrieved_at": "2026-10-11T03:59:52.841422+00:00",
+          "quote": "Contact",
+          "role": "audit_scope"
+        }
+      ]
+    },
+    {
+      "security_code": "206A",
+      "company_name": "ＰＲＩＳＭ　ＢｉｏＬａｂ",
+      "before_status": "unconfirmed",
+      "status": "unconfirmed",
+      "record": "records/206A.json",
+      "notes": "PRISM BioLab公式contact頁の埋込form.runは保存本文がtitleとhoneypot注意の短い文字列だけで実質問入力欄がない。IRは共通navであり、一般contactへのリンクを専用IRフォームと推測しない。 保存済み証拠のみの監査で、新たなGET・入力・送信は行っていない。 保存範囲での未確認であり、窓口不存在やIR受付拒否を意味しない。",
+      "snapshots_reviewed": [
+        "evidence/206A/01.json",
+        "evidence/206A/02.json",
+        "evidence/206A/03.json",
+        "evidence/206A/04.json",
+        "evidence/206A/05.json",
+        "evidence/206A/06.json",
+        "evidence/206A/07.json"
+      ],
+      "evidence": [
+        {
+          "snapshot": "evidence/206A/07.json",
+          "url": "https://form.run/embed/@admin-JQY81OnnpnzIL2asGUYK?embed=direct",
+          "retrieved_at": "2026-10-11T04:00:16.553835+00:00",
+          "quote": "お問い合わせ If you are a human, ignore this field",
+          "role": "audit_scope"
+        }
+      ]
+    },
+    {
+      "security_code": "208A",
+      "company_name": "構造計画研究所ホールディングス",
+      "before_status": "unconfirmed",
+      "status": "provisional",
+      "record": "records/208A.json",
+      "notes": "構造計画研究所ホールディングスの公式問い合わせ頁にIRお問い合わせ窓口と「株式・投資、IRに関するお問い合わせ」のフォーム案内を明示。保存リンクは同一頁を指すが実フォームcontrolsやIR用ポップアップの入力欄は保存されていないため provisional。総合、採用、個人情報保護相談の他の案内をIR実フォーム証拠として混同しない。 保存済み証拠のみの監査で、新たなGET・入力・送信は行っていない。",
+      "snapshots_reviewed": [
+        "evidence/208A/01.json",
+        "evidence/208A/02.json",
+        "evidence/208A/03.json",
+        "evidence/208A/04.json",
+        "evidence/208A/05.json"
+      ],
+      "evidence": [
+        {
+          "snapshot": "evidence/208A/03.json",
+          "url": "https://www.kke-hd.co.jp/inquiry/",
+          "retrieved_at": "2026-10-11T04:01:52.439613+00:00",
+          "quote": "IRお問い合わせ窓口 株式・投資、IRに関するお問い合わせはこちらへ。 お問い合わせフォーム",
+          "role": "ir_binding",
+          "source_link_url": "https://www.kke-hd.co.jp/inquiry/"
+        }
+      ]
+    },
+    {
+      "security_code": "215A",
+      "company_name": "タイミー",
+      "before_status": "unconfirmed",
+      "status": "unconfirmed",
+      "record": "records/215A.json",
+      "notes": "タイミーの公式ホームと取得済みworker-helpの保存本文を確認。後者は利用者の操作／不具合窓口で、ホームのメディア向けGoogleフォームもIR窓口とはしない。IR専用メール／フォーム／公式IR案内を保存範囲で実証できない。 保存済み証拠のみの監査で、新たなGET・入力・送信は行っていない。 保存範囲での未確認であり、窓口不存在やIR受付拒否を意味しない。",
+      "snapshots_reviewed": [
+        "evidence/215A/01.json",
+        "evidence/215A/02.json",
+        "evidence/215A/03.json"
+      ],
+      "evidence": [
+        {
+          "snapshot": "evidence/215A/01.json",
+          "url": "https://timee.co.jp/",
+          "retrieved_at": "2026-10-11T04:01:48.255274+00:00",
+          "quote": "メディアの方へ",
+          "role": "audit_scope"
+        }
+      ]
+    },
+    {
+      "security_code": "218A",
+      "company_name": "Ｌｉｂｅｒａｗａｒｅ",
+      "before_status": "unconfirmed",
+      "status": "provisional",
+      "record": "records/218A.json",
+      "notes": "Liberaware公式IR FAQの「IRお問い合わせ／投資家お問い合わせ」は公式contact頁へ直接リンクする。同頁の受付説明もIR質問を明示し、埋込外部フォームcpw564へのリンクを確認。保存範囲にフォーム本体の実入力欄がないので provisional。点検・産業用ドローンだけの受付と推測しておらず、FAQの株主優待など別用途は混同しない。 保存済み証拠のみの監査で、新たなGET・入力・送信は行っていない。",
+      "snapshots_reviewed": [
+        "evidence/218A/01.json",
+        "evidence/218A/02.json",
+        "evidence/218A/03.json",
+        "evidence/218A/04.json",
+        "evidence/218A/06.json"
+      ],
+      "evidence": [
+        {
+          "snapshot": "evidence/218A/06.json",
+          "url": "https://liberaware.co.jp/ir/faq/",
+          "retrieved_at": "2026-10-11T04:01:53.967810+00:00",
+          "quote": "IRお問い合わせ",
+          "role": "ir_binding",
+          "source_link_url": "https://liberaware.co.jp/contact/"
+        },
+        {
+          "snapshot": "evidence/218A/03.json",
+          "url": "https://liberaware.co.jp/contact/",
+          "retrieved_at": "2026-10-11T04:01:51.382481+00:00",
+          "quote": "点検・産業用ドローンIBISに関する お問い合わせ、IR、採用に関するお問い合わせなど気軽にご相談ください。",
+          "role": "ir_binding",
+          "source_link_url": "https://drone.liberaware.co.jp/l/1078952/2025-01-08/cpw564"
+        }
+      ]
+    }
+  ],
+  "partial_validator": {
+    "reviewed_company_count": 15,
+    "issue_count": 0,
+    "issues": [],
+    "records": [
+      {
+        "security_code": "137A",
+        "terminal": true,
+        "investigation_status": "provisional",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "candidate",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      {
+        "security_code": "147A",
+        "terminal": true,
+        "investigation_status": "unconfirmed",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "unconfirmed",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      {
+        "security_code": "151A",
+        "terminal": true,
+        "investigation_status": "unconfirmed",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "unconfirmed",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      {
+        "security_code": "156A",
+        "terminal": true,
+        "investigation_status": "confirmed",
+        "official_get_attempted": true,
+        "channel_verified": true,
+        "outreach_suitability": "candidate",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      {
+        "security_code": "160A",
+        "terminal": true,
+        "investigation_status": "unconfirmed",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "unconfirmed",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      {
+        "security_code": "167A",
+        "terminal": true,
+        "investigation_status": "provisional",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "candidate",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      {
+        "security_code": "177A",
+        "terminal": true,
+        "investigation_status": "provisional",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "candidate",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      {
+        "security_code": "186A",
+        "terminal": true,
+        "investigation_status": "unconfirmed",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "unconfirmed",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      {
+        "security_code": "190A",
+        "terminal": true,
+        "investigation_status": "provisional",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "candidate",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      {
+        "security_code": "192A",
+        "terminal": true,
+        "investigation_status": "confirmed",
+        "official_get_attempted": true,
+        "channel_verified": true,
+        "outreach_suitability": "candidate",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      {
+        "security_code": "195A",
+        "terminal": true,
+        "investigation_status": "unconfirmed",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "unconfirmed",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      {
+        "security_code": "206A",
+        "terminal": true,
+        "investigation_status": "unconfirmed",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "unconfirmed",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      {
+        "security_code": "208A",
+        "terminal": true,
+        "investigation_status": "provisional",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "candidate",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      {
+        "security_code": "215A",
+        "terminal": true,
+        "investigation_status": "unconfirmed",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "unconfirmed",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      },
+      {
+        "security_code": "218A",
+        "terminal": true,
+        "investigation_status": "provisional",
+        "official_get_attempted": true,
+        "channel_verified": false,
+        "outreach_suitability": "candidate",
+        "individual_access": "not_stated",
+        "manual_review_required": false,
+        "error_count": 0
+      }
+    ]
+  }
+}

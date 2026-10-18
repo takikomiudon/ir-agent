@@ -1,0 +1,100 @@
+{
+  "security_code": "4777",
+  "company_name": "ガーラ",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "情報・通信業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "http://www.gala.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T12:54:11.640920+00:00",
+  "completed_at": "2026-10-11T12:55:08.203576+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/4777/20261011T125411640946Z/01.json",
+      "url": "https://www.gala.biz/?r=0",
+      "retrieved_at": "2026-10-11T12:54:56.903772+00:00",
+      "quote": "株式会社ガーラ（証券コード4777）株式の売出し及び公開買付けに準ずる行為として政令で定める買集め行為に関するお知らせ",
+      "role": "issuer_identity"
+    },
+    {
+      "snapshot": "evidence/4777/20261011T125411640946Z/01.json",
+      "url": "https://www.gala.biz/?r=0",
+      "retrieved_at": "2026-10-11T12:54:56.903772+00:00",
+      "quote": "お問い合わせ",
+      "role": "general_contact_link_ir_purpose_unproven",
+      "source_link_url": "https://www.gala.biz/contact-us"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "http://www.gala.jp/",
+      "final_url": "https://www.gala.biz/?r=0",
+      "snapshot": "evidence/4777/20261011T125411640946Z/01.json",
+      "retrieved_at": "2026-10-11T12:54:56.903772+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "原本文の証券コードで同発行体確認、金融IR実問い合わせ窓口は未実証。メール通知サービスは購読用途、問い合わせ返信用メール/質問欄とは区別。",
+    "保存済み公式ページ・実フォーム欄を手動点検。送信・配信成功・回答実績は未確認。"
+  ],
+  "discovery": {
+    "security_code": "4777",
+    "official_url": "http://www.gala.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ガーラ",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/4777/20261011T125411640946Z/01.json",
+      "normalized_name": "ガーラ",
+      "security_code_observed": true
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 5,
+  "previous_attempts": [
+    "attempts/4777/20261011T045047509579Z.json",
+    "attempts/4777/20261011T125508203848Z.json"
+  ],
+  "manual_followup_candidates": [
+    {
+      "url": "https://www.gala.biz/contact-us",
+      "quote": "お問い合わせ",
+      "source_link_label": "お問い合わせ",
+      "method": "GET",
+      "IR_channel_verified": false,
+      "reason": "現4777公式ホームの実contact-us href。金融IR用途/実メール又は返信質問form・個人/返信条件は未確認。",
+      "parent_snapshot": "evidence/4777/20261011T125411640946Z/01.json"
+    },
+    {
+      "url": "https://www.gala.biz/investor-relations/for-shareholders",
+      "quote": "投資家の皆様へ",
+      "source_link_label": "投資家の皆様へ",
+      "method": "GET",
+      "IR_channel_verified": false,
+      "reason": "金融IRの投資家向け公式実href。質問受付/IR連絡先を補完せず原本文から確認する。",
+      "parent_snapshot": "evidence/4777/20261011T125411640946Z/01.json"
+    }
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_services",
+    "reviewed_at": "2026-10-11T13:16:56.771385+00:00",
+    "notes": "GALA Groupホームの原本文に株式会社ガーラ（証券コード4777）の実明記があり現JPX発行体との対応は確認。成功ホーム1頁のみで、ゲーム/アプリ/メタバース事業情報・メール通知登録・IR資料の存在から質問受付を推測せずU。公式実contact-usと投資家の皆様へhrefを追加候補にし、製品/ゲーム利用者問い合わせと金融IRの実区分は未確認。",
+    "attempted_at_reviewed": "2026-10-11T12:54:11.640920+00:00",
+    "saved_evidence_only": true
+  }
+}

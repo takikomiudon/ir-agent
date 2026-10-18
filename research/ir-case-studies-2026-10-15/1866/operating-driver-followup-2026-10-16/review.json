@@ -1,0 +1,128 @@
+{
+  "read_at": "2026-10-16T01:40:34.819925+00:00",
+  "completed_read_at": "2026-10-16T01:42:40.698240+00:00",
+  "artifact_type": "file_only_additional_reading_of_existing_issuer_source_not_new_disclosure",
+  "company_id": "jp:1866",
+  "native_case_id": "1866-earnings-scope-monitor",
+  "native_case_version": 2,
+  "existing_issue_id": "1866-earnings-guidance-share-basis",
+  "previous_semantic_pages": [
+    1,
+    2,
+    4
+  ],
+  "new_semantic_and_image_pages": [
+    10,
+    11
+  ],
+  "all_document_semantic_review": false,
+  "locator_only_new_page": [
+    9
+  ],
+  "prior_review_result_retained": "unchanged derived-facts observation in native v2; this file-only deeper reading is not applied to case/DB",
+  "public_information_partially_resolved": true,
+  "new_findings_summary": [
+    "単独建設の当Q1受注40,640/完成19,366/期末繰越91,266百万円と、前年Q1の別列を確認。成分足算・前年差/比率・book-to-billは計算しない。",
+    "Q1連結CF計算書を作成していない旨を確認。減価償却費をCFへ置き換えない。",
+    "連結建設/ホテル利益の公表は既読p4をreuseし、単独の完成工事高を連結売上へ同一視しない。"
+  ],
+  "comparison_boundaries": [
+    "p11前Q1は令和7年4–6月、当Q1は令和8年4–6月。前quarter比較ではない。西暦換算が必要ならreviewer解釈として別記し、本表に年率やFY予想を作らない。",
+    "p11は提出会社単独建設部門で、ホテルを含む連結全社や国内/海外別の数字へ同一視しない。",
+    "受注≠売上、完成工事高≠連結全社売上、期末繰越≠利益保証。新規契約のみ/取消別の純粋成長とも認定しない。",
+    "選択表は報告実績/残高。会社計画/将来予測へ読み替えず、Q1実績と年度会社予想を混ぜない。"
+  ],
+  "closed_inquiries": [
+    {
+      "id": "public-order-and-backlog-location",
+      "answer": "保存短信p11に、提出会社単独の建設事業部門として、当Q1/前年Q1の期首繰越・期中受注・期中完成・期末繰越を明示する。再質問する前にこの表で確認できる。",
+      "evidence": [
+        "OD11-company-only-order-completion-backlog"
+      ]
+    },
+    {
+      "id": "published-order-change-treatment",
+      "answer": "前事業年度以前の受注工事の契約変更による請負金額増減を期中受注工事高へ含め、期中完成工事高にもその増減を含むとの注記を確認した。受注を新規契約のみとは扱わない。",
+      "evidence": [
+        "OD11-company-only-order-completion-backlog"
+      ]
+    },
+    {
+      "id": "segment-profit-is-already-public",
+      "answer": "建設/ホテルの連結セグメント利益は既読p4で公表済み。今回p11の提出会社単独・建設工事高とは別系列である。",
+      "evidence": [
+        "OD4-reuse-segment-profit-narrative",
+        "OD11-company-only-order-completion-backlog"
+      ]
+    },
+    {
+      "id": "quarter-CF-statement-availability-in-this-report",
+      "answer": "p10は当Q1連結CF計算書を作成していないと直接説明する。減価償却費の比較注記はあるが、営業CF/FCFやそれらの0値ではない。会社の全媒体でCFが非開示と一般化しない。",
+      "evidence": [
+        "OD10-CF-not-prepared-and-depreciation-note"
+      ]
+    },
+    {
+      "id": "reported-table-scope-not-domestic-geography",
+      "answer": "p11は提出会社単独、建築/土木、官公庁/民間や特命/競争を表示する。連結全社/ホテル/国内限定または海外を含む別集計へ自動接続しない。特命/競争比は請負金額比。",
+      "evidence": [
+        "OD11-company-only-order-completion-backlog",
+        "OD11-procurement-method-definition",
+        "OD11-closing-backlog-by-customer-type"
+      ]
+    }
+  ],
+  "remaining_inquiries_not_IR_drafts": [
+    {
+      "id": "gross-new-orders-cancellations-and-scope",
+      "boundary": "契約変更の増減を含むことは判明したが、新規獲得と取消/変更の詳細分解や地理別範囲は選択表だけでは確認できない。未確認を会社全体の非開示や回答拒否にしない。"
+    },
+    {
+      "id": "backlog-profit-and-delivery-timing",
+      "boundary": "期末繰越は請負工事の表示残高。工期・完成時期・案件mix/原価/労務資材変動・採算・回収条件を未確認のまま保持し、利益や売上実現時期の保証へ変換しない。"
+    },
+    {
+      "id": "segment-reconciliation",
+      "boundary": "p4の連結セグメント売上/利益とp11の提出会社単独工事高は別範囲。詳細な同一範囲比較・調整は未確認。p9のセグメント情報表は見出しだけ定位し、次の有限読解候補として残すが今回開かない。"
+    },
+    {
+      "id": "cash-conversion",
+      "boundary": "本短信にQ1連結CF計算書がないことは確認したが、減価償却費や受注/繰越から営業CF・将来CF・正常税を作れない。他の保存公表情報や認識/回収条件の点検の必要性は残るが、今回新取得やIR草案へ進まない。"
+    }
+  ],
+  "author_method_basis": [
+    {
+      "file": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+      "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+      "sections": [
+        "Step 1 Gather Context",
+        "Step 2 Key Metrics Framework"
+      ],
+      "project_adaptation": "会社/報告期/全社とsegment/operational metricsを特定して既公表資料を比較する研究手順だけを適応。コンセンサス、price reaction、著者の数値予測や売買ruleは追加しない。"
+    },
+    {
+      "file": "docs/ir-question-preparation.md",
+      "sha256": "be39fd3d71b8b5428b63254bf509a559a76ce46299ddecebfc54cfac446fd987",
+      "upstream_reference": "日本IR協議会2018-02-28企業向け指針、既読9/14/25頁のproject適応",
+      "project_adaptation": "IRで繰り返し問う前に公表実績/定義と既公表箇所を照合する。企業向け望ましい実務を投資家の義務/現行法令/返答保証/売買ruleへしない。"
+    }
+  ],
+  "management_review_unchanged": {
+    "date": "2027-01-16",
+    "timezone": "Asia/Tokyo"
+  },
+  "case_config_or_progress_updates": 0,
+  "source_new_ingest_or_resave": 0,
+  "normalizer_calls": 0,
+  "financial_forecasts_or_IR_drafts_created": 0,
+  "financial_inputs_verified": false,
+  "financial_inputs_adopted": 0,
+  "new_GETs": 0,
+  "actual_DB_connections": 0,
+  "production_shared_files_changed": 0,
+  "next_source_page_candidate_only": {
+    "source_id": "case-public:52347b3c8a8157bfc5874e644276ea0b40ec920537b44da2d062ba5b5fdf834b",
+    "physical_page": 9,
+    "reason": "セグメント表の同期間/調整対象の確認が必要な場合の保存原典内候補。本文/画像意味未読のまま。"
+  }
+}

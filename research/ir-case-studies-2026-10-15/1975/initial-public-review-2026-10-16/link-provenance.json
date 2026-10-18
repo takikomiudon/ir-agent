@@ -1,0 +1,46 @@
+{
+  "performed_requests": [
+    {
+      "role": "issuer_robots",
+      "url": "https://www.asahikogyosha.co.jp/robots.txt",
+      "basis": "robots endpoint on selected official host"
+    },
+    {
+      "role": "issuer_root",
+      "url": "https://www.asahikogyosha.co.jp/",
+      "basis": "selected CSV official_url"
+    },
+    {
+      "role": "latest_Japanese_Q1_statement",
+      "url": "https://www.asahikogyosha.co.jp/wp-content/uploads/2026/08/98_1st-quarter-financial-results.pdf",
+      "literal_anchor": {
+        "url": "https://www.asahikogyosha.co.jp/wp-content/uploads/2026/08/98_1st-quarter-financial-results.pdf",
+        "href": "https://www.asahikogyosha.co.jp/wp-content/uploads/2026/08/98_1st-quarter-financial-results.pdf",
+        "label": "2027年3月期 第1四半期 決算短信"
+      },
+      "source_capture_sequence": 2,
+      "source_capture_pointer": "$.html_visible_text.links[102]",
+      "source_raw_sha256": "788d77e30998feac3a11569a2eb18e0c9521f064a1230bc33b83a93c23ab72d8",
+      "host_not_held": true,
+      "robots_can_fetch": true
+    }
+  ],
+  "root_direct_statement_link_avoided_unnecessary_index_GET": true,
+  "next_unattempted_literal": {
+    "capture": "02.json",
+    "source_id": "case-public:f13100626c01d39255de178a6e37d14566e477cb6a9083095b79ab659d1d7eef",
+    "pointer": "$.html_visible_text.links[101]",
+    "literal_anchor": {
+      "url": "https://www.asahikogyosha.co.jp/wp-content/uploads/2026/08/98_1st-quarter-financial-results-appendix.pdf",
+      "href": "https://www.asahikogyosha.co.jp/wp-content/uploads/2026/08/98_1st-quarter-financial-results-appendix.pdf",
+      "label": "2027年3月期 第1四半期 決算説明資料"
+    },
+    "date_from_root_listing": "2026-08-04",
+    "publication_date_precision": "day only from listing, actual body not acquired",
+    "GET_attempted": false,
+    "reason": "Finite initial scope obtained statement with actual management narrative; preserve paired explanation for separately scoped future reading",
+    "financial_body_verified": false
+  },
+  "public_QA": "No current earnings-QA literal identified among inspected root financial links; recruitment FAQ is unrelated, and whole-site absence not established",
+  "further_GETs_planned": 0
+}

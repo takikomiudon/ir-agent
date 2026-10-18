@@ -1,0 +1,215 @@
+{
+  "company_id": "jp:3817",
+  "recorded_at": "2026-10-16T13:35:08.335526+00:00",
+  "reviewer": "codex-audit-manufacturing",
+  "status": "saved_two_page_followup_complete_ordinary_BPS_mapping_partially_narrowed_unresolved",
+  "purpose": "既存C2/D2/D3の公開先行。Graham参考式の持分basisと日本会社直接表示BPSの経済的対応を狭める。値の再計算・金融採用ではない。",
+  "source": {
+    "id": "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e",
+    "native_sha256": "cdb77fd2cb0d201dd8fbcba84a200665e0912216981ea79e200a601558d7a616",
+    "native_hash_domain": "sha256 UTF8 json.dumps(source, ensure_ascii=False, sort_keys=True, allow_nan=False), default separators; not rawPDF/bundle/compact-normalizer hash",
+    "url": "https://www.sra-hd.co.jp/Portals/0/ir/settlement/tanshin/tanshin2605.pdf",
+    "published_at_unchanged": null,
+    "retrieved_at_unchanged": "2026-10-16T09:38:14.870707+00:00",
+    "raw_file": {
+      "path": "research/ir-case-studies-2026-10-15/3817/annual-accounting-input-discovery-2026-10-16/raw/1e204cd63f44a4e85bb4164e8963b5d1788e0f86a2a86c7d0ea1ca0532748fbe",
+      "sha256": "1e204cd63f44a4e85bb4164e8963b5d1788e0f86a2a86c7d0ea1ca0532748fbe"
+    },
+    "native_fulltext": {
+      "path": "research/ir-case-studies-2026-10-15/3817/annual-accounting-input-discovery-2026-10-16/text/02-full.txt",
+      "sha256": "d8dccc22ac9faf3a942f1284d72f005af79e17b90095886f77dc92ad9d76ce10"
+    },
+    "new_source_or_registration": false,
+    "actual_DB_firstsave_observed_this_task": false
+  },
+  "reading_scope": {
+    "total_physical_pages": 19,
+    "prior_accepted_meaning_pages": [
+      1,
+      2,
+      9,
+      18
+    ],
+    "new_meaning_and_image_physical_pages": [
+      8,
+      12
+    ],
+    "printed_pages": [
+      6,
+      10
+    ],
+    "maximum_new_pages": 2,
+    "locator_only_other_pages": [
+      3,
+      6,
+      7,
+      11
+    ],
+    "previously_read_pages_not_re_read": true,
+    "full_document_semantic_read_claim": false,
+    "selection_reason": {
+      "8": "未読連結BSの純資産区分を直接確認。総純資産/株主資本/OCI/NCIの違いが用途に対応。",
+      "12": "未読の当年度連結株主資本等変動計算書で新株予約権の独立列と期末表示を確認。"
+    }
+  },
+  "factual_findings": [
+    {
+      "id": "F1",
+      "status": "issuer_explicit",
+      "finding": "2026-03-31連結BSは株主資本、その他の包括利益累計額、非支配株主持分を別区分で表示。",
+      "current_display_million_JPY": {
+        "株主資本合計": "30,443",
+        "その他の包括利益累計額合計": "3,160",
+        "非支配株主持分": "426",
+        "純資産合計": "34,031"
+      },
+      "quotes": [
+        "P08-date-and-unit",
+        "P08-net-assets-components"
+      ],
+      "limit": "親会社普通株主へ帰属するBPS算定上の純資産額、という明示的な計算表や対応式はこの区画にはない。総純資産合計をordinaryへ流用しない。"
+    },
+    {
+      "id": "F2",
+      "status": "issuer_explicit",
+      "finding": "OCIは株主資本合計と別表示され、その他有価証券評価差額金・為替換算調整勘定・退職給付に係る調整累計額を列挙する。",
+      "quotes": [
+        "P08-net-assets-components",
+        "P12-OCI-warrants-NCI-column-header"
+      ],
+      "limit": "日本基準の株主資本合計という名前だけで外部providerのStockholdersEquity/CommonStockEquityへ置換しない。OCIを含む普通株帰属額をここで再構成しない。"
+    },
+    {
+      "id": "F3",
+      "status": "issuer_explicit_display_only",
+      "finding": "当年度変動計算書に新株予約権の独立列があり当期末欄は「－」。非支配株主持分の426とは別列である。",
+      "quotes": [
+        "P12-current-annual-scope",
+        "P12-OCI-warrants-NCI-column-header",
+        "P12-ending-row-with-warrants-dash"
+      ],
+      "limit": "会社表示の－を0という新数値へ変換せず、現在の潜在株式・優先権等の不存在や全普通株帰属を認証しない。"
+    },
+    {
+      "id": "F4",
+      "status": "issuer_explicit_book_amount_not_share_denominator",
+      "finding": "自己株式は株主資本内の△2,083百万円として表示。",
+      "quotes": [
+        "P08-net-assets-components",
+        "P12-equity-and-treasury-ending-row"
+      ],
+      "limit": "帳簿額であり、期末普通株数/自己株式数/信託株数を表す値ではない。BPS分母からの二重控除や逆算をしない。"
+    }
+  ],
+  "scope_by_item": {
+    "ordinary_equity_numerator": {
+      "known": "NCIとOCIの独立区分は公開表示で確認できた。",
+      "not_demonstrated": "ordinary BPSの算定上の純資産額・控除項目を列挙する明示計算表。",
+      "numeric_reconstruction": null
+    },
+    "noncontrolling_interests": {
+      "known": "2026-03-31表示426百万円、総純資産合計とは別行。",
+      "do_not_claim": "総純資産=ordinary / NCIを除いた値を今回計算したという認定。"
+    },
+    "stock_acquisition_rights": {
+      "known": "当年度変動表の当期末独立列は－。",
+      "not_demonstrated": "現在の権利や全期間の不存在、－の新たな数値0化。"
+    },
+    "preferred_or_other_noncommon_rights": {
+      "known": "新2頁に優先株の明示行/普通株帰属調整の説明は確認できなかった。",
+      "not_demonstrated": "優先持分が0/存在しないという企業全体認定。"
+    },
+    "period_end_and_treasury_shares": {
+      "prior_accepted_context_only": {
+        "issued_including_treasury": "15,240,000株",
+        "treasury": "2,606,111株",
+        "weighted_average": "12,633,889株"
+      },
+      "known_scope": "株数表は既受入物理2頁への参照。今回新読解はせず、平均EPS分母とBPS期末分母を混同しない。",
+      "not_demonstrated": "表示BPSの正確な期末分母の明示算定表やその調整。"
+    },
+    "trust_share_adjustment": {
+      "known": "新2頁に信託株や分母調整の明示説明なし。",
+      "not_demonstrated": "信託保有0、会社自己株式への包含、除外/二重控除の要否。"
+    }
+  },
+  "research_disposition": {
+    "case_id": "3817-reported-annual-per-share-basis-monitor",
+    "issue_id": "3817-annual-EPS-BPS-and-common-share-basis",
+    "condition": "C2",
+    "prior_dispositions": [
+      "D2",
+      "D3"
+    ],
+    "public_answered_progress": "株主資本/OCI/NCI区分と新株予約権期末の表示箇所という公開所在を追加できた。これらの区分自体を未知のまま会社へ照会する必要は狭まる。",
+    "remaining_company_definition": "会社直接表示BPSの普通株帰属純資産と期末普通株分母の明示的算定basis、優先持分/信託株など必要な調整の適用範囲は本2頁では確定しない。非公表/不存在とは認定しない。",
+    "method_owner_remaining": "外部providerのequity入力との適合は方法採用者の確認。日本基準ラベルの一致や会計表の差額だけでは同仕様を認証できない。",
+    "status": "unresolved_with_limited_public_definition_progress",
+    "IR_priority_not_increased": true,
+    "new_question_text": null,
+    "numeric_changes_authorized": [],
+    "unchanged_reported_candidates": {
+      "eps_jpy": "443.34",
+      "book_value_per_share_jpy": "2659.88"
+    },
+    "prior_reference_value_not_recomputed": true,
+    "later_corrections_current_share_basis_latest_guidance": "本2頁の当時表示から現在維持を認定しない。"
+  },
+  "input_pins": [
+    {
+      "path": "research/ir-seven-company-reference-to-IR-routing-2026-10-16/review.json",
+      "sha256": "dbab08e5f1cd9d43b5936f8b53dbc3f6629817e2bd60ee6f85d85eed1042c515"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/3817/annual-accounting-input-discovery-2026-10-16/review.json",
+      "sha256": "5c37209318827d0a332d6cbeb1ffccc18548cd0c1ba2c992ef7559b7efc7faf3"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/3817/annual-accounting-input-discovery-2026-10-16/source-only-bundle.json",
+      "sha256": "4eaf46d582b3223512ad40772663e6924f71d8758270547dd8e119acab396067"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/3817/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+      "sha256": "31b902a7215c387666b893bd71069f4fc9ddea9bf06b45917756db6cc2976a4a"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/3817/annual-accounting-input-discovery-2026-10-16/text/02-full.txt",
+      "sha256": "d8dccc22ac9faf3a942f1284d72f005af79e17b90095886f77dc92ad9d76ce10"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/3817/annual-accounting-input-discovery-2026-10-16/raw/1e204cd63f44a4e85bb4164e8963b5d1788e0f86a2a86c7d0ea1ca0532748fbe",
+      "sha256": "1e204cd63f44a4e85bb4164e8963b5d1788e0f86a2a86c7d0ea1ca0532748fbe"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/3817/ir-question-disposition-after-public-review-2026-10-16/disposition.json",
+      "sha256": "06cd1d51aac0d85e75c25444cfccdfd7748c9caa724d1cb0ddcea722bf354f44"
+    },
+    {
+      "path": "research/ir-graham-number-two-company-input-connection-2026-10-16/qualitative-reviews/3817/case-after.json",
+      "sha256": "4b03632465c82b70ce3f0279fe4e4e20955cb9fd11d3d222e59c377b49f766f1"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/3817/native-case-setup-2026-10-16/prepare-only/case-context.json",
+      "sha256": "8c648e6b063b66ac668df32faadcdb35a2ab110725ccaa6a6f7f78734b3f6ed5"
+    }
+  ],
+  "operations": {
+    "GET": 0,
+    "DB_or_Store": 0,
+    "valuation_or_fraction_arithmetic": 0,
+    "BPS_or_denominator_reverse_calculation": 0,
+    "normalization": 0,
+    "financial_adoption": 0,
+    "new_IR_draft": 0,
+    "old_file_or_config_edits": 0
+  },
+  "validation": {
+    "full_native_sha_matches_accepted": true,
+    "raw_sha_matches_accepted": true,
+    "selected_pages_native_exact": true,
+    "all_selected_quotes_nonempty_unicode_UTF8_exact": true,
+    "both_new_images_viewed": true,
+    "new_meaning_pages_count": 2,
+    "native_record_no_updates": true
+  }
+}

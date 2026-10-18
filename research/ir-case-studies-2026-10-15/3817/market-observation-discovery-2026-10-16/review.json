@@ -1,0 +1,60 @@
+{
+  "company_id": "jp:3817",
+  "recorded_at": "2026-10-16T10:02:20.099127+00:00",
+  "purpose": "Bounded new market observation discovery through issuer-disclosed stock link, not forecast adoption or issuer contact research",
+  "status": "bounded_stop_4GETs_redirect_chain_price_body_not_acquired",
+  "GETs": 4,
+  "GET_budget": 4,
+  "redirect_graph": [
+    {
+      "sequence": 1,
+      "URL": "https://stocks.finance.yahoo.co.jp/robots.txt",
+      "HTTP_status": 301,
+      "Location": "https://finance.yahoo.co.jp/robots.txt"
+    },
+    {
+      "sequence": 2,
+      "URL": "https://finance.yahoo.co.jp/robots.txt",
+      "HTTP_status": 200,
+      "Location": null
+    },
+    {
+      "sequence": 3,
+      "URL": "https://stocks.finance.yahoo.co.jp/stocks/detail/?code=3817",
+      "HTTP_status": 301,
+      "Location": "https://finance.yahoo.co.jp/quote/3817"
+    },
+    {
+      "sequence": 4,
+      "URL": "https://finance.yahoo.co.jp/quote/3817",
+      "HTTP_status": 301,
+      "Location": "/quote/3817.T"
+    }
+  ],
+  "unattempted_explicit_next_location": {
+    "literal_header": "/quote/3817.T",
+    "resolved_URL": "https://finance.yahoo.co.jp/quote/3817.T",
+    "resolution": "RFC relative URL resolution against the exact last response URL, not guessed .T suffix",
+    "provenance_pointer": "$.GETs[3].response_headers.location",
+    "attempted": false,
+    "reason": "Phase max4 GETs exhausted; no price body acquired"
+  },
+  "market_observation": {
+    "price_raw": null,
+    "currency_or_yen_label": null,
+    "company_code_in_market_body": null,
+    "market_observed_at": null,
+    "market_date": null,
+    "market_time": null,
+    "market_timezone": null,
+    "delay_label": null,
+    "close_label": null,
+    "reason": "No actual market price HTML/body was obtained; URL code alone does not certify a displayed quote"
+  },
+  "HTTP_completion_is_not_market_observed_at": true,
+  "pre_method_claim_scope": "Only inspected3817 issuer library body contained a stock hyperlink but no price observation. Root reported method/spec/case fixed before new market GET. No marketwide unbiased forward-test claim.",
+  "external_closed_1975_provider_route_reopened": false,
+  "new_native_source_bundle": false,
+  "method_calculation_or_thresholds_financial_adoption": 0,
+  "DB_Store_writes_GET_extra_JS_search_guess_other_provider_IR": 0
+}

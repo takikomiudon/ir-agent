@@ -1,0 +1,94 @@
+{
+  "security_code": "3402",
+  "company_name": "東レ",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "繊維製品",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.toray.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T07:47:35.548474+00:00",
+  "completed_at": "2026-10-11T07:48:40.236120+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/3402/20261011T074735548577Z/01.json",
+      "url": "https://www.toray.co.jp/",
+      "retrieved_at": "2026-10-11T07:48:08.316125+00:00",
+      "quote": "東レ株式会社 [TORAY]",
+      "role": "company_identity"
+    },
+    {
+      "snapshot": "evidence/3402/20261011T074735548577Z/02.json",
+      "url": "https://www.toray.co.jp/aboutus/information/inf210916.html",
+      "retrieved_at": "2026-10-11T07:48:24.327694+00:00",
+      "quote": "(1)電話によるお問い合わせ 東レ株式会社 ダンポッポお客様センター",
+      "role": "product_recall_scope"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.toray.co.jp/",
+      "final_url": "https://www.toray.co.jp/",
+      "snapshot": "evidence/3402/20261011T074735548577Z/01.json",
+      "retrieved_at": "2026-10-11T07:48:08.316125+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.toray.co.jp/aboutus/information/inf210916.html",
+      "final_url": "https://www.toray.co.jp/aboutus/information/inf210916.html",
+      "snapshot": "evidence/3402/20261011T074735548577Z/02.json",
+      "retrieved_at": "2026-10-11T07:48:24.327694+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "保存範囲はHOMEと製品回収記事の2頁。製品回収の連絡先をIR業績質問窓口とは扱わない。IR窓口不存在の判定ではない。",
+    "保存済み公式ページ・実フォーム欄を手動点検。送信・配信成功・回答実績は未確認。"
+  ],
+  "discovery": {
+    "security_code": "3402",
+    "official_url": "https://www.toray.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "東レ",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/3402/20261011T074735548577Z/01.json",
+      "normalized_name": "東レ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/3402/20261011T074735548577Z/02.json",
+      "normalized_name": "東レ",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 2,
+  "unconfirmed_reason": "ir_channel_not_verified_in_saved_scope",
+  "http_get_attempt_count": 4,
+  "previous_attempts": [
+    "attempts/3402/20261011T045047392715Z.json",
+    "attempts/3402/20261011T071653435983Z.json",
+    "attempts/3402/20261011T074840236270Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_services",
+    "reviewed_at": "2026-10-11T07:53:00.613117+00:00",
+    "notes": "東レの再取得HOMEと2021年製品リコール記事は本文200で会社名を確認できるが、IR親／IRお問い合わせの実リンクやメール・質問欄は保存されていない。リコールのお客様センターや商品回収用フォームをIR窓口に代用せずunconfirmed維持。過去共通503から本文取得へ回復した事実と、IR受付の有無は別。推測URLを追加しない。",
+    "attempted_at_reviewed": "2026-10-11T07:47:35.548474+00:00",
+    "saved_evidence_only": true
+  }
+}

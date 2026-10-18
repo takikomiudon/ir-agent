@@ -1,0 +1,140 @@
+{
+  "format": "ir_followup_collection",
+  "output": "/workspace/ir-agent/research/ir-contacts-universe-2026-10-11",
+  "started_at": "2026-10-12T12:46:25.692827+00:00",
+  "run_id": "20261012T124625692840Z",
+  "selected": [
+    {
+      "security_code": "9502",
+      "company_name": "中部電力",
+      "url": "https://form.chuden.co.jp/app/inquiry/ir_irsiryo",
+      "parent_url": "https://www.chuden.co.jp/faq/inquiry/inq_ir/",
+      "parent_snapshot": "evidence/9502/20261012T062252095900Z/followup-0226.json",
+      "parent_snapshot_sha256": "efe771f2434567183deb1a7920a9edc1750b71cb63632a5fd2718693790914a1",
+      "parent_retrieved_at": "2026-10-12T06:37:15.700713+00:00",
+      "discovery_link_label": "お問い合わせフォーム入力画面",
+      "source_link_index": 103,
+      "priority": 0,
+      "explicit_ir_link": true,
+      "purpose": "ir_contact_followup",
+      "association_basis": "actual_public_link_in_saved_page_with_human_reviewed_context; IR purpose and reception require review",
+      "official_url": "https://www.chuden.co.jp/",
+      "human_review_context": {
+        "quote": null,
+        "source_references": [
+          {
+            "snapshot": "evidence/9502/20261012T062252095900Z/followup-0226.json",
+            "url": "https://www.chuden.co.jp/faq/inquiry/inq_ir/",
+            "quote": "IR関連情報について お問い合わせ方法 お問い合わせフォームにて お問い合わせフォームをご用意しております。"
+          }
+        ],
+        "review_source": "audit_manufacturing-followup-page-reviews.jsonl",
+        "original_proposal_purpose": "ir_contact_followup",
+        "financial_IR_purpose_demonstrated": true
+      }
+    },
+    {
+      "security_code": "9946",
+      "company_name": "ミニストップ",
+      "url": "https://f.msgs.jp/webapp/form/20393_jeeb_1/index.do",
+      "parent_url": "https://www.ministop.co.jp/inquiry/privacy.html",
+      "parent_snapshot": "evidence/9946/20261012T062252095900Z/followup-0237.json",
+      "parent_snapshot_sha256": "ebe5bc5942166508be64aa494ceca4490334b6930311bafff8ee1254028c5500",
+      "parent_retrieved_at": "2026-10-12T06:40:29.071226+00:00",
+      "discovery_link_label": "同意する",
+      "source_link_index": 139,
+      "priority": 0,
+      "explicit_ir_link": true,
+      "purpose": "ir_contact_followup",
+      "association_basis": "actual_public_link_in_saved_page_with_human_reviewed_context; IR purpose and reception require review",
+      "official_url": "https://www.ministop.co.jp/",
+      "human_review_context": {
+        "quote": null,
+        "source_references": [
+          {
+            "snapshot": "evidence/9946/20261012T062252095900Z/followup-0237.json",
+            "url": "https://www.ministop.co.jp/inquiry/privacy.html",
+            "quote": "お問い合わせにおける個人情報のお取り扱い"
+          }
+        ],
+        "review_source": "audit_manufacturing-followup-page-reviews.jsonl",
+        "original_proposal_purpose": "ir_contact_followup",
+        "financial_IR_purpose_demonstrated": true
+      }
+    }
+  ],
+  "done": [
+    "9502 https://form.chuden.co.jp/app/inquiry/ir_irsiryo",
+    "9946 https://f.msgs.jp/webapp/form/20393_jeeb_1/index.do"
+  ],
+  "todo": [],
+  "pages": [
+    {
+      "security_code": "9502",
+      "snapshot": "evidence/9502/20261012T124625692840Z/followup-0001.json",
+      "url": "https://form.chuden.co.jp/app/inquiry/ir_irsiryo",
+      "http_status": null
+    },
+    {
+      "security_code": "9946",
+      "snapshot": "evidence/9946/20261012T124625692840Z/followup-0002.json",
+      "url": "https://f.msgs.jp/webapp/form/20393_jeeb_1/index.do",
+      "http_status": null
+    }
+  ],
+  "attempts": [
+    {
+      "key": "9502 https://form.chuden.co.jp/app/inquiry/ir_irsiryo",
+      "http_get_attempt_count": 1,
+      "snapshot": "evidence/9502/20261012T124625692840Z/followup-0001.json",
+      "requested_url": "https://form.chuden.co.jp/app/inquiry/ir_irsiryo",
+      "retrieved_at": "2026-10-12T12:46:30.459242+00:00",
+      "http_get_attempted": false,
+      "error": "robots_unreachable_stopped"
+    },
+    {
+      "key": "9946 https://f.msgs.jp/webapp/form/20393_jeeb_1/index.do",
+      "http_get_attempt_count": 1,
+      "snapshot": "evidence/9946/20261012T124625692840Z/followup-0002.json",
+      "requested_url": "https://f.msgs.jp/webapp/form/20393_jeeb_1/index.do",
+      "retrieved_at": "2026-10-12T12:46:34.442228+00:00",
+      "http_get_attempted": false,
+      "error": "robots_disallowed"
+    }
+  ],
+  "preflight": [
+    {
+      "snapshot": "followup-runs/20261012T124625692840Z/preflight-1.json",
+      "passed": true,
+      "requested_url": "https://www.jpx.co.jp/listing/stocks/new/index.html",
+      "url": "https://www.jpx.co.jp/listing/stocks/new/index.html",
+      "http_status": 200,
+      "retrieved_at": "2026-10-12T12:46:25.693247+00:00",
+      "http_get_attempted": true,
+      "http_get_started_at": "2026-10-12T12:46:25.693439+00:00",
+      "http_response_received_at": "2026-10-12T12:46:26.105348+00:00",
+      "http_get_completed_at": "2026-10-12T12:46:26.127205+00:00",
+      "http_get_elapsed_seconds": 0.433796016004635,
+      "host_wait_seconds": 2.9840011848136783e-06,
+      "global_wait_seconds": 8.809874998405576e-07,
+      "wait_seconds": 3.864988684654236e-06,
+      "global_rps_at_dispatch": 0.25,
+      "response_headers": {
+        "server": "envoy",
+        "date": "Mon, 12 Oct 2026 12:46:26 GMT"
+      },
+      "retry_after_seconds": null,
+      "failure_signature": null
+    }
+  ],
+  "http_get_attempt_count": 3,
+  "http_429_count": 0,
+  "common_transport_503_count": 0,
+  "identity_record_lineage": {},
+  "reviewed_ir_record_lineage": {},
+  "max_gets": 2000,
+  "global_rps": 0.25,
+  "finished_at": "2026-10-12T12:46:34.450826+00:00",
+  "status": "completed",
+  "observed_at": "2026-10-12T12:46:34.450803+00:00"
+}

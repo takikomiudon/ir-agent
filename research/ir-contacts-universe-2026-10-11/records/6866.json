@@ -1,0 +1,114 @@
+{
+  "security_code": "6866",
+  "company_name": "日置電機",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "電気機器",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.hioki.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T19:23:28.197281+00:00",
+  "completed_at": "2026-10-11T19:24:27.062114+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/6866/20261011T192328197318Z/01.json",
+      "url": "https://www.hioki.com/jp-ja",
+      "retrieved_at": "2026-10-11T19:24:13.270378+00:00",
+      "quote": "HIOKI – 日置電機株式会社｜製品・サービス",
+      "role": "issuer_saved_page"
+    },
+    {
+      "snapshot": "evidence/6866/20261011T192328197318Z/01.json",
+      "url": "https://www.hioki.com/jp-ja",
+      "retrieved_at": "2026-10-11T19:24:13.270378+00:00",
+      "quote": "コーポレート・IR",
+      "role": "additional_ir_discovery_link",
+      "source_link_index": 51,
+      "source_link_url": "https://www.hioki.com/ja/",
+      "source_link": {
+        "url": "https://www.hioki.com/ja/",
+        "href": "/ja/",
+        "label": "コーポレート・IR 別ウィンドウで表示する"
+      }
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.hioki.co.jp/",
+      "final_url": "https://www.hioki.com/jp-ja",
+      "snapshot": "evidence/6866/20261011T192328197318Z/01.json",
+      "retrieved_at": "2026-10-11T19:24:13.270378+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "保存資料は /jp-ja 製品・サービスの1本文のみ。検索formにはkeyword欄だけで質問textareaなし。コーポレート・IR actual51→/ja/は保存済みリンク候補、遷移先本文・受付条件は未取得。",
+    "保存済み公式ページ・実フォーム欄を手動点検。送信・配信成功・回答実績は未確認。"
+  ],
+  "discovery": {
+    "security_code": "6866",
+    "official_url": "https://www.hioki.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "日置電機",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/6866/20261011T192328197318Z/01.json",
+      "normalized_name": "日置電機",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 5,
+  "previous_attempts": [
+    "attempts/6866/20261011T045047621491Z.json",
+    "attempts/6866/20261011T192427062360Z.json"
+  ],
+  "manual_followup_candidates": [
+    {
+      "url": "https://www.hioki.com/ja/",
+      "quote": "コーポレート・IR",
+      "reason": "製品・サービス側の公式日本語トップに実在する別のコーポレート・IR入口。/ja/本文と当該株式IR窓口は未取得・未検証。検索formや製品ZendeskをIR受付として借用しない。",
+      "purpose": "ir_contact_followup",
+      "method": "GET",
+      "source_snapshot": "evidence/6866/20261011T192328197318Z/01.json",
+      "source_snapshot_sha256": "24f2c6dfa46ba1b5e118196a7e043addaf427d5fd1d7b698a08d10eef91e4c1b",
+      "source_link_index": 51,
+      "source_link": {
+        "url": "https://www.hioki.com/ja/",
+        "href": "/ja/",
+        "label": "コーポレート・IR 別ウィンドウで表示する"
+      },
+      "source_link_label": "コーポレート・IR 別ウィンドウで表示する",
+      "IR_channel_verified": false,
+      "IR_purpose_verified": false,
+      "current_issuer_reception_verified": false,
+      "parent_snapshot": "evidence/6866/20261011T192328197318Z/01.json",
+      "source_link_href": "/ja/",
+      "source_link_src": null,
+      "parent_snapshot_sha256": "24f2c6dfa46ba1b5e118196a7e043addaf427d5fd1d7b698a08d10eef91e4c1b",
+      "source_url": "https://www.hioki.com/jp-ja",
+      "source_retrieved_at": "2026-10-11T19:24:13.270378+00:00"
+    }
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_services",
+    "reviewed_at": "2026-10-11T22:01:38.801415+00:00",
+    "notes": "現日置電機名を含む製品・サービス本文とHIOKI公式ドメインを確認したが、source01の唯一native formは製品検索GET /jp-ja/search、keyword/submitのみ。お問い合わせ54/71は製品側ZendeskでIR用途を実証しない。actual51 rawhref /ja/「コーポレート・IR」を別の未取得探索候補として保存し、窓口・IR用途・現発行体受付の3flags falseを保持。IR受付不存在とは判定しない。",
+    "attempted_at_reviewed": "2026-10-11T19:23:28.197281+00:00",
+    "saved_evidence_only": true
+  }
+}

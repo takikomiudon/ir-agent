@@ -1,0 +1,80 @@
+{
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu"
+  ],
+  "hold_index": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+  "hold_index_sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952",
+  "robots_reviews": {
+    "www.asahikogyosha.co.jp": {
+      "proceed": true,
+      "branch": "fresh_robots200",
+      "raw_file": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/raw/958404cba9df989cc15ffb8ac355e6d078076091295c359032253c8103640626",
+      "raw_sha256": "958404cba9df989cc15ffb8ac355e6d078076091295c359032253c8103640626",
+      "root_can_fetch": true,
+      "rules_text": "User-agent: *\r\nDisallow: /wp-admin/\r\nAllow: /wp-admin/admin-ajax.php\r\nDisallow: /wp-content/uploads/wpo/wpo-plugins-tables-list.json\r\n\r\nSitemap: https://www.asahikogyosha.co.jp/sitemap.xml\r\nSitemap: https://www.asahikogyosha.co.jp/sitemap.rss\n",
+      "selected_target_checks": [
+        {
+          "url": "https://www.asahikogyosha.co.jp/ir/stock/",
+          "can_fetch": true
+        },
+        {
+          "url": "https://www.asahikogyosha.co.jp/ir/stock/price/",
+          "can_fetch": true
+        }
+      ]
+    },
+    "parts.stockweather.co.jp": {
+      "branch": "complete404_missingrobots",
+      "proceed": true,
+      "raw_file": "research/ir-case-studies-2026-10-15/1975/market-comparison-input-discovery-2026-10-16/raw/dd97137d218a6b1016d75f3956c825a01fc0c140bdc942734a3be8c639c264ac",
+      "raw_sha256": "dd97137d218a6b1016d75f3956c825a01fc0c140bdc942734a3be8c639c264ac",
+      "status": 404,
+      "complete_body": true,
+      "selected_target_checks": [
+        {
+          "url": "https://parts.stockweather.co.jp/stocks/ir/contents/1975_02/chartV2.aspx",
+          "can_fetch": true
+        }
+      ],
+      "basis": "docs/data-sources.md complete404missingrobots contract; not explicit permission or exemption from401/403/429/5xx/AIholds.",
+      "body_text_limit": "Capturehelper UTF8replacement text is not a robotsrule source; preserved raw404entity and HTTPstatus establish missingrobots branch. A local strictUTF8preview failed, no HTTPretry occurred."
+    }
+  },
+  "allowed_requests": [
+    {
+      "role": "official-stock-entry",
+      "url": "https://www.asahikogyosha.co.jp/ir/stock/"
+    },
+    {
+      "role": "official-price-page",
+      "url": "https://www.asahikogyosha.co.jp/ir/stock/price/",
+      "literal_pointer": "/GETs/0/html_visible_text/links/100",
+      "label": "株価情報",
+      "canonical_selection": "Existing terminal-slash literal chosen upfront; no other variant if failure."
+    },
+    {
+      "role": "provider-robots",
+      "url": "https://parts.stockweather.co.jp/robots.txt",
+      "purpose": "Fresh robots for exact embedded quote HTML host; previous other-company successes do not establish todayrules."
+    },
+    {
+      "role": "provider-quote-HTML",
+      "url": "https://parts.stockweather.co.jp/stocks/ir/contents/1975_02/chartV2.aspx",
+      "literal_pointer": "/GETs/1/html_visible_text/links/78",
+      "literal_src": "https://parts.stockweather.co.jp/stocks/ir/contents/1975_02/chartV2.aspx",
+      "selection": "Single embeddedHTML explicitly selected by official price page; no JS/API followups."
+    }
+  ],
+  "maximum_GETs": 4
+}

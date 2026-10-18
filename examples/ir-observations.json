@@ -1,0 +1,36 @@
+{"records": [
+  {
+    "id": "synthetic-observation-1",
+    "company_id": "synthetic-company",
+    "question_id": "synthetic-question-1",
+    "question": "架空の公開資料に示された対象費用の性質は単発か継続か、公開情報の範囲で確認する架空の質問。送信しない。",
+    "thesis_version": 1,
+    "cohort_id": "synthetic-cost-nature",
+    "design_version": 1,
+    "synthetic": true,
+    "policy_ref": null,
+    "question_created_at": "2026-10-01T10:00:00+09:00",
+    "design_recorded_at": "2026-10-01T10:01:00+09:00",
+    "hypothesis": {
+      "statement": "架空の費用が一時費用か継続費用かを、後の公開内訳で検証する架空の観測。送信実績ではない。",
+      "state_timing": "at_question",
+      "states": {"temporary": "架空の対象費用は単発で翌期に反復しない", "persistent": "架空の対象費用が翌期にも反復する", "mixed": "架空の対象費用に単発と継続の双方がある"},
+      "target_period": {"start": "2026-04-01", "end": "2026-09-30"}
+    },
+    "signals": {
+      "temporary_explanation": "単発であるとの説明",
+      "persistent_explanation": "継続又は混在との説明",
+      "unclear": "公開性は確認済みだが費用の性質は不明確",
+      "declined": "回答拒否",
+      "no_response_by_deadline": "期限までの受信確認済みで返信なし"
+    },
+    "reply_deadline": "2026-10-08T17:00:00+09:00",
+    "verification_deadline": "2026-11-15T17:00:00+09:00",
+    "premise_evidence": [{"id": "synthetic-public-premise", "company_id": "synthetic-company", "published_at": "2026-09-30T15:00:00+09:00", "retrieved_at": "2026-09-30T16:00:00+09:00", "quote": "架空資料。対象費用の一時性と継続性の内訳は未説明。", "url": "https://example.invalid/premise"}],
+    "dispatch": {"attempted_at": "2026-10-01T10:02:00+09:00", "recorded_at": "2026-10-01T10:02:00+09:00", "status": "sent"},
+    "response_check": {"checked_through": "2026-10-08T17:00:00+09:00", "recorded_at": "2026-10-08T17:01:00+09:00"},
+    "replies": [{"id": "synthetic-reply", "received_at": "2026-10-02T10:00:00+09:00", "recorded_at": "2026-10-02T10:01:00+09:00", "signal": "temporary_explanation", "information_status": "public_clarification"}],
+    "verification": {"status": "verified", "state": "temporary", "recorded_at": "2026-11-02T16:00:00+09:00", "reason": "架空の後続公開資料に、対象費用は単発で反復しないと明記されていると仮定した算術例。", "evidence": [{"id": "synthetic-later-disclosure", "company_id": "synthetic-company", "published_at": "2026-11-02T15:00:00+09:00", "retrieved_at": "2026-11-02T15:30:00+09:00", "quote": "架空資料。対象費用は単発で反復しない。", "url": "https://example.invalid/later-disclosure"}]},
+    "external_changes": []
+  }
+]}

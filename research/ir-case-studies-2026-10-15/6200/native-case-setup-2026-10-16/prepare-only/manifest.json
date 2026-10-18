@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "case_id": "6200-reported-annual-per-share-basis-monitor",
+  "company_id": "jp:6200",
+  "issue_id": "6200-annual-EPS-BPS-ordinary-share-and-dated-source-basis",
+  "recorded_at": "2026-10-16T10:34:18.487378+00:00",
+  "case_ref": {
+    "path": "research/ir-case-studies-2026-10-15/6200/native-case-setup-2026-10-16/prepare-only/case-context.json",
+    "sha256": "519837b4cf7614608ec2960fc3b00d794045dcc81fffc23728e622ab4b9ccb4b"
+  },
+  "sources": [
+    {
+      "id": "issuer-annual-original",
+      "source_id": "case-public:4e3b5b50cf1056ea17c9611853d8480231efa5c2eb3a8642d6f9ffb6a898280c",
+      "source_native_snapshot_sha256": "37a66ed5fa097b293d58ca0febab29c1d29ed3def5194b550eecbdda63ade6bd",
+      "native_hash_domain": "SHA256 UTF8 models.json_text; default JSON separators, distinct from normalizer compact/raw/content SHA",
+      "source_ref": {
+        "path": "research/ir-case-studies-2026-10-15/6200/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json",
+        "sha256": "3007c3e956b87f682a93e3ed7d8ead68ed071cb6677e5f61fd30eb59328dee73",
+        "json_pointer": "/sources/0"
+      },
+      "retrieved_at": "2026-10-16T10:25:02.705089+00:00",
+      "published_at": null,
+      "actual_DB_first_save": null,
+      "actual_DB_checked": false,
+      "financial_inputs_verified": false
+    },
+    {
+      "id": "issuer-derived-twofacts",
+      "source_id": "disclosed-facts:65bf86cb904c1f0740db3b27c61824b01aa65cea08c748017255f9183e7f61b6",
+      "source_native_snapshot_sha256": "8b86f6bcaf248b49469e65df104f566600654c903808409fb9e14fbeb25441c4",
+      "native_hash_domain": "SHA256 UTF8 models.json_text; default JSON separators, distinct from normalizer compact/raw/content SHA",
+      "source_ref": {
+        "path": "research/ir-case-studies-2026-10-15/6200/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json",
+        "sha256": "3007c3e956b87f682a93e3ed7d8ead68ed071cb6677e5f61fd30eb59328dee73",
+        "json_pointer": "/sources/1"
+      },
+      "retrieved_at": "2026-10-16T10:32:56.151564+00:00",
+      "published_at": null,
+      "actual_DB_first_save": null,
+      "actual_DB_checked": false,
+      "financial_inputs_verified": false
+    }
+  ],
+  "bootstrap_reviews": [],
+  "management_review": null,
+  "method_refs": [
+    {
+      "id": "maintainer-formula-positiveguard-and-denominators",
+      "path": "research/ir-transparent-metric-formula-review-2026-10-15/upstream-INDICATORS.md",
+      "sha256": "fb82b2d47596026ea75fa561169062c52622dcb153caffe37af5491111ad084f",
+      "fixed_commit": "00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7",
+      "quote": "EPS  = net_income / shares_outstanding            (weighted average)\nBVPS = total_equity / shares_outstanding_end      (period-end count, average as fallback)\ngraham_number = √( 22.5 · EPS · BVPS )        only when EPS > 0 AND BVPS > 0, else NaN",
+      "character_start": 12966,
+      "character_end": 13211,
+      "byte_start": 13359,
+      "byte_end": 13608,
+      "section": "5 Grahamnumber and latestfiscalperiod caveat",
+      "scope": "Maintainer originalreference; original Graham complete strategy not certified"
+    },
+    {
+      "id": "project-saved-input-specification",
+      "path": "research/ir-case-studies-2026-10-15/1975/graham-number-input-spec-review-2026-10-16/specification.json",
+      "sha256": "6b11349f628984ffc575f6a08d211d36adaf27cedfe76d58d69d7b2835b343e4",
+      "scope": "Earlier project audit of fixed maintainerinputmapping/annualdefault/fallback, not Japanesefinancialadoption or newpolicy"
+    }
+  ],
+  "issuer_quote_ref": {
+    "path": "research/ir-case-studies-2026-10-15/6200/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+    "sha256": "60a1e6f37784c0bec92adfb268e6f19222505f93c6190b32c1bc9cc2d25f30d7"
+  },
+  "issuer-selection-limits": {
+    "path": "research/ir-case-studies-2026-10-15/6200/annual-accounting-input-discovery-2026-10-16/review.json",
+    "sha256": "2b48a0633259675249a9f2c9e081d36d31c542e587c4ae8dae5d56adc15649b5"
+  },
+  "normalization_refs": [
+    {
+      "path": "research/ir-case-studies-2026-10-15/6200/annual-per-share-disclosed-facts-2026-10-16/normalization-input.json",
+      "sha256": "1e44eadbbf4f4bdadcad95f76f00bf7eee67aaf3dd44b4c53f49b1cf0f17ca1e"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/6200/annual-per-share-disclosed-facts-2026-10-16/validation.json",
+      "sha256": "dce00d56eca0a7da1bee68ef1663206f524546dce5ebc443e01a7e4ce7a069bd"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/6200/annual-per-share-disclosed-facts-2026-10-16/reproduction.json",
+      "sha256": "b06f0b3e644f628431ad958997c47a3bed6504c6e00036ca181bc9db3af519ae"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/6200/annual-per-share-disclosed-facts-2026-10-16/input-pins.json",
+      "sha256": "25d179730e7fb5a91a53e041a4ec696dbb9c4ed2874f5bce5c32697428380e7b"
+    }
+  ],
+  "normalizer_core_ref": {
+    "path": "src/ir_agent/disclosed_facts.py",
+    "sha256": "d434b41cfa19568d0cef1a2e6710365f447012d75a4b07ca950cc62b6bd9db51"
+  },
+  "product_CLI_valuation_pinned": false,
+  "registration_not_executed": true,
+  "pending_or_lease_claim": null,
+  "financial_adoption": false
+}

@@ -1,0 +1,30 @@
+{
+  "accepted_at": "2026-10-16T17:14:22.582013+00:00",
+  "status": "accepted_offline_milestone_stopped_waiting_for_user",
+  "implementation": "EDINET fixed first-fetch command, existing parser reused; candidate output only",
+  "test_count": 1663,
+  "test_result": "full-test-result.json",
+  "independent_material_findings": 0,
+  "independent_mock_cases": 17,
+  "evidence_pins": {
+    "full-test-result.json": "df9cdee7117990dab445ad3b6cb57334656c739dcf711233b4943d1cae5f14fb",
+    "full-tests.log": "b6ec079c7bde392994b77e214569c25ffcf2cd5eba21137b1a623a1fe55b94f5",
+    "independent-review.json": "70b67bd9e3772049970f2531586765f919279944ebcc693b4a2a84fd9eeb1277",
+    "root-CLI-preflight.json": "2112ed7f246d87b37c06b28ab874b2b049bbce920ee72fd72abc895bce684952",
+    "implementation.json": "602fee23f476b4733298d3e97521136abd79d2421c82e1257b1e6a2943c0d79a",
+    "manifest.json": "8c7fe5b73afed1e8b2868914b99a4c687de6d4bf34e80dd6a5e7bc5f9e38e231"
+  },
+  "code_pins": {
+    "scripts/start_edinet_research.py": "51599ebf51f4de34cfdda4a3cc460d51ad12d395fba84d3310bc24c46a5dccad",
+    "tests/test_edinet_startup.py": "3823442197b586e0d6fcd15a7282a7f1da27dfc7f3a9f7f34f8110c9cc656095"
+  },
+  "DB_unchanged": true,
+  "DB_SHA256": "02517d47f4f862da3a74048f38dd60ecd1a08027fdd6e18daca394ee26dc3ba1",
+  "observed_key_status": "not_configured_at_preflight",
+  "live_API_authentication_or_document_verified": false,
+  "financial_adoption_or_DB_ingestion": false,
+  "IR_send_or_order": false,
+  "stop": "No additional research, fetching, scheduling or background agent work; wait for user instruction.",
+  "next_command": ".venv/bin/python scripts/start_edinet_research.py",
+  "next_prerequisite": "Set EDINET_API_KEY in the cloud environment and expose it to the execution process."
+}

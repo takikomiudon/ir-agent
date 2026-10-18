@@ -1,0 +1,1752 @@
+{
+  "schema_version": 1,
+  "reviewer": "ir_operations_adaptive3",
+  "generated_at": "2026-10-11T06:43:55.590901+00:00",
+  "scope": {
+    "attempted_at_on_or_after": "2026-10-11T06:12:06+00:00",
+    "security_code_prefix": "3",
+    "successful_official_page_count_greater_than": 0,
+    "requires_completed_record": true,
+    "requires_pending_manual_review": true,
+    "selected_security_codes": [
+      "3067",
+      "3068",
+      "3069",
+      "3070",
+      "3071",
+      "3076",
+      "3077",
+      "3080",
+      "3082",
+      "3086",
+      "3087",
+      "3088",
+      "3089",
+      "3091",
+      "3093",
+      "3096",
+      "3097",
+      "3099"
+    ],
+    "finite_selected_company_count": 18,
+    "selection_snapshot": "/tmp/adaptive-audit-3-batch2-before.json"
+  },
+  "GET_count": 0,
+  "external_submission_count": 0,
+  "snapshot_modified_count": 0,
+  "records": [
+    {
+      "security_code": "3067",
+      "company_name": "東京一番フーズ",
+      "attempted_at": "2026-10-11T06:33:43.833172+00:00",
+      "completed_at": "2026-10-11T06:33:51.991411+00:00",
+      "before": {
+        "investigation_status": "confirmed",
+        "verification_level": "ir_email_verified",
+        "contact_url": "https://www.tokyo-ichiban-foods.co.jp/",
+        "channels": [
+          "email"
+        ],
+        "public_ir_emails": [
+          "ir01@tokyo-ichiban-foods.co.jp"
+        ],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "confirmed",
+        "verification_level": "ir_email_verified",
+        "contact_url": "https://www.tokyo-ichiban-foods.co.jp/",
+        "channels": [
+          "email"
+        ],
+        "public_ir_emails": [
+          "ir01@tokyo-ichiban-foods.co.jp"
+        ],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": false,
+        "unconfirmed_reason": null
+      },
+      "before_record_sha256": "a51caf7bdb0cf4023d4625f8c0351771479e559ff4bb9cc2ff111f18fefc72af",
+      "after_record_sha256": "937e33d0e8f92d821c48c1f1236c3276eceaec460868eaee532c19ba9e681b63",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "東京一番フーズ公式サイトの公開「IR お問い合わせ」リンクのexact hrefがmailto:ir01@tokyo-ichiban-foods.co.jpであることを確認。本文に裸メール表示はなくても公式用途ラベルとの結びつきが保存されている。個人入力条件・返信保証は未記載。",
+        "GET_count": 0,
+        "external_submission_count": 0
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3067/20261011T063343833219Z/01.json",
+          "url": "https://www.tokyo-ichiban-foods.co.jp/",
+          "retrieved_at": "2026-10-11T06:33:47.713165+00:00",
+          "quote": "株式会社 東京一番フーズ｜コーポレートサイト",
+          "role": "issuer_identity"
+        },
+        {
+          "snapshot": "evidence/3067/20261011T063343833219Z/01.json",
+          "url": "https://www.tokyo-ichiban-foods.co.jp/",
+          "retrieved_at": "2026-10-11T06:33:47.713165+00:00",
+          "quote": "IR お問い合わせ",
+          "role": "contact_scope"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3067/20261011T063343833219Z/01.json",
+          "sha256": "a2357e77265f4bcc93fde8082ea3da117091aab5cbdc19d2981337c6d3b51c13"
+        }
+      ],
+      "validation_issues": []
+    },
+    {
+      "security_code": "3068",
+      "company_name": "ＷＤＩ",
+      "attempted_at": "2026-10-11T06:33:44.397203+00:00",
+      "completed_at": "2026-10-11T06:34:22.639076+00:00",
+      "before": {
+        "investigation_status": "provisional",
+        "verification_level": "official_form_link_only",
+        "contact_url": "https://www.wdi.co.jp/contact/ir",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "provisional",
+        "verification_level": "official_form_link_only",
+        "contact_url": "https://www.wdi.co.jp/contact/ir",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": false,
+        "unconfirmed_reason": null
+      },
+      "before_record_sha256": "b2e744d7e45b4949ed1fe239095833ce74df09aa813b08262ffe384fcc75a28d",
+      "after_record_sha256": "60a020a189d41cbcc5e1ede732bb56c634c8264e7b86c24ff15a6ff9222ad5f2",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "WDI公式IR専用お問い合わせページとFAQのIR問い合わせ導線は確認できるが、保存本文に実メール/質問入力controlsがなくprovisional/link_onlyを維持。予約・営業勧誘拒否や条件付き回答遅延を個人投資家への全面拒否にはしない。1週間返信なしの通信不具合案内も返信実績ではない。",
+        "GET_count": 0,
+        "external_submission_count": 0
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3068/20261011T063344397255Z/01.json",
+          "url": "https://www.wdi.co.jp/",
+          "retrieved_at": "2026-10-11T06:33:49.519496+00:00",
+          "quote": "WDI GROUP -WORLD DINING INSPIRATIONS-WDI GROUP -WORLD DINING INSPIRATIONS",
+          "role": "issuer_identity"
+        },
+        {
+          "snapshot": "evidence/3068/20261011T063344397255Z/02.json",
+          "url": "https://www.wdi.co.jp/contact/ir",
+          "retrieved_at": "2026-10-11T06:33:52.590173+00:00",
+          "quote": "IR情報に関するお問い合わせ フォーム入力に関する注意点",
+          "role": "contact_scope"
+        },
+        {
+          "snapshot": "evidence/3068/20261011T063344397255Z/02.json",
+          "url": "https://www.wdi.co.jp/contact/ir",
+          "retrieved_at": "2026-10-11T06:33:52.590173+00:00",
+          "quote": "お問い合わせの内容によっては、ご回答・お返事に時間を要する場合や、回答致しかねる場合がございます。",
+          "role": "conditions"
+        },
+        {
+          "snapshot": "evidence/3068/20261011T063344397255Z/02.json",
+          "url": "https://www.wdi.co.jp/contact/ir",
+          "retrieved_at": "2026-10-11T06:33:52.590173+00:00",
+          "quote": "お問い合わせ後、1週間以上経過しても返答がない場合は、入力時のお間違いか、通信エラー等により送信されていない事が考えられます。",
+          "role": "conditions"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3068/20261011T063344397255Z/01.json",
+          "sha256": "13cd5c72aa949626b328e902b7b76435a03e9c4d8b1c1d46b346815c2a4bfa45"
+        },
+        {
+          "snapshot": "evidence/3068/20261011T063344397255Z/02.json",
+          "sha256": "903fc9be4890a32c203ed082d9c285ddb283ac7c6e195ee4ed6c41a23a20306a"
+        },
+        {
+          "snapshot": "evidence/3068/20261011T063344397255Z/03.json",
+          "sha256": "715eddbb3db9a0ff73c1e11049748367fbf55939010529ea2a26275871e275f7"
+        },
+        {
+          "snapshot": "evidence/3068/20261011T063344397255Z/04.json",
+          "sha256": "fd04608239801f1a17d82952b006a6b64d5603318c8dbefa9b2a220ce50a6546"
+        },
+        {
+          "snapshot": "evidence/3068/20261011T063344397255Z/05.json",
+          "sha256": "703b939b1a64ab1e7195eb81cebfdabfa3f76b2a323791af772a8d70fb9acdf8"
+        },
+        {
+          "snapshot": "evidence/3068/20261011T063344397255Z/06.json",
+          "sha256": "1934dfd1d94998e5394398b5f8b29171aaf43f4dca512c05a4c35580d62c251f"
+        },
+        {
+          "snapshot": "evidence/3068/20261011T063344397255Z/07.json",
+          "sha256": "85a43ca387651f842a19600a597eb354c4388af4b4be0eb5d663eefa0d62f6a3"
+        }
+      ],
+      "validation_issues": []
+    },
+    {
+      "security_code": "3069",
+      "company_name": "ＪＦＬＡホールディングス",
+      "attempted_at": "2026-10-11T06:33:50.287759+00:00",
+      "completed_at": "2026-10-11T06:34:26.473501+00:00",
+      "before": {
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "manual_review_required": false,
+        "unconfirmed_reason": "official_channel_not_demonstrated"
+      },
+      "before_record_sha256": "c6c6b524adf0edfccb6b46eb8cdf9caee859f96a1a684049b4f69503cc8df887",
+      "after_record_sha256": "102c16b5d8bc0360d4c9429a2b52c02e6a02043282ed455cb37eddbd0c74f242",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "JFLA公式一般formにin_mail emailとin_contact textareaはあるがIR用途の直接指定・IR選択肢はない。共通IRナビの「お問い合わせ」だけで一般窓口をIR受付に昇格せずunconfirmedを維持。窓口不存在・回答拒否ではない。",
+        "GET_count": 0,
+        "external_submission_count": 0,
+        "form_control_review": {
+          "snapshot": "evidence/3069/20261011T063350287809Z/03.json",
+          "source_sha256": "b89f59582c4fa861a5e9a12337626dd2e93058b3c750bd7f7aca4289b5113aab",
+          "form_index": 0,
+          "form_action": "",
+          "form_method": "post",
+          "same_form_reply_and_question_verified": true,
+          "reply_and_question_control_names": [
+            "in_mail",
+            "in_contact"
+          ],
+          "actual_controls_count": 5,
+          "IR_scope_verified": false
+        }
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3069/20261011T063350287809Z/01.json",
+          "url": "https://j-fla.com/",
+          "retrieved_at": "2026-10-11T06:33:53.608244+00:00",
+          "quote": "株式会社ＪＦＬＡホールディングス",
+          "role": "issuer_identity"
+        },
+        {
+          "snapshot": "evidence/3069/20261011T063350287809Z/03.json",
+          "url": "https://j-fla.com/contact/",
+          "retrieved_at": "2026-10-11T06:34:04.863477+00:00",
+          "quote": "氏名 * フリガナ * メールアドレス * お問い合わせ内容 *",
+          "role": "generic_controls_only"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3069/20261011T063350287809Z/01.json",
+          "sha256": "4bde14aced822ba64f6982dd286b948a87d1164a600f8ec7c0aa5b66a4c7f4d4"
+        },
+        {
+          "snapshot": "evidence/3069/20261011T063350287809Z/02.json",
+          "sha256": "b7b444196c2deeaea14bb201da381555e8d6d8a7e573b791eb0682fdab70bf70"
+        },
+        {
+          "snapshot": "evidence/3069/20261011T063350287809Z/03.json",
+          "sha256": "b89f59582c4fa861a5e9a12337626dd2e93058b3c750bd7f7aca4289b5113aab"
+        },
+        {
+          "snapshot": "evidence/3069/20261011T063350287809Z/04.json",
+          "sha256": "b326d5224c97a463977388b42f8cbc46558a7f07fed42c9d369d933858787ffa"
+        },
+        {
+          "snapshot": "evidence/3069/20261011T063350287809Z/05.json",
+          "sha256": "fc3d3e9cd3850a1eb9947622222b6a6b4471407685ba5621c27abef7cf0def68"
+        },
+        {
+          "snapshot": "evidence/3069/20261011T063350287809Z/06.json",
+          "sha256": "c7b265d1965634ede7999e6fefb94c20d3feadc96fb15cc5e842b0fe4fa0c559"
+        },
+        {
+          "snapshot": "evidence/3069/20261011T063350287809Z/07.json",
+          "sha256": "6293ae8554491737ecc9cd0abf8832a7d1e6aecb1bd69198ff198278d93d8bb1"
+        }
+      ],
+      "validation_issues": []
+    },
+    {
+      "security_code": "3070",
+      "company_name": "ジェリービーンズグループ",
+      "attempted_at": "2026-10-11T06:33:50.862666+00:00",
+      "completed_at": "2026-10-11T06:34:34.314069+00:00",
+      "before": {
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "manual_review_required": false,
+        "unconfirmed_reason": "official_channel_not_demonstrated"
+      },
+      "before_record_sha256": "a219ea9733b227db88aaeca70a17e8b16b0329b64853b204f4217e03b1c8e928",
+      "after_record_sha256": "d72e6badb27dfcc685788edaf5a405139078c73109779ed63c2e91af9135ba22",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "新しいジェリービーンズグループ公式ホームページの正式社名とIR/Contact表示は確認できるが、今回保存されたのはトップ1ページのみ。IRメール/フォーム用途と同一入力欄は未取得のためunconfirmedを維持。会社サイトなしや窓口不存在に変換しない。",
+        "GET_count": 0,
+        "external_submission_count": 0
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3070/20261011T063350862719Z/01.json",
+          "url": "https://www.jelly-beans-group.co.jp/",
+          "retrieved_at": "2026-10-11T06:34:26.213490+00:00",
+          "quote": "株式会社ジェリービーンズグループ — Jelly Beans Group",
+          "role": "issuer_identity"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3070/20261011T063350862719Z/01.json",
+          "sha256": "b0db8f27ca9e4ca75753ff631948be02aa5123718759231fcb3c8c40fe30dcea"
+        }
+      ],
+      "validation_issues": []
+    },
+    {
+      "security_code": "3071",
+      "company_name": "ストリーム",
+      "attempted_at": "2026-10-11T06:33:51.992534+00:00",
+      "completed_at": "2026-10-11T06:34:33.755493+00:00",
+      "before": {
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "manual_review_required": false,
+        "unconfirmed_reason": "official_channel_not_demonstrated"
+      },
+      "before_record_sha256": "bd1ead6be37a1daee81919cb568895b81c8531cda3c14305b142482a9abb6b3a",
+      "after_record_sha256": "7c00d7fbe2a84d9f72040e888e4b8b6a9bcaf63b7731bb18f11853dd85d39c66",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "ストリーム公式のcontact@stream-jp.comは「上記以外」の一般会社問い合わせ、info@は通販/製品、logistech表示は3PLでありIR用と明示されていない。IRナビと一般宛先を結合せずunconfirmedを維持。優待窓口も業績質問の宛先にはしない。",
+        "GET_count": 0,
+        "external_submission_count": 0
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3071/20261011T063351992566Z/01.json",
+          "url": "https://www.stream-jp.com/",
+          "retrieved_at": "2026-10-11T06:34:00.095064+00:00",
+          "quote": "株式会社ストリーム | Stream",
+          "role": "issuer_identity"
+        },
+        {
+          "snapshot": "evidence/3071/20261011T063351992566Z/03.json",
+          "url": "https://www.stream-jp.com/contact/",
+          "retrieved_at": "2026-10-11T06:34:11.404052+00:00",
+          "quote": "上記以外のお問い合わせの際は、お名前・ご用件をご記入の上、下記メールアドレスまでお願いいたします。 contact@stream-jp.com",
+          "role": "scope_not_demonstrated"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3071/20261011T063351992566Z/01.json",
+          "sha256": "d4a581b3b0e065e9c4ca4539561e1c83669294e59803d4451d38e069d525be5e"
+        },
+        {
+          "snapshot": "evidence/3071/20261011T063351992566Z/02.json",
+          "sha256": "f39e0889bcdbc62ef90b67d922e044ce0a54c93232b8b1e582a8f76704452a59"
+        },
+        {
+          "snapshot": "evidence/3071/20261011T063351992566Z/03.json",
+          "sha256": "9b506c9fe3c3b3ae6aa6cdb335d14c941c06da65da3791f8f69ca6f6abe8369f"
+        },
+        {
+          "snapshot": "evidence/3071/20261011T063351992566Z/04.json",
+          "sha256": "9dae2d47200cbeab6477a379da000f9bbec8cc9279eb137f12693bf11b6d556e"
+        },
+        {
+          "snapshot": "evidence/3071/20261011T063351992566Z/05.json",
+          "sha256": "8e73388c0e748579c69d1f15ef5cb2c3fa2485de02d0c8f0a237589999353221"
+        },
+        {
+          "snapshot": "evidence/3071/20261011T063351992566Z/06.json",
+          "sha256": "07c14168e428b6c4242cfd4968db4893399472ddcfabca4452aa9be89bc576c6"
+        },
+        {
+          "snapshot": "evidence/3071/20261011T063351992566Z/07.json",
+          "sha256": "d936ab2c3e4d58dd9f52b7c00a2aca55f63952dd11dd953f4494934699b276af"
+        }
+      ],
+      "validation_issues": []
+    },
+    {
+      "security_code": "3076",
+      "company_name": "あい　ホールディングス",
+      "attempted_at": "2026-10-11T06:34:24.826171+00:00",
+      "completed_at": "2026-10-11T06:35:02.391226+00:00",
+      "before": {
+        "investigation_status": "confirmed",
+        "verification_level": "form_fields_verified",
+        "contact_url": "https://www.aiholdings.co.jp/site_info/contact/contact_form1",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "confirmed",
+        "verification_level": "form_fields_verified",
+        "contact_url": "https://www.aiholdings.co.jp/site_info/contact/contact_form1",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": false,
+        "unconfirmed_reason": null
+      },
+      "before_record_sha256": "ad1d04b9801743f2fdabf0b4cfc0a09cf1e27d96ec2f275bc6e50b528b0c1401",
+      "after_record_sha256": "f138d50b4024ecf0dd15dcd55f2d809f4b7ac8637fcb79c8ab8e0516c3898960",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "あいHDの総合formにIR情報に関するお問い合わせradioとmail/mail_confirm email入力、message textareaを同一formで確認。公式IRも株主・投資家向け受付を案内。社名欄だけから個人許可・機関限定を推定しない。example@入力例は公開IRメールに含めない。",
+        "GET_count": 0,
+        "external_submission_count": 0,
+        "form_control_review": {
+          "snapshot": "evidence/3076/20261011T063424826263Z/05.json",
+          "source_sha256": "94bade5e376cf8e213e63d47d996169cfff5697c1883ff86c2d6d3c7bf135b35",
+          "form_index": 0,
+          "form_action": "https://www.aiholdings.co.jp/site_info/contact/contact_form1/confirm",
+          "form_method": "post",
+          "same_form_reply_and_question_verified": true,
+          "reply_and_question_control_names": [
+            "message",
+            "mail",
+            "mail_confirm"
+          ],
+          "actual_controls_count": 12,
+          "IR_scope_verified": true
+        }
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3076/20261011T063424826263Z/01.json",
+          "url": "https://www.aiholdings.co.jp/",
+          "retrieved_at": "2026-10-11T06:34:28.018418+00:00",
+          "quote": "あい ホールディングス株式会社 | 技術をつなぎ、価値を生み出す。戦略的なグループシナジーで、変わる時代に課題解決を",
+          "role": "issuer_identity"
+        },
+        {
+          "snapshot": "evidence/3076/20261011T063424826263Z/05.json",
+          "url": "https://www.aiholdings.co.jp/site_info/contact/contact_form1",
+          "retrieved_at": "2026-10-11T06:34:58.493326+00:00",
+          "quote": "お問い合わせ件名 Subject IR情報に関するお問い合わせ サービス・商品についてのお問い合わせ その他のお問い合わせ",
+          "role": "contact_scope"
+        },
+        {
+          "snapshot": "evidence/3076/20261011T063424826263Z/05.json",
+          "url": "https://www.aiholdings.co.jp/site_info/contact/contact_form1",
+          "retrieved_at": "2026-10-11T06:34:58.493326+00:00",
+          "quote": "後日、担当者より 電子メールまたはお電話にてご回答させていただきます。",
+          "role": "conditions"
+        },
+        {
+          "snapshot": "evidence/3076/20261011T063424826263Z/05.json",
+          "url": "https://www.aiholdings.co.jp/site_info/contact/contact_form1",
+          "retrieved_at": "2026-10-11T06:34:58.493326+00:00",
+          "quote": "尚、お問合せについての回答は、土・日・祝日、及び弊社休業日（GW休暇、夏期休暇、年末年始休暇などの連休）は、翌営業日以降の対応とさせていただきます。予めご了承ください。",
+          "role": "conditions"
+        },
+        {
+          "snapshot": "evidence/3076/20261011T063424826263Z/05.json",
+          "url": "https://www.aiholdings.co.jp/site_info/contact/contact_form1",
+          "retrieved_at": "2026-10-11T06:34:58.493326+00:00",
+          "quote": "お問い合わせ件名 Subject IR情報に関するお問い合わせ サービス・商品についてのお問い合わせ その他のお問い合わせ お問い合わせ内容 Content of inquiry 社名 Company 部署名 Department 氏名 Name ふりがな Phonetic guides メールアドレス Mail address メールアドレス確認用 Mail address confirmation 電話番号 Phone number 当社の プライバシーポリシー へ同意いただける場合は、「同意する」にチェックを付け「入力内容の確認」ボタンをクリックしてください。 If you agree with our Privacy Policy , select the \"I have read and agree with the Privacy Policy\" checkbox and click the \"Confirm\" button. 同意する I have read and agree with the Privacy Policy 入力内容の確認 Confirm",
+          "role": "contact_controls"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3076/20261011T063424826263Z/01.json",
+          "sha256": "c261db2fd0e717e63b2bcd935656e7acbe7f73a3f539baa039cbb34145b94db0"
+        },
+        {
+          "snapshot": "evidence/3076/20261011T063424826263Z/02.json",
+          "sha256": "18d4df8aab88661b8d9a8d81e4877ef878e88fbc8f4236b0ec0188cf16cb6aff"
+        },
+        {
+          "snapshot": "evidence/3076/20261011T063424826263Z/03.json",
+          "sha256": "38e7718cd8e2dbf61caa32d351933dfab1b35037b94706bb486ca007b7b8c5d0"
+        },
+        {
+          "snapshot": "evidence/3076/20261011T063424826263Z/04.json",
+          "sha256": "7d9d0733642026b4ca7df29882ce96c272fc1ac8a7319a00393596a2bd5f9625"
+        },
+        {
+          "snapshot": "evidence/3076/20261011T063424826263Z/05.json",
+          "sha256": "94bade5e376cf8e213e63d47d996169cfff5697c1883ff86c2d6d3c7bf135b35"
+        }
+      ],
+      "validation_issues": []
+    },
+    {
+      "security_code": "3077",
+      "company_name": "ホリイフードサービス",
+      "attempted_at": "2026-10-11T06:34:26.475061+00:00",
+      "completed_at": "2026-10-11T06:34:50.234745+00:00",
+      "before": {
+        "investigation_status": "confirmed",
+        "verification_level": "ir_email_verified",
+        "contact_url": "https://www.horiifood.co.jp/ir/contact/",
+        "channels": [
+          "email"
+        ],
+        "public_ir_emails": [
+          "horii-ir@horiifood.co.jp"
+        ],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "confirmed",
+        "verification_level": "ir_email_verified",
+        "contact_url": "https://www.horiifood.co.jp/ir/contact/",
+        "channels": [
+          "email"
+        ],
+        "public_ir_emails": [
+          "horii-ir@horiifood.co.jp"
+        ],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": false,
+        "unconfirmed_reason": null
+      },
+      "before_record_sha256": "79691479d509ef936fd5f8dde9da806ab8ca56c3ee126b33cf4b9ffffc7c03f5",
+      "after_record_sha256": "d3e9cf44cb8a17e333f1fde66fbb07aae2f8ecaf4dfe97a1812e1db18330d4c2",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "ホリイフード公式IR問い合わせページでIRお問い合せ連絡先ブロックにhorii-ir@horiifood.co.jpとmailtoを確認。みずほ信託の株式事務連絡先とは用途を区別。質問内容により答えない条件は全面無回答ではなくcandidateを維持。",
+        "GET_count": 0,
+        "external_submission_count": 0
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3077/20261011T063426475099Z/01.json",
+          "url": "https://www.horiifood.co.jp/",
+          "retrieved_at": "2026-10-11T06:34:35.494739+00:00",
+          "quote": "ホリイフードサービス株式会社 | 茨城県や関東を中心に多ジャンルの飲食店を140店舗以上を展開",
+          "role": "issuer_identity"
+        },
+        {
+          "snapshot": "evidence/3077/20261011T063426475099Z/03.json",
+          "url": "https://www.horiifood.co.jp/ir/contact/",
+          "retrieved_at": "2026-10-11T06:34:46.352477+00:00",
+          "quote": "IRお問い合せ ホリイフードサービス株式会社 〒310-0803 茨城県水戸市城南3-10-17 カーニープレイス水戸4階 TEL：(029)233-5825 FAX：(029)233-5828 メールアドレス： horii-ir@horiifood.co.jp",
+          "role": "contact_scope"
+        },
+        {
+          "snapshot": "evidence/3077/20261011T063426475099Z/03.json",
+          "url": "https://www.horiifood.co.jp/ir/contact/",
+          "retrieved_at": "2026-10-11T06:34:46.352477+00:00",
+          "quote": "Eメールでのお問い合せ内容はできるだけ具体的にお願いします。 内容によっては、お答えできない場合もありますのでご了承ください。",
+          "role": "conditions"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3077/20261011T063426475099Z/01.json",
+          "sha256": "0a28a47e3de28e22c15ba4bdcf3db187c6cd63ac5419f9ffcb84a7c0ebe4b283"
+        },
+        {
+          "snapshot": "evidence/3077/20261011T063426475099Z/02.json",
+          "sha256": "1350e298e269519e03e70b3b95e19d7e9a2ae780979b5d3e6a1baa405c70b89a"
+        },
+        {
+          "snapshot": "evidence/3077/20261011T063426475099Z/03.json",
+          "sha256": "c49fc48d3f14b3b49534b941459cfcca8b3881ca53216985e70d198e80f9a488"
+        }
+      ],
+      "validation_issues": []
+    },
+    {
+      "security_code": "3080",
+      "company_name": "ジェーソン",
+      "attempted_at": "2026-10-11T06:34:33.757714+00:00",
+      "completed_at": "2026-10-11T06:35:18.647714+00:00",
+      "before": {
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "confirmed",
+        "verification_level": "form_fields_verified",
+        "contact_url": "https://jason.co.jp/ir/inquiry/",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": false,
+        "unconfirmed_reason": null
+      },
+      "before_record_sha256": "f0aaa380612e8124f3b8fd7013a0a1b24186ff22dcf3d2ca517e401a4726b7d4",
+      "after_record_sha256": "4b741000a0757eeedbfae60ecd98505e33e5582ad59d015d376b63b414300a78",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "ジェーソン公式IR問い合わせ本文は当社株主・投資家の質問を同じフォームで受け付けることを明示し、your-email emailとyour-message textareaを確認。非公開/重要事実/株価/勧誘等の内容制限は保存し、公開IRの個別質問まで全面拒否とはしない。回答の転載・二次利用禁止を記録。個人直接受付明示はなし。",
+        "GET_count": 0,
+        "external_submission_count": 0,
+        "form_control_review": {
+          "snapshot": "evidence/3080/20261011T063433757751Z/03.json",
+          "source_sha256": "d0257be0bbb231c91a3f2a47e85882b2fa4ece8ddcdf5a547400325dec225982",
+          "form_index": 0,
+          "form_action": "/ir/inquiry/#wpcf7-f119090-p101958-o1",
+          "form_method": "post",
+          "same_form_reply_and_question_verified": true,
+          "reply_and_question_control_names": [
+            "your-email",
+            "your-message",
+            "_wpcf7_ak_hp_textarea"
+          ],
+          "actual_controls_count": 8,
+          "IR_scope_verified": true
+        }
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3080/20261011T063433757751Z/01.json",
+          "url": "https://jason.co.jp/",
+          "retrieved_at": "2026-10-11T06:34:38.018031+00:00",
+          "quote": "株式会社ジェーソン",
+          "role": "issuer_identity"
+        },
+        {
+          "snapshot": "evidence/3080/20261011T063433757751Z/03.json",
+          "url": "https://jason.co.jp/ir/inquiry/",
+          "retrieved_at": "2026-10-11T06:34:47.803862+00:00",
+          "quote": "当社株主、投資家の皆様からのお問い合わせは、以下のフォームよりお願いいたします。",
+          "role": "contact_scope"
+        },
+        {
+          "snapshot": "evidence/3080/20261011T063433757751Z/03.json",
+          "url": "https://jason.co.jp/ir/inquiry/",
+          "retrieved_at": "2026-10-11T06:34:47.803862+00:00",
+          "quote": "下記に該当するご質問は、IRからの回答を差し控えておりますので、あらかじめご了承ください。 ・非公開情報に関するご質問（新サービス、業績動向など） ・金融商品取引法 第166条にある「重要事実」に該当する可能性のあるご質問（株主還元、株価対策など） ・株式市場の値動きに関するご質問（株価動向、売買手口など）",
+          "role": "conditions"
+        },
+        {
+          "snapshot": "evidence/3080/20261011T063433757751Z/03.json",
+          "url": "https://jason.co.jp/ir/inquiry/",
+          "retrieved_at": "2026-10-11T06:34:47.803862+00:00",
+          "quote": "また、当社から回答した内容について、その一部または全部を転載、二次利用することはご遠慮ください。",
+          "role": "conditions"
+        },
+        {
+          "snapshot": "evidence/3080/20261011T063433757751Z/03.json",
+          "url": "https://jason.co.jp/ir/inquiry/",
+          "retrieved_at": "2026-10-11T06:34:47.803862+00:00",
+          "quote": "必須 お名前 必須 メールアドレス 任意 お電話番号 必須 件名 必須 お問い合わせ内容 個人情報の取扱いについて、同意の上送信します。 Δ",
+          "role": "contact_controls"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3080/20261011T063433757751Z/01.json",
+          "sha256": "b35d2a783d6734ece57cd4140b7580b88a63f687a8e479dfdb7bc1ce290e6d7e"
+        },
+        {
+          "snapshot": "evidence/3080/20261011T063433757751Z/02.json",
+          "sha256": "7434c31b180d2a5067684f5b429377ab3ba8d9daff730b57544bd4842d95c27a"
+        },
+        {
+          "snapshot": "evidence/3080/20261011T063433757751Z/03.json",
+          "sha256": "d0257be0bbb231c91a3f2a47e85882b2fa4ece8ddcdf5a547400325dec225982"
+        },
+        {
+          "snapshot": "evidence/3080/20261011T063433757751Z/04.json",
+          "sha256": "eca9bbbc6ff5fd40d451d4f3df0c782b9a5b296a1d2a83984a0e02c19cb7f478"
+        },
+        {
+          "snapshot": "evidence/3080/20261011T063433757751Z/05.json",
+          "sha256": "5efd3e8928653bd069efce2b161286d1f8d7c075e86e32883d79e31e564cac38"
+        },
+        {
+          "snapshot": "evidence/3080/20261011T063433757751Z/06.json",
+          "sha256": "7b1bd8fa6d18b720968952618a7ae9ed6d2f5cf0458f8b9578e97c3a8dfc487f"
+        },
+        {
+          "snapshot": "evidence/3080/20261011T063433757751Z/07.json",
+          "sha256": "2b2b7735cc95b180c6c554bdd26a9129ac282a480a72de02c0297c103fa5cf20"
+        }
+      ],
+      "validation_issues": [
+        {
+          "security_code": "3080",
+          "kind": "form_level",
+          "reason": "form_fields_verified lacks a bound email/question form; search/auth/empty controls do not qualify",
+          "severity": "error"
+        },
+        {
+          "security_code": "3080",
+          "kind": "confirmed_without_channel",
+          "reason": "confirmed requires a specific verified IR email or question form",
+          "severity": "error"
+        }
+      ]
+    },
+    {
+      "security_code": "3082",
+      "company_name": "きちりホールディングス",
+      "attempted_at": "2026-10-11T06:34:34.315495+00:00",
+      "completed_at": "2026-10-11T06:35:12.618492+00:00",
+      "before": {
+        "investigation_status": "confirmed",
+        "verification_level": "form_fields_verified",
+        "contact_url": "https://kichiri.jp/contact/",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "confirmed",
+        "verification_level": "form_fields_verified",
+        "contact_url": "https://kichiri.jp/contact/",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": false,
+        "unconfirmed_reason": null
+      },
+      "before_record_sha256": "42bf0d657e68a24670a6c1aed834e86ddb4be79ff275daeeb1f305bc175c62b8",
+      "after_record_sha256": "d3a892e1e87ebcf2bcfce1047d1c0d574c02d168d02a5627320896d8acb31018",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "きちり公式IR専用案内からexact kichiri.jp/contact/へ連結し、実formの「広報、IRなどのお問い合わせ」区分select、your-email email、content textareaを確認。店舗等は別区分。店舗利用以外は「本社宛」の入力指示を保存。商談希望時だけ返答する条項は提案・案内に限るためIRの全面無回答にしない。個人の明示なし。",
+        "GET_count": 0,
+        "external_submission_count": 0,
+        "form_control_review": {
+          "snapshot": "evidence/3082/20261011T063434315542Z/04.json",
+          "source_sha256": "2f83c8368da049d6923b1e8b34738fc02f6f2bbda0d676d30f2f7b47a8800f55",
+          "form_index": 0,
+          "form_action": "/contact/#wpcf7-f1865-o1",
+          "form_method": "post",
+          "same_form_reply_and_question_verified": true,
+          "reply_and_question_control_names": [
+            "your-email",
+            "content"
+          ],
+          "actual_controls_count": 13,
+          "IR_scope_verified": true
+        }
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3082/20261011T063434315542Z/01.json",
+          "url": "https://www.kichiri.co.jp/",
+          "retrieved_at": "2026-10-11T06:34:40.005941+00:00",
+          "quote": "株式会社きちりホールディングス | KICHIRI HOLDINGS & Co.,Ltd.",
+          "role": "issuer_identity"
+        },
+        {
+          "snapshot": "evidence/3082/20261011T063434315542Z/03.json",
+          "url": "https://www.kichiri.co.jp/ir/contact.php",
+          "retrieved_at": "2026-10-11T06:34:50.078217+00:00",
+          "quote": "当社IRに関するお問い合わせにつきましては、お問い合わせフォームからお気軽にご連絡ください。 お問い合わせフォームへ",
+          "role": "contact_scope"
+        },
+        {
+          "snapshot": "evidence/3082/20261011T063434315542Z/04.json",
+          "url": "https://kichiri.jp/contact/",
+          "retrieved_at": "2026-10-11T06:35:08.902287+00:00",
+          "quote": "広報、IRなどのお問い合わせ",
+          "role": "contact_scope"
+        },
+        {
+          "snapshot": "evidence/3082/20261011T063434315542Z/04.json",
+          "url": "https://kichiri.jp/contact/",
+          "retrieved_at": "2026-10-11T06:35:08.902287+00:00",
+          "quote": "店舗利用以外の方は「本社宛」と入力してください。",
+          "role": "conditions"
+        },
+        {
+          "snapshot": "evidence/3082/20261011T063434315542Z/04.json",
+          "url": "https://kichiri.jp/contact/",
+          "retrieved_at": "2026-10-11T06:35:08.902287+00:00",
+          "quote": "誠に勝手ながら、ご提案・ご案内につきましては、商談等を希望させていただく場合に限り、弊社よりご連絡させていただきますのでご了承くださいませ。",
+          "role": "conditions"
+        },
+        {
+          "snapshot": "evidence/3082/20261011T063434315542Z/04.json",
+          "url": "https://kichiri.jp/contact/",
+          "retrieved_at": "2026-10-11T06:35:08.902287+00:00",
+          "quote": "CONTACT お問い合わせは下記フォームより受け付けております 入力 確認 完了 お問い合わせ区分 —以下から選択してください— 店舗について（ご予約、お忘れ物、苦情等） 店舗物件情報について 業務用食材、備品、消耗品のご提案について 店舗設備のご提案について 加盟店募集に関するお問い合わせ 採用に関するお問い合わせ 広報、IRなどのお問い合わせ その他のお問い合わせ お名前 フリガナ 全角カタカナでご入力ください メールアドレス 半角英数字でご入力ください 電話番号 半角数字で、ハイフンなしでご入力ください ご利用店舗 業態名だけでなく、必ず「〇〇店」までご記入ください。 ご利用日時 ご利用店舗 ご利用店舗の店舗名を入力してください。店舗利用以外の方は「本社宛」と入力してください。 業態名だけでなく、必ず「〇〇店」までご記入ください。 ご利用日時 会社名 お問い合わせ内容 物件所在地、面積、賃料などをお書き添えいただくとスムーズです。 誠に勝手ながら、ご提案・ご案内につきましては、商談等を希望させていただく場合に限り、弊社よりご連絡させていただきますのでご了承くださいませ。 「個人情報の取扱いに関する同意事項」 に同意する 入力内容を確認する お問い合わせ区分 お名前 フリガナ メールアドレス 電話番号 ご利用店舗 ご利用日時 ご利用店舗 ご利用日時 会社名 お問い合わせ内容 戻る",
+          "role": "contact_controls"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3082/20261011T063434315542Z/01.json",
+          "sha256": "f65e8bd3e43fe4e9a202cec7562012a7bc7845045072cc733401fd7996409c15"
+        },
+        {
+          "snapshot": "evidence/3082/20261011T063434315542Z/02.json",
+          "sha256": "a8d5cc15969a4ade181585e0f1313c6e27f35abb0cafbef6e9a84986fbf9742d"
+        },
+        {
+          "snapshot": "evidence/3082/20261011T063434315542Z/03.json",
+          "sha256": "44ef2044ae1be439acc8d3b4764e6c67ff73e16aa233ce15659297278cecba05"
+        },
+        {
+          "snapshot": "evidence/3082/20261011T063434315542Z/04.json",
+          "sha256": "2f83c8368da049d6923b1e8b34738fc02f6f2bbda0d676d30f2f7b47a8800f55"
+        }
+      ],
+      "validation_issues": []
+    },
+    {
+      "security_code": "3086",
+      "company_name": "Ｊ．フロント　リテイリング",
+      "attempted_at": "2026-10-11T06:34:57.866264+00:00",
+      "completed_at": "2026-10-11T06:35:27.858097+00:00",
+      "before": {
+        "investigation_status": "provisional",
+        "verification_level": "official_form_link_only",
+        "contact_url": "https://www.j-front-retailing.com/ir/inquiry.html",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "provisional",
+        "verification_level": "official_form_link_only",
+        "contact_url": "https://www.j-front-retailing.com/ir/inquiry.html",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": false,
+        "unconfirmed_reason": null
+      },
+      "before_record_sha256": "4652770e90b07c3436e35eaa086f98d5d6596a05080f8fa795caaa4f1fbd12bd",
+      "after_record_sha256": "4a349d8548895dad6e35da0dcb3ffe49753cc91d35690b9aee9d4b9498689817",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "J.フロント公式IRページはメールによる投資家向けフォームを案内するが、プライバシー同意後へ進む画面のみで保存HTMLのformsは空。ボタン操作/同意/フォーム入力をせずprovisional/link_onlyを維持。商品の一般問い合わせや優待専用案内はIR業績質問へ流用しない。",
+        "GET_count": 0,
+        "external_submission_count": 0
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3086/20261011T063457866307Z/01.json",
+          "url": "https://www.j-front-retailing.com/",
+          "retrieved_at": "2026-10-11T06:35:01.582035+00:00",
+          "quote": "ホーム｜Ｊ．フロント リテイリング株式会社",
+          "role": "issuer_identity"
+        },
+        {
+          "snapshot": "evidence/3086/20261011T063457866307Z/02.json",
+          "url": "https://www.j-front-retailing.com/ir/inquiry.html",
+          "retrieved_at": "2026-10-11T06:35:05.597408+00:00",
+          "quote": "IRお問い合わせ メールによる投資家向けお問い合わせフォーム",
+          "role": "contact_scope"
+        },
+        {
+          "snapshot": "evidence/3086/20261011T063457866307Z/02.json",
+          "url": "https://www.j-front-retailing.com/ir/inquiry.html",
+          "retrieved_at": "2026-10-11T06:35:05.597408+00:00",
+          "quote": "上記にご同意いただいた方のみ、以下の「同意する」ボタンをクリックし、お問い合わせフォームにお進みください。",
+          "role": "contact_scope"
+        },
+        {
+          "snapshot": "evidence/3086/20261011T063457866307Z/02.json",
+          "url": "https://www.j-front-retailing.com/ir/inquiry.html",
+          "retrieved_at": "2026-10-11T06:35:05.597408+00:00",
+          "quote": "なお、お問い合わせの内容によっては、ご回答にお時間を頂く場合やご回答出来ない場合もございますので、あらかじめご了承願います。",
+          "role": "conditions"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3086/20261011T063457866307Z/01.json",
+          "sha256": "8c2e081f9fa122d878ad0d4a41a6a07206d1602bc70314ac62ca1dcd6513a3dd"
+        },
+        {
+          "snapshot": "evidence/3086/20261011T063457866307Z/02.json",
+          "sha256": "5a3b3dddf662ef9e0836d1143edb32a535f47e46b14d9907baa833cbaf479364"
+        },
+        {
+          "snapshot": "evidence/3086/20261011T063457866307Z/03.json",
+          "sha256": "5ed2f42fafaf1fa31b025f7b86b032eecfff9dac2010a73218b195cfaa8191b0"
+        },
+        {
+          "snapshot": "evidence/3086/20261011T063457866307Z/04.json",
+          "sha256": "7f6e18769a17df19a8d72e72072cdd8dcbbafc165695437a943f4cecc5053e61"
+        },
+        {
+          "snapshot": "evidence/3086/20261011T063457866307Z/05.json",
+          "sha256": "6a1eef2e2ba58562882ba05ab171f66a37524520c835604515ac68172920edb7"
+        },
+        {
+          "snapshot": "evidence/3086/20261011T063457866307Z/06.json",
+          "sha256": "da9b5888cbdd120805370929fdac480d963910efcb101989a3d26769ac13c4b7"
+        },
+        {
+          "snapshot": "evidence/3086/20261011T063457866307Z/07.json",
+          "sha256": "054df52133160bb53cf6d7b4de359f4d9d089c280d7ea6cc6454c1103c0b655e"
+        }
+      ],
+      "validation_issues": []
+    },
+    {
+      "security_code": "3087",
+      "company_name": "ドトール・日レスホールディングス",
+      "attempted_at": "2026-10-11T06:35:02.392870+00:00",
+      "completed_at": "2026-10-11T06:35:36.825520+00:00",
+      "before": {
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "manual_review_required": false,
+        "unconfirmed_reason": "official_channel_not_demonstrated"
+      },
+      "before_record_sha256": "45c66b32023c9f615dd46e00f1bc0d1d651dba1bd99273a2bca92fb14395668a",
+      "after_record_sha256": "866037394398627064e7bf60954fd9b75f48bfb8135533bc4594d63d13a987c6",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "ドトール公式ブランドドメインのフォームは正式HDへのご質問用でemail入力/feedback textareaを備えるが、保存本文にIR用途指定・IR選択肢はない。公式IRからの共通問い合わせナビだけでIR専用質問窓口と判断せずunconfirmedを維持。回答転載制限はこの一般フォームの条件としてのみ保存。例示doutor@を宛先にしない。",
+        "GET_count": 0,
+        "external_submission_count": 0,
+        "form_control_review": {
+          "snapshot": "evidence/3087/20261011T063502392906Z/03.json",
+          "source_sha256": "2bc6660e7fd25ad030c12fee2d4375f255cb4fa265366e1c16ecaaec1f75e06c",
+          "form_index": 0,
+          "form_action": "/inquiry/nrshd/confirmation.html",
+          "form_method": "post",
+          "same_form_reply_and_question_verified": true,
+          "reply_and_question_control_names": [
+            "feedback",
+            "email"
+          ],
+          "actual_controls_count": 7,
+          "IR_scope_verified": false
+        }
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3087/20261011T063502392906Z/01.json",
+          "url": "https://www.dnh.co.jp/",
+          "retrieved_at": "2026-10-11T06:35:06.783789+00:00",
+          "quote": "株式会社ドトール・日レスホールディングス",
+          "role": "issuer_identity"
+        },
+        {
+          "snapshot": "evidence/3087/20261011T063502392906Z/03.json",
+          "url": "https://www.doutor.co.jp/inquiry/nrshd/index.html",
+          "retrieved_at": "2026-10-11T06:35:17.747817+00:00",
+          "quote": "株式会社ドトール・日レスホールディングス へのご質問",
+          "role": "scope_not_demonstrated"
+        },
+        {
+          "snapshot": "evidence/3087/20261011T063502392906Z/03.json",
+          "url": "https://www.doutor.co.jp/inquiry/nrshd/index.html",
+          "retrieved_at": "2026-10-11T06:35:17.747817+00:00",
+          "quote": "弊社の承諾なく、ご返答内容の一部また全体を転用、二次利用して、お客様以外に開示されることは、固くお断りいたします。",
+          "role": "conditions"
+        },
+        {
+          "snapshot": "evidence/3087/20261011T063502392906Z/03.json",
+          "url": "https://www.doutor.co.jp/inquiry/nrshd/index.html",
+          "retrieved_at": "2026-10-11T06:35:17.747817+00:00",
+          "quote": "株式会社ドトール・日レスホールディングス へのご質問 お問い合わせの前の注意をご確認いただき、 必須事項をご記入の上「同意して確認画面に進む」ボタンをクリックしてください。 お問い合わせいただく前の注意 お客様からいただく個人情報につきましては、皆様とのコミュニケーションを目的として利用し、その他の目的で外部に流出することは一切ありません。 ご意見・お問い合わせの内容によっては、お電話にてご案内させていただく場合もございます。 ご返答までに数日をいただく場合や、ご返答致しかねる場合がございます。あらかじめご了承ください。 弊社の承諾なく、ご返答内容の一部また全体を転用、二次利用して、お客様以外に開示されることは、固くお断りいたします。 お客様の個人情報の取扱全般に関する当社の考え方をご覧になりたい方はプライバシーポリシーのページをご覧ください。 お客様は、お客様ご本人の個人情報について、開示、訂正、削除をご請求いただけます。 その際は下記の「個人情報に関する相談窓口」までご連絡ください。 土曜日・日曜日・祝日・年末年始ほか・当社休業日にいただくお問い合わせについては、翌営業日以降の回答となりますのでご了承ください。 個人情報に関する相談窓口 株式会社ドトールコーヒー お客様相談室 電話：(03) 5459-9036 受付時間9：00～17：00 土曜日・日曜日・祝日・年末年始ほか当社休業日を除く お問い合わせ内容 ※必須項目 以下の項目は当社からの 返信が必要な方 のみご記入いた",
+          "role": "generic_controls_only"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3087/20261011T063502392906Z/01.json",
+          "sha256": "3d31bc81f96eb7b2314456b56cb37911b1da1037d84ff8b5d6b787c85f57e97d"
+        },
+        {
+          "snapshot": "evidence/3087/20261011T063502392906Z/02.json",
+          "sha256": "1107384ef173ba6c4b6e1fa53f0c9475457301231c8e1f3dacbf6ec2f13780c1"
+        },
+        {
+          "snapshot": "evidence/3087/20261011T063502392906Z/03.json",
+          "sha256": "2bc6660e7fd25ad030c12fee2d4375f255cb4fa265366e1c16ecaaec1f75e06c"
+        },
+        {
+          "snapshot": "evidence/3087/20261011T063502392906Z/04.json",
+          "sha256": "e2d205df0b236f82296bea5e72f8db200ac11296bad35202181340f8c129bcb5"
+        },
+        {
+          "snapshot": "evidence/3087/20261011T063502392906Z/05.json",
+          "sha256": "60132163eea6c7ea4c9baaaa93381237eef4f6e8371d2f400dca3b062d42dc6e"
+        },
+        {
+          "snapshot": "evidence/3087/20261011T063502392906Z/06.json",
+          "sha256": "e28905dbf6c9b7614e80e5b0140a72b2f20bbcc297108bf58a01eaf31146d0bf"
+        },
+        {
+          "snapshot": "evidence/3087/20261011T063502392906Z/07.json",
+          "sha256": "0afdb6d77b03a9f21896371993935bf4a207864c873d870e5cf2e2f56c4095e4"
+        }
+      ],
+      "validation_issues": []
+    },
+    {
+      "security_code": "3088",
+      "company_name": "マツキヨココカラ＆カンパニー",
+      "attempted_at": "2026-10-11T06:35:12.621293+00:00",
+      "completed_at": "2026-10-11T06:35:41.229354+00:00",
+      "before": {
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "manual_review_required": false,
+        "unconfirmed_reason": "official_channel_not_demonstrated"
+      },
+      "before_record_sha256": "88ee77e9278584c480917b5957c415aba9a493f2f36db407b4ec5db8e77756b9",
+      "after_record_sha256": "eb56331353107256da7878f506ee70dc6854399974f10d8015773d8d5221e84a",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "マツキヨココカラ公式IR7ページにissuer名とIR開示は保存されているが、IR質問のメール/フォーム用途とactual入力欄を示す保存資料がない。有限取得範囲での未確認を維持し、窓口不存在・個人回答拒否とはしない。",
+        "GET_count": 0,
+        "external_submission_count": 0
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3088/20261011T063512621335Z/01.json",
+          "url": "https://www.matsukiyococokara.com/",
+          "retrieved_at": "2026-10-11T06:35:16.276554+00:00",
+          "quote": "マツキヨココカラ＆カンパニー",
+          "role": "issuer_identity"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3088/20261011T063512621335Z/01.json",
+          "sha256": "80c0aaf9e64cf1f3a4d12bac10c48831ded8329384fdd0b9090d0b03e1a00b96"
+        },
+        {
+          "snapshot": "evidence/3088/20261011T063512621335Z/02.json",
+          "sha256": "52805f2968d194b11db8a5b88c7f5cb01168881223a8e220d296ae5c7ce5d4d6"
+        },
+        {
+          "snapshot": "evidence/3088/20261011T063512621335Z/03.json",
+          "sha256": "e1cd4efc43b7b8b866674007d38d56b3fbe9a7dc135f5ec117961b5b14d97693"
+        },
+        {
+          "snapshot": "evidence/3088/20261011T063512621335Z/04.json",
+          "sha256": "74783c8aac44d53cfe6f3a4f7ae4034c5675ab474e689d0b9da39086b08eb461"
+        },
+        {
+          "snapshot": "evidence/3088/20261011T063512621335Z/05.json",
+          "sha256": "596973ce43364bd9a8842012f12eec97286d1ceb67af18cd6db45e293f0f8665"
+        },
+        {
+          "snapshot": "evidence/3088/20261011T063512621335Z/06.json",
+          "sha256": "92ef9fba60b654f6f0074efecd686044eb53d46af8467d953260978b26d3ff0b"
+        },
+        {
+          "snapshot": "evidence/3088/20261011T063512621335Z/07.json",
+          "sha256": "8546c73863056b361eda0a6c51a1c1a749a0da007712511b8c01935fe69ef3a7"
+        }
+      ],
+      "validation_issues": []
+    },
+    {
+      "security_code": "3089",
+      "company_name": "テクノアルファ",
+      "attempted_at": "2026-10-11T06:35:18.648867+00:00",
+      "completed_at": "2026-10-11T06:35:47.773936+00:00",
+      "before": {
+        "investigation_status": "provisional",
+        "verification_level": "official_form_link_only",
+        "contact_url": "https://www.technoalpha.co.jp/ir/inquiry/",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "provisional",
+        "verification_level": "official_form_link_only",
+        "contact_url": "https://www.technoalpha.co.jp/ir/inquiry/",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": false,
+        "unconfirmed_reason": null
+      },
+      "before_record_sha256": "5389129e67637adf8997e7ce8dd5454cd01571edd1c476d8df61f44b04cd01e2",
+      "after_record_sha256": "8f848162e041493ea66a4371d91d761d09e041f6d6f6a45d2064bb8e83549ccd",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "テクノアルファ公式IR専用ページは下記フォームを使うよう明示するが、保存HTMLに実form/controlsも埋込先もない。IRメール配信サービスへのSMPFORMは質問窓口とは異なる。provisional/link_onlyを維持。一般ページの協業提案に返信しない条件をIRへ波及させない。",
+        "GET_count": 0,
+        "external_submission_count": 0
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3089/20261011T063518648896Z/01.json",
+          "url": "https://www.technoalpha.co.jp/",
+          "retrieved_at": "2026-10-11T06:35:22.529301+00:00",
+          "quote": "テクノアルファ株式会社 | 半導体製造装置/電子材料/船舶・環境機器",
+          "role": "issuer_identity"
+        },
+        {
+          "snapshot": "evidence/3089/20261011T063518648896Z/03.json",
+          "url": "https://www.technoalpha.co.jp/ir/inquiry/",
+          "retrieved_at": "2026-10-11T06:35:29.353803+00:00",
+          "quote": "IR情報に関する各種お問い合わせにつきましては、下記のフォームをご利用ください。",
+          "role": "contact_scope"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3089/20261011T063518648896Z/01.json",
+          "sha256": "0f9ff09d3c307db3255300c4feb7e966032bb6809dde12ded7ebe0735ef36ae6"
+        },
+        {
+          "snapshot": "evidence/3089/20261011T063518648896Z/02.json",
+          "sha256": "e9acc09f57aace556b34cc3bf5eea02cf7741a69f73b872db9b4085a7c479def"
+        },
+        {
+          "snapshot": "evidence/3089/20261011T063518648896Z/03.json",
+          "sha256": "f38f9158434ec40a7ce89b6650c68ad31e1f1e04f821425c9c56c8548a2b7af1"
+        },
+        {
+          "snapshot": "evidence/3089/20261011T063518648896Z/04.json",
+          "sha256": "77310c7516fe534d22133c56cb60c3a878143a68d403822452d7b781b9284c42"
+        },
+        {
+          "snapshot": "evidence/3089/20261011T063518648896Z/05.json",
+          "sha256": "956890b21f480ce04c5d080b903e62b70953ffeb5786752937f7455c956f908c"
+        },
+        {
+          "snapshot": "evidence/3089/20261011T063518648896Z/06.json",
+          "sha256": "c19056f32ea46c68a2e0666bca3b7954608bdcf653b027d553118e57051d4b6c"
+        },
+        {
+          "snapshot": "evidence/3089/20261011T063518648896Z/07.json",
+          "sha256": "4aaf7bb34b2253018e406dd9d01ed12966803535b2ace7057a162dcad17a0875"
+        }
+      ],
+      "validation_issues": []
+    },
+    {
+      "security_code": "3091",
+      "company_name": "ブロンコビリー",
+      "attempted_at": "2026-10-11T06:35:27.861042+00:00",
+      "completed_at": "2026-10-11T06:35:58.190842+00:00",
+      "before": {
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "provisional",
+        "verification_level": "official_form_link_only",
+        "contact_url": "https://reg34.smp.ne.jp/regist/is?SMPFORM=qeoh-mbkgmg-9c5238593e9e8315682a7b005f48bc01",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": false,
+        "unconfirmed_reason": "official_channel_not_demonstrated"
+      },
+      "before_record_sha256": "546ab8104374a5106354dd646b90e6d9a70cf8437ae3258926835e54f3c1d512",
+      "after_record_sha256": "5a1b572a7e10bda170ca9661f7312cc4e5fcdd2a1c79db58ea5461e81ad5b8e3",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "ブロンコビリー公式お問い合わせ04は「会社・IR情報に関するお問い合わせ」をフォームへ案内し、入力画面リンクのexact SMPFORMを保存。外部対象formは今回取得されておらず入力欄未確認なのでprovisional/link_only。物件募集メール・PRメール・IRメール配信登録を質問受付へ混同しない。同SMPFORMはsupplier entryにも使われ、区分・個人条件の追加確認が必要。",
+        "GET_count": 0,
+        "external_submission_count": 0
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3091/20261011T063527861092Z/01.json",
+          "url": "https://www.bronco.co.jp/",
+          "retrieved_at": "2026-10-11T06:35:31.515891+00:00",
+          "quote": "ステーキ・ハンバーグのブロンコビリー",
+          "role": "issuer_identity"
+        },
+        {
+          "snapshot": "evidence/3091/20261011T063527861092Z/04.json",
+          "url": "https://www.bronco.co.jp/corporate/contact/",
+          "retrieved_at": "2026-10-11T06:35:41.980184+00:00",
+          "quote": "会社・IR情報に関するお問い合わせ、その他お問合わせについてはお問い合わせフォームよりご連絡ください。 入力画面に進む",
+          "role": "contact_scope"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3091/20261011T063527861092Z/01.json",
+          "sha256": "79481300af101e4b4656754cab08ffd52de21406e98715fb40594b0173252fd1"
+        },
+        {
+          "snapshot": "evidence/3091/20261011T063527861092Z/02.json",
+          "sha256": "ce7be51df1a4a2800bfef5eaa0944b25fd472e0d1521a67e1442ffc101b3e245"
+        },
+        {
+          "snapshot": "evidence/3091/20261011T063527861092Z/03.json",
+          "sha256": "f9ffe60c77c911b6bada162562613873a4828f2c0fe0d6fc109cf99a0812d9b2"
+        },
+        {
+          "snapshot": "evidence/3091/20261011T063527861092Z/04.json",
+          "sha256": "d39b82b208ac8b74c1aa2aa1cdd2cbf75bda3d7ba677f9a63d286305e8926846"
+        },
+        {
+          "snapshot": "evidence/3091/20261011T063527861092Z/05.json",
+          "sha256": "1b5603991e084ab374993f0c72b7e1630b42aa8070ff079782601acc293a9791"
+        },
+        {
+          "snapshot": "evidence/3091/20261011T063527861092Z/06.json",
+          "sha256": "79d481a1cdb3e8e01a45136735e81d64a4a748ffefaa940601fd3f975da3e401"
+        },
+        {
+          "snapshot": "evidence/3091/20261011T063527861092Z/07.json",
+          "sha256": "dc50d62b3b532fa0bbe2d0958abc9867ff1dffe0de0114917b2a4ca9f078292f"
+        }
+      ],
+      "validation_issues": []
+    },
+    {
+      "security_code": "3093",
+      "company_name": "トレジャー・ファクトリー",
+      "attempted_at": "2026-10-11T06:35:36.827228+00:00",
+      "completed_at": "2026-10-11T06:36:11.360841+00:00",
+      "before": {
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "confirmed",
+        "verification_level": "form_fields_verified",
+        "contact_url": "https://www.treasurefactory.co.jp/ask/ir/top.html",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": false,
+        "unconfirmed_reason": null
+      },
+      "before_record_sha256": "5d6506e89616aec247ca1b177e5eaada04a5c64cc7c1e435909d6e96310ef0c4",
+      "after_record_sha256": "b9905de22aa309b6d439c31893abe98fb266362f5d926c7a75ec7836c9a6d350",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "トレジャーファクトリー公式問い合わせ親03からIR専用ask/ir/top.htmlへ連結。IR専用タイトルの同一formにmail入力とbody textareaを確認しconfirmedへ昇格。PR/撮影用formと店舗苦情は別。回答義務なし/内容次第不回答は任意回答条項で、常に個別回答しない方針ではない。回答の無断転載・二次利用禁止を記録。",
+        "GET_count": 0,
+        "external_submission_count": 0,
+        "form_control_review": {
+          "snapshot": "evidence/3093/20261011T063536827277Z/04.json",
+          "source_sha256": "24b4c14e5b1d321fe7b706b4cdd2f53af2a0af0c968265f0dc07cdb665a48a49",
+          "form_index": 0,
+          "form_action": "confirm.html",
+          "form_method": "POST",
+          "same_form_reply_and_question_verified": true,
+          "reply_and_question_control_names": [
+            "mail",
+            "body"
+          ],
+          "actual_controls_count": 6,
+          "IR_scope_verified": true
+        }
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3093/20261011T063536827277Z/01.json",
+          "url": "https://www.treasurefactory.co.jp/",
+          "retrieved_at": "2026-10-11T06:35:39.468654+00:00",
+          "quote": "株式会社トレジャー・ファクトリー 会社案内・IR情報 公式サイト",
+          "role": "issuer_identity"
+        },
+        {
+          "snapshot": "evidence/3093/20261011T063536827277Z/04.json",
+          "url": "https://www.treasurefactory.co.jp/ask/ir/top.html",
+          "retrieved_at": "2026-10-11T06:35:50.441082+00:00",
+          "quote": "IRに関するお問い合わせ",
+          "role": "contact_scope"
+        },
+        {
+          "snapshot": "evidence/3093/20261011T063536827277Z/04.json",
+          "url": "https://www.treasurefactory.co.jp/ask/ir/top.html",
+          "retrieved_at": "2026-10-11T06:35:50.441082+00:00",
+          "quote": "当社からの回答の一部又は全部を無断で転用することはできません。（著作権法に違反します。）",
+          "role": "conditions"
+        },
+        {
+          "snapshot": "evidence/3093/20261011T063536827277Z/04.json",
+          "url": "https://www.treasurefactory.co.jp/ask/ir/top.html",
+          "retrieved_at": "2026-10-11T06:35:50.441082+00:00",
+          "quote": "お問い合わせについて、当社は何らの回答義務を負いません。",
+          "role": "conditions"
+        },
+        {
+          "snapshot": "evidence/3093/20261011T063536827277Z/04.json",
+          "url": "https://www.treasurefactory.co.jp/ask/ir/top.html",
+          "retrieved_at": "2026-10-11T06:35:50.441082+00:00",
+          "quote": "タイトル Title 氏名 Name [必須]* メールアドレス Email [必須]* お問い合わせ内容 Message [必須]*",
+          "role": "contact_controls"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3093/20261011T063536827277Z/01.json",
+          "sha256": "a232d7ed4a31a6f7a527c4bcc03f1df3983759c2ad6a0ea807d40ff9a27b307b"
+        },
+        {
+          "snapshot": "evidence/3093/20261011T063536827277Z/02.json",
+          "sha256": "6c59fe5a0709ce3b7b4d985f8be5be722ff8e486a9135d29f3e3487fe2b34a17"
+        },
+        {
+          "snapshot": "evidence/3093/20261011T063536827277Z/03.json",
+          "sha256": "53544cdaf609c63f1e78279d347b6352ed04d20c7b66af51896668fe9ad7768e"
+        },
+        {
+          "snapshot": "evidence/3093/20261011T063536827277Z/04.json",
+          "sha256": "24b4c14e5b1d321fe7b706b4cdd2f53af2a0af0c968265f0dc07cdb665a48a49"
+        },
+        {
+          "snapshot": "evidence/3093/20261011T063536827277Z/05.json",
+          "sha256": "7f3890e04d7695bd0f2b69e6c48af24b33ad32a0c80f4a0cb68722dccd0e9046"
+        },
+        {
+          "snapshot": "evidence/3093/20261011T063536827277Z/06.json",
+          "sha256": "f4991dde9d19528dc226e6d63492a2a845111dbe8a409104370a22b6e399f780"
+        },
+        {
+          "snapshot": "evidence/3093/20261011T063536827277Z/07.json",
+          "sha256": "3b0a71eeff94b441521c2a9aa7226e52365898f34db3da09a6df34992f5d7416"
+        }
+      ],
+      "validation_issues": []
+    },
+    {
+      "security_code": "3096",
+      "company_name": "オーシャンシステム",
+      "attempted_at": "2026-10-11T06:35:41.231183+00:00",
+      "completed_at": "2026-10-11T06:36:16.941715+00:00",
+      "before": {
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "manual_review_required": false,
+        "unconfirmed_reason": "official_channel_not_demonstrated"
+      },
+      "before_record_sha256": "4a346ad0da175e449c8c2bc51ee9f5193ebff5b233f21cd3af890de3c8c41949",
+      "after_record_sha256": "f79fb2c0ba8ec21b2e785bc3f584e5c05447e585d483d04bdb883ac13cc7aabb",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "オーシャンシステム公式IRのissuer名と資料は保存されているがactual問い合わせフォーム未取得。相対リンクの重複investパスで複数404があるが、サイト自体やIR窓口不存在を示すものではない。公式保存リンクによる経路再確認が必要でunconfirmedを維持。",
+        "GET_count": 0,
+        "external_submission_count": 0
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3096/20261011T063541231225Z/01.json",
+          "url": "https://www.ocean-system.com/",
+          "retrieved_at": "2026-10-11T06:35:45.738894+00:00",
+          "quote": "株式会社オーシャンシステム",
+          "role": "issuer_identity"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3096/20261011T063541231225Z/01.json",
+          "sha256": "cd001f6a80599c128b65465f483e08872f28a4ecc87bf397fdc903cc55cd23db"
+        },
+        {
+          "snapshot": "evidence/3096/20261011T063541231225Z/02.json",
+          "sha256": "0e0c5c3b3ad1a612307c918ff7dd3b6368d9e84af65cfadeddf6767e62ec0712"
+        },
+        {
+          "snapshot": "evidence/3096/20261011T063541231225Z/03.json",
+          "sha256": "eb6d85d245c694a57b8c70d94d14207243abadea0ca6f27d72725cac77c04f90"
+        },
+        {
+          "snapshot": "evidence/3096/20261011T063541231225Z/04.json",
+          "sha256": "782b491e3685303f6cb65d3bead6db0fc1387162b62882ccf55d94ea2f633c1a"
+        },
+        {
+          "snapshot": "evidence/3096/20261011T063541231225Z/05.json",
+          "sha256": "4735ac011fdad1b8439ed20aac3918865e4706785877777dc5a41003e0ae7d1f"
+        },
+        {
+          "snapshot": "evidence/3096/20261011T063541231225Z/06.json",
+          "sha256": "63cf1f7a4cd56a4fded37d0a5ad6242cad0901f614db4b844c08f98d5d6aed0b"
+        },
+        {
+          "snapshot": "evidence/3096/20261011T063541231225Z/07.json",
+          "sha256": "d2773414750c390afcb67e9f9ed16ebdaf54b9943c85eed4f4be6647d896bab6"
+        }
+      ],
+      "validation_issues": []
+    },
+    {
+      "security_code": "3097",
+      "company_name": "物語コーポレーション",
+      "attempted_at": "2026-10-11T06:35:47.776386+00:00",
+      "completed_at": "2026-10-11T06:36:00.220441+00:00",
+      "before": {
+        "investigation_status": "confirmed",
+        "verification_level": "form_fields_verified",
+        "contact_url": "https://www.monogatari.co.jp/contact-form/ir/",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "confirmed",
+        "verification_level": "form_fields_verified",
+        "contact_url": "https://www.monogatari.co.jp/contact-form/ir/",
+        "channels": [
+          "form"
+        ],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "candidate",
+        "manual_review_required": false,
+        "unconfirmed_reason": null
+      },
+      "before_record_sha256": "6b41aa2bc05d4f28cb421aea7f6c9bfb16dfd9a988a66dd8a5a0782546aa34f5",
+      "after_record_sha256": "fc694d60cc523be775ca0ace95a7750ade9a44656129345fc50a989d7fb13003",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "物語公式の株主・投資家IRフォームにemail入力とcontents textareaを同一formで確認。実種別は「株主様」「機関投資家様」の二択で、未保有の個人が選べる区分は不明。機関投資家のみとはしないが、株主として利用できる条件の確認が必要。優待FAQとIR全般のフォームを区別し、例示taro@を公開IR宛先にしない。",
+        "GET_count": 0,
+        "external_submission_count": 0,
+        "form_control_review": {
+          "snapshot": "evidence/3097/20261011T063547776421Z/02.json",
+          "source_sha256": "f592fb7a3cadcbf75967b822c087c1ba042d5ee5a7635819c244e6c48314dc82",
+          "form_index": 0,
+          "form_action": "https://www.monogatari.co.jp/contact-form/ir/confirm",
+          "form_method": "post",
+          "same_form_reply_and_question_verified": true,
+          "reply_and_question_control_names": [
+            "email",
+            "contents"
+          ],
+          "actual_controls_count": 10,
+          "IR_scope_verified": true
+        }
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3097/20261011T063547776421Z/01.json",
+          "url": "https://www.monogatari.co.jp/",
+          "retrieved_at": "2026-10-11T06:35:51.665208+00:00",
+          "quote": "物語コーポレーション | 「とびっきりの笑顔と心からの元気」で世の中をイキイキさせる",
+          "role": "issuer_identity"
+        },
+        {
+          "snapshot": "evidence/3097/20261011T063547776421Z/02.json",
+          "url": "https://www.monogatari.co.jp/contact-form/ir/",
+          "retrieved_at": "2026-10-11T06:35:56.402002+00:00",
+          "quote": "株主・投資家の皆様におかれましては、弊社の利用規約に同意の上、以下のフォームよりお問い合わせいただけますと幸いでございます。",
+          "role": "contact_scope"
+        },
+        {
+          "snapshot": "evidence/3097/20261011T063547776421Z/02.json",
+          "url": "https://www.monogatari.co.jp/contact-form/ir/",
+          "retrieved_at": "2026-10-11T06:35:56.402002+00:00",
+          "quote": "種別 選択してください 株主様 機関投資家様",
+          "role": "conditions"
+        },
+        {
+          "snapshot": "evidence/3097/20261011T063547776421Z/02.json",
+          "url": "https://www.monogatari.co.jp/contact-form/ir/",
+          "retrieved_at": "2026-10-11T06:35:56.402002+00:00",
+          "quote": "種別 選択してください 株主様 機関投資家様 お名前 フリガナ 全角カタカナで入力してください メールアドレス 半角英数字で入力してください お電話番号 半角数字で入力してください 会社名 部署名 役職 お問い合わせ内容 フォームのご利用に際しては弊社の利用規約に同意の上、お問い合わせいただきますようお願いいたします。 入力内容を確認する",
+          "role": "contact_controls"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3097/20261011T063547776421Z/01.json",
+          "sha256": "8d1599bca52a5cad1a701597986486a62954bd0fd39b49c8f332236116380af7"
+        },
+        {
+          "snapshot": "evidence/3097/20261011T063547776421Z/02.json",
+          "sha256": "f592fb7a3cadcbf75967b822c087c1ba042d5ee5a7635819c244e6c48314dc82"
+        }
+      ],
+      "validation_issues": []
+    },
+    {
+      "security_code": "3099",
+      "company_name": "三越伊勢丹ホールディングス",
+      "attempted_at": "2026-10-11T06:35:58.192681+00:00",
+      "completed_at": "2026-10-11T06:38:26.389086+00:00",
+      "before": {
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "manual_review_required": true
+      },
+      "after": {
+        "investigation_status": "unconfirmed",
+        "verification_level": "none",
+        "contact_url": null,
+        "channels": [],
+        "public_ir_emails": [],
+        "individual_access": "not_stated",
+        "outreach_suitability": "unconfirmed",
+        "manual_review_required": false,
+        "unconfirmed_reason": "official_channel_not_demonstrated"
+      },
+      "before_record_sha256": "2f92b21ada84554dcc4857c6818ae32a999fef804de11a7fa0d953cb08297cb5",
+      "after_record_sha256": "d5ee9f9c72d4b351353a5324c761e2635ccd4e4d36333036052724376dd2b8b5",
+      "review": {
+        "reviewer": "ir_operations_adaptive3",
+        "reviewed_at": "2026-10-11T06:43:55.590901+00:00",
+        "notes": "三越伊勢丹公式問い合わせ一覧に株主優待・株式の外部SMPFORM導線はあるが、今回はその対象フォーム本文が未取得。優待/株式手続き窓口を業績IR質問受付へ自動転用せずunconfirmedを維持。一般個人宛返信の転載制限や「個人の方」は未実証IRフォームの受付条件に流用しない。",
+        "GET_count": 0,
+        "external_submission_count": 0
+      },
+      "evidence": [
+        {
+          "snapshot": "evidence/3099/20261011T063558192714Z/01.json",
+          "url": "https://www.imhds.co.jp/corporate/index.html",
+          "retrieved_at": "2026-10-11T06:36:34.341234+00:00",
+          "quote": "株式会社三越伊勢丹ホールディングス",
+          "role": "issuer_identity"
+        },
+        {
+          "snapshot": "evidence/3099/20261011T063558192714Z/03.json",
+          "url": "https://www.imhds.co.jp/corporate/inquiry/index.html",
+          "retrieved_at": "2026-10-11T06:37:13.787431+00:00",
+          "quote": "株主優待・株式に関するお問い合わせ",
+          "role": "scope_not_demonstrated"
+        }
+      ],
+      "immutable_snapshots": [
+        {
+          "snapshot": "evidence/3099/20261011T063558192714Z/01.json",
+          "sha256": "0852fb8048fac973ee2e8e7efd28266329fac5a0d03c01ed7d68bf6d24ce0667"
+        },
+        {
+          "snapshot": "evidence/3099/20261011T063558192714Z/02.json",
+          "sha256": "c58548a57cd47e4a1d7644633898109dbd1872de48b096e8eedf854eb27ca49f"
+        },
+        {
+          "snapshot": "evidence/3099/20261011T063558192714Z/03.json",
+          "sha256": "9bdbc069f1d7d1840bd66aa60382a14c713f729255323e96086787fb1b2b54fb"
+        },
+        {
+          "snapshot": "evidence/3099/20261011T063558192714Z/04.json",
+          "sha256": "00cb4972de1741d1bdd07373f7f53a1d8a15569b44d9321357b7cc20ee3923f4"
+        },
+        {
+          "snapshot": "evidence/3099/20261011T063558192714Z/05.json",
+          "sha256": "8d5306ea6b26a9d034120149ca536a11b5bf8c91c0748639780ebb099d8aa19a"
+        },
+        {
+          "snapshot": "evidence/3099/20261011T063558192714Z/06.json",
+          "sha256": "ea09f0235a1f09ca2b9b1edbf04df6a87a8bf36d3dee98cc355efd18c649e574"
+        },
+        {
+          "snapshot": "evidence/3099/20261011T063558192714Z/07.json",
+          "sha256": "4e4512d46f1bf1ecf9417e137aad0db7a088b874d6353e74c7ae38aecc949de0"
+        }
+      ],
+      "validation_issues": []
+    }
+  ],
+  "skipped_collector_race_codes": [],
+  "validation_issues_before_save": [
+    {
+      "security_code": "3080",
+      "kind": "form_level",
+      "reason": "form_fields_verified lacks a bound email/question form; search/auth/empty controls do not qualify",
+      "severity": "error"
+    },
+    {
+      "security_code": "3080",
+      "kind": "confirmed_without_channel",
+      "reason": "confirmed requires a specific verified IR email or question form",
+      "severity": "error"
+    }
+  ],
+  "reviewed_company_count": 18,
+  "status_counts": {
+    "confirmed": 7,
+    "provisional": 4,
+    "unconfirmed": 7
+  },
+  "changed_investigation_status_codes": [
+    "3080",
+    "3091",
+    "3093"
+  ],
+  "limitations": [
+    "この監査は固定した18社の保存公式本文に限定し、追加収集分は未監査。",
+    "窓口確認は送信成功・返信・個人利用条件の保証ではない。",
+    "unconfirmedは保存範囲の用途不足を意味し、窓口不存在・回答拒否には変換しない。"
+  ]
+}

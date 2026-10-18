@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T12:15:01.270188+00:00",
+  "status": "adjacent_source_snapshot_publicity_guard_implemented_target_tests_passed",
+  "previous_implementation": "implementation.json",
+  "frozen_pre_fix": "adjacent-source-gap-before.json",
+  "frozen_reproduction": "adjacent-source-gap-reproduction.json",
+  "post_fix_recheck": "adjacent-source-gap-recheck.json",
+  "changes": [
+    "Match the existing pure source-origin classification condition before every new financial update, including legacy reply evaluation and all derived source parents.",
+    "Source metadata snapshot holds use dependency_source_information_holds keyed by source_id, source_sha256 and original classification, with no invented reply ID or version.",
+    "Reply correction holds retain dependency_information_holds keyed by actual reply ID with actual assessment version; the two categories and reason codes remain separate.",
+    "The incoming public reply retains information_status=public_clarification; new sources/thesis versions are not written while any dependency is held."
+  ],
+  "classification_semantics": {
+    "ir_reply_missing_or_null": "held; explicit public_clarification is required, matching pure _check_source_origins",
+    "other_public_disclosure_missing_or_null": "allowed by this classification gate, subject to all existing validation and time/financial gates",
+    "original_snapshot_unclear_or_potential_nonpublic": "held even when a later public reply-assessment is present; no original metadata rewriting or implicit adoption",
+    "original_snapshot_public_with_nonpublic_correction": "held by existing correction gate; a genuine later public correction can remove the correction hold upon explicit reassessment, as before"
+  },
+  "tests": {
+    "new_adjacent_regression_tests": 8,
+    "dependency_module_tests": 20,
+    "other_existing_related_tests": 91,
+    "total_target_tests": 111,
+    "passed": true,
+    "elapsed_seconds": "0.704",
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=tests .venv/bin/python -m unittest test_dependency_information_gates test_decision test_decision_lifecycle test_information_review test_source_provenance test_information_research test_workflow",
+    "full_suite_run": false
+  },
+  "independent_probe_reuse_result": {
+    "source_originally_unclear": true,
+    "correction_rows": 0,
+    "before_version": 3,
+    "after_version": 3,
+    "applied": false,
+    "incoming_reply_status": "public_clarification",
+    "old_source_and_thesis_immutable": true,
+    "retry_db_dump_and_total_changes_unchanged": true
+  },
+  "old_research_files_unchanged": 11,
+  "implementation_snapshots": [
+    {
+      "path": "src/ir_agent/harness.py",
+      "sha256": "5f75ba6452a61f47eb96c0ae06629d7251c90c84b53c46c7181953bff4b5b7bd",
+      "byte_count": 39034
+    },
+    {
+      "path": "src/ir_agent/decision_lifecycle.py",
+      "sha256": "6663f44f66cc20a097f0fff47b58751c161525c7339cf6a5b1356f5eeb14d9b3",
+      "byte_count": 15918
+    },
+    {
+      "path": "tests/test_dependency_information_gates.py",
+      "sha256": "44910ea257fb8a07f5ee492659a90860a20b65edf601ed61a931784212816c33",
+      "byte_count": 25317
+    }
+  ],
+  "evidence_snapshots": [
+    {
+      "path": "adjacent-source-gap-before.json",
+      "sha256": "07d5d46093965d3b21458d1386075866f2934e807180cb3723c6d2389f9d8297"
+    },
+    {
+      "path": "adjacent-source-gap-reproduction.json",
+      "sha256": "6f78bf4c329657f56e9678ce5af2f690e7bd5a740774d8ef8710cfe000f5fd43"
+    },
+    {
+      "path": "adjacent-source-gap-recheck.json",
+      "sha256": "456c3bedd1944b47dec7c7cb41948b9302c88b119f82444a6c00c1c7aa1404e5"
+    }
+  ],
+  "execution": {
+    "actual_db_accesses": 0,
+    "actual_db_changes": 0,
+    "new_gets": 0,
+    "old_research_file_changes": 0,
+    "financial_policy_changes": 0,
+    "schema_changes": 0,
+    "information_review_module_changes": 0,
+    "full_suite_runs": 0
+  },
+  "limits": [
+    "Existing source snapshots, replies, old applied thesis versions and old decision histories are preserved. No automatic rollback or metadata/publicity promotion.",
+    "The pre-fix exactprobe assertions are deliberately preserved and no longer describe the fixed application result."
+  ]
+}

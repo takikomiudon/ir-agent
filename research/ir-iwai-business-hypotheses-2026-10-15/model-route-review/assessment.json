@@ -1,0 +1,558 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T14:08:18.802687+00:00",
+  "status": "provisional_model_review_routes_recorded_needs_issuer_data",
+  "research_only": true,
+  "scope": {
+    "company_report_physical_pages_read": [
+      5,
+      10
+    ],
+    "company_report_images_read": [
+      "research/ir-explicit-valuation-route-review-2026-10-15/iwaicosmo-entry-followup/page-5.png",
+      "research/ir-explicit-valuation-route-review-2026-10-15/iwaicosmo-entry-followup/page-10.png"
+    ],
+    "company_original_disclosures_read": 0,
+    "GETs": 0,
+    "DB_accesses": 0,
+    "code_changes": 0,
+    "new_forecast_numeric_facts_extracted": 0,
+    "numeric_model_adoptions": 0,
+    "IR_questions_created": 0
+  },
+  "company_report": {
+    "title": "岩井コスモ投資情報 NO.335",
+    "publisher": "岩井コスモ証券",
+    "report_issue_date": "2026-03-23",
+    "issue_date_basis": "Previously saved README/review; cover not newly read in this task.",
+    "url": "https://www.iwaicosmo.co.jp/investment/net_report/pdf/sample_info_investment.pdf",
+    "retrieved_at": "2026-10-15T10:32:09.014654+00:00",
+    "raw_path": "research/ir-explicit-valuation-route-review-2026-10-15/iwaicosmo-entry-followup/raw/cd4743e44bd3ba775d20e4b58fd8a154b5815de2392d76c246dc88e329d32f6d",
+    "raw_sha256": "cd4743e44bd3ba775d20e4b58fd8a154b5815de2392d76c246dc88e329d32f6d",
+    "extracted_text_path": "research/ir-explicit-valuation-route-review-2026-10-15/iwaicosmo-entry-followup/03.pdf.txt",
+    "extracted_text_sha256": "74ce510b11e9524d9bf950d1dfd19a136426990b4f285055995f07e37fcf3fc8",
+    "role": "Third-party report only; company forecasts referred to in prose and report-author forecasts must remain separate. March vocabulary such as 今期 and 来期 is not reassigned to October.",
+    "published_at": null,
+    "source_bundle_or_DB_registered_by_this_task": false
+  },
+  "adopted_method_policy": {
+    "path": "research/valuation-model-routing-2026-10-15/routing.json",
+    "status": "adopted_as_research_routing",
+    "author": "Aswath Damodaran",
+    "scope": "Existing research routing principles. Mapping the two companies below is project adaptation; Damodaran did not classify them in the saved papers.",
+    "no_industry_auto_exclusion": true,
+    "no_default_inputs_or_investment_thresholds": true
+  },
+  "cases": [
+    {
+      "company_id": "jp:290A",
+      "security_code": "290A",
+      "name_as_reported": "Synspective",
+      "company_evidence_status": "third_party_provisional_only",
+      "issuer_verified_current_facts": false,
+      "reported_business_basis": {
+        "quote_ids": [
+          "290A-business",
+          "290A-investment",
+          "290A-subsidy-category",
+          "290A-transition",
+          "both-forecast-attribution"
+        ],
+        "description": "Small SAR satellite development/manufacture/operation and data/solution services, investment burden and a future operating-profit transition are described by the report. The satellite-count breakeven statement is the author’s assumption, not an issuer guarantee, adopted threshold or cash breakeven rule."
+      },
+      "provisional_review_labels": [
+        "young_loss_review",
+        "needs_data"
+      ],
+      "route_id": "young_loss_growth_path_review",
+      "route_status": "provisional_project_research_route_not_final_model_eligibility",
+      "requested_valuation_method": null,
+      "canonical_valuation_input_paths": [],
+      "why_this_route": "The business and commercialization/expansion narrative plus operating losses and future profitability pathway support reviewing transition economics and financing. The reason is broader than a single loss year or an information-communications sector label. Company disclosure has not yet confirmed the actual loss cause, present funding or current forecast vintage.",
+      "income_scope_boundary": "The report separates operating profit from ordinary/net profit because subsidy income is described as non-operating. Positive ordinary/net profit or EPS therefore cannot by itself certify commercial operating profitability, positive operating cashflow, free cashflow or ordinary positive-earnings multiple comparability. The grant receipt/recognition, recurrence and cash timing remain issuer-data questions.",
+      "method_reference_ids": [
+        "young-margin-path",
+        "young-reinvest",
+        "young-survival",
+        "young-tax-loss"
+      ],
+      "next_public_checks": [
+        {
+          "task_ids": [
+            "T01",
+            "T03"
+          ],
+          "owner": "project research using issuer public disclosures",
+          "first_dependency": true,
+          "check": "Obtain latest issuer consolidated statement, explanatory presentation and accounting notes; separate actual/issuer guidance/old Iwai forecast, operating/ordinary/net results and subsidy accounting, period and scope. Confirm what commercial revenue and losses comprise.",
+          "value": null
+        },
+        {
+          "task_ids": [
+            "T05"
+          ],
+          "owner": "project research using issuer business and results disclosures",
+          "first_dependency": false,
+          "check": "Check operational satellite timing, service capacity, contracts to revenue recognition, revenue/margin pathway, fixed/variable operating costs and reinvestment needed for expansion. Do not treat order backlog or satellite count as realized revenue, available cash or a guaranteed operating breakeven threshold.",
+          "value": null
+        },
+        {
+          "task_ids": [
+            "T06"
+          ],
+          "owner": "project research using issuer cashflow, financing and share-related notes",
+          "first_dependency": false,
+          "check": "Check cash, cashflow versus P/L subsidies, capex/development needs, funding commitments/maturity and equity/options/warrants or other dilution. Cash needs, financing capacity, tax losses and survival assumptions remain unset.",
+          "value": null
+        },
+        {
+          "task_ids": [
+            "T07"
+          ],
+          "owner": "project model review after sourced data",
+          "first_dependency": false,
+          "check": "Only then examine a multi-stage DCF with explicitly sourced growth, margins, reinvestment, risk and terminal assumptions. Existing explicit CF arithmetic does not construct these pathways or a survival/dilution model. Assess causes/counterevidence before treating young-loss as confirmed; do not assign survival=1 or a generic failure rate.",
+          "value": null
+        }
+      ],
+      "not_concluded": [
+        "Industry-based exclusion",
+        "Current issuer financial status or latest company forecast",
+        "Operating-cashflow/FCFF breakeven from operating-profit breakeven",
+        "Model adoption from positive EPS or a quoted market PER",
+        "A forecast probability, margin, discount rate, terminal value or target price"
+      ],
+      "ordinary_model_fit": null,
+      "financial_equity_model_fit": null,
+      "current_investment_action": null,
+      "model_adopted": false
+    },
+    {
+      "company_id": "jp:8725",
+      "security_code": "8725",
+      "name_as_reported": "MS&ADインシュアランスグループHD",
+      "company_evidence_status": "third_party_provisional_only",
+      "issuer_verified_current_facts": false,
+      "reported_business_basis": {
+        "quote_ids": [
+          "8725-business",
+          "8725-premium-meaning",
+          "8725-reinsurance",
+          "8725-risk",
+          "8725-adjusted-income",
+          "both-forecast-attribution"
+        ],
+        "description": "The report explicitly describes an insurance-group holding company, insurance premium/reinsurance and insurance-claim/financial-market drivers. These business descriptions, rather than memory of an insurance label alone, motivate an equity-focused financial model review.",
+        "table_note": "The annual consolidated table shows operating-profit cells as dashes; those are not zeros or evidence of an operating-loss company. It distinguishes ordinary revenue/profit, net profit, EPS and dividend columns. No table numerical forecasts are newly extracted."
+      },
+      "provisional_review_labels": [
+        "financial_equity_model_review",
+        "needs_data"
+      ],
+      "route_id": "financial_service_equity_review",
+      "route_status": "provisional_project_research_route_not_final_model_eligibility",
+      "requested_valuation_method": null,
+      "canonical_valuation_input_paths": [],
+      "why_this_route": "Insurance obligations and financial operations may make ordinary enterprise-debt, working-capital and reinvestment categories unsuitable. The exact liabilities, consolidated versus holding-company scope, insurance accounting, regulatory-capital constraints and distributable equity are not established by this report and require current issuer evidence.",
+      "income_scope_boundary": "Do not substitute premium volume for a generic corporate revenue input, convert the table’s operating-profit dash to zero, or combine ordinary profit/net income/group adjusted income as if the same economic quantity. Insurance underwriting, claims, reinsurance, investment results and one-offs need an issuer-defined bridge. Higher premiums or a positive net-income figure alone do not establish distributable ordinary shareholder cash.",
+      "method_reference_ids": [
+        "financial-debt",
+        "financial-cf-definition",
+        "financial-regcapital",
+        "financial-per-allowed",
+        "financial-per-drivers"
+      ],
+      "next_public_checks": [
+        {
+          "task_ids": [
+            "T01",
+            "T02"
+          ],
+          "owner": "project research using issuer financial statements and current capital/solvency disclosures",
+          "first_dependency": true,
+          "check": "Obtain latest issuer actual/guidance and accounting notes; identify insurance operating obligations versus financing debt, group/holding/subsidiary scopes, applicable current regulatory-capital/solvency definitions and limits on capital distribution. Do not insert a bank capital ratio into an insurer.",
+          "value": null
+        },
+        {
+          "task_ids": [
+            "T03",
+            "T07"
+          ],
+          "owner": "project research using issuer profit and business-line bridges",
+          "first_dependency": false,
+          "check": "Separate net profit from ordinary and adjusted group income, underwriting/claim/reinsurance and investment factors, one-off effects and segment/region mix. Check sustainable earnings, ROE, growth, payout and cost-of-equity comparability before any relative model; retain current periods and equity/share basis.",
+          "value": null
+        },
+        {
+          "task_ids": [
+            "T02",
+            "T06"
+          ],
+          "owner": "project research using issuer capital policy and distributions",
+          "first_dependency": false,
+          "check": "Check actual and forecast ordinary-share dividends, buybacks, capital retained for growth, regulatory reinvestment, dilution and group remittances; current payout is not identical to sustainable distributable cash. Merger/savings expectations in the March report are not achieved capital or cashflow.",
+          "value": null
+        },
+        {
+          "task_ids": [
+            "T07"
+          ],
+          "owner": "project model review after sourced data",
+          "first_dependency": false,
+          "check": "Review DDM, regulatory-capital FCFE or equity excess-return families as research alternatives. Existing dividend_discount calculates explicit annual DPS and terminal DPS with explicit costs/growth; it does not generate forecasts or verify sustainable payout. Regulatory-capital FCFE calculator remains unimplemented per existing spec.",
+          "value": null
+        }
+      ],
+      "relative_model_boundary": "Financial PE/PB is allowed by the author. A market PER printed next to the report stock price is not an adopted fair multiple or purchase threshold. Earnings quality, growth, payout, equity cost and business mix must be comparable; no blanket PE prohibition or automatic selection is made.",
+      "ordinary_model_fit": null,
+      "financial_equity_model_fit": null,
+      "current_investment_action": null,
+      "model_adopted": false
+    }
+  ],
+  "company_visual_quotes": [
+    {
+      "quote_id": "290A-business",
+      "company_id": "jp:290A",
+      "physical_pdf_page": 5,
+      "printed_page": 4,
+      "quote": "小型SAR（合成開口レーダー）衛星を開発、製造、運用して、衛星が取得した地球観測データやソリューションサービスを主に官公庁向けに提供する。",
+      "representation": "visual transcription from saved page image; broken-font extracted PDF text is not asserted to match Japanese quotation",
+      "quote_sha256_utf8": "e9276258817a356ddca0df4eb92b19c99886edf5475027a70940e3c07dad01cd",
+      "images": [
+        {
+          "path": "research/ir-explicit-valuation-route-review-2026-10-15/iwaicosmo-entry-followup/page-5.png",
+          "sha256": "b085edd77e711070ceb51ebb9eb701d7b62682e3ea42b37725063bf220037446"
+        }
+      ],
+      "transcription_normalization": "Visual line wrapping removed; quote is a short original passage, not new numerical forecast extraction."
+    },
+    {
+      "quote_id": "290A-subsidy-category",
+      "company_id": "jp:290A",
+      "physical_pdf_page": 5,
+      "printed_page": 4,
+      "quote": "補助金収入が営業外収益として計上される",
+      "representation": "visual transcription from saved page image; broken-font extracted PDF text is not asserted to match Japanese quotation",
+      "quote_sha256_utf8": "367b6c2e0d9121510373a7e4056f3452b97823500633673ea24b426d8bac54b6",
+      "images": [
+        {
+          "path": "research/ir-explicit-valuation-route-review-2026-10-15/iwaicosmo-entry-followup/page-5.png",
+          "sha256": "b085edd77e711070ceb51ebb9eb701d7b62682e3ea42b37725063bf220037446"
+        }
+      ],
+      "transcription_normalization": "Visual line wrapping removed; quote is a short original passage, not new numerical forecast extraction."
+    },
+    {
+      "quote_id": "290A-transition",
+      "company_id": "jp:290A",
+      "physical_pdf_page": 5,
+      "printed_page": 4,
+      "quote": "衛星機数が10機前後で営業損益からの黒字化を想定している。",
+      "representation": "visual transcription from saved page image; broken-font extracted PDF text is not asserted to match Japanese quotation",
+      "quote_sha256_utf8": "111f53777d01b70924887121df6bf2120f25256a235d19f26322a110a26cb7ef",
+      "images": [
+        {
+          "path": "research/ir-explicit-valuation-route-review-2026-10-15/iwaicosmo-entry-followup/page-5.png",
+          "sha256": "b085edd77e711070ceb51ebb9eb701d7b62682e3ea42b37725063bf220037446"
+        }
+      ],
+      "transcription_normalization": "Visual line wrapping removed; quote is a short original passage, not new numerical forecast extraction."
+    },
+    {
+      "quote_id": "290A-investment",
+      "company_id": "jp:290A",
+      "physical_pdf_page": 5,
+      "printed_page": 4,
+      "quote": "人員の増強、技術開発や製造基盤の拡充、グローバル展開などへの積極的な投資",
+      "representation": "visual transcription from saved page image; broken-font extracted PDF text is not asserted to match Japanese quotation",
+      "quote_sha256_utf8": "14b9766d7aaa5e9c3699b242083ebe5a3abd4fdce5274ab8949553288cffd8bc",
+      "images": [
+        {
+          "path": "research/ir-explicit-valuation-route-review-2026-10-15/iwaicosmo-entry-followup/page-5.png",
+          "sha256": "b085edd77e711070ceb51ebb9eb701d7b62682e3ea42b37725063bf220037446"
+        }
+      ],
+      "transcription_normalization": "Visual line wrapping removed; quote is a short original passage, not new numerical forecast extraction."
+    },
+    {
+      "quote_id": "8725-business",
+      "company_id": "jp:8725",
+      "physical_pdf_page": 10,
+      "printed_page": 9,
+      "quote": "三井住友海上火災保険、あいおいニッセイ同和損害保険などの大手保険グループの持株会社。",
+      "representation": "visual transcription from saved page image; broken-font extracted PDF text is not asserted to match Japanese quotation",
+      "quote_sha256_utf8": "1e84d6092ac30d6669eb6856ac2a9a20a69c2d45f3da003a16449cf2c3cb97b3",
+      "images": [
+        {
+          "path": "research/ir-explicit-valuation-route-review-2026-10-15/iwaicosmo-entry-followup/page-10.png",
+          "sha256": "ea834b8a223b1c83eeb388bb78efb4a46dc03903e9fab7d0c112290d2612c98d"
+        }
+      ],
+      "transcription_normalization": "Visual line wrapping removed; quote is a short original passage, not new numerical forecast extraction."
+    },
+    {
+      "quote_id": "8725-premium-meaning",
+      "company_id": "jp:8725",
+      "physical_pdf_page": 10,
+      "printed_page": 9,
+      "quote": "正味収入保険料（損害保険会社の売上高に相当）",
+      "representation": "visual transcription from saved page image; broken-font extracted PDF text is not asserted to match Japanese quotation",
+      "quote_sha256_utf8": "dfa215563b251e1383f26bc87e5e0b5f7cd2063c12cf971955d650cdeb4eae0e",
+      "images": [
+        {
+          "path": "research/ir-explicit-valuation-route-review-2026-10-15/iwaicosmo-entry-followup/page-10.png",
+          "sha256": "ea834b8a223b1c83eeb388bb78efb4a46dc03903e9fab7d0c112290d2612c98d"
+        }
+      ],
+      "transcription_normalization": "Visual line wrapping removed; quote is a short original passage, not new numerical forecast extraction."
+    },
+    {
+      "quote_id": "8725-reinsurance",
+      "company_id": "jp:8725",
+      "physical_pdf_page": 10,
+      "printed_page": 9,
+      "quote": "ロイズ・再保険（保険会社向けの保険）",
+      "representation": "visual transcription from saved page image; broken-font extracted PDF text is not asserted to match Japanese quotation",
+      "quote_sha256_utf8": "a81b1c3c77cbdc3f48c276506d274342e2ffd0e7d894bb24bb04748b29943f47",
+      "images": [
+        {
+          "path": "research/ir-explicit-valuation-route-review-2026-10-15/iwaicosmo-entry-followup/page-10.png",
+          "sha256": "ea834b8a223b1c83eeb388bb78efb4a46dc03903e9fab7d0c112290d2612c98d"
+        }
+      ],
+      "transcription_normalization": "Visual line wrapping removed; quote is a short original passage, not new numerical forecast extraction."
+    },
+    {
+      "quote_id": "8725-risk",
+      "company_id": "jp:8725",
+      "physical_pdf_page": 10,
+      "printed_page": 9,
+      "quote": "大雪に関わる保険金支払や金融市場の環境など、業績に影響を与える不確実な要素",
+      "representation": "visual transcription from saved page image; broken-font extracted PDF text is not asserted to match Japanese quotation",
+      "quote_sha256_utf8": "cea518a2311d614fbc0da4bef81129e72422b4b5664b7b1ecee80a7a2ccf3023",
+      "images": [
+        {
+          "path": "research/ir-explicit-valuation-route-review-2026-10-15/iwaicosmo-entry-followup/page-10.png",
+          "sha256": "ea834b8a223b1c83eeb388bb78efb4a46dc03903e9fab7d0c112290d2612c98d"
+        }
+      ],
+      "transcription_normalization": "Visual line wrapping removed; quote is a short original passage, not new numerical forecast extraction."
+    },
+    {
+      "quote_id": "8725-adjusted-income",
+      "company_id": "jp:8725",
+      "physical_pdf_page": 10,
+      "printed_page": 9,
+      "quote": "株主還元のベースになるグループ修正利益",
+      "representation": "visual transcription from saved page image; broken-font extracted PDF text is not asserted to match Japanese quotation",
+      "quote_sha256_utf8": "45c4f6ed9108bbc61c5daebca3a6bbc0805e1db5f5c96ffae8bc42c3bdc663ad",
+      "images": [
+        {
+          "path": "research/ir-explicit-valuation-route-review-2026-10-15/iwaicosmo-entry-followup/page-10.png",
+          "sha256": "ea834b8a223b1c83eeb388bb78efb4a46dc03903e9fab7d0c112290d2612c98d"
+        }
+      ],
+      "transcription_normalization": "Visual line wrapping removed; quote is a short original passage, not new numerical forecast extraction."
+    },
+    {
+      "quote_id": "both-forecast-attribution",
+      "company_ids": [
+        "jp:290A",
+        "jp:8725"
+      ],
+      "physical_pdf_pages": [
+        5,
+        10
+      ],
+      "quote": "※予は岩井コスモ証券予想",
+      "representation": "visual transcription from saved page image; broken-font extracted PDF text is not asserted to match Japanese quotation",
+      "quote_sha256_utf8": "d886149da84064e76519050d9c629f9da1300d4b680fb6ffaed7f3ac018681dd",
+      "images": [
+        {
+          "path": "research/ir-explicit-valuation-route-review-2026-10-15/iwaicosmo-entry-followup/page-5.png",
+          "sha256": "b085edd77e711070ceb51ebb9eb701d7b62682e3ea42b37725063bf220037446"
+        },
+        {
+          "path": "research/ir-explicit-valuation-route-review-2026-10-15/iwaicosmo-entry-followup/page-10.png",
+          "sha256": "ea834b8a223b1c83eeb388bb78efb4a46dc03903e9fab7d0c112290d2612c98d"
+        }
+      ],
+      "transcription_normalization": "Visual line wrapping removed; quote is a short original passage, not new numerical forecast extraction."
+    }
+  ],
+  "method_reference_evidence": [
+    {
+      "reference_id": "young-margin-path",
+      "source_id": "damodaran.young-growth.2009",
+      "pdf_page": 21,
+      "quote": "this “pathway to profitability”",
+      "section": "Operating expenses / margins",
+      "verification": "exact saved PDF extraction match after whitespace normalization",
+      "source_title": "Valuing Young, Start-up and Growth Companies: Estimation Issues and Valuation Challenges",
+      "author": "Aswath Damodaran",
+      "source_url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/younggrowth.pdf",
+      "source_raw_pdf_sha256": "0e45bb889ca2a6148f21a41070b7e9a15294e86be2a63c72f5627e26f9675782",
+      "source_retrieved_at": "2026-10-15T01:26:15.421045+00:00",
+      "saved_registry": "research/valuation-model-routing-2026-10-15/sources.json",
+      "extracted_page_sha256_utf8": "8cc4fbedfbe85593126d84c515b6efd5acb4258221f52054e287fbbfcbb11d67",
+      "match_method": "Exact page-scoped match after whitespace normalization; no new web request."
+    },
+    {
+      "reference_id": "young-reinvest",
+      "source_id": "damodaran.young-growth.2009",
+      "pdf_page": 22,
+      "quote": "neither revenue growth nor margin improvement is delivered for free",
+      "section": "Investments for growth",
+      "verification": "exact saved PDF extraction match after whitespace normalization",
+      "source_title": "Valuing Young, Start-up and Growth Companies: Estimation Issues and Valuation Challenges",
+      "author": "Aswath Damodaran",
+      "source_url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/younggrowth.pdf",
+      "source_raw_pdf_sha256": "0e45bb889ca2a6148f21a41070b7e9a15294e86be2a63c72f5627e26f9675782",
+      "source_retrieved_at": "2026-10-15T01:26:15.421045+00:00",
+      "saved_registry": "research/valuation-model-routing-2026-10-15/sources.json",
+      "extracted_page_sha256_utf8": "3c478045cc56c58188c0497842fc381301e16f785ecdc187e74f4c1a8fb24ce7",
+      "match_method": "Exact page-scoped match after whitespace normalization; no new web request."
+    },
+    {
+      "reference_id": "young-survival",
+      "source_id": "damodaran.young-growth.2009",
+      "pdf_page": 42,
+      "quote": "Expected Value = Value of going concern (1 – Probability of failure) + Distress Sale",
+      "section": "Survival",
+      "verification": "exact saved PDF extraction match after whitespace normalization",
+      "source_title": "Valuing Young, Start-up and Growth Companies: Estimation Issues and Valuation Challenges",
+      "author": "Aswath Damodaran",
+      "source_url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/younggrowth.pdf",
+      "source_raw_pdf_sha256": "0e45bb889ca2a6148f21a41070b7e9a15294e86be2a63c72f5627e26f9675782",
+      "source_retrieved_at": "2026-10-15T01:26:15.421045+00:00",
+      "saved_registry": "research/valuation-model-routing-2026-10-15/sources.json",
+      "extracted_page_sha256_utf8": "750b78612f4160c81e5172986fe36739a90d84db317d940021e47253c2c77989",
+      "match_method": "Exact page-scoped match after whitespace normalization; no new web request."
+    },
+    {
+      "reference_id": "young-tax-loss",
+      "source_id": "damodaran.young-growth.2009",
+      "pdf_page": 23,
+      "quote": "keep track of the net operating loss carry forward",
+      "section": "Compute tax effect",
+      "verification": "exact saved PDF extraction match after whitespace normalization",
+      "source_title": "Valuing Young, Start-up and Growth Companies: Estimation Issues and Valuation Challenges",
+      "author": "Aswath Damodaran",
+      "source_url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/younggrowth.pdf",
+      "source_raw_pdf_sha256": "0e45bb889ca2a6148f21a41070b7e9a15294e86be2a63c72f5627e26f9675782",
+      "source_retrieved_at": "2026-10-15T01:26:15.421045+00:00",
+      "saved_registry": "research/valuation-model-routing-2026-10-15/sources.json",
+      "extracted_page_sha256_utf8": "d77bea81c257b76ad8cd1bdbec3b35dd94286af627e11037658a41d38b4374bf",
+      "match_method": "Exact page-scoped match after whitespace normalization; no new web request."
+    },
+    {
+      "reference_id": "financial-debt",
+      "source_id": "damodaran.financial-services.2009",
+      "pdf_page": 7,
+      "quote": "Debt is raw material, not capital",
+      "section": "Debt and Equity",
+      "verification": "exact saved PDF extraction match after whitespace normalization",
+      "source_title": "Valuing Financial Service Firms",
+      "author": "Aswath Damodaran",
+      "source_url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/finfirm09.pdf",
+      "source_raw_pdf_sha256": "2e1b2d45a8d04ab14b8ed48825b64e7765dd896d59e1db34cce32ded23d07472",
+      "source_retrieved_at": "2026-10-15T01:26:13.430287+00:00",
+      "saved_registry": "research/valuation-model-routing-2026-10-15/sources.json",
+      "extracted_page_sha256_utf8": "5b5e313b929f62d1940f8e57fd1771a8192fd78247fb06f4f5a6d0d43708fa17",
+      "match_method": "Exact page-scoped match after whitespace normalization; no new web request."
+    },
+    {
+      "reference_id": "financial-cf-definition",
+      "source_id": "damodaran.financial-services.2009",
+      "pdf_page": 1,
+      "quote": "capital expenditures, working capital and debt are not clearly defined",
+      "section": "Abstract",
+      "verification": "exact saved PDF extraction match after whitespace normalization",
+      "source_title": "Valuing Financial Service Firms",
+      "author": "Aswath Damodaran",
+      "source_url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/finfirm09.pdf",
+      "source_raw_pdf_sha256": "2e1b2d45a8d04ab14b8ed48825b64e7765dd896d59e1db34cce32ded23d07472",
+      "source_retrieved_at": "2026-10-15T01:26:13.430287+00:00",
+      "saved_registry": "research/valuation-model-routing-2026-10-15/sources.json",
+      "extracted_page_sha256_utf8": "8a8f5d71b9aaeb494d26827967158d6a13f876a65950cc116aca0671596883ec",
+      "match_method": "Exact page-scoped match after whitespace normalization; no new web request."
+    },
+    {
+      "reference_id": "financial-regcapital",
+      "source_id": "damodaran.financial-services.2009",
+      "pdf_page": 22,
+      "quote": "Net Income – Reinvestment in Regulatory Capital",
+      "section": "Cashflow to Equity Models",
+      "verification": "exact saved PDF extraction match after whitespace normalization",
+      "source_title": "Valuing Financial Service Firms",
+      "author": "Aswath Damodaran",
+      "source_url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/finfirm09.pdf",
+      "source_raw_pdf_sha256": "2e1b2d45a8d04ab14b8ed48825b64e7765dd896d59e1db34cce32ded23d07472",
+      "source_retrieved_at": "2026-10-15T01:26:13.430287+00:00",
+      "saved_registry": "research/valuation-model-routing-2026-10-15/sources.json",
+      "extracted_page_sha256_utf8": "bbe02a7290870f4c9725146bd92fee3eb58c989c1bddc84bdeee7ec5f32dad7f",
+      "match_method": "Exact page-scoped match after whitespace normalization; no new web request."
+    },
+    {
+      "reference_id": "financial-per-allowed",
+      "source_id": "damodaran.financial-services.2009",
+      "pdf_page": 27,
+      "quote": "the use of price earnings and price to book value ratios for valuing financial service firms",
+      "section": "Relative Valuation",
+      "verification": "exact saved PDF extraction match after whitespace normalization",
+      "source_title": "Valuing Financial Service Firms",
+      "author": "Aswath Damodaran",
+      "source_url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/finfirm09.pdf",
+      "source_raw_pdf_sha256": "2e1b2d45a8d04ab14b8ed48825b64e7765dd896d59e1db34cce32ded23d07472",
+      "source_retrieved_at": "2026-10-15T01:26:13.430287+00:00",
+      "saved_registry": "research/valuation-model-routing-2026-10-15/sources.json",
+      "extracted_page_sha256_utf8": "5702537054bd1f9dfa42ee0784ddd9e97a86026e8afe2fcfc3dc3532c8f4c9b6",
+      "match_method": "Exact page-scoped match after whitespace normalization; no new web request."
+    },
+    {
+      "reference_id": "financial-per-drivers",
+      "source_id": "damodaran.financial-services.2009",
+      "pdf_page": 27,
+      "quote": "the expected growth rate in earnings, the payout ratio and the cost of equity",
+      "section": "Price Earnings Ratios",
+      "verification": "exact saved PDF extraction match after whitespace normalization",
+      "source_title": "Valuing Financial Service Firms",
+      "author": "Aswath Damodaran",
+      "source_url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/finfirm09.pdf",
+      "source_raw_pdf_sha256": "2e1b2d45a8d04ab14b8ed48825b64e7765dd896d59e1db34cce32ded23d07472",
+      "source_retrieved_at": "2026-10-15T01:26:13.430287+00:00",
+      "saved_registry": "research/valuation-model-routing-2026-10-15/sources.json",
+      "extracted_page_sha256_utf8": "5702537054bd1f9dfa42ee0784ddd9e97a86026e8afe2fcfc3dc3532c8f4c9b6",
+      "match_method": "Exact page-scoped match after whitespace normalization; no new web request."
+    }
+  ],
+  "implementation_boundary": {
+    "DDM_status_source": "docs/financial-equity-valuation-spec.md",
+    "dividend_discount": "Existing explicit-input arithmetic only; no company model adopted here.",
+    "regulatory_capital_FCFE": "Research formula/input scope; calculator not implemented.",
+    "young_growth": "No automatic revenue/margin, financing, dilution or survival estimation. Explicit CF arrays do not verify those meanings.",
+    "routing_template": "Research record, not a CLI import, job, company-state update or valuation method.",
+    "current_engine_code": {
+      "path": "src/ir_agent/valuation.py",
+      "sha256": "fa2df871f55935d7d8fdf130595c8606fbbcba15bc42d8e92e76b2b2d46c92ec",
+      "reviewed_locations": [
+        "src/ir_agent/valuation.py:124",
+        "src/ir_agent/valuation.py:139",
+        "src/ir_agent/valuation.py:252"
+      ],
+      "confirmed": "dividend_discount is an accepted method with exactly five explicit inputs and implemented DPS/terminal-DPS discount arithmetic. No execution or company numerical adoption was performed."
+    },
+    "older_routing_document_limit": "docs/model-routing-inputs.md retains an older statement including DDM among unimplemented specialist engines. That sentence is not used as the current implementation inventory here; routing principles and current engine contract are separate, with current DDM status based on financial-equity-valuation-spec.md and valuation.py."
+  },
+  "financial_input_changes": [],
+  "new_financial_values": [],
+  "author_rule_vs_project_adaptation": "Damodaran supplies model-family issues and input principles; Iwai supplies dated company-specific descriptions/expectations; project chooses the next issuer-public checks. No new investor rule is attributed to either author.",
+  "limits": [
+    "Only Iwai physical pages 5 and 10 were newly read, including images. Other report metadata uses existing records.",
+    "Japanese PDF extraction has broken glyphs; visual quotations are explicitly labelled rather than claimed as exact matches to corrupted extraction.",
+    "No issuer original disclosure was reviewed or fetched; source-author company statements are provisional, not validated current facts.",
+    "No forecast number was newly normalized or adopted. The pre-existing approximately-ten-satellite assumption is quoted only to identify its author and profit scope.",
+    "Neither a review label nor a completed research task establishes investment eligibility, a model value, a buy/sell rule or an IR question."
+  ]
+}

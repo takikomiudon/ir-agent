@@ -1,0 +1,127 @@
+{
+  "status": "pass",
+  "script_sha256": "26086774236936bc41aba208716212ca4e26b1c0abefbddaf8bc7d9a2e60068c",
+  "derived_bundle_sha256": "c814bb0530f31c197249f02cffeeff4d36fc342ea707acd7a951a6ee6c168425",
+  "shadow_completion_sha256": "f2468e335e223bb5a079b9565edcdd81ae6d62dc3f1db3220291e99e0e199d4c",
+  "expected_database_sha256": "2a36bf74a54c61905bb44926692d2ec89570c66315d0ebbd0bbb4b13f4ad93ce",
+  "recorded_at": "2026-10-16T00:15:05.200132+00:00",
+  "reviewer": "agent:/root/review_5831_policy",
+  "independence": "Independent of connection-script/shadow producer; reviewer previously independently accepted14fact semantics. This turn reads fixed script and artifacts, no script run/tests or DB access.",
+  "finding_count": 0,
+  "findings": [],
+  "checks": [
+    {
+      "id": "C01",
+      "status": "pass",
+      "script_lines": "entire file",
+      "detail": "Read entire18680byte script. All3fixedSHA match root-supplied pins; shadow preapply binds this same script/derived bundle and current classification request SHA."
+    },
+    {
+      "id": "C02",
+      "status": "pass",
+      "script_lines": "156-177",
+      "detail": "Frozen full bundle SHA and exact original/derived IDs required. Derived-only object equals unchanged full accepted bundle sources[1], with empty companies/theses;14historical reported_fact fields/unverified status enforced."
+    },
+    {
+      "id": "C03",
+      "status": "pass",
+      "script_lines": "97-111,178-193,220-225",
+      "detail": "Main DB expected SHA, pending/leased0, no existing derived source/no resend,84oldjobs,30caseversions,16currentcases/97reviewed, exact existing original snapshot/company required. Rechecked around backup and before actual Store opening."
+    },
+    {
+      "id": "C04",
+      "status": "pass",
+      "script_lines": "114-136",
+      "detail": "Actual requires independent status pass and parent status accepted, fileSHA plus exact4pins; parent must also pin same independent review SHA. actor argument must be root. Shadow status/actual unchanged proof required."
+    },
+    {
+      "id": "C05",
+      "status": "pass",
+      "script_lines": "178-194",
+      "detail": "Snapshot mode=ro/query_only, verified backup includes all-table multiset equality and schema equality before any Store/mutator. Actual targets DB only after guards; shadow targets disposable copy."
+    },
+    {
+      "id": "C06",
+      "status": "pass",
+      "script_lines": "153-155,194-206,315-332",
+      "detail": "Any same-mode journal/completion/error prevents replay. Exclusive journal plus fsync begin/success surrounds each mutator; failures record stage and stop. No automatic retry/resume. Separate commit pipeline disclosed."
+    },
+    {
+      "id": "C07",
+      "status": "pass",
+      "script_lines": "226-271",
+      "detail": "Store initialization must preserve before rows/schema; ingest exactly1source/no company/thesis; intake queue exactly1newcompany/source; one claim receipt pins source+packet+worker+generation1 and valid lease; complete uses expected_attempt1."
+    },
+    {
+      "id": "C08",
+      "status": "pass",
+      "script_lines": "272-294",
+      "detail": "Classification is other/financial_content true with literal source quote, version1, inputs_verified false. Alloldrow multisets preserved, schema unchanged, expected7table deltas only; sourceavailability trusted_insert snapshotSHA verified."
+    },
+    {
+      "id": "C09",
+      "status": "pass",
+      "proof": "shadow-completion.json + shadow-preapply.json",
+      "detail": "Successful shadow before/after receipts agree: sources+1,availability+1,classifications+1,jobs+1,attempts+1,requestreceipts+1,events+2; other20tables entirely equal. Alloldrows retained;84oldjobs,30caseversions,16/97summary unchanged."
+    },
+    {
+      "id": "C10",
+      "status": "pass",
+      "proof": "shadow-stage.jsonl",
+      "detail": "Exactly one begin+success each for ingest/queue/claim/complete, followed by verified;10journal entries total. No failed/retried stage in successful phase. Prior failed-shadow directory is not adopted success evidence."
+    },
+    {
+      "id": "C11",
+      "status": "pass",
+      "proof": "full bundle + accepted14fact review + classification request",
+      "detail": "Original source object/time unchanged; accepted14fact independent review SHA pinned. Derived processing time != actualfirstsave; shadow availability/lease timestamps apply only to copy. No EBIT/tax/NOPAT/ROC/valuation/policy adoption."
+    }
+  ],
+  "source_acceptance_review_sha256": "b3fe46ca041b924aea05e7cc1ad057c66756cf638f67c6342be84dda5b45e532",
+  "shadow_checks": {
+    "tables": 27,
+    "changed_tables": 7,
+    "unchanged_tables": 20,
+    "all_old_rows_preserved": true,
+    "old_jobs": 84,
+    "after_jobs": 85,
+    "case_versions_before_after": 30,
+    "current_case_count": 16,
+    "reviewed_sources_before_after": 97,
+    "pipeline_is_not_single_transaction": true,
+    "actual_DB_writes_by_shadow": false,
+    "journal_mutator_begin_success_pairs": 4
+  },
+  "meaning_limits": [
+    "Pass is acceptance of this pinned connection plan/proof only; actual execution remains parent root and requires separately pinned parent acceptance.",
+    "No actual source persistence/actualfirstsave has been performed or certified by this review. Shadow copy timestamps are not actualDB timestamps.",
+    "CLI actor=root is a declared orchestration boundary, not authenticated identity; script explicitly states it cannot authenticate actor. Sole-writer control remains with parent.",
+    "Stage APIs commit separately. Journals/backups support inspection; pass does not promise whole-pipeline atomic rollback or authorize blind retry after a partial/uncertain action.",
+    "Accepted14facts remain historical display values with unverified financial model meaning; classification/firstsave does not adopt EBIT/tax/NOPAT/ROC/EY/EV, forecasts, prices, policy or investment judgment.",
+    "Current DB is checked by execution-time hash/logical guards; this review does not reopen actual/shadowDB or rerun producer tests. Guard-checks.log is producer evidence, not independent test execution."
+  ],
+  "reference_SHA256": {
+    "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/actual-connection/prepare_connection.py": "26086774236936bc41aba208716212ca4e26b1c0abefbddaf8bc7d9a2e60068c",
+    "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/actual-connection/derived-only-bundle.json": "c814bb0530f31c197249f02cffeeff4d36fc342ea707acd7a951a6ee6c168425",
+    "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/actual-connection/shadow-completion.json": "f2468e335e223bb5a079b9565edcdd81ae6d62dc3f1db3220291e99e0e199d4c",
+    "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/actual-connection/shadow-preapply.json": "fe9c8142cd15217af2f447ef1061f95002a148cb55789f7d44493c558fdbbcb6",
+    "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/actual-connection/shadow-stage.jsonl": "23334b805895d4bb74f6ad856eefb2cbf03d6f405b091710f585f2a0a8d447b1",
+    "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/actual-connection/shadow-execution.log": "da8a343dd1fe78877ec7d29ee7bb780be4883ccbf45436c64a732f8d4fe86d7c",
+    "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/actual-connection/classification-request.json": "962ec008ae768d5b170f48b64853f3dca2b03e45d692dbdeaf63873dd108682a",
+    "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/actual-connection/guard-checks.log": "ecb52708c57da89b7ddc592f49d6d0682f674ecd8d8a19f993ccf957ccf0b574",
+    "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/normalized-bundle.json": "4c7723e2667252489997eaa2abaf99862c6c87b3d1fd02cef4053a890ec9683e",
+    "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/independent-review.json": "b3fe46ca041b924aea05e7cc1ad057c66756cf638f67c6342be84dda5b45e532",
+    "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/README.md": "4712fd2e7a77063d96dd84e24ed644290f4821989a4ed1bc97a601198b9744f8"
+  },
+  "operations": {
+    "script_execution": 0,
+    "additional_tests": 0,
+    "DB_access_or_write": 0,
+    "GET": 0,
+    "existing_or_shared_or_code_edits": 0,
+    "new_files_only": [
+      "connection-independent-review.json",
+      "connection-independent-review.md"
+    ]
+  }
+}

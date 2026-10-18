@@ -1,0 +1,926 @@
+{
+  "schema": "model-routing-assessment-research/v1",
+  "artifact_type": "unfilled_research_template",
+  "production_ingest_ready": false,
+  "assessment_id": null,
+  "company": {
+    "security_code": null,
+    "name": null,
+    "industry_label_context_only": null
+  },
+  "as_of": null,
+  "assessment_recorded_at": null,
+  "requested_valuation_method": null,
+  "adopted_research_policy": {
+    "path": "../research/valuation-model-routing-2026-10-15/routing.json",
+    "status": "adopted_as_research_routing",
+    "sources_path": "../research/valuation-model-routing-2026-10-15/sources.json",
+    "author": "Aswath Damodaran",
+    "additional_user_confirmation_required": false
+  },
+  "company_source_registry": [],
+  "facts": [
+    {
+      "fact_id": "entity_and_business_scope",
+      "value_kind": "object",
+      "value": null,
+      "definition": "対象の上場主体、主要事業、連結・単体、会計基準と対象期。業種ラベルは背景情報であり判定根拠の代用にしない。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "financial_intermediation_core",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "銀行・保険等の金融仲介が中核事業であるとの公表事業内容を確認したか。会社名や業種コードだけではtrueにしない。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "financial-debt"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "funding_liabilities_are_operating_inputs",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "預金・保険契約負債等が収益を生むための営業上の投入として使われているか。通常の財務借入と区別する。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "financial-debt"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "regulatory_capital_constrains_growth_or_distribution",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "適用される規制資本要件が事業拡大・分配を制約するか。過去論文の例示比率は使わない。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "financial-regcapital"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "financing_debt_definition_compatible",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "使用予定の負債定義が、その会社の営業と金融負債を区別し、モデルの企業価値→株主価値の橋渡しと整合するか。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "financial-cf-definition"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "noncash_working_capital_definition_compatible",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "使用予定の非現金運転資本定義がその事業に意味を持ち、期間と会計範囲が整合するか。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "financial-cf-definition"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "reinvestment_definition_compatible",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "成長に必要な再投資を把握し、capex等または規制資本など事業に適した定義を使っているか。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "financial-regcapital",
+        "cyclical-normalize-all",
+        "young-reinvest"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "current_earnings_measurements",
+      "value_kind": "object",
+      "value": null,
+      "definition": "営業利益、親会社利益、基本・希薄化EPS等の実績値と期間・単位・会計範囲。四半期実績、通期予想、正常化値を別記する。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "young-pe"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "current_operating_income_negative",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "指定した対象期の営業利益が負か。数値と比較した算術的観測であり若い成長企業との判定ではない。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "young-pe"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "current_eps_nonpositive",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "指定した対象期・定義のEPSがゼロ以下か。EPS実績と会社予想を混ぜず、除外条件へ変換しない。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "young-pe",
+        "financial-per-allowed"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "earnings_change_or_loss_cause",
+      "value_kind": "object",
+      "value": null,
+      "definition": "損失・利益変動の原因が景気、事業立上げ、単発会計、構造悪化等のどれで説明されるか。会社説明と調査仮説を分け、複数・未解決を許す。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "cyclical-cycle-window",
+        "young-margin-path"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "cycle_or_commodity_dependency_supported",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "利益・CFが景気または商品価格のサイクルに依存することを、公表説明と履歴で裏付けられるか。業界名や株価変動率だけではtrueにしない。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "cyclical-normalize-all"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "history_covers_full_cycle",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "使用する履歴がサイクル全体を含むとの根拠があるか。一律の年数を設定しない。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "cyclical-cycle-window"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "history_scope_and_scale_comparable",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "連結範囲・会計・企業規模の変化を確認し、利益の絶対額と利益率を使い分けられるか。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "cyclical-scale"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "normalization_inputs_consistent",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "利益、資本収益、再投資、資金調達条件が同じ正常化前提に基づくか。回復成長の二重加算を避けているか。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "cyclical-normalize-all"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "finite_resource_life_relevant",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "資源生産企業等で有限埋蔵量・操業寿命が評価を制約するか。単なる商品価格感応度と区別する。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "cyclical-finite-resource"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "operating_history_and_commercial_stage",
+      "value_kind": "object",
+      "value": null,
+      "definition": "商用化時期、営業履歴、売上構成、事業移行の実態。短い履歴に一律の年数閾値を設けない。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "young-margin-path"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "monetization_path_evidenced",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "売上ドライバー、目標利益率、収益化への経路に公開根拠があるか。将来の会社説明が存在することと実現したことを区別する。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "young-margin-path"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "growth_reinvestment_and_funding_consistent",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "売上・利益率の見通しと、設備・人材等への必要再投資と資金調達が整合するか。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "young-reinvest"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "funding_gap_or_dilution_before_positive_cashflow",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "正のCFに至る前の資金不足または希薄化が、公表残高・債務期限・明示仮定を用いた計算から見込まれるか。会社の実績事実とモデル結果を分ける。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "young-reinvest"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "survival_and_distress_inputs_supported",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "生存/失敗確率の期間と根拠、失敗時価値があり、継続価値と同じ評価範囲か。未設定を生存確率1へ補完しない。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "young-survival"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "tax_loss_and_terminal_conditions_supported",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "欠損金・税法、安定期の成長・利益率・再投資・有限寿命など、選んだモデルに必要な条件を確認したか。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "young-tax-loss",
+        "cyclical-finite-resource"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "earnings_multiple_comparability_reviewed",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "EPS・倍率の期間と比較対象が整合し、成長・配当・資本コスト・引当・事業構成等の差を点検したか。金融機関のPERを一律禁止しない。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [
+        "financial-per-allowed",
+        "financial-per-drivers",
+        "financial-allowance"
+      ],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    },
+    {
+      "fact_id": "ordinary_model_compatibility_supported",
+      "value_kind": "boolean",
+      "value": null,
+      "definition": "選択した通常モデルが必要要素を省略しないことを積極的な根拠で説明できるか。専用フラグが未確認なだけではtrueにしない。",
+      "unit": null,
+      "entity_scope": null,
+      "accounting_basis": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "label": null,
+        "kind": null
+      },
+      "as_of": null,
+      "claim_kind": null,
+      "source_references": [],
+      "method_reference_ids": [],
+      "verification_status": "unverified",
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "uncertainties": [],
+      "derivation": null,
+      "derivation_input_fact_ids": []
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "T01-entity-scope",
+      "purpose": "対象主体・会計・対象期の特定",
+      "fact_ids": [
+        "entity_and_business_scope",
+        "current_earnings_measurements"
+      ],
+      "depends_on_task_ids": [],
+      "status": "not_started",
+      "owner_id": null,
+      "completed_at": null,
+      "findings": null,
+      "missing_data": []
+    },
+    {
+      "task_id": "T02-financial-structure",
+      "purpose": "金融仲介・営業負債・規制資本・再投資定義の確認",
+      "fact_ids": [
+        "financial_intermediation_core",
+        "funding_liabilities_are_operating_inputs",
+        "regulatory_capital_constrains_growth_or_distribution",
+        "financing_debt_definition_compatible",
+        "noncash_working_capital_definition_compatible",
+        "reinvestment_definition_compatible"
+      ],
+      "depends_on_task_ids": [
+        "T01-entity-scope"
+      ],
+      "status": "not_started",
+      "owner_id": null,
+      "completed_at": null,
+      "findings": null,
+      "missing_data": []
+    },
+    {
+      "task_id": "T03-earnings-causes",
+      "purpose": "当期利益の符号と変動原因を分けて確認",
+      "fact_ids": [
+        "current_operating_income_negative",
+        "current_eps_nonpositive",
+        "earnings_change_or_loss_cause"
+      ],
+      "depends_on_task_ids": [
+        "T01-entity-scope"
+      ],
+      "status": "not_started",
+      "owner_id": null,
+      "completed_at": null,
+      "findings": null,
+      "missing_data": []
+    },
+    {
+      "task_id": "T04-cycle-history",
+      "purpose": "景気・商品価格依存と履歴の一貫性の確認",
+      "fact_ids": [
+        "cycle_or_commodity_dependency_supported",
+        "history_covers_full_cycle",
+        "history_scope_and_scale_comparable",
+        "normalization_inputs_consistent",
+        "finite_resource_life_relevant"
+      ],
+      "depends_on_task_ids": [
+        "T01-entity-scope",
+        "T03-earnings-causes"
+      ],
+      "status": "not_started",
+      "owner_id": null,
+      "completed_at": null,
+      "findings": null,
+      "missing_data": []
+    },
+    {
+      "task_id": "T05-commercial-path",
+      "purpose": "商用化と収益化・必要再投資の公開根拠確認",
+      "fact_ids": [
+        "operating_history_and_commercial_stage",
+        "monetization_path_evidenced",
+        "growth_reinvestment_and_funding_consistent"
+      ],
+      "depends_on_task_ids": [
+        "T01-entity-scope",
+        "T03-earnings-causes"
+      ],
+      "status": "not_started",
+      "owner_id": null,
+      "completed_at": null,
+      "findings": null,
+      "missing_data": []
+    },
+    {
+      "task_id": "T06-funding-and-risk",
+      "purpose": "資金不足・希薄化・生存/失敗と税/終端条件の不足整理",
+      "fact_ids": [
+        "funding_gap_or_dilution_before_positive_cashflow",
+        "survival_and_distress_inputs_supported",
+        "tax_loss_and_terminal_conditions_supported"
+      ],
+      "depends_on_task_ids": [
+        "T05-commercial-path"
+      ],
+      "status": "not_started",
+      "owner_id": null,
+      "completed_at": null,
+      "findings": null,
+      "missing_data": []
+    },
+    {
+      "task_id": "T07-model-and-counterreview",
+      "purpose": "倍率比較・通常モデルの適合・複数点検の根拠と反証を記録",
+      "fact_ids": [
+        "earnings_multiple_comparability_reviewed",
+        "ordinary_model_compatibility_supported"
+      ],
+      "depends_on_task_ids": [
+        "T02-financial-structure",
+        "T04-cycle-history",
+        "T06-funding-and-risk"
+      ],
+      "status": "not_started",
+      "owner_id": null,
+      "completed_at": null,
+      "findings": null,
+      "missing_data": []
+    }
+  ],
+  "review_assessments": [
+    {
+      "review_label": "ordinary_model_review",
+      "label_ja": "通常model点検",
+      "source_route_id": null,
+      "status": "unassessed",
+      "selected": null,
+      "supporting_fact_ids": [],
+      "counterevidence_fact_ids": [],
+      "missing_fact_ids": [],
+      "missing_model_input_ids": [],
+      "rationale": null,
+      "reviewer_id": null,
+      "reviewed_at": null
+    },
+    {
+      "review_label": "financial_equity_model_review",
+      "label_ja": "銀行等の専用model点検",
+      "source_route_id": "financial_service_equity_review",
+      "status": "unassessed",
+      "selected": null,
+      "supporting_fact_ids": [],
+      "counterevidence_fact_ids": [],
+      "missing_fact_ids": [],
+      "missing_model_input_ids": [],
+      "rationale": null,
+      "reviewer_id": null,
+      "reviewed_at": null
+    },
+    {
+      "review_label": "cyclical_normalization_review",
+      "label_ja": "循環正常化点検",
+      "source_route_id": "cyclical_or_commodity_normalization_review",
+      "status": "unassessed",
+      "selected": null,
+      "supporting_fact_ids": [],
+      "counterevidence_fact_ids": [],
+      "missing_fact_ids": [],
+      "missing_model_input_ids": [],
+      "rationale": null,
+      "reviewer_id": null,
+      "reviewed_at": null
+    },
+    {
+      "review_label": "young_loss_review",
+      "label_ja": "youngloss点検",
+      "source_route_id": "young_loss_growth_path_review",
+      "status": "unassessed",
+      "selected": null,
+      "supporting_fact_ids": [],
+      "counterevidence_fact_ids": [],
+      "missing_fact_ids": [],
+      "missing_model_input_ids": [],
+      "rationale": null,
+      "reviewer_id": null,
+      "reviewed_at": null
+    }
+  ],
+  "result": {
+    "review_labels": [
+      "needs_data"
+    ],
+    "status": "needs_data",
+    "labels_allow_multiple": true,
+    "rationale": null,
+    "missing_fact_ids": [
+      "entity_and_business_scope",
+      "financial_intermediation_core",
+      "funding_liabilities_are_operating_inputs",
+      "regulatory_capital_constrains_growth_or_distribution",
+      "financing_debt_definition_compatible",
+      "noncash_working_capital_definition_compatible",
+      "reinvestment_definition_compatible",
+      "current_earnings_measurements",
+      "current_operating_income_negative",
+      "current_eps_nonpositive",
+      "earnings_change_or_loss_cause",
+      "cycle_or_commodity_dependency_supported",
+      "history_covers_full_cycle",
+      "history_scope_and_scale_comparable",
+      "normalization_inputs_consistent",
+      "finite_resource_life_relevant",
+      "operating_history_and_commercial_stage",
+      "monetization_path_evidenced",
+      "growth_reinvestment_and_funding_consistent",
+      "funding_gap_or_dilution_before_positive_cashflow",
+      "survival_and_distress_inputs_supported",
+      "tax_loss_and_terminal_conditions_supported",
+      "earnings_multiple_comparability_reviewed",
+      "ordinary_model_compatibility_supported"
+    ],
+    "missing_model_inputs": [],
+    "unresolved_conflicts": [],
+    "assessed_by": null,
+    "assessed_at": null,
+    "counterreview": {
+      "reviewer_id": null,
+      "reviewed_at": null,
+      "findings": null
+    }
+  },
+  "engine_boundary": {
+    "currently_implemented_generic_methods": [
+      "eps_multiple",
+      "dcf"
+    ],
+    "specialist_routing_code_implemented": false,
+    "specialist_valuation_engines_implemented": false,
+    "generic_dcf_input_semantics": "Year-end unlevered FCF at firm level, followed by cash/debt/share bridge; not financial-service FCFE",
+    "engine_execution_requested": false
+  },
+  "actions": {
+    "classification_of_actual_company_performed": false,
+    "update_company_status": false,
+    "exclusion": false,
+    "buy_or_sell": false,
+    "send_ir": false
+  },
+  "notes": [
+    "Research template only. No CLI/schema validator implements this contract yet.",
+    "Unknown fact values remain null; a false observation requires affirmative evidence.",
+    "Method sources are not company factual evidence.",
+    "Multiple review labels and needs_data may coexist; no implicit precedence.",
+    "Positive company EPS does not prove ordinary valuation model suitability."
+  ]
+}

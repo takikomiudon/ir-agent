@@ -1,0 +1,8 @@
+# 限定修正の実装前設計
+
+独立レビューで確認した2点だけを修正する。v1 after6全文をbeforeとして保存し、v1研究成果は変更しない。
+
+1. newfieldのpure checkが検証したreview closure全sourceについて、既存RecordAvailability.atを各1回flatに呼ぶ。reviewed_atをevent/knowledge両cutoffに使い、trustedruntimeは実引数を保持。rootだけでなく全祖先のfirstsave/legacyknownby/unknownを保つ。欠けた祖先はpureの既存holdを保持。Store全体の再帰readerには触れない。
+2. 訂正を参照するIRsourceについて、保存reply.id=metadata.reply_id、保存question.id=reply.question_id、同社、source.content=reply.raw_textを照合。既存ResearchDecisions._reply_bindingsの内容同一性を新feature消費時に再利用し、不一致はValueError/transactionrollback。新しい金融ルールではない。
+
+1100祖先のpersist保存/有効判定、同社body不一致とID不一致、正しいbodyと訂正hold/retryを専用regressionで確認し、既存対象subsetを再実行。新table/status/CLI/実DB/GET/旧no-field経路/金融sources_forの変更は0。fullsuiteはroot実行。

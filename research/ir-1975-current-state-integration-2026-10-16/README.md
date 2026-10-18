@@ -1,0 +1,5 @@
+1975実登録後の現在値3docsだけを更新しました。before/には変更前の3fileを完全bytesで保存し、changes.diffで差分を限定しています。旧case表行と引継ぎ/過去履歴、1904 p10・残余v2のfile-only記録は不変です。
+
+RO/query_only/closingで190source/189分類/107全job完了、22case43版129既読、管理日Jan15 12/Jan16 10、32公開企業/27財務企業、legacy28/trusted162を再計算し、1975native v1全recordも保存actualと一致しました。v33のDB照合時点はcase登録前であり、その旧snapshotは変更しません。2163は実source0で原4＋派生1候補を未算入、FAQ5scope/単体平均対期末/split/mixedDPSを次作業に残しました。1963 p6/8と残余v2はfile-only/native v1維持です。
+
+コード44pinsは1558PASS/39.753秒の既存受入と現在SHAが一致、新しいtest実行0。GET/実DB書込み/コード/他producer変更/金融採用0。RO集計でjobsの列をkindと誤認、続く診断でdataと誤認した2エラーはreadonly-verification.jsonに保持し、検査済みpacket列のJSON kindへ修正しました。mutatorは一切呼んでいません。rootレビュー待ちで停止します。

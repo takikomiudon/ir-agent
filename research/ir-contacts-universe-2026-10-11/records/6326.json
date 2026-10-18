@@ -1,0 +1,165 @@
+{
+  "security_code": "6326",
+  "company_name": "クボタ",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "機械",
+  "investigation_status": "provisional",
+  "verification_level": "official_form_link_only",
+  "official_url": "https://www.kubota.co.jp/",
+  "contact_url": "https://www.kubota.co.jp/ir/contact/",
+  "channels": [
+    "form"
+  ],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "candidate",
+  "attempted_at": "2026-10-11T17:15:55.281554+00:00",
+  "completed_at": "2026-10-11T17:17:49.632980+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/6326/20261011T171555281588Z/01.json",
+      "url": "https://www.kubota.co.jp/",
+      "retrieved_at": "2026-10-11T17:16:10.087771+00:00",
+      "quote": "株式会社クボタ",
+      "role": "company_identity"
+    },
+    {
+      "snapshot": "evidence/6326/20261011T171555281588Z/04.json",
+      "url": "https://www.kubota.co.jp/ir/news-support/faqs/index.html",
+      "retrieved_at": "2026-10-11T17:16:52.618010+00:00",
+      "quote": "Q1 証券コ－ドを教えて下さい。 A1 証券コ－ドは「6326」です。",
+      "role": "company_identity"
+    },
+    {
+      "snapshot": "evidence/6326/20261011T171555281588Z/02.json",
+      "url": "https://www.kubota.co.jp/ir/index.html",
+      "retrieved_at": "2026-10-11T17:16:24.419863+00:00",
+      "quote": "投資家情報に関するお問い合わせ",
+      "role": "contact_channel",
+      "source_link_url": "https://www.kubota.co.jp/ir/contact/",
+      "source_link_index": 52,
+      "source_link_label": "投資家情報に関するお問い合わせ"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.kubota.co.jp/",
+      "final_url": "https://www.kubota.co.jp/",
+      "snapshot": "evidence/6326/20261011T171555281588Z/01.json",
+      "retrieved_at": "2026-10-11T17:16:10.087771+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.kubota.co.jp/ir/index.html",
+      "final_url": "https://www.kubota.co.jp/ir/index.html",
+      "snapshot": "evidence/6326/20261011T171555281588Z/02.json",
+      "retrieved_at": "2026-10-11T17:16:24.419863+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.kubota.co.jp/ir/contact/",
+      "final_url": "https://www.kubota.co.jp/ir/contact/",
+      "snapshot": "evidence/6326/20261011T171555281588Z/03.json",
+      "retrieved_at": "2026-10-11T17:16:38.136189+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.kubota.co.jp/ir/news-support/faqs/index.html",
+      "final_url": "https://www.kubota.co.jp/ir/news-support/faqs/index.html",
+      "snapshot": "evidence/6326/20261011T171555281588Z/04.json",
+      "retrieved_at": "2026-10-11T17:16:52.618010+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.kubota.co.jp/contact/index.html",
+      "final_url": "https://www.kubota.co.jp/contact/index.html",
+      "snapshot": "evidence/6326/20261011T171555281588Z/05.json",
+      "retrieved_at": "2026-10-11T17:17:07.049993+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.kubota.co.jp/ir/financial/integrated/index.html",
+      "final_url": "https://www.kubota.co.jp/ir/financial/integrated/index.html",
+      "snapshot": "evidence/6326/20261011T171555281588Z/06.json",
+      "retrieved_at": "2026-10-11T17:17:21.250974+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.kubota.co.jp/ir/policy/index.html",
+      "final_url": "https://www.kubota.co.jp/ir/policy/index.html",
+      "snapshot": "evidence/6326/20261011T171555281588Z/07.json",
+      "retrieved_at": "2026-10-11T17:17:35.313686+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "現クボタ正式名/IRFAQ04当該証券コードを確認。financialIR02のexplicit投資家情報に関するお問い合わせactual52→dedicated/ir/contact/03と同FAQ114の同target案内をIR質問受付の公開導線としてP回復。03はHTTP200/66bytesだが解析textはBOM1文字、title/headings/links/formsは空で実mail-question欄は保存未確認、成功statusだけでCにしない。元URL/query/bytecount/timeを変えず、JavaScript遷移先/iframe/入力法を補完推測しない。一般contact05農業/エンジン/建機等顧客製品問い合わせやIR共通検索form、信託銀行株式諸手続をIR質問欄へ借用しない。個人投資家ナビ/イベント案内から受付適格性を断定せずnot_stated、会社必須/返信条件も未確認。targetは既にGET済みのため新候補への重複自動追加0。"
+  ],
+  "discovery": {
+    "security_code": "6326",
+    "official_url": "https://www.kubota.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "クボタ",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/6326/20261011T171555281588Z/01.json",
+      "normalized_name": "クボタ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6326/20261011T171555281588Z/02.json",
+      "normalized_name": "クボタ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6326/20261011T171555281588Z/04.json",
+      "normalized_name": "クボタ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6326/20261011T171555281588Z/05.json",
+      "normalized_name": "クボタ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6326/20261011T171555281588Z/06.json",
+      "normalized_name": "クボタ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6326/20261011T171555281588Z/07.json",
+      "normalized_name": "クボタ",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 7,
+  "http_get_attempt_count": 8,
+  "previous_attempts": [
+    "attempts/6326/20261011T045047586849Z.json",
+    "attempts/6326/20261011T171749633678Z.json"
+  ],
+  "automatic_conditions_before_review": [],
+  "outreach_reason": "保存済み公式資料の金融IR用途・現発行体・実公開IRメール又は同native質問返信欄・個人条件を照合。一般製品/採用/株式事務と未取得欄を借用しない。",
+  "route_type": "officially_linked_form",
+  "ir_url": "https://www.kubota.co.jp/ir/index.html",
+  "manual_review": {
+    "reviewer": "codex_audit_data_63_batch14",
+    "reviewed_at": "2026-10-11T17:36:07.607510+00:00",
+    "notes": "現クボタ正式名/IRFAQ04当該証券コードを確認。financialIR02のexplicit投資家情報に関するお問い合わせactual52→dedicated/ir/contact/03と同FAQ114の同target案内をIR質問受付の公開導線としてP回復。03はHTTP200/66bytesだが解析textはBOM1文字、title/headings/links/formsは空で実mail-question欄は保存未確認、成功statusだけでCにしない。元URL/query/bytecount/timeを変えず、JavaScript遷移先/iframe/入力法を補完推測しない。一般contact05農業/エンジン/建機等顧客製品問い合わせやIR共通検索form、信託銀行株式諸手続をIR質問欄へ借用しない。個人投資家ナビ/イベント案内から受付適格性を断定せずnot_stated、会社必須/返信条件も未確認。targetは既にGET済みのため新候補への重複自動追加0。"
+  }
+}

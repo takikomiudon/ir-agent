@@ -1,0 +1,135 @@
+{
+  "security_code": "1899",
+  "company_name": "福田組",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "建設業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.fkd.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T03:59:37.269872+00:00",
+  "completed_at": "2026-10-11T03:59:52.087652+00:00",
+  "manual_review_required": false,
+  "evidence": [],
+  "fetches": [
+    {
+      "url": "https://www.fkd.co.jp/",
+      "final_url": "https://www.fkd.co.jp/",
+      "snapshot": "evidence/1899/01.json",
+      "retrieved_at": "2026-10-11T03:59:40.172146+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.fkd.co.jp/ir/performance/",
+      "final_url": "https://www.fkd.co.jp/ir/performance/",
+      "snapshot": "evidence/1899/02.json",
+      "retrieved_at": "2026-10-11T03:59:41.683766+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.fkd.co.jp/form/contact/",
+      "final_url": "https://www.fkd.co.jp/form/contact/",
+      "snapshot": "evidence/1899/03.json",
+      "retrieved_at": "2026-10-11T03:59:43.979760+00:00",
+      "http_status": 404,
+      "error": null
+    },
+    {
+      "url": "https://www.fkd.co.jp/ir/",
+      "final_url": "https://www.fkd.co.jp/ir/",
+      "snapshot": "evidence/1899/04.json",
+      "retrieved_at": "2026-10-11T03:59:46.136703+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.fkd.co.jp/ir/ir-message/",
+      "final_url": "https://www.fkd.co.jp/ir/ir-message/",
+      "snapshot": "evidence/1899/05.json",
+      "retrieved_at": "2026-10-11T03:59:47.592212+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.fkd.co.jp/ir/medium-term/",
+      "final_url": "https://www.fkd.co.jp/ir/medium-term/",
+      "snapshot": "evidence/1899/06.json",
+      "retrieved_at": "2026-10-11T03:59:48.809446+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.fkd.co.jp/ir/library/",
+      "final_url": "https://www.fkd.co.jp/ir/library/",
+      "snapshot": "evidence/1899/07.json",
+      "retrieved_at": "2026-10-11T03:59:50.445845+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用メール/質問フォームの明示を実証できなかった。窓口不存在の判定ではない。"
+  ],
+  "discovery": {
+    "security_code": "1899",
+    "official_url": "https://www.fkd.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "福田組",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/1899/01.json",
+      "normalized_name": "福田組",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/1899/02.json",
+      "normalized_name": "福田組",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/1899/03.json",
+      "normalized_name": "福田組",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/1899/04.json",
+      "normalized_name": "福田組",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/1899/05.json",
+      "normalized_name": "福田組",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/1899/06.json",
+      "normalized_name": "福田組",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/1899/07.json",
+      "normalized_name": "福田組",
+      "security_code_observed": false
+    }
+  ],
+  "classification_version": 2,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "successful_official_page_count": 6,
+  "manual_review": {
+    "reviewer": "codex_audit_recovery_1000",
+    "reviewed_at": "2026-10-11T04:27:57.929080+00:00",
+    "notes": "form/contact/ 本文と controls に IR 区分、個人／法人、メール・質問欄が実在する一方、HTTP ステータスは 404。利用可能な IR 窓口としては未確認に留め、再取得が必要。 保存取得の範囲での未実証であり、窓口不存在を示さない。"
+  }
+}

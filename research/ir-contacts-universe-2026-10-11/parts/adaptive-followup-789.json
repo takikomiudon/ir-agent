@@ -1,0 +1,341 @@
+{
+  "reviewer": "codex_audit_services_adaptive789",
+  "reviewed_at": "2026-10-11T06:16:32.275790+00:00",
+  "scope": {
+    "security_code_prefixes": [
+      "7",
+      "8",
+      "9"
+    ],
+    "include_statuses": [
+      "unconfirmed",
+      "provisional"
+    ],
+    "exclude_unconfirmed_reason": "environment_transport_failure",
+    "source": "existing saved records, fetches, evidence and links only"
+  },
+  "company_count": 3,
+  "additional_get_candidate_count": 5,
+  "additional_get_requests": 0,
+  "external_messages_sent": 0,
+  "records_modified": 0,
+  "scripts_modified": 0,
+  "submitted": false,
+  "companies": [
+    {
+      "security_code": "7013",
+      "company_name": "ＩＨＩ",
+      "record_status": "unconfirmed",
+      "record_attempted_at": "2026-10-11T04:03:25.477278+00:00",
+      "review_result": "access_denied_stop",
+      "ir_purpose_demonstrated": false,
+      "question_form_demonstrated": false,
+      "public_ir_email_demonstrated": false,
+      "individual_access": "not_stated",
+      "company_name_required": "unknown",
+      "reply_policy": "unknown",
+      "sources": [
+        {
+          "snapshot": "evidence/7013/01.json",
+          "url": "https://www.ihi.co.jp/",
+          "retrieved_at": "2026-10-11T04:03:29.992337+00:00",
+          "http_status": 403,
+          "quote": "No approved upstream IPv4 address",
+          "evidence_type": "transport_access_denial"
+        }
+      ],
+      "access_limits": [
+        {
+          "kind": "HTTP_403",
+          "url": "https://www.ihi.co.jp/",
+          "snapshot": "evidence/7013/01.json",
+          "reason": "保存本文は No approved upstream IPv4 address。許可済み上流IPがないアクセス経路上の拒否を示し、会社による個人IR拒否や窓口不存在は示さない。403を繰り返さず停止。"
+        },
+        {
+          "kind": "robots_fetch_503",
+          "snapshot": "evidence/7013/01.json",
+          "nested_object": "robots",
+          "reason": "robots.txt 取得もプロキシHTTP503。robotsルール本文がないため、禁止とも許可とも推測しない。"
+        }
+      ],
+      "missing_evidence": [
+        "会社のIR用途を示す本文・リンク",
+        "公開IRメールまたは回答先メール欄と質問本文欄の同一フォーム",
+        "個人受付・会社名必須・返信制限"
+      ],
+      "followup_get_candidates": [],
+      "notes": [
+        "403保存ページにはリンクもフォームもなく、根拠のある追加URLを抽出できない。第三者seedからパスを推測しない。"
+      ]
+    },
+    {
+      "security_code": "7685",
+      "company_name": "ＢｕｙＳｅｌｌ　Ｔｅｃｈｎｏｌｏｇｉｅｓ",
+      "record_status": "provisional",
+      "record_attempted_at": "2026-10-11T03:37:05.129793+00:00",
+      "review_result": "retain_official_form_link_only",
+      "ir_purpose_demonstrated": true,
+      "official_ir_page_url": "https://buysell-technologies.com/ir/",
+      "official_contact_page_url": "https://buysell-technologies.com/contact/form-ir/",
+      "question_form_demonstrated": false,
+      "public_ir_email_demonstrated": false,
+      "individual_access": "not_stated",
+      "company_name_required": "unknown",
+      "reply_policy": "unknown",
+      "sources": [
+        {
+          "snapshot": "../ir-contacts-2026-10-11/evidence/svc-7685-contact.json",
+          "url": "https://buysell-technologies.com/contact/form-ir/",
+          "retrieved_at": "2026-10-11T03:37:05.129793+00:00",
+          "http_status": 200,
+          "quote": "IRに関するお問い合わせ | 株式会社BuySell Technologies（バイセルテクノロジーズ）",
+          "evidence_type": "visible_text"
+        },
+        {
+          "snapshot": "../ir-contacts-2026-10-11/evidence/svc-7685-contact.json",
+          "url": "https://buysell-technologies.com/contact/form-ir/",
+          "retrieved_at": "2026-10-11T03:37:05.129793+00:00",
+          "http_status": 200,
+          "quote": "CONTACT お問い合わせ IRに関するお問い合わせ 株式会社BuySell Technologies",
+          "evidence_type": "visible_text"
+        },
+        {
+          "snapshot": "../ir-contacts-2026-10-11/evidence/svc-7685-ir.json",
+          "url": "https://buysell-technologies.com/ir/",
+          "retrieved_at": "2026-10-11T03:36:21.591954+00:00",
+          "http_status": 200,
+          "quote": "その他 IRニュース よくある質問 お問い合わせ ディスクロージャーポリシー 免責事項 電子公告",
+          "evidence_type": "visible_text"
+        }
+      ],
+      "access_limits": [
+        {
+          "kind": "no_form_controls_in_public_GET",
+          "snapshot": "../ir-contacts-2026-10-11/evidence/svc-7685-contact.json",
+          "reason": "HTTP200だが forms は空。質問欄・回答先メール欄・必須項目・入力例を実証できない。動的描画の可能性はあるがJSが原因と断定しない。"
+        },
+        {
+          "kind": "no_saved_external_form_target",
+          "snapshot": "../ir-contacts-2026-10-11/evidence/svc-7685-contact.json",
+          "reason": "保存linksにiframeやフォーム本体の別URLはなく、API/埋込先を推測しない。"
+        }
+      ],
+      "missing_evidence": [
+        "実際の質問フォーム入力欄",
+        "個人受付・会社名必須・返信制限"
+      ],
+      "followup_get_candidates": [
+        {
+          "security_code": "7685",
+          "url": "https://buysell-technologies.com/ir/policy/",
+          "parent_snapshot": "../ir-contacts-2026-10-11/evidence/svc-7685-contact.json",
+          "parent_url": "https://buysell-technologies.com/contact/form-ir/",
+          "parent_retrieved_at": "2026-10-11T03:37:05.129793+00:00",
+          "parent_quote": "お問い合わせ ディスクロージャーポリシー 免責事項 電子公告",
+          "saved_link_label": "ディスクロージャーポリシー",
+          "priority": 1,
+          "purpose": "contact_conditions",
+          "reason": "沈黙期間・公表情報の範囲・個別返信方針の案内があるかを確認する。フォーム入力欄の実証とは別の取得目的。",
+          "official_contact_acceptance_demonstrated": false,
+          "performed_in_this_review": false
+        },
+        {
+          "security_code": "7685",
+          "url": "https://buysell-technologies.com/ir/faq/",
+          "parent_snapshot": "../ir-contacts-2026-10-11/evidence/svc-7685-contact.json",
+          "parent_url": "https://buysell-technologies.com/contact/form-ir/",
+          "parent_retrieved_at": "2026-10-11T03:37:05.129793+00:00",
+          "parent_quote": "IRニュース よくある質問 お問い合わせ ディスクロージャーポリシー",
+          "saved_link_label": "よくある質問",
+          "priority": 2,
+          "purpose": "discovery_only",
+          "reason": "公開Q&AやIR受付案内に具体的なフォーム本体リンク・受付条件があるかを確認する。",
+          "official_contact_acceptance_demonstrated": false,
+          "performed_in_this_review": false
+        }
+      ],
+      "notes": [
+        "前回37社の引継ぎレコードであるためrecordも確認水準も変更しない。",
+        "同じIRフォームページへの繰り返しGETだけで入力欄確認へ昇格しない。",
+        "一般contactページもリンクされているが、一般問い合わせをIR専用と解釈しない。"
+      ]
+    },
+    {
+      "security_code": "9661",
+      "company_name": "歌舞伎座",
+      "record_status": "unconfirmed",
+      "record_attempted_at": "2026-10-11T04:04:08.150382+00:00",
+      "review_result": "additional_saved_official_links_available",
+      "ir_purpose_demonstrated": false,
+      "question_form_demonstrated": false,
+      "public_ir_email_demonstrated": false,
+      "individual_access": "not_stated",
+      "company_name_required": "unknown",
+      "reply_policy": "unknown",
+      "sources": [
+        {
+          "snapshot": "evidence/9661/01.json",
+          "url": "https://www.kabuki-za.co.jp/",
+          "retrieved_at": "2026-10-11T04:04:09.596245+00:00",
+          "http_status": 200,
+          "quote": "IR情報 有価証券報告書 決算短信 事業報告 プレスリリース 電子公告 株主情報 株主総会 株式事務 株主優待について",
+          "evidence_type": "visible_text"
+        },
+        {
+          "snapshot": "evidence/9661/02.json",
+          "url": "https://www.kabuki-za.co.jp/sitemap/",
+          "retrieved_at": "2026-10-11T04:04:10.580863+00:00",
+          "http_status": 200,
+          "quote": "株式会社歌舞伎座 【株主優待予約】 サイトマップ チケット 一幕見席 団体観劇 お食事 インターネット食事予約 インターネット折詰予約",
+          "evidence_type": "visible_text"
+        }
+      ],
+      "access_limits": [],
+      "missing_evidence": [
+        "業績IRを受け付ける具体的なメール/質問フォーム",
+        "個人受付・会社名必須・返信制限"
+      ],
+      "followup_get_candidates": [
+        {
+          "security_code": "9661",
+          "url": "https://www.kabuki-za.co.jp/annai/",
+          "parent_snapshot": "evidence/9661/02.json",
+          "parent_url": "https://www.kabuki-za.co.jp/sitemap/",
+          "parent_retrieved_at": "2026-10-11T04:04:10.580863+00:00",
+          "parent_quote": "会社情報 会社情報トップ 株式会社歌舞伎座 沿革 IR情報 有価証券報告書 決算短信",
+          "saved_link_label": "会社情報トップ",
+          "priority": 1,
+          "purpose": "discovery_only",
+          "reason": "IR資料をまとめる会社情報トップでIR窓口への具体的な導線があるかを確認する。会社情報リンク自体はIR受付の証明にならない。",
+          "official_contact_acceptance_demonstrated": false,
+          "performed_in_this_review": false
+        },
+        {
+          "security_code": "9661",
+          "url": "https://www.kabuki-za.co.jp/annai/k_jyouhou.html",
+          "parent_snapshot": "evidence/9661/02.json",
+          "parent_url": "https://www.kabuki-za.co.jp/sitemap/",
+          "parent_retrieved_at": "2026-10-11T04:04:10.580863+00:00",
+          "parent_quote": "IR情報 有価証券報告書 決算短信 事業報告 プレスリリース",
+          "saved_link_label": "決算短信",
+          "priority": 2,
+          "purpose": "discovery_only",
+          "reason": "公開業績ページに質問窓口の明示があるかを確認する。開示資料・電話の掲載だけではIRメール/フォーム確認にならない。",
+          "official_contact_acceptance_demonstrated": false,
+          "performed_in_this_review": false
+        },
+        {
+          "security_code": "9661",
+          "url": "https://www.kabuki-za.co.jp/annai/jimu2.html",
+          "parent_snapshot": "evidence/9661/02.json",
+          "parent_url": "https://www.kabuki-za.co.jp/sitemap/",
+          "parent_retrieved_at": "2026-10-11T04:04:10.580863+00:00",
+          "parent_quote": "株主情報 株主総会 株式事務 株主優待について",
+          "saved_link_label": "株式事務",
+          "priority": 3,
+          "purpose": "discovery_only",
+          "reason": "株式事務の案内からIRへの振り分けがあるかを補助確認する。株式手続・名義書換・優待専用の窓口は業績IRと区別する。",
+          "official_contact_acceptance_demonstrated": false,
+          "performed_in_this_review": false
+        }
+      ],
+      "excluded_contact_inferences": [
+        {
+          "url": "http://www.kabukiza-kabu.com/k/",
+          "label": "株式会社歌舞伎座 【株主優待予約】",
+          "reason": "公式リンクだが株主優待予約専用。業績IR質問フォームとは実証されていない。"
+        },
+        {
+          "labels": [
+            "インターネット食事予約",
+            "インターネット折詰予約",
+            "催し物ネット予約"
+          ],
+          "reason": "食事・チケット・催しの予約サービスは業績IR窓口の証拠にならない。"
+        }
+      ],
+      "notes": [
+        "取得済トップとサイトマップはいずれもHTTP200、forms は空、mailtoリンクなし。",
+        "IR情報はナビの見出し。IR資料の掲載だけをIR問い合わせ受付と扱わない。",
+        "保存robots本文は/wp-admin/禁止で、候補annai以下に該当する明示禁止はない。ただし追加取得前の最新確認はroot collectorへ委ねる。"
+      ]
+    }
+  ],
+  "followup_get_candidates": [
+    {
+      "security_code": "7685",
+      "url": "https://buysell-technologies.com/ir/policy/",
+      "parent_snapshot": "../ir-contacts-2026-10-11/evidence/svc-7685-contact.json",
+      "parent_url": "https://buysell-technologies.com/contact/form-ir/",
+      "parent_retrieved_at": "2026-10-11T03:37:05.129793+00:00",
+      "parent_quote": "お問い合わせ ディスクロージャーポリシー 免責事項 電子公告",
+      "saved_link_label": "ディスクロージャーポリシー",
+      "priority": 1,
+      "purpose": "contact_conditions",
+      "reason": "沈黙期間・公表情報の範囲・個別返信方針の案内があるかを確認する。フォーム入力欄の実証とは別の取得目的。",
+      "official_contact_acceptance_demonstrated": false,
+      "performed_in_this_review": false
+    },
+    {
+      "security_code": "7685",
+      "url": "https://buysell-technologies.com/ir/faq/",
+      "parent_snapshot": "../ir-contacts-2026-10-11/evidence/svc-7685-contact.json",
+      "parent_url": "https://buysell-technologies.com/contact/form-ir/",
+      "parent_retrieved_at": "2026-10-11T03:37:05.129793+00:00",
+      "parent_quote": "IRニュース よくある質問 お問い合わせ ディスクロージャーポリシー",
+      "saved_link_label": "よくある質問",
+      "priority": 2,
+      "purpose": "discovery_only",
+      "reason": "公開Q&AやIR受付案内に具体的なフォーム本体リンク・受付条件があるかを確認する。",
+      "official_contact_acceptance_demonstrated": false,
+      "performed_in_this_review": false
+    },
+    {
+      "security_code": "9661",
+      "url": "https://www.kabuki-za.co.jp/annai/",
+      "parent_snapshot": "evidence/9661/02.json",
+      "parent_url": "https://www.kabuki-za.co.jp/sitemap/",
+      "parent_retrieved_at": "2026-10-11T04:04:10.580863+00:00",
+      "parent_quote": "会社情報 会社情報トップ 株式会社歌舞伎座 沿革 IR情報 有価証券報告書 決算短信",
+      "saved_link_label": "会社情報トップ",
+      "priority": 1,
+      "purpose": "discovery_only",
+      "reason": "IR資料をまとめる会社情報トップでIR窓口への具体的な導線があるかを確認する。会社情報リンク自体はIR受付の証明にならない。",
+      "official_contact_acceptance_demonstrated": false,
+      "performed_in_this_review": false
+    },
+    {
+      "security_code": "9661",
+      "url": "https://www.kabuki-za.co.jp/annai/k_jyouhou.html",
+      "parent_snapshot": "evidence/9661/02.json",
+      "parent_url": "https://www.kabuki-za.co.jp/sitemap/",
+      "parent_retrieved_at": "2026-10-11T04:04:10.580863+00:00",
+      "parent_quote": "IR情報 有価証券報告書 決算短信 事業報告 プレスリリース",
+      "saved_link_label": "決算短信",
+      "priority": 2,
+      "purpose": "discovery_only",
+      "reason": "公開業績ページに質問窓口の明示があるかを確認する。開示資料・電話の掲載だけではIRメール/フォーム確認にならない。",
+      "official_contact_acceptance_demonstrated": false,
+      "performed_in_this_review": false
+    },
+    {
+      "security_code": "9661",
+      "url": "https://www.kabuki-za.co.jp/annai/jimu2.html",
+      "parent_snapshot": "evidence/9661/02.json",
+      "parent_url": "https://www.kabuki-za.co.jp/sitemap/",
+      "parent_retrieved_at": "2026-10-11T04:04:10.580863+00:00",
+      "parent_quote": "株主情報 株主総会 株式事務 株主優待について",
+      "saved_link_label": "株式事務",
+      "priority": 3,
+      "purpose": "discovery_only",
+      "reason": "株式事務の案内からIRへの振り分けがあるかを補助確認する。株式手続・名義書換・優待専用の窓口は業績IRと区別する。",
+      "official_contact_acceptance_demonstrated": false,
+      "performed_in_this_review": false
+    }
+  ],
+  "limitations": [
+    "IR受付の存在・不存在を投資適性と混同しない。",
+    "追加取得候補は保存リンクに存在するURLのみ。取得して受付を確認したという意味ではない。",
+    "この監査ではHTTP取得、フォーム送信、メール送信は行っていない。"
+  ]
+}

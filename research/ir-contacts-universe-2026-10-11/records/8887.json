@@ -1,0 +1,98 @@
+{
+  "security_code": "8887",
+  "company_name": "シーラホールディングス",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "不動産業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.cumica.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-12T01:16:51.343022+00:00",
+  "completed_at": "2026-10-12T01:18:01.881110+00:00",
+  "manual_review_required": true,
+  "evidence": [],
+  "fetches": [
+    {
+      "url": "https://www.cumica.co.jp/",
+      "final_url": "https://syla-holdings.jp/",
+      "snapshot": "evidence/8887/20261012T011651343058Z/01.json",
+      "retrieved_at": "2026-10-12T01:17:47.495929+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "requested_url": "https://syla-holdings.jp/contact",
+      "url": "https://syla-holdings.jp/contact",
+      "http_status": 200,
+      "retrieved_at": "2026-10-12T06:35:27.794098+00:00",
+      "http_get_attempted": true,
+      "http_get_started_at": "2026-10-12T06:35:28.786092+00:00",
+      "http_response_received_at": "2026-10-12T06:35:28.974007+00:00",
+      "http_get_completed_at": "2026-10-12T06:35:28.978903+00:00",
+      "http_get_elapsed_seconds": 0.1928507980046561,
+      "host_wait_seconds": 2.434011548757553e-06,
+      "global_wait_seconds": 0.9916360269999132,
+      "wait_seconds": 0.9916384610114619,
+      "global_rps_at_dispatch": 0.5,
+      "response_headers": {
+        "server": "envoy",
+        "date": "Mon, 12 Oct 2026 06:35:28 GMT"
+      },
+      "retry_after_seconds": null,
+      "failure_signature": null,
+      "final_url": "https://syla-holdings.jp/contact/",
+      "snapshot": "evidence/8887/20261012T062252095900Z/followup-0198.json",
+      "discovery_parent_url": "https://syla-holdings.jp/",
+      "discovery_parent_snapshot": "evidence/8887/20261012T011651343058Z/01.json",
+      "discovery_link_label": "CONTACT",
+      "explicit_ir_link": true,
+      "purpose": "ir_contact_followup"
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。"
+  ],
+  "discovery": {
+    "security_code": "8887",
+    "official_url": "https://www.cumica.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "クミカ",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/8887/20261012T011651343058Z/01.json",
+      "normalized_name": "シーラ",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 2,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 5,
+  "previous_attempts": [
+    "attempts/8887/20261011T045047743869Z.json",
+    "attempts/8887/20261012T011801881466Z.json",
+    "attempts/8887/20261012T063528981430Z-followup.json"
+  ],
+  "followup_completed_at": "2026-10-12T06:35:28.982836+00:00",
+  "followup_http_get_attempt_count": 3,
+  "followup_review_pending": [
+    {
+      "snapshot": "evidence/8887/20261012T062252095900Z/followup-0198.json",
+      "url": "https://syla-holdings.jp/contact/",
+      "parent_url": "https://syla-holdings.jp/",
+      "parent_snapshot": "evidence/8887/20261012T011651343058Z/01.json",
+      "discovery_link_label": "CONTACT",
+      "explicit_ir_link": true,
+      "purpose": "ir_contact_followup"
+    }
+  ]
+}

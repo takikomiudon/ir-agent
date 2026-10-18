@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-15T11:35:48.140390+00:00",
+  "status": "answer_key_frozen_before_external_response_collection",
+  "input_sha256": "2cdf502ba703c36e998d0422a0745182eaabc0256dc35b2751d99e9b642f0a4c",
+  "source_manifest_sha256": "727bbc80b377b784222efc8eb1d7b3f98dcd80554983558cd112b6c4a61513b4",
+  "protocol_sha256": "1affa1788ed9a79017cc9f816827d885a9876fac5aa22f4c5363202cc2bf340b",
+  "scope": "Excerpt entailment only; key designer knows the saved prior research. No stock-picking truth labels.",
+  "cases": [
+    {
+      "case_id": "B01",
+      "verdict": "not_established_by_excerpt",
+      "rationale": "AENTROは拠点遅延「かつ」継続顧客比率の頭打ちという条件付き見方を述べる。遅延だけでは他方の状態が分からず、この条件全体の成立は導けない。ほかの理由による減速の可能性まで否定しない。",
+      "sufficient_excerpt_id_sets": [
+        [
+          "E01"
+        ]
+      ],
+      "do_not_overclaim": [
+        "条件片側の確認で全体成立としない",
+        "将来減速しないという反対命題を真にしない"
+      ]
+    },
+    {
+      "case_id": "B02",
+      "verdict": "supported_by_excerpt",
+      "rationale": "期間/単位の表頭と、特別損失の減損423、税金等調整前利益を起点とする営業CF調整行423が対応する。これは二つの表示の確認で、現金流入や利益調整の採用ではない。",
+      "sufficient_excerpt_id_sets": [
+        [
+          "E02",
+          "E03",
+          "E04"
+        ]
+      ],
+      "do_not_overclaim": [
+        "両方とも当連結会計年度の列",
+        "金額表示を新規キャッシュ受取と扱わない"
+      ]
+    },
+    {
+      "case_id": "B03",
+      "verdict": "not_established_by_excerpt",
+      "rationale": "抜粋は特別損失と営業CF調整を表示するが、CF調整額を営業利益へ追加して正常利益に採用する規則/適合は与えない。表の数値が実在することと、この評価上の変換の根拠は別。",
+      "sufficient_excerpt_id_sets": [
+        [
+          "E03",
+          "E04"
+        ]
+      ],
+      "do_not_overclaim": [
+        "正常利益採用の規則を追加しない",
+        "contradictedの根拠として源泉にない明示禁止文を作らない"
+      ]
+    },
+    {
+      "case_id": "B04",
+      "verdict": "supported_by_excerpt",
+      "rationale": "同じ2027年3月期通期連結業績予想の修正表で、前回Aの1株当たり当期純利益185.40円と今回Bの229.67円を表示する。二つの版であり、実績や別著者独自予測とはしていない。",
+      "sufficient_excerpt_id_sets": [
+        [
+          "E05"
+        ]
+      ],
+      "do_not_overclaim": [
+        "旧/新を同じ版に統合しない",
+        "5月当時のシステム利用可能性を証明しない"
+      ]
+    },
+    {
+      "case_id": "B05",
+      "verdict": "not_established_by_excerpt",
+      "rationale": "企業結合日は「予定」と明記される。実施済みを確認する記述はこの抜粋にない。実際には未実施だった、という反対の事実もこの抜粋だけでは分からない。",
+      "sufficient_excerpt_id_sets": [
+        [
+          "E06"
+        ]
+      ],
+      "do_not_overclaim": [
+        "予定を実施済みにしない",
+        "未実施とも断定しない"
+      ]
+    },
+    {
+      "case_id": "B06",
+      "verdict": "not_established_by_excerpt",
+      "rationale": "会社の目標とQUICKの注視という別主体の記述はあるが、40%を著者の反証境界に採用する記述はない。目標の存在だけでは著者の許容停滞幅/期間を確定できない。",
+      "sufficient_excerpt_id_sets": [
+        [
+          "E07",
+          "E08"
+        ]
+      ],
+      "do_not_overclaim": [
+        "会社目標を著者規則へ変換しない",
+        "全レポートに定義がないという一般不存在を主張しない"
+      ]
+    },
+    {
+      "case_id": "B07",
+      "verdict": "supported_by_excerpt",
+      "rationale": "単位は億円、2027年3月期計画は2番目の数値列で378。1億円=100百万円なので378×100=37,800百万円。この表示算術から非丸め値や他資料との経済的同一性は導かない。",
+      "sufficient_excerpt_id_sets": [
+        [
+          "E09",
+          "E10",
+          "E11"
+        ]
+      ],
+      "do_not_overclaim": [
+        "表示単位算術だけ",
+        "丸め規則や予想版を補わない"
+      ]
+    },
+    {
+      "case_id": "B08",
+      "verdict": "contradicted_by_excerpt",
+      "rationale": "原注記が予想EPSは会社予想純利益をベースに当研究所で算出と明示するため、「会社予想純利益を使わず独自純利益予測から」という主張と両立しない。EPSの計算主体がQUICKでも純利益の予測主体まで同じではない。",
+      "sufficient_excerpt_id_sets": [
+        [
+          "E12"
+        ]
+      ],
+      "do_not_overclaim": [
+        "EPS計算と利益予測の主体を区別",
+        "正確な株数分母/現在の会社EPSを推定しない"
+      ]
+    }
+  ]
+}

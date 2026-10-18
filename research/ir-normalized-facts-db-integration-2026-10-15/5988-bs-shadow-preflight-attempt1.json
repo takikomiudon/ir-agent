@@ -1,0 +1,14 @@
+{
+  "recorded_at": "2026-10-15T21:45:07.464354+00:00",
+  "status": "failed_in_temporary_clone",
+  "exception": "ValueError: substring not found",
+  "cause": "Classification quote builder assumed spaces in minified normalized JSON; not a source mismatch or ingest failure",
+  "completed_before_error": [
+    "23/23 deterministic source reproductions",
+    "one-source shadow ingest and idempotent replay",
+    "single-source shadow queue/claim"
+  ],
+  "actual_database_writes": 0,
+  "temporary_clone_discarded": true,
+  "next_step": "Use an exact substring from the saved minified content; do not rewrite source"
+}

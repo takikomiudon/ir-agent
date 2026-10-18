@@ -1,0 +1,365 @@
+{
+  "requested_url": "https://gianluca.statistica.it/research/voi/",
+  "retrieved_at": "2026-10-15T01:05:37.317335+00:00",
+  "publication_time": null,
+  "submitted": false,
+  "http_get_attempted": true,
+  "http_get_started_at": "2026-10-15T01:05:38.783012+00:00",
+  "http_response_received_at": "2026-10-15T01:05:39.389445+00:00",
+  "http_get_completed_at": "2026-10-15T01:05:39.417081+00:00",
+  "host_wait_seconds": 0.4653339019860141,
+  "global_wait_seconds": 1.0003060800372623,
+  "wait_seconds": 1.4656399820232764,
+  "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+  "global_rps_at_dispatch": 1.0,
+  "url": "https://gianluca.statistica.it/research/voi/",
+  "http_status": 200,
+  "response_headers": {
+    "date": "Thu, 15 Oct 2026 01:05:39 GMT",
+    "server": "envoy"
+  },
+  "retry_after_seconds": null,
+  "byte_count": 62963,
+  "sha256": "8e0380f1597a0cefb4cf5b79ec10f17311a5fcf8cada63bfaef89a1e97544ab6",
+  "content_type": "text/html; charset=UTF-8",
+  "encoding": "utf-8",
+  "encoding_source": "http_charset",
+  "http_charset": "utf-8",
+  "html_meta_charset": "utf-8",
+  "text": "Bayesian computations for Value of Information measures using Gaussian processes, INLA and Moment Matching – Gianluca Baio’s webpage Research Publications Talks Books BMHTA BMHE BCEA book BMPR R for HTA Software BCEA survHE blendR bmhe SWSamp bmeta INLA Blog Teaching Summer school Research VoI Research Eurovision VoI Covid Missing data Survival RDD HPV ITS Population adjustment Stepped Wedge Trees Football PCOS Psymaptic-A Single arm Research VoI Bayesian computations for Value of Information measures using Gaussian processes, INLA and Moment Matching Health Economics Hierarchical models PhD project Authors Affiliations Gianluca Baio UCL Anna Heath Sick Kids Hospital (Toronto) Ioanna Manolopoulou UCL Published March 11, 2018 Introduction Understanding the impact of uncertainty on decision is an important aspect of health-economic decision making. While health-economic decision are typically made in a decision theoretic context, which quantifies the “best” decision under current evidence, the approval of a new health-care technology often comes with some risk. Therefore, funding bodies are often concerned with the impact of the parameter uncertainty on the optimal decision. The analysis of the Value of Information (VoI) is an increasingly popular method for quantifying the decision uncertainty. However, despite being a theoretically valid measure of decision uncertainty, its practical use has been limited by the immense computational power required to calculate typical VoI summaries, such as Expected Value of Partial Perfect Information (EVPPI) and the Expected Value of Sample Information (EVSI). For the EVPPI, recent developments using Bayesian non-parametric regression have vastly improved the computational time required but when larger subsets are considered the computational time is still prohibitive. To begin, this research focused on reducing the computation time for the EVPPI still further so that VoI measures can be used in standard Health Economic evaluations. INLA is an algorithm for fast approximate Bayesian inference that quickly approximates the marginal posteriors for a wide class of models. As part of this project, we worked on adapting the method of approximating the EVPPI such that INLA can be used to fit the Bayesian non-parametric regression. For the EVSI, a method based on moment matching has been developed to reduce the computational time required produce an estimate. This method is based on the Bayesian interpretation of the EVSI measure and the research project will continue by considering way to extend this methodology so the EVSI can be used to find optimal trial designs. Part of this research has been devoted to developing a web-application including graphical tools to visualise and analyse the EVSI. EVPPI with Gaussian Processes and INLA (Heath et al. 2016) The Expected Value of Partial (Perfect) Information (EVPPI) is a measure of the Value of Information associated with gathering evidence that can reduce uncertainty about a set of parameters of interest in a health economic model. Typically, we can split the vector of model parameters \\(\\boldsymbol\\theta\\) into two components, \\(\\boldsymbol\\phi\\) (the parameters we are interest in, which we may gather more information about) and \\(\\boldsymbol\\psi\\) , the set of “nuisance” parameters. The monetary value (utility) of a given intervention \\(t\\) is quantified by the (monetary) Net Benefit , \\(\\mbox{NB}_t(\\boldsymbol\\theta)=\\mbox{NB}_t(\\boldsymbol\\phi,\\boldsymbol\\psi)\\) . The EVPPI is the difference between the expected maximum utility (NB) if we were able to learn the value of the important parameters \\(\\boldsymbol\\phi\\) perfectly and the maximum expected utility calculated under current uncertainty: \\[ \\mbox{EVPPI} = \\mbox{E}_{\\boldsymbol\\phi}\\left[ \\max_t \\mbox{E}_{\\boldsymbol\\psi\\mid\\boldsymbol\\phi} \\left[ \\mbox{NB}_t({\\boldsymbol\\phi},\\boldsymbol\\psi) \\right] \\right] - \\max_t \\mbox{E}_\\boldsymbol\\theta \\left[ \\mbox{NB}_t(\\boldsymbol\\phi,\\boldsymbol\\psi) \\right]. \\] Computationally, the EVPPI is hard because it involves the maximisation of an expectation calculated with respect to a conditional distribution. Thus, unless simplifying assumptions hold (which usually don’t), it can involve a hard and lengthy computation, particularly when the size of the vector \\(\\boldsymbol\\phi\\) is large. We’ve built on the existing literature to combine a framework based on Gaussian Process Regression to estimate \\(\\mbox{E}_{\\boldsymbol\\psi\\mid\\boldsymbol\\phi} \\left[ \\mbox{NB}_t({\\boldsymbol\\phi},\\boldsymbol\\psi) \\right]\\) and Integrated Nested Laplace Approximation (INLA), a very fast method for Bayesian computation. This generates accurate estimates with substantial computational savings (Heath et al. 2017, 2016) . EVSI with the Moment Matching method (Heath et al. 2019) Generally speaking and assuming that the utility associated with the application of a given intervention is represented by the monetary net benefit \\(\\mbox{NB}(\\boldsymbol{\\theta})_t=k\\mbox{E}[e\\mid\\boldsymbol{\\theta};t] - \\mbox{E}[c\\mid\\boldsymbol{\\theta};t]\\) , the Expected Value of Sample Information is computed as \\[\\mbox{EVSI} = \\mbox{E}_{\\mathbf{X}} \\left[ \\max_t\\ \\underbrace{\\mbox{E}_{\\boldsymbol\\theta \\mid \\mathbf{X}} \\left[ \\mbox{NB}_t(\\boldsymbol\\theta) \\right]}_\\text{Value of decision based on sample information (for a given study design)}\\right] - \\underbrace{\\max_{t}\\mbox{E}_{\\boldsymbol\\theta}\\left[\\mbox{NB}_{t}(\\boldsymbol\\theta)\\right]}_\\text{Value of decision based on currentinformation}\\] The EVSI measures the value of reducing uncertainty by running a study of a given design and can be used to compare the benefits and costs of a study with given design, thus helping in both assessment of the impact of parameters uncertainty on the decision-making process and research prioritisation. Assuming we are only interested in a pairwise comparison (eg the new intervention vs the standard of care), the EVSI can be re-expressed as \\[\\mbox{EVSI} = \\mbox{E}_{\\mathbf{X}}\\left[\\max\\left\\{0,\\mbox{E}_{\\boldsymbol\\theta\\mid\\mathbf{X}}[\\mbox{INB}(\\boldsymbol\\theta)]\\right\\} \\right] - \\max\\left\\{0, \\mbox{E}_{\\boldsymbol\\theta}\\left[\\mbox{INB}(\\boldsymbol\\theta)\\right]\\right\\}.\\] In practical terms, the inner expectation \\(\\mu^{\\mathbf{X}}=\\mbox{E}_{\\boldsymbol\\theta\\mid\\mathbf{X}}[\\mbox{INB}(\\boldsymbol\\theta)]\\) is the complicated part to estimate. The ``standard’’ option is to use nested Monte Carlo integration, but this requires a very large number of simulations and thus is impractical. In effect, the objective is to approximate the distribution \\(p(\\mu^{\\mathbf{X}})\\) using the \\(S\\) simulations available from the process of probabilistic sensitivity analysis (PSA, which is mandatory in many jurisdictions). The approximation is made by matching the first two moments of the distribution \\(\\mbox{E}_{\\mathbf{X}}\\left[\\mu^{\\mathbf{X}}\\right] = \\mbox{E}_{\\mathbf{X}}\\left[ \\mbox{E}_{\\boldsymbol\\theta\\mid\\mathbf{X}} \\left[\\mbox{INB}(\\boldsymbol\\theta)\\right] \\right] = \\mbox{E}_{\\boldsymbol\\theta}\\left[\\mbox{INB}(\\boldsymbol\\theta)\\right]\\) \\(\\mbox{Var}_{\\mathbf{X}}\\left[\\mu^{\\mathbf{X}}\\right] = \\mbox{Var}_{\\boldsymbol\\theta}\\left[\\mbox{INB}(\\boldsymbol\\theta)\\right] - \\mbox{E}_{\\mathbf{X}}\\left[\\mbox{Var}_{\\boldsymbol\\theta\\mid\\mathbf{X}}\\left[\\mbox{INB}(\\boldsymbol\\theta)\\right]\\right]\\) In particular, the variance \\(\\mbox{Var}_{\\mathbf{X}}\\left[\\mu^{\\mathbf{X}}\\right]\\) can be efficiently estimated using only a limited number \\(30<Q<50\\) of simulations from the posterior distribution of the parameters given the “hypothetical” data \\(\\mathbf{X}\\) . Subsequently the original PSA samples for the INB can be rescaled and used to approximate the EVSI as \\[\\mbox{EVSI} = \\frac{1}{S}\\sum_{s=1}^S \\max\\left\\{ 0,\\eta^{\\mathbf{X}}_s \\right\\} - \\max\\left\\{0, \\mu \\right\\},\\] where \\(\\eta^{\\mathbf{X}}_s\\) is the \\(s-\\) th simulated rescaled value from the PSA samples of INB \\((\\boldsymbol\\theta)\\) and \\(\\mu\\) is the mean of these PSA samples. Computational tools The moment matching method is implemented in the R package EVSI , which is also available as a web-application here . Last updated: 8 October 2026 Relevant publications Eurovision Covid",
+  "title": "Bayesian computations for Value of Information measures using Gaussian processes, INLA and Moment Matching – Gianluca Baio’s webpage",
+  "headings": [
+    "Bayesian computations for Value of Information measures using Gaussian processes, INLA and Moment Matching",
+    "Introduction",
+    "EVPPI with Gaussian Processes and INLA (Heath et al. 2016)",
+    "EVSI with the Moment Matching method (Heath et al. 2019)",
+    "Computational tools",
+    "Relevant publications"
+  ],
+  "base_href": null,
+  "base_hrefs": [],
+  "base_url": "https://gianluca.statistica.it/research/voi/",
+  "base_resolution_error": null,
+  "links": [
+    {
+      "url": "https://gianluca.statistica.it/",
+      "href": "/",
+      "label": ""
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/",
+      "href": "/research/",
+      "label": "Research"
+    },
+    {
+      "url": "https://gianluca.statistica.it/publications/",
+      "href": "/publications/",
+      "label": "Publications"
+    },
+    {
+      "url": "https://gianluca.statistica.it/talks/",
+      "href": "/talks/",
+      "label": "Talks"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/voi/",
+      "href": "#",
+      "label": "Books"
+    },
+    {
+      "url": "https://gianluca.statistica.it/books/bmhta/",
+      "href": "/books/bmhta/",
+      "label": "BMHTA"
+    },
+    {
+      "url": "https://gianluca.statistica.it/books/bmhe/",
+      "href": "/books/bmhe/",
+      "label": "BMHE"
+    },
+    {
+      "url": "https://gianluca.statistica.it/books/bcea/",
+      "href": "/books/bcea/",
+      "label": "BCEA book"
+    },
+    {
+      "url": "https://gianluca.statistica.it/books/bmpr/",
+      "href": "/books/bmpr/",
+      "label": "BMPR"
+    },
+    {
+      "url": "https://gianluca.statistica.it/books/r-hta/",
+      "href": "/books/r-hta/",
+      "label": "R for HTA"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/voi/",
+      "href": "#",
+      "label": "Software"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bcea/",
+      "href": "/software/bcea/",
+      "label": "BCEA"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/survhe/",
+      "href": "/software/survhe/",
+      "label": "survHE"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/blendr/",
+      "href": "/software/blendr/",
+      "label": "blendR"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bmhe_utils/",
+      "href": "/software/bmhe_utils/",
+      "label": "bmhe"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/swsamp/",
+      "href": "/software/swsamp/",
+      "label": "SWSamp"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/bmeta/",
+      "href": "/software/bmeta/",
+      "label": "bmeta"
+    },
+    {
+      "url": "https://gianluca.statistica.it/software/inla/",
+      "href": "/software/inla/",
+      "label": "INLA"
+    },
+    {
+      "url": "https://gianluca.statistica.it/blog/",
+      "href": "/blog/",
+      "label": "Blog"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/voi/",
+      "href": "#",
+      "label": "Teaching"
+    },
+    {
+      "url": "https://gianluca.statistica.it/teaching/summer-school/",
+      "href": "/teaching/summer-school/",
+      "label": "Summer school"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/eurovision/",
+      "href": "/research/eurovision/",
+      "label": "Research"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/voi/",
+      "href": "/research/voi/",
+      "label": "VoI"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/eurovision/",
+      "href": "/research/eurovision/",
+      "label": "Eurovision"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/voi/",
+      "href": "/research/voi/",
+      "label": "VoI"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/covid/",
+      "href": "/research/covid/",
+      "label": "Covid"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/missing-data/",
+      "href": "/research/missing-data/",
+      "label": "Missing data"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/survival/",
+      "href": "/research/survival/",
+      "label": "Survival"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/causal/",
+      "href": "/research/causal/",
+      "label": "RDD"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/hpv/",
+      "href": "/research/hpv/",
+      "label": "HPV"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/its/",
+      "href": "/research/its/",
+      "label": "ITS"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/population-adjustment/",
+      "href": "/research/population-adjustment/",
+      "label": "Population adjustment"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/steppedwedge/",
+      "href": "/research/steppedwedge/",
+      "label": "Stepped Wedge"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/trees/",
+      "href": "/research/trees/",
+      "label": "Trees"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/football/",
+      "href": "/research/football/",
+      "label": "Football"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/pcos/",
+      "href": "/research/pcos/",
+      "label": "PCOS"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/psymaptica/",
+      "href": "/research/psymaptica/",
+      "label": "Psymaptic-A"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/single-arm/",
+      "href": "/research/single-arm/",
+      "label": "Single arm"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/eurovision/",
+      "href": "/research/eurovision/",
+      "label": "Research"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/voi/",
+      "href": "/research/voi/",
+      "label": "VoI"
+    },
+    {
+      "url": "https://github.com/giabaio/EVSI",
+      "href": "https://github.com/giabaio/EVSI",
+      "label": ""
+    },
+    {
+      "url": "http://www.convoi-group.org/",
+      "href": "http://www.convoi-group.org/",
+      "label": ""
+    },
+    {
+      "url": "https://twitter.com/ConVOIgroup",
+      "href": "https://twitter.com/ConVOIgroup",
+      "label": ""
+    },
+    {
+      "url": "https://sites.google.com/site/annaheathstats/",
+      "href": "https://sites.google.com/site/annaheathstats/",
+      "label": "Anna Heath"
+    },
+    {
+      "url": "http://www.homepages.ucl.ac.uk/~ucakima/",
+      "href": "http://www.homepages.ucl.ac.uk/~ucakima/",
+      "label": "Ioanna Manolopoulou"
+    },
+    {
+      "url": "https://egon.stats.ucl.ac.uk/projects/EVSI/",
+      "href": "https://egon.stats.ucl.ac.uk/projects/EVSI/",
+      "label": "web-application"
+    },
+    {
+      "url": "https://github.com/giabaio/EVSI",
+      "href": "https://github.com/giabaio/EVSI",
+      "label": "EVSI"
+    },
+    {
+      "url": "https://egon.stats.ucl.ac.uk/projects/EVSI/",
+      "href": "https://egon.stats.ucl.ac.uk/projects/EVSI/",
+      "label": "here"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/eurovision/",
+      "href": "/research/eurovision/",
+      "label": "Eurovision"
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/covid/",
+      "href": "/research/covid/",
+      "label": "Covid"
+    },
+    {
+      "url": "https://mas.to/@gianlubaio",
+      "href": "https://mas.to/@gianlubaio",
+      "label": ""
+    },
+    {
+      "url": "https://twitter.com/gianlubaio",
+      "href": "https://twitter.com/gianlubaio",
+      "label": ""
+    },
+    {
+      "url": "https://github.com/giabaio",
+      "href": "https://github.com/giabaio",
+      "label": ""
+    },
+    {
+      "url": "mailto:g.baio@ucl.ac.uk",
+      "href": "mailto:g.baio@ucl.ac.uk",
+      "label": ""
+    },
+    {
+      "url": "https://www.linkedin.com/in/gianluca-baio/",
+      "href": "https://www.linkedin.com/in/gianluca-baio/",
+      "label": ""
+    },
+    {
+      "url": "https://gianluca.statistica.it/research/voi/",
+      "href": "#",
+      "label": ""
+    }
+  ],
+  "unresolved_links": [],
+  "forms": [],
+  "http_get_elapsed_seconds": 0.6341070939670317,
+  "failure_signature": null,
+  "robots": {
+    "requested_url": "https://gianluca.statistica.it/robots.txt",
+    "retrieved_at": "2026-10-15T01:05:36.782344+00:00",
+    "publication_time": null,
+    "submitted": false,
+    "http_get_attempted": true,
+    "http_get_started_at": "2026-10-15T01:05:36.782377+00:00",
+    "http_response_received_at": "2026-10-15T01:05:37.316330+00:00",
+    "http_get_completed_at": "2026-10-15T01:05:37.317228+00:00",
+    "host_wait_seconds": 2.3140455596148968e-06,
+    "global_wait_seconds": 1.1319643817842007e-06,
+    "wait_seconds": 3.4460099413990974e-06,
+    "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+    "global_rps_at_dispatch": 1.0,
+    "url": "https://gianluca.statistica.it/robots.txt",
+    "http_status": 200,
+    "response_headers": {
+      "date": "Thu, 15 Oct 2026 01:05:37 GMT",
+      "server": "envoy"
+    },
+    "retry_after_seconds": null,
+    "byte_count": 52,
+    "sha256": "24d18e3b114a349bd1732191e68a453ac154383d03ef4939af0f1301b464fa98",
+    "content_type": "text/plain; charset=UTF-8",
+    "encoding": "utf-8",
+    "encoding_source": "http_charset",
+    "http_charset": "utf-8",
+    "html_meta_charset": null,
+    "text": "Sitemap: https://gianluca.statistica.it/sitemap.xml\n",
+    "title": "",
+    "headings": [],
+    "links": [],
+    "forms": [],
+    "http_get_elapsed_seconds": 0.534874209028203,
+    "failure_signature": null
+  }
+}

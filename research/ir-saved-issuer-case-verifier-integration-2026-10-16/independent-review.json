@@ -1,0 +1,96 @@
+{
+  "reviewed_at": "2026-10-16T16:56:16.947636+00:00",
+  "reviewer": "codex_audit_manufacturing",
+  "status": "independent_review_complete_no_material_findings",
+  "findings": [],
+  "scope": [
+    "新saved_issuer_case/pdf_text helper全体とdispatch、実production diff、新12testsの全本文を読解。",
+    "欠落/部分capture/URL/時刻/hash/count/pathと、旧legacy/nativeの不変性を重点点検。",
+    "source ID、issuer真正性、PDF再抽出の正しさ、意味/財務/利用許可の認定は対象外。"
+  ],
+  "static_results": {
+    "new_branch_entry": "provider == saved_issuer_case かつpdf_text。snapshotは9keys exact、captureは15必須項目。欠落を補完せずunknown。",
+    "known_bindings": "raw/extraction/snapshot SHA、source.contentのUTF-8完全bytes、snapshotとnestedの同URL/rawhash、responseURL、rawbytecount、安全resolvedrawpath、GET/HTTP200/errornull/complete/PDFflags、rawPDFmagic、offset-aware時刻順/完了時刻/source保存時刻、公表時刻を照合。",
+    "old_code_after_removing_only_added_helper_dispatch_docline_equals_before": true,
+    "legacy_native_3_frozen_output_wholebytes_equal": true,
+    "legacy_native_compatibility_output_SHA256": "c10392c64d3cda3d472fcea43d7d5794676b90093fdb09c57078d93af6d4f7a0",
+    "no_production_fix_required_from_review": true
+  },
+  "producer_evidence_checked_not_rerun": {
+    "focused_tests": {
+      "new": 12,
+      "legacy": 9,
+      "native": 21,
+      "total": 42
+    },
+    "all_logs_end_OK": true,
+    "full_suite_not_run_by_reviewer": true
+  },
+  "independent_in_memory_probes": {
+    "case_count": 47,
+    "baseline_matched": 1,
+    "negative_case_count": 46,
+    "negative_false_matched": 0,
+    "outcome_counts": {
+      "matched": 1,
+      "unknown": 29,
+      "mismatch": 9,
+      "ValueError": 8
+    },
+    "fixture": "既取得4318のsource/snapshot/raw/extractionを読み、bundle/snapshotの変更と再hashをPath.read_bytes overlayで模擬。missingはPath.is_file、外部symlink相当はPath.resolve戻り値だけをmock。ディスクのfixture/sourceを改変していない。",
+    "negative_cases": [
+      "capture15必須fieldを各1個欠落、snapshot9fieldを各1個欠落：全24unknown。",
+      "capture4時計をtimezone無しへ：全4ValueError。",
+      "complete_body:false、boolbytecount、時計逆転、公表時刻矛盾、source取得時刻矛盾。",
+      "抽出hash欠落、rawfile指定欠落、raw/snapshot/extractionの各filemissing。",
+      "capture ../ traversal、case_root外部symlink相当、raw外部symlink相当。",
+      "rawを%PDF-の5bytesへ切詰めてhashだけ再宣言したものは旧capturebytecountと矛盾しmismatch。",
+      "別rawpath、別responseURL、POST宣言、source.content単独変更。"
+    ],
+    "forbidden_calls_patched": "sqlite3.connect/socket.create_connection/subprocess.runを失敗mockし呼出し0。",
+    "test_fixture_writes": 0,
+    "method_limit": "symlink独立probeはresolve境界のメモリ模擬。新testの実symlink反例も本文読解済みだが独立probeで実symlinkを作成したとは主張しない。"
+  },
+  "actual_4318_readonly_check": {
+    "status": "matched",
+    "entire_result_equals_frozen_real_Q1_verification_JSON": true,
+    "source4_files_before_after_hash_unchanged": true,
+    "source_id_verification": "not_performed",
+    "semantic_financial_verification": "not_performed",
+    "current_collection_permission": "not_performed_by_this_offline_function",
+    "source_ID_or_metadata_rewritten": false
+  },
+  "scope_limitations": [
+    "matchedはcaller-controlledな宣言/保存bytesと照合対象fieldの内部一致。source ID/会社真正性/取得の独立証明、PDF抽出再現、引用意味、財務・分類・金融採用・現在GET許可へ拡張しない。",
+    "全宣言と保存物を整合的に作り直した者の真正性を識別する機能ではない。stable filesを監査中の前提とする既存契約も維持。",
+    "旧4318validation unknownの歴史は変更していない。新結果を元source/manifestへ書き込んでいない。"
+  ],
+  "input_pins": {
+    "scripts/verify_case_source_bundle.py": "46d006075553380682072d94a2532f7f7552a1a033b0db5b8959a1b0a52e9b8a",
+    "tests/test_saved_issuer_case_verifier.py": "ba182322a11f91521e292225eb4981a6c647acd6c0d063eaebeb09a31ac1a05d",
+    "src/ir_agent/models.py": "e0d0444fda0e730de6c6e9beaa110bbd796de00f3228c041daa016284a8e234e",
+    "research/ir-saved-issuer-case-verifier-integration-2026-10-16/before/verify_case_source_bundle.py": "65ba58f6183be3251247e83d16ae832bb868525ef60ea787e8706df2ad6bfb64",
+    "research/ir-saved-issuer-case-verifier-integration-2026-10-16/after/verify_case_source_bundle.py": "46d006075553380682072d94a2532f7f7552a1a033b0db5b8959a1b0a52e9b8a",
+    "research/ir-saved-issuer-case-verifier-integration-2026-10-16/after/test_saved_issuer_case_verifier.py": "ba182322a11f91521e292225eb4981a6c647acd6c0d063eaebeb09a31ac1a05d",
+    "research/ir-saved-issuer-case-verifier-integration-2026-10-16/verifier.diff": "43bdfd652ec42a1f93850238bad3943928df97102e566cc0176ba5f7e477b10d",
+    "research/ir-saved-issuer-case-verifier-integration-2026-10-16/implementation.json": "5f3f0d290a0e592bdda42d0b53c779a5bdbbc7692524cbf3eecb226a1b138d92",
+    "research/ir-saved-issuer-case-verifier-integration-2026-10-16/manifest.json": "2d0cf6c35e32e2826cb2c81142d2f1adbc9448a553e5740a071a049866b116d5",
+    "research/ir-saved-issuer-case-verifier-integration-2026-10-16/before-compatibility.json": "c10392c64d3cda3d472fcea43d7d5794676b90093fdb09c57078d93af6d4f7a0",
+    "research/ir-saved-issuer-case-verifier-integration-2026-10-16/after-compatibility.json": "c10392c64d3cda3d472fcea43d7d5794676b90093fdb09c57078d93af6d4f7a0",
+    "research/ir-saved-issuer-case-verifier-integration-2026-10-16/new-tests.log": "9df698ffb70060b0f2aa8ae942fa6794e86bf80f26d3b272a51ec5a97ac42159",
+    "research/ir-saved-issuer-case-verifier-integration-2026-10-16/legacy-tests.log": "5ce7631dc5b00b1bf7a22a4ec0d19386dd159d29115434811f0843ccfabad156",
+    "research/ir-saved-issuer-case-verifier-integration-2026-10-16/native-tests.log": "0ed4937af64778c8dfce4c5d1a2896133da05b3d685a0a1c788f094936cf1a50",
+    "research/ir-saved-issuer-case-verifier-integration-2026-10-16/real-Q1-verification.json": "78f63aadf337034f56da5b5b0a59abd6eb0a8f3bfe2d22783f0fc90bcd163d62",
+    "research/ir-case-studies-2026-10-15/4318/subsequent-Q1-public-review-2026-10-16/source-only-bundle.json": "ba8b11822c50ec55a2e4c2a52d0936982e5a5750a5d9242e4a5397c0380582c9",
+    "research/ir-case-studies-2026-10-15/4318/subsequent-Q1-public-review-2026-10-16/01-builder-snapshot.json": "c628a18d26524a7af451de098783e4d578b8b3566eb69d23edd8867f218d54ff",
+    "research/ir-case-studies-2026-10-15/4318/subsequent-Q1-public-review-2026-10-16/quarter-full.txt": "eb442efd3820e1bf79103681f52b6afae85b49cdb2012f4012733010081ed94b",
+    "research/ir-case-studies-2026-10-15/4318/subsequent-Q1-public-review-2026-10-16/raw/f6a96a94369a7d4df02ecfacb716b1ef1e623e6854bae7ee77e304bbb716ddfd": "f6a96a94369a7d4df02ecfacb716b1ef1e623e6854bae7ee77e304bbb716ddfd"
+  },
+  "operations": {
+    "GET": 0,
+    "DB_connection_or_write_or_Store": 0,
+    "full_suite_or_focused42_rerun": 0,
+    "code_test_old_source_or_report_edits": 0,
+    "authorized_new_output_files": 1
+  }
+}

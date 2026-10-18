@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "created_at": "2026-10-15T11:58:47.842186+00:00",
+  "purpose": "Existing7525preflight rubric rehearsal only; every response/public excerpt is invented and not an actual issuer IR response.",
+  "question_text": "GP2026・LV2030の「オリジナル品比率」の算定に使う売上範囲（連結・単体、グループ内取引の扱い）と、両計画でその範囲が共通かを、公表済みの定義または掲載資料でご教示ください。",
+  "existing_rubric": {
+    "scope_of_question": [
+      "比率の算定に使う売上の連結/単体範囲",
+      "同じ売上範囲におけるグループ内取引の扱い",
+      "GP2026/LV2030でその範囲が共通か"
+    ],
+    "reply_interpretations": [
+      {
+        "id": "A_same_sales_scope_defined",
+        "condition": "返答がGP2026/LV2030の売上範囲（連結/単体、グループ内取引の扱い）を明示し、その範囲が両計画で共通と確認できる。",
+        "research_effect": "明示された両計画の売上範囲という軸の比較を進められる。連結/単体のどちらを好条件とも評価しない。",
+        "remaining_limits": [
+          "過去実績29.3%と同じ定義・対象期・版かは別確認。",
+          "商品カテゴリ/分子の全算入ルール・会計計上基準・期間/再表示まで確認済みにしない。",
+          "著者の伸び悩み成立/反証・目標達成・利益/EPS・投資判断へ移さない。"
+        ]
+      },
+      {
+        "id": "B_different_scope_or_reclassification",
+        "condition": "売上範囲がGP/LVで異なる、またはその範囲に関係する再分類/変更があると明示される。",
+        "research_effect": "そのままの比率の単純比較を保留し、対象期/範囲と会社公表の対応表や注記があれば参照する。自ら過去値や目標を補正しない。",
+        "remaining_limits": [
+          "違い自体を悪化・反証と扱わない。",
+          "未提供の金額/比率を差分や再分母化で作らない。"
+        ]
+      },
+      {
+        "id": "C_scope_unknown_partial_or_no_reply",
+        "condition": "片方のみの定義、連単のみで内部取引不明、共通性不明、既出の目標/3カテゴリだけの再掲、曖昧、回答不能、無回答。",
+        "research_effect": "確認できた部分だけ記録し、共通の売上範囲は未解決として比較を保留する。無回答を0値や悪化・反証の証拠にしない。",
+        "remaining_limits": [
+          "返信の前向きな語調や回答速度を比較可能性の証拠にしない。",
+          "公表済み箇所の案内だけなら、その資料/版/定義を読んでから解消範囲を確認する。"
+        ]
+      }
+    ],
+    "reply_publicness_boundary": "公表定義を尋ねても返答の公開性を事前にpublic_clarificationと認定しない。受信時に原文/根拠を確認し、不明/非公開懸念があれば比較への使用も保留する。",
+    "not_asked_again": [
+      "会社目標40%以上/55%以上の存在や達成保証",
+      "自社/グループ/専売仕入品という既存外部説明の3カテゴリ",
+      "OEM/サービス/ブランドPB等の追加分類",
+      "QUICKが許容する伸び悩みの幅/期限/公正倍率/投資判断"
+    ],
+    "research_only_status": "research_preflight_not_ready_for_registration_or_send",
+    "formal_readiness": {
+      "ready_for_question_add": false,
+      "ready_for_ir_plan": false,
+      "ready_to_send": false,
+      "financial_thesis_available_for_this_candidate": false
+    },
+    "author_rules_remain_unset": {
+      "falsification_period": null,
+      "minimum_progress": null,
+      "ratio_tolerance_or_allowable_stagnation": null,
+      "valuation_multiple": null,
+      "target_price": null,
+      "exit_price_or_condition": null,
+      "probability": null,
+      "buy_sell_rule": null
+    }
+  },
+  "fixture_public_material_contract": {
+    "synthetic": true,
+    "meaning": "When present=true, the supplied excerpt is a declared public synthetic fixture available for this exercise only. It is not a real disclosure/source ID and its presence does not resolve missing or conflicting content. When absent, no evidence of response publicness is supplied.",
+    "real_response_receipt_dates_or_source_IDs_created": false,
+    "no_actual_public_clarification_status_assigned": true
+  },
+  "output_contract": {
+    "one_result_per_case": true,
+    "fields": [
+      "case_id",
+      "semantic_branch_id",
+      "scope_comparability",
+      "publicness",
+      "application_hold",
+      "financial_input_changes",
+      "reason",
+      "evidence"
+    ],
+    "semantic_branch_id": "Use an id from existing_rubric.reply_interpretations.",
+    "scope_comparability": "Classify the stated GP/LV sales-scope relationship only; do not certify29.3percent historical comparability.",
+    "publicness": "State whether the supplied synthetic public reference supports use, or publicness/no-response remains unresolved. Do not mark a real replypublic.",
+    "application_hold": "Keep comparison_use separately from financial_model and formal_registration_or_send. True means held; false means comparison can proceed only within synthetic fixture. Financial/formal applications remain held.",
+    "financial_input_changes": [],
+    "reason": "Explain with response wording and rubric; no buy/sell or EPS/model update.",
+    "evidence": "Quote the response if present, point to rubric field(s), and identify supplied/absent synthetic reference; null reply needs no invented quote."
+  },
+  "cases": [
+    {
+      "case_id": "case-01",
+      "synthetic": true,
+      "response_text": "GP2026とLV2030の算定範囲は同じです。",
+      "public_material_reference": {
+        "present": true,
+        "synthetic": true,
+        "state": "provided_as_public_material_within_this_exercise",
+        "label": "架空の公表説明抜粋",
+        "excerpt": "GP2026とLV2030の算定範囲は同じです。",
+        "real_URL": null,
+        "real_source_id": null
+      }
+    },
+    {
+      "case_id": "case-02",
+      "synthetic": true,
+      "response_text": "GP2026とLV2030は、いずれも当社単体の売上高を算定対象としています。グループ会社向けの売上も算入し、両計画の比率に用いる売上範囲とグループ内取引の扱いは共通です。",
+      "public_material_reference": {
+        "present": true,
+        "synthetic": true,
+        "state": "provided_as_public_material_within_this_exercise",
+        "label": "架空の公表説明抜粋",
+        "excerpt": "GP2026とLV2030は、いずれも当社単体の売上高を算定対象としています。グループ会社向けの売上も算入し、両計画の比率に用いる売上範囲とグループ内取引の扱いは共通です。",
+        "real_URL": null,
+        "real_source_id": null
+      }
+    },
+    {
+      "case_id": "case-03",
+      "synthetic": true,
+      "response_text": "GP2026とLV2030は、どちらも連結売上高を対象とし、比率の分子・分母からグループ内取引を消去しています。両計画で同じ売上範囲を用いています。",
+      "public_material_reference": {
+        "present": false,
+        "synthetic": true,
+        "state": "no_public_material_supplied",
+        "label": null,
+        "excerpt": null,
+        "real_URL": null,
+        "real_source_id": null
+      }
+    },
+    {
+      "case_id": "case-04",
+      "synthetic": true,
+      "response_text": "GP2026は連結売上高を対象とし、分子・分母ともグループ内取引を消去します。LV2030は当社単体売上高を対象とし、グループ会社向け売上も算入します。両計画の売上範囲は異なります。",
+      "public_material_reference": {
+        "present": true,
+        "synthetic": true,
+        "state": "provided_as_public_material_within_this_exercise",
+        "label": "架空の公表説明抜粋",
+        "excerpt": "GP2026は連結売上高を対象とし、分子・分母ともグループ内取引を消去します。LV2030は当社単体売上高を対象とし、グループ会社向け売上も算入します。両計画の売上範囲は異なります。",
+        "real_URL": null,
+        "real_source_id": null
+      }
+    },
+    {
+      "case_id": "case-05",
+      "synthetic": true,
+      "response_text": null,
+      "public_material_reference": {
+        "present": false,
+        "synthetic": true,
+        "state": "no_public_material_supplied",
+        "label": null,
+        "excerpt": null,
+        "real_URL": null,
+        "real_source_id": null
+      }
+    },
+    {
+      "case_id": "case-06",
+      "synthetic": true,
+      "response_text": "オリジナル品比率は、GP2026では40％以上、LV2030では55％以上を目標としています。",
+      "public_material_reference": {
+        "present": true,
+        "synthetic": true,
+        "state": "provided_as_public_material_within_this_exercise",
+        "label": "架空の公表説明抜粋",
+        "excerpt": "オリジナル品比率は、GP2026では40％以上、LV2030では55％以上を目標としています。",
+        "real_URL": null,
+        "real_source_id": null
+      }
+    },
+    {
+      "case_id": "case-07",
+      "synthetic": true,
+      "response_text": "GP2026とLV2030のオリジナル品比率は、いずれも連結売上高を算定対象としています。分子・分母ともグループ内取引を消去した後の売上を用い、両計画の売上範囲は共通です。",
+      "public_material_reference": {
+        "present": true,
+        "synthetic": true,
+        "state": "provided_as_public_material_within_this_exercise",
+        "label": "架空の公表説明抜粋",
+        "excerpt": "GP2026とLV2030のオリジナル品比率は、いずれも連結売上高を算定対象としています。分子・分母ともグループ内取引を消去した後の売上を用い、両計画の売上範囲は共通です。",
+        "real_URL": null,
+        "real_source_id": null
+      }
+    },
+    {
+      "case_id": "case-08",
+      "synthetic": true,
+      "response_text": "GP2026とLV2030は、いずれも連結売上高を対象とし、分子・分母からグループ内取引を消去した共通の算定範囲です。一方、LV2030は当社単体売上高のみを対象にグループ会社向け売上も算入しており、GP2026とは売上範囲が異なります。",
+      "public_material_reference": {
+        "present": true,
+        "synthetic": true,
+        "state": "provided_as_public_material_within_this_exercise",
+        "label": "架空の公表説明抜粋",
+        "excerpt": "GP2026とLV2030は、いずれも連結売上高を対象とし、分子・分母からグループ内取引を消去した共通の算定範囲です。一方、LV2030は当社単体売上高のみを対象にグループ会社向け売上も算入しており、GP2026とは売上範囲が異なります。",
+        "real_URL": null,
+        "real_source_id": null
+      }
+    }
+  ]
+}

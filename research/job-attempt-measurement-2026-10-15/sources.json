@@ -1,0 +1,92 @@
+{
+  "scope": "Official span, timing and attribute semantics only; no runtime capacity assumptions",
+  "maximum_urls": 2,
+  "retry_count": 0,
+  "sources": [
+    {
+      "source_id": "opentelemetry.trace-api",
+      "url": "https://opentelemetry.io/docs/specs/otel/trace/api/",
+      "retrieval_started_at": "2026-10-15T02:59:03.930563+00:00",
+      "get_count": 1,
+      "http_status": 200,
+      "received_at": "2026-10-15T02:59:04.216860+00:00",
+      "sha256": "8da7f3bf0c86b583adc1c53bc840cab8bd529beb3bc81ac6d1caa8ce27bcdb13",
+      "bytes": 120466,
+      "raw_file": "raw/8da7f3bf0c86b583adc1c53bc840cab8bd529beb3bc81ac6d1caa8ce27bcdb13",
+      "location": null,
+      "text_file": "opentelemetry-trace-api.txt",
+      "text_sha256": "576ea280850cc166dd92e09fce5adff97815d5a2c963326f805dd0b3c93a55d3"
+    },
+    {
+      "source_id": "opentelemetry.common-attributes",
+      "url": "https://opentelemetry.io/docs/specs/otel/common/",
+      "retrieval_started_at": "2026-10-15T02:59:04.226962+00:00",
+      "get_count": 1,
+      "http_status": 200,
+      "received_at": "2026-10-15T02:59:04.408244+00:00",
+      "sha256": "eea10c4cf25d1c0f292b1a62726fe788120bc86362babd84d4117dc7fbf6f99e",
+      "bytes": 92938,
+      "raw_file": "raw/eea10c4cf25d1c0f292b1a62726fe788120bc86362babd84d4117dc7fbf6f99e",
+      "location": null,
+      "text_file": "opentelemetry-common-attributes.txt",
+      "text_sha256": "509477a0e640a740d89a321fdb850b2c30f1f5db82598ee5d9ce6bb1f41dcaa4"
+    }
+  ],
+  "references": [
+    {
+      "id": "otel-span-start",
+      "source_id": "opentelemetry.trace-api",
+      "section": "Span lifetime",
+      "quote": "The start time is recorded when the Span is created.",
+      "exact_saved_text_match": true
+    },
+    {
+      "id": "otel-span-end",
+      "source_id": "opentelemetry.trace-api",
+      "section": "Span lifetime",
+      "quote": "The end time needs to be recorded when the operation is ended.",
+      "exact_saved_text_match": true
+    },
+    {
+      "id": "otel-api-time",
+      "source_id": "opentelemetry.trace-api",
+      "section": "Span lifetime",
+      "quote": "Start and end time as well as Event’s timestamps MUST be recorded at a time of a\ncalling of corresponding API.",
+      "exact_saved_text_match": true
+    },
+    {
+      "id": "otel-end-freeze",
+      "source_id": "opentelemetry.trace-api",
+      "section": "Span",
+      "quote": "After the Span is created, it SHOULD be possible to\nchange its name, set its Attributes, add Events, and set the Status. These\nMUST NOT be changed after the Span’s end time has been set.",
+      "exact_saved_text_match": true
+    },
+    {
+      "id": "otel-attribute",
+      "source_id": "opentelemetry.common-attributes",
+      "section": "Attribute",
+      "quote": "An Attribute is a key-value pair, which MUST have the following properties:",
+      "exact_saved_text_match": true
+    },
+    {
+      "id": "otel-attribute-key",
+      "source_id": "opentelemetry.common-attributes",
+      "section": "Attribute",
+      "quote": "The attribute key MUST be a non-null and non-empty string.",
+      "exact_saved_text_match": true
+    },
+    {
+      "id": "otel-mutable-attribute",
+      "source_id": "opentelemetry.common-attributes",
+      "section": "Attribute Collections",
+      "quote": "Setting an attribute with the same key as an\nexisting attribute SHOULD overwrite the existing attribute’s value.",
+      "exact_saved_text_match": true
+    }
+  ],
+  "limitations": [
+    "The Common page supplies attribute semantics, not a separate time section; timing evidence is the saved Trace API Span lifetime section.",
+    "No SDK, exporter, sampling policy, instrumentation or job measurement is installed by this evidence collection.",
+    "The project append-only attempt log, transactional guarantees and capacity mapping are independent adaptations, not OpenTelemetry requirements.",
+    "No worker budget, company count, financial threshold or model usage is inferred."
+  ]
+}

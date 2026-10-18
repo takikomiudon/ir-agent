@@ -1,0 +1,48 @@
+{
+  "fixed_maintainer_commit": "00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7",
+  "references": [
+    {
+      "id": "maintainer-formula-and-input-bases",
+      "role": "maintainer_exposition_not_Graham_original_verification",
+      "path": "research/ir-transparent-metric-formula-review-2026-10-15/upstream-INDICATORS.md",
+      "sha256": "fb82b2d47596026ea75fa561169062c52622dcb153caffe37af5491111ad084f",
+      "quote": "EPS  = net_income / shares_outstanding            (weighted average)\nBVPS = total_equity / shares_outstanding_end      (period-end count, average as fallback)\ngraham_number = √( 22.5 · EPS · BVPS )        only when EPS > 0 AND BVPS > 0, else NaN",
+      "character_start": 12966,
+      "character_end": 13211,
+      "line": 210
+    },
+    {
+      "id": "project-reported-two-input-requirements",
+      "role": "project_mapping_not_company_fact",
+      "path": "docs/graham-number-valuation-spec.md",
+      "sha256": "4ef4791993d6db68aea2a500e8aa0c99636ebe5f211e73efe77d9855a20841c1",
+      "quote": "| `eps_jpy` | 対象年度の会社表示の連結実績EPS。会社予想、個別、Q1の年率化と混ぜない |\n| `book_value_per_share_jpy` | 同年度末の会社表示BPS。普通株主の持分・期末株式基準を確認する |",
+      "character_start": 606,
+      "character_end": 725,
+      "line": 9
+    },
+    {
+      "id": "project-meaning-boundary",
+      "role": "project_mapping_not_company_fact",
+      "path": "docs/graham-number-valuation-spec.md",
+      "sha256": "4ef4791993d6db68aea2a500e8aa0c99636ebe5f211e73efe77d9855a20841c1",
+      "quote": "計算器は期間・株主範囲・実績か予測かを自動認証しない。EPSの年間平均株数とBPSの期末株数、自己株式、OCI・非支配持分の扱いを原典で別に確認する。",
+      "character_start": 727,
+      "character_end": 802,
+      "line": 12
+    },
+    {
+      "id": "fixed-code-input-columns",
+      "role": "maintainer_implementation_reference_not_executed",
+      "path": "research/ir-transparent-metric-core-review-2026-10-15/upstream-extras.py",
+      "sha256": "3038a489679aa163f5a4d930ac7cb4dcf320d72a62122ccd45e9d9242b593631",
+      "quote": "eps = c[\"net_income\"] / c[\"shares_outstanding\"]\n        bvps = c[\"total_equity\"] / shares",
+      "character_start": 5720,
+      "character_end": 5809,
+      "line": 105
+    }
+  ],
+  "upstream_code_imported_or_executed": false,
+  "formula_computed": false,
+  "Graham_original_all_conditions_or_company_recommendation_adopted": false
+}

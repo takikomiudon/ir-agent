@@ -1,0 +1,135 @@
+{
+  "status": "passed",
+  "scope": "Nine pure synthetic dependency cases; not an empirical financial test",
+  "implementation_sha256": {
+    "src/ir_agent/decision.py": "2c441f1d94a38453427dd8be3f589565dd7170a4c8cd7ec248be71d1ec516934",
+    "src/ir_agent/models.py": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c",
+    "src/ir_agent/valuation.py": "af42500de82d824ee29bde15fc44cfe66db1db7bbf2f00abed59ab26474e8a2a",
+    "tests/test_decision.py": "8d3389fdd6354a3624effd24fd1958a0f4c515461010886797763a511212904d"
+  },
+  "cases": [
+    {
+      "name": "weighted_fixture_control",
+      "synthetic": true,
+      "output": {
+        "status": "reviewed",
+        "proposed_action": "buy_review",
+        "reason_codes": [
+          "entry_conditions_met"
+        ],
+        "missing_parameters": [],
+        "net_expected_upside_pct": "27.87500"
+      }
+    },
+    {
+      "name": "unweighted_unheld_intact",
+      "synthetic": true,
+      "output": {
+        "status": "unresolved",
+        "proposed_action": "unresolved",
+        "reason_codes": [
+          "scenario_probabilities_not_configured"
+        ],
+        "missing_parameters": [],
+        "net_expected_upside_pct": null
+      }
+    },
+    {
+      "name": "unweighted_unheld_invalidated",
+      "synthetic": true,
+      "output": {
+        "status": "reviewed",
+        "proposed_action": "watch",
+        "reason_codes": [
+          "thesis_invalidated"
+        ],
+        "missing_parameters": [],
+        "net_expected_upside_pct": null
+      }
+    },
+    {
+      "name": "unweighted_held_invalidated",
+      "synthetic": true,
+      "output": {
+        "status": "reviewed",
+        "proposed_action": "exit_review",
+        "reason_codes": [
+          "thesis_invalidated"
+        ],
+        "missing_parameters": [],
+        "net_expected_upside_pct": null
+      }
+    },
+    {
+      "name": "unweighted_held_intact_below_target",
+      "synthetic": true,
+      "output": {
+        "status": "reviewed",
+        "proposed_action": "hold_review",
+        "reason_codes": [
+          "thesis_intact_below_target"
+        ],
+        "missing_parameters": [],
+        "net_expected_upside_pct": null
+      }
+    },
+    {
+      "name": "unweighted_held_target_reached",
+      "synthetic": true,
+      "output": {
+        "status": "reviewed",
+        "proposed_action": "exit_review",
+        "reason_codes": [
+          "valuation_target_reached"
+        ],
+        "missing_parameters": [],
+        "net_expected_upside_pct": null
+      }
+    },
+    {
+      "name": "invalidated_held_still_needs_buy_parameter",
+      "synthetic": true,
+      "output": {
+        "status": "unresolved",
+        "proposed_action": "unresolved",
+        "reason_codes": [
+          "policy_not_configured"
+        ],
+        "missing_parameters": [
+          "minimum_upside_pct"
+        ],
+        "net_expected_upside_pct": null
+      }
+    },
+    {
+      "name": "review_due_is_not_automatic_exit",
+      "synthetic": true,
+      "output": {
+        "status": "unresolved",
+        "proposed_action": "unresolved",
+        "reason_codes": [
+          "thesis_review_due"
+        ],
+        "missing_parameters": [],
+        "net_expected_upside_pct": null
+      }
+    },
+    {
+      "name": "qualitative_invalidated_still_requires_complete_valuation",
+      "synthetic": true,
+      "output": {
+        "exception": "ValueError",
+        "message": "thesis.valuation must be an object"
+      }
+    }
+  ],
+  "database_accesses": 0,
+  "network_calls": 0,
+  "request_mutation": false,
+  "real_company_forecast_or_policy_adopted": false,
+  "limits": [
+    "Configured numerical valuations and sourced synthetic policy remain present in all successful unweighted cases.",
+    "This does not show that qualitative-only real-company data can pass the current decision contract.",
+    "Current-view receipt/quote/thesis-version wrappers are not exercised; this is only pure decision dependency inspection."
+  ]
+}

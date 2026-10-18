@@ -1,0 +1,129 @@
+{
+  "company_id": "jp:1518",
+  "as_of": "2026-10-16T10:51:09.854909+00:00",
+  "synthetic": false,
+  "status": "source_values_matched",
+  "required_paths": [
+    "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+    "scenarios.reported_annual_reference.inputs.eps_jpy"
+  ],
+  "missing_paths": [],
+  "inputs": [
+    {
+      "path": "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+      "value": "1453.23",
+      "status": "source_value_matched",
+      "reason_codes": [],
+      "meaning_review_status": "unreviewed",
+      "meaning_checks": [
+        "unit_not_verified",
+        "period_not_verified",
+        "definition_not_verified",
+        "authorship_and_forecast_status_not_verified"
+      ],
+      "kind": "reported_fact",
+      "reference": "research/ir-case-studies-2026-10-15/1518/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json#/sources/1/content/facts/1/value;fact_id=1518-reported-BPS-at-20260331",
+      "rationale": "Direct originalp1 annualconsolidated １株当たり純資産 decimal token; ordinaryshare/p20split-BBTbasis preserved. No guide/individual substitution, roundedtotal redivision or current/financialmeaning certification. Preserve original split1:5 andBBT ending/average distinctions, no currentbasis certification.",
+      "recorded_at": "2026-10-16T10:51:09.854909+00:00",
+      "author": "三井松島ホールディングス株式会社（原公表実績）",
+      "source_id": "disclosed-facts:7bb2e3fe2bfbf9bb8e459d13f0d0ba68f1e3e301dce38b0cd5dbe60cffcb89ce",
+      "value_path": [
+        "content",
+        "facts",
+        1,
+        "value"
+      ],
+      "unit": "JPY-per-share",
+      "period": "{\"as_of_date\": \"2026-03-31\", \"date_basis\": \"CurrentFYfinancialposition row tiedannualend; originalp20 explicitinstantdate\", \"label\": \"2026年３月期\", \"period_kind\": \"instant\"}",
+      "missing_meaning_fields": [],
+      "source_lineage_ids": [
+        "disclosed-facts:7bb2e3fe2bfbf9bb8e459d13f0d0ba68f1e3e301dce38b0cd5dbe60cffcb89ce",
+        "case-public:5f9ce19bd970d1752e73dbefcae64d96de53326ec0b8097ef520bc56eeef752f"
+      ],
+      "normalization_checks": [
+        {
+          "source_id": "disclosed-facts:7bb2e3fe2bfbf9bb8e459d13f0d0ba68f1e3e301dce38b0cd5dbe60cffcb89ce",
+          "applicable": true,
+          "status": "reproduced",
+          "reason_codes": [],
+          "financial_inputs_verified": false,
+          "meaning_review_required": true,
+          "original_content_sha256_status": "matched",
+          "original_snapshot_sha256_status": "matched_supplied_snapshot",
+          "original_source_id": "case-public:5f9ce19bd970d1752e73dbefcae64d96de53326ec0b8097ef520bc56eeef752f"
+        }
+      ],
+      "source_fact_id": "1518-reported-BPS-at-20260331",
+      "source_fact_kind": "reported_fact",
+      "source_value": "1453.23"
+    },
+    {
+      "path": "scenarios.reported_annual_reference.inputs.eps_jpy",
+      "value": "148.30",
+      "status": "source_value_matched",
+      "reason_codes": [],
+      "meaning_review_status": "unreviewed",
+      "meaning_checks": [
+        "unit_not_verified",
+        "period_not_verified",
+        "definition_not_verified",
+        "authorship_and_forecast_status_not_verified"
+      ],
+      "kind": "reported_fact",
+      "reference": "research/ir-case-studies-2026-10-15/1518/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json#/sources/1/content/facts/0/value;fact_id=1518-reported-annual-EPS-FY2026",
+      "rationale": "Direct originalp1 annualconsolidated １株当たり当期純利益 decimal token; ordinaryshare/p20split-BBTbasis preserved. No guide/individual substitution, roundedtotal redivision or current/financialmeaning certification. Preserve original split1:5 andBBT ending/average distinctions, no currentbasis certification.",
+      "recorded_at": "2026-10-16T10:51:09.854909+00:00",
+      "author": "三井松島ホールディングス株式会社（原公表実績）",
+      "source_id": "disclosed-facts:7bb2e3fe2bfbf9bb8e459d13f0d0ba68f1e3e301dce38b0cd5dbe60cffcb89ce",
+      "value_path": [
+        "content",
+        "facts",
+        0,
+        "value"
+      ],
+      "unit": "JPY-per-share",
+      "period": "{\"date_basis\": \"Exactdates in same consolidatedannual heading\", \"end_date\": \"2026-03-31\", \"label\": \"2026年３月期\", \"period_kind\": \"annual_reported_duration\", \"start_date\": \"2025-04-01\"}",
+      "missing_meaning_fields": [],
+      "source_lineage_ids": [
+        "disclosed-facts:7bb2e3fe2bfbf9bb8e459d13f0d0ba68f1e3e301dce38b0cd5dbe60cffcb89ce",
+        "case-public:5f9ce19bd970d1752e73dbefcae64d96de53326ec0b8097ef520bc56eeef752f"
+      ],
+      "normalization_checks": [
+        {
+          "source_id": "disclosed-facts:7bb2e3fe2bfbf9bb8e459d13f0d0ba68f1e3e301dce38b0cd5dbe60cffcb89ce",
+          "applicable": true,
+          "status": "reproduced",
+          "reason_codes": [],
+          "financial_inputs_verified": false,
+          "meaning_review_required": true,
+          "original_content_sha256_status": "matched",
+          "original_snapshot_sha256_status": "matched_supplied_snapshot",
+          "original_source_id": "case-public:5f9ce19bd970d1752e73dbefcae64d96de53326ec0b8097ef520bc56eeef752f"
+        }
+      ],
+      "source_fact_id": "1518-reported-annual-EPS-FY2026",
+      "source_fact_kind": "reported_fact",
+      "source_value": "148.30"
+    }
+  ],
+  "aggregation": "unweighted",
+  "expected_value_available": false,
+  "unset_probability_paths": [
+    "scenarios.reported_annual_reference.probability"
+  ],
+  "meaning_review_required": true,
+  "financial_inputs_verified": false,
+  "source_snapshot_sha256": {
+    "case-public:5f9ce19bd970d1752e73dbefcae64d96de53326ec0b8097ef520bc56eeef752f": "5772fa7faec84378aabcce8a2caea26c2cb3fc25d9913601f00bec0894f88e32",
+    "disclosed-facts:7bb2e3fe2bfbf9bb8e459d13f0d0ba68f1e3e301dce38b0cd5dbe60cffcb89ce": "f8c1c41c68c8bd976804b0102bfaed47c403f3c8a325b0cdb2ea5eb7215fa9aa"
+  },
+  "limitations": [
+    "Numerical equality with a saved field does not verify units, periods, accounting definitions, authorship, or the meaning of a forecast.",
+    "Missing unit or period labels remain explicit meaning-review tasks; supplied labels are not automatically verified.",
+    "Explicit assumptions and synthetic examples are recorded declarations, not recommended or empirically validated inputs.",
+    "Audit status concerns only configured numerical paths; unset probabilities are neither audited nor supplied and do not produce an expected value.",
+    "This standalone audit reads only supplied source snapshots and does not consult live database classification corrections.",
+    "Known disclosed-fact normalization is replayed against its supplied original; unknown providers are not inferred to use that contract, and whole-snapshot commitments are reported separately from content reproduction.",
+    "No values, scenario probabilities, costs, or trading conditions are inferred; saved timestamps are supplied records, not independent proof of collection."
+  ]
+}

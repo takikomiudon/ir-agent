@@ -1,0 +1,68 @@
+{
+  "classifications": [
+    {
+      "source_id": "case-public:4550dcb5ba257247c47b846003c9a0448a392a5d075eedaa688452835da5010a",
+      "expected_version": 0,
+      "kind": "other",
+      "financial_content": false,
+      "basis_quote": "User-agent: *\nDisallow: /mt/\n",
+      "rationale": "クローラ向けrobots方針の本文。財務実績や予想の資料ではない。"
+    },
+    {
+      "source_id": "case-public:e70628e64f048ae49496c832eb44edee800d82ab2dcca5962a3a00838c29b896",
+      "expected_version": 0,
+      "kind": "index_only",
+      "financial_content": false,
+      "basis_quote": "日本冶金工業株式会社",
+      "rationale": "公式トップの案内・リンクであり、財務資料本文の取得や入力検証を表さない。"
+    },
+    {
+      "source_id": "case-public:89ed9fd51d5faf7426d484b82fb39df4be70de3c68fbb2c4b330269632a996b8",
+      "expected_version": 0,
+      "kind": "index_only",
+      "financial_content": false,
+      "basis_quote": "株主・投資家情報",
+      "rationale": "IR入口の案内。リンク先の決算本文が保存できたことにはしない。"
+    },
+    {
+      "source_id": "case-public:8868c78b4337b09f6600be40d08d290312ab9fa5900c84b8ff7adc4e6f00930f",
+      "expected_version": 0,
+      "kind": "index_only",
+      "financial_content": false,
+      "basis_quote": "説明会資料",
+      "rationale": "説明会資料一覧の入口。JS差込みの説明資料PDFはこの本文に含まれない。"
+    },
+    {
+      "source_id": "case-public:c9715de6c491a34c92a46bdedabc7c74d5947cfa8d21d9fc1c824ae0499ee616",
+      "expected_version": 0,
+      "kind": "other",
+      "financial_content": false,
+      "basis_quote": "/**\r\n* EIR Javascript v1.4.7\r\n* DATE: 2023-02-07\r\n*/\r\n\r\nconst eirCode = '5480';\r\nconst uniCodeEir = '20230517';\r\nconst u",
+      "rationale": "公開サイトのE-IR設定JavaScriptを実行せず文字列として保存した資料。財務実績本文ではない。"
+    },
+    {
+      "source_id": "case-public:398e1d4b1dff093ff66ccf43997d0cd40dc13d33cbfafac879719e531976bb99",
+      "expected_version": 0,
+      "kind": "qa",
+      "financial_content": false,
+      "basis_quote": "Q 証券コードは何番ですか？ A 5480です。なお、業種は「鉄鋼業」です。",
+      "rationale": "公開FAQの会社・決算期・株式手続きの説明。四半期の財務実績・会社予想は記載されていない。"
+    },
+    {
+      "source_id": "case-public:7ebd4f421bb0d918ddc742534804347eb60927dfe2b6c6371b56af46358fcf00",
+      "expected_version": 0,
+      "kind": "business_description",
+      "financial_content": true,
+      "basis_quote": "連結売上高は150,866百万円",
+      "rationale": "株主向け経営説明に2026年3月期の売上・利益と事業要因を掲載。最新決算一式や正常化入力の検証を意味しない。"
+    },
+    {
+      "source_id": "case-public:91f0c36851e32c4a00119d864fcabf7f5ba973e2f3d70b111d269ea6445ed265",
+      "expected_version": 0,
+      "kind": "business_description",
+      "financial_content": true,
+      "basis_quote": "資本金 24,300,910,790円 (2026年3月31日現在)",
+      "rationale": "会社概要に資本金の公表値と事業内容を掲載。損益・CF・必要資本の完全な資料やモデル入力検証ではない。"
+    }
+  ]
+}

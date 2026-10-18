@@ -1,0 +1,61 @@
+{
+  "source_snapshot": "01.json",
+  "source_raw_sha256": "1028a4dfb7e6d5cf7e02edfe597e1eb1350daca0d83e4240b1a35c53609eed9b",
+  "literal_parameter_evidence": [
+    {
+      "quote": "domain:'//www.xj-storage.jp'",
+      "character_start": 394,
+      "character_end": 422
+    },
+    {
+      "quote": "company:'AS06543'",
+      "character_start": 428,
+      "character_end": 445
+    },
+    {
+      "quote": "documents_results:'1,2,3,4,16,17,18,19,20,21'",
+      "character_start": 451,
+      "character_end": 496
+    },
+    {
+      "quote": "xjurl = self.settings.domain + '/public-list/GetList2.aspx?company=';",
+      "character_start": 3151,
+      "character_end": 3220
+    },
+    {
+      "quote": "xjurl+= '&len=10000';",
+      "character_start": 3368,
+      "character_end": 3389
+    },
+    {
+      "quote": "xjurl+= '&doctype=' + code;",
+      "character_start": 3435,
+      "character_end": 3462
+    },
+    {
+      "quote": "xjurl+= '&output=json&callback=?';",
+      "character_start": 3511,
+      "character_end": 3545
+    },
+    {
+      "quote": "new XjStorageLoaderLibraryKessan();",
+      "character_start": 8586,
+      "character_end": 8621
+    }
+  ],
+  "constructed_request_url": "https://www.xj-storage.jp/public-list/GetList2.aspx?company=AS06543&len=10000&doctype=1,2,3,4,16,17,18,19,20,21&output=json&callback=ir_agent_review",
+  "static_parameters": {
+    "company": "AS06543",
+    "len": "10000",
+    "doctype": "1,2,3,4,16,17,18,19,20,21",
+    "output": "json"
+  },
+  "callback": {
+    "value": "ir_agent_review",
+    "origin": "project-supplied fixed transport callback identifier explicitly authorized by parent",
+    "not_reproducing_jquery_runtime_callback": true
+  },
+  "javascript_executed": false,
+  "new_endpoint_or_company_id_invented": false,
+  "next_get_allowed_only_by_this_literal_derivation": true
+}

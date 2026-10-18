@@ -1,0 +1,133 @@
+--- before/scripts/verify_case_source_bundle.py
++++ after/scripts/verify_case_source_bundle.py
+@@ -2,7 +2,8 @@
+ """Check declared saved-case bytes offline; never certify financial meaning.
+ 
+ Scope: finite_initial_issuer_research and
+-finite_issuer_statement_calendar_followup metadata (1332/135A convention).
++finite_issuer_statement_calendar_followup metadata (1332/135A convention),
++and the explicitly recognized saved_issuer_case PDF adapter profile.
+ No GET, extraction, source-ID derivation, ingestion or file mutation occurs.
+ Hashes are comparisons against caller-controlled metadata, not proof that the
+ issuer published a document or that a financial interpretation is correct.
+@@ -86,6 +87,111 @@
+             'reason_codes': [name + '_unspecified'] if unknown else [] if actual == expected else [name + '_mismatch']}
+ 
+ 
++def _saved_issuer_pdf_audit(checked, metadata, repository, result):
++    """One observed saved_issuer_case PDF adapter; never guess legacy layouts."""
++    extraction = metadata.get('extraction')
++    if extraction is not None: object_value(extraction, 'metadata.extraction')
++    extraction = extraction or {}
++    if extraction.get('kind') != 'pdf_text':
++        result['reason_codes'] = ['unsupported_or_unspecified_saved_issuer_extraction']; return result
++    directory = metadata.get('saved_case_directory')
++    if directory is None:
++        result['reason_codes'] = ['saved_case_directory_unspecified']; return result
++    case_root = _relative(repository, directory)
++    result['case_directory'] = case_root.relative_to(repository).as_posix()
++    checks = result['checks']
++    raw_check, raw = _artifact(case_root, metadata.get('original_raw_file'),
++        metadata.get('original_raw_sha256'), 'raw', byte_count=metadata.get('original_raw_byte_count'))
++    snap_check, snap_raw = _artifact(case_root, metadata.get('original_transport_snapshot'),
++        metadata.get('original_transport_snapshot_sha256'), 'transport_snapshot')
++    text_check, output = _artifact(case_root, extraction.get('saved_file'), extraction.get('sha256'), 'extraction')
++    checks.extend(({'name': 'raw', **raw_check}, {'name': 'transport_snapshot', **snap_check},
++                   {'name': 'extraction', **text_check}))
++    if output is not None:
++        try: output.decode('utf-8')
++        except UnicodeError: raise ValueError('Saved extraction must be valid UTF-8') from None
++    checks.append(_comparison('extraction_source_content_bytes', output, checked['content'].encode('utf-8')))
++
++    def finish():
++        states = [check['status'] for check in checks]
++        result['status'] = 'mismatch' if 'mismatch' in states else 'unknown' if 'unknown' in states else 'matched'
++        result['reason_codes'] = list(dict.fromkeys(reason for check in checks for reason in check['reason_codes']))
++        return result
++
++    def unknown(reason):
++        checks.append({'name': 'saved_issuer_pdf_profile', 'status': 'unknown', 'reason_codes': [reason]})
++        return finish()
++
++    if snap_raw is None or snap_check['status'] != 'matched':
++        return unknown('transport_snapshot_not_matched')
++    snapshot = object_value(parse_json(snap_raw.decode('utf-8')), 'saved issuer transport snapshot')
++    # This exact top-level shape identifies the inspected adapter, not a search
++    # for useful fields. Other builder/HTML/XLSX or legacy snapshots stay unknown.
++    profile_keys = {'url', 'sha256', 'http_status', 'error', 'retrieved_at', 'publication_time',
++                    'content_type', 'original_complete_capture', 'adapter_note'}
++    if set(snapshot) != profile_keys:
++        return unknown('unsupported_or_incomplete_saved_issuer_pdf_snapshot_profile')
++    capture = snapshot['original_complete_capture']
++    if capture is None:
++        return unknown('saved_issuer_complete_capture_unspecified')
++    object_value(capture, 'saved issuer original_complete_capture')
++    required_capture = {'url', 'response_url', 'method', 'HTTP_status', 'complete_body', 'error', 'http_get_started_at',
++                        'headers_received_at', 'http_get_completed_at', 'raw_saved_at', 'raw_sha256',
++                        'byte_count', 'raw_file', 'PDF_magic', 'accepted_PDF_for_local_reading'}
++    if not required_capture <= set(capture):
++        return unknown('incomplete_saved_issuer_pdf_capture_profile')
++
++    def fixed(name, value, expected):
++        # None is a declared no-error/no-publication value, not missing evidence.
++        matched = type(value) is type(expected) and value == expected
++        checks.append({'name': name, 'status': 'matched' if matched else 'mismatch',
++                       'reason_codes': [] if matched else [name + '_mismatch']})
++
++    for node, label in ((snapshot, 'snapshot'), (capture, 'capture')):
++        status_key = 'http_status' if label == 'snapshot' else 'HTTP_status'
++        integer(node[status_key], label + ' status')
++        if node['error'] is not None: text(node['error'], label + ' error')
++        fixed(label + '_HTTP200', node[status_key], 200)
++        fixed(label + '_no_error', node['error'], None)
++        text(node['url'], label + ' URL')
++        checks.append(_comparison(label + '_source_url', node['url'], checked['url']))
++        raw_sha = node['sha256' if label == 'snapshot' else 'raw_sha256']
++        _hash(raw_sha, label + ' raw SHA')
++        checks.append(_comparison(label + '_raw_sha', _sha(raw) if raw is not None else None, raw_sha))
++    text(capture['response_url'], 'capture response URL')
++    checks.append(_comparison('capture_response_source_url', capture['response_url'], checked['url']))
++    integer(capture['byte_count'], 'capture byte_count')
++    checks.append(_comparison('capture_raw_byte_count', len(raw) if raw is not None else None, capture['byte_count']))
++    text(capture['raw_file'], 'capture raw_file')
++    # Compare resolved safe paths, not an arbitrary basename or a searched hash.
++    capture_path = _relative(case_root, capture['raw_file'])
++    if metadata.get('original_raw_file') is None:
++        checks.append({'name': 'capture_raw_file_binding', 'status': 'unknown',
++                       'reason_codes': ['original_raw_file_unspecified']})
++    else:
++        fixed('capture_raw_file_binding', capture_path, _relative(case_root, metadata['original_raw_file']))
++    for field in ('complete_body', 'PDF_magic', 'accepted_PDF_for_local_reading'):
++        if type(capture[field]) is not bool: raise ValueError('capture ' + field + ' must be boolean')
++        fixed('capture_' + field, capture[field], True)
++    fixed('capture_method_GET', capture['method'], 'GET')
++    text(snapshot['content_type'], 'snapshot content_type')
++    fixed('snapshot_PDF_content_type', snapshot['content_type'].split(';', 1)[0].strip().lower(), 'application/pdf')
++    if raw is not None: fixed('raw_PDF_magic', raw.startswith(b'%PDF-'), True)
++    fixed('source_public_disclosure', checked['source_type'], 'public_disclosure')
++    started, headers, completed, saved = [timestamp(capture[key], 'capture.' + key)
++        for key in ('http_get_started_at', 'headers_received_at', 'http_get_completed_at', 'raw_saved_at')]
++    checks.append(_comparison('snapshot_source_retrieved_at', timestamp(snapshot['retrieved_at']), timestamp(checked['retrieved_at'])))
++    checks.append(_comparison('capture_source_body_completed_at', completed, timestamp(checked['retrieved_at'])))
++    fixed('capture_clock_order', started <= headers <= completed <= saved, True)
++    publication = snapshot['publication_time']
++    if publication is not None: publication = timestamp(publication, 'snapshot publication_time')
++    source_publication = timestamp(checked['published_at']) if checked.get('published_at') is not None else None
++    fixed('snapshot_source_publication_time', publication, source_publication)
++    # No snapshot.text exists in this PDF profile. Separate saved extraction and
++    # source-content bytes are compared; PDF extraction itself is not replayed.
++    return finish()
++
++
+ def _source_audit(source, repository):
+     checked = validate_source(source)
+     metadata = checked['metadata']
+@@ -95,6 +201,8 @@
+               'source_id_verification': 'not_performed', 'semantic_financial_verification': 'not_performed'}
+     provider = metadata.get('provider')
+     if provider is not None: text(provider, 'metadata.provider')
++    if provider == 'saved_issuer_case':
++        return _saved_issuer_pdf_audit(checked, metadata, repository, result)
+     if provider not in _PROVIDERS:
+         result['reason_codes'] = ['unsupported_or_unspecified_provider']; return result
+     extraction = metadata.get('extraction')

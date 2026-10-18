@@ -1,0 +1,177 @@
+{
+  "recorded_at": "2026-10-16T16:50:13.113186+00:00",
+  "company_id": "jp:3817",
+  "status": "file_only_original_and_bounded_comparison_frozen_pending_parent_review",
+  "source": {
+    "id": "case-public:b27ff0580129aca01d61bb5827d6084429da94599ca4b0fe3016eff77c7b955d",
+    "native_SHA256": "7f163359dba52f498717d88f9e434fddf2512c1ca7f6265ccc092c19f6ad1460",
+    "content_SHA256": "09586dfd22f8426298075036e5000027a3c6a15a1d08c4b06367924ddf4d8132",
+    "raw_SHA256": "5ad624ecd77f03ec90ac3f847e08e0b34fd89ae0f792f88ead260b9daf0ee607",
+    "url": "https://www.sra-hd.co.jp/Portals/0/ir/settlement/tanshin/tanshin2608.pdf",
+    "publication_date": "2026-08-12",
+    "publication_precision": "day",
+    "published_at": null,
+    "http_complete_at": "2026-10-16T16:47:14.686202+00:00",
+    "actual_DB_firstsave": null
+  },
+  "reading_scope": {
+    "full_text_extraction_pages": 11,
+    "meaning_and_images_physical_pages": [
+      1,
+      2,
+      7,
+      10
+    ],
+    "TOC_locator_only_physical_page": 3,
+    "remaining_pages_not_meaning_reviewed": [
+      4,
+      5,
+      6,
+      8,
+      9,
+      11
+    ],
+    "all_pages_read": false
+  },
+  "original_annual_inputs_held": {
+    "bundle_file": "research/ir-case-studies-2026-10-15/3817/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json",
+    "bundle_SHA256": "9cb688305dc2a0582ee66f363f88efae03a5b677859adf1f07dd633d86fc2749",
+    "facts": [
+      {
+        "fact_id": "3817-reported-annual-EPS-FY2026",
+        "concept": "reported_annual_earnings_per_share",
+        "value": "443.34",
+        "unit": "JPY-per-share"
+      },
+      {
+        "fact_id": "3817-reported-BPS-at-20260331",
+        "concept": "reported_book_value_per_share",
+        "value": "2659.88",
+        "unit": "JPY-per-share"
+      }
+    ],
+    "financial_adopted": false,
+    "originals_modified": false
+  },
+  "comparison_to_existing_conditions": [
+    {
+      "condition_id": "C1",
+      "resolution": "Q1本文の期/連結/報告と予想が確認できた。年次実績を更新・年率化しない。",
+      "reported_Q1": {
+        "period_start": "2026-04-01",
+        "period_end": "2026-06-30",
+        "basis": "JGAAP consolidated, Q1 cumulative",
+        "basic_EPS_JPY": "96.69",
+        "prior_Q1_basic_EPS_JPY": "89.90",
+        "parent_NI_million_JPY": "1221",
+        "revenue_million_JPY": "12455",
+        "OP_million_JPY": "1725",
+        "ordinary_million_JPY": "2016"
+      },
+      "PL_distinctions": {
+        "pretax_million_JPY": "2017",
+        "income_taxes_total_million_JPY": "766",
+        "quarterly_net_income_million_JPY": "1250",
+        "NCI_income_million_JPY": "29",
+        "FX_gain_nonoperating_million_JPY": "174",
+        "prior_Q1_FX_loss_nonoperating_million_JPY": "250",
+        "special_securities_sale_gain_million_JPY": "2"
+      },
+      "prior_comparison": "前年OP1848/経常1717/親NI1135と別々に表示。営業利益の前年減と経常/親NIの前年増は同時に成立する。為替・税・NCIや特損を独自に調整しない。",
+      "quote_ids": [
+        "q1-identity-period-reported-EPS",
+        "PL-levels-FX-tax-NCI"
+      ],
+      "unknowns": [
+        "Q1希薄化後EPSの－の理由は選定4頁で未確定。年次注記の理由を新四半期へ自動継承しない。",
+        "Q1単独四半期累計を年次/TTM/正常利益とせず、個別EPS/BPSを連結の代わりにしない。"
+      ]
+    },
+    {
+      "condition_id": "C2",
+      "resolution": "普通株のQ1末/平均と年末比較、Q1後の自己株取得が区別できた。現在BPS/分母は算出しない。",
+      "ordinary_shares_as_reported": {
+        "Q1_end_including_treasury": "15240000",
+        "FY2026_end_including_treasury": "15240000",
+        "Q1_end_treasury": "2606114",
+        "FY2026_end_treasury": "2606111",
+        "Q1_average": "12633888",
+        "prior_Q1_average": "12633889",
+        "unit": "shares"
+      },
+      "post_quarter_buyback": {
+        "board_resolution": "2026-07-17",
+        "acquired_on": "2026-07-21",
+        "ordinary_shares_acquired_as_reported": "300000",
+        "acquisition_amount_JPY_as_reported": "1356000000",
+        "authorization_max_shares_as_reported": "960000",
+        "authorization_max_amount_JPY_as_reported": "4300000000",
+        "authorized_period_as_reported": "2026-07-21 to 2027-03-31",
+        "limits": "上限とこの取得結果を区別。買付単価・現在自己株・将来平均/期末分母を計算しない。"
+      },
+      "unknowns": [
+        "選定4頁にQ1のBPS直接表示は未確認。総純資産/自己資本/株数から再構成しない。",
+        "株式分割の有無・現在basisの完全な認証ではない。",
+        "EPS平均分母とBPS期末分母、年次分母とQ1分母は別。"
+      ],
+      "quote_ids": [
+        "scope-policies-and-ordinary-shares",
+        "post-quarter-buyback"
+      ]
+    },
+    {
+      "condition_id": "C3",
+      "resolution": "未取得Q1というcoverage gapは取得した1本の選定4頁で縮小。8/12当時の予想と7/21実行後発事象を確認したが10/16の全最新性は認証しない。",
+      "issuer_guide": {
+        "period_start": "2026-04-01",
+        "period_end": "2027-03-31",
+        "EPS_JPY": "435.34",
+        "revenue_million_JPY": "55500",
+        "OP_million_JPY": "8600",
+        "ordinary_million_JPY": "9000",
+        "parent_NI_million_JPY": "5500",
+        "revision_label": "無",
+        "annual_DPS_JPY": "220.00",
+        "dividend_revision_label": "無",
+        "type": "issuer guidance as of selected 2026-08-12 disclosure, not author forecast"
+      },
+      "scope_policy": "p2当四半期連結範囲の重要変更無、特有処理無、4会計変更等無はその期の会社記載。全事業/全未来/現在分母不変へ広げない。",
+      "cashflow": "Q1連結CFは未作成。無形償却を含むD&Aは前年48/当年55百万円。CF0、CAPEX/維持必要額、将来FCFへ代入しない。",
+      "quote_ids": [
+        "then-full-year-guide",
+        "scope-policies-and-ordinary-shares",
+        "Q1-CF-not-prepared-DA",
+        "post-quarter-buyback"
+      ],
+      "limits": [
+        "当資料の修正無は8/12の観測に限定。5/13会社予想435.34が10/16も現行との保証ではない。",
+        "Graham年次2入力443.34/2659.88を96.69/435.34へ置換しない。",
+        "現在株価・分割対応・採用policy・IR枝を作らない。"
+      ]
+    }
+  ],
+  "prior_case_ref": {
+    "file": "research/ir-case-studies-2026-10-15/3817/native-case-setup-2026-10-16/prepare-only/case-context.json",
+    "SHA256": "8c648e6b063b66ac668df32faadcdb35a2ab110725ccaa6a6f7f78734b3f6ed5",
+    "condition_ids": [
+      "C1",
+      "C2",
+      "C3"
+    ],
+    "condition_changed": false
+  },
+  "execution": {
+    "new_GET": 1,
+    "new_robots_GET": 0,
+    "saved_complete404_robots_reused": true,
+    "maximum_GET": 2,
+    "unused_budget_not_consumed": 1,
+    "redirect_retry_JS_child_GET": 0,
+    "DB_Store_or_ingestion": 0,
+    "normalizer_or_valuation_calculation": 0,
+    "financial_adopted": false,
+    "new_IR_questions_or_drafts": 0,
+    "old_files_edited": 0
+  },
+  "manual_handoff": "次の正当なsource保存/jobで、review.json/source-quotes.jsonのfileSHAとread_at/nativeSHAをC1-C3へ手動引継ぎ。全冊読了や自動受領とはしない。"
+}

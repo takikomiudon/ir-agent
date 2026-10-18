@@ -1,0 +1,117 @@
+{
+  "security_code": "2910",
+  "company_name": "ロック・フィールド",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "食料品",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.rockfield.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T04:50:54.211811+00:00",
+  "completed_at": "2026-10-11T04:50:58.988768+00:00",
+  "manual_review_required": false,
+  "evidence": [],
+  "fetches": [
+    {
+      "url": "https://www.rockfield.co.jp/",
+      "final_url": "https://www.rockfield.co.jp/",
+      "snapshot": "evidence/2910/20261011T045054211830Z/01.json",
+      "retrieved_at": "2026-10-11T04:50:55.666063+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.rockfield.co.jp/ir/",
+      "final_url": "https://www.rockfield.co.jp/ir/",
+      "snapshot": "evidence/2910/20261011T045054211830Z/02.json",
+      "retrieved_at": "2026-10-11T04:50:57.186861+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.rockfield.co.jp/contact/",
+      "final_url": null,
+      "snapshot": "evidence/2910/20261011T045054211830Z/03.json",
+      "retrieved_at": "2026-10-11T04:50:58.967681+00:00",
+      "http_status": null,
+      "error": "environment_circuit_breaker_open"
+    },
+    {
+      "url": "https://www.rockfield.co.jp/news/ir/",
+      "final_url": null,
+      "snapshot": "evidence/2910/20261011T045054211830Z/04.json",
+      "retrieved_at": "2026-10-11T04:50:58.969065+00:00",
+      "http_status": null,
+      "error": "environment_circuit_breaker_open"
+    },
+    {
+      "url": "https://www.rockfield.co.jp/ir/financial/",
+      "final_url": null,
+      "snapshot": "evidence/2910/20261011T045054211830Z/05.json",
+      "retrieved_at": "2026-10-11T04:50:58.974291+00:00",
+      "http_status": null,
+      "error": "environment_circuit_breaker_open"
+    },
+    {
+      "url": "https://www.rockfield.co.jp/ir/library/monthly/",
+      "final_url": null,
+      "snapshot": "evidence/2910/20261011T045054211830Z/06.json",
+      "retrieved_at": "2026-10-11T04:50:58.976885+00:00",
+      "http_status": null,
+      "error": "environment_circuit_breaker_open"
+    },
+    {
+      "url": "https://www.rockfield.co.jp/ir/library/",
+      "final_url": null,
+      "snapshot": "evidence/2910/20261011T045054211830Z/07.json",
+      "retrieved_at": "2026-10-11T04:50:58.983436+00:00",
+      "http_status": null,
+      "error": "environment_circuit_breaker_open"
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "https://www.rockfield.co.jp/contact/: environment_circuit_breaker_open",
+    "https://www.rockfield.co.jp/news/ir/: environment_circuit_breaker_open",
+    "https://www.rockfield.co.jp/ir/financial/: environment_circuit_breaker_open",
+    "https://www.rockfield.co.jp/ir/library/monthly/: environment_circuit_breaker_open",
+    "https://www.rockfield.co.jp/ir/library/: environment_circuit_breaker_open",
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。"
+  ],
+  "discovery": {
+    "security_code": "2910",
+    "official_url": "https://www.rockfield.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ロック・フィールド",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/2910/20261011T045054211830Z/01.json",
+      "normalized_name": "ロックフィールド",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/2910/20261011T045054211830Z/02.json",
+      "normalized_name": "ロックフィールド",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 2,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "previous_attempts": [
+    "attempts/2910/20261011T045047363092Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_adaptive_old_audit_12",
+    "reviewed_at": "2026-10-11T07:11:54.731699+00:00",
+    "notes": "保存成功は公式トップ/IRトップのみ。一般contact以後は環境回路停止で本文なし。IRナビの一般問い合わせだけをメール/フォーム受付と扱わない。 保存された公開本文・リンク・フォーム controls に基づく Codex 個別監査。追加 GET・送信 0 件。IR 窓口の不存在は判定していない。"
+  }
+}

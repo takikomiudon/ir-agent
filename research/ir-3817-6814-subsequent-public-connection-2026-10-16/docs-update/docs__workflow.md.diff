@@ -1,0 +1,11 @@
+--- before/docs/workflow.md
++++ after/docs/workflow.md
+@@ -116,7 +116,7 @@
+ 
+ 正NOPAT・正ROCのもとで、明示された非負gを純算術として受け付ける。明示g=0なら再投資率・再投資額は0、FCFFは明示NOPATと等しいが、gross capexや維持投資0・経済適合の認定ではない。欠損を0へ補わず、ROC=0はg=0でも除算未定義、負g・非正NOPATは対象外とする。再投資率が1を超える場合の負FCFFは保持する。半期CFOをNOPATや将来FCFFに代入したり、g/ROC再投資に設備投資・WCを重ねて控除したりしない。Exxon例は2009年の正成長の著者表示入力の分解であり、現在の会社予測ではない。
+ 
+-保存資料の宣言SHA・バイト数・本文対応は `scripts/verify_case_source_bundle.py BUNDLE --repository-root REPOSITORY_ROOT` でオフライン照合できる。対応するcapture形式は同スクリプトが明記した2種類だけ。未知の形式はunknown、空bundleはemptyで、CLI終了0だけを一致と解釈しない。資料の真正性、引用の意味、金融入力の採用は別に確認する。
++保存資料の宣言SHA・バイト数・本文対応は `scripts/verify_case_source_bundle.py BUNDLE --repository-root REPOSITORY_ROOT` でオフライン照合できる。対応するcapture形式は同スクリプトが明示したものだけ。従来2providerに加え、`saved_issuer_case`の限定PDF profileのraw/transport/抽出本文・URL/時刻等を検証できる。未知の形式はunknown、空bundleはemptyで、CLI終了0だけを一致と解釈しない。資料の真正性、引用の意味、金融入力の採用は別に確認する。
+ 
+ valuationはscenarios配列。各scenarioは `name`, `method`, `inputs`を持つ。通常のweightedモードは `probability` も必須で、確率は0〜1で合計を正確に1にする。確率を未設定にする場合は末尾のunweightedモードを明示する。JSONの小数は文字列で入力でき、計算はDecimalで行う。
+ 

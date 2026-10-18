@@ -1,0 +1,1490 @@
+{
+  "recorded_at": "2026-10-16T10:56:58.228415+00:00",
+  "purpose": "Seven-company source-bound historical annual input and authored formula reference; public plan order, no price comparison or investment ranking.",
+  "formula": "sqrt(22.5 * EPS * BVPS)",
+  "method_author": "maxgfr/crible maintainers at00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7; not complete original Graham strategy",
+  "method_ref": {
+    "path": "research/ir-transparent-metric-formula-review-2026-10-15/upstream-INDICATORS.md",
+    "sha256": "fb82b2d47596026ea75fa561169062c52622dcb153caffe37af5491111ad084f",
+    "section": "5. Graham number"
+  },
+  "companies": [
+    {
+      "security_code": "1518",
+      "company_name_from_dated_JPX_plan": "三井松島ホールディングス",
+      "eps_jpy": "148.30",
+      "book_value_per_share_jpy": "1453.23",
+      "reference_JPY_per_share": "2202.06",
+      "EPS_period": {
+        "date_basis": "Exactdates in same consolidatedannual heading",
+        "end_date": "2026-03-31",
+        "label": "2026年３月期",
+        "period_kind": "annual_reported_duration",
+        "start_date": "2025-04-01"
+      },
+      "BPS_period": {
+        "as_of_date": "2026-03-31",
+        "date_basis": "CurrentFYfinancialposition row tiedannualend; originalp20 explicitinstantdate",
+        "label": "2026年３月期",
+        "period_kind": "instant"
+      },
+      "audit_as_of": "2026-10-16T10:51:09.854909+00:00",
+      "audit_request_ref": {
+        "path": "research/ir-1518-6200-6814-annual-input-connection-2026-10-16/actual-input-audits/1518/request.json",
+        "sha256": "b319a832fddc72ea82ac6dea7718f7011598107cbfd5c4120076205c2fa0a7bb"
+      },
+      "audit_result_ref": {
+        "path": "research/ir-1518-6200-6814-annual-input-connection-2026-10-16/actual-input-audits/1518/result.json",
+        "sha256": "9b026fb2d6988f0b5e00e6e7d116b3fd035f86c3699408a6c1e2d9ef82ab0c13"
+      },
+      "public_CLI_reference_ref": {
+        "path": "research/ir-1518-6200-6814-annual-input-connection-2026-10-16/actual-input-audits/1518/reference-result.json",
+        "sha256": "55827a4c71ca60120d560d0c77f3f399e30938109b4002efbd7069c746337418"
+      },
+      "fact_bindings": [
+        {
+          "model_input_path": "scenarios.reported_annual_reference.inputs.eps_jpy",
+          "value_path": [
+            "content",
+            "facts",
+            0,
+            "value"
+          ],
+          "derived_source_id": "disclosed-facts:7bb2e3fe2bfbf9bb8e459d13f0d0ba68f1e3e301dce38b0cd5dbe60cffcb89ce",
+          "fact_id": "1518-reported-annual-EPS-FY2026",
+          "value": "148.30",
+          "unit": "JPY-per-share",
+          "period": {
+            "date_basis": "Exactdates in same consolidatedannual heading",
+            "end_date": "2026-03-31",
+            "label": "2026年３月期",
+            "period_kind": "annual_reported_duration",
+            "start_date": "2025-04-01"
+          },
+          "scope": {
+            "BBT_context": "BBTshares included in deductedtreasuryshares for endingBPS and periodaverageEPS separately. Do not subtract twice or interchangeend983000/average985154. BBT-RSdecision/proposedmeeting is historicalannouncement notcurrentexecutionproof.",
+            "accounting_basis": "日本基準",
+            "business_scope_limit": "p17three reportedsegments andResources3/31disposal/exclusion; do not inventcoal/discontinued classification. p5disposal/securitygains/losses/taxdescription not normalprofit addback.",
+            "company_id": "jp:1518",
+            "consolidation_scope": "連結",
+            "current_split_share_scope_verified": false,
+            "existing_case_preservation": "Existing1518case/conditions unchanged, no newregistration request or bootstrap/read claim",
+            "expected_value_eligible": false,
+            "financial_inputs_verified": false,
+            "financial_or_model_adopted": false,
+            "guide_and_individual_excluded": "OriginalMayguideEPS185.40 andlaterknownJuly229.67/AugQ1unchanged are companyforecasts notannualactual148.30. IndividualEPS44.61/BPS1041.70 not substituted.",
+            "independent_meaning_review_verified": false,
+            "meaning_review_required": true,
+            "ordinary_BPS_basis": {
+              "BBT_end_shares_already_deducted": "983,000",
+              "NCI_deduction_display_millionJPY": "147",
+              "ending_ordinary_shares": "38,295,660",
+              "ordinary_netassets_display_millionJPY": "55,652",
+              "physical_page": 20,
+              "total_netassets_display_millionJPY": "55,800"
+            },
+            "ordinary_EPS_basis": {
+              "BBT_average_shares_already_deducted": "985,154",
+              "average_ordinary_shares": "45,289,824",
+              "parent_ordinary_NI_display_millionJPY": "6,716",
+              "physical_page": 20
+            },
+            "original_author": {
+              "kind": "issuer",
+              "name": "三井松島ホールディングス株式会社"
+            },
+            "original_context_quotes": {
+              "SHA256": "354ced57c393d37c749373903af1f9f16458ebcc80fd8dacef00e1cc1cbc29b4",
+              "path": "research/ir-case-studies-2026-10-15/1518/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+              "quote_ids": [
+                "annual-actual-and-split-display",
+                "old-guide-scope-changes-shares-and-individual",
+                "annual-profit-and-disposal-tax-explanation",
+                "business-and-segment-boundary",
+                "ordinary-average-end-BBT-split-basis"
+              ]
+            },
+            "original_disclosure_day": "2026-05-13",
+            "period_scope_column_and_ordinaryshare_are_reviewer_assertions": true,
+            "precision_note": "DirectEPS/BPS used; roundedcompanymilliontotals and exactsharecounts not used for arithmetic reconciliation/reconstruction",
+            "publication_time_unknown": true,
+            "share_class": "ordinary common shares, originalp20 note",
+            "split_basis": {
+              "additional_split_conversion_applied": false,
+              "comparative_basis": "Priorperiodstart assumed split for comparativeEPS/BPS/sharecounts; originalreportedvalues preserved",
+              "current_October_basis_verified": false,
+              "issuer_stated_effective_date": "2025-10-01",
+              "ordinary_split_ratio": "1:5"
+            },
+            "unit_display_label": "円 銭",
+            "v1_unit_mapping": "Direct originalp1 decimal token under円 銭; supportedraw円→JPY-per-share, not createdcompositeyen-sen display"
+          }
+        },
+        {
+          "model_input_path": "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+          "value_path": [
+            "content",
+            "facts",
+            1,
+            "value"
+          ],
+          "derived_source_id": "disclosed-facts:7bb2e3fe2bfbf9bb8e459d13f0d0ba68f1e3e301dce38b0cd5dbe60cffcb89ce",
+          "fact_id": "1518-reported-BPS-at-20260331",
+          "value": "1453.23",
+          "unit": "JPY-per-share",
+          "period": {
+            "as_of_date": "2026-03-31",
+            "date_basis": "CurrentFYfinancialposition row tiedannualend; originalp20 explicitinstantdate",
+            "label": "2026年３月期",
+            "period_kind": "instant"
+          },
+          "scope": {
+            "BBT_context": "BBTshares included in deductedtreasuryshares for endingBPS and periodaverageEPS separately. Do not subtract twice or interchangeend983000/average985154. BBT-RSdecision/proposedmeeting is historicalannouncement notcurrentexecutionproof.",
+            "accounting_basis": "日本基準",
+            "business_scope_limit": "p17three reportedsegments andResources3/31disposal/exclusion; do not inventcoal/discontinued classification. p5disposal/securitygains/losses/taxdescription not normalprofit addback.",
+            "company_id": "jp:1518",
+            "consolidation_scope": "連結",
+            "current_split_share_scope_verified": false,
+            "existing_case_preservation": "Existing1518case/conditions unchanged, no newregistration request or bootstrap/read claim",
+            "expected_value_eligible": false,
+            "financial_inputs_verified": false,
+            "financial_or_model_adopted": false,
+            "guide_and_individual_excluded": "OriginalMayguideEPS185.40 andlaterknownJuly229.67/AugQ1unchanged are companyforecasts notannualactual148.30. IndividualEPS44.61/BPS1041.70 not substituted.",
+            "independent_meaning_review_verified": false,
+            "meaning_review_required": true,
+            "ordinary_BPS_basis": {
+              "BBT_end_shares_already_deducted": "983,000",
+              "NCI_deduction_display_millionJPY": "147",
+              "ending_ordinary_shares": "38,295,660",
+              "ordinary_netassets_display_millionJPY": "55,652",
+              "physical_page": 20,
+              "total_netassets_display_millionJPY": "55,800"
+            },
+            "ordinary_EPS_basis": {
+              "BBT_average_shares_already_deducted": "985,154",
+              "average_ordinary_shares": "45,289,824",
+              "parent_ordinary_NI_display_millionJPY": "6,716",
+              "physical_page": 20
+            },
+            "original_author": {
+              "kind": "issuer",
+              "name": "三井松島ホールディングス株式会社"
+            },
+            "original_context_quotes": {
+              "SHA256": "354ced57c393d37c749373903af1f9f16458ebcc80fd8dacef00e1cc1cbc29b4",
+              "path": "research/ir-case-studies-2026-10-15/1518/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+              "quote_ids": [
+                "annual-actual-and-split-display",
+                "old-guide-scope-changes-shares-and-individual",
+                "annual-profit-and-disposal-tax-explanation",
+                "business-and-segment-boundary",
+                "ordinary-average-end-BBT-split-basis"
+              ]
+            },
+            "original_disclosure_day": "2026-05-13",
+            "period_scope_column_and_ordinaryshare_are_reviewer_assertions": true,
+            "precision_note": "DirectEPS/BPS used; roundedcompanymilliontotals and exactsharecounts not used for arithmetic reconciliation/reconstruction",
+            "publication_time_unknown": true,
+            "share_class": "ordinary common shares, originalp20 note",
+            "split_basis": {
+              "additional_split_conversion_applied": false,
+              "comparative_basis": "Priorperiodstart assumed split for comparativeEPS/BPS/sharecounts; originalreportedvalues preserved",
+              "current_October_basis_verified": false,
+              "issuer_stated_effective_date": "2025-10-01",
+              "ordinary_split_ratio": "1:5"
+            },
+            "unit_display_label": "円 銭",
+            "v1_unit_mapping": "Direct originalp1 decimal token under円 銭; supportedraw円→JPY-per-share, not createdcompositeyen-sen display"
+          }
+        }
+      ],
+      "actual_sources": [
+        {
+          "source_id": "case-public:5f9ce19bd970d1752e73dbefcae64d96de53326ec0b8097ef520bc56eeef752f",
+          "native_SHA": "5772fa7faec84378aabcce8a2caea26c2cb3fc25d9913601f00bec0894f88e32",
+          "actual_first_saved_at": "2026-10-16T10:48:06.661068+00:00",
+          "availability_basis": "trusted_insert",
+          "whole_object_current_DB_equals_frozen_request": true
+        },
+        {
+          "source_id": "disclosed-facts:7bb2e3fe2bfbf9bb8e459d13f0d0ba68f1e3e301dce38b0cd5dbe60cffcb89ce",
+          "native_SHA": "f8c1c41c68c8bd976804b0102bfaed47c403f3c8a325b0cdb2ea5eb7215fa9aa",
+          "actual_first_saved_at": "2026-10-16T10:48:06.661068+00:00",
+          "availability_basis": "trusted_insert",
+          "whole_object_current_DB_equals_frozen_request": true
+        }
+      ],
+      "source_values_matched": 2,
+      "meaning_review_required": true,
+      "financial_inputs_adopted": false,
+      "actual_price": null,
+      "expected_reference_value_jpy": null
+    },
+    {
+      "security_code": "1975",
+      "company_name_from_dated_JPX_plan": "朝日工業社",
+      "eps_jpy": "358.13",
+      "book_value_per_share_jpy": "1965.51",
+      "reference_JPY_per_share": "3979.69",
+      "EPS_period": {
+        "date_basis": "Physical15 current annual header gives 自2025-04-01 至2026-03-31; physical1 explicitly labels annual consolidated period.",
+        "end_date": "2026-03-31",
+        "frequency": "annual",
+        "label": "FY2026年3月期 連結年間実績",
+        "period_kind": "duration",
+        "start_date": "2025-04-01"
+      },
+      "BPS_period": {
+        "as_of_basis": "BPS is the current year-end stock in physical15 one-share information/basis; physical1 consolidated financial position and physical7 current balance-sheet closing date corroborate2026-03-31, not an annual average.",
+        "as_of_date": "2026-03-31",
+        "end_date": "2026-03-31",
+        "label": "当連結会計年度末 2026-03-31",
+        "period_kind": "instant",
+        "start_date": null
+      },
+      "audit_as_of": "2026-10-16T09:56:22.160076+00:00",
+      "audit_request_ref": {
+        "path": "research/ir-graham-number-two-company-input-connection-2026-10-16/actual-input-audits/1975/request.json",
+        "sha256": "dd0e6e80d1e696dca15cbc71ae65fbec2a62b56e470a4f517eb29d53bfad61b9"
+      },
+      "audit_result_ref": {
+        "path": "research/ir-graham-number-two-company-input-connection-2026-10-16/actual-input-audits/1975/result.json",
+        "sha256": "6fc6cbd2c5a3db5fa45db64add597af7dc4e620d1138db7e2eae30da255b3cf3"
+      },
+      "public_CLI_reference_ref": {
+        "path": "research/ir-reference-value-integration-2026-10-16/actual-company-reference-runs/1975-result.json",
+        "sha256": "12d62899b066391116d4a294ae15e5b505d11eb938e3dcf24c8715c3b30b0818"
+      },
+      "fact_bindings": [
+        {
+          "model_input_path": "scenarios.reported_annual_reference.inputs.eps_jpy",
+          "value_path": [
+            "content",
+            "facts",
+            0,
+            "value"
+          ],
+          "derived_source_id": "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+          "fact_id": "1975-reported-annual-EPS-FY20260331-observed-20260514",
+          "value": "358.13",
+          "unit": "JPY-per-share",
+          "period": {
+            "date_basis": "Physical15 current annual header gives 自2025-04-01 至2026-03-31; physical1 explicitly labels annual consolidated period.",
+            "end_date": "2026-03-31",
+            "frequency": "annual",
+            "label": "FY2026年3月期 連結年間実績",
+            "period_kind": "duration",
+            "start_date": "2025-04-01"
+          },
+          "scope": {
+            "NCI_preferred_warrants_zero_inferred": false,
+            "accounting_basis": "Japanese_GAAP",
+            "company_id": "jp:1975",
+            "consolidation_scope": "連結",
+            "current_October_forecast_certified": false,
+            "direct_issuer_per_share_display": true,
+            "display_precision": "Printed two-decimal JPY-per-share token; unprinted precision unknown. NI/equity million-JPY and note thousand-share display rounding are not applied to this token.",
+            "extraction_author": "Codex saved annual disclosure extraction reviewer; 株式会社朝日工業社 authored the reported displays",
+            "financial_inputs_verified": false,
+            "forward_estimate_or_current_share_basis_adopted": false,
+            "meaning_review_required": true,
+            "model_or_policy_adopted": false,
+            "original_author": {
+              "kind": "issuer",
+              "name": "株式会社朝日工業社"
+            },
+            "per_share_display_not_reconstructed": true,
+            "period_scope_column_are_reviewer_assertions": true,
+            "profit_or_book_basis": "普通株式に係る親会社株主に帰属する当期純利益",
+            "publication_precision": "day",
+            "raw_value_format": "single printed decimal token, not yen/sen composite",
+            "reported_or_forecast": "annual reported actual",
+            "shareholder_scope": "ordinary common shareholders; issuer one-share calculation-basis note",
+            "source_context_references": [
+              {
+                "file": "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/quotes.json",
+                "native_snapshot_sha256": "ee28585481c9692e9374aed4ebc15cb04e5b71757d6c56f2d739c7c7265a3e25",
+                "pdf_page": 1,
+                "quote_id": "consolidated-Japanese-GAAP-title",
+                "source_character_end_exclusive": 160,
+                "source_character_start": 21,
+                "source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f"
+              },
+              {
+                "file": "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/quotes.json",
+                "native_snapshot_sha256": "ee28585481c9692e9374aed4ebc15cb04e5b71757d6c56f2d739c7c7265a3e25",
+                "pdf_page": 1,
+                "quote_id": "annual-consolidated-period",
+                "source_character_end_exclusive": 763,
+                "source_character_start": 726,
+                "source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f"
+              },
+              {
+                "file": "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/quotes.json",
+                "native_snapshot_sha256": "ee28585481c9692e9374aed4ebc15cb04e5b71757d6c56f2d739c7c7265a3e25",
+                "pdf_page": 15,
+                "quote_id": "ordinary-share-calculation-basis",
+                "source_character_end_exclusive": 32893,
+                "source_character_start": 31771,
+                "source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f"
+              },
+              {
+                "file": "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/quotes.json",
+                "native_snapshot_sha256": "ee28585481c9692e9374aed4ebc15cb04e5b71757d6c56f2d739c7c7265a3e25",
+                "pdf_page": 2,
+                "quote_id": "exact-annual-versus-end-common-shares",
+                "source_character_end_exclusive": 5683,
+                "source_character_start": 5314,
+                "source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f"
+              },
+              {
+                "file": "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/quotes.json",
+                "native_snapshot_sha256": "ee28585481c9692e9374aed4ebc15cb04e5b71757d6c56f2d739c7c7265a3e25",
+                "pdf_page": 7,
+                "quote_id": "equity-components-distinct",
+                "source_character_end_exclusive": 16722,
+                "source_character_start": 16055,
+                "source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f"
+              }
+            ],
+            "source_disclosure_date": "2026-05-14"
+          }
+        },
+        {
+          "model_input_path": "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+          "value_path": [
+            "content",
+            "facts",
+            1,
+            "value"
+          ],
+          "derived_source_id": "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+          "fact_id": "1975-reported-year-end-BPS-20260331-observed-20260514",
+          "value": "1965.51",
+          "unit": "JPY-per-share",
+          "period": {
+            "as_of_basis": "BPS is the current year-end stock in physical15 one-share information/basis; physical1 consolidated financial position and physical7 current balance-sheet closing date corroborate2026-03-31, not an annual average.",
+            "as_of_date": "2026-03-31",
+            "end_date": "2026-03-31",
+            "label": "当連結会計年度末 2026-03-31",
+            "period_kind": "instant",
+            "start_date": null
+          },
+          "scope": {
+            "NCI_preferred_warrants_zero_inferred": false,
+            "accounting_basis": "Japanese_GAAP",
+            "company_id": "jp:1975",
+            "consolidation_scope": "連結",
+            "current_October_forecast_certified": false,
+            "direct_issuer_per_share_display": true,
+            "display_precision": "Printed two-decimal JPY-per-share token; unprinted precision unknown. NI/equity million-JPY and note thousand-share display rounding are not applied to this token.",
+            "extraction_author": "Codex saved annual disclosure extraction reviewer; 株式会社朝日工業社 authored the reported displays",
+            "financial_inputs_verified": false,
+            "forward_estimate_or_current_share_basis_adopted": false,
+            "meaning_review_required": true,
+            "model_or_policy_adopted": false,
+            "original_author": {
+              "kind": "issuer",
+              "name": "株式会社朝日工業社"
+            },
+            "per_share_display_not_reconstructed": true,
+            "period_scope_column_are_reviewer_assertions": true,
+            "profit_or_book_basis": "普通株式に係る純資産額; includes company-described common net-asset basis distinct from narrow Japanese 株主資本 subtotal",
+            "publication_precision": "day",
+            "raw_value_format": "single printed decimal token, not yen/sen composite",
+            "reported_or_forecast": "annual reported actual",
+            "shareholder_scope": "ordinary common shareholders; issuer one-share calculation-basis note",
+            "source_context_references": [
+              {
+                "file": "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/quotes.json",
+                "native_snapshot_sha256": "ee28585481c9692e9374aed4ebc15cb04e5b71757d6c56f2d739c7c7265a3e25",
+                "pdf_page": 1,
+                "quote_id": "consolidated-Japanese-GAAP-title",
+                "source_character_end_exclusive": 160,
+                "source_character_start": 21,
+                "source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f"
+              },
+              {
+                "file": "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/quotes.json",
+                "native_snapshot_sha256": "ee28585481c9692e9374aed4ebc15cb04e5b71757d6c56f2d739c7c7265a3e25",
+                "pdf_page": 1,
+                "quote_id": "annual-consolidated-period",
+                "source_character_end_exclusive": 763,
+                "source_character_start": 726,
+                "source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f"
+              },
+              {
+                "file": "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/quotes.json",
+                "native_snapshot_sha256": "ee28585481c9692e9374aed4ebc15cb04e5b71757d6c56f2d739c7c7265a3e25",
+                "pdf_page": 15,
+                "quote_id": "ordinary-share-calculation-basis",
+                "source_character_end_exclusive": 32893,
+                "source_character_start": 31771,
+                "source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f"
+              },
+              {
+                "file": "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/quotes.json",
+                "native_snapshot_sha256": "ee28585481c9692e9374aed4ebc15cb04e5b71757d6c56f2d739c7c7265a3e25",
+                "pdf_page": 2,
+                "quote_id": "exact-annual-versus-end-common-shares",
+                "source_character_end_exclusive": 5683,
+                "source_character_start": 5314,
+                "source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f"
+              },
+              {
+                "file": "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/quotes.json",
+                "native_snapshot_sha256": "ee28585481c9692e9374aed4ebc15cb04e5b71757d6c56f2d739c7c7265a3e25",
+                "pdf_page": 7,
+                "quote_id": "equity-components-distinct",
+                "source_character_end_exclusive": 16722,
+                "source_character_start": 16055,
+                "source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f"
+              }
+            ],
+            "source_disclosure_date": "2026-05-14"
+          }
+        }
+      ],
+      "actual_sources": [
+        {
+          "source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f",
+          "native_SHA": "ee28585481c9692e9374aed4ebc15cb04e5b71757d6c56f2d739c7c7265a3e25",
+          "actual_first_saved_at": "2026-10-16T09:34:32.723062+00:00",
+          "availability_basis": "trusted_insert",
+          "whole_object_current_DB_equals_frozen_request": true
+        },
+        {
+          "source_id": "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+          "native_SHA": "d6db7c7c2454470dba83cec46a48ba76814db7324ec1109c8b4e8e81d6f54bcf",
+          "actual_first_saved_at": "2026-10-16T09:54:59.300265+00:00",
+          "availability_basis": "trusted_insert",
+          "whole_object_current_DB_equals_frozen_request": true
+        }
+      ],
+      "source_values_matched": 2,
+      "meaning_review_required": true,
+      "financial_inputs_adopted": false,
+      "actual_price": null,
+      "expected_reference_value_jpy": null
+    },
+    {
+      "security_code": "2929",
+      "company_name_from_dated_JPX_plan": "ファーマフーズ",
+      "eps_jpy": "68.61",
+      "book_value_per_share_jpy": "453.35",
+      "reference_JPY_per_share": "836.57",
+      "EPS_period": {
+        "date_basis": "Exact duration printed in sameconsolidated annual heading",
+        "end_date": "2026-07-31",
+        "label": "2026年７月期",
+        "period_kind": "annual_reported_duration",
+        "start_date": "2025-08-01"
+      },
+      "BPS_period": {
+        "as_of_date": "2026-07-31",
+        "date_basis": "CurrentFY financial-position row, annualend in sameheading and explicitBPS date at originalp21",
+        "label": "2026年７月期",
+        "period_kind": "instant"
+      },
+      "audit_as_of": "2026-10-16T10:43:45.901281+00:00",
+      "audit_request_ref": {
+        "path": "research/ir-2929-4318-annual-input-connection-2026-10-16/actual-input-audits/2929/request.json",
+        "sha256": "35f0cc6db5979c22f216489fc057f5adef5e6a18152e3e613dd8197dbefe89fa"
+      },
+      "audit_result_ref": {
+        "path": "research/ir-2929-4318-annual-input-connection-2026-10-16/actual-input-audits/2929/result.json",
+        "sha256": "c1a0a1e674fd4aae0376e00300ada08fd95682307058d80043dc26b2d56a830d"
+      },
+      "public_CLI_reference_ref": {
+        "path": "research/ir-2929-4318-annual-input-connection-2026-10-16/actual-input-audits/2929/reference-result.json",
+        "sha256": "c0c74a301e34642c9516ab518c0577830a590063ab4c6092867617583fd204a3"
+      },
+      "fact_bindings": [
+        {
+          "model_input_path": "scenarios.reported_annual_reference.inputs.eps_jpy",
+          "value_path": [
+            "content",
+            "facts",
+            0,
+            "value"
+          ],
+          "derived_source_id": "disclosed-facts:8cd53e8d69bfd982908ca784be132e0009d9cf53f0a19b23e84d79285fea3a9f",
+          "fact_id": "2929-reported-annual-EPS-FY2026",
+          "value": "68.61",
+          "unit": "JPY-per-share",
+          "period": {
+            "date_basis": "Exact duration printed in sameconsolidated annual heading",
+            "end_date": "2026-07-31",
+            "label": "2026年７月期",
+            "period_kind": "annual_reported_duration",
+            "start_date": "2025-08-01"
+          },
+          "scope": {
+            "accounting_basis": "日本基準",
+            "canonical_model_input_path": null,
+            "company_id": "jp:2929",
+            "consolidation_scope": "連結",
+            "current_split_share_basis_verified": false,
+            "expected_value_eligible": false,
+            "financial_inputs_verified": false,
+            "financial_or_model_adopted": false,
+            "historical_original_disclosure_day": "2026-09-11",
+            "independent_meaning_review_verified": false,
+            "individual_and_guidance_not_substituted": "Originalp2 individualEPS△8.20/BPS535.45 andp1 issuerguideEPS75.75 are distinct and not input here",
+            "known_correction": {
+              "image_observations_SHA256": "cdb2102783f6bfdc30dcdf88f386449be6ab9f9c6e497d97809d6129db386df9",
+              "image_observations_path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/image-observations.json",
+              "limited_review_SHA256": "bf5c704d1fcb9ea66c9e276c3036cacac2ecdc3505dc05ad9e74d9199b771084",
+              "limited_review_path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/correction-connection.json",
+              "scope": "2026-09-17 correction of original printed9/physical11 consolidated BS capital-surplus/retainedearnings. No automatic correction application, image-table textification, or certification of EPS/BPS unchanged/current. Original and correction preserved separately.",
+              "source_bundle_SHA256": "7e32e9b9e490e67dd3c73ad495190682463d34916f5ae2947eeb07c2be317f7f",
+              "source_bundle_path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/source-only-bundle.json",
+              "source_id": "case-public:e57a33cf096ab0b2b1b472a938684e6388a0f06096feac90ba21d325eabf8494",
+              "source_native_SHA256": "0cf9a39daa828bc013c01d304cb46c8cba4100e943dd1d06f566e3693ff8a510"
+            },
+            "meaning_review_required": true,
+            "ordinary_per_share_context": {
+              "BPS_basis": "ordinary share endingnetassets13166million/endordinaryshares29043377, originalprintedvalues, not recomputed",
+              "SHA256": "6386bc37bfd84af992a11dc0facb77016aa13ed0b4c9b596c6cce6e632b8bc75",
+              "basic_EPS_parent_NI_basis": "ordinary share parentNI1988million/average28978455, originalprintedvalues, not recomputed",
+              "dilutedEPS_dash": "Potentialshares do not exist per originalnote; not0",
+              "file": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/source-quotes.json",
+              "physical_page": 21,
+              "quote_id": "ordinary-per-share-basis"
+            },
+            "original_author": {
+              "kind": "issuer",
+              "name": "株式会社ファーマフーズ"
+            },
+            "period_scope_column_and_share_class_are_reviewer_assertions": true,
+            "publication_clock_unknown": true,
+            "share_class": "ordinary common shares, explicitly supported by originalphysical21 per-share note",
+            "source_display_unit_label": "円 銭",
+            "unit_mapping": "Rawdecimal token under円 銭 column, supportedv1円→JPY-per-share; not synthetic yen-sen composite"
+          }
+        },
+        {
+          "model_input_path": "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+          "value_path": [
+            "content",
+            "facts",
+            1,
+            "value"
+          ],
+          "derived_source_id": "disclosed-facts:8cd53e8d69bfd982908ca784be132e0009d9cf53f0a19b23e84d79285fea3a9f",
+          "fact_id": "2929-reported-BPS-at-20260731",
+          "value": "453.35",
+          "unit": "JPY-per-share",
+          "period": {
+            "as_of_date": "2026-07-31",
+            "date_basis": "CurrentFY financial-position row, annualend in sameheading and explicitBPS date at originalp21",
+            "label": "2026年７月期",
+            "period_kind": "instant"
+          },
+          "scope": {
+            "accounting_basis": "日本基準",
+            "canonical_model_input_path": null,
+            "company_id": "jp:2929",
+            "consolidation_scope": "連結",
+            "current_split_share_basis_verified": false,
+            "expected_value_eligible": false,
+            "financial_inputs_verified": false,
+            "financial_or_model_adopted": false,
+            "historical_original_disclosure_day": "2026-09-11",
+            "independent_meaning_review_verified": false,
+            "individual_and_guidance_not_substituted": "Originalp2 individualEPS△8.20/BPS535.45 andp1 issuerguideEPS75.75 are distinct and not input here",
+            "known_correction": {
+              "image_observations_SHA256": "cdb2102783f6bfdc30dcdf88f386449be6ab9f9c6e497d97809d6129db386df9",
+              "image_observations_path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/image-observations.json",
+              "limited_review_SHA256": "bf5c704d1fcb9ea66c9e276c3036cacac2ecdc3505dc05ad9e74d9199b771084",
+              "limited_review_path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/correction-connection.json",
+              "scope": "2026-09-17 correction of original printed9/physical11 consolidated BS capital-surplus/retainedearnings. No automatic correction application, image-table textification, or certification of EPS/BPS unchanged/current. Original and correction preserved separately.",
+              "source_bundle_SHA256": "7e32e9b9e490e67dd3c73ad495190682463d34916f5ae2947eeb07c2be317f7f",
+              "source_bundle_path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/source-only-bundle.json",
+              "source_id": "case-public:e57a33cf096ab0b2b1b472a938684e6388a0f06096feac90ba21d325eabf8494",
+              "source_native_SHA256": "0cf9a39daa828bc013c01d304cb46c8cba4100e943dd1d06f566e3693ff8a510"
+            },
+            "meaning_review_required": true,
+            "ordinary_per_share_context": {
+              "BPS_basis": "ordinary share endingnetassets13166million/endordinaryshares29043377, originalprintedvalues, not recomputed",
+              "SHA256": "6386bc37bfd84af992a11dc0facb77016aa13ed0b4c9b596c6cce6e632b8bc75",
+              "basic_EPS_parent_NI_basis": "ordinary share parentNI1988million/average28978455, originalprintedvalues, not recomputed",
+              "dilutedEPS_dash": "Potentialshares do not exist per originalnote; not0",
+              "file": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/source-quotes.json",
+              "physical_page": 21,
+              "quote_id": "ordinary-per-share-basis"
+            },
+            "original_author": {
+              "kind": "issuer",
+              "name": "株式会社ファーマフーズ"
+            },
+            "period_scope_column_and_share_class_are_reviewer_assertions": true,
+            "publication_clock_unknown": true,
+            "share_class": "ordinary common shares, explicitly supported by originalphysical21 per-share note",
+            "source_display_unit_label": "円 銭",
+            "unit_mapping": "Rawdecimal token under円 銭 column, supportedv1円→JPY-per-share; not synthetic yen-sen composite"
+          }
+        }
+      ],
+      "actual_sources": [
+        {
+          "source_id": "case-public:96f2f98c709f5f7d29cbe307a7954902ed8ea19c1ac20a6e41ac5f5be537679e",
+          "native_SHA": "4989a354f8aa51d2c63e604f2fd2d15fde556c9dcf7cfb2f2449a309c1b6d3c3",
+          "actual_first_saved_at": "2026-10-16T10:26:46.513405+00:00",
+          "availability_basis": "trusted_insert",
+          "whole_object_current_DB_equals_frozen_request": true
+        },
+        {
+          "source_id": "case-public:e57a33cf096ab0b2b1b472a938684e6388a0f06096feac90ba21d325eabf8494",
+          "native_SHA": "0cf9a39daa828bc013c01d304cb46c8cba4100e943dd1d06f566e3693ff8a510",
+          "actual_first_saved_at": "2026-10-16T10:26:46.513405+00:00",
+          "availability_basis": "trusted_insert",
+          "whole_object_current_DB_equals_frozen_request": true
+        },
+        {
+          "source_id": "disclosed-facts:8cd53e8d69bfd982908ca784be132e0009d9cf53f0a19b23e84d79285fea3a9f",
+          "native_SHA": "ca83c7d339c79748da4b7f726426d2fcfcd6440a08c0aeb9a99c83fcf7a1d5db",
+          "actual_first_saved_at": "2026-10-16T10:26:46.513405+00:00",
+          "availability_basis": "trusted_insert",
+          "whole_object_current_DB_equals_frozen_request": true
+        }
+      ],
+      "source_values_matched": 2,
+      "meaning_review_required": true,
+      "financial_inputs_adopted": false,
+      "actual_price": null,
+      "expected_reference_value_jpy": null
+    },
+    {
+      "security_code": "3817",
+      "company_name_from_dated_JPX_plan": "ＳＲＡホールディングス",
+      "eps_jpy": "443.34",
+      "book_value_per_share_jpy": "2659.88",
+      "reference_JPY_per_share": "5150.99",
+      "EPS_period": {
+        "date_basis": "Exact annual duration dates printed in the same consolidated earnings heading",
+        "end_date": "2026-03-31",
+        "label": "2026年３月期",
+        "period_kind": "annual_reported_duration",
+        "start_date": "2025-04-01"
+      },
+      "BPS_period": {
+        "as_of_date": "2026-03-31",
+        "date_basis": "Consolidated financial-position current FY row, tied to same annual heading end2026-03-31; reviewer asserts balance-sheet instant, not duration",
+        "label": "2026年３月期",
+        "period_kind": "instant"
+      },
+      "audit_as_of": "2026-10-16T09:56:22.169436+00:00",
+      "audit_request_ref": {
+        "path": "research/ir-graham-number-two-company-input-connection-2026-10-16/actual-input-audits/3817/request.json",
+        "sha256": "8c72f6456ff49280c3d9f6f73b9883c7a790bb4eb152056cd48a38497e0f6e30"
+      },
+      "audit_result_ref": {
+        "path": "research/ir-graham-number-two-company-input-connection-2026-10-16/actual-input-audits/3817/result.json",
+        "sha256": "78900141445db2bed4303b61572133dbf3d565084c9e95bd14d84e91195d0d68"
+      },
+      "public_CLI_reference_ref": {
+        "path": "research/ir-reference-value-integration-2026-10-16/actual-company-reference-runs/3817-result.json",
+        "sha256": "fc2aee6a650c4a771f5e76da4b23dce55b82edc7856b418f4f52372f6a131dff"
+      },
+      "fact_bindings": [
+        {
+          "model_input_path": "scenarios.reported_annual_reference.inputs.eps_jpy",
+          "value_path": [
+            "content",
+            "facts",
+            0,
+            "value"
+          ],
+          "derived_source_id": "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf",
+          "fact_id": "3817-reported-annual-EPS-FY2026",
+          "value": "443.34",
+          "unit": "JPY-per-share",
+          "period": {
+            "date_basis": "Exact annual duration dates printed in the same consolidated earnings heading",
+            "end_date": "2026-03-31",
+            "label": "2026年３月期",
+            "period_kind": "annual_reported_duration",
+            "start_date": "2025-04-01"
+          },
+          "scope": {
+            "October_current_guidance_or_share_basis_verified": false,
+            "accounting_basis": "日本基準",
+            "canonical_model_input_path": null,
+            "company_id": "jp:3817",
+            "consolidation_scope": "連結",
+            "display_precision": "Printed decimal token only, no rounded-NI/share reconstruction",
+            "document_context_title": "                      2026年３月期             決算短信〔日本基準〕（連結）",
+            "document_context_title_pdf_page": 1,
+            "financial_inputs_verified": false,
+            "historical_issuer_disclosure_only": true,
+            "meaning_review_required": true,
+            "model_or_policy_adopted": false,
+            "observed_source_disclosure_date": "2026-05-13",
+            "original_author": {
+              "kind": "issuer",
+              "name": "株式会社ＳＲＡホールディングス"
+            },
+            "period_scope_column_and_per_share_meaning_are_reviewer_assertions": true,
+            "profit_or_equity_basis": "ordinary-share parent earnings EPS, basic undiluted",
+            "publication_clock_unknown": true,
+            "raw_unit_mapping_note": "Supported raw 円→JPY-per-share preserves the decimal token; 円 銭 is printed column label, not composite443円34銭 display",
+            "share_class": "ordinary common shares; ordinary EPS numerator and ordinary-share average explicit in p18 note; BPS common-share per-share line reviewed",
+            "share_scope_context": "p2 issued including treasury15240000 shares/end treasury2606111/period average12633889; p18 average12633 thousand shares is distinct printed precision, not an exact replacement. No split/current basis certification.",
+            "source_context_references": {
+              "file": "research/ir-case-studies-2026-10-15/3817/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+              "file_SHA256": "31b902a7215c387666b893bd71069f4fc9ddea9bf06b45917756db6cc2976a4a",
+              "quote_ids": [
+                "share-counts",
+                "consolidated-PL-basis",
+                "per-share-basis-and-dilution"
+              ],
+              "source_id": "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e",
+              "source_native_SHA256": "cdb77fd2cb0d201dd8fbcba84a200665e0912216981ea79e200a601558d7a616"
+            },
+            "unit_display_label": "円 銭"
+          }
+        },
+        {
+          "model_input_path": "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+          "value_path": [
+            "content",
+            "facts",
+            1,
+            "value"
+          ],
+          "derived_source_id": "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf",
+          "fact_id": "3817-reported-BPS-at-20260331",
+          "value": "2659.88",
+          "unit": "JPY-per-share",
+          "period": {
+            "as_of_date": "2026-03-31",
+            "date_basis": "Consolidated financial-position current FY row, tied to same annual heading end2026-03-31; reviewer asserts balance-sheet instant, not duration",
+            "label": "2026年３月期",
+            "period_kind": "instant"
+          },
+          "scope": {
+            "October_current_guidance_or_share_basis_verified": false,
+            "accounting_basis": "日本基準",
+            "canonical_model_input_path": null,
+            "company_id": "jp:3817",
+            "consolidation_scope": "連結",
+            "display_precision": "Printed decimal token only, no rounded-NI/share reconstruction",
+            "document_context_title": "                      2026年３月期             決算短信〔日本基準〕（連結）",
+            "document_context_title_pdf_page": 1,
+            "financial_inputs_verified": false,
+            "historical_issuer_disclosure_only": true,
+            "meaning_review_required": true,
+            "model_or_policy_adopted": false,
+            "observed_source_disclosure_date": "2026-05-13",
+            "original_author": {
+              "kind": "issuer",
+              "name": "株式会社ＳＲＡホールディングス"
+            },
+            "period_scope_column_and_per_share_meaning_are_reviewer_assertions": true,
+            "profit_or_equity_basis": "issuer-reported consolidated net assets per common share; detailed BPS numerator not reconstructed",
+            "publication_clock_unknown": true,
+            "raw_unit_mapping_note": "Supported raw 円→JPY-per-share preserves the decimal token; 円 銭 is printed column label, not composite443円34銭 display",
+            "share_class": "ordinary common shares; ordinary EPS numerator and ordinary-share average explicit in p18 note; BPS common-share per-share line reviewed",
+            "share_scope_context": "p2 issued including treasury15240000 shares/end treasury2606111/period average12633889; p18 average12633 thousand shares is distinct printed precision, not an exact replacement. No split/current basis certification.",
+            "source_context_references": {
+              "file": "research/ir-case-studies-2026-10-15/3817/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+              "file_SHA256": "31b902a7215c387666b893bd71069f4fc9ddea9bf06b45917756db6cc2976a4a",
+              "quote_ids": [
+                "share-counts",
+                "consolidated-PL-basis",
+                "per-share-basis-and-dilution"
+              ],
+              "source_id": "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e",
+              "source_native_SHA256": "cdb77fd2cb0d201dd8fbcba84a200665e0912216981ea79e200a601558d7a616"
+            },
+            "unit_display_label": "円 銭"
+          }
+        }
+      ],
+      "actual_sources": [
+        {
+          "source_id": "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e",
+          "native_SHA": "cdb77fd2cb0d201dd8fbcba84a200665e0912216981ea79e200a601558d7a616",
+          "actual_first_saved_at": "2026-10-16T09:54:59.300265+00:00",
+          "availability_basis": "trusted_insert",
+          "whole_object_current_DB_equals_frozen_request": true
+        },
+        {
+          "source_id": "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf",
+          "native_SHA": "2bd0faef543ce9659035c844d7d1722975b37e23fc2035a2a66a85c1e78940ce",
+          "actual_first_saved_at": "2026-10-16T09:54:59.300265+00:00",
+          "availability_basis": "trusted_insert",
+          "whole_object_current_DB_equals_frozen_request": true
+        }
+      ],
+      "source_values_matched": 2,
+      "meaning_review_required": true,
+      "financial_inputs_adopted": false,
+      "actual_price": null,
+      "expected_reference_value_jpy": null
+    },
+    {
+      "security_code": "4318",
+      "company_name_from_dated_JPX_plan": "クイック",
+      "eps_jpy": "74.11",
+      "book_value_per_share_jpy": "345.24",
+      "reference_JPY_per_share": "758.74",
+      "EPS_period": {
+        "date_basis": "Exact dates in p1 consolidated annual earnings heading",
+        "end_date": "2026-03-31",
+        "label": "2026年3月期",
+        "period_kind": "annual_reported_duration",
+        "start_date": "2025-04-01"
+      },
+      "BPS_period": {
+        "as_of_date": "2026-03-31",
+        "date_basis": "Financial-position row at annual end from exact p1 duration end; reviewer asserts stock instant, not duration",
+        "label": "2026年3月期",
+        "period_kind": "instant"
+      },
+      "audit_as_of": "2026-10-16T10:43:45.912661+00:00",
+      "audit_request_ref": {
+        "path": "research/ir-2929-4318-annual-input-connection-2026-10-16/actual-input-audits/4318/request.json",
+        "sha256": "008617c0d720d5f9f15973df2771cb96ae90b96484f0ffc266c2ab303b5450a9"
+      },
+      "audit_result_ref": {
+        "path": "research/ir-2929-4318-annual-input-connection-2026-10-16/actual-input-audits/4318/result.json",
+        "sha256": "bcb1b92adc9a0ae28a04fed78ccbf81fe1157f9e9de8aa85f16b4819dfbd920b"
+      },
+      "public_CLI_reference_ref": {
+        "path": "research/ir-2929-4318-annual-input-connection-2026-10-16/actual-input-audits/4318/reference-result.json",
+        "sha256": "81609e348732f0b3cd23eaaade8068197af06311ee53752596975e73ae0bd0e0"
+      },
+      "fact_bindings": [
+        {
+          "model_input_path": "scenarios.reported_annual_reference.inputs.eps_jpy",
+          "value_path": [
+            "content",
+            "facts",
+            0,
+            "value"
+          ],
+          "derived_source_id": "disclosed-facts:6359dbeaa58c711f166fabfc6028785046120736fdaa2227c488596f1e08a10b",
+          "fact_id": "4318-reported-annual-EPS-FY2026",
+          "value": "74.11",
+          "unit": "JPY-per-share",
+          "period": {
+            "date_basis": "Exact dates in p1 consolidated annual earnings heading",
+            "end_date": "2026-03-31",
+            "label": "2026年3月期",
+            "period_kind": "annual_reported_duration",
+            "start_date": "2025-04-01"
+          },
+          "scope": {
+            "accounting_basis": "日本基準",
+            "canonical_model_input_path": null,
+            "company_id": "jp:4318",
+            "consolidation_scope": "連結",
+            "current_share_or_guidance_basis_verified": false,
+            "display_precision": "p1 decimal token exactly, no NI/share reverse calculation or precision interpolation",
+            "financial_inputs_verified": false,
+            "historical_issuer_disclosure_only": true,
+            "meaning_review_required": true,
+            "model_or_policy_adopted": false,
+            "observed_source_disclosure_date": "2026-04-30",
+            "original_author": {
+              "kind": "issuer",
+              "name": "株式会社クイック"
+            },
+            "period_scope_column_and_per_share_meaning_are_reviewer_assertions": true,
+            "profit_or_equity_basis": "ordinary-share parent profit basic EPS; p19 parent/ordinary profit4,158,976千円 and annual average56,121千株; no numerator/dash recomputation",
+            "publication_clock_unknown": true,
+            "raw_unit_mapping_note": "Raw 円 contained in printed 円銭; decimal token retained as JPY-per-share. Not conversion of p19 composite円銭 display.",
+            "share_class": "普通株式; p2 explicit ordinary shares, p19 ordinary EPS and ESOP basis",
+            "share_scope_context": "p2 current issued including treasury56,552,028株, endtreasury429,816株, average56,121,515株. ESOP included in endtreasury419,052株 and average deduction419,811株. p19 EPS average56,121千株 and ESOP419千株 are separate printed precision, not exact substitutes.",
+            "source_context_references": {
+              "file": "research/ir-case-studies-2026-10-15/4318/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+              "file_SHA256": "918883381a1c74b116e2de23f83d4c6dd08e9ed3f2fd9e030774355995400cd6",
+              "quote_ids": [
+                "identity-and-consolidated-EPS",
+                "consolidated-BPS-and-split",
+                "ordinary-shares-ESOP-split",
+                "per-share-basis-and-ESOP"
+              ],
+              "scope": "Existing accepted/source-review context references, not extra sources or independent confirmations.",
+              "source_id": "case-public:7304bcc072a7a497d7bdfede25cf02938f6c4fee91df789d9fc96cafb8c682db",
+              "source_native_SHA256": "cad8d5782fdc58295e5a5e260adc2cb7fcd245d843bae31a26be1e76b1e81f5e"
+            },
+            "split_basis": "Issuer states ordinary share1→3 effective2025-12-01, both periods EPS/BPS and p2 share counts presented assuming split at prior annual beginning. Values already adjusted; no second adjustment.",
+            "unit_display_label": "円銭"
+          }
+        },
+        {
+          "model_input_path": "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+          "value_path": [
+            "content",
+            "facts",
+            1,
+            "value"
+          ],
+          "derived_source_id": "disclosed-facts:6359dbeaa58c711f166fabfc6028785046120736fdaa2227c488596f1e08a10b",
+          "fact_id": "4318-reported-BPS-at-20260331",
+          "value": "345.24",
+          "unit": "JPY-per-share",
+          "period": {
+            "as_of_date": "2026-03-31",
+            "date_basis": "Financial-position row at annual end from exact p1 duration end; reviewer asserts stock instant, not duration",
+            "label": "2026年3月期",
+            "period_kind": "instant"
+          },
+          "scope": {
+            "accounting_basis": "日本基準",
+            "canonical_model_input_path": null,
+            "company_id": "jp:4318",
+            "consolidation_scope": "連結",
+            "current_share_or_guidance_basis_verified": false,
+            "display_precision": "p1 decimal token exactly, no NI/share reverse calculation or precision interpolation",
+            "financial_inputs_verified": false,
+            "historical_issuer_disclosure_only": true,
+            "meaning_review_required": true,
+            "model_or_policy_adopted": false,
+            "observed_source_disclosure_date": "2026-04-30",
+            "original_author": {
+              "kind": "issuer",
+              "name": "株式会社クイック"
+            },
+            "period_scope_column_and_per_share_meaning_are_reviewer_assertions": true,
+            "profit_or_equity_basis": "issuer consolidated net assets per ordinary share at annual end; p19 ESOP end shares deducted as treasury. Detailed full BPS numerator not reconstructed; net assets total not substituted",
+            "publication_clock_unknown": true,
+            "raw_unit_mapping_note": "Raw 円 contained in printed 円銭; decimal token retained as JPY-per-share. Not conversion of p19 composite円銭 display.",
+            "share_class": "普通株式; p2 explicit ordinary shares, p19 ordinary EPS and ESOP basis",
+            "share_scope_context": "p2 current issued including treasury56,552,028株, endtreasury429,816株, average56,121,515株. ESOP included in endtreasury419,052株 and average deduction419,811株. p19 EPS average56,121千株 and ESOP419千株 are separate printed precision, not exact substitutes.",
+            "source_context_references": {
+              "file": "research/ir-case-studies-2026-10-15/4318/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+              "file_SHA256": "918883381a1c74b116e2de23f83d4c6dd08e9ed3f2fd9e030774355995400cd6",
+              "quote_ids": [
+                "identity-and-consolidated-EPS",
+                "consolidated-BPS-and-split",
+                "ordinary-shares-ESOP-split",
+                "per-share-basis-and-ESOP"
+              ],
+              "scope": "Existing accepted/source-review context references, not extra sources or independent confirmations.",
+              "source_id": "case-public:7304bcc072a7a497d7bdfede25cf02938f6c4fee91df789d9fc96cafb8c682db",
+              "source_native_SHA256": "cad8d5782fdc58295e5a5e260adc2cb7fcd245d843bae31a26be1e76b1e81f5e"
+            },
+            "split_basis": "Issuer states ordinary share1→3 effective2025-12-01, both periods EPS/BPS and p2 share counts presented assuming split at prior annual beginning. Values already adjusted; no second adjustment.",
+            "unit_display_label": "円銭"
+          }
+        }
+      ],
+      "actual_sources": [
+        {
+          "source_id": "case-public:7304bcc072a7a497d7bdfede25cf02938f6c4fee91df789d9fc96cafb8c682db",
+          "native_SHA": "cad8d5782fdc58295e5a5e260adc2cb7fcd245d843bae31a26be1e76b1e81f5e",
+          "actual_first_saved_at": "2026-10-16T10:26:46.513405+00:00",
+          "availability_basis": "trusted_insert",
+          "whole_object_current_DB_equals_frozen_request": true
+        },
+        {
+          "source_id": "disclosed-facts:6359dbeaa58c711f166fabfc6028785046120736fdaa2227c488596f1e08a10b",
+          "native_SHA": "fe5a3398332a834294339a36b46ce1cd86d7fa132a8341df05348075b287dac9",
+          "actual_first_saved_at": "2026-10-16T10:26:46.513405+00:00",
+          "availability_basis": "trusted_insert",
+          "whole_object_current_DB_equals_frozen_request": true
+        }
+      ],
+      "source_values_matched": 2,
+      "meaning_review_required": true,
+      "financial_inputs_adopted": false,
+      "actual_price": null,
+      "expected_reference_value_jpy": null
+    },
+    {
+      "security_code": "6200",
+      "company_name_from_dated_JPX_plan": "インソース",
+      "eps_jpy": "49.20",
+      "book_value_per_share_jpy": "148.70",
+      "reference_JPY_per_share": "405.72",
+      "EPS_period": {
+        "date_basis": "原p1連結業績見出しの明示期間。p18当連結年度の期間に一致。",
+        "end_date": "2025-09-30",
+        "frequency": "annual",
+        "label": "2025年9月期 連結年次実績",
+        "period_kind": "duration",
+        "start_date": "2024-10-01"
+      },
+      "BPS_period": {
+        "as_of_date": "2025-09-30",
+        "date_basis": "p1連結財政状態の2025年9月期行。p1年次末日とp18当年度末BPS表対応による明示レビュー判断。",
+        "end_date": "2025-09-30",
+        "label": "2025年9月期末",
+        "period_kind": "instant",
+        "start_date": null
+      },
+      "audit_as_of": "2026-10-16T10:51:09.863820+00:00",
+      "audit_request_ref": {
+        "path": "research/ir-1518-6200-6814-annual-input-connection-2026-10-16/actual-input-audits/6200/request.json",
+        "sha256": "8b3bb040c56584df752ad7dcd963de850252bca91b86f13b86c5383b9b3e3aaa"
+      },
+      "audit_result_ref": {
+        "path": "research/ir-1518-6200-6814-annual-input-connection-2026-10-16/actual-input-audits/6200/result.json",
+        "sha256": "9c01db17fc3b2f7fff3e5001b70f1b889883fb028ea32983c4472350e880f0b3"
+      },
+      "public_CLI_reference_ref": {
+        "path": "research/ir-1518-6200-6814-annual-input-connection-2026-10-16/actual-input-audits/6200/reference-result.json",
+        "sha256": "e0605e76879576eb1e7f6f8c2ce0b9c9ae94172b9f839bf34842b093fbf699c4"
+      },
+      "fact_bindings": [
+        {
+          "model_input_path": "scenarios.reported_annual_reference.inputs.eps_jpy",
+          "value_path": [
+            "content",
+            "facts",
+            0,
+            "value"
+          ],
+          "derived_source_id": "disclosed-facts:65bf86cb904c1f0740db3b27c61824b01aa65cea08c748017255f9183e7f61b6",
+          "fact_id": "6200-reported-annual-EPS-FY20250930",
+          "value": "49.20",
+          "unit": "JPY-per-share",
+          "period": {
+            "date_basis": "原p1連結業績見出しの明示期間。p18当連結年度の期間に一致。",
+            "end_date": "2025-09-30",
+            "frequency": "annual",
+            "label": "2025年9月期 連結年次実績",
+            "period_kind": "duration",
+            "start_date": "2024-10-01"
+          },
+          "scope": {
+            "BPS_detailed_denominator_explicitly_verified": false,
+            "accounting_basis": "Japanese_GAAP",
+            "company_id": "jp:6200",
+            "consolidation_scope": "連結",
+            "current_October_forecast_certified": false,
+            "diluted_EPS": {
+              "issuer_explanation": "潜在株式が存在しないため記載省略。0ではない。",
+              "normalized_value": null,
+              "raw": "－"
+            },
+            "direct_issuer_per_share_display": true,
+            "display_precision": "直接二桁小数JPY-per-share。p1百万円未満切捨ての親NI4,130百万円やp18親NI4,130,091千円・株数から再除算せず、非表示精度は未知。",
+            "extraction_author": "Codex cited-display preparation",
+            "financial_inputs_verified": false,
+            "forward_estimate_or_current_share_basis_adopted": false,
+            "meaning_review_required": true,
+            "model_or_policy_adopted": false,
+            "ordinary_share_count_context": {
+              "end_minus_treasury_not_certified_as_company_BPS_denominator": true,
+              "nonordinary_amount_raw": "－",
+              "nonordinary_amount_zero_inferred": false,
+              "p18_ordinary_parent_NI_thousand_JPY": "4,130,091",
+              "p18_parent_NI_thousand_JPY": "4,130,091",
+              "p2_issued_end_including_treasury": "85,243,000",
+              "p2_p18_weighted_average": "83,947,385",
+              "p2_treasury_end": "1,269,169"
+            },
+            "original_author": {
+              "kind": "issuer",
+              "name": "株式会社インソース"
+            },
+            "per_share_display_not_reconstructed": true,
+            "period_scope_column_are_reviewer_assertions": true,
+            "publication_precision": "day",
+            "reported_or_forecast": "annual reported actual",
+            "shareholder_scope": "p18普通株式に係る親会社株主に帰属する当期純利益と期中平均株式数。",
+            "source_context_references": [
+              {
+                "json_pointer": "/quotes/0",
+                "path": "research/ir-case-studies-2026-10-15/6200/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+                "pdf_page": 1,
+                "quote_id": "annual-cover-and-period",
+                "sha256": "60a1e6f37784c0bec92adfb268e6f19222505f93c6190b32c1bc9cc2d25f30d7",
+                "source_character_span": {
+                  "end": 700,
+                  "start": 24
+                },
+                "source_native_SHA256": "37a66ed5fa097b293d58ca0febab29c1d29ed3def5194b550eecbdda63ade6bd"
+              },
+              {
+                "json_pointer": "/quotes/1",
+                "path": "research/ir-case-studies-2026-10-15/6200/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+                "pdf_page": 1,
+                "quote_id": "annual-summary-per-share",
+                "sha256": "60a1e6f37784c0bec92adfb268e6f19222505f93c6190b32c1bc9cc2d25f30d7",
+                "source_character_span": {
+                  "end": 2450,
+                  "start": 1317
+                },
+                "source_native_SHA256": "37a66ed5fa097b293d58ca0febab29c1d29ed3def5194b550eecbdda63ade6bd"
+              },
+              {
+                "json_pointer": "/quotes/2",
+                "path": "research/ir-case-studies-2026-10-15/6200/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+                "pdf_page": 2,
+                "quote_id": "annual-ordinary-share-counts",
+                "sha256": "60a1e6f37784c0bec92adfb268e6f19222505f93c6190b32c1bc9cc2d25f30d7",
+                "source_character_span": {
+                  "end": 5061,
+                  "start": 4769
+                },
+                "source_native_SHA256": "37a66ed5fa097b293d58ca0febab29c1d29ed3def5194b550eecbdda63ade6bd"
+              },
+              {
+                "json_pointer": "/quotes/3",
+                "path": "research/ir-case-studies-2026-10-15/6200/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+                "pdf_page": 18,
+                "quote_id": "annual-per-share-note",
+                "sha256": "60a1e6f37784c0bec92adfb268e6f19222505f93c6190b32c1bc9cc2d25f30d7",
+                "source_character_span": {
+                  "end": 33488,
+                  "start": 32376
+                },
+                "source_native_SHA256": "37a66ed5fa097b293d58ca0febab29c1d29ed3def5194b550eecbdda63ade6bd"
+              }
+            ],
+            "source_disclosure_date": "2025-11-04",
+            "substitution_prohibited": [
+              "当時FY2026会社guideEPS55.15",
+              "未読currentQ3EPS",
+              "四半期年率化",
+              "丸めNI/資本/株数から再計算",
+              "現在株式分母への自動調整"
+            ]
+          }
+        },
+        {
+          "model_input_path": "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+          "value_path": [
+            "content",
+            "facts",
+            1,
+            "value"
+          ],
+          "derived_source_id": "disclosed-facts:65bf86cb904c1f0740db3b27c61824b01aa65cea08c748017255f9183e7f61b6",
+          "fact_id": "6200-reported-year-end-BPS-20250930",
+          "value": "148.70",
+          "unit": "JPY-per-share",
+          "period": {
+            "as_of_date": "2025-09-30",
+            "date_basis": "p1連結財政状態の2025年9月期行。p1年次末日とp18当年度末BPS表対応による明示レビュー判断。",
+            "end_date": "2025-09-30",
+            "label": "2025年9月期末",
+            "period_kind": "instant",
+            "start_date": null
+          },
+          "scope": {
+            "BPS_detailed_denominator_explicitly_verified": false,
+            "accounting_basis": "Japanese_GAAP",
+            "company_id": "jp:6200",
+            "consolidation_scope": "連結",
+            "current_October_forecast_certified": false,
+            "diluted_EPS": {
+              "issuer_explanation": "潜在株式が存在しないため記載省略。0ではない。",
+              "normalized_value": null,
+              "raw": "－"
+            },
+            "direct_issuer_per_share_display": true,
+            "display_precision": "直接二桁小数JPY-per-share。p1百万円未満切捨ての親NI4,130百万円やp18親NI4,130,091千円・株数から再除算せず、非表示精度は未知。",
+            "extraction_author": "Codex cited-display preparation",
+            "financial_inputs_verified": false,
+            "forward_estimate_or_current_share_basis_adopted": false,
+            "meaning_review_required": true,
+            "model_or_policy_adopted": false,
+            "ordinary_share_count_context": {
+              "end_minus_treasury_not_certified_as_company_BPS_denominator": true,
+              "nonordinary_amount_raw": "－",
+              "nonordinary_amount_zero_inferred": false,
+              "p18_ordinary_parent_NI_thousand_JPY": "4,130,091",
+              "p18_parent_NI_thousand_JPY": "4,130,091",
+              "p2_issued_end_including_treasury": "85,243,000",
+              "p2_p18_weighted_average": "83,947,385",
+              "p2_treasury_end": "1,269,169"
+            },
+            "original_author": {
+              "kind": "issuer",
+              "name": "株式会社インソース"
+            },
+            "per_share_display_not_reconstructed": true,
+            "period_scope_column_are_reviewer_assertions": true,
+            "publication_precision": "day",
+            "reported_or_forecast": "annual reported actual",
+            "shareholder_scope": "会社の連結１株当たり純資産直接表示。p2普通株期末・自己株は別記録。詳細な普通株帰属調整/公式分母算定は選定頁で未確認。",
+            "source_context_references": [
+              {
+                "json_pointer": "/quotes/0",
+                "path": "research/ir-case-studies-2026-10-15/6200/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+                "pdf_page": 1,
+                "quote_id": "annual-cover-and-period",
+                "sha256": "60a1e6f37784c0bec92adfb268e6f19222505f93c6190b32c1bc9cc2d25f30d7",
+                "source_character_span": {
+                  "end": 700,
+                  "start": 24
+                },
+                "source_native_SHA256": "37a66ed5fa097b293d58ca0febab29c1d29ed3def5194b550eecbdda63ade6bd"
+              },
+              {
+                "json_pointer": "/quotes/1",
+                "path": "research/ir-case-studies-2026-10-15/6200/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+                "pdf_page": 1,
+                "quote_id": "annual-summary-per-share",
+                "sha256": "60a1e6f37784c0bec92adfb268e6f19222505f93c6190b32c1bc9cc2d25f30d7",
+                "source_character_span": {
+                  "end": 2450,
+                  "start": 1317
+                },
+                "source_native_SHA256": "37a66ed5fa097b293d58ca0febab29c1d29ed3def5194b550eecbdda63ade6bd"
+              },
+              {
+                "json_pointer": "/quotes/2",
+                "path": "research/ir-case-studies-2026-10-15/6200/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+                "pdf_page": 2,
+                "quote_id": "annual-ordinary-share-counts",
+                "sha256": "60a1e6f37784c0bec92adfb268e6f19222505f93c6190b32c1bc9cc2d25f30d7",
+                "source_character_span": {
+                  "end": 5061,
+                  "start": 4769
+                },
+                "source_native_SHA256": "37a66ed5fa097b293d58ca0febab29c1d29ed3def5194b550eecbdda63ade6bd"
+              },
+              {
+                "json_pointer": "/quotes/3",
+                "path": "research/ir-case-studies-2026-10-15/6200/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+                "pdf_page": 18,
+                "quote_id": "annual-per-share-note",
+                "sha256": "60a1e6f37784c0bec92adfb268e6f19222505f93c6190b32c1bc9cc2d25f30d7",
+                "source_character_span": {
+                  "end": 33488,
+                  "start": 32376
+                },
+                "source_native_SHA256": "37a66ed5fa097b293d58ca0febab29c1d29ed3def5194b550eecbdda63ade6bd"
+              }
+            ],
+            "source_disclosure_date": "2025-11-04",
+            "substitution_prohibited": [
+              "当時FY2026会社guideEPS55.15",
+              "未読currentQ3EPS",
+              "四半期年率化",
+              "丸めNI/資本/株数から再計算",
+              "現在株式分母への自動調整"
+            ]
+          }
+        }
+      ],
+      "actual_sources": [
+        {
+          "source_id": "case-public:4e3b5b50cf1056ea17c9611853d8480231efa5c2eb3a8642d6f9ffb6a898280c",
+          "native_SHA": "37a66ed5fa097b293d58ca0febab29c1d29ed3def5194b550eecbdda63ade6bd",
+          "actual_first_saved_at": "2026-10-16T10:48:06.661068+00:00",
+          "availability_basis": "trusted_insert",
+          "whole_object_current_DB_equals_frozen_request": true
+        },
+        {
+          "source_id": "disclosed-facts:65bf86cb904c1f0740db3b27c61824b01aa65cea08c748017255f9183e7f61b6",
+          "native_SHA": "8b86f6bcaf248b49469e65df104f566600654c903808409fb9e14fbeb25441c4",
+          "actual_first_saved_at": "2026-10-16T10:48:06.661068+00:00",
+          "availability_basis": "trusted_insert",
+          "whole_object_current_DB_equals_frozen_request": true
+        }
+      ],
+      "source_values_matched": 2,
+      "meaning_review_required": true,
+      "financial_inputs_adopted": false,
+      "actual_price": null,
+      "expected_reference_value_jpy": null
+    },
+    {
+      "security_code": "6814",
+      "company_name_from_dated_JPX_plan": "古野電気",
+      "eps_jpy": "529.53",
+      "book_value_per_share_jpy": "2826.61",
+      "reference_JPY_per_share": "5803.23",
+      "EPS_period": {
+        "date_basis": "Same consolidated annualheading exactcalendar dates",
+        "end_date": "2026-02-28",
+        "label": "2026年２月期",
+        "period_kind": "annual_reported_duration",
+        "start_date": "2025-03-01"
+      },
+      "BPS_period": {
+        "as_of_date": "2026-02-28",
+        "date_basis": "p1 financialposition currentFY row with exactannualend and p21explicit BPSinstant date",
+        "label": "2026年２月期",
+        "period_kind": "instant"
+      },
+      "audit_as_of": "2026-10-16T10:51:09.869802+00:00",
+      "audit_request_ref": {
+        "path": "research/ir-1518-6200-6814-annual-input-connection-2026-10-16/actual-input-audits/6814/request.json",
+        "sha256": "a42a7dff275c8d74defaea67bca88c986ff49bc7efb0c1cc2305c50fd7c42c9b"
+      },
+      "audit_result_ref": {
+        "path": "research/ir-1518-6200-6814-annual-input-connection-2026-10-16/actual-input-audits/6814/result.json",
+        "sha256": "03bb86b29f0dfc1be7195c89cdf418be165f7a75da8802f2152a34b25e3cd777"
+      },
+      "public_CLI_reference_ref": {
+        "path": "research/ir-1518-6200-6814-annual-input-connection-2026-10-16/actual-input-audits/6814/reference-result.json",
+        "sha256": "6ecd7ffacd3b9cb14cddc042dfcd8a2b5ef3533bac4a8b56bc39b86244b1f679"
+      },
+      "fact_bindings": [
+        {
+          "model_input_path": "scenarios.reported_annual_reference.inputs.eps_jpy",
+          "value_path": [
+            "content",
+            "facts",
+            0,
+            "value"
+          ],
+          "derived_source_id": "disclosed-facts:d05b7a50d0af1bb576db77f7114fd326a7739b9a16c0d1cc751a16154c807361",
+          "fact_id": "6814-reported-annual-EPS-FY2026",
+          "value": "529.53",
+          "unit": "JPY-per-share",
+          "period": {
+            "date_basis": "Same consolidated annualheading exactcalendar dates",
+            "end_date": "2026-02-28",
+            "label": "2026年２月期",
+            "period_kind": "annual_reported_duration",
+            "start_date": "2025-03-01"
+          },
+          "scope": {
+            "accounting_basis": "日本基準",
+            "accounting_policy_caveat": "p2 standardsamendmentchange有; detailedp19 unread; historicalscopechange無 not current guarantee",
+            "company_id": "jp:6814",
+            "consolidation_scope": "連結",
+            "current_split_share_scope_verified": false,
+            "diluted_EPS_dash": "p21 says no potentialshares, dash not0",
+            "equity_component_scope": "p13 shareholderscapital76310/OCIcumulative13035/NCI426/totalnetassets89772 are distinct; not namesubstituted or roundedrepaired",
+            "expected_value_eligible": false,
+            "financial_inputs_verified": false,
+            "financial_or_model_adopted": false,
+            "independent_meaning_review_verified": false,
+            "later_disclosures_known_not_read": "Currentindex FY2027Q2 and2026-10-09guide/dividendrevision literal only, bodiesunacquired; Aprilguide not currentcertified",
+            "meaning_review_required": true,
+            "not_substituted": "IndividualEPS414.55/BPS1780.67, originalissuerannualguide411.28/interim253.09 excluded; no normalearnings or total/share redivision",
+            "ordinary_BPS_basis": {
+              "deduction_NCI_display_millionJPY": "426",
+              "ending_ordinary_shares": "31,608,824",
+              "ordinary_netassets_display_millionJPY": "89,345",
+              "physical_page": 21,
+              "precision_note": "Direct company BPS used. Truncatedmilliontotals are separate printed amounts; no subtraction/division/reconciliation performed.",
+              "total_netassets_display_millionJPY": "89,772"
+            },
+            "ordinary_EPS_basis": {
+              "average_ordinary_shares": "31,604,751",
+              "parent_ordinary_NI_display_millionJPY": "16,735",
+              "physical_page": 21
+            },
+            "original_author": {
+              "kind": "issuer",
+              "name": "古野電気株式会社"
+            },
+            "original_context_quotes": {
+              "SHA256": "93b10d6ae75168b25edb14bbc2b5d4f43f9be08974e313eb332be0038f901789",
+              "path": "research/ir-case-studies-2026-10-15/6814/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+              "quote_ids": [
+                "shares-policy-change-and-individual-scope",
+                "BS-OCI-and-NCI-distinct",
+                "ordinary-EPS-average-BPS-ending-basis"
+              ]
+            },
+            "original_publication_day": "2026-04-09",
+            "publication_time_unknown": true,
+            "raw_unit_display": "円 銭",
+            "scope_period_column_assertion": "Reviewer mapping only, not normalization meaning certification",
+            "share_class": "ordinary common shares per originalphysical21",
+            "v1_decimal_mapping": "Originalp1 decimal token under円 銭; rawunit円→JPY-per-share; not composite jpy_yen_sen"
+          }
+        },
+        {
+          "model_input_path": "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+          "value_path": [
+            "content",
+            "facts",
+            1,
+            "value"
+          ],
+          "derived_source_id": "disclosed-facts:d05b7a50d0af1bb576db77f7114fd326a7739b9a16c0d1cc751a16154c807361",
+          "fact_id": "6814-reported-BPS-at-20260228",
+          "value": "2826.61",
+          "unit": "JPY-per-share",
+          "period": {
+            "as_of_date": "2026-02-28",
+            "date_basis": "p1 financialposition currentFY row with exactannualend and p21explicit BPSinstant date",
+            "label": "2026年２月期",
+            "period_kind": "instant"
+          },
+          "scope": {
+            "accounting_basis": "日本基準",
+            "accounting_policy_caveat": "p2 standardsamendmentchange有; detailedp19 unread; historicalscopechange無 not current guarantee",
+            "company_id": "jp:6814",
+            "consolidation_scope": "連結",
+            "current_split_share_scope_verified": false,
+            "diluted_EPS_dash": "p21 says no potentialshares, dash not0",
+            "equity_component_scope": "p13 shareholderscapital76310/OCIcumulative13035/NCI426/totalnetassets89772 are distinct; not namesubstituted or roundedrepaired",
+            "expected_value_eligible": false,
+            "financial_inputs_verified": false,
+            "financial_or_model_adopted": false,
+            "independent_meaning_review_verified": false,
+            "later_disclosures_known_not_read": "Currentindex FY2027Q2 and2026-10-09guide/dividendrevision literal only, bodiesunacquired; Aprilguide not currentcertified",
+            "meaning_review_required": true,
+            "not_substituted": "IndividualEPS414.55/BPS1780.67, originalissuerannualguide411.28/interim253.09 excluded; no normalearnings or total/share redivision",
+            "ordinary_BPS_basis": {
+              "deduction_NCI_display_millionJPY": "426",
+              "ending_ordinary_shares": "31,608,824",
+              "ordinary_netassets_display_millionJPY": "89,345",
+              "physical_page": 21,
+              "precision_note": "Direct company BPS used. Truncatedmilliontotals are separate printed amounts; no subtraction/division/reconciliation performed.",
+              "total_netassets_display_millionJPY": "89,772"
+            },
+            "ordinary_EPS_basis": {
+              "average_ordinary_shares": "31,604,751",
+              "parent_ordinary_NI_display_millionJPY": "16,735",
+              "physical_page": 21
+            },
+            "original_author": {
+              "kind": "issuer",
+              "name": "古野電気株式会社"
+            },
+            "original_context_quotes": {
+              "SHA256": "93b10d6ae75168b25edb14bbc2b5d4f43f9be08974e313eb332be0038f901789",
+              "path": "research/ir-case-studies-2026-10-15/6814/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+              "quote_ids": [
+                "shares-policy-change-and-individual-scope",
+                "BS-OCI-and-NCI-distinct",
+                "ordinary-EPS-average-BPS-ending-basis"
+              ]
+            },
+            "original_publication_day": "2026-04-09",
+            "publication_time_unknown": true,
+            "raw_unit_display": "円 銭",
+            "scope_period_column_assertion": "Reviewer mapping only, not normalization meaning certification",
+            "share_class": "ordinary common shares per originalphysical21",
+            "v1_decimal_mapping": "Originalp1 decimal token under円 銭; rawunit円→JPY-per-share; not composite jpy_yen_sen"
+          }
+        }
+      ],
+      "actual_sources": [
+        {
+          "source_id": "case-public:ecfb7db1a1c040c9fecf5f30b3a8d7cd4f6142e3d6e80c94a6cc01c3c64fb039",
+          "native_SHA": "5be2d964ae18bf456a140c4342272e9cfa6bc0945bdd3d52fd0fc779d8b4ce16",
+          "actual_first_saved_at": "2026-10-16T10:48:06.661068+00:00",
+          "availability_basis": "trusted_insert",
+          "whole_object_current_DB_equals_frozen_request": true
+        },
+        {
+          "source_id": "disclosed-facts:d05b7a50d0af1bb576db77f7114fd326a7739b9a16c0d1cc751a16154c807361",
+          "native_SHA": "b5e514eab19ed28da0711cc6263f76b9d5d76b64e0d18b338de18c11206f47f2",
+          "actual_first_saved_at": "2026-10-16T10:48:06.661068+00:00",
+          "availability_basis": "trusted_insert",
+          "whole_object_current_DB_equals_frozen_request": true
+        }
+      ],
+      "source_values_matched": 2,
+      "meaning_review_required": true,
+      "financial_inputs_adopted": false,
+      "actual_price": null,
+      "expected_reference_value_jpy": null
+    }
+  ],
+  "matched_input_paths": 14,
+  "annual_source_and_derived_actual_saved_companies": 7,
+  "independent_root_Fraction_Decimal100_display_matches": 7,
+  "DB_read_mode": "ro/query_only/closed",
+  "DB_main_SHA_before_after": "836fd60ddf86a92c05ccc981a0f47880373b0fac97e19cce14d69410d6edecbb",
+  "financial_inputs_adopted": false,
+  "price_or_IR_or_orders_or_DBwrites": 0
+}

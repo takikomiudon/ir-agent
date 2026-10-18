@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "company_id": "jp:3612",
+  "company_name": "ワールド",
+  "recorded_at": "2026-10-16T12:21:41.683320+00:00",
+  "reviewer": "Codex / audit_consumer",
+  "status": "exact_static_FAQ_nine_pairs_reviewed_profit_bridge_unresolved",
+  "source_id": "case-public:cc90debee860a3daefd8ce61f3d4ad913cb86b23d9d9cda424db1e8c9e33629b",
+  "source_native_models_json_text_sha256": "27c1146ef242a6811774e0f770c72adaaa4980bc11e2e8b27099f9efe3855e7c",
+  "source_URL": "https://corp.world.co.jp/ir/faq/",
+  "acquisition": {
+    "new_body_GETs": 1,
+    "new_robots_GETs": 0,
+    "total_new_GETs": 1,
+    "maximum_authorized": 3,
+    "HTTP_status": 200,
+    "complete_body": true,
+    "raw_entity_bytes": 25942,
+    "redirects_followed": 0,
+    "retries": 0,
+    "child_GETs": 0
+  },
+  "meaning_scope": {
+    "read": "All nine static FAQ Q/A pairs; complete short visible text read for navigation/context separation",
+    "QAs": 9,
+    "dynamic_or_linked_answers_assumed": false,
+    "all_site_absence_claim": false
+  },
+  "question_preparation_reference": {
+    "file": {
+      "file": "research/ir-3612-7388-earnings-driver-question-preparation-2026-10-16/preparation.json",
+      "sha256": "d64bc9053515a751f2bb7324e18351eaa939d138b387123085b7440622734d31"
+    },
+    "parent_acceptance": {
+      "file": "research/ir-3612-7388-earnings-driver-question-preparation-2026-10-16/parent-acceptance.json",
+      "sha256": "f00b875576a66b9595fc9098866bada3e30fa61ff381241215517d136f25c2c7"
+    },
+    "existing_issue_id": "3612-profit-measure-and-acquisition-scope-comparability",
+    "provisional_question_text": null
+  },
+  "public_answers": [
+    {
+      "quote_id": "3612-FAQ-Q01-company-foundation",
+      "question": "会社の設立はいつですか？",
+      "classification": "company_overview_unrelated_to_profit_bridge",
+      "answers_selected_profit_issue": false
+    },
+    {
+      "quote_id": "3612-FAQ-Q02-listing-date",
+      "question": "株式が上場されたのはいつですか？",
+      "classification": "stock_information_unrelated_to_profit_bridge",
+      "answers_selected_profit_issue": false
+    },
+    {
+      "quote_id": "3612-FAQ-Q03-listing-market",
+      "question": "上場市場はどこですか？",
+      "classification": "stock_information_unrelated_to_profit_bridge",
+      "answers_selected_profit_issue": false
+    },
+    {
+      "quote_id": "3612-FAQ-Q04-security-code",
+      "question": "証券コードは何番ですか？",
+      "classification": "issuer_identifier_only",
+      "answers_selected_profit_issue": false
+    },
+    {
+      "quote_id": "3612-FAQ-Q05-trading-unit",
+      "question": "株式の売買単位は何株ですか？",
+      "classification": "stock_information_unrelated_to_profit_bridge",
+      "answers_selected_profit_issue": false
+    },
+    {
+      "quote_id": "3612-FAQ-Q06-fiscal-year-end",
+      "question": "決算期はいつですか？",
+      "classification": "general_fiscal_end_month_only_not_comparability_bridge",
+      "answers_selected_profit_issue": false
+    },
+    {
+      "quote_id": "3612-FAQ-Q07-earnings-announcement-calendar",
+      "question": "決算発表はいつですか？",
+      "classification": "general_reporting_frequency_link_not_comparability_bridge",
+      "answers_selected_profit_issue": false
+    },
+    {
+      "quote_id": "3612-FAQ-Q08-shareholder-meeting-calendar",
+      "question": "株主総会はいつですか？",
+      "classification": "general_meeting_calendar_link_unrelated",
+      "answers_selected_profit_issue": false
+    },
+    {
+      "quote_id": "3612-FAQ-Q09-shareholder-benefit-link",
+      "question": "株主優待はありますか？",
+      "classification": "benefit_link_only_unrelated_to_profit_bridge",
+      "answers_selected_profit_issue": false
+    }
+  ],
+  "calendar_information": {
+    "fiscal_end_month_answer": "2月です。",
+    "quote_id": "3612-FAQ-Q06-fiscal-year-end",
+    "scope": "General month only. Does not identify FY2026/2 precise dates, prior/comparable statement version, IFRS18 restatement, consolidation scope or acquisition inclusion period.",
+    "announcement_quote_id": "3612-FAQ-Q07-earnings-announcement-calendar",
+    "scope_frequency": "Quarterly announcement statement plus IR calendar link; no event date or child contents read"
+  },
+  "unrelated_content": {
+    "company_and_stock_QA_ids": [
+      "3612-FAQ-Q01-company-foundation",
+      "3612-FAQ-Q02-listing-date",
+      "3612-FAQ-Q03-listing-market",
+      "3612-FAQ-Q04-security-code",
+      "3612-FAQ-Q05-trading-unit",
+      "3612-FAQ-Q08-shareholder-meeting-calendar",
+      "3612-FAQ-Q09-shareholder-benefit-link"
+    ],
+    "dividend": "配当状況 occurs in navigation; no dividend Q/A is present among these nine static pairs. No dividend answer or policy is inferred.",
+    "other_child_links": "IR calendar/shareholder benefit links recorded only inside literal answer quotes; no GET or answer inferred."
+  },
+  "issue_disposition": {
+    "newly_answered_selected_issues": [],
+    "new_IR_questions_removed_from_current_preparation": [],
+    "profit_measure_definition_resolved": false,
+    "same_version_period_consolidation_resolved": false,
+    "acquisition_inclusion_scope_resolved": false,
+    "tax_finance_NCI_parent_profit_bridge_resolved": false,
+    "newly_confirmed_general_fiscal_end_month": "2月という一般FAQ回答は確認したが、未解決bridgeの解消や正式質問追加にはしない。",
+    "previous_known_public_answers_unchanged": true,
+    "p5_followup_reopened": false,
+    "next_disposition": "Existing public statement/notes comparison first; question remains withheld/null; no additional exploration performed in this task."
+  },
+  "findings": [],
+  "limits": {
+    "financial_inputs_verified": false,
+    "model_adopted": false,
+    "independent_forecast": false,
+    "live_whole_site_latestness_verified": false,
+    "current_IR_contact_eligibility_verified": false,
+    "formal_question_registered": false,
+    "send_ready": false,
+    "individual_reply_guaranteed": false,
+    "actual_DB_presence_verified": false
+  },
+  "execution": {
+    "GET": 1,
+    "DB_Store": 0,
+    "calculation_or_financial_adoption": 0,
+    "formal_IR_or_submission": 0,
+    "old_source_reregistration": 0,
+    "old_file_shared_doc_code_index_monitor_changes": 0
+  }
+}

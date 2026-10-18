@@ -1,0 +1,238 @@
+{
+  "format_version": 1,
+  "created_at": "2026-10-15T01:22:27.499229+00:00",
+  "scope": "Candidate source profiles only; no adoption or default thresholds",
+  "profiles": [
+    {
+      "profile_id": "iwaicosmo.sample.20260417",
+      "organization": "岩井コスモ証券",
+      "status": "partially_verified_dated_public_sample",
+      "source_id": "a8c457e4283d4d84-bounded8m",
+      "definition_pdf_page": 3,
+      "source_date": "2026-04-17",
+      "current_policy_as_of_2026_10_15": "not_confirmed",
+      "market_scope": "Japanese listed equity example; not verified for all markets",
+      "horizon": {
+        "value": 6,
+        "unit": "months",
+        "qualifier": "within",
+        "source_term": "今後半年以内"
+      },
+      "return_basis": {
+        "type": "relative",
+        "benchmark": "TOPIX",
+        "source_term": "株価パフォーマンス",
+        "dividends_included": null,
+        "benchmark_forecast_required": true,
+        "strict_excess_return_formula_verified": false
+      },
+      "rating_levels": [
+        {
+          "label": "A",
+          "definition_quote_id": "iwaicosmo-rating-A",
+          "direction": "outperform",
+          "exact_executable_interval": null,
+          "source_outperformance_percent": {
+            "lower": 15,
+            "upper": null,
+            "qualifier": "程度以上",
+            "strict_lower_inclusive": null
+          }
+        },
+        {
+          "label": "B+",
+          "definition_quote_id": "iwaicosmo-rating-Bplus",
+          "direction": "outperform",
+          "exact_executable_interval": null,
+          "source_outperformance_percent": {
+            "lower": 5,
+            "upper": 15,
+            "qualifier": "程度",
+            "strict_lower_inclusive": null,
+            "strict_upper_inclusive": null
+          }
+        },
+        {
+          "label": "B",
+          "definition_status": "not_fully_transcribed_watermark",
+          "threshold": null
+        },
+        {
+          "label": "B−",
+          "definition_status": "not_fully_transcribed_watermark",
+          "threshold": null
+        },
+        {
+          "label": "C",
+          "definition_status": "not_fully_transcribed_watermark",
+          "threshold": null
+        },
+        {
+          "label": "NR",
+          "definition_status": "label_visible; not used as investment recommendation",
+          "threshold": null
+        }
+      ],
+      "target_price": {
+        "present_in_sample": true,
+        "general_definition": null,
+        "target_price_horizon_months": null,
+        "mandatory_sell_on_touch": null,
+        "mandatory_sell_on_touch_source": "not_stated; must not be inferred"
+      },
+      "costs_and_risk": {
+        "fee_adjustment_in_rating": null,
+        "dividend_return_convention": null,
+        "stop_loss_rule": null,
+        "sizing_rule": null,
+        "source_disclaimer_note": "The sample is information for reference; investment judgment belongs to the investor. Not a specified personal risk policy."
+      },
+      "adoption_status": "not_adopted_by_user",
+      "live_trading_configuration": false,
+      "automatic_classification_ready": false,
+      "missing_portfolio_conditions": [
+        "actual trading fees and taxes",
+        "spread/slippage/liquidity",
+        "position sizing and capital constraints",
+        "per-position and portfolio loss constraints",
+        "holding status and exit triggers",
+        "benchmark return forecast if relative",
+        "forecast uncertainty and falsification",
+        "response likelihoods and expected information value",
+        "explicit source-backed adoption and effective dates"
+      ]
+    },
+    {
+      "profile_id": "daiwa.unverified",
+      "organization": "大和証券",
+      "status": "definition_not_verified",
+      "source_ids": [
+        "ab30991684f348c6",
+        "255618adb365ee7d"
+      ],
+      "finding": "Public stock and online-library pages found; the attempted direct rating path returned404. No primary rating definition in the bounded downloaded pages.",
+      "market_scope": null,
+      "horizon": null,
+      "return_basis": null,
+      "rating_levels": null,
+      "target_price": {
+        "present_in_sample": null,
+        "general_definition": null,
+        "horizon_months": null
+      },
+      "costs_and_risk": {
+        "fee_adjustment_in_rating": null,
+        "dividend_return_convention": null,
+        "stop_loss_rule": null,
+        "sizing_rule": null
+      },
+      "adoption_status": "not_adopted_by_user",
+      "live_trading_configuration": false,
+      "automatic_classification_ready": false,
+      "missing_portfolio_conditions": [
+        "actual trading fees and taxes",
+        "spread/slippage/liquidity",
+        "position sizing and capital constraints",
+        "per-position and portfolio loss constraints",
+        "holding status and exit triggers",
+        "benchmark return forecast if relative",
+        "forecast uncertainty and falsification",
+        "response likelihoods and expected information value",
+        "explicit source-backed adoption and effective dates"
+      ]
+    },
+    {
+      "profile_id": "nomura.unverified",
+      "organization": "野村證券",
+      "status": "definition_not_verified",
+      "source_ids": [
+        "04287c29f4193dde",
+        "3f37e1ddd4247a85"
+      ],
+      "finding": "Official research page and an analyst article were obtained. Article discusses target-price revisions, not a buy/neutral/sell definition. Do not use its empirical performance discussion as rating thresholds.",
+      "market_scope": null,
+      "horizon": null,
+      "return_basis": null,
+      "rating_levels": null,
+      "target_price": {
+        "present_in_sample": null,
+        "general_definition": null,
+        "horizon_months": null
+      },
+      "costs_and_risk": {
+        "fee_adjustment_in_rating": null,
+        "dividend_return_convention": null,
+        "stop_loss_rule": null,
+        "sizing_rule": null
+      },
+      "adoption_status": "not_adopted_by_user",
+      "live_trading_configuration": false,
+      "automatic_classification_ready": false,
+      "missing_portfolio_conditions": [
+        "actual trading fees and taxes",
+        "spread/slippage/liquidity",
+        "position sizing and capital constraints",
+        "per-position and portfolio loss constraints",
+        "holding status and exit triggers",
+        "benchmark return forecast if relative",
+        "forecast uncertainty and falsification",
+        "response likelihoods and expected information value",
+        "explicit source-backed adoption and effective dates"
+      ]
+    },
+    {
+      "profile_id": "mizuho.unverified",
+      "organization": "みずほ証券",
+      "status": "definition_not_verified",
+      "source_ids": [
+        "ec428db4632eda4e",
+        "690fdfb2d3690316"
+      ],
+      "finding": "Official stock product page obtained; attempted market path returned404. Rating definition not verified; no statement that none exists publicly.",
+      "market_scope": null,
+      "horizon": null,
+      "return_basis": null,
+      "rating_levels": null,
+      "target_price": {
+        "present_in_sample": null,
+        "general_definition": null,
+        "horizon_months": null
+      },
+      "costs_and_risk": {
+        "fee_adjustment_in_rating": null,
+        "dividend_return_convention": null,
+        "stop_loss_rule": null,
+        "sizing_rule": null
+      },
+      "adoption_status": "not_adopted_by_user",
+      "live_trading_configuration": false,
+      "automatic_classification_ready": false,
+      "missing_portfolio_conditions": [
+        "actual trading fees and taxes",
+        "spread/slippage/liquidity",
+        "position sizing and capital constraints",
+        "per-position and portfolio loss constraints",
+        "holding status and exit triggers",
+        "benchmark return forecast if relative",
+        "forecast uncertainty and falsification",
+        "response likelihoods and expected information value",
+        "explicit source-backed adoption and effective dates"
+      ]
+    }
+  ],
+  "summary": {
+    "organizations_investigated": 4,
+    "partially_verified": 1,
+    "definition_unverified": 3,
+    "user_adopted_profiles": 0,
+    "automatic_classification_ready_profiles": 0
+  },
+  "guardrails": [
+    "Relative TOPIX outperformance is not absolute price upside",
+    "Approximate wording is not a strict numeric boundary",
+    "Rating horizon is not automatically target-price horizon",
+    "Target price is not a personal mandatory take-profit instruction",
+    "Current sample availability does not establish the date a definition became effective",
+    "Do not populate null source fields from memory or third-party summaries"
+  ]
+}

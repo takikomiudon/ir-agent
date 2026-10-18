@@ -1,0 +1,161 @@
+{
+  "company_id": "jp:4318",
+  "reviewer_id": "codex-review_5831_policy",
+  "recorded_at": "2026-10-16T11:56:19.732808+00:00",
+  "status": "limited_method_application_review_complete",
+  "purpose": "報告EPSを変更せず、一時・非営業項目の正常利益研究に必要な入力を特定する。投資判断や正常EPS計算ではない。",
+  "source_scope": {
+    "issuer": {
+      "source_id": "case-public:7304bcc072a7a497d7bdfede25cf02938f6c4fee91df789d9fc96cafb8c682db",
+      "native_sha256": "cad8d5782fdc58295e5a5e260adc2cb7fcd245d843bae31a26be1e76b1e81f5e",
+      "native_sha_domain": "sha256(models.json_text(original_source).encode(UTF8))",
+      "raw_sha256": "258dce23494d54ce52da621904d701c6f3c555c23e581217b2a0288d9a428c38",
+      "content_sha256": "028c6e8b3b29313ba08bb63a8bfcf4016496c3a764b2d307e06197e15bcb72ec",
+      "original_retrieved_at": "2026-10-16T10:20:34.020327+00:00",
+      "original_published_at": null,
+      "printed_publication_day": "2026-04-30",
+      "database_access_performed": false,
+      "new_source_created": false
+    },
+    "new_semantic_pages": [
+      11,
+      15
+    ],
+    "printed_pages": [
+      9,
+      13
+    ],
+    "new_pages_image_viewed": [
+      11,
+      15
+    ],
+    "locator_only": "保存25p全文のTOC/PL/CF/税・売却益行を検索し物理11/15を選択。その他未既読頁は新意味レビューに含めない。",
+    "reused_semantic_scope": "既受入p1/2/19とoperating-performance p4/5の固定参照。全25p意味読了とはしない。"
+  },
+  "author_findings": [
+    {
+      "reference": "A-DD-nonrecurring",
+      "direct_author_principle": "一時/非反復項目と利益のbridgeを理解するDD手順。",
+      "project_application": "4318のOP/親NI差と特別利益を区別して調整対象候補を特定する。",
+      "limits": "PE面談手順であり、上場株IRの有効性・税率・控除額・正常利益式を指定しない。作者が4318を分析/推奨したとはしない。"
+    },
+    {
+      "reference": "A-CYC-consistency",
+      "direct_author_principle": "循環正常化では利益のみを置換せずROC/再投資/資金調達とも整合させる。",
+      "project_application": "利益のラベルを正常へ変えただけでvaluationへ接続しないという境界の参考。",
+      "limits": "循環会社の条件付き議論。4318が循環会社と確認したものではなく、通常の一時売却益の税引後調整規則へ一般化しない。"
+    }
+  ],
+  "missing_author_rule": {
+    "status": "not_found_in_inspected_saved_scope",
+    "missing": "特別利益の税引前売却益を、税引後かつ親会社帰属の一時利益へ変換し正常EPSから控除する直接の著者規則。特別損失等の選別基準と再発性の採用規則も、この有限探索では得られない。",
+    "bounded_search": "保存Anthropic5技能のone-time/non-recurring等、Damodaran保存3paperの関連語locators/該当文脈、ValIntroSpr25/eqprojspr25テキスト、保存general definitionsの関連語、上記project docs。保存全資料や著者全著作の不在主張ではない。",
+    "near_matches_not_adopted": [
+      "finfirm09 p23の自己株取得/一時費用によるbook equity歪みは売却益調整式ではない。p25のnormalized earningsは金融企業例で今回の式を定めない。",
+      "younggrowthのone-timeは清算/存続区別であり、今回の税引後一時利益控除ではない。",
+      "一般definitionsのROCとone-time capital writeoff注意は、4318の売却益の税帰属を定めない。"
+    ],
+    "new_formula_invented": false
+  },
+  "company_public_facts": {
+    "scope": "日本基準連結。左2024-04-01–2025-03-31、右2025-04-01–2026-03-31。p11/15の全金額は原表示千円、以下も換算せず保持。",
+    "PL": {
+      "operating_income_current": "4,583,690",
+      "ordinary_income_current": "4,689,881",
+      "investment_securities_gain_prior": "718,380",
+      "investment_securities_gain_current": "1,164,476",
+      "investment_securities_loss_current": "3,495",
+      "classification": "売却益は特別利益。営業外収益ではなく、営業利益にも含まれない。",
+      "pretax_income_current": "5,777,051",
+      "current_taxes_line_current": "1,660,008",
+      "deferred_tax_adjustment_current": "△42,452",
+      "total_tax_expense_current": "1,617,556",
+      "net_income_current": "4,159,495",
+      "NCI_net_income_current": "519",
+      "parent_net_income_current": "4,158,976",
+      "quotes": [
+        "PL-header",
+        "PL-special-items",
+        "PL-tax-and-parent-attribution"
+      ]
+    },
+    "CF": {
+      "starting_line": "税金等調整前当期純利益",
+      "starting_amount_current": "5,777,051",
+      "investment_securities_sale_gain_loss_adjustment_current": "△1,160,981",
+      "income_taxes_paid_current": "△2,299,162",
+      "operating_cashflow_current": "2,727,310",
+      "investment_securities_sale_proceeds_current": "1,214,605",
+      "quotes": [
+        "CF-header-and-start",
+        "CF-securities-adjustment",
+        "CF-tax-and-CFO",
+        "CF-securities-cash-proceeds"
+      ],
+      "interpretation": "間接法営業CFの売却損益行は既に負調整。P/Lの売却益grossと損益調整net、投資CFの売却収入cashは異なる項目。単独gainを再控除しない。税費用と支払額も異なる。差額の再計算・税の項目別配賦はしない。"
+    },
+    "recurrence": "前期と当期の売却益がともに表示される。一度きり/翌期ゼロ/永続と認定しない。",
+    "dashes": "原表示の－は0へ変換せず、評価損やその他特別損益を正常化対象へ自動選別しない。"
+  },
+  "research_paths": [
+    {
+      "id": "R1-operating-profit-definition",
+      "available_now": "営業利益と特別利益の区分は公表既答。OPへ売却益を引く経路は不要。",
+      "remaining_inputs": "もし将来の営業CF研究へ進むなら、選ぶ著者法、対象利益の定義、税/再投資/将来期間を別途特定する。",
+      "owner": "研究者は著者法と適用範囲、会社公表資料は会計定義・税/CF事実。",
+      "possible_change": "現在の比較をOPと親NIの別系列として維持できる。まだ正常OP/NOPATとは呼ばない。"
+    },
+    {
+      "id": "R2-adjusted-parent-EPS-separate-research",
+      "available_now": "報告親NI、税前売却益、総税費用/NCI、当年度普通株平均分母の表示は公表済み。",
+      "remaining_inputs": "調整対象の一貫した著者原則、当該売却損益の税効果と親会社帰属範囲の根拠、他の特別損益の扱い、比較年度の同一規則。総税費用や法定率だけから推計しない。",
+      "owner": "調整方法/正常とみなす理由は外部著者方針と投資家側。取引・法人・税/NCI帰属の事実はまず公表注記等の確認範囲。現選択2頁は項目別税帰属を示していないが全社未公表とはしない。",
+      "possible_change": "これらが揃った時のみ、reportedとは別のadjusted earnings/EPS研究入力を明示できる。現時点は具体式/数値未作成で、会社の将来利益保証を求める経路ではない。"
+    },
+    {
+      "id": "R3-CF-bridge-no-double-adjustment",
+      "available_now": "売却損益調整・売却現金収入・税支払いは各区分で公表済み。",
+      "remaining_inputs": "正常将来CFを研究するなら、採用法と営業/投資・税の対象期間、再投資、当該税現金の帰属/タイミングを別途確認。",
+      "owner": "会社資料は履歴/会計定義、著者/投資家は将来CF法・予測。",
+      "possible_change": "reportedCFOから重ねて売却益を除く誤りを防げる。reportedCFOを正常FCF/FCFFへ自動採用しない。"
+    }
+  ],
+  "reported_method_boundary": {
+    "reported_eps_jpy": "74.11",
+    "reported_BVPS_jpy": "345.24",
+    "unchanged_input_paths": [
+      "scenarios.reported_annual_reference.inputs.eps_jpy",
+      "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy"
+    ],
+    "actual_audit_request": "research/ir-2929-4318-annual-input-connection-2026-10-16/actual-input-audits/4318/request.json",
+    "rule": "Grahamのreported2inputsとは別の正常利益研究。正常化値へ無断差替えず、既存参考計算も再実行しない。"
+  },
+  "limits": {
+    "normalized_earnings": null,
+    "normalized_EPS": null,
+    "tax_rate_estimate": null,
+    "PE_adoption": false,
+    "financial_inputs_adopted": false,
+    "investment_action": null,
+    "IR_question": null,
+    "new_thesis": null,
+    "native_case_changed": false,
+    "numerical_thesis_completeness_required_for_this_research": false,
+    "whole_company_exclusion": false,
+    "GET_count": 0,
+    "database_access_count": 0,
+    "old_file_edits": 0
+  },
+  "validation": {
+    "source_content_equals_original_file": true,
+    "original_native_sha256_matched": true,
+    "author_raw_pdf_sha256_verified": true,
+    "nonempty_exact_quotes": 9,
+    "character_and_UTF8_exact": true,
+    "new_semantic_page_budget": {
+      "allowed": 2,
+      "actual": 2
+    },
+    "rendered_images_visually_reviewed": true
+  }
+}

@@ -1,0 +1,11 @@
+--- docs/data-sources.md before
++++ docs/data-sources.md after
+@@ -17,7 +17,7 @@
+ 
+ ## 共通出力
+ 
+-公開Webの追加取得前に[収集保留の中央索引v8](../research/ir-source-access-holds-2026-10-15/README-v8.md)を読む。今回の12のexact hostについて、robots原文・HTTP状態・取得完了時刻・UA設定根拠と限界を保存した。wildcard禁止、403で規則未確認、202・空本文の有限停止、AI個別禁止を受けた運用保留を区別し、同じ取得の再試行・UA変更・迂回を避ける。過去の取得へ新しい規則を遡及したり、アクセス制約を投資対象の除外理由へ置き換えたりしない。
++公開Webの追加取得前に[収集保留の中央索引v9](../research/ir-source-access-holds-2026-10-15/README-v9.md)を読む。今回の13のexact hostについて、robots原文・HTTP状態・取得完了時刻・UA設定根拠と限界を保存した。wildcard禁止、403で規則未確認、202・空本文の有限停止、AI個別禁止を受けた運用保留を区別し、同じ取得の再試行・UA変更・迂回を避ける。過去の取得へ新しい規則を遡及したり、アクセス制約を投資対象の除外理由へ置き換えたりしない。
+ 
+ 通常の窓口調査CLIと自己生成followup fetcherは、新規取得の完全response entityを`output/raw/<SHA256>`へdecode前に保存する。これは`requests.iter_content`の返すbytesで、Content-Encodingの復号後の場合があり、wire上の圧縮転送bytesではない。`raw_storage_status`と`raw_file`を照合し、保存失敗を通信失敗や再試行理由にしない。partial受信・上限超過は完成品として保存せず、既存の異内容SHAファイルは上書きしない。`raw_body_completed_at`はローカルでのiteration完了観測で、公表時刻・実DB初回保存時刻ではない。任意設定を渡さない旧APIは従来どおりで、注入fetcherの保存先は変更しない。[契約とオフライン検証](../research/ir-contact-raw-entity-preservation-2026-10-15/README.md)を参照する。過去のcaptureに元HTMLがない場合、この変更で復元されたとは扱わず、旧資料の書換えや再取得も行わない。
+ 

@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "company_id": "jp:2983",
+  "reviewer": "Codex / audit_consumer independent reviewer",
+  "recorded_at": "2026-10-15T17:29:06.658984+00:00",
+  "status": "limited_resolution_confirmed_for_v2",
+  "scope": "Only prior finding 2983-DF-R01-multi-origin-scope: v2 removes supplemental-statement dependencies from exactly two revision-only facts. Existing formal revision p1 meaning reused.",
+  "blind_review": false,
+  "freeze": {
+    "frozen_at": "2026-10-15T17:26:50.925796+00:00",
+    "files": [
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/issuer-disclosed-facts-v2/README.md",
+        "sha256": "712df105430f06a47abbe13bc44a5033e58768338d0510eecbbdac883c21f7ae"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/issuer-disclosed-facts-v2/normalization-input.json",
+        "sha256": "6e420b00d87c89f2758b210b945e8a00c38b1c044e3db1e865b8c82d27ca372d"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/issuer-disclosed-facts-v2/normalized-bundle.json",
+        "sha256": "c2f5acd875b214b593627afd087999c77b1bc26865e2a1b33fcff63012d04f5a"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/issuer-disclosed-facts-v2/supplemental-review-only.json",
+        "sha256": "c2bf8532645fe8d02c33a7d0ac220027b45ec47b461cab45581c1fe2dbe2dd11"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/issuer-disclosed-facts-v2/validation.json",
+        "sha256": "760909d120011520b1b54a5cf74f2361d9e1f8e43d172e8ee706aae8989d000f"
+      }
+    ]
+  },
+  "original_v1_and_finding_preserved": {
+    "six_files": {
+      "frozen_at": "2026-10-15T17:20:54.010215+00:00",
+      "files": [
+        {
+          "file": "research/ir-case-studies-2026-10-15/2983/issuer-disclosed-facts/README.md",
+          "sha256": "de4d37ddb17a9fd6554a54d83fac6b4c1ff212e308d9a49b4c8a96979aa073d8"
+        },
+        {
+          "file": "research/ir-case-studies-2026-10-15/2983/issuer-disclosed-facts/normalization-input.json",
+          "sha256": "bb3d62c56e37b9e4636f19ac95dfbb3568cda3ac1e125daa6f20d189664af7d8"
+        },
+        {
+          "file": "research/ir-case-studies-2026-10-15/2983/issuer-disclosed-facts/normalized-bundle.json",
+          "sha256": "837b9ffb60208405a9a59456c107832a2f6358697abde0d64c4ae707636c5f2d"
+        },
+        {
+          "file": "research/ir-case-studies-2026-10-15/2983/issuer-disclosed-facts/source-bundle.json",
+          "sha256": "20a47f09e813617cb0258f79109baa2705344508ce6064c27237fd9b9524c227"
+        },
+        {
+          "file": "research/ir-case-studies-2026-10-15/2983/issuer-disclosed-facts/source-quotes.json",
+          "sha256": "3f14299e4d676a4134769d4f24fc0fc91f216ddf9e21eee1d735a2519f2acf78"
+        },
+        {
+          "file": "research/ir-case-studies-2026-10-15/2983/issuer-disclosed-facts/validation.json",
+          "sha256": "4e0c1ff8b41fcf7fe78c5a488448590453d06c602b8338fe10dcdbc4034e6342"
+        }
+      ]
+    },
+    "independent_review_pair": [
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/issuer-disclosed-facts/independent-recheck.json",
+        "sha256": "87a80f9b500f91e70ee39b70eb42b28e0249c92c2446a520d34d75a1aa85a73f"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/issuer-disclosed-facts/independent-recheck.md",
+        "sha256": "479b63dee27690aca5b4cfbf6c572db90d1a5b540227f41390dd77cb5499924d"
+      }
+    ],
+    "old_finding_status_in_old_record": "open",
+    "old_record_edited": false
+  },
+  "finding_resolution": {
+    "id": "2983-DF-R01-multi-origin-scope",
+    "status": "resolved_in_v2_only",
+    "old_derived_source_id": "disclosed-facts:4d90c467de1a143918ed678784ade860b35b690d6998b3ceec347f3ba4ee0de4",
+    "new_derived_source_id": "disclosed-facts:4e8f7dcb7903ca58074646fd7ff2e6d784ac23b881165cbbd513b393ae0fd644",
+    "primary_source_id": "case-public:c75788675e0b606f2c00bf372044f545e6ac53f77357a50556ae7f52d6a82290",
+    "basis": "Derived facts carry only revision origin; accounting_basis is null; statement accounting/corroboration/truncation data are outside derived facts in supplemental-review-only.json tied to unchanged v1 input. Original finding/files retained.",
+    "financial_model_approval": false
+  },
+  "checks": [
+    {
+      "id": "v2_five_v1_six_and_old_finding_pair_SHA_unchanged",
+      "pass": true
+    },
+    {
+      "id": "bare_API_full_output_replay_including_limitations_review",
+      "pass": true
+    },
+    {
+      "id": "request_unmutated",
+      "pass": true
+    },
+    {
+      "id": "original_revision_object_exact_v1",
+      "pass": true
+    },
+    {
+      "id": "two_API_output_source_objects_schema_valid_exact",
+      "pass": true
+    },
+    {
+      "id": "new_derivative_identity_and_native_reproduction",
+      "pass": true
+    },
+    {
+      "id": "two_raw_tokens_units_primary_quotes_locations_unchanged",
+      "pass": true
+    },
+    {
+      "id": "same_period_labels_dates_explicit_primary_quote",
+      "pass": true
+    },
+    {
+      "id": "accounting_basis_null_secondary_scope_fields_removed",
+      "pass": true
+    },
+    {
+      "id": "no_secondary_ID_or_GAAP_claim_inside_derivative",
+      "pass": true
+    },
+    {
+      "id": "all_actual_derived_source_refs_same_revision",
+      "pass": true
+    },
+    {
+      "id": "single_origin_matches_revision_only_period_facts",
+      "pass": true
+    },
+    {
+      "id": "excluded_context_exact_v1_2983-issuer-revised-FY2027-01-EPS-20260910",
+      "pass": true
+    },
+    {
+      "id": "excluded_context_exact_v1_2983-issuer-revised-FY2027-01-parent-NI-20260910",
+      "pass": true
+    },
+    {
+      "id": "review_context_outside_derivative_binds_original_v1_SHA",
+      "pass": true
+    },
+    {
+      "id": "Decimal_2983-issuer-revised-FY2027-01-EPS-20260910",
+      "pass": true
+    },
+    {
+      "id": "Decimal_2983-issuer-revised-FY2027-01-parent-NI-20260910",
+      "pass": true
+    },
+    {
+      "id": "canonical_values_unchanged",
+      "pass": true
+    },
+    {
+      "id": "primary_saved_quote_refs_2983-issuer-revised-FY2027-01-EPS-20260910",
+      "pass": true
+    },
+    {
+      "id": "primary_saved_quote_refs_2983-issuer-revised-FY2027-01-parent-NI-20260910",
+      "pass": true
+    },
+    {
+      "id": "EPS_split_note_unchanged_primary_only_denominator_unfilled",
+      "pass": true
+    },
+    {
+      "id": "financial_meaning_latestness_model_flags_unverified",
+      "pass": true
+    }
+  ],
+  "counts": {
+    "checks": 22,
+    "passed": 22,
+    "failed": 0,
+    "facts": 2,
+    "new_semantic_pages": 0,
+    "prior_finding_resolved_for_v2": 1,
+    "new_findings": 0
+  },
+  "findings": [],
+  "normalizer_reproduction": {
+    "source_id": "disclosed-facts:4e8f7dcb7903ca58074646fd7ff2e6d784ac23b881165cbbd513b393ae0fd644",
+    "applicable": true,
+    "status": "reproduced",
+    "reason_codes": [],
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "original_content_sha256_status": "matched",
+    "original_snapshot_sha256_status": "matched_supplied_snapshot",
+    "fact_kinds": [
+      {
+        "id": "2983-issuer-revised-FY2027-01-EPS-20260910",
+        "kind": "issuer_guidance"
+      },
+      {
+        "id": "2983-issuer-revised-FY2027-01-parent-NI-20260910",
+        "kind": "issuer_guidance"
+      }
+    ],
+    "original_source_id": "case-public:c75788675e0b606f2c00bf372044f545e6ac53f77357a50556ae7f52d6a82290"
+  },
+  "numeric_values": [
+    {
+      "id": "2983-issuer-revised-FY2027-01-EPS-20260910",
+      "raw_value": "304.27",
+      "raw_unit_label": "円",
+      "unit": "JPY-per-share",
+      "value": "304.27",
+      "multiplier": "1",
+      "Decimal_product": "304.27"
+    },
+    {
+      "id": "2983-issuer-revised-FY2027-01-parent-NI-20260910",
+      "raw_value": "3,250",
+      "raw_unit_label": "百万円",
+      "unit": "JPY",
+      "value": "3250000000",
+      "multiplier": "1000000",
+      "Decimal_product": "3250000000"
+    }
+  ],
+  "derived_source_references": [
+    {
+      "path": "derived.content.facts[0].original_source_id",
+      "source_id": "case-public:c75788675e0b606f2c00bf372044f545e6ac53f77357a50556ae7f52d6a82290"
+    },
+    {
+      "path": "derived.content.facts[0].scope.split_note_reference.source_id",
+      "source_id": "case-public:c75788675e0b606f2c00bf372044f545e6ac53f77357a50556ae7f52d6a82290"
+    },
+    {
+      "path": "derived.content.facts[0].source_id",
+      "source_id": "case-public:c75788675e0b606f2c00bf372044f545e6ac53f77357a50556ae7f52d6a82290"
+    },
+    {
+      "path": "derived.content.facts[1].original_source_id",
+      "source_id": "case-public:c75788675e0b606f2c00bf372044f545e6ac53f77357a50556ae7f52d6a82290"
+    },
+    {
+      "path": "derived.content.facts[1].source_id",
+      "source_id": "case-public:c75788675e0b606f2c00bf372044f545e6ac53f77357a50556ae7f52d6a82290"
+    },
+    {
+      "path": "derived.content.original_source_id",
+      "source_id": "case-public:c75788675e0b606f2c00bf372044f545e6ac53f77357a50556ae7f52d6a82290"
+    },
+    {
+      "path": "derived.metadata.original_source_id",
+      "source_id": "case-public:c75788675e0b606f2c00bf372044f545e6ac53f77357a50556ae7f52d6a82290"
+    }
+  ],
+  "reused_meaning_review": {
+    "file": "research/ir-case-studies-2026-10-15/2983/issuer-quarter-followup/independent-recheck.json",
+    "sha256": "991fffca2006ceb2be5f9debdc1cb060328860e2583cea524cbda47cb3740112",
+    "scope": "Formal revision p1 original row/columns/period/EPS split note only; no additional image view or full PDF audit."
+  },
+  "limits": {
+    "project_single_origin_contract_for_two_v2_facts": true,
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "latestness_verified": false,
+    "forecast_denominator_verified": false,
+    "author_EPS_basis_verified": false,
+    "model_adopted": false,
+    "DB_registration_approved": false,
+    "DB108_or_supplemental_actual_DB_status_rechecked": false
+  },
+  "execution": {
+    "GET": 0,
+    "submission": 0,
+    "DB_Store": 0,
+    "new_page_meaning_reads": 0,
+    "new_image_views": 0,
+    "new_renders": 0,
+    "old_file_changes": 0,
+    "code_changes": 0,
+    "index_monitor_changes": 0,
+    "outputs": [
+      "research/ir-case-studies-2026-10-15/2983/issuer-disclosed-facts-v2/independent-recheck.json",
+      "research/ir-case-studies-2026-10-15/2983/issuer-disclosed-facts-v2/independent-recheck.md"
+    ]
+  },
+  "preservation": {
+    "v2_five_v1_six_old_finding_pair_unchanged_before_write": true,
+    "derived_metadata_hand_edits": 0
+  },
+  "output_markdown_sha256": "fee3638549df7825ccb0c4d85afba301bf72f28189d9d513d4131cf4bef95fd1"
+}

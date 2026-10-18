@@ -1,0 +1,238 @@
+{
+  "company_id": "jp:2341",
+  "recorded_at": {
+    "utc": "2026-10-16T06:39:36.733887+00:00",
+    "jst": "2026-10-16T15:39:36.733887+09:00"
+  },
+  "status": "finite_file_only_residual_review_frozen_awaiting_root_acceptance",
+  "purpose": "既答を質問から除き、未知の定義と著者予測/投資家条件の未設定を分離する。未設定だけを理由にIR質問を作らない。",
+  "state": {
+    "requested_valuation_method": null,
+    "price": null,
+    "financial_parameter_paths": null,
+    "adopted_company_specific_external_forecast": null,
+    "adopted_company_specific_investor_policy": null,
+    "buy_sell": null,
+    "financial_branches": null,
+    "qualitative_answer_cases": [],
+    "EVSI_response_likelihoods": null,
+    "IR_value": "unproven",
+    "ready_to_send": false,
+    "formal_question_registered": false,
+    "external_send": false,
+    "native_case_id": null,
+    "native_case_version": null,
+    "CAS": null
+  },
+  "public_known_do_not_reask": [
+    {
+      "id": "K1",
+      "known": "中間実績（2026-03-01〜08-31）とFY会社予想（2026-03-01〜2027-02-28）は別。10/8表紙の直近修正無とp6の4/9前回予想→10/7修正説明は比較基準日が異なる。",
+      "exclude_from_questions": "既答の予想修正有無/基準日/対象期を再質問せず、会社予想を外部著者予測としない。",
+      "reference_ids": [
+        "initial_quotes",
+        "initial_acceptance",
+        "twelve_facts_acceptance"
+      ],
+      "json_pointers": [
+        "initial_quotes:/quotes/0",
+        "initial_quotes:/quotes/3"
+      ]
+    },
+    {
+      "id": "K2",
+      "known": "投資有価証券売却益26,207千円は特別利益。親NI予想139→167百万円は売却益26百万円計上「等」と説明し、売上/OP/経常は据置。PL税費用・CF税支払は別。",
+      "exclude_from_questions": "特益の利益段階/据置項目を再質問しない。26と28の税後1対1対応や正常利益を作らない。",
+      "reference_ids": [
+        "PL_review",
+        "PL_acceptance",
+        "initial_quotes",
+        "CFshare_review"
+      ],
+      "json_pointers": [
+        "PL_review:/findings/1",
+        "PL_review:/findings/2",
+        "PL_review:/findings/3",
+        "CFshare_review:/findings/0"
+      ]
+    },
+    {
+      "id": "K3",
+      "known": "セグメント利益と全社OPの差にはセグメント間調整と全社費用が明示される。商品別顧客収益/外部顧客売上と内部売上/消去前計を分ける。表示上の千円差は修正せず、丸めと断定しない。",
+      "exclude_from_questions": "全社費用調整の存在/区分、内部売上を含む計と外部売上の違いを再質問しない。",
+      "reference_ids": [
+        "segment_review",
+        "segment_model_acceptance"
+      ],
+      "json_pointers": [
+        "segment_review:/as_reported_tables/1",
+        "segment_review:/meaning_findings"
+      ]
+    },
+    {
+      "id": "K4",
+      "known": "4/17・7/17は各100万株の消却実施。10/16は10/8公表時点の消却予定。帳簿減少264,400千円・自己株取得cash△2千円・消却株数は異なる指標。初回p2は信託算入を含む期末自己株と期中平均の定義を明示。",
+      "exclude_from_questions": "消却を買付cashやEPS増加として再確認しない。予定完了/信託個別株数/△2の取得詳細は未確認だが、現時点で投資判断への必要性を示していないため質問化しない。",
+      "reference_ids": [
+        "CFshare_review",
+        "CFshare_acceptance",
+        "initial_quotes"
+      ],
+      "json_pointers": [
+        "CFshare_review:/findings/3",
+        "CFshare_review:/findings/4",
+        "CFshare_review:/share_basis_comparison",
+        "initial_quotes:/quotes/1"
+      ]
+    },
+    {
+      "id": "K5",
+      "known": "ワガシャdeDOMOは会社がサブスクリプション型課金と説明するが、商品別に公表されるのは当期認識売上。前中間945,215/当中間946,113千円をARR/MRR/解約率/顧客数や将来cashへ置換しない。RPO等のその他人材サービスの内訳もこの表から割り当てない。",
+      "exclude_from_questions": "商品売上がARRであるという誘導やHRtech等の定性表現だけで急成長を前提にした問いを作らない。",
+      "reference_ids": [
+        "initial_quotes",
+        "segment_review",
+        "segment_model_acceptance"
+      ],
+      "json_pointers": [
+        "initial_quotes:/quotes/2",
+        "segment_review:/meaning_findings"
+      ]
+    },
+    {
+      "id": "K6",
+      "known": "12factsは実績と会社予想等の既存公表値の出典付き再表現で、著者予測/正常利益/評価採用ではない。静的説明資料indexの1GETでは現FY27中間PDFのliteralを確認できず、旧期PDF/推定名へ追わず停止。",
+      "exclude_from_questions": "index限定未確認を全サイト不存在や会社拒否へ変換しない。旧calendar限定引用は決算日と旧沈黙期間のみで、実際の説明会開催日/現資料公表日は確定しない。",
+      "reference_ids": [
+        "twelve_facts_acceptance",
+        "index_review",
+        "index_calendar_acceptance"
+      ],
+      "json_pointers": [
+        "twelve_facts_acceptance:/review",
+        "index_review:/outcome",
+        "index_review:/unperformed",
+        "index_calendar_acceptance:/saved_calendar_limited_context"
+      ]
+    }
+  ],
+  "research_question_decision": {
+    "count": 0,
+    "questions": [],
+    "conditional_question_text": null,
+    "rationale": "KPI/契約構成/費用内訳は未知だが、どの外部著者の具体的予測・方針と選択モデル入力が変わるか未設定。公開資料indexの有限確認も現期PDFの不存在を示さない。既答を除いた問いの増分判断価値を立証できないため、現段階で質問0とする。",
+    "not_due_only_to_missing_numeric_thesis": "定義質問自体は数値pathがなくても研究として可能。ただしこの会社では、比較に必要な具体的定義/利用目的と既答残余の重要性が未固定であり、機械的に1問を作らない。",
+    "reconsideration_only": "issue1又は2が後日、特定著者の採用方法・対象期/範囲・影響する入力に結び付き、同scopeの公表資料でなお未解決の場合だけ、非誘導の公表定義確認を最大1問としてrootが再検討する。回答拒否/未公表を先に仮定しない。",
+    "no_current_send_authorization": true
+  },
+  "responsibility_split": [
+    {
+      "owner": "会社の公表定義",
+      "can_resolve": "契約/課金/認識単位、商品・KPI・費用の対象範囲、比較基準日の公開説明。既答は除外。",
+      "not_company_input": "将来の自作正常利益/必要利回り/適正倍率/目標株価/売買閾値/回答保証。",
+      "current_action": "現時点の質問0。保存される同scope公開根拠の確認を先に行う。"
+    },
+    {
+      "owner": "外部著者の具体的forecast / criteria を選ぶ研究担当",
+      "missing": "誰のどの版・日付の会社別予測/評価方式/反証基準を採るか、対象期と利益/CF/持分scope、会社FY予想との違い、その著者が採った入力・仮定が未設定。Damodaranの一般手順は点検方法であり、この会社のforecastではない。",
+      "model_input_connection": "方式を先に根拠付きで選ぶ。EPS倍率なら対象期/同定義EPSと比較可能な倍率、DCFなら同scopeの将来FCF列/再投資/税/割引率/終価と企業→株主bridge、DDMなら配当列/株主資本コスト/安定期等のうち選択方式が実際に要する入力を当該出典へ対応する。全部を一律要求しない。",
+      "current_parameter_path_mapping": null
+    },
+    {
+      "owner": "投資家のvaluation / 判断条件",
+      "missing": "評価日と価格source、対象持分/保有状態、採用する具体的な購入・維持・退出/反証方針とその著者/利用者根拠、費用・必要余地・リスク許容条件、必要なら確率/IR尤度が未固定。",
+      "boundary": "数値閾値や均等確率、将来PER/正常税率、売却期限をこのレビューで創作しない。現値や判定対象が無いため買売/価格/financial branchesを作らない。"
+    }
+  ],
+  "native_case_initial_issue_candidates": [
+    {
+      "issue_id": "2341-recurring-product-measurement",
+      "status": "initial_native_case_issue_candidate_only_not_registered",
+      "observation": "継続課金の説明と商品認識売上は既知。採用する比較が求める契約/課金単位・継続/初期/オプション等の同範囲定義は現在の受入scopeでは未確定。",
+      "first_owner": "公開研究担当",
+      "company_role_if_later_needed": "会社が公表する同期間・同商品KPIの定義/対象範囲のみ。内部顧客別数値や将来継続保証は求めない。",
+      "activation_condition": "具体的な外部著者の成長/利益予測でこの定義が必要と説明でき、同期間の公開資料で未解決と確認できること。今は未成立。",
+      "next_public_evidence": "現FY27中間に一致する公式説明資料/factsheetが実際に保存された場合の当該KPI/注記。未取得の推定ファイル名・旧期代替へは進まない。",
+      "reference_ids": [
+        "segment_review",
+        "index_review",
+        "model_assessment"
+      ],
+      "question_now": false
+    },
+    {
+      "issue_id": "2341-comparable-operating-profit-scope",
+      "status": "initial_native_case_issue_candidate_only_not_registered",
+      "observation": "セグメントからOPへの全社費用/内部調整は既答。将来OPを比較する場合の費用内訳・固定/変動と範囲一貫性は未確定だが、対象予測/モデルが未設定。",
+      "first_owner": "公開研究担当と採用予測の著者",
+      "company_role_if_later_needed": "公表される費用分類/比較定義の案内。恒常費用/将来削減額/正常利益を会社に認証させない。",
+      "activation_condition": "特定著者の同一連結scopeのOP予測がどの公表費用定義に依存するか先に固定する。未知だけでは質問にしない。",
+      "next_public_evidence": "同期間の公式説明にある費用bridge/会計注記。CFの償却足戻しや特益除外から正常OPを自作しない。",
+      "reference_ids": [
+        "segment_review",
+        "PL_review",
+        "CFshare_review",
+        "model_assessment"
+      ],
+      "question_now": false
+    },
+    {
+      "issue_id": "2341-authored-model-and-investor-policy",
+      "status": "initial_native_case_issue_candidate_only_not_registered",
+      "observation": "モデル点検はneeds_data/requested_valuation_method:null。会社1期予想と12factsだけでは他者の会社別予測・評価前提・投資家判断条件が揃わない。",
+      "first_owner": "研究担当/外部著者資料担当と投資家",
+      "company_role_if_later_needed": "会社は投資家の価格、PER、割引率、正常税率、売買閾値やIR応答尤度の設定担当ではない。",
+      "activation_condition": "具体的な著者名・資料版/日付・方法・対象期/連結/利益定義とモデル入力を採用し、投資家側の目的/保有状態/価格時点/条件を根拠付きで分離する。",
+      "next_public_evidence": "既存の著者原典/会社別外部予測と、明示的に採用する投資家方針。一般モデル選択手順の存在を会社別forecastの採用済みとしない。",
+      "reference_ids": [
+        "model_assessment",
+        "twelve_facts_acceptance"
+      ],
+      "question_now": false
+    }
+  ],
+  "next_public_evidence_plan": {
+    "max_initial_issue_candidates": 3,
+    "same_period_materials_first": "現期に一致する公式説明資料/KPI注記が実際に保存された場合だけ旧issueへ対応。今回index1GETはここで終了し追加GETしない。",
+    "calendar_scope": "旧保存calendarの限定引用は2026-10-08決算発表/旧IR沈黙期間と変更可能性のみ。説明会の実施日・現期資料の公表時刻はこのcontextでunknown。予定を実施/公表済みへ変えない。",
+    "unread_saved_statement_pages": "3はTOC locatorのみ、5/7/9/12はこのレビューでは新たに読まない。信託やBSを惰性で追加しない。",
+    "management_review_date": null,
+    "date_not_fabricated": "根拠のない説明会日/公表日/管理日を新作せず、次の実根拠又は別の正当な管理日設定で判断する。"
+  },
+  "source_history": {
+    "pins_file": {
+      "file": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/pins.json",
+      "sha256": "3b1121ab8b6cc0159b9d64d435f376e47d01d235d1ac35920050d39e4eaa5431",
+      "bytes": 8393
+    },
+    "initial_statement_actual_firstsave": "2026-10-16T06:27:32.516249+00:00",
+    "basis": "frozen root trusted_insert receipt; no DB observation by this review",
+    "derived12_and_index": "file-only as scoped at task receipt; prepared bundle or source-shaped record is not actual DB receipt",
+    "old_reviews_time_scopes_preserved": "PL/CF/segmentの未読表現は各freeze当時の履歴。後着の別受入を今回の参照で合成し、旧成果を再ラベル/上書きしない。",
+    "original_source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+    "new_source_created": false
+  },
+  "method": {
+    "file": {
+      "file": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/method-references.json",
+      "sha256": "83ad51b91c1d0546865904d4c3a5a29e104b098fcc05ed32c8f9d65a15af1227",
+      "bytes": 3934
+    },
+    "attribution": "Anthropic DDの既知/優先順位/中立follow-upを公開IRへ適応。公開first/既答除去はプロジェクト適応。売買/金融A/B/数値閾値/IR確率を原著に帰属させない。"
+  },
+  "future_manual_handoff": "rootが次の正当な研究jobへ明示する場合だけ、既答/残余/取得scope/実保存来歴と最大3論点を渡す。新source pending、case登録、job作成、source_reviewsへの自動投入を主張しない。",
+  "operations": {
+    "GET": 0,
+    "new_PDF_or_image_read": 0,
+    "DB_access_or_write": 0,
+    "Store": 0,
+    "source_registration": 0,
+    "case_job_or_formal_question_registration": 0,
+    "old_file_or_shared_code_change": 0,
+    "normalizer_or_new_facts": 0,
+    "model_execution_or_financial_adoption": 0,
+    "forecast_price_threshold_generation": 0,
+    "IR_draft_send": 0
+  },
+  "stop": "Finite residual consolidation complete. Zero questions, at most3 research issue candidates, frozen file-only output awaits root acceptance."
+}

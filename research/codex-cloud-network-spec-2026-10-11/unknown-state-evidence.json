@@ -1,0 +1,15 @@
+{
+  "tool": "mcp__codex_apps__cloud_environment_environment_status",
+  "tool_description": "Read the current cloud environment configuration and credential readiness.\n\nRead this task's managed cloud environment configuration and observed readiness. Returns network policy, configured capabilities, safe failure guidance, secret variable/file bindings and outbound identity aliases, without credential values. A null VPN failure does not establish VPN readiness. For restricted networking, allowed_hosts lists custom domains and presets lists selected groups. When resolved, preset_allowed_hosts lists preset domains and effective_allowed_hosts lists the complete policy. These resolved lists describe the desired spec; state reports whether it is enforced. Takes no arguments; the runtime supplies the instance. Unknown or stale observations do not establish credential readiness.\n\nexec tool declaration:\n```ts\ndeclare const tools: { mcp__codex_apps__cloud_environment_environment_status(args: {}): Promise<CallToolResult>; };\n```",
+  "runtime_observation": {
+    "network_policy": {
+      "mode": "unrestricted",
+      "state": "unknown"
+    },
+    "observations_current": true,
+    "spec_revision": "6",
+    "observed_spec_revision": "6",
+    "connectivity": "connected",
+    "observed_phase": "running"
+  }
+}

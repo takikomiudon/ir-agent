@@ -1,0 +1,47 @@
+{
+  "all_inputs_fictional": true,
+  "database": ":memory:",
+  "max_quote_age_seconds": 3600,
+  "trusted_save_now": "2026-10-09T20:00:00+09:00",
+  "stale_16_59": {
+    "initial_evaluation_action": "unresolved",
+    "initial_review_action": "unresolved",
+    "raw_historical_action": "exit_review",
+    "current_reason": [
+      "market_quote_stale"
+    ]
+  },
+  "stale_17_00": {
+    "current_action": "unresolved",
+    "quote_status": "stale"
+  },
+  "retry_and_read_views": {
+    "evaluation_action": "unresolved",
+    "review_action": "unresolved",
+    "cli_review_show": "unresolved",
+    "cli_reply_show": "unresolved",
+    "inbox_status": "requires_price_review",
+    "no_db_writes": true
+  },
+  "new_quote_new_review": {
+    "new_id": true,
+    "action": "exit_review",
+    "quote_status": "fresh",
+    "retry_no_db_writes": true
+  },
+  "expiry_boundary": {
+    "exact_age_us": 3600000000,
+    "exact_action": "exit_review",
+    "plus_one_us_age": 3600000001,
+    "plus_one_us_action": "unresolved"
+  },
+  "pure_at_save_now": {
+    "action": "unresolved",
+    "reasons": [
+      "market_quote_stale"
+    ]
+  },
+  "historical_records_unchanged": true,
+  "original_reproduction_files_unchanged": true,
+  "scope": "Quote timing gate only; no claim of full current investment revalidation."
+}

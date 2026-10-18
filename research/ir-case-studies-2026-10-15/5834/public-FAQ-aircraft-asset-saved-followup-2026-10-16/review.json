@@ -1,0 +1,65 @@
+{
+  "recorded_at": "2026-10-16T13:03:00.187069+00:00",
+  "company_id": "jp:5834",
+  "company_name": "SBIリーシングサービス株式会社",
+  "purpose": "一般的資産区分の公表回答を理解し、同じ問いの再質問を減らす。金融入力/モデル採用ではない。",
+  "source_ref": {
+    "file": "source-ref.json",
+    "sha256": "3550ee271b25f082ed43ae4c0ddb09bfc4e9f566f67a482f7b08f78d28111f9f"
+  },
+  "new_meaning_scope": {
+    "selected_QA": "5834-FAQ-aircraft-held-for-sale",
+    "count": 1,
+    "scope": "販売用航空機等の1QAのみ新規意味読解。既読商品出資金/売上認識2QAは固定ref再利用。",
+    "not_current_live": true,
+    "raw_HTML_not_available": true
+  },
+  "finding": {
+    "alternative": "A_explicit_temporary_asset_for_sale_to_partnership",
+    "issuer_statement": "任意組合方式では、会社が投資家の出資完了後に任意組合へ売却することを前提に航空機等を一時的に取得し、貸借対照表に販売用航空機等として計上する。",
+    "entity_and_asset_role": "取得/資産計上の主語は当社。売却先は出資完了後の任意組合。投資家個人が直接航空機を取得、又は会社が永久保有する自己投資という説明へ置換しない。",
+    "account_label_precision": "質問見出しは流動資産の勘定を問い、回答はBSの販売用航空機等を示す。会計評価額/原価基準は当該回答で指定されない。"
+  },
+  "role_correspondence": [
+    {
+      "reference": "5834-FAQ-merchandise-equity",
+      "scope": "匿名組合形式の場合",
+      "issuer_asset": "投資家へ出資持分を譲渡する前提で一時取得する場合の商品出資金。取得価額計上はこの既読回答の説明。",
+      "comparison": "新FAQは航空機等、既読FAQは匿名組合持分。同一勘定へ統合せず、商品出資金の取得価額を航空機へ自動移植しない。"
+    },
+    {
+      "reference": "5834-FAQ-aircraft-held-for-sale",
+      "scope": "任意組合方式の場合",
+      "issuer_asset": "会社が一時取得し、投資家出資完了後の任意組合へ売却する前提の販売用航空機等。",
+      "comparison": "組成過程の役割注記まで。全案件が短期/無リスク/売却完了とは認定しない。"
+    },
+    {
+      "reference": "5834-FAQ-revenue-recognition",
+      "scope": "主にJOL/任意組合と主にJOLCO/匿名組合という限定を保持",
+      "issuer_revenue": "任意組合方式は手数料と航空機等の任意組合への販売額、匿名組合方式は組成/持分販売等の手数料という既読説明。",
+      "comparison": "一時取得→任意組合へ販売という役割は売上説明と対応する。金額bridge、販売額=利益/CF、厳密な認識時点まで証明しない。"
+    }
+  ],
+  "unresolved_boundaries": {
+    "financing": "一時保有という資産目的は取得資金の調達源・借入・保証・償還義務を示さない。投資家出資完了という条件を会社借入なし/投資家資金だけという証明にしない。",
+    "measurement": "当期残高/滞留、評価・原価、売却未達リスク、売上/CFの時期はこの一般FAQで未確定。",
+    "model": "プリンシパル自己投資部門や別scopeの全資産へ一般化せず、銀行model/DDM/規制資本FCFE/将来CF・株主利回りを補わない。"
+  },
+  "question_disposition": {
+    "publicly_answered_do_not_reask": [
+      "販売用航空機等の一般的な一時取得の目的・主体・売却先・BS区分",
+      "既読商品出資金/方式別売上項目の一般定義"
+    ],
+    "remaining_owner": "具体期/範囲が必要なら既公表注記を先に確認。将来利益/CF・価値/モデル適用は外部著者/投資家側の別研究。欠損だけで新IRを必須にしない。",
+    "new_formal_IR": null,
+    "IR_value": "unproven"
+  },
+  "operations": {
+    "GET": 0,
+    "DB_Store": 0,
+    "new_source": 0,
+    "financial_calculations_inputs_forecast_bank_model": 0,
+    "old_source_prep_shared_files_edits": 0
+  },
+  "termination": "新規意味読解1QAの役割注記まででfreeze。旧FAQ2件/別businesssource不変更。"
+}

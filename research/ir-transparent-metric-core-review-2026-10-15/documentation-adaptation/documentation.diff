@@ -1,0 +1,11 @@
+--- before/docs/ir-decision-flow.md
++++ docs/ir-decision-flow.md
+@@ -44,6 +44,8 @@
+ 
+ `unweighted` の最低・最高評価は提示したシナリオの範囲であり、信頼区間や損失の統計的上限ではない。すべての点検は入力したモデルと方針に条件付く。数値計算の成功から、モデルの適合・予測の正しさ・超過収益を推定しない。
+ 
++資本収益率も定義を固定する。[公開実装の確認](../research/ir-transparent-metric-core-review-2026-10-15/README.md)では、歴史税前のGreenblatt型ROC、税率を加工する歴史税後ROIC、[安定期再投資](cyclical-reinvestment-spec.md)が使う将来の税後新規投資ROCは別の入力だった。営業利益とEBIT、純資産と実装のequityも自動で対応させない。会社IRで確認する公表指標の意味と、投資家が採用する計算定義・税率・将来利回りを分け、既存ライブラリの代替処理を回答後に暗黙適用しない。
++
+ ## 実企業で確認できた違い
+ 
+ - [IIJ](../research/ir-case-studies-2026-10-15/3774/README.md)：CAPEXの定義は追加公開資料で解け、追加質問の判断への寄与を説明できず不送信。

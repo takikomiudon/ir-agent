@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T12:07:15.816722+00:00",
+  "status": "acceptance_prepared_waiting_for_root_implementation_complete",
+  "finding_under_review": "RG01 / current dependent reply classification missing before new Store-backed send and financial application",
+  "implementation_review_started": false,
+  "production_or_new_tests_read_for_review": false,
+  "gate": "Do not evaluate the code until root sends implementation-complete/stable notification. Progress messages/tests-in-progress are not that notification.",
+  "basis_files": [
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/README.md",
+      "sha256": "c2f217692a612e487b81d0ad39c6454282b1741c9d0964059965eaf67e9196dc"
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/review.json",
+      "sha256": "28236371bea5b1b4b5818e291c2de95e427003bc7123f4c89fa14c50adf7dec8"
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/reproduction.json",
+      "sha256": "7dd4143669e6e673fef84730ff081898f5a75ef5aab72893f1061f2f4bec032a"
+    },
+    {
+      "path": "docs/decision-policy.md",
+      "sha256": "e687e70c70ec9ce4b40b935bb9e908cd2d1328f44dfa488fad639557fbba8de5"
+    },
+    {
+      "path": "docs/workflow.md",
+      "sha256": "6415612b8dca5bdd3c9070cdacc94117292968ac1c05dc8cbfe63d4395028ec3"
+    },
+    {
+      "path": "docs/historical-availability-design.md",
+      "sha256": "f0aec43a7f6bbeeb499c56df950f65441e1f5f6b11e36883178707a953d68afe"
+    }
+  ],
+  "policy_quotes": [
+    {
+      "path": "docs/decision-policy.md",
+      "sha256": "e687e70c70ec9ce4b40b935bb9e908cd2d1328f44dfa488fad639557fbba8de5",
+      "quote": "公開情報の補足と確認できない返信は適用を保留する。",
+      "character_start": 3208,
+      "character_end": 3233,
+      "purpose": "adopted project adaptation4"
+    },
+    {
+      "path": "docs/workflow.md",
+      "sha256": "6415612b8dca5bdd3c9070cdacc94117292968ac1c05dc8cbfe63d4395028ec3",
+      "quote": "適用済みモデルの自動差戻しは行わない。",
+      "character_start": 16547,
+      "character_end": 16566,
+      "purpose": "immutable history/no auto rollback"
+    },
+    {
+      "path": "docs/historical-availability-design.md",
+      "sha256": "f0aec43a7f6bbeeb499c56df950f65441e1f5f6b11e36883178707a953d68afe",
+      "quote": "`now` はengine/test runtimeの依存性であり、CLIやrequest JSONから保存時計を設定するfieldではない。",
+      "character_start": 3127,
+      "character_end": 3198,
+      "purpose": "trusted runtime/source availability boundary"
+    }
+  ],
+  "acceptance_cases": [
+    {
+      "id": "A01",
+      "scope": "required_RG01",
+      "scenario": "Current thesis has an IR reply dependency corrected to unclear or potential_nonpublic before a new Store-backed question freeze/send.",
+      "expected": "Preflight reports dependency review/needs_review and send is refused. It must not present historical decision_distinguishing as the current send clearance. Missing details may remain a draft; actual send record cannot advance.",
+      "verification": "Read stable diff and one existing/new synthetic targeted case; no real DB.",
+      "review_status": "pending_implementation_complete"
+    },
+    {
+      "id": "A02",
+      "scope": "required_RG01",
+      "scenario": "q2 was validly frozen/sent; a q1 dependency is corrected before evaluating separate public reply2.",
+      "expected": "Before any new reply source or financial-thesis version is inserted, the same transaction returns/stores held evaluation: applied false, action unresolved, old v2/EPS70 retained. No automatically derived v3/EPS40.",
+      "verification": "Read stable diff and one existing/new synthetic targeted case; no real DB.",
+      "review_status": "pending_implementation_complete"
+    },
+    {
+      "id": "A03",
+      "scope": "required_RG01",
+      "scenario": "Corrected IR is only the second original_source_ids parent, or plural/singular references coexist; a valid DAG shares a parent.",
+      "expected": "Traverse all consumed source origins through the existing closure helper. Hold second-parent dependence; do not treat a shared ancestor as a cycle. Existing missing/other-company/time/snapshot guards are preserved.",
+      "verification": "Read stable diff and one existing/new synthetic targeted case; no real DB.",
+      "review_status": "pending_implementation_complete"
+    },
+    {
+      "id": "A04",
+      "scope": "required_RG01",
+      "scenario": "Incoming reply2 remains public while only old reply1 is held.",
+      "expected": "Own information_status remains public_clarification; dependent hold identifies old reply/source ID, correction version/status separately. Own unclear/potential_nonpublic still holds through the existing own-reply path.",
+      "verification": "Read stable diff and one existing/new synthetic targeted case; no real DB.",
+      "review_status": "pending_implementation_complete"
+    },
+    {
+      "id": "A05",
+      "scope": "required_RG01",
+      "scenario": "Legacy question has no immutable decision contract, but current thesis depends on an existing corrected reply.",
+      "expected": "The same dependency hold precedes legacy financial mutation. Previously allowed no-contract branch processing remains action unresolved/missing_decision_contract when otherwise public; no new financial rule is inferred.",
+      "verification": "Read stable diff and one existing/new synthetic targeted case; no real DB.",
+      "review_status": "pending_implementation_complete"
+    },
+    {
+      "id": "A06",
+      "scope": "required_RG01",
+      "scenario": "Caller backdates plan as_of, sent_at, or evaluation recorded_at to before an already trusted-saved current correction.",
+      "expected": "A new write checks currently visible holds with trusted runtime now as well as any genuine historical view. A historical status remains labelled historical; current guard cannot be hidden merely by retaining the old as_of string.",
+      "verification": "Read stable diff and one existing/new synthetic targeted case; no real DB.",
+      "review_status": "pending_implementation_complete"
+    },
+    {
+      "id": "A07",
+      "scope": "required_RG01",
+      "scenario": "A public/unclear correction affects an unrelated reply, unrelated company or source outside the consumed dependency closure.",
+      "expected": "No unrelated dependency hold propagates. Existing public valid fixture still freezes/sends/applies, subject to the original policy, source, price and version gates.",
+      "verification": "Read stable diff and one existing/new synthetic targeted case; no real DB.",
+      "review_status": "pending_implementation_complete"
+    },
+    {
+      "id": "A08",
+      "scope": "required_RG01",
+      "scenario": "Dependency is held, then a later append-only correction reconfirms public status.",
+      "expected": "Reclassification alone performs no model update or automatic action recovery. A deliberate permitted evaluation/retry using the latest reviewed state may proceed if all other gates pass. Keep historical held evaluation and the original source/reply/question unchanged; transport retry must not double apply.",
+      "verification": "Read stable diff and one existing/new synthetic targeted case; no real DB.",
+      "review_status": "pending_implementation_complete"
+    },
+    {
+      "id": "A09",
+      "scope": "required_RG01",
+      "scenario": "The first operation holds, or a genuine post-guard downstream error occurs while applying an otherwise eligible reply.",
+      "expected": "A normal hold may append only the intended evaluation record; it must not insert new financial source/thesis/decision artefacts. A raised error rolls back all write/availability/receipt effects in the existing atomic transaction. Error after a newly introduced early hold is not required to execute.",
+      "verification": "Read stable diff and one existing/new synthetic targeted case; no real DB.",
+      "review_status": "pending_implementation_complete"
+    },
+    {
+      "id": "A10",
+      "scope": "required_RG01",
+      "scenario": "Old public q1 source/reply, previously applied v2, original q2 and historical evaluations/reviews are inspected after hold/correction/retry.",
+      "expected": "Original JSON and snapshots remain unchanged, existing versions preserved, no automatic rollback/rewrite of historical applied models. Same-request/idempotent replays follow existing receipt semantics rather than a new application.",
+      "verification": "Read stable diff and one existing/new synthetic targeted case; no real DB.",
+      "review_status": "pending_implementation_complete"
+    },
+    {
+      "id": "A11",
+      "scope": "required_RG01",
+      "scenario": "The new code is exercised for review.",
+      "expected": "Use only finite in-memory synthetic fixtures and selected target tests; no actual research DB access/migration/write, GET, order, external send, new financial assumptions or full-suite repetition.",
+      "verification": "Read stable diff and one existing/new synthetic targeted case; no real DB.",
+      "review_status": "pending_implementation_complete"
+    },
+    {
+      "id": "B01",
+      "scope": "bounded_adjacent_triage_not_automatic_new_requirement",
+      "scenario": "An origin IR source has metadata.information_status unclear from the start, with no classification-review row; especially legacy application.",
+      "expected": "Determine whether the existing pure path already blocks it and whether legacy can still mutate. Report a concrete remaining path as pre-existing adjacent issue versus mandatory RG01 correction regression; do not silently expand implementation scope.",
+      "verification": "Read stable diff and one existing/new synthetic targeted case; no real DB.",
+      "review_status": "pending_implementation_complete"
+    },
+    {
+      "id": "B02",
+      "scope": "preserve_existing_boundaries",
+      "scenario": "All sources pass the dependency correction guard.",
+      "expected": "Passing only means no current dependency classification hold. It cannot certify financial validity, semantic mapping, independent evidence, positive EVSI or authorize external send/order.",
+      "verification": "Read stable diff and one existing/new synthetic targeted case; no real DB.",
+      "review_status": "pending_implementation_complete"
+    }
+  ],
+  "fixed_old_reproduction_summary": [
+    {
+      "mode": "dependent_reply_correction",
+      "old_before_thesis_version": 2,
+      "old_after_thesis_version": 3,
+      "old_evaluation_applied": true,
+      "old_db_dump_unchanged": false,
+      "old_exception": null
+    },
+    {
+      "mode": "own_reply_correction_control",
+      "old_before_thesis_version": 2,
+      "old_after_thesis_version": 2,
+      "old_evaluation_applied": false,
+      "old_db_dump_unchanged": false,
+      "old_exception": null
+    },
+    {
+      "mode": "unknown_quote_rollback_control",
+      "old_before_thesis_version": 2,
+      "old_after_thesis_version": 2,
+      "old_evaluation_applied": null,
+      "old_db_dump_unchanged": true,
+      "old_exception": "Unknown source: not-ingested"
+    }
+  ],
+  "reproduction_use": "Saved reproduce.py asserts pre-fix bug behaviour. Do not present its expected post-fix assertion failure as a regression; inspect stable tests or adapt a memory-only local harness without changing saved evidence.",
+  "not_requested": [
+    "No new policy/price/risk/probability threshold, default financial assumption, new table or worker scheduler.",
+    "No automatic historical model rollback or source metadata rewrite.",
+    "No live DB access added to pure ir-plan FILE; Store-backed runtime overlay is the scope.",
+    "No unrelated source/privacy feature hunt or mandatory rewrite of every old test."
+  ],
+  "evidence_validation": {
+    "basis_unchanged_during_preparation": true,
+    "acceptance_count": 13,
+    "code_evaluated": false
+  },
+  "execution": {
+    "new_GETs": 0,
+    "actual_DB_accesses": 0,
+    "production_or_test_edits": 0,
+    "old_file_edits": 0,
+    "code_or_test_execution": 0,
+    "financial_rule_additions": 0
+  }
+}

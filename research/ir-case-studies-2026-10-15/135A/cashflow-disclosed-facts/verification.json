@@ -1,0 +1,86 @@
+{
+  "verified_at": "2026-10-15T04:56:49.885239+00:00",
+  "new_get_count": 0,
+  "database_reads_or_writes": 0,
+  "existing_inputs_unchanged": true,
+  "raw_hashes_verified": 3,
+  "text_hashes_verified": 3,
+  "snapshot_hashes_verified": 3,
+  "raw_text_reextractions_matched": 3,
+  "source_ids_recomputed": 3,
+  "source_checks": [
+    {
+      "source_id": "case-public:6ef4a4da4cf440a6b96b92a27da164346c8435107d658eb0b17b3bdf842c3498",
+      "raw_sha256": "1028a4dfb7e6d5cf7e02edfe597e1eb1350daca0d83e4240b1a35c53609eed9b",
+      "text_sha256": "1028a4dfb7e6d5cf7e02edfe597e1eb1350daca0d83e4240b1a35c53609eed9b",
+      "snapshot_sha256": "ca2960b7b28e4e443313c7fdf54864c583391cdfb0aa0f855e82ab9581226310",
+      "raw_text_reextraction_matched": true
+    },
+    {
+      "source_id": "case-public:f39107af487a6db103cc1cd8bfcc162f7173c6602899eaba453ac532c2f02824",
+      "raw_sha256": "3b62d5db50c382b0968bbba9c13c486f2a7d17438a2208ffc963fdef0b4f17a3",
+      "text_sha256": "3b62d5db50c382b0968bbba9c13c486f2a7d17438a2208ffc963fdef0b4f17a3",
+      "snapshot_sha256": "4fe4b9260d9360e22c70a684d6ccb23ebd01b9d55b4b219bbbfc6263746b135e",
+      "raw_text_reextraction_matched": true
+    },
+    {
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "raw_sha256": "6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+      "text_sha256": "3ecc1fb61cc34cf0abd0cdae3c36fed637e5257b94062cb2ed00f71e3ba52b2b",
+      "snapshot_sha256": "04a2fa967b8e0acef2629141247a8f3a2e69095ac7bba95782790bde4febca38",
+      "raw_text_reextraction_matched": true
+    }
+  ],
+  "fact_quote_row_cell_offsets_verified": 4,
+  "meaning_review_quotes_verified": 6,
+  "visual_table_review": {
+    "reviewed_by": "agent:/root/quote_normalization",
+    "pdf_page": 8,
+    "printed_page": 6,
+    "original_raw_sha256": "6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+    "temporary_image": "/tmp/vrain-135a-cashflow-p8.png",
+    "image_sha256": "9738f9225418d9a5cb0c702948018162b1d8aaf6f8e6cd89f0702dacda3ad609",
+    "method": "pdftoppm -f 8 -singlefile -scale-to 1800 -png; visually inspected current/prior columns, unit and triangle signs"
+  },
+  "reviewed_at": "2026-10-15T04:55:43.068876+00:00",
+  "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+  "original_retrieved_at": "2026-10-15T04:42:37.094960+00:00",
+  "derived_source_id": "disclosed-facts:8d3e2fabf17b9e9476c9d99e5237ca7c39fd707df13927c7d19ba994881ab224",
+  "derived_first_retrieved_at": "2026-10-15T04:55:43.164884+00:00",
+  "normalized_fact_count": 4,
+  "normalized_bundle_sha256": "7889e9b548f3d37b3e49f415bb492484c6e741b4de34b007773802fcab9bf400",
+  "normalization_request_sha256": "7fd5fd51df46b28b7509be1f1babbdd725460556409382f034956f800268a575",
+  "reproduction": {
+    "source_id": "disclosed-facts:8d3e2fabf17b9e9476c9d99e5237ca7c39fd707df13927c7d19ba994881ab224",
+    "applicable": true,
+    "status": "reproduced",
+    "reason_codes": [],
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "original_content_sha256_status": "matched",
+    "original_snapshot_sha256_status": "matched_supplied_snapshot",
+    "fact_kinds": [
+      {
+        "id": "vrain135a-2027interim-operating-cashflow",
+        "kind": "reported_fact"
+      },
+      {
+        "id": "vrain135a-2027interim-depreciation-cf-adjustment",
+        "kind": "reported_fact"
+      },
+      {
+        "id": "vrain135a-2027interim-ppe-acquisition-cashflow",
+        "kind": "reported_fact"
+      },
+      {
+        "id": "vrain135a-2027interim-receivables-contract-assets-cf-adjustment",
+        "kind": "reported_fact"
+      }
+    ],
+    "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb"
+  },
+  "financial_inputs_verified": false,
+  "meaning_review_required": true,
+  "working_capital_or_reinvestment_or_fcff_calculated": false,
+  "model_adopted": false
+}

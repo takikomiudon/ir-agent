@@ -1,0 +1,246 @@
+{
+  "company_id": "jp:1975",
+  "recorded_at": "2026-10-16T13:54:44.233253+00:00",
+  "review_type": "research_inquiry_connection_preflight_only",
+  "conclusion": {
+    "legitimate_research_use": "二つの公表繰越高表を同じ連結・事業・基準時点の系列として比較してよいか、また取消/契約変更等の扱いを重複控除しないか、という既存C2の比較定義点検。金融予想が未採用でもこの研究目的自体は成立する。",
+    "same_existing_preparation_ready_to_add_unchanged": false,
+    "reason_not_register_this_task": "既存受入票は条件付きの論点と研究注記までで、直接転記できるquestion本文・topic/id/作成時刻/公開既答レビュー一式は未固定。本taskは接続前reviewに限られ、新たな質問文や実登録は作らない。",
+    "recommended_next_if_root_selects": "rootが研究目的を採用する場合、このC2だけの1requestを別途準備し、既存A/B/不明の比較注記をそのまま使い、最新p39既答を含むpublic_information_reviewを現在時刻で宣言する。case4/config1のCASと公開性/来歴/file/DAG等はrootのcopy実行で最終確認する。",
+    "thin_purpose_boundary": "残高の存在/掲載位置を再照会するだけ、又は定義回答から利益/CF/価格へ結ぶことを目的にするなら登録しない。金融pathが0であることだけを研究inquiry拒否の理由にはしない。",
+    "IR_value": "unproven",
+    "contact_reconfirmed": false,
+    "send_ready": false,
+    "actual_inquiry_created": false
+  },
+  "current_case": {
+    "case_id": "1975-segment-earnings-order-and-cash-basis-monitor",
+    "head_version": 4,
+    "config_revision": 1,
+    "issue_id": "1975-segment-profit-orders-and-cash-basis",
+    "company_id_observed_not_in_inquiry_request": "jp:1975",
+    "case_record_native_sha256": "7733d6feb3a4c9d4988567d04a78a2366ee74eba88af6224ee4c46893fa11843",
+    "actual_head_first_saved_at_as_stored": "2026-10-16T10:05:04.110637+00:00",
+    "last_native_review_at_as_stored": "2026-10-16T10:00:53.896707+00:00",
+    "management_review_as_stored": {
+      "basis_quote": "次回の内部研究管理日は2027-01-16（Asia/Tokyo）とする。",
+      "basis_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1975/native-case-setup-2026-10-16/actual-inputs/management-basis.json",
+        "sha256": "6b9a32e11bdb7e482d1ec246446e0303bf22ab5cae761656d67d5ac49d4991f5"
+      },
+      "date": "2027-01-16",
+      "timezone": "Asia/Tokyo"
+    },
+    "matches_latest_saved_case_artifact": {
+      "path": "research/ir-graham-number-two-company-input-connection-2026-10-16/qualitative-reviews/1975/case-after.json",
+      "sha256": "81b895a7e8b0af8c4fcab52fddbf77b947dc7aa20690398ee6dc8131738f824c"
+    },
+    "condition_id_unchanged": "orders-recovery-expectation-versus-results-and-dated-guidance"
+  },
+  "existing_question_and_branches": {
+    "old_local_candidate_id": "C2",
+    "native_condition_id": "orders-recovery-expectation-versus-results-and-dated-guidance",
+    "existing_native_review_topic": {
+      "id": "orders-recovery-expectation-versus-results-and-dated-guidance",
+      "known": "Q1設備工事受注35,204百万円（前年同期比17.2%増）、機器受注1,028百万円（15.4%減）は実績。機器の下半期受注回復は会社の見込みで、契約成立/実績ではない。Q1 2026-04-01〜06-30とFY2026-04-01〜2027-03-31会社予想は別。8/4原文は5/14発表予想から変更なしと記載（5/14原資料の独立読了ではない）。",
+      "next_comparison": "新資料の受注フロー/期間/事業範囲と実際の回復説明を当時見込みへ対応させ、会社予想の版・対象期と実績を別に比較する。",
+      "residual": "回復の実際の時期/範囲/寄与、受注/取消/残高・認識の細かな定義、後日の予想更新は本準備では未確認。別担当未freeze資料を既読採用しない。",
+      "do_not_infer": "見込みを受注済/確率/独自予測へ変えずQ1年度化もしない。前年同期比と旧予想比を混同せず当時据置をOctober最新としない。未読/未freezeを会社非開示/無回答に変えない。",
+      "evidence_quote_ids": [
+        "Q1-statement-physical-1",
+        "Q1-statement-physical-4",
+        "current-Q1-static-document-listing"
+      ]
+    },
+    "accepted_remaining_topic_verbatim": "p10の連結/個別・機器包含・calendar基準日とp33の対応、取消/契約変更等をstock/flowへどう含むかは未解決。両表の差を機器/子会社へ帰属させず、stockflow identityや取消ゼロを作らない。",
+    "accepted_fixed_question_payload": null,
+    "accepted_disposition_kind": "remove_public_stock_existence; retain_one_conditional_comparability_topic_not_question_payload",
+    "question_text_created_here": null,
+    "qualitative_branches_verbatim": {
+      "A": "公表根拠が同じ連結範囲・基準期と取消/変更控除後等の定義を明示した場合、その系列に限り比較可能と注記し二重控除を避ける。数値の差を未表示構成へ配賦しない。",
+      "B": "対象範囲/計上期/商品や調整の違いが明示された場合、別系列として保持し同一定義の増減比較を保留する。未知の取消額を補正しない。",
+      "unclear": "現在の比較保留を継続。曖昧/無回答を業績悪化・価値0・著者予測反証にしない。"
+    },
+    "prospective_API_branch_mapping": {
+      "A": "A",
+      "B": "B",
+      "unclear": "unresolved"
+    },
+    "API_contract_note": "公開APIは2分岐以上・unresolved必須。既存3注記の意味を変えずにidだけ対応できる。mixedを7388例から機械的に追加しない。condition欄を含むexact requestは今回未作成。"
+  },
+  "already_answered": {
+    "accepted_before_p39": [
+      "繰越高が公表されているか/どこにあるかという一般確認",
+      "連結Q1繰越高の存在・公表表示値/単位の再確認",
+      "豊富な繰越高と当時売上見込み、施工体制と受注計画の会社説明があるか",
+      "p10の施設別stock110,795と、p33の明示された連結Q1stock117,864をそれぞれ公開既知へ移す。受注flow36,232は別概念。"
+    ],
+    "latest_manual_followup": {
+      "review_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1975/facility-backlog-saved-presentation-followup-2026-10-16/review.json",
+        "sha256": "7548e1e448b63662f2c987d09ad7fa8b7db6b4696db25016d7792d71ebc4e369"
+      },
+      "reviewed_at_original": "2026-10-16T13:02:42.742136+00:00",
+      "parent_acceptance": {
+        "path": "research/ir-case-studies-2026-10-15/1975/facility-backlog-saved-presentation-followup-2026-10-16/parent-acceptance.json",
+        "sha256": "b2caffd974431e054397cd655c09c08a792f101d26961b3a3818b6f37c627ffd"
+      },
+      "known": "8/6p39でも8/4p10と同じ施設別区分・Q1比較列/表示表が再掲されることを確認。施設表の公表有無/掲載位置を再質問する必要はない。",
+      "still_not_answered": "物理39頁に連結/個別、機器包含、正確な残高日、取消/契約変更の含め方を説明する脚注はない。p33の明示連結系列との対象一致も、異なる対象だという具体的定義も確認できない。",
+      "public_scope_limit": "This is one-page text/image determination; no all-site/full44pages absence finding or proof of same consolidated/equipment universe.",
+      "not_a_new_source": true,
+      "later_manual_read_not_backdated_into_native_review": true
+    },
+    "do_not_reask": [
+      "繰越高が公表されているか/掲載箇所。",
+      "施設別表が8/6説明資料にも再掲されているか。",
+      "当時の連結Q1繰越高や受注flowの表示値・単位の存在。"
+    ]
+  },
+  "remaining_uncertainty": {
+    "one_issue": "施設別繰越高表と連結決算概要の繰越高表の連単・事業/機器包含・基準時点の対応、及び比較するstock/flowの取消/契約変更等の定義。",
+    "current_branch": "unclear",
+    "current_branch_effect_verbatim": "同じ表の再掲はscope同定の回答ではなくA/Bどちらにも進めない。既存C2の比較範囲不明を維持し、同義の草案/質問票を増やさない。",
+    "unsupported_resolutions": [
+      "両表差額を計算し機器/子会社へ配賦すること。",
+      "同じQ1ラベルや同じ施設表の再掲から連結範囲一致を認定すること。",
+      "stock-flow恒等式/取消ゼロ/受注から利益又はcashへの転換を認定すること。"
+    ],
+    "future_public_observation_only": "既存p10/p33の公表scopeを保持し、今後実際に保存された同期の受注/繰越の脚注・公開Q&A又は11/12決算/11/17説明資料の当該欄を確認候補にする。予定資料の存在/公表/回答は仮定しない。",
+    "no_all_public_documents_absence_claim": true
+  },
+  "source_checks": [
+    {
+      "source_id": "case-public:28089f5afbce2490073542623ed24c85c7a70c2802b1bf894debc54503a4509e",
+      "source_snapshot_sha256": "5c10b3eee8e5d3a33bc2fabf2e1b1b77ec06a78435afafa6beda05312a13f229",
+      "producer_bundle": {
+        "path": "research/ir-case-studies-2026-10-15/1975/public-qa-presentation-followup-2026-10-16/PDF-source-candidate/source-only-bundle.json",
+        "sha256": "c131b18028cb1fb0b3b14f9ee7ce2005e4f3c6d9165ae1d12a71bf9b1e1be3c4"
+      },
+      "actual_source_whole_equals_frozen": true,
+      "case_reviewed_native_matches": true,
+      "source_url": "https://www.asahikogyosha.co.jp/wp-content/uploads/2026/08/20260806_Individual-Invester-Briefing.pdf",
+      "quote_scope": "Newly interpreted p39 and previously interpreted p33 of the same retained44-page issuer PDF"
+    },
+    {
+      "source_id": "case-public:b02c62df4645398a714ef96c978579c6d0e31e90754f12b2b389c7495d18a54c",
+      "source_snapshot_sha256": "5fd00583b3fa98ac0296d4f7b97549f071b2d63517a8f5a3b4cfd6034e6837d6",
+      "producer_bundle": {
+        "path": "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/source-bundle.json",
+        "sha256": "2b0a0e006a7c5019c41a58e01018b5fe9b4b3109d77a2bf5b92add760739f594"
+      },
+      "actual_source_whole_equals_frozen": true,
+      "case_reviewed_native_matches": true,
+      "source_url": "https://www.asahikogyosha.co.jp/wp-content/uploads/2026/08/98_1st-quarter-financial-results-appendix.pdf",
+      "quote_scope": "Reused accepted August4 p10 comparison only"
+    }
+  ],
+  "other_existing_source_context": {
+    "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
+    "source_snapshot_sha256": "2aae3878ce397e408f088338e4b9728e4a3c4e594a247fdbb3adfff34c27dfce",
+    "purpose": "Existing Q1 consolidated/separate orders-flow note context only; no new page reading or flow-to-stock calculation."
+  },
+  "exact_existing_quotes_rechecked": [
+    {
+      "id": "p39-title",
+      "source_id": "case-public:28089f5afbce2490073542623ed24c85c7a70c2802b1bf894debc54503a4509e",
+      "quote": "繰越高",
+      "physical_page": 39,
+      "exact_native_character_and_UTF8_match": true
+    },
+    {
+      "id": "p39-unit",
+      "source_id": "case-public:28089f5afbce2490073542623ed24c85c7a70c2802b1bf894debc54503a4509e",
+      "quote": "（単位：百万円）",
+      "physical_page": 39,
+      "exact_native_character_and_UTF8_match": true
+    },
+    {
+      "id": "p39-period-columns",
+      "source_id": "case-public:28089f5afbce2490073542623ed24c85c7a70c2802b1bf894debc54503a4509e",
+      "quote": "                            ‘25/3期    ‘26/3期    ‘27/3期      前年       増減率\n                              1Q        1Q        1Q       同期比        (%)",
+      "physical_page": 39,
+      "exact_native_character_and_UTF8_match": true
+    },
+    {
+      "id": "p39-total-row",
+      "source_id": "case-public:28089f5afbce2490073542623ed24c85c7a70c2802b1bf894debc54503a4509e",
+      "quote": " 合計                          83,837    96,038    110,795    14,758     15.4",
+      "physical_page": 39,
+      "exact_native_character_and_UTF8_match": true
+    },
+    {
+      "id": "p33-consolidated-Q1-title",
+      "source_id": "case-public:28089f5afbce2490073542623ed24c85c7a70c2802b1bf894debc54503a4509e",
+      "physical_page": 33,
+      "quote": "2027年3月期 第1四半期 連結決算概要",
+      "exact_native_match": true,
+      "reused_not_new_read": true
+    },
+    {
+      "id": "p33-unit",
+      "source_id": "case-public:28089f5afbce2490073542623ed24c85c7a70c2802b1bf894debc54503a4509e",
+      "physical_page": 33,
+      "quote": "（単位：百万円）",
+      "exact_native_match": true,
+      "reused_not_new_read": true
+    },
+    {
+      "id": "p33-period-columns",
+      "source_id": "case-public:28089f5afbce2490073542623ed24c85c7a70c2802b1bf894debc54503a4509e",
+      "physical_page": 33,
+      "quote": "‘25/3期           ‘26/3期                          ’27/3期\n              （単位：百万円）\n                             1Q               1Q              1Q             前年同期比            増減率（%）",
+      "exact_native_match": true,
+      "reused_not_new_read": true
+    },
+    {
+      "id": "p33-backlog-row",
+      "source_id": "case-public:28089f5afbce2490073542623ed24c85c7a70c2802b1bf894debc54503a4509e",
+      "physical_page": 33,
+      "quote": "繰越高                              90,906           103,025         117,864        14,838           14.4",
+      "exact_native_match": true,
+      "reused_not_new_read": true
+    }
+  ],
+  "duplicate_observation": {
+    "as_of": "2026-10-16T13:54:44.225843+00:00",
+    "company_filter": "jp:1975",
+    "all_financial_question_rows": [],
+    "all_research_inquiry_rows": [],
+    "duplicate_found": false,
+    "same_issue_C2_reused_not_new_native_case": true,
+    "limit": "保存済みDBの質問2表に対する観測。未登録の外部下書き/実送信/全ファイルの不存在認定ではない。"
+  },
+  "unchanged_paths": {
+    "authorized_financial_input_paths": [],
+    "research_result_paths_only": [
+      "/summary",
+      "/case_observation/rationale"
+    ],
+    "input_effect_verbatim": "A/B/曖昧で変え得るのは研究上の系列定義/支持・反証候補の説明。NCAV/株数/EPS/倍率/価格/将来CFを変えるpathは現在0。",
+    "NCAV_EPS_reference_value_price_forecast_changes": false,
+    "native_case_management_mutation": false
+  },
+  "readonly_database": {
+    "path": "data/ir-research-2026-10-15.sqlite3",
+    "uri_mode": "ro",
+    "query_only": 1,
+    "contextlib_closing": true,
+    "snapshot_observed_at": "2026-10-16T13:54:44.225843+00:00",
+    "observed_table_count": 30,
+    "total_changes": 0,
+    "no_Store_or_API_calls": true
+  },
+  "operations": {
+    "GET": 0,
+    "Store": 0,
+    "API_calls": 0,
+    "DB_mutations": 0,
+    "new_semantic_pages": 0,
+    "financial_calculation": 0,
+    "new_question_text": 0,
+    "source_registration": 0,
+    "code_or_old_file_edits": 0,
+    "external_send": 0
+  }
+}

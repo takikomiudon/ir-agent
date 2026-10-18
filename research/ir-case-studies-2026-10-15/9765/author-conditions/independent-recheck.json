@@ -1,0 +1,747 @@
+{
+  "schema_version": 1,
+  "company_id": "jp:9765",
+  "reviewer": "Codex /root/policy_documentation; separate reviewer of author-conditions",
+  "recorded_at": "2026-10-15T10:03:51.991238+00:00",
+  "status": "limited_independent_source_semantics_recheck_completed_no_blocking_misstatement_found",
+  "requires_correction_to_reviewed_artifacts": false,
+  "independence_scope": "Separate source/meaning review, not economic independence of SESSA and not external causal/financial validation.",
+  "target_record": {
+    "file": "research/ir-case-studies-2026-10-15/9765/author-conditions/case-record.json",
+    "sha256": "7539172394a70518add4031880e4f56730576b2574a30aa4a6bfdaab64da2acf",
+    "quotes_file": "research/ir-case-studies-2026-10-15/9765/author-conditions/quotes.json",
+    "quotes_sha256": "7fc20939a3d7a97bbe525bcd58e0a7a204985597ffc60af85358eebc3c59e265"
+  },
+  "source": {
+    "id": "case-public:25c1494baa3fb143084b16ad0b83b6c872c537b135d2bf56cf18b9842c89fab3",
+    "source_bundle": "research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/source-bundle.json",
+    "source_bundle_sha256": "f15071643ac390b2fcdb83646af6e79c437c21f5522ef19223c9c12287dad2be",
+    "raw_file": "research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/raw/0d314421a25b6a53db3adf103a4e143d2cec9881b75fa99e6f9c3a9bc77bb5b9",
+    "raw_sha256": "0d314421a25b6a53db3adf103a4e143d2cec9881b75fa99e6f9c3a9bc77bb5b9",
+    "text_file": "research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/report.pdf.txt",
+    "text_sha256": "9e0b45e9d522d464f70367f72bd7709179c02d8223ac2059d77b2e0c922942f1",
+    "report_display_date": "2026-09-28",
+    "published_at": null,
+    "source_retrieved_at": "2026-10-15T09:52:21.077140+00:00",
+    "path_basis": "repository root; metadata original paths are relative to research/ir-case-studies-2026-10-15"
+  },
+  "reviews": [
+    {
+      "id": "order_ratio_not_sales_mix",
+      "status": "consistent_with_source_with_scope_unresolved",
+      "pages": [
+        8,
+        18
+      ],
+      "existing_quote_ids": [
+        "order-categories-and-period-public"
+      ],
+      "review_context_ids": [
+        "p18-private-order-ratio-context",
+        "p8-public-private-client-context"
+      ],
+      "finding": "p18本文は26/5期の受注高に占める民間46%、25/5期42%から4pt上昇と明示。p8は官公庁46%/民間46%/連結子会社8%と明記。p18画像も同じ区分で、25/5の官公庁50/民間42/子会社8、26/5の46/46/8を表示する。これは著者表示の確認で、再計算やfacts生成ではない。",
+      "record_boundary": "既存case/MDは受注比率を売上比率/利益寄与へ変換していない。子会社8を民間へ加算・再分母化していない。",
+      "remaining": "官民区分と連結子会社区分が混じる表の正確な連単/消去/事業範囲は未確認。会社原典との一致を証明したわけではない。"
+    },
+    {
+      "id": "private_project_margin_context",
+      "status": "consistent_qualitative_author_interpretation",
+      "pages": [
+        8,
+        18
+      ],
+      "review_context_ids": [
+        "p8-public-private-client-context",
+        "p18-private-order-ratio-context"
+      ],
+      "finding": "p8は民間の相対的な価格決定自由度/採算と、官公庁の安定需要/価格競争を対比し、官民顧客基盤をSIRの強み解釈とする。p18は案件選別/価格決定自由度を通じた収益性改善とSIRが述べる。",
+      "record_boundary": "受注比率上昇が直ちに同率の利益/EPS増をもたらす計算や、会社が必ず実現する保証にはしていない。"
+    },
+    {
+      "id": "benchmark_not_realized_company_price",
+      "status": "consistent_with_source",
+      "pages": [
+        13
+      ],
+      "existing_quote_ids": [
+        "public-benchmark-not-company-realized-price",
+        "benchmark-average-definition"
+      ],
+      "review_context_ids": [
+        "p13-benchmark-and-author-pass-through-view"
+      ],
+      "finding": "国交省の設計業務委託等技術者単価（基準日額）について全職種単純平均を参照すると明示。51,715円/+4.3%はその基準の2026年度表示。SIRは価格転嫁しやすい環境/追い風と解釈する。",
+      "record_boundary": "既存recordは会社実現単価、会社職種構成による加重単価、全案件への転嫁率、賃金増控除後の利益効果へ置換していない。",
+      "remaining": "p13の3月適用と会社期初反映という説明は著者の叙述であり、同社各契約の適用/請求時点を今回独立検証していない。"
+    },
+    {
+      "id": "net_headcount_and_demand_capture",
+      "status": "consistent_qualitative_monitoring_point",
+      "pages": [
+        18,
+        21
+      ],
+      "existing_quote_ids": [
+        "published-staff-qualification-explanation",
+        "author-capacity-prerequisite"
+      ],
+      "review_context_ids": [
+        "p21-demand-capture-prerequisite-context"
+      ],
+      "finding": "p21は535従業員/510有資格者という表示を踏まえ、育成による伸びしろをSIRが解釈し、新卒/中途採用で人員純増と受注余力拡大ができるかを観察点にする。",
+      "record_boundary": "従業員・有資格者・技術職FTE・稼働率は同じとせず、採用人数から売上や利益を自動換算しない。人員純増を需要捕捉の十分条件/保証へしない。"
+    },
+    {
+      "id": "margin_upside_and_EPS_company_baseline",
+      "status": "consistent_and_period_label_discrepancy_preserved",
+      "pages": [
+        1,
+        25,
+        27
+      ],
+      "existing_quote_ids": [
+        "company-forecast-table-and-processing-caveat",
+        "company-plan-drivers",
+        "author-upside-view-and-company-margin",
+        "author-catalyst-condition",
+        "table-header-vs-body-label-limit"
+      ],
+      "finding": "p25/27の上振れ・EPS見通し引上げはSIRの定性見方。p1の91.64円はFY2027/5会予行、11.7%はp25の会社利益率計画であり著者の新しい点EPS/売買閾値ではない。p25本文/見出し27/5に対し表の最終列は26/5CEと実際に印字。",
+      "record_boundary": "既存recordは表年を自己補正せず未解決とし、会社予想の一次原典/株数基準等を確認済みにしない。p27の当時PER12.8/他社平均12.8も公正採用倍率へ転用しない。"
+    },
+    {
+      "id": "factor_list_not_formal_rule",
+      "status": "consistent_no_machine_sufficiency_claim",
+      "pages": [
+        21,
+        25,
+        27
+      ],
+      "existing_quote_ids": [
+        "company-plan-drivers",
+        "author-catalyst-condition",
+        "author-capacity-prerequisite"
+      ],
+      "finding": "複数改善要因の列挙と「つながるか」「可能性」「重要」等の叙述。既存caseはformalAND/OR、十分条件、排他的な原因、感応度、最低進捗、定量期限を定めていない。",
+      "record_boundary": "観測の整合を因果実証や自動合否にせず、未開示/定義不整合はunknown。明示numericrule欄はnullを確認。"
+    },
+    {
+      "id": "authorship_and_economic_relationship",
+      "status": "consistent_with_disclosure",
+      "pages": [
+        1,
+        31
+      ],
+      "existing_quote_ids": [
+        "commission-payment-and-trading-conflict"
+      ],
+      "review_context_ids": [
+        "p1-team-coverage-label"
+      ],
+      "finding": "表紙はチームカバレッジ。p31は会社委託と報酬、SESSA役職員の現在/将来の取引可能性および分析の客観性制約を記す。",
+      "record_boundary": "個人名を補わず、著者の解釈を会社保証にしない。スポンサー関係があることと記述/予想の主体は別。"
+    }
+  ],
+  "existing_quote_checks": [
+    {
+      "id": "company-forecast-table-and-processing-caveat",
+      "pdf_page": 1,
+      "page_character_start": 3766,
+      "page_character_end": 4693,
+      "source_character_start": 3766,
+      "source_character_end": 4693,
+      "exact": true
+    },
+    {
+      "id": "author-upside-view-and-company-margin",
+      "pdf_page": 25,
+      "page_character_start": 1094,
+      "page_character_end": 1331,
+      "source_character_start": 48386,
+      "source_character_end": 48623,
+      "exact": true
+    },
+    {
+      "id": "company-plan-drivers",
+      "pdf_page": 25,
+      "page_character_start": 169,
+      "page_character_end": 1073,
+      "source_character_start": 47461,
+      "source_character_end": 48365,
+      "exact": true
+    },
+    {
+      "id": "table-header-vs-body-label-limit",
+      "pdf_page": 25,
+      "page_character_start": 1362,
+      "page_character_end": 1474,
+      "source_character_start": 48654,
+      "source_character_end": 48766,
+      "exact": true
+    },
+    {
+      "id": "author-catalyst-condition",
+      "pdf_page": 27,
+      "page_character_start": 671,
+      "page_character_end": 903,
+      "source_character_start": 57982,
+      "source_character_end": 58214,
+      "exact": true
+    },
+    {
+      "id": "author-capacity-prerequisite",
+      "pdf_page": 21,
+      "page_character_start": 1069,
+      "page_character_end": 1278,
+      "source_character_start": 40076,
+      "source_character_end": 40285,
+      "exact": true
+    },
+    {
+      "id": "commission-payment-and-trading-conflict",
+      "pdf_page": 31,
+      "page_character_start": 218,
+      "page_character_end": 376,
+      "source_character_start": 84653,
+      "source_character_end": 84811,
+      "exact": true
+    },
+    {
+      "id": "order-categories-and-period-public",
+      "pdf_page": 8,
+      "page_character_start": 1269,
+      "page_character_end": 1338,
+      "source_character_start": 19334,
+      "source_character_end": 19403,
+      "exact": true
+    },
+    {
+      "id": "published-staff-qualification-explanation",
+      "pdf_page": 18,
+      "page_character_start": 188,
+      "page_character_end": 424,
+      "source_character_start": 33894,
+      "source_character_end": 34130,
+      "exact": true
+    },
+    {
+      "id": "public-benchmark-not-company-realized-price",
+      "pdf_page": 13,
+      "page_character_start": 142,
+      "page_character_end": 408,
+      "source_character_start": 27694,
+      "source_character_end": 27960,
+      "exact": true
+    },
+    {
+      "id": "benchmark-average-definition",
+      "pdf_page": 13,
+      "page_character_start": 1176,
+      "page_character_end": 1199,
+      "source_character_start": 28728,
+      "source_character_end": 28751,
+      "exact": true
+    },
+    {
+      "id": "single-entity-cost-scope",
+      "pdf_page": 7,
+      "page_character_start": 186,
+      "page_character_end": 373,
+      "source_character_start": 17455,
+      "source_character_end": 17642,
+      "exact": true
+    }
+  ],
+  "additional_context_quotes_not_normalized_facts": [
+    {
+      "id": "p18-private-order-ratio-context",
+      "source_id": "case-public:25c1494baa3fb143084b16ad0b83b6c872c537b135d2bf56cf18b9842c89fab3",
+      "pdf_page": 18,
+      "printed_page": 18,
+      "page_character_start": 520,
+      "page_character_end": 904,
+      "offset_unit": "zero-based Unicode characters in byte-preserving UTF-8 page; end exclusive",
+      "quote": "収益性の改善要因④｜民間案件比率の上昇\n             足元では、相対的に価格決定の自由度が高く、採算性に優れる民間案件の構成比上\n             昇も、収益性改善に寄与している。26/5期の受注高に占める民間比率は46%と、\n             25/5期の42%から4pt上昇し、官公庁向けと同水準まで拡大した。背景には、産業用\n             地・物流用地開発や市街化区域編入に伴う土地区画整理など、企業の設備投資や都\n             市開発需要を取り込んだ民間案件の増加がある。官公庁向けの業務量拡大余地が限\n             定的となる中、こうした民間案件へのシフトは受注拡大のみならず、案件選別や価\n             格決定の自由度向上を通じた収益性改善にもつながっているとSIRでは見ている。"
+    },
+    {
+      "id": "p8-public-private-client-context",
+      "source_id": "case-public:25c1494baa3fb143084b16ad0b83b6c872c537b135d2bf56cf18b9842c89fab3",
+      "pdf_page": 8,
+      "printed_page": 8,
+      "page_character_start": 1269,
+      "page_character_end": 1610,
+      "offset_unit": "zero-based Unicode characters in byte-preserving UTF-8 page; end exclusive",
+      "quote": "26/5期の受注高は、官公庁向けが46%、民間向けが46%、連結\n             子会社が8%と、官民比率は概ね1：1となった。官公庁案件は安定した需要が期待\n             できる一方、入札による価格・受注競争の影響を受けやすい。これに対し、民間案\n             件は相対的に価格決定の自由度が高く、採算性に優れる。同社ではまちづくり分野\n             で培った豊富な実績を背景に、安定性の高い官公庁需要を取り込みつつ、採算性の\n             高い民間案件を獲得している。SIRでは、官民双方に構築した顧客基盤が外部環境\n             の変化に対する耐性を高め、業績の安定成長を支える優位性になっていると考える。"
+    },
+    {
+      "id": "p13-benchmark-and-author-pass-through-view",
+      "source_id": "case-public:25c1494baa3fb143084b16ad0b83b6c872c537b135d2bf56cf18b9842c89fab3",
+      "pdf_page": 13,
+      "printed_page": 13,
+      "page_character_start": 491,
+      "page_character_end": 1093,
+      "offset_unit": "zero-based Unicode characters in byte-preserving UTF-8 page; end exclusive",
+      "quote": "全職種の単純平均値は、1990年代後半の3.9万円程度から、緊縮財政の影響等により\n                 一時3.0万円程度まで低下したが、2013年以降は明確な上昇局面を迎えている。\n                 2026年度の決定額は前年比+4.3%の51,715円となり、14年連続で上昇した。政府の\n                 重要政策の一つである賃上げ方針に加え、建設コンサルタント業界における技術者\n                 不足や人件費上昇等を背景に、基準単価の継続的な引き上げが進められている。結\n                 果として、技術者単価は14年連続で増加しており、10年前比で45.8%増、5年前比で\n                 26.5%増、前年比で4.3%増と、収益環境に追い風が吹く状況が続いている。技術者\n                 不足を背景に人件費の上昇が進む中、技術者単価の引き上げを通じて受注単価への\n                 価格転嫁が進みやすい環境にある。専門人材を確保し高付加価値案件を獲得できる\n                 同社にとって、技術者単価の上昇は人件費増加の影響を吸収しながら、売上高およ\n                 び利益成長を図る上での追い風となっているとSIRは考える。"
+    },
+    {
+      "id": "p21-demand-capture-prerequisite-context",
+      "source_id": "case-public:25c1494baa3fb143084b16ad0b83b6c872c537b135d2bf56cf18b9842c89fab3",
+      "pdf_page": 21,
+      "printed_page": 21,
+      "page_character_start": 817,
+      "page_character_end": 1278,
+      "offset_unit": "zero-based Unicode characters in byte-preserving UTF-8 page; end exclusive",
+      "quote": "一方、26/5期には従業員\n             535名に対して有資格者が510名まで増加しており、既存人材の資格取得を通じた成\n             長余地は徐々に限定的になりつつあるとSIRでは考える。\n             加えて、国土強靭化や防衛土木をはじめとする官公庁需要に加え、産業用地開発等\n             の民間需要も拡大するなか、これらの需要を実際の受注・売上成長につなげるため\n             には、業務を担う技術者の確保がこれまで以上に重要となる。今後、拡大する官民\n             双方の需要を業績成長につなげるためには、新卒・中途採用の強化を通じて従業員\n             数そのものを純増させ、受注余力を拡大できるかが重要となる。SIRでは、これま\n             での「既存人材の育成」に加え、「人材母数の拡大」へと人的資本戦略を進化させ\n             られるかが、中長期的な成長力を左右するポイントになると見ている。"
+    },
+    {
+      "id": "p1-team-coverage-label",
+      "source_id": "case-public:25c1494baa3fb143084b16ad0b83b6c872c537b135d2bf56cf18b9842c89fab3",
+      "pdf_page": 1,
+      "printed_page": 1,
+      "page_character_start": 3757,
+      "page_character_end": 3765,
+      "offset_unit": "zero-based Unicode characters in byte-preserving UTF-8 page; end exclusive",
+      "quote": "チームカバレッジ"
+    }
+  ],
+  "visual_review": [
+    {
+      "pdf_page": 8,
+      "temporary_render": "/tmp/9765-recheck-p8.png",
+      "sha256": "133c5779bf53c584029b280e3b3eadbad83d796c7da94a9a01fd2352328b01a1",
+      "manually_viewed": true
+    },
+    {
+      "pdf_page": 13,
+      "temporary_render": "/tmp/9765-recheck-p13.png",
+      "sha256": "abed27e6ce968b96b850b3ff7bd40fdafc8d392ee88327b5bf69df0d5a42a44a",
+      "manually_viewed": true
+    },
+    {
+      "pdf_page": 18,
+      "temporary_render": "/tmp/9765-recheck-p18.png",
+      "sha256": "8774509892ef7ffef40cd1e51b4563ce1972c1ea013e06f6e8420cce1063d2f1",
+      "manually_viewed": true
+    },
+    {
+      "pdf_page": 21,
+      "temporary_render": "/tmp/9765-recheck-p21.png",
+      "sha256": "6582d812888b8bc29438ae0937adf605e36bf97ca7401f3d67a372418128f3b2",
+      "manually_viewed": true
+    },
+    {
+      "pdf_page": 25,
+      "temporary_render": "/tmp/9765-recheck-p25.png",
+      "sha256": "2c57a90f3fef6cb69f6e4b8e6ddb2b4b3e6befdb8b18b571ba5d64cec3ece319",
+      "manually_viewed": true
+    },
+    {
+      "pdf_page": 27,
+      "temporary_render": "/tmp/9765-recheck-p27.png",
+      "sha256": "8d42d9a7a6782b4008ca2b882a7381a27ca27672988af46988416ae789815d1b",
+      "manually_viewed": true
+    },
+    {
+      "pdf_page": 1,
+      "existing_image": "research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/report-cover.png",
+      "sha256": "c2d531d9c8a6ff7685b0998ffb3443abb4542034889e5238768d3c8aeef1989a",
+      "manually_viewed": true
+    }
+  ],
+  "render_reproduction": "pdftoppm -f PAGE -l PAGE -scale-to 1800 -png -singlefile CITED_RAW /tmp/9765-recheck-pPAGE; images are temporary, raw PDF remains durable source.",
+  "checks": [
+    {
+      "id": "raw_sha",
+      "passed": true,
+      "details": "Saved PDF response entity SHA matches immutable source metadata."
+    },
+    {
+      "id": "raw_count",
+      "passed": true,
+      "details": "4,830,456 saved response entity bytes; not a claim about wire bytes."
+    },
+    {
+      "id": "content_text_sha",
+      "passed": true,
+      "details": "Source content equals byte-preserving saved UTF-8 extraction."
+    },
+    {
+      "id": "stable_source_id",
+      "passed": true,
+      "details": "Uses existing stable_source_id helper, not guessed identifiers."
+    },
+    {
+      "id": "fresh_extraction",
+      "passed": true,
+      "details": "Fresh pdftotext -layout stdout is byte-identical to saved text."
+    },
+    {
+      "id": "page_count",
+      "passed": true,
+      "details": "Physical PDF page boundaries retained in extraction."
+    },
+    {
+      "id": "quote:company-forecast-table-and-processing-caveat",
+      "passed": true,
+      "details": "Page-local and source-global substring / page / source identity agree."
+    },
+    {
+      "id": "reused_quote:company-forecast-table-and-processing-caveat",
+      "passed": true,
+      "details": "Original quote payload unchanged."
+    },
+    {
+      "id": "quote:author-upside-view-and-company-margin",
+      "passed": true,
+      "details": "Page-local and source-global substring / page / source identity agree."
+    },
+    {
+      "id": "reused_quote:author-upside-view-and-company-margin",
+      "passed": true,
+      "details": "Original quote payload unchanged."
+    },
+    {
+      "id": "quote:company-plan-drivers",
+      "passed": true,
+      "details": "Page-local and source-global substring / page / source identity agree."
+    },
+    {
+      "id": "reused_quote:company-plan-drivers",
+      "passed": true,
+      "details": "Original quote payload unchanged."
+    },
+    {
+      "id": "quote:table-header-vs-body-label-limit",
+      "passed": true,
+      "details": "Page-local and source-global substring / page / source identity agree."
+    },
+    {
+      "id": "reused_quote:table-header-vs-body-label-limit",
+      "passed": true,
+      "details": "Original quote payload unchanged."
+    },
+    {
+      "id": "quote:author-catalyst-condition",
+      "passed": true,
+      "details": "Page-local and source-global substring / page / source identity agree."
+    },
+    {
+      "id": "reused_quote:author-catalyst-condition",
+      "passed": true,
+      "details": "Original quote payload unchanged."
+    },
+    {
+      "id": "quote:author-capacity-prerequisite",
+      "passed": true,
+      "details": "Page-local and source-global substring / page / source identity agree."
+    },
+    {
+      "id": "reused_quote:author-capacity-prerequisite",
+      "passed": true,
+      "details": "Original quote payload unchanged."
+    },
+    {
+      "id": "quote:commission-payment-and-trading-conflict",
+      "passed": true,
+      "details": "Page-local and source-global substring / page / source identity agree."
+    },
+    {
+      "id": "reused_quote:commission-payment-and-trading-conflict",
+      "passed": true,
+      "details": "Original quote payload unchanged."
+    },
+    {
+      "id": "quote:order-categories-and-period-public",
+      "passed": true,
+      "details": "Page-local and source-global substring / page / source identity agree."
+    },
+    {
+      "id": "quote:published-staff-qualification-explanation",
+      "passed": true,
+      "details": "Page-local and source-global substring / page / source identity agree."
+    },
+    {
+      "id": "quote:public-benchmark-not-company-realized-price",
+      "passed": true,
+      "details": "Page-local and source-global substring / page / source identity agree."
+    },
+    {
+      "id": "quote:benchmark-average-definition",
+      "passed": true,
+      "details": "Page-local and source-global substring / page / source identity agree."
+    },
+    {
+      "id": "quote:single-entity-cost-scope",
+      "passed": true,
+      "details": "Page-local and source-global substring / page / source identity agree."
+    },
+    {
+      "id": "all_12_quotes",
+      "passed": true,
+      "details": "All existing author-condition quotations checked, including page7 scope and page31 commission disclosure."
+    },
+    {
+      "id": "prior_hash:research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/source-bundle.json",
+      "passed": true,
+      "details": "Old hash claim still matches saved bytes."
+    },
+    {
+      "id": "prior_hash:research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/capture.json",
+      "passed": true,
+      "details": "Old hash claim still matches saved bytes."
+    },
+    {
+      "id": "prior_hash:research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/report.pdf.txt",
+      "passed": true,
+      "details": "Old hash claim still matches saved bytes."
+    },
+    {
+      "id": "prior_hash:research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/review.json",
+      "passed": true,
+      "details": "Old hash claim still matches saved bytes."
+    },
+    {
+      "id": "prior_hash:research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/quotes.json",
+      "passed": true,
+      "details": "Old hash claim still matches saved bytes."
+    },
+    {
+      "id": "prior_hash:research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/validation.json",
+      "passed": true,
+      "details": "Old hash claim still matches saved bytes."
+    },
+    {
+      "id": "prior_hash:research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/README.md",
+      "passed": true,
+      "details": "Old hash claim still matches saved bytes."
+    },
+    {
+      "id": "prior_hash:research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/report-cover.png",
+      "passed": true,
+      "details": "Old hash claim still matches saved bytes."
+    },
+    {
+      "id": "prior_hash:research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/company-plan-and-header.png",
+      "passed": true,
+      "details": "Old hash claim still matches saved bytes."
+    },
+    {
+      "id": "prior_hash:research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/raw/0d314421a25b6a53db3adf103a4e143d2cec9881b75fa99e6f9c3a9bc77bb5b9",
+      "passed": true,
+      "details": "Old hash claim still matches saved bytes."
+    },
+    {
+      "id": "review_context:p18-private-order-ratio-context",
+      "passed": true,
+      "details": "Contiguous, page-bounded context; no new financial fact normalization."
+    },
+    {
+      "id": "review_context:p8-public-private-client-context",
+      "passed": true,
+      "details": "Contiguous, page-bounded context; no new financial fact normalization."
+    },
+    {
+      "id": "review_context:p13-benchmark-and-author-pass-through-view",
+      "passed": true,
+      "details": "Contiguous, page-bounded context; no new financial fact normalization."
+    },
+    {
+      "id": "review_context:p21-demand-capture-prerequisite-context",
+      "passed": true,
+      "details": "Contiguous, page-bounded context; no new financial fact normalization."
+    },
+    {
+      "id": "review_context:p1-team-coverage-label",
+      "passed": true,
+      "details": "Contiguous, page-bounded context; no new financial fact normalization."
+    },
+    {
+      "id": "null:project_application.numeric_model_input_path",
+      "passed": true,
+      "details": "No author numeric rule or management date supplied by project."
+    },
+    {
+      "id": "null:project_application.author_minimum_progress",
+      "passed": true,
+      "details": "No author numeric rule or management date supplied by project."
+    },
+    {
+      "id": "null:project_application.author_deadline",
+      "passed": true,
+      "details": "No author numeric rule or management date supplied by project."
+    },
+    {
+      "id": "null:project_application.author_rate_or_threshold",
+      "passed": true,
+      "details": "No author numeric rule or management date supplied by project."
+    },
+    {
+      "id": "null:project_application.price_or_target",
+      "passed": true,
+      "details": "No author numeric rule or management date supplied by project."
+    },
+    {
+      "id": "null:project_application.probabilities",
+      "passed": true,
+      "details": "No author numeric rule or management date supplied by project."
+    },
+    {
+      "id": "null:project_application.management_review_date",
+      "passed": true,
+      "details": "No author numeric rule or management date supplied by project."
+    },
+    {
+      "id": "null:exit:9765-author-margin-EPS-revision-catalyst",
+      "passed": true,
+      "details": "No invented falsification/exit condition."
+    },
+    {
+      "id": "not_causal_proof:9765-author-margin-EPS-revision-catalyst",
+      "passed": true,
+      "details": "Author narrative not causal proof."
+    },
+    {
+      "id": "null:exit:9765-author-demand-capture-staff",
+      "passed": true,
+      "details": "No invented falsification/exit condition."
+    },
+    {
+      "id": "not_causal_proof:9765-author-demand-capture-staff",
+      "passed": true,
+      "details": "Author narrative not causal proof."
+    },
+    {
+      "id": "null:9765-observe-mix-price-margin.numeric_minimum_or_threshold",
+      "passed": true,
+      "details": "Observation design remains non-numeric and does not create IR branches."
+    },
+    {
+      "id": "null:9765-observe-mix-price-margin.new_question_or_branch",
+      "passed": true,
+      "details": "Observation design remains non-numeric and does not create IR branches."
+    },
+    {
+      "id": "null:9765-observe-staff-and-capacity.numeric_minimum_or_threshold",
+      "passed": true,
+      "details": "Observation design remains non-numeric and does not create IR branches."
+    },
+    {
+      "id": "null:9765-observe-staff-and-capacity.new_question_or_branch",
+      "passed": true,
+      "details": "Observation design remains non-numeric and does not create IR branches."
+    },
+    {
+      "id": "scope_zero",
+      "passed": true,
+      "details": "The reviewed record remains offline and not financially adopted."
+    },
+    {
+      "id": "team_author",
+      "passed": true,
+      "details": "No individual author invented; cover team label and paid commission retained."
+    },
+    {
+      "id": "semantic_boundary:order_ratio_not_sales_mix",
+      "passed": true,
+      "details": "Manual reading of cited page text/images and target record; limited to the stated finding, not automated truth verification."
+    },
+    {
+      "id": "semantic_boundary:private_project_margin_context",
+      "passed": true,
+      "details": "Manual reading of cited page text/images and target record; limited to the stated finding, not automated truth verification."
+    },
+    {
+      "id": "semantic_boundary:benchmark_not_realized_company_price",
+      "passed": true,
+      "details": "Manual reading of cited page text/images and target record; limited to the stated finding, not automated truth verification."
+    },
+    {
+      "id": "semantic_boundary:net_headcount_and_demand_capture",
+      "passed": true,
+      "details": "Manual reading of cited page text/images and target record; limited to the stated finding, not automated truth verification."
+    },
+    {
+      "id": "semantic_boundary:margin_upside_and_EPS_company_baseline",
+      "passed": true,
+      "details": "Manual reading of cited page text/images and target record; limited to the stated finding, not automated truth verification."
+    },
+    {
+      "id": "semantic_boundary:factor_list_not_formal_rule",
+      "passed": true,
+      "details": "Manual reading of cited page text/images and target record; limited to the stated finding, not automated truth verification."
+    },
+    {
+      "id": "semantic_boundary:authorship_and_economic_relationship",
+      "passed": true,
+      "details": "Manual reading of cited page text/images and target record; limited to the stated finding, not automated truth verification."
+    },
+    {
+      "id": "old_inputs_unchanged",
+      "passed": true,
+      "details": "All14 designated prior artifacts unchanged; no issuer-financial-followup files read or compared."
+    }
+  ],
+  "check_count": 66,
+  "prior_input_hashes_unchanged": {
+    "research/ir-case-studies-2026-10-15/9765/author-conditions/case-record.json": "7539172394a70518add4031880e4f56730576b2574a30aa4a6bfdaab64da2acf",
+    "research/ir-case-studies-2026-10-15/9765/author-conditions/case-record.md": "3c0a4fdb15f0bd8e37a0947f89c950c31b8d65febe92c83ed63c08e4295b2165",
+    "research/ir-case-studies-2026-10-15/9765/author-conditions/quotes.json": "7fc20939a3d7a97bbe525bcd58e0a7a204985597ffc60af85358eebc3c59e265",
+    "research/ir-case-studies-2026-10-15/9765/author-conditions/validation.json": "713872fc136b10f8157d9043995f8384dcf74bf9c4e0ac9da317a777fea0f9b9",
+    "research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/README.md": "73a69f8c31bfa2585d8418a6703d5acd00f1ef9a93f1b2532515826c688b93f9",
+    "research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/capture.json": "1b29bc9cfbbdade59c7bf712324542d84931e0036c560ac8fb9f5b3b3e93782c",
+    "research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/company-plan-and-header.png": "2c57a90f3fef6cb69f6e4b8e6ddb2b4b3e6befdb8b18b571ba5d64cec3ece319",
+    "research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/quotes.json": "3b057c2909fe21ab84ec05831d3f47d55554e21afec5b34db36c2f69a7b2207c",
+    "research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/raw/0d314421a25b6a53db3adf103a4e143d2cec9881b75fa99e6f9c3a9bc77bb5b9": "0d314421a25b6a53db3adf103a4e143d2cec9881b75fa99e6f9c3a9bc77bb5b9",
+    "research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/report-cover.png": "c2d531d9c8a6ff7685b0998ffb3443abb4542034889e5238768d3c8aeef1989a",
+    "research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/report.pdf.txt": "9e0b45e9d522d464f70367f72bd7709179c02d8223ac2059d77b2e0c922942f1",
+    "research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/review.json": "d4744a6fee89b3435914525cbc59c4e36ab74c3c218e0301b1bf94f757db4131",
+    "research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/source-bundle.json": "f15071643ac390b2fcdb83646af6e79c437c21f5522ef19223c9c12287dad2be",
+    "research/ir-case-studies-2026-10-15/9765/pdf-redirect-followup/validation.json": "ce72aa13096647d5be3f8096370cfcc818b39bfc9fb77192c6d58726a7115462"
+  },
+  "reading_coverage": {
+    "new_page_text_read": [
+      1,
+      7,
+      8,
+      13,
+      18,
+      21,
+      25,
+      27,
+      31
+    ],
+    "new_page_images_viewed": [
+      1,
+      8,
+      13,
+      18,
+      21,
+      25,
+      27
+    ],
+    "all_31_pages_newly_read": false,
+    "fresh_all_page_extraction_used_only_for_byte_reproduction": true
+  },
+  "scope": {
+    "GETs": 0,
+    "database_accesses": 0,
+    "production_code_changes": 0,
+    "old_artifact_edits": 0,
+    "normalizer_calls": 0,
+    "new_financial_facts": 0,
+    "IR_drafts_or_registrations": 0,
+    "model_adoptions": 0,
+    "external_sends": 0,
+    "orders": 0,
+    "management_date_assignments": 0,
+    "issuer_followup_files_read_or_compared": 0
+  },
+  "limits": [
+    "No fresh issuer data or analyst estimate adopted; separate in-progress issuer followup is deliberately excluded.",
+    "Source agreement does not validate the reported figures, SIR causal interpretations, forecast accuracy or investment suitability.",
+    "The reviewed subset supplies no numerical machine decision rule; absence of such rules elsewhere in all31pages was not exhaustively established.",
+    "Period mismatch, group/standalone definitions, public contract price realization and personnel capacity meaning remain unresolved."
+  ],
+  "new_markdown_sha256": "b05dd4b1cfc8db922e4f1fb93b33cad18afa7a625227848b492d882da64b45f2"
+}

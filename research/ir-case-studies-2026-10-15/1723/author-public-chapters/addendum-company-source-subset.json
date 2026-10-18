@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "company_id": "jp:1723",
+  "reviewed_at": "2026-10-15T16:49:44.865635+00:00",
+  "status": "source_contract_finding_resolved_for_new_company_subset_original_bundle_unchanged",
+  "finding_id": "1723-SOURCE-CONTRACT-01",
+  "resolution_scope": "The new company-source subset excludes the global tos row while preserving the three jp:1723 source objects exactly. This resolves the specific null-company ingest-contract defect for this new candidate only; the old mixed bundle remains unchanged and cannot be ingested as-is.",
+  "new_candidate_inputs_sha256": {
+    "research/ir-case-studies-2026-10-15/1723/company-source-preparation/source-only-bundle.json": "4788d1576a80bffdf91cedc764e5d1ee09fa13fae4201da50650406170eab6cc",
+    "research/ir-case-studies-2026-10-15/1723/company-source-preparation/validation.json": "0d39db49cc9033c15f2424903c52c97463be5d2b8af3c902453ba8c1d3df88c3",
+    "research/ir-case-studies-2026-10-15/1723/company-source-preparation/README.md": "05ccede42a1ba4f731772447edc89566916c1beffe2877c63ffee3e3082c6816"
+  },
+  "source_object_checks": [
+    {
+      "new_source_index": 0,
+      "source_id": "case-public:902cd4bf6ff90ed3958b3d4ceb7fe2d4939d409ec99c3267de9fe450dcc6aa54",
+      "company_id": "jp:1723",
+      "source_object_exactly_preserved": true,
+      "validate_source_full_equal": true,
+      "source_snapshot_json_text_sha256": "19c3e3d3d7c9ceff555ff128c3b4c8ca8b14d29cf7f77e852474fc931b61fc20",
+      "old_artifact": "research/ir-case-studies-2026-10-15/1723/author-entry-followup/sourcebundle.json",
+      "old_source_index": 0
+    },
+    {
+      "new_source_index": 1,
+      "source_id": "case-public:51783fb026449f07a8811fd32102508e44e3c6b7130ea2f18bf4a2afec81e566",
+      "company_id": "jp:1723",
+      "source_object_exactly_preserved": true,
+      "validate_source_full_equal": true,
+      "source_snapshot_json_text_sha256": "ca6f56c8f86d2496324523bae5b1eb71a117a340e60d3147cdb679b60826a8b9",
+      "old_artifact": "research/ir-case-studies-2026-10-15/1723/author-public-chapters/sourcebundle.json",
+      "old_source_index": 1
+    },
+    {
+      "new_source_index": 2,
+      "source_id": "case-public:d11eba8842a41497e589c347eb280af03bc9857d26c9db87f696f4f950d28714",
+      "company_id": "jp:1723",
+      "source_object_exactly_preserved": true,
+      "validate_source_full_equal": true,
+      "source_snapshot_json_text_sha256": "98ceadb9853f2a6937a687259961b1a50f976e4741479aabb67453c409532014",
+      "old_artifact": "research/ir-case-studies-2026-10-15/1723/author-public-chapters/sourcebundle.json",
+      "old_source_index": 2
+    }
+  ],
+  "global_tos": {
+    "source_id": "case-public:335a3f0f358c6f85a38de62ed09a37bf064c4bee09631287c962f87150cf8f6b",
+    "company_id": null,
+    "original_file": "research/ir-case-studies-2026-10-15/1723/author-public-chapters/sourcebundle.json",
+    "preserved_as_file_only_reference": true,
+    "excluded_from_new_candidate": true,
+    "original_validate_source_error_still_reproducible": true,
+    "specific_1723_contract_or_compensation_inferred": false
+  },
+  "prior_independent_review_sha256": {
+    "research/ir-case-studies-2026-10-15/1723/author-public-chapters/independent-recheck.json": "8bce1ff6d48bb3d072c4ab80c79689e28456823c49c64e7a54c7fca6d8376774",
+    "research/ir-case-studies-2026-10-15/1723/author-public-chapters/independent-recheck.md": "cc52a0c5432d40afcc6fe4a02c74084067801654838f4d59a345ad3c3700ecc9"
+  },
+  "prior_31_input_files_unchanged": true,
+  "new_preparation_three_files_unchanged": true,
+  "boundaries": {
+    "raw_capture_or_meaning_reaudit": false,
+    "existing_independent_review_reused": true,
+    "actual_DB_import_verified": false,
+    "DB_accesses": 0,
+    "GETs": 0,
+    "code_changes": 0,
+    "old_file_changes": 0,
+    "index_or_monitor_changes": 0,
+    "IR_draft_registration_or_send": 0,
+    "financial_inputs_or_model_adoption": 0,
+    "financial_input_changes": []
+  },
+  "finite_stop": true
+}

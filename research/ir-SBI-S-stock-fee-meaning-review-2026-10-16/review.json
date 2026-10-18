@@ -1,0 +1,111 @@
+{
+  "reviewed_at": "2026-10-16T15:52:21.209456+00:00",
+  "status": "bounded_official_fee_meaning_review_not_account_or_order_verification",
+  "constraints": {
+    "file": "research/ir-user-operating-constraints-2026-10-16/constraints-v2.json",
+    "sha256": "a5dac51bc585093c05d2b6c9f48683d72c0d9ea2a668cd5ea9d6330697967e35"
+  },
+  "acquisition_acceptance": {
+    "file": "research/ir-SBI-S-stock-official-conditions-2026-10-16/parent-acceptance.json",
+    "sha256": "36db1adc95f215cc444cafb87875ab74c091df49a5752faeb87761f89c12f2ce"
+  },
+  "saved_inputs": [
+    {
+      "file": "research/ir-SBI-S-stock-official-conditions-2026-10-16/text/02.txt",
+      "sha256": "3ed2dd73b18c020ad58da8b7f5efdb0e1ab9a46ddc05cabb6b9c71ff49e64941"
+    },
+    {
+      "file": "research/ir-SBI-S-stock-official-conditions-2026-10-16/text/04-cp932-visible.txt",
+      "sha256": "93ae7b81060791027a3580c8f32e73e448fa96c94b5cd748b67bdd78271702ca"
+    },
+    {
+      "file": "research/ir-SBI-S-stock-official-conditions-2026-10-16/quotes.json",
+      "sha256": "ced02739475e69fa4c51c0ec706a349660f8649e6c01d12c0ee11f2825723c56"
+    },
+    {
+      "file": "research/ir-SBI-S-stock-official-conditions-2026-10-16/decode.json",
+      "sha256": "121983753616fa2ea6e58eb6a286dbebe24dfa313f740aa883450d00af6fbe43"
+    },
+    {
+      "file": "research/ir-SBI-S-stock-official-conditions-2026-10-16/capture.json",
+      "sha256": "63b294ab523c0209038cef208cb8747671a0e8e10305ce592d6b48306497e78c"
+    }
+  ],
+  "sources": [
+    {
+      "purpose": "一般LP",
+      "url": "https://go.sbisec.co.jp/lp/zero_revolution_2023.html?mediationCode=1116",
+      "capture_pointer": "/GETs/1",
+      "HTTP_completed_at": "2026-10-16T15:46:22.004376+00:00"
+    },
+    {
+      "purpose": "国内手数料詳細",
+      "url": "https://www.sbisec.co.jp/ETGate/WPLETmgR001Control?OutSide=on&getFlg=on&burl=search_home&cat1=home&cat2=none&dir=info&file=home_info_zerocom.html",
+      "capture_pointer": "/GETs/3",
+      "HTTP_completed_at": "2026-10-16T15:46:55.541191+00:00",
+      "decode_reference": "research/ir-SBI-S-stock-official-conditions-2026-10-16/decode.json",
+      "decode_note": "HTTP Windows-31Jを保存entityからcp932 strict aliasでローカル復号した受入済み本文を利用。captureの初期codec未対応履歴と後続decodeを区別。"
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "topic": "一般プログラム",
+      "quote_refs": [
+        "LP-fee-conditions-locator"
+      ],
+      "meaning": "LPはネットコースのネット取引と報告書等の電子交付を一般条件として掲げ、S株を含む現物・信用を対象として説明する。詳細本文の一般条件欄も同趣旨。利用者の電子交付設定を確認したわけではない。"
+    },
+    {
+      "id": "F2",
+      "topic": "S株についての明示例外",
+      "quote_refs": [
+        "detail-Sstock-fee-note-locator"
+      ],
+      "meaning": "詳細の対象商品注3は、S株の買付・売却注文についてネットコースのネット取引ならゼロ革命対象有無に関わらず無料と明記。電子交付未申込者等の従来プログラム欄にも同趣旨の記述が続く。したがって一般LP条件だけからS株ネット売買へ電子交付達成を一律必須と読まない。例外は注文経路の限定を外していない。"
+    },
+    {
+      "id": "F3",
+      "topic": "対象外の経路とその他費用",
+      "quote_refs": [
+        "detail-channel-exception-locator",
+        "detail-other-costs"
+      ],
+      "meaning": "電話・カスタマーサービスセンター経由は無料対象外とする記載、ネット以外のコースの対象外記載がある。注1でも電話は有料と説明。信用の金利・貸株料等は別費用と明記され、注意事項には商品別の必要経費があり得るとある。これはS株の全費用を列挙したものではない。S株の売買手数料無料をスプレッド/執行価格差/全費用ゼロへ変換しない。LPの明示スプレッド説明は米ドル円リアルタイム為替の文脈であり、S株価格形成の仕様として転用しない。"
+    },
+    {
+      "id": "F4",
+      "topic": "時点の分離",
+      "quote_refs": [
+        "detail-program-year",
+        "detail-page-declared-update"
+      ],
+      "meaning": "同頁の制度開始説明とFAQには2023年9月30日発注分とあるため、注3の9/30（土）を2026年の新開始日としない。2026/4/17は頁表示の更新日、LPの2026年各feature基準日は各説明の時点であり、全条件の開始/施行/初公表日時ではない。取得は2026-10-16のHTTP完了時刻。",
+      "initial_published_at": null
+    }
+  ],
+  "limited_practical_result": "月1万円/SBI暫定という利用者条件のもと、S株ネット買付だけでなくネット売却にも明示無料記載があることを確認できた。一般e交付条件とS株注3を分離して後続の費用/執行確認へ渡せる。利用者自身がその対象であることや、月1万円で対象銘柄を確実に買えることは未確認。",
+  "still_unknown": [
+    "利用者の現在の口座種別・取引コース・権限・S株サービス利用可否",
+    "最低発注単位と対象銘柄/市場・保有形態",
+    "執行時刻・価格決定・スプレッドや価格差・注文方式",
+    "S株の実際の積立方式と利用者の既存積立との関係",
+    "S株のその他費用全体",
+    "Carlisle最低20保有ガイドと初期資金/配分/保有期間との実行適合"
+  ],
+  "not_concluded": [
+    "単元株が難しいため月1万円では株式投資不可",
+    "S株なら1株を確実に購入できる",
+    "SBI又は特定口座への利用者適用認証",
+    "20銘柄保有の実行可能性",
+    "費用0を用いた投資判断・注文・送信権限"
+  ],
+  "work_boundary": {
+    "new_GET_DB_Store_code_shared_oldfile_changes": 0,
+    "raw_decode_capture_span_audit_replayed": false,
+    "selection_scope": "既受入2本文の費用条件と前後/FAQ/注意事項の文脈のみ。最低単位/対象/執行/積立の仕様調査へ拡張なし。",
+    "financial_adoption": false,
+    "account_verified": false,
+    "external_order": false
+  }
+}

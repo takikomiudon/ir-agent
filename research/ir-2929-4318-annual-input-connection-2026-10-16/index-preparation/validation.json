@@ -1,0 +1,411 @@
+{
+  "DB_Store_GET_normalizer_production_sharedindex_writes": 0,
+  "candidate_SHA": "19095fd8c6f0689e600e7eda8de3514483540e66a584a1ece66fd4c52a807f71",
+  "counts": {
+    "companies": 31,
+    "company_original_pairs": 38,
+    "derived_sources": 47,
+    "facts": 234,
+    "parents": 45
+  },
+  "financial_model_adoption": false,
+  "input_file_pins": {
+    "research/ir-2929-4318-annual-input-connection-2026-10-16/actual-verification.json": "f842a65935c6df32e87a74cb63dca8bbd10b968c9034ef161161ce13578e32ec",
+    "research/ir-2929-4318-annual-input-connection-2026-10-16/ingest-result.json": "368208c7c389b3411b6d7ee63cefd14644ad12dca071866006f2f48fd0f1d880",
+    "research/ir-2929-4318-annual-input-connection-2026-10-16/intake-completion-1.json": "379421001d2dd95d960a6a85f63b59a32f469f341687ab6d870c56d92ea4f500",
+    "research/ir-2929-4318-annual-input-connection-2026-10-16/intake-completion-2.json": "f0da3fb7bb0abe0305373c35528054ee9263f9cbeda574c9828c30b77dc5bd7b",
+    "research/ir-2929-4318-annual-input-connection-2026-10-16/qualitative-reviews/parent-result-acceptance.json": "dc4f20181eb265e58dc58f81e9ed85de38027a1c13c38e5cb2e4c1bb45076118",
+    "research/ir-2929-4318-annual-input-connection-2026-10-16/source-bundle.json": "06302b82f387028fab215e0cf9e5fec08c6f0aeaadd566e1f7599546112e84a5",
+    "research/ir-case-studies-2026-10-15/1332/disclosed-facts/normalized-bundle.json": "ec2f7e83d410f0a4c5e788f93b9addf3b22030b3e4da228c6063bf63bce461c7",
+    "research/ir-case-studies-2026-10-15/135A/balance-sheet-input-candidates/normalized-bundle.json": "653b0819489e0b18a48529cd6391f1085b56543dbdc646f33ce02bcc1c4815e2",
+    "research/ir-case-studies-2026-10-15/135A/cashflow-disclosed-facts/normalized-bundle.json": "7889e9b548f3d37b3e49f415bb492484c6e741b4de34b007773802fcab9bf400",
+    "research/ir-case-studies-2026-10-15/135A/disclosed-facts/normalized-bundle.json": "cd6ec111de870b91f6a3be37fecfd0cdfe3221b6b19132c8d8c0b02c6b00f36e",
+    "research/ir-case-studies-2026-10-15/135A/share-count-fact-followup/normalized-bundle.json": "f74514158b986b57da43afcc19ea6ade496229a8929c96edc4809765458f09e4",
+    "research/ir-case-studies-2026-10-15/1379/disclosed-facts/normalized-bundle.json": "85aaa1129c71f436ebbc12d568d2526860b23bd1004885e0af77e7df68f7b05e",
+    "research/ir-case-studies-2026-10-15/1518/guidance-revision-facts/bundle.json": "9509005a9d6debeacec85291fa433c28460e189592b583e184a169651bdf30b3",
+    "research/ir-case-studies-2026-10-15/1721/actual-and-plan-facts/bundle.json": "9645612c537290921007f03a3ae4e32c9c457e96248593fe0e6d050452107277",
+    "research/ir-case-studies-2026-10-15/1827/eps-dividend-facts/bundle.json": "1fb43baf7c1617c0e759c4f1ab6b3614e824135f8fcec865a6dc42b8f2017c79",
+    "research/ir-case-studies-2026-10-15/1833/eps-dividend-facts/bundle.json": "388e3055eff96b39ce871d161a5bdfa4e7f615b10eeb073acdce3100cb3be50f",
+    "research/ir-case-studies-2026-10-15/1866/disclosed-facts-2026-10-16/normalized-bundle.json": "f4eb0efcd9bd390bf90f3fb894dfdfed3352b3dd5eebe65532234c1241e1bf83",
+    "research/ir-case-studies-2026-10-15/1870/disclosed-facts-2026-10-16/previous-guidance-normalized-bundle.json": "f6a68d4455cc0024dfb2a46c0a8ddcbc5f8262f0aa2bbb4c0722c0f9c3aaa25a",
+    "research/ir-case-studies-2026-10-15/1870/disclosed-facts-2026-10-16/statement-normalized-bundle.json": "4c014d573ac8de22946c7def8c1526a54a5b3dd737343a3554459be726630a17",
+    "research/ir-case-studies-2026-10-15/1904/disclosed-facts-2026-10-16/normalized-bundle.json": "07e79894f6727dba572e63852bf7093e3fe805547742c832e48168e14efd0ea0",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/generated/normalized-bundle.json": "681c31d6a3274ba0f0b851f0f44e56caefe5b97a16a1462e981640f7ac5ffff8",
+    "research/ir-case-studies-2026-10-15/1950/disclosed-facts-2026-10-16/context-reference-only/normalized-bundle.json": "e29d7e9ae289c849442c64918f9c73672c1d8a9ceaae510d12cbbeb7d377769f",
+    "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/normalized-bundle.json": "c09b24ecf30c52420b4ec893219c2fbc7ae51fdd7e63d3ada4e9a2949c3d3f56",
+    "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json": "0defeba27b9f4538afd8d82c05c158918fcdfcaf455a64f1ea897eca7543e41e",
+    "research/ir-case-studies-2026-10-15/1975/disclosed-facts-2026-10-16/normalized-bundle.json": "6d678bd2209ec9f0a90a0f7545ca612a3c51844a67a3116ee3e7440aeede465f",
+    "research/ir-case-studies-2026-10-15/2163/disclosed-facts-2026-10-16/normalized-bundle.json": "fbbeda004f81a4f0b213239379b789c2a8c1da4fc7367ad8d56595e0b8af2dcd",
+    "research/ir-case-studies-2026-10-15/2315/disclosed-facts-2026-10-16/normalized-bundle.json": "62ac24e13125451f58971fabbb76ba2807ca286bcbaacf3b1a0fb83abc535f55",
+    "research/ir-case-studies-2026-10-15/2341/disclosed-facts-2026-10-16/normalized-bundle.json": "3d7e02520e26853f2e8f8066454f01b18d2f407d68f08db5b264ee3dbb234523",
+    "research/ir-case-studies-2026-10-15/2410/disclosed-facts-2026-10-16/normalized-bundle.json": "6fc7d3f12a060e9f0578275af1acd38e72fe2a1f790e171ec1666bdb8d9a63e8",
+    "research/ir-case-studies-2026-10-15/2929/annual-per-share-disclosed-facts-2026-10-16/input-pins.json": "ce537b8e40fbd38ec9f2f4f5e8c126d1bb5c3b0a6e556f12d4b02913fc4ce03b",
+    "research/ir-case-studies-2026-10-15/2929/annual-per-share-disclosed-facts-2026-10-16/normalization-input.json": "ce98ec425c309f8848bae9c894f77511c8a608bffee83363f35bbf452543b51d",
+    "research/ir-case-studies-2026-10-15/2929/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json": "47f6dd0ce9dd8257cbfb00091faaa7699cf620f9924bf132ccd5a117b6315e9d",
+    "research/ir-case-studies-2026-10-15/2929/annual-per-share-disclosed-facts-2026-10-16/parent-acceptance.json": "9a94e846653f013996d6218fbd50633019d7a5e590e78fc53c3629444e049c65",
+    "research/ir-case-studies-2026-10-15/2929/annual-per-share-disclosed-facts-2026-10-16/validation.json": "024f0488ddfbd724ae334b0c1cd597e59c2ccfd25ff78c8811837c4202b4b8a1",
+    "research/ir-case-studies-2026-10-15/2983/disclosed-facts/normalized-bundle.json": "c24f4acbbb51a573a1c56798b5eb7fb0be40674573221905af27e5d139a52ffa",
+    "research/ir-case-studies-2026-10-15/2983/issuer-disclosed-facts-v2/normalized-bundle.json": "c2f5acd875b214b593627afd087999c77b1bc26865e2a1b33fcff63012d04f5a",
+    "research/ir-case-studies-2026-10-15/3774/disclosed-facts-normalized.json": "a627f43a9aecea6986861049e3927f688413e619a51d3ff73716e815a105a331",
+    "research/ir-case-studies-2026-10-15/3774/faq-to-filing-guidance-comparison/faq-normalized.json": "de2de4cca7fc315d63d0f759738e274a8894018fb7cb43e8c9f86db3ace5c977",
+    "research/ir-case-studies-2026-10-15/3774/faq-to-filing-guidance-comparison/filing-normalized.json": "d273afe49a1f6d94d80c785e90542c6afc2b2ec7e5fa04f3f98a51eeb8aa9c55",
+    "research/ir-case-studies-2026-10-15/3817/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json": "9cb688305dc2a0582ee66f363f88efae03a5b677859adf1f07dd633d86fc2749",
+    "research/ir-case-studies-2026-10-15/4318/annual-per-share-disclosed-facts-2026-10-16/input-pins.json": "55ea7f0776b39d316bcfa4a08f2f88093ff54b89dc09843b23a17f0b75565b3e",
+    "research/ir-case-studies-2026-10-15/4318/annual-per-share-disclosed-facts-2026-10-16/normalization-input.json": "bf8b3a0dea86c7a9fb950f8e13b8da2d9ca7567f935e6e869d12e80837d99e1f",
+    "research/ir-case-studies-2026-10-15/4318/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json": "1b6fcd6854455cba067ac3a90d13453377fa346e0ebff9e5e83b5045ecf5eada",
+    "research/ir-case-studies-2026-10-15/4318/annual-per-share-disclosed-facts-2026-10-16/parent-acceptance.json": "0f2b0177a502d637d27c7cb4f19be8e91608e1f30f19b039c0afcee4d4b8f79e",
+    "research/ir-case-studies-2026-10-15/4318/annual-per-share-disclosed-facts-2026-10-16/validation.json": "d169780cbb78a095d5f1fc1ec755968d99488a85e2af7eba7a8fb3e39b3ae03e",
+    "research/ir-case-studies-2026-10-15/5480/disclosed-facts/normalized-bundle.json": "62e5672411e923db21b0529dd9365d816d58c1a2aeb88270f538e546e580180b",
+    "research/ir-case-studies-2026-10-15/5480/revenue-disclosed-facts/normalized-bundle.json": "0e251685a8bc95232b39fc678dc1ad6ffc662162dafdf961d731aaaf6350ea27",
+    "research/ir-case-studies-2026-10-15/5831/issuer-guidance-facts/normalized-bundle.json": "24dfc390fef1901da745445e3f24021423e2262e56cff06e5060783df57d590c",
+    "research/ir-case-studies-2026-10-15/5988/annual-bps-basis/normalized-bundle.json": "b9123b518059dc3a16e07074e4fd6684fe50618515f9a8ca959c7c91a976df32",
+    "research/ir-case-studies-2026-10-15/5988/annual-capital-balance-disclosed-facts/normalized-bundle.json": "642534fa52fa27c14be6f5a0943b36483a1fa66c65eaabb1a09100af68242eab",
+    "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/normalized-bundle.json": "4c7723e2667252489997eaa2abaf99862c6c87b3d1fd02cef4053a890ec9683e",
+    "research/ir-case-studies-2026-10-15/5988/balance-book-value-facts/normalized-bundle.json": "75c871e1e053390d3e6a4762b8391c66a76a790ea5b917b8c3f1edb5ba385aa4",
+    "research/ir-case-studies-2026-10-15/5988/disclosed-facts-normalized.json": "31cd24bb1b73a21152cfb11f1759f84e2970adab4ddf3c08a4a3b5b226a24695",
+    "research/ir-case-studies-2026-10-15/5988/tax-disclosed-facts/normalized-bundle.json": "cc8d3b972cfab2f0b8b90e823bf90a354fee15fc87538dfa4a3e1f0edc0e59cf",
+    "research/ir-case-studies-2026-10-15/6323/disclosed-facts/normalized-bundle.json": "175557397f5d05a4549e3672187e0e3f98cd58a6397ee676e98a070578114cee",
+    "research/ir-case-studies-2026-10-15/6754/disclosed-facts/normalized-bundle.json": "2ec58902101391f1523cb61eaa469d0ea804987c8eea89425cef074f51bd8d78",
+    "research/ir-case-studies-2026-10-15/7525/external-parameter-facts/normalized-facts.json": "5d09492511d703456c72a7f0c92597e3f969e4e2719fe3504f83f9c74a6f225a",
+    "research/ir-case-studies-2026-10-15/8151/external-estimate-facts/bundle.json": "3dd17da3a229c42f7966b6ab8e2793bd2b670459110b3750606fe8e646f38786",
+    "research/ir-case-studies-2026-10-15/8151/quick-external-parameter-facts/bundle.json": "2e3d3c2f44ea0b4d50a138c6445c00145a074f331a67aa02e7229b62ec6dea14",
+    "research/ir-case-studies-2026-10-15/8331/disclosed-facts-normalized.json": "109b3af7449f6d3059e266c6249ab9d0b7b191a995d0b37cba72749044d2b1c9",
+    "research/ir-case-studies-2026-10-15/disclosed-fact-index-v38.json": "717d74ee956aff199c09c5f563e0e7493de26c5f050233897394806dfa53a397",
+    "research/ir-external-estimate-extraction-2026-10-15/9702/bundle.json": "ba16f93e7a6290d7c7522aaed4bd0c0ebe005f7052ca1e2419f4112a09364817"
+  },
+  "newentry_proofs": [
+    {
+      "artifact": "research/ir-case-studies-2026-10-15/2929/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json",
+      "artifact_sha256": "47f6dd0ce9dd8257cbfb00091faaa7699cf620f9924bf132ccd5a117b6315e9d",
+      "company_id": "jp:2929",
+      "derived_source_id": "disclosed-facts:8cd53e8d69bfd982908ca784be132e0009d9cf53f0a19b23e84d79285fea3a9f",
+      "fact_projection": [
+        {
+          "concept": "reported_annual_earnings_per_share",
+          "id": "2929-reported-annual-EPS-FY2026",
+          "kind": "reported_fact",
+          "period": {
+            "date_basis": "Exact duration printed in sameconsolidated annual heading",
+            "end_date": "2026-07-31",
+            "label": "2026年７月期",
+            "period_kind": "annual_reported_duration",
+            "start_date": "2025-08-01"
+          },
+          "scope": {
+            "accounting_basis": "日本基準",
+            "canonical_model_input_path": null,
+            "company_id": "jp:2929",
+            "consolidation_scope": "連結",
+            "current_split_share_basis_verified": false,
+            "expected_value_eligible": false,
+            "financial_inputs_verified": false,
+            "financial_or_model_adopted": false,
+            "historical_original_disclosure_day": "2026-09-11",
+            "independent_meaning_review_verified": false,
+            "individual_and_guidance_not_substituted": "Originalp2 individualEPS△8.20/BPS535.45 andp1 issuerguideEPS75.75 are distinct and not input here",
+            "known_correction": {
+              "image_observations_SHA256": "cdb2102783f6bfdc30dcdf88f386449be6ab9f9c6e497d97809d6129db386df9",
+              "image_observations_path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/image-observations.json",
+              "limited_review_SHA256": "bf5c704d1fcb9ea66c9e276c3036cacac2ecdc3505dc05ad9e74d9199b771084",
+              "limited_review_path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/correction-connection.json",
+              "scope": "2026-09-17 correction of original printed9/physical11 consolidated BS capital-surplus/retainedearnings. No automatic correction application, image-table textification, or certification of EPS/BPS unchanged/current. Original and correction preserved separately.",
+              "source_bundle_SHA256": "7e32e9b9e490e67dd3c73ad495190682463d34916f5ae2947eeb07c2be317f7f",
+              "source_bundle_path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/source-only-bundle.json",
+              "source_id": "case-public:e57a33cf096ab0b2b1b472a938684e6388a0f06096feac90ba21d325eabf8494",
+              "source_native_SHA256": "0cf9a39daa828bc013c01d304cb46c8cba4100e943dd1d06f566e3693ff8a510"
+            },
+            "meaning_review_required": true,
+            "ordinary_per_share_context": {
+              "BPS_basis": "ordinary share endingnetassets13166million/endordinaryshares29043377, originalprintedvalues, not recomputed",
+              "SHA256": "6386bc37bfd84af992a11dc0facb77016aa13ed0b4c9b596c6cce6e632b8bc75",
+              "basic_EPS_parent_NI_basis": "ordinary share parentNI1988million/average28978455, originalprintedvalues, not recomputed",
+              "dilutedEPS_dash": "Potentialshares do not exist per originalnote; not0",
+              "file": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/source-quotes.json",
+              "physical_page": 21,
+              "quote_id": "ordinary-per-share-basis"
+            },
+            "original_author": {
+              "kind": "issuer",
+              "name": "株式会社ファーマフーズ"
+            },
+            "period_scope_column_and_share_class_are_reviewer_assertions": true,
+            "publication_clock_unknown": true,
+            "share_class": "ordinary common shares, explicitly supported by originalphysical21 per-share note",
+            "source_display_unit_label": "円 銭",
+            "unit_mapping": "Rawdecimal token under円 銭 column, supportedv1円→JPY-per-share; not synthetic yen-sen composite"
+          },
+          "unit": "JPY-per-share",
+          "value": "68.61"
+        },
+        {
+          "concept": "reported_book_value_per_share",
+          "id": "2929-reported-BPS-at-20260731",
+          "kind": "reported_fact",
+          "period": {
+            "as_of_date": "2026-07-31",
+            "date_basis": "CurrentFY financial-position row, annualend in sameheading and explicitBPS date at originalp21",
+            "label": "2026年７月期",
+            "period_kind": "instant"
+          },
+          "scope": {
+            "accounting_basis": "日本基準",
+            "canonical_model_input_path": null,
+            "company_id": "jp:2929",
+            "consolidation_scope": "連結",
+            "current_split_share_basis_verified": false,
+            "expected_value_eligible": false,
+            "financial_inputs_verified": false,
+            "financial_or_model_adopted": false,
+            "historical_original_disclosure_day": "2026-09-11",
+            "independent_meaning_review_verified": false,
+            "individual_and_guidance_not_substituted": "Originalp2 individualEPS△8.20/BPS535.45 andp1 issuerguideEPS75.75 are distinct and not input here",
+            "known_correction": {
+              "image_observations_SHA256": "cdb2102783f6bfdc30dcdf88f386449be6ab9f9c6e497d97809d6129db386df9",
+              "image_observations_path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/image-observations.json",
+              "limited_review_SHA256": "bf5c704d1fcb9ea66c9e276c3036cacac2ecdc3505dc05ad9e74d9199b771084",
+              "limited_review_path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/correction-connection.json",
+              "scope": "2026-09-17 correction of original printed9/physical11 consolidated BS capital-surplus/retainedearnings. No automatic correction application, image-table textification, or certification of EPS/BPS unchanged/current. Original and correction preserved separately.",
+              "source_bundle_SHA256": "7e32e9b9e490e67dd3c73ad495190682463d34916f5ae2947eeb07c2be317f7f",
+              "source_bundle_path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/source-only-bundle.json",
+              "source_id": "case-public:e57a33cf096ab0b2b1b472a938684e6388a0f06096feac90ba21d325eabf8494",
+              "source_native_SHA256": "0cf9a39daa828bc013c01d304cb46c8cba4100e943dd1d06f566e3693ff8a510"
+            },
+            "meaning_review_required": true,
+            "ordinary_per_share_context": {
+              "BPS_basis": "ordinary share endingnetassets13166million/endordinaryshares29043377, originalprintedvalues, not recomputed",
+              "SHA256": "6386bc37bfd84af992a11dc0facb77016aa13ed0b4c9b596c6cce6e632b8bc75",
+              "basic_EPS_parent_NI_basis": "ordinary share parentNI1988million/average28978455, originalprintedvalues, not recomputed",
+              "dilutedEPS_dash": "Potentialshares do not exist per originalnote; not0",
+              "file": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/source-quotes.json",
+              "physical_page": 21,
+              "quote_id": "ordinary-per-share-basis"
+            },
+            "original_author": {
+              "kind": "issuer",
+              "name": "株式会社ファーマフーズ"
+            },
+            "period_scope_column_and_share_class_are_reviewer_assertions": true,
+            "publication_clock_unknown": true,
+            "share_class": "ordinary common shares, explicitly supported by originalphysical21 per-share note",
+            "source_display_unit_label": "円 銭",
+            "unit_mapping": "Rawdecimal token under円 銭 column, supportedv1円→JPY-per-share; not synthetic yen-sen composite"
+          },
+          "unit": "JPY-per-share",
+          "value": "453.35"
+        }
+      ],
+      "fact_scope_native_sha256": {
+        "2929-reported-BPS-at-20260731": "eaec4d462443895cbdb3bb39a637cdc96f489420ff35d772350fb0224f18dee9",
+        "2929-reported-annual-EPS-FY2026": "eaec4d462443895cbdb3bb39a637cdc96f489420ff35d772350fb0224f18dee9"
+      },
+      "original_source_id": "case-public:96f2f98c709f5f7d29cbe307a7954902ed8ea19c1ac20a6e41ac5f5be537679e",
+      "raw_fact_original_source_id_not_index_override": true,
+      "source_content_sha256": {
+        "case-public:96f2f98c709f5f7d29cbe307a7954902ed8ea19c1ac20a6e41ac5f5be537679e": "f042569e4a1578ca495601066849d8b1d8425d4508dfdcef82a13f3c90442fe2",
+        "case-public:e57a33cf096ab0b2b1b472a938684e6388a0f06096feac90ba21d325eabf8494": "83d2ba42960948050417a39813dc4e983f772bf373a5aa803154d1c8520cd635",
+        "disclosed-facts:8cd53e8d69bfd982908ca784be132e0009d9cf53f0a19b23e84d79285fea3a9f": "97b112a08a96de3d08c648ac8c26b6385fd3791a9b0e07749bacd898b792e129"
+      },
+      "source_native_sha256": {
+        "case-public:96f2f98c709f5f7d29cbe307a7954902ed8ea19c1ac20a6e41ac5f5be537679e": "4989a354f8aa51d2c63e604f2fd2d15fde556c9dcf7cfb2f2449a309c1b6d3c3",
+        "case-public:e57a33cf096ab0b2b1b472a938684e6388a0f06096feac90ba21d325eabf8494": "0cf9a39daa828bc013c01d304cb46c8cba4100e943dd1d06f566e3693ff8a510",
+        "disclosed-facts:8cd53e8d69bfd982908ca784be132e0009d9cf53f0a19b23e84d79285fea3a9f": "ca83c7d339c79748da4b7f726426d2fcfcd6440a08c0aeb9a99c83fcf7a1d5db"
+      },
+      "source_whole_objects_match_root_ingest_bundle": true
+    },
+    {
+      "artifact": "research/ir-case-studies-2026-10-15/4318/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json",
+      "artifact_sha256": "1b6fcd6854455cba067ac3a90d13453377fa346e0ebff9e5e83b5045ecf5eada",
+      "company_id": "jp:4318",
+      "derived_source_id": "disclosed-facts:6359dbeaa58c711f166fabfc6028785046120736fdaa2227c488596f1e08a10b",
+      "fact_projection": [
+        {
+          "concept": "reported_annual_earnings_per_share",
+          "id": "4318-reported-annual-EPS-FY2026",
+          "kind": "reported_fact",
+          "period": {
+            "date_basis": "Exact dates in p1 consolidated annual earnings heading",
+            "end_date": "2026-03-31",
+            "label": "2026年3月期",
+            "period_kind": "annual_reported_duration",
+            "start_date": "2025-04-01"
+          },
+          "scope": {
+            "accounting_basis": "日本基準",
+            "canonical_model_input_path": null,
+            "company_id": "jp:4318",
+            "consolidation_scope": "連結",
+            "current_share_or_guidance_basis_verified": false,
+            "display_precision": "p1 decimal token exactly, no NI/share reverse calculation or precision interpolation",
+            "financial_inputs_verified": false,
+            "historical_issuer_disclosure_only": true,
+            "meaning_review_required": true,
+            "model_or_policy_adopted": false,
+            "observed_source_disclosure_date": "2026-04-30",
+            "original_author": {
+              "kind": "issuer",
+              "name": "株式会社クイック"
+            },
+            "period_scope_column_and_per_share_meaning_are_reviewer_assertions": true,
+            "profit_or_equity_basis": "ordinary-share parent profit basic EPS; p19 parent/ordinary profit4,158,976千円 and annual average56,121千株; no numerator/dash recomputation",
+            "publication_clock_unknown": true,
+            "raw_unit_mapping_note": "Raw 円 contained in printed 円銭; decimal token retained as JPY-per-share. Not conversion of p19 composite円銭 display.",
+            "share_class": "普通株式; p2 explicit ordinary shares, p19 ordinary EPS and ESOP basis",
+            "share_scope_context": "p2 current issued including treasury56,552,028株, endtreasury429,816株, average56,121,515株. ESOP included in endtreasury419,052株 and average deduction419,811株. p19 EPS average56,121千株 and ESOP419千株 are separate printed precision, not exact substitutes.",
+            "source_context_references": {
+              "file": "research/ir-case-studies-2026-10-15/4318/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+              "file_SHA256": "918883381a1c74b116e2de23f83d4c6dd08e9ed3f2fd9e030774355995400cd6",
+              "quote_ids": [
+                "identity-and-consolidated-EPS",
+                "consolidated-BPS-and-split",
+                "ordinary-shares-ESOP-split",
+                "per-share-basis-and-ESOP"
+              ],
+              "scope": "Existing accepted/source-review context references, not extra sources or independent confirmations.",
+              "source_id": "case-public:7304bcc072a7a497d7bdfede25cf02938f6c4fee91df789d9fc96cafb8c682db",
+              "source_native_SHA256": "cad8d5782fdc58295e5a5e260adc2cb7fcd245d843bae31a26be1e76b1e81f5e"
+            },
+            "split_basis": "Issuer states ordinary share1→3 effective2025-12-01, both periods EPS/BPS and p2 share counts presented assuming split at prior annual beginning. Values already adjusted; no second adjustment.",
+            "unit_display_label": "円銭"
+          },
+          "unit": "JPY-per-share",
+          "value": "74.11"
+        },
+        {
+          "concept": "reported_book_value_per_share",
+          "id": "4318-reported-BPS-at-20260331",
+          "kind": "reported_fact",
+          "period": {
+            "as_of_date": "2026-03-31",
+            "date_basis": "Financial-position row at annual end from exact p1 duration end; reviewer asserts stock instant, not duration",
+            "label": "2026年3月期",
+            "period_kind": "instant"
+          },
+          "scope": {
+            "accounting_basis": "日本基準",
+            "canonical_model_input_path": null,
+            "company_id": "jp:4318",
+            "consolidation_scope": "連結",
+            "current_share_or_guidance_basis_verified": false,
+            "display_precision": "p1 decimal token exactly, no NI/share reverse calculation or precision interpolation",
+            "financial_inputs_verified": false,
+            "historical_issuer_disclosure_only": true,
+            "meaning_review_required": true,
+            "model_or_policy_adopted": false,
+            "observed_source_disclosure_date": "2026-04-30",
+            "original_author": {
+              "kind": "issuer",
+              "name": "株式会社クイック"
+            },
+            "period_scope_column_and_per_share_meaning_are_reviewer_assertions": true,
+            "profit_or_equity_basis": "issuer consolidated net assets per ordinary share at annual end; p19 ESOP end shares deducted as treasury. Detailed full BPS numerator not reconstructed; net assets total not substituted",
+            "publication_clock_unknown": true,
+            "raw_unit_mapping_note": "Raw 円 contained in printed 円銭; decimal token retained as JPY-per-share. Not conversion of p19 composite円銭 display.",
+            "share_class": "普通株式; p2 explicit ordinary shares, p19 ordinary EPS and ESOP basis",
+            "share_scope_context": "p2 current issued including treasury56,552,028株, endtreasury429,816株, average56,121,515株. ESOP included in endtreasury419,052株 and average deduction419,811株. p19 EPS average56,121千株 and ESOP419千株 are separate printed precision, not exact substitutes.",
+            "source_context_references": {
+              "file": "research/ir-case-studies-2026-10-15/4318/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+              "file_SHA256": "918883381a1c74b116e2de23f83d4c6dd08e9ed3f2fd9e030774355995400cd6",
+              "quote_ids": [
+                "identity-and-consolidated-EPS",
+                "consolidated-BPS-and-split",
+                "ordinary-shares-ESOP-split",
+                "per-share-basis-and-ESOP"
+              ],
+              "scope": "Existing accepted/source-review context references, not extra sources or independent confirmations.",
+              "source_id": "case-public:7304bcc072a7a497d7bdfede25cf02938f6c4fee91df789d9fc96cafb8c682db",
+              "source_native_SHA256": "cad8d5782fdc58295e5a5e260adc2cb7fcd245d843bae31a26be1e76b1e81f5e"
+            },
+            "split_basis": "Issuer states ordinary share1→3 effective2025-12-01, both periods EPS/BPS and p2 share counts presented assuming split at prior annual beginning. Values already adjusted; no second adjustment.",
+            "unit_display_label": "円銭"
+          },
+          "unit": "JPY-per-share",
+          "value": "345.24"
+        }
+      ],
+      "fact_scope_native_sha256": {
+        "4318-reported-BPS-at-20260331": "6c0113ee74455d8511cfd399c7e3f959e986b8504fb4a2cc70171fb067839685",
+        "4318-reported-annual-EPS-FY2026": "de5c23d167f86edaf9defbc213b26c6dae941fe9a96579ddd0a9b3efe44feea7"
+      },
+      "original_source_id": "case-public:7304bcc072a7a497d7bdfede25cf02938f6c4fee91df789d9fc96cafb8c682db",
+      "raw_fact_original_source_id_not_index_override": true,
+      "source_content_sha256": {
+        "case-public:7304bcc072a7a497d7bdfede25cf02938f6c4fee91df789d9fc96cafb8c682db": "028c6e8b3b29313ba08bb63a8bfcf4016496c3a764b2d307e06197e15bcb72ec",
+        "disclosed-facts:6359dbeaa58c711f166fabfc6028785046120736fdaa2227c488596f1e08a10b": "b9142f92f80e64b4af16b43e5e071b2b6fb7180e5199eb5d2503a4320f060895"
+      },
+      "source_native_sha256": {
+        "case-public:7304bcc072a7a497d7bdfede25cf02938f6c4fee91df789d9fc96cafb8c682db": "cad8d5782fdc58295e5a5e260adc2cb7fcd245d843bae31a26be1e76b1e81f5e",
+        "disclosed-facts:6359dbeaa58c711f166fabfc6028785046120736fdaa2227c488596f1e08a10b": "fe5a3398332a834294339a36b46ce1cd86d7fa132a8341df05348075b287dac9"
+      },
+      "source_whole_objects_match_root_ingest_bundle": true
+    }
+  ],
+  "note": "Preparation candidate precedes independent current-database connection check. The candidate is immutable; canonical v39 adds that observation separately. Native source hash uses models.json_text semantics, not the compact normalizer snapshot hash.",
+  "old43entries230facts_whole_exact": true,
+  "old_actual_history_native_SHA": "054dd6c280f24e1714c343b85d500a75ba3279c26e7dceffdccd7331dc387173",
+  "old_outside2derived7facts_resolution_unchanged": true,
+  "old_perfact_source_artifact_overrides_unchanged": true,
+  "old_subtree_native_SHA_after": "8381d7a64689441753cc41ba72b9507cd36ec1d58eb2dd69f4797d79e662ba93",
+  "old_subtree_native_SHA_before": "8381d7a64689441753cc41ba72b9507cd36ec1d58eb2dd69f4797d79e662ba93",
+  "old_v38_SHA": "717d74ee956aff199c09c5f563e0e7493de26c5f050233897394806dfa53a397",
+  "old_v38_actual_history_object_whole_exact": true,
+  "outside7_resolved_facts": [
+    {
+      "artifact": "research/ir-case-studies-2026-10-15/8331/disclosed-facts-normalized.json",
+      "company_id": "jp:8331",
+      "fact_id": "8331.fy2027.company-guidance.annual-dps",
+      "original_source_id": "chibabank.8331.05",
+      "scope_sha256": "1c13a26b00e5539c02fef3695d71084edb5632c2fc97e651403336c047c8cc5a",
+      "source_id": "disclosed-facts:49fa0ec2c5cd2cdfb2a2393c75dcf78a5e9d903b9c850ed5330ea50ffe874cce"
+    },
+    {
+      "artifact": "research/ir-case-studies-2026-10-15/8331/disclosed-facts-normalized.json",
+      "company_id": "jp:8331",
+      "fact_id": "8331.fy2027.company-guidance.interim-dps",
+      "original_source_id": "chibabank.8331.05",
+      "scope_sha256": "8e9e6f7af79b2eb75fbe4816f33b422607cdda04e3ab8c519ae6688686d1e493",
+      "source_id": "disclosed-facts:49fa0ec2c5cd2cdfb2a2393c75dcf78a5e9d903b9c850ed5330ea50ffe874cce"
+    },
+    {
+      "artifact": "research/ir-case-studies-2026-10-15/8331/disclosed-facts-normalized.json",
+      "company_id": "jp:8331",
+      "fact_id": "8331.fy2027.company-guidance.consolidated-payout-ratio",
+      "original_source_id": "chibabank.8331.05",
+      "scope_sha256": "5d17ada5c962ef859a1d87e408e133fb01ec82b60dd4d86bc1ff645d88920974",
+      "source_id": "disclosed-facts:49fa0ec2c5cd2cdfb2a2393c75dcf78a5e9d903b9c850ed5330ea50ffe874cce"
+    },
+    {
+      "artifact": "research/ir-external-estimate-extraction-2026-10-15/9702/bundle.json",
+      "company_id": "jp:9702",
+      "fact_id": "9702-alpha-win-2026-12-newE-eps",
+      "original_source_id": "case-public:2d9802ebe8614ea26cbb622ab2e89d6ee9e129fe6d742b515b13687a4d642cf4",
+      "scope_sha256": "9b28641d3def8a49d924c014065b4f69353b155acadb9e248a9b94de46de080f",
+      "source_id": "disclosed-facts:8ddc2f01a3d80d2cba579575e77077ff3cc0e4ddfdeb98472a465e751f2284cf"
+    },
+    {
+      "artifact": "research/ir-external-estimate-extraction-2026-10-15/9702/bundle.json",
+      "company_id": "jp:9702",
+      "fact_id": "9702-alpha-win-2027-12-newE-eps",
+      "original_source_id": "case-public:2d9802ebe8614ea26cbb622ab2e89d6ee9e129fe6d742b515b13687a4d642cf4",
+      "scope_sha256": "9b28641d3def8a49d924c014065b4f69353b155acadb9e248a9b94de46de080f",
+      "source_id": "disclosed-facts:8ddc2f01a3d80d2cba579575e77077ff3cc0e4ddfdeb98472a465e751f2284cf"
+    },
+    {
+      "artifact": "research/ir-external-estimate-extraction-2026-10-15/9702/bundle.json",
+      "company_id": "jp:9702",
+      "fact_id": "9702-alpha-win-2028-12-newE-eps",
+      "original_source_id": "case-public:2d9802ebe8614ea26cbb622ab2e89d6ee9e129fe6d742b515b13687a4d642cf4",
+      "scope_sha256": "9b28641d3def8a49d924c014065b4f69353b155acadb9e248a9b94de46de080f",
+      "source_id": "disclosed-facts:8ddc2f01a3d80d2cba579575e77077ff3cc0e4ddfdeb98472a465e751f2284cf"
+    },
+    {
+      "artifact": "research/ir-external-estimate-extraction-2026-10-15/9702/bundle.json",
+      "company_id": "jp:9702",
+      "fact_id": "9702-alpha-win-2026-12-CE-eps-republished",
+      "original_source_id": "case-public:2d9802ebe8614ea26cbb622ab2e89d6ee9e129fe6d742b515b13687a4d642cf4",
+      "scope_sha256": "7c57b20377a4f671f607504af7631ee73a73f8caf0fe71622b721a2a95a466e9",
+      "source_id": "disclosed-facts:8ddc2f01a3d80d2cba579575e77077ff3cc0e4ddfdeb98472a465e751f2284cf"
+    }
+  ],
+  "recorded_at": "2026-10-16T10:40:49.923397+00:00",
+  "status": "candidate_prepared_from_root_receipt_not_parent_accepted"
+}

@@ -1,0 +1,140 @@
+{
+  "security_code": "196A",
+  "company_name": "ＭＦＳ",
+  "market": "グロース（内国株式）",
+  "jpx_sector": "その他金融業",
+  "investigation_status": "provisional",
+  "verification_level": "official_form_link_only",
+  "official_url": "https://www.mortgagefss.jp/",
+  "contact_url": "https://ir.mortgagefss.jp/inquiry/",
+  "channels": [
+    "form"
+  ],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "candidate",
+  "attempted_at": "2026-10-11T03:59:58.488024+00:00",
+  "completed_at": "2026-10-11T04:00:07.174901+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/196A/05.json",
+      "url": "https://ir.mortgagefss.jp/inquiry/",
+      "retrieved_at": "2026-10-11T04:00:06.315919+00:00",
+      "quote": "IRについてのお問い合わせ",
+      "http_status": 200,
+      "role": "contact_channel"
+    },
+    {
+      "snapshot": "evidence/196A/05.json",
+      "url": "https://ir.mortgagefss.jp/inquiry/",
+      "retrieved_at": "2026-10-11T04:00:06.315919+00:00",
+      "quote": "下記のフォームに必要事項を入力の上、「入力内容を確認」 をクリックして下さい。",
+      "http_status": 200,
+      "role": "conditions"
+    },
+    {
+      "snapshot": "evidence/196A/05.json",
+      "url": "https://ir.mortgagefss.jp/inquiry/",
+      "retrieved_at": "2026-10-11T04:00:06.315919+00:00",
+      "quote": "お問い合せの内容によっては電話や書面で回答を差し上げる場合もございます",
+      "http_status": 200,
+      "role": "conditions"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.mortgagefss.jp/",
+      "final_url": "https://mortgagefss.jp/",
+      "snapshot": "evidence/196A/01.json",
+      "retrieved_at": "2026-10-11T04:00:00.437689+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://ir.mortgagefss.jp/",
+      "final_url": "https://ir.mortgagefss.jp/",
+      "snapshot": "evidence/196A/02.json",
+      "retrieved_at": "2026-10-11T04:00:03.340894+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://ir.mortgagefss.jp/meeting/",
+      "final_url": "https://ir.mortgagefss.jp/meeting/",
+      "snapshot": "evidence/196A/03.json",
+      "retrieved_at": "2026-10-11T04:00:04.488371+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://ir.mortgagefss.jp/performance/",
+      "final_url": "https://ir.mortgagefss.jp/performance/",
+      "snapshot": "evidence/196A/04.json",
+      "retrieved_at": "2026-10-11T04:00:05.147188+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://ir.mortgagefss.jp/inquiry/",
+      "final_url": "https://ir.mortgagefss.jp/inquiry/",
+      "snapshot": "evidence/196A/05.json",
+      "retrieved_at": "2026-10-11T04:00:06.315919+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [
+    "公式IR専用ページにフォーム案内があるが、保存GETでは実入力欄を確認できない。",
+    "問い合わせ内容により電話・書面で回答する場合がある。"
+  ],
+  "limitations": [
+    "公開ページの保存済みGET証拠による確認。フォーム入力・送信、メール到達、実返信は未検証。",
+    "窓口の確認は投資適性、業績・株価の評価や個人への回答保証を示さない。",
+    "公式のIR窓口案内までの確認。メールと質問本文の実入力欄を結び付けた確認は完了していない。"
+  ],
+  "discovery": {
+    "security_code": "196A",
+    "official_url": "https://www.mortgagefss.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ＭＦＳ",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/196A/01.json",
+      "normalized_name": "mfs",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/196A/02.json",
+      "normalized_name": "mfs",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/196A/03.json",
+      "normalized_name": "mfs",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/196A/04.json",
+      "normalized_name": "mfs",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/196A/05.json",
+      "normalized_name": "mfs",
+      "security_code_observed": false
+    }
+  ],
+  "classification_version": 2,
+  "successful_official_page_count": 5,
+  "manual_review": {
+    "reviewer": "codex_audit_alpha",
+    "reviewed_at": "2026-10-11T04:11:06.691343+00:00",
+    "notes": "MFS公式IR専用ページとフォーム案内を確認。forms=[]なのでprovisional維持。サービス金融窓口の電話はIRメールフォーム証拠にしない。"
+  }
+}

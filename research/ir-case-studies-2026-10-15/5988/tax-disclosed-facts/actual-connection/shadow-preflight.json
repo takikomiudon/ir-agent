@@ -1,0 +1,259 @@
+{
+  "recorded_at": "2026-10-15T22:35:13.443301+00:00",
+  "status": "passed",
+  "events": [
+    {
+      "recorded_at": "2026-10-15T22:35:13.353574+00:00",
+      "stage": "ingest",
+      "result": {
+        "companies": 0,
+        "sources_added": 1,
+        "theses_added": 0
+      }
+    },
+    {
+      "recorded_at": "2026-10-15T22:35:13.367985+00:00",
+      "stage": "queue",
+      "result": {
+        "kind": "intake",
+        "stage": "source_classification",
+        "as_of": "2026-10-15T22:35:13.353581+00:00",
+        "selected": [
+          {
+            "job_id": "intake-971cfe9f82950ab9d067649e",
+            "company_id": "jp:5988",
+            "status": "pending",
+            "source_count": 1
+          }
+        ],
+        "deferred_count": 0,
+        "new_only": true,
+        "jobs_created": 1,
+        "skipped": []
+      }
+    },
+    {
+      "recorded_at": "2026-10-15T22:35:13.373320+00:00",
+      "stage": "claim",
+      "result": {
+        "request_ref": {
+          "caller_namespace": "codex-5988-tax-facts-intake",
+          "request_id": "shadow-20261015",
+          "operation": "claim",
+          "contract_version": 1
+        },
+        "replayed": false,
+        "original_response": {
+          "attempt_id": "attempt-37612dbbcd513c63b99c1b7779c6b71975fe82e99fe59515824d62e09cda2f32",
+          "company_id": "jp:5988",
+          "generation": 1,
+          "job_id": "intake-971cfe9f82950ab9d067649e",
+          "lease_until": "2026-10-15T22:50:13.368013+00:00",
+          "measurement_event_id": "attempt-event-ef3a32ff4b226805262f9ba01e2e3e33624894fd31f3e612db59746c10fa3707",
+          "packet_sha256": "64b6000ad11dca0645792f397f71d086cf0473059257c640c64a3f9c1719301f",
+          "worker": "codex-5988-tax-facts-intake"
+        },
+        "current_lease": {
+          "status": "active",
+          "valid_now": true,
+          "observed_at": "2026-10-15T22:35:13.368013+00:00",
+          "job_id": "intake-971cfe9f82950ab9d067649e",
+          "generation": 1,
+          "worker": "codex-5988-tax-facts-intake",
+          "job_status": "leased",
+          "lease_until": "2026-10-15T22:50:13.368013+00:00",
+          "packet_sha256": "64b6000ad11dca0645792f397f71d086cf0473059257c640c64a3f9c1719301f",
+          "reason_codes": []
+        }
+      }
+    },
+    {
+      "recorded_at": "2026-10-15T22:35:13.374793+00:00",
+      "stage": "complete",
+      "result": {
+        "job_id": "intake-971cfe9f82950ab9d067649e",
+        "status": "completed",
+        "completed_at": "2026-10-15T22:35:13.373436+00:00"
+      }
+    }
+  ],
+  "outcome": {
+    "job_id": "intake-971cfe9f82950ab9d067649e",
+    "completed_at": "2026-10-15T22:35:13.373436+00:00",
+    "receipt": {
+      "entity_type": "source",
+      "entity_id": "disclosed-facts:0c718f2c84fb7cf40e3eea6f5fe28cdf78ebe6de6589e0c51da2196845ce8d90",
+      "version": 0,
+      "snapshot_sha256": "010f861182efa6522185e293fedb86976d31d2c0128935707c74781b1bbbac2a",
+      "first_saved_at": "2026-10-15T22:35:13.352943+00:00",
+      "presence_observed_at": "2026-10-15T22:35:13.352943+00:00",
+      "basis": "trusted_insert"
+    }
+  },
+  "old_row_comparison": {
+    "metadata": {
+      "before_count": 1,
+      "after_count": 1,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "companies": {
+      "before_count": 1819,
+      "after_count": 1819,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "sources": {
+      "before_count": 150,
+      "after_count": 151,
+      "old_rows_preserved": true,
+      "entire_table_equal": false
+    },
+    "theses": {
+      "before_count": 0,
+      "after_count": 0,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "jobs": {
+      "before_count": 73,
+      "after_count": 74,
+      "old_rows_preserved": true,
+      "entire_table_equal": false
+    },
+    "questions": {
+      "before_count": 0,
+      "after_count": 0,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "replies": {
+      "before_count": 0,
+      "after_count": 0,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "evaluations": {
+      "before_count": 0,
+      "after_count": 0,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "decision_policies": {
+      "before_count": 0,
+      "after_count": 0,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "decision_reviews": {
+      "before_count": 0,
+      "after_count": 0,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "source_reviews": {
+      "before_count": 0,
+      "after_count": 0,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "position_observations": {
+      "before_count": 1819,
+      "after_count": 1819,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "reply_information_reviews": {
+      "before_count": 0,
+      "after_count": 0,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "reply_information_research_checks": {
+      "before_count": 0,
+      "after_count": 0,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "ir_observations": {
+      "before_count": 0,
+      "after_count": 0,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "ir_observation_versions": {
+      "before_count": 0,
+      "after_count": 0,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "source_classifications": {
+      "before_count": 149,
+      "after_count": 150,
+      "old_rows_preserved": true,
+      "entire_table_equal": false
+    },
+    "ir_prediction_models": {
+      "before_count": 0,
+      "after_count": 0,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "ir_predictions": {
+      "before_count": 0,
+      "after_count": 0,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "job_attempts": {
+      "before_count": 70,
+      "after_count": 71,
+      "old_rows_preserved": true,
+      "entire_table_equal": false
+    },
+    "job_attempt_events": {
+      "before_count": 140,
+      "after_count": 142,
+      "old_rows_preserved": true,
+      "entire_table_equal": false
+    },
+    "record_availability": {
+      "before_count": 150,
+      "after_count": 151,
+      "old_rows_preserved": true,
+      "entire_table_equal": false
+    },
+    "job_request_receipts": {
+      "before_count": 70,
+      "after_count": 71,
+      "old_rows_preserved": true,
+      "entire_table_equal": false
+    },
+    "ir_evaluation_protocol_versions": {
+      "before_count": 0,
+      "after_count": 0,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "position_declarations": {
+      "before_count": 0,
+      "after_count": 0,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "qualitative_case_versions": {
+      "before_count": 19,
+      "after_count": 19,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    },
+    "research_decision_reviews": {
+      "before_count": 0,
+      "after_count": 0,
+      "old_rows_preserved": true,
+      "entire_table_equal": true
+    }
+  },
+  "actual_database_unchanged": true,
+  "temporary_only": true
+}

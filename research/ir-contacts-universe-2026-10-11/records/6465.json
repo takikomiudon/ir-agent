@@ -1,0 +1,115 @@
+{
+  "security_code": "6465",
+  "company_name": "ホシザキ",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "機械",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.hoshizaki.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T17:51:49.337304+00:00",
+  "completed_at": "2026-10-11T17:52:54.884359+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/6465/20261011T175149337359Z/01.json",
+      "url": "https://www.hoshizaki.co.jp/",
+      "retrieved_at": "2026-10-11T17:52:04.882761+00:00",
+      "quote": "ホシザキ株式会社",
+      "role": "company_identity"
+    },
+    {
+      "snapshot": "evidence/6465/20261011T175149337359Z/02.json",
+      "url": "https://www.hoshizaki.co.jp/sitemap/",
+      "retrieved_at": "2026-10-11T17:52:19.563324+00:00",
+      "quote": "IR情報 IR情報TOP 株価チャート IRニュース IR資料室 IRカレンダー 業績ハイライト リスク情報 IR情報開示方針 免責事項",
+      "role": "financial_ir_information_navigation"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.hoshizaki.co.jp/",
+      "final_url": "https://www.hoshizaki.co.jp/",
+      "snapshot": "evidence/6465/20261011T175149337359Z/01.json",
+      "retrieved_at": "2026-10-11T17:52:04.882761+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.hoshizaki.co.jp/sitemap/",
+      "final_url": "https://www.hoshizaki.co.jp/sitemap/",
+      "snapshot": "evidence/6465/20261011T175149337359Z/02.json",
+      "retrieved_at": "2026-10-11T17:52:19.563324+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.hoshizaki.co.jp/p/support/faq/",
+      "final_url": "https://www.hoshizaki.co.jp/p/support/faq/",
+      "snapshot": "evidence/6465/20261011T175149337359Z/03.json",
+      "retrieved_at": "2026-10-11T17:52:33.020243+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.hoshizaki.co.jp/en/sitemap/",
+      "final_url": "https://www.hoshizaki.co.jp/en/sitemap/",
+      "snapshot": "evidence/6465/20261011T175149337359Z/04.json",
+      "retrieved_at": "2026-10-11T17:52:43.979362+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "現ホシザキ正式名01と日本語sitemap02/Englishsitemap04に金融IR公開情報navを確認。actual02 link221=hoshizaki.com/irは未取得金融情報topとしてobservedのみ、IR質問受付リンクへ推定しない。current資料は製品root01/sitemap02/厨房機器supportFAQ03/Englishsitemap04で実IR返信mail+質問nativeフォーム/publicIRmail/金融IR用途窓口を実証できないためU。FAQ03のsearch等4formを質問フォームへ混在せず、厨房製品の修理/営業所/資料請求/採用group窓口を現issuerIRへ借用0。個人/会社/返信not_stated、保存範囲未確認と窓口不存在/拒否を区別する。"
+  ],
+  "discovery": {
+    "security_code": "6465",
+    "official_url": "https://www.hoshizaki.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ホシザキ",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/6465/20261011T175149337359Z/01.json",
+      "normalized_name": "ホシザキ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6465/20261011T175149337359Z/02.json",
+      "normalized_name": "ホシザキ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6465/20261011T175149337359Z/03.json",
+      "normalized_name": "ホシザキ",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 4,
+  "unconfirmed_reason": "saved_product_site_sitemaps_faq_without_financial_ir_question_channel",
+  "http_get_attempt_count": 5,
+  "previous_attempts": [
+    "attempts/6465/20261011T045047595752Z.json",
+    "attempts/6465/20261011T175254884676Z.json"
+  ],
+  "automatic_conditions_before_review": [],
+  "outreach_reason": "現発行体の金融IR受付用途と同native質問返信欄・公式実導線・個人条件を保存原文で確認。一般製品/採用/株式事務/資料請求/別法人・別queryrouteへ受付を借用しない。",
+  "route_type": null,
+  "ir_url": null,
+  "manual_review": {
+    "reviewer": "codex_audit_data_64_batch17",
+    "reviewed_at": "2026-10-11T19:04:21.379719+00:00",
+    "notes": "現ホシザキ正式名01と日本語sitemap02/Englishsitemap04に金融IR公開情報navを確認。actual02 link221=hoshizaki.com/irは未取得金融情報topとしてobservedのみ、IR質問受付リンクへ推定しない。current資料は製品root01/sitemap02/厨房機器supportFAQ03/Englishsitemap04で実IR返信mail+質問nativeフォーム/publicIRmail/金融IR用途窓口を実証できないためU。FAQ03のsearch等4formを質問フォームへ混在せず、厨房製品の修理/営業所/資料請求/採用group窓口を現issuerIRへ借用0。個人/会社/返信not_stated、保存範囲未確認と窓口不存在/拒否を区別する。"
+  }
+}

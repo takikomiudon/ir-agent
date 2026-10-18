@@ -1,0 +1,181 @@
+{
+  "security_code": "4118",
+  "company_name": "カネカ",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "化学",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.kaneka.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T10:12:10.972798+00:00",
+  "completed_at": "2026-10-11T10:14:34.837400+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/4118/20261011T101210972846Z/02.json",
+      "url": "https://www.kaneka.co.jp/ir/",
+      "retrieved_at": "2026-10-11T10:12:44.101341+00:00",
+      "quote": "IR情報 | 株式会社カネカ",
+      "role": "saved_scope_review"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.kaneka.co.jp/",
+      "final_url": "https://www.kaneka.co.jp/",
+      "snapshot": "evidence/4118/20261011T101210972846Z/01.json",
+      "retrieved_at": "2026-10-11T10:12:28.175751+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.kaneka.co.jp/ir/",
+      "final_url": "https://www.kaneka.co.jp/ir/",
+      "snapshot": "evidence/4118/20261011T101210972846Z/02.json",
+      "retrieved_at": "2026-10-11T10:12:44.101341+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.kaneka.co.jp/ir/stocks/information/",
+      "final_url": "https://www.kaneka.co.jp/ir/stocks/information/",
+      "snapshot": "evidence/4118/20261011T101210972846Z/03.json",
+      "retrieved_at": "2026-10-11T10:13:00.326417+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.kaneka.co.jp/en/ir/stocks/information/",
+      "final_url": "https://www.kaneka.co.jp/en/ir/stocks/information/",
+      "snapshot": "evidence/4118/20261011T101210972846Z/04.json",
+      "retrieved_at": "2026-10-11T10:13:14.860616+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://deliverable.stockweather.co.jp/board?product=938",
+      "final_url": "https://deliverable.stockweather.co.jp/board?product=938",
+      "snapshot": "evidence/4118/20261011T101210972846Z/05.json",
+      "retrieved_at": "2026-10-11T10:13:47.408105+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.kaneka.co.jp/en/ir/",
+      "final_url": "https://www.kaneka.co.jp/en/ir/",
+      "snapshot": "evidence/4118/20261011T101210972846Z/06.json",
+      "retrieved_at": "2026-10-11T10:14:03.337497+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://deliverable.stockweather.co.jp/board?product=939",
+      "final_url": "https://deliverable.stockweather.co.jp/board?product=939",
+      "snapshot": "evidence/4118/20261011T101210972846Z/07.json",
+      "retrieved_at": "2026-10-11T10:14:19.543571+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "保存した株価iframeは質問受付窓口ではない。金融IR窓口は保存範囲で未実証。",
+    "窓口不存在の判定ではない。JavaScript等の追加表示は未検証。"
+  ],
+  "discovery": {
+    "security_code": "4118",
+    "official_url": "https://www.kaneka.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "カネカ",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/4118/20261011T101210972846Z/01.json",
+      "normalized_name": "カネカ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/4118/20261011T101210972846Z/02.json",
+      "normalized_name": "カネカ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/4118/20261011T101210972846Z/03.json",
+      "normalized_name": "カネカ",
+      "security_code_observed": true
+    },
+    {
+      "snapshot": "evidence/4118/20261011T101210972846Z/04.json",
+      "normalized_name": "カネカ",
+      "security_code_observed": true
+    }
+  ],
+  "successful_official_page_count": 7,
+  "unconfirmed_reason": "official_channel_not_demonstrated_in_saved_evidence",
+  "http_get_attempt_count": 9,
+  "previous_attempts": [
+    "attempts/4118/20261011T045047461496Z.json",
+    "attempts/4118/20261011T101434837647Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_manufacturing",
+    "reviewed_at": "2026-10-11T10:37:49.393825+00:00",
+    "notes": "カネカの会社/IR/株式情報など7保存ページを点検。取得した外部Stockweather iframeは株価情報であり、IR質問フォームではない。保存ページに金融IR用途の公開メール・質問フォーム・明示的な受付実リンクを確認できず、URLを推測しない。",
+    "saved_evidence_only": true,
+    "attempted_at_reviewed": "2026-10-11T10:12:10.972798+00:00",
+    "reviewed_snapshot_count": 7,
+    "original_evidence_sha256": {
+      "evidence/4118/20261011T101210972846Z/01.json": "f2e3e0edec2f7fd09134a28b3bf377e3938e2ea2d29f2bfff4b53945c201cb02",
+      "evidence/4118/20261011T101210972846Z/02.json": "adc5143f3c78ebc2556d92dd8c3ffbc027fedd181591333e24f73bea05dbcd8a",
+      "evidence/4118/20261011T101210972846Z/03.json": "110daee2455d3e8c808433b854f956303e7e22b3afb5b15389af5b8c66978865",
+      "evidence/4118/20261011T101210972846Z/04.json": "179d00db4bcb8382d04fe63359e426c2b3c699cb442016cd1707fee3adc4d115",
+      "evidence/4118/20261011T101210972846Z/05.json": "88b4f0545ce400aec8c92944ca75b10b47686acdb705691def41c397a0c932da",
+      "evidence/4118/20261011T101210972846Z/06.json": "b3e663b5af96634812a3a181ff6af67627da0e5e769eb1d2a5d2688bc2c4253a",
+      "evidence/4118/20261011T101210972846Z/07.json": "e25e08b249b7807619a32e02efdec998a0eda538007a79de420e82e7fcb9b3ce"
+    }
+  },
+  "previous_classification_before_manual_review": {
+    "investigation_status": "unconfirmed",
+    "verification_level": "none",
+    "contact_url": null,
+    "channels": [],
+    "public_ir_emails": [],
+    "individual_access": "not_stated",
+    "outreach_suitability": "unconfirmed",
+    "limitations": [
+      "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。"
+    ],
+    "unconfirmed_reason": "official_channel_not_demonstrated",
+    "identity_status": "name_or_security_code_observed",
+    "identity_matches": [
+      {
+        "snapshot": "evidence/4118/20261011T101210972846Z/01.json",
+        "normalized_name": "カネカ",
+        "security_code_observed": false
+      },
+      {
+        "snapshot": "evidence/4118/20261011T101210972846Z/02.json",
+        "normalized_name": "カネカ",
+        "security_code_observed": false
+      },
+      {
+        "snapshot": "evidence/4118/20261011T101210972846Z/03.json",
+        "normalized_name": "カネカ",
+        "security_code_observed": true
+      },
+      {
+        "snapshot": "evidence/4118/20261011T101210972846Z/04.json",
+        "normalized_name": "カネカ",
+        "security_code_observed": true
+      }
+    ]
+  }
+}

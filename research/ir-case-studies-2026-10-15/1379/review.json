@@ -1,0 +1,177 @@
+{
+  "company_id": "jp:1379",
+  "research_only": true,
+  "status": "initial_financial_bodies_obtained_model_inputs_unverified_calendar_label_conflict",
+  "get_cap": 5,
+  "new_GETs": 5,
+  "HTTP_statuses": [
+    200,
+    200,
+    200,
+    200,
+    200
+  ],
+  "retry_count": 0,
+  "automatic_redirect_follow_count": 0,
+  "javascript_executed": false,
+  "prior_fetched_urls_refetched": false,
+  "source_count": 5,
+  "financial_statement_body_count": 1,
+  "earnings_presentation_body_count": 1,
+  "latest_scope": "Latest explicit Q1 titles in currently fetched official navigation. Static statement archive does not expose its dynamic historical list; do not claim all company disclosures covered.",
+  "confirmed_report_scope": {
+    "fiscal_label": "2027年3月期第1四半期",
+    "accounting_basis": "日本基準",
+    "scope": "連結",
+    "actual_period_start": "2026-04-01",
+    "actual_period_end": "2026-06-30",
+    "comparison_actual_period_start": "2025-04-01",
+    "comparison_actual_period_end": "2025-06-30",
+    "amount_unit": "百万円 (EPS/dividend 円銭 separate)",
+    "company_full_year_forecast_period_start": "2026-04-01",
+    "company_full_year_forecast_period_end": "2027-03-31",
+    "quote_ids": [
+      "statement-identity-basis-actual-period",
+      "statement-actuals-and-EPS-table",
+      "statement-income-comparison-and-special-items",
+      "statement-company-full-year-forecast"
+    ]
+  },
+  "event": {
+    "date": "2026-11-13",
+    "status": "planned",
+    "time": null,
+    "title_raw": "第2四半期決算発表",
+    "calendar_fiscal_header_raw": "2026年3月期（2026年4月～2027年3月）",
+    "target_fiscal_year": null,
+    "period_label_status": "inconsistent_with_formal_statement_FY2027_label; no correction inferred",
+    "quote_id": "calendar-body-with-inconsistent-label",
+    "scheduler_or_DB_updated": false
+  },
+  "financial_meaning_checks": [
+    {
+      "item": "Actual versus forecast",
+      "status": "supported_public_labels",
+      "reason": "Statement labels quarterly actuals separately from interim/full-year company forecasts and dividends; no model forecast adopted.",
+      "quote_ids": [
+        "statement-actuals-and-EPS-table",
+        "statement-company-full-year-forecast",
+        "statement-dividend-forecast"
+      ]
+    },
+    {
+      "item": "OI/ordinary/pre-tax/net distinction and prior special gain",
+      "status": "supported_table_rows",
+      "reason": "Current/prior income statement shows separate concepts including prior insurance proceeds; no normalizing adjustment made.",
+      "quote_ids": [
+        "statement-income-comparison-and-special-items"
+      ]
+    },
+    {
+      "item": "Q1 consolidated CF",
+      "status": "not_prepared_as_explicitly_disclosed",
+      "reason": "Company says no Q1CF statement, supplies depreciation; do not compute CF from depreciation/earnings or balance-sheet changes alone.",
+      "quote_ids": [
+        "statement-cashflow-not-prepared"
+      ]
+    },
+    {
+      "item": "Payout policy",
+      "status": "supported_company_policy_not_investment_policy",
+      "reason": "Published stable payout/reserves/DOE target/strategic-investment policy; not a guarantee or forecast-series input.",
+      "quote_ids": [
+        "presentation-payout-policy-and-forecast"
+      ]
+    },
+    {
+      "item": "Share/dilution/forecast denominator",
+      "status": "partially_supported_needs_meaning_review",
+      "reason": "Actual basic/dilutedEPS and share counts public; future denominator/dilution assumptions not established by this initial review.",
+      "quote_ids": [
+        "statement-shares-scope-and-caution",
+        "statement-actuals-and-EPS-table"
+      ]
+    }
+  ],
+  "public_answers_do_not_send_questions": [
+    {
+      "topic": "Report period/basis/consolidation and public actual/forecast tables",
+      "quote_ids": [
+        "statement-identity-basis-actual-period",
+        "statement-company-full-year-forecast"
+      ]
+    },
+    {
+      "topic": "Has company changed its disclosed forecast sinceMay15?",
+      "quote_ids": [
+        "statement-unchanged-forecast-caution"
+      ]
+    },
+    {
+      "topic": "Is Q1 consolidated CF statement prepared?",
+      "quote_ids": [
+        "statement-cashflow-not-prepared"
+      ]
+    },
+    {
+      "topic": "What company explanation is already public for operating-profit change and initial-plan comparison?",
+      "quote_ids": [
+        "presentation-actual-operating-profit-drivers",
+        "presentation-actual-vs-initial-plan"
+      ]
+    },
+    {
+      "topic": "What dividend forecast and payout policy does company publicly state?",
+      "quote_ids": [
+        "statement-dividend-forecast",
+        "presentation-payout-policy-and-forecast"
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "item": "Current public earnings Q&A",
+      "status": "unknown",
+      "reason": "No explicit standalone current earnings QA obtained. Generic prior IR FAQ is separate; presentation is not automatically a QA record. No companywide nonexistence claim."
+    },
+    {
+      "item": "Calendar fiscal-year labeling",
+      "status": "inconsistent",
+      "reason": "Keep original calendar label and formal statement; no inferred correction, event remains planned and target fiscal yearnull."
+    },
+    {
+      "item": "Full-cycle/current-scale valuation inputs",
+      "status": "needs_data",
+      "reason": "Current quarter/prior quarter and presentation market-price history do not establish a complete business cycle or normalized earnings/reinvestment/ROC/financing. No fixed normalizing window."
+    },
+    {
+      "item": "Seasonal versus business-cycle exposure",
+      "status": "needs_data",
+      "reason": "Current price/mix observations and monthly market price charts are not by themselves a validated seasonal model or full-cycle assessment."
+    },
+    {
+      "item": "Future EPS/DPS/FCF, costs and policy-price decision fit",
+      "status": "needs_data",
+      "reason": "Company single-year forecasts/payout target and expansion plans are not automatically model inputs; independent assumptions/meaning and price evidence missing."
+    },
+    {
+      "item": "Current outreach eligibility",
+      "status": "unknown",
+      "reason": "Historical contact ledger not current eligibility; no form fetched/entered/submitted."
+    }
+  ],
+  "model_routing": {
+    "ordinary_model_review": "needs_data",
+    "financial_equity_review": null,
+    "cyclical_normalization_review": null,
+    "young_loss_review": null,
+    "sector_only_exclusion_or_route": false
+  },
+  "financial_inputs_verified": false,
+  "financial_values_automatically_adopted": false,
+  "new_predictions_probabilities_thresholds_model_values": [],
+  "questions_registered": [],
+  "DB_mutations": 0,
+  "company_state_changed": false,
+  "DB_selection_read_only": true
+}

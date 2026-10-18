@@ -1,0 +1,18 @@
+{
+  "format": "early_next_batch_503_reporting_correction",
+  "observed_at": "2026-10-11T15:50:18.878254+00:00",
+  "analysis_actual_GET_count": 0,
+  "snapshot": "research/ir-contacts-universe-2026-10-11/evidence/5921/20261011T153853713277Z/01.json",
+  "snapshot_sha256": "b737be50ee17e5f38e1f0d2fdcfe9d1230873df1e739e272772825467efdbd53",
+  "url": "https://kawagishi.co.jp/robots.txt",
+  "saved_retrieved_at": "2026-10-11T15:38:53.713339+00:00",
+  "http_status": 503,
+  "response_headers": {
+    "date": "Sun, 11 Oct 2026 15:39:06 GMT",
+    "server": "envoy"
+  },
+  "response_text": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout",
+  "classification": "ordinary_http_503",
+  "correction": "An earlier progress message incorrectly reported zero HTTP 503 in the new running batch after checking common_transport and TLS/termination counters. One ordinary HTTP 503 was already present at the beginning of that batch. The status observer now also reports total and ordinary HTTP 503 counters.",
+  "interpretation": "The response identifies envoy and an upstream connection timeout. It gives no Retry-After or numeric quota; the cause and failing infrastructure layer remain undetermined."
+}

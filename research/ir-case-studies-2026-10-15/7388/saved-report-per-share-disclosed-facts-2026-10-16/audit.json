@@ -1,0 +1,142 @@
+{
+  "recorded_at": "2026-10-16T11:59:12.331270+00:00",
+  "audit_kind": "file_only_normalization_and_exact_origin_audit",
+  "status": "two_reported_display_facts_structured_meaning_bases_unknown",
+  "normalization_version": 1,
+  "original_source_id": "case-public:b6787509990806d3699dc95e63bc3308cffb8f94efa4fbbf1e7016927bada2a3",
+  "original_source_native_sha256": "a194f46b4637c672103503f0383d8de215f8cc76bfe048ac582f763449821f44",
+  "original_source_content_sha256": "a0b2854fb8996978dcc9af18c322fcbce5838ac3b8842ead9f08e814fe7377fd",
+  "normalizer_original_snapshot_compact_sha256": "d315a6e2eead5162a6d03be7423c6d0085871e5029640b5309d1c66b690ab1bd",
+  "hash_domains": "native = models.json_text sorted default-separator JSON; compact snapshot = adapters.common.canonical_json. Raw file SHA, content SHA and each JSON snapshot domain are separate.",
+  "derived_source_id": "disclosed-facts:a8a491987616800597cbb9c680fc6b2ab4ff1e1549f9a0c189997b8586cfadbd",
+  "derived_source_native_sha256": "f3bbb6163a9c87fa46061b71e222efd3d16d6b7277984eea1b8e543c21782d11",
+  "normalization_now": "2026-10-16T11:59:12.331270+00:00",
+  "derived_actual_DB_first_saved_at": null,
+  "fact_count": 2,
+  "facts": [
+    {
+      "id": "7388-reported-annual-EPS-FY2025-11-label",
+      "concept": "reported_annual_earnings_per_share",
+      "kind": "reported_fact",
+      "raw_value": "88.79",
+      "value": "88.79",
+      "raw_unit_label": "円",
+      "unit": "JPY-per-share",
+      "raw_period_label": "2025.11",
+      "period": {
+        "date_basis": "p42 annual column and separately accepted p2 month range only; no day endpoints inferred",
+        "date_precision": "fiscal_year_label_and_month_range_only",
+        "end_date": null,
+        "fiscal_year_end_month": "2025-11",
+        "label": "2025年11月期（原列2025.11）",
+        "period_kind": "annual_reported_duration",
+        "raw_column_label": "2025.11",
+        "start_date": null
+      },
+      "normalization": {
+        "canonical_unit": "JPY-per-share",
+        "exact_quote_and_label_presence_verified": true,
+        "explicit_unit_multiplier": "1",
+        "raw_numeric_token_verified": true,
+        "status": "numeric_token_normalized"
+      }
+    },
+    {
+      "id": "7388-reported-BPS-FY2025-11-label",
+      "concept": "reported_book_value_per_share",
+      "kind": "reported_fact",
+      "raw_value": "508.60",
+      "value": "508.60",
+      "raw_unit_label": "円",
+      "unit": "JPY-per-share",
+      "raw_period_label": "2025.11",
+      "period": {
+        "as_of_date": null,
+        "date_basis": "p42 annual BPS column only; no exact day endpoint is explicitly supplied by the selected page or inferred from a calendar",
+        "date_precision": "fiscal_year_label_and_month_only",
+        "end_date": null,
+        "label": "2025.11列のBPS（年度ラベル・月まで）",
+        "period_kind": "instant",
+        "position_month": "2025-11",
+        "raw_column_label": "2025.11",
+        "start_date": null
+      },
+      "normalization": {
+        "canonical_unit": "JPY-per-share",
+        "exact_quote_and_label_presence_verified": true,
+        "explicit_unit_multiplier": "1",
+        "raw_numeric_token_verified": true,
+        "status": "numeric_token_normalized"
+      }
+    }
+  ],
+  "checks": {
+    "original_source_whole_preserved": true,
+    "full44page_content_preserved": true,
+    "no_original_reingestion": true,
+    "original_source_classification_unmodified": true,
+    "same_p42_quote_includes_header_unit_values_split_rounding": true,
+    "latest_2025_11_column_reuses_accepted_image_reading": true,
+    "separate_p2_context_exact_quote_offsets_and_pin_preserved": true,
+    "period_day_endpoints_all_null": true,
+    "unknown_accounting_and_shareholder_bases_null": true,
+    "no_total_net_asset_division_or_second_split_adjustment": true,
+    "normalizer_repeated_call_whole_bundle_equal": true
+  },
+  "unknown_bases": [
+    "accounting_standard",
+    "consolidated_or_standalone",
+    "basic_or_diluted",
+    "ordinary_profit_or_equity_attribution",
+    "EPS_annual_average_shares",
+    "BPS_end_shares",
+    "OCI_NCI_preferred_treasury_basis",
+    "fiscal_day_endpoints",
+    "current_share_basis"
+  ],
+  "accepted_p2_context_scope": "Month range2024-12 through2025-11 from prior accepted reading. No day-level FY dates or accounting basis inferred; title2026 is not FY2026.",
+  "split_note_scope": "Issuer states retrospective split adjustment of displayed history; no second adjustment, no current-share or complete ordinary-attribution certification.",
+  "core_reproduction": {
+    "source_id": "disclosed-facts:a8a491987616800597cbb9c680fc6b2ab4ff1e1549f9a0c189997b8586cfadbd",
+    "applicable": true,
+    "status": "reproduced",
+    "reason_codes": [],
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "original_content_sha256_status": "matched",
+    "original_snapshot_sha256_status": "matched_supplied_snapshot",
+    "fact_kinds": [
+      {
+        "id": "7388-reported-annual-EPS-FY2025-11-label",
+        "kind": "reported_fact"
+      },
+      {
+        "id": "7388-reported-BPS-FY2025-11-label",
+        "kind": "reported_fact"
+      }
+    ],
+    "original_source_id": "case-public:b6787509990806d3699dc95e63bc3308cffb8f94efa4fbbf1e7016927bada2a3"
+  },
+  "financial_inputs_verified": false,
+  "meaning_review_required": true,
+  "Graham_fit_or_seven_company_cohort_certified": false,
+  "valuation_or_reference_calculated": false,
+  "model_input_audit_API_called": false,
+  "financial_or_model_adopted": false,
+  "operations": {
+    "GET": 0,
+    "POST": 0,
+    "DB_connections": 0,
+    "Store_calls": 0,
+    "CLI_calls": 0,
+    "normalizer_core_calls": 3,
+    "old_source_or_files_changed": 0,
+    "shared_code_docs_index_changed": 0,
+    "native_cases_created": 0
+  },
+  "limitations": [
+    "Numeric token/label/unit reproduction is not a certification of period, entity, annual ordinary-common model basis, or financial fitness.",
+    "Original actual source is reused without reading its current DB classification or first-save timestamp; new derivative remains file-only.",
+    "No Graham calculation, reference value, price comparison, investment exclusion, forecast, IR draft or financial adoption."
+  ]
+}

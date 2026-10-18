@@ -1,0 +1,40 @@
+{
+  "prepared_at": "2026-10-16T15:39:04.595314+00:00",
+  "status": "prepare_only_root_execution_required",
+  "runner_scope": "derived1 ingestion/intake only; source original already exists; no qualitative operations or case/context/config edits",
+  "method_reference": {
+    "runner": "research/ir-2315-annual-accounting-intake-2026-10-16/run_once.py",
+    "sha256": "aee737ba83b8558cda8223c621095d55cc04b00671b931dbb897b7eb2e4c065a"
+  },
+  "baseline_main_sha256": "4783600606ed244710f0a0febf7a03b5b177980ad35df12a6791d64eec0227c1",
+  "expected_deltas": {
+    "sources": 1,
+    "record_availability": 1,
+    "source_classifications": 1,
+    "jobs": 1,
+    "job_attempts": 1,
+    "job_attempt_events": 2,
+    "job_request_receipts": 1
+  },
+  "all_other_tables_old_rows_schema_and_case_unchanged": true,
+  "success_before_next_operation": "exclusive fsynced per-operation success JSON and stage jsonl; stages separately guarded by sentinel, failed/uncertain stage must be inspected not replayed",
+  "stages": [
+    "root independently reviews prepared inputs/code; writes parent-input-acceptance.json",
+    "root runs shadow with reviewed execution-code pins; runner creates its copy only during root invocation",
+    "root reviews shadow-completion; runs same runner actual with matching baseline/code/input pins",
+    "root queues/claims native qualitative followup and uses handoff against actual packet",
+    "pure helper may create candidate under research; no canonical v43 or actual-source connection certificate until root separate verification"
+  ],
+  "no_actions_run_in_preparation": [
+    "Store",
+    "DBbackup",
+    "clone",
+    "ingest",
+    "intakequeue",
+    "claim",
+    "complete",
+    "qualitativequeue",
+    "indexhelper"
+  ],
+  "new_code_is_research_execution_helper_not_production_API": true
+}

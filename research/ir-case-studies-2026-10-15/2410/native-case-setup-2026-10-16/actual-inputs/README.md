@@ -1,0 +1,11 @@
+# 2410：実保存5sourceのnative初期登録準備（未登録）
+
+原短信/Oct1noticeは06:50:38.803336、Oct15resultは07:04:03.312107、派生12/QAは07:15:18.475308UTCのtrusted初回保存。全5wholeobjects/nativeSHA/availability/最新分類と原33引用+派生12表示をmode=ro/query_only/contextlib.closingで再照合し、全保存/受入後の実reviewed_atで5bootstrapを準備した。旧QA/derivedのfile-onlyとticketのtaskreceipt時点は歴史として保持し、後続実receiptと現在利用可能性を分ける。
+
+共通issue2410-comparable-standalone-earnings-and-ordinary-distributionとC1/C2/C3は受入ticketから完全同値で再利用。1case/1issueのみ。既知K1–K7/質問0をsummaryとcase_observation.rationale双方へ将来手動引継ぎ、source evidenceは実pendingだけ。latestlistingの会社公表結果を不明へ戻さず、独立取下完了/取引保証とは分ける。QAの取消認識・一部代理店要因・普通配当方針は既答。160=普通140+特別20の当時予想、来期ordinaryonly等は意向で次期額保証ではない。会社3000円目標/質問側cash・株価は投資家価格や会社認証値へ変えない。
+
+年度終了済みJulyguideを現在実績/現forecastへしない。新卒紹介終了実施/残務・新FY実績/正式guideは実際の今後公開根拠でC1へ照合し、未知を0/非開示にしない。具体的著者forecast/methodと投資家basis未設定は会社定義と別。methodnull/needs_data/金融未採用・IRvalueunproven/readyfalse、個社routingassessment新設0。
+
+管理Jan16JSTはapproved既存basis+Anthropicquarterly原文を保持する内部3calendar-month研究日。会社予定/退出期限ではない。未freezev37index/currentdocsをpinせず、rootだけがexpected-version0のcopyguard→actual登録を行う。既存APIのlast_review_atは登録時計に由来しcopy/actualで異なるため、両者の意味比較ではこのfieldだけ除外し、元recorded_at/reviewed_at・その他の入力/状態は比較する。copy実行/登録成功を本担当が認定した意味ではない。
+
+DBmain/凍結依存/code44不変。Store/runner/API/register/queue/GET/DBwrite/code/旧producer編集/金融・新予測/IR0。有限freezeで停止しroot確認待ち。

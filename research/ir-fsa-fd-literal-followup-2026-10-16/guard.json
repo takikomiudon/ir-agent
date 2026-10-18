@@ -1,0 +1,59 @@
+{
+  "recorded_at": "2026-10-16T01:47:21.455987+00:00",
+  "UA": "ir-agent-public-research/0.1",
+  "maximum_GETs": 4,
+  "timeout_seconds": 40,
+  "maximum_entity_bytes": 10485760,
+  "TLSverify": true,
+  "proxy_CA": "Inherited; no changes or secret values printed.",
+  "holds_file": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+  "holds_sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952",
+  "allowed_requests": [
+    {
+      "role": "http_robots",
+      "url": "http://www.fsa.go.jp/robots.txt"
+    },
+    {
+      "role": "https_robots",
+      "url": "https://www.fsa.go.jp/robots.txt",
+      "literal_Location_from_sequence": 1
+    },
+    {
+      "role": "http_fsa_entry",
+      "url": "http://www.fsa.go.jp/news/29/syouken/20180206.html",
+      "source_route_file": "route.json"
+    },
+    {
+      "role": "https_fsa_entry",
+      "url": "https://www.fsa.go.jp/news/29/syouken/20180206.html",
+      "literal_Location_from_sequence": 3
+    }
+  ],
+  "robots_reviews": {
+    "www.fsa.go.jp": {
+      "reviewed_at": "2026-10-16T01:49:21.070040+00:00",
+      "branch": "complete404_missingrobots_not_explicit_permission",
+      "response_sequence": 2,
+      "raw_sha256": "c9ecc2ec5e1626a2b4e7910b6167b0a1739e0fb9aad13962c84734e6096883a8",
+      "robots_rules_or_explicit_permission_verified": false,
+      "proceed": true,
+      "basis_file": "research/ir-case-studies-2026-10-15/1723/robots404-handling-clarification/clarification.json",
+      "basis_sha256": "18e53556e7173517ec4bb6a46b0625472f65be1fd989428c048b5229a8daf64e",
+      "root_scope_clarification": "Complete robots404 uses previously adopted missingrobots branch. Stop on robots403/rules denial or official body errors, not on complete missingrobots404. Preserve first2GETs; only literal HTTP entry and samehost literal Location within total4GET.",
+      "HTTP_robots_canonical_location_sequence": 1
+    }
+  },
+  "old_input_SHA256": {
+    "AGENTS.md": "117343a76b5a070ccf96fec2b66641be94ba2424257f18163cf96cf3e15fadfe",
+    ".agents/skills/jp-equity-ir/SKILL.md": "adf24500e1bbbc182c405e1d18ed1324ea49ef7581ee13e3e10dd0d450b5de77",
+    "docs/workflow.md": "a6751de6c9cca32a44cd5cbe7f2b99f328477b903f29c9a3cdf74b9220856788",
+    "research/ir-source-access-holds-2026-10-15/holds-v8.json": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952",
+    "research/ir-source-access-holds-2026-10-15/README-v8.md": "db6939fc01704bb6aac3e97c02f64599b3aff2b29f4e942b0d0ec866f38cd93b",
+    "research/ir-fd-interpretation-scope-2026-10-15/README.md": "ed5409fd1947d8b0ee263745633ddf65dbb45b4cf2a33c22c8fe760750cd172d",
+    "research/ir-fd-interpretation-scope-2026-10-15/review.json": "a16d39d7478b31364e612bd74383e9f1915b72a210bfc58eb94a0ec3c5cffa0f",
+    "research/ir-jira-dialogue-best-practices-2026-10-15/guide.locator.txt": "5626967a4145815cbb4cbd27bec3991e22167262b6b55f6f8785bb13e3337c89",
+    "research/ir-jira-dialogue-best-practices-2026-10-15/guide.pdf": "23383c8c6a5abb84cd1db2178b4349207f0e273b1666b5a38c51c44831362a38",
+    "research/ir-jira-dialogue-best-practices-2026-10-15/capture.json": "c47922e50e16f7beafaec7869b30b9e131b97aa267ebf0e80ee812896c8bbea7",
+    "research/ir-case-studies-2026-10-15/1723/robots404-handling-clarification/clarification.json": "18e53556e7173517ec4bb6a46b0625472f65be1fd989428c048b5229a8daf64e"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "window": {"started_at": "2026-10-15T09:00:00+09:00", "ended_at": "2026-10-15T10:00:00+09:00"},
+  "operator_capacity": {"worker_seconds": "3600", "cost_budget": {"amount": "50", "currency": "JPY"}, "synthetic": true},
+  "measurements": [
+    {"id": "synthetic-review-1", "company_id": "jp:130A", "stage": "disclosure_review", "worker_id": "example-worker-1", "attempt_id": "review-attempt-1", "started_at": "2026-10-15T09:00:00+09:00", "ended_at": "2026-10-15T09:10:00+09:00", "active_seconds": "300", "tokens": 1200, "cost": {"amount": "5", "currency": "JPY"}, "status": "completed", "synthetic": true},
+    {"id": "synthetic-deep-1", "company_id": "jp:130A", "stage": "deep_research", "worker_id": "example-worker-1", "attempt_id": "deep-attempt-1", "started_at": "2026-10-15T09:05:00+09:00", "ended_at": "2026-10-15T09:20:00+09:00", "active_seconds": "420", "tokens": 1800, "cost": {"amount": "8", "currency": "JPY"}, "status": "completed", "synthetic": true},
+    {"id": "synthetic-counter-failed", "company_id": "jp:1234", "stage": "counter_review", "worker_id": "example-worker-2", "attempt_id": "counter-attempt-1", "started_at": "2026-10-15T09:08:00+09:00", "ended_at": "2026-10-15T09:18:00+09:00", "active_seconds": "360", "tokens": 900, "cost": {"amount": "3", "currency": "JPY"}, "status": "failed", "synthetic": true},
+    {"id": "synthetic-counter-retry", "company_id": "jp:1234", "stage": "counter_review", "worker_id": "example-worker-2", "attempt_id": "counter-attempt-2", "started_at": "2026-10-15T09:20:00+09:00", "ended_at": "2026-10-15T09:25:00+09:00", "active_seconds": "200", "tokens": 600, "cost": {"amount": "2", "currency": "JPY"}, "status": "retry", "synthetic": true},
+    {"id": "synthetic-reply-open", "company_id": "jp:5678", "stage": "reply_review", "worker_id": "example-worker-1", "attempt_id": "reply-attempt-1", "started_at": "2026-10-15T09:30:00+09:00", "ended_at": null, "active_seconds": null, "tokens": null, "cost": null, "status": "in_progress", "synthetic": true},
+    {"id": "synthetic-before-window", "company_id": "jp:9012", "stage": "price_review", "worker_id": "example-worker-3", "attempt_id": "price-attempt-1", "started_at": "2026-10-15T08:10:00+09:00", "ended_at": "2026-10-15T08:20:00+09:00", "active_seconds": "300", "tokens": 50, "cost": {"amount": "0", "currency": "JPY"}, "status": "completed", "synthetic": true}
+  ]
+}

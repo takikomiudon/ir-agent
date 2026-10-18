@@ -1,0 +1,87 @@
+{
+  "security_code": "3399",
+  "company_name": "丸千代山岡家",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "小売業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.yamaokaya.com/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T06:53:21.713122+00:00",
+  "completed_at": "2026-10-11T06:53:33.734713+00:00",
+  "manual_review_required": false,
+  "evidence": [],
+  "fetches": [
+    {
+      "url": "https://www.yamaokaya.com/",
+      "final_url": "https://www.yamaokaya.com/",
+      "snapshot": "evidence/3399/20261011T065321713151Z/01.json",
+      "retrieved_at": "2026-10-11T06:53:24.444140+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.yamaokaya.com/cta/",
+      "final_url": "https://www.yamaokaya.com/cta/",
+      "snapshot": "evidence/3399/20261011T065321713151Z/02.json",
+      "retrieved_at": "2026-10-11T06:53:26.592637+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.yamaokaya.com/feedback/",
+      "final_url": null,
+      "snapshot": "evidence/3399/20261011T065321713151Z/03.json",
+      "retrieved_at": "2026-10-11T06:53:28.780868+00:00",
+      "http_status": null,
+      "error": "environment_circuit_breaker_open"
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "https://www.yamaokaya.com/feedback/: environment_circuit_breaker_open",
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "保存済み公式ページ・実フォーム欄を手動点検。送信・配信成功・回答実績は未確認。"
+  ],
+  "discovery": {
+    "security_code": "3399",
+    "official_url": "https://www.yamaokaya.com/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "丸千代山岡家",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "unverified",
+  "identity_matches": [],
+  "collection_stop_reason": "environment_circuit_breaker_open",
+  "successful_official_page_count": 2,
+  "unconfirmed_reason": "company_identity_and_ir_purpose_not_verified",
+  "http_get_attempt_count": 3,
+  "previous_attempts": [
+    "attempts/3399/20261011T045047392232Z.json",
+    "attempts/3399/20261011T065333736011Z.json"
+  ],
+  "manual_followup_candidates": [
+    {
+      "url": "https://maruchiyo.yamaokaya.com/",
+      "quote": "コーポレート",
+      "source_link_label": "コーポレート",
+      "method": "GET",
+      "IR_channel_verified": false,
+      "reason": "ブランド公式homeが示す会社サイトのIRparent/identity確認候補。顧客相談室をIRに代用しない。",
+      "parent_snapshot": "evidence/3399/20261011T065321713151Z/01.json"
+    }
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_services",
+    "reviewed_at": "2026-10-11T07:22:10.258336+00:00",
+    "notes": "丸千代山岡家保存seedはラーメンブランドの顧客相談室でフォーム未取得、corporate会社名/証券コード対応も未確認。顧客相談フォームをIRとせずunconfirmed/identity unverified維持。公開コーポレートlinkを次企業確認候補に限定しdomain生成はしない。",
+    "attempted_at_reviewed": "2026-10-11T06:53:21.713122+00:00",
+    "saved_evidence_only": true
+  }
+}

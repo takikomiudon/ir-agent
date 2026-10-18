@@ -1,0 +1,41 @@
+{
+  "before_files_ref": {
+    "path": "research/ir-question-baseline-binding-integration-2026-10-15/before-files.json",
+    "sha256": "977814e19e8c638d2656630bba2efc7c8a302ced24a1f41f68baa149bfbcfcf2"
+  },
+  "caller_optional_field": "research_baseline_id",
+  "focused_ref": {
+    "path": "research/ir-question-baseline-binding-integration-2026-10-15/focused-final.json",
+    "sha256": "9d6cf294347f49882083dc90445fc7b5a4ac6fc3e34cdee95dcc0b80411c4c25"
+  },
+  "focused_tests": 55,
+  "frozen_files_SHA256": {
+    "docs/question-baseline-binding.md": "9047e1ab6273672449283d649375b52f33a5b161127e0db065781ce91c29cba1",
+    "src/ir_agent/decision_lifecycle.py": "2fc7753f8c09a0c055a7340ffc8d53954e6f175c144231c1f306aa62cc110731",
+    "src/ir_agent/harness.py": "a1adc6dd29df103497498b159cacd555dc230d48f873051429ae55e979e6fae8",
+    "tests/test_question_baseline_binding.py": "7313957736118798936caa30eaa4f5b59efa8ae6372f5646afe6ab43ffb29ba9"
+  },
+  "full_suite_run_by_this_agent": false,
+  "new_tests": 18,
+  "notes": [
+    "Current_view is not included in the binding.",
+    "Existing ID-absent server JSON/retry behavior preserved; no unconditional None key.",
+    "Question evidence subsets, new same-held observation IDs and branch statuses need not match baseline assessment.",
+    "Baseline unresolved result is sticky even when branches are distinguishing.",
+    "Historical sent_at price/position preserved; quote-only IR ancestor correction and unconsumed information versions checked at trusted now.",
+    "Initial prior-IR fixture failed because receipt writes lacked the base INSERT transaction; fixture corrected without changing the receipt contract.",
+    "The first multi-module test runner used a cwd-relative interpreter path and failed before tests; corrected to sys.executable."
+  ],
+  "recorded_at": "2026-10-15T21:15:55.793710+00:00",
+  "server_frozen_field": "research_baseline_binding",
+  "side_effects": {
+    "actual_DB_access": 0,
+    "external_sends_orders": 0,
+    "financial_threshold_forecast_model_changes": 0,
+    "network": 0,
+    "observations_changes": 0,
+    "other_core_or_shared_doc_edits": 0,
+    "schema_changes": 0
+  },
+  "status": "producer_focused_pass_pending_parent_review_and_full_suite"
+}

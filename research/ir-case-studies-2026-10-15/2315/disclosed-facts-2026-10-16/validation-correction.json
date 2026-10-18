@@ -1,0 +1,30 @@
+{
+  "recorded_at": "2026-10-16T05:07:25.859135+00:00",
+  "stage": "offline context-reference walker after wholebundle and built-in replay checks",
+  "error_type": "TypeError",
+  "error_message": "string indices must be integers, not 'str'",
+  "cause": "Legacy initial source-quotes is a list; note source-quotes is a dict with quotes list; diagnostic walker assumed only list.",
+  "failed_script_copy": "research/ir-case-studies-2026-10-15/2315/disclosed-facts-2026-10-16/before-context-shape-correction/reproduce.py",
+  "failed_script_SHA256": "fa262078c528012bd8863ee78246e8386aec3506d6bec0ed96173124bc88c5a6",
+  "script_fix": "Read list directly or document.quotes before matching id",
+  "primary_generation_calls": 1,
+  "normalizer_or_request_or_bundle_changed": false,
+  "replay_calls_in_failed_run": 1,
+  "existing_reproducer_calls_in_failed_run": 1,
+  "DB_GET_or_producer_source_changes": 0,
+  "second_diagnostic_failure": {
+    "type": "KeyError",
+    "message": "pdf_physical_page",
+    "cause": "Note uses physical_pdf_page, legacy uses pdf_physical_page",
+    "failed_script_copy": "research/ir-case-studies-2026-10-15/2315/disclosed-facts-2026-10-16/before-context-shape-correction/reproduce-after-container-fix.py",
+    "failed_script_SHA256": "64f3e41ffeae51448b0d30d6b84f867fd76baedf7a0b77652f4260fcbac0315c"
+  },
+  "final_script_adjustments": [
+    "Accept list or dict.quotes",
+    "Accept pdf_physical_page or physical_pdf_page",
+    "Ensure actual final newline in new JSON report"
+  ],
+  "total_runs_after_final_success": 3,
+  "replay_calls_in_two_failed_runs": 2,
+  "existing_reproducer_calls_in_two_failed_runs": 2
+}

@@ -1,0 +1,92 @@
+{
+  "observed_at_utc": "2026-10-12T02:48:35.047981+00:00",
+  "observed_at_jst": "2026-10-12T11:48:35.047981+09:00",
+  "scope": "Two actual saved responses from still-running next batch; separate from the sealed22-batch cutoff.",
+  "examples": [
+    {
+      "source_path": "research/ir-contacts-universe-2026-10-11/evidence/9212/20261012T021210704947Z/01.json",
+      "source_sha256": "1a943efcf79e392750f61662f9551a4d754c85e947721e0bf739fc72d4556e6c",
+      "robots_GET_response": {
+        "requested_url": "https://gei.co.jp/robots.txt",
+        "retrieved_at": "2026-10-12T02:12:10.704975+00:00",
+        "publication_time": null,
+        "submitted": false,
+        "http_get_attempted": true,
+        "http_get_started_at": "2026-10-12T02:12:18.327163+00:00",
+        "http_response_received_at": "2026-10-12T02:12:24.277074+00:00",
+        "http_get_completed_at": "2026-10-12T02:12:24.277223+00:00",
+        "host_wait_seconds": 1.7719867173582315e-06,
+        "global_wait_seconds": 7.622156138997525,
+        "wait_seconds": 7.622157910984242,
+        "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+        "global_rps_at_dispatch": 0.25,
+        "url": "https://gei.co.jp/robots.txt",
+        "http_status": 503,
+        "response_headers": {
+          "date": "Mon, 12 Oct 2026 02:12:23 GMT",
+          "server": "envoy"
+        },
+        "retry_after_seconds": null,
+        "byte_count": 91,
+        "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+        "content_type": "text/plain",
+        "encoding": "utf-8",
+        "encoding_source": "utf8_fallback",
+        "http_charset": null,
+        "html_meta_charset": null,
+        "text": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout",
+        "title": "",
+        "headings": [],
+        "links": [],
+        "forms": [],
+        "http_get_elapsed_seconds": 5.950090462007211,
+        "failure_signature": "http_503"
+      },
+      "company_or_form_body_GET_succeeded": false
+    },
+    {
+      "source_path": "research/ir-contacts-universe-2026-10-11/evidence/9360/20261012T024424983862Z/04.json",
+      "source_sha256": "5e3ffa1124b186da3398e6f8ecb2616dfe5b08b128bab0e886ab40337ce2cb77",
+      "robots_GET_response": {
+        "requested_url": "https://form.k3r.jp/robots.txt",
+        "retrieved_at": "2026-10-12T02:45:29.283695+00:00",
+        "publication_time": null,
+        "submitted": false,
+        "http_get_attempted": true,
+        "http_get_started_at": "2026-10-12T02:45:44.376751+00:00",
+        "http_response_received_at": "2026-10-12T02:45:49.589999+00:00",
+        "http_get_completed_at": "2026-10-12T02:45:49.590150+00:00",
+        "host_wait_seconds": 3.264998667873442e-06,
+        "global_wait_seconds": 15.09301840099215,
+        "wait_seconds": 15.093021665990818,
+        "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+        "global_rps_at_dispatch": 0.25,
+        "url": "https://form.k3r.jp/robots.txt",
+        "http_status": 503,
+        "response_headers": {
+          "date": "Mon, 12 Oct 2026 02:45:49 GMT",
+          "server": "envoy"
+        },
+        "retry_after_seconds": null,
+        "byte_count": 91,
+        "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+        "content_type": "text/plain",
+        "encoding": "utf-8",
+        "encoding_source": "utf8_fallback",
+        "http_charset": null,
+        "html_meta_charset": null,
+        "text": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout",
+        "title": "",
+        "headings": [],
+        "links": [],
+        "forms": [],
+        "http_get_elapsed_seconds": 5.213425866997568,
+        "failure_signature": "http_503"
+      },
+      "company_or_form_body_GET_succeeded": false
+    }
+  ],
+  "interpretation": "Both are ordinary HTTP503 classification with the identical upstream connection-timeout body, rather than the Invalid argument cloudflare tunnel signature. Envoy header alone identifies neither the failing hop nor quota or cause. Responses at0.25RPS do not prove absence of concurrent throttling. Failed robots prevents target body GET and does not establish IR refusal or absence.",
+  "IR_GETs_for_this_analysis": 0,
+  "source_record_changes": 0
+}

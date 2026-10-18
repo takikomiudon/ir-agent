@@ -1,0 +1,42 @@
+--- before/docs/ongoing-work.md
++++ docs/ongoing-work.md
+@@ -4,13 +4,13 @@
+ 
+ ## 現在の台帳と受入
+ 
+-2026-10-16 10:38 UTC（read-only再照合）。[最新の実処理と検証](../research/ir-2929-4318-annual-input-connection-2026-10-16/README.md)では、実DB `data/ir-research-2026-10-15.sqlite3` は221資料（公開220・市場1）・分類220。全130job完了（intake102・定性28）、attempt127/event254/request receipt127・pending/leased0、source来歴はlegacy28/trusted193。native監視は30case・59版・170既読、内部管理日はJan15が12case・Jan16が18case。公開資料あり39社・財務内容あり34社。main DB SHA256は `9e71dc753365d105df1235e50395dc39d909383fc53f0e9d87069fe3937ebf92`。
++2026-10-16 10:54 UTC（[root実処理・read-only検証](../research/ir-1518-6200-6814-annual-input-connection-2026-10-16/actual-verification.json)の完了時点）。実DB `data/ir-research-2026-10-15.sqlite3` は227資料（公開226・市場1）・分類226。全136job完了（intake105・定性31）、attempt133/event266/request receipt133・pending/leased0、source来歴はlegacy28/trusted199。native監視は32case・64版・176既読、内部管理日はJan15が12case・Jan16が20case。公開資料あり41社・財務内容あり36社。main DB SHA256は `836fd60ddf86a92c05ccc981a0f47880373b0fac97e19cce14d69410d6edecbb`。
+ 
+-native監視は30case・59版・170既読資料。1904は既読通知の3配当表示を円銭版2で再表現した派生1sourceを比較し、source unchanged/case unresolvedを保持した。旧元条件と旧全行不変、再queue0。公表済みの税method/CF未作成/個別千円・契約変更の[追加読解](../research/ir-case-studies-2026-10-15/1904/operating-driver-followup-2026-10-16/parent-acceptance.json)も[固定handoff](../research/ir-case-studies-2026-10-15/1904/question-residual-review-2026-10-16/parent-acceptance.json)からsummaryとcase_observationへ日時・file/SHA/source-nativeSHA付きで引き継ぎ、現prior投影に両方残ることを確認した。旧Q1/追補を新pending証拠へ追加せず、自動受領保証とも扱わない。
++native監視は32case・64版・176既読資料。1904は既読通知の3配当表示を円銭版2で再表現した派生1sourceを比較し、source unchanged/case unresolvedを保持した。旧元条件と旧全行不変、再queue0。公表済みの税method/CF未作成/個別千円・契約変更の[追加読解](../research/ir-case-studies-2026-10-15/1904/operating-driver-followup-2026-10-16/parent-acceptance.json)も[固定handoff](../research/ir-case-studies-2026-10-15/1904/question-residual-review-2026-10-16/parent-acceptance.json)からsummaryとcase_observationへ日時・file/SHA/source-nativeSHA付きで引き継ぎ、現prior投影に両方残ることを確認した。旧Q1/追補を新pending証拠へ追加せず、自動受領保証とも扱わない。
+ 
+-[索引v39](../research/ir-case-studies-2026-10-15/disclosed-fact-index-v39.json)は31社234fact・45親entry・47解決済み派生source・会社/原典38組。実45source/227factを保存・分類し、対象外8331/9702の2source/7factはfile-only。旧v38の43entry/230factとactual object全体は履歴として保持し、旧v37や以前の履歴も書き換えない。金融入力の採用は0。
++[索引v40](../research/ir-case-studies-2026-10-15/disclosed-fact-index-v40.json)は33社240fact・48親entry・50解決済み派生source・会社/原典41組。実48source/233factを保存・分類し、対象外8331/9702の2source/7factはfile-only。[index接続の受入](../research/ir-1518-6200-6814-annual-input-connection-2026-10-16/index-connection/parent-acceptance.json)で旧v39の45親234factsとactual全体の履歴を保持した。旧v38以前も書き換えず、金融入力の採用は0。
+ 
+-1,819社のwatch/held:falseは実保有確認ではない。明示保有申告・金融thesis・正式質問・返信・実policy・research_decision_reviews・送信・注文は0。管理日は12caseが2027-01-15、5831/7325/7157/5988/1866/1870/1904/1950/1963/1975/2163/2315/2341/2410/5480/3817/2929/4318の18caseが2027-01-16 Asia/Tokyo。会社予定・売却期限ではない。外部scheduler・定時Web取得・LLMの定時実行は未設置。
++1,819社のwatch/held:falseは実保有確認ではない。明示保有申告・金融thesis・正式質問・返信・実policy・research_decision_reviews・送信・注文は0。管理日は12caseが2027-01-15、5831/7325/7157/5988/1866/1870/1904/1950/1963/1975/2163/2315/2341/2410/5480/3817/2929/4318/6200/6814の20caseが2027-01-16 Asia/Tokyo。会社予定・売却期限ではない。外部scheduler・定時Web取得・LLMの定時実行は未設置。
+ 
+ コードの最新受入は[1,585件・37.349秒成功](../research/ir-reference-value-integration-2026-10-16/parent-acceptance.json)。公開`calculate_reference_value`と`reference-value`は既存6methodを価格・dummyprice・価格比率・actionなしで再利用する。weightedは明示確率だけ、unweightedは期待参考値nullと範囲。独立reviewは必須指摘0、旧priced本体は不変で111結果/エラーが同値。従前の[1,573件・38.890秒](../research/ir-graham-number-valuation-integration-2026-10-16/parent-acceptance.json)では、新method graham_numberは正の明示EPS/BPSから著者の固定式を計算し、期間・金融採用・売買は自動認証しない。極端な価格/確率等による総精度の指摘を修正し、独立再確認で必須指摘0。従前の[1,558件の受入](../research/ir-public-information-review-binding-integration-2026-10-16/parent-acceptance.json)では任意のquestion.public_information_reviewで、確認範囲/時点/source native SHA/逐語引用と残余理由を固定し、全原典の実保存来歴/公開性訂正を照合する。独立F1/F2の2指摘を修正し、旧5planの全出力はbyte同値。レビュー用sourceを評価根拠へ自動採用せず、旧fieldなしの経路も保持。[1963実資料binding-only probe](../research/ir-case-studies-2026-10-15/1963/public-review-binding-probe-2026-10-16/README.md)の参照照合成功は回答不存在/IR価値/送信ready/投資判断の認証ではない。
+ 
+@@ -126,15 +126,18 @@
+ [23:25までの旧継続記録](research-history-2026-10-15-through-2325.md)を完全byteで保存した。さらに前の[20:05までの詳細記録](research-history-2026-10-15-through-2005.md)も保持する。旧件数・作業中・未確認・テスト数・source予算は当時の状態であり、現在の再実行指示ではない。個社原典と後続比較は[事例索引](../research/ir-case-studies-2026-10-15/README.md)へ。
+ 
+ 
+-## 次の作業を引き継ぐ位置（10:10 UTC）
++## 次の作業を引き継ぐ位置（10:10 UTC時点の履歴）
+ 
+ 1975・3817の入力接続、native初回比較、索引v38を完了した。3817は公開既答と残余IRの対応を準備中。次の公表順2471は[静的一覧の確認](../research/ir-case-studies-2026-10-15/2471/annual-accounting-input-discovery-2026-10-16/README.md)を2GETで終了し、動的配信/held hostへ進まない。年次入力未取得は投資除外ではない。次は2929の公式年次原典と訂正の関係を確認している。23社の既存作業と次の最小taskも整理し、同じ閉鎖経路を再探索しない。
+ 
+ 
+-## 10:38 UTC以後の引継ぎ
++## 10:38 UTC時点の履歴と、10:54 UTC以後の引継ぎ
+ 
+ 2929・4318は新原典/訂正/派生の計5sourceを実保存・分類し、native両v2（既読3/2）へ比較を完了、全130job完了・lease0。索引v39の旧230facts保持と実接続も受入済み。2929完了後の表示確認でrecordの階層を読み違えたが、保存済み成功とRO SQLを確認し、未完了4318だけを完了した。成功mutator再実行0。
+ 
+ 新APIの[価格なし参考計算](reference-value-spec.md)は1,585テスト成功・独立必須指摘0で受入済み。1975/3817を新公開CLIで実再現した。2929/4318のactual-source入力監査は2値ずつsource_values_matchedで完了し、公開CLI参考値836.57/758.74円をroot独立算術でも照合した。金融採用・価格観測は0。
+ 
+-23社の年次入力経路は全社に処理を割り当て済み。1518/6200/6814の原典と2factsはfile-only（1518派生は作成中）、次に実保存へ接続する。6200/6814の新caseはprepare-only、1518は既存caseの元条件へ新source比較を追加し、新case重複登録をしない。23社coverage作成workerのRO完了通知まで新DB書込を保留中。5480の旧annualfeed503、各静的PDFなし、8704のheld配信先は再取得しない。
++[23社coverage](../research/ir-jpx-smallmid-annual-input-coverage-2026-10-16/parent-acceptance.json)は受入済みで、今回対象年次経路の未着手0。7原典取得・14静的対象PDFなし・8704保留host・5480旧annualfeed503を区別し、221資料snapshotは当時の履歴として保持する。coverageのRO保留は解除済み。1518/6200/6814の原典と各2factsの計6sourceは[実保存・分類・定性比較](../research/ir-1518-6200-6814-annual-input-connection-2026-10-16/README.md)まで完了し、1518は既存case v3・既読9、6200/6814は新case各v2・既読2。1518の既存条件/管理Jan15を維持し、6200/6814は内部管理Jan16。新case重複登録や成功mutator再実行は不要。3社の初期file-only/prepare-only票は当時の履歴で、現在の実保存・監視を否定しない。7社全14年次入力は[まとめ](../research/ir-seven-company-annual-input-reference-summary-2026-10-16/README.md)へ接続済み。閉じた動的一覧・held配信先・旧503を再取得しない。
++
++
++公開calendarの別worker成果はfile-only・受入待ち。7社の参考値から残余IRへのroutingはworkerが作業中で、正式質問・送信準備や金融入力採用にはしない。現コードの1,585テスト受入は維持し、この文書更新で再実行していない。

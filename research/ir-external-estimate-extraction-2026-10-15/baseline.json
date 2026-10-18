@@ -1,0 +1,155 @@
+{
+  "recorded_at": "2026-10-15T07:37:36.969354+00:00",
+  "pre_change_source_sha256": "74791db42c03e41c1cd6962f855c06e4d100effb7c4f28e896fefacb3d797bc8",
+  "purpose": "Legacy normalizer fixture full-bundle and derived-identity compatibility commitment before any external_estimate change. Synthetic test inputs only.",
+  "legacy_fixtures": [
+    {
+      "kind": "reported_fact",
+      "request": {
+        "company_id": "jp:130A",
+        "source": {
+          "id": "saved-source",
+          "company_id": "jp:130A",
+          "title": "保存済み公表資料",
+          "url": "https://issuer.example/ir/financial",
+          "source_type": "public_disclosure",
+          "published_at": null,
+          "retrieved_at": "2026-10-15T00:00:00+00:00",
+          "content": "2026年度（単位：百万円）公表値 1,234.50。",
+          "requires_research": true,
+          "metadata": {
+            "publication_date": "2026-10-14"
+          }
+        },
+        "review": {
+          "author": "named-reviewer",
+          "recorded_at": "2026-10-15T00:10:00+00:00",
+          "rationale": "原文のラベルを保持。列・主体・概念対応は追加の意味確認が必要。"
+        },
+        "facts": [
+          {
+            "id": "fact-1",
+            "concept": "disclosed_example_value",
+            "kind": "reported_fact",
+            "raw_value": "1,234.50",
+            "raw_unit_label": "百万円",
+            "unit": "JPY",
+            "raw_period_label": "2026年度",
+            "period": {
+              "label": "2026年度"
+            },
+            "basis_quote": "2026年度（単位：百万円）公表値 1,234.50。",
+            "definition": "抽出担当者が主張する公表値の定義。自動確認ではない。",
+            "scope": {
+              "company_id": "jp:130A",
+              "consolidation": "consolidated"
+            }
+          }
+        ]
+      },
+      "now": "2026-10-15T01:00:00+00:00",
+      "bundle_canonical_sha256": "b099db8fe1029cbf0afa17dc0ef9746213db305d8a85fa6a886e382378edf181",
+      "derived_source_id": "disclosed-facts:f7b93e4e42787214190742c18d55c7585e72c2f567d39028cd4b24fc6984967e",
+      "derived_content_sha256": "f8a13ea1b1394b9c0f092423518a1e6579ac49d4b4d95dd22707d72a8223649c"
+    },
+    {
+      "kind": "issuer_guidance",
+      "request": {
+        "company_id": "jp:130A",
+        "source": {
+          "id": "saved-source",
+          "company_id": "jp:130A",
+          "title": "保存済み公表資料",
+          "url": "https://issuer.example/ir/financial",
+          "source_type": "public_disclosure",
+          "published_at": null,
+          "retrieved_at": "2026-10-15T00:00:00+00:00",
+          "content": "2026年度（単位：百万円）公表値 1,234.50。",
+          "requires_research": true,
+          "metadata": {
+            "publication_date": "2026-10-14"
+          }
+        },
+        "review": {
+          "author": "named-reviewer",
+          "recorded_at": "2026-10-15T00:10:00+00:00",
+          "rationale": "原文のラベルを保持。列・主体・概念対応は追加の意味確認が必要。"
+        },
+        "facts": [
+          {
+            "id": "fact-1",
+            "concept": "disclosed_example_value",
+            "kind": "issuer_guidance",
+            "raw_value": "1,234.50",
+            "raw_unit_label": "百万円",
+            "unit": "JPY",
+            "raw_period_label": "2026年度",
+            "period": {
+              "label": "2026年度"
+            },
+            "basis_quote": "2026年度（単位：百万円）公表値 1,234.50。",
+            "definition": "抽出担当者が主張する公表値の定義。自動確認ではない。",
+            "scope": {
+              "company_id": "jp:130A",
+              "consolidation": "consolidated"
+            }
+          }
+        ]
+      },
+      "now": "2026-10-15T01:00:00+00:00",
+      "bundle_canonical_sha256": "5e2cded682c7114cb4201601363724891d9310637e715b96f2cfce2e11b1ed0a",
+      "derived_source_id": "disclosed-facts:e60ccc03a2bb088414ba77e766a3c421d63d083e4d5537d64e765a6cb8410b76",
+      "derived_content_sha256": "d0af23b4be6ae4f38bc77a9b1467143fc6699994f2f358fd3fcfde7bfbbb4c33"
+    },
+    {
+      "kind": "general_explanation",
+      "request": {
+        "company_id": "jp:130A",
+        "source": {
+          "id": "saved-source",
+          "company_id": "jp:130A",
+          "title": "保存済み公表資料",
+          "url": "https://issuer.example/ir/financial",
+          "source_type": "public_disclosure",
+          "published_at": null,
+          "retrieved_at": "2026-10-15T00:00:00+00:00",
+          "content": "2026年度（単位：百万円）公表値 1,234.50。",
+          "requires_research": true,
+          "metadata": {
+            "publication_date": "2026-10-14"
+          }
+        },
+        "review": {
+          "author": "named-reviewer",
+          "recorded_at": "2026-10-15T00:10:00+00:00",
+          "rationale": "原文のラベルを保持。列・主体・概念対応は追加の意味確認が必要。"
+        },
+        "facts": [
+          {
+            "id": "fact-1",
+            "concept": "disclosed_example_value",
+            "kind": "general_explanation",
+            "raw_value": "1,234.50",
+            "raw_unit_label": "百万円",
+            "unit": "JPY",
+            "raw_period_label": "2026年度",
+            "period": {
+              "label": "2026年度"
+            },
+            "basis_quote": "2026年度（単位：百万円）公表値 1,234.50。",
+            "definition": "抽出担当者が主張する公表値の定義。自動確認ではない。",
+            "scope": {
+              "company_id": "jp:130A",
+              "consolidation": "consolidated"
+            }
+          }
+        ]
+      },
+      "now": "2026-10-15T01:00:00+00:00",
+      "bundle_canonical_sha256": "2cb3b85a8d19f640bab956cd2d5f5cf13f89c4255501a5f2e3c8653abbe15eb9",
+      "derived_source_id": "disclosed-facts:800f7764880719859afcab23968a1da3c6a9ef6ba8aef5a1e3574f7b6ff9e045",
+      "derived_content_sha256": "f344563a371b8e5daf986e49507281cc97bb9366d23b9b647ee0339358b6b7d3"
+    }
+  ],
+  "actual_database_reads_or_writes": 0
+}

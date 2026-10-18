@@ -1,0 +1,64 @@
+{
+  "all_inputs_fictional": true,
+  "database": ":memory:",
+  "late_reply": {
+    "before_version": 1,
+    "after_version": 1,
+    "same_job_id": true,
+    "packet_unchanged": true,
+    "packet_version": 1,
+    "current_version": 2,
+    "retrospective_version": 2,
+    "retrospective_label": "retrospective",
+    "current_candidate": "buy_review",
+    "saved_review_candidate": "buy_review"
+  },
+  "source_dag": {
+    "strict": false,
+    "strict_reasons": [
+      "first_saved_after_knowledge_at"
+    ],
+    "retrospective": true,
+    "shared_parent_count": 1,
+    "cycle": false,
+    "cycle_reasons": [
+      "source_origin_cycle"
+    ],
+    "missing": null,
+    "missing_reasons": [
+      "source_origin_missing"
+    ]
+  },
+  "legacy_open": [
+    {
+      "case": "future_declared",
+      "current_open_ok": true,
+      "raw_unchanged": true,
+      "library_status": "unavailable",
+      "library_reasons": [
+        "effective_time_after_as_of"
+      ],
+      "store_view": false
+    },
+    {
+      "case": "invalid_declared",
+      "current_open_ok": true,
+      "raw_unchanged": true,
+      "library_status": "unknown",
+      "library_reasons": [
+        "invalid_effective_time"
+      ],
+      "store_view": null
+    },
+    {
+      "case": "receipt_clock_ahead",
+      "current_open_ok": true,
+      "raw_unchanged": true,
+      "library_status": "unknown",
+      "library_reasons": [
+        "availability_clock_anomaly"
+      ],
+      "store_view": null
+    }
+  ]
+}

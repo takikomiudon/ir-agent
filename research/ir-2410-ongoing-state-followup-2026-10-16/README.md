@@ -1,0 +1,9 @@
+# ongoing入口の有限追補
+
+共有編集はdocs/ongoing-work.mdの1fileだけ。変更前全文はbefore-ongoing-work.md（SHA de781fa3d25b98d385924f3ce48a99cff9c8babc1d33866ca2c21fd59521060e）へ先に保存した。直前に受入済みの方法ボトルネック監査が参照した過去bytesを保持し、その監査の入力を後から置換しない。
+
+current集計を210source/209分類/117完了job/114attempt/228event/114receipt・公開36社/財務31社・legacy28/trusted182・native26/48版/149既読へ更新。v37保存時の210source/25case/47版/144既読と現在値を分け、旧v35段落は全bytesのまま履歴節へ移した。2341/2410の受入リンク、2327の現在210未算入、受入済2459のfile-only/DB外を記載。次は2983にDamodaran相対評価/市場・地域回帰を適用できるか原典を確認する別taskとし、外部会社forecast一般必須ではないこと・EPS/取消票の閉鎖を保持した。進行中の新sourceの結果や新数値は先取りしない。
+
+旧47段落中43段落を逐語で保持し、残4はcurrent ledger/native件数/管理日一覧/2327現件数だけ限定更新。旧1558/1534テスト段落は同値。local links108件は全存在。直前受入済み3docsのSHAは全不変。実DBをmode=ro/query_only/contextlib.closingだけで再読し7集計と全job完了を確認、詳細26/48/149等は直前受入済みRO証跡を再利用した。main SHA cbf81671f41ec320a4b08c96df53520e5300ffffbc5530e10bcba1d88f60b7a8は前後同値。
+
+GET/Store/実DB書込み/コード・以前proof編集/再登録/テスト再実行0。changes.diff、validation、入力pinsとmanifestをfreezeし、root受入待ちで停止する。

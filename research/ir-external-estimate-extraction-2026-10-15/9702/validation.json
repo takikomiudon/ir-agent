@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T07:41:47.534667+00:00",
+  "status": "quote_unit_arithmetic_reproduced_meaning_unverified",
+  "request_file": "request.json",
+  "bundle_file": "bundle.json",
+  "execution": {
+    "GET_calls": 0,
+    "database_accesses": 0,
+    "production_changes": 0,
+    "existing_source_changes": 0,
+    "full_suite_runs": 0,
+    "reproduction_calls": 1,
+    "value_calculations": 0,
+    "IR_registrations": 0,
+    "external_sends": 0,
+    "orders": 0,
+    "direct_normalization_calls": 3,
+    "reproduction_internally_reexecutes_normalizer": true
+  },
+  "source_identity": {
+    "helper": "ir_agent.adapters.common.stable_source_id",
+    "provider_prefix": "case-public",
+    "input_fields": [
+      "company_id",
+      "url",
+      "content",
+      "metadata"
+    ],
+    "top_level_retrieved_at_excluded_by_helper": true,
+    "original_id": "case-public:2d9802ebe8614ea26cbb622ab2e89d6ee9e129fe6d742b515b13687a4d642cf4",
+    "derived_id": "disclosed-facts:8ddc2f01a3d80d2cba579575e77077ff3cc0e4ddfdeb98472a465e751f2284cf",
+    "original_stable_id_reproduced": true,
+    "derived_id_generated_by_existing_normalizer": true
+  },
+  "source_bytes": {
+    "raw_sha256": "ecd0958729b0ac071ae808ff8136ecae5d0ec08eecb65ad034105bcb13f77525",
+    "raw_byte_count": 1983632,
+    "text_sha256": "5e14766b3e71631cc92abc2bea592b0d034ce45e036375003327723c959f728d",
+    "text_equals_saved_04_txt": true,
+    "fresh_pdf_layout_extraction_byte_identical": true,
+    "original_retrieved_at": "2026-10-15T07:24:49.158157+00:00",
+    "original_published_at": null,
+    "derived_retrieved_at": "2026-10-15T07:41:47.534667+00:00",
+    "review_recorded_at": "2026-10-15T07:41:47.534667+00:00",
+    "no_original_time_replaced_by_extraction_time": true
+  },
+  "quote": {
+    "pdf_page": 18,
+    "table": "図表A",
+    "page_character_start": 126,
+    "page_character_end_exclusive": 3544,
+    "quote_sha256": "ac6ef8b16e2e3df0e6b37071cd653cfae5018d74b5299c548b067eb82d615d95",
+    "length_characters": 3418,
+    "continuous_exact_substring": true,
+    "starts_at_table_header": true,
+    "includes_EPS_unit_E_CE_definition_and_split_note": true,
+    "visual_page_file": "/tmp/ir_9702_alpha_win_p18.png",
+    "visual_page_sha256": "b68cfef50006b99bd35406c425df1cca8b15efe8fb0647d3faff76c27e70a001",
+    "visual_page_viewed": true
+  },
+  "fact_summary": [
+    {
+      "id": "9702-alpha-win-2026-12-newE-eps",
+      "kind": "external_estimate",
+      "raw_period_label": "2026/12",
+      "source_forecast_label": "新E",
+      "raw_value": "161.17",
+      "value": "161.17",
+      "unit": "JPY-per-share",
+      "financial_inputs_verified": false,
+      "meaning_review_required": true
+    },
+    {
+      "id": "9702-alpha-win-2027-12-newE-eps",
+      "kind": "external_estimate",
+      "raw_period_label": "2027/12",
+      "source_forecast_label": "新E",
+      "raw_value": "181.21",
+      "value": "181.21",
+      "unit": "JPY-per-share",
+      "financial_inputs_verified": false,
+      "meaning_review_required": true
+    },
+    {
+      "id": "9702-alpha-win-2028-12-newE-eps",
+      "kind": "external_estimate",
+      "raw_period_label": "2028/12",
+      "source_forecast_label": "新E",
+      "raw_value": "196.02",
+      "value": "196.02",
+      "unit": "JPY-per-share",
+      "financial_inputs_verified": false,
+      "meaning_review_required": true
+    },
+    {
+      "id": "9702-alpha-win-2026-12-CE-eps-republished",
+      "kind": "issuer_guidance",
+      "raw_period_label": "2026/12",
+      "source_forecast_label": "CE",
+      "raw_value": "161.40",
+      "value": "161.40",
+      "unit": "JPY-per-share",
+      "financial_inputs_verified": false,
+      "meaning_review_required": true
+    }
+  ],
+  "reproduction": {
+    "source_id": "disclosed-facts:8ddc2f01a3d80d2cba579575e77077ff3cc0e4ddfdeb98472a465e751f2284cf",
+    "applicable": true,
+    "status": "reproduced",
+    "reason_codes": [],
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "original_content_sha256_status": "matched",
+    "original_snapshot_sha256_status": "matched_supplied_snapshot",
+    "fact_kinds": [
+      {
+        "id": "9702-alpha-win-2026-12-newE-eps",
+        "kind": "external_estimate"
+      },
+      {
+        "id": "9702-alpha-win-2027-12-newE-eps",
+        "kind": "external_estimate"
+      },
+      {
+        "id": "9702-alpha-win-2028-12-newE-eps",
+        "kind": "external_estimate"
+      },
+      {
+        "id": "9702-alpha-win-2026-12-CE-eps-republished",
+        "kind": "issuer_guidance"
+      }
+    ],
+    "original_source_id": "case-public:2d9802ebe8614ea26cbb622ab2e89d6ee9e129fe6d742b515b13687a4d642cf4"
+  },
+  "fixed_now_bundle_replay_equal": true,
+  "later_now_preserves_identity_content_metadata": true,
+  "caller_request_unchanged": true,
+  "original_source_validation_passed": true,
+  "derived_source_validation_passed": true,
+  "author_roles": {
+    "forecast_author": "アルファ・ウイン 調査部",
+    "publisher": "アルファ・ウイン・キャピタル株式会社",
+    "extraction_reviewer": "Codex /root/policy_documentation — extraction reviewer (not the forecast author)",
+    "individual_forecast_author": null,
+    "CE_origin": "company forecast as reproduced in external report, not direct issuer document verification"
+  },
+  "publication_context": {
+    "report_display_date": "2026-08-24",
+    "report_display_precision": "day",
+    "issuer_notice_display_date": "2026-09-02",
+    "pdf_metadata": {
+      "Author": "_SC AWC",
+      "CreationDate": "2026-08-30T13:44:51Z",
+      "ModDate": "2026-08-30T13:44:51Z",
+      "metadata_is_not_first_publication_time": true,
+      "internal_footer_code": "SMV2026-08-28-00-00",
+      "cover_stray_date_text": "2019/8/1",
+      "dates_not_silently_reconciled": true
+    },
+    "transport_last_modified": "Sun, 30 Aug 2026 13:44:52 GMT",
+    "published_at": null,
+    "exact_initial_publication_or_revision_history": null,
+    "dates_silently_reconciled": false
+  },
+  "unresolved": {
+    "consolidation": null,
+    "precise_period_start_end": null,
+    "subsequent_corporate_actions_or_current_split_basis": null,
+    "future_dilution_denominator": null,
+    "valuation_method": null,
+    "model_input_path": null,
+    "target_PE": null,
+    "scenario_probabilities": null,
+    "investment_decision": null
+  },
+  "catalog_boundary": {
+    "in_confirmed1819_catalog": false,
+    "archived_IR_status": "provisional",
+    "promoted_to_confirmed_IR": false,
+    "IR_access_rechecked": false
+  },
+  "financial_inputs_verified": false,
+  "meaning_review_required": true,
+  "model_adopted": false,
+  "original_artifact_hashes_unchanged": {
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/02.txt": "f6e0c63259afbe3003740e133acf993688d0010bf2a590a1b0ca6bbc04351539",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/03.json": "8fe74b3367dced3335a40987043dcd175961efaf44458f3aaa0c2f29b844293c",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/review.json": "2cebdfdc0886be1c623d3ef5b6fc59e355e1706ac494aabbf91183a15df60b55",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/discovery-basis.json": "6f06f698472f302574bad646c323a9df814bd2f0a364b236f66fc56839679d86",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/sources.json": "0d1f66b66f58371ec48de1f736c5b2011a7d84a9b44252b2de9e0cd1ada93f8d",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/01.json": "d913765fe20a80fe493cd788c26de873a3d2db3ba13fe96ec416a09cc49fad99",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/root-recheck.json": "301e8d705f0f878ffae9c4c887ed0e8c7d6e550b6d352b413a6c34a35e3f8a0d",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/robots-review.json": "09822613777cb57f022c2e6c31b7cc9d488aa61739a18ccc6ae8a5c5ffca4467",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/04.txt": "5e14766b3e71631cc92abc2bea592b0d034ce45e036375003327723c959f728d",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/02.json": "247dec62742d6ed23538525e3e8667904c89908cfee366d04b47c37b4cf41076",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/README.md": "a761d09555f278416d7c288386b95ac5f20142d2b985d7a6b1b143d549b4d79f",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/announcement-links.json": "dc6302cb5b1689e07097fa70026c214133baaee1d35095a44e71f81ae9a48b88",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/transport-manifest.json": "a14c481ccf820e5b7d0092729903249071b85135f80a9333de836957232c91eb",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/fetch_one.py": "2bd341a8dfaea167a6dbf1df223ed8f3867cd3d889973d4e2e70358f4025b852",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/04.json": "83c6782458ebd2345fd1f2503f14ab86a5f8b0ad2be87b59a9cbc286650b08b5",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/raw/ecd0958729b0ac071ae808ff8136ecae5d0ec08eecb65ad034105bcb13f77525": "ecd0958729b0ac071ae808ff8136ecae5d0ec08eecb65ad034105bcb13f77525",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/raw/cdaf289919b2096b4c936a3e249bba227791b88ae4417467fa54585c799394b4": "cdaf289919b2096b4c936a3e249bba227791b88ae4417467fa54585c799394b4",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/raw/1a7ec91bb1573605ec7bfea5c05c9205dfea2d561a0a9be264cb728040b6ff76": "1a7ec91bb1573605ec7bfea5c05c9205dfea2d561a0a9be264cb728040b6ff76",
+    "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/raw/e6a505c6c5d478b981a557101f1d84d7ee86e40f45bafa7f39537f7151bdd10b": "e6a505c6c5d478b981a557101f1d84d7ee86e40f45bafa7f39537f7151bdd10b"
+  },
+  "created_artifact_hashes": {
+    "request.json": "436768d42bc51405581e5cd89dba3224ebd758d7f275208d6ec9bb414919d5f5",
+    "bundle.json": "ba16f93e7a6290d7c7522aaed4bd0c0ebe005f7052ca1e2419f4112a09364817"
+  }
+}

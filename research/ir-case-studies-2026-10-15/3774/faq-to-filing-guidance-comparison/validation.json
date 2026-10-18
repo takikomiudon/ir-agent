@@ -1,0 +1,187 @@
+{
+  "checked_at": "2026-10-15T12:44:25.525461+00:00",
+  "status": "passed_with_meaning_and_freshness_limits",
+  "original_sources": 2,
+  "metric_pairs": 4,
+  "normalized_facts": 8,
+  "exact_quote_spans": 6,
+  "all_quote_offsets_exact": true,
+  "normalization_checks": {
+    "faq": {
+      "command": [
+        ".venv/bin/ir-agent",
+        "--db",
+        ":memory:",
+        "normalize-facts",
+        "research/ir-case-studies-2026-10-15/3774/faq-to-filing-guidance-comparison/faq-request.json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "api_exact_replay_matches_cli": true,
+      "derived_source_id": "disclosed-facts:cbec4ac1cb013a68f3cba5a0ba8648738e6b076297c7ddd86a09b6b3ea904937",
+      "derived_retrieved_at": "2026-10-15T12:42:50.449952+00:00",
+      "reproduction": {
+        "source_id": "disclosed-facts:cbec4ac1cb013a68f3cba5a0ba8648738e6b076297c7ddd86a09b6b3ea904937",
+        "applicable": true,
+        "status": "reproduced",
+        "reason_codes": [],
+        "financial_inputs_verified": false,
+        "meaning_review_required": true,
+        "original_content_sha256_status": "matched",
+        "original_snapshot_sha256_status": "matched_supplied_snapshot",
+        "fact_kinds": [
+          {
+            "id": "iij-faq-fy2027-revenue",
+            "kind": "issuer_guidance"
+          },
+          {
+            "id": "iij-faq-fy2027-operating_profit",
+            "kind": "issuer_guidance"
+          },
+          {
+            "id": "iij-faq-fy2027-profit_before_tax",
+            "kind": "issuer_guidance"
+          },
+          {
+            "id": "iij-faq-fy2027-profit_attributable_to_owners_of_parent",
+            "kind": "issuer_guidance"
+          }
+        ],
+        "original_source_id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d"
+      },
+      "original_source_exactly_preserved": true,
+      "fact_count": 4
+    },
+    "filing": {
+      "command": [
+        ".venv/bin/ir-agent",
+        "--db",
+        ":memory:",
+        "normalize-facts",
+        "research/ir-case-studies-2026-10-15/3774/faq-to-filing-guidance-comparison/filing-request.json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "api_exact_replay_matches_cli": true,
+      "derived_source_id": "disclosed-facts:3b2754828b7a2d6b21d6e3ae1de55b71ee2a1a24f1528f4c6b7e902e3ca76942",
+      "derived_retrieved_at": "2026-10-15T12:42:50.525483+00:00",
+      "reproduction": {
+        "source_id": "disclosed-facts:3b2754828b7a2d6b21d6e3ae1de55b71ee2a1a24f1528f4c6b7e902e3ca76942",
+        "applicable": true,
+        "status": "reproduced",
+        "reason_codes": [],
+        "financial_inputs_verified": false,
+        "meaning_review_required": true,
+        "original_content_sha256_status": "matched",
+        "original_snapshot_sha256_status": "matched_supplied_snapshot",
+        "fact_kinds": [
+          {
+            "id": "iij-filing-fy2027-revenue",
+            "kind": "issuer_guidance"
+          },
+          {
+            "id": "iij-filing-fy2027-operating_profit",
+            "kind": "issuer_guidance"
+          },
+          {
+            "id": "iij-filing-fy2027-profit_before_tax",
+            "kind": "issuer_guidance"
+          },
+          {
+            "id": "iij-filing-fy2027-profit_attributable_to_owners_of_parent",
+            "kind": "issuer_guidance"
+          }
+        ],
+        "original_source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f"
+      },
+      "original_source_exactly_preserved": true,
+      "fact_count": 4
+    }
+  },
+  "all_four_decimal_comparisons_equal": true,
+  "original_input_protection": {
+    "data/case-source-bundle.json": {
+      "before_sha256": "09dc53022739abfdc8d4e88957de1ec01c33b26566c4e63564330a3a72d2118d",
+      "after_sha256": "09dc53022739abfdc8d4e88957de1ec01c33b26566c4e63564330a3a72d2118d",
+      "unchanged": true
+    },
+    "research/ir-public-qa-interpretation-cases-2026-10-15/input-cases-v2.json": {
+      "before_sha256": "fd6affd7f2759c28a341c52eb4c8de1e2c5d40e411d8ede9e0eaa1ec07bc1692",
+      "after_sha256": "fd6affd7f2759c28a341c52eb4c8de1e2c5d40e411d8ede9e0eaa1ec07bc1692",
+      "unchanged": true
+    },
+    "research/ir-case-studies-2026-10-15/3774/disclosed-facts-draft.json": {
+      "before_sha256": "4a1162fd3f7cf28b8058e7cfc55495b5777142811c5be4b9d6287dd89d6b6c0c",
+      "after_sha256": "4a1162fd3f7cf28b8058e7cfc55495b5777142811c5be4b9d6287dd89d6b6c0c",
+      "unchanged": true
+    },
+    "research/ir-case-studies-2026-10-15/3774/disclosed-facts-normalized.json": {
+      "before_sha256": "a627f43a9aecea6986861049e3927f688413e619a51d3ff73716e815a105a331",
+      "after_sha256": "a627f43a9aecea6986861049e3927f688413e619a51d3ff73716e815a105a331",
+      "unchanged": true
+    },
+    "research/ir-case-studies-2026-10-15/3774/extraction-notes.md": {
+      "before_sha256": "de5c3b8b6f7caa6a97717dc4c37dbcfefb24ff0776f077d06b884e78bd529fef",
+      "after_sha256": "de5c3b8b6f7caa6a97717dc4c37dbcfefb24ff0776f077d06b884e78bd529fef",
+      "unchanged": true
+    },
+    "research/ir-case-studies-2026-10-15/3774/evidence/0e5d120d1acbad92f9fa7b96166c320a5f867764c81b4b9e828acec677267c5a.raw": {
+      "before_sha256": "0e5d120d1acbad92f9fa7b96166c320a5f867764c81b4b9e828acec677267c5a",
+      "after_sha256": "0e5d120d1acbad92f9fa7b96166c320a5f867764c81b4b9e828acec677267c5a",
+      "unchanged": true
+    },
+    "research/ir-case-studies-2026-10-15/3774/evidence/3f8e02d9d7390f80.json": {
+      "before_sha256": "619ff51671b3d218cf4d3cb96e2405463050491a99d0b3af9e8635c5505b6538",
+      "after_sha256": "619ff51671b3d218cf4d3cb96e2405463050491a99d0b3af9e8635c5505b6538",
+      "unchanged": true
+    },
+    "research/ir-case-studies-2026-10-15/3774/evidence/2f41e73809f88df8bc22e748cfd1e9aaa9002258c86a9c90dc359bdf82747047.raw": {
+      "before_sha256": "2f41e73809f88df8bc22e748cfd1e9aaa9002258c86a9c90dc359bdf82747047",
+      "after_sha256": "2f41e73809f88df8bc22e748cfd1e9aaa9002258c86a9c90dc359bdf82747047",
+      "unchanged": true
+    },
+    "research/ir-case-studies-2026-10-15/3774/evidence/58fa60ba292505d2.json": {
+      "before_sha256": "494e8c4c10add7415317b363d2b5c0e9ef9be35ef0c563bed8fba6415a440417",
+      "after_sha256": "494e8c4c10add7415317b363d2b5c0e9ef9be35ef0c563bed8fba6415a440417",
+      "unchanged": true
+    },
+    "research/ir-case-studies-2026-10-15/3774/evidence/58fa60ba292505d2.txt": {
+      "before_sha256": "f3cc58c011bbfc8f52ae8ce2ce6bdf04ff9f3f502e7177026e6f4ba6a4c3c107",
+      "after_sha256": "f3cc58c011bbfc8f52ae8ce2ce6bdf04ff9f3f502e7177026e6f4ba6a4c3c107",
+      "unchanged": true
+    }
+  },
+  "activity": {
+    "new_http_gets": 0,
+    "operational_db_connections": 0,
+    "in_memory_db_cli_connections": 2,
+    "in_memory_db_note": "CLI opens Store(:memory:) for each command. Ephemeral database use occurred; this is not zero DB access. No operational DB read/write or ingest occurred.",
+    "original_files_modified": 0,
+    "financial_model_updates": 0,
+    "ir_registrations_or_sends": 0
+  },
+  "artifact_sha256": {
+    "faq-normalized.json": "de2de4cca7fc315d63d0f759738e274a8894018fb7cb43e8c9f86db3ace5c977",
+    "filing-request.json": "c53ee735011b97c31f69b5051932c6a83801f870776c8e12b4bd9fb3b472f963",
+    "filing-page1.png": "7ad50562c385e90f1dd60b37f2302df8d4af23a7af31e62de3e3253ac4468583",
+    "comparison.json": "f7a3d2fb98ebbe62f5530c6b40330481cea10bed803451409d43c56e11f9ceef",
+    "filing-normalized.json": "d273afe49a1f6d94d80c785e90542c6afc2b2ec7e5fa04f3f98a51eeb8aa9c55",
+    "source-quotes.json": "916d18b41009c5df512c307a6b07d3b47846ff42d768f9e179e37a2e043f654e",
+    "README.md": "616f7531c32ea267be5454cbd6724b404d11ce9360d07c93f6bc5c3c02c1daeb",
+    "faq-request.json": "f9b0560b74c5a40573357a14e418fa988410d6424a36bb0c948973400a88af0b"
+  },
+  "limitations": [
+    "保存された2原典の同じ2027年3月期の会社通期予想表示を比較したもの。最新性確認・会社計画の達成保証・独立著者予測ではない。",
+    "FAQは年度ラベルと当社グループを明示するが、Q9自体に正式な開始終了日・詳細連結範囲・更新日はない。FAQ Q2の一般IFRS説明は補助的文脈であり、詳細範囲一致の独立認証ではない。",
+    "正式表の「修正の有無：無」はその資料の直近予想との比較表示であり、FAQとの同一版を証明しない。",
+    "税引前利益を経常利益としない。親会社所有者利益からEPS・株数を逆算しない。既存EPS3factは変更しない。",
+    "正規化は引用・token・単位演算の検査であり、financial_inputs_verifiedはfalse。モデル・正式質問・送信・投資判断には採用しない。",
+    "正式表紙は「百万円未満四捨五入」と明示する。比較は公表表示値の一致であり、JPYへの機械的単位換算は元の内部予測が1円単位の精度を持つことを証明しない。FAQの表示値も内部予測の精度の証明ではない。"
+  ],
+  "execution_provenance": {
+    "cli_py_sha256_before_and_after_two_cli_runs": "57254a8e24df6b7be8c772e637821a0546b66ece40088238bf3a5643a4c13979",
+    "cli_version_note": "Two CLI runs completed before parent-authorized separate CLI DB-side-effect fix; later cli.py changes do not change this execution provenance.",
+    "disclosed_facts_module_sha256": "b26f5b612b701f3d58abda681d375ebe4db072614e86f4de83bab21b422a866d",
+    "unit_arithmetic": "Existing normalizer: 億円 * 100000000 -> JPY; 百万円 * 1000000 -> JPY. Display comparison only: Decimal(normalized_value) / Decimal(1000000). No float or inverse EPS/share arithmetic."
+  }
+}

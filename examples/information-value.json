@@ -1,0 +1,22 @@
+{
+  "synthetic": true,
+  "unit": "synthetic utility units; not JPY or an investment default",
+  "states": ["temporary_cost", "persistent_cost"],
+  "actions": ["continue_review", "defer"],
+  "prior": {"temporary_cost": "0.5", "persistent_cost": "0.5"},
+  "payoffs": {
+    "continue_review": {"temporary_cost": "100", "persistent_cost": "-100"},
+    "defer": {"temporary_cost": "0", "persistent_cost": "0"}
+  },
+  "question_cost": "5",
+  "likelihoods": {
+    "temporary_explanation": {"temporary_cost": "0.8", "persistent_cost": "0.2"},
+    "persistent_explanation": {"temporary_cost": "0.2", "persistent_cost": "0.8"}
+  },
+  "provenance": {
+    "prior": {"kind": "synthetic_example", "reference": "Independent arithmetic fixture", "rationale": "Arbitrary equally likely states, not an estimated company probability"},
+    "payoffs": {"kind": "synthetic_example", "reference": "Independent arithmetic fixture", "rationale": "Arbitrary additive utilities, not expected stock returns"},
+    "question_cost": {"kind": "synthetic_example", "reference": "Independent arithmetic fixture", "rationale": "Arbitrary cost in the same synthetic utility unit"},
+    "likelihoods": {"kind": "synthetic_example", "reference": "Independent arithmetic fixture", "rationale": "Deliberately imperfect signals, not measured IR accuracy"}
+  }
+}

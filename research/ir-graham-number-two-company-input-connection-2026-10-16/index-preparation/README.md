@@ -1,0 +1,9 @@
+v38のローカル候補です。旧v37全41エントリ/226事実の全objectとsource/artifact overrideを保持し、1975・3817の通期実績EPS/期末BPSを各2事実追加しました。合計29社・230事実・43親エントリ・45派生資料・36会社原典組です。3817は索引では新社です。
+
+新4事実のid/concept/kind/period/scope/unit/valueは受入済みnormalized-bundleから完全copy。source_idは索引の親entryで派生資料へ結び、元factの原典source_idをper-fact overrideへ転記していません。新entryのartifactは当該normalized-bundle、original_source_idは元会社原典です。原2+派生2の4source objectと、実ingest増分3（1975原典既保存・3817原典新1・派生新2）を区別しています。
+
+2つのimported=trueは親から受領した実ingest/intake完了の報告に基づきます。本workerはDBを開かず、actualfirstsave・現在分類・実完全object照合を独立確認したとはしません。親finalizationで接続確認する構成です。旧v37の41派生/219事実/210sourcesというactual_connectionsは歴史objectのままです。確認後に見込む接続43派生/223事実と、従来file-only8331/9702の2派生/7事実は区別し、現在DBや将来case55版等を先付けしません。
+
+proposed-index-v38.jsonは共有索引ではありません。共有v37はSHAe1c07ebca3c5885007738d152588685d6de78f52dfe206d18b900efd7997df4bのまま、共有v38は作成していません。validation.jsonに元2bundle/親受入pins、両原/派生snapshot、4事実の同一性・scopeSHA・期間と解決先、旧41entryの前後同SHAを保存しました。新companyvaluation/金融入力採用や確率・現在価格は追加していません。
+
+候補SHA `1020e85e98a63edc8932c3734af320b21416cfd49124312845c0bf5efe7eaa2e`、validationSHA `a1e8a88140a132f2c3eacff6512a274ed4634d976a2a75e3fddb2a93e1fc0835`。新3fileを2026-10-16T10:01:01.483423+00:00に固定し、以降同名編集しません。新GET/DB/Store/normalizer/production・旧資料・共有索引編集0。実台帳照合・canonical v38確定はroot担当です。

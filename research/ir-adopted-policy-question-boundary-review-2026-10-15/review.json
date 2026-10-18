@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T13:14:55.878689+00:00",
+  "status": "known_explicit_contract_compatibility_boundary_no_new_bug_verified",
+  "question": "会社別の方針採用が記録済みのとき、新しいdecision_contractなし質問を作成しても方針を自動強制する約束があり、その約束とlegacy金融更新が食い違うか。",
+  "conclusion": {
+    "new_findings": [],
+    "finding_count": 0,
+    "P2_verified": false,
+    "legacy_financial_update_possible_by_existing_contract": true,
+    "legacy_update_policy_compliance_proven": false,
+    "legacy_policy_approved_action_returned": false,
+    "company_assignment_auto_enforcement_promised_in_reviewed_contract": false,
+    "reason": "契約なしのモデル更新とunresolved/missing_decision_contractは文書と既存テストが明示する互換境界。現運用手順は実案件で明示contractを付けるが、会社参照又は過去同社契約から将来全質問へ強制継承するruntime契約は今回確認できない。optional自体をbug扱いせず終了する。"
+  },
+  "separations": [
+    {
+      "state": "policy registry entry",
+      "meaning": "登録されたID/version。登録だけで全社採用とはならない。",
+      "evidence": [
+        "C07",
+        "D03"
+      ]
+    },
+    {
+      "state": "company adoption/reference reported by coverage",
+      "meaning": "company.decision_policy_ref又は同社の保存済み非合成question contractを採用参照として集計できる。これらの参照は存在するが、coverageは読取専用の不足棚卸し。将来の全questionへpolicyを自動強制する保証とは別。",
+      "evidence": [
+        "C05",
+        "C06"
+      ]
+    },
+    {
+      "state": "explicit question decision_contract",
+      "meaning": "指定ID/versionをfreezeし、branch入力pathを検証し、固定方針による価格点検へ進む。SKILLの現運用はこの明示経路を要求する。",
+      "evidence": [
+        "D02",
+        "C01",
+        "C02"
+      ]
+    },
+    {
+      "state": "new legacy question without contract",
+      "meaning": "他の入力/版/公開性/依存保留を通過すれば、あらかじめ保存したvaluation branchを適用可能。ただしactionはunresolved、判断contract不足として扱い、後からdecision-reviewでpolicyを黙って付加できない。",
+      "evidence": [
+        "D01",
+        "C03",
+        "C04",
+        "T01"
+      ]
+    }
+  ],
+  "static_path_review": {
+    "question_add": "validate_questionはcontractを必須化せず、存在するときだけfreezeする。company_refやregistryを新questionへ自動コピーする処理は今回のadd/evaluate経路にない。",
+    "reply_evaluate": "contractあり時だけvalidate_branch/review_appliedを呼ぶ。なしでも既知のlegacy分岐を適用するが、missing_decision_contractとunresolvedを維持。既存依存公開性保留等が不要になったという主張ではない。",
+    "decision_review": "contractなしは明示的に拒否する。過去の登録済みpolicyを自動検索して承認された判断へ昇格させない。"
+  },
+  "operating_instruction_vs_runtime": "SKILLの明示contract作成手順を省略した入力をAPIへ渡せることと、現在の推奨運用がその省略を認めることは別。今回は採用済み状態に応じて省略を自動拒否すると約束した文書差を確認できず、追加gate/新仕様を提案しない。",
+  "author_vs_project": {
+    "author_evidence": [
+      "A01"
+    ],
+    "project_evidence": [
+      "D02",
+      "D04"
+    ],
+    "statement": "質問前の方針版・価格根拠・変更範囲の固定はAnthropicの記録原則をIRへ適応した本プロジェクトの契約。原著が会社別policy gateや具体的な売買数値を定めたとはしない。"
+  },
+  "sources": {
+    "policy_doc": {
+      "file": "docs/decision-policy.md",
+      "sha256": "e687e70c70ec9ce4b40b935bb9e908cd2d1328f44dfa488fad639557fbba8de5"
+    },
+    "workflow": {
+      "file": "docs/workflow.md",
+      "sha256": "6415612b8dca5bdd3c9070cdacc94117292968ac1c05dc8cbfe63d4395028ec3"
+    },
+    "skill": {
+      "file": ".agents/skills/jp-equity-ir/SKILL.md",
+      "sha256": "d58897e57a2a103829987fe07636078fba9d7cc3eed3187e5ae12cc3d3136c4c"
+    },
+    "harness": {
+      "file": "src/ir_agent/harness.py",
+      "sha256": "5f75ba6452a61f47eb96c0ae06629d7251c90c84b53c46c7181953bff4b5b7bd"
+    },
+    "lifecycle": {
+      "file": "src/ir_agent/decision_lifecycle.py",
+      "sha256": "6663f44f66cc20a097f0fff47b58751c161525c7339cf6a5b1356f5eeb14d9b3"
+    },
+    "store": {
+      "file": "src/ir_agent/store.py",
+      "sha256": "2b9e6f3a3170c9164c052bf98c3e36b23b52dcdadd83d49f0b351350a22bceb9"
+    },
+    "models": {
+      "file": "src/ir_agent/models.py",
+      "sha256": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c"
+    },
+    "coverage": {
+      "file": "src/ir_agent/coverage.py",
+      "sha256": "df4b2b0139d68153c2b1431bd36636f1d30083c19f5578f4b9235cf84e1ef00f"
+    },
+    "workflow_test": {
+      "file": "tests/test_workflow.py",
+      "sha256": "88dac2b3637d8c96440401c9a0e5138382139a74360c5a0fe8a1a7c1b768927e"
+    },
+    "coverage_test": {
+      "file": "tests/test_coverage_report.py",
+      "sha256": "2b67fa2bcc0f55f5b9e17ffcf1d2082a5aa81b367bdbfb05274e9923b3ab7ec8"
+    },
+    "anthropic": {
+      "file": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+      "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "fixed_commit_url": "https://raw.githubusercontent.com/anthropics/financial-services-plugins/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md"
+    },
+    "manifest": {
+      "file": "third_party/anthropic/manifest.json",
+      "sha256": "45ff843e1c334454b63221fec6311f0c6bf525e79b99096e35f8f2542a405fdf"
+    }
+  },
+  "anchors": {
+    "D01": {
+      "source_key": "workflow",
+      "quote": "固定した判断契約がない従来の質問は、モデル更新後も `action: unresolved` と `decision_status: missing_decision_contract` を返す。",
+      "character_start": 9789,
+      "character_end_exclusive": 9887,
+      "line_start": 152,
+      "meaning": "Explicit documented legacy model-update versus investment-decision boundary."
+    },
+    "D02": {
+      "source_key": "skill",
+      "quote": "`policy add` で出典付き方針を登録し、質問の `decision_contract` に方針ID・版と価格根拠を指定する。",
+      "character_start": 8685,
+      "character_end_exclusive": 8752,
+      "line_start": 95,
+      "meaning": "Operating instructions require explicit per-question policy linkage for the current research workflow; do not describe this as an automatic company-state gate."
+    },
+    "D03": {
+      "source_key": "workflow",
+      "quote": "policy registryが存在しても全社へ自動採用しない。",
+      "character_start": 17628,
+      "character_end_exclusive": 17660,
+      "line_start": 282,
+      "meaning": "Global registration is distinct from company adoption, so registry presence alone does not imply a mandatory policy for every question."
+    },
+    "D04": {
+      "source_key": "policy_doc",
+      "quote": "以下は上記原則からの適応であり、Anthropic原文にあるIR戦略や推奨売買ルールとして扱わない。",
+      "character_start": 2449,
+      "character_end_exclusive": 2499,
+      "line_start": 30,
+      "meaning": "Policy/IR precommitment is project adaptation, not an author numeric trading rule."
+    },
+    "C01": {
+      "source_key": "harness",
+      "quote": "if \"decision_contract\" in question:\n                question[\"decision_contract\"] = DecisionLifecycle(self.store).freeze(question, thesis, current.isoformat())",
+      "character_start": 23685,
+      "character_end_exclusive": 23844,
+      "line_start": 379,
+      "meaning": "Only an explicitly supplied contract is frozen in add_question. A newly saved question is not automatically assigned a registry or company reference."
+    },
+    "C02": {
+      "source_key": "harness",
+      "quote": "if \"decision_contract\" in question:\n                DecisionLifecycle(self.store).validate_branch(question, branch)",
+      "character_start": 30504,
+      "character_end_exclusive": 30619,
+      "line_start": 475,
+      "meaning": "Contracted branch/path checks are conditional on that question contract."
+    },
+    "C03": {
+      "source_key": "harness",
+      "quote": "evaluation.update(status=\"applied\", applied=True, decision_status=\"missing_decision_contract\",\n                                  thesis_version=updated[\"version\"],\n                                  valuation=calculate_valuation(updated[\"valuation\"], updated[\"current_price_jpy\"]))",
+      "character_start": 34524,
+      "character_end_exclusive": 34804,
+      "line_start": 531,
+      "meaning": "Legacy can apply its saved valuation branch, but does not receive a price/policy-checked action from the contract path."
+    },
+    "C04": {
+      "source_key": "lifecycle",
+      "quote": "if 'decision_contract' not in question:\n            raise ValueError('This question has no frozen decision policy contract')",
+      "character_start": 14677,
+      "character_end_exclusive": 14801,
+      "line_start": 228,
+      "meaning": "A later decision-review cannot silently attach a registered policy to a legacy question."
+    },
+    "C05": {
+      "source_key": "coverage",
+      "quote": "reference = company.get(\"decision_policy_ref\")",
+      "character_start": 9246,
+      "character_end_exclusive": 9292,
+      "line_start": 164,
+      "meaning": "Company explicit policy references do exist in the read-only coverage model; they must not be conflated with only a global registry or claimed nonexistent."
+    },
+    "C06": {
+      "source_key": "coverage",
+      "quote": "\"\"\"Read-only inventory of saved research prerequisites, never eligibility scores.\"\"\"",
+      "character_start": 0,
+      "character_end_exclusive": 84,
+      "line_start": 1,
+      "meaning": "Coverage assignment reporting is prerequisite inventory, not enforcement of every new question or financial eligibility."
+    },
+    "C07": {
+      "source_key": "store",
+      "quote": "CREATE TABLE IF NOT EXISTS decision_policies (\n    id TEXT NOT NULL, version INTEGER NOT NULL, data TEXT NOT NULL,\n    first_saved_at TEXT NOT NULL, PRIMARY KEY(id,version)\n);",
+      "character_start": 2181,
+      "character_end_exclusive": 2356,
+      "line_start": 50,
+      "meaning": "Registered policy identity/version is global. Per-question freeze resolves the explicit ID/version; registry rows alone are not a company execution binding."
+    },
+    "T01": {
+      "source_key": "workflow_test",
+      "quote": "self.assertEqual(evaluation[\"decision_status\"], \"missing_decision_contract\")\n        self.assertEqual(evaluation[\"thesis_version\"], 3)\n        self.assertEqual(evaluation[\"valuation\"][\"expected_value_jpy\"], \"1400.00\")",
+      "character_start": 24703,
+      "character_end_exclusive": 24920,
+      "line_start": 464,
+      "meaning": "Existing test explicitly expects a newly constructed legacy question to update valuation while retaining missing_decision_contract. Read only, not rerun."
+    },
+    "A01": {
+      "source_key": "anthropic",
+      "quote": "- **Target price / valuation**: What's it worth if the thesis plays out\n- **Stop-loss trigger**: What would make you exit",
+      "character_start": 990,
+      "character_end_exclusive": 1111,
+      "line_start": 19,
+      "meaning": "Original asks to record valuation and exit rationale. Database policy adoption/freeze and automatic company gating are not specified here."
+    }
+  },
+  "offset_unit": "zero-based Unicode characters after UTF-8 decode; end exclusive; original line endings retained",
+  "validation": {
+    "source_file_count": 12,
+    "verbatim_anchor_count": 13,
+    "source_hashes_unchanged": true,
+    "memory_or_temp_reproductions": 0,
+    "reason_for_no_reproduction": "新しい文書約束との不一致が確認された場合だけ再現するという依頼条件を満たさない。既知legacy optional動作の再実演を増やしていない。",
+    "new_GETs": 0,
+    "actual_DB_accesses": 0,
+    "code_or_test_changes": 0,
+    "old_file_changes": 0,
+    "fullsuite_runs": 0
+  },
+  "required_changes": [],
+  "scope_limit": "指定docs/現add/evaluate/review/登録・coverage参照と既存testの静的有限照合。会社policyの実採用状態や全APIを実DBで調べた記録ではない。未実装の全社強制を既存機能として保証せず、逆に互換仕様を独断で不具合へ変更しない。"
+}

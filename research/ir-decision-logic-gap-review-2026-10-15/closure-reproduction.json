@@ -1,0 +1,207 @@
+{
+  "DB_writes": 0,
+  "SQLite_connections": 0,
+  "method": "Invoke unmodified production methods against an in-process Python stand-in that captures SQL without opening or executing a database. This is a branch reproduction, not a SQLite integration test.",
+  "production_methods": "Harness.close_question and Harness.add_reply",
+  "recorded_at": "2026-10-15T20:42:06.988840+00:00",
+  "scope": "No backtest, investing effectiveness claim, real question, response or DB mutation.",
+  "source_pin": {
+    "path": "src/ir_agent/harness.py",
+    "sha256": "ea6eb15ba4945c81f68f700d52fe23c4cddc36c9927195d857ef6aff5ab1b847"
+  },
+  "src_modifications": 0,
+  "state_reason_matrix": [
+    {
+      "captured_SQL_mutation_count": 1,
+      "current_production_method_observation": {
+        "accepted": true,
+        "result_status": "expired",
+        "sent_at": null
+      },
+      "initial_status": "draft",
+      "proposed_accept": false,
+      "reason": "no_response"
+    },
+    {
+      "captured_SQL_mutation_count": 1,
+      "current_production_method_observation": {
+        "accepted": true,
+        "result_status": "declined",
+        "sent_at": null
+      },
+      "initial_status": "draft",
+      "proposed_accept": false,
+      "reason": "declined"
+    },
+    {
+      "captured_SQL_mutation_count": 1,
+      "current_production_method_observation": {
+        "accepted": true,
+        "result_status": "cancelled",
+        "sent_at": null
+      },
+      "initial_status": "draft",
+      "proposed_accept": true,
+      "reason": "cancelled"
+    },
+    {
+      "captured_SQL_mutation_count": 1,
+      "current_production_method_observation": {
+        "accepted": true,
+        "result_status": "expired",
+        "sent_at": "2026-10-14T00:00:00+00:00"
+      },
+      "initial_status": "awaiting_reply",
+      "proposed_accept": true,
+      "reason": "no_response"
+    },
+    {
+      "captured_SQL_mutation_count": 1,
+      "current_production_method_observation": {
+        "accepted": true,
+        "result_status": "declined",
+        "sent_at": "2026-10-14T00:00:00+00:00"
+      },
+      "initial_status": "awaiting_reply",
+      "proposed_accept": true,
+      "reason": "declined"
+    },
+    {
+      "captured_SQL_mutation_count": 1,
+      "current_production_method_observation": {
+        "accepted": true,
+        "result_status": "cancelled",
+        "sent_at": "2026-10-14T00:00:00+00:00"
+      },
+      "initial_status": "awaiting_reply",
+      "proposed_accept": true,
+      "reason": "cancelled"
+    },
+    {
+      "captured_SQL_mutation_count": 0,
+      "current_production_method_observation": {
+        "accepted": false,
+        "error": "Only an open question can be closed"
+      },
+      "initial_status": "answered",
+      "proposed_accept": false,
+      "reason": "no_response"
+    },
+    {
+      "captured_SQL_mutation_count": 0,
+      "current_production_method_observation": {
+        "accepted": false,
+        "error": "Only an open question can be closed"
+      },
+      "initial_status": "answered",
+      "proposed_accept": false,
+      "reason": "declined"
+    },
+    {
+      "captured_SQL_mutation_count": 0,
+      "current_production_method_observation": {
+        "accepted": false,
+        "error": "Only an open question can be closed"
+      },
+      "initial_status": "answered",
+      "proposed_accept": false,
+      "reason": "cancelled"
+    },
+    {
+      "captured_SQL_mutation_count": 0,
+      "current_production_method_observation": {
+        "accepted": false,
+        "error": "Only an open question can be closed"
+      },
+      "initial_status": "expired",
+      "proposed_accept": false,
+      "reason": "no_response"
+    },
+    {
+      "captured_SQL_mutation_count": 0,
+      "current_production_method_observation": {
+        "accepted": false,
+        "error": "Only an open question can be closed"
+      },
+      "initial_status": "expired",
+      "proposed_accept": false,
+      "reason": "declined"
+    },
+    {
+      "captured_SQL_mutation_count": 0,
+      "current_production_method_observation": {
+        "accepted": false,
+        "error": "Only an open question can be closed"
+      },
+      "initial_status": "expired",
+      "proposed_accept": false,
+      "reason": "cancelled"
+    },
+    {
+      "captured_SQL_mutation_count": 0,
+      "current_production_method_observation": {
+        "accepted": false,
+        "error": "Only an open question can be closed"
+      },
+      "initial_status": "declined",
+      "proposed_accept": false,
+      "reason": "no_response"
+    },
+    {
+      "captured_SQL_mutation_count": 0,
+      "current_production_method_observation": {
+        "accepted": false,
+        "error": "Only an open question can be closed"
+      },
+      "initial_status": "declined",
+      "proposed_accept": false,
+      "reason": "declined"
+    },
+    {
+      "captured_SQL_mutation_count": 0,
+      "current_production_method_observation": {
+        "accepted": false,
+        "error": "Only an open question can be closed"
+      },
+      "initial_status": "declined",
+      "proposed_accept": false,
+      "reason": "cancelled"
+    },
+    {
+      "captured_SQL_mutation_count": 0,
+      "current_production_method_observation": {
+        "accepted": false,
+        "error": "Only an open question can be closed"
+      },
+      "initial_status": "cancelled",
+      "proposed_accept": false,
+      "reason": "no_response"
+    },
+    {
+      "captured_SQL_mutation_count": 0,
+      "current_production_method_observation": {
+        "accepted": false,
+        "error": "Only an open question can be closed"
+      },
+      "initial_status": "cancelled",
+      "proposed_accept": false,
+      "reason": "declined"
+    },
+    {
+      "captured_SQL_mutation_count": 0,
+      "current_production_method_observation": {
+        "accepted": false,
+        "error": "Only an open question can be closed"
+      },
+      "initial_status": "cancelled",
+      "proposed_accept": false,
+      "reason": "cancelled"
+    }
+  ],
+  "unsent_expired_reply_failure": {
+    "message": "timestamp must be a nonempty string",
+    "reply_insert_attempted": false,
+    "sent_at": null,
+    "type": "ValueError"
+  }
+}

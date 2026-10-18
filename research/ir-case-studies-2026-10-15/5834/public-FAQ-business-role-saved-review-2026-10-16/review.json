@@ -1,0 +1,93 @@
+{
+  "recorded_at": "2026-10-16T12:21:05.342757+00:00",
+  "company_id": "jp:5834",
+  "company_name": "SBIリーシングサービス株式会社",
+  "purpose": "Read at most2 business-role/recognition QAs from the already saved exact official IR FAQ; public-first clarification before considering IR.",
+  "source_ref": "source-ref.json",
+  "meaning_scope": {
+    "text_locator_input": "whole saved FAQ visible text; no child link/body acquisition",
+    "new_selected_QA_ids": [
+      "5834-FAQ-merchandise-equity",
+      "5834-FAQ-revenue-recognition"
+    ],
+    "new_selected_QA_count": 2,
+    "other_QA_interpretation_not_claimed": true,
+    "not_current_live": true
+  },
+  "findings": [
+    {
+      "id": "temporary_equity_asset_role",
+      "quote_id": "5834-FAQ-merchandise-equity",
+      "publicly_supported": "匿名組合方式で出資持分を投資家へ譲渡する前提の一時取得を行う場合、発行体は商品出資金として取得価額で資産計上する。",
+      "scope": "会社の条件付き会計説明。全案件が一時保有、全出資が顧客資金、全商品出資金が無リスク、負債がゼロ等とはしない。",
+      "clarifies_prior_unknown": "発行体が組成時に持分を一時保有し得ることと、その勘定/資産区分の定義は公開済み。",
+      "does_not_establish": "取得資金の調達源/借入・保証・償還義務、残存保有・時価損益、税務、CF、期間別残高やリスク額。"
+    },
+    {
+      "id": "revenue_recognition_role",
+      "quote_id": "5834-FAQ-revenue-recognition",
+      "publicly_supported": "主にJOLの任意組合方式では組成/事業管理手数料と航空機等の任意組合への販売額を売上に計上。主にJOLCOの匿名組合方式では案件組成/匿名組合持分販売等の手数料を売上に計上。",
+      "scope": "「主に」の限定を保持。売上がすべて手数料という説明にはしない。JOLの販売額を利益額にせず、売上計上と現金回収/利益認識の同一時点も認定しない。",
+      "clarifies_prior_unknown": "既存事業紹介で未確認だった報酬/売上項目の方式別区分は一部公開解決。",
+      "does_not_establish": "売上認識の厳密な履行時点、売却原価・利益率、どの案件のどれほどが各方式か、継続/一過性、自己投資損益・CFとのbridge。"
+    }
+  ],
+  "customer_vs_issuer_boundary": {
+    "resolved": "説明の主語「当社」が保有/売上計上するもので、投資家へ譲渡する持分や任意組合へ販売する航空機等との立場を区別できる。",
+    "unresolved": "この選択2Q/Aは顧客利回り/IRR/税効果や、issuer株主リターン・負債計上/資金調達構造を定義しない。",
+    "not_transferred": "商品利回り/税務メリットを株主リターン、将来会社CF/正常収益、銀行規制資本へ移さない。"
+  },
+  "prior_record_handling": {
+    "prior_business_review": {
+      "path": "research/ir-case-studies-2026-10-15/5834/business-description-public-review-2026-10-16/review.json",
+      "sha256": "7c5a61c919505fe6a55b685e9996199d72d97d331a0bf86bdfa67d050146240d"
+    },
+    "prior_business_source_id": "case-public:07926196d36f7b42f46710665d261e4f35f1c9d24cf1d95429cca3e5fee8d97a",
+    "prior_financial_content_and_model_routing": "Keep former financial_content:null/model_routing:null and original classification record untouched. Current QA meaning is separate; no classification assignment made.",
+    "inventory_ref": {
+      "path": "research/ir-jpx-smallmid-public-IR-FAQ-inventory-2026-10-16/inventory.json",
+      "sha256": "e359cf59fb0dc86182ac3852c3a524145cb1cbeb5c47eac8bf6f55b93303c83d"
+    },
+    "inventory_overbroad_descriptor": "The fixed inventory described5834 as mainly basic/referral FAQ based on bounded availability/question-heading inspection. This followup finds substantive recognition definitions in the same already-saved body; the earlier descriptor must not be used to conclude no business answers. No overwritten inventory or false new retrieval."
+  },
+  "question_disposition": {
+    "already_public_do_not_reask": [
+      "商品出資金の一般的な一時取得/取得価額・資産区分の定義",
+      "JOL/任意組合とJOLCO/匿名組合に関する会社の上記売上項目区分"
+    ],
+    "still_unknown_public_check_first": [
+      "認識時点/原価と利益・CF、取得資金/保証・負債、案件/方式別比較範囲と継続性"
+    ],
+    "IR_boundary": "未解決定義は次の公表財務注記等で確認する余地がある。今回実送信質問案/優先度/情報価値/新しい金融入力pathを作らない。",
+    "investor_side": "将来利益/会社CF・適合評価モデル・公正倍率や価格、継続性の採用判断は投資家側分析で、顧客商品IRRや会社FAQから補完しない。"
+  },
+  "method_application": {
+    "author_quote_ref": "quotes.json#/authored_method_quote",
+    "project_routing_ref": "quotes.json#/project_routing_quote",
+    "application": "資産/保有/売上の経済的役割を会社の実説明で区別し、顧客資金や業種名を銀行の営業負債/規制資本と自動同定しないための研究手順。",
+    "bank_DDM_or_regulatory_FCFE_selected": false,
+    "ordinary_model_selected": false,
+    "PER_for_financials_prohibited": false,
+    "new_model_classification": null
+  },
+  "boundaries": {
+    "GET": 0,
+    "DB_Store": 0,
+    "financial_calculation_forecast_valuation_IRdraft": 0,
+    "new_source_registration": 0,
+    "new_numeric_facts": 0,
+    "old_edits": 0,
+    "financial_inputs_verified": false
+  },
+  "input_pins": {
+    "research/ir-jpx-smallmid-public-IR-FAQ-inventory-2026-10-16/inventory.json": "e359cf59fb0dc86182ac3852c3a524145cb1cbeb5c47eac8bf6f55b93303c83d",
+    "research/ir-jpx-smallmid-public-IR-FAQ-inventory-2026-10-16/validation.json": "9d70650b3261a32dcbb8c0f48630527a99071668c25757bf33ec010077b23e18",
+    "research/ir-contacts-universe-2026-10-11/evidence/5834/20261011T151740206263Z/03.json": "2dec197dee64dbcd9111f2b825f7ee014037f1d97023a9c0b26a7bbefccff8e6",
+    "research/ir-case-studies-2026-10-15/5834/annual-accounting-input-discovery-2026-10-16/capture.json": "cdf673e9e8a23e1c1d31522688265f947e33094ccf0c51e555606acde9f34812",
+    "research/valuation-model-routing-2026-10-15/sources.json": "a9b8c046d3ff5b23eb65fdaabdd4ee8ef55c66498b52cbcad9fc5099c3cc7538",
+    "docs/model-routing-inputs.md": "1daab4991513af6f26d76c2f85d936b2bcb2a7ed2d30b0ec6621b0da81e193e1",
+    "research/ir-case-studies-2026-10-15/5834/business-description-public-review-2026-10-16/review.json": "7c5a61c919505fe6a55b685e9996199d72d97d331a0bf86bdfa67d050146240d",
+    "research/ir-case-studies-2026-10-15/5834/business-description-public-review-2026-10-16/source-only-bundle.json": "13b525f8944e9ca2a9fc6bc171bb61dd39dc4699276c0a65e8d664f22809d13b",
+    "research/ir-case-studies-2026-10-15/5834/business-description-public-review-2026-10-16/manifest.json": "579f876ddc804cd518a5530fabdffcabcbbc4f277d841d4db83c6d6f9d3b6e68"
+  }
+}

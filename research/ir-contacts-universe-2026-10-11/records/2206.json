@@ -1,0 +1,116 @@
+{
+  "security_code": "2206",
+  "company_name": "江崎グリコ",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "食料品",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.glico.com/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T04:01:47.666808+00:00",
+  "completed_at": "2026-10-11T04:01:56.579410+00:00",
+  "manual_review_required": false,
+  "evidence": [],
+  "fetches": [
+    {
+      "url": "https://www.glico.com/",
+      "final_url": "https://www.glico.com/jp/",
+      "snapshot": "evidence/2206/01.json",
+      "retrieved_at": "2026-10-11T04:01:48.742829+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.glico.com/jp/company/ir/",
+      "final_url": "https://www.glico.com/jp/company/ir/",
+      "snapshot": "evidence/2206/02.json",
+      "retrieved_at": "2026-10-11T04:01:50.499367+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://customer.glico.com/",
+      "final_url": "https://customer.glico.com/",
+      "snapshot": "evidence/2206/03.json",
+      "retrieved_at": "2026-10-11T04:01:53.014679+00:00",
+      "http_status": 503,
+      "error": null
+    },
+    {
+      "url": "https://www.glico.com/jp/company/ir/faq/",
+      "final_url": "https://www.glico.com/jp/company/ir/faq/",
+      "snapshot": "evidence/2206/04.json",
+      "retrieved_at": "2026-10-11T04:01:53.471045+00:00",
+      "http_status": 503,
+      "error": null
+    },
+    {
+      "url": "https://www.glico.com/jp/company/ir/library/plan/",
+      "final_url": "https://www.glico.com/jp/company/ir/library/plan/",
+      "snapshot": "evidence/2206/05.json",
+      "retrieved_at": "2026-10-11T04:01:53.967523+00:00",
+      "http_status": 503,
+      "error": null
+    },
+    {
+      "url": "https://www.glico.com/jp/company/ir/governance/",
+      "final_url": "https://www.glico.com/jp/company/ir/governance/",
+      "snapshot": "evidence/2206/06.json",
+      "retrieved_at": "2026-10-11T04:01:54.700242+00:00",
+      "http_status": 503,
+      "error": null
+    },
+    {
+      "url": "https://www.glico.com/jp/company/ir/policy/",
+      "final_url": "https://www.glico.com/jp/company/ir/policy/",
+      "snapshot": "evidence/2206/07.json",
+      "retrieved_at": "2026-10-11T04:01:55.720128+00:00",
+      "http_status": 503,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用メール/質問フォームの明示を実証できなかった。窓口不存在の判定ではない。"
+  ],
+  "discovery": {
+    "security_code": "2206",
+    "official_url": "https://www.glico.com/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "江崎グリコ",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/2206/01.json",
+      "normalized_name": "江崎グリコ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/2206/02.json",
+      "normalized_name": "江崎グリコ",
+      "security_code_observed": false
+    }
+  ],
+  "classification_version": 2,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "successful_official_page_count": 2,
+  "manual_review": {
+    "reviewer": "codex_audit_it",
+    "reviewed_at": "2026-10-11T04:21:32.720872+00:00",
+    "review_scope": "saved_public_snapshots_only_no_new_get",
+    "snapshots_reviewed": [
+      "evidence/2206/01.json",
+      "evidence/2206/02.json"
+    ],
+    "notes": "江崎グリコの公式ホーム／IRトップを確認。問い合わせリンクはcustomer.glico.comの一般窓口で、IR FAQも未取得。対象本文のIRカテゴリや公開IRメールを保存範囲で確認できない。 保存範囲での未確認であり、窓口不存在・受付拒否の断定ではない。"
+  },
+  "manual_classification_version": 1
+}

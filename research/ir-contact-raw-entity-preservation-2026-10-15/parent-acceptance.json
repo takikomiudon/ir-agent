@@ -1,0 +1,37 @@
+{
+  "status": "accepted_offline_raw_entity_preservation",
+  "recorded_at": "2026-10-15T22:20:05.676568+00:00",
+  "implementation": {
+    "path": "research/ir-contact-raw-entity-preservation-2026-10-15/implementation-receipt.json",
+    "sha256": "8f5c14ae487b63332f0fbd91a8d1db5eff82d26863bd7432a453999facfb5f7b"
+  },
+  "independent_review": {
+    "path": "research/ir-contact-raw-entity-preservation-2026-10-15/independent-review/review.json",
+    "sha256": "2caf554d7f9d74e3b4e434e15ea38e1518b081fc6c6690289c973988cde8d78f",
+    "checks": 21,
+    "actionable_findings": 0
+  },
+  "full_suite": {
+    "path": "research/ir-contact-raw-entity-preservation-2026-10-15/parent-full-suite.json",
+    "sha256": "37e8bf5f19f661f91d0a4695009b36fce87c3e2d2ecf4945c24d6f3dc98bb9e1",
+    "test_count": 1512,
+    "unittest_seconds": "37.048"
+  },
+  "code_sha256": {
+    "scripts/research_ir_universe.py": "373e06e6bd2b3fe7bf8e9b86de9d124118371eec9534ebea9a1ef07161e154f6",
+    "scripts/collect_ir_followups.py": "fa3df311c8c11632ae0f4a430ce9eaddbe965c4d77e3593d7ef3954b9cdd9bae",
+    "tests/test_ir_raw_entity_preservation.py": "37f260be63ff2bf897545fd57ce47f09a5f0ce8ccc8875416807992722cc545c"
+  },
+  "actual_database_unchanged": true,
+  "actual_database_main_sha256": "b0086b397a8a949e0616f5923cb183358d87b30f3b8a05bfe6fc0373af443e88",
+  "actual_database_writes": 0,
+  "new_collection_GETs": 0,
+  "live_API_auth_external_sends_orders": 0,
+  "limits": [
+    "Response entity bytes may already be content-decoded; not wire-transfer bytes",
+    "Atomic filename publication; directory fsync/power-loss durability is not claimed",
+    "Historic missing raw entities are not recovered; no old captures overwritten or recollected",
+    "Storage failure is separate from transport status and retry/backoff",
+    "No financial inputs, strategy thresholds or trading policies adopted"
+  ]
+}

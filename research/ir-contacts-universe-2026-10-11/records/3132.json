@@ -1,0 +1,67 @@
+{
+  "security_code": "3132",
+  "company_name": "マクニカホールディングス",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "卸売業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://holdings.macnica.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T06:39:00.212808+00:00",
+  "completed_at": "2026-10-11T06:39:09.268499+00:00",
+  "manual_review_required": false,
+  "evidence": [],
+  "fetches": [
+    {
+      "url": "https://holdings.macnica.co.jp/",
+      "final_url": "https://holdings.macnica.co.jp/",
+      "snapshot": "evidence/3132/20261011T063900212843Z/01.json",
+      "retrieved_at": "2026-10-11T06:39:03.439181+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "GET200保存本文はトップページ題名21文字のみ、links/formsは空。IR受付とメール/質問欄は未実証。窓口不存在の判断ではない。"
+  ],
+  "discovery": {
+    "security_code": "3132",
+    "official_url": "https://holdings.macnica.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "マクニカホールディングス",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/3132/20261011T063900212843Z/01.json",
+      "normalized_name": "マクニカ",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 2,
+  "previous_attempts": [
+    "attempts/3132/20261011T045047376872Z.json",
+    "attempts/3132/20261011T063909268692Z.json"
+  ],
+  "manual_review": {
+    "reviewed_at": "2026-10-11T06:46:33.842554+00:00",
+    "reviewer": "capacity_model_adaptive3134",
+    "review_agent_kind": "codex",
+    "notes": "公式トップGET200は題名21文字の抽出本文のみで、links/formsは空。IR窓口や質問入力欄を補完推測せず unconfirmed を維持。",
+    "source_scope": "Saved official pages and form controls only; no GET or submission",
+    "attempted_at_reviewed": "2026-10-11T06:39:00.212808+00:00",
+    "source_snapshot_sha256": {
+      "evidence/3132/20261011T063900212843Z/01.json": "2b35c78a04894dd5a630cd9d1c6a8de1514784aa934e7e13a94af7930717d3df"
+    }
+  }
+}

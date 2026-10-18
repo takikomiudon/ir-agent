@@ -1,0 +1,368 @@
+{
+  "schema": "research_case_study_only_not_question_ingest",
+  "security_code": "8331",
+  "company_name": "千葉銀行",
+  "study_date_jst": "2026-10-15",
+  "purpose": "Test public-input readiness for a financial-firm equity model, not select an investment.",
+  "ir_channel_status": "unconfirmed",
+  "catalog_note": "Absent from imported 1,819 contact candidates. Saved full-universe row is unconfirmed. The official reception link was observed but not fetched or validated; no catalog update.",
+  "network_scope": {
+    "max_unique_urls": 8,
+    "actual_unique_urls": 8,
+    "get_attempts": 8,
+    "http_200_count": 8,
+    "retries": 0,
+    "external_messages": 0,
+    "forms_submitted": 0
+  },
+  "adopted_method": {
+    "spec": "../../../docs/financial-equity-valuation-spec.md",
+    "primary_model_source_id": "damodaran.financial-services.2009",
+    "principle": "Equity cash flows discounted at cost of equity; forecast DPS, capital reinvestment and sustainable distribution are distinct inputs.",
+    "references": [
+      {
+        "page": 15,
+        "subject": "Two-stage DDM, explicit DPS and distinct equity costs"
+      },
+      {
+        "pages": [
+          21,
+          22
+        ],
+        "subject": "Financial-firm FCFE intermediate quantity NI minus reinvestment in regulatory capital; not implemented or filled here"
+      }
+    ],
+    "regulation_caveat": "2009 valuation exposition is not an automatically applicable current Japanese capital rule."
+  },
+  "facts": [
+    {
+      "id": "return-policy",
+      "source_id": "chibabank.8331.05",
+      "source_url": "https://www.chibabank.co.jp/investor/services/stock/dividend",
+      "raw_sha256": "3693f485ea9412f931089877196e9a262810119c312f7e6231d0d0660fa600dc",
+      "retrieved_at": "2026-10-15T01:56:32.230904+00:00",
+      "published_at": null,
+      "page": null,
+      "locator": "株主還元方針 > 中期経営計画期間（2026年4月～2029年3月）",
+      "basis_quote": "配当に関しては、配当性向40％以上を目安といたします。",
+      "classification": "company_policy_not_guaranteed_distribution",
+      "policy_period": {
+        "start": "2026-04-01",
+        "end": "2029-03-31"
+      },
+      "payout_ratio_floor_pct": "40"
+    },
+    {
+      "id": "buybacks",
+      "source_id": "chibabank.8331.05",
+      "source_url": "https://www.chibabank.co.jp/investor/services/stock/dividend",
+      "raw_sha256": "3693f485ea9412f931089877196e9a262810119c312f7e6231d0d0660fa600dc",
+      "retrieved_at": "2026-10-15T01:56:32.230904+00:00",
+      "published_at": null,
+      "page": null,
+      "locator": "株主還元方針",
+      "basis_quote": "自己株式取得に関しては、 機動的に実施します。",
+      "classification": "company_policy_no_quantified_future_buyback_schedule"
+    },
+    {
+      "id": "company-dps-forecast",
+      "source_id": "chibabank.8331.05",
+      "source_url": "https://www.chibabank.co.jp/investor/services/stock/dividend",
+      "raw_sha256": "3693f485ea9412f931089877196e9a262810119c312f7e6231d0d0660fa600dc",
+      "retrieved_at": "2026-10-15T01:56:32.230904+00:00",
+      "published_at": null,
+      "page": null,
+      "locator": "配当情報",
+      "basis_quote": "2027年3月期の1株当たりの配当金につきましては、年間64円とすることを予定しております。",
+      "classification": "company_forecast_not_independent_prediction",
+      "fiscal_year_end": "2027-03-31",
+      "annual_dividend_per_share_jpy": "64",
+      "share_basis_status": "not_independently_verified",
+      "do_not_auto_map_to_ddm_t1": true
+    },
+    {
+      "id": "company-dividend-table",
+      "source_id": "chibabank.8331.05",
+      "source_url": "https://www.chibabank.co.jp/investor/services/stock/dividend",
+      "raw_sha256": "3693f485ea9412f931089877196e9a262810119c312f7e6231d0d0660fa600dc",
+      "retrieved_at": "2026-10-15T01:56:32.230904+00:00",
+      "published_at": null,
+      "page": null,
+      "locator": "配当情報 > 数値表 > 2027年3月期（予想）",
+      "basis_quote": "2027年3月期（予想）\n64.0(-)\n32.0\n41.1%",
+      "classification": "company_forecast",
+      "annual_dividend_per_share_jpy": "64.0",
+      "interim_dividend_per_share_jpy": "32.0",
+      "consolidated_payout_ratio_pct": "41.1"
+    },
+    {
+      "id": "bank-faq-capital",
+      "source_id": "chibabank.8331.07",
+      "source_url": "https://www.chibabank.co.jp/investor/services/other/ir_faq",
+      "raw_sha256": "7201d8ad5458020c3456e6f52f910ce33e2cff647a85b96cf51504ce411281a4",
+      "retrieved_at": "2026-10-15T01:57:23.765094+00:00",
+      "published_at": null,
+      "page": null,
+      "locator": "決算・財務について > 自己資本比率はどうなっていますか。",
+      "basis_quote": "当行のように海外に支店を置いている銀行は、自己資本比率を国際統一基準である8％以上にすることが求められておりますが、当行は十分にこの水準を満たしております。",
+      "classification": "issuer_general_faq_statement_not_current_regulatory_validation",
+      "not_a_cet1_ratio": true,
+      "not_a_management_target": true,
+      "not_a_regulatory_reinvestment_forecast": true
+    },
+    {
+      "id": "reporting-schedule",
+      "source_id": "chibabank.8331.07",
+      "source_url": "https://www.chibabank.co.jp/investor/services/other/ir_faq",
+      "raw_sha256": "7201d8ad5458020c3456e6f52f910ce33e2cff647a85b96cf51504ce411281a4",
+      "retrieved_at": "2026-10-15T01:57:23.765094+00:00",
+      "published_at": null,
+      "page": null,
+      "locator": "決算・財務について > 決算発表の時期",
+      "basis_quote": "当行は、銀行法に基づき3月期決算を行っており、例年決算発表を5月に、中間決算発表を11月に実施しております。",
+      "classification": "general_schedule_not_exact_next_release_date"
+    },
+    {
+      "id": "code-confirmed",
+      "source_id": "chibabank.8331.07",
+      "source_url": "https://www.chibabank.co.jp/investor/services/other/ir_faq",
+      "raw_sha256": "7201d8ad5458020c3456e6f52f910ce33e2cff647a85b96cf51504ce411281a4",
+      "retrieved_at": "2026-10-15T01:57:23.765094+00:00",
+      "published_at": null,
+      "page": null,
+      "locator": "株式事務について > 証券コード",
+      "basis_quote": "8331です。",
+      "classification": "issuer_identity"
+    },
+    {
+      "id": "disclosure-principle",
+      "source_id": "chibabank.8331.08",
+      "source_url": "https://www.chibabank.co.jp/investor/services/other/ir_policy",
+      "raw_sha256": "4022e3f296cbf33a6280031b7afc20eb37b64fefc6c8e03740a53c87a38d66a0",
+      "retrieved_at": "2026-10-15T01:57:30.371307+00:00",
+      "published_at": null,
+      "page": null,
+      "locator": "1. 基本的な考え方",
+      "basis_quote": "公平かつ適時・適切でわかりやすい情報開示を行ってまいります。",
+      "classification": "company_disclosure_policy"
+    }
+  ],
+  "latest_financial_results": {
+    "status": "not_established_in_eight_urls",
+    "library_source_id": "chibabank.8331.04",
+    "reason": "The official financial library returns an E-IR dynamic container without a displayed date/document/PDF. The issuer-hosted preloaded configuration script was read; no report content was obtained. No latest period, profit, CET1 ratio or RWA figure is asserted."
+  },
+  "public_qa": {
+    "general_ir_faq_reviewed": true,
+    "source_id": "chibabank.8331.07",
+    "earnings_specific_qa_status": "not_retrieved"
+  },
+  "silent_period": {
+    "status": "not_found_in_checked_policy_and_faq_not_proven_absent",
+    "source_ids": [
+      "chibabank.8331.07",
+      "chibabank.8331.08"
+    ],
+    "automatic_contact_allowed": false
+  },
+  "ddm_readiness": {
+    "status": "needs_inputs",
+    "inputs": {
+      "dividends_per_share_jpy": null,
+      "cost_of_equity": null,
+      "terminal_cost_of_equity": null,
+      "terminal_dividend_per_share_jpy": null,
+      "terminal_growth_rate": null
+    },
+    "reported_company_forecast_is_separate_from_model_inputs": true,
+    "missing_inputs": [
+      {
+        "input": "dividends_per_share_jpy",
+        "status": "not_ready",
+        "reason": "Only FY2027 annual company forecast is observed. Period-end forecast is not automatically the t=1 one-year-end cash flow from the valuation date; future DPS path, payment timing and consistent share basis are not established."
+      },
+      {
+        "input": "cost_of_equity",
+        "status": "missing",
+        "reason": "No adopted externally sourced forecast-period equity cost is provided; the bank is not asked to supply the investor model parameter."
+      },
+      {
+        "input": "terminal_cost_of_equity",
+        "status": "missing",
+        "reason": "No adopted stable-period equity cost is provided; it is not copied from the forecast-period cost."
+      },
+      {
+        "input": "terminal_dividend_per_share_jpy",
+        "status": "missing",
+        "reason": "No explicitly grounded n+1 DPS is supplied; neither FY2027 forecast nor payout floor is perpetually extrapolated."
+      },
+      {
+        "input": "terminal_growth_rate",
+        "status": "missing",
+        "reason": "No independently adopted permanent dividend growth assumption or stable-phase justification is supplied."
+      },
+      {
+        "input": "current_market_quote",
+        "status": "not_retrieved",
+        "reason": "No current price or price timestamp is fetched or invented in this bounded study."
+      }
+    ],
+    "valuation_computed": false,
+    "target_price_jpy": null,
+    "buy_sell_action": "unresolved"
+  },
+  "regulatory_capital_fcfe_readiness": {
+    "status": "not_ready_and_calculator_not_implemented",
+    "issuer_faq_general_minimum_only": true,
+    "required_missing_inputs": [
+      "Current period-matched ordinary-shareholder attributable NI, regulatory capital numerator and risk-weighted asset disclosures",
+      "Applicable current Japanese/international regulatory definitions, consolidated/solo scope and transitional measures",
+      "Management target capital and buffer definitions, distinct from minimum regulatory percentage",
+      "Explicit future NI and regulatory-capital reinvestment paths for the same periods and units",
+      "Reconciliation of profit retention, capital allocation, buybacks, issuance, dividends and any dilution",
+      "Supported treatment of future capital distributions and valuation terminal conditions; no FCFE terminal value is computed here"
+    ],
+    "forbidden_shortcuts": [
+      "Do not use FAQ 8% as a CET1 ratio, management target, or reinvestment forecast.",
+      "Do not use accounting cash-flow CAPEX or debt movements as regulatory capital reinvestment.",
+      "Do not equate the 40% payout floor with maximum distributable cash or constant future DPS.",
+      "Do not add announced or hypothetical buybacks to DPS without a compatible per-share model."
+    ]
+  },
+  "questions": [
+    {
+      "id": "publicly-answered-return-policy",
+      "status": "do_not_send_publicly_answered",
+      "question": "配当方針と2027年3月期の予想配当はいくらですか。",
+      "answered_by_fact_ids": [
+        "return-policy",
+        "company-dps-forecast",
+        "company-dividend-table"
+      ],
+      "model_parameter": "Actual company policy/forecast record only; not sufficient to populate an annual DDM sequence."
+    },
+    {
+      "id": "capital-disclosure-reference",
+      "status": "do_not_send_value_unproven_and_channel_unconfirmed",
+      "research_question_draft": "中期経営計画の配当性向40％以上という方針と規制資本の留保・事業配賦の関係を読むにあたり、規制上の必要資本、経営管理上のバッファ、分配に用いる資本の定義と連結・単体の範囲を既に説明した公開資料がありましたら、資料名と該当ページをご教示いただく、という論点を想定する。",
+      "not_a_sendable_message": true,
+      "target_parameters": [
+        "future sustainable DPS distribution constraints",
+        "regulatory capital reinvestment definition for a possible future FCFE intermediate model"
+      ],
+      "public_review_required_before_question": [
+        "Official Basel disclosure linked from source03",
+        "Current financial statements and earnings presentation",
+        "Medium-term strategy and capital allocation material linked from source07",
+        "Earnings-specific public Q&A, not just the general FAQ"
+      ],
+      "answer_branches": [
+        {
+          "if": "The published definitions and matching period capital allocation are identified",
+          "then": "Read and reconcile the public source; delete the question if resolved. No cost of equity, growth, DPS or trade action is automatically changed."
+        },
+        {
+          "if": "The answer clarifies a scope difference but does not supply period-matched public forecasts",
+          "then": "Correct the scope description only. Regulatory reinvestment and future DPS remain missing."
+        },
+        {
+          "if": "No answer, unclear answer, or material not identified",
+          "then": "Keep valuation unconfigured; do not infer low capital quality or a sell action."
+        }
+      ],
+      "decision_distinguishing_status": "not_demonstrated",
+      "reason": "No completed baseline model, adoption policy, valuation inputs, current quote, source-bound answer-to-number update or EVSI likelihood exists."
+    }
+  ],
+  "final_disposition": "do_not_send; research example with IR channel unconfirmed and decision value unproven",
+  "sources": [
+    {
+      "id": "chibabank.8331.01",
+      "url": "https://www.chibabank.co.jp/robots.txt",
+      "retrieved_at": "2026-10-15T01:54:34.416703+00:00",
+      "published_at": null,
+      "sha256": "436b9d94a490a212399b1bb9b51a09d4ece119db7d690d507b38a23b1d1484ee",
+      "snapshot": "evidence/01.json",
+      "raw_path": "evidence/436b9d94a490a212399b1bb9b51a09d4ece119db7d690d507b38a23b1d1484ee.raw",
+      "text_path": null,
+      "purpose": "robots policy"
+    },
+    {
+      "id": "chibabank.8331.02",
+      "url": "https://www.chibabank.co.jp/",
+      "retrieved_at": "2026-10-15T01:55:02.983897+00:00",
+      "published_at": null,
+      "sha256": "9fd35bbb9ba1db45ae90e97ca46b6a08f32bbaaa20ce18bde2aaca38ba09dece",
+      "snapshot": "evidence/02.json",
+      "raw_path": "evidence/9fd35bbb9ba1db45ae90e97ca46b6a08f32bbaaa20ce18bde2aaca38ba09dece.raw",
+      "text_path": "evidence/02.txt",
+      "purpose": "official seed homepage from saved universe record"
+    },
+    {
+      "id": "chibabank.8331.03",
+      "url": "https://www.chibabank.co.jp/investor",
+      "retrieved_at": "2026-10-15T01:55:26.780283+00:00",
+      "published_at": null,
+      "sha256": "e4864cfac3d63a0c614ae80a8b9bef7fb5f5f5d9a04f529f398b320224e68ed0",
+      "snapshot": "evidence/03.json",
+      "raw_path": "evidence/e4864cfac3d63a0c614ae80a8b9bef7fb5f5f5d9a04f529f398b320224e68ed0.raw",
+      "text_path": "evidence/03.txt",
+      "purpose": "investor relations entrance linked from official homepage"
+    },
+    {
+      "id": "chibabank.8331.04",
+      "url": "https://www.chibabank.co.jp/investor/ir/quarterly",
+      "retrieved_at": "2026-10-15T01:56:09.358586+00:00",
+      "published_at": null,
+      "sha256": "6298827c6d7332145424e3a7e9fe77a0861e106d8cccf4cb6731335d9b94698f",
+      "snapshot": "evidence/04.json",
+      "raw_path": "evidence/6298827c6d7332145424e3a7e9fe77a0861e106d8cccf4cb6731335d9b94698f.raw",
+      "text_path": "evidence/04.txt",
+      "purpose": "latest financial results linked from official investor entrance"
+    },
+    {
+      "id": "chibabank.8331.05",
+      "url": "https://www.chibabank.co.jp/investor/services/stock/dividend",
+      "retrieved_at": "2026-10-15T01:56:32.230904+00:00",
+      "published_at": null,
+      "sha256": "3693f485ea9412f931089877196e9a262810119c312f7e6231d0d0660fa600dc",
+      "snapshot": "evidence/05.json",
+      "raw_path": "evidence/3693f485ea9412f931089877196e9a262810119c312f7e6231d0d0660fa600dc.raw",
+      "text_path": "evidence/05.txt",
+      "purpose": "capital return and company dividend policy linked from official IR entrance"
+    },
+    {
+      "id": "chibabank.8331.06",
+      "url": "https://www.chibabank.co.jp/ir/ja/eir_v5.js",
+      "retrieved_at": "2026-10-15T01:56:45.399106+00:00",
+      "published_at": null,
+      "sha256": "46114d35723694a5ba539b60a613993f425bae77a0aa7283483cda2cdb7d416e",
+      "snapshot": "evidence/06.json",
+      "raw_path": "evidence/46114d35723694a5ba539b60a613993f425bae77a0aa7283483cda2cdb7d416e.raw",
+      "text_path": "evidence/06.txt",
+      "purpose": "issuer-hosted E-IR script explicitly preloaded by official financial library; read-only source discovery"
+    },
+    {
+      "id": "chibabank.8331.07",
+      "url": "https://www.chibabank.co.jp/investor/services/other/ir_faq",
+      "retrieved_at": "2026-10-15T01:57:23.765094+00:00",
+      "published_at": null,
+      "sha256": "7201d8ad5458020c3456e6f52f910ce33e2cff647a85b96cf51504ce411281a4",
+      "snapshot": "evidence/07.json",
+      "raw_path": "evidence/7201d8ad5458020c3456e6f52f910ce33e2cff647a85b96cf51504ce411281a4.raw",
+      "text_path": "evidence/07.txt",
+      "purpose": "public IR FAQ linked from official IR entrance; avoid questions already answered publicly"
+    },
+    {
+      "id": "chibabank.8331.08",
+      "url": "https://www.chibabank.co.jp/investor/services/other/ir_policy",
+      "retrieved_at": "2026-10-15T01:57:30.371307+00:00",
+      "published_at": null,
+      "sha256": "4022e3f296cbf33a6280031b7afc20eb37b64fefc6c8e03740a53c87a38d66a0",
+      "snapshot": "evidence/08.json",
+      "raw_path": "evidence/4022e3f296cbf33a6280031b7afc20eb37b64fefc6c8e03740a53c87a38d66a0.raw",
+      "text_path": "evidence/08.txt",
+      "purpose": "official disclosure policy including silent period; linked from IR pages"
+    }
+  ]
+}

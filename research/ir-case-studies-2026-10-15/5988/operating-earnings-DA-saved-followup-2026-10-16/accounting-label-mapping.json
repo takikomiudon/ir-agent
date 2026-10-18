@@ -1,0 +1,101 @@
+{
+  "read_at": "2026-10-16T15:24:32.166669+00:00",
+  "purpose": "原会計行とroot指定のCarlisle FAQ英語ラベルとの限定対応候補。著者原文/式の新規採用・確定mappingではない。",
+  "source_id": "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+  "periods": {
+    "previous": {
+      "label": "前連結会計年度",
+      "start": "2024-04-01",
+      "end": "2025-03-31"
+    },
+    "current": {
+      "label": "当連結会計年度",
+      "start": "2025-04-01",
+      "end": "2026-03-31"
+    }
+  },
+  "entity_scope": "同有報の日本基準連結P/L/連結CFの受入済み文脈とp78連結損益計算書関係。当該年度会社行の比較で、単体・四半期・将来正常利益へ移さない。",
+  "author_method_revision_boundary": "root別taskでmethodreview v2のOperating Earnings用語訂正中。未freeze他担当成果はpinせず、この表は会社行の内包と未解決だけを記録。RevenueとOperating Earningsを同じ営業収益という意味で混同しない。",
+  "rows": [
+    {
+      "author_FAQ_label": "Revenue",
+      "company_accounting_line": "連結P/L 売上高",
+      "raw_previous": "63,351",
+      "raw_current": "62,045",
+      "unit": "百万円",
+      "company_basis": "受入済p65 Q65の直接表示を再利用。",
+      "candidate_status": "会社の売上高行との限定対応候補",
+      "evidence": [
+        "Q65",
+        "5988-p78-revenue-note"
+      ],
+      "remaining": "p78※1は顧客契約収益/それ以外を売上高で区分していないと明記。著者データのRevenueとの範囲/定義同値や全非営業収益を含む意味を認定しない。別の収益分解注記へ追わない。"
+    },
+    {
+      "author_FAQ_label": "COGS",
+      "company_accounting_line": "連結P/L 売上原価",
+      "raw_previous": "49,079",
+      "raw_current": "48,316",
+      "unit": "百万円",
+      "company_basis": "受入済p65 Q65の直接表示。p78※4は棚卸資産評価損が売上原価に内包と明示。",
+      "candidate_status": "会社原価行との限定対応候補・D&A調整前の著者入力同値は未確定",
+      "evidence": [
+        "Q65",
+        "5988-p78-inventory-loss-in-COGS"
+      ],
+      "remaining": "売上原価に含まれる減価償却/償却区分の当期費用額はこの頁で示されない。CF全額から販管費分を引いて原価償却と置かず、評価損等を独自除外しない。"
+    },
+    {
+      "author_FAQ_label": "SG&A",
+      "company_accounting_line": "連結P/L 販売費及び一般管理費",
+      "raw_previous": "11,888",
+      "raw_current": "12,258",
+      "unit": "百万円",
+      "company_basis": "受入済p65 Q65の全体行。p78※2の主要費目に減価償却費741/984百万円を含む。",
+      "candidate_status": "会社販管費行との限定対応候補・償却除外済み入力とは扱えない",
+      "evidence": [
+        "Q65",
+        "5988-p78-SGA-major-items-DA"
+      ],
+      "remaining": "主要費目表は販管費全項目の完全集計ではない。著者のSG&Aが償却を含む/除くのどちらかを本会社行だけで決めず、これをそのまま使って追加D&Aを独立控除しない。"
+    },
+    {
+      "author_FAQ_label": "D&A",
+      "company_accounting_line": "(a)販管費主要費目の減価償却費 (b)連結CF調整項目の減価償却費",
+      "raw_previous": {
+        "SGA_DA": "741",
+        "CF_depreciation": "4,353"
+      },
+      "raw_current": {
+        "SGA_DA": "984",
+        "CF_depreciation": "4,436"
+      },
+      "unit": "百万円",
+      "company_basis": "(a)新p78※2、(b)既読p69 OC01/OC15の固定引用参照。",
+      "candidate_status": "2種類の会社表示を分離保存。著者D&A入力の採用値はnull",
+      "evidence": [
+        "5988-p78-SGA-major-items-DA",
+        "OC01",
+        "OC15"
+      ],
+      "remaining": "販管費償却とCF全額の包括関係・製造/売上原価/棚卸資産への配賦、無形償却/連結調整等の範囲対応表は不明。差額を原価D&Aにせず、CF調整行を当期P/L費用の追加控除値にしない。"
+    },
+    {
+      "author_FAQ_label": "OIADP / Operating Earnings",
+      "company_accounting_line": "参考表示として連結P/L 営業利益",
+      "raw_previous": "2,382",
+      "raw_current": "1,470",
+      "unit": "百万円",
+      "company_basis": "受入済p65 Q65に売上高/原価/販管費の下で表示され、p78※2から販管費に償却が内包と確認できる。",
+      "candidate_status": "会社営業利益表示のみ。Carlisle OIADP適合/認証はnull",
+      "evidence": [
+        "Q65",
+        "5988-p78-SGA-major-items-DA"
+      ],
+      "remaining": "著者FAQの科目分類/会計基準/償却の別掲規約との対応を確定せず、営業利益をそのままOIADP認証しない。営業利益からCF総D&Aを再控除しない。著者methodreview-v2の正式固定前に方法採用・EV/ratio計算へ進めない。"
+    }
+  ],
+  "all_author_canonical_values_adopted": null,
+  "formula_EV_ratio_rank_action_created": false,
+  "normalizer_or_model_inputs_created": false
+}

@@ -1,0 +1,41 @@
+{
+  "recorded_at": "2026-10-15T03:46:24.973474+00:00",
+  "tests": {
+    "count": 1069,
+    "seconds": "33.098",
+    "result": "passed",
+    "command": ".venv/bin/python -m unittest discover -s tests -v"
+  },
+  "first_full_attempt": {
+    "count": 1069,
+    "seconds": "34.274",
+    "failures": 2,
+    "cause": "Two legacy fixtures used execution-host current time with October 9 prices while expecting a fresh current action. Their synthetic runtime timelines were made explicit; financial values and policy thresholds unchanged."
+  },
+  "behavior": {
+    "historical_result_immutable": true,
+    "current_age_uses_trusted_runtime": true,
+    "existing_policy_max_age_reused": true,
+    "first_evaluation_and_price_review_and_retries_checked": true,
+    "cli_show_and_inbox_checked": true,
+    "new_quote_new_review_does_not_reapply_reply": true,
+    "exact_boundary_accepted_plus_one_microsecond_held": true
+  },
+  "actual_operation_read_only_counts": {
+    "companies": 1819,
+    "sources": 28,
+    "source_classifications": 28,
+    "theses": 0,
+    "questions": 0,
+    "replies": 0,
+    "ir_observations": 0,
+    "ir_predictions": 0,
+    "record_availability": 28,
+    "job_attempts": 0
+  },
+  "actual_operation_changed_for_fix": false,
+  "raw_source_fingerprint_matches_previous": true,
+  "external_sends": 0,
+  "orders": 0,
+  "next_task": "Implement caller request receipts following verified AWS/Google idempotency guidance."
+}

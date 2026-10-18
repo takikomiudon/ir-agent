@@ -1,0 +1,129 @@
+{
+  "status": "finite_general_definition_clarification_not_model_adoption",
+  "recorded_at": "2026-10-16T07:48:55.957800+00:00",
+  "source_URL": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/definitions.html",
+  "source_raw_sha256": "08a2b4f46aa8bdda52fc9a5a7e17384121cd63e930aeb56da508f0e3ac7a6e77",
+  "body_received_complete_at": "2026-10-16T07:45:52.777717+00:00",
+  "published_at": null,
+  "date_limit": "No publication/update date for these definitions established; not asserted to be the exact January2026 regression production specification.",
+  "selected_raw_rows": {
+    "Beta": {
+      "original_label": "Beta (CAPM)",
+      "raw_file": "Beta-definition.raw-slice.html",
+      "raw_sha256": "86de65b2c2d621c20146792b9e61f9c18307a9bc8fc4272d63492c56425f0339",
+      "full_raw_Unicode_start": 6704,
+      "full_raw_Unicode_end_exclusive": 7981,
+      "full_raw_UTF8_start": 6704,
+      "full_raw_UTF8_end_exclusive": 7981,
+      "column_count": 4,
+      "columns": "Variables; Definition; What it tries to measure; Comments",
+      "raw_slice_semantics": "Exact contiguous original response bytes for selected row, not explanatory long quotation."
+    },
+    "Payout": {
+      "original_label": "Dividend Payout",
+      "raw_file": "Payout-definition.raw-slice.html",
+      "raw_sha256": "a0da800e478b3b44971d5dac8d3174f800ef7716c8e779ceca83278c1edc00d3",
+      "full_raw_Unicode_start": 32665,
+      "full_raw_Unicode_end_exclusive": 33774,
+      "full_raw_UTF8_start": 32665,
+      "full_raw_UTF8_end_exclusive": 33774,
+      "column_count": 4,
+      "columns": "Variables; Definition; What it tries to measure; Comments",
+      "raw_slice_semantics": "Exact contiguous original response bytes for selected row, not explanatory long quotation."
+    },
+    "PE": {
+      "original_label": "Price Earnings Ratio (PE)",
+      "raw_file": "PE-definition.raw-slice.html",
+      "raw_sha256": "de5f32b0219f64c70130a3f84aa2d28e1debebc75b52d6d166fa5dc31b6b30b2",
+      "full_raw_Unicode_start": 82535,
+      "full_raw_Unicode_end_exclusive": 83813,
+      "full_raw_UTF8_start": 82535,
+      "full_raw_UTF8_end_exclusive": 83813,
+      "column_count": 4,
+      "columns": "Variables; Definition; What it tries to measure; Comments",
+      "raw_slice_semantics": "Exact contiguous original response bytes for selected row, not explanatory long quotation."
+    }
+  },
+  "PE": {
+    "newly_confirmed": "概念は1株価格/EPS又は時価総額/NetIncome、equity value対equity earnings。負のearningsではPEは意味を持たないという著者留保。",
+    "share_basis_caution": "原著はprimary/dilutedEPSの単純な採用を批判し、optionを考慮したaggregatePE案も説明する。一般的な推奨/代替であり、日本Jan2026回帰がoption調整を実行したという記録ではない。",
+    "still_unresolved_for_specific_regression": [
+      "trailing/forward/current denominator period",
+      "price and earnings observation dates and share basis",
+      "which per-share/aggregate/option implementation generated Japan dependentPE"
+    ],
+    "new_numeric_denominator_or_2983_input": null,
+    "quote_ids": [
+      "PE1-ratio-definition",
+      "PE2-negative-earnings-limitation",
+      "PE3-primary-diluted-not-equivalent"
+    ]
+  },
+  "Payout": {
+    "newly_confirmed": "Dividends/NetIncome。負利益では通常算出できず100%超もありうるとの著者留保。",
+    "still_unresolved_for_specific_regression": [
+      "historical/forecast numerator and denominator periods",
+      "fiscal matching and dividend/earnings convention"
+    ],
+    "no_substitution": "別のaugmented buyback ratioへの自動変更や会社1期予想DPS/異なるEPSとの混合はしない。",
+    "quote_ids": [
+      "P1-net-income-and-loss-caution"
+    ]
+  },
+  "Beta": {
+    "newly_confirmed": "通常は株式returnをmarket-index returnへ回帰した傾き。原著は期間・index・日/週/月で値が変わる点と回帰Betaの後向き/推定誤差を説明。過去2年/5年は一般的例示で特定窓の指定ではない。",
+    "still_unresolved_for_specific_regression": [
+      "Japan2026 input estimator/window/frequency/benchmark",
+      "levering or bottom-up vs regression field used"
+    ],
+    "no_substitution": "一般のbottom-upBeta提案や任意の公開Betaを回帰の元変数と同一だとしない。",
+    "quote_ids": [
+      "B1-regression-beta"
+    ]
+  },
+  "g5": {
+    "prior_confirmed_ref": {
+      "file": "research/ir-damodaran-regional-regression-discovery-2026-10-16/quotes.json",
+      "sha256": "f2d02f96919b7305f46f8aeaa1a6026d16031425c4fce0218e18c3c16818e7c5",
+      "quote_id": "M4-fiveyear-growth"
+    },
+    "meaning": "既受入MRegの今後5年EPS成長/analyst estimatesという定義は保持。本definitionsでその期間や入力仕様を追加確定していない。Fundamental growth in EPSという別のretention×ROE定義をこのg5へ代用しない。",
+    "company_numeric_input_read_or_adopted": false
+  },
+  "scope_of_next_fit_review": "実際に使うPEとg5/Beta/Payoutの測定値が別物にならないことの確認。未知n/全samplefilterを一律の新しいhardgateとして設置していない。",
+  "route": "selection.json + route-selection.json; definitions link50 explicitly explains estimation, only samehost followed.",
+  "prior_regression_files_pinned_unchanged": {
+    "capture.json": {
+      "file": "research/ir-damodaran-regional-regression-discovery-2026-10-16/capture.json",
+      "sha256": "a9ffc3fbae87adea25e8f02b94afbcdddfcac2709d34f0e2c7971fb83541dd3c"
+    },
+    "manifest.json": {
+      "file": "research/ir-damodaran-regional-regression-discovery-2026-10-16/manifest.json",
+      "sha256": "da64d840d64bdf9b0a9df756cfdb0ec100e5767095270b0c5baeb3eb9a162d66"
+    },
+    "japan-PE-table.json": {
+      "file": "research/ir-damodaran-regional-regression-discovery-2026-10-16/japan-PE-table.json",
+      "sha256": "3c9b1ba5396cb682e6e3d8c9caee030c3793dc1a3b27b995e2483772d6d81985"
+    },
+    "quotes.json": {
+      "file": "research/ir-damodaran-regional-regression-discovery-2026-10-16/quotes.json",
+      "sha256": "f2d02f96919b7305f46f8aeaa1a6026d16031425c4fce0218e18c3c16818e7c5"
+    },
+    "parent-acceptance.json": {
+      "file": "research/ir-damodaran-regional-regression-discovery-2026-10-16/parent-acceptance.json",
+      "sha256": "6337439bea8cd81fabc239f9163d1789714890036a3d2f2718f0f12abca33aea"
+    }
+  },
+  "operations": {
+    "GET": 2,
+    "robots_reGET": 0,
+    "redirect_retry_otherhost_JS": 0,
+    "company_data_or_table_GET": 0,
+    "DB": 0,
+    "Store": 0,
+    "old_code_docs_changes": 0,
+    "2983_source_reread_or_arithmetic": 0,
+    "financial_adoption_or_new_trade": 0
+  },
+  "stop": "TwoGET limit reached, no new pages or links followed; root review pending."
+}

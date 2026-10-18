@@ -1,0 +1,37 @@
+{
+  "recorded_at": "2026-10-16T14:10:56.493233+00:00",
+  "status": "frozen_for_root_review",
+  "scope": "Only Harness.status aggregation and two synthetic tests; no new API/schema/inbox/decision/financial behavior.",
+  "changes": {
+    "research_inquiries": "status-grouped dict, empty {}",
+    "research_inquiry_replies": "independent row count",
+    "research_inquiry_reviews": "independent append-only review row count",
+    "old_keys_and_meanings": "unchanged"
+  },
+  "tests": {
+    "command": ".venv/bin/python -m unittest discover -s tests -p test_research_inquiry_status.py -v",
+    "exit_code": 0,
+    "tests_run": 2,
+    "duration_seconds": 0.013,
+    "result": "OK",
+    "coverage": [
+      "Empty DB new empty dict and zero counts; exact prior key/value set preserved.",
+      "draft→awaiting_reply→answered with another draft; one reply and two review versions counted separately; old status fields and financial questions/replies/evaluations unchanged, old inbox empty."
+    ],
+    "synthetic_only": true,
+    "actual_DB_used": false,
+    "full_suite": "not run by worker; root owns acceptance"
+  },
+  "files": {
+    "research/ir-research-inquiry-status-integration-2026-10-16/harness-before.py": "1006a94293495babb60b3a53a092f8e0b99d311d470c322ce25ed1885d1b5b88",
+    "research/ir-research-inquiry-status-integration-2026-10-16/before.json": "53209a13429f5ed9202cdfea77cc59d09334525f874692663d11ef6f642fb974",
+    "research/ir-research-inquiry-status-integration-2026-10-16/status.diff": "238e932c503fed483f2b1f5489153251a7497c569d7750e2be257a4c6aed11de",
+    "src/ir_agent/harness.py": "86db3916e5c310368f129ac83fdc1acde935312b792a7729030ee5e2e69a3f6f",
+    "tests/test_research_inquiry_status.py": "acd412b0f383049bda6266998fcacd3b6c2040744114755d6b7e42bb063264d9"
+  },
+  "operations": {
+    "GET": 0,
+    "actual_DB_Store_CLI": 0,
+    "Store_CLI_schema_shared_docs_changes": 0
+  }
+}

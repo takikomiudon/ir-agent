@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ir-agent"
+version = "0.1.0"
+description = "A hypothesis-first Japanese equity research harness for Codex"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+data = ["jquants-api-client==2.8.0", "edinet-tools==0.9.0"]
+
+[project.scripts]
+ir-agent = "ir_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

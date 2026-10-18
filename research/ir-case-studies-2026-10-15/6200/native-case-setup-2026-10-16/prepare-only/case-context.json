@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "case_id": "6200-reported-annual-per-share-basis-monitor",
+  "company_id": "jp:6200",
+  "company_name": "株式会社インソース",
+  "issue_id": "6200-annual-EPS-BPS-ordinary-share-and-dated-source-basis",
+  "recorded_at": "2026-10-16T10:34:18.487378+00:00",
+  "preparation_status": "file_only_not_registered_or_bootstrapped",
+  "purpose": "公表年次EPS/BPSを既存maintainer式の限定入力候補として比較し、EPS平均株とBPS期末・未確認分母・後続開示を混同しない。投資推奨/会社別将来予測ではない。",
+  "author_and_project_boundary": {
+    "implementation_author": "maxgfr/crible maintainers",
+    "fixed_commit": "00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7",
+    "formula": "sqrt(22.5 × EPS × BVPS)",
+    "positive_guard": "EPS>0 AND BVPS>0",
+    "original_Graham_complete_rules_adopted": false,
+    "external_author_recommends_6200": false,
+    "calculation_executed_here": false,
+    "provider_equity_to_Japanese_ordinary_BPS_equivalence_certified": false
+  },
+  "conditions": [
+    {
+      "id": "C1",
+      "topic": "同一年次連結actual EPSを基本・希薄化・会社guideと分ける",
+      "external_implementation_rule": "maintainer式のEPS入力。年次/TTM・weighted-average基準は意味確認を要する。",
+      "known": "p1 EPS49.20円は2024-10-01～2025-09-30の連結年次実績。p18 ordinary親NI4,130,091千円と平均株83,947,385株を注記。p1百万円未満切捨て親NI4,130百万円と精度を分ける。希薄化dashは潜在株式不存在による省略。",
+      "compare_on_new_saved_source": "同年度・連結・報告実績・基本EPSの訂正/新期情報を比較。当時FY2026 guide55.15や未読Q3を報告49.20へ置換しない。",
+      "status": "direct_display_input_candidate_meaning_unadopted",
+      "refs": [
+        "issuer-annual-original",
+        "issuer-derived-twofacts",
+        "maintainer-formula-positiveguard-and-denominators"
+      ]
+    },
+    {
+      "id": "C2",
+      "topic": "BPS期末basisとEPS平均、ordinary持分/分母未確認を分ける",
+      "external_implementation_rule": "maintainer BVPSはequity/期末株数を優先し平均fallbackを持つ。provider total_equityと日本原典のordinary持分の同値は名称だけで認定しない。",
+      "known": "p1/p18 BPS148.70円は2025-09-30末。p2普通株期末85,243,000株は自己株含む、自己株1,269,169株、期中平均83,947,385株を別に保持。BPS詳細分母算定・ordinary帰属調整の注記は選定頁で未確認。",
+      "compare_on_new_saved_source": "ordinary持分/NCI/優先持分/OCI/自己株/分割/期末と平均の範囲を原文で照合。issued−treasuryを会社公式BPS分母と認定せず、EPS平均をBPS分母へ流用しない。",
+      "status": "direct_BPS_display_candidate_detailed_denominator_unconfirmed",
+      "refs": [
+        "issuer-annual-original",
+        "issuer-derived-twofacts",
+        "maintainer-formula-positiveguard-and-denominators"
+      ]
+    },
+    {
+      "id": "C3",
+      "topic": "後続公表と現在株式basis、価格を別観測として確認",
+      "external_implementation_rule": "参考式そのものとlatest-period制約・価格比較・投資家policyを分ける。値が正でもGraham全適格/購入根拠ではない。",
+      "known": "取得一覧は2026FYのQ3まで、2025FYが静的最新通期。FY2026は暦上終了済みだが通期実績取得を認定しない。過去予想修正等のliteralは保存済review参照、selected annual訂正の不存在をサイト全体へ一般化しない。",
+      "compare_on_new_saved_source": "正当に保存された新年次/訂正/資本異動をC1/C2へ比較し、旧sourceを上書きしない。価格の通貨/対象株式/市場時点・株式basisと売買policyは別に必要。新GETやIRをこの準備で起動しない。",
+      "status": "later_publication_current_basis_price_and_policy_unset",
+      "refs": [
+        "issuer-annual-original",
+        "issuer-derived-twofacts",
+        "issuer-selection-limits",
+        "maintainer-formula-positiveguard-and-denominators"
+      ]
+    }
+  ],
+  "candidate_inputs_only": {
+    "eps_jpy": "49.20",
+    "book_value_per_share_jpy": "148.70",
+    "unit": "JPY-per-share",
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "forecast_or_current_share_basis_adopted": false,
+    "valuation_result": null
+  },
+  "source_reading_boundary": {
+    "full_extracted_pages": 18,
+    "meaning_image_review_pages": [
+      1,
+      2,
+      18
+    ],
+    "new_meaning_pages_read_here": [],
+    "original_and_derived_are_not_independent_confirmations": true,
+    "bootstrap_reviews": [],
+    "native_read_claim_created": false,
+    "future_first_review_source_ids": [
+      "case-public:4e3b5b50cf1056ea17c9611853d8480231efa5c2eb3a8642d6f9ffb6a898280c",
+      "disclosed-facts:65bf86cb904c1f0740db3b27c61824b01aa65cea08c748017255f9183e7f61b6"
+    ],
+    "first_qualitative_job_plan": "Rootによる正当な実保存/分類と登録後、凍結packetで初回の著者条件比較をする。file-only抽出とnative既読を分ける。"
+  },
+  "management_review": null,
+  "management_note": "今回内部管理日を新作しない。会社予定/退出期限と混同しない。",
+  "financial_and_IR_state": {
+    "actual_DB_first_save": null,
+    "DB_state_read_this_phase": false,
+    "native_case_version": null,
+    "registered_successfully": false,
+    "price": null,
+    "policy": null,
+    "forward_forecast": null,
+    "financial_branches": null,
+    "IR_question": null,
+    "IR_value": "unproven",
+    "send_ready": false,
+    "investment_action": null
+  }
+}

@@ -1,0 +1,512 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research_draft_not_harness_ingest_bundle",
+  "company": {
+    "security_code": "5988",
+    "company_id": "jp:5988",
+    "name": "株式会社パイオラックス"
+  },
+  "recorded_at": "2026-10-15T01:15:00.337160+00:00",
+  "research_as_of": "2026-10-15",
+  "status": "research_only_unresolved",
+  "investment_horizon": "数カ月〜1年",
+  "methodology": {
+    "adopted_sources": [
+      {
+        "local_path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+        "upstream_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+        "adopted": "Use company-specific revenue/margin metrics and conditional operating scenarios."
+      },
+      {
+        "local_path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+        "upstream_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+        "adopted": "Record falsification, catalysts and no-change outcomes with the thesis."
+      }
+    ],
+    "adaptation": "This project maps public-definition questions to driver changes before any valuation inputs are updated; this is not an upstream numerical investment strategy."
+  },
+  "business_context": {
+    "statement": "自動車関連等と医療機器を展開。主要OEM生産減の影響、高付加価値品・非日系OEM拡販、生産再配置が公開説明上の論点。最新1Qは売上増加と営業減益が同時に生じている。",
+    "citation_ids": [
+      "q1-cost-and-growth",
+      "fy26-forecast-assumptions"
+    ]
+  },
+  "sources": [
+    {
+      "requested_url": "https://www.piolax.co.jp/jp/shareholder/ir/library/",
+      "url": "https://www.piolax.co.jp/jp/shareholder/ir/library/",
+      "http_status": 200,
+      "error": null,
+      "retrieved_at": "2026-10-15T01:10:46.649948+00:00",
+      "content_type": "text/html; charset=UTF-8",
+      "title": "IRライブラリ – 株式会社パイオラックス",
+      "text_file": null,
+      "snapshot": "01.json",
+      "published_date": null,
+      "published_at": null,
+      "publication_precision": "unknown",
+      "publication_note": "Document cover or official index states a date; exact time is unknown. Revised PDFs may have a later replacement date that is not established here.",
+      "raw_file": "raw/ebc523f5a2c0877aa61cad8267d6dbb009b6dfaff92eefce3976c048f15684a3",
+      "sha256": "ebc523f5a2c0877aa61cad8267d6dbb009b6dfaff92eefce3976c048f15684a3"
+    },
+    {
+      "requested_url": "https://www.piolax.co.jp/jp/202608052048-6738/",
+      "url": "https://www.piolax.co.jp/jp/202608052048-6738/",
+      "http_status": 200,
+      "error": null,
+      "retrieved_at": "2026-10-15T01:10:48.713383+00:00",
+      "content_type": "text/html; charset=UTF-8",
+      "title": "2027年３月期 第１四半期決算短信〔日本基準〕（連結） – 株式会社パイオラックス",
+      "text_file": null,
+      "snapshot": "02.json",
+      "published_date": "2026-08-05",
+      "published_at": null,
+      "publication_precision": "day",
+      "publication_note": "Document cover or official index states a date; exact time is unknown. Revised PDFs may have a later replacement date that is not established here.",
+      "raw_file": "raw/41d8e511943ae02f5107e8c9fc217ed4b6ffc782f4d69ad994061fc5d21d9c70",
+      "sha256": "41d8e511943ae02f5107e8c9fc217ed4b6ffc782f4d69ad994061fc5d21d9c70"
+    },
+    {
+      "requested_url": "https://www.piolax.co.jp/jp/shareholder/ir/ir-information/",
+      "url": "https://www.piolax.co.jp/jp/shareholder/ir/ir-information/",
+      "http_status": 200,
+      "error": null,
+      "retrieved_at": "2026-10-15T01:11:08.159846+00:00",
+      "content_type": "text/html; charset=UTF-8",
+      "title": "IRカレンダー – 株式会社パイオラックス",
+      "text_file": null,
+      "snapshot": "06.json",
+      "published_date": null,
+      "published_at": null,
+      "publication_precision": "unknown",
+      "publication_note": "Document cover or official index states a date; exact time is unknown. Revised PDFs may have a later replacement date that is not established here.",
+      "raw_file": "raw/985b5b53a0524968f34a4b8b64e5f19863ca1df9b598e048a8efa8ad86c73e26",
+      "sha256": "985b5b53a0524968f34a4b8b64e5f19863ca1df9b598e048a8efa8ad86c73e26"
+    },
+    {
+      "requested_url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+      "http_status": 200,
+      "error": null,
+      "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+      "content_type": "application/pdf",
+      "title": "",
+      "text_file": "07.txt",
+      "snapshot": "07.json",
+      "published_date": "2026-08-05",
+      "published_at": null,
+      "publication_precision": "day",
+      "publication_note": "Document cover or official index states a date; exact time is unknown. Revised PDFs may have a later replacement date that is not established here.",
+      "raw_file": "raw/9960235822c9f224e178472064f39186645ca411b754621bd9ed6fdd91a0f9ff",
+      "sha256": "9960235822c9f224e178472064f39186645ca411b754621bd9ed6fdd91a0f9ff"
+    },
+    {
+      "requested_url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/20260512_2025-q4_summary_R2.pdf",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/20260512_2025-q4_summary_R2.pdf",
+      "http_status": 200,
+      "error": null,
+      "retrieved_at": "2026-10-15T01:11:46.331748+00:00",
+      "content_type": "application/pdf",
+      "title": "",
+      "text_file": "08.txt",
+      "snapshot": "08.json",
+      "published_date": "2026-05-12",
+      "published_at": null,
+      "publication_precision": "day",
+      "publication_note": "Document cover or official index states a date; exact time is unknown. Revised PDFs may have a later replacement date that is not established here.",
+      "raw_file": "raw/600eea36e3dc58755b2aa8ddc1bb402f7db34589e1a45dc6db730ad6d0d42b16",
+      "sha256": "600eea36e3dc58755b2aa8ddc1bb402f7db34589e1a45dc6db730ad6d0d42b16"
+    },
+    {
+      "requested_url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/2025-2027_management-plan_R.pdf",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/2025-2027_management-plan_R.pdf",
+      "http_status": 200,
+      "error": null,
+      "retrieved_at": "2026-10-15T01:11:50.219184+00:00",
+      "content_type": "application/pdf",
+      "title": "",
+      "text_file": "09.txt",
+      "snapshot": "09.json",
+      "published_date": "2026-05-12",
+      "published_at": null,
+      "publication_precision": "day",
+      "publication_note": "Document cover or official index states a date; exact time is unknown. Revised PDFs may have a later replacement date that is not established here.",
+      "raw_file": "raw/33cb13c658a36f4cce093b64b38b07c404b02b6aead830431ba25ec3a4e198b4",
+      "sha256": "33cb13c658a36f4cce093b64b38b07c404b02b6aead830431ba25ec3a4e198b4"
+    },
+    {
+      "requested_url": "https://www.piolax.co.jp/jp/shareholder/ir/financial-reports/",
+      "url": "https://www.piolax.co.jp/jp/shareholder/ir/financial-reports/",
+      "http_status": 200,
+      "error": null,
+      "retrieved_at": "2026-10-15T01:12:05.111556+00:00",
+      "content_type": "text/html; charset=UTF-8",
+      "title": "財務レポート – 株式会社パイオラックス",
+      "text_file": null,
+      "snapshot": "10.json",
+      "published_date": null,
+      "published_at": null,
+      "publication_precision": "unknown",
+      "publication_note": "Document cover or official index states a date; exact time is unknown. Revised PDFs may have a later replacement date that is not established here.",
+      "raw_file": "raw/b6bd87c0a694102282f94af40815df694d160c3f48402f7d323e20d45358734f",
+      "sha256": "b6bd87c0a694102282f94af40815df694d160c3f48402f7d323e20d45358734f"
+    },
+    {
+      "requested_url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf",
+      "http_status": 200,
+      "error": null,
+      "retrieved_at": "2026-10-15T01:12:38.091035+00:00",
+      "content_type": "application/pdf",
+      "title": "",
+      "text_file": "11.txt",
+      "snapshot": "11.json",
+      "published_date": "2026-06-18",
+      "published_at": null,
+      "publication_precision": "day",
+      "publication_note": "Document cover or official index states a date; exact time is unknown. Revised PDFs may have a later replacement date that is not established here.",
+      "raw_file": "raw/813f6500cd7716a3b527273c6817aeb507800030063847c35963cac4c72c74e4",
+      "sha256": "813f6500cd7716a3b527273c6817aeb507800030063847c35963cac4c72c74e4"
+    }
+  ],
+  "citations": [
+    {
+      "id": "q1-cost-and-growth",
+      "snapshot": "07.json",
+      "text_file": "07.txt",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+      "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+      "pdf_page": 4,
+      "printed_page": 2,
+      "quote": "このような需要環境のもと当社グループといたしましては、お取引先からのニーズを的確に捉え、日系のお取\n   引先に加え非日系のお取引先にもグローバルに拡販活動を継続的に推進したことに加え、円安による増収効果も\n   あり、売上高は15,761百万円と、前期比669百万円（4.4％）の増収となりました。\n    一方利益面におきましては、増収効果はあったものの、原材料・部品価格の上昇や人件費、物流費等の各種コ\n   スト増加の影響を吸収しきれず、営業利益は266百万円（前期比30.5％減）となりました。また、前年同期に計\n   上した支払手数料が当期は発生しなかったこと等により、経常利益は394百万円（前期比28.5％増）、親会社株\n   主に帰属する四半期純利益は125百万円（前期比2.0％減）となりました。"
+    },
+    {
+      "id": "fy26-forecast-assumptions",
+      "snapshot": "08.json",
+      "text_file": "08.txt",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/20260512_2025-q4_summary_R2.pdf",
+      "retrieved_at": "2026-10-15T01:11:46.331748+00:00",
+      "pdf_page": 7,
+      "printed_page": 7,
+      "quote": "１．主要OEMの生産台数予測は若干の増産予測\n  グローバル拡販、高付加価値品の開発販売による台当たり搭載金額の向上\n  営業と設計開発の専任化によるターゲットOEM、重点アイテムの更なる拡販\n  北米、中国、インドを中心に非日系への拡販を強化\n２．材料、エネルギーコストは高止まりの状況が続いており、加えて設備投資に\n  伴う減価償却負担が増加\n  拠点毎の収益性を踏まえた生産体制と方向性の検討を実施"
+    },
+    {
+      "id": "revenue-guidance",
+      "snapshot": "08.json",
+      "text_file": "08.txt",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/20260512_2025-q4_summary_R2.pdf",
+      "retrieved_at": "2026-10-15T01:11:46.331748+00:00",
+      "pdf_page": 8,
+      "printed_page": 8,
+      "quote": "2026年度                                連結業績予想\n■グローバル拡販、高付加価値の開発販売による台当たり搭載金額の向上\n■営業利益は変動費及び固定費の低減と収益体質改善活動を全社で展開\n                                                       （百万円）\n\n                     2026年度              2025年度                  増減         増減差異（億円）\n                          予想                  実績                （増減率）\n\n売       上       高       63,000              62,045                955     ・CASE拡販   5.9\n                                                                 1.5%     ・医療事業     5.6\n営   業       利   益         1,500               1,470                  30\n                          (2.4%)              (2.4%)              2.0%    次スライドにてご説明\n経   常       利   益         1,500               1,453                 47\n                                                                  3.2%\n親会社株主に帰属する\n                              700                ▲21               721\n当 期 純       利   益                                                     －\n\n1   株       当   期\n純    利          益       ¥27.45            ▲¥0.85                 28.30\n    （円）"
+    },
+    {
+      "id": "expansion-kpi",
+      "snapshot": "09.json",
+      "text_file": "09.txt",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/2025-2027_management-plan_R.pdf",
+      "retrieved_at": "2026-10-15T01:11:50.219184+00:00",
+      "pdf_page": 11,
+      "printed_page": 11,
+      "quote": "売上高向上\n ◼ グローバル拡販、高付加価値品の開発販売による台当たり搭載金額の向上\n ◼ 本社による海外子会社の収益管理の徹底\n ◼ 営業と設計開発の専任化によるターゲットOEM、重点アイテムの更なる拡販\n  （億円）\n                グローバル拡販                            (円/台)                                   (円/台)\n   160                                                      主要日系OEM (国内)                             主要非日系OEM\n                                                    5,000                                  600\n                                                                                   4,520\n                既存商品       CASE商品\n                                                                           4,230\n   120\n                                         20                 3,870 3,900\n                               15                   4,000                                  400                          340\n                                                                                                          300    300\n    80   16                                                                                        230\n                    13\n                              100        100        3,000                                  200\n    40\n         68         68\n\n     0                                              2,000                                    0\n         FY24      FY25       FY26      FY27                 FY24   FY25   FY26    FY27            FY24   FY25   FY26   FY27"
+    },
+    {
+      "id": "china-oneoff",
+      "snapshot": "09.json",
+      "text_file": "09.txt",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/2025-2027_management-plan_R.pdf",
+      "retrieved_at": "2026-10-15T01:11:50.219184+00:00",
+      "pdf_page": 15,
+      "printed_page": 15,
+      "quote": "FY25       中華系拡販が奏功、生産再配置で反転へ         25\n中国    （非日系 26億円）\n                                                               0\n                       • 売上高は、計画比で非日系拡販効果が日系減産影響を\n                                                                    FY24      FY25    FY26    FY27\n                          打ち消し過達。生産再配置による一時費用（約６億円）の\n      【主な取り組み】\n                          計上で営業利益は未達                                  FY25 売上高の構成\n      ・中華系拡販強化\n      ・現地化の推進          •"
+    },
+    {
+      "id": "income-statement-classification",
+      "snapshot": "11.json",
+      "text_file": "11.txt",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf",
+      "retrieved_at": "2026-10-15T01:12:38.091035+00:00",
+      "pdf_page": 65,
+      "printed_page": 62,
+      "quote": "営業利益                                      2,382                 1,470\n営業外収益\n 受取利息                                       657                   398\n 受取配当金                                       84                   164\n 投資有価証券売却益                                    3                    15\n 持分法による投資利益                                 316                     5\n その他                                        486                   335\n 営業外収益合計                                  1,548                   918\n営業外費用\n 支払利息                                        14                   254\n 有価証券売却損                                      0                     1\n 固定資産廃棄損                                     15                    21\n デリバティブ評価損                                   －                     62\n 為替差損                                       195                   137\n 賃貸収入原価                                       7                     5\n 支払手数料                                      119                   205\n 建物解体費用                                      72                   107\n その他                                        103                   140\n 営業外費用合計                                    528                   935\n経常利益                                      3,402                 1,453\n特別利益\n 減損損失戻入益                                     －                 ※５ 59\n\n 特別利益合計                                      －                     59\n特別損失\n 早期割増退職金                                     －                    325\n 減損損失                                        －                 ※６ 423\n\n 特別損失合計                                      －                    749"
+    },
+    {
+      "id": "china-impairment",
+      "snapshot": "11.json",
+      "text_file": "11.txt",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf",
+      "retrieved_at": "2026-10-15T01:12:38.091035+00:00",
+      "pdf_page": 79,
+      "printed_page": 76,
+      "quote": "当連結会計年度（自   2025年４月１日    至   2026年３月31日）\n     場所               用途                     種類   減損損失額\n                                  建物及び構築物\n                                  機械装置及び運搬具\n 中国広東省\n              事業用資産               工具、器具及び備品         337百万円\n 東莞市\n                                  建設仮勘定\n                                  無形固定資産のその他\n\n 英国\n                                  機械装置及び運搬具\n ランカシャー州      事業用資産                                 86百万円\n                                  工具、器具及び備品\n アルサム"
+    },
+    {
+      "id": "public-capital-policy",
+      "snapshot": "08.json",
+      "text_file": "08.txt",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/20260512_2025-q4_summary_R2.pdf",
+      "retrieved_at": "2026-10-15T01:11:46.331748+00:00",
+      "pdf_page": 10,
+      "printed_page": 10,
+      "quote": "■年間92円継続(27/3期まで配当性向100%、下限配当92円）\n■3年間で300億円の自己株取得実施(24年11月発表、累計約265億円実施済み)\n\n\n\n                                    2026年度              2025年度     増減\n                                        予想               実績\n\n       １    株    当     た     り\n       当 期 純 利 益                       ¥27.45            ▲¥0.85    28.30\n\n       １ 株 配 当 予 想\n                                       ¥92.00             ¥92.00      －\n\n       配     当       性      向         335.2%                  －"
+    }
+  ],
+  "public_information_review": {
+    "reviewed_document_urls": [
+      "https://www.piolax.co.jp/jp/shareholder/ir/library/",
+      "https://www.piolax.co.jp/jp/202608052048-6738/",
+      "https://www.piolax.co.jp/jp/shareholder/ir/ir-information/",
+      "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+      "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/20260512_2025-q4_summary_R2.pdf",
+      "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/2025-2027_management-plan_R.pdf",
+      "https://www.piolax.co.jp/jp/shareholder/ir/financial-reports/",
+      "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf"
+    ],
+    "dedicated_qa_documents_found": [],
+    "status": "bounded_review_complete_additional_public_qa_coverage_unconfirmed",
+    "details": "IRライブラリ、財務レポート、IRカレンダーの公開リンク・本文および取得4PDFを確認。専用の質疑応答/Q&Aリンクはこの範囲で見つからなかった。別公開先、未取得の説明会動画、全Webの不存在は確認していない。",
+    "question_send_readiness": "not_ready",
+    "reason": "Complete current public-answer coverage and freeze a sourced thesis/valuation/decision policy before selecting a sendable question."
+  },
+  "documented_company_figures": [
+    {
+      "period": "2027年3月期1Q",
+      "scope": "連結",
+      "unit": "百万円",
+      "revenue": "15761",
+      "operating_income": "266",
+      "citation_id": "q1-cost-and-growth",
+      "type": "reported_actual"
+    },
+    {
+      "period": "2027年3月期通期",
+      "scope": "連結",
+      "unit": "百万円",
+      "revenue": "63000",
+      "operating_income": "1500",
+      "parent_net_income": "700",
+      "eps_jpy": "27.45",
+      "citation_id": "revenue-guidance",
+      "type": "company_forecast_not_analyst_scenario"
+    },
+    {
+      "period": "FY2025",
+      "unit": "億円",
+      "kpi": "グローバル拡販",
+      "existing_products": "68",
+      "case_products": "13",
+      "citation_id": "expansion-kpi",
+      "image_check": "management-plan-p11.png",
+      "type": "company_kpi_definition_unconfirmed"
+    },
+    {
+      "period": "FY2026",
+      "unit": "億円",
+      "kpi": "グローバル拡販",
+      "existing_products": "100",
+      "case_products": "15",
+      "citation_id": "expansion-kpi",
+      "image_check": "management-plan-p11.png",
+      "type": "company_kpi_target_definition_unconfirmed"
+    }
+  ],
+  "issues": [
+    {
+      "id": "5988-expansion-kpi-definition",
+      "status": "candidate_definition_question",
+      "business_issue": "グローバル拡販というKPIを連結売上ブリッジへどう対応させるか。",
+      "citation_ids": [
+        "expansion-kpi",
+        "revenue-guidance",
+        "q1-cost-and-growth"
+      ],
+      "hypothesis_under_test": "KPIが示す新規拡販と既存販売の継続・減少、為替の影響を区別できれば、OEM台数だけに依存しない成長の検証が可能になる。会社の成長達成を仮定していない。",
+      "unresolved_point": "グラフの年度値が当該年度の実売上/計画売上、基準期比増収寄与、複数年度の累計案件などのいずれであるか、同じ案件の年度間継続計上の扱い。",
+      "valuation_mapping": {
+        "driver_paths": [
+          "revenue_bridge.expansion_kpi_basis",
+          "revenue_bridge.overlap_with_existing_sales"
+        ],
+        "eventual_calculator_paths": [
+          "scenarios.base.inputs.eps_jpy",
+          "scenarios.base.inputs.fcf_jpy"
+        ],
+        "dependency": "売上ブリッジ→原価/費用・税/株数/運転資本等の公開根拠付きモデル→EPS又はFCF。定義回答から直接EPSへ数値を代入しない。",
+        "current_input_values": null,
+        "prohibited_changes": [
+          "PE倍率の同時引上げ",
+          "回答確率の推定",
+          "KPI全額を連結売上に自動加算",
+          "会社予想への二重加算"
+        ]
+      },
+      "falsification": "KPIが将来受注累計等であり年度売上に変換できない、又は既存売上との重複が区分できない場合、KPIから追加売上を推計する仮説を採用しない。",
+      "question": "2026年5月12日公表「中期経営計画の見直し」11ページの「グローバル拡販」について、グラフの各年度の値は、その年度に計上する売上高、基準年度からの増収寄与、あるいは累計の案件規模のどれを表す指標でしょうか。また、前年度から継続する案件も当年度の値に含まれる定義でしょうか。公表済み資料の数値を重複して売上予測へ加算しないための定義確認です。公表範囲で説明のある資料があれば、その箇所をご教示ください。",
+      "branches": [
+        {
+          "id": "annual-sales",
+          "condition": "当該年度の売上高で継続案件も含むと明確に説明された場合",
+          "interpretation": "KPIは売上の内数。合計を連結売上へ足さず、比較可能な前年差と他の増減要因に分解する。",
+          "next_research_action": "区分の継続性・為替・他要因を公開資料で照合してから売上ブリッジを再構築",
+          "action": "unresolved",
+          "valuation_change": null,
+          "numeric_parameter_change": null,
+          "reason": "Definition confirmation alone does not establish forecast earnings, price attractiveness or a position decision."
+        },
+        {
+          "id": "incremental-or-cumulative",
+          "condition": "基準期比増収寄与又は受注累計等と明確に説明された場合",
+          "interpretation": "基準期/計上期間/計上単位を固定。年度売上への換算条件がない値は年次モデルへ使わない。",
+          "next_research_action": "該当する定義に対応する売上ブリッジへ修正し、期間が不明なら変換を保留",
+          "action": "unresolved",
+          "valuation_change": null,
+          "numeric_parameter_change": null,
+          "reason": "Definition confirmation alone does not establish forecast earnings, price attractiveness or a position decision."
+        },
+        {
+          "id": "unclear",
+          "condition": "曖昧・定義不明・回答拒否・無回答の場合",
+          "interpretation": "新たな増収を仮定せず、既存公開売上予想を変更しない。",
+          "next_research_action": "次回公開資料で定義の明示を待つ",
+          "action": "unresolved",
+          "valuation_change": null,
+          "numeric_parameter_change": null,
+          "reason": "Definition confirmation alone does not establish forecast earnings, price attractiveness or a position decision."
+        }
+      ]
+    },
+    {
+      "id": "5988-china-oneoff-scope",
+      "status": "candidate_accounting_scope_question",
+      "business_issue": "中国の生産再配置費用と特別損失の重複調整を防ぐ。",
+      "citation_ids": [
+        "china-oneoff",
+        "income-statement-classification",
+        "china-impairment",
+        "q1-cost-and-growth"
+      ],
+      "hypothesis_under_test": "過年度の費用区分が明確なら、営業収益力の変化と純利益だけに影響する損失を混同せず検証できる。将来の費用消失・利益回復を保証する仮説ではない。",
+      "unresolved_point": "中計15ページの約6億円が営業費用のみか、特別損失の中国減損337百万円などを含む集計か、公開有報の費用項目との対応。",
+      "valuation_mapping": {
+        "driver_paths": [
+          "normalized_earnings.china_relocation_scope",
+          "normalized_earnings.overlap_with_impairment"
+        ],
+        "eventual_calculator_paths": [
+          "scenarios.base.inputs.eps_jpy",
+          "scenarios.bear.inputs.eps_jpy"
+        ],
+        "dependency": "会計区分確認→過年度利益ブリッジの重複修正→税/非支配/株数の根拠確認→別途将来シナリオ。過年度約6億円を将来EPSへ自動加算しない。",
+        "current_input_values": null,
+        "prohibited_changes": [
+          "特別損失減損の営業利益への加算",
+          "約6億円と337百万円の重複加算",
+          "減損のFCFへの二重加算",
+          "一時という表現だけによる将来回復の断定"
+        ]
+      },
+      "falsification": "営業/特別損失区分又は重複が確認できなければ、約6億円を調整営業利益や将来利益の加算項目として採用しない。",
+      "question": "2026年5月12日公表「中期経営計画の見直し」15ページの中国に関する「生産再配置による一時費用（約6億円）」の集計範囲について確認させてください。これは売上原価・販管費等の営業費用に限る説明でしょうか、それとも有価証券報告書76ページの中国固定資産減損337百万円など、特別損失に計上した費用も含む説明でしょうか。既に公表された過年度費用と財務諸表上の区分の対応を確認する趣旨です。公表済みの説明箇所があれば、その箇所をご教示ください。",
+      "branches": [
+        {
+          "id": "operating-only",
+          "condition": "約6億円が営業費用のみと公開説明に基づき確認できた場合",
+          "interpretation": "中国減損は営業利益の下位にあるため調整営業利益へ加えない。約6億円も将来利益に自動加算しない。",
+          "next_research_action": "実績の営業利益/純利益ブリッジを分離し、再発や恒常コストを別の公開根拠で検証",
+          "action": "unresolved",
+          "valuation_change": null,
+          "numeric_parameter_change": null,
+          "reason": "Definition confirmation alone does not establish forecast earnings, price attractiveness or a position decision."
+        },
+        {
+          "id": "includes-special-loss",
+          "condition": "約6億円に減損等が含まれると公開説明に基づき確認できた場合",
+          "interpretation": "約6億円全額を営業費用の一過性要因として扱えない。重複する区分を除く必要がある。",
+          "next_research_action": "内訳が明らかな区分のみ整理し、不明分は調整しない",
+          "action": "unresolved",
+          "valuation_change": null,
+          "numeric_parameter_change": null,
+          "reason": "Definition confirmation alone does not establish forecast earnings, price attractiveness or a position decision."
+        },
+        {
+          "id": "unclear",
+          "condition": "範囲不明・曖昧・回答拒否・無回答の場合",
+          "interpretation": "区分を推定せず、調整利益の加算は行わない。",
+          "next_research_action": "今後の公開財務資料を待つ",
+          "action": "unresolved",
+          "valuation_change": null,
+          "numeric_parameter_change": null,
+          "reason": "Definition confirmation alone does not establish forecast earnings, price attractiveness or a position decision."
+        }
+      ]
+    }
+  ],
+  "excluded_questions": [
+    {
+      "question": "中国の生産再配置費用は一時費用ですか",
+      "reason": "中計15ページに既に「一時費用（約６億円）」と明記。追加質問は会計範囲だけ。",
+      "citation_ids": [
+        "china-oneoff"
+      ]
+    },
+    {
+      "question": "直近1Qで営業減益・経常増益なのはなぜですか",
+      "reason": "最新短信の定性説明にコスト増と前年支払手数料不発生の説明がある。",
+      "citation_ids": [
+        "q1-cost-and-growth"
+      ]
+    },
+    {
+      "question": "2027年3月期までの配当方針は何ですか",
+      "reason": "公開説明資料に92円下限と配当性向方針が明示。",
+      "citation_ids": [
+        "public-capital-policy"
+      ]
+    }
+  ],
+  "investment_decision": {
+    "status": "unresolved",
+    "proposed_action": "unresolved",
+    "valuation": null,
+    "quote": null,
+    "buy_price_jpy": null,
+    "take_profit_price_jpy": null,
+    "scenario_probabilities": null,
+    "reason_codes": [
+      "no_verified_market_quote",
+      "no_sourced_analyst_valuation_inputs",
+      "no_adopted_numeric_investment_policy",
+      "position_not_verified",
+      "public_answer_coverage_incomplete"
+    ],
+    "note": "Published company forecasts are recorded facts about company guidance, not adopted analyst scenarios or trade triggers."
+  },
+  "next_catalyst": {
+    "event": "2027年3月期第2四半期業績発表",
+    "window": "2026年11月初旬",
+    "exact_date": null,
+    "source_snapshot": "06.json",
+    "note": "公式カレンダーの概算時期。変更可能性の記載あり。日付や時刻を補わない。"
+  },
+  "ir_contact": {
+    "url": "https://www.piolax.co.jp/jp/shareholder/contact/form02/",
+    "verified_at": "2026-10-12T15:56:25.696076+00:00",
+    "verification_source": "research/ir-recovery-2026-10-13/recovery_c-page-observations.jsonl",
+    "conditions": [
+      "個人投資家の所属選択を既存調査で確認。現時点での再送信/再確認はしていない。",
+      "メール回答の無許可転用・二次利用・当該顧客以外への開示は禁止と案内。返信を得てもその制約を確認して保存/利用範囲を決める。",
+      "全問い合わせに回答するとは限らず、書面/電話/FAXになる場合もある。"
+    ],
+    "form_fields_entered": false,
+    "submitted": false
+  },
+  "limitations": [
+    "対象企業の投資候補採用や購入を決めた研究ではない。",
+    "市場価格・コンセンサス・保有情報・将来利益・投資閾値を取得/推定していない。",
+    "株価評価に必要な入力がないため回答ごとのbuy/exit分岐はまだ固定できず、全回答分岐の投資判断はunresolved。",
+    "最新資料の特定は取得した公式索引表示に基づく。全チャネルの完全な探索ではない。",
+    "専用Q&Aは範囲内で未発見。公開回答が他所で見つかれば質問を削除する。",
+    "PDF内の表と図で費用区分や範囲が曖昧なものを暗算で補っていない。"
+  ]
+}

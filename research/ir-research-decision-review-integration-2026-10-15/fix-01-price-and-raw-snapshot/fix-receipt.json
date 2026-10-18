@@ -1,0 +1,42 @@
+{
+  "actual_DB_access_writes": 0,
+  "before_full_bytes_verified": true,
+  "changed_files": {
+    "docs/research-decision-reviews.md": {
+      "bytes": 8155,
+      "sha256": "78c93ace57cf8c5bb3907befb54ba6d25c894037abdee1190a7da79aaa2d579d"
+    },
+    "src/ir_agent/research_decisions.py": {
+      "bytes": 23040,
+      "sha256": "913f467e2f768404742d5330a4e6f2433c4ea8ddd4b07d1abdb9a6276be791fa"
+    },
+    "tests/test_research_decisions.py": {
+      "bytes": 30883,
+      "sha256": "4042f61e8923e2ff95f26638323372f7c0f30292ab8be113decfd7c6e32b8ea9"
+    }
+  },
+  "changes": [
+    "Research wrapper validates every supplied price_jpy with existing finite Decimal parser and requires >0, including partial quotes, before policy/position decision gates. Old pure evaluator is unchanged by this fix.",
+    "Raw source snapshots remain exact for snapshot SHA/receipt/persistence; separate validate_source copies are passed only to quote helpers and financial calculation.",
+    "Raw IR metadata omission still records missing reply identity/publicity holds rather than KeyError; no raw default fields are inserted."
+  ],
+  "fixtures": "Synthetic only; in-memory/temp databases, no live financial data.",
+  "focused_log": "research/ir-research-decision-review-integration-2026-10-15/fix-01-price-and-raw-snapshot/focused-tests.log",
+  "focused_log_sha256": "8a2ed396a3375b0076a36a292ffebf0dfa47d925a17ddc5689f39fead78b4a74",
+  "focused_result": "pass",
+  "focused_test_command": ".venv/bin/python -m unittest discover -s tests -p test_research_decisions.py -v",
+  "focused_tests": 32,
+  "full_suite_run_by_producer": false,
+  "independent_review_completed": false,
+  "network_or_external_actions": 0,
+  "new_regression_tests": 3,
+  "old_implementation_manifest_preserved": true,
+  "old_implementation_manifest_sha256": "846a646d1046ffa6dcd7ba1d460d3542fea2130e4ffd8e4ad9d2359681e85fa1",
+  "old_pure_decision_module_modified_by_this_fix": false,
+  "parent_reported_findings": [
+    "Source-bound zero/negative price could bypass validation when position or policy was unresolved.",
+    "Schema-valid raw market sources omitting metadata/requires_research could raise KeyError in quote helpers that expected validated defaults."
+  ],
+  "recorded_at": "2026-10-15T21:03:18.665883+00:00",
+  "status": "implemented_focused_pass_pending_independent_recheck_and_parent_full_suite"
+}

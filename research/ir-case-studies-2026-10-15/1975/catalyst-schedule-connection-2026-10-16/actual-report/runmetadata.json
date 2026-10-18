@@ -1,0 +1,81 @@
+{
+  "started_at": "2026-10-16T08:58:25.699246+00:00",
+  "finished_at": "2026-10-16T08:58:25.758245+00:00",
+  "command_argv": [
+    ".venv/bin/python",
+    "scripts/report_catalyst_schedule.py",
+    "--db",
+    "data/ir-research-2026-10-15.sqlite3",
+    "--events",
+    "research/ir-case-studies-2026-10-15/1975/catalyst-schedule-connection-2026-10-16/catalyst-schedule-requests.json",
+    "--date-from",
+    "2026-11-01",
+    "--date-through",
+    "2027-02-28"
+  ],
+  "returncode": 0,
+  "report_stdout_file": "report.stdout.json",
+  "report_stdout_sha256": "c191e2aacc7141b51ece5893c062dd2d9cccdecf83bc54e296a3603881a840a6",
+  "stderr": "",
+  "as_of_mode": "--as-of omitted; existing script uses real now_iso() for both as_of and now",
+  "calendar_window": {
+    "date_from": "2026-11-01",
+    "date_through": "2027-02-28"
+  },
+  "input_SHA256": {
+    "research/ir-case-studies-2026-10-15/1975/catalyst-schedule-connection-2026-10-16/catalyst-schedule-requests.json": "6df867fec42fe087956fc033da5451ef9a524ebc5f967700fc159ed7865f5ded",
+    "research/ir-case-studies-2026-10-15/1975/catalyst-schedule-connection-2026-10-16/source-and-mapping.json": "8d52570df3e004109c296925ae23720d8e7216ca077ebe780d543d201c3415dd",
+    "research/ir-case-studies-2026-10-15/1975/catalyst-schedule-connection-2026-10-16/validation.json": "8bbdbec040353436db594d686a4a9e2408c049f51642283d744aa66fda056ac1",
+    "research/ir-case-studies-2026-10-15/1975/catalyst-schedule-connection-2026-10-16/README.md": "d65e1103310a9e87ba439d699477c03ce44a5778b5c4f34c52e7b7dc5ba8d93d",
+    "scripts/report_catalyst_schedule.py": "05858d3962da1540aae070d754822c6963263c96862f5aa3d08ca9a885f0ad6b",
+    "src/ir_agent/catalyst_schedule.py": "5d0a5f71d94cc468638931e129cc20e6bbddb4bf8253caa5f5119fcbcc4af59b",
+    "research/ir-case-studies-2026-10-15/1975/public-source-calendar-and-presentation-connection-2026-10-16/actual-verification.json": "9fa8856d3818753731cec69858fcd6503a26bc51bd3f73ba96835da778ad849d",
+    "research/ir-case-studies-2026-10-15/1975/public-source-calendar-and-presentation-connection-2026-10-16/qualitative-review/actual-verification.json": "6c14df9f58eb2d0f5459e83fb480eaa4c3baa037a1a7a89925a45f1dae87de93",
+    "research/ir-case-studies-2026-10-15/1975/public-qa-and-calendar-discovery-2026-10-16/calendar-source-candidate/source-only-bundle.json": "c40fd009b57981c6090ca53cb7fdfb5e7c198d7b893664379076f8db3f07d53c"
+  },
+  "DB_main_path": "data/ir-research-2026-10-15.sqlite3",
+  "DB_main_sha256_before": "b83bbd6bb3e74ea4aacceeaf26d783d768abdad32b21b946486d5744cc313f73",
+  "DB_main_sha256_after": "b83bbd6bb3e74ea4aacceeaf26d783d768abdad32b21b946486d5744cc313f73",
+  "read_only_connection": {
+    "script_uses": "sqlite3.connect(database.as_uri()+?mode=ro,uri=True); PRAGMA query_only=ON; BEGIN; finally connection.close()",
+    "connection_closed": "existing script finally block completed and subprocess exited",
+    "Store_used": false,
+    "DB_write_operations_by_this_run": 0
+  },
+  "actual_calendar_availability_from_root_receipt": {
+    "entity_type": "source",
+    "entity_id": "case-public:8ca228bff57d18ad4c826293546a3fb2059ce9b78479756e9ac2f9aa8aba90f2",
+    "version": 0,
+    "snapshot_sha256": "4ed61cd25d755ba08bbc1fc474c80e469da6ba4ebbd4724a96af1eec77e8612c",
+    "first_saved_at": "2026-10-16T08:48:49.358402+00:00",
+    "presence_observed_at": "2026-10-16T08:48:49.358402+00:00",
+    "basis": "trusted_insert"
+  },
+  "checks": {
+    "four_events": true,
+    "four_source_bound_candidate": true,
+    "all_in_window": true,
+    "floating_date_all": true,
+    "no_exact_time_or_timezone": true,
+    "due_null_all": true,
+    "occurrence_not_established_all": true,
+    "mapping_unverified_all": true,
+    "actual_asof_equals_runtime_checked_at": true,
+    "runtime_within_process_bounds": true,
+    "DB_main_SHA256_unchanged": true,
+    "all_input_files_unchanged": true
+  },
+  "coverage": {
+    "date_unknown_count": 0,
+    "event_count": 4,
+    "in_window_count": 4,
+    "outside_window_count": 0,
+    "source_bound_candidate_count": 4
+  },
+  "limitations": [
+    "Source-bound candidate means mechanical source/quote availability matching only.",
+    "All four dates remain caller mappings requiring semantic review; no exact time/timezone/due or occurrence is established.",
+    "Old four prepared files and their firstsave-null preparation snapshot remain unchanged.",
+    "No ingest/classification/job/case/question/forecast/result/notification mutation was run."
+  ]
+}

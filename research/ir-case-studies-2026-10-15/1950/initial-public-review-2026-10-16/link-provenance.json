@@ -1,0 +1,61 @@
+{
+  "performed_requests": [
+    {
+      "role": "issuer_robots",
+      "url": "https://www.densetsuko.co.jp/robots.txt",
+      "basis": "robots endpoint on selected official host"
+    },
+    {
+      "role": "issuer_root",
+      "url": "https://www.densetsuko.co.jp/",
+      "basis": "selected CSV official_url"
+    },
+    {
+      "role": "results_index",
+      "url": "https://www.densetsuko.co.jp/company/ir/irlibrary/",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[1].html_visible_text.links[36]",
+      "literal_href": "https://www.densetsuko.co.jp/company/ir/irlibrary/",
+      "label": "IR資料集"
+    },
+    {
+      "role": "quarter_results_index",
+      "url": "https://www.densetsuko.co.jp/company/ir/irlibrary/financial-information",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[2].html_visible_text.links[107]",
+      "literal_href": "https://www.densetsuko.co.jp/company/ir/irlibrary/financial-information",
+      "label": "決算情報"
+    },
+    {
+      "role": "canonical_results_index",
+      "url": "https://www.densetsuko.co.jp/company/ir/irlibrary/financial-information/",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[3].response_headers.location",
+      "same_host_explicit_redirect_hop": 1,
+      "GET_budget_counted": true
+    }
+  ],
+  "samehost_explicit_redirect": {
+    "from_capture": "04.json",
+    "pointer": "$.response_headers.location",
+    "to_capture": "05.json",
+    "hop_count": 1,
+    "GET_counted": true,
+    "automatic_follow": false,
+    "original301_preserved": true
+  },
+  "latest_Japanese_financial_PDF_unattempted": {
+    "source_id": "case-public:6592e0f7898cd2655e4d63f9f4ff388250144fde4d7245a40a360bbfd1fd6b93",
+    "source_capture": "05.json",
+    "literal_anchor_pointer": "$.html_visible_text.links[112]",
+    "anchor": {
+      "url": "https://www.densetsuko.co.jp/pdf/company/ir/irlibrary/financial-information/2027/20260731__sihanki.pdf",
+      "href": "/pdf/company/ir/irlibrary/financial-information/2027/20260731__sihanki.pdf",
+      "label": "第1四半期決算短信〔日本基準〕（連結） ［PDF/566KB］"
+    },
+    "year_quarter_source_quote": "current-Japanese-Q1-link-context",
+    "GET_attempted": false,
+    "reason": "Five-GET task cap reached after explicit canonical redirect; not document error, forbidden access or dynamic absence"
+  },
+  "further_GETs_planned": 0
+}

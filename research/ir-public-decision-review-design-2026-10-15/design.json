@@ -1,0 +1,257 @@
+{
+  "artifact_type": "read_only_design_not_implementation",
+  "code_evidence_quotes": [
+    {
+      "character_end": 2703,
+      "character_start": 2636,
+      "file": "src/ir_agent/store.py",
+      "file_sha256": "84c023046d43400742f729c95fb4789e75237433ef74ec4d7c40d712b927e47e",
+      "line": 60,
+      "quote": "id TEXT PRIMARY KEY, reply_id TEXT NOT NULL REFERENCES replies(id),"
+    },
+    {
+      "character_end": 13959,
+      "character_start": 13868,
+      "file": "src/ir_agent/decision_lifecycle.py",
+      "file_sha256": "33c73746954002012984dd720924bca5cf62608ebaaa3867bd6f58731ec2149e",
+      "line": 216,
+      "quote": "if set(request) - {'reply_id', 'expected_thesis_version', 'recorded_at', 'decision_quote'}:"
+    },
+    {
+      "character_end": 11986,
+      "character_start": 11883,
+      "file": "src/ir_agent/information_review.py",
+      "file_sha256": "22df6e4a6e5d717a390e817bb311b091112eb1d44722e0651623548f09b7d9ee",
+      "line": 232,
+      "quote": "latest = source_assessments(store, review['source_ids'], reply_id=review['reply_id'], as_of=checked_at)"
+    },
+    {
+      "character_end": 20771,
+      "character_start": 20683,
+      "file": "src/ir_agent/harness.py",
+      "file_sha256": "58c51502c7c1424e4870f4d3711e4ba7bd3d675e9da6681fdf5184478f38e230",
+      "line": 343,
+      "quote": "self.db.execute(\"UPDATE jobs SET status='completed',result=?,completed_at=? WHERE id=?\","
+    },
+    {
+      "character_end": 9892,
+      "character_start": 9844,
+      "file": "src/ir_agent/models.py",
+      "file_sha256": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c",
+      "line": 233,
+      "quote": "if result.get(\"proposed_action\") not in ACTIONS:"
+    },
+    {
+      "character_end": 955,
+      "character_start": 868,
+      "file": "src/ir_agent/availability.py",
+      "file_sha256": "4fbb1a7c252391706066f084205345260add06e9bb00e96bd65c5fabdcfa0d4a",
+      "line": 23,
+      "quote": "entity_type TEXT NOT NULL CHECK(entity_type IN ('source','thesis','reply','question')),"
+    },
+    {
+      "character_end": 129,
+      "character_start": 112,
+      "file": "docs/ir-operation-design.md",
+      "file_sha256": "b8e626a523869b7d2c71d43b89b64f695765af35d20c1a342c1e5d323f779025",
+      "line": 3,
+      "quote": "質問数を増やすことを目標にしない。"
+    },
+    {
+      "character_end": 5775,
+      "character_start": 5743,
+      "file": "docs/decision-policy.md",
+      "file_sha256": "e687e70c70ec9ce4b40b935bb9e908cd2d1328f44dfa488fad639557fbba8de5",
+      "line": 81,
+      "quote": "質問前の公開情報だけによる評価と、返信後の評価を別々に保存する。"
+    }
+  ],
+  "code_network_actual_DB_operations": 0,
+  "conditional_transaction": [
+    "Validate strict request schema and logical id; BEGIN IMMEDIATE, then sample trusted current time.",
+    "Exact request retry returns immutable stored result before enforcing present-day latest-version gates, but uses a fresh current display envelope; changed request with same id is rejected.",
+    "Resolve current immutable thesis and explicit policy version from Store, capture snapshots/SHAs/first-save evidence. Expected thesis must equal raw latest and strict-current selected available thesis.",
+    "Resolve full same-company source DAG including quote parents; source and thesis receipt availability at current target is mandatory. Unrelated excluded older legacy versions do not by themselves invalidate a known current selected record.",
+    "Resolve position only from explicit declaration receipt; unknown position is unresolved, not flat.",
+    "Verify public information status/metadata plus all dependency reply assessments at trusted runtime; no historical input can evade a currently known hold.",
+    "Compute via evaluate_decision with frozen policy/thesis/quote and attributed assessment; no financial input or action is supplied by caller.",
+    "Persist request digest, full input snapshots and source bindings, dependency assessment versions, result and trusted first_saved_at atomically in separate immutable table; no thesis/policy/question/reply/classification/company writes."
+  ],
+  "existing_IR_plan_boundary": "IR-plan compares hypothetical precommitted branch outcomes; it is not an actual public baseline record and must not substitute for registered policy/current thesis/explicit position/source-bound quote evaluation.",
+  "future_table_design": {
+    "contents": [
+      "exact request",
+      "thesis/policy/quote/position snapshots and SHA bindings",
+      "full source ID/SHA closure",
+      "selected thesis/source availability diagnostic and consumed dependency assessment versions",
+      "calculation input/result and explicit synthetic context",
+      "as_of/current calculation time separate from first_saved_at",
+      "basis.kind=saved_research and server-computed full-lineage IR/publicity boundary; no caller claim of public-only provenance"
+    ],
+    "minimum_columns": [
+      "id primary key",
+      "company_id foreign key",
+      "thesis_version foreign key with company_id",
+      "policy_id and policy_version foreign key",
+      "request_sha256",
+      "data immutable JSON",
+      "first_saved_at trusted runtime"
+    ],
+    "name": "research_decision_reviews",
+    "no_new_request_receipt_table_required": "The caller review id plus stored canonical request and digest provides same-request retry / same-id changed-request rejection. No implicit reuse of job request receipts."
+  },
+  "minimum_conditional_request": {
+    "not_accepted_fields": [
+      "reply_id",
+      "question_id",
+      "evaluation_version",
+      "raw policy overrides",
+      "raw thesis overrides",
+      "raw source snapshot overrides",
+      "held boolean for real decisions",
+      "client first_saved_at",
+      "client current evaluation clock",
+      "client action or valuation result",
+      "caller public-only or source-basis certification"
+    ],
+    "optional_fields": {
+      "synthetic": "boolean default false; synthetic input and policy lineage cannot become real context"
+    },
+    "phase_one_temporal_contract": "New writes evaluate at trusted current runtime only. Historical/retrospective analysis remains explicitly read-only; no new past-decision persistence mode in minimal scope.",
+    "required_fields": {
+      "assessment": {
+        "evidence_ids": "nonempty subset of selected thesis evidence IDs",
+        "rationale": "why the public evidence supports this assessment",
+        "reviewer": "attributed operator/reviewer",
+        "thesis_status": "intact / invalidated / uncertain; reviewer assertion, never inferred from positive language"
+      },
+      "company_id": "existing company ID",
+      "decision_quote": "existing source-bound quote object; may be empty for a saved unresolved result",
+      "expected_thesis_version": "must match both raw current and selected strict-current available thesis version",
+      "id": "caller-chosen stable logical review identity; unique within new public table",
+      "policy_id": "existing immutable policy identity",
+      "policy_version": "explicit immutable policy version, not automatically newest"
+    },
+    "status": "proposed_design_not_implemented_or_valid_request_example"
+  },
+  "not_claimed": [
+    "No new persistence/API implemented",
+    "No current real case input readiness or financial policy completeness assessed",
+    "No backtested performance, trading recommendation or current-price verification",
+    "No direct A1/D1 author endorsement of this schema",
+    "No availability gap or semantic validation solved by serializing a result"
+  ],
+  "public_scope_boundary": {
+    "all_origins_checked": true,
+    "caller_public_only_override_allowed": false,
+    "computed_basis_fields": [
+      "has_IR_reply_origin",
+      "public_information_check",
+      "public_only_lineage"
+    ],
+    "direct_reply_required": false,
+    "kind": "saved_research",
+    "no_new_financial_or_inferred_position_policy": true,
+    "public_only_lineage_definition": "True only after complete transitive origin closure contains no ir_reply source and same-company public-information checks pass. Missing or held origins cannot establish public-only.",
+    "with_IR_origin": "An existing public_clarification IR ancestor is permitted under existing decision rules with explicit IR-origin basis and current dependency holds; never label it public-only."
+  },
+  "recommendation": {
+    "adopted_workflow_gap": "docs/decision-policy.md already requires storing public-only evaluation separately from post-reply evaluation. Existing research outputs preserve proposals, but no route persists an actually evaluated source-bound public price baseline under fixed policy without a reply.",
+    "existing_daily_result_satisfies_formal_price_review_contract": false,
+    "existing_path_first": true,
+    "financial_research_action_record": "Existing research job result already stores proposed_action with full thesis_update under lease/CAS; calculate externally using pure decision if all inputs exist, record rationale/source references in standard result. This records research judgement but does not certify a source-bound persisted price decision.",
+    "formal_public_price_baseline_requires_separate_persistence": true,
+    "implementation_priority_boundary": "Implementation remains a parent decision after reviewing this design; no code is added here. If the adopted formal public baseline is to be supported, a separate small table/current-view wrapper is useful and existing daily/ir-plan is not a complete substitute.",
+    "independent_price_review_gap": "Use a separate research_decision_reviews identity/table and thin wrapper around existing decision math for the adopted actual-baseline storage requirement. The route does not require a new/direct reply; preserve dependency holds for any prior IR ancestry.",
+    "never_add_questions_to_obtain_storage": true,
+    "new_public_review_implementation_required_now": false,
+    "qualitative_public_assessments": "Use existing immutable qualitative case/job progression. No price/model values needed."
+  },
+  "recommended_name": {
+    "CLI": "research-decision-review",
+    "current_view": "current_research_decision_view",
+    "purpose": "A reply-independent saved-research price review; a genuine public-only baseline is a checked subset.",
+    "table": "research_decision_reviews"
+  },
+  "recorded_at": "2026-10-15T20:44:47.473552+00:00",
+  "reuse": {
+    "availability": "Use existing thesis/source receipts; policy and new review use their own trusted first_saved_at. Do not extend RecordAvailability entity types merely to duplicate timestamps.",
+    "current_view": "Reuse current quote timing and current thesis-version helper semantics in a separate public wrapper. Existing current_decision_view requires reply_id and cannot be called unchanged with an actual public record.",
+    "decision_math": "evaluate_decision unchanged",
+    "immutable_source_holds": "dependency_source_information_holds and existing pure origin checks; include quote lineage in full check",
+    "positions": "DecisionLifecycle.position_for or Store.declared_position_at, no import-derived held=false assumption",
+    "reply_dependency_holds": "source_assessments with reply_id omitted still discovers source metadata.reply_id in full lineage; capture consumed versions, check runtime holds before INSERT",
+    "sources": "DecisionLifecycle.sources_for plus Store.source_availability/source_origins closure"
+  },
+  "schema_version": 1,
+  "source_pins": {
+    "docs/current-price-views.md": {
+      "byte_count": 3678,
+      "sha256": "55d776377d6ed58cd7926099520956e7af7666adca2b9ab5920bfdc97e74f24c"
+    },
+    "docs/decision-policy.md": {
+      "byte_count": 14357,
+      "sha256": "e687e70c70ec9ce4b40b935bb9e908cd2d1328f44dfa488fad639557fbba8de5"
+    },
+    "docs/historical-availability-design.md": {
+      "byte_count": 13527,
+      "sha256": "f0aec43a7f6bbeeb499c56df950f65441e1f5f6b11e36883178707a953d68afe"
+    },
+    "docs/ir-operation-design.md": {
+      "byte_count": 23769,
+      "sha256": "b8e626a523869b7d2c71d43b89b64f695765af35d20c1a342c1e5d323f779025"
+    },
+    "docs/model-routing-inputs.md": {
+      "byte_count": 17046,
+      "sha256": "a0e8b7356e955e90909796c03c905f4455324c0b995db3f735697370aa410d8e"
+    },
+    "research/ir-decision-scope-2026-10-15/source-quotes.json": {
+      "byte_count": 17642,
+      "sha256": "a0eb1634cd187b1d42d86ef7d2fa7b0afe0917633eb655f4971123f58ab6435e"
+    },
+    "src/ir_agent/availability.py": {
+      "byte_count": 14166,
+      "sha256": "4fbb1a7c252391706066f084205345260add06e9bb00e96bd65c5fabdcfa0d4a"
+    },
+    "src/ir_agent/cli.py": {
+      "byte_count": 26180,
+      "sha256": "2598b5fae3b86a3a8ed728fc4ae38cfd883ee7c3a01d438c30b5a462e1b4b6d2"
+    },
+    "src/ir_agent/decision.py": {
+      "byte_count": 22938,
+      "sha256": "2c441f1d94a38453427dd8be3f589565dd7170a4c8cd7ec248be71d1ec516934"
+    },
+    "src/ir_agent/decision_lifecycle.py": {
+      "byte_count": 15927,
+      "sha256": "33c73746954002012984dd720924bca5cf62608ebaaa3867bd6f58731ec2149e"
+    },
+    "src/ir_agent/harness.py": {
+      "byte_count": 41803,
+      "sha256": "58c51502c7c1424e4870f4d3711e4ba7bd3d675e9da6681fdf5184478f38e230"
+    },
+    "src/ir_agent/information_review.py": {
+      "byte_count": 16070,
+      "sha256": "22df6e4a6e5d717a390e817bb311b091112eb1d44722e0651623548f09b7d9ee"
+    },
+    "src/ir_agent/models.py": {
+      "byte_count": 10045,
+      "sha256": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c"
+    },
+    "src/ir_agent/qualitative_research.py": {
+      "byte_count": 30000,
+      "sha256": "f528b674341e1482bdfc8eea634dc33cf964e7806657ce1d49f6fc2bb9ce3fc8"
+    },
+    "src/ir_agent/store.py": {
+      "byte_count": 27442,
+      "sha256": "84c023046d43400742f729c95fb4789e75237433ef74ec4d7c40d712b927e47e"
+    }
+  },
+  "time_and_current_view": {
+    "current_display": "Recheck latest thesis version, saved thesis review due date, fixed-policy quote age, dependency information revisions and current explicit position; hold current action if any is unavailable/changed/due. Do not upgrade a historically unresolved result or recalculate a new review implicitly.",
+    "fresh_quote_new_review": "new logical id, same chosen policy version if intended and current expected thesis; no reply reevaluation",
+    "historical_analysis": "existing read-only Store.thesis_view mode=pit requires equal as_of/knowledge_at; mode=retrospective requires both cutoffs and explicit non-PIT label. Pure decision is calculation, not historic DB proof.",
+    "historical_raw": "immutable stored result plus first_saved_at, never rewritten as current",
+    "new_write": "current-time only in phase one, no caller backdating",
+    "policy_freeze": "same explicit policy version/snapshot/hash stays fixed; later policy versions do not rewrite old reviews. Registration before decision is not proof that thresholds predated the market outcome."
+  }
+}

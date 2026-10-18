@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "validated_at": "2026-10-15T10:18:01.951857+00:00",
+  "status": "passed_display_token_unit_reproduction_not_model_approval",
+  "company_id": "jp:8151",
+  "origin_bundle_file": "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/source-bundle.json",
+  "origin_bundle_sha256": "9172a041745c387fbd77274c463dd80e3437e9e23e3920997f7464daab96b8d2",
+  "origin_source_id": "case-public:2469a802adda7396e6c4d0d235d11db39011a5d6077f37c6cd305007561640a4",
+  "origin_source_content_sha256": "df421a9d471cb1d3f8c44025559a327208b1310bb449089496375cbd572b5173",
+  "origin_source_snapshot_sha256": "01a0059804e0ea76adceacb2eb16c772ab0f5ad7b51ce996a589770bfdf961f5",
+  "origin_source_retrieved_at": "2026-10-15T10:11:43.240269+00:00",
+  "origin_published_at": null,
+  "report_date": "2026-09-25",
+  "source_snapshot_unchanged": true,
+  "raw_file": "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/raw/6e9dccc54a3b2a377cdd51b72e0f9ca48686f48736cb3bdcee428d000eb1476e",
+  "raw_sha256": "6e9dccc54a3b2a377cdd51b72e0f9ca48686f48736cb3bdcee428d000eb1476e",
+  "capture_file": "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/capture.json",
+  "capture_sha256": "5bbce5a34443b52171d1b1981d823d91c6fdda764240ba609af84d35360afd08",
+  "saved_text_file": "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/02.pdf.txt",
+  "saved_text_sha256": "df421a9d471cb1d3f8c44025559a327208b1310bb449089496375cbd572b5173",
+  "pdftotext_layout_stdout_bytes_identical": true,
+  "fact_count": 3,
+  "facts": [
+    {
+      "id": "8151-quick-calculated-eps-from-company-ni-fy26-20260925",
+      "concept": "externally_calculated_eps_from_issuer_profit_guidance",
+      "kind": "external_estimate",
+      "raw_value": "124.53",
+      "normalized_value": "124.53",
+      "unit": "JPY-per-share",
+      "Decimal_and_Fraction_checks_match": true,
+      "quote_utf8_sha256": "80c5e03cb87eeba85b2cca9c11eb249b7eb09e56aec3c2297f1fe0ded5e2b702",
+      "pdf_page": 1
+    },
+    {
+      "id": "8151-quick-capm-cost-equity-202608",
+      "concept": "externally_estimated_CAPM_cost_of_equity",
+      "kind": "external_estimate",
+      "raw_value": "7.0",
+      "normalized_value": "0.070",
+      "unit": "ratio",
+      "Decimal_and_Fraction_checks_match": true,
+      "quote_utf8_sha256": "dedecd41ee4b99edb118441a963bb6600fd34e8d4a327af85a6b27f380ad6bfd",
+      "pdf_page": 55
+    },
+    {
+      "id": "8151-quick-capm-cost-equity-trailing12m-report20260925",
+      "concept": "externally_estimated_CAPM_cost_of_equity_trailing_12_month_average",
+      "kind": "external_estimate",
+      "raw_value": "6.3",
+      "normalized_value": "0.063",
+      "unit": "ratio",
+      "Decimal_and_Fraction_checks_match": true,
+      "quote_utf8_sha256": "dedecd41ee4b99edb118441a963bb6600fd34e8d4a327af85a6b27f380ad6bfd",
+      "pdf_page": 55
+    }
+  ],
+  "visual_pages": [
+    {
+      "file": "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/report-cover.png",
+      "sha256": "1f9b4592c37f86a5cabf2d5f115c1f93fd5556db2e37690c6039aa8400127b23",
+      "pdf_page": 1,
+      "checked": "EPS unit/26/9 forecast row/124.53/NI2600 and QUICK-calculation attribution note"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/capital-cost-page.png",
+      "sha256": "27722bba52a48222f84ad1c069255826b3b175955b215d1a2122ec762850e0cf",
+      "pdf_page": 55,
+      "checked": "7.0%26Aug /6.3% trailing12month average /WACC5.6approx distinction and estimate caveat"
+    }
+  ],
+  "review_recorded_at": "2026-10-15T10:18:01.923479+00:00",
+  "derived_retrieved_at": "2026-10-15T10:18:01.931666+00:00",
+  "derived_source_id": "disclosed-facts:767a77f52004ee70e7a7839195aab5a5664dda9e48ce807df13898bbd43af208",
+  "request_sha256": "b8cf4c29079443ca9f28b22707723d381dff834a21834ce909b3054bcc845d00",
+  "bundle_sha256": "2e3d3c2f44ea0b4d50a138c6445c00145a074f331a67aa02e7229b62ec6dea14",
+  "CLI_replay": {
+    "method": "existing parser + run normalize-facts with connection=None placeholder, no Store or real sqlite handle",
+    "library_exact_replay": true,
+    "database_accesses": 0
+  },
+  "reproduce": {
+    "source_id": "disclosed-facts:767a77f52004ee70e7a7839195aab5a5664dda9e48ce807df13898bbd43af208",
+    "applicable": true,
+    "status": "reproduced",
+    "reason_codes": [],
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "original_content_sha256_status": "matched",
+    "original_snapshot_sha256_status": "matched_supplied_snapshot",
+    "fact_kinds": [
+      {
+        "id": "8151-quick-calculated-eps-from-company-ni-fy26-20260925",
+        "kind": "external_estimate"
+      },
+      {
+        "id": "8151-quick-capm-cost-equity-202608",
+        "kind": "external_estimate"
+      },
+      {
+        "id": "8151-quick-capm-cost-equity-trailing12m-report20260925",
+        "kind": "external_estimate"
+      }
+    ],
+    "original_source_id": "case-public:2469a802adda7396e6c4d0d235d11db39011a5d6077f37c6cd305007561640a4"
+  },
+  "independent_Decimal_Fraction_check": true,
+  "stable_derived_ID_and_later_now_replay": true,
+  "request_input_unchanged": true,
+  "excluded_parameters": [
+    {
+      "parameter": "WACC5.6％程度",
+      "reason": "The same paragraph reports approximate WACC with gross debt, but the date of that WACC value is not explicitly established. FY25/9 labels the interest/debt inputs, not automatically the WACC observation date. No period is copied from CAPM26Aug.",
+      "structured_fact_created": false
+    },
+    {
+      "parameter": "CAPM numeric risk-free rate, equity premium and beta",
+      "reason": "Formula/input types described but individual input numbers not supplied in the cited paragraph. No constants/rates/market data inferred.",
+      "structured_fact_created": false
+    },
+    {
+      "parameter": "market PER/PBR and identity relationships",
+      "reason": "Displayed market ratios or explanatory identities do not state a fair investment multiple or target; not selected as facts for model adoption.",
+      "structured_fact_created": false
+    }
+  ],
+  "old_input_hashes": {
+    "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/report-cover.png": "1f9b4592c37f86a5cabf2d5f115c1f93fd5556db2e37690c6039aa8400127b23",
+    "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/review.json": "f96b0740631bb553a42e2bee4dccb128e363f5984bc1894cfb259e089b2b1463",
+    "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/02.pdf.txt": "df421a9d471cb1d3f8c44025559a327208b1310bb449089496375cbd572b5173",
+    "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/quotes.json": "fdf49b4c825bded388f9610d6d6349b5e82c57066a84631948c7d0edd48ae6ae",
+    "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/byte-verifier-result.json": "b8914fc1a0e024db8cf8543af0440c82c351832daae26811cbb1ee9a3b238665",
+    "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/capital-cost-page.png": "27722bba52a48222f84ad1c069255826b3b175955b215d1a2122ec762850e0cf",
+    "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/01.txt": "7e9a003ef865e6f1cff3a3346ae5f7b97dfcc7538dfb5b35ec9e985624eb2890",
+    "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/README.md": "4572e07889ad302c6fda5b2b2d9d811c8571135c73931b7350f7b5129f8b708e",
+    "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/validation.json": "263afca7b3eadcdfb93997055b56f42b5912bae613c3f124809879f739c7f788",
+    "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/capture.json": "5bbce5a34443b52171d1b1981d823d91c6fdda764240ba609af84d35360afd08",
+    "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/source-bundle.json": "9172a041745c387fbd77274c463dd80e3437e9e23e3920997f7464daab96b8d2",
+    "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/raw/6e9dccc54a3b2a377cdd51b72e0f9ca48686f48736cb3bdcee428d000eb1476e": "6e9dccc54a3b2a377cdd51b72e0f9ca48686f48736cb3bdcee428d000eb1476e",
+    "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/raw/d736faec7a5a3dea5d507fb2fd573f3daae648b4ffe025ba8d27c983460fec76": "d736faec7a5a3dea5d507fb2fd573f3daae648b4ffe025ba8d27c983460fec76",
+    "research/ir-case-studies-2026-10-15/8151/external-estimate-facts/bundle.json": "3dd17da3a229c42f7966b6ab8e2793bd2b670459110b3750606fe8e646f38786",
+    "research/ir-case-studies-2026-10-15/8151/external-estimate-facts/request.json": "49b583398ecfdac266122a9b3c7c86b7c66aa062ff66a026ace7efb49b400a79",
+    "research/ir-case-studies-2026-10-15/8151/external-estimate-facts/root-recheck.json": "fde536fbd2ed2b4aed37cf46629bee4a7dc7f5a40efa6fd5397ab30300674c1c",
+    "research/ir-case-studies-2026-10-15/8151/external-estimate-facts/README.md": "ac53b20d7682f37e3ea979d40da164a01314b3699970392cdee858c0803cdbe7",
+    "research/ir-case-studies-2026-10-15/8151/external-estimate-facts/validation.json": "cc76219d046ed5e3750a6e62b7c55e1ea93bdf2a9004a9a59d97ae85bfb3c098"
+  },
+  "old_inputs_unchanged": true,
+  "Astris_vintage_files_unchanged": true,
+  "new_GETs": 0,
+  "DB_reads_or_writes": 0,
+  "code_or_old_artifact_changes": 0,
+  "forecast_adoption": false,
+  "financial_inputs_verified": false,
+  "meaning_review_required": true,
+  "model_adopted": false,
+  "price_or_IR_question_created": false,
+  "point_in_time_prediction_or_calibration_certified": false,
+  "limits": [
+    "EPS external_estimate means QUICK arithmetic on issuer profit guidance, not company-published EPS or independent QUICK net-income prediction.",
+    "6.3% preserves a relative12month window; start/end dates and monthly observations are not reconstructed.",
+    "Displayed author estimates do not establish a suitable future forecast/stable discount rate, fair multiple or investment action.",
+    "The report date, source retrieval, extraction review and derived retrieval remain distinct; published_at stays null and no backdated availability guarantee is created."
+  ]
+}

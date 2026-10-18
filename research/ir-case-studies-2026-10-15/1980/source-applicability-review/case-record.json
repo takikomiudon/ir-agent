@@ -1,0 +1,421 @@
+{
+  "schema_version": 1,
+  "artifact_type": "source_applicability_review_not_financial_thesis",
+  "company_id": "jp:1980",
+  "company_name": "ダイダン",
+  "recorded_at": "2026-10-15T17:49:03.763091+00:00",
+  "issue_id": "1980-source-EPS-basis",
+  "issue_kind": "source_and_calculation_basis_research",
+  "status": "source_applicability_review_complete_business_conditions_unconfirmed_in_fixed_quotes",
+  "roles": [
+    {
+      "id": "issuer-NI-guidance",
+      "role": "issuer_guidance_reprinted_by_external_author",
+      "as_printed": {
+        "value": "27,300",
+        "unit": "百万円",
+        "period": "連27/3期（予想）",
+        "accounting": "日本基準、連結（報告書表示）"
+      },
+      "author_of_forecast": "対象会社",
+      "what_can_be_used": "会社予想NIを入力に使ったという出典付きの参照。会社原本で予想vintage・期間・親会社帰属利益の範囲を照合する公開確認先を特定できる。",
+      "what_is_not_established": "会社原予想の直接照合/現在最新、QUICK自身のNI予測、達成保証、project採用。",
+      "evidence": [
+        {
+          "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+          "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+          "quote_id": "table-unit-and-scope",
+          "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+          "physical_page": 1,
+          "source_character_start": 3212,
+          "source_character_end_exclusive": 3427,
+          "image_sha256": "6a2bee58e20e255e42e218d6c22a5e42ba9c3b9e831f6e850eea87ecaab969c0"
+        },
+        {
+          "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+          "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+          "quote_id": "company-guidance-QUICK-EPS-row-and-note",
+          "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+          "physical_page": 1,
+          "source_character_start": 3655,
+          "source_character_end_exclusive": 3813,
+          "image_sha256": "6a2bee58e20e255e42e218d6c22a5e42ba9c3b9e831f6e850eea87ecaab969c0"
+        }
+      ]
+    },
+    {
+      "id": "QUICK-calculated-EPS",
+      "role": "external_author_calculation_from_issuer_guidance_not_independent_profit_forecast",
+      "as_printed": {
+        "value": "210.89",
+        "unit": "円/株",
+        "period": "連27/3期（予想）"
+      },
+      "calculation_author": "QUICK企業価値研究所",
+      "input_forecast_author": "会社予想純利益",
+      "definition_as_reported": "普通株主に帰属しない配当を控除した予想純利益と、QUICKが日々算出する直近普通株数（自己株除く）を用いる。",
+      "what_can_be_used": "日付付きの外部計算EPSとして、その作者・予想期・円/株・株数定義を記録して原公表会社予想と照合できる。印字値の参照に将来の精密株数保証は不要。",
+      "what_is_not_established": "会社原発表EPS、QUICK独自NI予測、210.89の実分母/精密計算日、個別split日/倍率、将来分母の保証、現モデルへの採用。",
+      "reproduction_vs_reference": "印字EPSを記録することと著者の計算を完全再現することは別。後者を行う場合だけ当該計算時点の実分母/調整情報が別根拠となる。NI÷EPSによる逆算で未知を埋めない。",
+      "future_share_guarantee_requested": false,
+      "evidence": [
+        {
+          "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+          "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+          "quote_id": "company-guidance-QUICK-EPS-row-and-note",
+          "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+          "physical_page": 1,
+          "source_character_start": 3655,
+          "source_character_end_exclusive": 3813,
+          "image_sha256": "6a2bee58e20e255e42e218d6c22a5e42ba9c3b9e831f6e850eea87ecaab969c0"
+        },
+        {
+          "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+          "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+          "quote_id": "forecast-EPS-current-net-shares-split-definition",
+          "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+          "physical_page": 100,
+          "source_character_start": 177660,
+          "source_character_end_exclusive": 177867,
+          "image_sha256": "155460c517abc38b941c0059b3600bb6d8c483e297e109b9a2611bd4ef484a2a"
+        }
+      ]
+    },
+    {
+      "id": "share-basis-purpose-separation",
+      "role": "share_definition_comparability_review",
+      "three_bases": {
+        "forecast_EPS": "QUICK日々算出の直近普通株数、自己株除く",
+        "historical_TSR_EPS": "期中平均発行済株式数、自己株除く。p54の歴史分析用",
+        "issued_share_display": "QUICK日々算出の直近発行済普通株数、自己株含む"
+      },
+      "what_can_be_used": "同じ「株数」でも目的/時点が異なると判断し、表示株数や過去TSR分母で印字予想EPSを再計算しない。",
+      "what_is_not_established": "この資料だけから特定の将来の株数/希薄化や会社EPSとの完全同一性は保証しない。一般split遡及注記を特定日/倍率の証明にしない。",
+      "evidence": [
+        {
+          "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+          "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+          "quote_id": "forecast-EPS-current-net-shares-split-definition",
+          "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+          "physical_page": 100,
+          "source_character_start": 177660,
+          "source_character_end_exclusive": 177867,
+          "image_sha256": "155460c517abc38b941c0059b3600bb6d8c483e297e109b9a2611bd4ef484a2a"
+        },
+        {
+          "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+          "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+          "quote_id": "issued-share-treasury-inclusion-definition",
+          "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+          "physical_page": 100,
+          "source_character_start": 178015,
+          "source_character_end_exclusive": 178062,
+          "image_sha256": "155460c517abc38b941c0059b3600bb6d8c483e297e109b9a2611bd4ef484a2a"
+        },
+        {
+          "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+          "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+          "quote_id": "TSR-historical-EPS-denominator",
+          "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+          "physical_page": 54,
+          "source_character_start": 74195,
+          "source_character_end_exclusive": 74314,
+          "image_sha256": "807e0ca3a8cd45738814789e7de5afd8f83a00e01cb407de71b814509784efbc"
+        }
+      ]
+    },
+    {
+      "id": "TSR-identity-and-peer",
+      "role": "descriptive_historical_and_market_comparison",
+      "what_can_be_used": "p54のBPS×PBR/EPS×PERは歴史TSR/市場評価変化の分解、p58のpeer散布図は市場株価と期末BPS/会社予想EPSの比較として読める。",
+      "what_is_not_established": "著者が採用した公正PER、目標株価式、価格到達期限、購入/利確規則。市場価格をEPSで割り戻して公正倍率を作らない。",
+      "reference_price": {
+        "as_printed": "26/9/11終値2,653.0円",
+        "current_price": false
+      },
+      "fair_PE_reverse_engineering_required": false,
+      "rating_as_printed": "Not Rated",
+      "evidence": [
+        {
+          "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+          "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+          "quote_id": "TSR-price-identity-context",
+          "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+          "physical_page": 54,
+          "source_character_start": 70370,
+          "source_character_end_exclusive": 70467,
+          "image_sha256": "807e0ca3a8cd45738814789e7de5afd8f83a00e01cb407de71b814509784efbc"
+        },
+        {
+          "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+          "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+          "quote_id": "TSR-historical-EPS-denominator",
+          "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+          "physical_page": 54,
+          "source_character_start": 74195,
+          "source_character_end_exclusive": 74314,
+          "image_sha256": "807e0ca3a8cd45738814789e7de5afd8f83a00e01cb407de71b814509784efbc"
+        },
+        {
+          "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+          "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+          "quote_id": "peer-multiple-definition",
+          "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+          "physical_page": 58,
+          "source_character_start": 79302,
+          "source_character_end_exclusive": 79332,
+          "image_sha256": "f339f8f0390ff24b4ac04936342b6f839f4542f2b7875e94db1ebb0dcba664d1"
+        },
+        {
+          "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+          "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+          "quote_id": "not-rated-label",
+          "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+          "physical_page": 1,
+          "source_character_start": 2829,
+          "source_character_end_exclusive": 3001,
+          "image_sha256": "6a2bee58e20e255e42e218d6c22a5e42ba9c3b9e831f6e850eea87ecaab969c0"
+        },
+        {
+          "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+          "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+          "quote_id": "reference-price-date-not-current",
+          "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+          "physical_page": 1,
+          "source_character_start": 1591,
+          "source_character_end_exclusive": 1646,
+          "image_sha256": "6a2bee58e20e255e42e218d6c22a5e42ba9c3b9e831f6e850eea87ecaab969c0"
+        }
+      ]
+    },
+    {
+      "id": "author-cost-estimates",
+      "role": "source_specific_estimates_reference_not_adopted_discount_parameters",
+      "as_printed": {
+        "cost_of_equity_CAPM": "9.2%",
+        "COE_smoothing": "直近12カ月平均、足元spotではない",
+        "debt_cost": "0.8%",
+        "debt_cost_basis": "26/3支払利息÷期首期末平均有利子負債の簡便法",
+        "WACC": "9.1%",
+        "WACC_debt_basis": "gross debt、現預金控除なし"
+      },
+      "what_can_be_used": "著者推計として各値の目的/計算基準と「推計値にすぎない」という留保を記録できる。将来モデルへ採用したとき何を別途意味レビューするかを分けられる。",
+      "what_is_not_established": "CAPM全入力、厳密な平均窓cutoff、将来事業CFとの適合/採用。COEの12カ月平均をdebt/WACCへ根拠なく付与しない。",
+      "guaranteed_future_cost_of_capital_requested": false,
+      "project_r_or_WACC_adopted": false,
+      "evidence": [
+        {
+          "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+          "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+          "quote_id": "CAPM-average-debt-cost-WACC",
+          "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+          "physical_page": 57,
+          "source_character_start": 77184,
+          "source_character_end_exclusive": 77403,
+          "image_sha256": "150b9676240b67bcfaadac9bd5d7b866b368f6a5521e287a1e412cd0a605c4f0"
+        },
+        {
+          "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+          "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+          "quote_id": "cost-estimate-caution",
+          "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+          "physical_page": 57,
+          "source_character_start": 77487,
+          "source_character_end_exclusive": 77598,
+          "image_sha256": "150b9676240b67bcfaadac9bd5d7b866b368f6a5521e287a1e412cd0a605c4f0"
+        }
+      ]
+    }
+  ],
+  "business_condition_scope": {
+    "conditions": [],
+    "count": 0,
+    "maximum_allowed": 1,
+    "finding": "固定15引用は作者/計算/株数/市場比較/コスト/免責を対象としており、独立した具体的事業条件として固定できる著者前提はこの引用集合で未確認。",
+    "cover_context_not_elevated": "既読p1の会社事業紹介や当時の受注/業績叙述を、新たな著者の十分条件/数値予測/売買条件に組み替えない。",
+    "not_whole_report_absence": true,
+    "new_business_quote_or_page_read": 0,
+    "no_condition_added_to_fill_slot": true
+  },
+  "author_boundary": {
+    "authors_as_printed": [
+      "前田俊明",
+      "小勝智恵"
+    ],
+    "organization": "QUICK企業価値研究所（株式会社QUICK）",
+    "company_sponsor_paid": true,
+    "authors_independent_from_subject_company": false,
+    "rating": "Not Rated",
+    "individual_contract_details_or_fee": null,
+    "economic_relationship_not_forecast_authorship": true,
+    "evidence": [
+      {
+        "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+        "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+        "quote_id": "cover-date-and-authors",
+        "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+        "physical_page": 1,
+        "source_character_start": 12,
+        "source_character_end_exclusive": 212,
+        "image_sha256": "6a2bee58e20e255e42e218d6c22a5e42ba9c3b9e831f6e850eea87ecaab969c0"
+      },
+      {
+        "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+        "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+        "quote_id": "contract-creator",
+        "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+        "physical_page": 100,
+        "source_character_start": 178386,
+        "source_character_end_exclusive": 178471,
+        "image_sha256": "155460c517abc38b941c0059b3600bb6d8c483e297e109b9a2611bd4ef484a2a"
+      },
+      {
+        "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+        "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+        "quote_id": "sponsorship-and-independence",
+        "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+        "physical_page": 100,
+        "source_character_start": 178574,
+        "source_character_end_exclusive": 178650,
+        "image_sha256": "155460c517abc38b941c0059b3600bb6d8c483e297e109b9a2611bd4ef484a2a"
+      },
+      {
+        "quote_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json",
+        "quote_file_sha256": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+        "quote_id": "creation-vs-distribution",
+        "source_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+        "physical_page": 101,
+        "source_character_start": 179405,
+        "source_character_end_exclusive": 179504,
+        "image_sha256": "70c9622eff52075ba9adf389a57d25bd26267f251993a39146022552b478a222"
+      }
+    ]
+  },
+  "next_finite_public_check": {
+    "task": "会社原本の連27/3期通期予想を公表資料1件で照合する",
+    "purpose": "当該vintageのNI原表示・対象期・会計/連結範囲を確認し、会社原EPSが載るならその値/注記を外部計算値と区別する。",
+    "exact_saved_route_or_document_selected_here": null,
+    "new_GET_authorized_or_performed_here": false,
+    "does_not_require": [
+      "会社に将来の精密株数を保証させる",
+      "著者が未提示のfairPEを会社に決めさせる",
+      "市場PERから公正倍率を逆算する",
+      "著者独自の利益予測や確率を自作する"
+    ],
+    "no_formal_IR_draft_before_public_check": true
+  },
+  "financial_adoption_boundary": {
+    "formal_numeric_thesis": null,
+    "canonical_financial_path": null,
+    "valuation_method": null,
+    "adopted_EPS": null,
+    "adopted_NI": null,
+    "adopted_discount_rate_or_WACC": null,
+    "fair_PE": null,
+    "current_price": null,
+    "target_price": null,
+    "probabilities": null,
+    "financial_input_changes": [],
+    "financial_inputs_verified": false,
+    "model_adopted": false,
+    "missing_meaning_and_adoption_not_resolved_by_capture_or_intake": "作者/対象期/円株/株数目的を記録できても、将来価値シナリオ・採用倍率/CF・費用/価格・反証条件や方針を自動補完しない。精密将来分母保証が投資研究一般の前提という意味ではない。"
+  },
+  "actual_save_boundary": {
+    "receipt_file": "research/ir-case-studies-2026-10-15/1980/actual-author-import/actual-import.json",
+    "receipt_sha256": "55782bd190d98d6264dfba7d602c46855722be1c8ddfed6efbf2e362b1cda89b",
+    "receipt_status": "completed",
+    "source_receipts": [
+      {
+        "basis": "trusted_insert",
+        "entity_id": "case-public:3ba7efd10fb25d17d94f79b335185a668b23496a181451022ca7d4f04977d04d",
+        "entity_type": "source",
+        "first_saved_at": "2026-10-15T17:45:17.192447+00:00",
+        "presence_observed_at": "2026-10-15T17:45:17.192447+00:00",
+        "snapshot_sha256": "01ab792ed4c5845cd7fd9bb840085f0cad205f2cc35b17361edbbac62f80a6ba",
+        "version": 0
+      },
+      {
+        "basis": "trusted_insert",
+        "entity_id": "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f",
+        "entity_type": "source",
+        "first_saved_at": "2026-10-15T17:45:17.192447+00:00",
+        "presence_observed_at": "2026-10-15T17:45:17.192447+00:00",
+        "snapshot_sha256": "babaec1574453d035615e230d168c236f21dcf3cadbd1f1a74474208d493d423",
+        "version": 0
+      }
+    ],
+    "parent_recorded_counts_at_that_receipt": {
+      "sources": 116,
+      "source_classifications": 115,
+      "jobs": 47
+    },
+    "current_DB_live_read": false,
+    "receipt_attribution": "親が保存した固定実行記録として参照。ここではDB/Storeを開かず、現在の件数や実DBを独立再検証していない。",
+    "HTTP_completion_times_are_not_DB_first_save_times": true,
+    "original_source_metadata_firstsave_null_not_rewritten": true,
+    "published_at": null,
+    "precise_publication_time_or_prior_DB_presence_inferred": false,
+    "classification_is_full_research_or_financial_adoption": false
+  },
+  "reused_scope": {
+    "source_ids": [
+      "case-public:3ba7efd10fb25d17d94f79b335185a668b23496a181451022ca7d4f04977d04d",
+      "case-public:4df33a50a3198dfa36142fd1c839f0d28598ff26d911ed83b31fe17d2884645f"
+    ],
+    "meaning_pages": [
+      1,
+      54,
+      57,
+      58,
+      100,
+      101
+    ],
+    "existing_quote_count": 15,
+    "independent_review_file": "research/ir-case-studies-2026-10-15/1980/first-author-report/independent-recheck.json",
+    "independent_review_sha256": "7497c67e322a32a6f186325c41a62ee291555af8ec9b990882b2fd43f5cf1b95",
+    "new_original_pages_raw_or_images_read": 0,
+    "new_full_report_or_original_issuer_body_read": false
+  },
+  "project_policy_reference": {
+    "path": "docs/decision-policy.md",
+    "section": "数値評価が未完成の段階の研究",
+    "application": "計算/公表事実の役割を整理する研究を数値投資判断や著者自身の売買規則と分け、未知の入力/ルールを補わない。新たなinvestment policyや第三者閾値は作らない。"
+  },
+  "execution": {
+    "new_GETs": 0,
+    "DB_Store_SQLite_CLI_calls": 0,
+    "production_or_old_artifact_index_monitoring_changes": 0,
+    "new_numeric_facts_or_forecasts_or_thresholds": 0,
+    "financial_model_or_formal_IR": 0,
+    "new_files": 3
+  },
+  "protected_inputs_SHA256": {
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/guard.json": "ea9c0336e59f4e29c3f97b35a648b014b5c2b2f7145967a0dcf7fb1e229799c5",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/review.json": "833ffd38a246eac5dac202759d56a3a577608b411ed5a981e0df36d1990b55ee",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/02.snapshot.json": "e810943fc1b86be63bc2362cef5769a29f8077cc9fbbb52e9deb4419e653c958",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/route.json": "9d1d8b307197a77abef93e207ac8c8bfcf040c8e88797ca42214006bd647eb90",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/quotes.json": "29c906d4ca1964260a6c02355f4deeb1a0ea705dc0809ce5609511d925ad3a13",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/01.snapshot.json": "36692b5f2ad9012d4c7bf5fcfb6f3a596af136577c7ec6cac4cd3eff39c11c37",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/report-route.json": "f4f7cb518ce01957dce15d83cdf3248c8fca9d8c170354bb92466d17618cc74d",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/provenance.json": "3beb9d7a3d5b38c0da820abb4159da3058595bb7e41019e722f2249e7a642777",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/README.md": "39fd9b355d7b98e313c49eea7d5a32a17fbdf788888ebf552765e23425ddd080",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/validation.json": "cdb9ac534b34aead3899953d553d2ecd5ce3e43b590d20b1628895baf9c60c79",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/capture.json": "dc4b4c264e764d55468f6312e63aeae727216151e8c8936b90ef76c120e0f5ac",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/independent-recheck.json": "7497c67e322a32a6f186325c41a62ee291555af8ec9b990882b2fd43f5cf1b95",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/source-bundle.json": "81eaa36637b8eb05cdc1f3113f075e4a161f8a4891ed4ed294c14de79a69b9b0",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/independent-recheck.md": "ce5e1f91036212997c5da96a0906952a92f99b5971f04328d40260a201b5f3c7",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/images/page-57.png": "150b9676240b67bcfaadac9bd5d7b866b368f6a5521e287a1e412cd0a605c4f0",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/images/page-101.png": "70c9622eff52075ba9adf389a57d25bd26267f251993a39146022552b478a222",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/images/page-100.png": "155460c517abc38b941c0059b3600bb6d8c483e297e109b9a2611bd4ef484a2a",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/images/page-58.png": "f339f8f0390ff24b4ac04936342b6f839f4542f2b7875e94db1ebb0dcba664d1",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/images/page-54.png": "807e0ca3a8cd45738814789e7de5afd8f83a00e01cb407de71b814509784efbc",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/images/page-1.png": "6a2bee58e20e255e42e218d6c22a5e42ba9c3b9e831f6e850eea87ecaab969c0",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/text/02.txt": "0f3cc694d550c17be04d3380d86ad12ed51277139f354780014dfe1ba76c1fcd",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/text/01.txt": "e106a49edcb54ddc7f1c4f864954f180a67b636d50b565191dee71961db30ce9",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/raw/e0c553034eb84733307f50e35a733b864fca186659d80ad71b92a16fb64483ac": "e0c553034eb84733307f50e35a733b864fca186659d80ad71b92a16fb64483ac",
+    "research/ir-case-studies-2026-10-15/1980/first-author-report/raw/2942aeb156763d6deba0ca316c4d75595769a328632dd67a73e46f6c10c0aebd": "2942aeb156763d6deba0ca316c4d75595769a328632dd67a73e46f6c10c0aebd",
+    "research/ir-case-studies-2026-10-15/1980/actual-author-import/actual-import.json": "55782bd190d98d6264dfba7d602c46855722be1c8ddfed6efbf2e362b1cda89b",
+    "research/ir-case-studies-2026-10-15/1980/actual-author-import/README.md": "7b60934c3312e26d53598b07f8225ad56b3efcf4756e6b711e2d9d9b2b3f3cf4",
+    "docs/decision-policy.md": "e687e70c70ec9ce4b40b935bb9e908cd2d1328f44dfa488fad639557fbba8de5"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "baseline_date": "2026-09-30",
+  "as_of": "2026-10-11",
+  "baseline_domestic_ordinary_stocks": 3695,
+  "excluded_preferred_or_class_codes": [
+    "25935",
+    "50765",
+    "75505",
+    "92015",
+    "92025",
+    "94345",
+    "94346"
+  ],
+  "new_listing_count": 3,
+  "delisted_count": 12,
+  "adjusted_domestic_ordinary_stocks": 3686,
+  "source_pages": [
+    {
+      "url": "https://www.jpx.co.jp/listing/stocks/new/index.html",
+      "retrieved_at": "2026-10-11T03:58:30.950721+00:00",
+      "http_status": 200
+    },
+    {
+      "url": "https://www.jpx.co.jp/listing/stocks/delisted/index.html",
+      "retrieved_at": "2026-10-11T03:58:30.950721+00:00",
+      "http_status": 200
+    }
+  ],
+  "excluded_future_changes": [
+    {
+      "security_code": "660A",
+      "change": "new_listing",
+      "effective_date": "2026-11-10"
+    },
+    {
+      "security_code": "658A",
+      "change": "new_listing",
+      "effective_date": "2026-11-06"
+    },
+    {
+      "security_code": "656A",
+      "change": "new_listing",
+      "effective_date": "2026-11-04"
+    },
+    {
+      "security_code": "653A",
+      "change": "new_listing",
+      "effective_date": "2026-11-02"
+    },
+    {
+      "security_code": "652A",
+      "change": "new_listing",
+      "effective_date": "2026-10-30"
+    },
+    {
+      "security_code": "648A",
+      "change": "new_listing",
+      "effective_date": "2026-10-15"
+    },
+    {
+      "security_code": "2388",
+      "change": "delisted",
+      "effective_date": "2027-04-01"
+    },
+    {
+      "security_code": "8254",
+      "change": "delisted",
+      "effective_date": "2027-03-01"
+    },
+    {
+      "security_code": "4760",
+      "change": "delisted",
+      "effective_date": "2027-03-01"
+    },
+    {
+      "security_code": "1382",
+      "change": "delisted",
+      "effective_date": "2027-01-01"
+    },
+    {
+      "security_code": "8141",
+      "change": "delisted",
+      "effective_date": "2026-10-29"
+    },
+    {
+      "security_code": "5484",
+      "change": "delisted",
+      "effective_date": "2026-10-19"
+    }
+  ],
+  "new_listing_sectors": {
+    "640A": "サービス業",
+    "641A": "輸送用機器",
+    "642A": "電気・ガス業"
+  },
+  "jpx_sector_provenance": "Delisted-company sectors are retained from the official JPX 2026-09-30 list. New holding-company sectors are verified by official JPX StockSearch GET results; no predecessor-sector inference is made.",
+  "sector_source_snapshot": "../ir-contacts-2026-10-11/evidence/jpx-listing-universe.csv",
+  "sector_source_url": "https://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/data_j.xlsx",
+  "note": "Only effective listing/delisting dates strictly after 2026-09-30 and on/before 2026-10-11 are applied; approval/publication dates are not applied.",
+  "new_listing_sector_evidence": [
+    {
+      "security_code": "640A",
+      "market": "グロース",
+      "jpx_sector": "サービス業",
+      "source_url": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=640A",
+      "retrieved_at": "2026-10-11T04:00:50.457995+00:00",
+      "snapshot": "evidence/delta-jpx-stocksearch-640A.json",
+      "quote": "640A0 ＡＳＮＯＶＡ Ｃｏｍｐａｎｉｅｓ グロース サービス業 3月"
+    },
+    {
+      "security_code": "641A",
+      "market": "プライム",
+      "jpx_sector": "輸送用機器",
+      "source_url": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=641A",
+      "retrieved_at": "2026-10-11T04:00:50.521885+00:00",
+      "snapshot": "evidence/delta-jpx-stocksearch-641A.json",
+      "quote": "641A0 ＮＯＫ Ｇｒｏｕｐ プライム 輸送用機器 3月"
+    },
+    {
+      "security_code": "642A",
+      "market": "プライム",
+      "jpx_sector": "電気・ガス業",
+      "source_url": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=642A",
+      "retrieved_at": "2026-10-11T04:00:50.441114+00:00",
+      "snapshot": "evidence/delta-jpx-stocksearch-642A.json",
+      "quote": "642A0 キューデンホールディングス プライム 電気・ガス業 3月"
+    }
+  ]
+}

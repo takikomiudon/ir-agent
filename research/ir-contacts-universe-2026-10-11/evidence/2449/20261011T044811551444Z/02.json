@@ -1,0 +1,63 @@
+{
+  "requested_url": "https://www.prap.co.jp/pr/service/assignment/4282766",
+  "retrieved_at": "2026-10-11T04:48:13.529308+00:00",
+  "publication_time": null,
+  "submitted": false,
+  "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+  "url": "https://www.prap.co.jp/pr/service/assignment/4282766",
+  "http_status": 200,
+  "byte_count": 46697,
+  "sha256": "6c6f7f7afa42f9638f228c5618d4d0cda15919b65fd40d88d392116ff90b5670",
+  "content_type": "text/html; charset=utf-8",
+  "encoding": "utf-8",
+  "text": "投資家との戦略的なコミュニケーションを実現したい | PR会社 | プラップジャパン | PRAP JAPAN サンプル SERVICE 課題 投資家との戦略的なコミュニケーションを実現したい ASSIGNMENT 課題 投資家との戦略的なコミュニケーションを実現したい CASES 関連する事例 SOLUTION 関連するソリューション 一覧へ戻る © Basic Inc.",
+  "title": "投資家との戦略的なコミュニケーションを実現したい | PR会社 | プラップジャパン | PRAP JAPAN",
+  "headings": [
+    "ASSIGNMENT",
+    "投資家との戦略的なコミュニケーションを実現したい",
+    "CASES",
+    "SOLUTION"
+  ],
+  "links": [
+    {
+      "url": "https://www.prap.co.jp/",
+      "label": "サンプル"
+    },
+    {
+      "url": "https://www.prap.co.jp/pr/service",
+      "label": "SERVICE"
+    },
+    {
+      "url": "https://www.prap.co.jp/pr/service/assignment",
+      "label": "課題"
+    },
+    {
+      "url": "https://www.prap.co.jp/pr/service",
+      "label": "一覧へ戻る"
+    }
+  ],
+  "forms": [],
+  "robots": {
+    "requested_url": "https://www.prap.co.jp/robots.txt",
+    "retrieved_at": "2026-10-11T04:48:11.551479+00:00",
+    "publication_time": null,
+    "submitted": false,
+    "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+    "url": "https://www.prap.co.jp/robots.txt",
+    "http_status": 200,
+    "byte_count": 1610,
+    "sha256": "1f654b2a159f09c8300cae5f622cef655e33d3c6ade880a777d095bec0acf6d3",
+    "content_type": "text/plain",
+    "encoding": "utf-8",
+    "text": "# robots.txt for https://www.prap.co.jp/\n# Updated to align with llms.txt guidance (PRAP corporate site + recruit content + external IR site)\n# Focus:\n# - Block WP internals\n# - Avoid crawling internal search result URLs\n# - Avoid crawling form endpoints / thank-you pages (lead-gen, personal data)\n# - Reduce crawl load from large volumes of PDFs under /topics/wp-content/uploads/\n#\n# Last-Reviewed: 2026-02-10\n\nUser-agent: *\n\n# --- WordPress admin / internals (standard hardening) ---\nDisallow: /wp/wp-admin/\nAllow: /wp/wp-admin/admin-ajax.php\nDisallow: /wp/wp-login.php\nDisallow: /wp/wp-json/\nDisallow: /wp/wp-includes/\n\n# --- Internal search results (WordPress-style query) ---\nDisallow: /?s=\nDisallow: /*?s=\nDisallow: /*&s=\n\n# --- Lead-gen / inquiry forms & thank-you pages (avoid indexing/crawling) ---\n# PR inquiry / document requests / newsletters\nDisallow: /pr/contact\nDisallow: /pr/contact/\nDisallow: /pr/contact_con\nDisallow: /pr/contact/documents\nDisallow: /pr/contact/request_thanks\nDisallow: /pr/contact/newsletter\nDisallow: /pr/contact/newsletter/thanks\n\n# Recruit / other inquiries (forms)\nDisallow: /contact/recruit/\nDisallow: /contact/etc/\n\n# Service-specific document request forms (pattern)\nDisallow: /pr/service/*document-request\n\n# --- PDF crawl reduction (majority of PDFs are stored under /topics/wp-content/uploads/...) ---\n# Note: keep this ON only if you do NOT need PDF SEO/indexing.\nDisallow: /topics/wp-content/uploads/*.pdf$\n\n# --- Sitemaps (keep the one your CMS actually serves) ---\nSitemap: https://www.prap.co.jp/sitemap_index.xml\nSitemap: https://www.prap.co.jp/sitemap.xml\n",
+    "title": "",
+    "headings": [],
+    "links": [],
+    "forms": []
+  },
+  "security_code": "2449",
+  "source_type": "official_public_contact_page",
+  "discovery_parent_url": "https://www.prap.co.jp/",
+  "discovery_link_label": "投資家との戦略的なコミュニケーションを実現したい",
+  "official_identity_basis": "third_party_unverified"
+}

@@ -1,0 +1,83 @@
+{
+  "recorded_at": {
+    "utc": "2026-10-16T05:22:22.292561+00:00",
+    "jst": "2026-10-16T14:22:22.292561+09:00"
+  },
+  "status": "definition_research_backlog_only; not IR draft",
+  "already_resolved_from_saved_sources": [
+    {
+      "topic": "事業/利益段階",
+      "resolution": "暗号資産売却損等・NFT手数料・顧客サポート、非営業Fisco、特別善光、holding費用は別。",
+      "fact_ids": [
+        "entity_and_business_scope",
+        "earnings_change_or_loss_cause"
+      ]
+    },
+    {
+      "topic": "期間/連結寄与",
+      "resolution": "Q3 9か月とFY12か月、善光PL3か月、新segmentと旧scopeを区別。再質問しない。",
+      "fact_ids": [
+        "entity_and_business_scope",
+        "current_earnings_measurements"
+      ]
+    }
+  ],
+  "company_definitions_public_first_then_IR_if_still_needed": [
+    {
+      "id": "D1-financial-revenue-definition",
+      "priority": 1,
+      "definition_needed": "金融segment負の売上に入る暗号資産の売却損益/評価損益/手数料等の範囲、gross/net、内部売上との関係。取引量/売上/損益を混ぜない。",
+      "already_known": "売却損等の不調とNFT販売高に応じる手数料は公表済み。",
+      "first_public_material_types": [
+        "会計方針/segment収益計上注記",
+        "公開説明/有報の暗号資産投資会計定義"
+      ],
+      "author_forecast_not_requested": "将来BTC価格/運用利回り/正常収益を会社回答へ置換しない。"
+    },
+    {
+      "id": "D2-asset-liability-regulatory-scope",
+      "priority": 2,
+      "definition_needed": "どの法人の自己/顧客資産・預り/調達負債、仲介/交換/手数料サービス、規制/資本/分配制約が連結へ関係するか。",
+      "already_known": "Zaifは提携相手として交換業の記述。CAICAの金融仲介core/非該当は未確定。",
+      "first_public_material_types": [
+        "各法人の公表事業/登録情報",
+        "資産負債/顧客資産/規制注記"
+      ],
+      "author_forecast_not_requested": "規制資本数値や将来配当を関連性確認前に一律要求しない。"
+    },
+    {
+      "id": "D3-cash-claim-and-investment-boundaries",
+      "priority": 3,
+      "definition_needed": "Fisco持分法、暗号資産運用、営業CF/投資資産、借入/少数持分/持合株の同一scope定義。holding費用と事業CFの重複除外。",
+      "already_known": "Fisco適用時投資差額減損説明、OP調整、CF未作成は公開回答済み。",
+      "first_public_material_types": [
+        "年度CF表",
+        "投資/関係会社/負債/株式の公表注記"
+      ],
+      "author_forecast_not_requested": "将来正常CF/税率/維持投資は著者の整合した仮定に残す。"
+    },
+    {
+      "id": "D4-paid-commercial-and-share-basis",
+      "priority": 4,
+      "definition_needed": "有償/無償PoC、継続課金・製品・契約の定義、工程日付と収益認識範囲、旧guide EPSの当時株数basis。",
+      "already_known": "UNX販売、AIX終了、FY据置と現在EPS負は公表済み。",
+      "first_public_material_types": [
+        "公表サービス/KPI定義と収益認識",
+        "発行株/EPSと旧guidance注記"
+      ],
+      "author_forecast_not_requested": "未公表契約見込み、株価織込、将来margin保証を求めず、NI/EPS逆算もしない。"
+    }
+  ],
+  "author_forecast_responsibility": [
+    "選んだ価値scopeに対応する売上ドライバー/将来利益率・再投資・税cash・資金調達を原説明から別にモデル化する。今回は作成0。",
+    "金融適合が支持されれば規制資本/株主CF、通常FCFFが支持されれば企業CFと株主bridgeを混ぜない。",
+    "PoCや価格リスクだけでyoung/cycleを選ばず、該当根拠が得られた場合のみ関連履歴/移行/存続を点検。"
+  ],
+  "investor_input_responsibility": [
+    "評価時点・対象普通株主/通貨・投資期間を指定する。現在はas_of:null。",
+    "割引率/リスク条件・peer/multiple・必要収益・価格/売買条件は別の採用入力。今回設定0。"
+  ],
+  "IR_send_or_draft": false,
+  "requested_valuation_method": null,
+  "new_engine_or_forecast": false
+}

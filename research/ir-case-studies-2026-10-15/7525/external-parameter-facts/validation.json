@@ -1,0 +1,122 @@
+{
+  "checked_at": "2026-10-15T09:32:02.269379+00:00",
+  "source_id": "case-public:b87e707ca4bec9077ffecb14be83767b1b4311e45b1d25d26a051c7e59a06656",
+  "original_source_retrieved_at": "2026-10-15T09:22:11.560623+00:00",
+  "original_source_published_at": null,
+  "original_content_sha256": "e548061378e9a4879a3031d0214d92178e25a8029b7a4baa08c1e56d569cd6c1",
+  "CLI_command": [
+    ".venv/bin/ir-agent",
+    "normalize-facts",
+    "research/ir-case-studies-2026-10-15/7525/external-parameter-facts/request.json"
+  ],
+  "CLI_exit_code": 0,
+  "new_derivation_retrieved_at": "2026-10-15T09:32:02.232880+00:00",
+  "review_author_is_extractor_not_report_author": true,
+  "all_kind_external_estimate": true,
+  "exact_same_page_quote_offsets_valid": 3,
+  "CLI_API_replay_exact": true,
+  "derived_source_reproduction": {
+    "source_id": "disclosed-facts:c316527840fec8f703f258d54836f2e7db0e14b0856b342ef2be7478b7f55f4d",
+    "applicable": true,
+    "status": "reproduced",
+    "reason_codes": [],
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "original_content_sha256_status": "matched",
+    "original_snapshot_sha256_status": "matched_supplied_snapshot",
+    "fact_kinds": [
+      {
+        "id": "7525-QUICK-companyNI-derived-EPS-FY27March",
+        "kind": "external_estimate"
+      },
+      {
+        "id": "7525-QUICK-CAPM-costofequity-2026Aug",
+        "kind": "external_estimate"
+      },
+      {
+        "id": "7525-QUICK-CAPM-costofequity-trailing12months-average",
+        "kind": "external_estimate"
+      }
+    ],
+    "original_source_id": "case-public:b87e707ca4bec9077ffecb14be83767b1b4311e45b1d25d26a051c7e59a06656"
+  },
+  "Decimal_checks": [
+    {
+      "id": "7525-QUICK-companyNI-derived-EPS-FY27March",
+      "raw": "369.80",
+      "value": "369.80",
+      "unit": "JPY-per-share",
+      "equals_expected": true
+    },
+    {
+      "id": "7525-QUICK-CAPM-costofequity-2026Aug",
+      "raw": "6.2",
+      "value": "0.062",
+      "unit": "ratio",
+      "equals_expected": true
+    },
+    {
+      "id": "7525-QUICK-CAPM-costofequity-trailing12months-average",
+      "raw": "6.0",
+      "value": "0.060",
+      "unit": "ratio",
+      "equals_expected": true
+    }
+  ],
+  "skip": [
+    {
+      "candidate": "WACC約5.3％（有利子負債グロス）",
+      "raw_value": "5.3",
+      "raw_unit_label": "％",
+      "approximation_literal": "程度",
+      "scope": "gross_debt_WACC_author_estimate",
+      "status": "skipped_missing_explicit_value_reference_period",
+      "basis_quote": "CAPM で見た同社の株主資本コストは直近値で 6.2％（26 年 8 月）。直近 12 カ月の平均は 6.0％。直\n  近 5 年の推移を見ると、総じて緩やかな上昇トレンドとなっている。また、WACC（有利子負債はグロス）は\n  5.3％程度である。なお、負債コストは 26/3 期の支払利息を期首・期末平均の有利子負債で除算する簡便法\n  を用いた。",
+      "location": {
+        "pdf_page": 60,
+        "printed_page": 60,
+        "page_character_start": 18,
+        "page_character_end": 195
+      },
+      "value_asof": null,
+      "reason": "本文はWACC5.3％程度を示すが独自の対象時点を明示しない。26/3期は負債コスト計算に使う支払利息の期で、WACCの時点ではない。近接するCAPM26年8月やグラフ終点をWACC測定期へ継承しない。値/単位の存在だけをperiod妥当性へ置換せず、normalize対象から除外。"
+    }
+  ],
+  "visual_checks": [
+    {
+      "file": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/report-cover.png",
+      "page": 1,
+      "sha256": "147b4943d0132847ca5d611badfe7d0dd75a8c1ec27e3f253920a442196b99d8",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/7525-parameters-p60.png",
+      "page": 60,
+      "sha256": "442bf98cf8b64900844ea8edc2dbb581e47bfb1094d46f353e86693f5a355c0a",
+      "viewed": true,
+      "retention": "temporary, reproducible from preserved rawPDF using pdftoppm -f60 -l60 -scale-to1800 -png -singlefile"
+    }
+  ],
+  "old_files_unchanged_count": 13,
+  "old_input_hashes": {
+    "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/report-cover.png": "147b4943d0132847ca5d611badfe7d0dd75a8c1ec27e3f253920a442196b99d8",
+    "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/review.json": "d30a9d72c0f59dc7ec22b4c3d026c02c007cdd8fa05dc9799685184999fa68c2",
+    "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/report.pdf.txt": "e548061378e9a4879a3031d0214d92178e25a8029b7a4baa08c1e56d569cd6c1",
+    "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/quotes.json": "82e8b8b987e75a50aafe2e2cda64e88cbb7304e5898a264e1a2c8c0d4a4bc962",
+    "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/byte-verifier-result.json": "52e9e95b51d8555c3a82343f07b87446484db7ba89f6b07fda7708c8ce3fd31e",
+    "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/README.md": "321ae3f40ecee800d01e994c6727c2118f30f11a9233888a13a0b46a58d1684c",
+    "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/price-decomposition.png": "d44fcfd377032c12c3a0f09d6692ed5a04fe71e0e4fbf012cb38ec386d790b7a",
+    "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/validation.json": "86c43e3fc4da188ce4f2eba0773c9736bbdc6281fd229bc7663023b3157fe00d",
+    "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/capture.json": "2f129a6b161e7ecec48f2b7d0ca504861a3bbab1b5475d86ec3bd2ca5151711f",
+    "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/independent-recheck.json": "c59dcef2259083a00ffe1c463f1067c73a33399439af84416b542e5ef717d7fd",
+    "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/source-bundle.json": "f2feb89d3464ea4c9167764d2dac2a0ad6853b97efc7576fd572ffdc33719e13",
+    "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/independent-recheck.md": "ab336e5a8bc73f0aee50342065158bbe5d81b7762d1b9597ccdc3e446c0019a1",
+    "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/raw/301a29465db9ba9b7d62e9c285ded59540e65a6dedb07d4c885db295e74764b8": "301a29465db9ba9b7d62e9c285ded59540e65a6dedb07d4c885db295e74764b8"
+  },
+  "GET_count": 0,
+  "DB_access": false,
+  "production_code_changed": false,
+  "financial_inputs_verified": false,
+  "meaning_review_required": true,
+  "model_adoption": false
+}

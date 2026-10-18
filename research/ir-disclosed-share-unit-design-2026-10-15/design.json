@@ -1,0 +1,722 @@
+{
+  "recorded_at": "2026-10-15T15:19:48.964974+00:00",
+  "status": "design_only_parent_review_required",
+  "recommendation": "Add only explicit share-count unit mappings to existing normalization table; consumer rewrite not needed",
+  "current_gap": "Existing valuation and model-input audit accept explicitly sourced numerical shares, but normalizer cannot produce a shares-unit fact. Manual arbitrary source fields are an available consumer route, not a resolution of this normalization gap.",
+  "proposed_canonical_unit": "shares",
+  "proposed_mapping": [
+    {
+      "raw_unit_label": "shares",
+      "unit": "shares",
+      "multiplier": "1"
+    },
+    {
+      "raw_unit_label": "株",
+      "unit": "shares",
+      "multiplier": "1"
+    },
+    {
+      "raw_unit_label": "千株",
+      "unit": "shares",
+      "multiplier": "1000"
+    },
+    {
+      "raw_unit_label": "万株",
+      "unit": "shares",
+      "multiplier": "10000"
+    },
+    {
+      "raw_unit_label": "百万株",
+      "unit": "shares",
+      "multiplier": "1000000"
+    }
+  ],
+  "mapping_scope": "Exact finite labels only. 株 has current issuer evidence; 万株 has saved author example. 千株/百万株 are explicitly declared decimal scaling proposals, not claims these labels occur in the scoped135A issuer page. No suffix parsing, aliases, English million shares or inferred denomination.",
+  "financial_author_basis": {
+    "path": "research/ir-toyota-author-valuation-readiness-2026-10-15/readiness.json",
+    "sha256": "10e9287e2fd2f3e1f597eb58002432436d87e15663aa259244007576a5e6d4f7",
+    "author": "Aswath Damodaran",
+    "title": "Ups and Downs: Valuing Cyclical and Commodity Companies",
+    "raw_pdf_sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+    "quote": {
+      "id": "TY12",
+      "pdf_page": 17,
+      "quote": "subsidiaries (583 billion Yen), and dividing by the number of shares (3.448 billion) yields\na value per share of 4735 yen/share.",
+      "page_character_start": 2047,
+      "page_character_end": 2175,
+      "offset_basis": "Unicode code points, 0-based end-exclusive, saved pdftotext-layout page",
+      "exact_match": true
+    },
+    "adoption_boundary": "The author divides equity value by number of shares. The shares canonical label and finite multiplier table are project data normalization, not an author financial rule or authorization to adopt issuer issued shares as that denominator."
+  },
+  "evidence": [
+    {
+      "path": "src/ir_agent/disclosed_facts.py",
+      "sha256": "b26f5b612b701f3d58abda681d375ebe4db072614e86f4de83bab21b422a866d",
+      "quote": "Supported canonical units are only JPY, JPY-per-share and ratio.",
+      "start": 4214,
+      "end": 4278,
+      "offset_basis": "UTF-8 decoded original bytes, Unicode codepoints, zero-based half-open, line endings preserved"
+    },
+    {
+      "path": "src/ir_agent/disclosed_facts.py",
+      "sha256": "b26f5b612b701f3d58abda681d375ebe4db072614e86f4de83bab21b422a866d",
+      "quote": "multiplier = _UNIT_MULTIPLIERS.get((raw_unit, unit))\n        if multiplier is None:\n            raise ValueError(\"Unsupported explicit raw-unit/canonical-unit mapping\")",
+      "start": 7804,
+      "end": 7972,
+      "offset_basis": "UTF-8 decoded original bytes, Unicode codepoints, zero-based half-open, line endings preserved"
+    },
+    {
+      "path": "src/ir_agent/model_inputs.py",
+      "sha256": "23aa6ef4146a8bc1fb931f8df81a6914e1d345809f7617d0a37f913a25a6ffe2",
+      "quote": "'meaning_checks': ['unit_not_verified', 'period_not_verified', 'definition_not_verified',\n                                  'authorship_and_forecast_status_not_verified']",
+      "start": 5093,
+      "end": 5263,
+      "offset_basis": "UTF-8 decoded original bytes, Unicode codepoints, zero-based half-open, line endings preserved"
+    },
+    {
+      "path": "src/ir_agent/valuation.py",
+      "sha256": "fa2df871f55935d7d8fdf130595c8606fbbcba15bc42d8e92e76b2b2d46c92ec",
+      "quote": "if inputs[\"shares_outstanding\"] <= 0:\n                raise ValueError(f\"{input_path}.shares_outstanding must be greater than zero\")",
+      "start": 10821,
+      "end": 10953,
+      "offset_basis": "UTF-8 decoded original bytes, Unicode codepoints, zero-based half-open, line endings preserved"
+    },
+    {
+      "path": "docs/explicit-equity-bridge-spec.md",
+      "sha256": "877723bc70071ecb56480bebe2e662cf1364c08d61c8f450cfc41bf0971872cd",
+      "quote": "金額はすべてJPY実単位、株数も実株数。",
+      "start": 1839,
+      "end": 1859,
+      "offset_basis": "UTF-8 decoded original bytes, Unicode codepoints, zero-based half-open, line endings preserved"
+    },
+    {
+      "path": "docs/workflow.md",
+      "sha256": "6415612b8dca5bdd3c9070cdacc94117292968ac1c05dc8cbfe63d4395028ec3",
+      "quote": "対応はJPY、JPY-per-share、ratioで、例えば百万円から円、%から比率へ換算する。欠損・空欄・ダッシュを0で埋めない。",
+      "start": 23111,
+      "end": 23178,
+      "offset_basis": "UTF-8 decoded original bytes, Unicode codepoints, zero-based half-open, line endings preserved"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/135A/library-followup/03.txt",
+      "sha256": "3ecc1fb61cc34cf0abd0cdae3c36fed637e5257b94062cb2ed00f71e3ba52b2b",
+      "quote": "（３）発行済株式数（普通株式）\n  ① 期末発行済株式数 (自己株式を含む)   2027年２月期中間期    10,256,000株 2026年２月期      10,256,000株\n\n  ②   期末自己株式数            2027年２月期中間期          －株 2026年２月期                －株\n\n  ③   期中平均株式数（中間期）       2027年２月期中間期    10,256,000株 2026年２月期中間期   10,150,533株",
+      "start": 3280,
+      "end": 3529,
+      "offset_basis": "UTF-8 decoded original bytes, Unicode codepoints, zero-based half-open, line endings preserved"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/02.visible.txt",
+      "sha256": "01f71124b8560b08217782c3f6b7b5f4061885eb1ded3ad3ad35b1770c9888b1",
+      "quote": "発行済株式数 FY26/2 売上高 FY26/2 営業利益率 FY27/2E 売上高 4,190円 430億円 1,025.6万株 3,278百万円 27.9% 4,823百万円",
+      "start": 380,
+      "end": 469,
+      "offset_basis": "UTF-8 decoded original bytes, Unicode codepoints, zero-based half-open, line endings preserved"
+    }
+  ],
+  "original_issuer_source": {
+    "id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+    "snapshot_sha256": "ab189746f82c7eed23a4ab2d511a83ba4d82d1e93963f2e7172a1b0928feb494",
+    "content_matches_saved_text": true,
+    "raw_path": "research/ir-case-studies-2026-10-15/135A/library-followup/raw/6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+    "raw_sha256": "6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+    "date_scope": "Issuer2027年２月期中間期 period-end count; do not treat as current valuation-date netshares"
+  },
+  "distinct_concepts": [
+    "issued_ordinary_shares_including_treasury",
+    "treasury_shares",
+    "shares_excluding_treasury",
+    "weighted_average_shares_for_period",
+    "diluted_weighted_average_shares",
+    "EPS_denominator",
+    "valuation_share_count_at_valuation_date"
+  ],
+  "forbidden_inferences": [
+    "Do not net treasury shares automatically. Issuer dash－is not0.",
+    "Do not replace period-end count with weighted-average count even when values coincide.",
+    "Do not equate diluted EPS denominator, ordinary share capital, ADR/security ratios or split-adjusted share counts.",
+    "Do not calculate missing shares from netincome/EPS or marketcapitalization/price.",
+    "Do not auto-map unit shares into valuation.inputs.shares_outstanding.",
+    "Do not add global negative/zero/integer-only restrictions to fact normalization. Existing valuation positive-share guard remains local.",
+    "Do not infer economic definitions, source publication timestamp, first-save receipt or PIT from numeric equality."
+  ],
+  "implementation_minimum": {
+    "production": [
+      "src/ir_agent/disclosed_facts.py: finite _UNIT_MULTIPLIERS additions and internal supported-unit docstring only"
+    ],
+    "no_new_framework": true,
+    "unchanged": [
+      "schema_version1",
+      "normalization_version1",
+      "return/limitations/declarations strings",
+      "stable_source_id/canonical_json algorithm",
+      "existing output keys/order/content and metadata",
+      "old source snapshots/IDs and saved bundles",
+      "reproduce_disclosed_fact_source",
+      "model_inputs and valuation numeric consumers",
+      "CLI parsing and DB boundaries"
+    ],
+    "why_no_version_bump": "The normalized fact schema already stores a free unit string and explicit multiplier; adding pairs is additive. Preserve version1 to replay old outputs exactly. Old installations without shares mapping cannot reproduce new shares facts and must hold them, not reinterpret them.",
+    "replay": "Known normalizer replay reuses normalize_disclosed_facts on saved required/optional fields, so the same table handles shares without a parallel implementation. Missing origin/tampered value/wrong kind/source availability remain existing checks.",
+    "identity": "ID depends on normalized content+metadata, not module SHA/table contents. Existing mappings/fields/limitations must stay identical; new shares facts get normal deterministic IDs. Fixednow required for fullbundle comparisons because derived retrieved_at changes with now."
+  },
+  "consumer_boundary": {
+    "model_inputs": "Existing audit_model_inputs accepts nonempty provenance.unit text, numerical value_path and normalized-source replay; outputs unit/period/definition meaning unreviewed and financial_inputs_verifiedfalse. No unit enum expansion needed there.",
+    "valuation": "Explicit9method consumes positive actual shares_outstanding numerical value. Its local guard is not a normalization rule, and matching arithmetic does not establish the chosen denominator.",
+    "direct_source_alternative": "Caller can already reference an explicit numeric field in a saved source; this does not offer a share-unit fact from normalize-facts or a basis to relabel a monetary/ratio fact."
+  },
+  "current_reproduction": {
+    "request": {
+      "source": {
+        "company_id": "jp:135A",
+        "title": "2027年２月期 第２四半期（中間期）決算短信〔日本基準〕(非連結)",
+        "url": "https://contents.xj-storage.jp/xcontents/AS06543/0e4abefd/2c7d/4512/9376/0761580b1ba5/140120260831528808.pdf",
+        "source_type": "public_disclosure",
+        "published_at": null,
+        "retrieved_at": "2026-10-15T04:42:37.094960+00:00",
+        "content": "          2027年２月期      第２四半期（中間期）決算短信〔日本基準〕(非連結)\n                                                           2026年10月14日\n上 場 会 社 名   株式会社ＶＲＡＩＮ Ｓｏｌｕｔｉｏｎ           上場取引所                         東\nコ ー ド 番 号   135A               URL https://vrain.co.jp/\n代   表   者 (役職名) 代表取締役社長           (氏名) 南塲 勇佑\n問合せ先責任者 (役職名) 取締役 コーポレート部部長 (氏名) 菊地 佳宏                 (TEL) 03-6280-4915\n半期報告書提出予定日       2026年10月14日 配当支払開始予定日              －\n決算補足説明資料作成の有無           ：有\n決算説明会開催の有無              ：有\n                                                                                       (百万円未満切捨て)\n１．2027年２月期第２四半期（中間期）の業績（2026年３月１日～2026年８月31日）\n（１）経営成績(累計)                          (％表示は、対前年中間期増減率)\n                       売上高                   営業利益                経常利益                      中間純利益\n                      百万円           ％        百万円           ％      百万円             ％            百万円        ％\n 2027年２月期中間期          1,884      80.0           409    328.1          409      327.4            267    336.2\n 2026年２月期中間期          1,047      29.5            95   △49.7            95     △49.5              61   △51.4\n                                            潜在株式調整後\n                      １株当たり\n                                             １株当たり\n                      中間純利益\n                                             中間純利益\n                                円   銭                  円   銭\n 2027年２月期中間期                    26.06                  25.94\n 2026年２月期中間期                     6.04                   6.00\n\n\n（２）財政状態\n                       総資産                      純資産            自己資本比率\n                                百万円                    百万円                        ％\n  2027年２月期中間期                   2,850                   2,353               82.6\n  2026年２月期                      3,215                   2,086               64.9\n(参考) 自己資本 2027年２月期中間期           2,353百万円              2026年２月期        2,086百万円\n\n\n\n２．配当の状況\n                                                年間配当金\n\n                 第１四半期末 第２四半期末 第３四半期末                           期末                合計\n                       円    銭           円   銭          円   銭          円   銭            円   銭\n   2026年２月期        －     0.00                              －           0.00             0.00\n   2027年２月期        －     0.00\n   2027年２月期(予想)                                            －           0.00             0.00\n(注) 直近に公表されている配当予想からの修正の有無 ： 無\n\n\n３．2027年２月期の業績予想（2026年３月１日～2027年２月28日）\n                                                                              (％表示は、対前期増減率)\n                                                                                    １株当たり\n                売上高                 営業利益               経常利益                 当期純利益\n                                                                                    当期純利益\n                百万円     ％           百万円         ％      百万円       ％            百万円          ％          円   銭\n     通期      4,823 47.1 1,449 58.5                     1,449   58.9            972     49.2           94.85\n(注) 直近に公表されている業績予想からの修正の有無 ： 無\n\f※ 注記事項\n（１）中間財務諸表の作成に特有の会計処理の適用                ： 無\n\n（２）会計方針の変更・会計上の見積りの変更・修正再表示\n  ① 会計基準等の改正に伴う会計方針の変更                 ： 無\n  ②   ①以外の会計方針の変更                      ： 無\n  ③   会計上の見積りの変更                       ： 無\n  ④   修正再表示                            ： 無\n\n（３）発行済株式数（普通株式）\n  ① 期末発行済株式数 (自己株式を含む)   2027年２月期中間期    10,256,000株 2026年２月期      10,256,000株\n\n  ②   期末自己株式数            2027年２月期中間期          －株 2026年２月期                －株\n\n  ③   期中平均株式数（中間期）       2027年２月期中間期    10,256,000株 2026年２月期中間期   10,150,533株\n\n\n ※   第２四半期（中間期）決算短信は公認会計士又は監査法人のレビューの対象外です\n ※   業績予想の適切な利用に関する説明、その他特記事項\n （将来に関する記述等についてのご注意）\n  本資料に記載されている業績見通し等の将来に関する記述は、当社が現在入手している情報及び合理的であると判\n 断する一定の前提に基づいており、その達成を当社として約束するものではありません。また、実際の業績等は様々\n な要因により大きく異なる可能性があります。\n\f                              株式会社ＶＲＡＩＮ Ｓｏｌｕｔｉｏｎ(135A)\n                                2027年２月期 第２四半期(中間期)決算短信\n\n\n○添付資料の目次\n\n  １．当四半期決算に関する定性的情報 ……………………………………………………………………………２\n   （１）経営成績に関する説明 ……………………………………………………………………………………２\n   （２）財政状態に関する説明 ……………………………………………………………………………………２\n   （３）業績予想などの将来予測情報に関する説明 ……………………………………………………………３\n  ２．中間財務諸表及び主な注記 ……………………………………………………………………………………４\n   （１）中間貸借対照表 ……………………………………………………………………………………………４\n   （２）中間損益計算書 ……………………………………………………………………………………………５\n   （３）中間キャッシュ・フロー計算書 …………………………………………………………………………６\n   （４）中間財務諸表に関する注記事項 …………………………………………………………………………７\n    （継続企業の前提に関する注記） ……………………………………………………………………………７\n    （株主資本の金額に著しい変動があった場合の注記） ……………………………………………………７\n    （中間キャッシュ・フロー計算書関係） ……………………………………………………………………７\n    （セグメント情報等） …………………………………………………………………………………………７\n    （重要な後発事象） ……………………………………………………………………………………………７\n\n\n\n\n                         1\n\f                                   株式会社ＶＲＡＩＮ Ｓｏｌｕｔｉｏｎ(135A)\n                                     2027年２月期 第２四半期(中間期)決算短信\n\n\n１．当四半期決算に関する定性的情報\n（１）経営成績に関する説明\n  当社は、「モノづくりのあり方を変え、世界を変えていく」ことをミッションに掲げ、製造業界向けに、ＡＩ技\n 術及びＩｏＴ技術等の新しい技術を活用したサービスを提供しております。\n  当中間会計期間におけるわが国経済は、ＡＩ及び半導体関連産業における旺盛な需要や、企業による省力化・デ\n ジタル化投資の継続を背景に、生産活動や設備投資を中心に緩やかな持ち直しの動きが見られました。一方で、原\n 材料・エネルギー価格の高止まりや人手不足に伴う人件費・物流コストの増加、物価高の継続による消費者の節約\n 志向に加え、日本銀行による金融政策の正常化に伴う金利上昇の影響、為替相場の変動、並びに海外景気の下振れ\n 懸念や地政学的リスクなど、先行きにつきましては依然として不透明な状況で推移しております。\n  当社がサービスを提供する製造業界においては、原材料価格や人件費の高騰等の利益圧迫により景況感の悪化が\n 見られるも、企業の設備投資意欲は底堅く、少子高齢化や人口減少を背景とした将来の労働生産性の確保に向けて\n 既存システムの刷新やＤＸの推進によるＩＴ投資の動きが見られます。\n  このような経営環境の中、当社は、製造業の品質検査における労働集約型の作業や従来の製品に代わる手段とし\n て、ＡＩを活用した画像検査システム「Phoenix Vision/Eye」の提供及び製造業の生産工程における自動化を推進\n するＤＸコンサルティングサービスを提供しております。\n  当中間会計期間においては、前期末の受注残の納品に注力しつつ、展示会への出展によるリード獲得の強化、金\n 沢営業所及び名古屋工場の開設、積極的な採用活動などを通じ、成長戦略に基づき社内基盤の拡充と営業体制の強\n 化を図ってまいりました。また、大手半導体セラミックスメーカーの国内拠点における製造プロセスのデジタル化、\n 及び製品検査のさらなる高精度化を目指すプロジェクトにおいて、当社のＡＩ外観・３Ｄ形状測定検査システムが\n 採用されるなど、事業は順調に拡大しております。\n  この結果、累計取引社数が394社となり、当中間会計期間においては、売上高1,884百万円（前年同期比80.0％\n 増）、営業利益409百万円（前年同期比328.1％増）、経常利益409百万円（前年同期比327.4％増）、中間純利益267\n 百万円（前年同期比336.2％増）となりました。当中間会計期間末の受注残高は、1,308百万円となります。\n  なお、当社は、製造業ＤＸ事業の単一セグメントであるため、セグメント毎の記載はしておりません。\n\n\n（２）財政状態に関する説明\n ①資産、負債及び純資産の状況\n （資産）\n  当中間会計期間末における総資産につきましては、前事業年度末に比べ365百万円減少し、2,850百万円となりま\n した。これは主に、現金及び預金が288百万円減少したこと等によるものであります。\n\n\n （負債）\n  当中間会計期間末における負債合計につきましては、前事業年度末に比べ632百万円減少し、496百万円となりま\n した。これは主に、短期借入金が400百万円、未払法人税等が83百万円それぞれ減少したこと等によるものでありま\n す。\n\n\n （純資産）\n  当中間会計期間末における純資産合計につきましては、前事業年度末に比べ、267百万円増加し、2,353百万円と\n なりました。これは主に、中間純利益を267百万円計上したことによるものであります。\n\n\n ②キャッシュ・フローの状況\n  当中間会計期間末における現金及び現金同等物（以下「資金」という）の残高は、前事業年度末に比べ288百万円\n 減少した結果、138百万円となりました。各キャッシュ・フローの状況とその要因は以下のとおりであります。\n\n\n （営業活動によるキャッシュ・フロー）\n  営業活動によるキャッシュ・フローは223百万円の収入（前年同期は468百万円の支出）となりました。これは主\n に、税引前中間純利益409百万円の計上、法人税等の支払額202百万円を支出したこと等によるものであります。\n\n\n\n\n                              2\n\f                                    株式会社ＶＲＡＩＮ Ｓｏｌｕｔｉｏｎ(135A)\n                                      2027年２月期 第２四半期(中間期)決算短信\n\n\n （投資活動によるキャッシュ・フロー)\n  投資活動によるキャッシュ・フローは111百万円の支出（前年同期は101百万円の支出）となりました。これは主\n に、有形固定資産の取得による支出100百万円等によるものであります。\n\n\n （財務活動によるキャッシュ・フロー)\n  財務活動によるキャッシュ・フローは400百万円の支出（前年同期は171百万円の収入）となりました。これは主\n に、短期借入金の返済による支出400百万円等によるものであります。\n\n\n（３）業績予想などの将来予測情報に関する説明\n 業績予想につきましては、2026年４月14日付「2026年２月期   決算短信」で公表いたしました通期の業績予想に変\n更はありません。業績予想値は、現在入手可能な情報に基づき作成したものであり、実際の業績等は様々な要因によ\nり異なる可能性があります。\n\n\n\n\n                             3\n\f                          株式会社ＶＲＡＩＮ Ｓｏｌｕｔｉｏｎ(135A)\n                            2027年２月期 第２四半期(中間期)決算短信\n\n\n２．中間財務諸表及び主な注記\n（１）中間貸借対照表\n                                               (単位：百万円)\n                        前事業年度              当中間会計期間\n                     (2026年２月28日)         (2026年８月31日)\n資産の部\n 流動資産\n   現金及び預金                         427                  138\n   売掛金及び契約資産                    1,957                1,802\n   商品及び製品                          17                   20\n   仕掛品                             10                    7\n   原材料                            179                  225\n   前払費用                            82                  140\n   その他                             72                   65\n   流動資産合計                       2,747                2,402\n 固定資産\n   有形固定資産                         130                  207\n   無形固定資産                           2                    1\n   投資その他の資産                       335                  239\n   固定資産合計                         468                  448\n 資産合計                           3,215                2,850\n負債の部\n 流動負債\n   買掛金                            160                     75\n   短期借入金                          400                     －\n   未払金                             61                     45\n   未払費用                           221                    189\n   契約負債                             0                     19\n   未払法人税等                         202                    118\n   未払消費税等                          39                      6\n   その他                             42                     41\n   流動負債合計                       1,129                    496\n 負債合計                           1,129                    496\n純資産の部\n 株主資本\n   資本金                               16                   16\n   資本剰余金\n     資本準備金                          294                  294\n     その他資本剰余金                       288                  288\n     資本剰余金合計                        583                  583\n   利益剰余金\n     その他利益剰余金\n      繰越利益剰余金                   1,486                1,753\n     利益剰余金合計                    1,486                1,753\n   株主資本合計                       2,086                2,353\n 純資産合計                          2,086                2,353\n負債純資産合計                         3,215                2,850\n\n\n\n\n                 4\n\f                     株式会社ＶＲＡＩＮ Ｓｏｌｕｔｉｏｎ(135A)\n                       2027年２月期 第２四半期(中間期)決算短信\n\n\n（２）中間損益計算書\n                                         (単位：百万円)\n                 前中間会計期間             当中間会計期間\n               (自 2025年３月１日        (自 2026年３月１日\n                至 2025年８月31日)       至 2026年８月31日)\n売上高                        1,047               1,884\n売上原価                         205                 448\n売上総利益                        841               1,436\n販売費及び一般管理費                   746               1,026\n営業利益                          95                 409\n営業外収益\n 受取利息                          0                   0\n 雑収入                           0                   0\n 為替差益                         －                    0\n 営業外収益合計                       0                   0\n営業外費用\n 支払利息                          0                   0\n 為替差損                          0                  －\n 営業外費用合計                       0                   0\n経常利益                          95                 409\n税引前中間純利益                      95                 409\n法人税、住民税及び事業税                  36                 118\n法人税等調整額                      △2                   23\n法人税等合計                        34                 142\n中間純利益                         61                 267\n\n\n\n\n               5\n\f                              株式会社ＶＲＡＩＮ Ｓｏｌｕｔｉｏｎ(135A)\n                                2027年２月期 第２四半期(中間期)決算短信\n\n\n（３）中間キャッシュ・フロー計算書\n                                                   (単位：百万円)\n                           前中間会計期間             当中間会計期間\n                         (自 2025年３月１日        (自 2026年３月１日\n                          至 2025年８月31日)       至 2026年８月31日)\n営業活動によるキャッシュ・フロー\n 税引前中間純利益                               95               409\n 減価償却費                                  28                30\n 受取利息及び受取配当金                             0                 0\n 支払利息                                    0                 0\n 売上債権及び契約資産の増減額（△は増加）                △418                154\n 棚卸資産の増減額（△は増加）                       △39               △46\n 前払費用の増減額（△は増加）                       △31                 16\n 仕入債務の増減額（△は減少）                         13              △84\n 未払金の増減額（△は減少）                        △36               △23\n 未払費用の増減額（△は減少）                         60              △32\n 契約負債の増減額（△は減少）                          4                19\n 未払消費税等の増減額（△は減少）                     △40               △32\n その他                                   △3                 14\n 小計                                  △365                425\n 利息及び配当金の受取額                             0                 0\n 利息の支払額                                △0                △0\n 法人税等の支払額                            △103              △202\n 営業活動によるキャッシュ・フロー                    △468                223\n投資活動によるキャッシュ・フロー\n 有形固定資産の取得による支出                       △71              △100\n 敷金の差入による支出                            △9               △11\n 資産除去債務の履行による支出                       △21                 -\n その他                                    0                 0\n 投資活動によるキャッシュ・フロー                    △101              △111\n財務活動によるキャッシュ・フロー\n 短期借入金の純増減額（△は減少）                     170              △400\n 長期借入金の返済による支出                        △5                  -\n 新株予約権の行使による株式の発行による収入                  6                 -\n 財務活動によるキャッシュ・フロー                     171              △400\n現金及び現金同等物の増減額（△は減少）                  △399              △288\n現金及び現金同等物の期首残高                        488               427\n現金及び現金同等物の中間期末残高                       89               138\n\n\n\n\n                         6\n\f                                  株式会社ＶＲＡＩＮ Ｓｏｌｕｔｉｏｎ(135A)\n                                    2027年２月期 第２四半期(中間期)決算短信\n\n\n（４）中間財務諸表に関する注記事項\n  （継続企業の前提に関する注記）\n   該当事項はありません。\n\n\n  （株主資本の金額に著しい変動があった場合の注記）\n   該当事項はありません。\n\n\n  （中間キャッシュ・フロー計算書関係）\n   ※ 現金及び現金同等物の中間期末残高と中間貸借対照表に掲記されている科目の金額との関係は、次のとおり\n     であります。\n\n                          前中間会計期間              当中間会計期間\n                        (自 2025年３月１日         (自 2026年３月１日\n                         至 2025年８月31日)        至 2026年８月31日)\n   現金及び預金                        89 百万円             138 百万円\n   現金及び現金同等物                     89 百万円             138 百万円\n\n\n  （セグメント情報等）\n  当社は、製造業ＤＸ事業の単一のセグメントであるため、記載を省略しております。\n\n\n  （重要な後発事象）\n   該当事項はありません。\n\n\n\n\n                             7\n\f",
+        "requires_research": true,
+        "metadata": {
+          "provider": "finite_issuer_library_followup",
+          "document_kind": "issuer_interim_financial_statement",
+          "capture_source_id": "vrain-loader-03",
+          "saved_case_directory": "research/ir-case-studies-2026-10-15",
+          "original_raw_file": "135A/library-followup/raw/6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+          "original_raw_sha256": "6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+          "original_raw_byte_count": 436197,
+          "original_transport_snapshot": "135A/library-followup/03.json",
+          "original_transport_snapshot_sha256": "04a2fa967b8e0acef2629141247a8f3a2e69095ac7bba95782790bde4febca38",
+          "original_manifest": {
+            "document": "135A/library-followup/manifest.json",
+            "path": [
+              2
+            ]
+          },
+          "extraction": {
+            "kind": "pdf_text",
+            "saved_file": "135A/library-followup/03.txt",
+            "sha256": "3ecc1fb61cc34cf0abd0cdae3c36fed637e5257b94062cb2ed00f71e3ba52b2b",
+            "method": "pdftotext -layout; form-feed separates one-based PDF pages",
+            "line_endings_preserved_in_saved_UTF8_bytes": true,
+            "page_separator": "form-feed; one-based PDF page"
+          },
+          "publication_date": "2026-10-14",
+          "publication_precision": "day",
+          "publication_time_known": false,
+          "financial_inputs_verified": false,
+          "financial_values_automatically_adopted": false,
+          "financial_statement_body_obtained": true,
+          "current_outreach_eligibility_verified": false,
+          "authority_chain": [
+            "../04.json raw literal loader reference",
+            "request-derivation.json static default parameters and caller-defined transport callback",
+            "document-selection.json exact PDF-GENERAL URL"
+          ],
+          "javascript_executed": false,
+          "accounting_basis": "日本基準",
+          "reporting_scope": "非連結",
+          "reported_period_start": "2026-03-01",
+          "reported_period_end": "2026-08-31",
+          "company_forecast_period_start": "2026-03-01",
+          "company_forecast_period_end": "2027-02-28",
+          "publication_note": "PDF cover is dated 2026年10月14日; index publishDate 2026/10/14 16:15:00 has no confirmed timezone, so published_at remains null"
+        },
+        "id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb"
+      },
+      "review": {
+        "author": "design-only-extractor",
+        "recorded_at": "2026-10-15T15:19:48.964846+00:00",
+        "rationale": "Design-only unsupported share-unit reproduction; no candidate bundle adopted"
+      },
+      "facts": [
+        {
+          "id": "issued-shares-including-treasury-candidate",
+          "concept": "issued_ordinary_shares_including_treasury",
+          "kind": "reported_fact",
+          "raw_value": "10,256,000",
+          "raw_unit_label": "株",
+          "unit": "shares",
+          "raw_period_label": "2027年２月期中間期",
+          "period": {
+            "label": "2027年２月期中間期",
+            "measurement": "period_end_as_issuer_label"
+          },
+          "basis_quote": "（３）発行済株式数（普通株式）\n  ① 期末発行済株式数 (自己株式を含む)   2027年２月期中間期    10,256,000株 2026年２月期      10,256,000株\n\n  ②   期末自己株式数            2027年２月期中間期          －株 2026年２月期                －株\n\n  ③   期中平均株式数（中間期）       2027年２月期中間期    10,256,000株 2026年２月期中間期   10,150,533株",
+          "definition": "期末発行済株式数 (自己株式を含む)。自己株式控除後、期中平均、希薄化後または評価分母の意味を自動付与しない。",
+          "scope": {
+            "company_id": "jp:135A",
+            "security_class": "普通株式",
+            "treasury_included": true
+          },
+          "location": {
+            "pdf_page": 1
+          }
+        }
+      ]
+    },
+    "outcome": "ValueError",
+    "reason": "Unsupported explicit raw-unit/canonical-unit mapping",
+    "production_modified": false,
+    "no_new_bundle_produced": true
+  },
+  "preimplementation_compatibility": {
+    "baseline_path": "research/ir-oku-yen-normalization-2026-10-15/baseline.json",
+    "baseline_sha256": "96a28d8a3f874ea0b54c3ee7ca98ad95dda77b5ef49e1a3db82ee9567e506e3c",
+    "synthetic": true,
+    "case_count": 52,
+    "all_full_bundle_hashes_and_IDs_match": true,
+    "cases": [
+      {
+        "raw_unit_label": "%",
+        "unit": "ratio",
+        "kind": "external_estimate",
+        "derived_source_id": "disclosed-facts:6335b98b2cde74ccabcc6ef0f7af0c1cac743283e0760099bf5619c15e71ed0c",
+        "bundle_canonical_sha256": "a8487ef78d898e77d9694f18f06ddc17b43745064bb835aedc8f732588b6b25b",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "%",
+        "unit": "ratio",
+        "kind": "general_explanation",
+        "derived_source_id": "disclosed-facts:93fc0a7aa6644f157f3ffc157078a904df6e0bb13b347f3d0e7d99a4996700df",
+        "bundle_canonical_sha256": "0437fba98f138ca499120cf1c28a5e275e3ef9bdf753e4671a496ce87494f982",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "%",
+        "unit": "ratio",
+        "kind": "issuer_guidance",
+        "derived_source_id": "disclosed-facts:476db1c0b37811982e7e37b182d7af38b810e0d394aac1bfa1ebf8fa71fbb382",
+        "bundle_canonical_sha256": "9ed56ba5a258ed37d20dd3e9496a02576f0bf26ec5efc35f0faffb97e6d9b1ec",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "%",
+        "unit": "ratio",
+        "kind": "reported_fact",
+        "derived_source_id": "disclosed-facts:e527353e26560dee289f527ada06bdbd35804caa39f0b201013a9ebc86fe2fbc",
+        "bundle_canonical_sha256": "56ed3258b814c0e7f6d93e523017f78f8ec71a03aefaf065a0d431ad0772bd8a",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "JPY",
+        "unit": "JPY",
+        "kind": "external_estimate",
+        "derived_source_id": "disclosed-facts:2be747342dfe101287aee5006c89e7ec56e4d37bfe27027a0ca9b37ad20c06f9",
+        "bundle_canonical_sha256": "3491df91ab5724b34624d8dad71ad0f1dfa6153fb01996ef9deee8343a98477b",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "JPY",
+        "unit": "JPY",
+        "kind": "general_explanation",
+        "derived_source_id": "disclosed-facts:2811ac1eefe3fb7aa77dda47323593b9c36defd58d4d5b8d7fd3cc207b531c05",
+        "bundle_canonical_sha256": "3ea1fe2c06f1fccd39188b6e96b3adee98e479f706ca2f5dee419286199ea3fb",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "JPY",
+        "unit": "JPY",
+        "kind": "issuer_guidance",
+        "derived_source_id": "disclosed-facts:e256387ba49491ef640e27d634532c2ace070e2353ba68644f3263f569e622a9",
+        "bundle_canonical_sha256": "f1e068a2ea7b53657c1452a33ebb22a30f56c14c303338b9b7b446896c8e37ea",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "JPY",
+        "unit": "JPY",
+        "kind": "reported_fact",
+        "derived_source_id": "disclosed-facts:82c068989c73c5c25e7dafdba74a18c543f60402e6aab7b3d81f7355ee2097c2",
+        "bundle_canonical_sha256": "d1bbdabc1c90c79ce812ccd688660dcdbe9ae63e94755a60100753f7798ea71b",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "JPY-per-share",
+        "unit": "JPY-per-share",
+        "kind": "external_estimate",
+        "derived_source_id": "disclosed-facts:ec8649ab890f6568c253d87151de2ba42421ba89acc693c018909e982978b39d",
+        "bundle_canonical_sha256": "cb99d6f0783e2b35190d5e84e2d6b13120786c375577f203662db05de05374d6",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "JPY-per-share",
+        "unit": "JPY-per-share",
+        "kind": "general_explanation",
+        "derived_source_id": "disclosed-facts:fbc21737a5dd7290301af3c042960859e7a42d1d5dfdb799e2e1cdb5f195a9d4",
+        "bundle_canonical_sha256": "ef43ee6d5fc3f73c3cff71daec8ced56900e1aa4b5d3324ddc5a781ed45026d5",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "JPY-per-share",
+        "unit": "JPY-per-share",
+        "kind": "issuer_guidance",
+        "derived_source_id": "disclosed-facts:76fc8f3529428d1a4af060c1d3e3e2539ea8132cdb856a579b5452a2554cec0c",
+        "bundle_canonical_sha256": "2283e5bf2862e372d90d67aa366bff2ae195eac022e8b5434377031c01e27690",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "JPY-per-share",
+        "unit": "JPY-per-share",
+        "kind": "reported_fact",
+        "derived_source_id": "disclosed-facts:2debc03c68b97f77ba619b9f202e981d147c0d05c96715bd233feeddfdf8ef00",
+        "bundle_canonical_sha256": "3e8cd265d6e0d80b49947ba45c0db69a64b5e7041e46e15afb3988a7ef504e0e",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "JPY/share",
+        "unit": "JPY-per-share",
+        "kind": "external_estimate",
+        "derived_source_id": "disclosed-facts:11b0276fb60af60abbf824b3068367617e6d5f5c532ac3d2295612f5ee00a08e",
+        "bundle_canonical_sha256": "70b17b910b110f8309ef97aeb3672c20d13843631f464d02295a38a6469e44c6",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "JPY/share",
+        "unit": "JPY-per-share",
+        "kind": "general_explanation",
+        "derived_source_id": "disclosed-facts:cb7d6c53b20ef62d69029fea09f93431069fc083e44623e7f38834b5b28d3373",
+        "bundle_canonical_sha256": "7421d3d24b221227695ce28a4565fab70a4d557da788846d71bf940c63b1a21f",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "JPY/share",
+        "unit": "JPY-per-share",
+        "kind": "issuer_guidance",
+        "derived_source_id": "disclosed-facts:ad4198a218977c63a2714ce860c6330b6cd26a7b8c617644f107fe289cec48a7",
+        "bundle_canonical_sha256": "0564d5f1770c749b7abbd524b95e371350a20ec0e17c30437198a812d0afbb2f",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "JPY/share",
+        "unit": "JPY-per-share",
+        "kind": "reported_fact",
+        "derived_source_id": "disclosed-facts:e8acee4d479f6a53ecfda85cc7d260cc6ce0ff1446b7b97627123e5ef65e3e5f",
+        "bundle_canonical_sha256": "74e6eee595c884f8e5c6e84e231984a5b1349f7c758ad5afa74ad79788e4e018",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "percent",
+        "unit": "ratio",
+        "kind": "external_estimate",
+        "derived_source_id": "disclosed-facts:02c815bddaa48aa043ad220cac0c210c9803118a831c15d3b339f5ab2ca91682",
+        "bundle_canonical_sha256": "da99616d8c6f36e7603503cde12f3c1e3c9c7a41cc859dd76b5766075b3ae398",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "percent",
+        "unit": "ratio",
+        "kind": "general_explanation",
+        "derived_source_id": "disclosed-facts:dd652df9e62a8ed60422e7a69c37d10da887d480eb5d5733fd4e65248f257277",
+        "bundle_canonical_sha256": "e31fa4d228d47fc113b3b4d05bbe2fb5202fc9cd8d49a1dd138fa96adc8f40b6",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "percent",
+        "unit": "ratio",
+        "kind": "issuer_guidance",
+        "derived_source_id": "disclosed-facts:d24e12cbd928f0e155cd79eb222bf5d51729ee199c053952d752f836120b40a4",
+        "bundle_canonical_sha256": "607d15ebaefd751d387de2f0821e24cee4d450ba738b97a630489742a086711a",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "percent",
+        "unit": "ratio",
+        "kind": "reported_fact",
+        "derived_source_id": "disclosed-facts:65346c122e518510c41561a34858d8dfd06326b31b16f506171d149a3c31e152",
+        "bundle_canonical_sha256": "473d8a181d3449f8dc8ada10658224b3484b1a71ae7bcb14bab519003efc8ffd",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "ratio",
+        "unit": "ratio",
+        "kind": "external_estimate",
+        "derived_source_id": "disclosed-facts:9ac367493d2a24f0586aae03cbbe79f3bc9680699d24ce1916913e8b08672d2d",
+        "bundle_canonical_sha256": "e1a4d652973e209b76e9eb4bf90b50c2efcadf6bf6f4a10150cef71a7f8ed046",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "ratio",
+        "unit": "ratio",
+        "kind": "general_explanation",
+        "derived_source_id": "disclosed-facts:63f05ed3391dcadf9201d869d18566c4cd9a585f0c1ebfb3de9075c765fe50f7",
+        "bundle_canonical_sha256": "ccad5fd0377eed51efd3e296ad296d089548cd979b41e618f859af2e919e902d",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "ratio",
+        "unit": "ratio",
+        "kind": "issuer_guidance",
+        "derived_source_id": "disclosed-facts:faf6531fba77909df2c32289a2ff429e98bf05762f7c3110a3b4cc98649725aa",
+        "bundle_canonical_sha256": "64a268e675af219dcdd5796083f86e286bb3de0803f2cabe63aea703b927b22b",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "ratio",
+        "unit": "ratio",
+        "kind": "reported_fact",
+        "derived_source_id": "disclosed-facts:4bd7e711c4efac47dbf5d27e063197887790a5e74991baa9830d95e7bb9975dc",
+        "bundle_canonical_sha256": "8432616a37ac90786a3f541904f3aa2c528b99054ec7721bbda80ab8f6efa7cc",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "円",
+        "unit": "JPY",
+        "kind": "external_estimate",
+        "derived_source_id": "disclosed-facts:357b6580ed041cf80fd0c1aff74314555923d457b943a7c6c383cae3c53d692b",
+        "bundle_canonical_sha256": "9fc5b5425a8bcafa8779ff37342d580a1d8e1cdeab35aeb50c89e4023ee0cf66",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "円",
+        "unit": "JPY",
+        "kind": "general_explanation",
+        "derived_source_id": "disclosed-facts:834936f3a1876783c9ff363b413f1d3c160e8449f8f942c92aa1ae8da5814c87",
+        "bundle_canonical_sha256": "e0cede3c0e014fdfa397e8855968d3886cb592e625a1c3b5c8bf8e434213a080",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "円",
+        "unit": "JPY",
+        "kind": "issuer_guidance",
+        "derived_source_id": "disclosed-facts:1df57a1059111717fe3cd9f1c636331f58962d62cd2152519035f3b0c7bee1f7",
+        "bundle_canonical_sha256": "378c04b84a8d7f9e428878e60ce81c2a5639ecf0c0a7b0e19faef7b864da4dc1",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "円",
+        "unit": "JPY",
+        "kind": "reported_fact",
+        "derived_source_id": "disclosed-facts:8fd91396c34347375a1e735be1a9a480f6e57d4b72d53aadacd45cd73b3ecff1",
+        "bundle_canonical_sha256": "24aeaee2f82a92ef3e65479d2bbaf9f2974b4cec7b9999c1e87bc5ab24ad0d4c",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "円",
+        "unit": "JPY-per-share",
+        "kind": "external_estimate",
+        "derived_source_id": "disclosed-facts:e58ca6039f2d094fd6e266d39c776852ddfab2daab8a0ea926d68679afc54495",
+        "bundle_canonical_sha256": "ce8182fa749b677b641dd9cc52c4e063735651eff5dd6f597a15f3b344ccd0ae",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "円",
+        "unit": "JPY-per-share",
+        "kind": "general_explanation",
+        "derived_source_id": "disclosed-facts:c802445c1d2cb2c458cbc50fcf7dacd5352c2c3089c605abe70643717380bf7d",
+        "bundle_canonical_sha256": "c36afacbcf0a8b8be60dc483a4bb7bb26abdd45426b8c4fa173a2629d832ff4f",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "円",
+        "unit": "JPY-per-share",
+        "kind": "issuer_guidance",
+        "derived_source_id": "disclosed-facts:1f4ba407f66888be3555bb7a34b857f0831aa508ad18c1831de14de34710f4e6",
+        "bundle_canonical_sha256": "fc7ba685584b0b926f5701716dec72a87718c9123a26bf0196b7f089c9d33296",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "円",
+        "unit": "JPY-per-share",
+        "kind": "reported_fact",
+        "derived_source_id": "disclosed-facts:fe1d63584e3c56d74a6be6f25671c43f61bb291ebcd5f27f1fd2e382444eaba6",
+        "bundle_canonical_sha256": "2d8800327e94b3730104f02dc2a5d07b405faac564b6c22896eb7ae4e86e707a",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "円/株",
+        "unit": "JPY-per-share",
+        "kind": "external_estimate",
+        "derived_source_id": "disclosed-facts:1112de062de7749f1e4c352803f545bcd35c213a74b9ab1433ae669a4a811f50",
+        "bundle_canonical_sha256": "c689e67877deb674782588cbe7e5f2fa038b443ad75067a681c81f155684b3a0",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "円/株",
+        "unit": "JPY-per-share",
+        "kind": "general_explanation",
+        "derived_source_id": "disclosed-facts:161ed9592080e63f2e36781a59bbb0a8a469668e78f3c1a8384481656dd59363",
+        "bundle_canonical_sha256": "10bdc4e35981a4e205d15ab70b98623e1b65f1bcbd9ffa47cd5df395980c16ec",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "円/株",
+        "unit": "JPY-per-share",
+        "kind": "issuer_guidance",
+        "derived_source_id": "disclosed-facts:a204953f153cb5af980a269b28c32f2fcdbd4c4c451910010175eb5292a3d155",
+        "bundle_canonical_sha256": "3f1a111f6f0bf1eb9b13ebbaadf1a229c8e6ea90260091f91f61b452e93dafb6",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "円/株",
+        "unit": "JPY-per-share",
+        "kind": "reported_fact",
+        "derived_source_id": "disclosed-facts:ca63b3d506bc71a5d7114c5bd2014f77cddb5e5a24bc6c9617e7821784084851",
+        "bundle_canonical_sha256": "39f3492d37d19a2332a0506e6c423e1ca09cc7f98814caf1414f03b4076d852c",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "円／株",
+        "unit": "JPY-per-share",
+        "kind": "external_estimate",
+        "derived_source_id": "disclosed-facts:de01bcbeea54015fbca697270a7fa8808ca007098e254c90dd3a0a08e34b31be",
+        "bundle_canonical_sha256": "d8ba03caf7f33c447464f8710858c786fc369ee92fd1ae7ec6950471aa033d23",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "円／株",
+        "unit": "JPY-per-share",
+        "kind": "general_explanation",
+        "derived_source_id": "disclosed-facts:e938abb017fb1398bf28a10c6c386e47c019ce669a8d2413b3384da071005c7b",
+        "bundle_canonical_sha256": "308c7db258f1c276bb601aa1444df5ffd046fec41d21be1e6c23ed0858a55778",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "円／株",
+        "unit": "JPY-per-share",
+        "kind": "issuer_guidance",
+        "derived_source_id": "disclosed-facts:d2bca369d86dd4a9de4cdc8e76adcf4f21e9b5aa790296f0f45ccc740f71fb0a",
+        "bundle_canonical_sha256": "a61ba9adfdbc7a6baf93f3e95469caf22433898f1dd093404fed5844a3baa42a",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "円／株",
+        "unit": "JPY-per-share",
+        "kind": "reported_fact",
+        "derived_source_id": "disclosed-facts:98cbda3ffad112f53d8bb8638b4e2102ce777114457dac30e7e6c20279a162f3",
+        "bundle_canonical_sha256": "1a924cbcb754e5b26530d7631b7a0b545a8576b46f0b9c49c5d903561c722224",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "千円",
+        "unit": "JPY",
+        "kind": "external_estimate",
+        "derived_source_id": "disclosed-facts:9746a858fd6bb134a354e0dc28faad35aec67bc5a72c3d8e4c54d9bfe34da51d",
+        "bundle_canonical_sha256": "1226c51a5a6996022335a22fb2a6547bb140d377f2a4b98a79ddfb6f613072e9",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "千円",
+        "unit": "JPY",
+        "kind": "general_explanation",
+        "derived_source_id": "disclosed-facts:9fcc08f7c4605c792f642710267db42752ef058e2dc7e0f86eb609efa00c7b21",
+        "bundle_canonical_sha256": "71896e83e6c648166a48371091af8d4f9b66bdd3508f872d2ccd9d278a3e5961",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "千円",
+        "unit": "JPY",
+        "kind": "issuer_guidance",
+        "derived_source_id": "disclosed-facts:afbc13aee4bf863723de35813f6db4efbebd8b5e1c97859e00af03270b71d84c",
+        "bundle_canonical_sha256": "7b85c9c6f9aedac8e6a4309f8785c273889ddf439c353b4d39cd09662f71b0ca",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "千円",
+        "unit": "JPY",
+        "kind": "reported_fact",
+        "derived_source_id": "disclosed-facts:7cc0bb3924a2d08a080a767feac3db5c3b70156dde43447d850460d4f262a9e7",
+        "bundle_canonical_sha256": "83cdfef201686021bde75cda17873bf9c0d199ee3ab47668be5ca154fe1a1c9b",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "百万円",
+        "unit": "JPY",
+        "kind": "external_estimate",
+        "derived_source_id": "disclosed-facts:9826e4b9effd4ae5f9b6fca51feceecfc7bff6cf05f80b129e4c91f2eb238279",
+        "bundle_canonical_sha256": "d706d76839b290425e7e27ebcc1a232305382df236cba19e202d51db15c64d91",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "百万円",
+        "unit": "JPY",
+        "kind": "general_explanation",
+        "derived_source_id": "disclosed-facts:9121163cef0f9035a9c497d2fbfab6c80945f8dfd01fd3e110990c0021076c33",
+        "bundle_canonical_sha256": "a2492d42f475390aba9caa135a0978e0380b4101e8c87dbc7bf7d0c6eca3f218",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "百万円",
+        "unit": "JPY",
+        "kind": "issuer_guidance",
+        "derived_source_id": "disclosed-facts:cef5552a94d80dbf0a1ba11395db1ada4ee8f694314f47946e8cf0472ff07001",
+        "bundle_canonical_sha256": "63d21c3119f6e6a4af89a74f7bd3052567485e86cc0de1af1714967e0e9470a0",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "百万円",
+        "unit": "JPY",
+        "kind": "reported_fact",
+        "derived_source_id": "disclosed-facts:099de3577727d8e62fc35b8792aebe951e2c89463756ad95b1242a04b62acf8c",
+        "bundle_canonical_sha256": "2195396d0bdc710346d65b0df8757aceaf168fd31a50f6694d3e1e5fac6f7a3c",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "％",
+        "unit": "ratio",
+        "kind": "external_estimate",
+        "derived_source_id": "disclosed-facts:3370cb1458494f4a4f9182cb21331131342b22c2b03a8e3ed939359b1f8f2f5d",
+        "bundle_canonical_sha256": "687db4777596d8cd433d80b47413844c53195c0a1c977e4fd81c7f7a659bd9ed",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "％",
+        "unit": "ratio",
+        "kind": "general_explanation",
+        "derived_source_id": "disclosed-facts:6dbd1fc146047a387ba3a211380b5d052cd9f3c556e89bc57546f28c41134848",
+        "bundle_canonical_sha256": "9a8fd46508794fe3bdeb9f4f59d891193ccf621ce92db8131e208e2390dc603c",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "％",
+        "unit": "ratio",
+        "kind": "issuer_guidance",
+        "derived_source_id": "disclosed-facts:1d67bc541f74f079c0c35d2bbb555c13b62b855c7fd6bc770fc3ac818039fe2a",
+        "bundle_canonical_sha256": "d7946ffba708aaf5c73caa97fbdc37622d0ce507274438093cc62680fec7ed96",
+        "equal_saved_baseline": true
+      },
+      {
+        "raw_unit_label": "％",
+        "unit": "ratio",
+        "kind": "reported_fact",
+        "derived_source_id": "disclosed-facts:605563c6fa21290f3769ae316b7fca876b543f15876710f186dadedd36767b79",
+        "bundle_canonical_sha256": "d97d71861c33b2a931071ddb3c318d967b4d553b84b5cae7b0613422ec46f588",
+        "equal_saved_baseline": true
+      }
+    ],
+    "meaning": "Current baseline replay only, not proof of a future implementation. Must repeat after authorized edit."
+  },
+  "acceptance_cases": [
+    "株 comma-token10256000 exact Decimal; 千株1.234→1234; 万株1025.6→10256000; 百万株1.25→1250000; canonicalshares passthrough. All synthetic except citedissuer fact.",
+    "No rounding/integer restriction: explicitfractional rawtoken scales exactly and is retained pendingmeaningreview; no shares_outstanding adoption.",
+    "0,△/▲/negative token behavior unchanged; no clamp. Dash/empty/null staynull and no automatic treasury deduction.",
+    "株→JPY/JPY-per-share/ratio and 円/percent→shares reject; unsupported 億株/株式/English aliases reject until separately declared.",
+    "Same basis quote must include rawvalue/unit/period and be present on saved source/pdfpage. Numeric boundaries/commagrouping unchanged.",
+    "New shares source deterministically replays and altered value/multiplier or missing origin cannot pass.",
+    "Synthetic9input model audit references normalizedvalue with kindmatch, returns numericalmatch but financial_inputs_verifiedfalse/unreviewed semantics/unweightedexpectedvaluenull; wrongkind/mismatch/PIT hold.",
+    "All priorunit×kind fixture fullbundlehashes+IDs, including new億円 previousaddition and existingexamples, exactly identical with fixednow. Do not change limitations strings.",
+    "Review/source dates continue gated; no DB open, source ingest, thesis/policy/IR adoption or realshare-denominator calculation."
+  ],
+  "execution": {
+    "GETs": 0,
+    "DB_accesses": 0,
+    "production_edits": 0,
+    "test_edits": 0,
+    "existing_artifact_edits": 0,
+    "test_suite_runs": 0,
+    "finite_pure_API_checks": "52 saved synthetic baseline replays plus one current unsupported issuer-share candidate rejection"
+  },
+  "input_file_sha256": {
+    "src/ir_agent/disclosed_facts.py": "b26f5b612b701f3d58abda681d375ebe4db072614e86f4de83bab21b422a866d",
+    "src/ir_agent/model_inputs.py": "23aa6ef4146a8bc1fb931f8df81a6914e1d345809f7617d0a37f913a25a6ffe2",
+    "src/ir_agent/valuation.py": "fa2df871f55935d7d8fdf130595c8606fbbcba15bc42d8e92e76b2b2d46c92ec",
+    "src/ir_agent/adapters/common.py": "a6ca5fdd16778706f8a4de072bcdb27f5dcd78efbc6768039d1116606ebbb095",
+    "docs/explicit-equity-bridge-spec.md": "877723bc70071ecb56480bebe2e662cf1364c08d61c8f450cfc41bf0971872cd",
+    "docs/workflow.md": "6415612b8dca5bdd3c9070cdacc94117292968ac1c05dc8cbfe63d4395028ec3",
+    "research/ir-toyota-author-valuation-readiness-2026-10-15/readiness.json": "10e9287e2fd2f3e1f597eb58002432436d87e15663aa259244007576a5e6d4f7",
+    "research/ir-oku-yen-normalization-2026-10-15/baseline.json": "96a28d8a3f874ea0b54c3ee7ca98ad95dda77b5ef49e1a3db82ee9567e506e3c",
+    "research/ir-case-studies-2026-10-15/135A/library-followup/03.txt": "3ecc1fb61cc34cf0abd0cdae3c36fed637e5257b94062cb2ed00f71e3ba52b2b",
+    "research/ir-case-studies-2026-10-15/135A/library-followup/source-bundle.json": "a8db4fa1d594e9f9e82baa8f85bce3d16cc2f5866c46f1d409e74f1d9ce74de2",
+    "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/02.visible.txt": "01f71124b8560b08217782c3f6b7b5f4061885eb1ded3ad3ad35b1770c9888b1"
+  }
+}

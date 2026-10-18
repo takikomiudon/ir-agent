@@ -1,0 +1,101 @@
+{
+  "recorded_at": "2026-10-16T06:23:35.691140+00:00",
+  "company_id": "jp:2341",
+  "existing_source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+  "source_snapshot_sha256": "7d1775aaf4804852a61779ac2bd108a2c135a9347410a785859bddcead91f7b8",
+  "status": "one_saved_page_frozen_awaiting_root_acceptance",
+  "new_meaning_pages": [
+    8
+  ],
+  "known_prior_initial_scope": [
+    1,
+    2,
+    4,
+    6
+  ],
+  "findings": [
+    {
+      "topic": "利益段階と前年比",
+      "meaning": "当中間2026-03-01〜08-31を前年2025-03-01〜08-31と比較。売上/OP/経常/税前/法人税/親NIは別行、税費用をcashや正常税率としない。",
+      "row_refs": {
+        "売上高": {
+          "path": "research/ir-case-studies-2026-10-15/2341/profit-levels-saved-page-2026-10-16/signed-PL-rows.json",
+          "sha256": "186938930f2d82e4dafeea2a90588f59cb3ce4cb73b6d03075ce5eac5114a30e",
+          "json_pointer": "/rows/0"
+        },
+        "営業利益": {
+          "path": "research/ir-case-studies-2026-10-15/2341/profit-levels-saved-page-2026-10-16/signed-PL-rows.json",
+          "sha256": "186938930f2d82e4dafeea2a90588f59cb3ce4cb73b6d03075ce5eac5114a30e",
+          "json_pointer": "/rows/4"
+        },
+        "経常利益": {
+          "path": "research/ir-case-studies-2026-10-15/2341/profit-levels-saved-page-2026-10-16/signed-PL-rows.json",
+          "sha256": "186938930f2d82e4dafeea2a90588f59cb3ce4cb73b6d03075ce5eac5114a30e",
+          "json_pointer": "/rows/16"
+        },
+        "投資有価証券売却益": {
+          "path": "research/ir-case-studies-2026-10-15/2341/profit-levels-saved-page-2026-10-16/signed-PL-rows.json",
+          "sha256": "186938930f2d82e4dafeea2a90588f59cb3ce4cb73b6d03075ce5eac5114a30e",
+          "json_pointer": "/rows/17"
+        },
+        "税金等調整前中間純利益": {
+          "path": "research/ir-case-studies-2026-10-15/2341/profit-levels-saved-page-2026-10-16/signed-PL-rows.json",
+          "sha256": "186938930f2d82e4dafeea2a90588f59cb3ce4cb73b6d03075ce5eac5114a30e",
+          "json_pointer": "/rows/19"
+        },
+        "法人税、住民税及び事業税": {
+          "path": "research/ir-case-studies-2026-10-15/2341/profit-levels-saved-page-2026-10-16/signed-PL-rows.json",
+          "sha256": "186938930f2d82e4dafeea2a90588f59cb3ce4cb73b6d03075ce5eac5114a30e",
+          "json_pointer": "/rows/20"
+        },
+        "法人税等調整額": {
+          "path": "research/ir-case-studies-2026-10-15/2341/profit-levels-saved-page-2026-10-16/signed-PL-rows.json",
+          "sha256": "186938930f2d82e4dafeea2a90588f59cb3ce4cb73b6d03075ce5eac5114a30e",
+          "json_pointer": "/rows/21"
+        },
+        "法人税等合計": {
+          "path": "research/ir-case-studies-2026-10-15/2341/profit-levels-saved-page-2026-10-16/signed-PL-rows.json",
+          "sha256": "186938930f2d82e4dafeea2a90588f59cb3ce4cb73b6d03075ce5eac5114a30e",
+          "json_pointer": "/rows/22"
+        },
+        "親会社株主に帰属する中間純利益": {
+          "path": "research/ir-case-studies-2026-10-15/2341/profit-levels-saved-page-2026-10-16/signed-PL-rows.json",
+          "sha256": "186938930f2d82e4dafeea2a90588f59cb3ce4cb73b6d03075ce5eac5114a30e",
+          "json_pointer": "/rows/24"
+        }
+      },
+      "difference_scope": "表示値の単純前年差のみ。増減率/営業利益再構成/寄与配賦なし。"
+    },
+    {
+      "topic": "営業外と特別損益",
+      "meaning": "受取利息/賃貸/投資事業組合運用益等は営業外収益、利息/違約金/為替差損等は営業外費用。投資有価証券売却益26,207千円は特別利益、前年表示はdash。特別利益計も26,207。特別損失の区分/行は当頁には表示されず、非表示を数値0に補わない。投資事業組合運用益565と証券売却益26,207を混ぜずOPへ足さない。"
+    },
+    {
+      "topic": "税と親会社利益",
+      "meaning": "法人税等調整額は前年△13,294から当年35,307、法人税等合計17,113から67,016。中間純利益/親会社帰属はともに115,644（前年63,660）の表示。NCI行は当頁に無く、別途NCI0のfactを作らない。税費用から入出金・正常率/個別特益の税効果は推定しない。"
+    },
+    {
+      "topic": "既知p6の当時guide修正との関係",
+      "meaning": "初回受入p6は親NI139→167百万円/EPS7.63→9.18を売却益26百万円計上「等」により修正し、売上/OP/経常は据置と説明。今回26,207千円は実績PLにおける該当特別利益を確認するが、予想NI28百万円増額との1対1純額/税後対応や全寄与を証明しない。10/7修正と10/8表紙の直近修正無という比較時点の差を保持。売却益を営業正常利益/キャッシュへ加算しない。"
+    }
+  ],
+  "unresolved": [
+    "売却益の個別取引/税cash/対価入金の対応、予想修正「等」の追加要因と数値bridgeはこのPL1頁で未確認。非開示/無回答としない。",
+    "包括利益p9/BS7/信託12・他担当の10/11/15と13/14は未読scopeのまま。正常税率/正常営業利益/将来CF/価格判断へ採用しない。"
+  ],
+  "initial_reference": {
+    "path": "research/ir-case-studies-2026-10-15/2341/initial-public-review-2026-10-16/source-quotes.json",
+    "sha256": "ff3737cf433abf4e26fb1ee2fa4ab1aefe31c124cdc6ab6ca02860889c99214f",
+    "json_pointer": "/3"
+  },
+  "financial_input_adoption": false,
+  "new_normalizer_or_facts": false,
+  "operations": {
+    "GET": 0,
+    "DB": 0,
+    "Store_API": 0,
+    "new_source": 0,
+    "shared_code_old_file_changes": 0,
+    "IR_or_financial_adoption": 0
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "security_code": "2136",
+  "company_name": "ヒップ",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "サービス業",
+  "investigation_status": "confirmed",
+  "verification_level": "form_fields_verified",
+  "official_url": "https://www.hip-pro.co.jp/",
+  "contact_url": "https://www.hip-pro.co.jp/form/form.html",
+  "channels": [
+    "form"
+  ],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "candidate",
+  "attempted_at": "2026-10-11T04:01:47.629267+00:00",
+  "completed_at": "2026-10-11T04:01:54.411671+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/2136/03.json",
+      "url": "https://www.hip-pro.co.jp/form/form.html",
+      "retrieved_at": "2026-10-11T04:01:53.604098+00:00",
+      "quote": "o.co.jp 確認のため再度ご入力ください 任意 お問い合わせ項目 技術者派遣に関するお問い合わせ 業務請負（常駐請負・受託開発）に関するお問い合わせ 採用に関するお問い合わせ メディア掲載・IR情報に関するお問い合わせ その他 任意 お問い合わせ内容 お預かりする個人情報の取り扱いについて 当社はお預かりしたお客様情報 (氏名、住所、電話番号、メールアドレスなど)を、法令およびその他の規範を遵守",
+      "role": "contact_channel"
+    },
+    {
+      "snapshot": "evidence/2136/03.json",
+      "url": "https://www.hip-pro.co.jp/form/form.html",
+      "retrieved_at": "2026-10-11T04:01:53.604098+00:00",
+      "quote": "内容の ご入力 2 ご入力内容の ご確認 3 お問い合わせ 完了 任意 御社名 例）株式会社ヒップ 任意 所属部署 例）営業部 必須 お名前 例）山田 太郎 姓 ： 名 ： 必須 ご希望連絡方法 ご希望連絡方法の情報を どれか一つ必ず入力 してください。連絡方法のご希望がない場合は両方ご入力ください。 電話番号 例）0453281000 メールアドレス 例）HybridI",
+      "role": "conditions"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.hip-pro.co.jp/",
+      "final_url": "https://www.hip-pro.co.jp/",
+      "snapshot": "evidence/2136/01.json",
+      "retrieved_at": "2026-10-11T04:01:49.507592+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.hip-pro.co.jp/ir/faq.html",
+      "final_url": "https://www.hip-pro.co.jp/ir/faq.html",
+      "snapshot": "evidence/2136/02.json",
+      "retrieved_at": "2026-10-11T04:01:51.593623+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.hip-pro.co.jp/form/form.html",
+      "final_url": "https://www.hip-pro.co.jp/form/form.html",
+      "snapshot": "evidence/2136/03.json",
+      "retrieved_at": "2026-10-11T04:01:53.604098+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [
+    "電話・メールのどちらかの連絡先を必須入力。希望がない場合は両方を記入する案内。メール返信を希望する場合は実メールアドレスを指定する。"
+  ],
+  "limitations": [
+    "公開 GET の保存本文と非 hidden 入力欄を点検。送信、JavaScript・CAPTCHA の動作、実際の返信は未検証。"
+  ],
+  "discovery": {
+    "security_code": "2136",
+    "official_url": "https://www.hip-pro.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ヒップ",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/2136/01.json",
+      "normalized_name": "ヒップ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/2136/02.json",
+      "normalized_name": "ヒップ",
+      "security_code_observed": true
+    },
+    {
+      "snapshot": "evidence/2136/03.json",
+      "normalized_name": "ヒップ",
+      "security_code_observed": false
+    }
+  ],
+  "classification_version": 2,
+  "successful_official_page_count": 3,
+  "manual_review": {
+    "reviewer": "ir_operations",
+    "reviewed_at": "2026-10-11T04:15:43.401508+00:00",
+    "notes": "実フォーム本文の「メディア掲載・IR情報に関するお問い合わせ」選択肢と、返信メール入力・問い合わせ本文 textarea を確認。ナビゲーションや個人情報方針のIR語からは推定していない。"
+  }
+}

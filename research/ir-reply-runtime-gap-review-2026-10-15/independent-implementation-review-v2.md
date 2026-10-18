@@ -1,0 +1,17 @@
+# v2独立レビュー：元source公開性guardも受入可
+
+**阻害所見0。元sourceの公開性不足を持つlegacy適用のADJ01は閉じられ、旧RG01の訂正guardも維持されている。** 10受入条件・固定copyの9抜粋・3件の独立memory probeは[independent-implementation-review-v2.json](independent-implementation-review-v2.json)へ保存した。
+
+今回は[source-snapshots-v2.json](source-snapshots-v2.json)に列挙された**5ファイルの完全byte copy**を読む。全copyのSHAと現codeの一致を実行前後・最終記録時に確認した。manifest SHAは`c060ffb510babb9c154e4713d38d6f84e1fb33cb2c22610e06cc00e477759277`、[implementation-v2](implementation-v2.json) SHAは`c7a77ce8cc2129e7ca2b2ad2385e8ae6ab33e686dbc6c5efdd86765d44a4fed1`。前レビューの旧全文copy欠落を遡って補ったものではなく、新checkpointとして区別する。
+
+`dependency_source_information_holds`はsource ID・snapshot SHA・元分類を持ち、実在しないreply IDや訂正版を補わない。`dependency_information_holds`は実際のreply IDと訂正版を保持し、理由も別々に併記できる。どちらも新source・財務版を作る前の同じtransactionで確認し、当該public返信自身の分類を変更しない。
+
+新source述語は、既存pure `_check_source_origins`の公開性条件と一致する。`ir_reply`はmissing/nullを含め明示的なpublic_clarificationが必要で、その他の公表sourceのmissing/nullを同じIR holdにはしない。全親は既存closure helperで辿る。元metadataがunclear/nullなら、後のpublic返信訂正だけではsource holdを解除しない。逆に、元sourceがpublicで後日訂正されたRG01経路では、真正なpublic再確認と新しい明示評価要求による回復が残る。
+
+[independent-probe-v2.py](independent-probe-v2.py)で3件を実行した。
+
+- nullのIR sourceを第二親に置き、別のpotential_nonpublic訂正も加えたlegacy適用は保留。source holdと訂正holdのidentityが分かれ、新public返信の分類、元sourceと財務版を保持した。public再確認後もsource holdを維持し、hold表示の故障を注入した場合は全dumpがrollbackした。
+- nullのpublic_disclosureという合成対照は、この分類gateで保留せず既存要件の下で適用できた。実IR本文を公表資料とラベル変更する許可や、型の意味の認証ではない。
+- 元public sourceの訂正は、評価申告を過去へ戻してもtrusted runtimeで保留。public訂正だけと同じ要求の再送ではwrite0、新しいCAS評価だけが適用し、適用済み再送もwrite0だった。
+
+担当者の新8件を含む依存module20＋既存91＝111件成功は保存済み実行記録として参照した。親の全件実行と重複せず、独立側は3 memoryケースのみ。既存の仮説／source原文／前checkpointレビューを変更せず、source型・期間・金融モデルの妥当性や投資成績をこのguardで検証したとはしない。GET・実DBアクセス・code/test/旧file変更・IR・金融方針追加は0。

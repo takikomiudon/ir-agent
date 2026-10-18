@@ -1,0 +1,22 @@
+--- research/ir-graham-number-valuation-integration-2026-10-16/before-docs__model-routing-inputs.md
++++ docs/model-routing-inputs.md
+@@ -8,7 +8,7 @@
+ 
+ 1社・1評価時点につきテンプレートを複製する。`company.security_code` は英数字の証券コード文字列、`company.name` は対象主体、`as_of` は評価対象のタイムゾーン付き日時、`assessment_recorded_at` は実際の記録日時とする。未設定の値を現在時刻や架空企業で埋めない。
+ 
+-`requested_valuation_method` は点検しようとする方法を記録する欄で、選択が未定なら `null`。現在の評価器の実装名を使う場合は `eps_multiple`、`dcf`、`dcf_explicit_terminal`、`dcf_explicit_terminal_equity_bridge`、`dividend_discount`。研究上の点検ラベルを新しい計算methodとして渡さない。`cycle-margin` と `stable-reinvestment` は別の中間計算であり、この欄へ新しいvaluation methodとして投入しない。
++`requested_valuation_method` は点検しようとする方法を記録する欄で、選択が未定なら `null`。現在の評価器の実装名を使う場合は `eps_multiple`、`dcf`、`dcf_explicit_terminal`、`dcf_explicit_terminal_equity_bridge`、`dividend_discount`、`graham_number`。研究上の点検ラベルを新しい計算methodとして渡さない。`cycle-margin` と `stable-reinvestment` は別の中間計算であり、この欄へ新しいvaluation methodとして投入しない。
+ 
+ `company_source_registry` には**会社についての根拠**を登録する。著者の評価方法の出典は別の `adopted_research_policy` と `method_reference_ids` に保持する。Damodaran論文が存在しても、その会社が金融仲介を行う証拠にはならない。
+ 
+@@ -89,7 +89,9 @@
+ 
+ ## モデルの実装状況と禁止する取り違え
+ 
+-現在の評価器は上記5つのmethodに対応する。`eps_multiple` は正のEPSとPER、従来の `dcf` は会社全体の年末アンレバードFCF予測と、現金・負債・株数による株主価値への調整を入力する。この通常DCF欄へ、銀行の株主CFや配当をそのまま入れない。
++現在の評価器は上記6つのmethodに対応する。`eps_multiple` は正のEPSとPER、従来の `dcf` は会社全体の年末アンレバードFCF予測と、現金・負債・株数による株主価値への調整を入力する。この通常DCF欄へ、銀行の株主CFや配当をそのまま入れない。
++
++2026-10-16追補：[`graham_number`](graham-number-valuation-spec.md)は正の明示EPS・BPSから外部実装の参考式を計算する。期間・実績/予想・普通株basisの点検は必要で、既存の企業分類やモデル選択を自動化しない。
+ 
+ 2026-10-15の実装状況の追補：次は [valuation.py](../src/ir_agent/valuation.py) に実装済みの純計算であり、配当割引を未実装とは扱わない。
+ 

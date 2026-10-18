@@ -1,0 +1,60 @@
+{
+  "status": "published_PE_output_inventory_not_financial_input_adoption",
+  "source_URL": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/MReg26.html",
+  "raw_file": "raw/fe3a70f1e0bee3b01913c377d4572e0bd1abdfde38ca939146782b74a923d761",
+  "raw_sha256": "fe3a70f1e0bee3b01913c377d4572e0bd1abdfde38ca939146782b74a923d761",
+  "body_received_complete_at": "2026-10-16T07:34:47.199030+00:00",
+  "label": "January2026; Japanese companies; market-wide regressions; t statistics in brackets below coefficients",
+  "region_row": {
+    "file": "Japan-PE-region-row.raw-slice.html",
+    "sha256": "82ad81dc1636ead8facd9c41338a0fa12fb25c52454558f36c019e22337eff41",
+    "raw_Unicode_start": 92508,
+    "raw_Unicode_end_exclusive": 93895,
+    "raw_UTF8_start": 92508,
+    "raw_UTF8_end_exclusive": 93895
+  },
+  "display": {
+    "formula": "PE = 4.51 + 4.28 Beta + 42.26 gEPS + 10.46 Payout",
+    "coefficient_signs": {
+      "constant": "+4.51",
+      "Beta": "+4.28",
+      "g_EPS": "+42.26",
+      "Payout": "+10.46"
+    },
+    "t_statistics_in_printed_order": [
+      "3.50",
+      "7.32",
+      "9.05",
+      "5.78"
+    ],
+    "R_squared": "34.5%",
+    "n": null,
+    "PE_trailing_forward_current_denominator": null
+  },
+  "display_method": "HTML entity-decoded, whitespace-collapsed for inspection; g<sub>EPS</sub> becomes gEPS. Exact source is raw row span, not this transformed display. No formula executed.",
+  "duplicate_PE_sorted_Japan_row": {
+    "file": "Japan-PE-multiple-row.raw-slice.html",
+    "sha256": "b340bc75a939dc717c72b53469f2bd2f1d8dc6945afaa9ecbce170c9010c9d6d",
+    "raw_Unicode_start": 138344,
+    "raw_Unicode_end_exclusive": 140067,
+    "same_formula_t_R2": true
+  },
+  "variable_facts": {
+    "ratio_scale": "decimal,25% is0.25",
+    "g_EPS": "ExpectedEPSgrowth for next5years, analyst estimates",
+    "Payout": "Dividends/Earnings",
+    "Beta": "Named but estimator/window/benchmark/levering not specified in reviewed definition."
+  },
+  "unresolved_before_2983_use": [
+    "PE denominator trailing/forward/current and price/EPS cutoffs/share basis",
+    "regression n, eligibility/negative-EPS/outlier filters",
+    "Beta estimator and period",
+    "Payout numerator/denominator period and conventions",
+    "company-specific5yearEPSgrowth evidence/knowledge date",
+    "market-vs-sector comparability and valuation horizon"
+  ],
+  "general_data_timing_not_PE_definition": "CurrentData general prior-yearQ3 TTM remark cannot establish particular Japan PE denominator.",
+  "source_typography_not_repaired": "Other models excluded from analysis. Original completeHTML retained, no PEG or other formula correction.",
+  "financial_adoption": false,
+  "company_rawdata_downloaded": false
+}

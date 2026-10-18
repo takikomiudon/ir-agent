@@ -1,0 +1,569 @@
+{
+  "record_type": "135A_customer_counting_unit_definition_review",
+  "recorded_at": "2026-10-15T06:44:31.061563+00:00",
+  "company_id": "jp:135A",
+  "status": "bounded_public_review_partial_answer_definition_draft_retained_unsent",
+  "issue_reused_from": "author-condition-followup/case-record-v2.json / remaining_definition_issues_that_could_matter / customer-counting-unit",
+  "scope": {
+    "new_GETs": 0,
+    "database_reads_or_writes": 0,
+    "original_artifacts_modified": false,
+    "production_or_registry_changes": false,
+    "saved_source_bodies_reviewed": 15,
+    "source_bundles": [
+      "source-bundle.json",
+      "library-followup/source-bundle.json",
+      "presentation-followup/source-bundle.json",
+      "external-forecast-discovery/source-bundle.json"
+    ],
+    "limits": "保存本文を対象に関連箇所を検索/文脈確認。未取得の全公開資料や画像のみ文字の網羅OCRまで完了したとはしない。"
+  },
+  "answer_to_public_resolution": {
+    "fully_resolved": false,
+    "resolved": "現行394社と、受注ベースという計測段階。正式短信と説明資料は同じ表示値。",
+    "partially_suggested_not_definition": "会社は顧客の工場/ラインへの横展開、同一企業の複数成約を語る。顧客と工場/契約を概念として区別しているが、それ自体はKPIの集計単位の規程ではない。",
+    "unresolved": [
+      "法人単位/グループ単位/工場・事業所単位又は混合か",
+      "同一法人別工場/別ライン、同グループ別法人、複数サービスの重複扱い",
+      "初回の受注時点の意味と取消/取引終了/統合時の累計除外・過去修正",
+      "FY26基準とFY27観測を通した定義の一貫性又は変更有無"
+    ],
+    "not_claimed": "公表情報全体に定義が存在しないとは断定しない。社という字、右肩上がりの図、事業所TAMの脚注から未記載ルールを補わない。"
+  },
+  "definition_dimensions": [
+    {
+      "dimension": "recognition_basis",
+      "public_status": "resolved_stage_only",
+      "finding": "受注ベース。売上計上顧客や稼働中顧客の数と同定しない。",
+      "quote_ids": [
+        "published-order-basis"
+      ]
+    },
+    {
+      "dimension": "corporation_or_site_or_group",
+      "public_status": "unresolved",
+      "finding": "顧客/企業と工場/ラインの階層表現はあるが、KPIでの1社は明示的に定義されていない。",
+      "quote_ids": [
+        "one-customer-multiple-factories",
+        "same-enterprise-repeat-contracts",
+        "qa-customer-and-factory-hierarchy"
+      ]
+    },
+    {
+      "dimension": "deduplication_and_first_entry",
+      "public_status": "unresolved",
+      "finding": "同一企業の複数成約・別工場への追加導入の例があっても、社数加算/重複排除や初回受注確定時点を決められない。",
+      "quote_ids": [
+        "one-customer-multiple-factories",
+        "same-enterprise-repeat-contracts"
+      ]
+    },
+    {
+      "dimension": "removal_and_historical_revision",
+      "public_status": "unresolved",
+      "finding": "累計という見出しや増加グラフだけで永久保持/取消の無視/一切除外なしと推測しない。今回読んだ関連記述には具体ルールを確認できない。",
+      "quote_ids": [
+        "published-order-basis"
+      ]
+    },
+    {
+      "dimension": "TAM_denominator_versus_customer_numerator",
+      "public_status": "denominator_label_resolved_numerator_alignment_unresolved",
+      "finding": "市場規模の脚注は従業員10名以上の事業所数。これは累計取引社数も事業所単位だという定義ではない。著者の事業所と337の比較も帰属を分ける。",
+      "quote_ids": [
+        "issuer-market-size-label",
+        "issuer-market-size-establishment-footnote",
+        "author-establishment-TAM-interpretation"
+      ]
+    }
+  ],
+  "count_values_and_authorship": {
+    "issuer_latest_display": "394社",
+    "issuer_latest_basis": "受注ベース",
+    "issuer_material_date": "2026-10-14",
+    "author": "AENTRO Research/株式会社AENTRO",
+    "author_display_report_date": "2026-05-11",
+    "author_FY26_baseline": "337社",
+    "author_FY29_yardstick_literal": "550-600社ペース（毎期+70社前後）",
+    "author_definition_independently_confirmed": false,
+    "time_limit": "10/15に保存済み資料を後日比較。著者5月時点の前向き検証にしない。"
+  },
+  "comparison_layers": {
+    "issuer_time_series": "同じ1社単位・入口/除外/修正規則が期間をまたいで適用されているかを確認する問題。",
+    "author_yardstick_alignment": "著者が同じ会社KPIを同じ範囲で将来へ使う意図か、独立に確認する問題。会社の定義回答だけでは自動確定しない。",
+    "TAM_and_business_narrative": "顧客数と事業所TAM・顧客分散の叙述に同じ母集団を使えるかはさらに別。質問の回答を顧客維持率/売上/利益に変換しない。"
+  },
+  "one_definition_question_candidate": {
+    "candidate_id": "135A-customer-counting-unit-definition-candidate",
+    "status": "saved_research_draft_not_registered_or_sent",
+    "question": "2027年2月期第2四半期決算説明資料5頁の「累計取引社数394社（受注ベース）」について、集計上の「1社」の単位と累計の更新方法を、既存の公表定義の範囲で確認させてください。同一法人の別工場・別ラインへの追加導入や、同一企業グループ内の別法人への導入をそれぞれ新たな1社として含めるか、初めて累計に含める時点、および取引終了・統合等による除外や過去値の見直しの有無をご教示いただけますでしょうか。FY26末337社と現行394社を同じ基準で比較する際の変更がある場合は、その有無も確認したいです。既に公表資料に定義がある場合は、掲載箇所のご案内で差し支えありません。",
+    "public_basis_quote_ids": [
+      "official-current-count",
+      "published-order-basis",
+      "one-customer-multiple-factories",
+      "qa-customer-and-factory-hierarchy",
+      "author-original-customer-yardstick"
+    ],
+    "purpose": "既存のcustomer-counting-unit論点を1問で具体化し、会社系列内と著者目安との比較可能性を分ける。投資判断を尋ねず、未公開の足元数値/顧客名を求めない。",
+    "why_not_cancelled_now": "受注ベースは既答として再質問しないが、集計上1社/累計更新の定義全体はこの保存本文では解決していない。",
+    "cancel_if": "同じ期間/範囲に適用する公表済み定義が見つかり、下記の単位/重複/入口/除外・改訂の確認点が既に答えられていれば候補を廃止し、掲載箇所へ置き換える。",
+    "reply_branches": [
+      {
+        "id": "A",
+        "condition": "会社が一貫した法人単位等の単位と重複/初回/除外規則を明確に説明し、対象期間での適用/変更有無を確認できる。",
+        "issuer_series_effect": "会社系列の期間比較の定義が明確になる。法人であること自体ではなく、一貫性と明示された変更の扱いに基づいて比較を点検する。",
+        "author_yardstick_effect": "著者の550-600の単位/対象範囲が独立に明示されない限り、同母集団の比較可能性は確定しない。会社定義を用いて既存著者の意図との対応確認へ進むだけ。",
+        "interpretation": "研究の定義不確実性を減らす。EPS/FCFF/買売の変更はしない。"
+      },
+      {
+        "id": "B",
+        "condition": "会社が工場/拠点/企業グループ/混合単位、又は過去からの定義変更・累計除外/見直しの存在を説明する。",
+        "issuer_series_effect": "同単位が過去にも一貫して適用されていれば会社系列の比較は可能になり得る。変更があれば対象期間と公表調整の対応が必要で、自己補正しない。",
+        "author_yardstick_effect": "法人でないことだけで著者の社数目安/仮説全体を反証しない。著者も同じKPIを意図したか、TAM/顧客分散への意味付けが同じかの対応を未解決として確認する。",
+        "interpretation": "単位/期間対応を再点検する。成長率・社数・株価・評価の代替値を作らない。"
+      },
+      {
+        "id": "ambiguous_or_no_answer",
+        "condition": "受注ベースとの既出説明だけ、単位/更新規則が曖昧、回答不能又は無回答。",
+        "issuer_series_effect": "公開で解決した受注基準のみ保持。法人/工場/グループの定義と累計の一貫性は未確認のまま。",
+        "author_yardstick_effect": "比較可能/不可能や達成/未達を確定せずunresolved。",
+        "interpretation": "曖昧さや無回答を悪化証拠、価格/利益の下方修正、条件成立にしない。"
+      }
+    ],
+    "formal_question_contract_created": false,
+    "valuation_input_path": null,
+    "numeric_input_path_created": false,
+    "EPS_or_FCFF_mapping_created": false,
+    "probability_or_investment_threshold_created": false
+  },
+  "contact_note": {
+    "source": "親から提供された旧時点の窓口情報（本taskで接続/再確認なし）",
+    "historical_official_url": "https://vrain.co.jp/ir/inquiry/",
+    "reported_prior_reviewed_at": "2026-10-11T04:11:06Z",
+    "reported_prior_retrieved_at": "2026-10-11T03:58:51Z",
+    "reference_as_reported": "research/ir-recovery-2026-10-13/all-companies.csv / 135A; research/ir-contacts-universe-2026-10-11/records/135A.json",
+    "individual_access_note": "親の旧確認では個人受付explicit。今回の本文調査で現在受付/条件を認定していない。",
+    "current_outreach_eligibility": null,
+    "ready_to_send": false,
+    "reply_guarantee": false
+  },
+  "source_provenance": [
+    {
+      "key": "statement",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "url": "https://contents.xj-storage.jp/xcontents/AS06543/0e4abefd/2c7d/4512/9376/0761580b1ba5/140120260831528808.pdf",
+      "published_at": null,
+      "publication_date": "2026-10-14",
+      "original_retrieved_at": "2026-10-15T04:42:37.094960+00:00",
+      "raw_path": "research/ir-case-studies-2026-10-15/135A/library-followup/raw/6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+      "raw_sha256": "6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/library-followup/03.txt",
+      "body_sha256": "3ecc1fb61cc34cf0abd0cdae3c36fed637e5257b94062cb2ed00f71e3ba52b2b",
+      "transport_snapshot_path": "research/ir-case-studies-2026-10-15/135A/library-followup/03.json",
+      "transport_snapshot_sha256": "04a2fa967b8e0acef2629141247a8f3a2e69095ac7bba95782790bde4febca38",
+      "attribution": "株式会社VRAIN Solution（会社本文/会社作成想定問答/一般FAQ）"
+    },
+    {
+      "key": "presentation",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "url": "https://contents.xj-storage.jp/xcontents/AS06543/add89fe1/7c75/426d/908b/a7cb51fa85bb/140120260831528813.pdf",
+      "published_at": null,
+      "publication_date": "2026-10-14",
+      "original_retrieved_at": "2026-10-15T04:51:16.281339+00:00",
+      "raw_path": "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/93eb46606d41dc10c91870d9481310fcf5fda5c107d318ef7424e1a6ce89fb99",
+      "raw_sha256": "93eb46606d41dc10c91870d9481310fcf5fda5c107d318ef7424e1a6ce89fb99",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/presentation-followup/03.txt",
+      "body_sha256": "73bccf42aec37efb174f09c8160dbd20878f97f4b5a4622f0b02bc0210c63818",
+      "transport_snapshot_path": "research/ir-case-studies-2026-10-15/135A/presentation-followup/03.json",
+      "transport_snapshot_sha256": "aaf30a8f8194132baf4b822dc15d714bba5e60417983a3b4ed94aba94f1da638",
+      "attribution": "株式会社VRAIN Solution（会社本文/会社作成想定問答/一般FAQ）"
+    },
+    {
+      "key": "qa",
+      "source_id": "case-public:c3c890386f935535dda16bb42e78ede9f85f4551f5640f170648e4d59fc6c63b",
+      "url": "https://contents.xj-storage.jp/xcontents/AS06543/716abbe4/683a/4898/b4c1/de6c6a8fff61/140120260630584501.pdf",
+      "published_at": null,
+      "publication_date": "2026-07-14",
+      "original_retrieved_at": "2026-10-15T04:51:16.938567+00:00",
+      "raw_path": "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/1cd0433a17587f9b2d4169740a2205d4f5871aeefdce1c08f74b80844e31beba",
+      "raw_sha256": "1cd0433a17587f9b2d4169740a2205d4f5871aeefdce1c08f74b80844e31beba",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/presentation-followup/04.txt",
+      "body_sha256": "2a34cf7b7c665856900a638ea5df9eddad71183275c2d81f24a9fac99a73448d",
+      "transport_snapshot_path": "research/ir-case-studies-2026-10-15/135A/presentation-followup/04.json",
+      "transport_snapshot_sha256": "7ceba600be7b290ab0157c7150ca3c5c132a00f85341c7e5b9cea5dfd68b27a0",
+      "attribution": "株式会社VRAIN Solution（会社本文/会社作成想定問答/一般FAQ）"
+    },
+    {
+      "key": "faq",
+      "source_id": "case-public:4b047af4dcd2099052131b9bd5a6cc0ad83a3cbeb84291ba7888219fd1df6532",
+      "url": "https://vrain.co.jp/ir/faq/",
+      "published_at": null,
+      "publication_date": null,
+      "original_retrieved_at": "2026-10-15T04:50:52.443178+00:00",
+      "raw_path": "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/e88cf537930d5f0364dad6c918920473cee30c89b47f951bedd32e5ce41ae763",
+      "raw_sha256": "e88cf537930d5f0364dad6c918920473cee30c89b47f951bedd32e5ce41ae763",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/presentation-followup/02.visible.txt",
+      "body_sha256": "c4a87b43ed157d61f87b258102e89eb54c5e369b96ca8a00b2c8cc6f760cf017",
+      "transport_snapshot_path": "research/ir-case-studies-2026-10-15/135A/presentation-followup/02.json",
+      "transport_snapshot_sha256": "40318a884cc071e567a8315ca3abc7af205189026d60d04f4856286e7ac734ca",
+      "attribution": "株式会社VRAIN Solution（会社本文/会社作成想定問答/一般FAQ）"
+    },
+    {
+      "key": "author",
+      "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+      "url": "https://research.aentroinc.com/ja/report/VRAIN_Solution/Initiation",
+      "published_at": null,
+      "publication_date": "2026-05-11",
+      "original_retrieved_at": "2026-10-15T05:43:16.598131+00:00",
+      "raw_path": "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/raw/0cfe0cdb8d1eff0d6814dd514e99e4684b4ff73b888cc318398061aee0247ad5",
+      "raw_sha256": "0cfe0cdb8d1eff0d6814dd514e99e4684b4ff73b888cc318398061aee0247ad5",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/02.visible.txt",
+      "body_sha256": "01f71124b8560b08217782c3f6b7b5f4061885eb1ded3ad3ad35b1770c9888b1",
+      "transport_snapshot_path": "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/02.json",
+      "transport_snapshot_sha256": "18461a56789f69d9dda5da2819b48e06e1610bec5ba525af5b2292cdfa74451b",
+      "attribution": "AENTRO Research/株式会社AENTRO（スポンサー関係を開示する外部著者）"
+    }
+  ],
+  "quotes": [
+    {
+      "id": "official-current-count",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "source_key": "statement",
+      "pdf_page": 4,
+      "printed_page": "2",
+      "source_text_start": 5652,
+      "source_text_end_exclusive": 5671,
+      "offset_unit": "Unicode code points in exact saved source.content; end exclusive",
+      "quote": "この結果、累計取引社数が394社となり",
+      "supports": "正式中間短信に記載された現行累計取引社数394社を原文で確認。"
+    },
+    {
+      "id": "presentation-current-count",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "source_key": "presentation",
+      "pdf_page": 5,
+      "printed_page": "5",
+      "source_text_start": 1903,
+      "source_text_end_exclusive": 2158,
+      "offset_unit": "Unicode code points in exact saved source.content; end exclusive",
+      "quote": "394社                                                                            1,084百万円\n                                （前期末より＋57社）                                                                   （売上高全体に占める割合 57.5％）\n                      食品を中心に機械、化学が伸長",
+      "supports": "p5現行394社/前期末+57という公表表示。左右欄の文字が抽出に混在するが、別KPIの数値で集計単位を推測しない。"
+    },
+    {
+      "id": "published-order-basis",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "source_key": "presentation",
+      "pdf_page": 5,
+      "printed_page": "5",
+      "source_text_start": 4374,
+      "source_text_end_exclusive": 4382,
+      "offset_unit": "Unicode code points in exact saved source.content; end exclusive",
+      "quote": "※1 受注ベース",
+      "supports": "公開で確定できる計測段階は受注ベース。1社の顧客ID集約/除外方法までは書いていない。"
+    },
+    {
+      "id": "one-customer-multiple-factories",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "source_key": "presentation",
+      "pdf_page": 45,
+      "printed_page": "45",
+      "source_text_start": 49684,
+      "source_text_end_exclusive": 49849,
+      "offset_unit": "Unicode code points in exact saved source.content; end exclusive",
+      "quote": "AIシステム｜新規案件獲得後の売上拡大イメージ（勝ちパターン例）\n加工食品業の顧客において、A工場の製造工程でFY２５/2QにAIシステムを新規導入\nA工場に導入したAIシステムの稼働実績が評価され、FY２５/4QにB工場からG工場までの６工場に追加で一括導入\n更に、「別製造工程」「別工場」「同業他社」への展開による拡大余地あり",
+      "supports": "A工場から別工場への追加導入例はあるが、その都度KPIを何社加算するかの記述ではない。"
+    },
+    {
+      "id": "same-enterprise-repeat-contracts",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "source_key": "presentation",
+      "pdf_page": 39,
+      "printed_page": "39",
+      "source_text_start": 43679,
+      "source_text_end_exclusive": 43720,
+      "offset_unit": "Unicode code points in exact saved source.content; end exclusive",
+      "quote": "その結果、同一企業から幅広い課題に対する相談を受け、複数回の成約・リピートが実現。",
+      "supports": "同一企業と複数回の成約を区別する会社説明。累計取引社数の重複排除ルールと同定しない。"
+    },
+    {
+      "id": "qa-customer-and-factory-hierarchy",
+      "source_id": "case-public:c3c890386f935535dda16bb42e78ede9f85f4551f5640f170648e4d59fc6c63b",
+      "source_key": "qa",
+      "pdf_page": 1,
+      "printed_page": "1",
+      "source_text_start": 1165,
+      "source_text_end_exclusive": 1375,
+      "offset_unit": "Unicode code points in exact saved source.content; end exclusive",
+      "quote": "現在の取引社数 358 社に対する別ラインや別工場\n      への横展開の余地をどのように見積もっていますか。また、継続顧客の売上比率は今後もこの高\n      い水準（約８割）を維持する想定ですか。\n回答４．既存顧客における潜在需要は、顧客ごとの工場数、ライン数、投資計画等に依存するため、現時\n      点で一律の具体的な数値としての算出は困難ですが、横展開の余地は極めて大きいと認識してお\n      ります。",
+      "supports": "Q&Aの当時の現在358社と、顧客ごとの工場/ラインという階層は確認できる。正確な法人/グループ集計ルールを定める回答ではない。"
+    },
+    {
+      "id": "issuer-market-size-label",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "source_key": "presentation",
+      "pdf_page": 48,
+      "printed_page": "48",
+      "source_text_start": 52049,
+      "source_text_end_exclusive": 52076,
+      "offset_unit": "Unicode code points in exact saved source.content; end exclusive",
+      "quote": "製造業11万社に対して当社の取引社数シェアは約0.4%",
+      "supports": "市場側の見出し文言。累計顧客数の分子の法人数/工場数を定義しない。"
+    },
+    {
+      "id": "issuer-market-size-establishment-footnote",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "source_key": "presentation",
+      "pdf_page": 48,
+      "printed_page": "48",
+      "source_text_start": 53311,
+      "source_text_end_exclusive": 53358,
+      "offset_unit": "Unicode code points in exact saved source.content; end exclusive",
+      "quote": "※1 総務省・経済産業省「令和３年経済センサスー活動調査 従業員10名以上の事業所数」より引用",
+      "supports": "脚注はTAM側が事業所数という根拠。累計取引社数の数え方を逆推論しない。"
+    },
+    {
+      "id": "author-original-baseline-count",
+      "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+      "source_key": "author",
+      "pdf_page": null,
+      "printed_page": null,
+      "source_text_start": 16267,
+      "source_text_end_exclusive": 16329,
+      "offset_unit": "Unicode code points in exact saved source.content; end exclusive",
+      "quote": "KPI FY24末 FY25末 FY26末 前期末比 意味 累計取引社数（社） 169 233 337 +104 受注ベース",
+      "supports": "著者のFY26基準は337社。集計単位を独立に定義した文章ではない。"
+    },
+    {
+      "id": "author-original-customer-yardstick",
+      "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+      "source_key": "author",
+      "pdf_page": null,
+      "printed_page": null,
+      "source_text_start": 40510,
+      "source_text_end_exclusive": 40550,
+      "offset_unit": "Unicode code points in exact saved source.content; end exclusive",
+      "quote": "累計取引社数 337社 FY29までに550-600社ペース（毎期+70社前後）",
+      "supports": "著者FY29の監視目安を原文通り保持。幅/年率やEPSへ変換しない。"
+    },
+    {
+      "id": "author-establishment-TAM-interpretation",
+      "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+      "source_key": "author",
+      "pdf_page": null,
+      "printed_page": null,
+      "source_text_start": 11895,
+      "source_text_end_exclusive": 11974,
+      "offset_unit": "Unicode code points in exact saved source.content; end exclusive",
+      "quote": "同社が自ら定義するTAMは「製造業の事業所数11万社（従業員10名以上、経済センサス）」であり、FY26末の累計取引社数337社はこのうち0.3％にすぎない。",
+      "supports": "著者のTAM/顧客数比較は著者解釈として保存。両者が同じ集計単位であるという一次の定義にはしない。"
+    }
+  ],
+  "body_scope_and_search": [
+    {
+      "bundle_path": "source-bundle.json",
+      "source_id": "case-public:90b6430f1c3db281a436c38b4ee9dd31a4442fe456569cf317ac9ccf5cfebf60",
+      "document_kind": "robots_policy",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/01.txt",
+      "body_sha256": "4b59547488224f1725258fa9a43f18834da9d22c2dcf2f5216e5d77aacdb4339",
+      "body_characters": 167,
+      "keyword_occurrences": {},
+      "method": "保存本文を語句検索し関連する説明/表/注記の文脈を点検。JS/JSONPは保存データであり実行なし。"
+    },
+    {
+      "bundle_path": "source-bundle.json",
+      "source_id": "case-public:bdae3949d5e7a93f60ac5675ecd9635ca759a4362dd71bdf0984e70e4738a3e1",
+      "document_kind": "issuer_business_homepage",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/02.txt",
+      "body_sha256": "3c505bce5430af3e6349d3cd00f5ca45147609a4e0cdea7a5d5f1db9c042316e",
+      "body_characters": 1745,
+      "keyword_occurrences": {},
+      "method": "保存本文を語句検索し関連する説明/表/注記の文脈を点検。JS/JSONPは保存データであり実行なし。"
+    },
+    {
+      "bundle_path": "source-bundle.json",
+      "source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "document_kind": "issuer_ir_index",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/03.txt",
+      "body_sha256": "e12d206157ea40fa183a4cc79162ffc3fab31fa3cbd5883aa33909d1dae218d5",
+      "body_characters": 1009,
+      "keyword_occurrences": {},
+      "method": "保存本文を語句検索し関連する説明/表/注記の文脈を点検。JS/JSONPは保存データであり実行なし。"
+    },
+    {
+      "bundle_path": "source-bundle.json",
+      "source_id": "case-public:b38c20a96b55fca35f28d4aadc31ce0d21cccb72c0a675936c574bcc0c5fd438",
+      "document_kind": "issuer_ir_library_index_only",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/04.txt",
+      "body_sha256": "9d7ed6ecdd7675837026a0f830f43e22518dde3d7ce9ebdbff3a5a474dabb93a",
+      "body_characters": 1191,
+      "keyword_occurrences": {},
+      "method": "保存本文を語句検索し関連する説明/表/注記の文脈を点検。JS/JSONPは保存データであり実行なし。"
+    },
+    {
+      "bundle_path": "source-bundle.json",
+      "source_id": "case-public:decc7b41b89118944070d42554aef7998516b16bba1bd993c6afcd6c5076d98c",
+      "document_kind": "issuer_ir_calendar_generic_months",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/05.txt",
+      "body_sha256": "d59baed319f648c2af82ec86494898a02fe5d0515c8ba244449331812deb69fa",
+      "body_characters": 1105,
+      "keyword_occurrences": {},
+      "method": "保存本文を語句検索し関連する説明/表/注記の文脈を点検。JS/JSONPは保存データであり実行なし。"
+    },
+    {
+      "bundle_path": "library-followup/source-bundle.json",
+      "source_id": "case-public:6ef4a4da4cf440a6b96b92a27da164346c8435107d658eb0b17b3bdf842c3498",
+      "document_kind": "public_loader_not_financial_statement",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/library-followup/01.txt",
+      "body_sha256": "1028a4dfb7e6d5cf7e02edfe597e1eb1350daca0d83e4240b1a35c53609eed9b",
+      "body_characters": 8639,
+      "keyword_occurrences": {},
+      "method": "保存本文を語句検索し関連する説明/表/注記の文脈を点検。JS/JSONPは保存データであり実行なし。"
+    },
+    {
+      "bundle_path": "library-followup/source-bundle.json",
+      "source_id": "case-public:f39107af487a6db103cc1cd8bfcc162f7173c6602899eaba453ac532c2f02824",
+      "document_kind": "public_results_index_not_financial_statement",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/library-followup/02.txt",
+      "body_sha256": "3b62d5db50c382b0968bbba9c13c486f2a7d17438a2208ffc963fdef0b4f17a3",
+      "body_characters": 8247,
+      "keyword_occurrences": {},
+      "method": "保存本文を語句検索し関連する説明/表/注記の文脈を点検。JS/JSONPは保存データであり実行なし。"
+    },
+    {
+      "bundle_path": "library-followup/source-bundle.json",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "document_kind": "issuer_interim_financial_statement",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/library-followup/03.txt",
+      "body_sha256": "3ecc1fb61cc34cf0abd0cdae3c36fed637e5257b94062cb2ed00f71e3ba52b2b",
+      "body_characters": 13646,
+      "keyword_occurrences": {
+        "累計取引社数": 1,
+        "取引社数": 1
+      },
+      "method": "保存本文を語句検索し関連する説明/表/注記の文脈を点検。JS/JSONPは保存データであり実行なし。"
+    },
+    {
+      "bundle_path": "presentation-followup/source-bundle.json",
+      "source_id": "case-public:dab70fbcbc47c5c6b3245ca689d56257b091cf96372ab2aef2e8cc7cdcfa1b35",
+      "document_kind": "public_presentation_index_not_financial_body",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/presentation-followup/01.txt",
+      "body_sha256": "90b270a479a2b03624b1e24a59303b7f5bbca0532de12b041ddde906e6dc247a",
+      "body_characters": 9572,
+      "keyword_occurrences": {},
+      "method": "保存本文を語句検索し関連する説明/表/注記の文脈を点検。JS/JSONPは保存データであり実行なし。"
+    },
+    {
+      "bundle_path": "presentation-followup/source-bundle.json",
+      "source_id": "case-public:4b047af4dcd2099052131b9bd5a6cc0ad83a3cbeb84291ba7888219fd1df6532",
+      "document_kind": "issuer_ir_faq",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/presentation-followup/02.visible.txt",
+      "body_sha256": "c4a87b43ed157d61f87b258102e89eb54c5e369b96ca8a00b2c8cc6f760cf017",
+      "body_characters": 3013,
+      "keyword_occurrences": {},
+      "method": "保存本文を語句検索し関連する説明/表/注記の文脈を点検。JS/JSONPは保存データであり実行なし。"
+    },
+    {
+      "bundle_path": "presentation-followup/source-bundle.json",
+      "source_id": "case-public:27c83ce1abc444eb432011130ec14371bb3381064b2ee9016f0c5628064ca817",
+      "document_kind": "issuer_interim_earnings_presentation",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/presentation-followup/03.txt",
+      "body_sha256": "73bccf42aec37efb174f09c8160dbd20878f97f4b5a4622f0b02bc0210c63818",
+      "body_characters": 54007,
+      "keyword_occurrences": {
+        "累計取引社数": 1,
+        "取引社数": 2,
+        "受注ベース": 1,
+        "同一企業": 1,
+        "別工場": 2,
+        "別ライン": 1,
+        "事業所数": 1
+      },
+      "method": "保存本文を語句検索し関連する説明/表/注記の文脈を点検。JS/JSONPは保存データであり実行なし。"
+    },
+    {
+      "bundle_path": "presentation-followup/source-bundle.json",
+      "source_id": "case-public:c3c890386f935535dda16bb42e78ede9f85f4551f5640f170648e4d59fc6c63b",
+      "document_kind": "issuer_prior_quarter_prepared_questions_and_answers",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/presentation-followup/04.txt",
+      "body_sha256": "2a34cf7b7c665856900a638ea5df9eddad71183275c2d81f24a9fac99a73448d",
+      "body_characters": 3492,
+      "keyword_occurrences": {
+        "取引社数": 1,
+        "別工場": 1,
+        "別ライン": 1
+      },
+      "method": "保存本文を語句検索し関連する説明/表/注記の文脈を点検。JS/JSONPは保存データであり実行なし。"
+    },
+    {
+      "bundle_path": "external-forecast-discovery/source-bundle.json",
+      "source_id": "case-public:d633d9b84c9eb5843cfac05e05e01d6a2af6fd6b65852c4a77c62e220442db03",
+      "document_kind": "external_provider_robots_policy",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/01.txt",
+      "body_sha256": "ed0c138de3109dececb490d7665e940a416c889b37a083e45170949d366e9e42",
+      "body_characters": 289,
+      "keyword_occurrences": {},
+      "method": "保存本文を語句検索し関連する説明/表/注記の文脈を点検。JS/JSONPは保存データであり実行なし。"
+    },
+    {
+      "bundle_path": "external-forecast-discovery/source-bundle.json",
+      "source_id": "case-public:ebb28082ec2d5a3604465bd493ea7c26ad8cd1db6529750be7e67c46a5fa0d8c",
+      "document_kind": "sponsored_external_company_initiation_report",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/02.visible.txt",
+      "body_sha256": "01f71124b8560b08217782c3f6b7b5f4061885eb1ded3ad3ad35b1770c9888b1",
+      "body_characters": 50520,
+      "keyword_occurrences": {
+        "累計取引社数": 10,
+        "取引社数": 13,
+        "受注ベース": 2,
+        "重複": 2,
+        "別工場": 4,
+        "事業所数": 1
+      },
+      "method": "保存本文を語句検索し関連する説明/表/注記の文脈を点検。JS/JSONPは保存データであり実行なし。"
+    },
+    {
+      "bundle_path": "external-forecast-discovery/source-bundle.json",
+      "source_id": "case-public:569bc23666b067266ae55d3241ffbe8847f50e9970318c708d9a7b94959b2449",
+      "document_kind": "external_provider_research_principles",
+      "body_path": "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/03.visible.txt",
+      "body_sha256": "4edb69449e51512fb4aa658dbb2544e86a05d2501ded07fa9d9d123682efa7cb",
+      "body_characters": 1104,
+      "keyword_occurrences": {},
+      "method": "保存本文を語句検索し関連する説明/表/注記の文脈を点検。JS/JSONPは保存データであり実行なし。"
+    }
+  ],
+  "verification": {
+    "verified_at": "2026-10-15T06:44:31.061563+00:00",
+    "saved_source_bodies_text_hashes_checked": 15,
+    "supporting_raw_text_snapshot_sets_checked": 5,
+    "supporting_stable_source_IDs_checked": 5,
+    "exact_quote_offsets_checked": 11,
+    "prior_artifact_hashes": {
+      "source-bundle.json": "7d0ff134aa227c9c518e59c1ee76480be292749392462da7b649d99099c51921",
+      "library-followup/source-bundle.json": "a8db4fa1d594e9f9e82baa8f85bce3d16cc2f5866c46f1d409e74f1d9ce74de2",
+      "presentation-followup/source-bundle.json": "4fd50c80f02e4e1d6ed78689f3c8a2df185187a2f89324f0c0f33418b850e8cf",
+      "external-forecast-discovery/source-bundle.json": "199178e927dbe28570bfe30e8ce354e12e30b41d6e1930bf84a34f3f51a07527",
+      "author-condition-followup/case-record-v2.json": "2e566e72a04a89938357220715a10603a51ce1ce744207599ac921de6e81328b",
+      "author-condition-followup/case-record-v2.md": "33b7bcaf95da6af3854d9a4e1f0c11eca4cab91f22d240a0fff17edc3c240dae"
+    },
+    "prior_artifacts_unchanged": true,
+    "presentation_page48_visual_check": {
+      "temporary_image": "/tmp/135a-customer-unit-p48.png",
+      "image_sha256": "419d67eb2edf4b3ac726a090ae3a1eaa15c3e50f3e8c338ff54e0ea1f5320223",
+      "viewed": true,
+      "meaning": "事業所数の脚注が市場規模の説明にあることを確認。1社の集計単位の定義へ転用しない。"
+    },
+    "negative_search_is_not_all_public_information_absence_proof": true,
+    "new_GETs": 0,
+    "database_accesses": 0,
+    "new_code_registry_or_normalizer": false
+  },
+  "adoption_boundary": {
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "model_adopted": false,
+    "trade_or_exit_threshold": null,
+    "probabilities": null,
+    "formal_IR_question_registered": false
+  }
+}

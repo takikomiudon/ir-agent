@@ -1,0 +1,75 @@
+{
+  "security_code": "3187",
+  "company_name": "ミラタップ",
+  "market": "グロース（内国株式）",
+  "jpx_sector": "小売業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.sanwacompany.co.jp/shop/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T06:42:48.297121+00:00",
+  "completed_at": "2026-10-11T06:42:59.103402+00:00",
+  "manual_review_required": false,
+  "evidence": [],
+  "fetches": [
+    {
+      "url": "https://www.sanwacompany.co.jp/shop/",
+      "final_url": "https://www.miratap.co.jp/shop/",
+      "snapshot": "evidence/3187/20261011T064248297162Z/01.json",
+      "retrieved_at": "2026-10-11T06:42:56.507780+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "保存済み公式ページ・実フォーム欄を手動点検。送信・配信成功・回答実績は未確認。"
+  ],
+  "discovery": {
+    "security_code": "3187",
+    "official_url": "https://www.sanwacompany.co.jp/shop/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "サンワカンパニー",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/3187/20261011T064248297162Z/01.json",
+      "normalized_name": "ミラタップ",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "ir_channel_not_verified_in_saved_scope",
+  "http_get_attempt_count": 5,
+  "previous_attempts": [
+    "attempts/3187/20261011T045047381448Z.json",
+    "attempts/3187/20261011T064259103545Z.json"
+  ],
+  "manual_followup_candidates": [
+    {
+      "url": "https://info.miratap.co.jp/ir/",
+      "quote": "IR情報",
+      "source_link_label": "IR情報",
+      "method": "GET",
+      "reason": "公式通販からリンクされた企業IR頁。商材/修理窓口をIRへ転用しない。",
+      "parent_snapshot": "evidence/3187/20261011T064248297162Z/01.json",
+      "IR_channel_verified": false
+    }
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_services",
+    "reviewed_at": "2026-10-11T07:05:47.147352+00:00",
+    "notes": "ミラタップ保存seedは建材・住宅設備通販。商材問い合わせ/修理formはIRではない。通販内の実在IR情報linkがinfo.miratap.co.jp/ir/を指すが未取得なので企業IR親の追加候補に限定する。",
+    "attempted_at_reviewed": "2026-10-11T06:42:48.297121+00:00",
+    "saved_evidence_only": true
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "recorded_at": "2026-10-16T11:51:31.338707+00:00",
+  "company_id": "jp:3612",
+  "company_name": "株式会社ワールド",
+  "purpose": "Saved report suitability for already adopted reported2input GrahamNumber arithmetic; no new retrieval/source creation/classification/model action.",
+  "source": {
+    "id": "case-public:5304377b63a7df6f4b648f1e486e7813c5bc96b42acfb84f3b1666a65043a3cf",
+    "native_SHA256": "82ba3b28b1acbb67b4f11c5c83802f38f37f03d698b27f4985fd5628bab0081d",
+    "bundle": {
+      "path": "research/ir-case-studies-2026-10-15/3612/integrated-report-business-review-2026-10-16/source-only-bundle.json",
+      "sha256": "189ef8c5f93214425efc2b3633a64b8970efba6113cbad1cc62b1ce040bea645"
+    },
+    "raw": {
+      "path": "research/ir-case-studies-2026-10-15/3612/integrated-report-business-review-2026-10-16/raw/a441fc34cd621a7797fe63c1523b18ddfc3524452157989a121042c7acc68050",
+      "sha256": "a441fc34cd621a7797fe63c1523b18ddfc3524452157989a121042c7acc68050"
+    },
+    "full_text": {
+      "path": "research/ir-case-studies-2026-10-15/3612/integrated-report-business-review-2026-10-16/full.txt",
+      "sha256": "d12776e8e4825d10c2729df39215e9feecd3560c3414de3b14b799f887b96b0c"
+    },
+    "retrieved_at": "2026-10-16T11:25:34.502866+00:00",
+    "published_at": null,
+    "actual_DB_read_this_task": false,
+    "existing_actual_classification_as_reported_by_parent": "business_description",
+    "classification_unchanged": true
+  },
+  "reading_scope": {
+    "new_semantic_image_physical_pages": [
+      63,
+      66
+    ],
+    "printed_pages": [
+      62,
+      65
+    ],
+    "new_page_limit": 4,
+    "full_original_pages": 67,
+    "cover_p2_business_acceptance": "Existing accepted physical1/2/4/10 interpretation reused by fixed review reference; no re-read of images or report-period derivation.",
+    "remaining_pages_not_meaning_reviewed": true,
+    "images": [
+      {
+        "path": "research/ir-case-studies-2026-10-15/3612/annual-per-share-saved-report-review-2026-10-16/pages/physical-63.png",
+        "sha256": "0b830273759a36f79235e2b2b3d855a885338411bb531bc7a0cb64682ba503f2"
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/3612/annual-per-share-saved-report-review-2026-10-16/pages/physical-66.png",
+        "sha256": "1d9d7c506446702c2bb510a9ac41b7c9e149ffe03debacd83f50e9757883deb1"
+      }
+    ]
+  },
+  "method": {
+    "author": "maxgfr/crible maintainers",
+    "fixed_commit": "00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7",
+    "reference": {
+      "path": "research/ir-transparent-metric-formula-review-2026-10-15/upstream-INDICATORS.md",
+      "sha256": "fb82b2d47596026ea75fa561169062c52622dcb153caffe37af5491111ad084f"
+    },
+    "quote": "graham_number = √( 22.5 · EPS · BVPS )        only when EPS > 0 AND BVPS > 0, else NaN",
+    "character_start": 13125,
+    "character_end": 13211,
+    "byte_start": 13518,
+    "byte_end": 13608,
+    "application": "Inspect annual EPS and same-basis closing BVPS inputs only; original Graham whole investing criteria/fairvalue/price ceiling not adopted here."
+  },
+  "period_selection": {
+    "latest_complete_FY_column_within_report": "2026/2",
+    "selection_basis": "Rightmost of eleven historical financial-summary columns and already accepted report period2025-03-01..2026-02-28; not worldwide/latest issuer filing proof.",
+    "annual_start": "2025-03-01",
+    "annual_end": "2026-02-28",
+    "existing_period_quote_ref": "Q2-report-period-scope-and-forward-caveat physical2",
+    "not_comparable_same_length_all_history": "2024/2 explicitly an11-month transition period. No annualization or normalizing calculated."
+  },
+  "direct_input_candidates": {
+    "eps_jpy": {
+      "status": "display_found_candidate_only",
+      "raw_value": "171.36",
+      "raw_unit": "円",
+      "label": "1株当たり当期利益",
+      "FY_column": "2026/2",
+      "basis": "2026-03-01 1→2split already reflected retrospectively over all displayed EPS periods per note6. No extra multiply/divide.",
+      "basic_or_diluted_label_explicit_on_selected_pages": false,
+      "weighted_average_denominator_explicit_on_selected_pages": false,
+      "ordinary_profit_numerator_reconciliation_verified": false,
+      "consolidation_scope": "Report/group context and parent-owner earnings line present. Specific EPS row does not print連結; no automatic strict consolidated-basic certification.",
+      "candidate_input_adopted": false,
+      "quote_ids": [
+        "historical-columns",
+        "annual-per-share-profit-row",
+        "share-events-and-EPS-retrospective-basis"
+      ]
+    },
+    "book_value_per_share_jpy": {
+      "status": "not_located_in_saved_text_and_selected_images",
+      "value": null,
+      "calculated_from_capital_or_share_count": false,
+      "common_equity_NCI_OCI_mapping_verified": false
+    }
+  },
+  "accounting_and_share_comparability": {
+    "IFRS18": "Note1 states early application fromFY2027/2 with accounting-policy change reflected fromFY2026/2, and labelコア営業利益 changed to事業利益. Do not assert the unadjusted old publication matches this restated summary or infer no EPS effect.",
+    "IFRS18_EPS_effect_amount": null,
+    "share_events": "Note5 states2018-07-12 ordinary5→1consolidation and2026-03-01 1→2split. Note6 explicitly EPS series retrospectively adjusted.",
+    "ending_share_count_limit": "Physical66 stock information is dated2026-02-28; the major-shareholder note explicitly says share counts are pre-split. Do not use those ending counts as split-adjusted EPS averages or infer a BVPS. Scope of that note is kept local, not applied mechanically to every table.",
+    "EPS171_36_is_normal_earnings_or_forecast": false,
+    "historical_price_or_DPS_figures_on_page66_used": false
+  },
+  "disposition": {
+    "usable_now": "Publicly displayed annual per-share-profit candidate and its retrospective split/accounting comparison caveats.",
+    "not_ready_for_two_input_formula": "Direct same-year BPS not located; EPS basic/average and strict ordinary-consolidated mapping not fully specified on these pages. No value or formula execution.",
+    "positive_guard": "Displayed EPS171.36 is positive; BPS unknown so the joint EPS>0 AND BVPS>0 guard cannot be fully assessed. This is missing input, not observed nonpositive or permanent exclusion.",
+    "next_missing_original": "A publicly reported same-FY direct ordinary closing BPS and EPS definition/denominator on a formal financial note would resolve the key missing input; no retrieval or route reopened here.",
+    "IR_or_investment_action": null
+  },
+  "validation": {
+    "source_raw_text_binding": true,
+    "new_quote_nonempty_count": 6,
+    "global_page_Unicode_UTF8_quote_replay": "passed",
+    "source_ID_wholeobject_oldfiles_preserved": true,
+    "direct_BPS_not_reconstructed": true,
+    "new_numeric_facts_normalizer_GET_DB_Store_code_docs_index_financial_IR_changes": 0
+  },
+  "input_pins": {
+    "research/ir-case-studies-2026-10-15/3612/integrated-report-business-review-2026-10-16/source-only-bundle.json": "189ef8c5f93214425efc2b3633a64b8970efba6113cbad1cc62b1ce040bea645",
+    "research/ir-case-studies-2026-10-15/3612/integrated-report-business-review-2026-10-16/raw/a441fc34cd621a7797fe63c1523b18ddfc3524452157989a121042c7acc68050": "a441fc34cd621a7797fe63c1523b18ddfc3524452157989a121042c7acc68050",
+    "research/ir-case-studies-2026-10-15/3612/integrated-report-business-review-2026-10-16/full.txt": "d12776e8e4825d10c2729df39215e9feecd3560c3414de3b14b799f887b96b0c",
+    "research/ir-case-studies-2026-10-15/3612/integrated-report-business-review-2026-10-16/manifest.json": "374db5bad7b6fa385cc530fd887db705fd48cab8a71ca156c27f96d54632e6b6",
+    "research/ir-case-studies-2026-10-15/3612/integrated-report-business-review-2026-10-16/review.json": "ddeab416556adf95fda7d6bbf3929706e4850c280d1088c2453ecbc69b6e44c9",
+    "research/ir-case-studies-2026-10-15/3612/integrated-report-business-review-2026-10-16/quotes.json": "f454de0fda846c588dad2e7aecc5079f84e68545bc8639eb13a6367d9c1c98f4",
+    "research/ir-transparent-metric-formula-review-2026-10-15/upstream-INDICATORS.md": "fb82b2d47596026ea75fa561169062c52622dcb153caffe37af5491111ad084f",
+    "research/ir-transparent-metric-core-review-2026-10-15/upstream-extras.py": "3038a489679aa163f5a4d930ac7cb4dcf320d72a62122ccd45e9d9242b593631"
+  }
+}

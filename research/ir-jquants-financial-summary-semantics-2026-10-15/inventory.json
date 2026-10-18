@@ -1,0 +1,201 @@
+{
+  "API_auth_paid_issuer_data_requests": 0,
+  "collection_outcome_ref": {
+    "path": "research/ir-jquants-financial-summary-semantics-2026-10-15/route-outcome.json"
+  },
+  "financial_adapter_source_tests_shared_docs_actual_DB_changes": 0,
+  "financial_inputs_verified": false,
+  "meaning_boundary": [
+    "SDK code/date_yyyymmdd argument descriptions do not certify the returned Code/DiscDate field meanings.",
+    "The fact that a label is NP/EPS/FEPS/NCNP/FNCEPS is insufficient to assert its JPY unit, company forecast/year, profit attribution or consolidated/standalone basis.",
+    "SDK date conversion and111-field constant list are implementation contracts, not original HTTP token or financial-meaning verification."
+  ],
+  "model_adopted": false,
+  "prior_saved_materials": {
+    "code_contract": "SDK2.8 method docs and constant labels, already archived in research/ir-jquants-financial-summary-integration-2026-10-15/sdk-contract-evidence.json",
+    "history_search": "rg on research/docs JSON,md,py plus installed SDK sources/metadata found literal docs links and SDK evidence; two8697 snapshots are JPX index pages linking J-Quants service, not prior spec attempts. No same prior negative found in that bounded search; raw-only global absence not certified.",
+    "semantic_specification": "No saved official response specification giving requested returned-field units/accounting/forecast scope identified in the searched research/docs/SDK readme material."
+  },
+  "purpose": "Locate official semantics of a selected subset of SDK V2/fins/summary fields; no111-column expansion or financial normalization/adoption.",
+  "recorded_at": "2026-10-15T20:54:36.400314+00:00",
+  "saved_literal_quotes": [
+    {
+      "UTF8_byte_end_exclusive": 10085,
+      "UTF8_byte_start": 10032,
+      "character_end_exclusive": 9129,
+      "character_start": 9076,
+      "file_sha256": "517e296b22b80e45a114b89a279091fde2dff4d04f89bc8e6260799ad32d9499",
+      "path": ".venv/lib/python3.12/site-packages/jquantsapi/constants.py",
+      "quote": "# ref. ja https://jpx-jquants.com/ja/spec/fin-summary"
+    },
+    {
+      "UTF8_byte_end_exclusive": 29476,
+      "UTF8_byte_start": 29278,
+      "character_end_exclusive": 26578,
+      "character_start": 26446,
+      "file_sha256": "9320818de2df49930e05d3c19a0637be7e633df3b8ede74189620c0346dee725",
+      "path": ".venv/lib/python3.12/site-packages/jquantsapi/client_v2.py",
+      "quote": "            code: 銘柄コード\n            date_yyyymmdd: 開示日 (YYYYMMDD or YYYY-MM-DD)\n            cursor: 前回レスポンスで返却された cursor。差分取得に使用します。"
+    },
+    {
+      "UTF8_byte_end_exclusive": 29262,
+      "UTF8_byte_start": 29154,
+      "character_end_exclusive": 26430,
+      "character_start": 26384,
+      "file_sha256": "9320818de2df49930e05d3c19a0637be7e633df3b8ede74189620c0346dee725",
+      "path": ".venv/lib/python3.12/site-packages/jquantsapi/client_v2.py",
+      "quote": "        cursor パラメータを使用した差分取得はプレミアムプラン限定の機能です。"
+    },
+    {
+      "UTF8_byte_end_exclusive": 4949,
+      "UTF8_byte_start": 4775,
+      "character_end_exclusive": 3955,
+      "character_start": 3865,
+      "file_sha256": "a79487b8dce3bf03e3f24e38f229323cdba581b8c97f74f13b70eaf2d89cb68f",
+      "path": ".venv/lib/python3.12/site-packages/jquants_api_client-2.8.0.dist-info/METADATA",
+      "quote": "プランごとに利用可能な API とデータ格納期間については、[公式ドキュメント](https://jpx-jquants.com/spec/data-spec) をご参照ください。"
+    }
+  ],
+  "schema": "finite-jquants-summary-semantics-inventory/v1",
+  "selected_official_literal_routes": [
+    {
+      "body_GETs": 0,
+      "content_read": false,
+      "line": 357,
+      "literal_source_file": ".venv/lib/python3.12/site-packages/jquantsapi/constants.py",
+      "note": "Found in installed SDK constant source during final offline field scan; not fetched because exacthost robots route already ended unknown.",
+      "role": "direct endpoint-spec candidate",
+      "source_sha256": "517e296b22b80e45a114b89a279091fde2dff4d04f89bc8e6260799ad32d9499",
+      "url": "https://jpx-jquants.com/ja/spec/fin-summary"
+    },
+    {
+      "body_GETs": 0,
+      "content_read": false,
+      "line": 51,
+      "literal_source_file": "docs/data-sources.md",
+      "role": "canonical existing docs data coverage/spec index",
+      "source_sha256": "ca0d01775f941c05ae243fafbbca8a8fbeba8b90792ebea7bf86f01c3849d4b8",
+      "url": "https://jpx-jquants.com/ja/spec/data-spec"
+    },
+    {
+      "body_GETs": 0,
+      "content_read": false,
+      "line": 51,
+      "literal_source_file": "docs/data-sources.md",
+      "role": "canonical existing docs rate limit reference; not a unit definition",
+      "source_sha256": "ca0d01775f941c05ae243fafbbca8a8fbeba8b90792ebea7bf86f01c3849d4b8",
+      "url": "https://jpx-jquants.com/ja/spec/rate-limits"
+    }
+  ],
+  "status": "finite_completed_official_docs_access_held_fields_unverified",
+  "target_field_name_evidence_only": [
+    {
+      "SDK_line": 362,
+      "SDK_literal": "    \"Code\",",
+      "definition_scope_period_forecast_consolidation": "unverified; abbreviated field name is not semantic evidence",
+      "name": "Code",
+      "source_file": ".venv/lib/python3.12/site-packages/jquantsapi/constants.py",
+      "source_file_sha256": "517e296b22b80e45a114b89a279091fde2dff4d04f89bc8e6260799ad32d9499",
+      "unit": "unverified"
+    },
+    {
+      "SDK_line": 360,
+      "SDK_literal": "    \"DiscDate\",",
+      "definition_scope_period_forecast_consolidation": "unverified; abbreviated field name is not semantic evidence",
+      "name": "DiscDate",
+      "source_file": ".venv/lib/python3.12/site-packages/jquantsapi/constants.py",
+      "source_file_sha256": "517e296b22b80e45a114b89a279091fde2dff4d04f89bc8e6260799ad32d9499",
+      "unit": "unverified"
+    },
+    {
+      "SDK_line": 363,
+      "SDK_literal": "    \"DiscNo\",",
+      "definition_scope_period_forecast_consolidation": "unverified; abbreviated field name is not semantic evidence",
+      "name": "DiscNo",
+      "source_file": ".venv/lib/python3.12/site-packages/jquantsapi/constants.py",
+      "source_file_sha256": "517e296b22b80e45a114b89a279091fde2dff4d04f89bc8e6260799ad32d9499",
+      "unit": "unverified"
+    },
+    {
+      "SDK_line": 364,
+      "SDK_literal": "    \"DocType\",",
+      "definition_scope_period_forecast_consolidation": "unverified; abbreviated field name is not semantic evidence",
+      "name": "DocType",
+      "source_file": ".venv/lib/python3.12/site-packages/jquantsapi/constants.py",
+      "source_file_sha256": "517e296b22b80e45a114b89a279091fde2dff4d04f89bc8e6260799ad32d9499",
+      "unit": "unverified"
+    },
+    {
+      "SDK_line": 365,
+      "SDK_literal": "    \"CurPerType\",",
+      "definition_scope_period_forecast_consolidation": "unverified; abbreviated field name is not semantic evidence",
+      "name": "CurPerType",
+      "source_file": ".venv/lib/python3.12/site-packages/jquantsapi/constants.py",
+      "source_file_sha256": "517e296b22b80e45a114b89a279091fde2dff4d04f89bc8e6260799ad32d9499",
+      "unit": "unverified"
+    },
+    {
+      "SDK_line": 375,
+      "SDK_literal": "    \"NP\",",
+      "definition_scope_period_forecast_consolidation": "unverified; abbreviated field name is not semantic evidence",
+      "name": "NP",
+      "source_file": ".venv/lib/python3.12/site-packages/jquantsapi/constants.py",
+      "source_file_sha256": "517e296b22b80e45a114b89a279091fde2dff4d04f89bc8e6260799ad32d9499",
+      "unit": "unverified"
+    },
+    {
+      "SDK_line": 376,
+      "SDK_literal": "    \"EPS\",",
+      "definition_scope_period_forecast_consolidation": "unverified; abbreviated field name is not semantic evidence",
+      "name": "EPS",
+      "source_file": ".venv/lib/python3.12/site-packages/jquantsapi/constants.py",
+      "source_file_sha256": "517e296b22b80e45a114b89a279091fde2dff4d04f89bc8e6260799ad32d9499",
+      "unit": "unverified"
+    },
+    {
+      "SDK_line": 423,
+      "SDK_literal": "    \"FEPS\",",
+      "definition_scope_period_forecast_consolidation": "unverified; abbreviated field name is not semantic evidence",
+      "name": "FEPS",
+      "source_file": ".venv/lib/python3.12/site-packages/jquantsapi/constants.py",
+      "source_file_sha256": "517e296b22b80e45a114b89a279091fde2dff4d04f89bc8e6260799ad32d9499",
+      "unit": "unverified"
+    },
+    {
+      "SDK_line": 441,
+      "SDK_literal": "    \"NCNP\",",
+      "definition_scope_period_forecast_consolidation": "unverified; abbreviated field name is not semantic evidence",
+      "name": "NCNP",
+      "source_file": ".venv/lib/python3.12/site-packages/jquantsapi/constants.py",
+      "source_file_sha256": "517e296b22b80e45a114b89a279091fde2dff4d04f89bc8e6260799ad32d9499",
+      "unit": "unverified"
+    },
+    {
+      "SDK_line": 442,
+      "SDK_literal": "    \"NCEPS\",",
+      "definition_scope_period_forecast_consolidation": "unverified; abbreviated field name is not semantic evidence",
+      "name": "NCEPS",
+      "source_file": ".venv/lib/python3.12/site-packages/jquantsapi/constants.py",
+      "source_file_sha256": "517e296b22b80e45a114b89a279091fde2dff4d04f89bc8e6260799ad32d9499",
+      "unit": "unverified"
+    },
+    {
+      "SDK_line": 460,
+      "SDK_literal": "    \"FNCNP\",",
+      "definition_scope_period_forecast_consolidation": "unverified; abbreviated field name is not semantic evidence",
+      "name": "FNCNP",
+      "source_file": ".venv/lib/python3.12/site-packages/jquantsapi/constants.py",
+      "source_file_sha256": "517e296b22b80e45a114b89a279091fde2dff4d04f89bc8e6260799ad32d9499",
+      "unit": "unverified"
+    },
+    {
+      "SDK_line": 461,
+      "SDK_literal": "    \"FNCEPS\",",
+      "definition_scope_period_forecast_consolidation": "unverified; abbreviated field name is not semantic evidence",
+      "name": "FNCEPS",
+      "source_file": ".venv/lib/python3.12/site-packages/jquantsapi/constants.py",
+      "source_file_sha256": "517e296b22b80e45a114b89a279091fde2dff4d04f89bc8e6260799ad32d9499",
+      "unit": "unverified"
+    }
+  ]
+}

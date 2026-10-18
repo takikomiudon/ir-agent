@@ -1,0 +1,690 @@
+{
+  "schema_version": 1,
+  "artifact_type": "cyclical_model_research_case_partial_public_materials",
+  "company": {
+    "id": "jp:5480",
+    "security_code": "5480",
+    "name": "日本冶金工業株式会社",
+    "english_name": "Nippon Yakin Kogyo Co., Ltd.",
+    "official_url": "https://www.nyk.co.jp/"
+  },
+  "recorded_at": "2026-10-15T02:49:43.453292+00:00",
+  "status": "needs_data",
+  "research_only": true,
+  "production_ingest_ready": false,
+  "sampling": {
+    "ledger_file": "research/ir-recovery-2026-10-13/contact-candidates.csv",
+    "ledger_sha256": "d7a55a842a7c126b48c588801cc2c6035d21bad22cb228ef57da68def1e03f31",
+    "ledger_rows": 1819,
+    "predicate": {
+      "jpx_sector": "鉄鋼",
+      "individual_access": "explicit"
+    },
+    "order_by": "security_code ascending",
+    "matching_count": 2,
+    "matching_codes": [
+      "5480",
+      "5484"
+    ],
+    "selected_security_code": "5480",
+    "selection_purpose": "research example for applying an existing cyclical-model research method; not investment selection",
+    "investment_eligible": null,
+    "currently_send_eligible": null,
+    "historical_contact_url": "https://www.nyk.co.jp/contact/index.php",
+    "historical_contact_record": "research/ir-contacts-universe-2026-10-11/records/5480.json",
+    "contact_currently_revalidated": false,
+    "no_form_entry_or_submission": true
+  },
+  "adopted_method": {
+    "author": "Aswath Damodaran",
+    "source_id": "damodaran.cyclical-commodity.2009",
+    "title": "Ups and Downs: Valuing Cyclical and Commodity Companies",
+    "url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/commodity.pdf",
+    "saved_source_record": "research/valuation-model-routing-2026-10-15/sources.json",
+    "raw_pdf_sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+    "routing_file": "research/valuation-model-routing-2026-10-15/routing.json",
+    "read_before_new_get": true,
+    "author_quotes": [
+      {
+        "pdf_page": 10,
+        "quote": "we also have to normalize return on capital, reinvestment and cost of financing"
+      },
+      {
+        "pdf_page": 14,
+        "quote": "the averaging should occur over a period long enough to cover an entire cycle"
+      },
+      {
+        "pdf_page": 14,
+        "quote": "apply the average profit margin to revenues in the most recent period"
+      }
+    ],
+    "project_adaptation": "点検対象と不足資料の整理。サイクルが一巡する期間・正常化の尺度・現在規模を裏付けるまで評価せず、利益のみの正常化をしない。",
+    "fixed_normalization_years": null,
+    "normal_margin": null,
+    "normal_reinvestment": null,
+    "normal_financing_cost": null,
+    "low_spot_pe_buy_rule": null,
+    "volatility_exclusion_rule": null
+  },
+  "source_bundle_file": "source-bundle.json",
+  "source_id_map": {
+    "nyk5480-01": "case-public:4550dcb5ba257247c47b846003c9a0448a392a5d075eedaa688452835da5010a",
+    "nyk5480-02": "case-public:e70628e64f048ae49496c832eb44edee800d82ab2dcca5962a3a00838c29b896",
+    "nyk5480-03": "case-public:89ed9fd51d5faf7426d484b82fb39df4be70de3c68fbb2c4b330269632a996b8",
+    "nyk5480-04": "case-public:8868c78b4337b09f6600be40d08d290312ab9fa5900c84b8ff7adc4e6f00930f",
+    "nyk5480-05": "case-public:c9715de6c491a34c92a46bdedabc7c74d5947cfa8d21d9fc1c824ae0499ee616",
+    "nyk5480-06": "case-public:398e1d4b1dff093ff66ccf43997d0cd40dc13d33cbfafac879719e531976bb99",
+    "nyk5480-07": "case-public:7ebd4f421bb0d918ddc742534804347eb60927dfe2b6c6371b56af46358fcf00",
+    "nyk5480-08": "case-public:91f0c36851e32c4a00119d864fcabf7f5ba973e2f3d70b111d269ea6445ed265"
+  },
+  "sources": [
+    {
+      "source_id": "nyk5480-01",
+      "requested_url": "https://www.nyk.co.jp/robots.txt",
+      "url": "https://www.nyk.co.jp/robots.txt",
+      "retrieved_at": "2026-10-15T02:44:14.150321+00:00",
+      "http_status": 200,
+      "error": null,
+      "title": "",
+      "content_type": "text/plain",
+      "raw_file": "raw/e124570cf8e8f9e06cc7e61a0ccba02c626cc61a2d67ee2605a6bc17e93f4964",
+      "sha256": "e124570cf8e8f9e06cc7e61a0ccba02c626cc61a2d67ee2605a6bc17e93f4964",
+      "byte_count": 29,
+      "text_file": null,
+      "complete_body": true,
+      "snapshot": "01.json"
+    },
+    {
+      "source_id": "nyk5480-02",
+      "requested_url": "https://www.nyk.co.jp/",
+      "url": "https://www.nyk.co.jp/",
+      "retrieved_at": "2026-10-15T02:44:15.868790+00:00",
+      "http_status": 200,
+      "error": null,
+      "title": "トップページ | 日本冶金工業株式会社",
+      "content_type": "text/html",
+      "raw_file": "raw/6dfdb5979cb56f3c62d2057e48ce2357ed6c20f9ddcd0b6435b112fe1fb5c062",
+      "sha256": "6dfdb5979cb56f3c62d2057e48ce2357ed6c20f9ddcd0b6435b112fe1fb5c062",
+      "byte_count": 29194,
+      "text_file": null,
+      "complete_body": true,
+      "snapshot": "02.json"
+    },
+    {
+      "source_id": "nyk5480-03",
+      "requested_url": "https://www.nyk.co.jp/investors/",
+      "url": "https://www.nyk.co.jp/investors/",
+      "retrieved_at": "2026-10-15T02:44:31.239311+00:00",
+      "http_status": 200,
+      "error": null,
+      "title": "株主・投資家情報 | 日本冶金工業株式会社",
+      "content_type": "text/html",
+      "raw_file": "raw/b83117ccd1d2318c7c23daaffff7bcb6f2930cee72eed5ed0020043f290058fb",
+      "sha256": "b83117ccd1d2318c7c23daaffff7bcb6f2930cee72eed5ed0020043f290058fb",
+      "byte_count": 25739,
+      "text_file": null,
+      "complete_body": true,
+      "snapshot": "03.json"
+    },
+    {
+      "source_id": "nyk5480-04",
+      "requested_url": "https://www.nyk.co.jp/investors/library/presentation.html",
+      "url": "https://www.nyk.co.jp/investors/library/presentation.html",
+      "retrieved_at": "2026-10-15T02:44:33.136397+00:00",
+      "http_status": 200,
+      "error": null,
+      "title": "説明会資料 | 株主・投資家情報 | 日本冶金工業株式会社",
+      "content_type": "text/html",
+      "raw_file": "raw/9b8af5e7fcb63589c11eeee961a9343ed8b1d7e140385cdd4cbcd038ee466a53",
+      "sha256": "9b8af5e7fcb63589c11eeee961a9343ed8b1d7e140385cdd4cbcd038ee466a53",
+      "byte_count": 57356,
+      "text_file": null,
+      "complete_body": true,
+      "snapshot": "04.json"
+    },
+    {
+      "source_id": "nyk5480-05",
+      "requested_url": "https://www.nyk.co.jp/investors/eir/eir_v5.js",
+      "url": "https://www.nyk.co.jp/investors/eir/eir_v5.js",
+      "retrieved_at": "2026-10-15T02:45:29.190234+00:00",
+      "http_status": 200,
+      "error": null,
+      "title": "",
+      "content_type": "application/x-javascript",
+      "raw_file": "raw/52245f3e35f4f58218041bc79d9e763c707de25cbe9d8f4d39113ae88cf8ce9c",
+      "sha256": "52245f3e35f4f58218041bc79d9e763c707de25cbe9d8f4d39113ae88cf8ce9c",
+      "byte_count": 13383,
+      "text_file": null,
+      "complete_body": true,
+      "snapshot": "05.json"
+    },
+    {
+      "source_id": "nyk5480-06",
+      "requested_url": "https://www.nyk.co.jp/investors/faq/",
+      "url": "https://www.nyk.co.jp/investors/faq/",
+      "retrieved_at": "2026-10-15T02:45:30.905615+00:00",
+      "http_status": 200,
+      "error": null,
+      "title": "よくあるご質問 | 株主・投資家情報 | 日本冶金工業株式会社",
+      "content_type": "text/html",
+      "raw_file": "raw/09c79652278afbe4fe5f6d97061bfffbfa2f156eee415efc9e54182443fea572",
+      "sha256": "09c79652278afbe4fe5f6d97061bfffbfa2f156eee415efc9e54182443fea572",
+      "byte_count": 22410,
+      "text_file": null,
+      "complete_body": true,
+      "snapshot": "06.json"
+    },
+    {
+      "source_id": "nyk5480-07",
+      "requested_url": "https://www.nyk.co.jp/investors/message.html",
+      "url": "https://www.nyk.co.jp/investors/message.html",
+      "retrieved_at": "2026-10-15T02:46:12.089948+00:00",
+      "http_status": 200,
+      "error": null,
+      "title": "株主・投資家の皆様へ | 株主・投資家情報 | 日本冶金工業株式会社",
+      "content_type": "text/html",
+      "raw_file": "raw/9f1ad20e842de2161e18ec8e2c2d2367f93580ccc8fd0996ea846a2fda8f94ae",
+      "sha256": "9f1ad20e842de2161e18ec8e2c2d2367f93580ccc8fd0996ea846a2fda8f94ae",
+      "byte_count": 24438,
+      "text_file": null,
+      "complete_body": true,
+      "snapshot": "07.json"
+    },
+    {
+      "source_id": "nyk5480-08",
+      "requested_url": "https://www.nyk.co.jp/about/introduction.html",
+      "url": "https://www.nyk.co.jp/about/introduction.html",
+      "retrieved_at": "2026-10-15T02:46:13.806216+00:00",
+      "http_status": 200,
+      "error": null,
+      "title": "会社概要 | 会社情報 | 日本冶金工業株式会社",
+      "content_type": "text/html",
+      "raw_file": "raw/8b4f292297bb7c5d8b5ee77b6ec8a3dbfb2938370d242a7cf74e3b5acfb22592",
+      "sha256": "8b4f292297bb7c5d8b5ee77b6ec8a3dbfb2938370d242a7cf74e3b5acfb22592",
+      "byte_count": 22522,
+      "text_file": null,
+      "complete_body": true,
+      "snapshot": "08.json"
+    }
+  ],
+  "evidence_references": [
+    {
+      "source_id": "case-public:91f0c36851e32c4a00119d864fcabf7f5ba973e2f3d70b111d269ea6445ed265",
+      "capture_source_id": "nyk5480-08",
+      "source_snapshot": "08.json",
+      "url": "https://www.nyk.co.jp/about/introduction.html",
+      "retrieved_at": "2026-10-15T02:46:13.806216+00:00",
+      "published_at": null,
+      "publication_date": null,
+      "quote": "会社名 日本冶金工業株式会社 (Nippon Yakin Kogyo Co., Ltd.) ",
+      "location": {
+        "representation": "saved_snapshot.text",
+        "section": "会社概要・会社名",
+        "pdf_page": null,
+        "character_start": 628,
+        "character_end": 674
+      },
+      "target_period": null,
+      "scope": "会社概要・会社名",
+      "verification": "exact substring in saved original snapshot text and source-bundle content",
+      "id": "identity_company"
+    },
+    {
+      "source_id": "case-public:398e1d4b1dff093ff66ccf43997d0cd40dc13d33cbfafac879719e531976bb99",
+      "capture_source_id": "nyk5480-06",
+      "source_snapshot": "06.json",
+      "url": "https://www.nyk.co.jp/investors/faq/",
+      "retrieved_at": "2026-10-15T02:45:30.905615+00:00",
+      "published_at": null,
+      "publication_date": null,
+      "quote": "Q 証券コードは何番ですか？ A 5480です。なお、業種は「鉄鋼業」です。 ",
+      "location": {
+        "representation": "saved_snapshot.text",
+        "section": "FAQの証券コード・業種",
+        "pdf_page": null,
+        "character_start": 797,
+        "character_end": 836
+      },
+      "target_period": null,
+      "scope": "FAQの証券コード・業種",
+      "verification": "exact substring in saved original snapshot text and source-bundle content",
+      "id": "identity_code"
+    },
+    {
+      "source_id": "case-public:91f0c36851e32c4a00119d864fcabf7f5ba973e2f3d70b111d269ea6445ed265",
+      "capture_source_id": "nyk5480-08",
+      "source_snapshot": "08.json",
+      "url": "https://www.nyk.co.jp/about/introduction.html",
+      "retrieved_at": "2026-10-15T02:46:13.806216+00:00",
+      "published_at": null,
+      "publication_date": null,
+      "quote": "事業内容 ステンレス鋼、耐熱鋼および高ニッケル合金の板(薄板、中厚板)・帯(コイル)、鍛造品ならびに加工品の製造・販売 フェロニッケルの製造 ",
+      "location": {
+        "representation": "saved_snapshot.text",
+        "section": "会社概要・事業内容",
+        "pdf_page": null,
+        "character_start": 878,
+        "character_end": 949
+      },
+      "target_period": null,
+      "scope": "会社概要・事業内容",
+      "verification": "exact substring in saved original snapshot text and source-bundle content",
+      "id": "business"
+    },
+    {
+      "source_id": "case-public:7ebd4f421bb0d918ddc742534804347eb60927dfe2b6c6371b56af46358fcf00",
+      "capture_source_id": "nyk5480-07",
+      "source_snapshot": "07.json",
+      "url": "https://www.nyk.co.jp/investors/message.html",
+      "retrieved_at": "2026-10-15T02:46:12.089948+00:00",
+      "published_at": null,
+      "publication_date": "2026-06",
+      "quote": "第144期（2025年4月1日から2026年3月31日まで）の報告書をお届けするにあたり、一言ご挨拶申し上げます。 ",
+      "location": {
+        "representation": "saved_snapshot.text",
+        "section": "株主向けメッセージの報告対象",
+        "pdf_page": null,
+        "character_start": 742,
+        "character_end": 800
+      },
+      "target_period": {
+        "start_date": "2025-04-01",
+        "end_date": "2026-03-31",
+        "label": "第144期・連結会計年度"
+      },
+      "scope": "株主向けメッセージの報告対象",
+      "verification": "exact substring in saved original snapshot text and source-bundle content",
+      "id": "period"
+    },
+    {
+      "source_id": "case-public:7ebd4f421bb0d918ddc742534804347eb60927dfe2b6c6371b56af46358fcf00",
+      "capture_source_id": "nyk5480-07",
+      "source_snapshot": "07.json",
+      "url": "https://www.nyk.co.jp/investors/message.html",
+      "retrieved_at": "2026-10-15T02:46:12.089948+00:00",
+      "published_at": null,
+      "publication_date": "2026-06",
+      "quote": "ステンレス特殊鋼業界におきましては、造船向けの需要は堅調に推移し、半導体製造装置向け需要も年明けより回復の兆しが見え始めました。一方で、建築資材向けは物価高や人手不足等による需要停滞に改善が見られず、厳しい状況が続きました。また、東アジア地域からの安価な輸入材の流入は高水準で継続いたしました。 当社グループの戦略分野である高機能材につきましては、世界的なAI投資拡大等を背景に半導体生産関連向けの需要が増大しているものの、中国経済の停滞や環境関連分野への投資先送りなどが影響し数量面では低迷が続きました。 ",
+      "location": {
+        "representation": "saved_snapshot.text",
+        "section": "会社の需要・用途別環境説明",
+        "pdf_page": null,
+        "character_start": 900,
+        "character_end": 1154
+      },
+      "target_period": {
+        "start_date": "2025-04-01",
+        "end_date": "2026-03-31",
+        "label": "第144期・連結会計年度"
+      },
+      "scope": "会社の需要・用途別環境説明",
+      "verification": "exact substring in saved original snapshot text and source-bundle content",
+      "id": "demand_mix"
+    },
+    {
+      "source_id": "case-public:7ebd4f421bb0d918ddc742534804347eb60927dfe2b6c6371b56af46358fcf00",
+      "capture_source_id": "nyk5480-07",
+      "source_snapshot": "07.json",
+      "url": "https://www.nyk.co.jp/investors/message.html",
+      "retrieved_at": "2026-10-15T02:46:12.089948+00:00",
+      "published_at": null,
+      "publication_date": "2026-06",
+      "quote": "コスト面につきましては、原料価格は比較的安定して推移いたしましたが、人件費や減価償却費など固定費の増加が収益を圧迫いたしました。 ",
+      "location": {
+        "representation": "saved_snapshot.text",
+        "section": "会社の原料価格と固定費の説明",
+        "pdf_page": null,
+        "character_start": 1154,
+        "character_end": 1219
+      },
+      "target_period": {
+        "start_date": "2025-04-01",
+        "end_date": "2026-03-31",
+        "label": "第144期・連結会計年度"
+      },
+      "scope": "会社の原料価格と固定費の説明",
+      "verification": "exact substring in saved original snapshot text and source-bundle content",
+      "id": "costs"
+    },
+    {
+      "source_id": "case-public:7ebd4f421bb0d918ddc742534804347eb60927dfe2b6c6371b56af46358fcf00",
+      "capture_source_id": "nyk5480-07",
+      "source_snapshot": "07.json",
+      "url": "https://www.nyk.co.jp/investors/message.html",
+      "retrieved_at": "2026-10-15T02:46:12.089948+00:00",
+      "published_at": null,
+      "publication_date": "2026-06",
+      "quote": "その結果、当連結会計年度の販売数量につきましては前年度比6.8%減（高機能材9.9%減、一般材5.0%減）、連結売上高は150,866百万円（前年度比21,231百万円減）となりました。また、利益面につきましては、連結営業利益10,973百万円（前年度比5,994百万円減）、連結経常利益9,657百万円（前年度比6,542百万円減）、親会社株主に帰属する当期純利益7,215百万円（前年度比4,363百万円減）となりました。 ",
+      "location": {
+        "representation": "saved_snapshot.text",
+        "section": "会社説明の当連結期実績。正常値/独自予想ではない",
+        "pdf_page": null,
+        "character_start": 1219,
+        "character_end": 1433
+      },
+      "target_period": {
+        "start_date": "2025-04-01",
+        "end_date": "2026-03-31",
+        "label": "第144期・連結会計年度"
+      },
+      "scope": "会社説明の当連結期実績。正常値/独自予想ではない",
+      "verification": "exact substring in saved original snapshot text and source-bundle content",
+      "id": "year_results"
+    },
+    {
+      "source_id": "case-public:7ebd4f421bb0d918ddc742534804347eb60927dfe2b6c6371b56af46358fcf00",
+      "capture_source_id": "nyk5480-07",
+      "source_snapshot": "07.json",
+      "url": "https://www.nyk.co.jp/investors/message.html",
+      "retrieved_at": "2026-10-15T02:46:12.089948+00:00",
+      "published_at": null,
+      "publication_date": "2026-06",
+      "quote": "当社グループを取り巻く事業環境は、半導体関連の需要は今後も好調に推移する見通しであり、輸入材の流入はピーク時に比べて減少傾向が見られ、足元のステンレス一般材の受注状況は回復基調にあります。 その一方、中東情勢によるエネルギー価格の高騰や経済活動の減速など地政学的リスクは高まっております。 ",
+      "location": {
+        "representation": "saved_snapshot.text",
+        "section": "会社の需要見通しと地政学/エネルギー懸念",
+        "pdf_page": null,
+        "character_start": 1433,
+        "character_end": 1578
+      },
+      "target_period": {
+        "label": "2026年6月表示の会社見通し; 達成結果ではない"
+      },
+      "scope": "会社の需要見通しと地政学/エネルギー懸念",
+      "verification": "exact substring in saved original snapshot text and source-bundle content",
+      "id": "outlook"
+    },
+    {
+      "source_id": "case-public:398e1d4b1dff093ff66ccf43997d0cd40dc13d33cbfafac879719e531976bb99",
+      "capture_source_id": "nyk5480-06",
+      "source_snapshot": "06.json",
+      "url": "https://www.nyk.co.jp/investors/faq/",
+      "retrieved_at": "2026-10-15T02:45:30.905615+00:00",
+      "published_at": null,
+      "publication_date": null,
+      "quote": "Q 決算期はいつですか？ A 毎年3月31日です。 ",
+      "location": {
+        "representation": "saved_snapshot.text",
+        "section": "FAQの決算期",
+        "pdf_page": null,
+        "character_start": 871,
+        "character_end": 897
+      },
+      "target_period": null,
+      "scope": "FAQの決算期",
+      "verification": "exact substring in saved original snapshot text and source-bundle content",
+      "id": "fiscal_date"
+    },
+    {
+      "source_id": "case-public:c9715de6c491a34c92a46bdedabc7c74d5947cfa8d21d9fc1c824ae0499ee616",
+      "capture_source_id": "nyk5480-05",
+      "source_snapshot": "05.json",
+      "url": "https://www.nyk.co.jp/investors/eir/eir_v5.js",
+      "retrieved_at": "2026-10-15T02:45:29.190234+00:00",
+      "published_at": null,
+      "publication_date": null,
+      "quote": "const eirCode = '5480';",
+      "location": {
+        "representation": "saved_snapshot.text",
+        "section": "公式ページで参照されたE-IR configの証券コード",
+        "pdf_page": null,
+        "character_start": 56,
+        "character_end": 79
+      },
+      "target_period": null,
+      "scope": "公式ページで参照されたE-IR configの証券コード",
+      "verification": "exact substring in saved original snapshot text and source-bundle content",
+      "id": "eir_identity"
+    },
+    {
+      "source_id": "case-public:c9715de6c491a34c92a46bdedabc7c74d5947cfa8d21d9fc1c824ae0499ee616",
+      "capture_source_id": "nyk5480-05",
+      "source_snapshot": "05.json",
+      "url": "https://www.nyk.co.jp/investors/eir/eir_v5.js",
+      "retrieved_at": "2026-10-15T02:45:29.190234+00:00",
+      "published_at": null,
+      "publication_date": null,
+      "quote": "const eirUrl = ('https:' == document.location.protocol ? 'https://ssl4' : 'http://v4') + '.eir-parts.net';\r\nif( (document.location.protocol == 'https:' || document.location.protocol == 'http:') && !/aspdev/.test(window.location.host)){\r\n\tvar eirPass = eirUrl + '/Custom/' + eirLevel + '/v5parts/' + eirCode + '/' + eirLanguage + '/' + uniCodeEir + '/';\r\n\tvar qirPass = eirUrl + '/Custom/' + eirLevel + '/qir/' + eirCode + '/' + eirLanguage + '/' + uniCodeQir +'/';\r\n}else{\r\n\tvar eirPass = '/v5parts/' + eirCode + '/' + eirLanguage + '/' + uniCodeEir + '/';\r\n    var qirPass = '/v4qir/' + eirCode + '/' + eirLanguage + '/' + uniCodeQir + '/';\r\n}\r\n",
+      "location": {
+        "representation": "saved_snapshot.text",
+        "section": "公式E-IR configのpublic配信先構成; 未実行・外部参照先未GET",
+        "pdf_page": null,
+        "character_start": 698,
+        "character_end": 1344
+      },
+      "target_period": null,
+      "scope": "公式E-IR configのpublic配信先構成; 未実行・外部参照先未GET",
+      "verification": "exact substring in saved original snapshot text and source-bundle content",
+      "id": "eir_external"
+    }
+  ],
+  "checks": [
+    {
+      "id": "issuer_identity",
+      "status": "supported",
+      "finding": "日本冶金工業株式会社/Nippon Yakin Kogyo、証券コード5480。同じNYK略称を使う別発行体へ混同しない。",
+      "evidence_ids": [
+        "identity_company",
+        "identity_code",
+        "eir_identity"
+      ],
+      "remaining_missing": []
+    },
+    {
+      "id": "business_scope",
+      "status": "supported",
+      "finding": "ステンレス鋼・耐熱鋼・高ニッケル合金の板/帯・鍛造品等の製造販売、フェロニッケル製造を公表。",
+      "evidence_ids": [
+        "business"
+      ],
+      "remaining_missing": []
+    },
+    {
+      "id": "demand_and_cost_exposure_for_cyclical_review",
+      "status": "supported",
+      "finding": "会社は用途別需要、輸入材、中国経済/投資先送り、数量減少、固定費増による収益圧迫を説明。循環性を点検する根拠になる。業種ラベルだけでの判定ではない。",
+      "evidence_ids": [
+        "demand_mix",
+        "costs",
+        "year_results"
+      ],
+      "remaining_missing": [
+        "多年度の利益率/CFと原因の時系列対応。循環の存在や現在局面を定量確定した記録ではない。"
+      ]
+    },
+    {
+      "id": "raw_material_effect",
+      "status": "supported",
+      "finding": "2026年3月期について原料価格は比較的安定、固定費の増加が収益を圧迫したという定性的説明。",
+      "evidence_ids": [
+        "costs"
+      ],
+      "remaining_missing": [
+        "原料価格の具体的対象/市場、販売価格への転嫁、価格決定時点と会計原価のラグ、感応度。原料上昇が常に増益/減益という符号は設定しない。"
+      ]
+    },
+    {
+      "id": "inventory_valuation_and_non_cash_effect",
+      "status": "unknown",
+      "finding": null,
+      "evidence_ids": [
+        "costs"
+      ],
+      "remaining_missing": [
+        "最新連結決算と注記による棚卸資産評価方法/低価法、評価損益や原料在庫の時価差・総平均等の対象、数量/単価/価格ラグとの区分。メッセージに在庫評価の説明は特定できない。"
+      ]
+    },
+    {
+      "id": "complete_cycle_and_normalization_window",
+      "status": "unknown",
+      "finding": null,
+      "evidence_ids": [
+        "period",
+        "year_results"
+      ],
+      "remaining_missing": [
+        "会計/連結範囲の揃った全サイクルの利益率/売上/CF/原料価格・需要履歴と、期間が一巡を含む根拠。1期前年比だけではサイクルを特定できない。"
+      ]
+    },
+    {
+      "id": "current_scale_and_structural_changes",
+      "status": "unknown",
+      "finding": null,
+      "evidence_ids": [
+        "business",
+        "year_results",
+        "costs"
+      ],
+      "remaining_missing": [
+        "2026年3月期単年実績はあるが、最新事業規模、能力・稼働率、設備更新/増設・製品ミックスの変化、過去平均利益率の現在適合性が不足。売上規模を勝手に固定しない。"
+      ]
+    },
+    {
+      "id": "normalized_reinvestment_and_return_on_capital",
+      "status": "unknown",
+      "finding": null,
+      "evidence_ids": [
+        "costs"
+      ],
+      "remaining_missing": [
+        "維持/成長設備投資、減価償却の設備稼働時期、売掛/棚卸/買掛など非現金運転資本、投下資本/資本収益率の一巡履歴。利益だけを平均し再投資を足元値に固定しない。"
+      ]
+    },
+    {
+      "id": "normalized_financing_and_downturn_funding",
+      "status": "unknown",
+      "finding": null,
+      "evidence_ids": [],
+      "remaining_missing": [
+        "負債満期・金利条件・流動性/資金需要の公表資料と正常化する資金調達コスト。資本コスト、存続確率、金融既定値を補完しない。"
+      ]
+    },
+    {
+      "id": "current_cycle_position_and_recovery_path",
+      "status": "unknown",
+      "finding": null,
+      "evidence_ids": [
+        "outlook",
+        "year_results"
+      ],
+      "remaining_missing": [
+        "最新決算/公開Q&A、ドライバーの時系列を用いた現在の循環局面と正常値への経路。2026年6月の会社見通しを2026年10月の実績として扱わない。正常化と回復成長を二重計上しない。"
+      ]
+    },
+    {
+      "id": "latest_financial_statement_and_public_qa",
+      "status": "unknown",
+      "finding": null,
+      "evidence_ids": [
+        "eir_identity",
+        "eir_external"
+      ],
+      "remaining_missing": [
+        "動的一覧の決算本文/公開決算Q&Aは今回未取得。最新の公表期・日付・リリース名も未確認。一般FAQ取得は決算説明会Q&A取得ではない。"
+      ]
+    }
+  ],
+  "model_routing": {
+    "cyclical_or_commodity_normalization_review": "research_review_warranted",
+    "basis_check_id": "demand_and_cost_exposure_for_cyclical_review",
+    "empirical_full_cycle_confirmed": false,
+    "current_cycle_phase": null,
+    "ordinary_model_suitability_confirmed": false,
+    "valuation_executed": false,
+    "route_is_investment_recommendation": false
+  },
+  "excluded_questions": [
+    {
+      "question": "会社の事業、証券コード、決算期は何か。",
+      "reason": "会社概要/FAQに公表済み。",
+      "evidence_ids": [
+        "identity_company",
+        "identity_code",
+        "business",
+        "fiscal_date"
+      ]
+    },
+    {
+      "question": "2026年3月期の数量/収益変動について会社は何を要因として説明したか。",
+      "reason": "需要/輸入材/高機能材数量/固定費について株主向けメッセージに公表説明がある。",
+      "evidence_ids": [
+        "demand_mix",
+        "costs",
+        "year_results"
+      ]
+    },
+    {
+      "question": "当該年度に原料価格高騰があったと会社は説明したか。",
+      "reason": "原料価格は比較的安定との説明済み。確認の重複質問にしない。影響額/ラグまで解決した意味ではない。",
+      "evidence_ids": [
+        "costs"
+      ]
+    }
+  ],
+  "unresolved_research_issues": [
+    {
+      "id": "inventory-accounting",
+      "status": "needs_public_materials",
+      "question_draft": null,
+      "target_model_input": "operating earnings and working-capital normalization",
+      "public_review_result": "在庫評価の方式/集計範囲/価格ラグを説明する原注記未取得。会社が説明していないとは断定しない。",
+      "required_public_materials": [
+        "最新連結決算の棚卸資産注記",
+        "原料価格/在庫評価影響の利益ブリッジと公開決算Q&A"
+      ],
+      "possible_clarification_only_after_public_review": "公開資料間で用語・対象期・ラグの説明が食い違う場合、その定義・範囲の確認が必要かを再点検。未公表の直近業績/受注を要求しない。",
+      "answer_branch": null,
+      "valuation_input_change": null
+    },
+    {
+      "id": "reinvestment-and-scale",
+      "status": "needs_public_materials",
+      "question_draft": null,
+      "target_model_input": "normalized margin/reinvestment/current operating scale",
+      "public_review_result": "固定費増の説明は公開済み。正常化に使う設備投資/稼働・運転資本の資料は未取得。",
+      "required_public_materials": [
+        "全サイクルの連結CF/BSと設備投資/減価償却履歴",
+        "能力増強・製品構成変更の公表資料"
+      ],
+      "possible_clarification_only_after_public_review": "公開済み維持投資/成長投資や能力指標の定義対応が未解決の場合だけ検討。独自の正常利益率/投資額を作らない。",
+      "answer_branch": null,
+      "valuation_input_change": null
+    }
+  ],
+  "question_drafts": [],
+  "valuation": null,
+  "scenario_probabilities": null,
+  "financial_inputs_verified": false,
+  "public_disclosure_readiness": {
+    "http200_not_financial_validation": true,
+    "latest_earnings_pdf_obtained": false,
+    "earnings_call_qa_obtained": false,
+    "general_faq_obtained": true,
+    "annual_financial_summary_in_shareholder_message_obtained": true,
+    "newest_release_publication_period": null
+  },
+  "operational_constraints": {
+    "unique_url_limit": 8,
+    "actual_unique_urls": 8,
+    "actual_get_attempts": 8,
+    "attempts_per_url_max": 1,
+    "redirects_followed": 0,
+    "raw_max_bytes_per_url": 8388608,
+    "javascript_executed": false,
+    "inherited_proxy_and_tls_trust_preserved": true,
+    "retry": false,
+    "external_eir_host_requested": false,
+    "db_registration": false,
+    "intake_classification_completed": false,
+    "question_registration": false,
+    "ir_send": false,
+    "company_state_change": false
+  },
+  "limitations": [
+    "公式IRページの資料一覧はE-IR差込みで、静的HTMLには最新PDFリンクがない。公式configの配信先参照は読んだが、有限8 URL内で決算本文に届かなかった。URLを推測/探索拡大/再試行していない。",
+    "需要/コストの説明は2026年3月期および2026年6月表示の会社説明であり、2026年10月の最新実績を確認したものではない。",
+    "ニッケル等の特定原料感応度、在庫評価の方式/損益、全サイクル、正常化利益率・再投資・資金調達費用は未確認。",
+    "現在が循環の頂点/底、低PERが割安、特定業種が投資不適格とは判定しない。株価・倍率・予測・確率・目標株価を生成していない。",
+    "窓口台帳からの機械的な研究例抽出は、投資選定や現在のIR送信適格性の確認と別。窓口フォームを新規取得/入力/送信していない。"
+  ]
+}

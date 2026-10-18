@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T14:13:27.583760+00:00",
+  "company_id": "jp:6754",
+  "status": "bounded_independent_one_page_QA_recheck_pass",
+  "findings": [],
+  "scope": {
+    "saved_PDF_physical_pages_read": [
+      1
+    ],
+    "image_visually_inspected": "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/page-01.png",
+    "questions_read": [
+      "Q1",
+      "Q2",
+      "Q3",
+      "Q4",
+      "Q5"
+    ],
+    "new_GETs": 0,
+    "Store_or_other_DB_constructors": 0,
+    "DB_accesses": 0
+  },
+  "capture_checks": [
+    {
+      "sequence": 1,
+      "url": "https://dl.cdn-anritsu.com/robots.txt",
+      "http_status": 404,
+      "raw_sha256": "53fa35e7042c21944d25db90dc405674b7a7e359263514c4752939f374ee22ba",
+      "actual_saved_entity_bytes": 301,
+      "text_sha256": "53fa35e7042c21944d25db90dc405674b7a7e359263514c4752939f374ee22ba",
+      "individual_snapshot_equals_capture": true,
+      "completion": "2026-10-15T14:08:08.023952+00:00",
+      "UA_configured_and_prepared_equal": true,
+      "body_byte_semantics": "requests response entity bytes; Content-Encoding may be decoded; not wire capture"
+    },
+    {
+      "sequence": 2,
+      "url": "https://dl.cdn-anritsu.com/ja-jp/about-anritsu/ir/financial-materials/fy2026/260731-01.pdf",
+      "http_status": 200,
+      "raw_sha256": "518e618338b5d9a046f744f9110536c8bf8837bbf4977173d9953ec2913f598d",
+      "actual_saved_entity_bytes": 277328,
+      "text_sha256": "b78f62805d9dfd3e88d992f2227efd47db221d5b24d5bf03bc85f38107feeb4e",
+      "individual_snapshot_equals_capture": true,
+      "completion": "2026-10-15T14:08:13.147763+00:00",
+      "UA_configured_and_prepared_equal": true,
+      "body_byte_semantics": "requests response entity bytes; Content-Encoding may be decoded; not wire capture"
+    }
+  ],
+  "robots_result": {
+    "status": 404,
+    "representation": "XML Error/NoSuchKey for robots.txt",
+    "not_explicit_site_or_AI_permission": true,
+    "captured_data_request_count": 1,
+    "data_request": "Saved designated literal PDF only",
+    "central7_hold_exact_host_nonmatch": true,
+    "limit": "Internal saved capture correspondence; no independent packet trace or blanket certification of prior collection."
+  },
+  "PDF_reextraction": {
+    "raw_sha256": "518e618338b5d9a046f744f9110536c8bf8837bbf4977173d9953ec2913f598d",
+    "actual_entity_bytes": 277328,
+    "PDF_magic": true,
+    "physical_pages": 1,
+    "pdftotext_layout_byte_identical": true,
+    "text_sha256": "b78f62805d9dfd3e88d992f2227efd47db221d5b24d5bf03bc85f38107feeb4e",
+    "five_question_labels": true,
+    "quote_count": 6,
+    "saved_image_sha256": "fc247241e8805bb4fb40bac9ccf3c711acb2f251c425c6df93d076a4fc636d03"
+  },
+  "source_checks": {
+    "source_id": "case-public:65bdda374f8c3ce9530c869814a23bcf8df06401ecedbb9f7557c4583abb03b5",
+    "shared_stable_ID_reproduced": true,
+    "validate_source_invariant": true,
+    "source_content_equals_reextracted_text": true,
+    "models_json_text_snapshot_sha256": "6d566e9a1236bef3b889ed6cf8c96cf22ad469f203fe2d1405b1a71bf648eb25",
+    "compact_sorted_JSON_sha256_for_distinction_only": "6aa8ffa539984fe9f7a55417be88c045d25a3e3ee84c65574a934e33ce6ca8ee",
+    "snapshot_hash_not_compact_hash": true,
+    "retrieved_at_equals_HTTP_completion": "2026-10-15T14:08:13.147763+00:00",
+    "published_at": null,
+    "meeting_date": null,
+    "publication_date": null,
+    "link_provenance_saved_JSONpath": "$.links[113]",
+    "old_link_label": "決算説明会Q&A 概要（PDF）",
+    "raw_old_HTML_not_newly_verified": true
+  },
+  "meaning_review": [
+    {
+      "case": "Q1 and Q4",
+      "supported": "Q1通信計測の売上は社内想定に概ね沿い、受注はDC関連好調と前倒し発注もあって想定超過。売上は計画どおりだったため通期予想据置と会社が明示。",
+      "not_supported": "受注超過を売上/利益/EPSの上方修正、恒久需要又は独立著者予測の改定へ変換しない。前倒し割合や売上化時期は未確認。",
+      "quote_ids": [
+        "Q1-answer",
+        "Q4-answer"
+      ]
+    },
+    {
+      "case": "Q2",
+      "supported": "通信計測の光トランシーバー計測器の受注構成について、1.6TE向けもあるが回答時点では800GE向けが多いという相対説明。",
+      "not_supported": "数値比率、総売上/利益構成、現在Octoberの比率又は将来の優位継続は示さない。回答時点の日付は本文では不明。",
+      "quote_ids": [
+        "Q2-answer"
+      ]
+    },
+    {
+      "case": "Q3",
+      "supported": "モバイルは当面低調・横ばいの見通し。Pre-6Gに先行する立上がりは可能性、来年以降の回復は会社の期待として説明。",
+      "not_supported": "需要回復の実績、確実な発生日、会社又は外部著者の数量/利益予測として扱わない。来年を取得時点Octoberから暦へ自動対応しない。",
+      "quote_ids": [
+        "Q3-answer"
+      ]
+    },
+    {
+      "case": "Q5",
+      "supported": "PQAの北米好調は主に食肉加工向けX線検査機の着実な成長、市場開拓と顧客基盤拡大への長年の取組みと会社が説明。",
+      "not_supported": "寄与金額、利益率/感応度、将来持続性やグループEPSへのbridgeは示されていない。",
+      "quote_ids": [
+        "Q5-answer"
+      ]
+    },
+    {
+      "case": "period and publication",
+      "supported": "本文タイトルが2027年3月期第1四半期を示す。開催日・公表日はこの一頁では不明でsourceもnull。",
+      "not_supported": "URL fy2026/260731、HTTP Last-Modified、PDF作成日やcopyright2026を会議日/公表日へ置き換えない。",
+      "quote_ids": [
+        "title-period"
+      ]
+    },
+    {
+      "case": "company metadata and adoption",
+      "supported": "未importのwatch/held:falseはmetadata。会社説明と会社期待を保存し、financial_inputs_verified/model_adopted:falseを保持している。",
+      "not_supported": "保有申告、独立著者条件の確認、数値予測/モデル採用又は売買判断は成立しない。",
+      "quote_ids": []
+    }
+  ],
+  "quote_checks": [
+    {
+      "id": "title-period",
+      "pdf_page": 1,
+      "page_character_start": 33,
+      "page_character_end_exclusive": 61,
+      "quote_sha256_utf8": "4a56f5e8c904192762dea317051c1ea13d8d9696229fc2e197d52be19ec47cc2",
+      "exact_match": true
+    },
+    {
+      "id": "Q1-answer",
+      "pdf_page": 1,
+      "page_character_start": 63,
+      "page_character_end_exclusive": 204,
+      "quote_sha256_utf8": "812ab305c94be909f2d4d5a0bf87a5d2ce24ea2ba6143b54f30ae146dc72a6b7",
+      "exact_match": true
+    },
+    {
+      "id": "Q2-answer",
+      "pdf_page": 1,
+      "page_character_start": 207,
+      "page_character_end_exclusive": 340,
+      "quote_sha256_utf8": "e8e33615848b57ba4ac5493d2e8596d3b49237a2735536ed5c2c1e508a36fcdb",
+      "exact_match": true
+    },
+    {
+      "id": "Q3-answer",
+      "pdf_page": 1,
+      "page_character_start": 343,
+      "page_character_end_exclusive": 481,
+      "quote_sha256_utf8": "091043946b3d2ad08bd282b634a51dd1080c25a8a714d892b932fff2dbdefb56",
+      "exact_match": true
+    },
+    {
+      "id": "Q4-answer",
+      "pdf_page": 1,
+      "page_character_start": 484,
+      "page_character_end_exclusive": 571,
+      "quote_sha256_utf8": "a10bdc8dcdb622c0a9b5e542a5b3bdbc21450d7f8be3a3535b7388b89857cbd7",
+      "exact_match": true
+    },
+    {
+      "id": "Q5-answer",
+      "pdf_page": 1,
+      "page_character_start": 573,
+      "page_character_end_exclusive": 692,
+      "quote_sha256_utf8": "a7461ac4fbb24457fb291daaa9898ec589010700b07c5a135334bb8fb3a35c5a",
+      "exact_match": true
+    }
+  ],
+  "old_files_unchanged": {
+    "initial_followup_files": {
+      "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/01.json": "68f0ffcc7dcf0c6b4f4761fc1d3c8d1d1cc7a709d6d087134cfabcf6a7a0c5ed",
+      "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/01.txt": "53fa35e7042c21944d25db90dc405674b7a7e359263514c4752939f374ee22ba",
+      "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/02.json": "006db2cd3342dbbc56ea141b90e7d125ca8f2a90d810c2cdf6ec14ec6c19eaa0",
+      "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/02.txt": "b78f62805d9dfd3e88d992f2227efd47db221d5b24d5bf03bc85f38107feeb4e",
+      "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/README.md": "eaebd7624264ce4ec0195fdd281ca9a0c5f341a89fbbaf9a8dbb88a548e02c85",
+      "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/capture.json": "a8e11e7df627ba5e92c99e5e82a565afcdb0144c734bd5c1be2408b73f5378e3",
+      "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/page-01.png": "fc247241e8805bb4fb40bac9ccf3c711acb2f251c425c6df93d076a4fc636d03",
+      "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/pdfinfo.txt": "176b06cd841cfa1c72d0598172cd87f7285e86f61fffbeed6a497488e38aadf5",
+      "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/quotes.json": "da0ebcb830281244960437f135439a157485a9e3fc1b8da76de908385f1a5cd4",
+      "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/raw/518e618338b5d9a046f744f9110536c8bf8837bbf4977173d9953ec2913f598d": "518e618338b5d9a046f744f9110536c8bf8837bbf4977173d9953ec2913f598d",
+      "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/raw/53fa35e7042c21944d25db90dc405674b7a7e359263514c4752939f374ee22ba": "53fa35e7042c21944d25db90dc405674b7a7e359263514c4752939f374ee22ba",
+      "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/review.json": "61b04c28a2984441ab7de84d3c5ac2373bd119568316175057194f8140c2e8e4",
+      "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/source-bundle.json": "c83ebef7952dac7d1bc752aaeda408bd1301766f2a7f2e32b8c9a692898d5808",
+      "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/validation.json": "8ca59ad4a402182345f53c36e96f5abca4d516048b3f9d1627c42fcfeba60cd1"
+    },
+    "protected_inputs": {
+      "research/ir-iwai-business-hypotheses-2026-10-15/issuer-route-inventory/routes.json": "d7b8d85910f5da0bece1cc68e6ec5ed9ae1338d4bcf6d2ac9d7a9e5ec2755a20",
+      "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T185726005673Z/02.json": "4c43c1c4984c190908439f4e69b403b03dd7f5dcd27b8a1d14944f841b149f50",
+      "research/ir-source-access-holds-2026-10-15/holds-v3.json": "ec1e9f85d378571c3d0f99eca73ec8e397ea8dd7b155aa4be80c2100d2294551"
+    },
+    "all_matched_at_end": true
+  },
+  "financial_input_changes": [],
+  "model_adopted": false,
+  "execution": {
+    "GETs": 0,
+    "API_calls": 0,
+    "Store_or_DB_constructors": 0,
+    "DB_reads_or_writes": 0,
+    "code_or_old_file_edits": 0,
+    "forecast_or_investment_rules_created": 0,
+    "IR_drafts_or_sends": 0
+  },
+  "limits": [
+    "Only the one saved issuer Q&A and its five answers were substantively read; complete statements and latest IR-site status were not verified.",
+    "Hash, quote, parser and schema agreement do not verify financial meaning, forecast realization or model adoption.",
+    "Generic verifier provider compatibility remains unknown; no provider relabelling or helper execution involving a DB.",
+    "No mapping to March Iwai author conditions was newly performed."
+  ]
+}

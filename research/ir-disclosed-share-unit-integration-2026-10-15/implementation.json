@@ -1,0 +1,131 @@
+{
+  "recorded_at": "2026-10-15T15:25:29.141755+00:00",
+  "status": "frozen_targeted41pass_independent_review_pending",
+  "scope": "Five explicit share-count mappings and internal unit docstring only in production; same schema/version/API/old outputs",
+  "production_change_exactly_approved_replacements": true,
+  "mappings": [
+    {
+      "raw_unit_label": "shares",
+      "canonical_unit": "shares",
+      "multiplier": "1"
+    },
+    {
+      "raw_unit_label": "株",
+      "canonical_unit": "shares",
+      "multiplier": "1"
+    },
+    {
+      "raw_unit_label": "千株",
+      "canonical_unit": "shares",
+      "multiplier": "1000"
+    },
+    {
+      "raw_unit_label": "万株",
+      "canonical_unit": "shares",
+      "multiplier": "10000"
+    },
+    {
+      "raw_unit_label": "百万株",
+      "canonical_unit": "shares",
+      "multiplier": "1000000"
+    }
+  ],
+  "API": "normalize_disclosed_facts(request, *, now); existing reproduce_disclosed_fact_source and audit_model_inputs unchanged",
+  "unchanged_contract": [
+    "schema_version1",
+    "normalization_version1",
+    "all existing return/content/metadata/declarations/limitations strings",
+    "sourceID derivation/canonical JSON",
+    "source availability/review/quote checks",
+    "valuation shares positivity guard",
+    "model-input meaning-review false/unreviewed flags",
+    "no semantic financial adoption"
+  ],
+  "compatibility": {
+    "old_synthetic_fixtures": 52,
+    "all_bundle_hashes_derived_IDs_content_hashes_and_request_unchanged": true,
+    "existing_oku_yen_kind_cases": 4,
+    "oku_full_bundles_equal_before_implementation": true,
+    "global_mapping_table": "exact before14pairs plus five approved shares pairs",
+    "legacy_oku_test_old_fixture_loop_byte_equal": true,
+    "legacy_oku_test_change": "Rename scope and replace full-registry equality with exact currency/ratio projection. All historical fixture assertions retained. New shares test owns exact whole-registry delta."
+  },
+  "new_tests": {
+    "methods": 8,
+    "boundaries": [
+      "all5 explicit scalings with immutable raw labels/definitions/scope and no DB/network",
+      "lowhost Decimal precision/sign/0/fraction/null/dash preserved",
+      "cross-dimension and unsupported aliases reject",
+      "same-source quote/token/label and source/review time gates",
+      "stable IDs on later replay; changed value/multiplier and missing origin held",
+      "synthetic nine-input source numeric match remains meaning unreviewed, financial false, unweighted expectedvalue unavailable; wrongkind/mismatch/missingorigin/early recording held",
+      "equalcounts do not merge period-end versus weighted-average concepts",
+      "old52 bundlehash/ID/contenthash identity and existing oku4 beforebundle exact; whole table delta exactly5"
+    ]
+  },
+  "targeted_tests": {
+    "command": "PYTHONPATH=src:tests .venv/bin/python -m unittest tests/test_disclosed_share_units.py tests/test_disclosed_facts.py tests/test_disclosed_fact_reproduction.py tests/test_fact_model_pipeline.py tests/test_oku_yen_facts.py",
+    "tests": 41,
+    "seconds": 0.11,
+    "exit_code": 0,
+    "log": "targeted.log",
+    "log_sha256": "e1c4083cefbaa0c88f3d7af5a92650d2d750152d815b8b277e2d7ba2754285e7",
+    "full_suite_runs": 0
+  },
+  "untouched_current_files_match_before": {
+    "tests/test_disclosed_facts.py": true,
+    "src/ir_agent/model_inputs.py": true,
+    "src/ir_agent/valuation.py": true,
+    "docs/workflow.md": true,
+    "docs/explicit-equity-bridge-spec.md": true
+  },
+  "source_before_full_copies_hash_unchanged": true,
+  "before_manifest_sha256": "aa913a1e633400a5557f5c3f6b6c9ca1eb45262b23b993555f30c130e7e2d4f6",
+  "additional_before_test_scope": "additional-test-scope-before.json",
+  "design_unchanged": {
+    "path": "research/ir-disclosed-share-unit-design-2026-10-15/design.json",
+    "sha256": "750be3addb47e3b7e6d681669acaee6e5983f2c88b86c58f11987a793cb0a9d7"
+  },
+  "files": [
+    {
+      "path": "src/ir_agent/disclosed_facts.py",
+      "copy": "research/ir-disclosed-share-unit-integration-2026-10-15/source-after/src/ir_agent/disclosed_facts.py",
+      "sha256": "0b65d28b6d8ad17824b364c4997f8f94b7aab987cd431a5657aa1b7ae6d57cca",
+      "byte_count": 18471
+    },
+    {
+      "path": "tests/test_disclosed_share_units.py",
+      "copy": "research/ir-disclosed-share-unit-integration-2026-10-15/source-after/tests/test_disclosed_share_units.py",
+      "sha256": "555b4d079e796c0ce7512097c6c51b7cf27ad406e2e48fab6275b5c8a005aa3a",
+      "byte_count": 12376
+    },
+    {
+      "path": "docs/disclosed-share-units.md",
+      "copy": "research/ir-disclosed-share-unit-integration-2026-10-15/source-after/docs/disclosed-share-units.md",
+      "sha256": "7896f53a8122b077372cb1e4fc7f31dbcbbd468c4274521e34f72da2e5a3cf59",
+      "byte_count": 2770
+    },
+    {
+      "path": "tests/test_oku_yen_facts.py",
+      "copy": "research/ir-disclosed-share-unit-integration-2026-10-15/source-after/tests/test_oku_yen_facts.py",
+      "sha256": "b6e1aa420e94281aeca75e9307d45a1e3beaf0eaacc2f7981dbe5a6b6cda7bbc",
+      "byte_count": 7758
+    }
+  ],
+  "source_after_manifest_sha256": "e738d14db91f31a59c7c7c011231dd02e89e962ced30c3cab5e7d2390feb164d",
+  "limitations": [
+    "Normalization establishes only quoted token/label presence and explicit unit arithmetic, not share definition, period, investor claim, denominator suitability, issuer authenticity or financial inputs.",
+    "No automatic treasury deduction, EPS or marketcap inversion, integer/positive restriction in fact normalization or new investment rule. Existing valuation positive shares guard remains.",
+    "Old build cannot reproduce newly supported unit pairs and must hold them; old records are not retroactively changed.",
+    "All new tests use synthetic values. No real135A fact bundle/model adoption was produced.",
+    "Meanings such as issued including treasury/net/average/diluted/EPS denominator remain distinct even if values coincide."
+  ],
+  "execution": {
+    "GETs": 0,
+    "actual_DB_accesses": 0,
+    "old_record_changes": 0,
+    "external_sends": 0,
+    "consumer_code_changes": 0,
+    "full_suite_runs": 0
+  }
+}

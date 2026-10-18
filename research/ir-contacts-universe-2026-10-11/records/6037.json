@@ -1,0 +1,86 @@
+{
+  "security_code": "6037",
+  "company_name": "楽待",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "サービス業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.firstlogic.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T16:06:32.557018+00:00",
+  "completed_at": "2026-10-11T16:07:52.068350+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/6037/20261011T160632557064Z/01.json",
+      "url": "https://rakumachi.co.jp/",
+      "retrieved_at": "2026-10-11T16:07:35.962435+00:00",
+      "quote": "お問合せ",
+      "role": "unverified_general_contact_link",
+      "source_link_url": "https://rakumachi.co.jp/contact/"
+    },
+    {
+      "snapshot": "evidence/6037/20261011T160632557064Z/01.json",
+      "url": "https://rakumachi.co.jp/",
+      "retrieved_at": "2026-10-11T16:07:35.962435+00:00",
+      "quote": "よくあるご質問",
+      "role": "unverified_financial_IR_FAQ_discovery_link",
+      "source_link_url": "https://rakumachi.co.jp/ir/faq/"
+    },
+    {
+      "snapshot": "evidence/6037/20261011T160632557064Z/01.json",
+      "url": "https://rakumachi.co.jp/",
+      "retrieved_at": "2026-10-11T16:07:35.962435+00:00",
+      "quote": "楽待株式会社 RAKUMACHI,INC. | 不動産投資サイト「楽待」運営",
+      "role": "issuer_identity"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.firstlogic.co.jp/",
+      "final_url": "https://rakumachi.co.jp/",
+      "snapshot": "evidence/6037/20261011T160632557064Z/01.json",
+      "retrieved_at": "2026-10-11T16:07:35.962435+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "現楽待公式homeと財務IRnavを確認。一般contact・金融IR FAQの実hrefはあるがどちらも未取得、メール/form用途・実欄未確認。",
+    "不動産投資サイトの商品サービスの「投資」と発行体への金融IR質問を分離。物件/会員/不動産業者/採用受付をIRへ推定転用せずU。旧名称/別issuer窓口を借用しない。"
+  ],
+  "discovery": {
+    "security_code": "6037",
+    "official_url": "https://www.firstlogic.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ファーストロジック",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/6037/20261011T160632557064Z/01.json",
+      "normalized_name": "楽待",
+      "security_code_observed": true
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 5,
+  "previous_attempts": [
+    "attempts/6037/20261011T045047566147Z.json",
+    "attempts/6037/20261011T160752068504Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "ir_operations_60_batch14",
+    "reviewed_at": "2026-10-11T16:22:11.844752+00:00",
+    "notes": "楽待現法人titleとJPX銘柄を照合、source01だけの未取得一般contact/IRfaqをliteral発見候補へ。商品不動産投資事業からIRquestionformを生成せず、個人制限/無回答/不存在は未証明。"
+  }
+}

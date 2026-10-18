@@ -1,0 +1,601 @@
+{
+  "source_id": "idempotency-02",
+  "requested_url": "https://google.aip.dev/155",
+  "url": "https://google.aip.dev/155",
+  "retrieved_at": "2026-10-15T03:44:24.304986+00:00",
+  "published_at": null,
+  "http_status": 200,
+  "redirects_followed": 0,
+  "retry_count": 0,
+  "error": null,
+  "byte_limit": 8388608,
+  "http_get_attempted": true,
+  "complete_body": true,
+  "extraction_method": "research_ir_universe.Page visible HTML text; no script execution",
+  "content_type": "text/html; charset=utf-8",
+  "response_headers": {
+    "content-type": "text/html; charset=utf-8",
+    "last-modified": "Wed, 07 Oct 2026 16:30:00 GMT",
+    "date": "Thu, 15 Oct 2026 03:44:24 GMT",
+    "content-length": "6038"
+  },
+  "text": "AIP-155: Request identification AIPs Jump to Content Browse AIPs News FAQ Contributing API Linter Search this site View on GitHub AIPs Jump to Content View on GitHub AIPs by Scope General Google Cloud Platform Auth Client libraries Workspace Actions on Google AIPs 1 AIP Purpose and Guidelines 2 AIP Numbering 3 AIP Versioning 8 AIP Style and Guidance 9 Glossary 100 API Design Review FAQ 111 Planes 121 Resource-oriented design 122 Resource names 123 Resource types 124 Resource association 126 Enumerations 127 HTTP and gRPC Transcoding 128 Declarative-friendly interfaces 129 Server-Modified Values and Defaults 130 Methods 131 Standard methods: Get 132 Standard methods: List 133 Standard methods: Create 134 Standard methods: Update 135 Standard methods: Delete 136 Custom methods 140 Field names 141 Quantities 142 Time and duration 143 Standardized codes 144 Repeated fields 145 Ranges 146 Generic fields 147 Sensitive fields 148 Standard fields 149 Unset field values 151 Long-running operations 152 Jobs 153 Import and export 154 Resource freshness validation 155 Request identification 156 Singleton resources 157 Partial responses 158 Pagination 159 Reading across collections 160 Filtering 161 Field masks 162 Resource Revisions 163 Change validation 164 Soft delete 165 Criteria-based delete 180 Backwards compatibility 181 Stability levels 182 External software dependencies 184 API version identifiers 185 API Versioning 190 Naming conventions 191 File and directory structure 192 Documentation 193 Errors 194 Automatic retry configuration 200 Precedent 202 Fields 203 Field behavior documentation 205 Beta-blocking changes 210 Unicode 211 Authorization checks 213 Common components 214 Resource expiration 215 API-specific protos 216 States 217 Unreachable resources 231 Batch methods: Get 233 Batch methods: Create 234 Batch methods: Update 235 Batch methods: Delete 236 Policy preview Request identification Number 155 Permalink google.aip.dev/155 State Approved Created 2019-05-06 Updated 2019-05-06 Contents Guidance Stale success responses Further reading Rationale Using UUIDs for request identification Changelog File Bug View source Edit this page API Improvement Proposals General AIPs Request identification AIP-155 Request identification It is sometimes useful for an API to have a unique, customer-provided identifier for particular requests. This can be useful for several purposes, such as de-duplicating requests from parallel processes, ensuring the safety of retries, or auditing. The most important purpose for request IDs is to provide idempotency guarantees: allowing the same request to be issued more than once without subsequent calls having any effect. In the event of a network failure, the client can retry the request, and the server can detect duplication and ensure that the request is only processed once. Guidance APIs may add a string request_id parameter to request messages (including those of standard methods) in order to uniquely identify particular requests. message CreateBookRequest { // The parent resource where this book will be created. // Format: publishers/{publisher} string parent = 1 [ ( google.api.field_behavior ) = REQUIRED , ( google.api.resource_reference ) = { child_type : \"library.googleapis.com/Book\" }]; // The ID to use for the book, which will become the final component of // the book's resource name. // // This value should be 4-63 characters, and valid characters // are /[a-z][0-9]-/. string book_id = 2 [( google.api.field_behavior ) = REQUIRED ]; // The book to create. Book book = 3 [( google.api.field_behavior ) = REQUIRED ]; // A unique identifier for this request. Restricted to 36 ASCII characters. // A random UUID is recommended. // This request is only idempotent if a `request_id` is provided. string request_id = 4 [( google.api.field_info ) . format = UUID4 ]; } Providing a request ID must guarantee idempotency. If a duplicate request is detected, the server should return the response for the previously successful request, because the client most likely did not receive the previous response. APIs may choose any reasonable timeframe for honoring request IDs. The request_id field must be provided on the request message to which it applies (and it must not be a field on resources themselves). Request IDs should be optional. Request IDs should be able to be UUIDs, and may allow UUIDs to be the only valid format. The format restrictions for request IDs must be documented. Request IDs that are UUIDs must be annotated with the google.api.FieldInfo.Format value UUID4 using the extension (google.api.field_info).format = UUID4 . See AIP-202 for more. Stale success responses In some unusual situations, it may not be possible to return an identical success response. For example, a duplicate request to create a resource may arrive after the resource has not only been created, but subsequently updated; because the service has no other need to retain the historical data, it is no longer feasible to return an identical success response. In this situation, the method may return the current state of the resource instead. In other words, it is permissible to substitute the historical success response with a similar response that reflects more current data. Further reading For which codes to retry, see AIP-194 . For how to retry errors in client libraries, see AIP-4221 . Rationale Using UUIDs for request identification When a value is required to be unique, leaving the format open-ended can lead to API consumers incorrectly providing a duplicate identifier. As such, standardizing on a universally unique identifier drastically reduces the chance for collisions when done correctly. Changelog 2024-01-08 : Add book_id to request message. 2023-10-02 : Add UUID format extension guidance. 2019-08-01 : Changed the examples from \"shelves\" to \"publishers\", to present a better example of resource ownership. Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License , and code samples are licensed under the Apache 2.0 License . For details, see content licensing .",
+  "title": "AIP-155: Request identification",
+  "headings": [
+    "Request identification",
+    "Guidance",
+    "Stale success responses",
+    "Further reading",
+    "Rationale",
+    "Using UUIDs for request identification",
+    "Changelog"
+  ],
+  "base_href": null,
+  "base_hrefs": [],
+  "base_url": "https://google.aip.dev/155",
+  "base_resolution_error": null,
+  "links": [
+    {
+      "url": "https://google.aip.dev/",
+      "href": "/",
+      "label": "Google AIPs"
+    },
+    {
+      "url": "https://google.aip.dev/155#page-content",
+      "href": "#page-content",
+      "label": "Jump to Content"
+    },
+    {
+      "url": "https://google.aip.dev/general",
+      "href": "/general",
+      "label": "Browse AIPs"
+    },
+    {
+      "url": "https://google.aip.dev/news",
+      "href": "/news",
+      "label": "News"
+    },
+    {
+      "url": "https://google.aip.dev/faq",
+      "href": "/faq",
+      "label": "FAQ"
+    },
+    {
+      "url": "https://google.aip.dev/contributing",
+      "href": "/contributing",
+      "label": "Contributing"
+    },
+    {
+      "url": "https://linter.aip.dev/",
+      "href": "https://linter.aip.dev/",
+      "label": "API Linter"
+    },
+    {
+      "url": "https://github.com/aip-dev/google.aip.dev",
+      "href": "https://github.com/aip-dev/google.aip.dev",
+      "label": "View on GitHub"
+    },
+    {
+      "url": "https://google.aip.dev/",
+      "href": "/",
+      "label": "Google AIPs"
+    },
+    {
+      "url": "https://google.aip.dev/155#page-content",
+      "href": "#page-content",
+      "label": "Jump to Content"
+    },
+    {
+      "url": "https://github.com/aip-dev/google.aip.dev",
+      "href": "https://github.com/aip-dev/google.aip.dev",
+      "label": "View on GitHub"
+    },
+    {
+      "url": "https://google.aip.dev/general",
+      "href": "/general",
+      "label": "General"
+    },
+    {
+      "url": "https://google.aip.dev/cloud",
+      "href": "/cloud",
+      "label": "Google Cloud Platform"
+    },
+    {
+      "url": "https://google.aip.dev/auth",
+      "href": "/auth",
+      "label": "Auth"
+    },
+    {
+      "url": "https://google.aip.dev/client-libraries",
+      "href": "/client-libraries",
+      "label": "Client libraries"
+    },
+    {
+      "url": "https://google.aip.dev/apps",
+      "href": "/apps",
+      "label": "Workspace"
+    },
+    {
+      "url": "https://google.aip.dev/aog",
+      "href": "/aog",
+      "label": "Actions on Google"
+    },
+    {
+      "url": "https://google.aip.dev/1",
+      "href": "/1",
+      "label": "1 AIP Purpose and Guidelines"
+    },
+    {
+      "url": "https://google.aip.dev/2",
+      "href": "/2",
+      "label": "2 AIP Numbering"
+    },
+    {
+      "url": "https://google.aip.dev/3",
+      "href": "/3",
+      "label": "3 AIP Versioning"
+    },
+    {
+      "url": "https://google.aip.dev/8",
+      "href": "/8",
+      "label": "8 AIP Style and Guidance"
+    },
+    {
+      "url": "https://google.aip.dev/9",
+      "href": "/9",
+      "label": "9 Glossary"
+    },
+    {
+      "url": "https://google.aip.dev/100",
+      "href": "/100",
+      "label": "100 API Design Review FAQ"
+    },
+    {
+      "url": "https://google.aip.dev/111",
+      "href": "/111",
+      "label": "111 Planes"
+    },
+    {
+      "url": "https://google.aip.dev/121",
+      "href": "/121",
+      "label": "121 Resource-oriented design"
+    },
+    {
+      "url": "https://google.aip.dev/122",
+      "href": "/122",
+      "label": "122 Resource names"
+    },
+    {
+      "url": "https://google.aip.dev/123",
+      "href": "/123",
+      "label": "123 Resource types"
+    },
+    {
+      "url": "https://google.aip.dev/124",
+      "href": "/124",
+      "label": "124 Resource association"
+    },
+    {
+      "url": "https://google.aip.dev/126",
+      "href": "/126",
+      "label": "126 Enumerations"
+    },
+    {
+      "url": "https://google.aip.dev/127",
+      "href": "/127",
+      "label": "127 HTTP and gRPC Transcoding"
+    },
+    {
+      "url": "https://google.aip.dev/128",
+      "href": "/128",
+      "label": "128 Declarative-friendly interfaces"
+    },
+    {
+      "url": "https://google.aip.dev/129",
+      "href": "/129",
+      "label": "129 Server-Modified Values and Defaults"
+    },
+    {
+      "url": "https://google.aip.dev/130",
+      "href": "/130",
+      "label": "130 Methods"
+    },
+    {
+      "url": "https://google.aip.dev/131",
+      "href": "/131",
+      "label": "131 Standard methods: Get"
+    },
+    {
+      "url": "https://google.aip.dev/132",
+      "href": "/132",
+      "label": "132 Standard methods: List"
+    },
+    {
+      "url": "https://google.aip.dev/133",
+      "href": "/133",
+      "label": "133 Standard methods: Create"
+    },
+    {
+      "url": "https://google.aip.dev/134",
+      "href": "/134",
+      "label": "134 Standard methods: Update"
+    },
+    {
+      "url": "https://google.aip.dev/135",
+      "href": "/135",
+      "label": "135 Standard methods: Delete"
+    },
+    {
+      "url": "https://google.aip.dev/136",
+      "href": "/136",
+      "label": "136 Custom methods"
+    },
+    {
+      "url": "https://google.aip.dev/140",
+      "href": "/140",
+      "label": "140 Field names"
+    },
+    {
+      "url": "https://google.aip.dev/141",
+      "href": "/141",
+      "label": "141 Quantities"
+    },
+    {
+      "url": "https://google.aip.dev/142",
+      "href": "/142",
+      "label": "142 Time and duration"
+    },
+    {
+      "url": "https://google.aip.dev/143",
+      "href": "/143",
+      "label": "143 Standardized codes"
+    },
+    {
+      "url": "https://google.aip.dev/144",
+      "href": "/144",
+      "label": "144 Repeated fields"
+    },
+    {
+      "url": "https://google.aip.dev/145",
+      "href": "/145",
+      "label": "145 Ranges"
+    },
+    {
+      "url": "https://google.aip.dev/146",
+      "href": "/146",
+      "label": "146 Generic fields"
+    },
+    {
+      "url": "https://google.aip.dev/147",
+      "href": "/147",
+      "label": "147 Sensitive fields"
+    },
+    {
+      "url": "https://google.aip.dev/148",
+      "href": "/148",
+      "label": "148 Standard fields"
+    },
+    {
+      "url": "https://google.aip.dev/149",
+      "href": "/149",
+      "label": "149 Unset field values"
+    },
+    {
+      "url": "https://google.aip.dev/151",
+      "href": "/151",
+      "label": "151 Long-running operations"
+    },
+    {
+      "url": "https://google.aip.dev/152",
+      "href": "/152",
+      "label": "152 Jobs"
+    },
+    {
+      "url": "https://google.aip.dev/153",
+      "href": "/153",
+      "label": "153 Import and export"
+    },
+    {
+      "url": "https://google.aip.dev/154",
+      "href": "/154",
+      "label": "154 Resource freshness validation"
+    },
+    {
+      "url": "https://google.aip.dev/155",
+      "href": "/155",
+      "label": "155 Request identification"
+    },
+    {
+      "url": "https://google.aip.dev/156",
+      "href": "/156",
+      "label": "156 Singleton resources"
+    },
+    {
+      "url": "https://google.aip.dev/157",
+      "href": "/157",
+      "label": "157 Partial responses"
+    },
+    {
+      "url": "https://google.aip.dev/158",
+      "href": "/158",
+      "label": "158 Pagination"
+    },
+    {
+      "url": "https://google.aip.dev/159",
+      "href": "/159",
+      "label": "159 Reading across collections"
+    },
+    {
+      "url": "https://google.aip.dev/160",
+      "href": "/160",
+      "label": "160 Filtering"
+    },
+    {
+      "url": "https://google.aip.dev/161",
+      "href": "/161",
+      "label": "161 Field masks"
+    },
+    {
+      "url": "https://google.aip.dev/162",
+      "href": "/162",
+      "label": "162 Resource Revisions"
+    },
+    {
+      "url": "https://google.aip.dev/163",
+      "href": "/163",
+      "label": "163 Change validation"
+    },
+    {
+      "url": "https://google.aip.dev/164",
+      "href": "/164",
+      "label": "164 Soft delete"
+    },
+    {
+      "url": "https://google.aip.dev/165",
+      "href": "/165",
+      "label": "165 Criteria-based delete"
+    },
+    {
+      "url": "https://google.aip.dev/180",
+      "href": "/180",
+      "label": "180 Backwards compatibility"
+    },
+    {
+      "url": "https://google.aip.dev/181",
+      "href": "/181",
+      "label": "181 Stability levels"
+    },
+    {
+      "url": "https://google.aip.dev/182",
+      "href": "/182",
+      "label": "182 External software dependencies"
+    },
+    {
+      "url": "https://google.aip.dev/184",
+      "href": "/184",
+      "label": "184 API version identifiers"
+    },
+    {
+      "url": "https://google.aip.dev/185",
+      "href": "/185",
+      "label": "185 API Versioning"
+    },
+    {
+      "url": "https://google.aip.dev/190",
+      "href": "/190",
+      "label": "190 Naming conventions"
+    },
+    {
+      "url": "https://google.aip.dev/191",
+      "href": "/191",
+      "label": "191 File and directory structure"
+    },
+    {
+      "url": "https://google.aip.dev/192",
+      "href": "/192",
+      "label": "192 Documentation"
+    },
+    {
+      "url": "https://google.aip.dev/193",
+      "href": "/193",
+      "label": "193 Errors"
+    },
+    {
+      "url": "https://google.aip.dev/194",
+      "href": "/194",
+      "label": "194 Automatic retry configuration"
+    },
+    {
+      "url": "https://google.aip.dev/200",
+      "href": "/200",
+      "label": "200 Precedent"
+    },
+    {
+      "url": "https://google.aip.dev/202",
+      "href": "/202",
+      "label": "202 Fields"
+    },
+    {
+      "url": "https://google.aip.dev/203",
+      "href": "/203",
+      "label": "203 Field behavior documentation"
+    },
+    {
+      "url": "https://google.aip.dev/205",
+      "href": "/205",
+      "label": "205 Beta-blocking changes"
+    },
+    {
+      "url": "https://google.aip.dev/210",
+      "href": "/210",
+      "label": "210 Unicode"
+    },
+    {
+      "url": "https://google.aip.dev/211",
+      "href": "/211",
+      "label": "211 Authorization checks"
+    },
+    {
+      "url": "https://google.aip.dev/213",
+      "href": "/213",
+      "label": "213 Common components"
+    },
+    {
+      "url": "https://google.aip.dev/214",
+      "href": "/214",
+      "label": "214 Resource expiration"
+    },
+    {
+      "url": "https://google.aip.dev/215",
+      "href": "/215",
+      "label": "215 API-specific protos"
+    },
+    {
+      "url": "https://google.aip.dev/216",
+      "href": "/216",
+      "label": "216 States"
+    },
+    {
+      "url": "https://google.aip.dev/217",
+      "href": "/217",
+      "label": "217 Unreachable resources"
+    },
+    {
+      "url": "https://google.aip.dev/231",
+      "href": "/231",
+      "label": "231 Batch methods: Get"
+    },
+    {
+      "url": "https://google.aip.dev/233",
+      "href": "/233",
+      "label": "233 Batch methods: Create"
+    },
+    {
+      "url": "https://google.aip.dev/234",
+      "href": "/234",
+      "label": "234 Batch methods: Update"
+    },
+    {
+      "url": "https://google.aip.dev/235",
+      "href": "/235",
+      "label": "235 Batch methods: Delete"
+    },
+    {
+      "url": "https://google.aip.dev/236",
+      "href": "/236",
+      "label": "236 Policy preview"
+    },
+    {
+      "url": "https://google.aip.dev/155",
+      "href": "https://google.aip.dev/155",
+      "label": "google.aip.dev/155"
+    },
+    {
+      "url": "https://google.aip.dev/155#guidance",
+      "href": "#guidance",
+      "label": "Guidance"
+    },
+    {
+      "url": "https://google.aip.dev/155#stale-success-responses",
+      "href": "#stale-success-responses",
+      "label": "Stale success responses"
+    },
+    {
+      "url": "https://google.aip.dev/155#further-reading",
+      "href": "#further-reading",
+      "label": "Further reading"
+    },
+    {
+      "url": "https://google.aip.dev/155#rationale",
+      "href": "#rationale",
+      "label": "Rationale"
+    },
+    {
+      "url": "https://google.aip.dev/155#using-uuids-for-request-identification",
+      "href": "#using-uuids-for-request-identification",
+      "label": "Using UUIDs for request identification"
+    },
+    {
+      "url": "https://google.aip.dev/155#changelog",
+      "href": "#changelog",
+      "label": "Changelog"
+    },
+    {
+      "url": "https://github.com/aip-dev/google.aip.dev/issues/",
+      "href": "https://github.com/aip-dev/google.aip.dev/issues/",
+      "label": "File Bug"
+    },
+    {
+      "url": "https://github.com/aip-dev/google.aip.dev/blob/master/aip/general/0155.md",
+      "href": "https://github.com/aip-dev/google.aip.dev/blob/master/aip/general/0155.md",
+      "label": "View source"
+    },
+    {
+      "url": "https://github.com/aip-dev/google.aip.dev/edit/master/aip/general/0155.md",
+      "href": "https://github.com/aip-dev/google.aip.dev/edit/master/aip/general/0155.md",
+      "label": "Edit this page"
+    },
+    {
+      "url": "https://google.aip.dev/",
+      "href": "/",
+      "label": "API Improvement Proposals"
+    },
+    {
+      "url": "https://google.aip.dev/general",
+      "href": "/general",
+      "label": "General AIPs"
+    },
+    {
+      "url": "https://google.aip.dev/202",
+      "href": "/202",
+      "label": "AIP-202"
+    },
+    {
+      "url": "https://aip.dev/194",
+      "href": "https://aip.dev/194",
+      "label": "AIP-194"
+    },
+    {
+      "url": "https://aip.dev/4221",
+      "href": "https://aip.dev/4221",
+      "label": "AIP-4221"
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "label": "Creative Commons Attribution 4.0 License"
+    },
+    {
+      "url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "href": "https://www.apache.org/licenses/LICENSE-2.0",
+      "label": "Apache 2.0 License"
+    },
+    {
+      "url": "https://google.aip.dev/licensing",
+      "href": "/licensing",
+      "label": "content licensing"
+    }
+  ],
+  "unresolved_links": [],
+  "forms": [
+    {
+      "action": "/search",
+      "method": "GET",
+      "controls": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "q",
+          "placeholder": "Search AIPs",
+          "id": "q"
+        }
+      ],
+      "text": "Search this site"
+    }
+  ],
+  "raw_file": "raw/b3910f3fba876eabbea6c1d45ba20163adf1d7a497c1be03cdf3f57a9a8f746a",
+  "raw_sha256": "b3910f3fba876eabbea6c1d45ba20163adf1d7a497c1be03cdf3f57a9a8f746a",
+  "byte_count": 28316,
+  "text_file": "02.txt",
+  "text_sha256": "32d78066b225bf52843a0a70f1793b625159dcd02c324aa90c4d84265812dac6"
+}

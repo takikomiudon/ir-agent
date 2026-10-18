@@ -1,0 +1,195 @@
+{
+  "DB_Store_GET_normalizer_production_sharedindex_writes": 0,
+  "candidate_SHA": "1020e85e98a63edc8932c3734af320b21416cfd49124312845c0bf5efe7eaa2e",
+  "counts": {
+    "companies": 29,
+    "company_original_pairs": 36,
+    "derived_sources": 45,
+    "facts": 230,
+    "parents": 43
+  },
+  "current_DB_and_classification_or_firstsave_checked": false,
+  "financial_model_adoption": false,
+  "input_file_pins": {
+    "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/normalization-input.json": "4506961a3b0ab927e83d2184d15cfad49d9027e476029a5cacaa68a89fb6f977",
+    "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json": "0defeba27b9f4538afd8d82c05c158918fcdfcaf455a64f1ea897eca7543e41e",
+    "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/parent-acceptance.json": "530cab9bb4b2cfaecf9aadce084dfe78a239add8dbf70fc99bea9d099e29547f",
+    "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/validation.json": "e40961a61c795d00dbb2957769186b069f00666778d1e720b51c71cd75de3477",
+    "research/ir-case-studies-2026-10-15/3817/annual-per-share-disclosed-facts-2026-10-16/normalization-input.json": "5a4323ccd815bc118f82e56b8f1e3943b9f4848e93d5e5f7658fd40363892150",
+    "research/ir-case-studies-2026-10-15/3817/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json": "9cb688305dc2a0582ee66f363f88efae03a5b677859adf1f07dd633d86fc2749",
+    "research/ir-case-studies-2026-10-15/3817/annual-per-share-disclosed-facts-2026-10-16/parent-acceptance.json": "d69bcfb3a76f2142df856d70a554f110c4a35acbe782404a36bcea318eb42533",
+    "research/ir-case-studies-2026-10-15/3817/annual-per-share-disclosed-facts-2026-10-16/validation.json": "10928b7ebce0c5f28f116f8a0e3e9d3e20eb30f45dad1048f3694faec6fbcc8d",
+    "research/ir-case-studies-2026-10-15/disclosed-fact-index-v37.json": "e1c07ebca3c5885007738d152588685d6de78f52dfe206d18b900efd7997df4b"
+  },
+  "input_pins_unchanged": true,
+  "new4facts_ID_unit_kind_period_scope_and_values_whole_exact": true,
+  "new4source_objects_and_ingest_delta_are_distinct": true,
+  "new_original2_derived2_source_snapshots": {
+    "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e": "cdb77fd2cb0d201dd8fbcba84a200665e0912216981ea79e200a601558d7a616",
+    "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f": "ee28585481c9692e9374aed4ebc15cb04e5b71757d6c56f2d739c7c7265a3e25",
+    "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf": "2bd0faef543ce9659035c844d7d1722975b37e23fc2035a2a66a85c1e78940ce",
+    "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313": "d6db7c7c2454470dba83cec46a48ba76814db7324ec1109c8b4e8e81d6f54bcf"
+  },
+  "newentry_proofs": [
+    {
+      "artifact": "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json",
+      "artifact_sha256": "0defeba27b9f4538afd8d82c05c158918fcdfcaf455a64f1ea897eca7543e41e",
+      "company_id": "jp:1975",
+      "derived_lineage_original_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f",
+      "derived_source_id": "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+      "imported_flag_basis": "Parent task reports actual ingestion/intake complete; no liveDB/firstsave/classification check by this worker. Finalization must verify actual complete source objects/receipts.",
+      "new_facts": [
+        {
+          "id": "1975-reported-annual-EPS-FY20260331-observed-20260514",
+          "index_resolved_artifact": "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json",
+          "index_resolved_original_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f",
+          "index_resolved_source_id": "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+          "kind": "reported_fact",
+          "period": {
+            "date_basis": "Physical15 current annual header gives 自2025-04-01 至2026-03-31; physical1 explicitly labels annual consolidated period.",
+            "end_date": "2026-03-31",
+            "frequency": "annual",
+            "label": "FY2026年3月期 連結年間実績",
+            "period_kind": "duration",
+            "start_date": "2025-04-01"
+          },
+          "rawfact_source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f",
+          "scope_whole_native_SHA": "f8391d78c042f85a76e187d5a16e041bc421c3d9f7556814ab8ff6f7320b614c",
+          "unit": "JPY-per-share",
+          "value": "358.13"
+        },
+        {
+          "id": "1975-reported-year-end-BPS-20260331-observed-20260514",
+          "index_resolved_artifact": "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json",
+          "index_resolved_original_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f",
+          "index_resolved_source_id": "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+          "kind": "reported_fact",
+          "period": {
+            "as_of_basis": "BPS is the current year-end stock in physical15 one-share information/basis; physical1 consolidated financial position and physical7 current balance-sheet closing date corroborate2026-03-31, not an annual average.",
+            "as_of_date": "2026-03-31",
+            "end_date": "2026-03-31",
+            "label": "当連結会計年度末 2026-03-31",
+            "period_kind": "instant",
+            "start_date": null
+          },
+          "rawfact_source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f",
+          "scope_whole_native_SHA": "b790b4cbd8ad85ed5a3e47edaaa958f85280326769a71fca1e39dee1d51762d0",
+          "unit": "JPY-per-share",
+          "value": "1965.51"
+        }
+      ],
+      "no_financial_model_adoption": true,
+      "original_source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f",
+      "projection_fields_whole_exact": true,
+      "source_native_snapshots": {
+        "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f": "ee28585481c9692e9374aed4ebc15cb04e5b71757d6c56f2d739c7c7265a3e25",
+        "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313": "d6db7c7c2454470dba83cec46a48ba76814db7324ec1109c8b4e8e81d6f54bcf"
+      }
+    },
+    {
+      "artifact": "research/ir-case-studies-2026-10-15/3817/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json",
+      "artifact_sha256": "9cb688305dc2a0582ee66f363f88efae03a5b677859adf1f07dd633d86fc2749",
+      "company_id": "jp:3817",
+      "derived_lineage_original_id": "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e",
+      "derived_source_id": "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf",
+      "imported_flag_basis": "Parent task reports actual ingestion/intake complete; no liveDB/firstsave/classification check by this worker. Finalization must verify actual complete source objects/receipts.",
+      "new_facts": [
+        {
+          "id": "3817-reported-annual-EPS-FY2026",
+          "index_resolved_artifact": "research/ir-case-studies-2026-10-15/3817/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json",
+          "index_resolved_original_id": "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e",
+          "index_resolved_source_id": "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf",
+          "kind": "reported_fact",
+          "period": {
+            "date_basis": "Exact annual duration dates printed in the same consolidated earnings heading",
+            "end_date": "2026-03-31",
+            "label": "2026年３月期",
+            "period_kind": "annual_reported_duration",
+            "start_date": "2025-04-01"
+          },
+          "rawfact_source_id": "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e",
+          "scope_whole_native_SHA": "5b095340971e458e0a08a41ffe7f773fd0df2560baedb21ff660c3b7f8c963f6",
+          "unit": "JPY-per-share",
+          "value": "443.34"
+        },
+        {
+          "id": "3817-reported-BPS-at-20260331",
+          "index_resolved_artifact": "research/ir-case-studies-2026-10-15/3817/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json",
+          "index_resolved_original_id": "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e",
+          "index_resolved_source_id": "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf",
+          "kind": "reported_fact",
+          "period": {
+            "as_of_date": "2026-03-31",
+            "date_basis": "Consolidated financial-position current FY row, tied to same annual heading end2026-03-31; reviewer asserts balance-sheet instant, not duration",
+            "label": "2026年３月期",
+            "period_kind": "instant"
+          },
+          "rawfact_source_id": "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e",
+          "scope_whole_native_SHA": "a1a293bac486a0f843d9cc62060a439e75bd33946db9c048d40c112c6c481a53",
+          "unit": "JPY-per-share",
+          "value": "2659.88"
+        }
+      ],
+      "no_financial_model_adoption": true,
+      "original_source_id": "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e",
+      "projection_fields_whole_exact": true,
+      "source_native_snapshots": {
+        "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e": "cdb77fd2cb0d201dd8fbcba84a200665e0912216981ea79e200a601558d7a616",
+        "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf": "2bd0faef543ce9659035c844d7d1722975b37e23fc2035a2a66a85c1e78940ce"
+      }
+    }
+  ],
+  "old41entries226facts_whole_exact": true,
+  "old_actual_connection_history_object_whole_exact": true,
+  "old_outside2derived7facts_resolution_unchanged": [
+    [
+      "jp:8331",
+      "8331.fy2027.company-guidance.annual-dps",
+      "disclosed-facts:49fa0ec2c5cd2cdfb2a2393c75dcf78a5e9d903b9c850ed5330ea50ffe874cce",
+      "research/ir-case-studies-2026-10-15/8331/disclosed-facts-normalized.json"
+    ],
+    [
+      "jp:8331",
+      "8331.fy2027.company-guidance.interim-dps",
+      "disclosed-facts:49fa0ec2c5cd2cdfb2a2393c75dcf78a5e9d903b9c850ed5330ea50ffe874cce",
+      "research/ir-case-studies-2026-10-15/8331/disclosed-facts-normalized.json"
+    ],
+    [
+      "jp:8331",
+      "8331.fy2027.company-guidance.consolidated-payout-ratio",
+      "disclosed-facts:49fa0ec2c5cd2cdfb2a2393c75dcf78a5e9d903b9c850ed5330ea50ffe874cce",
+      "research/ir-case-studies-2026-10-15/8331/disclosed-facts-normalized.json"
+    ],
+    [
+      "jp:9702",
+      "9702-alpha-win-2026-12-newE-eps",
+      "disclosed-facts:8ddc2f01a3d80d2cba579575e77077ff3cc0e4ddfdeb98472a465e751f2284cf",
+      "research/ir-external-estimate-extraction-2026-10-15/9702/bundle.json"
+    ],
+    [
+      "jp:9702",
+      "9702-alpha-win-2027-12-newE-eps",
+      "disclosed-facts:8ddc2f01a3d80d2cba579575e77077ff3cc0e4ddfdeb98472a465e751f2284cf",
+      "research/ir-external-estimate-extraction-2026-10-15/9702/bundle.json"
+    ],
+    [
+      "jp:9702",
+      "9702-alpha-win-2028-12-newE-eps",
+      "disclosed-facts:8ddc2f01a3d80d2cba579575e77077ff3cc0e4ddfdeb98472a465e751f2284cf",
+      "research/ir-external-estimate-extraction-2026-10-15/9702/bundle.json"
+    ],
+    [
+      "jp:9702",
+      "9702-alpha-win-2026-12-CE-eps-republished",
+      "disclosed-facts:8ddc2f01a3d80d2cba579575e77077ff3cc0e4ddfdeb98472a465e751f2284cf",
+      "research/ir-external-estimate-extraction-2026-10-15/9702/bundle.json"
+    ]
+  ],
+  "old_per_fact_source_and_artifact_overrides_unchanged": true,
+  "old_subtree_native_SHA_after": "3a78cf06604d913f9aace93ea353f84f4e0d309d6c7b6af5acf40161bf5e051c",
+  "old_subtree_native_SHA_before": "3a78cf06604d913f9aace93ea353f84f4e0d309d6c7b6af5acf40161bf5e051c",
+  "old_v37_SHA": "e1c07ebca3c5885007738d152588685d6de78f52dfe206d18b900efd7997df4b",
+  "recorded_at": "2026-10-16T10:01:01.450663+00:00",
+  "sourcefact_originalID_not_misused_as_indexoverride": true,
+  "status": "prepared_file_only_v38_candidate_root_finalization_required"
+}

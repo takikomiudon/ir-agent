@@ -1,0 +1,95 @@
+{
+  "status": "schedule_monitor_only",
+  "as_of": "2026-10-15T05:05:19.776661+00:00",
+  "checked_at": "2026-10-15T05:09:27.926742+00:00",
+  "coverage": {
+    "event_count": 3,
+    "in_window_count": 2,
+    "outside_window_count": 1,
+    "date_unknown_count": 0,
+    "source_bound_candidate_count": 3
+  },
+  "events": [
+    {
+      "id": "jp:1332:2027fy-q2-release",
+      "company_id": "jp:1332",
+      "kind": "earnings_release",
+      "label": "2027年3月期第2四半期決算発表",
+      "window_group": "in_window",
+      "status": "source_bound_candidate",
+      "timing": {
+        "status": "floating_date",
+        "scheduled_date": "2026-11-06",
+        "scheduled_at": null,
+        "time": null,
+        "timezone": null,
+        "relation_to_as_of": "unknown_timezone"
+      },
+      "due": null,
+      "occurrence": {
+        "status": "not_established"
+      },
+      "result_documents": {
+        "status": "none_linked"
+      },
+      "semantic_review_required": true,
+      "mapping_prospectiveness": "unverified"
+    },
+    {
+      "id": "jp:1332:2027fy-q2-presentation",
+      "company_id": "jp:1332",
+      "kind": "earnings_presentation",
+      "label": "2027年3月期第2四半期決算説明会",
+      "window_group": "in_window",
+      "status": "source_bound_candidate",
+      "timing": {
+        "status": "floating_date",
+        "scheduled_date": "2026-11-10",
+        "scheduled_at": null,
+        "time": null,
+        "timezone": null,
+        "relation_to_as_of": "unknown_timezone"
+      },
+      "due": null,
+      "occurrence": {
+        "status": "not_established"
+      },
+      "result_documents": {
+        "status": "none_linked"
+      },
+      "semantic_review_required": true,
+      "mapping_prospectiveness": "unverified"
+    },
+    {
+      "id": "jp:1332:2027fy-q3-release",
+      "company_id": "jp:1332",
+      "kind": "earnings_release",
+      "label": "2027年3月期第3四半期決算発表",
+      "window_group": "outside_window",
+      "status": "source_bound_candidate",
+      "timing": {
+        "status": "floating_date",
+        "scheduled_date": "2027-02-05",
+        "scheduled_at": null,
+        "time": null,
+        "timezone": null,
+        "relation_to_as_of": "unknown_timezone"
+      },
+      "due": null,
+      "occurrence": {
+        "status": "not_established"
+      },
+      "result_documents": {
+        "status": "none_linked"
+      },
+      "semantic_review_required": true,
+      "mapping_prospectiveness": "unverified"
+    }
+  ],
+  "limitations": [
+    "Date interpretations and period correspondence are caller mappings requiring semantic review.",
+    "Mapping prospectiveness is unverified; event registration and full-universe completeness are not established.",
+    "Occurrence, cancellation, rescheduling, results, fingerprints, change detection and exact-time resolution are not implemented.",
+    "No jobs, questions, forecasts, thesis updates, messages or orders are created."
+  ]
+}

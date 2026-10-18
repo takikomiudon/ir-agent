@@ -1,0 +1,264 @@
+{
+  "artifact_type": "bounded_independent_normalized_facts_review",
+  "company_id": "jp:2929",
+  "recorded_at": "2026-10-16T10:25:32.232295+00:00",
+  "recorded_at_JST": "2026-10-16T19:25:32.232295+09:00",
+  "result": "no_mandatory_correction",
+  "mandatory_findings": [],
+  "reviewed_worker_8_files_SHA256": {
+    "README.md": "fee5230afe1c4d5a4022c0d95ca7e49d6b289927dd9aa3c5f2d9c37f7310fa23",
+    "normalization-input.json": "ce98ec425c309f8848bae9c894f77511c8a608bffee83363f35bbf452543b51d",
+    "input-pins.json": "ce537b8e40fbd38ec9f2f4f5e8c126d1bb5c3b0a6e556f12d4b02913fc4ce03b",
+    "normalizer-output.json": "9aae5429e0df0abc91870333fad03c1c684bb3897b5d9b78a1445b0ceaab2710",
+    "normalized-bundle.json": "47f6dd0ce9dd8257cbfb00091faaa7699cf620f9924bf132ccd5a117b6315e9d",
+    "model-input-audit-request.json": "7edce0abe19ee8384a486ee90e67aeae76fe1c8ddcef064fd6927c5d14531fd7",
+    "validation.json": "024f0488ddfbd724ae334b0c1cd597e59c2ccfd25ff78c8811837c4202b4b8a1",
+    "reproduce.py": "98f7a7ae54f55b58ddbdd3aee84feb3a77ca5baaab7a65e8ca31217fd4ae541c"
+  },
+  "historical_code_pin_transition": {
+    "input_pin_count": 12,
+    "current_matching": 11,
+    "known_mismatch": [
+      {
+        "path": "src/ir_agent/cli.py",
+        "historical_sha256": "149e43c4a0a645127f1180fca0567fcf29d06b4e0ea4dad96006e4820ddcc37f",
+        "observed_sha256": "5bc85f52f666089f956211c39fce5fc0a2a8bc706e224c845171e7909a017c1c",
+        "current_match": false
+      }
+    ],
+    "interpretation": "Historical CLI pin preserved unchanged. Direct pure normalizer core reproduction used frozen request and saved derived retrieved_at; old wrapper script was not altered or used to bypass its pin assertion.",
+    "core_SHA256": "d434b41cfa19568d0cef1a2e6710365f447012d75a4b07ca950cc62b6bd9db51",
+    "full_pin_checks": [
+      {
+        "path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/source-only-bundle.json",
+        "historical_sha256": "a7693d894ed80711811169ae1ce7c64ce690f15be2e6a377e52325b6f3c2d1b9",
+        "observed_sha256": "a7693d894ed80711811169ae1ce7c64ce690f15be2e6a377e52325b6f3c2d1b9",
+        "current_match": true
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/source-quotes.json",
+        "historical_sha256": "6386bc37bfd84af992a11dc0facb77016aa13ed0b4c9b596c6cce6e632b8bc75",
+        "observed_sha256": "6386bc37bfd84af992a11dc0facb77016aa13ed0b4c9b596c6cce6e632b8bc75",
+        "current_match": true
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/correction-connection.json",
+        "historical_sha256": "bf5c704d1fcb9ea66c9e276c3036cacac2ecdc3505dc05ad9e74d9199b771084",
+        "observed_sha256": "bf5c704d1fcb9ea66c9e276c3036cacac2ecdc3505dc05ad9e74d9199b771084",
+        "current_match": true
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/parent-acceptance.json",
+        "historical_sha256": "18d2dbfb9ece438a384189e244e3c492d11d0f8496ad0b84c7eee85f9b752f28",
+        "observed_sha256": "18d2dbfb9ece438a384189e244e3c492d11d0f8496ad0b84c7eee85f9b752f28",
+        "current_match": true
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/source-only-bundle.json",
+        "historical_sha256": "7e32e9b9e490e67dd3c73ad495190682463d34916f5ae2947eeb07c2be317f7f",
+        "observed_sha256": "7e32e9b9e490e67dd3c73ad495190682463d34916f5ae2947eeb07c2be317f7f",
+        "current_match": true
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/image-observations.json",
+        "historical_sha256": "cdb2102783f6bfdc30dcdf88f386449be6ab9f9c6e497d97809d6129db386df9",
+        "observed_sha256": "cdb2102783f6bfdc30dcdf88f386449be6ab9f9c6e497d97809d6129db386df9",
+        "current_match": true
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/parent-acceptance.json",
+        "historical_sha256": "5a1ce8da5687f96befaeb33d3dc2a0b64f374837d4f0f83543fae024e7225af9",
+        "observed_sha256": "5a1ce8da5687f96befaeb33d3dc2a0b64f374837d4f0f83543fae024e7225af9",
+        "current_match": true
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/images/page-01.png",
+        "historical_sha256": "1de02fa14053a054ae33e3191ee553245f7b9b945a515c7611a6008858f6eef4",
+        "observed_sha256": "1de02fa14053a054ae33e3191ee553245f7b9b945a515c7611a6008858f6eef4",
+        "current_match": true
+      },
+      {
+        "path": "src/ir_agent/disclosed_facts.py",
+        "historical_sha256": "d434b41cfa19568d0cef1a2e6710365f447012d75a4b07ca950cc62b6bd9db51",
+        "observed_sha256": "d434b41cfa19568d0cef1a2e6710365f447012d75a4b07ca950cc62b6bd9db51",
+        "current_match": true
+      },
+      {
+        "path": "src/ir_agent/model_inputs.py",
+        "historical_sha256": "23aa6ef4146a8bc1fb931f8df81a6914e1d345809f7617d0a37f913a25a6ffe2",
+        "observed_sha256": "23aa6ef4146a8bc1fb931f8df81a6914e1d345809f7617d0a37f913a25a6ffe2",
+        "current_match": true
+      },
+      {
+        "path": "src/ir_agent/cli.py",
+        "historical_sha256": "149e43c4a0a645127f1180fca0567fcf29d06b4e0ea4dad96006e4820ddcc37f",
+        "observed_sha256": "5bc85f52f666089f956211c39fce5fc0a2a8bc706e224c845171e7909a017c1c",
+        "current_match": false
+      },
+      {
+        "path": "docs/graham-number-valuation-spec.md",
+        "historical_sha256": "4ef4791993d6db68aea2a500e8aa0c99636ebe5f211e73efe77d9855a20841c1",
+        "observed_sha256": "4ef4791993d6db68aea2a500e8aa0c99636ebe5f211e73efe77d9855a20841c1",
+        "current_match": true
+      }
+    ]
+  },
+  "independent_core_reproduction_observed": {
+    "call": "normalize_disclosed_facts(frozen_request, now=saved_derived.retrieved_at)",
+    "saved_derived_retrieved_at": "2026-10-16T10:18:05.739941+00:00",
+    "rebuilt_object_equals_native_normalizer_output": true,
+    "pretty_JSON_plus_newline_bytes_exact": true,
+    "rebuilt_SHA256": "9aae5429e0df0abc91870333fad03c1c684bb3897b5d9b78a1445b0ceaab2710",
+    "model_input_audit_or_valuation_called": false,
+    "reproduced_result_not_written_over_worker_artifact": true
+  },
+  "source_wholeobjects": {
+    "checks": [
+      {
+        "role": "original",
+        "id": "case-public:96f2f98c709f5f7d29cbe307a7954902ed8ea19c1ac20a6e41ac5f5be537679e",
+        "native_SHA256": "4989a354f8aa51d2c63e604f2fd2d15fde556c9dcf7cfb2f2449a309c1b6d3c3",
+        "content_UTF8_SHA256": "f042569e4a1578ca495601066849d8b1d8425d4508dfdcef82a13f3c90442fe2",
+        "retrieved_at": "2026-10-16T10:14:11.380986+00:00",
+        "published_at": null,
+        "producer_declared_native_matches": true
+      },
+      {
+        "role": "correction",
+        "id": "case-public:e57a33cf096ab0b2b1b472a938684e6388a0f06096feac90ba21d325eabf8494",
+        "native_SHA256": "0cf9a39daa828bc013c01d304cb46c8cba4100e943dd1d06f566e3693ff8a510",
+        "content_UTF8_SHA256": "83d2ba42960948050417a39813dc4e983f772bf373a5aa803154d1c8520cd635",
+        "retrieved_at": "2026-10-16T10:12:04.325875+00:00",
+        "published_at": null,
+        "producer_declared_native_matches": true
+      },
+      {
+        "role": "derived",
+        "id": "disclosed-facts:8cd53e8d69bfd982908ca784be132e0009d9cf53f0a19b23e84d79285fea3a9f",
+        "native_SHA256": "ca83c7d339c79748da4b7f726426d2fcfcd6440a08c0aeb9a99c83fcf7a1d5db",
+        "content_UTF8_SHA256": "97b112a08a96de3d08c648ac8c26b6385fd3791a9b0e07749bacd898b792e129",
+        "retrieved_at": "2026-10-16T10:18:05.739941+00:00",
+        "published_at": null,
+        "producer_declared_native_matches": true
+      }
+    ],
+    "request_and_normalizer_original_equal_accepted_original": true,
+    "final_bundle_exact_composition": "normalizer output with sources replaced by unchanged original + unchanged correction + unchanged derived",
+    "native_normalizer_source_count": 2,
+    "handoff_bundle_source_count": 3,
+    "derived_original_parents": [
+      "case-public:96f2f98c709f5f7d29cbe307a7954902ed8ea19c1ac20a6e41ac5f5be537679e"
+    ],
+    "known_correction_reference": "Per-fact scope.known_correction and derived.metadata.review.rationale",
+    "correction_native_DAG_edge_created": false,
+    "correction_automatically_consumed_or_applied": false
+  },
+  "fact_meaning_checks": [
+    {
+      "id": "2929-reported-annual-EPS-FY2026",
+      "raw_value": "68.61",
+      "normalized_value": "68.61",
+      "kind": "reported_fact",
+      "unit": "JPY-per-share",
+      "period": {
+        "date_basis": "Exact duration printed in sameconsolidated annual heading",
+        "end_date": "2026-07-31",
+        "label": "2026年７月期",
+        "period_kind": "annual_reported_duration",
+        "start_date": "2025-08-01"
+      },
+      "original_source_id": "case-public:96f2f98c709f5f7d29cbe307a7954902ed8ea19c1ac20a6e41ac5f5be537679e",
+      "nonempty_continuous_quote_Unicode_UTF8_exact": true,
+      "raw_token_Unicode_UTF8_exact": true,
+      "unit_and_annual_label_in_same_quote": true,
+      "financial_inputs_verified": false,
+      "meaning_review_required": true
+    },
+    {
+      "id": "2929-reported-BPS-at-20260731",
+      "raw_value": "453.35",
+      "normalized_value": "453.35",
+      "kind": "reported_fact",
+      "unit": "JPY-per-share",
+      "period": {
+        "as_of_date": "2026-07-31",
+        "date_basis": "CurrentFY financial-position row, annualend in sameheading and explicitBPS date at originalp21",
+        "label": "2026年７月期",
+        "period_kind": "instant"
+      },
+      "original_source_id": "case-public:96f2f98c709f5f7d29cbe307a7954902ed8ea19c1ac20a6e41ac5f5be537679e",
+      "nonempty_continuous_quote_Unicode_UTF8_exact": true,
+      "raw_token_Unicode_UTF8_exact": true,
+      "unit_and_annual_label_in_same_quote": true,
+      "financial_inputs_verified": false,
+      "meaning_review_required": true
+    }
+  ],
+  "ordinary_share_context": {
+    "original_physical_page": 21,
+    "EPS": "Original annual ordinary-share parent earnings divided by annual-average ordinary shares as disclosed; direct EPS68.61 is not recomputed from truncated amounts",
+    "BPS": "Original closing ordinary-share net assets and end common-share basis as disclosed; direct BPS453.35 is not recomputed",
+    "annual_average_shares_display": "28,978,455",
+    "end_common_shares_display": "29,043,377",
+    "end_issued_including_treasury_display": "29,079,000",
+    "end_treasury_display": "35,623",
+    "individual_values_or_forecast_substituted": false,
+    "dash_or_unshown_NCI_claims_imputed_to_zero": false
+  },
+  "correction_scope": "Original Sept11 and later Sept17 correction remain separate. Correction concerns printed9/physical11 capital surplus and retained earnings. Matching displayed totals is a limited observation, not proof that all per-share/current financial inputs are unaffected. No numeric facts created from correction image tables.",
+  "images": [
+    {
+      "path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/images/page-01.png",
+      "sha256": "1de02fa14053a054ae33e3191ee553245f7b9b945a515c7611a6008858f6eef4",
+      "visually_reviewed": true,
+      "scope": "Original annual consolidated cover, period and direct decimal EPS/BPS; forecast is separate"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/images/page-02.png",
+      "sha256": "2fa817a898a7f376f98ea86ac4febef262b961e9f15b90312512f810979f9943",
+      "visually_reviewed": true,
+      "scope": "Whole-share annual average versus end issued/treasury; individual values excluded"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/images/page-11.png",
+      "sha256": "69e66dad3cfe21083cd76da2182463f6e249421d3268c199741e08266070ff04",
+      "visually_reviewed": true,
+      "scope": "Printed9 original balance-sheet date columns and capital/retained-earnings rows before correction"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/images/page-21.png",
+      "sha256": "d5d4acedbe79b8440a86cdd842c6a31a73ec64c1f1d16e65846629b1ebdaf6f4",
+      "visually_reviewed": true,
+      "scope": "Ordinary-share parent-profit/annual-average versus closing net-assets/end common shares; yen-sen notation and dash retained"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/images/page-01.png",
+      "sha256": "e6d4f5b547f9a13da3c5acf797a1c9e3585466b6b1a43795b2a4a88c1ed05190",
+      "visually_reviewed": true,
+      "scope": "Later September17 correction identifies September11 annual statement and printed9; before panel separate"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/images/page-02.png",
+      "sha256": "02900a880f530f273e81c658b6a5729cd5ad19e227ddd9467627e517e6e7c491",
+      "visually_reviewed": true,
+      "scope": "After panel changes capital surplus/retained earnings; same displayed totals only, not an EPS/BPS current-validity certificate"
+    }
+  ],
+  "audit_request_preparation_only": {
+    "sources_exactly_match_handoff_3source_bundle": true,
+    "two_provenance_paths_point_to_derived_facts_0_and_1_values": true,
+    "executed": false
+  },
+  "scope_and_operations": {
+    "new_GET": 0,
+    "DB_or_Store": 0,
+    "sharedcode_or_docs_edits": 0,
+    "old_artifact_edits": 0,
+    "new_investment_facts_or_forecasts": 0,
+    "valuation_price_threshold_or_IR": 0,
+    "only_new_artifacts_in": "research/ir-case-studies-2026-10-15/2929/annual-per-share-disclosed-facts-2026-10-16/independent-review",
+    "full_PDF_semantic_review_claimed": false,
+    "scope_shape_note": "Worker eight files guarded by explicit names; parallel root parent-acceptance is separate, not counted as a worker-file mutation."
+  },
+  "freeze": true
+}

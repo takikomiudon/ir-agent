@@ -1,0 +1,544 @@
+//財務情報　決算短信
+//========================================================
+//
+// ■XJStorageLoaderクラス定義
+//
+//========================================================
+
+if (!Array.prototype.indexOf) {
+  Array.prototype.indexOf = function (elt /*, from*/ ) {
+    var len = this.length;
+
+    var from = Number(arguments[1]) || 0;
+    from = (from < 0)
+      ? Math.ceil(from)
+      : Math.floor(from);
+    if (from < 0)
+      from += len;
+
+    for (; from < len; from++) {
+      if (from in this
+        && this[from] === elt)
+        return from;
+    }
+    return -1;
+  };
+}
+
+(function () {
+
+  /*========================================================
+   コンストラクタ
+  ========================================================*/
+  XjStorageLoaderNews = function (s) {
+    var defaults = {
+      domain: '//www.xj-storage.jp',
+      company: '75250',
+      pdf: '1',
+      len: '',
+      documents_all: '',
+      documents_Kessan: '13,98,113'
+    };
+
+    this.settings = $.extend(defaults, s);
+    this.fdate;
+    this.pdate;
+    this.documents;
+    this.select_latest = '';
+    this.select_oldest = '';
+
+    this.ary_doc_no;
+    this.ary_doc_Kessan;
+
+    XjStorageLoaderNews.prototype.init.call(this);
+  };
+
+  /*========================================================
+   初期設定
+  ========================================================*/
+  XjStorageLoaderNews.prototype.init = function () {
+    $.ajaxSetup({
+      scriptCharset: 'utf-8'
+    });
+
+    //$.ajaxSetup({scriptCharset:'shift_jis'});
+
+    this.ary_doc_Kessan = this.settings.documents_Kessan.split(",");
+    this.settings.documents_all = this.settings.documents_Kessan;
+
+    //初期読み込み対象指定
+    this.documents = this.settings.documents_all;
+    this.ary_doc_no = this.documents.split(",");
+
+    //記事年範囲取得
+    this.setMaxMinYear(this.documents);
+  };
+
+  /*========================================================
+   年選択ボタン生成
+  ========================================================*/
+  XjStorageLoaderNews.prototype.setMaxMinYear = function (code) {
+    var self = this;
+    var xjurl = '';
+
+    //URL生成
+    xjurl += self.settings.domain + '/public-list/GetList2.aspx?company=';
+    xjurl += self.settings.company;
+    xjurl += '&len=10000';
+
+    // タイプ指定
+    if (this.documents && this.documents.length > 0) {
+      xjurl += '&doctype=' + this.documents;
+    }
+
+    xjurl += '&output=json&callback=?';
+
+    $.ajax({
+      url: xjurl,
+      dataType: 'json',
+
+      success: function (data) {
+        if (undefined == data.items) {
+          return;
+        }
+
+        $.each(data.items, function (i, item) {
+          // 目的の文書番号でなかったら
+          if (-1 == self.ary_doc_no.indexOf(item.disclosureCode)) {
+            return true;
+          }
+          
+          //disclosureItemCode【11321】または【11322】は表示
+          var e = 0;
+          var itemCodes = '';
+          var iCodes = '';
+          if (item.disclosureItemCodes) {
+            $.each(item.disclosureItemCodes, function (e, disclosureItemCode) {
+              itemCodes = disclosureItemCode.itemCode;
+              iCodes += itemCodes;
+              e++;
+            });
+          }
+          var regexp = '11321';
+					var regexp2 = '11322';
+          var res;
+					if (item.disclosureCode == '13') {
+						if (((res = iCodes.includes(regexp)) == false) && ((res = iCodes.includes(regexp2)) == false)) {
+							return true;
+						}
+					}
+
+          // fiscalYearEndがあるときは
+          if (item.fiscalYearEnd != null) {
+            var fyEnd = item.fiscalYearEnd;
+            var fyEndY = fyEnd.substring(0, 4);
+						var fyEndQ = fyEnd.substring(4, 8);
+            var entry_year = Number(fyEndY);
+						if (fyEndQ == '0331') {
+              entry_year = Number(fyEndY);
+            } else if (fyEndQ == '0630') {
+							entry_year = Number(fyEndY) + 1 ;
+            } else if (fyEndQ == '0930') {
+							entry_year = Number(fyEndY) + 1 ;
+            } else if (fyEndQ == '1231') {
+							entry_year = Number(fyEndY) + 1 ;
+            }
+          }
+          // fiscalYearEndがないときは
+          else {
+            // 文書タイトルから読み取り
+            var entry_year = self.getFiscalYear(item.title);
+
+            // 文書タイトルから読み取れないときは
+            if ("" == entry_year) {
+
+              var date = item.publishDate.split(' ')[0].split('/');
+              // 7月以降なら
+              if (7 <= Number(date[1])) {
+                entry_year = Number(date[0]) + 1;
+              } else // 7月より前なら
+              {
+                entry_year = Number(date[0]);
+              }
+
+            }
+          }
+
+          //最新の年月期と最古の年月期を取得
+          if (self.select_latest === '' || self.select_latest < entry_year) {
+            self.select_latest = entry_year;
+          }
+
+          if (self.select_oldest === '' || self.select_oldest >= entry_year) {
+            self.select_oldest = entry_year;
+          }
+        });
+
+        //self.active_select = self.select_latest ;
+      },
+      complete: function () {
+        self.setDateButton();
+        //self.setDocumentButton ( ) ;
+        self.show();
+      }
+    });
+  }
+
+  /*========================================================
+   0000年12月期取得（戻り値：0000）
+  ========================================================*/
+  XjStorageLoaderNews.prototype.getFiscalYear = function (title) {
+    var self = this;
+    var fiscalyear = '';
+    var res;
+
+    //スペース削除
+    title = self.spaceTrim(title);
+
+    //判定パターン
+    var regexp0 = /令和元年([0-9０-９]{1,2})月期/;
+    var regexp1 = /令和([0-9０-９]{1,2})年([1-9１-９]{1,2})月期/;
+    var regexp2 = /平成([0-9０-９]{2})年([1-9１-９]{1,2})月期/;
+    var regexp3 = /([0-9０-９]{4})年([1-9１-９]{1,2})月期/;
+    var regexp4 = /第([0-9０-９]{1,2})期/;
+    var regexp5 = /第([0-9０-９]{1,2})回/;
+
+    var ki;
+
+    if ((res = regexp0.exec(title)) !== null) {
+      fiscalyear = 2019;
+    } else if ((res = regexp1.exec(title)) !== null) {
+      ki = Number(self.zen2han(res[1]));
+      fiscalyear = self.reiwaToSeireki(ki);
+    } else if ((res = regexp2.exec(title)) !== null) {
+      ki = Number(self.zen2han(res[1]));
+      fiscalyear = self.heiseiToSeireki(ki);
+    } else if ((res = regexp3.exec(title)) !== null) {
+      ki = Number(self.zen2han(res[1]));
+      fiscalyear = ki;
+    } else if ((res = regexp4.exec(title)) !== null) {
+      fiscalyear = Number(self.zen2han(res[1]));
+      fiscalyear = 1946 + fiscalyear;
+    } else if ((res = regexp5.exec(title)) !== null) {
+      fiscalyear = Number(self.zen2han(res[1]));
+      fiscalyear = 1946 + fiscalyear;
+    }
+
+    return fiscalyear;
+
+  }
+
+  /*============================================
+   空白除去
+  ============================================*/
+  XjStorageLoaderNews.prototype.spaceTrim = function (str) {
+    return str.replace(/[ 　\t\r\n]+/g, "");
+  }
+
+  /*============================================
+
+   全角英数を半角に変換
+  ============================================*/
+  XjStorageLoaderNews.prototype.zen2han = function (str) {
+    return str.replace(/[０-ｚ]/g, function ($0) {
+      return String.fromCharCode(parseInt($0.charCodeAt(0)) - 65248);
+    });
+  }
+
+  /*============================================
+   令和を西暦に変換
+  ============================================*/
+  XjStorageLoaderNews.prototype.reiwaToSeireki = function (y) {
+    if ((y > 0) && (y < 99)) {
+      return (2018 + y);
+    }
+  }
+
+  /*============================================
+   西暦を令和に変換
+  ============================================*/
+  XjStorageLoaderNews.prototype.SeirekiToReiwa = function (y) {
+    if (y > 2018) {
+      return (y - 2018);
+    }
+
+    return y;
+  }
+
+  /*============================================
+   平成を西暦に変換
+  ============================================*/
+  XjStorageLoaderNews.prototype.heiseiToSeireki = function (y) {
+    if ((y > 0) && (y < 99)) {
+      return (1988 + y);
+    }
+  }
+
+  /*============================================
+   西暦を平成に変換
+  ============================================*/
+  XjStorageLoaderNews.prototype.SeirekiToHeisei = function (y) {
+    if (y > 1988) {
+      return (y - 1988);
+    }
+
+    return y;
+  }
+
+  /*========================================================
+   年選択ボタン生成
+  ========================================================*/
+  XjStorageLoaderNews.prototype.setDateButton = function () {
+    var self = this;
+    self.active_select = self.select_latest;
+    $('#xj-title').html(self.select_latest + '年3月期');
+    var ul = $('#xj-select-year_s');
+
+
+    //年範囲分年メニュー生成
+    for (var i = self.select_latest; i >= self.select_oldest; i--) {
+
+      if (i !== "") {
+
+        if (i == self.active_select) {
+          var tmp = $('<option value="' + i + '" selected>' + i + '年3月期</option>');
+        } else {
+          var tmp = $('<option value="' + i + '">' + i + '年3月期</option>');
+        }
+      }
+      //年範囲分年メニュー生成出来ないときはプルダウンを隠す
+      else {
+        $('#xj-select-year_s').css('display', 'none');
+        $("#xj-title").css('display', 'none');
+      }
+
+      ul.append(tmp);
+    }
+
+    ul.change(function () {
+      var year = $('#xj-select-year_s option:selected').val();
+
+      $('#xj-select-year_s').val(year);
+
+      if ("" == year) {
+        self.fdate = "";
+        self.pdate = "";
+        self.setDuration(year, year);
+        return;
+      }
+
+      $('#xj-title').html(year + '年3月期');
+
+      //self.setDuration ( year + '1231', year + '0101' ) ;
+      self.setDuration(year, year);
+
+    });
+    self.setDuration(self.active_select);
+  }
+
+
+  /*========================================================
+   絞込み期間更新
+  ========================================================*/
+  XjStorageLoaderNews.prototype.setDuration = function (f, p) {
+    this.fdate = f;
+    this.pdate = p;
+    this.show();
+  }
+
+  /*========================================================
+   絞込みカテゴリー更新
+  ========================================================*/
+  XjStorageLoaderNews.prototype.setDocument = function (d) {
+    this.documents = d;
+    this.show();
+  }
+
+  /*========================================================
+   表示処理
+  ========================================================*/
+  XjStorageLoaderNews.prototype.show = function () {
+    var self = this;
+    var is_first = true;
+
+    var url = this.settings.domain + '/public-list/GetList2.aspx?company=';
+
+    url += this.settings.company;
+    url += '&len=10000';
+
+    // タイプ指定
+    if (this.documents && this.documents.length > 0) {
+      url += '&doctype=' + this.documents;
+    }
+
+    //url+= '&filetype=PDF-GENERAL';
+    url += '&output=json&callback=?';
+
+    $.getJSON(url, function (data, title) {
+      $('#xj-mainlist').empty();
+
+      var cont = '';
+
+      if (data.items) {
+        var j = 0;
+        var now_dd = new Date();
+
+        $.each(data.items, function (i, item) {
+          // 目的の文書番号でなかったら
+          if (-1 == self.ary_doc_no.indexOf(item.disclosureCode)) {
+            return true;
+          }
+
+          //disclosureItemCode【11321】または【11322】は表示
+          var e = 0;
+          var itemCodes = '';
+          var iCodes = '';
+          if (item.disclosureItemCodes) {
+            $.each(item.disclosureItemCodes, function (e, disclosureItemCode) {
+              itemCodes = disclosureItemCode.itemCode;
+              iCodes += itemCodes;
+              e++;
+            });
+          }
+          var regexp = '11321';
+					var regexp2 = '11322';
+          var res;
+					if (item.disclosureCode == '13') {
+						if (((res = iCodes.includes(regexp)) == false) && ((res = iCodes.includes(regexp2)) == false)) {
+							return true;
+						}
+					}
+
+          // 日付設定
+          var date = item.publishDate.split(' ')[0].split('/');
+          var dateStr = date[0] + '/' + date[1] + '/' + date[2];
+          var date_dd = new Date(parseInt(date[0], 10),
+            parseInt(date[1], 10) - 1,
+            parseInt(date[2], 10));
+
+          // fiscalYearEndがあるときは
+          if (item.fiscalYearEnd != null) {
+            var fyEnd = item.fiscalYearEnd;
+            var fyEndY = fyEnd.substring(0, 4);
+            var fyEndQ = fyEnd.substring(4, 8);
+            var entry_year = Number(fyEndY);
+						if (fyEndQ == '0331') {
+              entry_year = Number(fyEndY);
+            } else if (fyEndQ == '0630') {
+							entry_year = Number(fyEndY) + 1 ;
+            } else if (fyEndQ == '0930') {
+							entry_year = Number(fyEndY) + 1 ;
+            } else if (fyEndQ == '1231') {
+							entry_year = Number(fyEndY) + 1 ;
+            }
+          }
+          // fiscalYearEndがないときは
+          else {
+
+            // 年度の算出
+            var entry_year = self.getFiscalYear(item.title);
+            if ("" == entry_year) {
+              var date = item.publishDate.split(' ')[0].split('/');
+              if (7 <= Number(date[1])) {
+                entry_year = Number(date[0]) + 1;
+              } else {
+                entry_year = Number(date[0]);
+              }
+
+            }
+          }
+          if (('' == self.fdate || !self.fdate)) {
+            if (j < 0) {
+              return true;
+            }
+          } else if (self.fdate != entry_year) {
+            return true;
+          }
+
+          var entrytype = '';
+          var url = '';
+          var size = '';
+          var page = '';
+
+          if (item.files) {
+            $.each(item.files, function (j, file) {
+              if (file.type == 'PDF-GENERAL') {
+                url = file.url;
+                size = parseInt(file.size);
+                page = file.page;
+              } else if (file.type == 'HTML-GENERAL') {
+                url = file.url;
+
+              }
+
+            });
+          }
+
+          if (size > 0) {
+            if (size > 1000 && size < 1000000) {
+              size = parseInt(size / 1000) + 'K';
+            } else if (size > 1000000) {
+              size = parseInt(size / 1000000) + 'M';
+            }
+          } else {
+            size = '－';
+          }
+
+          //ページ数の生成
+          if (page <= 0) {
+            page = '－';
+          }
+
+          // 画面表示
+
+
+          cont += '<li>';
+
+          cont += '<p class="date">' + dateStr + '</p>';
+          
+          cont += '<div class="date-docs">';
+
+          if (url != '' && size != '－') {
+            cont += '<p class="date-title file">';
+            cont += '<a href="' + url + '" target="_blank">';
+          } else if (url != '') {
+            cont += '<p class="date-title">';
+            cont += '<a href="' + url + '" target="_blank">';
+          } else {
+            cont += '<p class="date-title">';
+          }
+
+          cont += item.title;
+          
+          if (url != '') {
+            cont += '</a>';
+          }
+
+          cont += '</p>';
+
+          if (url != '' && size != '－') {
+            cont += '<span class="date-icon">' + size + 'B</span>';
+          }
+
+          cont += '</div>';
+
+          cont += '</li>';
+
+
+          j++;
+        });
+      }
+
+      if (cont == '') {
+        cont += '<li><p>ただいま掲載する事項はございません。</p></li>';        
+      }
+
+      $('#xj-mainlist').append(cont);
+    });
+  }
+
+}());
+
+$(function () {
+  var xj_storage_loader = new XjStorageLoaderNews();
+});

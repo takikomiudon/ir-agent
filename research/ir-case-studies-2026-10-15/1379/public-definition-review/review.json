@@ -1,0 +1,264 @@
+{
+  "company_id": "jp:1379",
+  "research_only": true,
+  "status": "public_definitions_partly_supported_no_send_ready_question",
+  "recorded_at": "2026-10-15T05:23:48.689804+00:00",
+  "scope": {
+    "new_GETs": 0,
+    "statement_pages_available": 11,
+    "presentation_pages_available": 35,
+    "review_method": "Full saved extracted-text targeted term scan, focused paragraphs/tables and4 saved-PDF image pages; reused FAQ only for relevant answer/pointer.",
+    "new_company_or_sector_search": false,
+    "source_bodies_modified": false,
+    "normalizer_run": false,
+    "database_accessed_or_modified": false,
+    "forecasts_prices_questions_or_sends_changed": false
+  },
+  "findings": [
+    {
+      "id": "seasonality",
+      "status": "unknown_within_reviewed_sources",
+      "finding_kind": "limited_not_found_not_companywide_absence",
+      "supported_parts": [
+        "Company explains current domestic prices afterGoldenWeek in weather/vegetable-price conditions and demand-promotion context.",
+        "Presentation includes monthly Tokyo-wholesale-market price reference charts; observed variation is market data, distinct from company realized prices or profits."
+      ],
+      "quote_ids": [
+        "domestic-price-company-explanation",
+        "market-monthly-price-reference"
+      ],
+      "unresolved": [
+        "No explicit issuer explanation of earnings seasonality, seasonal cost/production lag or seasonal annual-profit profile verified in this limited source set.",
+        "No inference that an upcoming winter/half-year guarantees profit improvement or that full business cycle is established."
+      ],
+      "next_public_check": "Previously linked official IR archive/financial history: dated annual or quarterly narrative about seasonality and comparable periods; none fetched in this task.",
+      "current_model_parameter_path": null,
+      "decision_impact": null,
+      "ready_to_send_IR": false
+    },
+    {
+      "id": "orders-production-sales-demand",
+      "status": "partially_supported",
+      "finding_kind": "company_explanations_with_missing_metric_definitions",
+      "supported_parts": [
+        "Demand forecasts and production adjustment/area strategy are public company explanations.",
+        "Arden orders Apr/May weak then June recovery is local processed-business context.",
+        "Domestic production/own-average-selling-price comparison and market prices are distinct published objects.",
+        "Segment external/internal sales and OI reconciliation are explicitly disclosed."
+      ],
+      "quote_ids": [
+        "arden-orders-and-processed-sales",
+        "demand-and-production-management-description",
+        "company-average-selling-price-comparison",
+        "company-production-comparison",
+        "market-monthly-price-reference",
+        "segment-reconciliation-definition"
+      ],
+      "unresolved": [
+        "No groupwide order intake/backlog metric definition or relation to revenue recognition verified.",
+        "Own average selling price weighting, denominator (volume/shipments/product mix) and absolute yen/kg basis not verified.",
+        "Monthly market wholesale price is not issuer average price or a sell-through metric.",
+        "Company explanation of marketing impact is not a controlled causal estimate or future pricing guarantee."
+      ],
+      "next_public_check": "Existing official IR/financial-history pointers: metric-definition footnotes, annual accounting/revenue-recognition note and segment definitions. Do not request undisclosed current orders.",
+      "current_model_parameter_path": null,
+      "decision_impact": null,
+      "ready_to_send_IR": false
+    },
+    {
+      "id": "profit-cost-definitions",
+      "status": "partially_supported",
+      "finding_kind": "published_bridge_and_segment_explanation",
+      "supported_parts": [
+        "Company public bridge distinguishes revenue, labor cost, otherCOGS, promotion/advertising, personnel and otherSGA categories (p5 image checked).",
+        "Chemical-products business reports purchase-cost increases and price revision response.",
+        "Balance-sheet raw-materials/stores are dated inventories, not period raw-material expense."
+      ],
+      "quote_ids": [
+        "profit-bridge-public-labels",
+        "chemical-purchase-cost-and-price-revision",
+        "inventory-stock-not-expense",
+        "segment-reconciliation-definition"
+      ],
+      "unresolved": [
+        "OtherCOGS cannot be replaced with raw-material cost; inventory changes are not expense/cash movements.",
+        "Precise cost-category scope, raw-material/energy sensitivity, price revision lag and any inventory valuation effects not verified.",
+        "No one-off removal or normalized margin/earnings adjustment adopted."
+      ],
+      "next_public_check": "Existing archive links: official annual cost/inventory/accounting notes or explanatory bridge definitions; no added GET.",
+      "current_model_parameter_path": null,
+      "decision_impact": null,
+      "ready_to_send_IR": false
+    },
+    {
+      "id": "DPS-forecast-vs-DOE-target",
+      "status": "partially_supported",
+      "finding_kind": "company_forecast_and_policy_are_separate",
+      "supported_parts": [
+        "62JPY is annual company dividend forecast for2027/3; statement divides interim10/end52 and presentation axis labels27/3(forecast).",
+        "3.5percent DOE is company policy target for2029/3, alongside reserves/stable-dividend efforts and strategic-investment priority.",
+        "Record dates in reusedFAQ are not dividend payment dates or amounts."
+      ],
+      "quote_ids": [
+        "annual-dividend-company-forecast",
+        "payout-policy-target-and-chart",
+        "FAQ-record-dates-and-public-pointer"
+      ],
+      "unresolved": [
+        "DOE formula/numerator/denominator, consolidated-vs-parent equity scope, equity-components inclusion, beginning/end/average timing and treasury-share handling not verified.",
+        "Statement shareholders-equity/net-assets figures do not identify DOE denominator; no reverse engineering from chart.",
+        "No exact payment date, committed post2027 dividend path or guarantee of2029DOE target achievement."
+      ],
+      "next_public_check": {
+        "basis": "Literal dividend-history link in reusedFAQ, not fetched here",
+        "url": "https://www.hokto-kinoko.co.jp/corporate/ir/kabushiki/haitoukin/",
+        "original_FAQ_snapshot": "../reused/06.json",
+        "link_index": 146,
+        "other_material": "Official shareholder-return/annual dividend-policy disclosure if explicitly linked; verify formula and scope before any derived payout."
+      },
+      "current_model_parameter_path": null,
+      "decision_impact": null,
+      "ready_to_send_IR": false
+    },
+    {
+      "id": "CF-and-supplementary-indicators",
+      "status": "supported_not_prepared_note_CF_missing",
+      "finding_kind": "explicit_statement_and_project_limit",
+      "supported_parts": [
+        "Statement explicitly says no Q1 consolidated cash-flow statement; comparative depreciation includes intangible amortization and matchedQ1 periods.",
+        "Supplementary profitability/production/pricing/payout indicators do not supply a CF statement or complete FCF inputs."
+      ],
+      "quote_ids": [
+        "CF-not-prepared-and-depreciation-scope",
+        "company-production-comparison",
+        "profit-bridge-public-labels"
+      ],
+      "unresolved": [
+        "Actual operating/investing/financingCF, capex and working-capital movements cannot be reconstructed as verified cash flows from these indicators.",
+        "No disclosed CF=earnings+depreciation identity or EBITDA/FCF proxy verified; none calculated."
+      ],
+      "next_public_check": "Official annual or interim statement where consolidatedCF is actually prepared, with matching period/unit and capex/working-capital definitions; no new GET here.",
+      "current_model_parameter_path": null,
+      "decision_impact": null,
+      "ready_to_send_IR": false
+    }
+  ],
+  "publicly_answered_questions_do_not_send": [
+    "Is annual62 a current company forecast and is DOE3.5percent a2029/3 target? These labels/periods are public.",
+    "Did company prepare Q1 consolidatedCF and does supplementary depreciation include amortization? Explicit note answers this.",
+    "What public company explanation exists for current domestic pricing, processed-product order recovery, chemical purchase-cost/price revision and profit bridge? Cited paragraphs/figure answer the stated scope.",
+    "Are segment profits reconciled to consolidatedOI and are external/internal sales separated? Statement note answers this.",
+    "What are published dividend record dates and where is dividend history? ReusedFAQ provides those, subject to its original date."
+  ],
+  "public_earnings_QA": {
+    "status": "not_obtained",
+    "not_nonexistence_conclusion": true,
+    "reused_general_FAQ_not_earnings_QA": true
+  },
+  "IR_readiness": {
+    "candidate_questions": [],
+    "current_model_parameter_path": null,
+    "decision_impact": null,
+    "valuation_or_policy_branch_precommitment": null,
+    "reason": "Definition gaps remain, but no current model path or decision impact is established; do not convert them into send-ready requests. Public information first under existing workflow.",
+    "outreach_sent": false
+  },
+  "definition_search": [
+    {
+      "document_key": "statement",
+      "extracted_text_term_counts": {
+        "季節": 0,
+        "夏": 0,
+        "冬": 0,
+        "DOE": 0,
+        "自己資本": 3,
+        "分母": 0,
+        "計算式": 0,
+        "EBITDA": 0,
+        "原材料": 1,
+        "平均販売単価": 0,
+        "受注": 2
+      },
+      "limitation": "Limited keyword scan plus cited targeted readings/image checks, not proof of companywide absence or exhaustive OCR."
+    },
+    {
+      "document_key": "presentation",
+      "extracted_text_term_counts": {
+        "季節": 0,
+        "夏": 0,
+        "冬": 0,
+        "DOE": 2,
+        "自己資本": 0,
+        "分母": 0,
+        "計算式": 0,
+        "EBITDA": 0,
+        "原材料": 0,
+        "平均販売単価": 1,
+        "受注": 1
+      },
+      "limitation": "Limited keyword scan plus cited targeted readings/image checks, not proof of companywide absence or exhaustive OCR."
+    },
+    {
+      "document_key": "reusedFAQ",
+      "extracted_text_term_counts": {
+        "季節": 0,
+        "夏": 0,
+        "冬": 0,
+        "DOE": 0,
+        "自己資本": 0,
+        "分母": 0,
+        "計算式": 0,
+        "EBITDA": 0,
+        "原材料": 0,
+        "平均販売単価": 0,
+        "受注": 0
+      },
+      "limitation": "Limited keyword scan plus cited targeted readings/image checks, not proof of companywide absence or exhaustive OCR."
+    }
+  ],
+  "financial_inputs_verified": false,
+  "financial_values_automatically_adopted": false,
+  "existing_sources_immutable": true,
+  "validation": {
+    "checked_at": "2026-10-15T05:23:48.693946+00:00",
+    "exact_quote_offset_checks": [
+      "domestic-price-company-explanation",
+      "arden-orders-and-processed-sales",
+      "chemical-purchase-cost-and-price-revision",
+      "profit-bridge-public-labels",
+      "demand-and-production-management-description",
+      "company-average-selling-price-comparison",
+      "market-monthly-price-reference",
+      "company-production-comparison",
+      "segment-reconciliation-definition",
+      "inventory-stock-not-expense",
+      "annual-dividend-company-forecast",
+      "payout-policy-target-and-chart",
+      "equity-components-not-DOE-definition",
+      "CF-not-prepared-and-depreciation-scope",
+      "FAQ-record-dates-and-public-pointer"
+    ],
+    "quote_count": 15,
+    "images_visually_inspected": [
+      5,
+      15,
+      25,
+      31
+    ],
+    "protected_original_file_SHA256_unchanged": {
+      "research/ir-case-studies-2026-10-15/1379/source-bundle.json": "2d5ca761f0d3be81681a61f1ea8e45beb68a6af0b816ca8b1ccd369502ab5302",
+      "research/ir-case-studies-2026-10-15/1379/03.json": "e55ffb1d2b7d60d9e8188dddb676a426c83aa371c95528469baf253804076bec",
+      "research/ir-case-studies-2026-10-15/1379/03.txt": "2688b07fe43b3bbf27095efc2e608ca8bebca5123d042451db61b62e7f0537ce",
+      "research/ir-case-studies-2026-10-15/1379/04.json": "b74d173fc44336a794615f3e44bf7edb6e834503ed9ca952ccefbea835c62435",
+      "research/ir-case-studies-2026-10-15/1379/04.txt": "ce2afbf2432d1bfa7bff3dd36d32d29b223dc677e8fa49ceb3d33d308f4a8db3",
+      "research/ir-case-studies-2026-10-15/1379/raw/6e98a5a7707d6d9e6882ee688bb2e225fcc19b34cbb1fb57c53ad71d0a7996cb": "6e98a5a7707d6d9e6882ee688bb2e225fcc19b34cbb1fb57c53ad71d0a7996cb",
+      "research/ir-case-studies-2026-10-15/1379/raw/407d08492a6dbb8d74c774bbe4e8681c5fbef3f8362831db406d5f499aa3c867": "407d08492a6dbb8d74c774bbe4e8681c5fbef3f8362831db406d5f499aa3c867",
+      "research/ir-case-studies-2026-10-15/1379/reused/06.json": "e00d6bd31d62305a75dfd0cdcfffa7b4c8a5f075a826b0d49d99ddc3e0a0f1f5",
+      "research/ir-contacts-universe-2026-10-11/evidence/1379/06.json": "e00d6bd31d62305a75dfd0cdcfffa7b4c8a5f075a826b0d49d99ddc3e0a0f1f5"
+    },
+    "new_GETs": 0,
+    "new_DB_writes": 0,
+    "normalizer_run": false,
+    "scope_limit": "Provenance and limited definition review, not exhaustive public-information absence, price/profit prediction or model-input verification."
+  }
+}

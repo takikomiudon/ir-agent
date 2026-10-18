@@ -1,0 +1,142 @@
+{
+  "recorded_at": "2026-10-15T06:37:06.103089+00:00",
+  "checks": {
+    "nine_inputs_equal_original_readiness_candidates": true,
+    "author_display": {
+      "result": {
+        "scenarios": [
+          {
+            "name": "toyota-author-2009-displayed-cashflows",
+            "probability": null,
+            "method": "dcf_explicit_terminal_equity_bridge",
+            "fair_value_jpy": "3944.09",
+            "upside_pct": "28.89",
+            "enterprise_value_jpy": "16911221147955.57",
+            "equity_value_jpy": "13599221147955.57",
+            "terminal_fcff_jpy": "713000000000",
+            "forecast_periods": 3,
+            "terminal_value_jpy": "19860724233983.29",
+            "present_value_of_terminal_value_jpy": "17112399287026.38",
+            "present_value_of_forecast_fcf_jpy": "-201178139070.80",
+            "cash_jpy": "2288000000000.00",
+            "non_operating_assets_jpy": "6845000000000.00",
+            "debt_jpy": "11862000000000.00",
+            "minority_interests_jpy": "583000000000.00",
+            "equity_bridge_formula": "enterprise_value_jpy + cash_jpy + non_operating_assets_jpy - debt_jpy - minority_interests_jpy"
+          }
+        ],
+        "expected_value_jpy": null,
+        "expected_upside_pct": null,
+        "worst_case_downside_pct": "0.00",
+        "aggregation": "unweighted",
+        "status": "scenario_values_only",
+        "valuation_range_jpy": {
+          "min": "3944.09",
+          "max": "3944.09"
+        },
+        "unrounded": {
+          "expected_value_jpy": null,
+          "scenarios": [
+            {
+              "name": "toyota-author-2009-displayed-cashflows",
+              "fair_value_jpy": "3944.0896600799227478542361308126724689426784015338515729610365161042167761536969397272427118013836898215739175514876457619618015658466429329100441651995728509530003"
+            }
+          ],
+          "valuation_range_jpy": {
+            "min": "3944.0896600799227478542361308126724689426784015338515729610365161042167761536969397272427118013836898215739175514876457619618015658466429329100441651995728509530003",
+            "max": "3944.0896600799227478542361308126724689426784015338515729610365161042167761536969397272427118013836898215739175514876457619618015658466429329100441651995728509530003"
+          }
+        }
+      },
+      "fair_value_fraction": "26232453384675098000/6651079373318183",
+      "operating_value_fraction": "260969545602760000000000000/15431738685193",
+      "equity_value_fraction": "209859627077400784000000000/15431738685193",
+      "terminal_value_fraction": "7130000000000000/359",
+      "unrounded_absolute_error_fraction": "6237724096055451/66510793733181830000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "synthetic": {
+      "result": {
+        "scenarios": [
+          {
+            "name": "synthetic-equity-bridge",
+            "probability": null,
+            "method": "dcf_explicit_terminal_equity_bridge",
+            "fair_value_jpy": "92.82",
+            "upside_pct": "-7.18",
+            "enterprise_value_jpy": "918181818.18",
+            "equity_value_jpy": "928181818.18",
+            "terminal_fcff_jpy": "80000000",
+            "forecast_periods": 1,
+            "terminal_value_jpy": "1000000000.00",
+            "present_value_of_terminal_value_jpy": "909090909.09",
+            "present_value_of_forecast_fcf_jpy": "9090909.09",
+            "cash_jpy": "0.00",
+            "non_operating_assets_jpy": "20000000.00",
+            "debt_jpy": "0.00",
+            "minority_interests_jpy": "10000000.00",
+            "equity_bridge_formula": "enterprise_value_jpy + cash_jpy + non_operating_assets_jpy - debt_jpy - minority_interests_jpy"
+          }
+        ],
+        "expected_value_jpy": null,
+        "expected_upside_pct": null,
+        "worst_case_downside_pct": "7.18",
+        "aggregation": "unweighted",
+        "status": "scenario_values_only",
+        "valuation_range_jpy": {
+          "min": "92.82",
+          "max": "92.82"
+        },
+        "unrounded": {
+          "expected_value_jpy": null,
+          "scenarios": [
+            {
+              "name": "synthetic-equity-bridge",
+              "fair_value_jpy": "92.818181818181818181818181818181818181818181818181818181818181818181818181818182"
+            }
+          ],
+          "valuation_range_jpy": {
+            "min": "92.818181818181818181818181818181818181818181818181818181818181818181818181818182",
+            "max": "92.818181818181818181818181818181818181818181818181818181818181818181818181818182"
+          }
+        }
+      },
+      "fair_value_fraction": "1021/11",
+      "operating_value_fraction": "10100000000/11",
+      "equity_value_fraction": "10210000000/11",
+      "terminal_value_fraction": "1000000000",
+      "unrounded_absolute_error_fraction": "1/5500000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "database_read_only": {
+      "counts": {
+        "companies": 1819,
+        "sources": 64,
+        "source_classifications": 63,
+        "theses": 0,
+        "questions": 0,
+        "replies": 0
+      },
+      "sha256_before": "0954962993c0e2b5116068d4b38ffefb4dba219485f18ff67b4f97b554960dff",
+      "sha256_after": "0954962993c0e2b5116068d4b38ffefb4dba219485f18ff67b4f97b554960dff",
+      "unchanged": true
+    }
+  },
+  "input_sha256": {
+    "research/ir-toyota-author-valuation-readiness-2026-10-15/readiness.json": "10e9287e2fd2f3e1f597eb58002432436d87e15663aa259244007576a5e6d4f7",
+    "research/ir-toyota-author-valuation-readiness-2026-10-15/independent-review.json": "b7ca5fa98d23aa8c1e80e6b6aa5227d43527f550bb6c85c49090a551dad115bd",
+    "examples/valuation-equity-bridge.toyota-author-display.json": "899316c11065efdb485075d24d9f988537db0e2cf54100bd424c75ed9e737f91",
+    "examples/valuation-equity-bridge.synthetic.json": "4834fee3ee41f5670190eeb203a1c9a4e285e404900a513068d2bd9dc331bc73"
+  },
+  "execution": {
+    "GET": 0,
+    "database_writes": 0,
+    "IR_sends": 0,
+    "orders": 0
+  },
+  "financial_inputs_verified": false,
+  "current_company_model_adopted": false,
+  "limits": [
+    "Author-display reproduction is historical, not a current Toyota forecast or adopted investment policy.",
+    "Original printed terminal value already differs from arithmetic; no hidden inputs were reverse engineered.",
+    "Source matching, reviewer agreement and calculation do not certify financial meaning, current market values or returns."
+  ]
+}

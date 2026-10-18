@@ -1,0 +1,93 @@
+{
+  "security_code": "2683",
+  "company_name": "ＵＯＧｒｏｕｐ",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "小売業",
+  "investigation_status": "confirmed",
+  "verification_level": "form_fields_verified",
+  "official_url": "https://www.uoki.co.jp/",
+  "contact_url": "https://www.uoki.co.jp/inquiry/",
+  "channels": [
+    "form"
+  ],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "candidate",
+  "attempted_at": "2026-10-11T04:49:26.061271+00:00",
+  "completed_at": "2026-10-11T04:49:28.951267+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/2683/20261011T044926061294Z/02.json",
+      "quote": "IR/SDGsなど会社運営について",
+      "purpose": "ir_category",
+      "url": "https://www.uoki.co.jp/inquiry/",
+      "retrieved_at": "2026-10-11T04:49:27.978506+00:00",
+      "http_status": 200
+    },
+    {
+      "snapshot": "evidence/2683/20261011T044926061294Z/02.json",
+      "quote": "メールアドレス 必須 メールアドレス 確認用 必須",
+      "purpose": "reply_fields",
+      "url": "https://www.uoki.co.jp/inquiry/",
+      "retrieved_at": "2026-10-11T04:49:27.978506+00:00",
+      "http_status": 200
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.uoki.co.jp/",
+      "final_url": "https://www.uoki.co.jp/",
+      "snapshot": "evidence/2683/20261011T044926061294Z/01.json",
+      "retrieved_at": "2026-10-11T04:49:27.365468+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.uoki.co.jp/inquiry/",
+      "final_url": "https://www.uoki.co.jp/inquiry/",
+      "snapshot": "evidence/2683/20261011T044926061294Z/02.json",
+      "retrieved_at": "2026-10-11T04:49:27.978506+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [
+    "IR/SDGsなど会社運営についてを選択。",
+    "氏名・ふりがな・返信メール/確認・件名・内容・同意必須。",
+    "店舗欄の表示/必須はIRカテゴリ選択後の挙動未検証。個人投資家受付明示はない。"
+  ],
+  "limitations": [],
+  "discovery": {
+    "security_code": "2683",
+    "official_url": "https://www.uoki.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "魚喜",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/2683/20261011T044926061294Z/01.json",
+      "normalized_name": "uogroup",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/2683/20261011T044926061294Z/02.json",
+      "normalized_name": "uogroup",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 2,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "previous_attempts": [
+    "attempts/2683/20261011T044640533721Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_adaptive_old_audit_12",
+    "reviewed_at": "2026-10-11T06:46:54.287952+00:00",
+    "notes": "魚喜公式ページの著作権表記 UOGroup と原台帳の旧名称対応を補足。フォームIR/SDGsなど会社運営について選択肢、text mail1/mail2とtextarea detail の実required欄。店舗日時は別用途の動的欄として存在するためIRでの必須動作は未確認。 原本文と実メール input /質問 textarea を手動点検。個人条件の未明示は誰でも利用可と読み替えない。追加 GET・送信 0 件。"
+  }
+}

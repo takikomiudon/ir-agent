@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/tmp/ir-recover-held.py", line 96, in <module>
+    row=json.loads(line);c=row['security_code'];ref=row['parent_snapshot'];parent=Path(ref) if Path(ref).is_absolute() else (B/ref if (B/ref).exists() else S/ref)
+                                                    ~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'parent_snapshot'

@@ -1,0 +1,20 @@
+{
+  "summary": "架空の補足資料では費用の性質が未解決。仮説と評価を維持し、IR質問候補にする。",
+  "evidence_ids": ["demo-public-q2", "demo-public-update"],
+  "counterarguments": ["採用費が一時的でも人件費は恒常的に増えるため、利益率回復は別途検証が必要。"],
+  "proposed_action": "watch",
+  "thesis_update": {
+    "company_id": "demo-services", "version": 2, "recorded_at": "2026-10-09T09:00:00+09:00",
+    "statement": "採用費の一部は一時的で、既存事業の成長によって利益率が回復するという架空の仮説。",
+    "pillars": ["継続課金売上の成長", "採用費が一時的である可能性"],
+    "invalidation_conditions": ["費用増加が恒常的で利益率回復を妨げる", "既存顧客売上が縮小する"],
+    "exit_conditions": ["仮説が否定された場合は売却を検討", "評価額に達した場合は利確を検討"],
+    "current_price_jpy": "1000", "next_review_date": "2026-10-30",
+    "evidence_ids": ["demo-public-q2", "demo-public-update"],
+    "valuation": {"scenarios": [
+      {"name": "bear", "probability": "0.25", "method": "eps_multiple", "inputs": {"eps_jpy": "45", "pe": "15"}},
+      {"name": "base", "probability": "0.50", "method": "eps_multiple", "inputs": {"eps_jpy": "65", "pe": "20"}},
+      {"name": "bull", "probability": "0.25", "method": "eps_multiple", "inputs": {"eps_jpy": "80", "pe": "23"}}
+    ]}
+  }
+}

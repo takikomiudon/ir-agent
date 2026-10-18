@@ -1,0 +1,129 @@
+{
+  "company_id": "jp:3817",
+  "as_of": "2026-10-16T09:56:22.169436+00:00",
+  "synthetic": false,
+  "status": "source_values_matched",
+  "required_paths": [
+    "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+    "scenarios.reported_annual_reference.inputs.eps_jpy"
+  ],
+  "missing_paths": [],
+  "inputs": [
+    {
+      "path": "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+      "value": "2659.88",
+      "status": "source_value_matched",
+      "reason_codes": [],
+      "meaning_review_status": "unreviewed",
+      "meaning_checks": [
+        "unit_not_verified",
+        "period_not_verified",
+        "definition_not_verified",
+        "authorship_and_forecast_status_not_verified"
+      ],
+      "author": "株式会社ＳＲＡホールディングス",
+      "kind": "reported_fact",
+      "period": "{\"as_of_date\": \"2026-03-31\", \"date_basis\": \"Consolidated financial-position current FY row, tied to same annual heading end2026-03-31; reviewer asserts balance-sheet instant, not duration\", \"label\": \"2026年３月期\", \"period_kind\": \"instant\"}",
+      "rationale": "Use the unchanged directly reported historical annual EPS level or closing BPS level; candidate mapping only. Direct consolidated one-share net assets token at annual balance-sheet date. Not total consolidated net assets divided by inferred shares, individual699.68 or currentOctober book value.",
+      "recorded_at": "2026-10-16T09:56:22.169436+00:00",
+      "reference": "research/ir-case-studies-2026-10-15/3817/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json#/sources/1/content/facts/1/value; fact_id=3817-reported-BPS-at-20260331",
+      "source_id": "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf",
+      "unit": "JPY-per-share",
+      "value_path": [
+        "content",
+        "facts",
+        1,
+        "value"
+      ],
+      "missing_meaning_fields": [],
+      "source_lineage_ids": [
+        "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf",
+        "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e"
+      ],
+      "normalization_checks": [
+        {
+          "source_id": "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf",
+          "applicable": true,
+          "status": "reproduced",
+          "reason_codes": [],
+          "financial_inputs_verified": false,
+          "meaning_review_required": true,
+          "original_content_sha256_status": "matched",
+          "original_snapshot_sha256_status": "matched_supplied_snapshot",
+          "original_source_id": "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e"
+        }
+      ],
+      "source_fact_id": "3817-reported-BPS-at-20260331",
+      "source_fact_kind": "reported_fact",
+      "source_value": "2659.88"
+    },
+    {
+      "path": "scenarios.reported_annual_reference.inputs.eps_jpy",
+      "value": "443.34",
+      "status": "source_value_matched",
+      "reason_codes": [],
+      "meaning_review_status": "unreviewed",
+      "meaning_checks": [
+        "unit_not_verified",
+        "period_not_verified",
+        "definition_not_verified",
+        "authorship_and_forecast_status_not_verified"
+      ],
+      "author": "株式会社ＳＲＡホールディングス",
+      "kind": "reported_fact",
+      "period": "{\"date_basis\": \"Exact annual duration dates printed in the same consolidated earnings heading\", \"end_date\": \"2026-03-31\", \"label\": \"2026年３月期\", \"period_kind\": \"annual_reported_duration\", \"start_date\": \"2025-04-01\"}",
+      "rationale": "Use the unchanged directly reported historical annual EPS level or closing BPS level; candidate mapping only. Direct basic consolidated annual EPS token; ordinary-share parent-profit basis supported by p18 note. Not issuer guide435.34, individual253.08, diluted dash0 or recomputed roundedNI/shares.",
+      "recorded_at": "2026-10-16T09:56:22.169436+00:00",
+      "reference": "research/ir-case-studies-2026-10-15/3817/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json#/sources/1/content/facts/0/value; fact_id=3817-reported-annual-EPS-FY2026",
+      "source_id": "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf",
+      "unit": "JPY-per-share",
+      "value_path": [
+        "content",
+        "facts",
+        0,
+        "value"
+      ],
+      "missing_meaning_fields": [],
+      "source_lineage_ids": [
+        "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf",
+        "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e"
+      ],
+      "normalization_checks": [
+        {
+          "source_id": "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf",
+          "applicable": true,
+          "status": "reproduced",
+          "reason_codes": [],
+          "financial_inputs_verified": false,
+          "meaning_review_required": true,
+          "original_content_sha256_status": "matched",
+          "original_snapshot_sha256_status": "matched_supplied_snapshot",
+          "original_source_id": "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e"
+        }
+      ],
+      "source_fact_id": "3817-reported-annual-EPS-FY2026",
+      "source_fact_kind": "reported_fact",
+      "source_value": "443.34"
+    }
+  ],
+  "aggregation": "unweighted",
+  "expected_value_available": false,
+  "unset_probability_paths": [
+    "scenarios.reported_annual_reference.probability"
+  ],
+  "meaning_review_required": true,
+  "financial_inputs_verified": false,
+  "source_snapshot_sha256": {
+    "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e": "cdb77fd2cb0d201dd8fbcba84a200665e0912216981ea79e200a601558d7a616",
+    "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf": "2bd0faef543ce9659035c844d7d1722975b37e23fc2035a2a66a85c1e78940ce"
+  },
+  "limitations": [
+    "Numerical equality with a saved field does not verify units, periods, accounting definitions, authorship, or the meaning of a forecast.",
+    "Missing unit or period labels remain explicit meaning-review tasks; supplied labels are not automatically verified.",
+    "Explicit assumptions and synthetic examples are recorded declarations, not recommended or empirically validated inputs.",
+    "Audit status concerns only configured numerical paths; unset probabilities are neither audited nor supplied and do not produce an expected value.",
+    "This standalone audit reads only supplied source snapshots and does not consult live database classification corrections.",
+    "Known disclosed-fact normalization is replayed against its supplied original; unknown providers are not inferred to use that contract, and whole-snapshot commitments are reported separately from content reproduction.",
+    "No values, scenario probabilities, costs, or trading conditions are inferred; saved timestamps are supplied records, not independent proof of collection."
+  ]
+}

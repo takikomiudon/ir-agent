@@ -1,0 +1,13 @@
+# 任意の公開情報レビュー参照固定
+
+`question.public_information_review`を明示した場合だけ、reviewed_at/reviewer/rationaleと、資料ID・native snapshot SHA・確認範囲・逐語quoteを不変質問へ保存する。scopeは非空string、余剰field/重複/不正hash等は拒否。意味上の「回答が無い」、実際に読んだこと、全公開情報の最新性は認証しない。
+
+Pure planは渡されたsourceの同社・時点・公開lineage・引用とSHAを確認する。レビュー専用根拠はthesisの金融evidenceとは別で、追加の評価入力にはしない。PersistenceはそのDAGについて既存のfirst-save/legacyknownby readerとreview時点/境界/現在の公開訂正を使う。別会社reply_idの偽装参照も拒否する。元sources_forの他用途、既存source、金融計算は変更しない。
+
+時点・公開性が未解決なら、contract preflight又はnewfield/noncontractのserver計算checkに理由を保存し、既送信の新規記録時に再点検して止める。新fieldがある新規requestへcallerがservercheckを指定することは拒否。同じ原requestのretryは保存観測を返し、変更retryは拒否する。APIのrow-state付き応答は元addrequestではない。すでに記録した同じsent_atのretryは歴史記録をそのまま返す。
+
+newfield無しでは新checkを作らず、旧JSON・出力・gateを維持する。同名の余剰JSONが旧経路に存在しても、featureの確認結果・送信適格性の根拠として参照しない。旧contractless記録を新しく金融readyとするものでもない。
+
+before12filesとdesign/input-pinsを変更前に固定し、after6files/diffを実装後に保存。専用19testと既存対象subsetを合わせ136testが通過した。fullsuiteはrootが最終実行する。詳しい拒否境界、時点、互換・再送・rollbackの検査はtestsとimplementation.jsonに記録した。最初のfixture SQL不一致1件はテスト側の修正として明記した。
+
+実DB・GET・外部送信・新金融方針/閾値・新table/CLI・共有docs編集は0。実装は固定してroot/独立reviewを待つ。

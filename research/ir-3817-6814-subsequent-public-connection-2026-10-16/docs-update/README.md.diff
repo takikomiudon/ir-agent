@@ -1,0 +1,13 @@
+--- before/README.md
++++ after/README.md
+@@ -1,8 +1,8 @@
+ # ir-agent
+ 
+-最新の検証は[全1,641テスト成功](research/ir-research-inquiry-worklist-integration-2026-10-16/parent-acceptance.json)。研究IRの全返信を拾う読取専用一覧は `.venv/bin/python scripts/report_research_inquiries.py --db PATH` で実行できる。未レビュー・根拠保留と固定比較注記を分け、本文や売買判断を追加しない。
++直近のコード受入は[全1,653テスト成功](research/ir-saved-issuer-case-verifier-integration-2026-10-16/parent-acceptance.json)。保存PDFの宣言bytes検証と研究IR全返信の作業一覧を備える。EDINET初回起動scriptは追加検証中で、最終結果は[継続作業の状態](docs/ongoing-work.md)へ記録する。
+ 
+-16:42 UTC以後の研究台帳：[4318の後発Q1を保存・比較](research/ir-4318-subsequent-Q1-connection-2026-10-16/actual-verification.json)し、263資料・分類262・183job完了、native34case/81版/199既読。予想EPSの変化と利益予想据置き・自己株の基準を分けた。[索引v43](research/ir-case-studies-2026-10-15/disclosed-fact-index-v43.json)は35社254fact（実247fact）を維持。未送信の研究IRは3件、返信0。利用条件は[月1万円の積立・SBI証券想定](research/ir-user-operating-constraints-2026-10-16/constraints-v2.json)で、現在残高と1社配分は未指定。
++最新研究台帳：[3817・6814の後発短信を保存・比較](research/ir-3817-6814-subsequent-public-connection-2026-10-16/actual-verification.json)し、265資料・分類264・187job完了、native34case/83版/201既読。未送信研究IR3件、返信0。[索引v43](research/ir-case-studies-2026-10-15/disclosed-fact-index-v43.json)の254factsは維持。利用条件は月1万円・SBI想定・[既存APIと停止方針](research/ir-user-operating-constraints-2026-10-16/constraints-v4.json)。[EDINET再開手順](docs/edinet-first-run.md)を用意して区切る。
+ 
+ 日本株の数カ月〜1年の投資仮説を、公開情報とIRへの質問で検証するCodex用ベースライン。
+ 

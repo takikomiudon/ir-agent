@@ -1,0 +1,91 @@
+{
+  "security_code": "3840",
+  "company_name": "ヴィクトン",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "情報・通信業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.pathway.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T08:57:31.458095+00:00",
+  "completed_at": "2026-10-11T08:58:51.832440+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/3840/20261011T085731458138Z/01.json",
+      "url": "https://vixton.co.jp/",
+      "retrieved_at": "2026-10-11T08:58:35.760485+00:00",
+      "quote": "株式会社ヴィクトン（VIXTON corporation）",
+      "role": "company_identity_manual"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.pathway.co.jp/",
+      "final_url": "https://vixton.co.jp/",
+      "snapshot": "evidence/3840/20261011T085731458138Z/01.json",
+      "retrieved_at": "2026-10-11T08:58:35.760485+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "保存済み公式ページ・実フォーム欄を手動点検。送信・配信成功・回答実績は未確認。"
+  ],
+  "discovery": {
+    "security_code": "3840",
+    "official_url": "https://www.pathway.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "パス",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/3840/20261011T085731458138Z/01.json",
+      "normalized_name": "ヴィクトン",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 5,
+  "previous_attempts": [
+    "attempts/3840/20261011T045047417151Z.json",
+    "attempts/3840/20261011T085851832633Z.json"
+  ],
+  "manual_followup_candidates": [
+    {
+      "url": "https://vixton.co.jp/ir/",
+      "quote": "IR情報",
+      "source_link_label": "IR情報",
+      "method": "GET",
+      "IR_channel_verified": false,
+      "reason": "旧seedからredirectされた現会社公式homeのIR landing実リンク。IR窓口への経路は未確認のため追加探索候補。",
+      "parent_snapshot": "evidence/3840/20261011T085731458138Z/01.json"
+    },
+    {
+      "url": "https://vixton.co.jp/contact/",
+      "quote": "お問い合わせ",
+      "source_link_label": "お問い合わせ",
+      "method": "GET",
+      "IR_channel_verified": false,
+      "reason": "現会社公式homeのcontact実リンク。IR用途/返信欄/個人条件があるか追加確認する候補で、現時点の一般フォームをIRとしない。",
+      "parent_snapshot": "evidence/3840/20261011T085731458138Z/01.json"
+    }
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_services",
+    "reviewed_at": "2026-10-11T09:06:53.494860+00:00",
+    "notes": "ヴィクトンは旧pathway seedからactual redirect先vixton公式homeを取得し現会社名とIR情報/一般contact実リンクを確認。ただし本文1頁にIR質問用途・publicメール・実フォームはなくunconfirmed維持。IR landingと一般contactは追加探索候補としてのみ指定し、IRナビから一般contactの質問受付を推測しない。",
+    "attempted_at_reviewed": "2026-10-11T08:57:31.458095+00:00",
+    "saved_evidence_only": true
+  }
+}

@@ -1,0 +1,15 @@
+--- before/src/ir_agent/harness.py
+
++++ src/ir_agent/harness.py
+
+@@ -400,7 +400,8 @@
+
+                     incoming.setdefault("synthetic", False)
+                     incoming.setdefault("quote", {})
+                     incoming.setdefault("synthetic_position", None)
+-                    reference = {key: saved["decision_contract"].get(key) for key in CONTRACT_INPUTS}
++                    reference = {key: saved["decision_contract"].get(key) for key in CONTRACT_INPUTS
++                                 if key != "research_baseline_id" or key in saved["decision_contract"]}
+                     if incoming != reference:
+                         raise ValueError("Saved questions and decision contracts are immutable")
+                     question["decision_contract"] = saved["decision_contract"]

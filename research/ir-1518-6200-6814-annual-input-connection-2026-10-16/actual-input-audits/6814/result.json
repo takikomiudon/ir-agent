@@ -1,0 +1,129 @@
+{
+  "company_id": "jp:6814",
+  "as_of": "2026-10-16T10:51:09.869802+00:00",
+  "synthetic": false,
+  "status": "source_values_matched",
+  "required_paths": [
+    "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+    "scenarios.reported_annual_reference.inputs.eps_jpy"
+  ],
+  "missing_paths": [],
+  "inputs": [
+    {
+      "path": "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+      "value": "2826.61",
+      "status": "source_value_matched",
+      "reason_codes": [],
+      "meaning_review_status": "unreviewed",
+      "meaning_checks": [
+        "unit_not_verified",
+        "period_not_verified",
+        "definition_not_verified",
+        "authorship_and_forecast_status_not_verified"
+      ],
+      "kind": "reported_fact",
+      "reference": "research/ir-case-studies-2026-10-15/6814/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json#/sources/1/content/facts/1/value; fact_id=6814-reported-BPS-at-20260228",
+      "rationale": "Direct originalp1 consolidated １株当たり純資産 token; ordinary scope per p21, candidate only. No roundedtotal recalculation, guide/individualsubstitution, financialmeaning or currentbasis certification. Retain NCI/OCI and historicalaccountingchange/currentguide caveats in factscope.",
+      "recorded_at": "2026-10-16T10:51:09.869802+00:00",
+      "author": "古野電気株式会社（原公表実績）",
+      "source_id": "disclosed-facts:d05b7a50d0af1bb576db77f7114fd326a7739b9a16c0d1cc751a16154c807361",
+      "value_path": [
+        "content",
+        "facts",
+        1,
+        "value"
+      ],
+      "unit": "JPY-per-share",
+      "period": "{\"as_of_date\": \"2026-02-28\", \"date_basis\": \"p1 financialposition currentFY row with exactannualend and p21explicit BPSinstant date\", \"label\": \"2026年２月期\", \"period_kind\": \"instant\"}",
+      "missing_meaning_fields": [],
+      "source_lineage_ids": [
+        "disclosed-facts:d05b7a50d0af1bb576db77f7114fd326a7739b9a16c0d1cc751a16154c807361",
+        "case-public:ecfb7db1a1c040c9fecf5f30b3a8d7cd4f6142e3d6e80c94a6cc01c3c64fb039"
+      ],
+      "normalization_checks": [
+        {
+          "source_id": "disclosed-facts:d05b7a50d0af1bb576db77f7114fd326a7739b9a16c0d1cc751a16154c807361",
+          "applicable": true,
+          "status": "reproduced",
+          "reason_codes": [],
+          "financial_inputs_verified": false,
+          "meaning_review_required": true,
+          "original_content_sha256_status": "matched",
+          "original_snapshot_sha256_status": "matched_supplied_snapshot",
+          "original_source_id": "case-public:ecfb7db1a1c040c9fecf5f30b3a8d7cd4f6142e3d6e80c94a6cc01c3c64fb039"
+        }
+      ],
+      "source_fact_id": "6814-reported-BPS-at-20260228",
+      "source_fact_kind": "reported_fact",
+      "source_value": "2826.61"
+    },
+    {
+      "path": "scenarios.reported_annual_reference.inputs.eps_jpy",
+      "value": "529.53",
+      "status": "source_value_matched",
+      "reason_codes": [],
+      "meaning_review_status": "unreviewed",
+      "meaning_checks": [
+        "unit_not_verified",
+        "period_not_verified",
+        "definition_not_verified",
+        "authorship_and_forecast_status_not_verified"
+      ],
+      "kind": "reported_fact",
+      "reference": "research/ir-case-studies-2026-10-15/6814/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json#/sources/1/content/facts/0/value; fact_id=6814-reported-annual-EPS-FY2026",
+      "rationale": "Direct originalp1 consolidated １株当たり当期純利益 token; ordinary scope per p21, candidate only. No roundedtotal recalculation, guide/individualsubstitution, financialmeaning or currentbasis certification. Retain NCI/OCI and historicalaccountingchange/currentguide caveats in factscope.",
+      "recorded_at": "2026-10-16T10:51:09.869802+00:00",
+      "author": "古野電気株式会社（原公表実績）",
+      "source_id": "disclosed-facts:d05b7a50d0af1bb576db77f7114fd326a7739b9a16c0d1cc751a16154c807361",
+      "value_path": [
+        "content",
+        "facts",
+        0,
+        "value"
+      ],
+      "unit": "JPY-per-share",
+      "period": "{\"date_basis\": \"Same consolidated annualheading exactcalendar dates\", \"end_date\": \"2026-02-28\", \"label\": \"2026年２月期\", \"period_kind\": \"annual_reported_duration\", \"start_date\": \"2025-03-01\"}",
+      "missing_meaning_fields": [],
+      "source_lineage_ids": [
+        "disclosed-facts:d05b7a50d0af1bb576db77f7114fd326a7739b9a16c0d1cc751a16154c807361",
+        "case-public:ecfb7db1a1c040c9fecf5f30b3a8d7cd4f6142e3d6e80c94a6cc01c3c64fb039"
+      ],
+      "normalization_checks": [
+        {
+          "source_id": "disclosed-facts:d05b7a50d0af1bb576db77f7114fd326a7739b9a16c0d1cc751a16154c807361",
+          "applicable": true,
+          "status": "reproduced",
+          "reason_codes": [],
+          "financial_inputs_verified": false,
+          "meaning_review_required": true,
+          "original_content_sha256_status": "matched",
+          "original_snapshot_sha256_status": "matched_supplied_snapshot",
+          "original_source_id": "case-public:ecfb7db1a1c040c9fecf5f30b3a8d7cd4f6142e3d6e80c94a6cc01c3c64fb039"
+        }
+      ],
+      "source_fact_id": "6814-reported-annual-EPS-FY2026",
+      "source_fact_kind": "reported_fact",
+      "source_value": "529.53"
+    }
+  ],
+  "aggregation": "unweighted",
+  "expected_value_available": false,
+  "unset_probability_paths": [
+    "scenarios.reported_annual_reference.probability"
+  ],
+  "meaning_review_required": true,
+  "financial_inputs_verified": false,
+  "source_snapshot_sha256": {
+    "case-public:ecfb7db1a1c040c9fecf5f30b3a8d7cd4f6142e3d6e80c94a6cc01c3c64fb039": "5be2d964ae18bf456a140c4342272e9cfa6bc0945bdd3d52fd0fc779d8b4ce16",
+    "disclosed-facts:d05b7a50d0af1bb576db77f7114fd326a7739b9a16c0d1cc751a16154c807361": "b5e514eab19ed28da0711cc6263f76b9d5d76b64e0d18b338de18c11206f47f2"
+  },
+  "limitations": [
+    "Numerical equality with a saved field does not verify units, periods, accounting definitions, authorship, or the meaning of a forecast.",
+    "Missing unit or period labels remain explicit meaning-review tasks; supplied labels are not automatically verified.",
+    "Explicit assumptions and synthetic examples are recorded declarations, not recommended or empirically validated inputs.",
+    "Audit status concerns only configured numerical paths; unset probabilities are neither audited nor supplied and do not produce an expected value.",
+    "This standalone audit reads only supplied source snapshots and does not consult live database classification corrections.",
+    "Known disclosed-fact normalization is replayed against its supplied original; unknown providers are not inferred to use that contract, and whole-snapshot commitments are reported separately from content reproduction.",
+    "No values, scenario probabilities, costs, or trading conditions are inferred; saved timestamps are supplied records, not independent proof of collection."
+  ]
+}

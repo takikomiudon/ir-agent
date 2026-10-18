@@ -1,0 +1,242 @@
+{
+  "format_version": 1,
+  "created_at": "2026-10-15T01:28:42.911242+00:00",
+  "date_jst": "2026-10-15",
+  "artifact_type": "research_model_routing_policy_not_valuation_engine",
+  "author": "Aswath Damodaran",
+  "project_status": "adopted_as_research_routing",
+  "source_record": "sources.json",
+  "routes": [
+    {
+      "route_id": "financial_service_equity_review",
+      "source_ids": [
+        "damodaran.financial-services.2009"
+      ],
+      "reference_ids": [
+        "financial-debt",
+        "financial-cf-definition",
+        "financial-regcapital",
+        "financial-per-allowed",
+        "financial-per-drivers",
+        "financial-allowance"
+      ],
+      "observable_conditions": [
+        {
+          "observation": "The core business intermediates financial assets, takes deposits, issues insurance obligations, or otherwise uses funding liabilities as an operating input",
+          "measurement": "Confirm in issuer business descriptions and balance-sheet/liability notes, not only industry label",
+          "threshold": null
+        },
+        {
+          "observation": "Regulatory equity/capital requirements constrain balance-sheet growth or distributions",
+          "measurement": "Issuer regulatory-capital disclosure and applicable current local regime",
+          "threshold": null
+        }
+      ],
+      "why_generic_model_needs_adaptation": "Ordinary FCFF debt/capex/noncash-working-capital categories may not represent financial operating economics. Enterprise debt subtraction and WACC using customer deposits can be misleading.",
+      "preferred_model_families": [
+        "equity dividend discount with sustainable payout review",
+        "equity cashflow based on regulatory-capital reinvestment",
+        "equity excess-return model"
+      ],
+      "permitted_relative_models": [
+        "PE with earnings quality, growth, payout and cost-of-equity comparability",
+        "PB with forward profitability/ROE and risk comparability"
+      ],
+      "not_a_rule": "Financial-sector PE is not forbidden by the author; do not block it categorically. A raw common PER is insufficient when loan provisions or business mix differ.",
+      "author_model_formula": {
+        "fcfe": "FCFE_financial = NetIncome - ReinvestmentInRegulatoryCapital",
+        "scope": "Simplified equity cashflow relation on PDF22; regulatory capital, growth and profitability assumptions must be explicit. Do not reuse example capital ratios."
+      },
+      "required_inputs": [
+        "current and forward net income / accounting scope",
+        "book equity and regulatory-capital definition",
+        "current required capital and sourced target capital policy",
+        "growth in risk/earning assets and resulting equity reinvestment",
+        "forward ROE and return persistence",
+        "cost of equity, currency, valuation date and source",
+        "sustainable actual/potential dividends",
+        "loan-loss provision and asset-quality comparability",
+        "business-line mix and separate models where materially different",
+        "dilution or new equity funding assumptions where relevant"
+      ],
+      "if_inputs_missing": "Retain financial equity specialist review. Do not use ordinary FCFF with guessed debt/WACC or automatically exclude the issuer.",
+      "project_adoption": {
+        "status": "adopted_as_research_routing",
+        "adopted_at": "2026-10-15T01:28:42.911242+00:00",
+        "adopted_by": "project agent under user instruction to use existing author policies",
+        "purpose": "Select an appropriate research model and identify missing inputs; not activate a financial parameter, contact or order",
+        "additional_user_confirmation_required": false
+      },
+      "exclusion_action": false,
+      "buy_action": false,
+      "valuation_inputs_default": null,
+      "investment_thresholds_default": null,
+      "missing_input_behavior": "unresolved or specialist_model_review; do not synthesize forecast inputs",
+      "evidence_requirement": "Issuer public disclosure and dated numerical data; sector tag alone is not conclusive"
+    },
+    {
+      "route_id": "cyclical_or_commodity_normalization_review",
+      "source_ids": [
+        "damodaran.cyclical-commodity.2009"
+      ],
+      "reference_ids": [
+        "cyclical-normalize-all",
+        "cyclical-cycle-window",
+        "cyclical-scale",
+        "cyclical-finite-resource"
+      ],
+      "observable_conditions": [
+        {
+          "observation": "Issuer evidence links earnings or cashflows materially to an economic/commodity cycle",
+          "measurement": "Read business risk/sensitivity disclosures and compare historical revenues/margins with the identified driver",
+          "threshold": null
+        },
+        {
+          "observation": "Current profit or reinvestment is at an atypical cycle point",
+          "measurement": "Assess against a sourced history covering a full cycle; no volatility cutoff supplied by the author",
+          "threshold": null
+        },
+        {
+          "observation": "A commodity producer has finite reserves or operating resource life",
+          "measurement": "Review reserves, production and resource-life disclosures if applicable",
+          "threshold": null
+        }
+      ],
+      "why_generic_model_needs_adaptation": "Current peak/trough earnings, returns, reinvestment and financing costs are not automatically sustainable inputs. A low spot PE can be a high-cycle denominator effect.",
+      "preferred_model_families": [
+        "cycle-normalized DCF with consistent reinvestment and financing assumptions",
+        "normalized earnings multiples with comparable risk and growth",
+        "explicit finite-life resource model when applicable"
+      ],
+      "normalization_methods": [
+        {
+          "method": "full-cycle absolute earnings average",
+          "caution": "Changing issuer scale can make past absolute averages inappropriate"
+        },
+        {
+          "method": "historical average margin applied to current revenue scale",
+          "caution": "Need consistent accounting and evidence that historical margins remain relevant"
+        },
+        {
+          "method": "cycle-average sector margins when issuer history is limited",
+          "caution": "Must account for issuer-specific economics; do not treat sector mean as automatic truth"
+        }
+      ],
+      "required_inputs": [
+        "identified macro/commodity driver and date",
+        "income/cashflow history with accounting/scope consistency",
+        "evidence that history covers a complete cycle",
+        "normalization method and current issuer scale",
+        "normalized margin or earnings with source",
+        "normalized reinvestment, returns and financing cost",
+        "recovery path distinct from long-run normal growth",
+        "commodity price/volume/cost and reserve life if relevant",
+        "survival/financing constraints during downturns",
+        "current market price and separate adopted decision conditions"
+      ],
+      "normalization_window_years": null,
+      "normalization_window_rule": "Evidence of a full cycle; do not hardcode 5,7 or10 years from illustrative ranges",
+      "double_count_guard": "Do not both replace trough earnings with normal earnings and add the entire rebound growth a second time.",
+      "if_inputs_missing": "Current EPS×PER or a one-period DCF is not sufficient for ordinary valuation. Keep unresolved and request public historical/driver evidence, not an industry exclusion.",
+      "project_adoption": {
+        "status": "adopted_as_research_routing",
+        "adopted_at": "2026-10-15T01:28:42.911242+00:00",
+        "adopted_by": "project agent under user instruction to use existing author policies",
+        "purpose": "Select an appropriate research model and identify missing inputs; not activate a financial parameter, contact or order",
+        "additional_user_confirmation_required": false
+      },
+      "exclusion_action": false,
+      "buy_action": false,
+      "valuation_inputs_default": null,
+      "investment_thresholds_default": null,
+      "missing_input_behavior": "unresolved or specialist_model_review; do not synthesize forecast inputs",
+      "evidence_requirement": "Issuer public disclosure and dated numerical data; sector tag alone is not conclusive"
+    },
+    {
+      "route_id": "young_loss_growth_path_review",
+      "source_ids": [
+        "damodaran.young-growth.2009"
+      ],
+      "reference_ids": [
+        "young-pe",
+        "young-margin-path",
+        "young-reinvest",
+        "young-survival",
+        "young-tax-loss"
+      ],
+      "observable_conditions": [
+        {
+          "observation": "Young business has short/incomplete operating history and operating losses or little revenue",
+          "measurement": "Issuer financial statements and business commercialization history",
+          "threshold": null
+        },
+        {
+          "observation": "Expected revenue growth/profitability depends on a transition not demonstrated by current earnings",
+          "measurement": "Published product/customer/business evidence and explicit forecast drivers",
+          "threshold": null
+        },
+        {
+          "observation": "External funding or dilution may be required before positive cashflow",
+          "measurement": "Balance-sheet cash, debt maturity, cashflow forecast and financing terms; no generic runway cutoff",
+          "threshold": null
+        }
+      ],
+      "why_generic_model_needs_adaptation": "Loss-year PE is not an ordinary comparable positive-earnings multiple. A stable-margin one-period DCF can conceal the revenue/margin transition, cash needs and probability of failure. DCF itself remains a valid framework when the transitions are explicit.",
+      "preferred_model_families": [
+        "multi-stage DCF with sourced revenue, margins and reinvestment pathways",
+        "explicit survival/distress adjustment on a consistently defined value basis",
+        "relative valuation only with suitable denominator, comparability and survival treatment"
+      ],
+      "not_a_rule": "Negative profit alone does not prove a young-growth route; mature cyclical distress or one-off accounting losses require separate cause review.",
+      "author_model_formula": {
+        "survival_adjustment": "ExpectedValue = GoingConcernValue * (1 - FailureProbability) + DistressSaleValue * FailureProbability",
+        "scope": "Firm/value basis consistent across both scenarios before any equity bridge; see PDF42. No default failure probability or distress value."
+      },
+      "required_inputs": [
+        "commercial revenue drivers, market size and achievable share with evidence",
+        "revenue growth path and expected duration",
+        "steady-state operating margin and pathway to reach it",
+        "reinvestment required for growth, capacity and human/R&D capital",
+        "cash needs, financing capacity and ownership dilution",
+        "tax loss carryforwards and applicable tax rules",
+        "discount-rate/risk path consistent with business maturation",
+        "stable growth conditions and terminal assumptions",
+        "sourced survival/failure probability over a specified horizon",
+        "distress value on same scope/currency/date as going-concern value",
+        "net debt and other equity claims if bridging to common equity"
+      ],
+      "failure_probability_default": null,
+      "terminal_growth_default": null,
+      "if_inputs_missing": "Unresolved model review; do not assign survival=1, borrow dated US startup failure rates as Japanese-company defaults, or automatically discard the firm.",
+      "project_adoption": {
+        "status": "adopted_as_research_routing",
+        "adopted_at": "2026-10-15T01:28:42.911242+00:00",
+        "adopted_by": "project agent under user instruction to use existing author policies",
+        "purpose": "Select an appropriate research model and identify missing inputs; not activate a financial parameter, contact or order",
+        "additional_user_confirmation_required": false
+      },
+      "exclusion_action": false,
+      "buy_action": false,
+      "valuation_inputs_default": null,
+      "investment_thresholds_default": null,
+      "missing_input_behavior": "unresolved or specialist_model_review; do not synthesize forecast inputs",
+      "evidence_requirement": "Issuer public disclosure and dated numerical data; sector tag alone is not conclusive"
+    }
+  ],
+  "common_dispatch": {
+    "input": "Issuer evidence and model input packet",
+    "unknown_evidence": "unresolved; absence of data is not proof of a normal industrial business",
+    "multiple_routes": "Collect all applicable flags and review composition; no unsupported universal route precedence",
+    "ordinary_route": "Requires positive evidence that the chosen model inputs are appropriate; not established just because no exception matched",
+    "negative_or_zero_eps": "Review earnings cause; do not use an ordinary positive-earnings comparable PE on zero/loss earnings",
+    "output": "model family and missing input checklist only, never buy/sell/exclusion",
+    "code_integration": "Not implemented by this artifact; routing fields are research contracts only"
+  },
+  "non_adopted_author_examples": [
+    "company-specific beta, cost of equity and risk premium",
+    "toy bank capital ratios and profitability",
+    "historical Toyota normalized margin",
+    "startup example failure probabilities and terminal growth",
+    "mandatory industry filters or loss thresholds"
+  ]
+}

@@ -1,0 +1,819 @@
+{
+  "schema_version": 1,
+  "artifact_type": "saved_author_source_capability_inventory",
+  "recorded_at": "2026-10-15T10:47:48.717662+00:00",
+  "status": "research_inventory_only",
+  "scope": {
+    "rows": 10,
+    "basis": "saved reviews and their bounded reading scopes, not new PDF reading or web acquisition",
+    "exhaustive_source_universe": false,
+    "source_local_not_report_type_rule": true
+  },
+  "status_definitions": {
+    "確認済": "保存済レビューが肯定的に確認した範囲。金融的正しさ・独立性・現在採用を保証しない。",
+    "限定範囲未特定": "限定した既読範囲で必要な具体情報を特定できていない。未読箇所/他資料での不存在とは違う。",
+    "未確認": "この必要事項の検証/意味対応が未確認。nullはゼロ・不存在ではない。"
+  },
+  "rows": [
+    {
+      "id": "135A-aentro",
+      "label": "135A AENTRO",
+      "company_id": "jp:135A",
+      "author": "AENTRO / AENTRO Research",
+      "report_vintage": "2026-05-11",
+      "references": [
+        {
+          "path": "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/review.json",
+          "sha256": "05c6bf5d07241f77f63f5f77934eb64ff262d6519216f513c61d6c965d9a98a2",
+          "role": "saved_review",
+          "reading_scope": "保存レビューの帰属・条件付き見通し・未解決項目を再利用。原本文の再読なし。"
+        },
+        {
+          "path": "research/ir-case-studies-2026-10-15/135A/author-condition-followup/case-record-v2.json",
+          "sha256": "2e566e72a04a89938357220715a10603a51ce1ce744207599ac921de6e81328b",
+          "role": "saved_review",
+          "reading_scope": "既存v2の3候補照合とAND条件訂正を参照。v1の単一条件化を採らない。"
+        }
+      ],
+      "capabilities": {
+        "author_business_issue": {
+          "status": "確認済",
+          "summary": "営業利益率、顧客拡大、拠点立上げと継続顧客売上比率を通じた成長持続性。"
+        },
+        "numerical_role": {
+          "status": "確認済",
+          "summary": "著者の営業指標・条件付き成長見通しがある。FY27 EPS94.85は会社予想転載で、著者独自EPSとは別。",
+          "issuer_reprint": "FY27 EPS94.85",
+          "author_independent_forecast": [
+            "FY29営業利益率35%近傍",
+            "FY29まで顧客550–600社・毎期+70社前後",
+            "拠点遅延 AND 継続顧客比率45%近辺頭打ちならFY28 CAGR+35–40%"
+          ],
+          "author_calculation": null
+        },
+        "target_point": {
+          "status": "限定範囲未特定",
+          "summary": "保存レビュー範囲に著者目標株価は特定されていない。",
+          "value_jpy": null
+        },
+        "explicit_valuation_contract": {
+          "status": "限定範囲未特定",
+          "summary": "FY29/FY28という営業見通しの期はあるが、株式評価へ選ぶEPS期・公正倍率・再評価式は特定されていない。",
+          "selected_target_period": null,
+          "fair_multiple": null,
+          "formula": null
+        },
+        "falsification_and_deadline": {
+          "status": "確認済",
+          "summary": "条件付き下振れシナリオのANDは明示。35%近傍/45%近辺の幅、頭打ち期間、CAGR基準は未確認。会社資料の394社・比率57.5%等から条件成立や反証完了とはしない。",
+          "numeric_falsification_threshold": null,
+          "author_trade_deadline": null,
+          "project_review_date_separate": "2027-01-15は管理日で、著者の売却期限ではない。"
+        }
+      },
+      "permitted_research_use_not_adoption": [
+        "同じ既存論点IDで会社KPIの対象期・定義と条件の各項を点検する。"
+      ],
+      "limitations": [
+        "著者FY27Q1のApr–Jul表記と会社年度の対応は未解決。",
+        "EPS/DCFへの自動変換・現在の著者予測採用はしない。"
+      ],
+      "current_adoption": {
+        "current_forecast_adopted": false,
+        "financial_inputs_verified": false,
+        "current_company_method_adopted": false,
+        "execution_policy_adopted": false,
+        "buy_sell_decision": null,
+        "EVSI": null
+      }
+    },
+    {
+      "id": "1518-fisco",
+      "label": "1518 FISCO",
+      "company_id": "jp:1518",
+      "author": "茂木稜司 / FISCO客員アナリスト",
+      "report_vintage": "2026-06-29",
+      "references": [
+        {
+          "path": "research/ir-case-studies-2026-10-15/1518/author-conditions/conditions.json",
+          "sha256": "833e3926b6955ee904b9e2ac44f99059fb37f03b37fa2601cbfa150c2bea6281",
+          "role": "saved_review",
+          "reading_scope": "既存レビューのPDF3/15–17頁の事業論点、1/20頁の作者・利害・日付引用を参照。"
+        },
+        {
+          "path": "research/ir-case-studies-2026-10-15/1518/author-condition-followup/case-record.json",
+          "sha256": "763cb8ad2f001b7ed0eb7395508e1960a5c3b0c7715b00ab963b679c46dc1a1e",
+          "role": "saved_review",
+          "reading_scope": "後続会社3資料の同論点比較・期間/会計/取得売却範囲の限界を参照。"
+        }
+      ],
+      "capabilities": {
+        "author_business_issue": {
+          "status": "確認済",
+          "summary": "既存事業の成長と投資事業の利益創出能力を別の業績変動要因として追う。"
+        },
+        "numerical_role": {
+          "status": "確認済",
+          "summary": "FISCO自身の定性見解と会社計画・過去IRR転載を分離。6月レポートの会社計画は後の7/22会社修正と同じ版ではない。",
+          "issuer_reprint": "会社通期計画・中計、過去投資IRR等",
+          "author_independent_forecast": null,
+          "author_calculation": null,
+          "independent_numeric_forecast_status": "限定範囲未特定"
+        },
+        "target_point": {
+          "status": "限定範囲未特定",
+          "summary": "保存レビューで目標株価は特定されていない。",
+          "value_jpy": null
+        },
+        "explicit_valuation_contract": {
+          "status": "限定範囲未特定",
+          "summary": "会社利益計画の説明からFISCO独自EPS列・公正倍率・評価式を確認したとはしない。",
+          "selected_target_period": null,
+          "fair_multiple": null,
+          "formula": null
+        },
+        "falsification_and_deadline": {
+          "status": "限定範囲未特定",
+          "summary": "投資収益を注視するという定性論点はあるが、重要度の数値閾値・反証窓・固定期限は特定されていない。",
+          "numeric_falsification_threshold": null,
+          "author_trade_deadline": null,
+          "project_review_date_separate": "四半期の管理日は著者条件ではない。"
+        }
+      },
+      "permitted_research_use_not_adoption": [
+        "後続会社の受注/事業利益と受取配当/株式売却益を会計区分別に比較する。"
+      ],
+      "limitations": [
+        "連結受取配当・売却益の全額をMM Investments専属実績としない。",
+        "単一四半期、グループ範囲変更、含み益込税引前IRRから持続利益や将来CFを作らない。"
+      ],
+      "current_adoption": {
+        "current_forecast_adopted": false,
+        "financial_inputs_verified": false,
+        "current_company_method_adopted": false,
+        "execution_policy_adopted": false,
+        "buy_sell_decision": null,
+        "EVSI": null
+      }
+    },
+    {
+      "id": "1721-shared-research",
+      "label": "1721 Shared Research",
+      "company_id": "jp:1721",
+      "author": "Shared Research (SR社)、個人未確認",
+      "report_vintage": "提供者更新2026-08-18（各段落の初回公表日時ではない）",
+      "references": [
+        {
+          "path": "research/ir-case-studies-2026-10-15/1721/external-report-review/review.json",
+          "sha256": "1f9800496b7769c3b26fed450ea53c42eca11328b4ac335e7033d4de6f5e0ba3",
+          "role": "saved_review",
+          "reading_scope": "静的reportContentの概要・当期Q1/会社計画・強み弱み・限定語句検索。PDF頁なし、全文精読ではない。"
+        }
+      ],
+      "capabilities": {
+        "author_business_issue": {
+          "status": "確認済",
+          "summary": "NTT工事資格等による寡占・合理化実行力・IT/DX等の追い風と、大手通信依存・シェア拡大制約・IT取組遅れという3強み/3弱み。"
+        },
+        "numerical_role": {
+          "status": "確認済",
+          "summary": "FY2027/3の予想表は会社予想の転載。独自の構造的定性評価とは別。",
+          "issuer_reprint": "FY2027/3会社計画・2030ビジョン",
+          "author_independent_forecast": null,
+          "author_calculation": null,
+          "independent_numeric_forecast_status": "限定範囲未特定"
+        },
+        "target_point": {
+          "status": "限定範囲未特定",
+          "summary": "点検した節と保存検索では目標点を特定していない。",
+          "value_jpy": null
+        },
+        "explicit_valuation_contract": {
+          "status": "限定範囲未特定",
+          "summary": "会社の資本コスト/ROE方針や財務比率をSRの株価評価算式へ置き換えない。",
+          "selected_target_period": null,
+          "fair_multiple": null,
+          "formula": null
+        },
+        "falsification_and_deadline": {
+          "status": "限定範囲未特定",
+          "summary": "定性の構造的強弱は確認したが、数値反証・検証期間・退出条件は特定していない。",
+          "numeric_falsification_threshold": null,
+          "author_trade_deadline": null
+        }
+      },
+      "permitted_research_use_not_adoption": [
+        "既存6論点へ会社の公開根拠を対応させる事業研究。"
+      ],
+      "limitations": [
+        "会社純利益378億円とSR表37,860百万円の差60百万円の原因・版・精度は未解決。",
+        "委託報酬条件/個人作者未確認。既知の収集保留は迂回しない。"
+      ],
+      "current_adoption": {
+        "current_forecast_adopted": false,
+        "financial_inputs_verified": false,
+        "current_company_method_adopted": false,
+        "execution_policy_adopted": false,
+        "buy_sell_decision": null,
+        "EVSI": null
+      }
+    },
+    {
+      "id": "7525-quick",
+      "label": "7525 QUICK",
+      "company_id": "jp:7525",
+      "author": "佐久間聰・中村宏司 / QUICK企業価値研究所",
+      "report_vintage": "2026-10-02",
+      "references": [
+        {
+          "path": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/review.json",
+          "sha256": "d30a9d72c0f59dc7ec22b4c3d026c02c007cdd8fa05dc9799685184999fa68c2",
+          "role": "saved_review",
+          "reading_scope": "既存レビューは主に1/52–60/66/95–96頁と限定抽出検索。全頁精読ではない。"
+        },
+        {
+          "path": "research/ir-case-studies-2026-10-15/7525/author-original-product-review/case-record.json",
+          "sha256": "ccec4fc4179bd510a39268ec8ae5af07c83bdafad1a3e75e6c0c3fa9617cd61a",
+          "role": "saved_review",
+          "reading_scope": "原比率論点44–46頁、定義6/7/10/31/32/34頁、画像6/31/32/34頁の既存点検を参照。"
+        }
+      ],
+      "capabilities": {
+        "author_business_issue": {
+          "status": "確認済",
+          "summary": "他KPIよりオリジナル品比率の伸びが遅い点を注視。高採算品構成と営業利益率/ROEの関係。"
+        },
+        "numerical_role": {
+          "status": "確認済",
+          "summary": "EPS369.80は会社NI3,000百万円をQUICK株数で計算した値。独自利益予測ではない。資本コスト6.2%等は日付付き著者推定。",
+          "issuer_reprint": "連27/3期会社利益予想・オリジナル品比率目標40%以上/55%以上",
+          "author_independent_forecast": null,
+          "author_calculation": "EPS369.80、2026/8 CAPM株主資本コスト6.2%・12カ月平均6.0%・概算gross WACC5.3%",
+          "independent_numeric_forecast_status": "限定範囲未特定"
+        },
+        "target_point": {
+          "status": "限定範囲未特定",
+          "summary": "Not Ratedはラベル。点検範囲に目標点は特定されていない。",
+          "value_jpy": null
+        },
+        "explicit_valuation_contract": {
+          "status": "限定範囲未特定",
+          "summary": "株価=EPS×PER/PBR=ROE×PERは過去価格の分解。表紙PER9.65/同業9.8を公正倍率としない。CAPM推定値だけでは目標評価契約が揃わない。",
+          "selected_target_period": null,
+          "fair_multiple": null,
+          "formula": null
+        },
+        "falsification_and_deadline": {
+          "status": "限定範囲未特定",
+          "summary": "動向を注視したいという定性条件。最低進捗・停滞許容幅・期限は特定されていない。会社目標期を著者の売却期限にしない。",
+          "numeric_falsification_threshold": null,
+          "author_trade_deadline": null
+        }
+      },
+      "permitted_research_use_not_adoption": [
+        "比率の分母/範囲/期を確認し、同じ論点を後の会社資料と比較する。",
+        "日付と役割を保った著者資本コスト推定の参照。"
+      ],
+      "limitations": [
+        "29.3%と足元約30%の0.7ポイント進捗を作らない。",
+        "最新説明会入口だけの取得は現在比率/定義を確定しない。資本コスト構成値・厳密株数未再現。"
+      ],
+      "current_adoption": {
+        "current_forecast_adopted": false,
+        "financial_inputs_verified": false,
+        "current_company_method_adopted": false,
+        "execution_policy_adopted": false,
+        "buy_sell_decision": null,
+        "EVSI": null
+      }
+    },
+    {
+      "id": "8151-astris",
+      "label": "8151 Astris",
+      "company_id": "jp:8151",
+      "author": "アストリス・アドバイザリー・ジャパン、個人未確認",
+      "report_vintage": "2025-06-03",
+      "references": [
+        {
+          "path": "research/ir-case-studies-2026-10-15/8151/external-report-review/review.json",
+          "sha256": "7ee9d92627dbd2fd5024853296f1178dccda5c86a0e4c0abfa8783ff61dd5d79",
+          "role": "saved_review",
+          "reading_scope": "既存11頁PDFの選択本文、画像1/5頁による予測・列/帰属点検。全頁全主張検証ではない。"
+        },
+        {
+          "path": "research/ir-case-studies-2026-10-15/8151/external-estimate-facts/validation.json",
+          "sha256": "cc76219d046ed5e3750a6e62b7c55e1ea93bdf2a9004a9a59d97ae85bfb3c098",
+          "role": "saved_review",
+          "reading_scope": "著者EPS/DPS6候補の構造化・再現検証。意味/モデル採用の確認ではない。"
+        },
+        {
+          "path": "research/ir-case-studies-2026-10-15/8151/author-forecast-conditions/case-record.json",
+          "sha256": "61231f215816f9d96512153a46f1b6dbf2b266b14142264dadb2fea3e1e2ade2",
+          "role": "saved_review",
+          "reading_scope": "既存3条件と原引用の帰属/比較限界を参照。後続会社実績の比較判定なし。"
+        }
+      ],
+      "capabilities": {
+        "author_business_issue": {
+          "status": "確認済",
+          "summary": "防衛・AD/ADAS・リカーリング成長、高採算mixと投資/採用費の相殺、納入/売上計上の遅延を別論点として扱う。"
+        },
+        "numerical_role": {
+          "status": "確認済",
+          "summary": "FY25E/26E/27Eの著者独自EPS/DPS列とFY25会社予想列が別に存在する。",
+          "issuer_reprint": "FY25会社予想の別列",
+          "author_independent_forecast": "EPS80.88/103.69/147.83、DPS69.00/72.00/80.00（2025-06-03表示時点）",
+          "author_calculation": null
+        },
+        "target_point": {
+          "status": "限定範囲未特定",
+          "summary": "既存点検範囲に著者目標株価は特定されていない。",
+          "value_jpy": null
+        },
+        "explicit_valuation_contract": {
+          "status": "限定範囲未特定",
+          "summary": "市場FY26 PER13.7/PBR1.2は歴史価格1,420円に対する指標。採用するEPS期・公正倍率・目標評価式は特定されていない。",
+          "selected_target_period": null,
+          "fair_multiple": null,
+          "formula": null
+        },
+        "falsification_and_deadline": {
+          "status": "確認済",
+          "summary": "米政策によるFY26への納入期ずれ・一部受注の12カ月超の売上計上期間というリスク/時点記述はある。低いキャンセル可能性を確率にしない。",
+          "numeric_falsification_threshold": null,
+          "author_trade_deadline": null,
+          "fixed_falsification_window_status": "限定範囲未特定"
+        }
+      },
+      "permitted_research_use_not_adoption": [
+        "当時の著者予測と事業前提を日付付き参照として残す。",
+        "同定義の会社実績・新セグメント対応・株数/配当権利の比較準備。"
+      ],
+      "limitations": [
+        "2026年取得であり2025年に事前登録した予測ではない。現在予測ではない。",
+        "委託報酬明記、独立性未検証。受注/納入/検収/売上を同一視しない。"
+      ],
+      "current_adoption": {
+        "current_forecast_adopted": false,
+        "financial_inputs_verified": false,
+        "current_company_method_adopted": false,
+        "execution_policy_adopted": false,
+        "buy_sell_decision": null,
+        "EVSI": null
+      }
+    },
+    {
+      "id": "8151-quick",
+      "label": "8151 QUICK",
+      "company_id": "jp:8151",
+      "author": "佐久間聰・園田三保 / QUICK企業価値研究所",
+      "report_vintage": "2026-09-25",
+      "references": [
+        {
+          "path": "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/review.json",
+          "sha256": "f96b0740631bb553a42e2bee4dccb128e363f5984bc1894cfb259e089b2b1463",
+          "role": "saved_review",
+          "reading_scope": "89頁中の選択本文1/2/39–41/47–49/55–59/61/62/88/89頁、画像1/55頁。"
+        },
+        {
+          "path": "research/ir-case-studies-2026-10-15/8151/quick-nomura-review/independent-recheck.json",
+          "sha256": "388a2b6a2559fe9756955ec65d0a7b99a43f18cf7f8cc7a60acfc2ee0e0e2c37",
+          "role": "saved_review",
+          "reading_scope": "保存バイト/14引用と指定頁・役割の独立点検。89頁精読の主張ではない。"
+        }
+      ],
+      "capabilities": {
+        "author_business_issue": {
+          "status": "確認済",
+          "summary": "期ずれ案件・M&A寄与と、車両政策/設備投資遅延・為替/中国リスクを分離した説明。SWOTは著者解釈で因果検証ではない。"
+        },
+        "numerical_role": {
+          "status": "確認済",
+          "summary": "EPS124.53は会社NI2,600百万円をQUICKの株数基準で計算。独自NI予測ではない。CAPM推定は役割と時点が異なる。",
+          "issuer_reprint": "FY26会社計画",
+          "author_independent_forecast": null,
+          "author_calculation": "EPS124.53、2026/8 CAPM7.0%・12カ月平均6.3%・概算gross WACC5.6%",
+          "independent_numeric_forecast_status": "限定範囲未特定"
+        },
+        "target_point": {
+          "status": "限定範囲未特定",
+          "summary": "Not Ratedから方法不存在を判断しない。指定点検範囲に目標点は特定されていない。",
+          "value_jpy": null
+        },
+        "explicit_valuation_contract": {
+          "status": "限定範囲未特定",
+          "summary": "歴史的株価=EPS×PER、表紙PER15.14、8/31同業PER16は公正倍率を指定しない。CAPMの役割は資本コスト推定で株価目標式とは別。",
+          "selected_target_period": null,
+          "fair_multiple": null,
+          "formula": null
+        },
+        "falsification_and_deadline": {
+          "status": "限定範囲未特定",
+          "summary": "リスク叙述はあるが数値反証/短期検証窓/退出条件は特定されていない。",
+          "numeric_falsification_threshold": null,
+          "author_trade_deadline": null
+        }
+      },
+      "permitted_research_use_not_adoption": [
+        "当期会社見通しの転載・著者EPS計算・日付付き資本コストを区別して読む。"
+      ],
+      "limitations": [
+        "古いAstrisと同案件/対象期/株数と認定せず、予測採点やコンセンサス化をしない。",
+        "CAPM構成値と厳密EPS分母は未再現。委託報酬/非独立性記述あり。"
+      ],
+      "current_adoption": {
+        "current_forecast_adopted": false,
+        "financial_inputs_verified": false,
+        "current_company_method_adopted": false,
+        "execution_policy_adopted": false,
+        "buy_sell_decision": null,
+        "EVSI": null
+      }
+    },
+    {
+      "id": "9702-alpha-win",
+      "label": "9702 AlphaWin",
+      "company_id": "jp:9702",
+      "author": "アルファ・ウイン調査部（個人未確認）",
+      "report_vintage": "本文表示2026-08-24、改訂/初回公表時刻未確定",
+      "references": [
+        {
+          "path": "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/review.json",
+          "sha256": "2cebdfdc0886be1c623d3ef5b6fc59e355e1706ac494aabbf91183a15df60b55",
+          "role": "saved_review",
+          "reading_scope": "評価節16–19頁、予測/帰属1/10/11/18/19頁、全19頁の限定語句検索、画像16/18頁。"
+        },
+        {
+          "path": "research/ir-public-valuation-report-discovery-2026-10-15/9702-alpha-win/README.md",
+          "sha256": "a761d09555f278416d7c288386b95ac5f20142d2b985d7a6b1b143d549b4d79f",
+          "role": "saved_review",
+          "reading_scope": "既存レビューの事業前提・E/CE・日付差の説明を参照。"
+        }
+      ],
+      "capabilities": {
+        "author_business_issue": {
+          "status": "確認済",
+          "summary": "リスクを踏まえた会社計画同額の当期利益予想、中期の事業構成/販管費/利益率見直し。Q3決算・受注・不採算案件を観測項目として記述。"
+        },
+        "numerical_role": {
+          "status": "確認済",
+          "summary": "著者新Eと会社CEが区別される。利益総額が同じでもEPSを同じ帰属にしない。",
+          "issuer_reprint": "2026/12 CE EPS161.40",
+          "author_independent_forecast": "2026/12・2027/12・2028/12 新E EPS161.17/181.21/196.02",
+          "author_calculation": "株価一定の将来PER、比較指標算式"
+        },
+        "target_point": {
+          "status": "限定範囲未特定",
+          "summary": "定性的アップサイド表現はあるが、著者数値目標は点検範囲に特定されていない。",
+          "value_jpy": null
+        },
+        "explicit_valuation_contract": {
+          "status": "限定範囲未特定",
+          "summary": "15.4/13.7/12.7は8/21株価2,480円を固定した著者EPSの記述的PER。同業比較は会社CE。どちらも公正倍率にしない。",
+          "selected_target_period": null,
+          "fair_multiple": null,
+          "formula": null
+        },
+        "falsification_and_deadline": {
+          "status": "限定範囲未特定",
+          "summary": "Q3/受注/不採算案件の観測項目はあるが、明示数値反証・到達期限・退出規則は特定されていない。",
+          "numeric_falsification_threshold": null,
+          "author_trade_deadline": null
+        }
+      },
+      "permitted_research_use_not_adoption": [
+        "著者独自3期EPSと会社予想を別々に構造化し、将来の比較準備へ使う。"
+      ],
+      "limitations": [
+        "本文日付・PDF作成日・footer・会社告知日が異なり、改訂履歴未確認。",
+        "2021分割の表注記は現時点までの株調整全体の確認ではない。窓口1819社への追加・投資候補昇格ではない。"
+      ],
+      "current_adoption": {
+        "current_forecast_adopted": false,
+        "financial_inputs_verified": false,
+        "current_company_method_adopted": false,
+        "execution_policy_adopted": false,
+        "buy_sell_decision": null,
+        "EVSI": null
+      }
+    },
+    {
+      "id": "6323-iwai-existing",
+      "label": "6323 Iwai 既読アナリスト例",
+      "company_id": "jp:6323",
+      "author": "有沢正一 / 岩井コスモ証券 投資調査部",
+      "report_vintage": "2026-04-17",
+      "references": [
+        {
+          "path": "research/ir-author-valuation-example-2026-10-15/result.json",
+          "sha256": "95486a9da55fde245adb2b73e08a19184170c684b738151369b757eea68dbf5f",
+          "role": "saved_review",
+          "reading_scope": "既存原図1–2頁の点検を再利用。A定義3頁は既存逐語記録の再利用で今回再読なし。"
+        },
+        {
+          "path": "research/ir-author-valuation-example-2026-10-15/README.md",
+          "sha256": "9dd2e9dfbc01620dd09042cd617871ae7c9ba0d379cf726ad807de4509dc1f65",
+          "role": "saved_review",
+          "reading_scope": "対象期・価格・相対ratingと再評価式不足の境界を参照。"
+        }
+      ],
+      "capabilities": {
+        "author_business_issue": {
+          "status": "限定範囲未特定",
+          "summary": "半導体関連企業に対する株式市場評価の高まりが目標理由。保存要約では企業固有の事業反証論点までは特定されていない。"
+        },
+        "numerical_role": {
+          "status": "確認済",
+          "summary": "著者連結EPSと会社予想EPSが別列。会社EPSには同証券による直近株数計算注記。",
+          "issuer_reprint": "2027/2会社予EPS160.3（著者株数計算注記）",
+          "author_independent_forecast": "2027/2 EPS161.4・2028/2 EPS184.5",
+          "author_calculation": null
+        },
+        "target_point": {
+          "status": "確認済",
+          "summary": "著者目標4,500円を日付付き参照として保持できる。目標への再評価式とは別。",
+          "value_jpy": "4500",
+          "reference_quote_jpy": "3819",
+          "reference_quote_label": "04/16（報告2026-04-17）"
+        },
+        "explicit_valuation_contract": {
+          "status": "限定範囲未特定",
+          "summary": "目標に用いたEPS年度と目標PER/式が不明。指標欄23.7/20.7を目標倍率にしない。",
+          "selected_target_period": null,
+          "fair_multiple": null,
+          "formula": null
+        },
+        "falsification_and_deadline": {
+          "status": "確認済",
+          "summary": "A定義は今後半年以内にTOPIXを15%程度以上上回る相対株価パフォーマンス。目標4,500の期限や個人の利確条件は別途未確認。",
+          "numeric_falsification_threshold": null,
+          "author_trade_deadline": null,
+          "rating_horizon": "今後半年以内",
+          "rating_basis": "対TOPIX相対・15%程度以上、絶対上昇余地に変換しない。"
+        }
+      },
+      "permitted_research_use_not_adoption": [
+        "目標点・著者EPSの歴史的参照。採用期/式が明示された別資料がなければIR感応度を新作しない。"
+      ],
+      "limitations": [
+        "原文字層が利用できず旧引用は画像手動転記。今回原画像再読なし。",
+        "4月当時のシステム事前保存の証明ではない。"
+      ],
+      "current_adoption": {
+        "current_forecast_adopted": false,
+        "financial_inputs_verified": false,
+        "current_company_method_adopted": false,
+        "execution_policy_adopted": false,
+        "buy_sell_decision": null,
+        "EVSI": null
+      }
+    },
+    {
+      "id": "iwai-12p-sample",
+      "label": "Iwai 新規取得12頁サンプル",
+      "company_id": null,
+      "author": "岩井コスモ証券（141A紹介の記名は饗場大介、全7銘柄へ拡張しない）",
+      "report_vintage": "岩井コスモ投資情報NO.335 / 2026-03-23",
+      "references": [
+        {
+          "path": "research/ir-explicit-valuation-route-review-2026-10-15/iwaicosmo-entry-followup/review.json",
+          "sha256": "b7469ea4859b409e2ff65456ebdb57e27e46ef1cfbcb63b5741bc4fe4710f297",
+          "role": "saved_review",
+          "reading_scope": "12頁中画像1/4–10頁、開示文12頁の本文。未読の2–3/11頁を含む全頁精読ではない。"
+        },
+        {
+          "path": "research/ir-explicit-valuation-route-review-2026-10-15/iwaicosmo-entry-followup/quotes.json",
+          "sha256": "76002a9d0c977cad30972f0427e7e59ff965669fa50c5e695c7711fded961363",
+          "role": "saved_review",
+          "reading_scope": "著者予想凡例・参照価格/PERの既存視覚転記。フォント崩れのため機械検索非一致だけに依存しない。"
+        }
+      ],
+      "capabilities": {
+        "author_business_issue": {
+          "status": "限定範囲未特定",
+          "summary": "141A/290A/6080/6754/7741/8252/8725の事業解説の存在は旧レビューで確認。各企業の具体的な反証可能論点の抽出は保存要約にない。"
+        },
+        "numerical_role": {
+          "status": "確認済",
+          "summary": "紹介7頁の表は「予は岩井コスモ証券予想」。市場価格/PERは別の指標。今回新しい金融数値を抽出しない。",
+          "issuer_reprint": null,
+          "author_independent_forecast": "7銘柄紹介表の証券会社予想という帰属",
+          "author_calculation": "3/18参照価格に対応する市場PER"
+        },
+        "target_point": {
+          "status": "限定範囲未特定",
+          "summary": "既読の紹介7頁で目標点は特定されていない。",
+          "value_jpy": null
+        },
+        "explicit_valuation_contract": {
+          "status": "限定範囲未特定",
+          "summary": "予想表の年度があっても、目標評価に選択したEPS年度・目標PER・再評価式は特定されていない。",
+          "selected_target_period": null,
+          "fair_multiple": null,
+          "formula": null
+        },
+        "falsification_and_deadline": {
+          "status": "未確認",
+          "summary": "保存要約からは企業別の反証条件や固定期限を確認できない。全資料にないとはしない。",
+          "numeric_falsification_threshold": null,
+          "author_trade_deadline": null
+        }
+      },
+      "permitted_research_use_not_adoption": [
+        "サンプル形式・著者予想の有無を確認した日付付き方法探索記録。"
+      ],
+      "limitations": [
+        "複数会社を含み単一company source-bundleを新作していない。",
+        "既読6323の同じリンクを再GET/再読していない。今回取得が新しくてもレポートは3月表示。"
+      ],
+      "current_adoption": {
+        "current_forecast_adopted": false,
+        "financial_inputs_verified": false,
+        "current_company_method_adopted": false,
+        "execution_policy_adopted": false,
+        "buy_sell_decision": null,
+        "EVSI": null
+      }
+    },
+    {
+      "id": "toyota-damodaran-historical-9input",
+      "label": "歴史Toyota 著者9入力法",
+      "company_id": "jp:7203",
+      "author": "Aswath Damodaran / Ups and Downs: Valuing Cyclical and Commodity Companies",
+      "report_vintage": "September 2009 / Illustration3・5",
+      "references": [
+        {
+          "path": "research/ir-toyota-author-valuation-readiness-2026-10-15/readiness.json",
+          "sha256": "10e9287e2fd2f3e1f597eb58002432436d87e15663aa259244007576a5e6d4f7",
+          "role": "saved_review",
+          "reading_scope": "保存済み35引用・9群、PDF15–18/23–25頁と原図17/18/24/25頁の旧点検。本文再読なし。"
+        },
+        {
+          "path": "docs/explicit-equity-bridge-spec.md",
+          "sha256": "877723bc70071ecb56480bebe2e662cf1364c08d61c8f450cfc41bf0971872cd",
+          "role": "implemented_method_spec",
+          "reading_scope": "後続の実装済9入力契約と著者表示/計算差。先行readinessの未実装記述を現在状態へ持ち越さない。"
+        },
+        {
+          "path": "research/ir-equity-bridge-integration-2026-10-15/independent-recheck.json",
+          "sha256": "dc20447f890158c0bf511fcf60c6c5865346845819c0cae79933594b7c3f286f",
+          "role": "saved_review",
+          "reading_scope": "表示入力の独立算術再現と不一致の保持。現在企業予測の採用ではない。"
+        }
+      ],
+      "capabilities": {
+        "author_business_issue": {
+          "status": "確認済",
+          "summary": "循環の谷から正常期への回復、年次FCFFと安定期の橋渡し、非営業資産/少数持分を分けた営業価値→株主価値。"
+        },
+        "numerical_role": {
+          "status": "確認済",
+          "summary": "著者の歴史的予測・明示仮定・会計調整例。現在の会社予想ではない。",
+          "issuer_reprint": "当時の基礎会計値を含むが現在開示の独立確認ではない。",
+          "author_independent_forecast": "3年FCFF[-412,-88,314]と4年目713（十億円）",
+          "author_calculation": "単一r5.09%、g1.5%、現金2288/非営業資産6845/負債11862/NCI583十億円、株数3.448十億株"
+        },
+        "target_point": {
+          "status": "確認済",
+          "summary": "著者最終表示3,943円、表示入力算術3,944.09円を別々に保持。完全一致を主張しない。",
+          "value_jpy": "3943",
+          "displayed_input_calculation_jpy": "3944.09",
+          "reference_quote_jpy": "3060",
+          "reference_quote_label": "2009年2月・正確日時未確認"
+        },
+        "explicit_valuation_contract": {
+          "status": "確認済",
+          "summary": "3期明示FCFF＋n+1終価FCFF、単一r/gで営業価値、現金/非営業資産加算・負債/NCI控除後に株数で割る。9入力の既存計算器は実装済。",
+          "selected_target_period": "第1期April2009–March2010、明示3期と4年目終価CFを区別",
+          "fair_multiple": null,
+          "formula": "TV3=FCFF4/(r-g); operating_value=sum(FCFFt/(1+r)^t)+TV3/(1+r)^3; equity=operating_value+cash+nonoperating-debt-NCI; per_share=equity/shares"
+        },
+        "falsification_and_deadline": {
+          "status": "未確認",
+          "summary": "回復3期というモデル時間軸はあるが、利用者の数カ月〜1年の売買反証/退出期限は確認していない。",
+          "numeric_falsification_threshold": null,
+          "author_trade_deadline": null
+        }
+      },
+      "permitted_research_use_not_adoption": [
+        "著者式の純計算とIR感応入力を事前固定する技術的方法の参照。"
+      ],
+      "limitations": [
+        "著者TV19,856十億円と表示算術19,860.724233…の差も残る。最終丸めだけと断定しない。",
+        "当時簿価を市場値近似とする前提、税/ROC/NOLの不整合・内部精度は未確認。",
+        "現在Toyota予測/価格/方針/買売の採用ではない。"
+      ],
+      "current_adoption": {
+        "current_forecast_adopted": false,
+        "financial_inputs_verified": false,
+        "current_company_method_adopted": false,
+        "execution_policy_adopted": false,
+        "buy_sell_decision": null,
+        "EVSI": null
+      }
+    }
+  ],
+  "method_provenance": [
+    {
+      "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+      "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+      "role": "author_method_or_project_adaptation_reference",
+      "reading_scope": "引用した既存著者手順/式だけをこの比較表へ参照。",
+      "quote": "For each new data point or development:",
+      "character_start": 1222,
+      "character_end": 1261,
+      "offset_semantics": "UTF-8 decoded original, Unicode characters, end exclusive",
+      "application": "新しい根拠ごとに既存論点への影響を追う。無変化で同義のレポートを増やさない運用はプロジェクト適応。"
+    },
+    {
+      "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+      "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+      "role": "author_method_or_project_adaptation_reference",
+      "reading_scope": "引用した既存著者手順/式だけをこの比較表へ参照。",
+      "quote": "**Thesis impact**: Does this strengthen, weaken, or neutralize a specific pillar?",
+      "character_start": 1388,
+      "character_end": 1469,
+      "offset_semantics": "UTF-8 decoded original, Unicode characters, end exclusive",
+      "application": "事業論点と根拠を結ぶ著者手順。閾値や買売の自動生成を意味しない。"
+    },
+    {
+      "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+      "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+      "role": "author_method_or_project_adaptation_reference",
+      "reading_scope": "引用した既存著者手順/式だけをこの比較表へ参照。",
+      "quote": "Review theses at least quarterly, even when nothing dramatic has happened",
+      "character_start": 2490,
+      "character_end": 2563,
+      "offset_semantics": "UTF-8 decoded original, Unicode characters, end exclusive",
+      "application": "無変化時の点検周期の原則。管理日と会社発表日/売却期限を区別。"
+    },
+    {
+      "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+      "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+      "role": "author_method_or_project_adaptation_reference",
+      "reading_scope": "引用した既存著者手順/式だけをこの比較表へ参照。",
+      "quote": "What would need to happen operationally",
+      "character_start": 1643,
+      "character_end": 1682,
+      "offset_semantics": "UTF-8 decoded original, Unicode characters, end exclusive",
+      "application": "株価だけでなく営業上の前提を明示する著者手順。確率/数値を補う指示ではない。"
+    },
+    {
+      "path": "docs/explicit-equity-bridge-spec.md",
+      "sha256": "877723bc70071ecb56480bebe2e662cf1364c08d61c8f450cfc41bf0971872cd",
+      "role": "author_method_or_project_adaptation_reference",
+      "reading_scope": "引用した既存著者手順/式だけをこの比較表へ参照。",
+      "quote": "We keep the cost of capital unchanged at 5.09% over the period",
+      "character_start": 824,
+      "character_end": 886,
+      "offset_semantics": "UTF-8 decoded original, Unicode characters, end exclusive",
+      "application": "保存済Damodaran原典p25/TY31を引用する既存仕様。5.09%は歴史Toyota例専用で新企業へ転用しない。"
+    }
+  ],
+  "next_source_selection_procedure": [
+    {
+      "step": 1,
+      "action": "まず埋めたい入力・同じ既存事業論点ID・対象期/単位/範囲を決め、この10例の保存記録を照合する。",
+      "provenance": "project_adaptation_of_author_workflows"
+    },
+    {
+      "step": 2,
+      "action": "価格再評価が目的なら、著者の明示算式・採用対象期・単位・必要入力の所在を先に確認。独自EPSの存在だけ、目標点だけ、市場PERだけで式が完成したとしない。",
+      "provenance": "project_adaptation_of_saved_Damodaran_input_and_formula_checks"
+    },
+    {
+      "step": 3,
+      "action": "会社転載、著者独自予測、会社入力を使った著者計算を分ける。会社同額利益でも帰属/株数差を消さず、CAPM時点値と現在割引率採用を分ける。",
+      "provenance": "project_application_of_saved_source_reviews"
+    },
+    {
+      "step": 4,
+      "action": "式/採用期が保存範囲で特定されなければ、その資料を事業前提の研究・日付付き目標/方法参照へ用途限定。同じ既読PDFの再探索を繰り返さず、別の明示リンクに新しい式等が期待できる根拠がある場合だけ既存保留/有限取得方針の内で次資料を選ぶ。",
+      "provenance": "project_operating_rule_not_an_author_quote"
+    },
+    {
+      "step": 5,
+      "action": "新公表根拠を既存論点へ対応させ、反証・対象期・定義・代替説明を残す。無変化でも既存四半期管理で点検する。数値採用/実行方針/価格鮮度/確率は別途根拠がなければnullのまま。",
+      "provenance": "Anthropic_thesis_tracker_plus_project_adaptation"
+    }
+  ],
+  "global_boundaries": [
+    "投資順位/点数/報告書タイプ別の一律除外を作らない。",
+    "NotRatedだけを理由に方法不存在としない。",
+    "当時市場PER・同業PER・逆算PERをfair multipleへ昇格しない。",
+    "作者名/組織/委託報酬は区別し、独立性を自動認定しない。",
+    "保存レビューのhashは参照ファイルの同一性であり原典全主張の証明ではない。",
+    "過去表示日・実取得/初回保存・現在採用を分け、前向き予測成績を装わない。",
+    "新しい予測/価格/費用/閾値/確率/期待値/正EVSIは作成していない。"
+  ],
+  "execution": {
+    "new_GETs": 0,
+    "database_accesses": 0,
+    "production_changes": 0,
+    "old_file_changes": 0,
+    "new_IR_drafts_or_sends": 0,
+    "financial_method_or_forecast_adoptions": 0,
+    "buy_sell_decisions": 0,
+    "full_test_runs": 0
+  }
+}

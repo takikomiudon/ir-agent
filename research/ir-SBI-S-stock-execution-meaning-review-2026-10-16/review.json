@@ -1,0 +1,231 @@
+{
+  "reviewed_at": "2026-10-16T15:59:09.427658+00:00",
+  "status": "bounded_static_official_execution_conditions_review_not_account_verification_or_investment_adoption",
+  "inputs": {
+    "constraints": {
+      "file": "research/ir-user-operating-constraints-2026-10-16/constraints-v2.json",
+      "sha256": "a5dac51bc585093c05d2b6c9f48683d72c0d9ea2a668cd5ea9d6330697967e35"
+    },
+    "introduction_acceptance": {
+      "file": "research/ir-SBI-S-stock-sitemap-followup-2026-10-16/parent-acceptance.json",
+      "sha256": "3d4684ec67e2957490d8f64ba54018998075f7a7762603200580536fbc28a859"
+    },
+    "overview_acceptance": {
+      "file": "research/ir-SBI-S-stock-service-overview-2026-10-16/parent-acceptance.json",
+      "sha256": "1637ae6505987b6e0698e97e9e5f3f24151c687d069ccbbb2005865f6f6ddfba"
+    },
+    "introduction_capture": {
+      "file": "research/ir-SBI-S-stock-sitemap-followup-2026-10-16/capture.json",
+      "sha256": "2aa03a7daf80cfd069e854e465da7ba1b647c538d5ee9ea7da53f00194f8eadb"
+    },
+    "overview_capture": {
+      "file": "research/ir-SBI-S-stock-service-overview-2026-10-16/capture.json",
+      "sha256": "5e430fd52df849d226edccea22e6006d5e95607645f8b4ef188de1bd0f9f1af4"
+    },
+    "introduction_decode": {
+      "file": "research/ir-SBI-S-stock-sitemap-followup-2026-10-16/decode.json",
+      "sha256": "15beb669b670e581e375523801f4d4c72e05fbce86164f5bad8c462c39b72ce5"
+    },
+    "overview_decode": {
+      "file": "research/ir-SBI-S-stock-service-overview-2026-10-16/decode.json",
+      "sha256": "5ca1d31d68ab292b232cbaf6e45c92dad99880196ca89528db3e2df84f0d16c8"
+    },
+    "old_fee_review": {
+      "file": "research/ir-SBI-S-stock-fee-meaning-review-2026-10-16/review.json",
+      "sha256": "9a3d79a56c3ca80acaa4b8290f890b670e80aa816c575f22c276194172652884"
+    },
+    "old_fee_acceptance": {
+      "file": "research/ir-SBI-S-stock-fee-meaning-review-2026-10-16/parent-acceptance.json",
+      "sha256": "35606658687e1eec742d7fdcb384bf264b8ae445048690ad9d2897aefeb76aa0"
+    }
+  },
+  "source_scope": {
+    "introduction": {
+      "text": {
+        "file": "research/ir-SBI-S-stock-sitemap-followup-2026-10-16/text/02-cp932-visible.txt",
+        "sha256": "78d5be5c9f4126d11b5d98115a9a2a9429d8b7f586213b41521a7db55f7497a7"
+      },
+      "HTTP_completed_at": "2026-10-16T15:52:18.675190+00:00"
+    },
+    "overview": {
+      "text": {
+        "file": "research/ir-SBI-S-stock-service-overview-2026-10-16/text/01-cp932-visible.txt",
+        "sha256": "bfda4f0aba564d4fc994f5cfb442b0a7a47c210f009cf3b271e61dd3e09916c8"
+      },
+      "HTTP_completed_at": "2026-10-16T15:55:10.986594+00:00"
+    },
+    "provenance": "受入済み公式紹介とサービス概要の可視本文を再利用。原entity/cp932 strict復号/routeの再監査なし。会社財務原典や本人口座の照会結果ではない。",
+    "initial_published_at": null,
+    "time_label_limit": "画面の2026-10-17時計は頁表示であり、公表時刻/実約定時刻ではない。取引時間欄のtimezoneは本文で明示されていないためunknown。"
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "topic": "単位と積立の分離",
+      "quotes": [
+        "I1",
+        "I2",
+        "I3",
+        "I4"
+      ],
+      "meaning": "紹介はS株を1株からのサービスとし、通常注文の画面手順で1～99株入力を案内する。日株積立を設定すればS株対象を自動買付との説明と、関連サービス欄の1000円からという紹介は別制度の表示。1000円からを通常S株注文の最小金額へ移さず、1～99株を積立金額方式の全仕様にも移さない。日株積立の設定・指定単位・端数・買付日の全条件は未読。"
+    },
+    {
+      "id": "F2",
+      "topic": "市場/個別対象/口座",
+      "quotes": [
+        "O1",
+        "O2"
+      ],
+      "context": "target-and-account",
+      "meaning": "東証3区分は買付/売却可、名証/福証/札証各記載区分は売却のみ可。個別銘柄画面の取扱情報でS株対象かを確認するよう指定される。特定/一般/NISA口座が並記され、NISAでの買付は成長投資枠・投資可能枠の範囲内、NISA個別対象も別確認。全銘柄の買付や利用者の口座種別/権限を認証しない。新規上場は初値成立翌日3時頃から受注可という注記があるがtimezoneを補わない。"
+    },
+    {
+      "id": "F3",
+      "topic": "時間帯と約定価格",
+      "quotes": [
+        "O3",
+        "O4"
+      ],
+      "context": "timing-and-failure",
+      "Tokyo_listed_source_labels": [
+        {
+          "order_window": "0:00～7:00",
+          "price_basis": "当日前場始値"
+        },
+        {
+          "order_window": "7:00～10:30",
+          "price_basis": "当日後場始値"
+        },
+        {
+          "order_window": "10:30～14:00",
+          "price_basis": "当日後場引け (終値)"
+        },
+        {
+          "order_window": "14:00～24:00",
+          "price_basis": "翌営業日前場始値"
+        }
+      ],
+      "timezone": null,
+      "meaning": "地方市場の売却時間欄には10:30～14:00の終値枠は掲げられておらず、東証表を一律転用しない。各締切7:00/10:30/14:00直後でもシステム都合で直前枠として受け付ける場合がある。境界を秒単位の確定約定規則へ変換しない。重複上場の価格市場は原則東証優先だが取引量等による例外と取引一部制限が記載される。研究の参照価格や即時価格と実際の約定価格を同一にしない。"
+    },
+    {
+      "id": "F4",
+      "topic": "余力・未約定・停止",
+      "quotes": [
+        "O5",
+        "O6"
+      ],
+      "context": "timing-and-failure",
+      "meaning": "14～16時注文は18時頃の翌日制限値幅上限による余力再計算で不足となり失効し得る。前場不成立は後場始値へ、後場始値不成立は失効。大引けストップ配分ではS株への配分なし。コーポレートアクションの種類別受注停止や臨時メンテナンスもあり、受付/買付可能な一般条件から約定を保証しない。現在余力や実残高は未確認。"
+    },
+    {
+      "id": "F5",
+      "topic": "複数注文/日計りの制約",
+      "quotes": [
+        "O7"
+      ],
+      "context": "orders-unit-and-fee",
+      "source_order_timing_labels": [
+        "前営業日14:00～当日7:00",
+        "当日7:00～10:30",
+        "当日10:30～14:00"
+      ],
+      "meaning": "同一取引日・同一預り・同一銘柄の複数注文不可という文と、各発注タイミングにつき買売それぞれ1件という後続文をともに保持。1日総1注文又は3回自由売買などに独自統合しない。現物のみで信用不可、注文訂正は不可で取消/再発注。日計り可との記載にも、同銘柄/同資金の差金決済に該当し得る3回目等の禁止例が伴う。実注文の適否判定器は作らない。"
+    },
+    {
+      "id": "F6",
+      "topic": "無料とスプレッド/経路例外",
+      "quotes": [
+        "O8"
+      ],
+      "context": "orders-unit-and-fee",
+      "meaning": "サービス概要は買付・売却手数料無料とスプレッド無しを明示。旧fee-only段階のS株スプレッド未確認は、この通常サービス説明の範囲で後続解消する。電話・買取/買増請求・ダイレクト/IFAの別手数料リンクは存在するが本文条件は今回未読。旧詳細のネットコース/ネット注文の無料条件・仲介等の対象外記載を捨てず、利用者本人の適用/全費用0/価格変動差0へ拡張しない。"
+    },
+    {
+      "id": "F7",
+      "topic": "単元到達後",
+      "quotes": [
+        "O9"
+      ],
+      "context": "orders-unit-and-fee",
+      "meaning": "同銘柄合計が単元株数以上となった場合の単元株数は通常の単元株取引へ移り、到達当日の単元株売却不可との説明を紹介/概要の双方で確認。単元100株の銘柄で100株到達する場面もこの扱いの範囲であり、すべての保有残余や到達当日の全S株売却可否まで独自解釈しない。"
+    }
+  ],
+  "practical_result": "100株単位での通常購入を理由に、月1万円では個別株が一律不可能と除外する必要はない。S株の1株からという公式選択肢はある。ただし個別のS株/NISA買付対象、1株の実際の約定額と余力、利用者本人のサービス権限は別確認。月額を現在資金や1社配分へ変換しない。",
+  "old_history_disposition": {
+    "unchanged_old_fee_review": {
+      "file": "research/ir-SBI-S-stock-fee-meaning-review-2026-10-16/review.json",
+      "sha256": "9a3d79a56c3ca80acaa4b8290f890b670e80aa816c575f22c276194172652884"
+    },
+    "old_unknown_now_partly_answered": [
+      "1株からというサービス単位",
+      "東証と地方の買売対象差・個別確認の要否",
+      "口座区分とNISA成長枠",
+      "時間帯ごとの価格基準と失効の存在",
+      "通常サービス欄の売買手数料無料/スプレッド無し"
+    ],
+    "still_unknown": [
+      "利用者の実口座/コース/仲介/権限/残高/余力",
+      "個別候補の現在の対象と実際の買付可能額",
+      "日株積立の全設定条件と利用者の既存積立との関係",
+      "電話/別コース/請求取引等の別料金詳細・その他全費用",
+      "Carlisle最低20保有ガイドと資金・対象・保有期間の適合"
+    ],
+    "no_overwrite": true
+  },
+  "context_locations": {
+    "target-and-account": {
+      "source": "overview",
+      "character_start": 3044,
+      "character_end": 3358,
+      "UTF8_byte_start": 7590,
+      "UTF8_byte_end": 8416,
+      "scope": "Location reference for the Japanese summary, not a duplicated full quotation."
+    },
+    "timing-and-failure": {
+      "source": "overview",
+      "character_start": 3358,
+      "character_end": 4143,
+      "UTF8_byte_start": 8416,
+      "UTF8_byte_end": 10383,
+      "scope": "Location reference for the Japanese summary, not a duplicated full quotation."
+    },
+    "orders-unit-and-fee": {
+      "source": "overview",
+      "character_start": 4143,
+      "character_end": 4675,
+      "UTF8_byte_start": 10383,
+      "UTF8_byte_end": 11817,
+      "scope": "Location reference for the Japanese summary, not a duplicated full quotation."
+    },
+    "pricing-and-risk": {
+      "source": "overview",
+      "character_start": 4675,
+      "character_end": 5119,
+      "UTF8_byte_start": 11817,
+      "UTF8_byte_end": 13065,
+      "scope": "Location reference for the Japanese summary, not a duplicated full quotation."
+    }
+  },
+  "verification": {
+    "source_text_pins_checked_before_semantic_read": {
+      "introduction": "78d5be5c9f4126d11b5d98115a9a2a9429d8b7f586213b41521a7db55f7497a7",
+      "overview": "bfda4f0aba564d4fc994f5cfb442b0a7a47c210f009cf3b271e61dd3e09916c8"
+    },
+    "source_text_pins_after": {
+      "introduction": "78d5be5c9f4126d11b5d98115a9a2a9429d8b7f586213b41521a7db55f7497a7",
+      "overview": "bfda4f0aba564d4fc994f5cfb442b0a7a47c210f009cf3b271e61dd3e09916c8"
+    },
+    "source_text_unchanged": true,
+    "new_quotes_count": 13,
+    "quote_locations": "新規の必要最小引用だけUnicode/UTF8半開spanを元保存textへ結合。原capture抽出の再監査なし。",
+    "new_GET_DB_Store_oldsource_shared_code_changes": 0
+  },
+  "not_adopted": [
+    "投資20銘柄保有の実行可能性",
+    "均等配分/仮想積立残高/現在残高",
+    "買売/目標価格/評価式/即時約定保証",
+    "本人権限・注文・送信・金融policy"
+  ]
+}

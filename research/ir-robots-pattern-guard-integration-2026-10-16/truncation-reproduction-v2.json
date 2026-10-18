@@ -1,0 +1,25 @@
+{
+  "before": {
+    "mocked_request_urls": [
+      "https://issuer.invalid/robots.txt",
+      "https://issuer.invalid/article/_pdf/report"
+    ],
+    "mocked_body_requests": 1,
+    "error": null,
+    "robots_failure_reason": null,
+    "robots_text_truncated": null,
+    "original_bytes": 231032,
+    "actual_network_GETs": 0
+  },
+  "after": {
+    "mocked_request_urls": [
+      "https://issuer.invalid/robots.txt"
+    ],
+    "mocked_body_requests": 0,
+    "error": "robots_unreachable_stopped",
+    "robots_failure_reason": "robots_text_truncated",
+    "robots_text_truncated": true,
+    "original_bytes": 231032,
+    "actual_network_GETs": 0
+  }
+}

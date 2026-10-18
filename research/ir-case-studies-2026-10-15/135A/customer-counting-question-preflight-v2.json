@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "record_type": "research_question_preflight_revision",
+  "recorded_at": "2026-10-15T06:49:27.142301+00:00",
+  "company_id": "jp:135A",
+  "issue_id": "customer-counting-unit",
+  "candidate_id": "135A-customer-counting-unit-definition-candidate",
+  "research_revision": 2,
+  "status": "draft_only_not_registered_or_sent",
+  "supersedes_research_wording_only": {
+    "path": "customer-counting-definition-review.json",
+    "sha256": "a56a16dd37aa19238f14b73581017d40fdab6b6033cdaf4747e6744f9bf9e539",
+    "prior_draft_preserved": true
+  },
+  "root_source_recheck": {
+    "path": "customer-counting-definition-root-recheck.json",
+    "sha256": "051ebcf27ca3eff19a756645d8f979d63b519acee5df0888e23120b22709d674"
+  },
+  "method_sources": [
+    "anthropic.thesis-tracker",
+    "anthropic.earnings-preview",
+    "damodaran.valuation-project.spring2025"
+  ],
+  "method_attribution_limit": "公開根拠・事前解釈を保持する方法を採用。質問文と照会範囲・分岐整理は本プロジェクトの運用判断で、著者による当該会社への推奨質問・投資規則ではない。",
+  "independent_review_findings": [
+    "原草案Aの一貫した法人単位等には工場単位も含まれBと重なるため、単位の種類と期間一貫性を分離。",
+    "初回の質問を単位と比較期間での変更有無へ絞り、算入・取消・除外・過去改訂の詳細は必要時に別途確認。"
+  ],
+  "question": "2027年2月期第2四半期決算説明資料5頁の「累計取引社数394社（受注ベース）」について、集計上の「1社」の単位（同一法人の別工場への追加導入を別の1社に数えるか）と、FY26末337社から現在までにその単位・対象範囲の変更があったかを、公表済み定義の範囲でご教示ください。掲載箇所のご案内でも差し支えありません。",
+  "known_public_answer_not_asked_again": "受注ベースであることと現行394社の表示。",
+  "public_quote_ids": [
+    "official-current-count",
+    "published-order-basis",
+    "one-customer-multiple-factories",
+    "qa-customer-and-factory-hierarchy",
+    "author-original-customer-yardstick"
+  ],
+  "public_review_scope": "15保存本文・11引用・5原典の照合。全公開情報の不存在証明ではない。",
+  "cancel_if": "同じ期間・対象範囲の1社単位と変更有無が公表済み定義で解ければ、草案を廃止して掲載箇所を参照する。",
+  "reply_interpretations": [
+    {
+      "id": "unit_defined_scope_unchanged",
+      "condition": "単位・対象範囲を明示し、比較期間を通じてその定義に変更がないと確認できる。",
+      "effect": "単位と対象範囲について会社系列内の比較を進められる。他の算入・除外・改訂ルールまで確認済みとはしない。"
+    },
+    {
+      "id": "unit_defined_scope_changed",
+      "condition": "単位は明示され、比較期間に単位または対象範囲の変更があると確認できる。",
+      "effect": "変更の対象期・範囲と会社公表の対応を待つ。自ら過去値を補正せず、単純比較を保留する。"
+    },
+    {
+      "id": "unit_defined_history_unknown",
+      "condition": "現在の単位は明示されるが、比較期間での単位・対象範囲の変更有無は未確認。",
+      "effect": "現在の定義だけを記録し、過去との一貫性を未解決として残す。"
+    },
+    {
+      "id": "unit_unknown_or_no_answer",
+      "condition": "単位自体を特定できない、受注ベースとの既出説明のみ、曖昧、回答不能、無回答。",
+      "effect": "既知の受注基準だけを保持し、今回の定義不確実性は解消扱いにしない。無回答を悪化証拠にしない。"
+    }
+  ],
+  "interpretation_axes": {
+    "unit": "法人/工場/グループのどれが好ましいという序列を置かず、明示された定義を記録する。",
+    "period_consistency": "変更なし・変更あり・不明を単位の種類と別に記録する。",
+    "remaining_scope": "算入/除外/取消/過去改訂等が未確認なら、その不確実性を残す。"
+  },
+  "common_limits": [
+    "会社の定義回答だけで外部著者の550〜600社目安と同じ母集団だと認定しない。",
+    "回答の公開性は受信後に別途確認し、定義を尋ねたことだけでpublic_clarificationへ分類しない。",
+    "EPS/FCFF/倍率/確率/評価額/買売判断へ自動転記しない。"
+  ],
+  "deferred_questions": [
+    "グループ内の別法人・別ライン・複数サービスの全組合せ。",
+    "初めて累計へ含める受注条件、取消/取引終了/統合に伴う除外。",
+    "過去数値修正や変更時の対応表。"
+  ],
+  "contact_note": {
+    "source": "親から提供された旧時点の窓口情報（本taskで接続/再確認なし）",
+    "historical_official_url": "https://vrain.co.jp/ir/inquiry/",
+    "reported_prior_reviewed_at": "2026-10-11T04:11:06Z",
+    "reported_prior_retrieved_at": "2026-10-11T03:58:51Z",
+    "reference_as_reported": "research/ir-recovery-2026-10-13/all-companies.csv / 135A; research/ir-contacts-universe-2026-10-11/records/135A.json",
+    "individual_access_note": "親の旧確認では個人受付explicit。今回の本文調査で現在受付/条件を認定していない。",
+    "current_outreach_eligibility": null,
+    "ready_to_send": false,
+    "reply_guarantee": false
+  },
+  "valuation_input_path": null,
+  "financial_inputs_verified": false,
+  "model_adopted": false,
+  "formal_question_registered": false,
+  "GET": 0,
+  "database_writes": 0,
+  "external_sends": 0,
+  "orders": 0,
+  "method_reference_paths": [
+    "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+    "third_party/anthropic/skills/earnings-preview/SKILL.md",
+    "research/ir-policy-adoption-2026-10-15/sources.json /sources[id=damodaran.valuation-project.spring2025]"
+  ]
+}

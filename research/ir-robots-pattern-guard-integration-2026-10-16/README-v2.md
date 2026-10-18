@@ -1,0 +1,9 @@
+robots pattern guard：最終v2
+
+初期163testsの証跡は旧ファイルとbefore-raw-completeness-fix/に保持。独立reviewで非HTML text200000字切詰めが末尾禁止を落とすと判明し、完全性guardを追加。raw_getはtext_truncatedを記録しrobotsなら本文GET前に停止。保存済み旧形式でflagが無くても既知cap以上は完全規則不明として拒否、collectの明示flagもunreachableとする。明示HTML/XHTMLのrobots200もunknown停止、会社HTML本文の取得は変えない。text/plain空/通常とcomplete404/410は既存扱いを維持。
+
+truncation-reproduction-v2.jsonは完全mockで本文要求before1→after0、実GET0。新pattern10・既存contact79・followup79の計168対象testsがPASS。最終diffはchanges-v2.diff、pins/結果はvalidation-v2.json。fullsuiteはroot担当。旧budget fixtureの空robotsのみ意図どおりtext/plainと明示した。
+
+Protego0.7.0固定・純Python依存1件追加だけで旧locked versionsは不変。stdlib UA/group/literalの旧許可を上限にANDし、6383literal修正とsaved denial recoveryを維持。raw対応不明/曖昧/再parse/切詰めは拒否、pattern新許可は作らない。PyPI metadata/package以外のGET・実DB/Store/contact/holds/金融コード/共有docs変更0。
+
+root受入：全1,627テスト成功（38.562秒）、独立レビュー未解決指摘0。コード/依存/金融ロジック/holdsの固定値と実DB SHAの不変を確認。parent-acceptance.jsonとtest-result.jsonに記録した。

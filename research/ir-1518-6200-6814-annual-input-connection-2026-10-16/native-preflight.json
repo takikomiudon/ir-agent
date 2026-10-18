@@ -1,0 +1,162 @@
+{
+  "recorded_at": "2026-10-16T10:49:02.301397+00:00",
+  "backup": "data/backups/6200-6814-native-before-20261016.sqlite3",
+  "backup_SHA": "8f60a36de688f1f2dc58b36250cecd5db39b5e604a7569f429e39beb6d478ddc",
+  "copy_registration_results": {
+    "6200": {
+      "case_id": "6200-reported-annual-per-share-basis-monitor",
+      "version": 1,
+      "head_version": 1,
+      "config_revision": 1,
+      "record": {
+        "bootstrap_meaning_verified": false,
+        "case_id": "6200-reported-annual-per-share-basis-monitor",
+        "case_ref": {
+          "path": "research/ir-case-studies-2026-10-15/6200/native-case-setup-2026-10-16/prepare-only/case-context.json",
+          "sha256": "519837b4cf7614608ec2960fc3b00d794045dcc81fffc23728e622ab4b9ccb4b"
+        },
+        "company_id": "jp:6200",
+        "enabled": true,
+        "files": {
+          "case_ref": {
+            "content": "{\n  \"schema_version\": 1,\n  \"case_id\": \"6200-reported-annual-per-share-basis-monitor\",\n  \"company_id\": \"jp:6200\",\n  \"company_name\": \"株式会社インソース\",\n  \"issue_id\": \"6200-annual-EPS-BPS-ordinary-share-and-dated-source-basis\",\n  \"recorded_at\": \"2026-10-16T10:34:18.487378+00:00\",\n  \"preparation_status\": \"file_only_not_registered_or_bootstrapped\",\n  \"purpose\": \"公表年次EPS/BPSを既存maintainer式の限定入力候補として比較し、EPS平均株とBPS期末・未確認分母・後続開示を混同しない。投資推奨/会社別将来予測ではない。\",\n  \"author_and_project_boundary\": {\n    \"implementation_author\": \"maxgfr/crible maintainers\",\n    \"fixed_commit\": \"00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7\",\n    \"formula\": \"sqrt(22.5 × EPS × BVPS)\",\n    \"positive_guard\": \"EPS>0 AND BVPS>0\",\n    \"original_Graham_complete_rules_adopted\": false,\n    \"external_author_recommends_6200\": false,\n    \"calculation_executed_here\": false,\n    \"provider_equity_to_Japanese_ordinary_BPS_equivalence_certified\": false\n  },\n  \"conditions\": [\n    {\n      \"id\": \"C1\",\n      \"topic\": \"同一年次連結actual EPSを基本・希薄化・会社guideと分ける\",\n      \"external_implementation_rule\": \"maintainer式のEPS入力。年次/TTM・weighted-average基準は意味確認を要する。\",\n      \"known\": \"p1 EPS49.20円は2024-10-01～2025-09-30の連結年次実績。p18 ordinary親NI4,130,091千円と平均株83,947,385株を注記。p1百万円未満切捨て親NI4,130百万円と精度を分ける。希薄化dashは潜在株式不存在による省略。\",\n      \"compare_on_new_saved_source\": \"同年度・連結・報告実績・基本EPSの訂正/新期情報を比較。当時FY2026 guide55.15や未読Q3を報告49.20へ置換しない。\",\n      \"status\": \"direct_display_input_candidate_meaning_unadopted\",\n      \"refs\": [\n        \"issuer-annual-original\",\n        \"issuer-derived-twofacts\",\n        \"maintainer-formula-positiveguard-and-denominators\"\n      ]\n    },\n    {\n      \"id\": \"C2\",\n      \"topic\": \"BPS期末basisとEPS平均、ordinary持分/分母未確認を分ける\",\n      \"external_implementation_rule\": \"maintainer BVPSはequity/期末株数を優先し平均fallbackを持つ。provider total_equityと日本原典のordinary持分の同値は名称だけで認定しない。\",\n      \"known\": \"p1/p18 BPS148.70円は2025-09-30末。p2普通株期末85,243,000株は自己株含む、自己株1,269,169株、期中平均83,947,385株を別に保持。BPS詳細分母算定・ordinary帰属調整の注記は選定頁で未確認。\",\n      \"compare_on_new_saved_source\": \"ordinary持分/NCI/優先持分/OCI/自己株/分割/期末と平均の範囲を原文で照合。issued−treasuryを会社公式BPS分母と認定せず、EPS平均をBPS分母へ流用しない。\",\n      \"status\": \"direct_BPS_display_candidate_detailed_denominator_unconfirmed\",\n      \"refs\": [\n        \"issuer-annual-original\",\n        \"issuer-derived-twofacts\",\n        \"maintainer-formula-positiveguard-and-denominators\"\n      ]\n    },\n    {\n      \"id\": \"C3\",\n      \"topic\": \"後続公表と現在株式basis、価格を別観測として確認\",\n      \"external_implementation_rule\": \"参考式そのものとlatest-period制約・価格比較・投資家policyを分ける。値が正でもGraham全適格/購入根拠ではない。\",\n      \"known\": \"取得一覧は2026FYのQ3まで、2025FYが静的最新通期。FY2026は暦上終了済みだが通期実績取得を認定しない。過去予想修正等のliteralは保存済review参照、selected annual訂正の不存在をサイト全体へ一般化しない。\",\n      \"compare_on_new_saved_source\": \"正当に保存された新年次/訂正/資本異動をC1/C2へ比較し、旧sourceを上書きしない。価格の通貨/対象株式/市場時点・株式basisと売買policyは別に必要。新GETやIRをこの準備で起動しない。\",\n      \"status\": \"later_publication_current_basis_price_and_policy_unset\",\n      \"refs\": [\n        \"issuer-annual-original\",\n        \"issuer-derived-twofacts\",\n        \"issuer-selection-limits\",\n        \"maintainer-formula-positiveguard-and-denominators\"\n      ]\n    }\n  ],\n  \"candidate_inputs_only\": {\n    \"eps_jpy\": \"49.20\",\n    \"book_value_per_share_jpy\": \"148.70\",\n    \"unit\": \"JPY-per-share\",\n    \"financial_inputs_verified\": false,\n    \"meaning_review_required\": true,\n    \"forecast_or_current_share_basis_adopted\": false,\n    \"valuation_result\": null\n  },\n  \"source_reading_boundary\": {\n    \"full_extracted_pages\": 18,\n    \"meaning_image_review_pages\": [\n      1,\n      2,\n      18\n    ],\n    \"new_meaning_pages_read_here\": [],\n    \"original_and_derived_are_not_independent_confirmations\": true,\n    \"bootstrap_reviews\": [],\n    \"native_read_claim_created\": false,\n    \"future_first_review_source_ids\": [\n      \"case-public:4e3b5b50cf1056ea17c9611853d8480231efa5c2eb3a8642d6f9ffb6a898280c\",\n      \"disclosed-facts:65bf86cb904c1f0740db3b27c61824b01aa65cea08c748017255f9183e7f61b6\"\n    ],\n    \"first_qualitative_job_plan\": \"Rootによる正当な実保存/分類と登録後、凍結packetで初回の著者条件比較をする。file-only抽出とnative既読を分ける。\"\n  },\n  \"management_review\": null,\n  \"management_note\": \"今回内部管理日を新作しない。会社予定/退出期限と混同しない。\",\n  \"financial_and_IR_state\": {\n    \"actual_DB_first_save\": null,\n    \"DB_state_read_this_phase\": false,\n    \"native_case_version\": null,\n    \"registered_successfully\": false,\n    \"price\": null,\n    \"policy\": null,\n    \"forward_forecast\": null,\n    \"financial_branches\": null,\n    \"IR_question\": null,\n    \"IR_value\": \"unproven\",\n    \"send_ready\": false,\n    \"investment_action\": null\n  }\n}\n",
+            "reference": {
+              "path": "research/ir-case-studies-2026-10-15/6200/native-case-setup-2026-10-16/prepare-only/case-context.json",
+              "sha256": "519837b4cf7614608ec2960fc3b00d794045dcc81fffc23728e622ab4b9ccb4b"
+            }
+          },
+          "management_basis": {
+            "content": "{\n  \"recorded_at\": \"2026-10-16T10:49:01.927022+00:00\",\n  \"company_id\": \"jp:6200\",\n  \"author_ref\": {\n    \"path\": \"third_party/anthropic/skills/thesis-tracker/SKILL.md\",\n    \"sha256\": \"6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b\",\n    \"quote\": \"- Review theses at least quarterly, even when nothing dramatic has happened\"\n  },\n  \"project_application\": \"2026-10-16の研究case登録に対応し、次回の内部研究管理日は2027-01-16（Asia/Tokyo）とする。新しい公表資料を実保存した場合は前倒しで点検する。\",\n  \"not_issuer_event_or_falsification_or_sale_deadline\": true\n}\n",
+            "reference": {
+              "path": "research/ir-case-studies-2026-10-15/6200/native-case-setup-2026-10-16/actual-inputs/management-basis.json",
+              "sha256": "ec0c7cb08ca8e950c0a9c8bf9f77f3462134ff4d4c60da7b110c6ca6070e4aac"
+            }
+          },
+          "manifest_ref": {
+            "content": "{\n  \"schema_version\": 1,\n  \"case_id\": \"6200-reported-annual-per-share-basis-monitor\",\n  \"company_id\": \"jp:6200\",\n  \"issue_id\": \"6200-annual-EPS-BPS-ordinary-share-and-dated-source-basis\",\n  \"recorded_at\": \"2026-10-16T10:34:18.487378+00:00\",\n  \"case_ref\": {\n    \"path\": \"research/ir-case-studies-2026-10-15/6200/native-case-setup-2026-10-16/prepare-only/case-context.json\",\n    \"sha256\": \"519837b4cf7614608ec2960fc3b00d794045dcc81fffc23728e622ab4b9ccb4b\"\n  },\n  \"sources\": [\n    {\n      \"id\": \"issuer-annual-original\",\n      \"source_id\": \"case-public:4e3b5b50cf1056ea17c9611853d8480231efa5c2eb3a8642d6f9ffb6a898280c\",\n      \"source_native_snapshot_sha256\": \"37a66ed5fa097b293d58ca0febab29c1d29ed3def5194b550eecbdda63ade6bd\",\n      \"native_hash_domain\": \"SHA256 UTF8 models.json_text; default JSON separators, distinct from normalizer compact/raw/content SHA\",\n      \"source_ref\": {\n        \"path\": \"research/ir-case-studies-2026-10-15/6200/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json\",\n        \"sha256\": \"3007c3e956b87f682a93e3ed7d8ead68ed071cb6677e5f61fd30eb59328dee73\",\n        \"json_pointer\": \"/sources/0\"\n      },\n      \"retrieved_at\": \"2026-10-16T10:25:02.705089+00:00\",\n      \"published_at\": null,\n      \"actual_DB_first_save\": null,\n      \"actual_DB_checked\": false,\n      \"financial_inputs_verified\": false\n    },\n    {\n      \"id\": \"issuer-derived-twofacts\",\n      \"source_id\": \"disclosed-facts:65bf86cb904c1f0740db3b27c61824b01aa65cea08c748017255f9183e7f61b6\",\n      \"source_native_snapshot_sha256\": \"8b86f6bcaf248b49469e65df104f566600654c903808409fb9e14fbeb25441c4\",\n      \"native_hash_domain\": \"SHA256 UTF8 models.json_text; default JSON separators, distinct from normalizer compact/raw/content SHA\",\n      \"source_ref\": {\n        \"path\": \"research/ir-case-studies-2026-10-15/6200/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json\",\n        \"sha256\": \"3007c3e956b87f682a93e3ed7d8ead68ed071cb6677e5f61fd30eb59328dee73\",\n        \"json_pointer\": \"/sources/1\"\n      },\n      \"retrieved_at\": \"2026-10-16T10:32:56.151564+00:00\",\n      \"published_at\": null,\n      \"actual_DB_first_save\": null,\n      \"actual_DB_checked\": false,\n      \"financial_inputs_verified\": false\n    }\n  ],\n  \"bootstrap_reviews\": [],\n  \"management_review\": null,\n  \"method_refs\": [\n    {\n      \"id\": \"maintainer-formula-positiveguard-and-denominators\",\n      \"path\": \"research/ir-transparent-metric-formula-review-2026-10-15/upstream-INDICATORS.md\",\n      \"sha256\": \"fb82b2d47596026ea75fa561169062c52622dcb153caffe37af5491111ad084f\",\n      \"fixed_commit\": \"00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7\",\n      \"quote\": \"EPS  = net_income / shares_outstanding            (weighted average)\\nBVPS = total_equity / shares_outstanding_end      (period-end count, average as fallback)\\ngraham_number = √( 22.5 · EPS · BVPS )        only when EPS > 0 AND BVPS > 0, else NaN\",\n      \"character_start\": 12966,\n      \"character_end\": 13211,\n      \"byte_start\": 13359,\n      \"byte_end\": 13608,\n      \"section\": \"5 Grahamnumber and latestfiscalperiod caveat\",\n      \"scope\": \"Maintainer originalreference; original Graham complete strategy not certified\"\n    },\n    {\n      \"id\": \"project-saved-input-specification\",\n      \"path\": \"research/ir-case-studies-2026-10-15/1975/graham-number-input-spec-review-2026-10-16/specification.json\",\n      \"sha256\": \"6b11349f628984ffc575f6a08d211d36adaf27cedfe76d58d69d7b2835b343e4\",\n      \"scope\": \"Earlier project audit of fixed maintainerinputmapping/annualdefault/fallback, not Japanesefinancialadoption or newpolicy\"\n    }\n  ],\n  \"issuer_quote_ref\": {\n    \"path\": \"research/ir-case-studies-2026-10-15/6200/annual-accounting-input-discovery-2026-10-16/source-quotes.json\",\n    \"sha256\": \"60a1e6f37784c0bec92adfb268e6f19222505f93c6190b32c1bc9cc2d25f30d7\"\n  },\n  \"issuer-selection-limits\": {\n    \"path\": \"research/ir-case-studies-2026-10-15/6200/annual-accounting-input-discovery-2026-10-16/review.json\",\n    \"sha256\": \"2b48a0633259675249a9f2c9e081d36d31c542e587c4ae8dae5d56adc15649b5\"\n  },\n  \"normalization_refs\": [\n    {\n      \"path\": \"research/ir-case-studies-2026-10-15/6200/annual-per-share-disclosed-facts-2026-10-16/normalization-input.json\",\n      \"sha256\": \"1e44eadbbf4f4bdadcad95f76f00bf7eee67aaf3dd44b4c53f49b1cf0f17ca1e\"\n    },\n    {\n      \"path\": \"research/ir-case-studies-2026-10-15/6200/annual-per-share-disclosed-facts-2026-10-16/validation.json\",\n      \"sha256\": \"dce00d56eca0a7da1bee68ef1663206f524546dce5ebc443e01a7e4ce7a069bd\"\n    },\n    {\n      \"path\": \"research/ir-case-studies-2026-10-15/6200/annual-per-share-disclosed-facts-2026-10-16/reproduction.json\",\n      \"sha256\": \"b06f0b3e644f628431ad958997c47a3bed6504c6e00036ca181bc9db3af519ae\"\n    },\n    {\n      \"path\": \"research/ir-case-studies-2026-10-15/6200/annual-per-share-disclosed-facts-2026-10-16/input-pins.json\",\n      \"sha256\": \"25d179730e7fb5a91a53e041a4ec696dbb9c4ed2874f5bce5c32697428380e7b\"\n    }\n  ],\n  \"normalizer_core_ref\": {\n    \"path\": \"src/ir_agent/disclosed_facts.py\",\n    \"sha256\": \"d434b41cfa19568d0cef1a2e6710365f447012d75a4b07ca950cc62b6bd9db51\"\n  },\n  \"product_CLI_valuation_pinned\": false,\n  \"registration_not_executed\": true,\n  \"pending_or_lease_claim\": null,\n  \"financial_adoption\": false\n}\n",
+            "reference": {
+              "path": "research/ir-case-studies-2026-10-15/6200/native-case-setup-2026-10-16/prepare-only/manifest.json",
+              "sha256": "a358ff905b09a23a7d1d1b90290cee84c2c8c20d1643f75ce3fcb29a8ac4d9b7"
+            }
+          }
+        },
+        "issue_id": "6200-annual-EPS-BPS-ordinary-share-and-dated-source-basis",
+        "last_review_at": "2026-10-16T10:49:02.250338+00:00",
+        "last_review_id": null,
+        "management_review": {
+          "basis_quote": "2026-10-16の研究case登録に対応し、次回の内部研究管理日は2027-01-16（Asia/Tokyo）とする。新しい公表資料を実保存した場合は前倒しで点検する。",
+          "basis_ref": {
+            "path": "research/ir-case-studies-2026-10-15/6200/native-case-setup-2026-10-16/actual-inputs/management-basis.json",
+            "sha256": "ec0c7cb08ca8e950c0a9c8bf9f77f3462134ff4d4c60da7b110c6ca6070e4aac"
+          },
+          "date": "2027-01-16",
+          "timezone": "Asia/Tokyo"
+        },
+        "manifest_ref": {
+          "path": "research/ir-case-studies-2026-10-15/6200/native-case-setup-2026-10-16/prepare-only/manifest.json",
+          "sha256": "a358ff905b09a23a7d1d1b90290cee84c2c8c20d1643f75ce3fcb29a8ac4d9b7"
+        },
+        "recorded_at": "2026-10-16T10:49:01.927136+00:00",
+        "research_root": "/workspace/ir-agent",
+        "reviewed_sources": {},
+        "synthetic": false
+      },
+      "first_saved_at": "2026-10-16T10:49:02.250338+00:00",
+      "added": true,
+      "financial_inputs_verified": false
+    },
+    "6814": {
+      "case_id": "6814-reported-annual-per-share-basis-monitor",
+      "version": 1,
+      "head_version": 1,
+      "config_revision": 1,
+      "record": {
+        "bootstrap_meaning_verified": false,
+        "case_id": "6814-reported-annual-per-share-basis-monitor",
+        "case_ref": {
+          "path": "research/ir-case-studies-2026-10-15/6814/native-case-setup-2026-10-16/prepare-only/case-context.json",
+          "sha256": "7df4eef88fc898d1e1438b006ff0c6ce76f739d2ffabfedec5cc5e70a4b1a3cd"
+        },
+        "company_id": "jp:6814",
+        "enabled": true,
+        "files": {
+          "case_ref": {
+            "content": "{\n  \"schema_version\": 1,\n  \"case_id\": \"6814-reported-annual-per-share-basis-monitor\",\n  \"company_id\": \"jp:6814\",\n  \"company_name\": \"古野電気株式会社\",\n  \"issue_id\": \"6814-annual-EPS-BPS-and-common-share-equity-basis\",\n  \"recorded_at\": \"2026-10-16T10:34:13.487983+00:00\",\n  \"preparation_status\": \"file_only_not_registered_or_bootstrapped\",\n  \"purpose\": \"23社公表予定cohortの報告年次EPS/BPS入力basis比較を継続する。買売や会社全体thesisではない。\",\n  \"author_and_Japanese_mapping\": {\n    \"author\": \"maxgfr/crible maintainers\",\n    \"fixed_commit\": \"00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7\",\n    \"formula\": \"sqrt(22.5 × EPS × BVPS)\",\n    \"positive_guard\": \"EPS>0 AND BVPS>0\",\n    \"original_Graham_full_strategy_adopted\": false,\n    \"external_author_recommends_6814\": false,\n    \"boundary\": \"Maintainerformula/providercolumnsと、日本基準直接表示/ordinary範囲mappingは別。正値は式定義域のみ、currentbasis/適格性/投資判断を保証しない。\",\n    \"production_code_SHA_frozen\": false\n  },\n  \"conditions\": [\n    {\n      \"id\": \"C1\",\n      \"topic\": \"annualreportedEPS、親会社ordinary利益と平均株数\",\n      \"author_rule\": \"Maintainerannualdefault/weightedaverageEPS、正EPSかつ正BVPSguard。式関数自体はannual/TTM意味を保証しない。\",\n      \"Japanese_mapping\": \"直接EPS529.53円はFY2025-03-01..2026-02-28連結基本実績。p21ordinary親会社利益16735百万円/平均31604751株のscopeに対応、表示EPSを再計算しない。\",\n      \"compare_future_saved_source\": \"実績/会社guide、年次/累計四半期、連結/個別、基本/潜在、期間/分割基準を比較。個別414.55/guide411.28を混ぜず、負/0/欠損を正常値へ補完しない。\",\n      \"status\": \"candidate_only_financial_and_independent_meaning_unadopted\",\n      \"refs\": [\n        \"issuer-annual-original\",\n        \"issuer-derived-twofacts\",\n        \"maintainer-formula-positiveguard\"\n      ]\n    },\n    {\n      \"id\": \"C2\",\n      \"topic\": \"ordinaryBPS、OCI/NCI、EPS平均とBPS末分母\",\n      \"author_rule\": \"BVPSの持分/期末株数優先と平均fallbackを区別。StockholdersEquity/CommonStockEquityを日本の純資産/株主資本に名のみで直訳しない。\",\n      \"Japanese_mapping\": \"直接BPS2826.61円は2026-02-28instant、p21ordinary末純資産89345百万円/期末31608824株。総純資産89772/NCI控除426とp13株主資本76310/OCI13035/NCI426を別範囲で保持。EPS平均31604751とBPS期末は別分母、表示丸め額は引算/割算で補正しない。\",\n      \"compare_future_saved_source\": \"ordinary帰属/NCI/OCI/優先・自己株/分割と平均末を比較。潜在EPSdashは潜在株式なしの注記で0化しない。currentbasisと外部provider持分適合を自動認証しない。\",\n      \"status\": \"ordinary_direct_BPS_candidate_cross_provider_mapping_unresolved\",\n      \"refs\": [\n        \"issuer-annual-original\",\n        \"issuer-derived-twofacts\",\n        \"maintainer-formula-positiveguard\"\n      ]\n    },\n    {\n      \"id\": \"C3\",\n      \"topic\": \"会計変更・後日更新と現在価格の別点検\",\n      \"author_rule\": \"Upstream価格比較はlatestfiscalperiodonlyで過去行へbackdateしない。純式2inputsとupstreamprice非None実行条件を区別。\",\n      \"Japanese_mapping\": \"原本4/9公表、p2会計基準改正有の詳細p19未読。現indexにFY2027Q2/10月9日guide修正があるが本文未取得で、4月guide維持や現在split/連結scopeを認証しない。\",\n      \"compare_future_saved_source\": \"正当に保存された後日訂正/会計注記/四半期/資本・分母変更をC1/C2へ比較。価格は別の正当観測で通貨/市場日・時刻/対象株式を確認し、HTTP取得を市場asofへ流用しない。ここから自動追加GETはしない。\",\n      \"status\": \"later_changes_and_current_price_unset\",\n      \"not_investment_action\": \"正値guardの定義外と永久会社除外を区別し、買売threshold/新IR/予測・正常利益は作らない。\",\n      \"refs\": [\n        \"issuer-annual-original\",\n        \"saved-later-update-locators\",\n        \"maintainer-formula-positiveguard\"\n      ]\n    }\n  ],\n  \"candidate_inputs_only\": {\n    \"eps_jpy\": {\n      \"value\": \"529.53\",\n      \"kind\": \"reported_fact\",\n      \"start\": \"2025-03-01\",\n      \"end\": \"2026-02-28\"\n    },\n    \"book_value_per_share_jpy\": {\n      \"value\": \"2826.61\",\n      \"kind\": \"reported_fact\",\n      \"as_of\": \"2026-02-28\"\n    },\n    \"unit\": \"JPY-per-share\",\n    \"financial_inputs_verified\": false,\n    \"independent_meaning_review_verified\": false,\n    \"expected_value_eligible\": false,\n    \"meaning_review_required\": true,\n    \"calculation_executed_here\": false\n  },\n  \"source_reading_boundary\": {\n    \"full_original_pages\": 22,\n    \"original_producer_meaning_pages\": [\n      1,\n      2,\n      13,\n      21\n    ],\n    \"root_meaning_acceptance_claimed_here\": false,\n    \"new_meaning_pages\": [],\n    \"original_and_derived_not_independent\": true,\n    \"bootstrap_reviews\": [],\n    \"native_read_claim_created\": false,\n    \"future_first_review_source_ids\": [\n      \"case-public:ecfb7db1a1c040c9fecf5f30b3a8d7cd4f6142e3d6e80c94a6cc01c3c64fb039\",\n      \"disclosed-facts:d05b7a50d0af1bb576db77f7114fd326a7739b9a16c0d1cc751a16154c807361\"\n    ],\n    \"first_review_plan\": \"Root正当初回保存/分類後、原本と派生2sourceの凍結pendingpacketを初回reviewする。準備を登録・既読成功としない。\"\n  },\n  \"management_review\": null,\n  \"actual_DB_firstsave\": null,\n  \"DB_state_read_this_phase\": false,\n  \"native_case_version\": null,\n  \"native_job_or_CAS\": null,\n  \"registered_successfully\": false,\n  \"price\": null,\n  \"new_thesis_forecast_financial_adoption_IR\": null,\n  \"send_ready\": false\n}\n",
+            "reference": {
+              "path": "research/ir-case-studies-2026-10-15/6814/native-case-setup-2026-10-16/prepare-only/case-context.json",
+              "sha256": "7df4eef88fc898d1e1438b006ff0c6ce76f739d2ffabfedec5cc5e70a4b1a3cd"
+            }
+          },
+          "management_basis": {
+            "content": "{\n  \"recorded_at\": \"2026-10-16T10:49:01.927426+00:00\",\n  \"company_id\": \"jp:6814\",\n  \"author_ref\": {\n    \"path\": \"third_party/anthropic/skills/thesis-tracker/SKILL.md\",\n    \"sha256\": \"6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b\",\n    \"quote\": \"- Review theses at least quarterly, even when nothing dramatic has happened\"\n  },\n  \"project_application\": \"2026-10-16の研究case登録に対応し、次回の内部研究管理日は2027-01-16（Asia/Tokyo）とする。新しい公表資料を実保存した場合は前倒しで点検する。\",\n  \"not_issuer_event_or_falsification_or_sale_deadline\": true\n}\n",
+            "reference": {
+              "path": "research/ir-case-studies-2026-10-15/6814/native-case-setup-2026-10-16/actual-inputs/management-basis.json",
+              "sha256": "ca6a4bac24fb2f93fd813df9e5a29bed04cbb62b5d64ec99e478024cb41e4d6d"
+            }
+          },
+          "manifest_ref": {
+            "content": "{\n  \"schema_version\": 1,\n  \"case_id\": \"6814-reported-annual-per-share-basis-monitor\",\n  \"company_id\": \"jp:6814\",\n  \"issue_id\": \"6814-annual-EPS-BPS-and-common-share-equity-basis\",\n  \"recorded_at\": \"2026-10-16T10:34:13.487983+00:00\",\n  \"case_ref\": {\n    \"path\": \"research/ir-case-studies-2026-10-15/6814/native-case-setup-2026-10-16/prepare-only/case-context.json\",\n    \"sha256\": \"7df4eef88fc898d1e1438b006ff0c6ce76f739d2ffabfedec5cc5e70a4b1a3cd\"\n  },\n  \"sources\": [\n    {\n      \"id\": \"issuer-annual-original\",\n      \"source_id\": \"case-public:ecfb7db1a1c040c9fecf5f30b3a8d7cd4f6142e3d6e80c94a6cc01c3c64fb039\",\n      \"source_native_snapshot_sha256\": \"5be2d964ae18bf456a140c4342272e9cfa6bc0945bdd3d52fd0fc779d8b4ce16\",\n      \"source_content_sha256\": \"03488a192aec97a28df21366598f04c2dee618c7488842c57bb503d0643a8bb5\",\n      \"native_hash_domain\": \"models.json_text(source), distinctfromnormalizercompact/raw/content SHA\",\n      \"source_ref\": {\n        \"path\": \"research/ir-case-studies-2026-10-15/6814/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json\",\n        \"sha256\": \"12d8f01408735bb4db3f119bb2975e4835d142c354696ecf78a821b988de9f6f\",\n        \"json_pointer\": \"/sources/0\"\n      },\n      \"retrieved_at\": \"2026-10-16T10:27:44.002345+00:00\",\n      \"published_at\": null,\n      \"actual_DB_first_save\": null,\n      \"actual_DB_checked\": false,\n      \"root_acceptance_ref\": null,\n      \"financial_inputs_verified\": false\n    },\n    {\n      \"id\": \"issuer-derived-twofacts\",\n      \"source_id\": \"disclosed-facts:d05b7a50d0af1bb576db77f7114fd326a7739b9a16c0d1cc751a16154c807361\",\n      \"source_native_snapshot_sha256\": \"b5e514eab19ed28da0711cc6263f76b9d5d76b64e0d18b338de18c11206f47f2\",\n      \"source_content_sha256\": \"fe49d69e24b957ae020b5368ce065e94eef6f3c9072c5da3683b0b614ac67517\",\n      \"native_hash_domain\": \"models.json_text(source), distinctfromnormalizercompact/raw/content SHA\",\n      \"source_ref\": {\n        \"path\": \"research/ir-case-studies-2026-10-15/6814/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json\",\n        \"sha256\": \"12d8f01408735bb4db3f119bb2975e4835d142c354696ecf78a821b988de9f6f\",\n        \"json_pointer\": \"/sources/1\"\n      },\n      \"retrieved_at\": \"2026-10-16T10:32:44.891274+00:00\",\n      \"published_at\": null,\n      \"actual_DB_first_save\": null,\n      \"actual_DB_checked\": false,\n      \"root_acceptance_ref\": null,\n      \"financial_inputs_verified\": false\n    }\n  ],\n  \"bootstrap_reviews\": [],\n  \"method_refs\": [\n    {\n      \"id\": \"maintainer-formula-positiveguard\",\n      \"path\": \"research/ir-transparent-metric-formula-review-2026-10-15/upstream-INDICATORS.md\",\n      \"sha256\": \"fb82b2d47596026ea75fa561169062c52622dcb153caffe37af5491111ad084f\",\n      \"fixed_commit\": \"00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7\",\n      \"quote\": \"EPS  = net_income / shares_outstanding            (weighted average)\\nBVPS = total_equity / shares_outstanding_end      (period-end count, average as fallback)\\ngraham_number = √( 22.5 · EPS · BVPS )        only when EPS > 0 AND BVPS > 0, else NaN\",\n      \"character_start\": 12966,\n      \"character_end\": 13211,\n      \"byte_start\": 13359,\n      \"byte_end\": 13608,\n      \"section\": \"5 Grahamnumber and latestfiscalperiod caveat\",\n      \"Graham_original_full_rules_verified\": false\n    },\n    {\n      \"id\": \"project-saved-input-mapping\",\n      \"path\": \"research/ir-case-studies-2026-10-15/1975/graham-number-input-spec-review-2026-10-16/specification.json\",\n      \"sha256\": \"6b11349f628984ffc575f6a08d211d36adaf27cedfe76d58d69d7b2835b343e4\",\n      \"scope\": \"Savedprojectadaptationofauthorinputfields; notJapanesefinancialadoption\"\n    }\n  ],\n  \"existing_issuer_quote_refs\": {\n    \"original\": {\n      \"path\": \"research/ir-case-studies-2026-10-15/6814/annual-accounting-input-discovery-2026-10-16/source-quotes.json\",\n      \"sha256\": \"93b10d6ae75168b25edb14bbc2b5d4f43f9be08974e313eb332be0038f901789\"\n    },\n    \"saved-later-update-locators\": {\n      \"path\": \"research/ir-case-studies-2026-10-15/6814/annual-accounting-input-discovery-2026-10-16/link-provenance.json\",\n      \"sha256\": \"64c71737d7eb24af644a9f9f9a4a409df33fc76e95eb007adc128d7cc24007c8\"\n    }\n  },\n  \"normalizer_refs\": {\n    \"request\": {\n      \"path\": \"research/ir-case-studies-2026-10-15/6814/annual-per-share-disclosed-facts-2026-10-16/normalization-input.json\",\n      \"sha256\": \"ba98f74dd6360c58d410d0dc5980abe36e9b0459678fa0f8a439256fa0009600\"\n    },\n    \"bundle\": {\n      \"path\": \"research/ir-case-studies-2026-10-15/6814/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json\",\n      \"sha256\": \"12d8f01408735bb4db3f119bb2975e4835d142c354696ecf78a821b988de9f6f\"\n    },\n    \"fixed_core_and_now\": {\n      \"path\": \"research/ir-case-studies-2026-10-15/6814/annual-per-share-disclosed-facts-2026-10-16/input-pins.json\",\n      \"sha256\": \"33e5a86b2fc1ffb7eae57934ded69c4952f473a4a101a198c6fdadeee8b9f7f7\"\n    },\n    \"validation\": {\n      \"path\": \"research/ir-case-studies-2026-10-15/6814/annual-per-share-disclosed-facts-2026-10-16/validation.json\",\n      \"sha256\": \"8a3366f88d8aeb8f3c5e681e08881fabfd6fbc184ea9dff8a7300dc20cfb40cd\"\n    },\n    \"reproduce\": {\n      \"path\": \"research/ir-case-studies-2026-10-15/6814/annual-per-share-disclosed-facts-2026-10-16/reproduce.py\",\n      \"sha256\": \"148ffbcdbcd82adabd7c49518980b5aeede85c32981f3a52f91da5dc70f4884a\"\n    }\n  },\n  \"future_registration\": {\n    \"expected_version_if_first_registration\": 0,\n    \"actual_native_version\": null,\n    \"root_only_actual_writer\": true,\n    \"copy_preflight_not_executed\": true,\n    \"management_review_in_preparation\": null,\n    \"firstsaved_and_classification_to_confirm_after_actual_ingest\": true,\n    \"future_first_review_source_ids\": [\n      \"case-public:ecfb7db1a1c040c9fecf5f30b3a8d7cd4f6142e3d6e80c94a6cc01c3c64fb039\",\n      \"disclosed-facts:d05b7a50d0af1bb576db77f7114fd326a7739b9a16c0d1cc751a16154c807361\"\n    ],\n    \"registered_successfully\": false\n  },\n  \"production_code_SHA_frozen\": false,\n  \"operations\": {\n    \"GET\": 0,\n    \"DB_Store_access\": 0,\n    \"shared_old_docs_index_edits\": 0,\n    \"calculation_financialadoption_IR\": 0\n  }\n}\n",
+            "reference": {
+              "path": "research/ir-case-studies-2026-10-15/6814/native-case-setup-2026-10-16/prepare-only/manifest.json",
+              "sha256": "d40e446db18d92f0ac31961ba0ccae998ddae61c998df6a2bb407db00d7bfaba"
+            }
+          }
+        },
+        "issue_id": "6814-annual-EPS-BPS-and-common-share-equity-basis",
+        "last_review_at": "2026-10-16T10:49:02.253328+00:00",
+        "last_review_id": null,
+        "management_review": {
+          "basis_quote": "2026-10-16の研究case登録に対応し、次回の内部研究管理日は2027-01-16（Asia/Tokyo）とする。新しい公表資料を実保存した場合は前倒しで点検する。",
+          "basis_ref": {
+            "path": "research/ir-case-studies-2026-10-15/6814/native-case-setup-2026-10-16/actual-inputs/management-basis.json",
+            "sha256": "ca6a4bac24fb2f93fd813df9e5a29bed04cbb62b5d64ec99e478024cb41e4d6d"
+          },
+          "date": "2027-01-16",
+          "timezone": "Asia/Tokyo"
+        },
+        "manifest_ref": {
+          "path": "research/ir-case-studies-2026-10-15/6814/native-case-setup-2026-10-16/prepare-only/manifest.json",
+          "sha256": "d40e446db18d92f0ac31961ba0ccae998ddae61c998df6a2bb407db00d7bfaba"
+        },
+        "recorded_at": "2026-10-16T10:49:01.927481+00:00",
+        "research_root": "/workspace/ir-agent",
+        "reviewed_sources": {},
+        "synthetic": false
+      },
+      "first_saved_at": "2026-10-16T10:49:02.253328+00:00",
+      "added": true,
+      "financial_inputs_verified": false
+    }
+  },
+  "copy_queue": {
+    "kind": "qualitative_review",
+    "as_of": "2026-10-16T10:49:02.254894+00:00",
+    "selected": [
+      {
+        "case_id": "1518-author-condition-monitor",
+        "job_id": "qualitative-2107002940e14de8f08478ee",
+        "status": "pending"
+      },
+      {
+        "case_id": "6200-reported-annual-per-share-basis-monitor",
+        "job_id": "qualitative-e3cbf6a36191b71aea503984",
+        "status": "pending"
+      },
+      {
+        "case_id": "6814-reported-annual-per-share-basis-monitor",
+        "job_id": "qualitative-07808b353071e6acc8b0a853",
+        "status": "pending"
+      }
+    ],
+    "skipped": [],
+    "jobs_created": 3,
+    "deferred_count": 0,
+    "financial_inputs_verified": false
+  },
+  "case_ids": [
+    "1518-author-condition-monitor",
+    "6200-reported-annual-per-share-basis-monitor",
+    "6814-reported-annual-per-share-basis-monitor"
+  ],
+  "main_DBwrites": 0
+}

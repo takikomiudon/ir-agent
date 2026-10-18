@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T13:56:48.305014+00:00",
+  "company_id": "jp:141A",
+  "status": "bounded_independent_capture_and_meaning_recheck_pass",
+  "findings": [],
+  "scope": "Saved files only; two captured HTTP response entity bodies and pre-existing route evidence. No Store instance, database, network or JS/API execution.",
+  "source_id": "case-public:86c383d0321faa718308c7224a9c9229e7eb4138452c307a59253407c1decff9",
+  "source_snapshot_json_text_sha256": "8b196213df90784b23559f7888665582344c8891e84162eec29ec5e66708a404",
+  "source_contract_and_common_id_reproduced": true,
+  "source_snapshot_unchanged_by_validation": true,
+  "captures": [
+    {
+      "sequence": 1,
+      "url": "https://trial-holdings.inc/robots.txt",
+      "http_status": 404,
+      "raw_sha256": "c3e97c60833213caac9e97d97a2187a8bc4a0371b597829000366a8a75e4cf3d",
+      "raw_bytes": 388102,
+      "text_sha256": "78e8b074a6033c4e060879869a5d4faad79be082199d26d61d8178f93eff6504",
+      "html_reextraction_matched": true,
+      "actual_anchors_reproduced": 115,
+      "individual_capture_equal": true,
+      "complete_at": "2026-10-15T13:51:13.999387+00:00",
+      "retrieved_equals_complete": true,
+      "configured_and_prepared_UA_equal": true,
+      "response_bytes_semantics": "requests response entity bytes; possible Content-Encoding decoding; not wire capture"
+    },
+    {
+      "sequence": 2,
+      "url": "https://trial-holdings.inc/ir/library/financial-announcement/",
+      "http_status": 200,
+      "raw_sha256": "08c169f03079f6d172a52b3ecb5fc636f1767fcc3c2fc54055e05c77200d4739",
+      "raw_bytes": 413661,
+      "text_sha256": "ff104add3ef36195bf40236a5e3b9b49c7f8fcec6f47b1572874c2b22180c010",
+      "html_reextraction_matched": true,
+      "actual_anchors_reproduced": 169,
+      "individual_capture_equal": true,
+      "complete_at": "2026-10-15T13:51:18.683333+00:00",
+      "retrieved_equals_complete": true,
+      "configured_and_prepared_UA_equal": true,
+      "response_bytes_semantics": "requests response entity bytes; possible Content-Encoding decoding; not wire capture"
+    }
+  ],
+  "budget": {
+    "maximum_GETs": 3,
+    "captured_GETs": 2,
+    "unused_GETs": 1,
+    "new_review_GETs": 0,
+    "distinct_hosts": [
+      "trial-holdings.inc"
+    ],
+    "retries_redirects_JS_API_other_host_GETs": 0
+  },
+  "static_representation": {
+    "anchor_count": 169,
+    "PDF_href_count": 0,
+    "NEXT_DATA_props_pageProps": {},
+    "page_specific_client_chunk_observed_but_not_fetched": true,
+    "FY2026_June_label_not_in_extracted_index_text": true,
+    "target_financial_body_count": 0,
+    "target_business_QA_body_count": 0
+  },
+  "access_boundary": {
+    "central_holds_path": "research/ir-source-access-holds-2026-10-15/holds-v3.json",
+    "central_holds_sha256": "ec1e9f85d378571c3d0f99eca73ec8e397ea8dd7b155aa4be80c2100d2294551",
+    "held_exact_hosts": [
+      "contents.xj-storage.jp",
+      "sharedresearch.jp",
+      "ssl4.eir-parts.net",
+      "web.fisco.jp",
+      "www.investors.com",
+      "www.toyo.co.jp",
+      "www.xj-storage.jp"
+    ],
+    "requested_host_matches_no_held_host": true,
+    "robots_response_status": 404,
+    "robots_response_kind": "HTML 404 page, not established robots directives or explicit permission",
+    "no_request_to_any_known_held_host_in_capture": true,
+    "limit": "This checks stored captures and exact-host correspondence, not independent proof of all network activity or wire headers; it does not retroactively certify all previous source collection."
+  },
+  "meaning_review": [
+    {
+      "topic": "route and publication",
+      "conclusion": "Saved FAQ actual href and saved IR-top label point to this entrance. The 2026-08-12 FY2026/6 Q4 meeting label does not establish target body content, meeting occurrence, current latest status, or source publication time.",
+      "evidence": {
+        "FAQ_JSONpath": "$.links[82]",
+        "top_JSONpath": "$.links[74]",
+        "top_label": "2026年08月12日 2026年6月期 第4四半期 決算説明会"
+      }
+    },
+    {
+      "topic": "static shell versus disclosure absence",
+      "conclusion": "The exact static HTML has 169 anchors, no PDF href and empty pageProps. No financial body or business Q&A was received on this limited route. This does not establish that no disclosure exists elsewhere or that the issuer has not disclosed the topics."
+    },
+    {
+      "topic": "company and author claims",
+      "conclusion": "index_only/financial_content:false is appropriate. The index cannot supply company results/guidance, independent author forecasts, period/unit/accounting definitions, or outcomes of March author conditions. No EPS, model input, prediction, valuation or IR question follows."
+    },
+    {
+      "topic": "timestamps and bytes",
+      "conclusion": "Source retrieved_at equals the second response completion, published_at remains null. Last-Modified is not treated as publication. Raw count and SHA concern saved Requests response entity bytes after potential gzip decoding, not wire bytes or Content-Length identity."
+    },
+    {
+      "topic": "held metadata",
+      "conclusion": "watch/held:false in the unimported company bundle is compatibility metadata. The new explicit declaration boundary is not satisfied by validate_company or ingest; this review did not instantiate Store or create any declaration."
+    },
+    {
+      "topic": "validation meaning",
+      "conclusion": "validate_source, exact body reconstruction, common stable ID and json_text snapshot SHA match. These are schema/byte consistency checks; generic verifier compatibility remains unknown and neither financial meaning nor model adoption is certified."
+    }
+  ],
+  "quote_checks": [
+    {
+      "id": "static-index-heading-without-body",
+      "file": "research/ir-case-studies-2026-10-15/141A/initial-public-followup/02.txt",
+      "character_start": 753,
+      "character_end_exclusive": 804,
+      "quote": "Financial Results Related Materials\n決算関連資料\nIRサイトマップ",
+      "exact": true
+    },
+    {
+      "id": "unrequested-page-chunk",
+      "file": "research/ir-case-studies-2026-10-15/141A/initial-public-followup/raw/08c169f03079f6d172a52b3ecb5fc636f1767fcc3c2fc54055e05c77200d4739",
+      "character_start": 2037,
+      "character_end_exclusive": 2150,
+      "quote": "<script src=\"/_next/static/chunks/pages/ir/library/financial-announcement-55207d75136b1b50.js\" defer=\"\"></script>",
+      "exact": true
+    },
+    {
+      "id": "empty-static-page-props",
+      "file": "research/ir-case-studies-2026-10-15/141A/initial-public-followup/raw/08c169f03079f6d172a52b3ecb5fc636f1767fcc3c2fc54055e05c77200d4739",
+      "character_start": 410111,
+      "character_end_exclusive": 410359,
+      "quote": "<script id=\"__NEXT_DATA__\" type=\"application/json\">{\"props\":{\"pageProps\":{}},\"page\":\"/ir/library/financial-announcement\",\"query\":{},\"buildId\":\"P6jMREI-xe8vVGK6iT0dv\",\"nextExport\":true,\"autoExport\":true,\"isFallback\":false,\"scriptLoader\":[]}</script>",
+      "exact": true
+    }
+  ],
+  "old_files_unchanged": {
+    "initial_public_followup_files": {
+      "research/ir-case-studies-2026-10-15/141A/initial-public-followup/01.json": "31d48717dda094f753a729baf08e080ae950d7317fffc03a5270d6f6844586ea",
+      "research/ir-case-studies-2026-10-15/141A/initial-public-followup/01.txt": "78e8b074a6033c4e060879869a5d4faad79be082199d26d61d8178f93eff6504",
+      "research/ir-case-studies-2026-10-15/141A/initial-public-followup/02.json": "30936a4753b7f4f5dd0272fa86d96dd67868105c281b276777fe8ebf3b7f2dd8",
+      "research/ir-case-studies-2026-10-15/141A/initial-public-followup/02.txt": "ff104add3ef36195bf40236a5e3b9b49c7f8fcec6f47b1572874c2b22180c010",
+      "research/ir-case-studies-2026-10-15/141A/initial-public-followup/README.md": "8b95eb25a162cb1e4418011ab6e6bf3836a54724e43985bf2264ca1798cd240d",
+      "research/ir-case-studies-2026-10-15/141A/initial-public-followup/capture.json": "14dd21a1af8eed86087e507c0a673af28a843578381cebea9c9e5e2598975c16",
+      "research/ir-case-studies-2026-10-15/141A/initial-public-followup/quotes.json": "ffe93dd0c4045c4262ac6c45431b34575b83fddfdb7a9e1fe5222a665028c7a0",
+      "research/ir-case-studies-2026-10-15/141A/initial-public-followup/raw/08c169f03079f6d172a52b3ecb5fc636f1767fcc3c2fc54055e05c77200d4739": "08c169f03079f6d172a52b3ecb5fc636f1767fcc3c2fc54055e05c77200d4739",
+      "research/ir-case-studies-2026-10-15/141A/initial-public-followup/raw/c3e97c60833213caac9e97d97a2187a8bc4a0371b597829000366a8a75e4cf3d": "c3e97c60833213caac9e97d97a2187a8bc4a0371b597829000366a8a75e4cf3d",
+      "research/ir-case-studies-2026-10-15/141A/initial-public-followup/review.json": "93fcf327b3d183bde633343c562b2cfb1b1b3de5401f815b44ac283d3e83728c",
+      "research/ir-case-studies-2026-10-15/141A/initial-public-followup/source-bundle.json": "5547ffa986f79121787167644f50ce2be16cb4c54a80907eeb4bc9eb24c78915",
+      "research/ir-case-studies-2026-10-15/141A/initial-public-followup/validation.json": "7ae1a02fb9c227d834e5af521338dd3cdc4e780f80996f6d40edc388536b847c"
+    },
+    "prior_saved_inputs": {
+      "research/ir-contacts-universe-2026-10-11/records/141A.json": "7e9f988ad0d88238133adafca906a1b7d82ad2f1603556a6db5116931148fb88",
+      "research/ir-contacts-universe-2026-10-11/evidence/141A/01.json": "2df7991d8ea7e3122a899b454523cc7c25fb0c6de21b42b41dca8ce183131c8e",
+      "research/ir-contacts-universe-2026-10-11/evidence/141A/02.json": "936cb519e81a22b3c65a7382616775513d59193fa7805035c9abc5eb8b57fc65",
+      "research/ir-contacts-universe-2026-10-11/evidence/141A/03.json": "7af403dcb4f946951819c7d6d603264afec3be2cf52bdcb32a517fef46efdfae",
+      "research/ir-contacts-universe-2026-10-11/evidence/141A/04.json": "32e40a20dc450483640c89a617c63e1d812e4a4fff9a41bada3fceb5bf3f6c02",
+      "research/ir-source-access-holds-2026-10-15/holds-v3.json": "ec1e9f85d378571c3d0f99eca73ec8e397ea8dd7b155aa4be80c2100d2294551"
+    },
+    "all_matched_at_end": true
+  },
+  "execution": {
+    "GETs": 0,
+    "API_calls": 0,
+    "Store_instances": 0,
+    "actual_DB_accesses": 0,
+    "code_or_old_artifact_edits": 0,
+    "financial_inputs_or_rules_created": 0,
+    "formal_questions_or_sends": 0
+  },
+  "limits": [
+    "Only the static representations and saved route labels were independently read; no browser rendering or exhaustive site search.",
+    "Collector reference was read as source only; no collector main or GET helper executed.",
+    "Capture facts are internally reproducible saved evidence, not independent packet-level authentication.",
+    "No company financial table or author original was replaced with the index body."
+  ]
+}

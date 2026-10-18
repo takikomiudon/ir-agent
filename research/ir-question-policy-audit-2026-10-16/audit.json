@@ -1,0 +1,683 @@
+{
+  "artifact_type": "source_and_implementation_audit_not_new_investment_policy",
+  "recorded_at": "2026-10-16T03:42:38.639476+00:00",
+  "status": "completed_waiting_for_root_review",
+  "fixed_anthropic_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+  "criteria": [
+    {
+      "id": "P1-public-known-answer",
+      "requirement": "公開Q&Aで既知となった回答を再質問から除く",
+      "status": "partly_implemented; public-first manual review plus a status gate",
+      "author_evidence": [
+        "author-dd-known",
+        "author-dd-priority",
+        "author-jira-faq"
+      ],
+      "project_adaptation": "既公表Q&Aとの照合/既答の質問除外・public_answer_statusの機械gateはproject設計。著者が個人メールIRの成功率や専用schemaを示したものではない。",
+      "implemented": [
+        {
+          "ref": {
+            "path": "src/ir_agent/models.py",
+            "symbol": "validate_question",
+            "line_start": 179,
+            "line_end": 212,
+            "file_sha256": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c"
+          },
+          "behavior": "非空evidence_idsと質問/分岐を保持。通常証拠参照自体は存在する。"
+        },
+        {
+          "ref": {
+            "path": "src/ir_agent/harness.py",
+            "symbol": "add_question",
+            "line_start": 391,
+            "line_end": 432,
+            "file_sha256": "a1adc6dd29df103497498b159cacd555dc230d48f873051429ae55e979e6fae8"
+          },
+          "behavior": "evidence sourceの同社/時点利用可能性を確認し、質問を不変保存。contract経路はthesisの根拠との対応もplanで点検。"
+        },
+        {
+          "ref": {
+            "path": "src/ir_agent/decision.py",
+            "symbol": "evaluate_ir_plan",
+            "line_start": 376,
+            "line_end": 427,
+            "file_sha256": "a37bbc586c0aa7c00a924ecc54db7e7132417fa89e350915b9fe2215646b064b"
+          },
+          "behavior": "public_answer_statusがliteral not_found以外ならpublic_information_reviewをincompleteへ追加。"
+        },
+        {
+          "ref": {
+            "path": "src/ir_agent/decision_lifecycle.py",
+            "symbol": "validate_send",
+            "line_start": 258,
+            "line_end": 269,
+            "file_sha256": "2fc7753f8c09a0c055a7340ffc8d53954e6f175c144231c1f306aa62cc110731"
+          },
+          "behavior": "contract付きはplanがdecision_distinguishingでなければ既送信記録を拒否。"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/test_decision.py",
+          "symbol": "test_later_policy_wrong_version_and_unreviewed_public_information",
+          "line_start": 273,
+          "line_end": 282,
+          "file_sha256": "8d3389fdd6354a3624effd24fd1958a0f4c515461010886797763a511212904d",
+          "verification": "existing test body read; not executed in this audit"
+        }
+      ],
+      "residual": "通常evidence_ids/利用時点の参照はあるが、どのQ&Aのどの範囲をいつ/誰が読み、何が未解決かを専用にscope/time/hash/quoteで固定していない。not_foundは意味レビューの申告であって機械検証した不存在証明ではない。",
+      "gap_ids": [
+        "G1"
+      ]
+    },
+    {
+      "id": "P2-question-decision-connection",
+      "requirement": "投資仮説/反証・評価入力へ接続しない質問は送らない",
+      "status": "implemented_in_opt_in_contract_path; legacy recording path separate",
+      "author_evidence": [
+        "author-falsifiable",
+        "author-operational-scenario",
+        "author-narrative-numbers",
+        "author-new-information",
+        "author-evsi"
+      ],
+      "project_adaptation": "固定回答分岐/parameter_paths/decision_distinguishing/send-record gateはproject設計。EVSIは別計算で、ir-planのaction差を金銭価値や送信許可と呼ばない。",
+      "implemented": [
+        {
+          "ref": {
+            "path": "src/ir_agent/decision.py",
+            "symbol": "evaluate_ir_plan",
+            "line_start": 376,
+            "line_end": 427,
+            "file_sha256": "a37bbc586c0aa7c00a924ecc54db7e7132417fa89e350915b9fe2215646b064b"
+          },
+          "behavior": "質問前の同一thesis/policy・証拠を点検。許可されたvaluationpath以外の変更をunmapped_parameter_changeで保留。thesis_statusによる反証も別に評価し、単に非空parameter_pathsを要求してはいない。"
+        },
+        {
+          "ref": {
+            "path": "src/ir_agent/decision_lifecycle.py",
+            "symbol": "freeze",
+            "line_start": 183,
+            "line_end": 218,
+            "file_sha256": "2fc7753f8c09a0c055a7340ffc8d53954e6f175c144231c1f306aa62cc110731"
+          },
+          "behavior": "登録済policy、価格、保有状態と事前planを不変questionへ固定。"
+        },
+        {
+          "ref": {
+            "path": "src/ir_agent/decision_lifecycle.py",
+            "symbol": "validate_send",
+            "line_start": 258,
+            "line_end": 269,
+            "file_sha256": "2fc7753f8c09a0c055a7340ffc8d53954e6f175c144231c1f306aa62cc110731"
+          },
+          "behavior": "既送信の記録時点でも再planし、no_decision_change/needs_reviewを拒否。外部送信機能ではない。"
+        },
+        {
+          "ref": {
+            "path": "src/ir_agent/decision_lifecycle.py",
+            "symbol": "validate_branch",
+            "line_start": 271,
+            "line_end": 282,
+            "file_sha256": "2fc7753f8c09a0c055a7340ffc8d53954e6f175c144231c1f306aa62cc110731"
+          },
+          "behavior": "返信時も許可pathと事前thesis_statusの整合を点検。"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/test_decision.py",
+          "symbol": "test_unmapped_multiple_change_is_held_for_review",
+          "line_start": 255,
+          "line_end": 260,
+          "file_sha256": "8d3389fdd6354a3624effd24fd1958a0f4c515461010886797763a511212904d",
+          "verification": "existing test body read; not executed in this audit"
+        },
+        {
+          "path": "tests/test_decision.py",
+          "symbol": "test_favorable_branch_does_not_force_buy_when_price_has_risen",
+          "line_start": 248,
+          "line_end": 253,
+          "file_sha256": "8d3389fdd6354a3624effd24fd1958a0f4c515461010886797763a511212904d",
+          "verification": "existing test body read; not executed in this audit"
+        },
+        {
+          "path": "tests/test_decision_lifecycle.py",
+          "symbol": "test_changed_branch_inputs_are_not_applied_even_if_draft_was_saved",
+          "line_start": 134,
+          "line_end": 139,
+          "file_sha256": "70400c7a6e90dab2dc229798b8916d21a93762f9cb9087e3c9402630df3fbd99",
+          "verification": "existing test body read; not executed in this audit"
+        },
+        {
+          "path": "tests/test_decision_lifecycle.py",
+          "symbol": "test_question_freezes_registered_policy_and_retries_do_not_overwrite",
+          "line_start": 73,
+          "line_end": 82,
+          "file_sha256": "70400c7a6e90dab2dc229798b8916d21a93762f9cb9087e3c9402630df3fbd99",
+          "verification": "existing test body read; not executed in this audit"
+        }
+      ],
+      "residual": "新規質問もdecision_contract任意の旧互換経路が存在。no-contractでも既送信記録はできるが、返信のactionはmissing_decision_contractでunresolvedのまま。全IR経路が同一のpreflight済みとは言えない。",
+      "gap_ids": [
+        "G2"
+      ]
+    },
+    {
+      "id": "P3-noresponse-ambiguity",
+      "requirement": "無回答/曖昧回答を業績悪化や売り判断に直結させない",
+      "status": "implemented_with_explicit_holds; semantic branch assignment remains reviewer responsibility",
+      "author_evidence": [
+        "author-disconfirming",
+        "author-evsi"
+      ],
+      "project_adaptation": "無回答・拒否の状態保存、曖昧branch禁止更新、3情報分類はproject契約。原著がIR無回答を必ず無情報/悪材料と示したわけではない。",
+      "implemented": [
+        {
+          "ref": {
+            "path": "src/ir_agent/models.py",
+            "symbol": "validate_question",
+            "line_start": 179,
+            "line_end": 212,
+            "file_sha256": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c"
+          },
+          "behavior": "unresolved branchを必須にし、そのvaluation指定を拒否。"
+        },
+        {
+          "ref": {
+            "path": "src/ir_agent/decision.py",
+            "symbol": "evaluate_ir_plan",
+            "line_start": 376,
+            "line_end": 427,
+            "file_sha256": "a37bbc586c0aa7c00a924ecc54db7e7132417fa89e350915b9fe2215646b064b"
+          },
+          "behavior": "unresolvedはambiguous_or_no_response、parameter_changes=[]でbaselineを保持。"
+        },
+        {
+          "ref": {
+            "path": "src/ir_agent/harness.py",
+            "symbol": "close_question",
+            "line_start": 454,
+            "line_end": 471,
+            "file_sha256": "a1adc6dd29df103497498b159cacd555dc230d48f873051429ae55e979e6fae8"
+          },
+          "behavior": "no_response/declinedは有効sent_atの送信済みopenquestionに限定。質問状態だけ変更しthesisを更新しない。"
+        },
+        {
+          "ref": {
+            "path": "src/ir_agent/harness.py",
+            "symbol": "evaluate_reply",
+            "line_start": 497,
+            "line_end": 598,
+            "file_sha256": "a1adc6dd29df103497498b159cacd555dc230d48f873051429ae55e979e6fae8"
+          },
+          "behavior": "初期action unresolved/appliedfalse。非publicはheld、unresolved branchは非適用、最新依存情報のholdも保持。basis_quoteの意味と選択branchの正しさまでは自動判定しない。"
+        },
+        {
+          "ref": {
+            "path": "src/ir_agent/information_value.py",
+            "symbol": "_calculate",
+            "line_start": 85,
+            "line_end": 184,
+            "file_sha256": "5c247ec174fe267c6079618264d757361ceebaaa44ce38bf17593260a7c6ce6a"
+          },
+          "behavior": "尤度を供給された不完全信号として扱い、未設定ならneeds_calibration。無回答を自動悪化へ写さない。"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/test_workflow.py",
+          "symbol": "test_one_open_question_per_topic_and_expiry_preserves_thesis",
+          "line_start": 420,
+          "line_end": 431,
+          "file_sha256": "aa709a454ce1b878a097044680e58646cd30215039476f5fab639350d09d0711",
+          "verification": "existing test body read; not executed in this audit"
+        },
+        {
+          "path": "tests/test_workflow.py",
+          "symbol": "test_question_closure_status_reason_matrix",
+          "line_start": 433,
+          "line_end": 467,
+          "file_sha256": "aa709a454ce1b878a097044680e58646cd30215039476f5fab639350d09d0711",
+          "verification": "existing test body read; not executed in this audit"
+        },
+        {
+          "path": "tests/test_workflow.py",
+          "symbol": "test_public_but_unresolved_branch_preserves_valuation",
+          "line_start": 577,
+          "line_end": 585,
+          "file_sha256": "aa709a454ce1b878a097044680e58646cd30215039476f5fab639350d09d0711",
+          "verification": "existing test body read; not executed in this audit"
+        },
+        {
+          "path": "tests/test_workflow.py",
+          "symbol": "test_ambiguous_and_potential_nonpublic_replies_are_held_without_application",
+          "line_start": 557,
+          "line_end": 575,
+          "file_sha256": "aa709a454ce1b878a097044680e58646cd30215039476f5fab639350d09d0711",
+          "verification": "existing test body read; not executed in this audit"
+        },
+        {
+          "path": "tests/test_dependency_information_gates.py",
+          "symbol": "test_ambiguous_branch_remains_unresolved_without_model_writes",
+          "line_start": 196,
+          "line_end": 202,
+          "file_sha256": "44910ea257fb8a07f5ee492659a90860a20b65edf601ed61a931784212816c33",
+          "verification": "existing test body read; not executed in this audit"
+        },
+        {
+          "path": "tests/test_information_value.py",
+          "symbol": "test_no_reply_is_an_explicit_signal_not_automatic_bad_news",
+          "line_start": 55,
+          "line_end": 61,
+          "file_sha256": "853610451762744756b9d132365abdd352bbb5abb482bdc035ad16875a3213ce",
+          "verification": "existing test body read; not executed in this audit"
+        }
+      ],
+      "residual": "語調や引用存在だけでは意味を認証できない。人によるbranch/publicness照合が必要という既知の境界であり、これを埋める新しい投資ルール/自動意味判定器は提案しない。",
+      "gap_ids": []
+    },
+    {
+      "id": "P4-unadopted-numerical-policy",
+      "requirement": "将来の数値方針未採用なら無理にbuy/sellへ進めない",
+      "status": "implemented_no_financial_defaults",
+      "author_evidence": [
+        "author-falsifiable",
+        "author-estimate-provenance",
+        "author-narrative-numbers"
+      ],
+      "project_adaptation": "policy6項目・source種別・保有/価格/公開性等の共通要件、actionenum/優先順位、未指定時保留はproject契約。著者の一律数値条件ではない。",
+      "implemented": [
+        {
+          "ref": {
+            "path": "src/ir_agent/decision.py",
+            "symbol": "validate_decision_policy",
+            "line_start": 22,
+            "line_end": 54,
+            "file_sha256": "a37bbc586c0aa7c00a924ecc54db7e7132417fa89e350915b9fe2215646b064b"
+          },
+          "behavior": "明示値にuser/external_policy/synthetic_exampleのreference/rationaleを要求し、未指定を既定の金融閾値で補わない。実在著者の適合/採用の意味は別review。"
+        },
+        {
+          "ref": {
+            "path": "src/ir_agent/decision.py",
+            "symbol": "_evaluate_decision",
+            "line_start": 137,
+            "line_end": 285,
+            "file_sha256": "a37bbc586c0aa7c00a924ecc54db7e7132417fa89e350915b9fe2215646b064b"
+          },
+          "behavior": "必要policyがNoneならpolicy_not_configuredでunresolved。未保有unweightedは期待値を捏造せずscenario_probabilities_not_configured。保有時の明示反証/目標は全別要件を満たせば確率なしで点検できる。"
+        },
+        {
+          "ref": {
+            "path": "src/ir_agent/harness.py",
+            "symbol": "evaluate_reply",
+            "line_start": 497,
+            "line_end": 598,
+            "file_sha256": "a1adc6dd29df103497498b159cacd555dc230d48f873051429ae55e979e6fae8"
+          },
+          "behavior": "旧互換経路でモデル更新があってもactionはunresolved、decision_status missing_decision_contract。"
+        },
+        {
+          "ref": {
+            "path": "src/ir_agent/qualitative_research.py",
+            "symbol": "complete",
+            "line_start": 414,
+            "line_end": 508,
+            "file_sha256": "2ca2058af8bbda868cbd24ad36408d14afcd075d35ac8a4140fc472997d675a5"
+          },
+          "behavior": "数値thesis前の著者条件reviewは別契約で、金融action/valuationを生成せずfinancial_inputs_verifiedfalse/meaning_review_verifiedfalse。"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/test_decision.py",
+          "symbol": "test_missing_policy_does_not_supply_financial_defaults",
+          "line_start": 76,
+          "line_end": 81,
+          "file_sha256": "8d3389fdd6354a3624effd24fd1958a0f4c515461010886797763a511212904d",
+          "verification": "existing test body read; not executed in this audit"
+        },
+        {
+          "path": "tests/test_decision.py",
+          "symbol": "test_unsourced_or_nonfinite_limits_and_synthetic_live_use_are_rejected",
+          "line_start": 83,
+          "line_end": 91,
+          "file_sha256": "8d3389fdd6354a3624effd24fd1958a0f4c515461010886797763a511212904d",
+          "verification": "existing test body read; not executed in this audit"
+        },
+        {
+          "path": "tests/test_unweighted_decision.py",
+          "symbol": "test_unknown_expected_return_blocks_a_new_purchase_without_invented_weights",
+          "line_start": 25,
+          "line_end": 34,
+          "file_sha256": "1970736136b77b73478adc039ef83233575462957d08e65170c80c8689748664",
+          "verification": "existing test body read; not executed in this audit"
+        },
+        {
+          "path": "tests/test_unweighted_decision.py",
+          "symbol": "test_existing_position_target_and_scenario_risk_checks_need_no_probability",
+          "line_start": 36,
+          "line_end": 44,
+          "file_sha256": "1970736136b77b73478adc039ef83233575462957d08e65170c80c8689748664",
+          "verification": "existing test body read; not executed in this audit"
+        },
+        {
+          "path": "tests/test_workflow.py",
+          "symbol": "test_ir_reply_updates_frozen_branch_valuation_after_research_v2",
+          "line_start": 530,
+          "line_end": 555,
+          "file_sha256": "aa709a454ce1b878a097044680e58646cd30215039476f5fab639350d09d0711",
+          "verification": "existing test body read; not executed in this audit"
+        }
+      ],
+      "residual": "valuation必須の数値APIに不完全な入力を投げればvalidationerrorとなる場合もあり、全欠損をunresolvedで受理する契約ではない。定性研究は別経路で継続できる。",
+      "gap_ids": []
+    }
+  ],
+  "author_primary_quotes": [
+    {
+      "id": "author-dd-known",
+      "author": "Anthropic",
+      "path": "third_party/anthropic/skills/dd-meeting-prep/SKILL.md",
+      "file_sha256": "a74eecadece794106d515ce3d00e07b3857ed123e841e8962e26363d2413d94f",
+      "quote": "**What you already know**: Prior meetings, CIM, data room findings",
+      "character_start": 818,
+      "character_end": 884,
+      "UTF8_byte_start": 820,
+      "UTF8_byte_end": 886,
+      "line_start": 16,
+      "scope": "PE/DD context. Public-IR prior-Q&A exclusion is project adaptation, not literal author rule.",
+      "original_URL": "https://github.com/anthropics/financial-services-plugins/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/dd-meeting-prep/SKILL.md"
+    },
+    {
+      "id": "author-dd-priority",
+      "author": "Anthropic",
+      "path": "third_party/anthropic/skills/dd-meeting-prep/SKILL.md",
+      "file_sha256": "a74eecadece794106d515ce3d00e07b3857ed123e841e8962e26363d2413d94f",
+      "quote": "Organize questions by priority and topic. Structure depends on meeting type:",
+      "character_start": 967,
+      "character_end": 1043,
+      "UTF8_byte_start": 969,
+      "UTF8_byte_end": 1045,
+      "line_start": 21,
+      "scope": "Prioritized targeted diligence, not a numerical IR send threshold.",
+      "original_URL": "https://github.com/anthropics/financial-services-plugins/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/dd-meeting-prep/SKILL.md"
+    },
+    {
+      "id": "author-falsifiable",
+      "author": "Anthropic",
+      "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+      "file_sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+      "quote": "A thesis should be falsifiable — if nothing could disprove it, it's not a thesis",
+      "character_start": 2339,
+      "character_end": 2419,
+      "UTF8_byte_start": 2341,
+      "UTF8_byte_end": 2423,
+      "line_start": 63,
+      "scope": "Require meaningful thesis/risks, not an authored Japanese-IR branch classifier.",
+      "original_URL": "https://github.com/anthropics/financial-services-plugins/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md"
+    },
+    {
+      "id": "author-disconfirming",
+      "author": "Anthropic",
+      "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+      "file_sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+      "quote": "Track disconfirming evidence as rigorously as confirming evidence",
+      "character_start": 2422,
+      "character_end": 2487,
+      "UTF8_byte_start": 2426,
+      "UTF8_byte_end": 2491,
+      "line_start": 64,
+      "scope": "Balanced evidence, not treating nonresponse itself as disconfirming earnings evidence.",
+      "original_URL": "https://github.com/anthropics/financial-services-plugins/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/thesis-tracker/SKILL.md"
+    },
+    {
+      "id": "author-operational-scenario",
+      "author": "Anthropic",
+      "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+      "file_sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+      "quote": "What would need to happen operationally",
+      "character_start": 1643,
+      "character_end": 1682,
+      "UTF8_byte_start": 1645,
+      "UTF8_byte_end": 1684,
+      "line_start": 46,
+      "scope": "Operational conditions behind scenarios, not source-supplied probabilities or IR reliability.",
+      "original_URL": "https://github.com/anthropics/financial-services-plugins/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/earnings-preview/SKILL.md"
+    },
+    {
+      "id": "author-estimate-provenance",
+      "author": "Anthropic",
+      "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+      "file_sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+      "quote": "always note the source and date of estimates",
+      "character_start": 2411,
+      "character_end": 2455,
+      "UTF8_byte_start": 2423,
+      "UTF8_byte_end": 2467,
+      "line_start": 70,
+      "scope": "Keep estimate author/date, not universal buy/sell thresholds.",
+      "original_URL": "https://github.com/anthropics/financial-services-plugins/blob/574ed3624aebd0418c7e96cd101262f30210ab26/plugins/vertical-plugins/equity-research/skills/earnings-preview/SKILL.md"
+    },
+    {
+      "id": "author-narrative-numbers",
+      "author": "Aswath Damodaran",
+      "path": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt",
+      "file_sha256": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106",
+      "quote": "Tie your narrative to key numbers that you will be using in\n  your valuation.",
+      "character_start": 1899,
+      "character_end": 1976,
+      "UTF8_byte_start": 1908,
+      "UTF8_byte_end": 1985,
+      "line_start": 40,
+      "scope": "Saved Spring2025 valuation-project PDF p4, exact line break retained. Not an IR sending policy.",
+      "original_URL": "https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/eqprojspr25.pdf",
+      "physical_page": 4
+    },
+    {
+      "id": "author-new-information",
+      "author": "Aswath Damodaran",
+      "path": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt",
+      "file_sha256": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106",
+      "quote": "Before you make your recommendation, check whether\n anything that has happened during the period of your analysis\n has changed your narrative and your valuation.",
+      "character_start": 4079,
+      "character_end": 4240,
+      "UTF8_byte_start": 4109,
+      "UTF8_byte_end": 4270,
+      "line_start": 95,
+      "scope": "Saved PDF p8; reassess narrative and valuation, not guaranteed convergence or author-prescribed minimum return.",
+      "original_URL": "https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/eqprojspr25.pdf",
+      "physical_page": 8
+    },
+    {
+      "id": "author-evsi",
+      "author": "Baio / Heath / Manolopoulou",
+      "path": "research/ir-policy-adoption-2026-10-15/evidence/8e0380f1597a0cefb4cf5b79ec10f17311a5fcf8cada63bfaef89a1e97544ab6.raw",
+      "file_sha256": "8e0380f1597a0cefb4cf5b79ec10f17311a5fcf8cada63bfaef89a1e97544ab6",
+      "quote": "The EVSI measures the value of reducing uncertainty by running a study of a given design",
+      "character_start": 26583,
+      "character_end": 26671,
+      "UTF8_byte_start": 26599,
+      "UTF8_byte_end": 26687,
+      "line_start": 498,
+      "scope": "Author-hosted health-economic decision analysis. Finite IR signals/utility and explicit unknown nonresponse parameters are project adaptation.",
+      "original_URL": "https://gianluca.statistica.it/research/voi/"
+    },
+    {
+      "id": "author-jira-faq",
+      "author": "日本IR協議会",
+      "path": "research/ir-jira-dialogue-best-practices-2026-10-15/pages/physical-14.txt",
+      "file_sha256": "168900710422f0dee5f7ce5d012f379dc877447a001e0abe96100083143cdef1",
+      "quote": "対話の中でよく聞かれる質\n問への回答など、個人投資家等とも共有するほうがよいと判断した情報をわかりやすく開\n示すること",
+      "character_start": 241,
+      "character_end": 300,
+      "UTF8_byte_start": 679,
+      "UTF8_byte_end": 852,
+      "line_start": 8,
+      "scope": "2018issuer-facing best-practice guide physical/printedp14. Investor public-first comparison/exclusion is project adaptation; current guidance/law not re-researched."
+    }
+  ],
+  "gaps": [
+    {
+      "id": "G1",
+      "type": "evidence_binding_gap_not_missing_public_first_instructions",
+      "title": "公開情報レビュー専用の参照固定がない",
+      "evidence_refs": [
+        {
+          "path": "src/ir_agent/models.py",
+          "symbol": "validate_question",
+          "line_start": 179,
+          "line_end": 212,
+          "file_sha256": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c"
+        },
+        {
+          "path": "src/ir_agent/harness.py",
+          "symbol": "add_question",
+          "line_start": 391,
+          "line_end": 432,
+          "file_sha256": "a1adc6dd29df103497498b159cacd555dc230d48f873051429ae55e979e6fae8"
+        },
+        {
+          "path": "src/ir_agent/decision.py",
+          "symbol": "evaluate_ir_plan",
+          "line_start": 376,
+          "line_end": 427,
+          "file_sha256": "a37bbc586c0aa7c00a924ecc54db7e7132417fa89e350915b9fe2215646b064b"
+        }
+      ],
+      "facts": "evidence_idsは存在し、資料の同社/利用時点とthesis根拠への参照を点検する。だがnot_foundがどの公開Q&A/対象範囲/確認時刻/原文を根拠にするかは専用記録へ結び付かず、pureplanは文字列not_foundを受け付ける。",
+      "scope": "意味上の未回答をAIが保証できないこと自体をbugとはしない。後日の公開情報更新への再照合も、このfieldだけでは固定されない。",
+      "priority": "before_first_new_real_question_preparation; not an emergency blocking current file-only research",
+      "smallest_next_step": "既存source/quote/scope/時点の照合を再利用する小さい任意参照固定の設計をrootが検討。投資ルールや自動未回答認証を追加しない。",
+      "implement_now": false,
+      "reason": "本監査はreview待ち。現在の研究はnotreadyを維持でき、数値やsend権限を埋める必要はない。"
+    },
+    {
+      "id": "G2",
+      "type": "deliberate_legacy_compatibility_boundary_not_external_send_bug",
+      "title": "contractなし旧互換経路を新運用の準備完了と混同しうる",
+      "evidence_refs": [
+        {
+          "path": "src/ir_agent/harness.py",
+          "symbol": "add_question",
+          "line_start": 391,
+          "line_end": 432,
+          "file_sha256": "a1adc6dd29df103497498b159cacd555dc230d48f873051429ae55e979e6fae8"
+        },
+        {
+          "path": "src/ir_agent/harness.py",
+          "symbol": "mark_sent",
+          "line_start": 434,
+          "line_end": 452,
+          "file_sha256": "a1adc6dd29df103497498b159cacd555dc230d48f873051429ae55e979e6fae8"
+        },
+        {
+          "path": "src/ir_agent/harness.py",
+          "symbol": "evaluate_reply",
+          "line_start": 497,
+          "line_end": 598,
+          "file_sha256": "a1adc6dd29df103497498b159cacd555dc230d48f873051429ae55e979e6fae8"
+        },
+        {
+          "path": "src/ir_agent/decision_lifecycle.py",
+          "symbol": "add_review",
+          "line_start": 325,
+          "line_end": 354,
+          "file_sha256": "2fc7753f8c09a0c055a7340ffc8d53954e6f175c144231c1f306aa62cc110731"
+        }
+      ],
+      "facts": "contractは任意。mark_sentは外部で既送信の状態記録であり、旧経路ではvalue/publicreviewgateを呼ばない。返信のactionはunresolvedのままで、保存モデル更新を取引判断完了へ昇格しない。",
+      "priority": "operational distinction before real precommitted use",
+      "smallest_next_step": "既存旧recordの読取・既送信記録を一律禁止せず、新しい事前準備の入口と旧互換記録の区別を保つ。必要ならG1参照固定の説明に、この適用範囲を明記。",
+      "implement_now": false,
+      "reason": "互換仕様/外部履歴記録を本監査のため変更しない。実送信機能はなく、action側の保留も既存実装済み。"
+    }
+  ],
+  "new_implementation_required_in_this_task": false,
+  "primary_author_claim_limits": [
+    "No cited author defines all4Japanese email/form IR rules verbatim. Precommitted branch/path/gates/null/enum choices are project adaptations.",
+    "Anthropic gives no universal financial thresholds; scenario table examples are not adopted policy values.",
+    "Baio etal source is health-economic VOI; no observedJapaneseIR response rate, reliability or excess return is derived.",
+    "JIRA evidence is2018issuer-facing guidance, not a legal/currentness/individual-response guarantee.",
+    "Source labels and quote presence are structural evidence, not semantic truth certification."
+  ],
+  "pure_function_spot_checks": {
+    "performed": true,
+    "source_fixture": "tests/test_decision.py plan()/request(); synthetic_example thresholds from existing tests, not adopted",
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=tests .venv/bin/python - [synthetic pure API checks only]",
+    "not_found": {
+      "question_value": "decision_distinguishing",
+      "incomplete_reviews": []
+    },
+    "found": {
+      "question_value": "needs_review",
+      "incomplete_reviews": [
+        "public_information_review"
+      ]
+    },
+    "missing_public_status": {
+      "question_value": "needs_review",
+      "incomplete_reviews": [
+        "public_information_review"
+      ]
+    },
+    "not_found_has_ordinary_evidence_ids_but_no_dedicated_QA_review_binding": true,
+    "missing_policy": {
+      "status": "unresolved",
+      "proposed_action": "unresolved",
+      "reason_codes": [
+        "policy_not_configured"
+      ],
+      "missing_parameters": [
+        "minimum_upside_pct"
+      ]
+    },
+    "new_test_files_or_full_test_runs": 0,
+    "DB_Store_CLI_calls": 0
+  },
+  "read_scope": "Targeted listed source text/quoted lines, callable bodies and named existing test bodies; not full-repository semantic audit. Tests were read, not all rerun. Pure synthetic APIs only were executed. No live operational DB was queried.",
+  "input_file_sha256": {
+    "docs/decision-policy.md": "4f4b6474033c4f2d979991cd282b1600748c8c53b81488d073deb0c0d4acadca",
+    "docs/ir-question-preparation.md": "be39fd3d71b8b5428b63254bf509a559a76ce46299ddecebfc54cfac446fd987",
+    "docs/workflow.md": "0ac18f252b6da89b1f1df5ec2e93d2f1417eb337a75dfac914fa44a9363d704a",
+    "docs/model-routing-inputs.md": "a0e8b7356e955e90909796c03c905f4455324c0b995db3f735697370aa410d8e",
+    "src/ir_agent/decision.py": "a37bbc586c0aa7c00a924ecc54db7e7132417fa89e350915b9fe2215646b064b",
+    "src/ir_agent/decision_lifecycle.py": "2fc7753f8c09a0c055a7340ffc8d53954e6f175c144231c1f306aa62cc110731",
+    "src/ir_agent/models.py": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c",
+    "src/ir_agent/harness.py": "a1adc6dd29df103497498b159cacd555dc230d48f873051429ae55e979e6fae8",
+    "src/ir_agent/model_inputs.py": "23aa6ef4146a8bc1fb931f8df81a6914e1d345809f7617d0a37f913a25a6ffe2",
+    "src/ir_agent/cli.py": "149e43c4a0a645127f1180fca0567fcf29d06b4e0ea4dad96006e4820ddcc37f",
+    "src/ir_agent/information_value.py": "5c247ec174fe267c6079618264d757361ceebaaa44ce38bf17593260a7c6ce6a",
+    "src/ir_agent/qualitative_research.py": "2ca2058af8bbda868cbd24ad36408d14afcd075d35ac8a4140fc472997d675a5",
+    "tests/test_decision.py": "8d3389fdd6354a3624effd24fd1958a0f4c515461010886797763a511212904d",
+    "tests/test_decision_lifecycle.py": "70400c7a6e90dab2dc229798b8916d21a93762f9cb9087e3c9402630df3fbd99",
+    "tests/test_workflow.py": "aa709a454ce1b878a097044680e58646cd30215039476f5fab639350d09d0711",
+    "tests/test_dependency_information_gates.py": "44910ea257fb8a07f5ee492659a90860a20b65edf601ed61a931784212816c33",
+    "tests/test_unweighted_decision.py": "1970736136b77b73478adc039ef83233575462957d08e65170c80c8689748664",
+    "tests/test_information_value.py": "853610451762744756b9d132365abdd352bbb5abb482bdc035ad16875a3213ce",
+    "tests/test_stale_decision_workflow.py": "5fa7f2bd36212b60cf26ab9e90cc1eba81dd406a46419f5bd2cf75b54dad2768",
+    "third_party/anthropic/manifest.json": "e26191efdbd0129d708b6b9c29ba796824c82c33f6f1e300ba9064337b6cf219",
+    "third_party/anthropic/skills/dd-meeting-prep/SKILL.md": "a74eecadece794106d515ce3d00e07b3857ed123e841e8962e26363d2413d94f",
+    "third_party/anthropic/skills/thesis-tracker/SKILL.md": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+    "third_party/anthropic/skills/earnings-preview/SKILL.md": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+    "research/ir-policy-adoption-2026-10-15/README.md": "9320cf6b56952d9a2458a81256e46ddda681a884d32bd6f74763087fe2b92356",
+    "research/ir-policy-adoption-2026-10-15/sources.json": "4b4f591641916b002ab37cb547bc11b5a0726f5a03647d0230ef4c85c32125f1",
+    "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106",
+    "research/ir-policy-adoption-2026-10-15/evidence/08a2f88e320ec50a.json": "2b9df941925e6ef306041867c306426cdd1ab1e39e3531e06fc3c29fa2f23b34",
+    "research/ir-policy-adoption-2026-10-15/evidence/8e0380f1597a0cefb4cf5b79ec10f17311a5fcf8cada63bfaef89a1e97544ab6.raw": "8e0380f1597a0cefb4cf5b79ec10f17311a5fcf8cada63bfaef89a1e97544ab6",
+    "research/ir-jira-dialogue-best-practices-2026-10-15/pages/physical-14.txt": "168900710422f0dee5f7ce5d012f379dc877447a001e0abe96100083143cdef1",
+    "research/ir-decision-scope-2026-10-15/README.md": "ce783c766b7b4087ac15c1405d7725eedbdb3f5d58a6eb6b7bf9d884d119da43",
+    "research/ir-decision-scope-2026-10-15/source-quotes.json": "a0eb1634cd187b1d42d86ef7d2fa7b0afe0917633eb655f4971123f58ab6435e"
+  },
+  "operations": {
+    "GETs": 0,
+    "DB_connections_or_writes": 0,
+    "code_or_old_file_edits": 0,
+    "real_numeric_forecasts_or_thresholds_created": 0,
+    "new_questions_or_sends": 0,
+    "new_investment_policy_adoptions": 0
+  },
+  "next": "root review; no implementation or further discovery performed"
+}

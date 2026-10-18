@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "case_id": "6814-reported-annual-per-share-basis-monitor",
+  "company_id": "jp:6814",
+  "company_name": "古野電気株式会社",
+  "issue_id": "6814-annual-EPS-BPS-and-common-share-equity-basis",
+  "recorded_at": "2026-10-16T10:34:13.487983+00:00",
+  "preparation_status": "file_only_not_registered_or_bootstrapped",
+  "purpose": "23社公表予定cohortの報告年次EPS/BPS入力basis比較を継続する。買売や会社全体thesisではない。",
+  "author_and_Japanese_mapping": {
+    "author": "maxgfr/crible maintainers",
+    "fixed_commit": "00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7",
+    "formula": "sqrt(22.5 × EPS × BVPS)",
+    "positive_guard": "EPS>0 AND BVPS>0",
+    "original_Graham_full_strategy_adopted": false,
+    "external_author_recommends_6814": false,
+    "boundary": "Maintainerformula/providercolumnsと、日本基準直接表示/ordinary範囲mappingは別。正値は式定義域のみ、currentbasis/適格性/投資判断を保証しない。",
+    "production_code_SHA_frozen": false
+  },
+  "conditions": [
+    {
+      "id": "C1",
+      "topic": "annualreportedEPS、親会社ordinary利益と平均株数",
+      "author_rule": "Maintainerannualdefault/weightedaverageEPS、正EPSかつ正BVPSguard。式関数自体はannual/TTM意味を保証しない。",
+      "Japanese_mapping": "直接EPS529.53円はFY2025-03-01..2026-02-28連結基本実績。p21ordinary親会社利益16735百万円/平均31604751株のscopeに対応、表示EPSを再計算しない。",
+      "compare_future_saved_source": "実績/会社guide、年次/累計四半期、連結/個別、基本/潜在、期間/分割基準を比較。個別414.55/guide411.28を混ぜず、負/0/欠損を正常値へ補完しない。",
+      "status": "candidate_only_financial_and_independent_meaning_unadopted",
+      "refs": [
+        "issuer-annual-original",
+        "issuer-derived-twofacts",
+        "maintainer-formula-positiveguard"
+      ]
+    },
+    {
+      "id": "C2",
+      "topic": "ordinaryBPS、OCI/NCI、EPS平均とBPS末分母",
+      "author_rule": "BVPSの持分/期末株数優先と平均fallbackを区別。StockholdersEquity/CommonStockEquityを日本の純資産/株主資本に名のみで直訳しない。",
+      "Japanese_mapping": "直接BPS2826.61円は2026-02-28instant、p21ordinary末純資産89345百万円/期末31608824株。総純資産89772/NCI控除426とp13株主資本76310/OCI13035/NCI426を別範囲で保持。EPS平均31604751とBPS期末は別分母、表示丸め額は引算/割算で補正しない。",
+      "compare_future_saved_source": "ordinary帰属/NCI/OCI/優先・自己株/分割と平均末を比較。潜在EPSdashは潜在株式なしの注記で0化しない。currentbasisと外部provider持分適合を自動認証しない。",
+      "status": "ordinary_direct_BPS_candidate_cross_provider_mapping_unresolved",
+      "refs": [
+        "issuer-annual-original",
+        "issuer-derived-twofacts",
+        "maintainer-formula-positiveguard"
+      ]
+    },
+    {
+      "id": "C3",
+      "topic": "会計変更・後日更新と現在価格の別点検",
+      "author_rule": "Upstream価格比較はlatestfiscalperiodonlyで過去行へbackdateしない。純式2inputsとupstreamprice非None実行条件を区別。",
+      "Japanese_mapping": "原本4/9公表、p2会計基準改正有の詳細p19未読。現indexにFY2027Q2/10月9日guide修正があるが本文未取得で、4月guide維持や現在split/連結scopeを認証しない。",
+      "compare_future_saved_source": "正当に保存された後日訂正/会計注記/四半期/資本・分母変更をC1/C2へ比較。価格は別の正当観測で通貨/市場日・時刻/対象株式を確認し、HTTP取得を市場asofへ流用しない。ここから自動追加GETはしない。",
+      "status": "later_changes_and_current_price_unset",
+      "not_investment_action": "正値guardの定義外と永久会社除外を区別し、買売threshold/新IR/予測・正常利益は作らない。",
+      "refs": [
+        "issuer-annual-original",
+        "saved-later-update-locators",
+        "maintainer-formula-positiveguard"
+      ]
+    }
+  ],
+  "candidate_inputs_only": {
+    "eps_jpy": {
+      "value": "529.53",
+      "kind": "reported_fact",
+      "start": "2025-03-01",
+      "end": "2026-02-28"
+    },
+    "book_value_per_share_jpy": {
+      "value": "2826.61",
+      "kind": "reported_fact",
+      "as_of": "2026-02-28"
+    },
+    "unit": "JPY-per-share",
+    "financial_inputs_verified": false,
+    "independent_meaning_review_verified": false,
+    "expected_value_eligible": false,
+    "meaning_review_required": true,
+    "calculation_executed_here": false
+  },
+  "source_reading_boundary": {
+    "full_original_pages": 22,
+    "original_producer_meaning_pages": [
+      1,
+      2,
+      13,
+      21
+    ],
+    "root_meaning_acceptance_claimed_here": false,
+    "new_meaning_pages": [],
+    "original_and_derived_not_independent": true,
+    "bootstrap_reviews": [],
+    "native_read_claim_created": false,
+    "future_first_review_source_ids": [
+      "case-public:ecfb7db1a1c040c9fecf5f30b3a8d7cd4f6142e3d6e80c94a6cc01c3c64fb039",
+      "disclosed-facts:d05b7a50d0af1bb576db77f7114fd326a7739b9a16c0d1cc751a16154c807361"
+    ],
+    "first_review_plan": "Root正当初回保存/分類後、原本と派生2sourceの凍結pendingpacketを初回reviewする。準備を登録・既読成功としない。"
+  },
+  "management_review": null,
+  "actual_DB_firstsave": null,
+  "DB_state_read_this_phase": false,
+  "native_case_version": null,
+  "native_job_or_CAS": null,
+  "registered_successfully": false,
+  "price": null,
+  "new_thesis_forecast_financial_adoption_IR": null,
+  "send_ready": false
+}

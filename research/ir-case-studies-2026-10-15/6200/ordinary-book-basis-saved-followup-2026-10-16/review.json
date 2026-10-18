@@ -1,0 +1,156 @@
+{
+  "read_at": "2026-10-16T13:53:43.355535+00:00",
+  "company_id": "jp:6200",
+  "company_name_as_source": "株式会社インソース",
+  "status": "limited_saved_pages_meaning_review_complete_file_only",
+  "source": {
+    "id": "case-public:4e3b5b50cf1056ea17c9611853d8480231efa5c2eb3a8642d6f9ffb6a898280c",
+    "URL": "https://www.insource.co.jp/resource/pdf/ir/25110405.pdf",
+    "source_native_JSON_SHA256": "37a66ed5fa097b293d58ca0febab29c1d29ed3def5194b550eecbdda63ade6bd",
+    "native_hash_algorithm": "SHA256(UTF8 json.dumps(source,ensure_ascii=False,sort_keys=True), default separators)",
+    "content_SHA256": "a50794b14a608f861fce3c273c8f60060812d8bfb08f7087cc208ef20ee2187f",
+    "raw_PDF_SHA256": "eecb4e6a5a9bb0d23b3e90ef6de59dbf2d6e7caf332c78779ec99320293b92df",
+    "source_content_equals_saved_fulltext": true,
+    "source_whole_matches_prior_actual_intake_bundle": true,
+    "source_snapshot_file": {
+      "path": "research/ir-case-studies-2026-10-15/6200/annual-accounting-input-discovery-2026-10-16/source-candidates.json",
+      "SHA256": "f72b91ea16ab9e691d5d4e2173c7e0afe7673a7faebad06fb19c3faf9548b6fc",
+      "bytes": 72908
+    },
+    "source_JSON_pointer": "/sources/0",
+    "fulltext_file": {
+      "path": "research/ir-case-studies-2026-10-15/6200/annual-accounting-input-discovery-2026-10-16/text/annual-full.txt",
+      "SHA256": "a50794b14a608f861fce3c273c8f60060812d8bfb08f7087cc208ef20ee2187f",
+      "bytes": 59185
+    },
+    "raw_file": {
+      "path": "research/ir-case-studies-2026-10-15/6200/annual-accounting-input-discovery-2026-10-16/raw/eecb4e6a5a9bb0d23b3e90ef6de59dbf2d6e7caf332c78779ec99320293b92df",
+      "SHA256": "eecb4e6a5a9bb0d23b3e90ef6de59dbf2d6e7caf332c78779ec99320293b92df",
+      "bytes": 632921
+    }
+  },
+  "scope": {
+    "new_meaning_and_image_physical_pages": [
+      13,
+      16
+    ],
+    "printed_pages": [
+      11,
+      14
+    ],
+    "newly_read_pages_count": 2,
+    "prior_pages_fixed_references": [
+      1,
+      2,
+      18
+    ],
+    "other_pages_newly_reviewed": false,
+    "full_extraction_not_full_semantic_review": true,
+    "periods": "BSは2024-09-30/2025-09-30。変動表は前年度2023-10-01～2024-09-30と当年度2024-10-01～2025-09-30を別表で表示。今回の中心は当年度。",
+    "unit": "千円の原表示。JPY換算/金額演算/normalizer入力は作成しない。"
+  },
+  "findings": [
+    {
+      "id": "equity_vs_OCI",
+      "quote_ids": [
+        "6200-annual-BS-comparison-period-unit",
+        "6200-annual-BS-net-assets-sections",
+        "6200-annual-current-equity-changes"
+      ],
+      "publicly_supported": "2025-09-30の連結BS純資産の部は株主資本合計12,451,441、その他有価証券評価差額金/その他の包括利益累計額合計35,632、純資産合計12,487,074を独立表示する（全て千円）。株主資本とOCI累計額、純資産合計は同じ名称/範囲として扱えない。",
+      "image_checked_raw_current_cells": {
+        "資本金": "800,623",
+        "資本剰余金": "941,782",
+        "利益剰余金": "11,379,746",
+        "自己株式": "△670,710",
+        "株主資本合計": "12,451,441",
+        "その他有価証券評価差額金": "35,632",
+        "その他の包括利益累計額合計": "35,632",
+        "純資産合計": "12,487,074"
+      },
+      "limit": "表示行の合計/差額を演算・補正せず、純資産合計や株主資本合計をordinary BPSの正式分子/provider total_equityへ自動対応しない。"
+    },
+    {
+      "id": "no_separate_NCI_or_options_row_in_scope",
+      "quote_ids": [
+        "6200-annual-BS-net-assets-sections",
+        "6200-annual-current-equity-changes"
+      ],
+      "publicly_supported": "この2頁の純資産区分/変動表の列には、非支配株主持分・新株予約権という独立の表示行/列を確認しない。選択画像の表範囲を確認した限定的な観測。",
+      "limit": "全会社/全期で不存在、数値0、優先持分なし、普通株への全額帰属と認定しない。隠れた項目を0で補わず、他頁/原文注記まで点検したとはしない。"
+    },
+    {
+      "id": "treasury_book_amount_not_share_denominator",
+      "quote_ids": [
+        "6200-annual-current-equity-changes"
+      ],
+      "publicly_supported": "当年度の自己株式帳簿額は当期首△708,300→当期末△670,710千円、自己株式処分行の自己株式欄37,589千円を表示。自己株式取得行の株主資本合計/純資産合計は原表示「－」、資本金/資本剰余金等に空欄があることを画像で区別した。",
+      "limit": "自己株式帳簿額は株数でない。dash/空欄を新規numeric0へ変換せず、処分額から株数・現在分母・希薄化を逆算しない。"
+    },
+    {
+      "id": "parent_income_row_not_BPS_formula",
+      "quote_ids": [
+        "6200-annual-current-equity-changes"
+      ],
+      "publicly_supported": "変動表の当年度「親会社株主に帰属する当期純利益」は4,130,091千円と表示される。これは利益剰余金の変動行であって普通株純資産の算定式ではない。",
+      "limit": "親会社利益の帰属から期末純資産全額のordinary帰属・優先権調整・BPS分母を推定しない。"
+    }
+  ],
+  "prior_basis_reused": {
+    "quote_references": "selected-quotes.json#/prior_reviewed_quote_references",
+    "EPS": "既読p18のordinary平均83,947,385株とEPS49.20の基礎はそのまま。",
+    "end_shares": "既読p2は普通株期末85,243,000株（自己株含む）と期末自己株1,269,169株を別表示。今回両者を差し引いてBPS公式分母にせず、EPS平均を期末分母にしない。",
+    "BPS": "148.70円は会社直接表示のまま。今回2頁にBPSの正式分子・分母対応を示す算定式は見当たらず、ordinary持分調整・信託等の分母扱いは未確定。"
+  },
+  "existing_condition_effect": {
+    "case_id": "6200-reported-annual-per-share-basis-monitor",
+    "case_version": 5,
+    "config_revision": 1,
+    "native_read_count": 6,
+    "issue_id": "6200-annual-EPS-BPS-ordinary-share-and-dated-source-basis",
+    "condition_id": "C2",
+    "known_added": "株主資本/OCI/純資産合計を区分する同年度会社原典の所在と表示範囲が追加確認できた。",
+    "remaining": "正式なordinary BPS分子/期末分母、普通株以外持分・信託等調整、provider会計範囲との同値性は未認定。",
+    "numeric_input_change": false,
+    "case_DB_or_management_updated": false,
+    "prior_case_file": {
+      "path": "research/ir-four-company-public-QA-connection-2026-10-16/actual-qualitative/6200/case-after.json",
+      "SHA256": "0b24ca145618cba1d7eb42de91888bacd9d5c8880a766c265b38a976e772b15d",
+      "bytes": 17741
+    },
+    "prior_context_file": {
+      "path": "research/ir-case-studies-2026-10-15/6200/native-case-setup-2026-10-16/prepare-only/case-context.json",
+      "SHA256": "519837b4cf7614608ec2960fc3b00d794045dcc81fffc23728e622ab4b9ccb4b",
+      "bytes": 5771
+    }
+  },
+  "handoff": {
+    "kind": "manual_reference_for_next_legitimate_qualitative_job_only",
+    "source_id": "case-public:4e3b5b50cf1056ea17c9611853d8480231efa5c2eb3a8642d6f9ffb6a898280c",
+    "source_snapshot_sha256": "37a66ed5fa097b293d58ca0febab29c1d29ed3def5194b550eecbdda63ade6bd",
+    "producer_read_at": "2026-10-16T13:53:43.355535+00:00",
+    "new_scope": [
+      13,
+      16
+    ],
+    "review_file": "research/ir-case-studies-2026-10-15/6200/ordinary-book-basis-saved-followup-2026-10-16/review.json",
+    "quotes_file": "research/ir-case-studies-2026-10-15/6200/ordinary-book-basis-saved-followup-2026-10-16/selected-quotes.json",
+    "instructions": "次の正当なjobでreview file/SHA/read_at/source-nativeSHAをsummaryとcase_observation双方へ手動参照する。この再読を新source/publication/新pending証拠にせず、元C2/数値/管理日を自動更新しない。"
+  },
+  "unadopted": [
+    "BPS148.70の変更/逆算",
+    "provider equity同値",
+    "一般BPS定義からの個社金融採用",
+    "現在株式分母",
+    "金融モデル入力/将来利益/IR質問/価格/売買"
+  ],
+  "operations": {
+    "GET": 0,
+    "DB": 0,
+    "Store": 0,
+    "new_source": 0,
+    "normalizer": 0,
+    "financial_adoption": false,
+    "old_files_edited": 0
+  }
+}

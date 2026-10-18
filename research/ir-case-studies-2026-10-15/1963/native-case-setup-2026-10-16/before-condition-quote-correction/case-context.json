@@ -1,0 +1,1089 @@
+{
+  "case_id": "1963-project-profit-period-and-disposal-basis-monitor",
+  "company_id": "jp:1963",
+  "issue_id": "1963-project-profit-period-disposal-and-backlog-basis",
+  "status": "file_only_context_preparation_before_actual_source_ingest",
+  "synthetic": false,
+  "prepared_at": "2026-10-16T03:55:35.038561+00:00",
+  "purpose": "公表済み説明を保持し、期間/粗利・利益段階/連結範囲/売却取引/受注残/還元時点の同じ論点を継続比較する。著者の企業固有価格予測は作らない。",
+  "actual_source_first_saved_at": null,
+  "bootstrap_handoff_reviewed_at": null,
+  "bootstrap_or_register_request_created": false,
+  "author_method_references": [
+    {
+      "id": "anthropic.earnings-preview",
+      "ref": {
+        "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+        "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sections": [
+        "Step 1: Gather Context",
+        "Step 2: Key Metrics Framework",
+        "Step 4: Catalyst Checklist"
+      ],
+      "project_adaptation": "会社/四半期/指標/当時会社予想と変化を、期間/単位/主体を揃えて点検。未取得consensus・株価反応・予測を補わない。"
+    },
+    {
+      "id": "anthropic.thesis-tracker",
+      "ref": {
+        "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+        "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sections": [
+        "Step 2: Update Log",
+        "Important Notes / quarterly review"
+      ],
+      "project_adaptation": "同じ論点へ支持/反証候補/不明を追記し、少なくとも四半期という手順を内部研究日に適応。会社別売買規則を借りたことにはしない。"
+    },
+    {
+      "id": "anthropic.dd-meeting-prep",
+      "ref": {
+        "path": "third_party/anthropic/skills/dd-meeting-prep/SKILL.md",
+        "sha256": "a74eecadece794106d515ce3d00e07b3857ed123e841e8962e26363d2413d94f"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sections": [
+        "Step 1: Meeting Context",
+        "Step 3: Benchmarks & Context",
+        "Important Notes / neutral questions"
+      ],
+      "project_adaptation": "既知情報/懸念と資料の対象範囲を比較し、公開資料で解けた事項を再質問しない。PE非公開DDや問数を採用せず残論点の必要性を点検。"
+    },
+    {
+      "id": "damodaran.operating-cashflow-and-equity-scope",
+      "ref": {
+        "path": "research/ir-toyota-author-valuation-readiness-2026-10-15/readiness.json",
+        "sha256": "10e9287e2fd2f3e1f597eb58002432436d87e15663aa259244007576a5e6d4f7"
+      },
+      "source_record_ref": {
+        "path": "research/valuation-model-routing-2026-10-15/sources.json",
+        "sha256": "a9b8c046d3ff5b23eb65fdaabdd4ee8ef55c66498b52cbcad9fc5099c3cc7538",
+        "json_pointer": "/sources/2"
+      },
+      "author": "Aswath Damodaran",
+      "source_pdf_sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+      "source_title": "Ups and Downs: Valuing Cyclical and Commodity Companies",
+      "source_publication": "2009-09",
+      "evidence_pointers": [
+        {
+          "json_pointer": "/quotations/8",
+          "id": "TY09",
+          "pdf_page": 17
+        },
+        {
+          "json_pointer": "/quotations/10",
+          "id": "TY11",
+          "pdf_page": 17
+        },
+        {
+          "json_pointer": "/quotations/11",
+          "id": "TY12",
+          "pdf_page": 17
+        }
+      ],
+      "project_adaptation": "保存Toyota例の税/再投資後CF、営業価値と非営業資産・負債・少数持分・株数の分離を、1963の営業/経常/税/NCI/親NIとCF/売却対価/売却益を混同しない研究確認へ適応する。Toyotaの値・正常税・将来ROC・1950/1963への評価式適合は採用しない。企業固有の価格/売買条件を著者が示したとはしない。",
+      "author_did_not_state_1963_specific_conditions": true
+    },
+    {
+      "id": "jira.public-disclosure-and-dialogue.2018",
+      "ref": {
+        "path": "research/ir-jira-dialogue-best-practices-2026-10-15/review.json",
+        "sha256": "1dcbd63edd10ae382021ef7566ca4e5ab5899a32d1cf8b85185b5fa431414106",
+        "json_pointer": "/question_method_dimensions"
+      },
+      "source_title": "情報開示と対話のベストプラクティスに向けての行動指針～フェア・ディスクロージャー・ルールを踏まえて～",
+      "publication_day": "2018-02-28",
+      "source_raw_sha256": "23383c8c6a5abb84cd1db2178b4349207f0e273b1666b5a38c51c44831362a38",
+      "limited_prior_pages": [
+        9,
+        14,
+        25
+      ],
+      "quote_ref": {
+        "path": "research/ir-jira-dialogue-best-practices-2026-10-15/review.json",
+        "sha256": "1dcbd63edd10ae382021ef7566ca4e5ab5899a32d1cf8b85185b5fa431414106",
+        "json_pointer": "/quotes/4"
+      },
+      "short_quote": "その変動要因や業績予想値\nと乖離した理由",
+      "project_adaptation": "会社側の公表/対話推奨を、投資家が公表説明/Q&A/注記の既答を先に保持し、残る期/主体/比較を具体化する手順へ適応。法全体/現在の個別返信を自動分類しない。原典が1963質問・金融方針を作成したとはしない。"
+    }
+  ],
+  "source_ids": [
+    "case-public:b44ac39d2bb01d97ccb3513689ab02c3b916987e5b4a90920900d0b29397c0b1",
+    "case-public:857ccc64117019f749deae2362782d39c1416e4dc8bedd5af1c9172e2cb59733",
+    "case-public:33917957734a3f4b705072164e8e3526e23fec79c9f1b2265a7131a17e6253b1",
+    "case-public:7b3cca883705399d58fd34b557295098bfafcc67ffbc8716a5d42787aa2ed681",
+    "case-public:46b5535b348373426d7a5a1f1445d0d7115bbb1e099757e7f4263e904c0757fb",
+    "disclosed-facts:e691939950fbeb9823ff565d34da55861f18a761249cb755efd3855193bfa91e"
+  ],
+  "source_inventory": [
+    {
+      "source_id": "case-public:b44ac39d2bb01d97ccb3513689ab02c3b916987e5b4a90920900d0b29397c0b1",
+      "source_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/source-bundle.json",
+        "sha256": "02d6b924c91fa8b492d21cdfb86e637c43f47b703a204020734b058c1385b56c",
+        "json_pointer": "/sources/0"
+      },
+      "native_snapshot_sha256": "4a1ba922fa4d4545df44a8a68e3c84969caacc293259d1041935565545254437",
+      "snapshot_algorithm": "SHA256 UTF8 sorted JSON default separators; native registry domain",
+      "content_sha256": "1fe80ef135f9e82ba0e41f9dc0bdc31c7a025c130cd39c769654849d7fe3233f",
+      "title": "日揮ホールディングス株式会社（JGC HOLDINGS CORPORATION）",
+      "publication_day": null,
+      "published_at_preserved": null,
+      "retrieved_at_preserved": "2026-10-16T03:24:54.237500+00:00",
+      "actual_DB_first_saved_at": null
+    },
+    {
+      "source_id": "case-public:857ccc64117019f749deae2362782d39c1416e4dc8bedd5af1c9172e2cb59733",
+      "source_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/source-bundle.json",
+        "sha256": "02d6b924c91fa8b492d21cdfb86e637c43f47b703a204020734b058c1385b56c",
+        "json_pointer": "/sources/1"
+      },
+      "native_snapshot_sha256": "a83b61cfa9319a680098b15084713ea261261998b4e9f3dcfdaf298f91a6b453",
+      "snapshot_algorithm": "SHA256 UTF8 sorted JSON default separators; native registry domain",
+      "content_sha256": "da60973327444b0f31eb12e4089f0efe205ad02403f9a1de521faa22869a87e8",
+      "title": "決算短信/決算説明会資料 | IRライブラリー | 日揮ホールディングス株式会社",
+      "publication_day": null,
+      "published_at_preserved": null,
+      "retrieved_at_preserved": "2026-10-16T03:25:14.329604+00:00",
+      "actual_DB_first_saved_at": null
+    },
+    {
+      "source_id": "case-public:33917957734a3f4b705072164e8e3526e23fec79c9f1b2265a7131a17e6253b1",
+      "source_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/source-bundle.json",
+        "sha256": "02d6b924c91fa8b492d21cdfb86e637c43f47b703a204020734b058c1385b56c",
+        "json_pointer": "/sources/2"
+      },
+      "native_snapshot_sha256": "0328e4c87fed482735de185f6465d165bae2e5a07dcc1d98189d67564e3bc702",
+      "snapshot_algorithm": "SHA256 UTF8 sorted JSON default separators; native registry domain",
+      "content_sha256": "60b9d2bb63712f0aa66ce70947ac72b4fc0d142a299f4d6267a82c275a1d396a",
+      "title": "日揮ホールディングス株式会社 2027年3月期 第1四半期決算短信〔日本基準〕（連結）",
+      "publication_day": "2026-08-07",
+      "published_at_preserved": null,
+      "retrieved_at_preserved": "2026-10-16T03:25:36.380108+00:00",
+      "actual_DB_first_saved_at": null
+    },
+    {
+      "source_id": "case-public:7b3cca883705399d58fd34b557295098bfafcc67ffbc8716a5d42787aa2ed681",
+      "source_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/source-bundle.json",
+        "sha256": "e7cad37e29fbedc7c3e25a1e14d2a9b4512dc496e5584fe5cff30c475f1307d6",
+        "json_pointer": "/sources/0"
+      },
+      "native_snapshot_sha256": "2e42ce6dab0ce7ba785838433a60d5bc1ae988844c92e5dd1599af6483dfbf15",
+      "snapshot_algorithm": "SHA256 UTF8 sorted JSON default separators; native registry domain",
+      "content_sha256": "e7a0d7e742014336c54f475c1d3696596a270cdd606f671cc0fab12cb656d2db",
+      "title": "日揮ホールディングス株式会社 2027年3月期 第1四半期 決算概要",
+      "publication_day": "2026-08-07",
+      "published_at_preserved": null,
+      "retrieved_at_preserved": "2026-10-16T03:37:30.354315+00:00",
+      "actual_DB_first_saved_at": null
+    },
+    {
+      "source_id": "case-public:46b5535b348373426d7a5a1f1445d0d7115bbb1e099757e7f4263e904c0757fb",
+      "source_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/source-bundle.json",
+        "sha256": "e7cad37e29fbedc7c3e25a1e14d2a9b4512dc496e5584fe5cff30c475f1307d6",
+        "json_pointer": "/sources/1"
+      },
+      "native_snapshot_sha256": "3fb5b4f8827fe776ca4e329e35a7a59598a510dce8b4521cc31166fd33aadeda",
+      "snapshot_algorithm": "SHA256 UTF8 sorted JSON default separators; native registry domain",
+      "content_sha256": "fd751146bc72a8dab1f24dd506f3e776250feff8f3daeaf29ff3c9e4cd40bf4c",
+      "title": "日揮ホールディングス株式会社 2026年度第1四半期決算に係るオンラインカンファレンスにおける質疑応答（2026年8月7日開催）",
+      "publication_day": "2026-08-10",
+      "published_at_preserved": null,
+      "retrieved_at_preserved": "2026-10-16T03:39:19.529991+00:00",
+      "actual_DB_first_saved_at": null
+    },
+    {
+      "source_id": "disclosed-facts:e691939950fbeb9823ff565d34da55861f18a761249cb755efd3855193bfa91e",
+      "source_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/normalized-bundle.json",
+        "sha256": "c09b24ecf30c52420b4ec893219c2fbc7ae51fdd7e63d3ada4e9a2949c3d3f56",
+        "json_pointer": "/sources/1"
+      },
+      "native_snapshot_sha256": "35ef77119d980a4811a99fd18e131c7ca17acbc80c55b6468f1fcc9cf1e4e088",
+      "snapshot_algorithm": "SHA256 UTF8 sorted JSON default separators; native registry domain",
+      "content_sha256": "fe404591ea753aec4f4b0e9f190e1d78c4f9ab43e2eaa98cc48c168f73350c16",
+      "title": "日揮ホールディングス株式会社 2027年3月期 第1四半期決算短信〔日本基準〕（連結） — cited fact extraction (meaning review required)",
+      "publication_day": null,
+      "published_at_preserved": null,
+      "retrieved_at_preserved": "2026-10-16T03:39:37.631966+00:00",
+      "actual_DB_first_saved_at": null
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "quarter-annual-gross-profit-and-period-perimeter-comparison",
+      "known": "Q1は2026-04-01〜06-30/当時FY予想は2026-04-01〜2027-03-31。Q1粗利益率12.8%対通期予想10.9%の上振れ1.9ptを会社は約30億円、円安約15億/採算改善約15億と説明。前年同期OP増44億円や営業外FXgain3,882百万円の分解ではない。採算改善は前期末リスク対応費用の戻りではないという既答を保つ。PT. JGC INDONESIAの仮決算変更で当Q1取込が6か月、別掲Jan–Mar売上15,907/OP1,536/経常2,331/税前2,335百万円。JGC Emirates新1社追加は別のscope。",
+      "next_comparison": "新しい実際の開示を同じ期・粗利/営業/経常段階・会社/子会社範囲で比較する。FYguideとQ1、前年同期間と予想比、6か月取込とグループ3か月を別々に示し、実際の訂正/定義変更と未解決の寄与を記録する。",
+      "residual": "継続採算/原価・契約見積の詳細、6か月取込と同一範囲前年比較、Emiratesの開始・機構・寄与は、既読資料で確認できた範囲以上には未確定。",
+      "do_not_infer": "Q1年度化、Indonesia表示値の機械的控除/正常利益化、EmiratesとIndonesiaの同一視、全利益増のFX説明やorganic成長認定はしない。粗利率/YoYOP/非営業FXという比較軸の違いだけで矛盾/市場反証を作らない。",
+      "evidence_quote_ids": [
+        "actual-period-unit-and-profit",
+        "full-year-issuer-guidance",
+        "scope-new-company-shares-and-treatment",
+        "PL-operating-FX-tax-and-NCI",
+        "public_qa-physical-1",
+        "public_qa-physical-2",
+        "indonesia-period-and-method-change",
+        "segment-current-period-reconciliation"
+      ]
+    },
+    {
+      "id": "tax-NCI-cashflow-and-completed-disposal-basis",
+      "known": "原PLは営業12,355/経常21,378/税前21,328/税9,703/四半期NI11,624/NCI7/親NI11,617百万円を分ける。税注記は通期税効果後実効税率を合理的に見積もり四半期税前に乗じる方法で、正常税率の数値ではない。Q1CF未作成、D&A3,011は別注記。水ing売却は2026-04-14契約/07-01完了で予定取引のままではない。持分法関連会社とその子会社2社の企業集団除外、譲渡価額25,068百万円（受領特別配当5,332に基づく価格調整後）、連結益19,933/個別益19,608は別。概要Q2特益約200億円は当時通期前提。Q&A左質問25,608は質問者提示で会社回答の対価確定ではない。",
+      "next_comparison": "後続原典の同じ利益主体/期間/税・NCIと、対価/配当/売却益/cash-in/CFを別に照合する。Q2実績が保存されれば当時のQ2特益前提と比較するが、今回の会社完了説明を未完了へ戻さない。",
+      "residual": "調整前価格、特別配当の受領日/損益期、税引後親NI/総cash-in、正常税・将来CFは未確認又は投資家側未採用。質問者25,608と会社25,068の基準差は未解消で、誤記/一致へ補正しない。",
+      "do_not_infer": "CF未作成を0、D&AをFCFF/維持投資にしない。Q2売却益をQ1OPや現金全額へ移さず、5,332を加算逆算した総cash-in/対価を作らない。売却益の累計引継ぎを再発としない。全特別損益足戻し・将来正常利益/税/利回りの保証を求めない。",
+      "evidence_quote_ids": [
+        "PL-operating-FX-tax-and-NCI",
+        "tax-estimated-annual-rate-method",
+        "cf-not-prepared-and-da",
+        "suing-completed-sale-and-group-scope",
+        "suing-counterparty-date-and-business",
+        "suing-price-gain-dividend-basis",
+        "quarter_summary-physical-4",
+        "public_qa-physical-4"
+      ]
+    },
+    {
+      "id": "backlog-project-risk-guidance-and-capital-return-timing",
+      "known": "受注高は総合エンジニアリングのQ1累計、受注残は期末で、売上/現金とは別。受注残にFX/契約金額修正等の調整13,785百万円（同事業）・73（機能材）・△17（その他）を含む。SAF年度内EPC受注は会社期待、既存FEED役務とEPC受注を分ける。Aug7会議時点UAE LNG機器輸送への大きな影響なし/代替ルート検討だが具体的な影響回避期限は示せないとの回答。機能材調達リスクはQ1末で未顕在化、解消認定ではない。会社は当時150円想定へ収束する場合の通期為替差損想定と不透明感でguide維持と説明。cash-in後も2026–2030中計全体での配分方針維持、今直ぐ追加還元を想定しないという当時回答。",
+      "next_comparison": "新たな公表受注/残高は定義と期末調整を維持し、実際の契約/進捗/リスク/予想版/還元方針変更を当時説明へ比較する。Q&AはAug10公表・Aug7時点という二時点を保ち、株式/利益/配当表示の対象を揃える。",
+      "residual": "SAFの最終契約成立/時期、UAEリスクの後日の実際の影響と具体的期限、受注/契約修正内訳、現在のguide/株数・還元方針は後続新根拠なしに更新しない。年次DPS52.00は当時会社予想・合計欄で、日付/GAAP/consol nullと現在分母不明を維持。",
+      "do_not_infer": "受注残identityを再計算して調整内訳を推定しない。期待を受注済/確率1、当時未顕在化をリスク消滅/永久回避期限なし、今直ぐ還元なしを永久還元なしとしない。会社150円想定・当時EPS/DPSを我々の将来予測/現在評価へ採用しない。",
+      "evidence_quote_ids": [
+        "orders-sales-backlog-scope-and-display",
+        "orders-backlog-adjustment-notes",
+        "quarter_summary-physical-7",
+        "quarter_summary-physical-11",
+        "public_qa-physical-2",
+        "public_qa-physical-3",
+        "public_qa-physical-4",
+        "full-year-issuer-guidance",
+        "scope-new-company-shares-and-treatment"
+      ]
+    }
+  ],
+  "evidence_quote_bindings": {
+    "PL-operating-FX-tax-and-NCI": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "fac25c8d5fd6ef12584bd1cc07f434c9f46355f6d55b202c67dc4d119a3450d7",
+        "json_pointer": "/8"
+      },
+      "source_id": "case-public:33917957734a3f4b705072164e8e3526e23fec79c9f1b2265a7131a17e6253b1",
+      "physical_page": 7,
+      "source_character_start": 11199,
+      "source_character_end": 13159,
+      "quote_sha256": "cc19117a5eeca04cb60b0f5b174afbc917fbb3e7ce33a896a038945683c474f8",
+      "exact_source_content": true
+    },
+    "actual-period-unit-and-profit": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "fac25c8d5fd6ef12584bd1cc07f434c9f46355f6d55b202c67dc4d119a3450d7",
+        "json_pointer": "/4"
+      },
+      "source_id": "case-public:33917957734a3f4b705072164e8e3526e23fec79c9f1b2265a7131a17e6253b1",
+      "physical_page": 1,
+      "source_character_start": 519,
+      "source_character_end": 1822,
+      "quote_sha256": "8d4507b41574911377e2e9440eae7703d15e9a3749339b7e2d0d3a6830a46d79",
+      "exact_source_content": true
+    },
+    "cf-not-prepared-and-da": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "a9904d421a8589919d80ad7cb26a68d02c9028f55bf4751dd7ad4597015ca199",
+        "json_pointer": "/quotes/9"
+      },
+      "source_id": "case-public:33917957734a3f4b705072164e8e3526e23fec79c9f1b2265a7131a17e6253b1",
+      "physical_page": 10,
+      "source_character_start": 17215,
+      "source_character_end": 17601,
+      "quote_sha256": "b1da0b202d2c53994fc8d68ee253b615bf4d915c05bccc9f2b46cfb613ef5982",
+      "exact_source_content": true
+    },
+    "full-year-issuer-guidance": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "fac25c8d5fd6ef12584bd1cc07f434c9f46355f6d55b202c67dc4d119a3450d7",
+        "json_pointer": "/5"
+      },
+      "source_id": "case-public:33917957734a3f4b705072164e8e3526e23fec79c9f1b2265a7131a17e6253b1",
+      "physical_page": 1,
+      "source_character_start": 2954,
+      "source_character_end": 3611,
+      "quote_sha256": "aeb9a2581ac42b513d8d01ca1ddf2ea70c370f8164e3937a1d1663d5a73ddd57",
+      "exact_source_content": true
+    },
+    "indonesia-period-and-method-change": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "a9904d421a8589919d80ad7cb26a68d02c9028f55bf4751dd7ad4597015ca199",
+        "json_pointer": "/quotes/8"
+      },
+      "source_id": "case-public:33917957734a3f4b705072164e8e3526e23fec79c9f1b2265a7131a17e6253b1",
+      "physical_page": 10,
+      "source_character_start": 16802,
+      "source_character_end": 17215,
+      "quote_sha256": "e94552beb5d640f7d6f3e3274ba9520efe509351d86da9fe3d8b29c51702814c",
+      "exact_source_content": true
+    },
+    "orders-backlog-adjustment-notes": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "a9904d421a8589919d80ad7cb26a68d02c9028f55bf4751dd7ad4597015ca199",
+        "json_pointer": "/quotes/15"
+      },
+      "source_id": "case-public:33917957734a3f4b705072164e8e3526e23fec79c9f1b2265a7131a17e6253b1",
+      "physical_page": 12,
+      "source_character_start": 21097,
+      "source_character_end": 21407,
+      "quote_sha256": "630834775328467ba57025521c68b295c65032ad979668c0216900167bf7f61a",
+      "exact_source_content": true
+    },
+    "orders-sales-backlog-scope-and-display": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "a9904d421a8589919d80ad7cb26a68d02c9028f55bf4751dd7ad4597015ca199",
+        "json_pointer": "/quotes/14"
+      },
+      "source_id": "case-public:33917957734a3f4b705072164e8e3526e23fec79c9f1b2265a7131a17e6253b1",
+      "physical_page": 12,
+      "source_character_start": 18853,
+      "source_character_end": 21097,
+      "quote_sha256": "aa4d4b3969fbb4a1e5ece0d2fbedbd570f2ecea6c74fb95d4ec44773d8ce489a",
+      "exact_source_content": true
+    },
+    "public_qa-physical-1": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/source-quotes.json",
+        "sha256": "078763d3581e99e3a0850e6f586c3b5521b5b24b4b4130731f249107df0ae37c",
+        "json_pointer": "/4"
+      },
+      "source_id": "case-public:46b5535b348373426d7a5a1f1445d0d7115bbb1e099757e7f4263e904c0757fb",
+      "physical_page": 1,
+      "source_character_start": 0,
+      "source_character_end": 1593,
+      "quote_sha256": "b1953c02e0075535070b796f325428fcaa9accb4d6cb2f171f83dadacdc2c2bd",
+      "exact_source_content": true
+    },
+    "public_qa-physical-2": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/source-quotes.json",
+        "sha256": "078763d3581e99e3a0850e6f586c3b5521b5b24b4b4130731f249107df0ae37c",
+        "json_pointer": "/5"
+      },
+      "source_id": "case-public:46b5535b348373426d7a5a1f1445d0d7115bbb1e099757e7f4263e904c0757fb",
+      "physical_page": 2,
+      "source_character_start": 1594,
+      "source_character_end": 3024,
+      "quote_sha256": "3ddb74196532d75a1889d583c8f1e87e8999a00dd0a7add5664f2b4b9828d9c0",
+      "exact_source_content": true
+    },
+    "public_qa-physical-3": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/source-quotes.json",
+        "sha256": "078763d3581e99e3a0850e6f586c3b5521b5b24b4b4130731f249107df0ae37c",
+        "json_pointer": "/6"
+      },
+      "source_id": "case-public:46b5535b348373426d7a5a1f1445d0d7115bbb1e099757e7f4263e904c0757fb",
+      "physical_page": 3,
+      "source_character_start": 3025,
+      "source_character_end": 4420,
+      "quote_sha256": "e561692730a82be74d9b0a44481edc26f0a513e9fb89ad63ba51843c5099da44",
+      "exact_source_content": true
+    },
+    "public_qa-physical-4": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/source-quotes.json",
+        "sha256": "078763d3581e99e3a0850e6f586c3b5521b5b24b4b4130731f249107df0ae37c",
+        "json_pointer": "/7"
+      },
+      "source_id": "case-public:46b5535b348373426d7a5a1f1445d0d7115bbb1e099757e7f4263e904c0757fb",
+      "physical_page": 4,
+      "source_character_start": 4421,
+      "source_character_end": 5397,
+      "quote_sha256": "75dd8b069db4be92b70b3727106405257ce6287e39fc13d576db27eeb875147e",
+      "exact_source_content": true
+    },
+    "quarter_summary-physical-11": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/source-quotes.json",
+        "sha256": "078763d3581e99e3a0850e6f586c3b5521b5b24b4b4130731f249107df0ae37c",
+        "json_pointer": "/3"
+      },
+      "source_id": "case-public:7b3cca883705399d58fd34b557295098bfafcc67ffbc8716a5d42787aa2ed681",
+      "physical_page": 11,
+      "source_character_start": 5121,
+      "source_character_end": 6342,
+      "quote_sha256": "2427800c7060dd0167c3636c5e5776526ccfd7c1de03b3114c730ccc3cfb010f",
+      "exact_source_content": true
+    },
+    "quarter_summary-physical-4": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/source-quotes.json",
+        "sha256": "078763d3581e99e3a0850e6f586c3b5521b5b24b4b4130731f249107df0ae37c",
+        "json_pointer": "/0"
+      },
+      "source_id": "case-public:7b3cca883705399d58fd34b557295098bfafcc67ffbc8716a5d42787aa2ed681",
+      "physical_page": 4,
+      "source_character_start": 187,
+      "source_character_end": 590,
+      "quote_sha256": "71ab736bb239cdbd835a1184d9b30ce626a4dcd18b3c55064811d46e75d819a1",
+      "exact_source_content": true
+    },
+    "quarter_summary-physical-7": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/source-quotes.json",
+        "sha256": "078763d3581e99e3a0850e6f586c3b5521b5b24b4b4130731f249107df0ae37c",
+        "json_pointer": "/2"
+      },
+      "source_id": "case-public:7b3cca883705399d58fd34b557295098bfafcc67ffbc8716a5d42787aa2ed681",
+      "physical_page": 7,
+      "source_character_start": 2474,
+      "source_character_end": 3720,
+      "quote_sha256": "2ccf6a250b451f32d95f1e9c70c890b1f175987acc7440fced2c5bcc65714427",
+      "exact_source_content": true
+    },
+    "scope-new-company-shares-and-treatment": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "fac25c8d5fd6ef12584bd1cc07f434c9f46355f6d55b202c67dc4d119a3450d7",
+        "json_pointer": "/6"
+      },
+      "source_id": "case-public:33917957734a3f4b705072164e8e3526e23fec79c9f1b2265a7131a17e6253b1",
+      "physical_page": 2,
+      "source_character_start": 3612,
+      "source_character_end": 4678,
+      "quote_sha256": "bf4ebe67511e062123f231e403f4e8a46c9266da7c13b87311c7d157a46c0f18",
+      "exact_source_content": true
+    },
+    "segment-current-period-reconciliation": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "a9904d421a8589919d80ad7cb26a68d02c9028f55bf4751dd7ad4597015ca199",
+        "json_pointer": "/quotes/6"
+      },
+      "source_id": "case-public:33917957734a3f4b705072164e8e3526e23fec79c9f1b2265a7131a17e6253b1",
+      "physical_page": 9,
+      "source_character_start": 15554,
+      "source_character_end": 16616,
+      "quote_sha256": "52af9cf75b9c839c312e4ab64dae2241f0e3c21cabd5c682394676f1e2a8bdd8",
+      "exact_source_content": true
+    },
+    "suing-completed-sale-and-group-scope": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "a9904d421a8589919d80ad7cb26a68d02c9028f55bf4751dd7ad4597015ca199",
+        "json_pointer": "/quotes/10"
+      },
+      "source_id": "case-public:33917957734a3f4b705072164e8e3526e23fec79c9f1b2265a7131a17e6253b1",
+      "physical_page": 11,
+      "source_character_start": 17699,
+      "source_character_end": 17950,
+      "quote_sha256": "22a062b4fcc8b3132485eba783e8519315610f5b6bab015e1236b74d2853ac29",
+      "exact_source_content": true
+    },
+    "suing-counterparty-date-and-business": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "a9904d421a8589919d80ad7cb26a68d02c9028f55bf4751dd7ad4597015ca199",
+        "json_pointer": "/quotes/12"
+      },
+      "source_id": "case-public:33917957734a3f4b705072164e8e3526e23fec79c9f1b2265a7131a17e6253b1",
+      "physical_page": 11,
+      "source_character_start": 18279,
+      "source_character_end": 18496,
+      "quote_sha256": "af0a81c9cb193ff7f578d0227d980c84b7bf801ed69d159cecaf9b7428ef01de",
+      "exact_source_content": true
+    },
+    "suing-price-gain-dividend-basis": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "a9904d421a8589919d80ad7cb26a68d02c9028f55bf4751dd7ad4597015ca199",
+        "json_pointer": "/quotes/13"
+      },
+      "source_id": "case-public:33917957734a3f4b705072164e8e3526e23fec79c9f1b2265a7131a17e6253b1",
+      "physical_page": 11,
+      "source_character_start": 18496,
+      "source_character_end": 18746,
+      "quote_sha256": "b12fda4513078deabc33322e7d4e94fd2e3a4f71eabe9c19b1d318a7d35d45b8",
+      "exact_source_content": true
+    },
+    "tax-estimated-annual-rate-method": {
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "a9904d421a8589919d80ad7cb26a68d02c9028f55bf4751dd7ad4597015ca199",
+        "json_pointer": "/quotes/4"
+      },
+      "source_id": "case-public:33917957734a3f4b705072164e8e3526e23fec79c9f1b2265a7131a17e6253b1",
+      "physical_page": 9,
+      "source_character_start": 14347,
+      "source_character_end": 14469,
+      "quote_sha256": "51d707461f3e1defc7e9e1aeea5232241afd3b0ce074c2f224cfaf5fb9a7492a",
+      "exact_source_content": true
+    }
+  },
+  "prior_root_acceptance_refs": [
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/parent-acceptance.json",
+      "sha256": "286972080707b961f6a0112f8865080ac7c5d5e328c2b3b08548477e74ff2235"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/parent-acceptance.json",
+      "sha256": "970e61ec3e11afa847ac0280e9c0246bbafae663f08c1e33da4fcbda13c76a6e"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/parent-acceptance.json",
+      "sha256": "451f0a904c2ca350ad7e9d7aa9c4c3f81547e7e6f08d9b43da9140d19bdc9584"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/parent-acceptance.json",
+      "sha256": "b9210650093561cebba2b2482a00fb14831891905e11fb4ea5134eb13e114ff9"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/parent-derived-values-check.json",
+      "sha256": "9c764f5467d13a71db4b3787b9207c4862ff4b8f0398e1434eed010378ed974d"
+    }
+  ],
+  "limited_inherited_reading_scope": {
+    "initial_HTML": "選定した事業/現Q1説明・Q&Aの静的リンク案内だけ。全サイト最新性ではない。",
+    "initial_statement_pages": [
+      1,
+      2,
+      4,
+      7
+    ],
+    "additional_same_statement_pages": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "same_statement_followup_is_new_source_or_publication": false,
+    "original_statement_fulltext_pages": 14,
+    "quarter_summary_semantic_pages": [
+      4,
+      5,
+      7,
+      11
+    ],
+    "quarter_summary_fulltext_pages": 18,
+    "public_QA_semantic_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "public_QA_fulltext_pages": 4,
+    "public_QA_publication_day": "2026-08-10",
+    "public_QA_information_as_of": "2026-08-07 conference",
+    "annotated_summary_link_93": "initial finite route ended unattempted; not read here",
+    "disclosed_fact_scope": "同一原本9直接表示。金融採用/新会社開示ではない。",
+    "this_preparation_uses_existing_root_accepted_limited_reading": true,
+    "full_statement_or_summary_read": false,
+    "actual_DB_or_historical_presence_certified": false
+  },
+  "comparison_protocol": {
+    "supports": "実際の根拠が同期間/主体/単位/株式基準の特定観測を支持する場合だけ記録する。",
+    "counterevidence": "特定の保存観測への実際の訂正/矛盾を記録し、未定義の閾値や株価で反証を作らない。",
+    "unchanged": "既知資料の構造化や同じ内容では観測不変を許す。",
+    "unresolved": "未読/不明/曖昧は残し、未取得という初期履歴を現在全体の非開示/無回答へ読み替えない。"
+  },
+  "already_answered_not_to_reask": [
+    "Q1と当時FYguideの期間/値/修正無、基本EPSと希薄化EPSの区分",
+    "粗利率Q1対guideの約30億説明とリスク対応費用戻りではないこと",
+    "Indonesia6か月取込、税費用計算方法、Q1CF未作成",
+    "水ingの完了日/調整後価額/特別配当/連結対個別売却益の区分",
+    "受注残がFX/契約変更調整を含むこと",
+    "当時guide維持・UAE具体的期限提示不可・当時cash配分方針"
+  ],
+  "management_review": {
+    "date": "2027-01-16",
+    "timezone": "Asia/Tokyo",
+    "purpose": "root selected internal three-calendar-month research date only, not issuer event or sale deadline"
+  },
+  "IR_boundary": "公開説明/Q&A/注記既答を保持し、新IR文案/枝/送信準備を作らない。残る投資家予測・正常税/利回り・評価の保証を会社へ求めない。",
+  "financial_inputs_verified": false,
+  "financial_input_adoption": false,
+  "financial_thesis_or_investment_action": null,
+  "new_forecasts_multiples_probabilities_prices_IRdrafts": 0,
+  "unadopted": [
+    "数値thesis・author固有1963予測/評価・売買閾値",
+    "正常利益/将来税・CF/再投資/現在株式分母",
+    "市場反証/期待確率/適格モデルの選択",
+    "新IR文案・分岐・会社決算日/売却期限"
+  ],
+  "input_file_pins_before_preparation": [
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/01.json",
+      "sha256": "a9ef98350789ba2b7c20acc45067a77867599f4a7f7d6a697ee4d87fd2dadbdc"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/02.json",
+      "sha256": "4926beba6833ae4db3614c7fc9120a785de56a5db64dcfbd967452c2de81890f"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/03-builder-snapshot.json",
+      "sha256": "161b624a29e13510a33604218324240ee41032d230241abbe13c0427b1352ea4"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/03.json",
+      "sha256": "1c3ea8bf29d342c29dd5074635f8a735d728eb4b7d9237e937a242f1cb4fcd55"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/04-builder-snapshot.json",
+      "sha256": "a994b15f6e4ef43251dc96ef4e1c95cfe1da794a512116fd72863574c7cdeae2"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/04.json",
+      "sha256": "2b66c32a9d9271f3402efbcf39cb49d3ef1ad3655d81bdd3fbea9408a0d9bf7c"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/05-builder-snapshot.json",
+      "sha256": "f847a8f97f1747ec34776e41ef56d3bd22258e7f8ca2a8e6546296b32d342ce0"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/05.json",
+      "sha256": "ab19dcfe151679d21ca4d9151080183b8346ab249a82ee06b0f0275c291a7f6f"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/README.md",
+      "sha256": "fea8c11a9312edd026487ec586d5bea0fe002696b3271a07ca7355f75394b3a7"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/capture-once.py",
+      "sha256": "26666ab815669a4b79b38b7d0705f74645e74cb2a5654b899bb472d8254e83c9"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/capture-reuse.json",
+      "sha256": "c50722cb2602776b4ff1c8b902d079f77a23d272b25db7a9714cc7ffcdcf01cb"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/capture.json",
+      "sha256": "ca529ee5f64b7f62bc551adee7f11d91378e09643ff4fcd76fd5d001e6dd2106"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/guard.json",
+      "sha256": "3ab133e58d5890d54a7eb13385a0fb5a39af922715b0e6186dc6da2bed18f850"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/images/physical-1.png",
+      "sha256": "1a04e20e99390db577d65ea4602cb09e0df7ed26cbc968e2cd7635070d0eba20"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/images/physical-2.png",
+      "sha256": "00d658aec0d2cfcd074612e1b92d1bea67bed4e9624b027bba4b282de01f3553"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/images/physical-4.png",
+      "sha256": "a6ff220dfd97e3539c96cc5d8167bfa6a41e009654bf40d0140fc6e0ee4bb283"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/images/physical-7.png",
+      "sha256": "dc0628603b114c5846d5c0c4d37782c20f56f652df58071aec08b1c362d941db"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/link-provenance.json",
+      "sha256": "8e743c1aaeecf3c0cca41e27916853a9baf63c3492ae2f90c9feb484609142d5"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/manifest.json",
+      "sha256": "860785031a3a34f01cb0a4983e2bd9eb6f4cd2bb26c2383925f3f19bbfa78f0a"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/parent-acceptance.json",
+      "sha256": "286972080707b961f6a0112f8865080ac7c5d5e328c2b3b08548477e74ff2235"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/pdf/full.txt",
+      "sha256": "60b9d2bb63712f0aa66ce70947ac72b4fc0d142a299f4d6267a82c275a1d396a"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/pdf/page-1.txt",
+      "sha256": "2ca82927ed88029cc151a7c95ea563bc425e2ee688c494d7837fb0366012a6eb"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/pdf/page-2.txt",
+      "sha256": "bf4ebe67511e062123f231e403f4e8a46c9266da7c13b87311c7d157a46c0f18"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/pdf/page-4.txt",
+      "sha256": "b09587bbb838f531279e73a09779dd053e1e28d55ff7c780a92fafa6ff7145c8"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/pdf/page-7.txt",
+      "sha256": "91b3f57a4debac2cb24cfa3ed481ef63ce4536f5db053bab327927895f5df917"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/pdf/pdfinfo.txt",
+      "sha256": "f70fbb16b70911692122bb8781bd4cd86d51559a249de03a775c8ca0563544f6"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/raw/200c7cfde3bc7ffbb80586a4970e508eeeed055b778fac53a05444b54ce2a7f7",
+      "sha256": "200c7cfde3bc7ffbb80586a4970e508eeeed055b778fac53a05444b54ce2a7f7"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/raw/45767d574f791b18a9f083947bc338d7fbdaf5caaf25bd80765e0498fccc0b1c",
+      "sha256": "45767d574f791b18a9f083947bc338d7fbdaf5caaf25bd80765e0498fccc0b1c"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/raw/657725162e098bc0c417064574f553af9d89bc60733468215c29048702710a29",
+      "sha256": "657725162e098bc0c417064574f553af9d89bc60733468215c29048702710a29"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/raw/80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880",
+      "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/raw/aded731b79d1dbbfb47a00d9a08ff65298f5403000daae5e48e0e8d6d7460f0a",
+      "sha256": "aded731b79d1dbbfb47a00d9a08ff65298f5403000daae5e48e0e8d6d7460f0a"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/review.json",
+      "sha256": "b4cb716fd604e8be9e1dc1cf9e78d10f0202c584821f79fb84f3e3e83969f420"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/selection.json",
+      "sha256": "b55c2d35d46813b15a8b8ad48d7c9fd9cb0240fc1e882e44dabb2f1870020528"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/shared-builder-output.json",
+      "sha256": "50b81e47d3c883b9c1f36217937733962dec5f542a25262b8f72b1bd34b8b84c"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/source-bundle.json",
+      "sha256": "02d6b924c91fa8b492d21cdfb86e637c43f47b703a204020734b058c1385b56c"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/source-manifest-adapter.json",
+      "sha256": "d2f6a98f917e9f2df4cacc9fe2a19c3943ff0c0f28e2eb24226c682d23eafcf0"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/source-map.json",
+      "sha256": "93d4ac9f5b2055c87b15cb54e8bbbe54d2b3a5a69373335e9e12e20176e12f1d"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/source-quotes.json",
+      "sha256": "fac25c8d5fd6ef12584bd1cc07f434c9f46355f6d55b202c67dc4d119a3450d7"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/text/01.txt",
+      "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/text/03.txt",
+      "sha256": "1fe80ef135f9e82ba0e41f9dc0bdc31c7a025c130cd39c769654849d7fe3233f"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/text/04.txt",
+      "sha256": "da60973327444b0f31eb12e4089f0efe205ad02403f9a1de521faa22869a87e8"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/validation.json",
+      "sha256": "d74033d623b28817013c605697d16f26c24fa9143950a6d6281ac211996b163a"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/01-builder-snapshot.json",
+      "sha256": "3bef26fa5437684bc1f43bb1de188c562e16ec4638d1637e43c3c17f92b16acc"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/01.json",
+      "sha256": "2233ddacbd3cfbb3ffb29bea590789f27f9a12e1750b70ea49732332a4b97227"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/02-builder-snapshot.json",
+      "sha256": "afb24025c03308a0196bbefdd327273ad0e6001ba8d74cffdd01e530946d0de7"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/02.json",
+      "sha256": "2f956b340f21872dde7fb124e55f9d70e46271dd3191cd56842141bde9bd5df9"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/README.md",
+      "sha256": "f8982ebc4c4c3c6306951aff4e5ce66acfc3c4faa4d8524893a29c88381f6a8e"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/capture-once.py",
+      "sha256": "2fd201c88e57c99dff67a29cfda0555f7fbfcbf585b4a88c1c340d16a1ce9b39"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/capture-reuse.json",
+      "sha256": "f68e285c821d1fb905a8b8758878bf68c40c2b1916a84a5db5cba259dc9611a1"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/capture.json",
+      "sha256": "9a0600d96d65f162be9428b83622d0970f6833819b1885cbdb7208f96ec3a373"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/guard.json",
+      "sha256": "1d0d44fe449f1577025210e89407780943d889ab15109ecde7b9201c454bd44a"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/images/01-physical-04.png",
+      "sha256": "9ba9e9e8746943d6867c83b4cff88c9377f0b557296c3789319aa836d971a424"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/images/01-physical-05.png",
+      "sha256": "c17e511a3f4be7d2e5ee4ded24485d1dd6548d6a7255560ac17dda90c0e67001"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/images/01-physical-07.png",
+      "sha256": "3e6a0c7eeb9beda3e71ae0e04cde91276ae2f9ddb33ea8cbd2e6a92fe9dc69e0"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/images/01-physical-11.png",
+      "sha256": "37d99e71c07166c269b44107a4f3a035e35b5c920533960dd9ca0c4988dbf265"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/images/02-physical-01.png",
+      "sha256": "9c2003c81cecaaa93c6276ef370ae1448bd73069a912e58fd95af6e3af46ff88"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/images/02-physical-02.png",
+      "sha256": "dd3b19eaafcbc90fb064e30859f2406723402a5a826334b41ca9ef8af52b814c"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/images/02-physical-03.png",
+      "sha256": "b841f011272ff5db2a4b1888fe80ed39afbc4d09cac1fc9c1dab7a3d2bccf840"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/images/02-physical-04.png",
+      "sha256": "d977da55720f120a5c61041d4e234f394b7df1e2b81da15b1a4a1d4f22519ad3"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/manifest.json",
+      "sha256": "9875e5f197e2b9405e42f3e674d8e101ea0ad7f8b89bcb3892a4553b7d611ae5"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/parent-acceptance.json",
+      "sha256": "970e61ec3e11afa847ac0280e9c0246bbafae663f08c1e33da4fcbda13c76a6e"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/raw/0cc65ee3099804239cadbc584a7553b156cda8a31481cfb362fa9a51d8fc87b6",
+      "sha256": "0cc65ee3099804239cadbc584a7553b156cda8a31481cfb362fa9a51d8fc87b6"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/raw/7ff8a66d9ea498bbf423733aeeb7099a467d95dfae7308bcfbed7992b53240a5",
+      "sha256": "7ff8a66d9ea498bbf423733aeeb7099a467d95dfae7308bcfbed7992b53240a5"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/review.json",
+      "sha256": "c7d58705f9d5fbfacbe204b4c25d2d49b0cbbfc6e63cca6974d18b56eddce7b0"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/shared-builder-output.json",
+      "sha256": "a7fdc7f2548b297cf41fab15ff16c811757f8b8c562bf529bcf0906506edaefd"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/source-bundle.json",
+      "sha256": "e7cad37e29fbedc7c3e25a1e14d2a9b4512dc496e5584fe5cff30c475f1307d6"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/source-manifest-adapter.json",
+      "sha256": "4870fb85afbe5a39b168c5d40f6cc94db68a1e4b8d5f7bf9ac24fbb400067f51"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/source-map.json",
+      "sha256": "86c4a6a7de7c810dabdb004423c43ed699467fb1c2534afa38c1fbb732adfa47"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/source-quotes.json",
+      "sha256": "078763d3581e99e3a0850e6f586c3b5521b5b24b4b4130731f249107df0ae37c"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/text/01-full.txt",
+      "sha256": "e7a0d7e742014336c54f475c1d3696596a270cdd606f671cc0fab12cb656d2db"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/text/01-pdfinfo.txt",
+      "sha256": "f486e21dd7108405a432100ec73037462ac3dc87c1f291b59953c8a9f0508c2a"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/text/02-full.txt",
+      "sha256": "fd751146bc72a8dab1f24dd506f3e776250feff8f3daeaf29ff3c9e4cd40bf4c"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/text/02-pdfinfo.txt",
+      "sha256": "e3c5d3dda1010c7d3e391799d4999cebda63e3afb667143f1fc83b1772dd3424"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/public-explanation-followup-2026-10-16/validation.json",
+      "sha256": "ecf34912fa2cef8ed6ccf8686cc3dd843b171530c6d9c5ea64d8198119f19e42"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/README.md",
+      "sha256": "d9a90479e7b070f661298966ab22647a930828018989d084f8a3bfa6a0087d42"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/extraction.json",
+      "sha256": "c012e4641edd9de5b797f8ba53402e02f08f5628a8a795bcce88abdffbb5afa4"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/handoff.json",
+      "sha256": "b2626586f553d5193c11ed302adb38bdd4929d6a68a935c295f606c60cc1adbe"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/image-review.json",
+      "sha256": "63e873dba4e2a6e72b088406239ac9e42b4baf9100027c76405efef202332eeb"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/images/physical-10.png",
+      "sha256": "467458304fa7bbd605b88f6027cbc699986915980a88d17588f7c5ccbc69360a"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/images/physical-11.png",
+      "sha256": "93b5f367e23a1e9e71603f1de51628bd4d1ae5157ad866f1b2fc19925e5116ac"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/images/physical-12.png",
+      "sha256": "93ad096152a402555bc718fd09d626ff4eca0ad65a78553d1a2c8b843c563163"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/images/physical-9.png",
+      "sha256": "f1a26cb20ac76c518114334666d1d9730b45a511110caf0a49e41bbf115e9f6c"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/manifest.json",
+      "sha256": "fee505311a1440e042dc07eead9c16faa8920c4cfd8d1679facc1e48ba2d02cb"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/parent-acceptance.json",
+      "sha256": "451f0a904c2ca350ad7e9d7aa9c4c3f81547e7e6f08d9b43da9140d19bdc9584"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/pdf/physical-10-reextracted.txt",
+      "sha256": "b9630d5159dde1a2b52e0be2dbbd9fe4aae3dcb4906113aa141521855924fc1b"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/pdf/physical-11-reextracted.txt",
+      "sha256": "6318a1cf7bc3cae87264195e168ce30497855862b271f3d5ab388aba819db0c5"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/pdf/physical-12-reextracted.txt",
+      "sha256": "479683a024e7692230b4854f20770410bb22f694e21f614afcdb89c442bdc1cd"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/pdf/physical-9-reextracted.txt",
+      "sha256": "ecf135d79c4cd3b7cdf36f5dc0e08a7f1528bfd394270b52feaa76e8cf68f8d0"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/pins.json",
+      "sha256": "aad54c11a382a096333b08e37753727642d1a135f8ad06aa0c0d180cf4faa787"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/review.json",
+      "sha256": "4aba5cbc024eddc5ba69807540f0d81abe3353eb4b7100154070485ff201eeb4"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/source-quotes.json",
+      "sha256": "a9904d421a8589919d80ad7cb26a68d02c9028f55bf4751dd7ad4597015ca199"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/text/physical-10.txt",
+      "sha256": "b9630d5159dde1a2b52e0be2dbbd9fe4aae3dcb4906113aa141521855924fc1b"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/text/physical-11.txt",
+      "sha256": "6318a1cf7bc3cae87264195e168ce30497855862b271f3d5ab388aba819db0c5"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/text/physical-12.txt",
+      "sha256": "479683a024e7692230b4854f20770410bb22f694e21f614afcdb89c442bdc1cd"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/text/physical-9.txt",
+      "sha256": "ecf135d79c4cd3b7cdf36f5dc0e08a7f1528bfd394270b52feaa76e8cf68f8d0"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/statement-note-followup-2026-10-16/validation.json",
+      "sha256": "b27853bcade7b7301c1c727e54cd42867654b1b7ca23e5e8798903c5e0f2847b"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/README.md",
+      "sha256": "4104041fbde1341d867901c3d5a2a98788d7e1e9926a3c88c64e0de19905554c"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/before-readme-scope-correction/README.md",
+      "sha256": "142a23b86aabc56915b781531830bd271b8e684a3140dc9a484ac8dba1986480"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/before-readme-scope-correction/validation.json",
+      "sha256": "482e48ed84aa026ee3dc00145e6e0e580a1f13a399bd8262c73763df5bcde19f"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/generate_once.py",
+      "sha256": "e5bdeb0b73fe2ed3a075ee77d76b641b9f0435dfa22794820495872144bdde6c"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/generation.log",
+      "sha256": "c12525c6aab5aa5dbabf3fc2818a45e4a34a6ae65ada163f29e27c37d82fc9a2"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/manifest.json",
+      "sha256": "d5f179ea1e0498a0e21ede4a6bda2e078a0f687472651c5708f51a4c4614c1b9"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/normalization-input.json",
+      "sha256": "6d52aa6c145dd725c2ec890d55804b5fd87b0fa678d4d7cc63186b678d5572ed"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/normalized-bundle.json",
+      "sha256": "c09b24ecf30c52420b4ec893219c2fbc7ae51fdd7e63d3ada4e9a2949c3d3f56"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/parent-acceptance.json",
+      "sha256": "b9210650093561cebba2b2482a00fb14831891905e11fb4ea5134eb13e114ff9"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/parent-derived-values-check.json",
+      "sha256": "9c764f5467d13a71db4b3787b9207c4862ff4b8f0398e1434eed010378ed974d"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/quotes.json",
+      "sha256": "2a552d3b021b74980851714e648f4c8c5256f13734c77fe66d6d1d8d0c68a98e"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/readme-scope-correction.json",
+      "sha256": "e799505b1822715409b01344ee1761c8e5beeaf8e3341e01d90affb6ee86f0f3"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/reproduce.py",
+      "sha256": "302e72fb0963fda3ba7ea461d5fed502799a2acc068262389cbe218082c8f643"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/reproduction.json",
+      "sha256": "fbf68df377ecbc4cf35d7e1962176c381cf08834c109ac2285c4dce89eae49c5"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/reproduction.log",
+      "sha256": "1bc47f3452517ac128ae13b9d907c22108089bb2d37f026aae1eace54dc8b366"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/source-reference.json",
+      "sha256": "277a0ee69e0d77402a611aac74a2822bd08b3a76073ff1bc3951d938d38916e6"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1963/disclosed-facts-2026-10-16/validation.json",
+      "sha256": "75f329037874fdbe9647dced913ffd29e3fa05c3dc157ab47f43cd6d2b8a7eac"
+    }
+  ],
+  "preparation_checks": {
+    "input_file_count": 113,
+    "all_pins_unchanged": true,
+    "sources_deduplicated_count": 6,
+    "original_statement_same_object_in_derived_bundle": true,
+    "condition_count": 3,
+    "quote_bindings_exact": true,
+    "only_context_and_management_files_created": true,
+    "GET_DB_API_code_or_oldfile_edits": 0
+  }
+}

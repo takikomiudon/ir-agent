@@ -1,0 +1,25 @@
+{
+  "summary": "既読の同一有価証券報告書から作られた年次BS/PL14値の派生1資料を、元caseと前回観測へ比較した。2025年/2026年3月期の営業利益・税前利益・支払利息・税金費用と各年度末の流動資産/負債・有形固定資産を分けて確認できるが、新会社開示や将来利益更新ではない。旧費用/CFO起点、歴史税/将来税NOL、定義不足の未解決点を維持し、正常CF・将来ROC・投資判断・質問を作らない。",
+  "recorded_at": "2026-10-16T00:20:06.786545+00:00",
+  "source_reviews": [
+    {
+      "source_id": "disclosed-facts:1fce07909a0b48066cb45e14c7b72920922a97f859d1efe6b3589f49dd23c94b",
+      "snapshot_sha256": "5de24930251baebe223c989e14c44b15390d3b21b7ff29e8ee3edbd8872dfe3f",
+      "read_state": "reviewed",
+      "outcome": "unchanged",
+      "basis_quote": "\"concept\":\"reported_consolidated_income_taxes_total\",\"definition\":\"連結損益計算書の法人税、住民税及び事業税と法人税等調整額を含む法人税等合計の直接表示。現金税額/正常税率/営業税率へ変換せず、税率やNOPATを計算しない。\",\"financial_inputs_verified\":false,\"id\":\"5988-reported-20260331-income-taxes-total-annual-20260618\",\"kind\":\"reported_fact\",\"location\":{\"column\":\"当連結会計年度 自2025-04-01至2026-03-31\",\"image_file\":\"research/ir-case-studies-2026-10-15/5988/annual-capital-metric-input-discovery/images/physical-065.png\",\"image_sha256\":\"41a568402cfc87268e94a284fc4d6b37d1248ca357dde6adc3b25db8cf3c2e85\",\"image_visually_reviewed_in_prior_discovery\":true,\"page_character_end\":2484,\"page_character_start\":0,\"pdf_page\":65,\"printed_page\":62,\"quote_reference\":\"Q65\",\"row\":\"法人税等合計\",\"row_UTF8_byte_end\":258591,\"row_UTF8_byte_start\":258510,\"row_source_character_end\":129787,\"row_source_character_start\":129718,\"section\":\"連結損益計算書\",\"source_UTF8_byte_end\":258591,\"source_UTF8_byte_start\":255491,\"source_character_end\":129787,\"source_character_start\":127303,\"table_raw_column\":\"右列\",\"table_spatial_meaning_review_required\":true},\"meaning_review_required\":true,\"normalization\":{\"canonical_unit\":\"JPY\",\"exact_quote_and_label_presence_verified\":true,\"explicit_unit_multiplier\":\"1000000\",\"raw_numeric_token_verified\":true,\"status\":\"numeric_token_normalized\"},\"original_source_id\":\"case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365\",\"period\":{\"date_basis\":\"Explicit same-table prior/current column date headings in original PDF p65\",\"end_date\":\"2026-03-31\",\"label\":\"当連結会計年度（自2025-04-01至2026-03-31）\",\"period_kind\":\"annual_duration\",\"start_date\":\"2025-04-01\"},\"raw_period_label\":\"当連結会計年度\",\"raw_unit_label\":\"百万円\",\"raw_value\":\"769\",\"scope\":{\"accounting_basis\":null,\"accounting_basis_note\":\"Not restated as a financial input in the selected BS/PL quote. Same-source general p26 accounting statement is recorded in discovery only; old fact/source metadata remain unchanged.\",\"company_id\":\"jp:5988\",\"concept_author\":\"issuer / 株式会社パイオラックス\",\"consolidation_scope\":\"連結\",\"current_financial_input_applicability_verified\":false,\"explicit_unit_conversion_only\":true,\"extractor_role\":\"Codex delegated offline token/table reviewer, not issuer financial author\",\"financial_meaning_adopted\":false,\"historical_only\":true,\"model_or_policy_adopted\":false,\"period_role\":\"annual_profit_and_loss_flow\",\"period_scope_and_column_are_reviewer_assertions\":true,\"publication_time_unknown\":true,\"raw_money_precision\":\"原表は百万円表示。端数処理/未表示精度はこの表引用だけで未確定、円換算値を未丸めの正確経済額としない。\",\"table_column\":\"当連結会計年度\",\"table_row\":\"法人税等合計\"},\"source_id\":\"case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365\",\"unit\":\"JPY\",\"value\":\"769000000\"",
+      "rationale": "派生14factは同じ保存済み会社原典の表示値をJPYへ換算した再表現であり、今回の新しい会社発表・新期予測ではない。年次PLは2024-04-01〜2025-03-31と2025-04-01〜2026-03-31を区別し、順に営業利益2,382/1,470、税金等調整前当期純利益3,402/763、支払利息14/254、法人税等合計1,549/769（原表示は百万円）を読む。BSは2025-03-31/2026-03-31のinstantとして流動資産64,398/58,140、流動負債12,218/33,541、有形固定資産合計33,572/35,836（百万円）で、年次フローと同じ種類の期間にはしない。営業利益、税前利益、支払利息、税金費用はそれぞれ別の会計行であり、税前利益を営業利益や正常CFに読み替えない。scope.accounting_basisはnullであり、同じnullだけで会計適合や日本原典からcanonicalへの対応を確認済みにしない。元case expense-and-CFO-no-double-addに対し、この14値はCFO調整内訳・減損の二重加算可否・現金支払時期の追加説明を含まず、既存の減損423百万円/CFO調整の観測を新たに再検証/反証しない。historical-tax-vs-future-tax-NOLに対しては歴史PLの税前/税費用の対象年を明確にするが、法定率・p94歴史負担率・DTA338百万円・将来の正常税率/現金税/NOL利用は別で、税務主体・国・期限・回収可能性の不足を埋めない。conditional-definition-gapsに対しても、流動資産/負債/PPEの総額だけでは中国費用の範囲・現金時期や期待税引後CF、再投資の適合は解けない。別のscalar研究結果・maintainer税clip・仮net_ppe/ROCをpendingの会社公表事実に加えず、会社税率・normalCF・ROC_newへ転用しない。前回の未解決観測とclosedの有限探索を維持し、金融入力検証・分類変更・数値仮説・価格・新質問は行わない。"
+    }
+  ],
+  "case_observation": {
+    "issue_id": "5988-cost-tax-cashflow-basis",
+    "outcome": "unchanged",
+    "rationale": "元caseのexpense-and-CFO-no-double-add、historical-tax-vs-future-tax-NOL、conditional-definition-gapsを維持する。今回の14factは同一の既読原典にある会計行と2年度/期末を追跡しやすくするが、費用の現金時期、中国損失の税務帰属、将来税/NOL利用、正常CFや新規投資利回りを追加しない。Anthropicの支持/反証記録とDamodaranの会計CFO・税後評価CF・正常化の定義を分ける既存研究手順に沿い、数値の存在だけで元著者条件の支持/反証成立や金融モデル適合を認定しない。前回の歴史税/予測期/BS期末の区別を保持し、新保存の派生読解を新会社開示・未確認の現在鮮度・将来予測へ読み替えない。scalar計算は根拠sourceにも本caseの金融入力にも採用していない。",
+    "evidence_source_ids": [
+      "disclosed-facts:1fce07909a0b48066cb45e14c7b72920922a97f859d1efe6b3589f49dd23c94b"
+    ]
+  },
+  "management_review_update": {
+    "mode": "retain"
+  }
+}

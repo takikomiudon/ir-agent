@@ -1,0 +1,83 @@
+{
+  "security_code": "3407",
+  "company_name": "旭化成",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "化学",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.asahi-kasei.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T07:48:40.237234+00:00",
+  "completed_at": "2026-10-11T07:50:00.069463+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/3407/20261011T074840237262Z/01.json",
+      "url": "https://www.asahi-kasei.com/jp",
+      "retrieved_at": "2026-10-11T07:49:44.236961+00:00",
+      "quote": "旭化成株式会社",
+      "role": "company_identity"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.asahi-kasei.co.jp/",
+      "final_url": "https://www.asahi-kasei.com/jp",
+      "snapshot": "evidence/3407/20261011T074840237262Z/01.json",
+      "retrieved_at": "2026-10-11T07:49:44.236961+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "保存済み公式ページ・実フォーム欄を手動点検。送信・配信成功・回答実績は未確認。"
+  ],
+  "discovery": {
+    "security_code": "3407",
+    "official_url": "https://www.asahi-kasei.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "旭化成",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/3407/20261011T074840237262Z/01.json",
+      "normalized_name": "旭化成",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "ir_parent_and_question_fields_unfetched",
+  "http_get_attempt_count": 5,
+  "previous_attempts": [
+    "attempts/3407/20261011T045047392923Z.json",
+    "attempts/3407/20261011T075000069809Z.json"
+  ],
+  "manual_followup_candidates": [
+    {
+      "url": "https://www.asahi-kasei.com/jp/ir",
+      "quote": "IR情報 /content/asahi-kasei/jp/ja/ir",
+      "source_link_label": "/content/asahi-kasei/jp/ja/ir",
+      "method": "GET",
+      "IR_channel_verified": false,
+      "reason": "保存HOMEのactual /jp/ir hrefが示す未取得IR親。IR窓口・実フォーム欄の追加発見候補であり受付確認ではない。",
+      "parent_snapshot": "evidence/3407/20261011T074840237262Z/01.json"
+    }
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_services",
+    "reviewed_at": "2026-10-11T07:53:00.616624+00:00",
+    "notes": "旭化成の旧co.jpからcom/jpへの公式redirect先は本文200で会社名とIR情報のコンテンツ説明、実link /jp/irを含む。動的コンテンツのIR親自体は未取得でIR質問フォーム／メールは未確認、unconfirmed維持。AEM内のcontent pathを窓口URLへ推定変換せず、保存された実href /jp/irだけを次取得候補にする。",
+    "attempted_at_reviewed": "2026-10-11T07:48:40.237234+00:00",
+    "saved_evidence_only": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "all_inputs_fictional": true,
+  "database": ":memory:",
+  "only_thesis_version_changed": true,
+  "policy_and_financial_inputs_unchanged": true,
+  "quote_observed_at": "2026-10-09T17:00:00+09:00",
+  "checked_at": "2026-10-09T17:11:00+09:00",
+  "max_quote_age_seconds": 3600,
+  "current_quote_status": "fresh",
+  "quote_age_microseconds": 660000000,
+  "before": {
+    "store_thesis_version": 2,
+    "current_action": "exit_review"
+  },
+  "after": {
+    "store_thesis_version": 3,
+    "review_thesis_version": 2,
+    "current_action": "exit_review",
+    "current_validity": "no_recorded_information_correction",
+    "current_review_requirements": [],
+    "historical_result_label_present": false,
+    "current_evaluation_action": "exit_review",
+    "same_request_retry_action": "exit_review",
+    "cli_show_action": "exit_review"
+  },
+  "new_review_with_old_version_rejected": "Thesis changed; review fresh research instead of reusing stale IR branches",
+  "historical_review_unchanged": true,
+  "read_and_retry_db_unchanged": true,
+  "scope": "Version coherence of current-facing candidates, not financial recalculation or quote freshness."
+}

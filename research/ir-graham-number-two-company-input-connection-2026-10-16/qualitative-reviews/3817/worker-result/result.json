@@ -1,0 +1,34 @@
+{
+  "summary": "3817の初回定性jobで年次原source1と同原典の2fact派生source1を比較した。原19頁の意味範囲は物理1/2/9/18だけで、FY2025-04-01～2026-03-31の連結reported基本EPS443.34円と2026-03-31のBPS2659.88円を候補入力として限定確認した。原sourceは候補の存在/basisをsupports、派生sourceは同表示の再表現でunchangedとした。会社guide435.34・個別253.08/699.68・純資産総額・丸め額からの再計算は代用していない。C1の報告年次/正値条件と、C2のEPS平均分母/BPS期末basis・普通株持分の詳細、C3のlatestperiod価格/後日異動/金融採用を分け、ケースは残余未解決としてunresolvedを維持する。新保存の読解であって新公表期や独立裏付け追加ではなく、正常利益や現在株数・価格・policyの保証はない。management2027-01-16 Asia/Tokyoは内部四半期管理日で未到来、due_occurrence:nullのためretainする。",
+  "recorded_at": "2026-10-16T10:00:34.706247+00:00",
+  "source_reviews": [
+    {
+      "source_id": "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e",
+      "snapshot_sha256": "cdb77fd2cb0d201dd8fbcba84a200665e0912216981ea79e200a601558d7a616",
+      "read_state": "reviewed",
+      "outcome": "supports",
+      "basis_quote": "（１株当たり情報の注記）\n                              前連結会計年度                 当連結会計年度\n                            (自 2024年４月１日            (自 2025年４月１日\n                             至 2025年３月31日)           至 2026年３月31日)\n\n１株当たり純資産額                           2,438.30円               2,659.88円\n\n１株当たり当期純利益                           267.48円                   443.34\n\n",
+      "rationale": "原sourceは2026年3月期決算短信〔日本基準〕（連結）の年次公表資料で、意味確認は保存19頁中の物理1/2/9/18に限定した。C1では2025-04-01～2026-03-31の連結基本EPS443.34円、C2では同年度末2026-03-31のBPS2659.88円という正の直接表示を候補として限定支持する。p18はEPSの普通株主利益/普通株式平均、p2は発行済・自己・平均株数を示し、p18の12633千株とp2の12633889株の表示精度を置換しない。会社guide435.34や個別EPS253.08/BPS699.68、純資産総額・丸めNIからの再計算を代用せず、希薄化後のdashも0にしない。p9のOP・経常・税前・親会社利益を区別し、FX/引当等の正常化足戻しはしない。supportsは報告候補と公表basisの存在への支持だけで、詳細BPS分子/OCI・NCI等の完全mapping、現在株式basis・価格、正常利益の保証、金融policy・数値採用の成立ではない。"
+    },
+    {
+      "source_id": "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf",
+      "snapshot_sha256": "2bd0faef543ce9659035c844d7d1722975b37e23fc2035a2a66a85c1e78940ce",
+      "read_state": "reviewed",
+      "outcome": "unchanged",
+      "basis_quote": "{\"declarations\":{\"financial_inputs_verified\":false,\"forecast_values_automatically_adopted\":false,\"meaning_review_required\":true,\"scope_period_definition_and_table_column_are_reviewer_assertions\":true},",
+      "rationale": "sourcekindは既存原短信からのcited fact extractionで、2factはreported年次EPS443.34と期末BPS2659.88を原表示のdecimal/JPY-per-shareへ構造化した再表現である。EPS期間durationとBPSinstant、連結・日本基準・普通株basisのreviewer assertion、financial_inputs_verified:false/meaning_review_required:trueを保持している。正規化reviewの作者は抽出担当で、会社原表示の作者や外部戦略の作者ではない。これは独立した財務裏付け/新公表期/新会社予想ではなく、元条件C1/C2の候補値とC3未採用状態に変更をもたらさないためunchangedとした。現在株数・詳細BPS分子・最新予想・価格の確認やGraham計算/金融採用を完了したとは扱わず、normalizerの再実行もしていない。"
+    }
+  ],
+  "case_observation": {
+    "issue_id": "3817-annual-EPS-BPS-and-common-share-basis",
+    "outcome": "unresolved",
+    "rationale": "元3条件を保持する。C1は同年度の連結reported EPS443.34、C2は同年度末の直接BPS2659.88という正の候補が原文で確認できる。これはnormal earningsや持続性保証を新しい必須条件にしたり、逆にそれらを成立済みにしたりするものではない。詳細BPS分子と普通株持分/OCI/NCI等の完全mapping、期中平均と期末・株と千株の精度、後日資本異動・現在株式basisは別に残る。C3では価格・金融policy未採用で、未取得latestQ1locatorを会社予想維持や現在basisの本文根拠にしない。maxgfr/cribleのannualdefaultは計算関数による年次/TTM認証ではなく、価格はlatestfiscalperiodのみ・過去行へbackdateしない仕様と、日本原典の期/basis対応は分ける。正EPSかつ正BVPSのguardから外れる将来観測はこの式の適用範囲外であり、会社永久除外や売却を意味しない。個別値・会社forecast・総純資産や丸めNI/株数を代用せず、派生2factsを独立根拠2本と数えない。参考式・金融計算/価格比較・売買action・原著Graham全基準・IR質問/回答分岐はここで追加/採用しない。新しく正当保存された訂正/後発資料は同じC1〜C3に比較し、管理日2027-01-16 Asia/Tokyoは未到来なので維持する。",
+    "evidence_source_ids": [
+      "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e",
+      "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf"
+    ]
+  },
+  "management_review_update": {
+    "mode": "retain"
+  }
+}

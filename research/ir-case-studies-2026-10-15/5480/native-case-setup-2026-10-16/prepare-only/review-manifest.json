@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "case_id": "5480-cyclical-normalization-monitor",
+  "company_id": "jp:5480",
+  "issue_id": "5480-cyclical-normalization-input-basis",
+  "recorded_at": "2026-10-16T09:24:57.871715+00:00",
+  "case_ref": {
+    "path": "research/ir-case-studies-2026-10-15/5480/native-case-setup-2026-10-16/prepare-only/case-context.json",
+    "sha256": "6f057a9c47fd1a9f432d9c9d8e66ee2462f973d474061e7cb4a4ecb668b46a52"
+  },
+  "source_count": 4,
+  "source_reviews": [
+    {
+      "source_id": "case-public:7ebd4f421bb0d918ddc742534804347eb60927dfe2b6c6371b56af46358fcf00",
+      "source_snapshot_sha256": "40b9a85b68d91a14a5895fdf491646bd4514c9a82a21609068af92b909c10857",
+      "source_content_sha256": "add985976d8303937a56a6e1c5f789dce6ff4421ae0ff278038643ceee931277",
+      "snapshot_algorithm": "SHA256 UTF8 ir_agent.models.json_text(source); not compactJSON/fileSHA",
+      "source_refs": [
+        {
+          "path": "research/ir-case-studies-2026-10-15/5480/source-bundle.json",
+          "file_sha256": "60f3f834c25eca360cac7c53a64b22b477282f9c1337d8160ba8b8300ef78047",
+          "json_pointer": "/sources/6",
+          "whole_object_equal": true
+        },
+        {
+          "path": "research/ir-case-studies-2026-10-15/5480/disclosed-facts/normalized-bundle.json",
+          "file_sha256": "62e5672411e923db21b0529dd9365d816d58c1a2aeb88270f538e546e580180b",
+          "json_pointer": "/sources/0",
+          "whole_object_equal": true
+        },
+        {
+          "path": "research/ir-case-studies-2026-10-15/5480/revenue-disclosed-facts/normalized-bundle.json",
+          "file_sha256": "0e251685a8bc95232b39fc678dc1ad6ffc662162dafdf961d731aaaf6350ea27",
+          "json_pointer": "/sources/0",
+          "whole_object_equal": true
+        }
+      ],
+      "actual_whole_object_equal": true,
+      "actual_availability": [
+        {
+          "entity_type": "source",
+          "entity_id": "case-public:7ebd4f421bb0d918ddc742534804347eb60927dfe2b6c6371b56af46358fcf00",
+          "version": 0,
+          "snapshot_sha256": "40b9a85b68d91a14a5895fdf491646bd4514c9a82a21609068af92b909c10857",
+          "first_saved_at": null,
+          "presence_observed_at": "2026-10-15T03:35:45.500280+00:00",
+          "basis": "legacy_presence"
+        }
+      ],
+      "actual_latest_classification": {
+        "source_id": "case-public:7ebd4f421bb0d918ddc742534804347eb60927dfe2b6c6371b56af46358fcf00",
+        "version": 1,
+        "data": {
+          "basis_quote": "連結売上高は150,866百万円",
+          "financial_content": true,
+          "first_saved_at": "2026-10-15T02:51:37.576454+00:00",
+          "inputs_verified": false,
+          "job_id": "intake-a2947b4baf6233e686b1d78e",
+          "kind": "business_description",
+          "rationale": "株主向け経営説明に2026年3月期の売上・利益と事業要因を掲載。最新決算一式や正常化入力の検証を意味しない。",
+          "recorded_at": "2026-10-15T02:51:37.576454+00:00",
+          "source_id": "case-public:7ebd4f421bb0d918ddc742534804347eb60927dfe2b6c6371b56af46358fcf00",
+          "source_sha256": "add985976d8303937a56a6e1c5f789dce6ff4421ae0ff278038643ceee931277",
+          "source_snapshot_sha256": "40b9a85b68d91a14a5895fdf491646bd4514c9a82a21609068af92b909c10857",
+          "version": 1
+        },
+        "first_saved_at": "2026-10-15T02:51:37.576454+00:00",
+        "job_id": "intake-a2947b4baf6233e686b1d78e"
+      },
+      "reviewed_at": "2026-10-16T09:24:57.871715+00:00",
+      "read_state": "limited_review_declaration_for_bootstrap_candidate",
+      "read_scope": "Originalwholemessage/body or companybusiness/identity, or oneoriginalfact and definition/declarations/review; authorcondition comparison only.",
+      "quote_ids": [
+        "message-period",
+        "message-demand",
+        "message-cost",
+        "message-revenue",
+        "message-OP",
+        "message-month"
+      ],
+      "basis_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5480/native-case-setup-2026-10-16/prepare-only/reading-evidence.json",
+        "sha256": "df9523fc385502dd0f99608574e661833f87d290d08a574901077e0e79697c4d"
+      },
+      "financial_inputs_verified": false,
+      "meaning_certification": false
+    },
+    {
+      "source_id": "case-public:91f0c36851e32c4a00119d864fcabf7f5ba973e2f3d70b111d269ea6445ed265",
+      "source_snapshot_sha256": "2e34df842bc78486acdd6719312d84428ebaf7a3ac4ac1a6b279f617ef7d9abb",
+      "source_content_sha256": "c5c65635dd4e7e93f7c980505ba8b3792d645d03001b0e4fecd1b158ea902858",
+      "snapshot_algorithm": "SHA256 UTF8 ir_agent.models.json_text(source); not compactJSON/fileSHA",
+      "source_refs": [
+        {
+          "path": "research/ir-case-studies-2026-10-15/5480/source-bundle.json",
+          "file_sha256": "60f3f834c25eca360cac7c53a64b22b477282f9c1337d8160ba8b8300ef78047",
+          "json_pointer": "/sources/7",
+          "whole_object_equal": true
+        }
+      ],
+      "actual_whole_object_equal": true,
+      "actual_availability": [
+        {
+          "entity_type": "source",
+          "entity_id": "case-public:91f0c36851e32c4a00119d864fcabf7f5ba973e2f3d70b111d269ea6445ed265",
+          "version": 0,
+          "snapshot_sha256": "2e34df842bc78486acdd6719312d84428ebaf7a3ac4ac1a6b279f617ef7d9abb",
+          "first_saved_at": null,
+          "presence_observed_at": "2026-10-15T03:35:45.500280+00:00",
+          "basis": "legacy_presence"
+        }
+      ],
+      "actual_latest_classification": {
+        "source_id": "case-public:91f0c36851e32c4a00119d864fcabf7f5ba973e2f3d70b111d269ea6445ed265",
+        "version": 1,
+        "data": {
+          "basis_quote": "資本金 24,300,910,790円 (2026年3月31日現在)",
+          "financial_content": true,
+          "first_saved_at": "2026-10-15T02:51:37.576454+00:00",
+          "inputs_verified": false,
+          "job_id": "intake-a2947b4baf6233e686b1d78e",
+          "kind": "business_description",
+          "rationale": "会社概要に資本金の公表値と事業内容を掲載。損益・CF・必要資本の完全な資料やモデル入力検証ではない。",
+          "recorded_at": "2026-10-15T02:51:37.576454+00:00",
+          "source_id": "case-public:91f0c36851e32c4a00119d864fcabf7f5ba973e2f3d70b111d269ea6445ed265",
+          "source_sha256": "c5c65635dd4e7e93f7c980505ba8b3792d645d03001b0e4fecd1b158ea902858",
+          "source_snapshot_sha256": "2e34df842bc78486acdd6719312d84428ebaf7a3ac4ac1a6b279f617ef7d9abb",
+          "version": 1
+        },
+        "first_saved_at": "2026-10-15T02:51:37.576454+00:00",
+        "job_id": "intake-a2947b4baf6233e686b1d78e"
+      },
+      "reviewed_at": "2026-10-16T09:24:57.871715+00:00",
+      "read_state": "limited_review_declaration_for_bootstrap_candidate",
+      "read_scope": "Originalwholemessage/body or companybusiness/identity, or oneoriginalfact and definition/declarations/review; authorcondition comparison only.",
+      "quote_ids": [
+        "company-business"
+      ],
+      "basis_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5480/native-case-setup-2026-10-16/prepare-only/reading-evidence.json",
+        "sha256": "df9523fc385502dd0f99608574e661833f87d290d08a574901077e0e79697c4d"
+      },
+      "financial_inputs_verified": false,
+      "meaning_certification": false
+    },
+    {
+      "source_id": "disclosed-facts:f2102aa8a0c45411a8e5ac300e20e5eea781c357e9d2799129ab5dcd0c444744",
+      "source_snapshot_sha256": "ded92aa25105faea5c81bee4f299cc03ac0e56f305c0cb630912d3d555953dad",
+      "source_content_sha256": "8e2a7e5f3c28cc9e64db823f9499b79b440cb3062c96369a45705113e08d5dbc",
+      "snapshot_algorithm": "SHA256 UTF8 ir_agent.models.json_text(source); not compactJSON/fileSHA",
+      "source_refs": [
+        {
+          "path": "research/ir-case-studies-2026-10-15/5480/disclosed-facts/normalized-bundle.json",
+          "file_sha256": "62e5672411e923db21b0529dd9365d816d58c1a2aeb88270f538e546e580180b",
+          "json_pointer": "/sources/1",
+          "whole_object_equal": true
+        }
+      ],
+      "actual_whole_object_equal": true,
+      "actual_availability": [
+        {
+          "entity_type": "source",
+          "entity_id": "disclosed-facts:f2102aa8a0c45411a8e5ac300e20e5eea781c357e9d2799129ab5dcd0c444744",
+          "version": 0,
+          "snapshot_sha256": "ded92aa25105faea5c81bee4f299cc03ac0e56f305c0cb630912d3d555953dad",
+          "first_saved_at": "2026-10-15T22:28:52.999091+00:00",
+          "presence_observed_at": "2026-10-15T22:28:52.999091+00:00",
+          "basis": "trusted_insert"
+        }
+      ],
+      "actual_latest_classification": {
+        "source_id": "disclosed-facts:f2102aa8a0c45411a8e5ac300e20e5eea781c357e9d2799129ab5dcd0c444744",
+        "version": 1,
+        "data": {
+          "basis_quote": "\"concept\":\"reported_consolidated_operating_income\",\"definition\":\"会社が当連結会計年度の連結営業利益と記載した通期実績。前年比5,994百万円減という差額、連結経常利益9,657百万円、当期純利益7,215百万円と区別する。正常化営業利益・EBITDA・フリーキャッシュフロー・会社予想・将来再投資として採用しない。\",\"financial_inputs_verified\":false,\"id\":\"nyk5480-fy202603-consolidated-operating-income\",\"kind\":\"reported_fact\",\"location\":{\"character_offset_unit\":\"Unicode code points, zero-based, end exclusive\",\"document_kind\":\"html_shareholder_message\",\"period_basis\":{\"quote\":\"第144期（2025年4月1日から2026年3月31日まで）の報告書をお届けするにあたり、一言ご挨拶申し上げます。\",\"source_text_end_exclusive\":799,\"source_text_start\":742},\"saved_snapshot\":\"5480/07.json\",\"section\":\"株主・投資家の皆様へ／第144期の当連結会計年度業績\",\"source_text_end_exclusive\":1432,\"source_text_start\":1219},\"meaning_review_required\":true,\"normalization\":{\"canonical_unit\":\"JPY\",\"exact_quote_and_label_presence_verified\":true,\"explicit_unit_multiplier\":\"1000000\",\"raw_numeric_token_verified\":true,\"status\":\"numeric_token_normalized\"},\"original_source_id\":\"case-public:7ebd4f421bb0d918ddc742534804347eb60927dfe2b6c6371b56af46358fcf00\",\"period\":{\"actual_or_forecast\":\"reported_actual\",\"aggregation\":\"full_year_cumulative\",\"end_date\":\"2026-03-31\",\"frequency\":\"annual\",\"label\":\"第144期・2026年3月期\",\"single_quarter\":false,\"start_date\":\"2025-04-01\"},\"raw_period_label\":\"当連結会計年度\",\"raw_unit_label\":\"百万円\",\"raw_value\":\"10,973\",\"scope\":{\"accounting_standard\":null,\"accounting_standard_verification\":\"株主向けメッセージだけでは未確認\",\"company_id\":\"jp:5480\",\"consolidation\":\"consolidated\",\"entity\":\"日本冶金工業株式会社グループ\",\"source_metric_label\":\"連結営業利益\"},\"unit\":\"JPY\",\"value\":\"10973000000\"",
+          "financial_content": true,
+          "first_saved_at": "2026-10-15T22:28:53.193064+00:00",
+          "inputs_verified": false,
+          "job_id": "intake-ec95379bfa089de9b601d8a5",
+          "kind": "other",
+          "rationale": "保存済み原典から作られた構造化派生金融資料。元factsのkind=reported_fact、concept=reported_consolidated_operating_incomeを記録する。原典の短信・説明資料・外部レポートそのものとは区別する。著者・会社予想/実績等の区分、期間、単位、未確認を保持し、金融入力検証・予測・モデル・投資方針への採用は行わない。",
+          "recorded_at": "2026-10-15T22:28:53.193064+00:00",
+          "source_id": "disclosed-facts:f2102aa8a0c45411a8e5ac300e20e5eea781c357e9d2799129ab5dcd0c444744",
+          "source_sha256": "8e2a7e5f3c28cc9e64db823f9499b79b440cb3062c96369a45705113e08d5dbc",
+          "source_snapshot_sha256": "ded92aa25105faea5c81bee4f299cc03ac0e56f305c0cb630912d3d555953dad",
+          "version": 1
+        },
+        "first_saved_at": "2026-10-15T22:28:53.193064+00:00",
+        "job_id": "intake-ec95379bfa089de9b601d8a5"
+      },
+      "reviewed_at": "2026-10-16T09:24:57.871715+00:00",
+      "read_state": "limited_review_declaration_for_bootstrap_candidate",
+      "read_scope": "Originalwholemessage/body or companybusiness/identity, or oneoriginalfact and definition/declarations/review; authorcondition comparison only.",
+      "quote_ids": [
+        "derived-OP-raw-value"
+      ],
+      "basis_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5480/native-case-setup-2026-10-16/prepare-only/reading-evidence.json",
+        "sha256": "df9523fc385502dd0f99608574e661833f87d290d08a574901077e0e79697c4d"
+      },
+      "financial_inputs_verified": false,
+      "meaning_certification": false
+    },
+    {
+      "source_id": "disclosed-facts:487cb89709ae01cba3c250ed113295e5383cf391599e2c4eda6dcde578c99e6f",
+      "source_snapshot_sha256": "4536269c85e13b95cf052b30e91882489f208da8ee01de941292573db2ae61b6",
+      "source_content_sha256": "2eb497f59ceb62b668ec54c2bc0fb0d54c474a357d9ff559f059eb0d0cef91a2",
+      "snapshot_algorithm": "SHA256 UTF8 ir_agent.models.json_text(source); not compactJSON/fileSHA",
+      "source_refs": [
+        {
+          "path": "research/ir-case-studies-2026-10-15/5480/revenue-disclosed-facts/normalized-bundle.json",
+          "file_sha256": "0e251685a8bc95232b39fc678dc1ad6ffc662162dafdf961d731aaaf6350ea27",
+          "json_pointer": "/sources/1",
+          "whole_object_equal": true
+        }
+      ],
+      "actual_whole_object_equal": true,
+      "actual_availability": [
+        {
+          "entity_type": "source",
+          "entity_id": "disclosed-facts:487cb89709ae01cba3c250ed113295e5383cf391599e2c4eda6dcde578c99e6f",
+          "version": 0,
+          "snapshot_sha256": "4536269c85e13b95cf052b30e91882489f208da8ee01de941292573db2ae61b6",
+          "first_saved_at": "2026-10-15T22:28:52.999091+00:00",
+          "presence_observed_at": "2026-10-15T22:28:52.999091+00:00",
+          "basis": "trusted_insert"
+        }
+      ],
+      "actual_latest_classification": {
+        "source_id": "disclosed-facts:487cb89709ae01cba3c250ed113295e5383cf391599e2c4eda6dcde578c99e6f",
+        "version": 1,
+        "data": {
+          "basis_quote": "\"concept\":\"reported_consolidated_annual_revenue\",\"definition\":\"既存2026年6月表示の株主メッセージが当連結会計年度の実績として述べた連結売上高150,866百万円。前年度比21,231百万円減という変化額、営業利益10,973百万円など別指標と区別する。前年比からの過年度実額逆算、正常化売上、将来売上、利益率やROICの算定には使っていない。\",\"financial_inputs_verified\":false,\"id\":\"nyk5480-fy202603-consolidated-revenue\",\"kind\":\"reported_fact\",\"location\":{\"document_kind\":\"html_shareholder_message\",\"field_path\":[\"text\"],\"offset_unit\":\"Unicode code points in original source content, end exclusive\",\"saved_snapshot\":\"5480/07.json\",\"text_character_end\":1432,\"text_character_start\":742,\"value_character_end\":1286,\"value_character_start\":1279},\"meaning_review_required\":true,\"normalization\":{\"canonical_unit\":\"JPY\",\"exact_quote_and_label_presence_verified\":true,\"explicit_unit_multiplier\":\"1000000\",\"raw_numeric_token_verified\":true,\"status\":\"numeric_token_normalized\"},\"original_source_id\":\"case-public:7ebd4f421bb0d918ddc742534804347eb60927dfe2b6c6371b56af46358fcf00\",\"period\":{\"actual_or_forecast\":\"reported_actual\",\"aggregation\":\"full_year_cumulative\",\"end_date\":\"2026-03-31\",\"frequency\":\"annual\",\"label\":\"第144期・2026年3月期\",\"start_date\":\"2025-04-01\"},\"raw_period_label\":\"第144期（2025年4月1日から2026年3月31日まで）\",\"raw_unit_label\":\"百万円\",\"raw_value\":\"150,866\",\"scope\":{\"accounting_basis\":null,\"company_id\":\"jp:5480\",\"consolidation\":\"consolidated\",\"entity\":\"日本冶金工業株式会社グループ\",\"formal_annual_statement_independently_reconciled\":false,\"newest_financial_release_verified\":false,\"source_metric_label\":\"連結売上高\"},\"unit\":\"JPY\",\"value\":\"150866000000\"",
+          "financial_content": true,
+          "first_saved_at": "2026-10-15T22:28:53.193064+00:00",
+          "inputs_verified": false,
+          "job_id": "intake-ec95379bfa089de9b601d8a5",
+          "kind": "other",
+          "rationale": "保存済み原典から作られた構造化派生金融資料。元factsのkind=reported_fact、concept=reported_consolidated_annual_revenueを記録する。原典の短信・説明資料・外部レポートそのものとは区別する。著者・会社予想/実績等の区分、期間、単位、未確認を保持し、金融入力検証・予測・モデル・投資方針への採用は行わない。",
+          "recorded_at": "2026-10-15T22:28:53.193064+00:00",
+          "source_id": "disclosed-facts:487cb89709ae01cba3c250ed113295e5383cf391599e2c4eda6dcde578c99e6f",
+          "source_sha256": "2eb497f59ceb62b668ec54c2bc0fb0d54c474a357d9ff559f059eb0d0cef91a2",
+          "source_snapshot_sha256": "4536269c85e13b95cf052b30e91882489f208da8ee01de941292573db2ae61b6",
+          "version": 1
+        },
+        "first_saved_at": "2026-10-15T22:28:53.193064+00:00",
+        "job_id": "intake-ec95379bfa089de9b601d8a5"
+      },
+      "reviewed_at": "2026-10-16T09:24:57.871715+00:00",
+      "read_state": "limited_review_declaration_for_bootstrap_candidate",
+      "read_scope": "Originalwholemessage/body or companybusiness/identity, or oneoriginalfact and definition/declarations/review; authorcondition comparison only.",
+      "quote_ids": [
+        "derived-revenue-raw-value"
+      ],
+      "basis_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5480/native-case-setup-2026-10-16/prepare-only/reading-evidence.json",
+        "sha256": "df9523fc385502dd0f99608574e661833f87d290d08a574901077e0e79697c4d"
+      },
+      "financial_inputs_verified": false,
+      "meaning_certification": false
+    }
+  ],
+  "not_bootstrapped_source_inventory": [
+    {
+      "source_id": "case-public:398e1d4b1dff093ff66ccf43997d0cd40dc13d33cbfafac879719e531976bb99",
+      "native_snapshot_sha256": "999f4feab84a933eb03c845334a5950e4c3d3a958aa70c41cee3a722190e11b5",
+      "reason": "Only inventoried metadata/classification; not declarednative-read here."
+    },
+    {
+      "source_id": "case-public:4550dcb5ba257247c47b846003c9a0448a392a5d075eedaa688452835da5010a",
+      "native_snapshot_sha256": "bd38d440d2bbc6ec4d0a8b2dbee86dfad6541779a805cc360d95dc35ba36003d",
+      "reason": "Only inventoried metadata/classification; not declarednative-read here."
+    },
+    {
+      "source_id": "case-public:8868c78b4337b09f6600be40d08d290312ab9fa5900c84b8ff7adc4e6f00930f",
+      "native_snapshot_sha256": "f4b4e7991d5998a968fb13f086a0155764f157d22bf4648a2b35fd3933355d4e",
+      "reason": "Only inventoried metadata/classification; not declarednative-read here."
+    },
+    {
+      "source_id": "case-public:89ed9fd51d5faf7426d484b82fb39df4be70de3c68fbb2c4b330269632a996b8",
+      "native_snapshot_sha256": "58e112127b0824955dae866e611c7cdd15b7ee2ce36ccb582ea1ae8a5aacf11e",
+      "reason": "Only inventoried metadata/classification; not declarednative-read here."
+    },
+    {
+      "source_id": "case-public:c9715de6c491a34c92a46bdedabc7c74d5947cfa8d21d9fc1c824ae0499ee616",
+      "native_snapshot_sha256": "c60d20798c871ba778e1b8ca8641b249e3e538411f3340d255aa62b03300fdd6",
+      "reason": "Only inventoried metadata/classification; not declarednative-read here."
+    },
+    {
+      "source_id": "case-public:e70628e64f048ae49496c832eb44edee800d82ab2dcca5962a3a00838c29b896",
+      "native_snapshot_sha256": "9c6d76cb30ccd15818a9dec79ab98d05f81fafe4090b119649340e3674608399",
+      "reason": "Only inventoried metadata/classification; not declarednative-read here."
+    }
+  ],
+  "bootstrap_eligibility": "Candidate only; actualknown_by/currentpublicity/DAG/classificationguards must pass existingcopyAPI before rootregistration. Legacyfirst_saved_at remainsnull.",
+  "management_review": null,
+  "actual_readonly_ref": {
+    "path": "research/ir-case-studies-2026-10-15/5480/native-case-setup-2026-10-16/prepare-only/actual-readonly-source-inventory.json",
+    "sha256": "646fa7ab61d6547ff0722ceb5bc8b1cd3797a18f05a23fb7738be49f2f4f6d4a"
+  }
+}

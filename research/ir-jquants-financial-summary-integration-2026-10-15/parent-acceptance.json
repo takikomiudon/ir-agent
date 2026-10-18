@@ -1,0 +1,32 @@
+{
+  "status": "accepted_offline",
+  "recorded_at": "2026-10-15T20:43:03.073318+00:00",
+  "full_suite": {
+    "path": "research/ir-jquants-financial-summary-integration-2026-10-15/parent-full-suite.json",
+    "sha256": "64b72885fb7a1076c8885cd428dbf108a67aa5bc7e9a58d0c0179a2cb8ccc64a",
+    "test_count": 1444,
+    "unittest_seconds": "36.744"
+  },
+  "independent_review": {
+    "path": "research/ir-jquants-financial-summary-integration-2026-10-15/independent-review.json",
+    "sha256": "11c75f24adcca50523b6cb4a468d6d2d1a5abdbfea8cdf91a3b9beda9ff944a5",
+    "checks": 34,
+    "actionable_findings": 0
+  },
+  "accepted_code_sha256": {
+    "src/ir_agent/adapters/jquants_financials.py": "153fc9df09a0cf7a09ca271044f4c63a3f4425e0db98a21397c2037f922c96d4",
+    "src/ir_agent/adapters/__init__.py": "d1a71b0992717016f31829b618e3185deb947f2c4fe146c853d28684ee905be8",
+    "src/ir_agent/cli.py": "2598b5fae3b86a3a8ed728fc4ae38cfd883ee7c3a01d438c30b5a462e1b4b6d2",
+    "tests/test_jquants_financial_summary.py": "ddbb64c6019e6190435c2f8a183608a5695e4ae85b477047a0ab8ba6b47909fd"
+  },
+  "actual_database_unchanged": true,
+  "actual_database_main_sha256": "a2d49996f1d4558db2c8b6f6f79c0f2fbb1d540e937e406dbc408f1d956c094d",
+  "external_API_or_auth_calls": 0,
+  "live_data_received": 0,
+  "models_or_forecasts_automatically_adopted": false,
+  "limitations": [
+    "SDK/endpoint access, data entitlement, live coverage and current forecasts unverified",
+    "SDK row JSON does not certify original HTTP lexemes, units, accounting scope or issuer PDF",
+    "External scheduler and continuous model execution not installed"
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "company_id": "jp:1379",
+  "research_only": true,
+  "status": "general_dividend_policy_supported_DOE_formula_capital_scope_still_unknown",
+  "GET_cap": 2,
+  "new_GET_count": 1,
+  "HTTP_statuses": [
+    200
+  ],
+  "retry_count": 0,
+  "automatic_redirect_count": 0,
+  "javascript_executed": false,
+  "second_GET_not_used_reason": "No new direct policy material link identified; no broad search or extra phase.",
+  "source_id": "case-public:94005d715005d80af588f17e7c39eb05e6e31e96eb661ed98afb16004e30d971",
+  "publication_date": null,
+  "published_at": null,
+  "supported_public_answers": [
+    {
+      "item": "Dividend frequency and decision authority",
+      "status": "supported",
+      "answer": "Basic policy annual2 dividends; final determined by shareholders meeting, interim by board",
+      "quote_ids": [
+        "semiannual-policy-and-authority"
+      ]
+    },
+    {
+      "item": "Historical consolidated dividend table",
+      "status": "supported_historical_rows",
+      "answer": "Newest displayed row2026/3, annual55, prior2025/3 annual50; columns distinguish interim/final/annual dividend and payout ratio. Historical amounts only, not DOE",
+      "quote_ids": [
+        "history-table-scope-and-latest-rows"
+      ]
+    },
+    {
+      "item": "General shareholder-return approach",
+      "status": "supported_general_statement",
+      "answer": "Company states importance of returns and forward approach to dividend increases/splits, not a numeric DOE or guaranteed payout path",
+      "quote_ids": [
+        "company-general-dividend-policy"
+      ]
+    }
+  ],
+  "DOE_definition": {
+    "status": "unknown_in_fetched_page_and_prior_limited_materials",
+    "numerator": null,
+    "denominator_formula": null,
+    "equity_scope_consolidated_or_standalone": null,
+    "equity_components": null,
+    "equity_timing_begin_end_average": null,
+    "treasury_share_handling": null,
+    "reason": "No DOE definition in fetched policy/history page; its consolidated label belongs to history table, not a documented DOE capital denominator. Do not reverse engineer from EPS/DPS/equity/DOE chart."
+  },
+  "forecast_and_target_preserved_separately": [
+    {
+      "kind": "company_annual_dividend_forecast",
+      "target_period": "2027/3",
+      "DPS_JPY": "62",
+      "origin": "ExistingAug12statement/Aug19presentation, not a new current-page promise",
+      "source_ids": [
+        "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+        "case-public:cfaaeb10d985d6e0a51f083af8580c301c776308f8951eeeb45127f8294f0a5c"
+      ],
+      "quote_references": [
+        {
+          "quote_id": "statement-dividend-forecast",
+          "source_id": "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+          "pdf_page": 1,
+          "full_quote_and_offsets": "../sources.json"
+        },
+        {
+          "quote_id": "presentation-payout-policy-and-forecast",
+          "source_id": "case-public:cfaaeb10d985d6e0a51f083af8580c301c776308f8951eeeb45127f8294f0a5c",
+          "pdf_page": 15,
+          "full_quote_and_offsets": "../sources.json"
+        }
+      ]
+    },
+    {
+      "kind": "company_policy_target",
+      "target_period": "2029/3",
+      "metric": "DOE",
+      "target_percent": "3.5",
+      "origin": "ExistingAug19presentation policy. Goal not guarantee, latest page does not redefine it.",
+      "source_id": "case-public:cfaaeb10d985d6e0a51f083af8580c301c776308f8951eeeb45127f8294f0a5c",
+      "quote_reference": "../sources.json presentation-payout-policy-and-forecast"
+    }
+  ],
+  "period_relationship": {
+    "latest_history_row": "2026/3 actual",
+    "existing_forecast": "2027/3 annual forecast",
+    "existing_DOE_target": "2029/3 target",
+    "no_same_period_conflict_asserted": true,
+    "no_formula_or_future_DPS_derived": true,
+    "latest_page_does_not_reaffirm_or_revoke_DOE_target": true
+  },
+  "public_questions_do_not_send": [
+    "What dividend frequency and decision bodies does company state? New page answers it.",
+    "Are table historical annual55 for2026/3 and existing forecast62 for2027/3 the same period? They are separately labelled periods.",
+    "What existing policy target date/percent and annual forecast labels are disclosed? Existing PDFs answer them."
+  ],
+  "remaining_unknowns": [
+    "Company-specific DOE formula and equity scope/timing",
+    "Whether and how DOE target is used to derive future annual dividend amounts",
+    "Post2027 dividend trajectory, target achievement and actual future decisions"
+  ],
+  "IR_readiness": {
+    "model_parameter_path": null,
+    "decision_impact": null,
+    "ready_question_candidates": [],
+    "reason": "Definition remains unknown; current model path/decision impact/branch precommitment absent, so no send-ready question."
+  },
+  "financial_inputs_verified": false,
+  "financial_values_automatically_adopted": false,
+  "new_forecasts_investment_thresholds_or_modelvalues": [],
+  "DB_accessed_or_modified": false,
+  "existing_company_or_source_modified": false,
+  "questions_registered_or_sent": false,
+  "validation": {
+    "checked_at": "2026-10-15T05:27:10.775183+00:00",
+    "new_source_contract_stable_ID_raw_text_snapshot_SHA_valid": true,
+    "body_quote_positions_valid": 3,
+    "original_protected_snapshot_source_files_unchanged": 6,
+    "existing_PDF_raw_SHA_matches_original_metadata": 2,
+    "GET_count": 1,
+    "cap": 2,
+    "normalizer_DB_changes_new_forecasts_questions_sends": 0,
+    "scope_limit": "Exact provenance and limited-definition check, not companywide absence proof, DOE definition completion, future payout or investment suitability."
+  }
+}

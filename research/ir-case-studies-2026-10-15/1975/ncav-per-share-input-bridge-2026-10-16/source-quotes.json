@@ -1,0 +1,116 @@
+{
+  "recorded_at": "2026-10-16T09:07:14.996822+00:00",
+  "new_meaning_scope": "physical2 existing ordinary-share table, for new end-count mapping purpose only",
+  "native_content_hash_vs_registry_snapshot_hash_distinguished": true,
+  "quotes": [
+    {
+      "id": "common-issued-treasury-average-table",
+      "quote": "（４）発行済株式数（普通株式）\n      ① 期末発行済株式数（自己株式を含む） 2027年３月期１Ｑ     27,200,000株   2026年３月期     27,200,000株\n      ②   期末自己株式数           2027年３月期１Ｑ   1,324,717株    2026年３月期     1,324,317株\n      ③   期中平均株式数（四半期累計）    2027年３月期１Ｑ   25,875,312株   2026年３月期1Ｑ   25,755,491株",
+      "quote_utf8_sha256": "9127acf41cd042ee1336cad9831ac76780c5097d2d4e49e0956d4de01cff3b45",
+      "source_file": {
+        "file": "research/ir-case-studies-2026-10-15/1975/native-case-setup-2026-10-16/actual-inputs/actual-source-snapshots.json",
+        "bytes": 164256,
+        "sha256": "ccb0f348aead27cde26cf4321102979f919d8deb64457dca1794aad5c95240a2"
+      },
+      "unicode_start": 4514,
+      "unicode_end_exclusive": 4768,
+      "utf8_start": 6286,
+      "utf8_end_exclusive": 6726,
+      "normalization": "none; UTF-8 codepoints/bytes end-exclusive",
+      "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
+      "native_snapshot_sha256": "2aae3878ce397e408f088338e4b9728e4a3c4e594a247fdbb3adfff34c27dfce",
+      "native_content_utf8_sha256": "5b590ae0edd7df00cc1b165437bc4e81d23fa117addbbbd948ff827668b95c83",
+      "physical_pdf_page": 2,
+      "printed_page_label_on_page": null,
+      "actual_snapshot_pointer": "/sources/1",
+      "image": {
+        "file": "research/ir-case-studies-2026-10-15/1975/ncav-per-share-input-bridge-2026-10-16/images/physical-2.png",
+        "bytes": 268437,
+        "sha256": "5940646ee20855c33b70993faadcf34586750744573aa61740bc1c511ac1bfab"
+      }
+    },
+    {
+      "id": "maintainer-price-share-rule",
+      "quote": "The share count a price multiplies: period-end shares, falling back to\n    the weighted average when the provider has no period-end count — or one\n    in another unit than the average (more than 2× apart).",
+      "quote_utf8_sha256": "fd972797719933a5ba3c59aca8bb7f602ecc6eb5ceb9730b654045a6bfd5551c",
+      "source_file": {
+        "file": "research/ir-transparent-metric-core-review-2026-10-15/upstream-canonical.py",
+        "bytes": 9518,
+        "sha256": "2933aa8ff2ac2407a56293efcd0bcd7c923c41ec2250fe69bea88ec499ff9ede"
+      },
+      "unicode_start": 6047,
+      "unicode_end_exclusive": 6252,
+      "utf8_start": 6066,
+      "utf8_end_exclusive": 6274,
+      "normalization": "none; UTF-8 codepoints/bytes end-exclusive",
+      "line_start": 137,
+      "line_end": 139
+    },
+    {
+      "id": "maintainer-price-share-end-selection",
+      "quote": "end = canonical[\"shares_outstanding_end\"]",
+      "quote_utf8_sha256": "377105ec4e6b5ce8e5f28ee06ccf9b3f09b16e0a44dac47b0b3bbfa180b6d61e",
+      "source_file": {
+        "file": "research/ir-transparent-metric-core-review-2026-10-15/upstream-canonical.py",
+        "bytes": 9518,
+        "sha256": "2933aa8ff2ac2407a56293efcd0bcd7c923c41ec2250fe69bea88ec499ff9ede"
+      },
+      "unicode_start": 6401,
+      "unicode_end_exclusive": 6442,
+      "utf8_start": 6423,
+      "utf8_end_exclusive": 6464,
+      "normalization": "none; UTF-8 codepoints/bytes end-exclusive",
+      "line_start": 143,
+      "line_end": 143
+    },
+    {
+      "id": "maintainer-price-times-shares",
+      "quote": "shares = price_shares(c)\n        market_cap = price * shares",
+      "quote_utf8_sha256": "8329cd4ceee81020e6b5272d5229dc5277dd6edb31ce1b32d9280a95912486b5",
+      "source_file": {
+        "file": "research/ir-transparent-metric-core-review-2026-10-15/upstream-extras.py",
+        "bytes": 7912,
+        "sha256": "3038a489679aa163f5a4d930ac7cb4dcf320d72a62122ccd45e9d9242b593631"
+      },
+      "unicode_start": 5567,
+      "unicode_end_exclusive": 5627,
+      "utf8_start": 5606,
+      "utf8_end_exclusive": 5666,
+      "normalization": "none; UTF-8 codepoints/bytes end-exclusive",
+      "line_start": 102,
+      "line_end": 103
+    },
+    {
+      "id": "maintainer-ncav-threshold",
+      "quote": "`ncav_to_market_cap >= 1.5` (market cap ≤ ⅔·NCAV).",
+      "quote_utf8_sha256": "ef8fcffa6b2939e66b7c9d7430457182efd099f74b3c73b91c31d12265cfd6d2",
+      "source_file": {
+        "file": "research/ir-transparent-metric-formula-review-2026-10-15/upstream-INDICATORS.md",
+        "bytes": 53818,
+        "sha256": "fb82b2d47596026ea75fa561169062c52622dcb153caffe37af5491111ad084f"
+      },
+      "unicode_start": 14806,
+      "unicode_end_exclusive": 14856,
+      "utf8_start": 15247,
+      "utf8_end_exclusive": 15302,
+      "normalization": "none; UTF-8 codepoints/bytes end-exclusive",
+      "line_start": 245,
+      "line_end": 245
+    }
+  ],
+  "accepted_date_context_ref": {
+    "file": {
+      "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/source-quotes.json",
+      "bytes": 7813,
+      "sha256": "46860885bcedfaad51dce9cc39457a02b56169c767ce1a07d7c49a3f4bf85e2d"
+    },
+    "quote_id": "statement-consolidation-unit-dates",
+    "physical_pdf_page": 5,
+    "use": "既受入済みBSの同一Q1対象日確認だけ。新p5再抽出・画像再読はしない。"
+  },
+  "accepted_NCAV_caveat_ref": {
+    "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/review.json",
+    "bytes": 5789,
+    "sha256": "059046bc0031bde4d636a29d03db2708eb290d14ccf6df2c7c7e46f9e33c56f2"
+  }
+}

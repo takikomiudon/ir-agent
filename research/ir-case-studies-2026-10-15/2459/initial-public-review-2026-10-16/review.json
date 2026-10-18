@@ -1,0 +1,102 @@
+{
+  "recorded_at": "2026-10-16T07:25:32.270965+00:00",
+  "company_id": "jp:2459",
+  "status": "finite_initial_public_review_frozen_awaiting_root_acceptance",
+  "source_id": "case-public:a6b2b42356d083a0660165eff244081ffa2b422ad9e0c79d143b33a9ffcbd393",
+  "native_source_SHA256": "5d77fce83d269479e511aa9a85738d161f2691d2ec040e760320616bdbf5a038",
+  "source_count": 1,
+  "findings": [
+    {
+      "id": "period-and-results",
+      "quote_ids": [
+        "A1-cover-issuer-standard-date",
+        "A2-Q1-cumulative-period-millions-EPS",
+        "A6-revenue-down-loss-narrowed-thousand-yen"
+      ],
+      "meaning": "10/14公表の日本基準連結Q1累計2026/6/1〜8/31。本文は売上43100千円、営業損失15299・経常損失16741・親会社株主帰属純損失16813千円、比較前年の各損失23031/23739/23854千円。表紙は百万円未満切捨の43/△15/△16/△16、EPS△2.24円。単位精度・損失表現を保持。",
+      "limits": "売上減と前年より損失縮小は別軸。損失縮小を黒字化/一時費用消失/反証成立にせず、Q1を通期/年率に換算しない。PL詳細8/9未読、営業外費用notice未取得。"
+    },
+    {
+      "id": "guidance-and-dividend",
+      "quote_ids": [
+        "A3-reported-and-forecast-dividend-not-earnings",
+        "A4-FY-period-undetermined-earnings-guidance",
+        "A8-FY-guidance-undetermined"
+      ],
+      "meaning": "FY2027/5の対象期2026/6/1〜2027/5/31だが、会社は不確定要素が多く合理的数値予想算出困難として未定。合理的予想が開示可能となれば公表する方針。配当は前期中間/末/年計0.00、当期予想中間/末/年計0.00の表示とQ1/Q3のdashを区別。",
+      "limits": "会社未定を売上/利益/EPS0や著者予測で埋めず、配当予想0.00を利益0/支払確認/将来配当列へ転用しない。後日の開示予想や公表予定日を発明しない。"
+    },
+    {
+      "id": "business-and-revenue-scope",
+      "quote_ids": [
+        "A5-existing-business-and-new-service-starts",
+        "A6-revenue-down-loss-narrowed-thousand-yen",
+        "A9-no-items-notes-and-single-segment",
+        "A11-important-doubt-events-and-issuer-uncertainty-judgement"
+      ],
+      "meaning": "海外SEO/広告運用/多言語支援の既存サービスを提供し、6月市場検証、7月ChatGPT広告支援、8月中国AIO提携/提供を会社は開始と説明。マーケティング単一セグメント。新サービスの浸透/導入に時間を要しQ1業績寄与は限定的と会社明記。",
+      "limits": "サービス開始と有償売上/採算成立を混同せず、既存案件終了と新規先行投資の当期説明から将来損失解消/新サービス別金額を推定しない。新サービスの独立課金/単価/継続契約等は本頁で未確認。"
+    },
+    {
+      "id": "going-concern-distinctions",
+      "quote_ids": [
+        "A9-no-items-notes-and-single-segment",
+        "A11-important-doubt-events-and-issuer-uncertainty-judgement"
+      ],
+      "meaning": "p10の継続企業の前提注記は該当事項なし。一方その他では2020/5期以降営業赤字が継続、前FY営業損失57055千円・当Q1営業損失15299千円で重要な疑義を生じる事象/状況が引き続き存在と会社認識。ただし期末時点の当面の運転資金/事業投資資金を確保し資金繰りに重要懸念なしとして重要な不確実性は認められないという会社判断も併記。",
+      "limits": "重要事象なし/安全保証にも、重要な不確実性ありという逆の断定にもせず原区別を保持。現時点資金残/将来調達・存続・利益の独立検証ではない。監査人レビュー報告11/12の意見は未読。"
+    },
+    {
+      "id": "CF-and-noncash-items",
+      "quote_ids": [
+        "A10-CF-not-prepared-depreciation-and-goodwill"
+      ],
+      "meaning": "当Q1累計CF計算書は作成していない。のれんを除く無形償却含む減価償却費は前295千円/当―千円、のれん償却は前588/当630千円と別行表示。",
+      "limits": "dash0補完・償却合算/正常利益足戻し/EBITDA・CFO/FCF・現金流入への変換なし。CF非作成はcash0や現金情報全体不存在ではない。"
+    },
+    {
+      "id": "listing-plan-asof-disclosure",
+      "quote_ids": [
+        "A7-listing-noncompliance-and-improvement-plan"
+      ],
+      "meaning": "会社は5/31時点の流通株式時価総額がStandard上場維持基準に不適合、8/21適合計画公表/改善期間入りと説明。経営/提携/IR等施策は改善期間内適合を目指す会社方針。",
+      "limits": "期間終了日/指定や廃止/解除・現状・株価目標・IR効果/保証を推測しない。8/21原計画未取得、10/16現在の取引所状態を本短信だけで確定しない。企業アクセス制約や業種による投資除外をしない。"
+    }
+  ],
+  "known_do_not_reask": [
+    "当Q1の対象期/日本基準連結と赤字各段階・会社の損失縮小説明",
+    "通期数値業績予想が未定という公表方針",
+    "Q1新サービス寄与限定と単一セグメント",
+    "CF非作成、減価償却と別のれん償却の原表示",
+    "重要な疑義を生む事象と重要な不確実性なしという会社判断の区別",
+    "当時の維持基準非適合と改善計画説明"
+  ],
+  "remaining_owners": {
+    "public_unread_or_update": "未読2/6/7/8/9/11/12、補足資料、営業外費用/上場維持原計画等のliteralは未読未取得として残す。会社非開示/IR未回答にしない。",
+    "company_definition": "公開未読を除いてなお比較上必要となるサービス課金/売上期間/採算範囲等の会社固有事実。未知だけで必須IR問へしない。",
+    "author_forecast_investor_valuation": "数値会社guide未定を独自成長/正常利益/資金安全性/確率/倍率/価格で埋めず、著者手順・期間適合と金融入力は未採用。"
+  },
+  "boundaries": {
+    "financial_inputs_verified": false,
+    "financial_thesis": null,
+    "financial_branches": null,
+    "model": null,
+    "IR_value": "unproven",
+    "send_ready": false,
+    "investment_excluded": false,
+    "operational_DB_firstsave": null,
+    "nativecase": null
+  },
+  "operations": {
+    "GETs": 3,
+    "maximum_GETs": 4,
+    "unused_GETs": 1,
+    "retries_redirects_JS_otherhost": 0,
+    "DB_write": 0,
+    "Store": 0,
+    "shared_code_or_docs": 0,
+    "financial_adoption": 0,
+    "IRdraft_send": 0
+  },
+  "stop": "Original statement acquired, exact4meaning image pages; stop without using residual GET or next company."
+}

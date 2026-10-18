@@ -1,0 +1,127 @@
+{
+  "status": "pass",
+  "finding_count": 0,
+  "findings": [],
+  "recorded_at": "2026-10-16T01:42:52.982023+00:00",
+  "reviewer": "codex-review-5831-policy",
+  "independence": "Independent of roles.md editor/root; this reviewer authored the accepted handoff design, so this is an independent integration/difference review, not an independent redesign or second original-source meaning review.",
+  "scope": "Only the inserted additional-reading handoff section and preservation of old roles bytes; no code/runtime/DB/financial certification.",
+  "before_roles_sha256": "0b20f297bbaddce40c2c5d2e2ca535f8d243b73baef51ed383a6d228e8f9e5b5",
+  "reviewed_roles_sha256": "828168d64ef9598c483275610d99bbd60e145f56e9440cf72daa4c4e085b905c",
+  "fixed_copy": {
+    "path": "research/ir-additional-reading-role-integration-2026-10-16/reviewed-roles.md",
+    "sha256": "828168d64ef9598c483275610d99bbd60e145f56e9440cf72daa4c4e085b905c",
+    "byte_equal_live_roles_at_review": true
+  },
+  "diff": {
+    "type": "single_section_insertion",
+    "old_file_bytes": 12026,
+    "new_file_bytes": 14370,
+    "inserted_bytes": 2344,
+    "inserted_section_sha256": "718d74a174d41e9301fa81d078cc04d22fc249a0fdecdf7637b08d83c99c8107",
+    "new_start_line": 64,
+    "new_end_line": 75,
+    "deletions": 0,
+    "replacements": 0,
+    "old_all_bytes_preserved": true
+  },
+  "accepted_design": {
+    "README.md": "2ab209775b1d6c32dca670c567d09fbf904076d3d3815d3baa904a0fde9495ae",
+    "worker-handoff.json": "9d2fb0f0a4434bef5c1646f3ee4369475ea4c1f370f2ebfd6960acbe4de86317",
+    "old_input_pin_count": 16,
+    "old_input_pins_match": true,
+    "roles_in_old_pin_list": false
+  },
+  "code_contract_references": [
+    {
+      "path": "src/ir_agent/qualitative_research.py",
+      "lines": "136–161;302–345;414–475;495–507",
+      "meaning": "pending-only evidence, prior_review summary/observation and immutable version append as already read in accepted design"
+    },
+    {
+      "path": "docs/qualitative-research-jobs.md",
+      "lines": "33–42",
+      "meaning": "five fields, pending coverage, due management and atomic completion contract"
+    }
+  ],
+  "new_links": [
+    {
+      "literal": "../../../../research/ir-1870-additional-reading-native-handoff-design-2026-10-16/worker-handoff.json",
+      "resolved": "/workspace/ir-agent/research/ir-1870-additional-reading-native-handoff-design-2026-10-16/worker-handoff.json",
+      "sha256": "9d2fb0f0a4434bef5c1646f3ee4369475ea4c1f370f2ebfd6960acbe4de86317"
+    }
+  ],
+  "checks": [
+    {
+      "id": "one_insert_only",
+      "status": "pass",
+      "observation": "before完全bytesへ新しい1節（現在64〜75行）を挿入した差分のみ。既存全bytesは同順序・同内容で保持。"
+    },
+    {
+      "id": "same_source_and_limited_reading",
+      "status": "pass",
+      "observation": "元source/公開・取得・初保存・旧caseを保持し、時刻/頁/引用/offset/解消と残余を追記。reviewed≠全冊読了、新開示/偽config/管理日変更を禁止。"
+    },
+    {
+      "id": "future_job_authority",
+      "status": "pass",
+      "observation": "正当な新着/実管理日jobのみ。保存担当が固定packetと追補file/SHAを明示handoff。票の旧case版は未来の権限でなく、当時のcase/lease/資料利用可否を確認。"
+    },
+    {
+      "id": "summary_and_observation_propagation",
+      "status": "pass",
+      "observation": "summaryとcase_observation.rationaleへ既知文脈を保存し、source_reviews.rationaleだけでは次prior_reviewへ引き継がれない境界を保持。後続観測でも解消状況を落とさない運用を明示。"
+    },
+    {
+      "id": "pending_evidence_contract",
+      "status": "pass",
+      "observation": "source_reviews/観測evidenceは実packet pendingのみ。旧sourceの追加や新source引用への偽装を禁止し、既存completeの証拠範囲を拡大しない。"
+    },
+    {
+      "id": "empty_pending_and_outcome",
+      "status": "pass",
+      "observation": "管理日だけでpending空ならsource_reviews/観測evidence空。旧追補だけによるsupports/counterevidenceを禁止。future outcome/管理日を前決めしない。既存58行のdue管理日更新契約も不変。"
+    },
+    {
+      "id": "public_answer_followup",
+      "status": "pass",
+      "observation": "保存担当/独立担当が追補実読・引用/意味・既答再質問除外・既知と新観測の区別を完了前に確認。"
+    },
+    {
+      "id": "nonautomatic_acceptance",
+      "status": "pass",
+      "observation": "外部票の受領や文字列file/SHAの自動検証がないことを明示。result SHA保証と追補機械受領保証を分離し、新API/自動同梱を主張しない。"
+    },
+    {
+      "id": "no_financial_rule",
+      "status": "pass",
+      "observation": "価格/EPS/確率/税率/売買/閾値・新管理期限の追加なし。既存job契約上の引継ぎ手順であり投資規則ではない。"
+    },
+    {
+      "id": "fixed_design_and_link",
+      "status": "pass",
+      "observation": "原設計2fileの固定SHAとhandoff旧16input pinが一致。rolesは旧16pinに含まれず、設計票改変なし。新リンク先存在/固定handoff SHA一致。"
+    }
+  ],
+  "read_file_SHA256": {
+    "research/ir-additional-reading-role-integration-2026-10-16/before-roles.md": "0b20f297bbaddce40c2c5d2e2ca535f8d243b73baef51ed383a6d228e8f9e5b5",
+    "research/ir-additional-reading-role-integration-2026-10-16/before-pins.json": "49db3ea95a04a39c6b159474908230d6147d6bc440cbdb48dac3c722d55d01db",
+    "research/ir-1870-additional-reading-native-handoff-design-2026-10-16/README.md": "2ab209775b1d6c32dca670c567d09fbf904076d3d3815d3baa904a0fde9495ae",
+    "research/ir-1870-additional-reading-native-handoff-design-2026-10-16/worker-handoff.json": "9d2fb0f0a4434bef5c1646f3ee4369475ea4c1f370f2ebfd6960acbe4de86317",
+    "research/ir-1870-additional-reading-native-handoff-design-2026-10-16/parent-acceptance.json": "fd351ec094df3de273414f5a36f64ee54d4a4a26da22e9493d56c976d227fade"
+  },
+  "meaning_limits": [
+    "Document integration acceptance only; does not cause packet attachment, future worker receipt, a new job, completion or native case update.",
+    "No tests or code execution for workflow semantics; existing accepted code/design contracts were compared statically.",
+    "No new financial policy, forecast, investor question or send readiness established."
+  ],
+  "operations": {
+    "new_reviewed_full_byte_copy": 1,
+    "new_counter_review": 1,
+    "GET": 0,
+    "DB_access_or_write": 0,
+    "shared_roles_edits": 0,
+    "old_design_or_artifact_edits": 0,
+    "code_changes_or_tests": 0
+  }
+}

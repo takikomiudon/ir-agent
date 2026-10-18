@@ -1,0 +1,294 @@
+{
+  "artifact_type": "proposed_design_not_implemented",
+  "recorded_at": "2026-10-16T02:35:15.209854+00:00",
+  "status": "minimal_explicit_opt_in_recommended_not_adopted_in_code",
+  "current_code_facts": [
+    {
+      "ref": "src/ir_agent/disclosed_facts.py:_OPTIONAL/_NUMERIC/_UNIT_MULTIPLIERS",
+      "observation": "No raw_value_format; one numeric raw_value and one fixed unit multiplier. No sen mapping."
+    },
+    {
+      "ref": "src/ir_agent/disclosed_facts.py:normalize_disclosed_facts",
+      "observation": "Exact contiguous quote, raw unit and period labels; raw token boundary; original preserved; derived version1 and stable ID; meaning remains unverified."
+    },
+    {
+      "ref": "src/ir_agent/disclosed_facts.py:reproduce_disclosed_fact_source",
+      "observation": "Supports exact int normalization_version1 only; rebuilds declarations from required/optional fields and compares content/metadata/source fields and identity separately from original snapshot recheck."
+    },
+    {
+      "ref": "src/ir_agent/model_inputs.py:132–165",
+      "observation": "Uses reproduction reason codes and content/facts/i/value plus fact kind. Numeric-token flag is not itself a model-adoption permission."
+    }
+  ],
+  "existing_API_alternatives": [
+    {
+      "option": "Keep existing raw-display candidates",
+      "viable_now": true,
+      "scope": "Faithful nonnumeric storage of all3 displays; cannot deliver all3 numeric facts."
+    },
+    {
+      "option": "Extract whole-yen99/198 only for explicitly00sen",
+      "viable_now": "limited_human_review_only",
+      "scope": "Existing workflow documents a narrow whole-yen extraction with00sen manually checked. Does not support24yen75sen or automatically certify cents; cannot meet complete3-display request."
+    },
+    {
+      "option": "Use raw_value24.75",
+      "viable_now": false,
+      "reason": "Not a contiguous source token; existing negative probe rejects it."
+    },
+    {
+      "option": "Use raw_value24 or split24/75 into2facts",
+      "viable_now": false,
+      "reason": "24 alone drops nonzero cents. Separate components would not be the disclosed dividend amount; no existing sen mapping/composition API."
+    },
+    {
+      "option": "Rewrite source/quote/raw_unit or set raw_value null",
+      "viable_now": false,
+      "reason": "Would alter evidence or falsely describe a displayed value as missing; do not create a synthetic raw token."
+    }
+  ],
+  "recommended_request_extension": {
+    "field": "raw_value_format",
+    "placement": "optional per fact, not request-wide",
+    "sole_new_allowed_value": "jpy_yen_sen",
+    "absent": "Exactly existing parser, fields, metadata, JSON and IDs. Do not insert a default format key.",
+    "null_empty_unknown_nonstring": "ValueError even for missing raw_value; no fallback or format guessing.",
+    "raw_value": "Entire unmodified contiguous original display, e.g.24 円 75 銭; no new numeric input field.",
+    "raw_unit_label": "Only literal円 for first implementation",
+    "canonical_unit_allowlist": [
+      "JPY",
+      "JPY-per-share"
+    ],
+    "unit_limits": "Do not permit千円/百万円/億円/JPY aliases/円銭/銭 alone/ratio/shares/per-share scaling. Currency vs per-share meaning remains reviewer-declared; parse does not infer it from concept.",
+    "unchanged_contracts": [
+      "required fields",
+      "source/review availability",
+      "company/source identity",
+      "exact quote with period/unit labels",
+      "pdf_page validation",
+      "meaning_review_required true",
+      "financial_inputs_verified false",
+      "forecast_values_automatically_adopted false",
+      "source object unchanged"
+    ]
+  },
+  "lexical_contract": {
+    "entire_string_fullmatch_required": true,
+    "grammar_description": "SIGN? YEN H* 円 H* SEN H* 銭; H is ASCII space, tab or U+3000 only. No leading/trailing whitespace. SIGN is exactly one of +,-,△,▲ at display start. YEN is ASCII integer, either ungrouped digits or1–3initial digits followed by comma groups of exactly3digits. SEN is1or2ASCII digits, integer0..99.",
+    "leading_zeros": "Allowed as current ungrouped integer token; raw spelling preserved. No interpretation as octal.",
+    "horizontal_only": "Reject CR/LF/formfeed, vertical tab, NEL, Unicode line/paragraph separators and NBSP; do not use unrestricted\\s or normalize whitespace.",
+    "sign_binding": "Sign applies to complete yen+sen sum, including -0円05銭 -> -0.05; no sign on sen, no second sign, no parentheses or Unicode-minus normalization.",
+    "numeric_rejections": [
+      "fractional yen",
+      "fractional sen",
+      "100sen",
+      "three-digit sen including000",
+      "sen comma grouping",
+      "scientific notation",
+      "fullwidth digits",
+      "missing/duplicated/reversed unit labels",
+      "annotation/brackets embedded in raw_value",
+      "separate-line or joined snippets"
+    ],
+    "source_presence": "Exact raw display must occur in exact basis_quote before any comma/sign processing. Use boundary checks for the whole display so no prefix/suffix numeric token can be stripped; source position still does not certify a table cell.",
+    "boundary_policy": "At minimum preserve existing ASCII numeric/token-neighbor refusal; for this new format also refuse immediately adjacent Unicode decimal digits or alternative sign characters that would let a malformed larger display be sliced into a valid positive display. No legacy parser change.",
+    "missing": "None, empty or horizontal-space-only strings retain null and missing/empty status, both verification flags false. Existing stand-alone dash markers retain null/unconfirmed_dash after existing whole-token quote check; never zero. Non-horizontal whitespace-only strings rejected in this opt-in format. A null output must not label1904 printed amounts as missing."
+  },
+  "decimal_composition": {
+    "formula": "signed_total = sign * (Decimal(yen_digits_without_commas) + Decimal(sen_digits) * Decimal(\"0.01\"))",
+    "context": "Reuse explicit local Decimal context and trap policy; size precision for yen digits plus cents/carry guard (at least existing80digits). Include conversion, multiplication, addition and formatting within protected arithmetic; do not depend on ambient precision/traps or use float.",
+    "rendering": "Output value remains a decimal string. For nonzero new-format values retain2decimal places through exact sen*0.01 arithmetic; zero including negative zero canonicalizes to\"0\". Do not round cents, carry100sen or quantize to hide malformed input.",
+    "display_only_expected_examples_not_created_facts": [
+      {
+        "raw_value": "99 円 00 銭",
+        "expected_value": "99.00"
+      },
+      {
+        "raw_value": "24 円 75 銭",
+        "expected_value": "24.75"
+      },
+      {
+        "raw_value": "198 円 00 銭",
+        "expected_value": "198.00"
+      }
+    ],
+    "no_other_operations": [
+      "stock-split adjustment",
+      "annual addition",
+      "cashflow forecast",
+      "EPS/price inference",
+      "model input adoption"
+    ]
+  },
+  "new_format_normalization_metadata_proposal": {
+    "status": "composite_display_normalized",
+    "raw_numeric_token_verified": false,
+    "raw_display_verified": true,
+    "format": "jpy_yen_sen",
+    "canonical_unit": "same as fact.unit",
+    "exact_quote_and_label_presence_verified": true,
+    "components": {
+      "sign": {
+        "raw_token": "",
+        "multiplier": "1",
+        "raw_value_span": [
+          0,
+          0
+        ]
+      },
+      "yen": {
+        "raw_token": "24",
+        "raw_unit": "円",
+        "unit_multiplier_to_JPY": "1",
+        "raw_value_span": [
+          0,
+          2
+        ]
+      },
+      "sen": {
+        "raw_token": "75",
+        "raw_unit": "銭",
+        "unit_multiplier_to_JPY": "0.01",
+        "raw_value_span": [
+          5,
+          7
+        ]
+      }
+    },
+    "component_span_basis": "Half-open Unicode character offsets within raw_value itself; recomputed, not caller-supplied. Example only for exact24 円 75 銭. UTF8/page/global spans belong evidence/location and must not be fabricated.",
+    "explicit_unit_multiplier": "Do not populate this legacy single-token field for the composite branch. It would obscure two component multipliers. Keep legacy branch exactly unchanged.",
+    "missing_shape": "In this branch missing outputs have raw_display_verified false/raw_numeric_token_verified false/components null; preserve appropriate missing/empty/dash status. No apparent parsed component for an absent value.",
+    "certification_limit": "raw_display_verified certifies exact display presence and permitted unit arithmetic, not original existence of24.75 as a numeric token, unique table column, period scope, share basis, payment or financial validity."
+  },
+  "version_and_reproduction": {
+    "preferred": "normalization_version1 for bundles with no new format; version2 only if at least1fact explicitly selects jpy_yen_sen. Mixed bundles use2 but existing-format fact objects retain their old shape.",
+    "why_version2": "Older consumers currently hold known unsupported versions; do not make old version1 readers appear able to reproduce a composite parser they do not implement.",
+    "version1": "Reject format-bearing fact under version1 on reproduction. Do not insert new flags, defaults, declarations or limitations in legacy-only output; all canonical identity inputs stay unchanged.",
+    "version2": "Accept exact int2 only for the defined format contract. Replay must retain raw_value_format in reconstructed declarations and recompute parsed components, spans, values and flags from original exact source, not trust stored parsed components. Reject2without feature and feature/version mismatch by full replay comparison.",
+    "shared_checks": "Keep original content hash/whole-snapshot status separate; compare canonical content, metadata, source fields, identity when snapshot verified. Preserve source/sourceID/actual original retrieval unchanged and derive new processing retrieval at trusted now.",
+    "old_consumers": "Expected needs_review/unsupported_normalization_version for2; no bypass of audit_model_inputs. Old1output must remain reproduccible under both versions of the code.",
+    "choice_comparison": "Same-version1optional-parser would save a version branch but misstate old reader capability. Always-version2 would invalidate unrelated historical IDs. Conditional2is the narrower compatibility contract."
+  },
+  "implementation_surface_if_separately_authorized": [
+    "disclosed_facts.py only parser dispatch/optional field, branch-specific normalization metadata, conditional producer version, strict reproduction version+declaration contract",
+    "Targeted tests in new test module plus version guard tests and existing fixtures. Existing CLI can forward JSON; no new CLI command or dependency needed.",
+    "model_inputs.py likely no new behavior: existing full reproduction and kind/value audit remains. Confirm by integration tests rather than weaken its holds.",
+    "Do not touch real DB, stable case bundles, source text, existing accepted6facts, monitoring or financial engines."
+  ],
+  "meaningful_tests_not_run": [
+    {
+      "group": "positive exact display",
+      "cases": [
+        "24 円 75 銭 ->24.75",
+        "99 円 00 銭 ->99.00",
+        "198 円 00 銭 ->198.00",
+        "1,234円05銭 ->1234.05",
+        "24円1銭 ->24.01",
+        "ASCII tab/U+3000 interior separators preserved"
+      ]
+    },
+    {
+      "group": "sign and zero",
+      "cases": [
+        "-0円05銭 ->-0.05",
+        "△24円75銭 ->-24.75",
+        "▲24円75銭 ->-24.75",
+        "+24円75銭 ->24.75",
+        "-0円00銭 ->0",
+        "0円00銭 ->0"
+      ]
+    },
+    {
+      "group": "grammar refusal",
+      "cases": [
+        "1,00円75銭",
+        "1234,567円75銭",
+        "24.0円75銭",
+        "24円100銭",
+        "24円000銭",
+        "24円7.5銭",
+        "24円-75銭",
+        "24円+75銭",
+        "△-24円75銭",
+        "24銭75円",
+        "24円75",
+        "２４円７５銭",
+        "24e0円75銭",
+        "raw_value including brackets or注2"
+      ]
+    },
+    {
+      "group": "substring and line refusal",
+      "cases": [
+        "raw24 円75銭 absent while quote has24円75銭",
+        "24円\\n75銭",
+        "24円\\r\\n75銭",
+        "24円\\f75銭",
+        "NBSP separator",
+        "raw24円75銭 found only inside124円75銭",
+        "raw24円75銭 followed by an extra0",
+        "positive raw1円00銭 inside－1円00銭",
+        "raw24.75 fabricated for actual24円75銭"
+      ]
+    },
+    {
+      "group": "missing vs zero",
+      "cases": [
+        "None/empty/horizontal whitespace ->null not0",
+        "existing dash marker quoted whole ->null",
+        "dash from date substring refuses",
+        "nonstring0/False reject",
+        "opt-in newline-only reject; legacy newline-only behavior unchanged"
+      ]
+    },
+    {
+      "group": "unit and format boundaries",
+      "cases": [
+        "only円+JPY/JPY-per-share accepted",
+        "千円/百万円/億円/銭/JPY/円銭 aliases rejected in new mode",
+        "ratio/shares rejected",
+        "unknown/null/empty/nonstring format reject",
+        "no format: composite still rejects; legacy12円still rejects"
+      ]
+    },
+    {
+      "group": "reproduction and consumers",
+      "cases": [
+        "new2replay stable ID independent later processing time",
+        "tamper each component/sign/raw display/unit/value/format/flag/version/source quote ->hold",
+        "v1with feature/v2without feature ->hold",
+        "mixedbundle full replay",
+        "original snapshot vs content statuses kept separate",
+        "same value+model tamper cannot bypass replay",
+        "kind mismatch remains held and meaning remains unverified"
+      ]
+    },
+    {
+      "group": "arithmetic isolation and identity",
+      "cases": [
+        "large integer with75sen exact under ambient precision3 and Inexact/Rounded traps",
+        "legacy whole-yen/oku/ratio/shares/external-estimate frozencanonical output+ID byte-identical",
+        "original request/source unchanged",
+        "accepted1904sixfacts fileSHA+derivedID unchanged"
+      ]
+    }
+  ],
+  "before_after_fixed_replay_plan": [
+    "Before any code edit, preserve exact current normalizer bytes0b65d28... and SHA in a separate controlled baseline, plus interpreter/dependency revision and existing fixture input/output; do not reinterpret this design as an executed replay.",
+    "Reuse existing oku/external-estimate baseline golden fixtures. Add frozen1904six-fact input/output/ID as READ-ONLY regression fixtures with acceptance SHA07e798... and original processing now taken from saved output. Do not replace or re-save those research files.",
+    "On separate implementation branch compare all legacy-only canonical original+derived source objects/content/metadata/IDs at identical trusted now. At later now compare deterministic ID/content/metadata and keep first original receipt unchanged; processing retrieved_at may differ by design.",
+    "For new format make synthetic parser fixtures and a separately named future1904composite request/output only after independent unit/source review; do not append24.75to original content or retrofit old bundle.",
+    "Run focused grammar/replay/model-input boundary tests then required repository checks once authorized. Save before+after codeSHAs, commands, actual time, fixture hashes and exact diffs. Keep old held tests and accepted facts rather than relabeling past processing as new-version output."
+  ],
+  "scope": {
+    "design_only": true,
+    "new_numeric_facts": 0,
+    "new_normalized_sources": 0,
+    "new_GETs": 0,
+    "DB_connections": 0,
+    "code_edits": 0,
+    "financial_adoptions": 0,
+    "IR_questions_or_sends": 0,
+    "future_implementation_authorized_by_this_artifact": false
+  }
+}

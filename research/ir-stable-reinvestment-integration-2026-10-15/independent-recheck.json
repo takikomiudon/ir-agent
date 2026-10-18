@@ -1,0 +1,112 @@
+{
+  "scope": "Bounded read-only arithmetic and CLI recheck; temporary synthetic DB only",
+  "input_sha256": {
+    "synthetic": "a044da2c80b297c99e7164f12f85af7a0bd389bad18c6a6964f6017b26d442af",
+    "exxon_author": "a85958ef03d0cf773ccdf45baba6626ec5344493ac7a30d177e36a6c01928b8b"
+  },
+  "checks": {
+    "independent_fraction": {
+      "synthetic": {
+        "reinvestment_rate": {
+          "exact_fraction": "1/5",
+          "returned_decimal": "0.2",
+          "absolute_error_fraction": "0",
+          "rounding_bound_fraction": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "reinvestment_amount": {
+          "exact_fraction": "20",
+          "returned_decimal": "20",
+          "absolute_error_fraction": "0",
+          "rounding_bound_fraction": "1/10000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "fcff": {
+          "exact_fraction": "80",
+          "returned_decimal": "80",
+          "absolute_error_fraction": "0",
+          "rounding_bound_fraction": "1/10000000000000000000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "exxon_author": {
+        "reinvestment_rate": {
+          "exact_fraction": "2/21",
+          "returned_decimal": "0.095238095238095238095238095238095238095238095238095238095238095238095238095238095",
+          "absolute_error_fraction": "1/4200000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "rounding_bound_fraction": "1/10000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "reinvestment_amount": {
+          "exact_fraction": "9120789/4375",
+          "returned_decimal": "2084.7517714285714285714285714285714285714285714285714285714285714285714285714286",
+          "absolute_error_fraction": "1/35000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "rounding_bound_fraction": "1/100000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "fcff": {
+          "exact_fraction": "173294991/8750",
+          "returned_decimal": "19805.141828571428571428571428571428571428571428571428571428571428571428571428571",
+          "absolute_error_fraction": "3/7000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "rounding_bound_fraction": "1/10000000000000000000000000000000000000000000000000000000000000000000000000"
+        }
+      }
+    },
+    "nopat_preparation_outside_calculator": {
+      "formula": "34614 * 1.02 * .62",
+      "exact_nopat_next": "21889.8936",
+      "growth_and_tax_not_applied_again": true
+    },
+    "negative_fcff_retained": {
+      "reinvestment_rate": {
+        "exact_fraction": "2",
+        "returned_decimal": "2",
+        "absolute_error_fraction": "0",
+        "rounding_bound_fraction": "1/100000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "reinvestment_amount": {
+        "exact_fraction": "200",
+        "returned_decimal": "200",
+        "absolute_error_fraction": "0",
+        "rounding_bound_fraction": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "fcff": {
+        "exact_fraction": "-100",
+        "returned_decimal": "-100",
+        "absolute_error_fraction": "0",
+        "rounding_bound_fraction": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "rejections": {
+      "zero_growth_defined_but_scope_unsupported": "Zero growth is mathematically defined with nonzero ROC, but unsupported in this initial author-example scope",
+      "zero_roc_undefined": "ROC_new=0 is an undefined denominator; no substitute is supplied",
+      "both_zero_denominator_precedence": "ROC_new=0 is an undefined denominator; no substitute is supplied",
+      "missing_nopat_value": "nopat_next must contain exactly ['basis', 'concept', 'data_kind', 'period', 'rationale', 'source_refs', 'timing', 'value']; unknown fields are rejected",
+      "pretax_concept": "nopat_next.concept must be aftertax_operating_income_before_financing; no profit/rate conversion is performed",
+      "old_period_timing": "nopat_next.timing must explicitly be next_stable_period",
+      "percent_not_decimal_ratio": "growth.unit must explicitly be annual_decimal_ratio",
+      "mixed_amount_unit": "roc_new.basis must exactly match the request company/currency/unit/scope/accounting basis",
+      "mixed_company_basis": "growth.basis must exactly match the request company/currency/unit/scope/accounting basis",
+      "mixed_period": "NOPAT_next, growth and ROC_new must declare exactly the same next stable annual period",
+      "quarter_period": "nopat_next.period.kind must declare full_fiscal_year; quarter/YTD periods are unsupported",
+      "missing_explicit_method": "stable reinvestment request must contain exactly ['assessment', 'basis', 'growth', 'method', 'nopat_next', 'roc_new']; unknown fields are rejected"
+    },
+    "ambient_decimal_independent": true,
+    "fully_declared_assessment_does_not_verify_or_adopt": true,
+    "cli_dispatch_db_dump_and_total_changes_unchanged": true,
+    "cli_main": {
+      "synthetic": {
+        "exit_code": 0,
+        "matches_api": true
+      },
+      "exxon_author": {
+        "exit_code": 0,
+        "matches_api": true
+      }
+    },
+    "temporary_db_bytes_unchanged": true,
+    "input_files_and_requests_unchanged": true
+  },
+  "limitations": [
+    "Source IDs, quotes, period labels and tax/ROC applicability are declarations, not verified evidence.",
+    "Displayed historical author numbers are used literally; author textual/rounding discrepancies are not corrected.",
+    "No DCF, forecast adoption, present issuer input, IR sending, scoring or investment judgment is performed.",
+    "Only the specified finite cases were checked; no full suite or broad input exploration was run."
+  ],
+  "status": "passed"
+}

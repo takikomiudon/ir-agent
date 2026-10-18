@@ -1,0 +1,126 @@
+{
+  "security_code": "6481",
+  "company_name": "ＴＨＫ",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "機械",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.thk.com/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T17:57:14.074811+00:00",
+  "completed_at": "2026-10-11T17:58:55.678171+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/6481/20261011T175714074864Z/01.json",
+      "url": "https://www.thk.com/",
+      "retrieved_at": "2026-10-11T17:57:28.967156+00:00",
+      "quote": "THK Global Top | THK Global Top",
+      "role": "current_issuer_global_site_title"
+    },
+    {
+      "snapshot": "evidence/6481/20261011T175714074864Z/02.json",
+      "url": "https://www.thk.com/jp/en/company/overseas_base/",
+      "retrieved_at": "2026-10-11T17:58:11.347469+00:00",
+      "quote": "Worldwide Sales Contacts | Company | THK Official Web Site [Japan]",
+      "role": "worldwide_sales_contact_scope_not_financial_ir"
+    },
+    {
+      "snapshot": "evidence/6481/20261011T175714074864Z/01.json",
+      "url": "https://www.thk.com/",
+      "retrieved_at": "2026-10-11T17:57:28.967156+00:00",
+      "quote": "Japan (日本語)",
+      "role": "actual_japan_region_route_not_ir_question_assignment",
+      "source_link_url": "https://www.thk.com/?q=jp",
+      "source_link_index": 4
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.thk.com/",
+      "final_url": "https://www.thk.com/",
+      "snapshot": "evidence/6481/20261011T175714074864Z/01.json",
+      "retrieved_at": "2026-10-11T17:57:28.967156+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.thk.com/?q=eng/node/292",
+      "final_url": "https://www.thk.com/jp/en/company/overseas_base/",
+      "snapshot": "evidence/6481/20261011T175714074864Z/02.json",
+      "retrieved_at": "2026-10-11T17:58:11.347469+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.thk.com/jp/en/company/overseas_base/",
+      "final_url": "https://www.thk.com/jp/en/company/overseas_base/",
+      "snapshot": "evidence/6481/20261011T175714074864Z/03.json",
+      "retrieved_at": "2026-10-11T17:58:34.179569+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "取得先英語の各国販売窓口のメールは営業用、上場会社金融IRメールとして登録しない。地域別サイトと質問受付を区別、金融IR受付不存在とは判定しない。",
+    "保存済み公式ページ・実フォーム欄を手動点検。送信・配信成功・回答実績は未確認。"
+  ],
+  "discovery": {
+    "security_code": "6481",
+    "official_url": "https://www.thk.com/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ＴＨＫ",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/6481/20261011T175714074864Z/01.json",
+      "normalized_name": "thk",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6481/20261011T175714074864Z/02.json",
+      "normalized_name": "thk",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6481/20261011T175714074864Z/03.json",
+      "normalized_name": "thk",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 3,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 5,
+  "previous_attempts": [
+    "attempts/6481/20261011T045047597074Z.json",
+    "attempts/6481/20261011T175855678416Z.json"
+  ],
+  "manual_followup_candidates": [
+    {
+      "url": "https://www.thk.com/?q=jp",
+      "quote": "Japan (日本語)",
+      "source_link_label": "Japan (日本語)",
+      "method": "GET",
+      "IR_channel_verified": false,
+      "reason": "公式日本地域実href ?q=jpの追加点検候補。地域リンク自体は金融IR質問受付の証拠ではない。海外営業代理店/子会社mailを当該issuerIRへ借用しない。",
+      "parent_snapshot": "evidence/6481/20261011T175714074864Z/01.json"
+    }
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_services",
+    "reviewed_at": "2026-10-11T19:06:32.263821+00:00",
+    "notes": "現THK Global公式トップの地域選択と英語Worldwide Sales Contacts取得02/03を確認。後者は各国営業・THK America/販売代理店のsales mail等で現在上場THK金融IR用途の指示なし、U維持。公式日本地域actual href ?q=jpのみ追加点検候補に保存、/jp/ja/IRなど推測URLを作らずクエリ保持。個人/会社/返信条件とIRnative/mailは未確認。",
+    "attempted_at_reviewed": "2026-10-11T17:57:14.074811+00:00",
+    "saved_evidence_only": true
+  }
+}

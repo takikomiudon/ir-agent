@@ -1,0 +1,110 @@
+{
+  "security_code": "7399",
+  "company_name": "ナンシン",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "輸送用機器",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.nansin.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T20:54:06.357565+00:00",
+  "completed_at": "2026-10-11T20:55:08.380175+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/7399/20261011T205406357821Z/02.json",
+      "url": "https://www.nansin.co.jp/contact/",
+      "retrieved_at": "2026-10-11T20:54:37.381442+00:00",
+      "quote": "お問い合わせ｜株式会社ナンシン",
+      "role": "general_contact_scope"
+    },
+    {
+      "snapshot": "evidence/7399/20261011T205406357821Z/02.json",
+      "url": "https://www.nansin.co.jp/contact/",
+      "retrieved_at": "2026-10-11T20:54:37.381442+00:00",
+      "quote": "メールフォームでのお問い合わせ お問い合わせメールフォーム",
+      "role": "general_form_link_scope"
+    },
+    {
+      "snapshot": "evidence/7399/20261011T205406357821Z/01.json",
+      "url": "https://www.nansin.co.jp/",
+      "retrieved_at": "2026-10-11T20:54:20.838125+00:00",
+      "quote": "株式会社ナンシン",
+      "role": "issuer_identity"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.nansin.co.jp/",
+      "final_url": "https://www.nansin.co.jp/",
+      "snapshot": "evidence/7399/20261011T205406357821Z/01.json",
+      "retrieved_at": "2026-10-11T20:54:20.838125+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.nansin.co.jp/contact/",
+      "final_url": "https://www.nansin.co.jp/contact/",
+      "snapshot": "evidence/7399/20261011T205406357821Z/02.json",
+      "retrieved_at": "2026-10-11T20:54:37.381442+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.nansin.co.jp/sitemap/",
+      "final_url": "https://www.nansin.co.jp/sitemap/",
+      "snapshot": "evidence/7399/20261011T205406357821Z/03.json",
+      "retrieved_at": "2026-10-11T20:54:52.506822+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "一般メールフォーム実リンクはあるが金融IR用途・実返信質問欄は未実証。",
+    "製品/会員/販売supportを金融IR質問受付へ移さず、外部フォーム送信/本文・個人条件も未確認。"
+  ],
+  "discovery": {
+    "security_code": "7399",
+    "official_url": "https://www.nansin.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ナンシン",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/7399/20261011T205406357821Z/01.json",
+      "normalized_name": "ナンシン",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/7399/20261011T205406357821Z/02.json",
+      "normalized_name": "ナンシン",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/7399/20261011T205406357821Z/03.json",
+      "normalized_name": "ナンシン",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 3,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 4,
+  "previous_attempts": [
+    "attempts/7399/20261011T045047658827Z.json",
+    "attempts/7399/20261011T205508380440Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "ir_operations_70_batch26",
+    "reviewed_at": "2026-10-12T02:53:10.397212+00:00",
+    "notes": "現ナンシンhome01/generalcontact02/sitemap03を確認。キャスター/台車の顧客support電話と実externalcontact39は一般受付で金融IRの指定は保存範囲になく、外部本文も未取得・native0。一般form実hrefのみ発見候補、IRpathname/旧会社/株式窓口を推測しない。個人会員navやcookie拒否をIR受付拒否/可否にせずU・不存在判断なし。"
+  }
+}

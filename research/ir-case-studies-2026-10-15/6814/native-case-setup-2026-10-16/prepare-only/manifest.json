@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "case_id": "6814-reported-annual-per-share-basis-monitor",
+  "company_id": "jp:6814",
+  "issue_id": "6814-annual-EPS-BPS-and-common-share-equity-basis",
+  "recorded_at": "2026-10-16T10:34:13.487983+00:00",
+  "case_ref": {
+    "path": "research/ir-case-studies-2026-10-15/6814/native-case-setup-2026-10-16/prepare-only/case-context.json",
+    "sha256": "7df4eef88fc898d1e1438b006ff0c6ce76f739d2ffabfedec5cc5e70a4b1a3cd"
+  },
+  "sources": [
+    {
+      "id": "issuer-annual-original",
+      "source_id": "case-public:ecfb7db1a1c040c9fecf5f30b3a8d7cd4f6142e3d6e80c94a6cc01c3c64fb039",
+      "source_native_snapshot_sha256": "5be2d964ae18bf456a140c4342272e9cfa6bc0945bdd3d52fd0fc779d8b4ce16",
+      "source_content_sha256": "03488a192aec97a28df21366598f04c2dee618c7488842c57bb503d0643a8bb5",
+      "native_hash_domain": "models.json_text(source), distinctfromnormalizercompact/raw/content SHA",
+      "source_ref": {
+        "path": "research/ir-case-studies-2026-10-15/6814/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json",
+        "sha256": "12d8f01408735bb4db3f119bb2975e4835d142c354696ecf78a821b988de9f6f",
+        "json_pointer": "/sources/0"
+      },
+      "retrieved_at": "2026-10-16T10:27:44.002345+00:00",
+      "published_at": null,
+      "actual_DB_first_save": null,
+      "actual_DB_checked": false,
+      "root_acceptance_ref": null,
+      "financial_inputs_verified": false
+    },
+    {
+      "id": "issuer-derived-twofacts",
+      "source_id": "disclosed-facts:d05b7a50d0af1bb576db77f7114fd326a7739b9a16c0d1cc751a16154c807361",
+      "source_native_snapshot_sha256": "b5e514eab19ed28da0711cc6263f76b9d5d76b64e0d18b338de18c11206f47f2",
+      "source_content_sha256": "fe49d69e24b957ae020b5368ce065e94eef6f3c9072c5da3683b0b614ac67517",
+      "native_hash_domain": "models.json_text(source), distinctfromnormalizercompact/raw/content SHA",
+      "source_ref": {
+        "path": "research/ir-case-studies-2026-10-15/6814/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json",
+        "sha256": "12d8f01408735bb4db3f119bb2975e4835d142c354696ecf78a821b988de9f6f",
+        "json_pointer": "/sources/1"
+      },
+      "retrieved_at": "2026-10-16T10:32:44.891274+00:00",
+      "published_at": null,
+      "actual_DB_first_save": null,
+      "actual_DB_checked": false,
+      "root_acceptance_ref": null,
+      "financial_inputs_verified": false
+    }
+  ],
+  "bootstrap_reviews": [],
+  "method_refs": [
+    {
+      "id": "maintainer-formula-positiveguard",
+      "path": "research/ir-transparent-metric-formula-review-2026-10-15/upstream-INDICATORS.md",
+      "sha256": "fb82b2d47596026ea75fa561169062c52622dcb153caffe37af5491111ad084f",
+      "fixed_commit": "00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7",
+      "quote": "EPS  = net_income / shares_outstanding            (weighted average)\nBVPS = total_equity / shares_outstanding_end      (period-end count, average as fallback)\ngraham_number = √( 22.5 · EPS · BVPS )        only when EPS > 0 AND BVPS > 0, else NaN",
+      "character_start": 12966,
+      "character_end": 13211,
+      "byte_start": 13359,
+      "byte_end": 13608,
+      "section": "5 Grahamnumber and latestfiscalperiod caveat",
+      "Graham_original_full_rules_verified": false
+    },
+    {
+      "id": "project-saved-input-mapping",
+      "path": "research/ir-case-studies-2026-10-15/1975/graham-number-input-spec-review-2026-10-16/specification.json",
+      "sha256": "6b11349f628984ffc575f6a08d211d36adaf27cedfe76d58d69d7b2835b343e4",
+      "scope": "Savedprojectadaptationofauthorinputfields; notJapanesefinancialadoption"
+    }
+  ],
+  "existing_issuer_quote_refs": {
+    "original": {
+      "path": "research/ir-case-studies-2026-10-15/6814/annual-accounting-input-discovery-2026-10-16/source-quotes.json",
+      "sha256": "93b10d6ae75168b25edb14bbc2b5d4f43f9be08974e313eb332be0038f901789"
+    },
+    "saved-later-update-locators": {
+      "path": "research/ir-case-studies-2026-10-15/6814/annual-accounting-input-discovery-2026-10-16/link-provenance.json",
+      "sha256": "64c71737d7eb24af644a9f9f9a4a409df33fc76e95eb007adc128d7cc24007c8"
+    }
+  },
+  "normalizer_refs": {
+    "request": {
+      "path": "research/ir-case-studies-2026-10-15/6814/annual-per-share-disclosed-facts-2026-10-16/normalization-input.json",
+      "sha256": "ba98f74dd6360c58d410d0dc5980abe36e9b0459678fa0f8a439256fa0009600"
+    },
+    "bundle": {
+      "path": "research/ir-case-studies-2026-10-15/6814/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json",
+      "sha256": "12d8f01408735bb4db3f119bb2975e4835d142c354696ecf78a821b988de9f6f"
+    },
+    "fixed_core_and_now": {
+      "path": "research/ir-case-studies-2026-10-15/6814/annual-per-share-disclosed-facts-2026-10-16/input-pins.json",
+      "sha256": "33e5a86b2fc1ffb7eae57934ded69c4952f473a4a101a198c6fdadeee8b9f7f7"
+    },
+    "validation": {
+      "path": "research/ir-case-studies-2026-10-15/6814/annual-per-share-disclosed-facts-2026-10-16/validation.json",
+      "sha256": "8a3366f88d8aeb8f3c5e681e08881fabfd6fbc184ea9dff8a7300dc20cfb40cd"
+    },
+    "reproduce": {
+      "path": "research/ir-case-studies-2026-10-15/6814/annual-per-share-disclosed-facts-2026-10-16/reproduce.py",
+      "sha256": "148ffbcdbcd82adabd7c49518980b5aeede85c32981f3a52f91da5dc70f4884a"
+    }
+  },
+  "future_registration": {
+    "expected_version_if_first_registration": 0,
+    "actual_native_version": null,
+    "root_only_actual_writer": true,
+    "copy_preflight_not_executed": true,
+    "management_review_in_preparation": null,
+    "firstsaved_and_classification_to_confirm_after_actual_ingest": true,
+    "future_first_review_source_ids": [
+      "case-public:ecfb7db1a1c040c9fecf5f30b3a8d7cd4f6142e3d6e80c94a6cc01c3c64fb039",
+      "disclosed-facts:d05b7a50d0af1bb576db77f7114fd326a7739b9a16c0d1cc751a16154c807361"
+    ],
+    "registered_successfully": false
+  },
+  "production_code_SHA_frozen": false,
+  "operations": {
+    "GET": 0,
+    "DB_Store_access": 0,
+    "shared_old_docs_index_edits": 0,
+    "calculation_financialadoption_IR": 0
+  }
+}

@@ -1,0 +1,13 @@
+--- docs/research-inquiries.md before
++++ docs/research-inquiries.md after
+@@ -82,3 +82,10 @@
+ 
+ 
+ 一時DBだけで一連の手順を試すには `.venv/bin/python scripts/demo_research_inquiry.py` を実行する。未解決の公表説明から質問を準備し、模擬返信後に別の公表定義を保存して比較注記を確認する。最後に公開性を訂正し、過去レビューを保持したまま現在の注記が保留になることを示す。架空企業だけを使い、外部通信・実送信は行わない。
++
++
++## 全質問・全返信の現在作業を一覧にする
++
++`.venv/bin/python scripts/report_research_inquiries.py --db PATH` は既存DBをmode=ro/query_onlyで開き、Storeを初期化せず単一snapshotを読む。全研究質問と各質問の全返信をID順に表示し、draft・返信待ち・未レビュー・根拠保留・比較注記を並列に残す。後の返信を処理しても古い未レビュー返信を消さない。原質問・返信本文・引用・レビュー全文は出力せず、既存current_viewのID・版・理由と利用可能な固定注記を使う。
++
++過去as-ofは受け付けず、現在の時計を一度固定する。表欠落や読解不能を0件/利用可とせずunknownにし、無回答を否定材料にしない。ID順は優先順位ではなく、比較注記も金融採用・自動case更新・送信readyを意味しない。[1,641テストと実3draftの読取確認](../research/ir-research-inquiry-worklist-integration-2026-10-16/parent-acceptance.json)を受入済み。

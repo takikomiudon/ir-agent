@@ -1,0 +1,39 @@
+{
+  "recorded_at": "2026-10-15T03:21:46.649063+00:00",
+  "tests": {
+    "count": 1033,
+    "seconds": "33.573",
+    "result": "passed",
+    "command": ".venv/bin/python -m unittest discover -s tests -v"
+  },
+  "implemented": [
+    "atomic lease start/renew/completion/expiry journal",
+    "read-only as-of projection with capacity request and audit",
+    "explicit observed/synthetic/unknown provenance"
+  ],
+  "not_implemented": [
+    "request receipts",
+    "active time/token/cost collection",
+    "historical thesis availability fix"
+  ],
+  "actual_operation": {
+    "schema_tables_added": [
+      "job_attempts",
+      "job_attempt_events"
+    ],
+    "historical_jobs_backfilled": false,
+    "measured_attempts": 0,
+    "unmeasured_jobs": 3,
+    "source_snapshot_fingerprint_before": "a01ad313afa4316341d305249a36e89f75f005dbb525334ed8cedf03f1f93544",
+    "source_snapshot_fingerprint_after": "a01ad313afa4316341d305249a36e89f75f005dbb525334ed8cedf03f1f93544",
+    "companies": 1819,
+    "sources": 28,
+    "classifications": 28,
+    "completed_intake_jobs": 3,
+    "theses": 0,
+    "questions": 0,
+    "external_sends": 0,
+    "orders": 0
+  },
+  "open_finding": "A later-saved thesis can currently enter an earlier as-of view; the saved decision review time remains honest. Fix next."
+}

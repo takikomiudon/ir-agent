@@ -1,0 +1,220 @@
+{
+  "case_id": "1950-seasonality-profit-and-share-basis-monitor",
+  "company_id": "jp:1950",
+  "issue_id": "1950-quarter-annual-profit-and-share-basis",
+  "status": "research_only_no_financial_thesis",
+  "synthetic": false,
+  "recorded_at": "2026-10-16T03:23:52.929357+00:00",
+  "purpose": "保存済みQ1の季節性/当時年度予想、利益主体とCF、当時EPS/DPS/株式基準を後続の公表資料へ同じ定義で照合する。",
+  "author_method_references": [
+    {
+      "id": "anthropic.earnings-preview",
+      "ref": {
+        "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+        "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sections": [
+        "Step 1: Gather Context",
+        "Step 2: Key Metrics Framework",
+        "Step 4: Catalyst Checklist"
+      ],
+      "project_adaptation": "会社/四半期/指標/当時会社予想と変化を、期間/単位/主体を揃えて点検。未取得consensus・株価反応・予測を補わない。"
+    },
+    {
+      "id": "anthropic.thesis-tracker",
+      "ref": {
+        "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+        "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sections": [
+        "Step 2: Update Log",
+        "Important Notes / quarterly review"
+      ],
+      "project_adaptation": "同じ論点へ支持/反証候補/不明を追記し、少なくとも四半期という手順を内部研究日に適応。会社別売買規則を借りたことにはしない。"
+    },
+    {
+      "id": "anthropic.dd-meeting-prep",
+      "ref": {
+        "path": "third_party/anthropic/skills/dd-meeting-prep/SKILL.md",
+        "sha256": "a74eecadece794106d515ce3d00e07b3857ed123e841e8962e26363d2413d94f"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sections": [
+        "Step 1: Meeting Context",
+        "Step 3: Benchmarks & Context",
+        "Important Notes / neutral questions"
+      ],
+      "project_adaptation": "既知情報/懸念と資料の対象範囲を比較し、公開資料で解けた事項を再質問しない。PE非公開DDや問数を採用せず残論点の必要性を点検。"
+    },
+    {
+      "id": "damodaran.operating-cashflow-and-equity-scope",
+      "ref": {
+        "path": "research/ir-toyota-author-valuation-readiness-2026-10-15/readiness.json",
+        "sha256": "10e9287e2fd2f3e1f597eb58002432436d87e15663aa259244007576a5e6d4f7"
+      },
+      "source_record_ref": {
+        "path": "research/valuation-model-routing-2026-10-15/sources.json",
+        "sha256": "a9b8c046d3ff5b23eb65fdaabdd4ee8ef55c66498b52cbcad9fc5099c3cc7538",
+        "json_pointer": "/sources/2"
+      },
+      "author": "Aswath Damodaran",
+      "source_pdf_sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+      "source_title": "Ups and Downs: Valuing Cyclical and Commodity Companies",
+      "source_publication": "2009-09",
+      "evidence_pointers": [
+        {
+          "json_pointer": "/quotations/8",
+          "id": "TY09",
+          "pdf_page": 17
+        },
+        {
+          "json_pointer": "/quotations/10",
+          "id": "TY11",
+          "pdf_page": 17
+        },
+        {
+          "json_pointer": "/quotations/11",
+          "id": "TY12",
+          "pdf_page": 17
+        }
+      ],
+      "project_adaptation": "保存Toyota例の税/再投資後CF、営業価値と非営業資産・負債・少数持分・株数の分離を、1950原典の営業/経常/親NI、税/NCIとCFを混同しない研究確認へ適応する。Toyotaの数値/税/将来ROC/評価式の1950適合を認定せず、季節性だけで循環モデルへ振り分けない。",
+      "author_did_not_state_1950_specific_conditions": true
+    }
+  ],
+  "review_questions": [
+    {
+      "id": "quarter-versus-annual-guidance-and-seasonality",
+      "established_scope": "日本基準・連結Q1 2026-04-01〜06-30は売上34,971/営業1,081/親NI1,443百万円。前年Q1の営業は△858であって親NIは592。July31時点FY2026-04-01〜2027-03-31会社予想242,310/23,890/18,470百万円、修正無と記載。会社は繰越工事の効率施工/採算性の高い工事の進捗を説明し、販管費等固定費が通年発生し工事完成引渡しがQ4へ集中する季節性も既答。",
+      "future_review": "次の実際の公表資料を同じ四半期/累計、前年同期間、同じ版の年度予想へ個別に対応させる。工事採算/原価/mix/進捗や季節性について新しい明示説明があれば既存説明に比較し、実際に定義が変わった点/未解決を記録する。",
+      "do_not_infer": "Q1×4の年度化、通年固定費をQ1だけの一時費用扱い、全収益の引渡時認識、比較指数142%/244%を増減率へ無言変換、7/31予想をOctober最新へ読替えはしない。前回予想発表日はこの表では不明。会社予想/実績/独自予測を別にする。",
+      "evidence_quote_ids": [
+        "quarter-actual-period-units-and-profit",
+        "full-year-issuer-guidance",
+        "operating-drivers-and-seasonality"
+      ],
+      "normalized_fact_indexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "profit-stages-special-items-tax-NCI-and-cashflow",
+      "established_scope": "既読物理8 P/Lは当期営業1,081/経常2,007/税前1,998/税598/四半期純利益1,399/非支配損失△43/親NI1,443百万円を別表示。受取利息/配当、投資有価証券売却益81、立退料90等の科目も既答。比較期の営業損失・親NI黒字は別水準として保持。",
+      "future_review": "新しい原典の同期間・同主体・同単位の利益段階と、一時項目の区分・税/NCI・CFの起点/調整を照合する。後続注記/CF等の未読範囲があることを保ち、会社の既説明と新定義/実際の訂正を分ける。",
+      "do_not_infer": "受取配当等を営業改善、親NIを会社全体営業利益/FCFFにしない。表示行から丸め差を補正せず、全特別損益の機械的足戻し/正常税/持続利益/将来CFは作らない。累計に同一項目が残ることを再発とせず、未読を会社無回答/非開示と呼ばない。金融適合やモデルの選択は未採用。",
+      "evidence_quote_ids": [
+        "PL-operating-nonoperating-special-and-NCI",
+        "quarter-actual-period-units-and-profit"
+      ],
+      "normalized_fact_indexes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "historical-share-EPS-DPS-versus-later-buyback-notice",
+      "established_scope": "物理2は期末発行済61,537,219株（自己株含む）、期末自己株3,165,114株、当Q1平均58,372,105株/前年58,461,993株を区別。Q1EPS24.73円、当時FY予想EPS316.42円/年間合計DPS127.00円は各会社の直接表示。rootには2026.9.11自己株券買付状況報告書の告知があるが本文未取得。Q1重要連結変更/四半期固有会計適用は無という期内の記載だけ。",
+      "future_review": "実際に後日資料が保存されれば、公表/対象/基準日・取得実績/自己株/期中平均/予想EPS/DPSの株式基準と版を区別して比較する。会社総額の予想と1株表示を別に保持し、Q1分母と現在分母の一致を仮定しない。",
+      "do_not_infer": "告知日を買付実施日/数量/終了とせず、予告本文や現在株数を捏造しない。表示EPSを丸めNIから再作成、年間DPSを支払実績/将来DDM列へ転用しない。DPSのstart/end/record date/GAAP/consolidationは派生factのnullを維持、利益表から継承しない。Q1変更無を現在の全連結範囲/株式基準保証としない。",
+      "evidence_quote_ids": [
+        "quarter-scope-share-count-and-review-basis",
+        "quarter-actual-period-units-and-profit",
+        "full-year-issuer-guidance",
+        "issuer-dividend-table-and-unchanged-forecast",
+        "buyback-report-notice"
+      ],
+      "normalized_fact_indexes": [
+        6,
+        7,
+        8
+      ]
+    }
+  ],
+  "comparison_protocol": {
+    "supports": "実際の明示根拠が同一期間/主体/単位/株式基準の関係を支持する場合だけ候補にする。",
+    "counterevidence": "特定の保存観測に対する実際の訂正/矛盾を記録する。未指定の数値閾値/市場反証は作らない。",
+    "unchanged": "同じ公表内容/新たな構造化保存だけでは観測を変えない場合を記録する。",
+    "unresolved": "未読/不明/曖昧な根拠は不明のまま。無回答/未公表を悪化/0/売却へ自動変換しない。"
+  },
+  "source_ids": [
+    "case-public:d1f8cac2d772b10e7ef1c47f35c1664cc8ec7000b1017581e2c4540d9c133703",
+    "case-public:981d87fa2d1475e04e8c9d5b06a116c100b6da3b11b5296f7f297ccc671d9790",
+    "case-public:6592e0f7898cd2655e4d63f9f4ff388250144fde4d7245a40a360bbfd1fd6b93",
+    "case-public:023e20b23a02e4a4d9e99db8f8aa9d146da5326ce5a8808fe62aa782479e58e1",
+    "disclosed-facts:46cbe924b4dd80930b76e0b5ecacb92b35bef6762088d189d5187c0a9089f91c"
+  ],
+  "source_review_manifest": "research/ir-case-studies-2026-10-15/1950/native-case-setup-2026-10-16/review-manifest.json",
+  "reading_scope": {
+    "HTML": "原rootの選定した事業/告知見出し、IR資料集と決算indexのカテゴリ/Q1 literal案内のみ。",
+    "statement_fulltext_pages_saved": 13,
+    "statement_prior_root_image_and_meaning_pages": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "statement_other_pages_unreviewed": true,
+    "normalized_source": "同じ原本の直接9表示token再表現。推奨context-reference-only版の補足27箇所は固定出典参照で、旧fullcontext版は未登録代替履歴。数値/主引用/期間/scope意味を変えず、新会社開示/独立予測/新期情報ではない。",
+    "new_page_image_or_website_reading_in_this_task": 0,
+    "handoff_at": "2026-10-16T03:23:52.929357+00:00",
+    "handoff_not_original_first_read_or_historical_first_save": true
+  },
+  "already_answered_not_to_reask": [
+    "Q1と当時年度予想の期間/単位/値・当時修正無",
+    "Q4完成引渡し集中・固定費通年という季節性と採算工事進捗の説明",
+    "営業/経常/特別/税/NCI/親NIの表示区分",
+    "当時期末自己株/期中平均株数の定義",
+    "原本が決算補足資料/説明会を無とする記載（他のQ&A不存在を示さない）"
+  ],
+  "prior_review_refs": [
+    {
+      "path": "research/ir-case-studies-2026-10-15/1950/initial-public-review-2026-10-16/review.json",
+      "sha256": "cf8862836d519f74839647dcf04dbba48e33c2d707967da7a997623b521202dc"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1950/initial-public-review-2026-10-16/parent-acceptance.json",
+      "sha256": "0be07071888d389eb3d822012eaf7533baeb9fef0ae56d92528e5f54eca103f7"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1950/statement-followup-2026-10-16/review.json",
+      "sha256": "f7ebfc8acd7beba284cd64c13f4337d5d49f0333f105225fe2905e8e65c5f8e9"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1950/statement-followup-2026-10-16/parent-acceptance.json",
+      "sha256": "4f0648ddd4431536dd2aa77c1e7a490e0d95429b50320b09e4cb0a7b1c37dfb9"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1950/disclosed-facts-2026-10-16/context-reference-only/validation.json",
+      "sha256": "c1c0ba22a0c1a8efe089b0325e318f6a89389078be2d509a86bca0b10f203137"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1950/disclosed-facts-2026-10-16/context-reference-only/parent-acceptance.json",
+      "sha256": "de57313a3550aab16fcd3ac9881720fea546f0636adeef469d395cd7894dd3f4"
+    }
+  ],
+  "management_review": {
+    "date": "2027-01-16",
+    "timezone": "Asia/Tokyo",
+    "purpose": "internal research management only; three-calendar-month adaptation, not issuer event/sale deadline"
+  },
+  "IR_boundary": "公開既答と未読/未取得を区別し、新草案/分岐/送信準備は作らない。将来税/利回り/会社予想達成や評価額を会社に保証させない。",
+  "closed_route_boundary": "新GET/旧有限経路の再開0。新しい保存資料/新しい実際の説明がない同義previewを増やさない。",
+  "financial_inputs_verified": false,
+  "financial_input_adoption": false,
+  "financial_thesis_or_investment_action": null,
+  "new_IR_questions": 0,
+  "unadopted": [
+    "通常事業/循環/金融/赤字成長のモデル適合・選択",
+    "正常利益/将来CF/税/再投資/将来株数",
+    "著者固有1950予測/評価・倍率・確率・価格/売買条件",
+    "自己株買付の実数量/現在分母/後日会社予想の最新性",
+    "会社決算日/売却期限/外部送信"
+  ]
+}

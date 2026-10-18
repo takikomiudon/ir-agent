@@ -1,0 +1,105 @@
+{
+  "recorded_at": "2026-10-16T15:46:58.102541+00:00",
+  "status": "frozen_for_independent_review",
+  "new_files_only": true,
+  "existing_files_edited": [],
+  "owned_files": [
+    {
+      "path": "src/ir_agent/research_inquiry_worklist.py",
+      "bytes": 7058,
+      "sha256": "33779ebc114826629acb6150043306c70b9c10030d66b72c7dd501ac5caa0700"
+    },
+    {
+      "path": "scripts/report_research_inquiries.py",
+      "bytes": 878,
+      "sha256": "5bf353504f08d49fe295102a35ccac01e491fca990dd5ee8e09b328700951899"
+    },
+    {
+      "path": "tests/test_research_inquiry_worklist.py",
+      "bytes": 12790,
+      "sha256": "d86d3e70c0fd3783f8c9cd73089b37d0835236288b3b267b67c99c213f81441c"
+    }
+  ],
+  "dependency_pins": [
+    {
+      "path": "src/ir_agent/research_inquiries.py",
+      "bytes": 24306,
+      "sha256": "0b7841eef2b8cf0515f479167a2fe681eace7b1bf692903af6b83a3ad415e482"
+    },
+    {
+      "path": "src/ir_agent/store.py",
+      "bytes": 27724,
+      "sha256": "6f3c96ad9575f47196d194f1bec1fd6c5ace37fca42ecf6639bf9ea76dc66d7f"
+    },
+    {
+      "path": "src/ir_agent/qualitative_research.py",
+      "bytes": 31378,
+      "sha256": "2ca2058af8bbda868cbd24ad36408d14afcd075d35ac8a4140fc472997d675a5"
+    },
+    {
+      "path": "src/ir_agent/decision_lifecycle.py",
+      "bytes": 29387,
+      "sha256": "a6813698eb32ea6293d765b616a86340f6695d247e563ebcca3296941f633273"
+    },
+    {
+      "path": "src/ir_agent/information_review.py",
+      "bytes": 16070,
+      "sha256": "22df6e4a6e5d717a390e817bb311b091112eb1d44722e0651623548f09b7d9ee"
+    },
+    {
+      "path": "src/ir_agent/availability.py",
+      "bytes": 14166,
+      "sha256": "4fbb1a7c252391706066f084205345260add06e9bb00e96bd65c5fabdcfa0d4a"
+    },
+    {
+      "path": "tests/test_research_inquiries.py",
+      "bytes": 22505,
+      "sha256": "4aa9e9606cfbdca2a241504c34cc688070a144248cbb12f89135bec13909b0c9"
+    },
+    {
+      "path": "research/ir-next-logic-gap-review-2026-10-16/proposal.md",
+      "bytes": 6565,
+      "sha256": "d6657eaac824311ecd158c282a76ced6a77f87d87490b0e30f1b728a468e622c"
+    }
+  ],
+  "documentation": {
+    "path": "research/ir-research-inquiry-worklist-integration-2026-10-16/README.md",
+    "bytes": 3470,
+    "sha256": "073c0d348d3865dfcdb1cbc61253145a9aabdc0d53f4b03c7d25e9c9dff4d343"
+  },
+  "focused_tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src:tests .venv/bin/python -m unittest test_research_inquiry_worklist -v",
+    "tests": 14,
+    "passed": 14,
+    "failed": 0,
+    "log": {
+      "path": "research/ir-research-inquiry-worklist-integration-2026-10-16/focused-tests.log",
+      "bytes": 2781,
+      "sha256": "3565ccf6f2efd0dbc4b16acd40a46fd82980d9ca79aecd7a10c89da58b3c4042"
+    }
+  },
+  "history": {
+    "draft_log": {
+      "path": "research/ir-research-inquiry-worklist-integration-2026-10-16/draft-focused-tests.log",
+      "bytes": 2937,
+      "sha256": "4c7425744d515e50b59c50dc2292119c7ddaa50ac5072c99c02c06715c26eb68"
+    },
+    "draft_failure": "CLI subprocess module unavailable while /tmp draft awaited root src-set freeze release; final source placement resolved it."
+  },
+  "limits": {
+    "actual_db_access": 0,
+    "network_get": 0,
+    "external_messages_or_dispatch": 0,
+    "full_suite_run": false,
+    "existing_core_or_shared_docs_changes": 0,
+    "financial_or_allocation_decisions": 0
+  },
+  "behavior": [
+    "all inquiries and all explicit reply IDs; concurrent categories",
+    "fixed current clock and one read-only SQLite snapshot",
+    "current_view retains case/files/source DAG/public-information correction guards",
+    "default omits question/reply text, basis quotes, rationale and full review",
+    "missing schema is unknown; no absent DB creation",
+    "no automated branch classification, financial input adoption or send-ready certification"
+  ]
+}

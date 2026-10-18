@@ -1,0 +1,151 @@
+{
+  "status": "intermediate_only",
+  "adoption": "unresolved",
+  "request": {
+    "assessment": {
+      "comparability_rationale": null,
+      "new_investment_roc_rationale": null,
+      "source_refs": [],
+      "stable_growth_rationale": null,
+      "tax_and_nol_rationale": null
+    },
+    "basis": {
+      "accounting_basis": "Synthetic arithmetic fixture",
+      "amount_unit": "millions",
+      "company_id": "synthetic:stable-reinvestment-demo",
+      "currency": "JPY",
+      "scope": "Fictional consolidated company"
+    },
+    "growth": {
+      "basis": {
+        "accounting_basis": "Synthetic arithmetic fixture",
+        "amount_unit": "millions",
+        "company_id": "synthetic:stable-reinvestment-demo",
+        "currency": "JPY",
+        "scope": "Fictional consolidated company"
+      },
+      "concept": "stable_operating_income_growth",
+      "data_kind": "synthetic_example",
+      "period": {
+        "end": null,
+        "kind": "full_fiscal_year",
+        "label": "Synthetic next stable period",
+        "start": null
+      },
+      "rationale": "Explicit fictional arithmetic input; no forecast or economic fitness is established.",
+      "source_refs": [],
+      "unit": "annual_decimal_ratio",
+      "value": "0.02"
+    },
+    "method": "stable_growth_new_investment_roc",
+    "nopat_next": {
+      "basis": {
+        "accounting_basis": "Synthetic arithmetic fixture",
+        "amount_unit": "millions",
+        "company_id": "synthetic:stable-reinvestment-demo",
+        "currency": "JPY",
+        "scope": "Fictional consolidated company"
+      },
+      "concept": "aftertax_operating_income_before_financing",
+      "data_kind": "synthetic_example",
+      "period": {
+        "end": null,
+        "kind": "full_fiscal_year",
+        "label": "Synthetic next stable period",
+        "start": null
+      },
+      "rationale": "Explicit fictional arithmetic input; no forecast or economic fitness is established.",
+      "source_refs": [],
+      "timing": "next_stable_period",
+      "value": "100"
+    },
+    "roc_new": {
+      "basis": {
+        "accounting_basis": "Synthetic arithmetic fixture",
+        "amount_unit": "millions",
+        "company_id": "synthetic:stable-reinvestment-demo",
+        "currency": "JPY",
+        "scope": "Fictional consolidated company"
+      },
+      "concept": "aftertax_return_on_new_investment",
+      "data_kind": "synthetic_example",
+      "period": {
+        "end": null,
+        "kind": "full_fiscal_year",
+        "label": "Synthetic next stable period",
+        "start": null
+      },
+      "rationale": "Explicit fictional arithmetic input; no forecast or economic fitness is established.",
+      "source_refs": [],
+      "unit": "annual_decimal_ratio",
+      "value": "0.10"
+    }
+  },
+  "request_sha256": "d4c88bec1cfab52c27614ccf5b84e26dc766797299cc16d4500ba67c4dd3de45",
+  "arithmetic": {
+    "reinvestment_rate": "0.2",
+    "reinvestment_amount": "20",
+    "fcff": "80",
+    "basis": {
+      "accounting_basis": "Synthetic arithmetic fixture",
+      "amount_unit": "millions",
+      "company_id": "synthetic:stable-reinvestment-demo",
+      "currency": "JPY",
+      "scope": "Fictional consolidated company"
+    }
+  },
+  "calculation": {
+    "working_precision_digits": 80,
+    "rounding": "ROUND_HALF_UP",
+    "division_may_round": true,
+    "display_quantization": null,
+    "formula": {
+      "reinvestment_rate": "growth / roc_new",
+      "reinvestment_amount": "nopat_next * reinvestment_rate",
+      "fcff": "nopat_next - reinvestment_amount"
+    },
+    "author_reference": {
+      "author": "Aswath Damodaran",
+      "year": 2009,
+      "title": "Ups and Downs: Valuing Cyclical and Commodity Companies",
+      "source_id": "damodaran.cyclical-commodity.2009",
+      "pdf_sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+      "pdf_pages": [
+        17,
+        21
+      ],
+      "support": "Stable reinvestment rate g/ROC and the next-period after-tax operating-income valuation numerator; this function decomposes that numerator only."
+    },
+    "project_adaptation": "Strict next-stable-period metadata, positive author-example scope, isolated Decimal arithmetic and unresolved adoption are local API rules, not a universal author policy or verified forecast."
+  },
+  "verification": {
+    "source_references": "unverified",
+    "declared_basis_semantics": "unverified",
+    "next_annual_period_and_comparability": "unverified",
+    "tax_and_nol_treatment": "unverified",
+    "stable_growth_applicability": "unverified",
+    "new_investment_roc_applicability": "unverified",
+    "funding_and_survival": "unverified"
+  },
+  "period_dates_incomplete": [
+    "nopat_next.period.start",
+    "nopat_next.period.end",
+    "growth.period.start",
+    "growth.period.end",
+    "roc_new.period.start",
+    "roc_new.period.end"
+  ],
+  "assessment_fields_unset": [
+    "assessment.comparability_rationale",
+    "assessment.new_investment_roc_rationale",
+    "assessment.stable_growth_rationale",
+    "assessment.tax_and_nol_rationale"
+  ],
+  "limitations": [
+    "Input labels, period equality and source/quote references are caller declarations, not independently verified documents, tax treatment, annual/52/53-week comparability, next-period timing or economic applicability.",
+    "NOPAT_next is supplied as after-tax operating income before financing; no tax/NOL calculation, (1+g) multiplication, historical ROC selection, WACC substitution or pretax-profit conversion is performed.",
+    "Only the positive author-example scope is implemented; zero growth has a defined algebraic value with nonzero ROC but is unsupported here, distinct from the ROC=0 denominator error.",
+    "Reinvestment rates above one and negative FCFF are retained without clamping; capital funding, growth sustainability and survival remain unverified.",
+    "No capex/D&A/working-capital parts, financing cash flows, DCF, terminal value, stock price, IR action or probability is generated, and intermediate arithmetic does not adopt a normalized forecast."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "company_id": "jp:2163",
+  "maximum_GETs": 5,
+  "user_agent": "Codex-IR-Research/0.1",
+  "allowed_requests": [
+    {
+      "role": "issuer_robots",
+      "url": "https://www.artner.co.jp/robots.txt",
+      "basis": "robots endpoint on selected official host"
+    },
+    {
+      "role": "issuer_root",
+      "url": "https://www.artner.co.jp/ir/",
+      "basis": "selected CSV official_url (IR entry, not guessed corporate domain root)"
+    },
+    {
+      "role": "latest_Japanese_Q2_statement",
+      "url": "https://www.artner.co.jp/asset-ir/download_file/2027_q2.pdf",
+      "literal_anchor": {
+        "url": "https://www.artner.co.jp/asset-ir/download_file/2027_q2.pdf",
+        "href": "https://www.artner.co.jp/asset-ir/download_file/2027_q2.pdf",
+        "label": "2027年1月期 第2四半期決算短信〔日本基準〕（連結）［PDF 170 KB/9 ページ］"
+      },
+      "source_capture_sequence": 2,
+      "source_capture_pointer": "$.html_visible_text.links[433]",
+      "source_raw_sha256": "b4464f1cedbb6484bae5a80a48e6a62a7c828257ab45c324e2827c1b767fa0ce",
+      "host_not_held": true,
+      "robots_can_fetch": true
+    }
+  ],
+  "robots_reviews": {
+    "www.artner.co.jp": {
+      "proceed": true,
+      "branch": "fresh_robots200",
+      "raw_file": "research/ir-case-studies-2026-10-15/2163/initial-public-review-2026-10-16/raw/4cb1ae2118aaf0cfa484d2a3ee9f699438e01c5cd6cc4854f14268c6adb47e03",
+      "raw_sha256": "4cb1ae2118aaf0cfa484d2a3ee9f699438e01c5cd6cc4854f14268c6adb47e03",
+      "root_can_fetch": true,
+      "rules_text": "# START YOAST BLOCK\n# ---------------------------\nUser-agent: *\nDisallow:\n\nSitemap: https://www.artner.co.jp/sitemap_index.xml\n# ---------------------------\n# END YOAST BLOCK"
+    }
+  },
+  "holds_file": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+  "holds_sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952",
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu"
+  ],
+  "maximum_samehost_explicit_redirect_hops": 1,
+  "no_JS_search_form_externalhost_or_diagnostics": true,
+  "maximum_meaning_image_pages": 4
+}

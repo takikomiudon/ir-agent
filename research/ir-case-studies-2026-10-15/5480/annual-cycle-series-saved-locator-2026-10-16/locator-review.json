@@ -1,0 +1,652 @@
+{
+  "recorded_at": "2026-10-16T11:59:36.015816+00:00",
+  "company_id": "jp:5480",
+  "case_id": "5480-cyclical-normalization-monitor",
+  "case_version_preserved": 3,
+  "issue_id": "5480-cyclical-normalization-input-basis",
+  "condition_id": "C1",
+  "existing_author_condition": {
+    "id": "C1",
+    "author_refs": [
+      "D1-complete-cycle",
+      "D2-scale-margin"
+    ],
+    "author_condition": "正常化期間は一巡を覆う根拠が必要で、規模変化には比較可能な過去利益率と現在規模の対応を点検する。固定年数や足元利益を正常値としない。",
+    "current_comparison": "June2026表示メッセージにFY2025-04-01～2026-03-31の連結売上/OPがあり、派生2件は同原典の表示を構造化しただけ。前年比変化額から前年実額を逆算せず、1年から全サイクル/正常窓/正常率を認定しない。",
+    "status": "unresolved",
+    "future_saved_public_checks": "新たに正当に保存される正式財務表等があれば、年度/通期か累計か・会計/連結/事業範囲・実績/予想・表示単位・履歴の比較可能性を元論点へ比較する。全サイクルとする根拠は別に必要。",
+    "does_not_create": "固定窓、正常率、予測、過去年の逆算、別会社/業種平均代入は作らない。"
+  },
+  "task_from_latest_disposition": {
+    "owner": "公開資料点検担当",
+    "task": "既存C1で必要な、年次売上/OPと連結・事業範囲を対応できる履歴原典の所在1件を利用可能な保存資料から特定する。",
+    "why": "会社中計の計画basisは解けたが全サイクル/規模比較の履歴根拠は増えていない。平均/正常率/固定年数は作らない。",
+    "boundary": "既に読んだ中計basisの再点検やclosedroute再開を指示しない。見つからなければ不足のまま。"
+  },
+  "status": "annual_consolidated_sales_OP_multi_year_table_not_found_in_inspected_saved_text_locator_scope",
+  "source_inventory": [
+    {
+      "source_id": "case-public:473d984ca9d64f8e8b274b94f8b6f98fe7e163ee0fda708cf659af15d144cdc4",
+      "native_source_SHA256": "085c8d1f86f0947ec369b3f3e374b3bd4fdfd75fe5e2f5b3ca895b6ac61bcc13",
+      "source_content_SHA256": "9b8a6e42221e8f6836140570f1f60270eed8db25490e2913163a834357664f8e",
+      "title": "日本冶金工業 中期経営計画リンク入口（静的本文のみ）",
+      "whole_object_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5480/business-description-public-review-2026-10-16/builder-bundle.json",
+        "sha256": "a152584e94e9401ee7e017d9314380fec857448148d3a4fadfbb121378468d44",
+        "pointer": "$.sources[0]"
+      },
+      "original_raw_SHA256": "34ceb12197763e2c4d957c38ee72c7c0fa9fc6216a0043aaba440acd5c2c5a44",
+      "locator_token_counts": {
+        "営業利益": 0,
+        "売上高": 0,
+        "業績推移": 0,
+        "Operating profit": 0
+      },
+      "locator_only_not_new_meaning_review": true
+    },
+    {
+      "source_id": "case-public:7ebd4f421bb0d918ddc742534804347eb60927dfe2b6c6371b56af46358fcf00",
+      "native_source_SHA256": "40b9a85b68d91a14a5895fdf491646bd4514c9a82a21609068af92b909c10857",
+      "source_content_SHA256": "add985976d8303937a56a6e1c5f789dce6ff4421ae0ff278038643ceee931277",
+      "title": "株主・投資家の皆様へ | 株主・投資家情報 | 日本冶金工業株式会社",
+      "whole_object_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5480/disclosed-facts/normalized-bundle.json",
+        "sha256": "62e5672411e923db21b0529dd9365d816d58c1a2aeb88270f538e546e580180b",
+        "pointer": "$.sources[0]"
+      },
+      "original_raw_SHA256": "9f1ad20e842de2161e18ec8e2c2d2367f93580ccc8fd0996ea846a2fda8f94ae",
+      "locator_token_counts": {
+        "営業利益": 1,
+        "売上高": 1,
+        "業績推移": 0,
+        "Operating profit": 0
+      },
+      "locator_only_not_new_meaning_review": true
+    },
+    {
+      "source_id": "disclosed-facts:f2102aa8a0c45411a8e5ac300e20e5eea781c357e9d2799129ab5dcd0c444744",
+      "native_source_SHA256": "ded92aa25105faea5c81bee4f299cc03ac0e56f305c0cb630912d3d555953dad",
+      "source_content_SHA256": "8e2a7e5f3c28cc9e64db823f9499b79b440cb3062c96369a45705113e08d5dbc",
+      "title": "株主・投資家の皆様へ | 株主・投資家情報 | 日本冶金工業株式会社 — cited fact extraction (meaning review required)",
+      "whole_object_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5480/disclosed-facts/normalized-bundle.json",
+        "sha256": "62e5672411e923db21b0529dd9365d816d58c1a2aeb88270f538e546e580180b",
+        "pointer": "$.sources[1]"
+      },
+      "original_raw_SHA256": null,
+      "locator_token_counts": {
+        "営業利益": 5,
+        "売上高": 1,
+        "業績推移": 0,
+        "Operating profit": 0
+      },
+      "locator_only_not_new_meaning_review": true
+    },
+    {
+      "source_id": "case-public:a69c6b6f093774426823a7e54d484c038f10a20d7ce3c25b38c993a22f089de0",
+      "native_source_SHA256": "b66ca33532cadd36578673c25bd4589acbf6cacb20eaad78a3b6f0bfc6b67c3e",
+      "source_content_SHA256": "674d5f089bf2572c81f9675ce4c6eea90e287667eb8ceb120aa8287f363b6a2b",
+      "title": "日本冶金グループ 中期経営計画2026-2028（2026年5月8日付、意味範囲5頁）",
+      "whole_object_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5480/medium-term-plan-public-review-2026-10-16/builder-bundle.json",
+        "sha256": "5c1aa5309b6771afb86ef266a90b6e420142b8f554c76e891bbf06eca38c2598",
+        "pointer": "$.sources[0]"
+      },
+      "original_raw_SHA256": "9cf3daa5a3a696c22a3fd833b475973533bd5af45d2a04aa6b96e0f96a3c9fd2",
+      "locator_token_counts": {
+        "営業利益": 0,
+        "売上高": 4,
+        "業績推移": 0,
+        "Operating profit": 0
+      },
+      "locator_only_not_new_meaning_review": true
+    },
+    {
+      "source_id": "disclosed-facts:487cb89709ae01cba3c250ed113295e5383cf391599e2c4eda6dcde578c99e6f",
+      "native_source_SHA256": "4536269c85e13b95cf052b30e91882489f208da8ee01de941292573db2ae61b6",
+      "source_content_SHA256": "2eb497f59ceb62b668ec54c2bc0fb0d54c474a357d9ff559f059eb0d0cef91a2",
+      "title": "株主・投資家の皆様へ | 株主・投資家情報 | 日本冶金工業株式会社 — cited fact extraction (meaning review required)",
+      "whole_object_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5480/revenue-disclosed-facts/normalized-bundle.json",
+        "sha256": "0e251685a8bc95232b39fc678dc1ad6ffc662162dafdf961d731aaaf6350ea27",
+        "pointer": "$.sources[1]"
+      },
+      "original_raw_SHA256": null,
+      "locator_token_counts": {
+        "営業利益": 3,
+        "売上高": 3,
+        "業績推移": 0,
+        "Operating profit": 0
+      },
+      "locator_only_not_new_meaning_review": true
+    },
+    {
+      "source_id": "case-public:4550dcb5ba257247c47b846003c9a0448a392a5d075eedaa688452835da5010a",
+      "native_source_SHA256": "bd38d440d2bbc6ec4d0a8b2dbee86dfad6541779a805cc360d95dc35ba36003d",
+      "source_content_SHA256": "e124570cf8e8f9e06cc7e61a0ccba02c626cc61a2d67ee2605a6bc17e93f4964",
+      "title": "robots.txt | 日本冶金工業株式会社",
+      "whole_object_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5480/source-bundle.json",
+        "sha256": "60f3f834c25eca360cac7c53a64b22b477282f9c1337d8160ba8b8300ef78047",
+        "pointer": "$.sources[0]"
+      },
+      "original_raw_SHA256": "e124570cf8e8f9e06cc7e61a0ccba02c626cc61a2d67ee2605a6bc17e93f4964",
+      "locator_token_counts": {
+        "営業利益": 0,
+        "売上高": 0,
+        "業績推移": 0,
+        "Operating profit": 0
+      },
+      "locator_only_not_new_meaning_review": true
+    },
+    {
+      "source_id": "case-public:e70628e64f048ae49496c832eb44edee800d82ab2dcca5962a3a00838c29b896",
+      "native_source_SHA256": "9c6d76cb30ccd15818a9dec79ab98d05f81fafe4090b119649340e3674608399",
+      "source_content_SHA256": "bce7718677be1d747f6335078968100391de1f00cb3926d1c0abe6e037556bbe",
+      "title": "トップページ | 日本冶金工業株式会社",
+      "whole_object_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5480/source-bundle.json",
+        "sha256": "60f3f834c25eca360cac7c53a64b22b477282f9c1337d8160ba8b8300ef78047",
+        "pointer": "$.sources[1]"
+      },
+      "original_raw_SHA256": "6dfdb5979cb56f3c62d2057e48ce2357ed6c20f9ddcd0b6435b112fe1fb5c062",
+      "locator_token_counts": {
+        "営業利益": 0,
+        "売上高": 0,
+        "業績推移": 0,
+        "Operating profit": 0
+      },
+      "locator_only_not_new_meaning_review": true
+    },
+    {
+      "source_id": "case-public:89ed9fd51d5faf7426d484b82fb39df4be70de3c68fbb2c4b330269632a996b8",
+      "native_source_SHA256": "58e112127b0824955dae866e611c7cdd15b7ee2ce36ccb582ea1ae8a5aacf11e",
+      "source_content_SHA256": "208cc60dc23669b04e37cf9468a1cc3f60bfd24ff00b68addd09ede063014d4f",
+      "title": "株主・投資家情報 | 日本冶金工業株式会社",
+      "whole_object_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5480/source-bundle.json",
+        "sha256": "60f3f834c25eca360cac7c53a64b22b477282f9c1337d8160ba8b8300ef78047",
+        "pointer": "$.sources[2]"
+      },
+      "original_raw_SHA256": "b83117ccd1d2318c7c23daaffff7bcb6f2930cee72eed5ed0020043f290058fb",
+      "locator_token_counts": {
+        "営業利益": 0,
+        "売上高": 0,
+        "業績推移": 0,
+        "Operating profit": 0
+      },
+      "locator_only_not_new_meaning_review": true
+    },
+    {
+      "source_id": "case-public:8868c78b4337b09f6600be40d08d290312ab9fa5900c84b8ff7adc4e6f00930f",
+      "native_source_SHA256": "f4b4e7991d5998a968fb13f086a0155764f157d22bf4648a2b35fd3933355d4e",
+      "source_content_SHA256": "91511430c0fda3b5211181cadb265ec04abe56345748983ad91294516ac72577",
+      "title": "説明会資料 | 株主・投資家情報 | 日本冶金工業株式会社",
+      "whole_object_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5480/source-bundle.json",
+        "sha256": "60f3f834c25eca360cac7c53a64b22b477282f9c1337d8160ba8b8300ef78047",
+        "pointer": "$.sources[3]"
+      },
+      "original_raw_SHA256": "9b8af5e7fcb63589c11eeee961a9343ed8b1d7e140385cdd4cbcd038ee466a53",
+      "locator_token_counts": {
+        "営業利益": 0,
+        "売上高": 0,
+        "業績推移": 0,
+        "Operating profit": 0
+      },
+      "locator_only_not_new_meaning_review": true
+    },
+    {
+      "source_id": "case-public:c9715de6c491a34c92a46bdedabc7c74d5947cfa8d21d9fc1c824ae0499ee616",
+      "native_source_SHA256": "c60d20798c871ba778e1b8ca8641b249e3e538411f3340d255aa62b03300fdd6",
+      "source_content_SHA256": "52245f3e35f4f58218041bc79d9e763c707de25cbe9d8f4d39113ae88cf8ce9c",
+      "title": "E-IR public site configuration | 日本冶金工業株式会社 5480",
+      "whole_object_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5480/source-bundle.json",
+        "sha256": "60f3f834c25eca360cac7c53a64b22b477282f9c1337d8160ba8b8300ef78047",
+        "pointer": "$.sources[4]"
+      },
+      "original_raw_SHA256": "52245f3e35f4f58218041bc79d9e763c707de25cbe9d8f4d39113ae88cf8ce9c",
+      "locator_token_counts": {
+        "営業利益": 0,
+        "売上高": 0,
+        "業績推移": 0,
+        "Operating profit": 0
+      },
+      "locator_only_not_new_meaning_review": true
+    },
+    {
+      "source_id": "case-public:398e1d4b1dff093ff66ccf43997d0cd40dc13d33cbfafac879719e531976bb99",
+      "native_source_SHA256": "999f4feab84a933eb03c845334a5950e4c3d3a958aa70c41cee3a722190e11b5",
+      "source_content_SHA256": "95d03c566b43816792409566d447fa9b31572f14398bfd70fc9f64fcc9a57796",
+      "title": "よくあるご質問 | 株主・投資家情報 | 日本冶金工業株式会社",
+      "whole_object_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5480/source-bundle.json",
+        "sha256": "60f3f834c25eca360cac7c53a64b22b477282f9c1337d8160ba8b8300ef78047",
+        "pointer": "$.sources[5]"
+      },
+      "original_raw_SHA256": "09c79652278afbe4fe5f6d97061bfffbfa2f156eee415efc9e54182443fea572",
+      "locator_token_counts": {
+        "営業利益": 0,
+        "売上高": 0,
+        "業績推移": 0,
+        "Operating profit": 0
+      },
+      "locator_only_not_new_meaning_review": true
+    },
+    {
+      "source_id": "case-public:91f0c36851e32c4a00119d864fcabf7f5ba973e2f3d70b111d269ea6445ed265",
+      "native_source_SHA256": "2e34df842bc78486acdd6719312d84428ebaf7a3ac4ac1a6b279f617ef7d9abb",
+      "source_content_SHA256": "c5c65635dd4e7e93f7c980505ba8b3792d645d03001b0e4fecd1b158ea902858",
+      "title": "会社概要 | 会社情報 | 日本冶金工業株式会社",
+      "whole_object_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5480/source-bundle.json",
+        "sha256": "60f3f834c25eca360cac7c53a64b22b477282f9c1337d8160ba8b8300ef78047",
+        "pointer": "$.sources[7]"
+      },
+      "original_raw_SHA256": "8b4f292297bb7c5d8b5ee77b6ec8a3dbfb2938370d242a7cf74e3b5acfb22592",
+      "locator_token_counts": {
+        "営業利益": 0,
+        "売上高": 0,
+        "業績推移": 0,
+        "Operating profit": 0
+      },
+      "locator_only_not_new_meaning_review": true
+    }
+  ],
+  "scope": "Native5480 accepted12source objects resolved and pinned; new37page MTP text locator plus old saved HTML/raw image-alt/name term locators only. No database or outside document acquisition.",
+  "PDF_page_locators_not_meaning_review": [
+    {
+      "physical_page": 1,
+      "heading_locator": "  NIPPON YAKIN GROUP\n\n\n\n\n中期経営計画\n 2026-2028\n  2026年5月8日\n",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 2,
+      "heading_locator": "  目次\n\nⅠ. 「中期経営計画2023」のレビュー             Ⅳ.「中期経営計画2026-2028 」の基本戦略と施策\n 1. 数値目標に対する",
+      "matched_terms": {
+        "実績": 1
+      },
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 3,
+      "heading_locator": "Ⅰ. 「中期経営計画2023」のレビュー\n",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 4,
+      "heading_locator": "      Ⅰ-1. 数値目標に対する達成状況\n\n中期経営計画2023 目標達成状況（連結）\n\n                     中計2023（A）  ",
+      "matched_terms": {
+        "売上高": 2,
+        "EBITDA": 3,
+        "実績": 1,
+        "連結": 1
+      },
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 5,
+      "heading_locator": "      Ⅰ-2. ３つの基本戦略のレビュー\n\n\n           基本戦略①                         基本戦略②        ",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 6,
+      "heading_locator": "      Ⅰ-3.コストダウン実績\n\n中期経営計画2023 コストダウン計画・実績\n\n                  中計2023（A）    実績（B）",
+      "matched_terms": {
+        "実績": 3
+      },
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 7,
+      "heading_locator": "  Ⅰ-4. 設備投資の状況\n\n中期経営計画2023 設備投資計画・実績（意思決定ベース）\n\n             計画         実績\n\n     ",
+      "matched_terms": {
+        "実績": 2
+      },
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 8,
+      "heading_locator": "  Ⅰ-5. 次期中期経営計画への課題\n\n\n課題1                        課題2\n\n      高機能材拡販を加速するための      ",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 9,
+      "heading_locator": "Ⅱ. 事業環境と当社ポジション\n",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 10,
+      "heading_locator": "    Ⅱ-1. 事業環境認識 〜 ①マクロ経済環境\n\nマクロ経済環境\n\n    （1）政治\n        地政学リスクの高まりから自国産業保護やブロック経",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 11,
+      "heading_locator": "    Ⅱ-1. 事業環境認識 〜 ②当社事業環境と今後の想定\n\n当社事業環境\n\n   前中計期間中のNi相場は概ね下落基調で推移していたが、インドネシア政府",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 12,
+      "heading_locator": "Ⅱ-2．当社事業のSWOT分析\n\n\n  Strength      強み         Weakness     弱み\n\n    成長期待市場への地理的優位",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 13,
+      "heading_locator": "Ⅲ.「中期経営計画2026-2028」のコンセプト\n",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 14,
+      "heading_locator": " 当社の将来像と「中期経営計画2026-2028」の位置づけ\n\n\n\n 当社の     新たな領域で挑戦し続け 「SHINKA」 を遂げる\nありたい\n  姿   ",
+      "matched_terms": {
+        "EBITDA": 1
+      },
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 15,
+      "heading_locator": "    将来像を見据えた企業価値向上に向けた取り組み\n\n                           当社の将来像\n\n             「PBR",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 16,
+      "heading_locator": "  「中期経営計画2026-2028」目指す姿\n\n                            当社の将来像\n\n              「PBR：",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 17,
+      "heading_locator": "       Ⅳ．\n「中期経営計画2026-2028」の\n    基本戦略と施策\n",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 18,
+      "heading_locator": "     3つの基本戦略\n\n                    中期経営計画2026-2028で目指す姿\n        ニッケル高合金・ステンレス市場のト",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 19,
+      "heading_locator": "  基本戦略①\n\n 新たな領域での市場ニーズの探求と、必要なアイテムの開発と提供\n\n\n\n\n     高機能材部門                        ",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 20,
+      "heading_locator": "      基本戦略①\n\n  新たな領域での市場ニーズの探求と、必要なアイテムの開発と提供\n\n高機能材部門：成長市場・分野への戦略的な取り組みによる拡販と開発推",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 21,
+      "heading_locator": "      基本戦略①\n\n    新たな領域での市場ニーズの探求と、必要なアイテムの開発と提供\n\n高機能材部門：成長市場・分野への戦略的な取り組みによる拡販と開",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 22,
+      "heading_locator": "    基本戦略①\n\n   新たな領域での市場ニーズの探求と、必要なアイテムの開発と提供\n\n高機能材部門：成長市場・分野への戦略的な取り組みによる拡販と開発推進",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 23,
+      "heading_locator": "    基本戦略①\n\n  新たな領域での市場ニーズの探求と、必要なアイテムの開発と提供\n\n高機能材部門：成長市場・分野への戦略的な取り組みによる拡販と開発推進\n",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 24,
+      "heading_locator": "   基本戦略①\n\n  新たな領域での市場ニーズの探求と、必要なアイテムの開発と提供\n\n高機能材部門：成長市場・分野への戦略的な取り組みによる拡販と開発推進\n\n",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 25,
+      "heading_locator": "    基本戦略①\n\n  新たな領域での市場ニーズの探求と、必要なアイテムの開発と提供\n\n一般材部門\nニッチ材への注力および小ロット・多品種材の供給により、お客",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 26,
+      "heading_locator": "    基本戦略②\n\n  技術を追求し、あらゆるニーズに対応可能な生産体制を構築\n\nQCD競争力強化：生産技術の進化による競争力トップの高機能材生産体制の確立 ",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 27,
+      "heading_locator": "         基本戦略③\n\n        環境変化に対応し、持続可能な経営基盤を確立\n                                  ",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 28,
+      "heading_locator": "      基本戦略③\n\n     環境変化に対応し、持続可能な経営基盤を確立\n\nカーボンニュートラル計画\n\nCO2排出量（実績･見込）と削減率\n\n      ",
+      "matched_terms": {
+        "実績": 5
+      },
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 29,
+      "heading_locator": "          基本戦略③\n\n         環境変化に対応し、持続可能な経営基盤を確立\n\n人材施策          将来を見据えた人的資本計画の遂行\n",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 30,
+      "heading_locator": "Ⅴ．設備投資計画\n",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 31,
+      "heading_locator": "  Ⅴ．設備投資計画\n\n設備投資の考え方\n\n 高機能材の稼ぐ力のブラッシュアップと、新たな成長戦略に資する開拓と開発に向けた新設備の導入\n\n 競争力強化とカ",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 32,
+      "heading_locator": "Ⅵ. コストダウン計画\n",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 33,
+      "heading_locator": "  Ⅵ. コストダウン計画\n\n\n 原料コスト・操業改善等を中心に3ヶ年累計で36億円のコストダウンを計画。\n\n 設備投資効果（中計2023 投資効果の最大化",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 34,
+      "heading_locator": "     Ⅶ．資金配分\n（キャッシュ・アロケーション）\n",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 35,
+      "heading_locator": "     Ⅶ．資金配分（キャッシュ・アロケーション）\n\n中計期間中の資金配分計画を下図に示す。\n 設備投資（キャッシュフロー）、研究開発費として451億円（＝",
+      "matched_terms": {
+        "売上高": 1,
+        "経常利益": 1
+      },
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 36,
+      "heading_locator": "Ⅷ．達成目標\n",
+      "matched_terms": {},
+      "meaning_review_new": false
+    },
+    {
+      "physical_page": 37,
+      "heading_locator": " Ⅷ．達成目標\n\n                                  参考\n                   目標（2028年度）   中計",
+      "matched_terms": {
+        "売上高": 1,
+        "EBITDA": 1
+      },
+      "meaning_review_new": false
+    }
+  ],
+  "old_HTML_raw_locator_checks": [
+    {
+      "snapshot": "research/ir-case-studies-2026-10-15/5480/02.json",
+      "raw_file": "research/ir-case-studies-2026-10-15/5480/raw/6dfdb5979cb56f3c62d2057e48ce2357ed6c20f9ddcd0b6435b112fe1fb5c062",
+      "raw_SHA256": "6dfdb5979cb56f3c62d2057e48ce2357ed6c20f9ddcd0b6435b112fe1fb5c062",
+      "term_counts": {
+        "業績推移": 0,
+        "営業利益": 0,
+        "売上高": 0
+      },
+      "matching_img_tag_count": 0,
+      "meaning_or_image_review_new": false
+    },
+    {
+      "snapshot": "research/ir-case-studies-2026-10-15/5480/03.json",
+      "raw_file": "research/ir-case-studies-2026-10-15/5480/raw/b83117ccd1d2318c7c23daaffff7bcb6f2930cee72eed5ed0020043f290058fb",
+      "raw_SHA256": "b83117ccd1d2318c7c23daaffff7bcb6f2930cee72eed5ed0020043f290058fb",
+      "term_counts": {
+        "業績推移": 0,
+        "営業利益": 0,
+        "売上高": 0
+      },
+      "matching_img_tag_count": 0,
+      "meaning_or_image_review_new": false
+    },
+    {
+      "snapshot": "research/ir-case-studies-2026-10-15/5480/04.json",
+      "raw_file": "research/ir-case-studies-2026-10-15/5480/raw/9b8af5e7fcb63589c11eeee961a9343ed8b1d7e140385cdd4cbcd038ee466a53",
+      "raw_SHA256": "9b8af5e7fcb63589c11eeee961a9343ed8b1d7e140385cdd4cbcd038ee466a53",
+      "term_counts": {
+        "業績推移": 0,
+        "営業利益": 0,
+        "売上高": 0
+      },
+      "matching_img_tag_count": 0,
+      "meaning_or_image_review_new": false
+    },
+    {
+      "snapshot": "research/ir-case-studies-2026-10-15/5480/06.json",
+      "raw_file": "research/ir-case-studies-2026-10-15/5480/raw/09c79652278afbe4fe5f6d97061bfffbfa2f156eee415efc9e54182443fea572",
+      "raw_SHA256": "09c79652278afbe4fe5f6d97061bfffbfa2f156eee415efc9e54182443fea572",
+      "term_counts": {
+        "業績推移": 0,
+        "営業利益": 0,
+        "売上高": 0
+      },
+      "matching_img_tag_count": 0,
+      "meaning_or_image_review_new": false
+    },
+    {
+      "snapshot": "research/ir-case-studies-2026-10-15/5480/07.json",
+      "raw_file": "research/ir-case-studies-2026-10-15/5480/raw/9f1ad20e842de2161e18ec8e2c2d2367f93580ccc8fd0996ea846a2fda8f94ae",
+      "raw_SHA256": "9f1ad20e842de2161e18ec8e2c2d2367f93580ccc8fd0996ea846a2fda8f94ae",
+      "term_counts": {
+        "業績推移": 0,
+        "営業利益": 1,
+        "売上高": 1
+      },
+      "matching_img_tag_count": 0,
+      "meaning_or_image_review_new": false
+    },
+    {
+      "snapshot": "research/ir-case-studies-2026-10-15/5480/08.json",
+      "raw_file": "research/ir-case-studies-2026-10-15/5480/raw/8b4f292297bb7c5d8b5ee77b6ec8a3dbfb2938370d242a7cf74e3b5acfb22592",
+      "raw_SHA256": "8b4f292297bb7c5d8b5ee77b6ec8a3dbfb2938370d242a7cf74e3b5acfb22592",
+      "term_counts": {
+        "業績推移": 0,
+        "営業利益": 0,
+        "売上高": 0
+      },
+      "matching_img_tag_count": 0,
+      "meaning_or_image_review_new": false
+    }
+  ],
+  "one_specific_next_locator": {
+    "type": "saved_navigation_literal_only_target_body_unavailable_in12sources",
+    "source_id": "case-public:e70628e64f048ae49496c832eb44edee800d82ab2dcca5962a3a00838c29b896",
+    "native_source_SHA256": "9c6d76cb30ccd15818a9dec79ab98d05f81fafe4090b119649340e3674608399",
+    "snapshot": "research/ir-case-studies-2026-10-15/5480/02.json",
+    "snapshot_SHA256": "00f92c667184c34009ef27eee8a42842a96fe7a6744b8e48a1298bdae8497773",
+    "pointer": "$.links[52]",
+    "anchor": "財務ハイライト",
+    "href": "/investors/highlight/",
+    "url": "https://www.nyk.co.jp/investors/highlight/",
+    "raw_quote_id": "exact-highlight-rawanchor",
+    "target_body_found_in12native_sources": false,
+    "target_period": null,
+    "target_actual_vs_plan": null,
+    "target_consolidation_scope": null,
+    "target_sales_OP_definitions": null,
+    "target_year_series_or_fullcycle": null,
+    "current_download_delivery_or_robots_reverified": false,
+    "no_GET_or_closed_route_reopen_authorized_by_locator": true
+  },
+  "appropriate_saved_new_meaning_pages_selected": [],
+  "new_image_render_or_views": 0,
+  "prior_meaning_pages_preserved": [
+    1,
+    2,
+    11,
+    31,
+    35
+  ],
+  "excluded_locator_candidates": [
+    {
+      "physical_page": 4,
+      "reason": "Target/actual table labelled EBITDA/ROE etc; no sales+OP multipleyear matchingseries text. Locator only, no newnumbers/meaning adopted."
+    },
+    {
+      "physical_page": 35,
+      "reason": "Alreadyread planned cumulative cash allocation andpre-RD ordinaryincome, not annualOP history."
+    },
+    {
+      "physical_page": 37,
+      "reason": "Targetsection locator only, no annualOP history text; no meaning promotion."
+    }
+  ],
+  "C1_result": "unresolved; oneannualsales/OP and oldsource reexpressions do not supply fullcycle/comparable perimeter. No fullcycleperiod/window/rate/normalearnings is assigned.",
+  "limits": [
+    "No comprehensive negative claim about unread PDF images or all issuer publications.",
+    "Fiscalyear, consolidation/operationscope, annual actual versus forecast and sales/OP definitions at the highlight target remain unknown.",
+    "EBITDA, ordinaryincome, plan targets and multi-year cumulative measures are not annual OP substitutes.",
+    "Oldderived2 are the same annual original reexpression, not independent years/evidence."
+  ],
+  "GET_DB_Store_source_case_context_code_docs_index_normalizer_financial_IR_changes": 0,
+  "input_pins": {
+    "research/ir-6814-guidance-and-business-reading-connection-2026-10-16/actual-qualitative/5480/case-after.json": "eee994f0d80f50bfff68e7f7f26ae097727ccf7f4dbee418726b1af913a70367",
+    "research/ir-6814-guidance-and-business-reading-connection-2026-10-16/actual-qualitative/5480/full-packet.json": "d82be72c84a9d3c27f12d59acdacf282d65089cd2cf119a4fbb19e71dcdff289",
+    "research/ir-three-company-public-update-IR-disposition-2026-10-16/disposition.json": "7f4c97efa6babe364959ca73a3452aee346abb4d1acf67d6df9905bf3b437475",
+    "research/ir-case-studies-2026-10-15/5480/native-case-setup-2026-10-16/prepare-only/case-context.json": "6f057a9c47fd1a9f432d9c9d8e66ee2462f973d474061e7cb4a4ecb668b46a52",
+    "research/ir-case-studies-2026-10-15/5480/business-description-public-review-2026-10-16/builder-bundle.json": "a152584e94e9401ee7e017d9314380fec857448148d3a4fadfbb121378468d44",
+    "research/ir-case-studies-2026-10-15/5480/disclosed-facts/normalized-bundle.json": "62e5672411e923db21b0529dd9365d816d58c1a2aeb88270f538e546e580180b",
+    "research/ir-case-studies-2026-10-15/5480/medium-term-plan-public-review-2026-10-16/builder-bundle.json": "5c1aa5309b6771afb86ef266a90b6e420142b8f554c76e891bbf06eca38c2598",
+    "research/ir-case-studies-2026-10-15/5480/revenue-disclosed-facts/normalized-bundle.json": "0e251685a8bc95232b39fc678dc1ad6ffc662162dafdf961d731aaaf6350ea27",
+    "research/ir-case-studies-2026-10-15/5480/source-bundle.json": "60f3f834c25eca360cac7c53a64b22b477282f9c1337d8160ba8b8300ef78047",
+    "research/ir-case-studies-2026-10-15/5480/medium-term-plan-public-review-2026-10-16/review.json": "b7f1f7673636602c7367d4212607af055b8cbd85c7c5f149a560f3fa9c9638bb",
+    "research/ir-case-studies-2026-10-15/5480/02.json": "00f92c667184c34009ef27eee8a42842a96fe7a6744b8e48a1298bdae8497773",
+    "research/ir-case-studies-2026-10-15/5480/raw/6dfdb5979cb56f3c62d2057e48ce2357ed6c20f9ddcd0b6435b112fe1fb5c062": "6dfdb5979cb56f3c62d2057e48ce2357ed6c20f9ddcd0b6435b112fe1fb5c062",
+    "research/ir-case-studies-2026-10-15/5480/03.json": "502ecb38c383767f3630b30b197c6fd2d11a9a599041b59e9f33c63b54830d2e",
+    "research/ir-case-studies-2026-10-15/5480/raw/b83117ccd1d2318c7c23daaffff7bcb6f2930cee72eed5ed0020043f290058fb": "b83117ccd1d2318c7c23daaffff7bcb6f2930cee72eed5ed0020043f290058fb",
+    "research/ir-case-studies-2026-10-15/5480/04.json": "6204b2edded41195cdd547d007bb33fbf3e885490a33956b0b5b876f430d6645",
+    "research/ir-case-studies-2026-10-15/5480/raw/9b8af5e7fcb63589c11eeee961a9343ed8b1d7e140385cdd4cbcd038ee466a53": "9b8af5e7fcb63589c11eeee961a9343ed8b1d7e140385cdd4cbcd038ee466a53",
+    "research/ir-case-studies-2026-10-15/5480/06.json": "d086aaebc5f3cb900a02d141f5398c6f68e705f0cc91b9eab93f56a2601bbd5f",
+    "research/ir-case-studies-2026-10-15/5480/raw/09c79652278afbe4fe5f6d97061bfffbfa2f156eee415efc9e54182443fea572": "09c79652278afbe4fe5f6d97061bfffbfa2f156eee415efc9e54182443fea572",
+    "research/ir-case-studies-2026-10-15/5480/07.json": "d3b21e124d5abaa6fd6dcf95180b5512edb71054d245a8ebb21a1494549a7c49",
+    "research/ir-case-studies-2026-10-15/5480/raw/9f1ad20e842de2161e18ec8e2c2d2367f93580ccc8fd0996ea846a2fda8f94ae": "9f1ad20e842de2161e18ec8e2c2d2367f93580ccc8fd0996ea846a2fda8f94ae",
+    "research/ir-case-studies-2026-10-15/5480/08.json": "da0fa80a849c58191c85e7ece426c90f8b2bf78edc9235afd27930c46d750ea2",
+    "research/ir-case-studies-2026-10-15/5480/raw/8b4f292297bb7c5d8b5ee77b6ec8a3dbfb2938370d242a7cf74e3b5acfb22592": "8b4f292297bb7c5d8b5ee77b6ec8a3dbfb2938370d242a7cf74e3b5acfb22592"
+  }
+}

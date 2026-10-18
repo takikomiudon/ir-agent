@@ -1,0 +1,58 @@
+{
+  "recorded_at": "2026-10-15T15:17:39.874347+00:00",
+  "company_id": "jp:135A",
+  "status": "raw_candidates_not_normalized_or_model_adopted",
+  "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+  "candidates": [
+    {
+      "id": "135A-20260831-issued-common-including-treasury",
+      "concept": "period_end_issued_common_shares_including_treasury",
+      "kind": "reported_fact_candidate",
+      "raw_value": "10,256,000",
+      "raw_unit_label": "株",
+      "raw_period_label": "2027年２月期中間期",
+      "as_of_date_from_period_and_BS_context": "2026-08-31",
+      "basis_quote_id": "issued-treasury-average-shares",
+      "current_column": "2027年２月期中間期",
+      "raw_row_label": "① 期末発行済株式数 (自己株式を含む)",
+      "normalized_value": null,
+      "normalization_status": "not_attempted_existing_normalizer_has_no_share_count_unit",
+      "scope": "普通株式の発行済総数、自己株含む。期中平均株数や自己株控除後net sharesではない。",
+      "model_input_adopted": false
+    },
+    {
+      "id": "135A-20260831-treasury-share-dash",
+      "concept": "period_end_treasury_share_count_unconfirmed_dash",
+      "kind": "reported_fact_candidate",
+      "raw_value": "－",
+      "raw_unit_label": "株",
+      "raw_period_label": "2027年２月期中間期",
+      "as_of_date_from_period_and_BS_context": "2026-08-31",
+      "basis_quote_id": "issued-treasury-average-shares",
+      "raw_row_label": "②   期末自己株式数",
+      "normalized_value": null,
+      "normalization_status": "unconfirmed_dash_and_unsupported_share_unit",
+      "zero_inferred": false,
+      "model_input_adopted": false
+    },
+    {
+      "id": "135A-20260831-short-term-borrowing-dash",
+      "concept": "short_term_borrowings_closing_display_unconfirmed_dash",
+      "kind": "reported_fact_candidate",
+      "raw_value": "－",
+      "raw_unit_label": "百万円",
+      "raw_period_label": "2026年８月31日",
+      "basis_quote_id": "interim-BS-short-borrowing-dash",
+      "raw_row_label": "短期借入金",
+      "prior_display": "400",
+      "current_column": "当中間会計期間 (2026年８月31日)",
+      "normalized_value": null,
+      "normalization_status": "raw_candidate_retained_unconfirmed_dash_not_zero",
+      "zero_inferred": false,
+      "full_financial_debt_scope_verified": false,
+      "model_input_adopted": false
+    }
+  ],
+  "period_average_shares_boundary": "p2期中平均株式数も同じ当期10,256,000だが別row/期間概念。数字一致から期末net株数や希薄化後分母へ採用しない。",
+  "unit_boundary": "Existing normalize-facts accepts JPY, JPY-per-share, ratio only. Share counts are not coerced into currency or ratios and no new unit/code is introduced."
+}

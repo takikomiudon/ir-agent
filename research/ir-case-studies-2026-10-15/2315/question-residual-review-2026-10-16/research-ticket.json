@@ -1,0 +1,864 @@
+{
+  "company_id": "jp:2315",
+  "recorded_at": "2026-10-16T05:38:21.044484+00:00",
+  "status": "final_single_file_only_research_ticket_frozen_awaiting_root_review",
+  "purpose": "公表指標の定義を確認する必要性と、回答で変わる比較可能性を限定する。投資結論を作らない。",
+  "state": {
+    "price": null,
+    "financial_parameter_paths": null,
+    "buy_sell": null,
+    "EVSI_response_likelihoods": null,
+    "financial_branches": null,
+    "valuation_method": null,
+    "IR_value": "unproven",
+    "ready_to_send": false,
+    "formal_question_registered": false,
+    "external_send": false,
+    "native_case_id": null,
+    "native_case_version": null,
+    "CAS": null
+  },
+  "public_known_do_not_reask": [
+    {
+      "id": "K1",
+      "known": "営業黒字/会社独自調整後EBITDAと経常・親会社赤字は別段階。金融segment外部売上△44,890・損失△125,685千円は営業段階のsegment表で、営業外持分法損失や介護DX特別減損ではない。全社OPへの調整には消去と持株会社費用を含む。",
+      "do_not_reask": "公表済み利益段階/全社費用調整、会社調整後EBITDA定義、CF未作成の有無。相殺・足戻し/正常化はしない。",
+      "evidence": [
+        "current-segment-table-period-unit-and-reconciliation",
+        "current-segment-adjustment-notes",
+        "Q3-statement-physical-5",
+        "CF-not-prepared-and-da"
+      ]
+    },
+    {
+      "id": "K2",
+      "known": "Bitcoin売却損等による低調、NFT販売高に応じる手数料、顧客サポートは会社説明済み。補足17累計/22単四半期の損失原因説明も既知。補足9はFY2023末交換所等子会社売却と内部取引控除後の年次図。 追加20は四半期売上図の内部取引控除を明示。57/58はINO Fineとカイカコインの発行主体の事業紹介。",
+      "do_not_reask": "不振原因・内部取引控除の有無・自社コイン発行主体を再質問しない。内部消去と売却原価/損益のgross/netは別。自己発行を自己保有/顧客資産へ変換しない。",
+      "evidence": [
+        "financial-crypto-investment-and-NFT-fee-source",
+        "financial-support-services-and-negative-revenue-result",
+        "financial-service-structure-change",
+        "segment-revenue-after-elimination",
+        "bitcoin-sale-loss-explanation",
+        "crypto-sale-loss-explanation",
+        "p20-caption-segment-internal-elimination",
+        "p57-business-introduction-only",
+        "p58-own-token-issuer-not-holdings"
+      ]
+    },
+    {
+      "id": "K3",
+      "known": "新旧segment/連結範囲は異なり、善光のQ3PLは3〜5月3か月という既知範囲。IoT/介護DX追加、暫定のれん増加と取得対価/cashは別。 補足20は主要自治体等の契約/検収が3月集中し、善光3〜5月取込みに売上等が偏る傾向を説明。",
+      "do_not_reask": "既答の追加segment/取込期間・暫定PPAを再質問せず、全9か月/organic同範囲へ拡張しない。 既答の季節集中も再質問せず、3か月寄与を年率換算しない。",
+      "evidence": [
+        "segment-perimeter-changes",
+        "zenkou-goodwill-increase-provisional",
+        "root-p20-care-DX-March-inspection-seasonality"
+      ]
+    },
+    {
+      "id": "K4",
+      "known": "Sep14のFY据置はDec19旧予想への参照で、経常/親利益が予想を下回り影響精査・必要時修正という留保付き。個別通知冒頭のMay–Jul四半期、Q3累計Nov–Jul、FYNov–Octを分離。12factsは旧表示再表現で、現EPS/株数basisを再認証しない。",
+      "do_not_reask": "据置理由/同日反映は公開既答。回復/修正無し保証、現在予想やDPS未定を0としない。",
+      "evidence": [
+        "unchanged-full-year-guidance-rationale",
+        "nonoperating-notice-full-physical1"
+      ]
+    }
+  ],
+  "remaining_owners": [
+    {
+      "owner": "公開研究担当",
+      "next": "指定した補足9/17/20/22/57/58は確認済み。送信検討時に同指標の公表方針・後日訂正が明示されていれば照合し、既答になれば候補除外。残る未読頁を資料全体の不存在へ変えず、今回範囲をさらに拡張しない。",
+      "current_status": "finite public check completed; recognition definition unresolved in reviewed scope, not a claim of whole-source absence"
+    },
+    {
+      "owner": "会社の公表指標定義",
+      "next": "公開確認後も必要なら下の1問のみ。負の外部売上のgross/net・実現/評価・包含範囲を明確化。",
+      "current_status": "definition unverified in accepted read scope; loss cause is already known"
+    },
+    {
+      "owner": "外部著者のforecast/method",
+      "next": "定義と価値scopeが支持されてから、その方法の将来収益/税/再投資前提を別出典で扱う。",
+      "current_status": "forecast unadopted; modelscope needs_data/requested method null"
+    },
+    {
+      "owner": "投資家のvaluation/リスク入力",
+      "next": "対象時点・株主scope・価格/必要収益/リスク条件を別途定める。会社へ価格織込・将来BTC価格や公正倍率を求めない。",
+      "current_status": "unconfigured; no price/financial path/action/likelihood"
+    }
+  ],
+  "research_question": {
+    "id": "2315-negative-financial-revenue-definition",
+    "question": "金融サービス事業の2026年10月期第3四半期累計「外部顧客への売上高△44,890千円」について、暗号資産の売却代金・簿価（売却損益）・手数料等をどの範囲で総額/純額集計し、未実現評価損益を含むか、公表されている会計方針や説明箇所をご案内いただけますか。Bitcoin売却損等による不振や補足図の内部取引控除は確認済みで、取引規模と収益・評価損益を区別するための確認です。",
+    "maximum_company_specific_question_count": 1,
+    "current_disposition": "conditional_research_candidate_not_for_sending",
+    "activation_condition": "今回の有限公開確認後も認識定義は未確認。同定義比較の必要性が残る研究候補1問に限る。後日公表等で既答になれば取り下げ、未知の存在だけで送信候補へ昇格させない。",
+    "public_question_route": "Published policy/reference location requested; no confidential transaction values, future return or guarantee requested",
+    "evidence": [
+      "current-segment-table-period-unit-and-reconciliation",
+      "financial-crypto-investment-and-NFT-fee-source",
+      "bitcoin-sale-loss-explanation",
+      "segment-revenue-after-elimination",
+      "p20-caption-segment-internal-elimination",
+      "p57-business-introduction-only",
+      "p58-own-token-issuer-not-holdings"
+    ],
+    "qualitative_answer_cases": [
+      {
+        "answer": "A",
+        "condition": "公表根拠により、実現売買損益と手数料等の純額集計で、未実現評価損益を含まないこと及び対象範囲が明確になる場合。",
+        "comparison_change": "同じ取引/法人範囲・認識方法・累計期間の金融部門内の純額系列として比較できる範囲が特定される。IT等の顧客売上額や取引総量との直接比較・売上分母の利益率は引き続き自動採用しない。 ここでいう純額は内部取引消去だけの意味ではなく、会社の取引収益認識の説明で照合する。銀行/金融専用モデルをこの回答だけで採用しない。",
+        "next_owner": "研究担当が公表箇所/同定義の過去期へ照合。不足していた定義だけを解消し、将来収益や正常値は著者/投資家に残す。"
+      },
+      {
+        "answer": "B",
+        "condition": "評価損益を含む、総額表示、複数の認識方法など、Aと異なる具体的定義が公表根拠で明確になる場合。",
+        "comparison_change": "会社が明示した成分と範囲に限り、取引による収益/費用と価値変動を区別すべき箇所が特定される。金額内訳がなければ分離計算はできず、異なる定義の期/他事業とは比較を留保する。",
+        "next_owner": "研究担当が新定義を原表/公表方針へ対応。著者のmodel適合検討はその後に行い、評価損益除外や正常化を暗黙実行しない。"
+      },
+      {
+        "answer": "不明・その他・無回答",
+        "condition": "公表説明が特定できない、部分回答/別定義がなお不明、回答辞退/無回答の場合。",
+        "comparison_change": "確認できた部分だけ記録し、負売上の認識方法と期間/他部門比較の留保を維持。定義不明を業績悪化・価値ゼロ・反証成立へ変換しない。",
+        "next_owner": "公開研究担当が残る具体箇所を判断。根拠がなければ保留し、同じ問いを繰返したり既存評価を変更しない。"
+      }
+    ],
+    "financial_branches": null,
+    "price_or_policy_effect": null,
+    "IR_value": "unproven",
+    "send_blockers": [
+      "定義の比較上の重要性は具体化したが、投資判断への増分IR価値は未立証",
+      "正式登録/当時仮説・現在情報・受付/公開性などの必要点検は別であり、本票は送信適格性を認定しない"
+    ]
+  },
+  "model_scope_reference": {
+    "assessment": {
+      "file": "research/ir-case-studies-2026-10-15/2315/model-scope-review-2026-10-16/model-routing-assessment.json",
+      "sha256": "99570caf4f54e2f12f397ef779c77b578896a66707b2ed1f8fe08a1f102f33a9",
+      "bytes": 152401
+    },
+    "JSON_pointers": [
+      "/requested_valuation_method",
+      "/as_of",
+      "/result/status"
+    ],
+    "model_method_reference": {
+      "file": "research/ir-case-studies-2026-10-15/2315/model-scope-review-2026-10-16/method-references.json",
+      "sha256": "f74a8397d01a3e9dd9b884167445932621380865314293b9f748552d46afe90b",
+      "bytes": 18467
+    },
+    "backlog": {
+      "file": "research/ir-case-studies-2026-10-15/2315/model-scope-review-2026-10-16/definition-research-backlog.json",
+      "sha256": "57772eabccac2654c3ca25024ef95db61da4b0553c12e533d30d2da00e29b276",
+      "bytes": 4352
+    },
+    "backlog_pointer": "/company_definitions_public_first_then_IR_if_still_needed/0",
+    "acceptance": {
+      "file": "research/ir-case-studies-2026-10-15/2315/model-scope-review-2026-10-16/parent-acceptance.json",
+      "sha256": "7d1059f32fca350f7e02d949a027867940847d7d0359c754e0f535f820aeab0c",
+      "bytes": 942
+    },
+    "template_or_full_assessment_copied": false
+  },
+  "evidence_references": [
+    {
+      "id": "current-segment-table-period-unit-and-reconciliation",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/segment-acquisition-followup-2026-10-16/source-quotes.json",
+        "sha256": "5e62b0119ebd85a8ed09909ef24b21acab71c18e48ca0279250c95c7eb4bb74d",
+        "bytes": 29272
+      },
+      "JSON_pointer": "/quotes/4",
+      "source_id": "case-public:4b5ce46d1ebbc5efaff0f91585ab4ed6b18e02ce1cd4944d0a9394703ed16e65",
+      "native_source_SHA256": "a3b9e6b03d239eeba0a2ca44afe5d027a5b54fc26c929abcf37d4c2e08ae67b5",
+      "source_content_UTF8_SHA256": "15d6fb51f80c50755243a2baa819d7c8cff42d85e0151546112b1ab36df82373",
+      "raw_SHA256": "321421701474a4dee47350ba1a4e489803a754cff40be515e11d5aba8b29f1ef",
+      "physical_page": 17,
+      "quote_UTF8_SHA256": "812dbbbb02dd887275e764fdeddf9e2a7ad36622ad64d0612c5ec0c2f55edff1",
+      "Unicode_span": [
+        29500,
+        30672
+      ],
+      "UTF8_span": [
+        59592,
+        61168
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "current-segment-adjustment-notes",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/segment-acquisition-followup-2026-10-16/source-quotes.json",
+        "sha256": "5e62b0119ebd85a8ed09909ef24b21acab71c18e48ca0279250c95c7eb4bb74d",
+        "bytes": 29272
+      },
+      "JSON_pointer": "/quotes/5",
+      "source_id": "case-public:4b5ce46d1ebbc5efaff0f91585ab4ed6b18e02ce1cd4944d0a9394703ed16e65",
+      "native_source_SHA256": "a3b9e6b03d239eeba0a2ca44afe5d027a5b54fc26c929abcf37d4c2e08ae67b5",
+      "source_content_UTF8_SHA256": "15d6fb51f80c50755243a2baa819d7c8cff42d85e0151546112b1ab36df82373",
+      "raw_SHA256": "321421701474a4dee47350ba1a4e489803a754cff40be515e11d5aba8b29f1ef",
+      "physical_page": 17,
+      "quote_UTF8_SHA256": "a9ddd9dd8c897462984c3668a8116d81e7d9315abba10f7db7f94aaddad47174",
+      "Unicode_span": [
+        30672,
+        30865
+      ],
+      "UTF8_span": [
+        61168,
+        61659
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "segment-perimeter-changes",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/segment-acquisition-followup-2026-10-16/source-quotes.json",
+        "sha256": "5e62b0119ebd85a8ed09909ef24b21acab71c18e48ca0279250c95c7eb4bb74d",
+        "bytes": 29272
+      },
+      "JSON_pointer": "/quotes/6",
+      "source_id": "case-public:4b5ce46d1ebbc5efaff0f91585ab4ed6b18e02ce1cd4944d0a9394703ed16e65",
+      "native_source_SHA256": "a3b9e6b03d239eeba0a2ca44afe5d027a5b54fc26c929abcf37d4c2e08ae67b5",
+      "source_content_UTF8_SHA256": "15d6fb51f80c50755243a2baa819d7c8cff42d85e0151546112b1ab36df82373",
+      "raw_SHA256": "321421701474a4dee47350ba1a4e489803a754cff40be515e11d5aba8b29f1ef",
+      "physical_page": 17,
+      "quote_UTF8_SHA256": "c11397a4f3642b0d4632352c8791eace5913a39d75aac20dc8155cd2c90cc5d2",
+      "Unicode_span": [
+        30865,
+        31072
+      ],
+      "UTF8_span": [
+        61659,
+        62208
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "zenkou-goodwill-increase-provisional",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/segment-acquisition-followup-2026-10-16/source-quotes.json",
+        "sha256": "5e62b0119ebd85a8ed09909ef24b21acab71c18e48ca0279250c95c7eb4bb74d",
+        "bytes": 29272
+      },
+      "JSON_pointer": "/quotes/8",
+      "source_id": "case-public:4b5ce46d1ebbc5efaff0f91585ab4ed6b18e02ce1cd4944d0a9394703ed16e65",
+      "native_source_SHA256": "a3b9e6b03d239eeba0a2ca44afe5d027a5b54fc26c929abcf37d4c2e08ae67b5",
+      "source_content_UTF8_SHA256": "15d6fb51f80c50755243a2baa819d7c8cff42d85e0151546112b1ab36df82373",
+      "raw_SHA256": "321421701474a4dee47350ba1a4e489803a754cff40be515e11d5aba8b29f1ef",
+      "physical_page": 17,
+      "quote_UTF8_SHA256": "6ec3344fd90ba445d69d424a3537340402f56d3f6b6920ce47c10b95e4ed390b",
+      "Unicode_span": [
+        31197,
+        31413
+      ],
+      "UTF8_span": [
+        62519,
+        63079
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "financial-crypto-investment-and-NFT-fee-source",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/model-scope-review-2026-10-16/company-quotes.json",
+        "sha256": "96e8e0b8e9f3b29764c315acc0c2648e670d2bb9184701cfd8a3e7d5e8ef910c",
+        "bytes": 70484
+      },
+      "JSON_pointer": "/quotes/3",
+      "source_id": "case-public:4b5ce46d1ebbc5efaff0f91585ab4ed6b18e02ce1cd4944d0a9394703ed16e65",
+      "native_source_SHA256": "a3b9e6b03d239eeba0a2ca44afe5d027a5b54fc26c929abcf37d4c2e08ae67b5",
+      "source_content_UTF8_SHA256": "15d6fb51f80c50755243a2baa819d7c8cff42d85e0151546112b1ab36df82373",
+      "raw_SHA256": "321421701474a4dee47350ba1a4e489803a754cff40be515e11d5aba8b29f1ef",
+      "physical_page": 6,
+      "quote_UTF8_SHA256": "19f7e55c7fc74b24f948a4edfc8e8baa52510601ce6db9d96a9732df94e76fa9",
+      "Unicode_span": [
+        11480,
+        12024
+      ],
+      "UTF8_span": [
+        26036,
+        27548
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "financial-support-services-and-negative-revenue-result",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/model-scope-review-2026-10-16/company-quotes.json",
+        "sha256": "96e8e0b8e9f3b29764c315acc0c2648e670d2bb9184701cfd8a3e7d5e8ef910c",
+        "bytes": 70484
+      },
+      "JSON_pointer": "/quotes/4",
+      "source_id": "case-public:4b5ce46d1ebbc5efaff0f91585ab4ed6b18e02ce1cd4944d0a9394703ed16e65",
+      "native_source_SHA256": "a3b9e6b03d239eeba0a2ca44afe5d027a5b54fc26c929abcf37d4c2e08ae67b5",
+      "source_content_UTF8_SHA256": "15d6fb51f80c50755243a2baa819d7c8cff42d85e0151546112b1ab36df82373",
+      "raw_SHA256": "321421701474a4dee47350ba1a4e489803a754cff40be515e11d5aba8b29f1ef",
+      "physical_page": 7,
+      "quote_UTF8_SHA256": "61780d9a06b4b5416df1ed76f253ab23cfd3c632952a41bc9aa29c2687a3cab7",
+      "Unicode_span": [
+        12053,
+        12442
+      ],
+      "UTF8_span": [
+        27577,
+        28596
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "Q3-statement-physical-5",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "0f7b18efc3c2adecad735d697beed29026a8d133695f43f852699697e8249085",
+        "bytes": 24682
+      },
+      "JSON_pointer": "/5",
+      "source_id": "case-public:4b5ce46d1ebbc5efaff0f91585ab4ed6b18e02ce1cd4944d0a9394703ed16e65",
+      "native_source_SHA256": "a3b9e6b03d239eeba0a2ca44afe5d027a5b54fc26c929abcf37d4c2e08ae67b5",
+      "source_content_UTF8_SHA256": "15d6fb51f80c50755243a2baa819d7c8cff42d85e0151546112b1ab36df82373",
+      "raw_SHA256": "321421701474a4dee47350ba1a4e489803a754cff40be515e11d5aba8b29f1ef",
+      "physical_page": 5,
+      "quote_UTF8_SHA256": "fc013f6c91664adad53d6b9976c33a09122a977d053c48f03adf3f791d1c4451",
+      "Unicode_span": [
+        7704,
+        9964
+      ],
+      "UTF8_span": [
+        15498,
+        21862
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "unchanged-full-year-guidance-rationale",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "3289fa0e5c77508458b49da0e911f2e3af3014a0ade68180ea45b7fa2c521307",
+        "bytes": 35095
+      },
+      "JSON_pointer": "/quotes/4",
+      "source_id": "case-public:4b5ce46d1ebbc5efaff0f91585ab4ed6b18e02ce1cd4944d0a9394703ed16e65",
+      "native_source_SHA256": "a3b9e6b03d239eeba0a2ca44afe5d027a5b54fc26c929abcf37d4c2e08ae67b5",
+      "source_content_UTF8_SHA256": "15d6fb51f80c50755243a2baa819d7c8cff42d85e0151546112b1ab36df82373",
+      "raw_SHA256": "321421701474a4dee47350ba1a4e489803a754cff40be515e11d5aba8b29f1ef",
+      "physical_page": 10,
+      "quote_UTF8_SHA256": "d497b10146d72ff8f5fc4cfc2a4bda419821a77de6edbb6ecee930a3f4b0a645",
+      "Unicode_span": [
+        17961,
+        18661
+      ],
+      "UTF8_span": [
+        43143,
+        45033
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "CF-not-prepared-and-da",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "3289fa0e5c77508458b49da0e911f2e3af3014a0ade68180ea45b7fa2c521307",
+        "bytes": 35095
+      },
+      "JSON_pointer": "/quotes/10",
+      "source_id": "case-public:4b5ce46d1ebbc5efaff0f91585ab4ed6b18e02ce1cd4944d0a9394703ed16e65",
+      "native_source_SHA256": "a3b9e6b03d239eeba0a2ca44afe5d027a5b54fc26c929abcf37d4c2e08ae67b5",
+      "source_content_UTF8_SHA256": "15d6fb51f80c50755243a2baa819d7c8cff42d85e0151546112b1ab36df82373",
+      "raw_SHA256": "321421701474a4dee47350ba1a4e489803a754cff40be515e11d5aba8b29f1ef",
+      "physical_page": 18,
+      "quote_UTF8_SHA256": "045aba15e15d47d968f58406aa75d86d82ec29fc407923251df12677ec72cb8f",
+      "Unicode_span": [
+        31559,
+        31904
+      ],
+      "UTF8_span": [
+        63325,
+        64008
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "nonoperating-notice-full-physical1",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/nonoperating-notice-pdf-followup-2026-10-16/source-quotes.json",
+        "sha256": "68bfed17c17b3da07f1388600301a55617b168796288488ef547b64cd8e7a4ee",
+        "bytes": 4502
+      },
+      "JSON_pointer": "/0",
+      "source_id": "case-public:5e20b62e0066c64f75a7113ee359c463275297786dc41040072f01692daf58d3",
+      "native_source_SHA256": "73a4cde51d5a1dbc17760331e93949f4d73b339efd1d7b3feeeef9bdbb3f7ed2",
+      "source_content_UTF8_SHA256": "0babf789d04d7b592e707746ce65bec81790a295e83b531ad4a05260ac8ec6dc",
+      "raw_SHA256": "77aa7a943faa988247b82698ed9eb286ddb55fd76f5b4ef72ce5e350e1a63936",
+      "physical_page": 1,
+      "quote_UTF8_SHA256": "57c49594dd442546b1e68ee5183e0cce3b6cab50c40b3ce867482c7b2867bd9a",
+      "Unicode_span": [
+        0,
+        1603
+      ],
+      "UTF8_span": [
+        0,
+        3715
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "financial-service-structure-change",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/supplement-financial-definition-followup-2026-10-16/source-quotes.json",
+        "sha256": "84ec124e5bcd01f0b3a7aee3b7fd530ff9cb5c71f4c3cf3f16508ac6bc6c7abd",
+        "bytes": 8718
+      },
+      "JSON_pointer": "/quotes/1",
+      "source_id": "case-public:0051f6135d00f49b58835386348f9c7c3bdac9e38c0bd18e42cf2ad86c7dac74",
+      "native_source_SHA256": "b5f241f868929d765c1da73bd924faed674e443056e4b7be80f305fb9b0a9c01",
+      "source_content_UTF8_SHA256": "16b0e524880308ec55e48520546e877487d122f763891198881e02e17d063c89",
+      "raw_SHA256": "42f381f798a6ed6f92d853c5319fd912cad15f1dfc56ff788798f5787c288b58",
+      "physical_page": 9,
+      "quote_UTF8_SHA256": "4f02605e75a0a689a7a4a69e8c059272a72668d972f30e536e9f405d08793348",
+      "Unicode_span": [
+        7743,
+        7885
+      ],
+      "UTF8_span": [
+        13863,
+        14241
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "segment-revenue-after-elimination",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/supplement-financial-definition-followup-2026-10-16/source-quotes.json",
+        "sha256": "84ec124e5bcd01f0b3a7aee3b7fd530ff9cb5c71f4c3cf3f16508ac6bc6c7abd",
+        "bytes": 8718
+      },
+      "JSON_pointer": "/quotes/2",
+      "source_id": "case-public:0051f6135d00f49b58835386348f9c7c3bdac9e38c0bd18e42cf2ad86c7dac74",
+      "native_source_SHA256": "b5f241f868929d765c1da73bd924faed674e443056e4b7be80f305fb9b0a9c01",
+      "source_content_UTF8_SHA256": "16b0e524880308ec55e48520546e877487d122f763891198881e02e17d063c89",
+      "raw_SHA256": "42f381f798a6ed6f92d853c5319fd912cad15f1dfc56ff788798f5787c288b58",
+      "physical_page": 9,
+      "quote_UTF8_SHA256": "53218c918a72727e597780eeace009e8eb06db0e5e9b94d09738567c809ee774",
+      "Unicode_span": [
+        9618,
+        9640
+      ],
+      "UTF8_span": [
+        16770,
+        16836
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "cumulative-highlight-scope",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/supplement-financial-definition-followup-2026-10-16/source-quotes.json",
+        "sha256": "84ec124e5bcd01f0b3a7aee3b7fd530ff9cb5c71f4c3cf3f16508ac6bc6c7abd",
+        "bytes": 8718
+      },
+      "JSON_pointer": "/quotes/3",
+      "source_id": "case-public:0051f6135d00f49b58835386348f9c7c3bdac9e38c0bd18e42cf2ad86c7dac74",
+      "native_source_SHA256": "b5f241f868929d765c1da73bd924faed674e443056e4b7be80f305fb9b0a9c01",
+      "source_content_UTF8_SHA256": "16b0e524880308ec55e48520546e877487d122f763891198881e02e17d063c89",
+      "raw_SHA256": "42f381f798a6ed6f92d853c5319fd912cad15f1dfc56ff788798f5787c288b58",
+      "physical_page": 17,
+      "quote_UTF8_SHA256": "b41d42134a4d109f277691497e0e4ae2550656da65bb013055af0a12c4f04783",
+      "Unicode_span": [
+        17547,
+        17572
+      ],
+      "UTF8_span": [
+        30851,
+        30908
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "bitcoin-sale-loss-explanation",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/supplement-financial-definition-followup-2026-10-16/source-quotes.json",
+        "sha256": "84ec124e5bcd01f0b3a7aee3b7fd530ff9cb5c71f4c3cf3f16508ac6bc6c7abd",
+        "bytes": 8718
+      },
+      "JSON_pointer": "/quotes/4",
+      "source_id": "case-public:0051f6135d00f49b58835386348f9c7c3bdac9e38c0bd18e42cf2ad86c7dac74",
+      "native_source_SHA256": "b5f241f868929d765c1da73bd924faed674e443056e4b7be80f305fb9b0a9c01",
+      "source_content_UTF8_SHA256": "16b0e524880308ec55e48520546e877487d122f763891198881e02e17d063c89",
+      "raw_SHA256": "42f381f798a6ed6f92d853c5319fd912cad15f1dfc56ff788798f5787c288b58",
+      "physical_page": 17,
+      "quote_UTF8_SHA256": "c05bee95588f8b94552714c94169c4d8cbf3a5d7db4f1251f0b872352af6d348",
+      "Unicode_span": [
+        19054,
+        19193
+      ],
+      "UTF8_span": [
+        32924,
+        33187
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "quarterly-segment-profit-scope",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/supplement-financial-definition-followup-2026-10-16/source-quotes.json",
+        "sha256": "84ec124e5bcd01f0b3a7aee3b7fd530ff9cb5c71f4c3cf3f16508ac6bc6c7abd",
+        "bytes": 8718
+      },
+      "JSON_pointer": "/quotes/5",
+      "source_id": "case-public:0051f6135d00f49b58835386348f9c7c3bdac9e38c0bd18e42cf2ad86c7dac74",
+      "native_source_SHA256": "b5f241f868929d765c1da73bd924faed674e443056e4b7be80f305fb9b0a9c01",
+      "source_content_UTF8_SHA256": "16b0e524880308ec55e48520546e877487d122f763891198881e02e17d063c89",
+      "raw_SHA256": "42f381f798a6ed6f92d853c5319fd912cad15f1dfc56ff788798f5787c288b58",
+      "physical_page": 22,
+      "quote_UTF8_SHA256": "31c78d9286cbc004153e220a97d1cf8068b1d652da5165a987d5fe2fe936d511",
+      "Unicode_span": [
+        27683,
+        27698
+      ],
+      "UTF8_span": [
+        45603,
+        45648
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "crypto-sale-loss-explanation",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/supplement-financial-definition-followup-2026-10-16/source-quotes.json",
+        "sha256": "84ec124e5bcd01f0b3a7aee3b7fd530ff9cb5c71f4c3cf3f16508ac6bc6c7abd",
+        "bytes": 8718
+      },
+      "JSON_pointer": "/quotes/6",
+      "source_id": "case-public:0051f6135d00f49b58835386348f9c7c3bdac9e38c0bd18e42cf2ad86c7dac74",
+      "native_source_SHA256": "b5f241f868929d765c1da73bd924faed674e443056e4b7be80f305fb9b0a9c01",
+      "source_content_UTF8_SHA256": "16b0e524880308ec55e48520546e877487d122f763891198881e02e17d063c89",
+      "raw_SHA256": "42f381f798a6ed6f92d853c5319fd912cad15f1dfc56ff788798f5787c288b58",
+      "physical_page": 22,
+      "quote_UTF8_SHA256": "63880ff9ced5d9da8df7660ebaf14df4a73e604bbe91a2336915aef6fc8f5894",
+      "Unicode_span": [
+        27788,
+        27819
+      ],
+      "UTF8_span": [
+        45880,
+        45973
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "corporate-cost-chart-footnote",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/supplement-financial-definition-followup-2026-10-16/source-quotes.json",
+        "sha256": "84ec124e5bcd01f0b3a7aee3b7fd530ff9cb5c71f4c3cf3f16508ac6bc6c7abd",
+        "bytes": 8718
+      },
+      "JSON_pointer": "/quotes/7",
+      "source_id": "case-public:0051f6135d00f49b58835386348f9c7c3bdac9e38c0bd18e42cf2ad86c7dac74",
+      "native_source_SHA256": "b5f241f868929d765c1da73bd924faed674e443056e4b7be80f305fb9b0a9c01",
+      "source_content_UTF8_SHA256": "16b0e524880308ec55e48520546e877487d122f763891198881e02e17d063c89",
+      "raw_SHA256": "42f381f798a6ed6f92d853c5319fd912cad15f1dfc56ff788798f5787c288b58",
+      "physical_page": 22,
+      "quote_UTF8_SHA256": "f96aabc8221ed4e034d523f103209ea9ba20c49e3a765099850560ba979a5ff2",
+      "Unicode_span": [
+        30302,
+        30334
+      ],
+      "UTF8_span": [
+        48642,
+        48738
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "p20-quarterly-consolidated-chart-scope",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/financial-definition-saved-pages-followup-2026-10-16/page-quotes.json",
+        "sha256": "c9640878504b75ce68aa458b880c681ef23ae67ad7779c5d72e0ac88862ea044",
+        "bytes": 12002
+      },
+      "JSON_pointer": "/quotes/0",
+      "source_id": "case-public:0051f6135d00f49b58835386348f9c7c3bdac9e38c0bd18e42cf2ad86c7dac74",
+      "native_source_SHA256": "b5f241f868929d765c1da73bd924faed674e443056e4b7be80f305fb9b0a9c01",
+      "source_content_UTF8_SHA256": "16b0e524880308ec55e48520546e877487d122f763891198881e02e17d063c89",
+      "raw_SHA256": "42f381f798a6ed6f92d853c5319fd912cad15f1dfc56ff788798f5787c288b58",
+      "physical_page": 20,
+      "quote_UTF8_SHA256": "26344f3b16af00ee356f6cffc323c0574910245b743f4761840b875f7c966539",
+      "Unicode_span": [
+        23739,
+        23754
+      ],
+      "UTF8_span": [
+        40001,
+        40042
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "p20-caption-segment-internal-elimination",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/financial-definition-saved-pages-followup-2026-10-16/page-quotes.json",
+        "sha256": "c9640878504b75ce68aa458b880c681ef23ae67ad7779c5d72e0ac88862ea044",
+        "bytes": 12002
+      },
+      "JSON_pointer": "/quotes/1",
+      "source_id": "case-public:0051f6135d00f49b58835386348f9c7c3bdac9e38c0bd18e42cf2ad86c7dac74",
+      "native_source_SHA256": "b5f241f868929d765c1da73bd924faed674e443056e4b7be80f305fb9b0a9c01",
+      "source_content_UTF8_SHA256": "16b0e524880308ec55e48520546e877487d122f763891198881e02e17d063c89",
+      "raw_SHA256": "42f381f798a6ed6f92d853c5319fd912cad15f1dfc56ff788798f5787c288b58",
+      "physical_page": 20,
+      "quote_UTF8_SHA256": "9a1929e71077dd45ddcef0ed626cf73dd92e743c90b16141b4cee8797c03dbfa",
+      "Unicode_span": [
+        23945,
+        24066
+      ],
+      "UTF8_span": [
+        40523,
+        40694
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "p20-footnote-internal-elimination",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/financial-definition-saved-pages-followup-2026-10-16/page-quotes.json",
+        "sha256": "c9640878504b75ce68aa458b880c681ef23ae67ad7779c5d72e0ac88862ea044",
+        "bytes": 12002
+      },
+      "JSON_pointer": "/quotes/2",
+      "source_id": "case-public:0051f6135d00f49b58835386348f9c7c3bdac9e38c0bd18e42cf2ad86c7dac74",
+      "native_source_SHA256": "b5f241f868929d765c1da73bd924faed674e443056e4b7be80f305fb9b0a9c01",
+      "source_content_UTF8_SHA256": "16b0e524880308ec55e48520546e877487d122f763891198881e02e17d063c89",
+      "raw_SHA256": "42f381f798a6ed6f92d853c5319fd912cad15f1dfc56ff788798f5787c288b58",
+      "physical_page": 20,
+      "quote_UTF8_SHA256": "4dd4fdbc80c99a55d6126a1c41867a7a05590c704e1914425bcdc07a6820c8da",
+      "Unicode_span": [
+        25798,
+        25817
+      ],
+      "UTF8_span": [
+        42480,
+        42525
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "p57-business-introduction-only",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/financial-definition-saved-pages-followup-2026-10-16/page-quotes.json",
+        "sha256": "c9640878504b75ce68aa458b880c681ef23ae67ad7779c5d72e0ac88862ea044",
+        "bytes": 12002
+      },
+      "JSON_pointer": "/quotes/3",
+      "source_id": "case-public:0051f6135d00f49b58835386348f9c7c3bdac9e38c0bd18e42cf2ad86c7dac74",
+      "native_source_SHA256": "b5f241f868929d765c1da73bd924faed674e443056e4b7be80f305fb9b0a9c01",
+      "source_content_UTF8_SHA256": "16b0e524880308ec55e48520546e877487d122f763891198881e02e17d063c89",
+      "raw_SHA256": "42f381f798a6ed6f92d853c5319fd912cad15f1dfc56ff788798f5787c288b58",
+      "physical_page": 57,
+      "quote_UTF8_SHA256": "3ba3964c3703a6f5ea30dbe5dc754688e4402ed104f5a618fa69e54c5a26c358",
+      "Unicode_span": [
+        51286,
+        51576
+      ],
+      "UTF8_span": [
+        85757,
+        86383
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "p58-own-token-issuer-not-holdings",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/financial-definition-saved-pages-followup-2026-10-16/page-quotes.json",
+        "sha256": "c9640878504b75ce68aa458b880c681ef23ae67ad7779c5d72e0ac88862ea044",
+        "bytes": 12002
+      },
+      "JSON_pointer": "/quotes/4",
+      "source_id": "case-public:0051f6135d00f49b58835386348f9c7c3bdac9e38c0bd18e42cf2ad86c7dac74",
+      "native_source_SHA256": "b5f241f868929d765c1da73bd924faed674e443056e4b7be80f305fb9b0a9c01",
+      "source_content_UTF8_SHA256": "16b0e524880308ec55e48520546e877487d122f763891198881e02e17d063c89",
+      "raw_SHA256": "42f381f798a6ed6f92d853c5319fd912cad15f1dfc56ff788798f5787c288b58",
+      "physical_page": 58,
+      "quote_UTF8_SHA256": "ee06fd9bfb5845bf0bf06d18c747b34a0e0953b6ad52d2db3c1db5b34849e8f6",
+      "Unicode_span": [
+        52389,
+        52646
+      ],
+      "UTF8_span": [
+        87641,
+        88244
+      ],
+      "quote_text_copied": false
+    },
+    {
+      "id": "root-p20-care-DX-March-inspection-seasonality",
+      "file": {
+        "file": "research/ir-case-studies-2026-10-15/2315/financial-definition-saved-pages-followup-2026-10-16/parent-acceptance.json",
+        "sha256": "6aee60e8641448e1ff306efec4ad0cc6750e13dadff02c2f081b3ee8d6cce595",
+        "bytes": 1547
+      },
+      "JSON_pointer": "/root_additional_same_page_observation",
+      "source_id": "case-public:0051f6135d00f49b58835386348f9c7c3bdac9e38c0bd18e42cf2ad86c7dac74",
+      "native_source_SHA256": "b5f241f868929d765c1da73bd924faed674e443056e4b7be80f305fb9b0a9c01",
+      "source_content_UTF8_SHA256": "16b0e524880308ec55e48520546e877487d122f763891198881e02e17d063c89",
+      "raw_SHA256": "42f381f798a6ed6f92d853c5319fd912cad15f1dfc56ff788798f5787c288b58",
+      "physical_page": 20,
+      "quote_UTF8_SHA256": "ab5448274d4b5127d9507b93f93c7af723f19fe649e85f24f4b540985dbb0709",
+      "Unicode_span": [
+        25828,
+        25969
+      ],
+      "UTF8_span": [
+        42536,
+        42913
+      ],
+      "quote_text_copied": false
+    }
+  ],
+  "scope": {
+    "statement": "accepted1/2/4/5 +10/13/18 +16/17 + model6/7; TOC3 location only, remaining8/9/11/12/14/15 unread",
+    "supplement": "66pages saved; accepted meaning9/17/20/22/57/58 only. Otherpages remain unreviewed; whole-source definition absence/QA absence not established. p20 internal elimination chart scope and seasonal March careDX peak are known.",
+    "notice": "accepted one-page direct PDF; old index302/body0 phase remains historical",
+    "new_reading_in_this_task": "accepted saved evidence review only; no fresh PDF/image extraction or additional unread pages"
+  },
+  "source_history": {
+    "root_actual_intake_acceptance": {
+      "file": "research/ir-2315-initial-with-facts-intake-2026-10-16/parent-acceptance.json",
+      "sha256": "8018344a7b24b5231a7e584cbe5b8f51f17fca86e39d4501c99d6a8369fc4547",
+      "bytes": 844
+    },
+    "saved_six_source_bundle": {
+      "file": "research/ir-2315-initial-with-facts-intake-2026-10-16/source-bundle.json",
+      "sha256": "27faf1c53b416c5c3106115ca1b1e7ae32ae25504cd41357b1df7738aeb13926",
+      "bytes": 245582
+    },
+    "firstsave_receipt": {
+      "file": "research/ir-2315-initial-with-facts-intake-2026-10-16/actual-source-firstsave.json",
+      "sha256": "03a19b8517126907e9afcaa1f96b5ba46364654c18bd9b03ef01fa0bada7c306",
+      "bytes": 1759
+    },
+    "supplement_source": {
+      "source_id": "case-public:0051f6135d00f49b58835386348f9c7c3bdac9e38c0bd18e42cf2ad86c7dac74",
+      "native_SHA256": "b5f241f868929d765c1da73bd924faed674e443056e4b7be80f305fb9b0a9c01",
+      "raw_SHA256": "42f381f798a6ed6f92d853c5319fd912cad15f1dfc56ff788798f5787c288b58",
+      "retrieved_at": "2026-10-16T05:23:49.080878+00:00",
+      "firstsave": "2026-10-16T05:33:31.231436+00:00",
+      "firstsave_status": "trusted root actual intake receipt; saved source object/native SHA equals supplement original; no fresh DB query",
+      "source_bundle": {
+        "file": "research/ir-case-studies-2026-10-15/2315/supplement-financial-definition-followup-2026-10-16/source-bundle.json",
+        "sha256": "fcd5d0707e0613476ab7c2b4d74f14a90a96b02f8afd28f42272045a789b3023",
+        "bytes": 119528
+      },
+      "JSON_pointer": "/sources/0",
+      "actual_intake_acceptance": {
+        "file": "research/ir-2315-supplement-intake-2026-10-16/parent-acceptance.json",
+        "sha256": "02552a0282028280b58266179eb4853697bd322cfa669cd2e5f76d6d342f60e5",
+        "bytes": 867
+      },
+      "actual_firstsave_receipt": {
+        "file": "research/ir-2315-supplement-intake-2026-10-16/actual-source-firstsave.json",
+        "sha256": "41e235b26f90bdc7f4a9690a36fec129231b9f330d3606de0541763f28184d79",
+        "bytes": 295
+      }
+    },
+    "verification": "Saved six-source bundle plus separate supplement actual-intake bundle and trusted root firstsave receipts match source native SHAs. This task made no fresh DB observation. Case/version/CAS not inferred from source intake.",
+    "index_v35_acceptance": {
+      "file": "research/ir-case-studies-2026-10-15/2315/disclosed-facts-2026-10-16/index-connection/parent-acceptance.json",
+      "sha256": "8142240fbeb17cfdc4a04f10926904fa4a98e28924f2193de086d770bdbc3d8a",
+      "bytes": 892
+    },
+    "actual_sources": [
+      {
+        "source_id": "case-public:af10e75fc854ca27fe480cf52fec38850b2e94aeba79e6745d3e8d0c17a3ec92",
+        "native_SHA256": "3a0b9d35c46c6e02a4989ac710eb94f2960683a6bef50cc20298a81561dc73a7",
+        "root_firstsave": "2026-10-16T05:18:48.226120+00:00",
+        "basis": "trusted_insert",
+        "saved_intake_bundle_pointer": "/sources/0"
+      },
+      {
+        "source_id": "case-public:4a21e09e06da3d8b2ee5b5a8959810e458e0c78610d08de8fbe4bedb1cbbcd0c",
+        "native_SHA256": "c6574ebb59f7ea7b12b0edb2c6fc8baa6fce8527ad15b23e53435c1650fa9c56",
+        "root_firstsave": "2026-10-16T05:18:48.226120+00:00",
+        "basis": "trusted_insert",
+        "saved_intake_bundle_pointer": "/sources/1"
+      },
+      {
+        "source_id": "case-public:4b5ce46d1ebbc5efaff0f91585ab4ed6b18e02ce1cd4944d0a9394703ed16e65",
+        "native_SHA256": "a3b9e6b03d239eeba0a2ca44afe5d027a5b54fc26c929abcf37d4c2e08ae67b5",
+        "root_firstsave": "2026-10-16T05:18:48.226120+00:00",
+        "basis": "trusted_insert",
+        "saved_intake_bundle_pointer": "/sources/2"
+      },
+      {
+        "source_id": "case-public:8d65b00a301a5b4603b9a00bde72ba7b8757248ab56e3b1f10cc06bf8ef1cf91",
+        "native_SHA256": "741c46b40d6c330db95b77dd7387b2b2ac571a808de66cbcf4cafa36d54457fa",
+        "root_firstsave": "2026-10-16T05:18:48.226120+00:00",
+        "basis": "trusted_insert",
+        "saved_intake_bundle_pointer": "/sources/3"
+      },
+      {
+        "source_id": "case-public:5e20b62e0066c64f75a7113ee359c463275297786dc41040072f01692daf58d3",
+        "native_SHA256": "73a4cde51d5a1dbc17760331e93949f4d73b339efd1d7b3feeeef9bdbb3f7ed2",
+        "root_firstsave": "2026-10-16T05:18:48.226120+00:00",
+        "basis": "trusted_insert",
+        "saved_intake_bundle_pointer": "/sources/4"
+      },
+      {
+        "source_id": "disclosed-facts:37d25f2a62c0653c2b79ec17a132b96f7632c42824984817857fa2711187c50e",
+        "native_SHA256": "087f7123b81760acb4932026b48f78e5a29624f9fd3b05f572299cc61633c00c",
+        "root_firstsave": "2026-10-16T05:18:48.226120+00:00",
+        "basis": "trusted_insert",
+        "saved_intake_bundle_pointer": "/sources/5"
+      },
+      {
+        "source_id": "case-public:0051f6135d00f49b58835386348f9c7c3bdac9e38c0bd18e42cf2ad86c7dac74",
+        "native_SHA256": "b5f241f868929d765c1da73bd924faed674e443056e4b7be80f305fb9b0a9c01",
+        "root_firstsave": "2026-10-16T05:33:31.231436+00:00",
+        "basis": "trusted_insert",
+        "saved_intake_bundle": {
+          "file": "research/ir-2315-supplement-intake-2026-10-16/source-bundle.json",
+          "sha256": "fcd5d0707e0613476ab7c2b4d74f14a90a96b02f8afd28f42272045a789b3023",
+          "bytes": 119528
+        },
+        "saved_intake_bundle_pointer": "/sources/0"
+      }
+    ],
+    "actual_source_count_in_referenced_root_receipts": 7,
+    "supplement_actual_intake_acceptance": {
+      "file": "research/ir-2315-supplement-intake-2026-10-16/parent-acceptance.json",
+      "sha256": "02552a0282028280b58266179eb4853697bd322cfa669cd2e5f76d6d342f60e5",
+      "bytes": 867
+    }
+  },
+  "method": {
+    "question_preparation": {
+      "file": "docs/ir-question-preparation.md",
+      "sha256": "c5e881e0a0874edfc28dcc67d8d48c69600a4916254131477f71b961218d7a7f",
+      "bytes": 5660
+    },
+    "decision_flow": {
+      "file": "docs/ir-decision-flow.md",
+      "sha256": "3b43ac8d631aefa7267a6714afb91fdbac817b25107e8d21bcd11ca832d1f828",
+      "bytes": 8726
+    },
+    "attribution": "Anthropic DD neutral comparison/follow-up and JIRA public-first are project adaptations. Qualitative A/B/unknown comparison cases are project research design, not author investment rules or financial branches."
+  },
+  "future_manual_use": "Root explicitly supplies this single ticket and refs to a legitimate future worker. Preserve known/residual/read-scope/source-SHA in summary and case_observation.rationale; only actual pending sources enter source_reviews/evidence. No automatic inclusion/receipt/queue or future outcome authority.",
+  "operations": {
+    "GET": 0,
+    "DB_access": 0,
+    "DB_write": 0,
+    "source_registration": 0,
+    "case_queue": 0,
+    "production_changes": 0,
+    "old_file_changes": 0,
+    "normalizer": 0,
+    "financial_adoption": 0,
+    "formal_question_registration_or_send": 0
+  },
+  "finalized_after_last_public_reading_acceptance": {
+    "file": "research/ir-case-studies-2026-10-15/2315/financial-definition-saved-pages-followup-2026-10-16/parent-acceptance.json",
+    "sha256": "6aee60e8641448e1ff306efec4ad0cc6750e13dadff02c2f081b3ee8d6cce595",
+    "bytes": 1547
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "recorded_at": "2026-10-15T17:17:58.318137+00:00",
+  "maximum_GETs": 2,
+  "allowed_URLs": [
+    "https://www.rasaco.co.jp/robots.txt",
+    "https://www.rasaco.co.jp/pdf/ir/library07/20260715.pdf"
+  ],
+  "central_holds_file": "research/ir-source-access-holds-2026-10-15/holds-v3.json",
+  "central_holds_sha256": "ec1e9f85d378571c3d0f99eca73ec8e397ea8dd7b155aa4be80c2100d2294551",
+  "exact_host_known_hold": false,
+  "UA": "Codex-IR-Research/0.1",
+  "TLS_verification": true,
+  "proxy_CA": "Inherited environment; no configuration changes or secret values printed.",
+  "timeout_seconds": 40,
+  "maximum_entity_bytes": 10485760,
+  "retry_redirect_JS_API_or_host_switch": 0,
+  "robots_PDF_allowed_after_manual_review": true,
+  "old_input_hashes": {
+    "research/ir-case-studies-2026-10-15/3023/parent-target-membership.json": "8eea3198c461661d80176c19bbbb009281aecfc75f58520e9c29d5c9df52511f",
+    "research/ir-author-routing-remaining-catalog-2026-10-15/routes.json": "4eed5a57f20cc4092343e4f1ddbedf49d83bf871a51c6cb0bb2286a4867d1981",
+    "research/ir-contacts-universe-2026-10-11/evidence/3023/20261011T062905262583Z/06.json": "56dfeff920fad343e04cef6508c953b10852a387e1c222efd493377007fbd62d",
+    "research/ir-source-access-holds-2026-10-15/holds-v3.json": "ec1e9f85d378571c3d0f99eca73ec8e397ea8dd7b155aa4be80c2100d2294551",
+    "research/ir-recovery-2026-10-13/contact-candidates.csv": "d7a55a842a7c126b48c588801cc2c6035d21bad22cb228ef57da68def1e03f31",
+    "research/ir-case-studies-2026-10-15/1723/robots404-handling-clarification/clarification.json": "18e53556e7173517ec4bb6a46b0625472f65be1fd989428c048b5229a8daf64e"
+  },
+  "robots_review": {
+    "reviewed_at": "2026-10-15T17:18:46.961478+00:00",
+    "branch": "complete404_missingrobots_not_explicit_permission",
+    "HTTP_status": 404,
+    "complete_body": true,
+    "raw_sha256": "447dcb29719aac911bfef6110aed03f96296d7b033e0884e4560c6d308d6989a",
+    "raw_file": "raw/447dcb29719aac911bfef6110aed03f96296d7b033e0884e4560c6d308d6989a",
+    "basis_path": "research/ir-case-studies-2026-10-15/1723/robots404-handling-clarification/clarification.json",
+    "basis_sha256": "18e53556e7173517ec4bb6a46b0625472f65be1fd989428c048b5229a8daf64e",
+    "standard_implementation_basis": {
+      "application": "404 falls within400<=status<500 other than401/403; RobotFileParser.read setsallow_all. We inspect saved code only and do not callread or makeanotherrobotsrequest.",
+      "character_end": 1983,
+      "character_start": 1495,
+      "kind": "existing_standard_library_implementation",
+      "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/robotparser.py",
+      "python_version": "3.12.14",
+      "quote": "    def read(self):\n        \"\"\"Reads the robots.txt URL and feeds it to the parser.\"\"\"\n        try:\n            f = urllib.request.urlopen(self.url)\n        except urllib.error.HTTPError as err:\n            if err.code in (401, 403):\n                self.disallow_all = True\n            elif err.code >= 400 and err.code < 500:\n                self.allow_all = True\n            err.close()\n        else:\n            raw = f.read()\n            self.parse(raw.decode(\"utf-8\").splitlines())\n",
+      "sha256": "644cc6d2b09948e8782cb1e7dea3bb39a2d83932c67e7a8eae65a711318c002c"
+    },
+    "exact_target": "https://www.rasaco.co.jp/pdf/ir/library07/20260715.pdf",
+    "UA": "Codex-IR-Research/0.1",
+    "proceed": true,
+    "site_rules_or_explicit_permission_confirmed": false,
+    "reason": "Reuse adopted standard-library 400<=status<500 except401/403 handling for this host complete404. No robots retry; only first attempt of stored PDF. 404HTML is not parsed as robots rules. Holds/401/403/5xx/TLS/AI restrictions unchanged."
+  }
+}

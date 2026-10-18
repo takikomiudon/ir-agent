@@ -1,0 +1,85 @@
+{
+  "recorded_at": "2026-10-15T02:27:05.205158+00:00",
+  "tests": {
+    "count": 911,
+    "seconds": "33.617",
+    "result": "passed",
+    "command": ".venv/bin/python -m unittest discover -s tests -v",
+    "scope": "Before observation assessment implementation"
+  },
+  "synthetic_model_input_audit": {
+    "status": "synthetic_example",
+    "required_paths": 9,
+    "financial_inputs_verified": false
+  },
+  "unweighted": {
+    "synthetic": true,
+    "expected_value_jpy": null,
+    "probabilities_inferred": false
+  },
+  "actual_bank_extraction": {
+    "company_id": "jp:8331",
+    "contact_eligible": false,
+    "persisted_in_actual_database": false,
+    "artifact": "research/ir-case-studies-2026-10-15/8331/disclosed-facts-normalized.json",
+    "artifact_sha256": "109b3af7449f6d3059e266c6249ab9d0b7b191a995d0b37cba72749044d2b1c9",
+    "derived_source_id": "disclosed-facts:49fa0ec2c5cd2cdfb2a2393c75dcf78a5e9d903b9c850ed5330ea50ffe874cce",
+    "derived_retrieved_at": "2026-10-15T02:20:16.567964+00:00",
+    "facts": [
+      {
+        "concept": "annual_dividend_per_share",
+        "value": "64.0",
+        "unit": "JPY-per-share",
+        "kind": "issuer_guidance"
+      },
+      {
+        "concept": "interim_dividend_per_share",
+        "value": "32.0",
+        "unit": "JPY-per-share",
+        "kind": "issuer_guidance"
+      },
+      {
+        "concept": "consolidated_dividend_payout_ratio",
+        "value": "0.411",
+        "unit": "ratio",
+        "kind": "issuer_guidance"
+      }
+    ],
+    "financial_inputs_verified": false,
+    "forecast_values_adopted": false
+  },
+  "coverage": {
+    "summary": {
+      "confirmed_contact_available": 1819,
+      "held_true": 0,
+      "held_unknown": 0,
+      "individual_access": {
+        "explicit": 343,
+        "not_stated": 1476
+      },
+      "status_counts": {
+        "watch": 1819
+      },
+      "with_available_thesis": 0,
+      "with_company_policy_assignment": 0,
+      "with_financial_content": 2,
+      "with_market_source": 0
+    },
+    "next_material_counts": {
+      "confirm_individual_reception_conditions": 1476,
+      "obtain_public_financial_content": 1817,
+      "obtain_saved_market_data": 1819,
+      "prepare_sourced_thesis": 1819,
+      "record_company_policy_adoption": 1819,
+      "review_financial_model": 1819
+    }
+  },
+  "external_sends": 0,
+  "orders": 0,
+  "open_followups": [
+    "Observation classification correction implementation and independent raw bindings",
+    "Explicit meaning review of sourced model inputs",
+    "Actual complete-workload capacity measurement",
+    "Missing real-company financial models, policy assignments and current market data"
+  ]
+}

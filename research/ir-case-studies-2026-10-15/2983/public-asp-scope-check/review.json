@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "artifact_type": "author_watch_ASP_scope_addendum",
+  "company_id": "jp:2983",
+  "parent_issue_id": "2983-author-watch-volume-margin-leverage",
+  "recorded_at": "2026-10-15T17:29:23.434098+00:00",
+  "inputs": [
+    {
+      "path": "research/ir-case-studies-2026-10-15/2983/author-conditions/case-record.json",
+      "sha256": "4f0d47ffcc9350a55e5ad7b878cdff92748b400f3e6dd6aaa98c2d006e6945a4"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2983/author-issuer-comparison/comparison.json",
+      "sha256": "b046b622c3b450804e68cd1c6c2d6e157f245b4faf79b705953c69d17ffaf260"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2983/author-issuer-comparison/search-and-scope.json",
+      "sha256": "99974771b42f8a45ee2b107752b36e2fcd11f03ab9c7dc301587f2284c8fb25f"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2983/public-order-definition-check/review.json",
+      "sha256": "514823d0a645fd3ee91f3479e5506cca031f86401a6159fe2ec5beebc2912192"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2983/issuer-quarter-followup/text/03.txt",
+      "sha256": "f2e154f81bc1ae2f7d2bccd5bb681508c589d9873cf88a6480f0412019229e20"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2983/issuer-quarter-followup/raw/b2a3053be470b4c02796c4c243d7693c1b412e0f2429ae398cf26ff19f937dbe",
+      "sha256": "b2a3053be470b4c02796c4c243d7693c1b412e0f2429ae398cf26ff19f937dbe"
+    }
+  ],
+  "status": "two_page_ASP_search_closed_qualitative_observation_possible_no_model_adoption",
+  "meaning_scope": {
+    "pages": [
+      44,
+      48
+    ],
+    "full_PDF_read": false,
+    "additional_page_search_after_reading": false,
+    "old_pages_reread": false
+  },
+  "observations": [
+    {
+      "page": 44,
+      "classification": "issuer_market_size_estimate_assumptions_not_company_transaction_prices",
+      "finding": "持家3500万円、分譲(うち一戸建)東海4000万円/首都圏7000万円は国交省着工戸数に掛け市場規模を算出する仮定単価。自社の販売ASP・受注ASP・商品価格帯ではない。",
+      "period_and_source_role": "会社資料が国交省統計の着工戸数を利用して作った市場規模説明。会社将来実績予想や取引価格実績ではない。原統計自体の再監査は0。",
+      "land_building_scope": "この注記は持家/分譲(一戸建)区分。仮定価格の土地建物内訳や自社の注文/分譲ASP分母を認証しない。",
+      "evidence": [
+        "ASP44-market-size-assumption"
+      ]
+    },
+    {
+      "page": 44,
+      "classification": "strategic_geography_note",
+      "finding": "東海=愛知/岐阜/静岡/三重、首都圏=東京/埼玉/千葉/神奈川という当頁市場推計の注記。これだけで他頁KPIの案件振分規則へ一律適用しない。",
+      "evidence": [
+        "ASP44-strategy-region-note",
+        "ASP44-strategic-region-purpose"
+      ]
+    },
+    {
+      "page": 48,
+      "classification": "issuer_product_location_and_profitability_strategy",
+      "finding": "デザイン/機能/コスト競争力強化で1棟単価・収益性向上を図り生産性向上を目指す。土地仕入販売の情報を好立地の注文/分譲住宅に生かすという方針。実際のASP実数・算式・達成効果や将来利益保証ではない。",
+      "land_building_scope": "土地の仕入販売/注文住宅/分譲住宅という施策対象の言及はあるが、取引金額を土地建物に分けたASP算式/分母は確認できない。",
+      "evidence": [
+        "ASP48-improvement-policy",
+        "ASP48-value-proposition-not-price-table",
+        "ASP48-land-information-strategy"
+      ]
+    }
+  ],
+  "definitions_not_resolved_within_two_pages": {
+    "company_sales_ASP_numeric_series": null,
+    "company_order_unit_price_numeric_series": null,
+    "ASP_formula_numerator_denominator": null,
+    "price_ranges_for_company_products": null,
+    "SGA_or_cost_accounting_definition": null,
+    "company_product_land_building_valuation_split": null,
+    "whole_PDF_absence_claim": false
+  },
+  "author_condition_effect": [
+    {
+      "child_issue_id": "2983-B01-volume",
+      "effect": "販売数量・地域商品の公表系列を使う前比較の観測を維持。p44市場仮定を会社販売量/単価モデルへ入れない。",
+      "success_or_failure": null
+    },
+    {
+      "child_issue_id": "2983-B02-margin-mix",
+      "effect": "p48は高付加価値/好立地という著者説明と対応する会社戦略の観測。販売ASPが直接なくても公表粗利率・商品地域mix・数量・会社定性帰属で限定観測可能。ただし純粋価格効果/独立利益bridgeは識別できない。",
+      "success_or_failure": null
+    },
+    {
+      "child_issue_id": "2983-B03-sga-leverage",
+      "effect": "コスト競争力/生産性という方針は販管費効率の実証ではない。既存公表販管費額/構成比の観測を維持。",
+      "success_or_failure": null
+    }
+  ],
+  "ASP_necessity_and_closure": {
+    "ASP_required_for_limited_qualitative_author_condition_tracking": false,
+    "observations_available_without_ASP": [
+      "同期間の公表商品/地域別販売・受注系列（期間basisを維持）",
+      "粗利構成比・販管費額/構成比・売上mix",
+      "会社の単価/付加価値寄与説明と戦略（因果識別/保証とは区別）"
+    ],
+    "ASP_required_if_later_separately_authorized_quantitative_price_volume_bridge": true,
+    "no_quantitative_bridge_authorized_or_created": true,
+    "closure": "本ASP有限探索は2頁で終了。直接ASP不明だけを理由に恒久public task/IR必須事項を作らない。",
+    "automatically_reopen_or_search_more_pages": false
+  },
+  "inquiry_value": {
+    "formal_IR_draft": null,
+    "new_future_guarantee_question": false,
+    "publicly_answered_exclusions": [
+      "p44価格が市場規模用仮定であること",
+      "p44市場推計上の地域注記",
+      "p48商品力/好立地/単価収益性向上という戦略の有無"
+    ],
+    "ASP_query_required_now": false,
+    "remaining_interpretation_value": "将来別途、定量ASP・価格数量bridgeが本当に必要となり、既公開注記でも同分類の分母/土地建物対応が未解決の場合に限り、公開可能な定義/資料位置確認を再評価。現在の定性条件観測には必須ではない。",
+    "unrelated_order_cancellation_or_cost_topics": "前回限定確認の未解決として残すが、本ASP探索から追加調査/IRへ自動拡張しない。"
+  },
+  "maintained_boundaries": {
+    "issuer304_27_vs_author308_31_separate": true,
+    "author_share_denominator_unverified": true,
+    "PER5_2_6_1_not_fair_PE": true,
+    "companySept10_before_authorOct1_not_out_of_sample_success": true,
+    "company_2033_not_falsification_threshold": true,
+    "financial_paths_scenario_currentprice_multiple_probability": null
+  },
+  "execution": {
+    "GET_Store_DB_oldfiles_code_index_monitor_financial_formalIR": 0,
+    "nonimage_files": 6,
+    "images": 2,
+    "quotes": 6,
+    "producer_review_independent_pending": true
+  }
+}

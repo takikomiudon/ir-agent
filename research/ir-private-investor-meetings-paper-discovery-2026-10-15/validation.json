@@ -1,0 +1,56 @@
+{
+  "recorded_at": "2026-10-15T23:26:04.324644+00:00",
+  "total_GETs": 2,
+  "robots_GETs": 1,
+  "metadata_query_GETs": 1,
+  "retry_redirect_follow_otherhost_body_DB_sharedfile_edits": 0,
+  "captures": [
+    {
+      "capture": "robots-capture.json",
+      "capture_sha256": "0143d7ea4ec08592033068c7af286437c72878ae3ff828bdc6189e88ae37904f",
+      "http_status": 404,
+      "raw_file": "research/ir-private-investor-meetings-paper-discovery-2026-10-15/raw/e61a074ca2e4f9d188e05a2fbb207940a17a1a2edf18445b02f985e8f7e1bde1",
+      "raw_sha256": "e61a074ca2e4f9d188e05a2fbb207940a17a1a2edf18445b02f985e8f7e1bde1",
+      "byte_count": 105,
+      "complete_entity_observed_at": "2026-10-15T23:24:50.587950+00:00",
+      "GET_call_finished_at": "2026-10-15T23:24:50.590159+00:00",
+      "saved_bytes_verified": true,
+      "requested_url": "https://api.crossref.org/robots.txt",
+      "response_headers": {
+        "date": "Thu, 15 Oct 2026 23:24:50 GMT",
+        "server": "envoy"
+      }
+    },
+    {
+      "capture": "metadata-capture.json",
+      "capture_sha256": "a02b3a04533fcc7f928c63a691ff05283bd1789afc835b5a4872767ec7b818da",
+      "http_status": 200,
+      "raw_file": "research/ir-private-investor-meetings-paper-discovery-2026-10-15/raw/cbcc689ad6b8487f17798da2c41c69453b94950fbdc48f56f2eb701b69794398",
+      "raw_sha256": "cbcc689ad6b8487f17798da2c41c69453b94950fbdc48f56f2eb701b69794398",
+      "byte_count": 11917,
+      "complete_entity_observed_at": "2026-10-15T23:24:59.899548+00:00",
+      "GET_call_finished_at": "2026-10-15T23:24:59.901727+00:00",
+      "saved_bytes_verified": true,
+      "requested_url": "https://api.crossref.org/works?query.title=What+Are+We+Meeting+For%3F+The+Consequences+of+Private+Meetings+with+Investors&rows=3",
+      "response_headers": {
+        "date": "Thu, 15 Oct 2026 23:24:59 GMT",
+        "server": "envoy"
+      }
+    }
+  ],
+  "source_file_pins": {
+    "scripts/research_ir_universe.py": "373e06e6bd2b3fe7bf8e9b86de9d124118371eec9534ebea9a1ef07161e154f6",
+    "docs/data-sources.md": "0f98151b56027e4bac0520929b123cf2d846ceaeb63d0414e7fc98fec51f2659",
+    "research/ir-source-access-holds-2026-10-15/holds-v7.json": "ef162bac356672e342fafce1ef1d785d7050f79d6a94c2778a49a03fbc23cffd",
+    "/etc/codex/network-policy.json": "266ee47b22dd736206e1454a525c3003a458e742c7fca6b13765f4d8b5289275"
+  },
+  "guard_sha256": "33f23f9c18664899daaf016d0babb192a1ca5b2a0d10ca6895913105b61f28ea",
+  "metadata_extraction_sha256": "83ddbf4c352beb711c96a30c5631fa5559260e9e87241baf0a1d0e2217b7f27b",
+  "limitations": [
+    "requests entity bytes may be content-decoded; not wire bytes",
+    "UA is configured collector header, not independent outbound wire audit",
+    "runtime network state unknown was not treated as enforced readiness",
+    "investment-research-sources references/access.md and references/sources.json skill resource reads failed; no alternate host or source discovery was performed",
+    "Crossref metadata not paper body or independent validation of study findings"
+  ]
+}

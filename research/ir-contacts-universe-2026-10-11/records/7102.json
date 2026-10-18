@@ -1,0 +1,114 @@
+{
+  "security_code": "7102",
+  "company_name": "日本車輌製造",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "輸送用機器",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.n-sharyo.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T20:02:47.831817+00:00",
+  "completed_at": "2026-10-11T20:03:45.594566+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/7102/20261011T200247831863Z/01.json",
+      "url": "https://www.n-sharyo.co.jp/",
+      "retrieved_at": "2026-10-11T20:02:59.626917+00:00",
+      "http_status": 200,
+      "quote": "日本車輌製造株式会社",
+      "role": "issuer_identity",
+      "snapshot_json_sha256": "e2b5eea75dba39cecdfc737ba13b3ba501dc56528b64735d989ebcb889b70809"
+    },
+    {
+      "snapshot": "evidence/7102/20261011T200247831863Z/01.json",
+      "url": "https://www.n-sharyo.co.jp/",
+      "retrieved_at": "2026-10-11T20:02:59.626917+00:00",
+      "http_status": 200,
+      "quote": "2026.07.28 2027年３月期 第１四半期決算説明資料 2026.07.28 2027年３月期 第１四半期決算短信",
+      "role": "financial_disclosure_context",
+      "snapshot_json_sha256": "e2b5eea75dba39cecdfc737ba13b3ba501dc56528b64735d989ebcb889b70809"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.n-sharyo.co.jp/",
+      "final_url": "https://www.n-sharyo.co.jp/",
+      "snapshot": "evidence/7102/20261011T200247831863Z/01.json",
+      "retrieved_at": "2026-10-11T20:02:59.626917+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.n-sharyo.co.jp/finance/index.html",
+      "final_url": "https://www.n-sharyo.co.jp/finance/index.html",
+      "snapshot": "evidence/7102/20261011T200247831863Z/02.json",
+      "retrieved_at": "2026-10-11T20:03:11.080491+00:00",
+      "http_status": 200,
+      "error": "LookupError"
+    },
+    {
+      "url": "https://www.n-sharyo.co.jp/company/contactus.html",
+      "final_url": "https://www.n-sharyo.co.jp/company/contactus.html",
+      "snapshot": "evidence/7102/20261011T200247831863Z/03.json",
+      "retrieved_at": "2026-10-11T20:03:22.806496+00:00",
+      "http_status": 200,
+      "error": "LookupError"
+    },
+    {
+      "url": "https://www.n-sharyo.co.jp/sitemap.html",
+      "final_url": "https://www.n-sharyo.co.jp/sitemap.html",
+      "snapshot": "evidence/7102/20261011T200247831863Z/04.json",
+      "retrieved_at": "2026-10-11T20:03:33.939320+00:00",
+      "http_status": 200,
+      "error": "LookupError"
+    }
+  ],
+  "conditions": [
+    "日本車輌製造の保存home01は同issuer名/実2027年決算資料・適時開示を掲載。IR/一般contact/sitemap02/03/04の保存HTTPstatusは200だがtitle/text/forms/linksの実本文抽出がなく、欠落を空method/action/controlsへ補わない。",
+    "home一般お問合せnav、製品本部/株主総会更新や会社名だけでは金融IRemail又は質問フォームを実証しない。未抽出ページの非存在・取得失敗/成功の意味を推測で補わず、既存HTTP/時刻/shaを保持する。",
+    "個人利用区分・会社条件・返信/質問項目・公開IRmailboxは保存本文から未確認。新GET/再抽出/helper変更/送信は行わない。"
+  ],
+  "limitations": [
+    "https://www.n-sharyo.co.jp/finance/index.html: LookupError",
+    "https://www.n-sharyo.co.jp/company/contactus.html: LookupError",
+    "https://www.n-sharyo.co.jp/sitemap.html: LookupError",
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "金融IR受付操作とsame native項目を保存資料で実証できずU。200と本文欠落を両方保持し、窓口不存在又は電話受付の推定をしない。",
+    "saved-source-only人手監査。新GET・送信0、送信・返信実績、相手先の投資提案受諾は未確認。"
+  ],
+  "discovery": {
+    "security_code": "7102",
+    "official_url": "https://www.n-sharyo.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "日本車輌製造",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/7102/20261011T200247831863Z/01.json",
+      "normalized_name": "日本車輌製造",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 5,
+  "previous_attempts": [
+    "attempts/7102/20261011T045047637941Z.json",
+    "attempts/7102/20261011T200345594798Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_consumer_70_batch23",
+    "reviewed_at": "2026-10-12T00:22:16.700344+00:00",
+    "reviewed_at_jst": "2026-10-12T09:22:16.700344+09:00",
+    "notes": "同issuerhome実決算と200の本文/構造欠落targetを確認U。欠落attrsを補わず金融IR受付/個人条件は未確認。 保存公式原文だけを使用し、追加GET・送信・実入力検証は行わない。"
+  }
+}

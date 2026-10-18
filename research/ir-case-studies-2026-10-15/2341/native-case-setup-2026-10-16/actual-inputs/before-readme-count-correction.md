@@ -1,0 +1,9 @@
+# 2341：実保存2sourceのnative登録準備（未登録）
+
+原短信06:27:32.516249UTCと派生12facts06:38:21.789206UTCのtrusted保存・全object/nativeSHA・最新分類をmode=ro/query_only/contextlib.closingで照合し、受入原16引用と派生12表示を再確認した後の実時計reviewed_atで2bootstrapを準備した。元source/producer/ticketのfile-only・未読・準備時刻は歴史として保持し、後着receiptと現在利用可能性を分離する。
+
+1case/1issue。既存2341-comparable-operating-profit-scopeを共通nativeissueへ選び、商品測定/比較可能なOP費用scope/著者modelと投資家basisの既存3候補IDを条件として保持。商品認識売上をARR/急成長へ変換せず、segment全社費用・内部売上・原表示千円差と連結OPを分ける。特益26,207とNIguide増28mの税後bridge、正常OP/CFを作らない。消却実施/予定、帳簿減少/cash/株数・信託/平均株を区別し、現在EPS効果を認証しない。
+
+既知K1–K6と3候補・質問0を固定ticketへ参照し、今後summary/rationale双方へ手動引継ぎ。methodnull/needs_data、IRvalueunproven/readyfalse、金融入力/forecast/方針/新質問0。公開KPIindexはfile-only補助で実source/pending/bootstrapへ含めない。未freeze索引v36/indexconnection/currentdocsは依存pin外。既受入12facts親receiptまでを根拠とした。
+
+Jan16JSTは既存approvedbasisの原quoteとAnthropic quarterly引用を保持する内部3calendar-month研究日。会社予定/売却期限ではない。rootだけが既存API expected-version0でcopyguard後に登録し、初回job0を確認する予定。Store/API/register/queue/GET/DBwrite/sharedcode/旧producer編集/金融採用0。実登録成功を主張せず有限freezeして停止。

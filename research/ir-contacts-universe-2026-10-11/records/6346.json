@@ -1,0 +1,149 @@
+{
+  "security_code": "6346",
+  "company_name": "キクカワエンタープライズ",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "機械",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.kikukawa.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T17:23:54.041100+00:00",
+  "completed_at": "2026-10-11T17:25:27.995249+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/6346/20261011T172354041148Z/02.json",
+      "url": "https://www.kikukawa.co.jp/ir/",
+      "retrieved_at": "2026-10-11T17:24:27.598079+00:00",
+      "http_status": 200,
+      "quote": "IR情報 電子公告を見る 株主総会資料 第145期定時株主総会招集ご通知[PDF] 第144期定時株主総会招集ご通知[PDF] 2026年度 2026年度第1四半期決算短信［日本基準］（非連結）［PDF］ NEW!",
+      "role": "issuer_financial_ir_scope",
+      "snapshot_json_sha256": "402c468948cfa1545f4b12f04449634d8d06e7d9fdf5d0ada848e67ca72360e6"
+    },
+    {
+      "snapshot": "evidence/6346/20261011T172354041148Z/03.json",
+      "url": "https://www.kikukawa.co.jp/contact/",
+      "retrieved_at": "2026-10-11T17:24:41.989540+00:00",
+      "http_status": 200,
+      "quote": "貴社名 部署 お役職 お名前 ふりがな 郵便番号 住所 TEL FAX メールアドレス メールアドレス確認用 URL ご要望 カタログ請求 見積依頼 詳細説明希望 加工テスト 水分計購入 水分計無料貸出 その他 ご要望製品名 ※2000文字以内 ご意見・ご質問 ※2000文字以内 当社の プライバシーポリシー に 同意の上、送信してください。 プライバシーポリシーに同意する",
+      "role": "product_generic_form_fields",
+      "snapshot_json_sha256": "4f338e702190981701bb874ea6243cacfeaad1332d4edaebcf9b1f5967976c26",
+      "source_form_index": 0
+    },
+    {
+      "snapshot": "evidence/6346/20261011T172354041148Z/02.json",
+      "url": "https://www.kikukawa.co.jp/ir/",
+      "retrieved_at": "2026-10-11T17:24:27.598079+00:00",
+      "http_status": 200,
+      "quote": "総務部 TEL : 0596-21-2120 FAX : 0596-21-2137 E-Mail : soumu@kikukawa.co.jp",
+      "role": "general_department_email_not_ir_purpose",
+      "snapshot_json_sha256": "402c468948cfa1545f4b12f04449634d8d06e7d9fdf5d0ada848e67ca72360e6"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.kikukawa.co.jp/",
+      "final_url": "https://www.kikukawa.co.jp/",
+      "snapshot": "evidence/6346/20261011T172354041148Z/01.json",
+      "retrieved_at": "2026-10-11T17:24:13.197082+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.kikukawa.co.jp/ir/",
+      "final_url": "https://www.kikukawa.co.jp/ir/",
+      "snapshot": "evidence/6346/20261011T172354041148Z/02.json",
+      "retrieved_at": "2026-10-11T17:24:27.598079+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.kikukawa.co.jp/contact/",
+      "final_url": "https://www.kikukawa.co.jp/contact/",
+      "snapshot": "evidence/6346/20261011T172354041148Z/03.json",
+      "retrieved_at": "2026-10-11T17:24:41.989540+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.kikukawa.co.jp/recruit-contact/",
+      "final_url": "https://www.kikukawa.co.jp/recruit-contact/",
+      "snapshot": "evidence/6346/20261011T172354041148Z/04.json",
+      "retrieved_at": "2026-10-11T17:24:58.584627+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.kikukawa.co.jp/sitemap/",
+      "final_url": "https://www.kikukawa.co.jp/sitemap/",
+      "snapshot": "evidence/6346/20261011T172354041148Z/05.json",
+      "retrieved_at": "2026-10-11T17:25:13.247207+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [
+    "キクカワエンタープライズの同issuer金融IRは決算短信・株主総会資料を掲載。一般contactフォームにIR選択肢や同社財務IR受付操作がなく、IRナビとfooter部門メールから用途を推論しない。",
+    "sole nativePOST form0はcompany/busho/positionとemail/email_confirm・det製品名/faq質問、カタログ/見積/加工テスト/水分計/その他の製品需要選択。会社・部署の必須属性/表示と個人入力案内は未記載。",
+    "同社公式本文に営業/貿易/総務/資材/営業所メールはあるがIR用途を明示していない。captured mailto:pと正しい本文表記の差は原sourceで保持し、IRアドレスを補正・推測しない。",
+    "営業目的お問い合わせは遠慮、採用は別フォーム、製品名/質問2000文字以内、個人情報方針同意の案内を保持。"
+  ],
+  "limitations": [
+    "native製品一般formと部門メールは確認したが、実金融IR受付用途の結合と個人受付条件を確認できない。",
+    "保存済み資料のみで監査。追加GET・フォーム送信・メール送信0。送信成功・回答実績・現在の稼働/到達性・投資提案の承認は確認していない。"
+  ],
+  "discovery": {
+    "security_code": "6346",
+    "official_url": "https://www.kikukawa.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "キクカワエンタープライズ",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/6346/20261011T172354041148Z/01.json",
+      "normalized_name": "キクカワエンタープライズ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6346/20261011T172354041148Z/02.json",
+      "normalized_name": "キクカワエンタープライズ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6346/20261011T172354041148Z/03.json",
+      "normalized_name": "キクカワエンタープライズ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6346/20261011T172354041148Z/04.json",
+      "normalized_name": "キクカワエンタープライズ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6346/20261011T172354041148Z/05.json",
+      "normalized_name": "キクカワエンタープライズ",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 5,
+  "unconfirmed_reason": "financial_ir_acceptance_not_demonstrated",
+  "http_get_attempt_count": 6,
+  "previous_attempts": [
+    "attempts/6346/20261011T045047588477Z.json",
+    "attempts/6346/20261011T172527995675Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_consumer_63_batch16",
+    "reviewed_at": "2026-10-11T17:39:30.912190+00:00",
+    "reviewed_at_jst": "2026-10-12T02:39:30.912190+09:00",
+    "notes": "同社金融IR文書とgeneric product form0を照合しU。カタログ/見積/テスト等の分類や総務/営業footerメールを金融IRへ流用しない。会社/個人条件不明、2000文字・営業遠慮・採用別を保持。 保存資料だけを使用。新GET/送信0、送信/返信実績や投資提案承認は推論しない。"
+  }
+}

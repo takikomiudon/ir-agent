@@ -1,0 +1,133 @@
+{
+  "security_code": "2130",
+  "company_name": "メンバーズ",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "サービス業",
+  "investigation_status": "provisional",
+  "verification_level": "official_form_link_only",
+  "official_url": "https://www.members.co.jp/",
+  "contact_url": "https://marke.members.co.jp/contact.public.html",
+  "channels": [
+    "form"
+  ],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "candidate",
+  "attempted_at": "2026-10-11T04:01:47.627467+00:00",
+  "completed_at": "2026-10-11T04:01:56.243493+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/2130/03.json",
+      "url": "https://www.members.co.jp/contact",
+      "retrieved_at": "2026-10-11T04:01:50.676182+00:00",
+      "quote": "広報／IR／当社及び当Webサイトに関するお問い合わせは、以下のお問い合わせフォームにて、受け付けております。",
+      "role": "ir_binding",
+      "source_link_url": "https://marke.members.co.jp/contact.public.html"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.members.co.jp/",
+      "final_url": "https://www.members.co.jp/",
+      "snapshot": "evidence/2130/01.json",
+      "retrieved_at": "2026-10-11T04:01:48.223895+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.members.co.jp/ir/message",
+      "final_url": "https://www.members.co.jp/ir/message",
+      "snapshot": "evidence/2130/02.json",
+      "retrieved_at": "2026-10-11T04:01:49.784512+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.members.co.jp/contact",
+      "final_url": "https://www.members.co.jp/contact",
+      "snapshot": "evidence/2130/03.json",
+      "retrieved_at": "2026-10-11T04:01:50.676182+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://marke.members.co.jp/contact.public.html",
+      "final_url": "https://marke.members.co.jp/contact.public.html",
+      "snapshot": "evidence/2130/04.json",
+      "retrieved_at": "2026-10-11T04:01:53.120110+00:00",
+      "http_status": 503,
+      "error": null
+    },
+    {
+      "url": "https://www.members.co.jp/contact/",
+      "final_url": "https://www.members.co.jp/contact/",
+      "snapshot": "evidence/2130/05.json",
+      "retrieved_at": "2026-10-11T04:01:53.978928+00:00",
+      "http_status": 503,
+      "error": null
+    },
+    {
+      "url": "https://www.members.co.jp/policy/information_security",
+      "final_url": "https://www.members.co.jp/policy/information_security",
+      "snapshot": "evidence/2130/06.json",
+      "retrieved_at": "2026-10-11T04:01:54.294933+00:00",
+      "http_status": 503,
+      "error": null
+    },
+    {
+      "url": "https://www.members.co.jp/ir",
+      "final_url": "https://www.members.co.jp/ir",
+      "snapshot": "evidence/2130/07.json",
+      "retrieved_at": "2026-10-11T04:01:55.357805+00:00",
+      "http_status": 503,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "公式のIR用途案内とリンク先URLのみを確認。対象フォーム本体の入力欄・作動・受付条件を未取得のため確認済みの窓口とは数えない。",
+    "保存された公開GET資料のオフライン監査。実際の返信、現在の送信機能、未記載の個人受付条件は確認していない。"
+  ],
+  "discovery": {
+    "security_code": "2130",
+    "official_url": "https://www.members.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "メンバーズ",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/2130/01.json",
+      "normalized_name": "メンバーズ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/2130/02.json",
+      "normalized_name": "メンバーズ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/2130/03.json",
+      "normalized_name": "メンバーズ",
+      "security_code_observed": false
+    }
+  ],
+  "classification_version": 2,
+  "successful_official_page_count": 3,
+  "manual_review": {
+    "reviewer": "codex_audit_it",
+    "reviewed_at": "2026-10-11T04:21:32.720872+00:00",
+    "review_scope": "saved_public_snapshots_only_no_new_get",
+    "snapshots_reviewed": [
+      "evidence/2130/01.json",
+      "evidence/2130/02.json",
+      "evidence/2130/03.json"
+    ],
+    "notes": "メンバーズ公式問い合わせ一覧が広報／IRの受付をフォームと明記し、同じラベルのリンクを marke.members.co.jp/contact.public.html に対応付けた。サービス問い合わせなど別フォームは採用しない。対象フォーム本体の実欄は未取得なので provisional。"
+  },
+  "manual_classification_version": 1
+}

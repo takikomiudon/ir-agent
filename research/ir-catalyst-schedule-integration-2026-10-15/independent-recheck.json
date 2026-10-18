@@ -1,0 +1,1000 @@
+{
+  "scope": "Schedule-only finite independent checks; no occurrence, date resolution, changes or jobs",
+  "checks": {
+    "baseline_candidate": {
+      "status": "source_bound_candidate",
+      "reason_codes": [],
+      "historical_usability": {
+        "status": "matched",
+        "reason_codes": []
+      },
+      "current_use": {
+        "status": "matched",
+        "reason_codes": []
+      }
+    },
+    "midnight_and_past_date_do_not_resolve_due_or_occurrence": true,
+    "snapshot_quote_company_mismatch": {
+      "snapshot": {
+        "status": "mismatch",
+        "reason_codes": [
+          "source_snapshot_sha_mismatch"
+        ],
+        "historical_usability": {
+          "status": "mismatch",
+          "reason_codes": [
+            "source_snapshot_sha_mismatch"
+          ]
+        },
+        "current_use": {
+          "status": "mismatch",
+          "reason_codes": [
+            "source_snapshot_sha_mismatch"
+          ]
+        }
+      },
+      "quote": {
+        "status": "mismatch",
+        "reason_codes": [
+          "basis_quote_mismatch",
+          "raw_date_label_mismatch",
+          "date_context_quote_mismatch"
+        ],
+        "historical_usability": {
+          "status": "mismatch",
+          "reason_codes": [
+            "basis_quote_mismatch",
+            "raw_date_label_mismatch",
+            "date_context_quote_mismatch"
+          ]
+        },
+        "current_use": {
+          "status": "mismatch",
+          "reason_codes": [
+            "basis_quote_mismatch",
+            "raw_date_label_mismatch",
+            "date_context_quote_mismatch"
+          ]
+        }
+      },
+      "company": {
+        "status": "mismatch",
+        "reason_codes": [
+          "source_identity_or_company_mismatch"
+        ],
+        "historical_usability": {
+          "status": "mismatch",
+          "reason_codes": [
+            "source_identity_or_company_mismatch"
+          ]
+        },
+        "current_use": {
+          "status": "mismatch",
+          "reason_codes": [
+            "source_identity_or_company_mismatch"
+          ]
+        }
+      }
+    },
+    "outer_transaction_and_query_only_preserved": true,
+    "all_parent_lineage": {
+      "shared_dag": {
+        "status": "source_bound_candidate",
+        "reason_codes": [],
+        "historical_usability": {
+          "status": "matched",
+          "reason_codes": []
+        },
+        "current_use": {
+          "status": "matched",
+          "reason_codes": []
+        }
+      },
+      "future_second": {
+        "status": "mismatch",
+        "reason_codes": [
+          "effective_time_after_as_of",
+          "first_saved_after_knowledge_at",
+          "classification_not_available"
+        ],
+        "historical_usability": {
+          "status": "mismatch",
+          "reason_codes": [
+            "effective_time_after_as_of",
+            "first_saved_after_knowledge_at",
+            "classification_not_available"
+          ]
+        },
+        "current_use": {
+          "status": "matched",
+          "reason_codes": []
+        }
+      },
+      "late_second": {
+        "status": "mismatch",
+        "reason_codes": [
+          "first_saved_after_knowledge_at",
+          "classification_not_available"
+        ],
+        "historical_usability": {
+          "status": "mismatch",
+          "reason_codes": [
+            "first_saved_after_knowledge_at",
+            "classification_not_available"
+          ]
+        },
+        "current_use": {
+          "status": "matched",
+          "reason_codes": []
+        }
+      },
+      "nonpublic_second": {
+        "status": "held",
+        "reason_codes": [
+          "source_information_held_for_review"
+        ],
+        "historical_usability": {
+          "status": "held",
+          "reason_codes": [
+            "source_information_held_for_review"
+          ]
+        },
+        "current_use": {
+          "status": "held",
+          "reason_codes": [
+            "source_information_held_for_review"
+          ]
+        }
+      },
+      "unclassified_second": {
+        "status": "unknown",
+        "reason_codes": [
+          "classification_not_available"
+        ],
+        "historical_usability": {
+          "status": "unknown",
+          "reason_codes": [
+            "classification_not_available"
+          ]
+        },
+        "current_use": {
+          "status": "unknown",
+          "reason_codes": [
+            "classification_not_available"
+          ]
+        }
+      },
+      "synthetic_second": {
+        "status": "mismatch",
+        "reason_codes": [
+          "synthetic_source_in_real_observation"
+        ],
+        "historical_usability": {
+          "status": "mismatch",
+          "reason_codes": [
+            "synthetic_source_in_real_observation"
+          ]
+        },
+        "current_use": {
+          "status": "mismatch",
+          "reason_codes": [
+            "synthetic_source_in_real_observation"
+          ]
+        }
+      }
+    },
+    "current_classification_hold_preserves_history": {
+      "status": "held",
+      "reason_codes": [
+        "classification_unresolved"
+      ],
+      "historical_usability": {
+        "status": "matched",
+        "reason_codes": []
+      },
+      "current_use": {
+        "status": "held",
+        "reason_codes": [
+          "classification_unresolved"
+        ]
+      }
+    },
+    "nissui_saved_snapshot_three_events": {
+      "coverage": {
+        "event_count": 3,
+        "in_window_count": 2,
+        "outside_window_count": 1,
+        "date_unknown_count": 0,
+        "source_bound_candidate_count": 3
+      },
+      "dates": [
+        "2026-11-06",
+        "2026-11-10",
+        "2027-02-05"
+      ],
+      "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+      "all_due_null_occurrence_not_established": true
+    },
+    "readonly_disk_and_cli_bytes_unchanged": true,
+    "actual_db_one_readonly_call": {
+      "before_sha256": {
+        "/workspace/ir-agent/data/ir-research-2026-10-15.sqlite3": "615ae02af4d452cea5ed6b1c63ab3d5d1efc3c994edad2fb794c622563ad501c"
+      },
+      "after_sha256": {
+        "/workspace/ir-agent/data/ir-research-2026-10-15.sqlite3": "615ae02af4d452cea5ed6b1c63ab3d5d1efc3c994edad2fb794c622563ad501c"
+      },
+      "coverage": {
+        "event_count": 3,
+        "in_window_count": 2,
+        "outside_window_count": 1,
+        "date_unknown_count": 0,
+        "source_bound_candidate_count": 3
+      },
+      "as_of": "2026-10-15T05:05:19.776661+00:00",
+      "checked_at": "2026-10-15T05:09:27.926742+00:00"
+    },
+    "original_case_files_unchanged": true
+  },
+  "limitations": [
+    "Source matching does not verify date/period meaning, prospectiveness, complete event universe or economic effects.",
+    "Synthetic DB fixtures are isolated; the one real DB call uses SQLite mode=ro and query_only.",
+    "Real DB base/WAL hashes are compared once around that call; SHM is coordination state, not audited logical content.",
+    "No new GET, Store initialization, migration, production/test edits or workspace DB writes are performed."
+  ],
+  "actual_readonly_report": {
+    "schema_version": 1,
+    "status": "schedule_monitor_only",
+    "as_of": "2026-10-15T05:05:19.776661+00:00",
+    "checked_at": "2026-10-15T05:09:27.926742+00:00",
+    "events": [
+      {
+        "id": "jp:1332:2027fy-q2-release",
+        "company_id": "jp:1332",
+        "kind": "earnings_release",
+        "label": "2027年3月期第2四半期決算発表",
+        "period": {
+          "basis_quote": "IRカレンダー 都合により変更する場合があることを、予めご了承ください。 最新情報 2025年度 2024年度 2023年度 2022年度 2021年度 2026年度（令和8年度） 2026年4月～2027年3月 日程 タイトル 関連資料ダウンロード その他コンテンツ 02月05日（予定） 2027年3月期第3四半期決算発表 11月10日（予定） 2027年3月期第2四半期決算説明会 11月06日（予定） 2027年3月期第2四半期決算発表 ",
+          "fiscal_year_label": "2027年3月期",
+          "interpretation": "原文イベント名の対象期。会計対象期間の開始日/終了日はここから補完しない。",
+          "quarter_label": "第2四半期",
+          "raw_label": "2027年3月期第2四半期"
+        },
+        "request": {
+          "claims": [
+            {
+              "basis_quote": "IRカレンダー 都合により変更する場合があることを、予めご了承ください。 最新情報 2025年度 2024年度 2023年度 2022年度 2021年度 2026年度（令和8年度） 2026年4月～2027年3月 日程 タイトル 関連資料ダウンロード その他コンテンツ 02月05日（予定） 2027年3月期第3四半期決算発表 11月10日（予定） 2027年3月期第2四半期決算説明会 11月06日（予定） 2027年3月期第2四半期決算発表 ",
+              "basis_quote_location": {
+                "character_end": 2891,
+                "character_start": 2668,
+                "offset_unit": "Unicode code points, page-local for PDF; zero-based end-exclusive",
+                "pdf_page": null,
+                "printed_page": null,
+                "saved_text_file": "1332/statement-calendar-followup/02.txt",
+                "section": "変更可能の注意、年度範囲、11月/2月の予定表示"
+              },
+              "date": "2026-11-06",
+              "date_context_quote": "2026年度（令和8年度） 2026年4月～2027年3月",
+              "date_context_rationale": "2026年度（2026年4月〜2027年3月）の11月として年を対応",
+              "id": "jp:1332:2027fy-q2-release:schedule-1",
+              "kind": "schedule",
+              "raw_date_label": "11月06日（予定）",
+              "source_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+              "source_snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+              "supersedes_claim_id": null,
+              "time": null,
+              "timezone": null
+            }
+          ],
+          "company_id": "jp:1332",
+          "id": "jp:1332:2027fy-q2-release",
+          "kind": "earnings_release",
+          "label": "2027年3月期第2四半期決算発表",
+          "period": {
+            "basis_quote": "IRカレンダー 都合により変更する場合があることを、予めご了承ください。 最新情報 2025年度 2024年度 2023年度 2022年度 2021年度 2026年度（令和8年度） 2026年4月～2027年3月 日程 タイトル 関連資料ダウンロード その他コンテンツ 02月05日（予定） 2027年3月期第3四半期決算発表 11月10日（予定） 2027年3月期第2四半期決算説明会 11月06日（予定） 2027年3月期第2四半期決算発表 ",
+            "fiscal_year_label": "2027年3月期",
+            "interpretation": "原文イベント名の対象期。会計対象期間の開始日/終了日はここから補完しない。",
+            "quarter_label": "第2四半期",
+            "raw_label": "2027年3月期第2四半期"
+          },
+          "synthetic": false
+        },
+        "window_group": "in_window",
+        "status": "source_bound_candidate",
+        "reason_codes": [],
+        "source_binding": {
+          "status": "matched",
+          "reason_codes": [],
+          "source_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+          "source_snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+          "url": "https://www.nissui.co.jp/ir/calendar/index.html",
+          "published_at": null,
+          "retrieved_at": "2026-10-15T04:22:56.478724+00:00"
+        },
+        "lineage_checks": [
+          {
+            "source_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+            "status": "matched",
+            "reason_codes": [],
+            "historical_availability": {
+              "status": "matched",
+              "reason_codes": [],
+              "availability": {
+                "entity_type": "source",
+                "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                "version": 0,
+                "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                "as_of": "2026-10-15T05:05:19.776661+00:00",
+                "knowledge_at": "2026-10-15T05:05:19.776661+00:00",
+                "status": "available",
+                "available": true,
+                "reason_codes": [],
+                "effective_fields": {
+                  "retrieved_at": "2026-10-15T04:22:56.478724+00:00"
+                },
+                "receipt": {
+                  "entity_type": "source",
+                  "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                  "version": 0,
+                  "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                  "first_saved_at": "2026-10-15T04:30:14.136467+00:00",
+                  "presence_observed_at": "2026-10-15T04:30:14.136467+00:00",
+                  "basis": "trusted_insert"
+                },
+                "known_by_at": "2026-10-15T04:30:14.136467+00:00",
+                "first_save_known": true,
+                "limitations": [
+                  "Clock provenance is trusted runtime input, not independently certified.",
+                  "Receipt confirms presence of this snapshot; origin closure, company, public status and mutable-state history are separate checks.",
+                  "Legacy presence is a known-by bound, not a reconstructed first-save time."
+                ]
+              }
+            },
+            "usage_availability": {
+              "status": "matched",
+              "reason_codes": [],
+              "availability": {
+                "entity_type": "source",
+                "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                "version": 0,
+                "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                "as_of": "2026-10-15T05:05:19.776661+00:00",
+                "knowledge_at": "2026-10-15T05:05:19.776661+00:00",
+                "status": "available",
+                "available": true,
+                "reason_codes": [],
+                "effective_fields": {
+                  "retrieved_at": "2026-10-15T04:22:56.478724+00:00"
+                },
+                "receipt": {
+                  "entity_type": "source",
+                  "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                  "version": 0,
+                  "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                  "first_saved_at": "2026-10-15T04:30:14.136467+00:00",
+                  "presence_observed_at": "2026-10-15T04:30:14.136467+00:00",
+                  "basis": "trusted_insert"
+                },
+                "known_by_at": "2026-10-15T04:30:14.136467+00:00",
+                "first_save_known": true,
+                "limitations": [
+                  "Clock provenance is trusted runtime input, not independently certified.",
+                  "Receipt confirms presence of this snapshot; origin closure, company, public status and mutable-state history are separate checks.",
+                  "Legacy presence is a known-by bound, not a reconstructed first-save time."
+                ]
+              }
+            },
+            "current_availability": {
+              "status": "matched",
+              "reason_codes": [],
+              "availability": {
+                "entity_type": "source",
+                "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                "version": 0,
+                "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                "as_of": "2026-10-15T05:09:27.926742+00:00",
+                "knowledge_at": "2026-10-15T05:09:27.926742+00:00",
+                "status": "available",
+                "available": true,
+                "reason_codes": [],
+                "effective_fields": {
+                  "retrieved_at": "2026-10-15T04:22:56.478724+00:00"
+                },
+                "receipt": {
+                  "entity_type": "source",
+                  "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                  "version": 0,
+                  "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                  "first_saved_at": "2026-10-15T04:30:14.136467+00:00",
+                  "presence_observed_at": "2026-10-15T04:30:14.136467+00:00",
+                  "basis": "trusted_insert"
+                },
+                "known_by_at": "2026-10-15T04:30:14.136467+00:00",
+                "first_save_known": true,
+                "limitations": [
+                  "Clock provenance is trusted runtime input, not independently certified.",
+                  "Receipt confirms presence of this snapshot; origin closure, company, public status and mutable-state history are separate checks.",
+                  "Legacy presence is a known-by bound, not a reconstructed first-save time."
+                ]
+              }
+            },
+            "historical_publicity": {
+              "status": "matched",
+              "reason_codes": [],
+              "effective_information_status": null,
+              "latest_review": null
+            },
+            "current_publicity": {
+              "status": "matched",
+              "reason_codes": [],
+              "effective_information_status": null,
+              "latest_review": null
+            },
+            "usage_publicity": {
+              "status": "matched",
+              "reason_codes": [],
+              "effective_information_status": null,
+              "latest_review": null
+            },
+            "historical_classification": {
+              "status": "matched",
+              "reason_codes": [],
+              "kind": "schedule",
+              "version": 1,
+              "recorded_at": "2026-10-15T04:30:14.150439+00:00"
+            },
+            "current_classification": {
+              "status": "matched",
+              "reason_codes": [],
+              "kind": "schedule",
+              "version": 1,
+              "recorded_at": "2026-10-15T04:30:14.150439+00:00"
+            }
+          }
+        ],
+        "historical_usability": {
+          "status": "matched",
+          "reason_codes": []
+        },
+        "current_use": {
+          "status": "matched",
+          "reason_codes": []
+        },
+        "schedule": {
+          "status": "candidate_only",
+          "claim_id": "jp:1332:2027fy-q2-release:schedule-1",
+          "date": "2026-11-06",
+          "date_interpretation": "caller_mapping_unverified"
+        },
+        "timing": {
+          "status": "floating_date",
+          "scheduled_date": "2026-11-06",
+          "scheduled_at": null,
+          "time": null,
+          "timezone": null,
+          "relation_to_as_of": "unknown_timezone"
+        },
+        "due": null,
+        "occurrence": {
+          "status": "not_established"
+        },
+        "result_documents": {
+          "status": "none_linked"
+        },
+        "semantic_review_required": true,
+        "mapping_prospectiveness": "unverified"
+      },
+      {
+        "id": "jp:1332:2027fy-q2-presentation",
+        "company_id": "jp:1332",
+        "kind": "earnings_presentation",
+        "label": "2027年3月期第2四半期決算説明会",
+        "period": {
+          "basis_quote": "IRカレンダー 都合により変更する場合があることを、予めご了承ください。 最新情報 2025年度 2024年度 2023年度 2022年度 2021年度 2026年度（令和8年度） 2026年4月～2027年3月 日程 タイトル 関連資料ダウンロード その他コンテンツ 02月05日（予定） 2027年3月期第3四半期決算発表 11月10日（予定） 2027年3月期第2四半期決算説明会 11月06日（予定） 2027年3月期第2四半期決算発表 ",
+          "fiscal_year_label": "2027年3月期",
+          "interpretation": "原文イベント名の対象期。会計対象期間の開始日/終了日はここから補完しない。",
+          "quarter_label": "第2四半期",
+          "raw_label": "2027年3月期第2四半期"
+        },
+        "request": {
+          "claims": [
+            {
+              "basis_quote": "IRカレンダー 都合により変更する場合があることを、予めご了承ください。 最新情報 2025年度 2024年度 2023年度 2022年度 2021年度 2026年度（令和8年度） 2026年4月～2027年3月 日程 タイトル 関連資料ダウンロード その他コンテンツ 02月05日（予定） 2027年3月期第3四半期決算発表 11月10日（予定） 2027年3月期第2四半期決算説明会 11月06日（予定） 2027年3月期第2四半期決算発表 ",
+              "basis_quote_location": {
+                "character_end": 2891,
+                "character_start": 2668,
+                "offset_unit": "Unicode code points, page-local for PDF; zero-based end-exclusive",
+                "pdf_page": null,
+                "printed_page": null,
+                "saved_text_file": "1332/statement-calendar-followup/02.txt",
+                "section": "変更可能の注意、年度範囲、11月/2月の予定表示"
+              },
+              "date": "2026-11-10",
+              "date_context_quote": "2026年度（令和8年度） 2026年4月～2027年3月",
+              "date_context_rationale": "同年度の11月",
+              "id": "jp:1332:2027fy-q2-presentation:schedule-1",
+              "kind": "schedule",
+              "raw_date_label": "11月10日（予定）",
+              "source_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+              "source_snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+              "supersedes_claim_id": null,
+              "time": null,
+              "timezone": null
+            }
+          ],
+          "company_id": "jp:1332",
+          "id": "jp:1332:2027fy-q2-presentation",
+          "kind": "earnings_presentation",
+          "label": "2027年3月期第2四半期決算説明会",
+          "period": {
+            "basis_quote": "IRカレンダー 都合により変更する場合があることを、予めご了承ください。 最新情報 2025年度 2024年度 2023年度 2022年度 2021年度 2026年度（令和8年度） 2026年4月～2027年3月 日程 タイトル 関連資料ダウンロード その他コンテンツ 02月05日（予定） 2027年3月期第3四半期決算発表 11月10日（予定） 2027年3月期第2四半期決算説明会 11月06日（予定） 2027年3月期第2四半期決算発表 ",
+            "fiscal_year_label": "2027年3月期",
+            "interpretation": "原文イベント名の対象期。会計対象期間の開始日/終了日はここから補完しない。",
+            "quarter_label": "第2四半期",
+            "raw_label": "2027年3月期第2四半期"
+          },
+          "synthetic": false
+        },
+        "window_group": "in_window",
+        "status": "source_bound_candidate",
+        "reason_codes": [],
+        "source_binding": {
+          "status": "matched",
+          "reason_codes": [],
+          "source_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+          "source_snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+          "url": "https://www.nissui.co.jp/ir/calendar/index.html",
+          "published_at": null,
+          "retrieved_at": "2026-10-15T04:22:56.478724+00:00"
+        },
+        "lineage_checks": [
+          {
+            "source_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+            "status": "matched",
+            "reason_codes": [],
+            "historical_availability": {
+              "status": "matched",
+              "reason_codes": [],
+              "availability": {
+                "entity_type": "source",
+                "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                "version": 0,
+                "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                "as_of": "2026-10-15T05:05:19.776661+00:00",
+                "knowledge_at": "2026-10-15T05:05:19.776661+00:00",
+                "status": "available",
+                "available": true,
+                "reason_codes": [],
+                "effective_fields": {
+                  "retrieved_at": "2026-10-15T04:22:56.478724+00:00"
+                },
+                "receipt": {
+                  "entity_type": "source",
+                  "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                  "version": 0,
+                  "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                  "first_saved_at": "2026-10-15T04:30:14.136467+00:00",
+                  "presence_observed_at": "2026-10-15T04:30:14.136467+00:00",
+                  "basis": "trusted_insert"
+                },
+                "known_by_at": "2026-10-15T04:30:14.136467+00:00",
+                "first_save_known": true,
+                "limitations": [
+                  "Clock provenance is trusted runtime input, not independently certified.",
+                  "Receipt confirms presence of this snapshot; origin closure, company, public status and mutable-state history are separate checks.",
+                  "Legacy presence is a known-by bound, not a reconstructed first-save time."
+                ]
+              }
+            },
+            "usage_availability": {
+              "status": "matched",
+              "reason_codes": [],
+              "availability": {
+                "entity_type": "source",
+                "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                "version": 0,
+                "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                "as_of": "2026-10-15T05:05:19.776661+00:00",
+                "knowledge_at": "2026-10-15T05:05:19.776661+00:00",
+                "status": "available",
+                "available": true,
+                "reason_codes": [],
+                "effective_fields": {
+                  "retrieved_at": "2026-10-15T04:22:56.478724+00:00"
+                },
+                "receipt": {
+                  "entity_type": "source",
+                  "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                  "version": 0,
+                  "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                  "first_saved_at": "2026-10-15T04:30:14.136467+00:00",
+                  "presence_observed_at": "2026-10-15T04:30:14.136467+00:00",
+                  "basis": "trusted_insert"
+                },
+                "known_by_at": "2026-10-15T04:30:14.136467+00:00",
+                "first_save_known": true,
+                "limitations": [
+                  "Clock provenance is trusted runtime input, not independently certified.",
+                  "Receipt confirms presence of this snapshot; origin closure, company, public status and mutable-state history are separate checks.",
+                  "Legacy presence is a known-by bound, not a reconstructed first-save time."
+                ]
+              }
+            },
+            "current_availability": {
+              "status": "matched",
+              "reason_codes": [],
+              "availability": {
+                "entity_type": "source",
+                "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                "version": 0,
+                "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                "as_of": "2026-10-15T05:09:27.926742+00:00",
+                "knowledge_at": "2026-10-15T05:09:27.926742+00:00",
+                "status": "available",
+                "available": true,
+                "reason_codes": [],
+                "effective_fields": {
+                  "retrieved_at": "2026-10-15T04:22:56.478724+00:00"
+                },
+                "receipt": {
+                  "entity_type": "source",
+                  "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                  "version": 0,
+                  "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                  "first_saved_at": "2026-10-15T04:30:14.136467+00:00",
+                  "presence_observed_at": "2026-10-15T04:30:14.136467+00:00",
+                  "basis": "trusted_insert"
+                },
+                "known_by_at": "2026-10-15T04:30:14.136467+00:00",
+                "first_save_known": true,
+                "limitations": [
+                  "Clock provenance is trusted runtime input, not independently certified.",
+                  "Receipt confirms presence of this snapshot; origin closure, company, public status and mutable-state history are separate checks.",
+                  "Legacy presence is a known-by bound, not a reconstructed first-save time."
+                ]
+              }
+            },
+            "historical_publicity": {
+              "status": "matched",
+              "reason_codes": [],
+              "effective_information_status": null,
+              "latest_review": null
+            },
+            "current_publicity": {
+              "status": "matched",
+              "reason_codes": [],
+              "effective_information_status": null,
+              "latest_review": null
+            },
+            "usage_publicity": {
+              "status": "matched",
+              "reason_codes": [],
+              "effective_information_status": null,
+              "latest_review": null
+            },
+            "historical_classification": {
+              "status": "matched",
+              "reason_codes": [],
+              "kind": "schedule",
+              "version": 1,
+              "recorded_at": "2026-10-15T04:30:14.150439+00:00"
+            },
+            "current_classification": {
+              "status": "matched",
+              "reason_codes": [],
+              "kind": "schedule",
+              "version": 1,
+              "recorded_at": "2026-10-15T04:30:14.150439+00:00"
+            }
+          }
+        ],
+        "historical_usability": {
+          "status": "matched",
+          "reason_codes": []
+        },
+        "current_use": {
+          "status": "matched",
+          "reason_codes": []
+        },
+        "schedule": {
+          "status": "candidate_only",
+          "claim_id": "jp:1332:2027fy-q2-presentation:schedule-1",
+          "date": "2026-11-10",
+          "date_interpretation": "caller_mapping_unverified"
+        },
+        "timing": {
+          "status": "floating_date",
+          "scheduled_date": "2026-11-10",
+          "scheduled_at": null,
+          "time": null,
+          "timezone": null,
+          "relation_to_as_of": "unknown_timezone"
+        },
+        "due": null,
+        "occurrence": {
+          "status": "not_established"
+        },
+        "result_documents": {
+          "status": "none_linked"
+        },
+        "semantic_review_required": true,
+        "mapping_prospectiveness": "unverified"
+      },
+      {
+        "id": "jp:1332:2027fy-q3-release",
+        "company_id": "jp:1332",
+        "kind": "earnings_release",
+        "label": "2027年3月期第3四半期決算発表",
+        "period": {
+          "basis_quote": "IRカレンダー 都合により変更する場合があることを、予めご了承ください。 最新情報 2025年度 2024年度 2023年度 2022年度 2021年度 2026年度（令和8年度） 2026年4月～2027年3月 日程 タイトル 関連資料ダウンロード その他コンテンツ 02月05日（予定） 2027年3月期第3四半期決算発表 11月10日（予定） 2027年3月期第2四半期決算説明会 11月06日（予定） 2027年3月期第2四半期決算発表 ",
+          "fiscal_year_label": "2027年3月期",
+          "interpretation": "原文イベント名の対象期。会計対象期間の開始日/終了日はここから補完しない。",
+          "quarter_label": "第3四半期",
+          "raw_label": "2027年3月期第3四半期"
+        },
+        "request": {
+          "claims": [
+            {
+              "basis_quote": "IRカレンダー 都合により変更する場合があることを、予めご了承ください。 最新情報 2025年度 2024年度 2023年度 2022年度 2021年度 2026年度（令和8年度） 2026年4月～2027年3月 日程 タイトル 関連資料ダウンロード その他コンテンツ 02月05日（予定） 2027年3月期第3四半期決算発表 11月10日（予定） 2027年3月期第2四半期決算説明会 11月06日（予定） 2027年3月期第2四半期決算発表 ",
+              "basis_quote_location": {
+                "character_end": 2891,
+                "character_start": 2668,
+                "offset_unit": "Unicode code points, page-local for PDF; zero-based end-exclusive",
+                "pdf_page": null,
+                "printed_page": null,
+                "saved_text_file": "1332/statement-calendar-followup/02.txt",
+                "section": "変更可能の注意、年度範囲、11月/2月の予定表示"
+              },
+              "date": "2027-02-05",
+              "date_context_quote": "2026年度（令和8年度） 2026年4月～2027年3月",
+              "date_context_rationale": "2026年度の翌年2月",
+              "id": "jp:1332:2027fy-q3-release:schedule-1",
+              "kind": "schedule",
+              "raw_date_label": "02月05日（予定）",
+              "source_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+              "source_snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+              "supersedes_claim_id": null,
+              "time": null,
+              "timezone": null
+            }
+          ],
+          "company_id": "jp:1332",
+          "id": "jp:1332:2027fy-q3-release",
+          "kind": "earnings_release",
+          "label": "2027年3月期第3四半期決算発表",
+          "period": {
+            "basis_quote": "IRカレンダー 都合により変更する場合があることを、予めご了承ください。 最新情報 2025年度 2024年度 2023年度 2022年度 2021年度 2026年度（令和8年度） 2026年4月～2027年3月 日程 タイトル 関連資料ダウンロード その他コンテンツ 02月05日（予定） 2027年3月期第3四半期決算発表 11月10日（予定） 2027年3月期第2四半期決算説明会 11月06日（予定） 2027年3月期第2四半期決算発表 ",
+            "fiscal_year_label": "2027年3月期",
+            "interpretation": "原文イベント名の対象期。会計対象期間の開始日/終了日はここから補完しない。",
+            "quarter_label": "第3四半期",
+            "raw_label": "2027年3月期第3四半期"
+          },
+          "synthetic": false
+        },
+        "window_group": "outside_window",
+        "status": "source_bound_candidate",
+        "reason_codes": [],
+        "source_binding": {
+          "status": "matched",
+          "reason_codes": [],
+          "source_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+          "source_snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+          "url": "https://www.nissui.co.jp/ir/calendar/index.html",
+          "published_at": null,
+          "retrieved_at": "2026-10-15T04:22:56.478724+00:00"
+        },
+        "lineage_checks": [
+          {
+            "source_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+            "status": "matched",
+            "reason_codes": [],
+            "historical_availability": {
+              "status": "matched",
+              "reason_codes": [],
+              "availability": {
+                "entity_type": "source",
+                "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                "version": 0,
+                "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                "as_of": "2026-10-15T05:05:19.776661+00:00",
+                "knowledge_at": "2026-10-15T05:05:19.776661+00:00",
+                "status": "available",
+                "available": true,
+                "reason_codes": [],
+                "effective_fields": {
+                  "retrieved_at": "2026-10-15T04:22:56.478724+00:00"
+                },
+                "receipt": {
+                  "entity_type": "source",
+                  "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                  "version": 0,
+                  "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                  "first_saved_at": "2026-10-15T04:30:14.136467+00:00",
+                  "presence_observed_at": "2026-10-15T04:30:14.136467+00:00",
+                  "basis": "trusted_insert"
+                },
+                "known_by_at": "2026-10-15T04:30:14.136467+00:00",
+                "first_save_known": true,
+                "limitations": [
+                  "Clock provenance is trusted runtime input, not independently certified.",
+                  "Receipt confirms presence of this snapshot; origin closure, company, public status and mutable-state history are separate checks.",
+                  "Legacy presence is a known-by bound, not a reconstructed first-save time."
+                ]
+              }
+            },
+            "usage_availability": {
+              "status": "matched",
+              "reason_codes": [],
+              "availability": {
+                "entity_type": "source",
+                "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                "version": 0,
+                "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                "as_of": "2026-10-15T05:05:19.776661+00:00",
+                "knowledge_at": "2026-10-15T05:05:19.776661+00:00",
+                "status": "available",
+                "available": true,
+                "reason_codes": [],
+                "effective_fields": {
+                  "retrieved_at": "2026-10-15T04:22:56.478724+00:00"
+                },
+                "receipt": {
+                  "entity_type": "source",
+                  "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                  "version": 0,
+                  "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                  "first_saved_at": "2026-10-15T04:30:14.136467+00:00",
+                  "presence_observed_at": "2026-10-15T04:30:14.136467+00:00",
+                  "basis": "trusted_insert"
+                },
+                "known_by_at": "2026-10-15T04:30:14.136467+00:00",
+                "first_save_known": true,
+                "limitations": [
+                  "Clock provenance is trusted runtime input, not independently certified.",
+                  "Receipt confirms presence of this snapshot; origin closure, company, public status and mutable-state history are separate checks.",
+                  "Legacy presence is a known-by bound, not a reconstructed first-save time."
+                ]
+              }
+            },
+            "current_availability": {
+              "status": "matched",
+              "reason_codes": [],
+              "availability": {
+                "entity_type": "source",
+                "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                "version": 0,
+                "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                "as_of": "2026-10-15T05:09:27.926742+00:00",
+                "knowledge_at": "2026-10-15T05:09:27.926742+00:00",
+                "status": "available",
+                "available": true,
+                "reason_codes": [],
+                "effective_fields": {
+                  "retrieved_at": "2026-10-15T04:22:56.478724+00:00"
+                },
+                "receipt": {
+                  "entity_type": "source",
+                  "entity_id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+                  "version": 0,
+                  "snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+                  "first_saved_at": "2026-10-15T04:30:14.136467+00:00",
+                  "presence_observed_at": "2026-10-15T04:30:14.136467+00:00",
+                  "basis": "trusted_insert"
+                },
+                "known_by_at": "2026-10-15T04:30:14.136467+00:00",
+                "first_save_known": true,
+                "limitations": [
+                  "Clock provenance is trusted runtime input, not independently certified.",
+                  "Receipt confirms presence of this snapshot; origin closure, company, public status and mutable-state history are separate checks.",
+                  "Legacy presence is a known-by bound, not a reconstructed first-save time."
+                ]
+              }
+            },
+            "historical_publicity": {
+              "status": "matched",
+              "reason_codes": [],
+              "effective_information_status": null,
+              "latest_review": null
+            },
+            "current_publicity": {
+              "status": "matched",
+              "reason_codes": [],
+              "effective_information_status": null,
+              "latest_review": null
+            },
+            "usage_publicity": {
+              "status": "matched",
+              "reason_codes": [],
+              "effective_information_status": null,
+              "latest_review": null
+            },
+            "historical_classification": {
+              "status": "matched",
+              "reason_codes": [],
+              "kind": "schedule",
+              "version": 1,
+              "recorded_at": "2026-10-15T04:30:14.150439+00:00"
+            },
+            "current_classification": {
+              "status": "matched",
+              "reason_codes": [],
+              "kind": "schedule",
+              "version": 1,
+              "recorded_at": "2026-10-15T04:30:14.150439+00:00"
+            }
+          }
+        ],
+        "historical_usability": {
+          "status": "matched",
+          "reason_codes": []
+        },
+        "current_use": {
+          "status": "matched",
+          "reason_codes": []
+        },
+        "schedule": {
+          "status": "candidate_only",
+          "claim_id": "jp:1332:2027fy-q3-release:schedule-1",
+          "date": "2027-02-05",
+          "date_interpretation": "caller_mapping_unverified"
+        },
+        "timing": {
+          "status": "floating_date",
+          "scheduled_date": "2027-02-05",
+          "scheduled_at": null,
+          "time": null,
+          "timezone": null,
+          "relation_to_as_of": "unknown_timezone"
+        },
+        "due": null,
+        "occurrence": {
+          "status": "not_established"
+        },
+        "result_documents": {
+          "status": "none_linked"
+        },
+        "semantic_review_required": true,
+        "mapping_prospectiveness": "unverified"
+      }
+    ],
+    "calendar_window": {
+      "date_from": "2026-11-01",
+      "date_through": "2026-11-30"
+    },
+    "limitations": [
+      "Date interpretations and period correspondence are caller mappings requiring semantic review.",
+      "Mapping prospectiveness is unverified; event registration and full-universe completeness are not established.",
+      "Occurrence, cancellation, rescheduling, results, fingerprints, change detection and exact-time resolution are not implemented.",
+      "No jobs, questions, forecasts, thesis updates, messages or orders are created."
+    ],
+    "source_sections": {
+      "sources": {
+        "status": "known",
+        "row_count": 52,
+        "reason_codes": []
+      },
+      "record_availability": {
+        "status": "known",
+        "row_count": 52,
+        "reason_codes": []
+      },
+      "source_classifications": {
+        "status": "known",
+        "row_count": 52,
+        "reason_codes": []
+      }
+    },
+    "table_status": {
+      "sources": "known",
+      "record_availability": "known",
+      "source_classifications": "known"
+    },
+    "coverage": {
+      "event_count": 3,
+      "in_window_count": 2,
+      "outside_window_count": 1,
+      "date_unknown_count": 0,
+      "source_bound_candidate_count": 3
+    }
+  },
+  "status": "passed"
+}

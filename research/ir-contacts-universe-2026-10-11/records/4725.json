@@ -1,0 +1,70 @@
+{
+  "security_code": "4725",
+  "company_name": "ＣＡＣ　Ｈｏｌｄｉｎｇｓ",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "情報・通信業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.cac-holdings.com/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T12:45:17.118082+00:00",
+  "completed_at": "2026-10-11T12:45:37.729131+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/4725/20261011T124517118132Z/01.json",
+      "url": "https://www.cac-holdings.com/",
+      "retrieved_at": "2026-10-11T12:45:26.705955+00:00",
+      "quote": "株式会社CAC Holdings",
+      "role": "issuer_identity"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.cac-holdings.com/",
+      "final_url": "https://www.cac-holdings.com/",
+      "snapshot": "evidence/4725/20261011T124517118132Z/01.json",
+      "retrieved_at": "2026-10-11T12:45:26.705955+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "保存公式入口は社名だけで金融IR質問受付は未実証。動的表示の内容/窓口不存在は判定しない。",
+    "実入力欄・IRメール・受付条件は未確認。"
+  ],
+  "discovery": {
+    "security_code": "4725",
+    "official_url": "https://www.cac-holdings.com/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ＣＡＣ Ｈｏｌｄｉｎｇｓ",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/4725/20261011T124517118132Z/01.json",
+      "normalized_name": "cac",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 2,
+  "previous_attempts": [
+    "attempts/4725/20261011T045047506092Z.json",
+    "attempts/4725/20261011T124537729313Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "ir_operations_47_batch04",
+    "reviewed_at": "2026-10-11T12:59:56.576198+00:00",
+    "notes": "CAC Holdings正式名を公式hostnameの公開入口で確認。保存homepageの可視本文は社名だけ（18文字/BOM含む）、forms0/受付リンクなしの動的表示入口で、金融IR窓口や公開メールを実証できない。JS内の推測URLや他社/旧同名メールを採用せずU。"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "sources": [
+    {
+      "id": "case-public:5dcf896822ffca8ca4958a5c6074d8ad99d992555bd2fa41d01a9ce859f77b3d",
+      "title": "決算短信 | ユキグニファクトリー株式会社 | キノコのチカラ、ミライのセカイ",
+      "url": "https://www.yukiguni-factory.co.jp/ir/library/results/",
+      "retrieved_at": "2026-10-15T05:07:55.430243+00:00",
+      "published_at": null,
+      "raw_sha256": "8b5439f7f1de0bff6869309889a3656face3a4fc6b8031964731aaab7ec1448e",
+      "document_kind": "issuer_financial_results_index_only"
+    },
+    {
+      "id": "case-public:c535744c09aaeac1f7db04290533a1a5964675682c00ab1f54e1337fa40a3c89",
+      "title": "公式E-IR日本語設定（データとして保存）",
+      "url": "https://www.yukiguni-factory.co.jp/wp-content/themes/ai-yukiguni/assets/js/ir/eir/eir_v5.js",
+      "retrieved_at": "2026-10-15T05:08:19.887233+00:00",
+      "published_at": null,
+      "raw_sha256": "68d33eac98a720c57b612bd6585523fedbc727032a28c3d9dd16d3d01e743078",
+      "document_kind": "issuer_eir_configuration_not_financial_body"
+    },
+    {
+      "id": "case-public:abd79b1aa229f72012832fadbab8ead5b3bb8483d90ce0c549ef9665dd4995c6",
+      "title": "公式E-IR core loader（データとして保存）",
+      "url": "https://ssl4.eir-parts.net/Custom/public/v5parts/1375/jp/20250305/core/eir_common.js",
+      "retrieved_at": "2026-10-15T05:08:32.386471+00:00",
+      "published_at": null,
+      "raw_sha256": "fcb86b1019dba5d9e721d73452b8def056671b002a9c5e8d315807cb87bda206",
+      "document_kind": "issuer_eir_loader_not_financial_body"
+    }
+  ],
+  "source_content_quotes": [
+    {
+      "id": "config-company-id",
+      "source_id": "case-public:c535744c09aaeac1f7db04290533a1a5964675682c00ab1f54e1337fa40a3c89",
+      "quote": "var eirCode = '1375';",
+      "location": {
+        "text_character_start": 53,
+        "text_character_end": 74,
+        "offset_unit": "Unicode code points, end exclusive",
+        "pdf_page": null
+      },
+      "supports": "Company code in infrastructure config, independently matches initial FAQ; not financial data."
+    },
+    {
+      "id": "config-current-core-path",
+      "source_id": "case-public:c535744c09aaeac1f7db04290533a1a5964675682c00ab1f54e1337fa40a3c89",
+      "quote": "var eirPassCore = eirPass + 'core/';",
+      "location": {
+        "text_character_start": 1339,
+        "text_character_end": 1375,
+        "offset_unit": "Unicode code points, end exclusive",
+        "pdf_page": null
+      },
+      "supports": "Literal resource path only."
+    },
+    {
+      "id": "loader-next-config-reference",
+      "source_id": "case-public:abd79b1aa229f72012832fadbab8ead5b3bb8483d90ce0c549ef9665dd4995c6",
+      "quote": "scriptLoader.setSrc(unescape(eirPassApp + 'conf/common_conf.js' + gt));",
+      "location": {
+        "text_character_start": 7732,
+        "text_character_end": 7803,
+        "offset_unit": "Unicode code points, end exclusive",
+        "pdf_page": null
+      },
+      "supports": "Next literal config reference seen offline; not fetched within this3GET task."
+    }
+  ],
+  "raw_implementation_observations": [
+    {
+      "source_id": "case-public:5dcf896822ffca8ca4958a5c6074d8ad99d992555bd2fa41d01a9ce859f77b3d",
+      "raw_file": "raw/8b5439f7f1de0bff6869309889a3656face3a4fc6b8031964731aaab7ec1448e",
+      "raw_sha256": "8b5439f7f1de0bff6869309889a3656face3a4fc6b8031964731aaab7ec1448e",
+      "quote": "script1.src = 'https://www.yukiguni-factory.co.jp/wp-content/themes/ai-yukiguni/assets/js/ir/eir/' + (isEnglish ? 'eire_v5.js' : 'eir_v5.js');",
+      "location": {
+        "raw_UTF8_character_start": 46750,
+        "raw_UTF8_character_end": 46892,
+        "pdf_page": null
+      },
+      "supports": "Dynamic Japanese config reference; not financial body or publication date."
+    }
+  ],
+  "literal_request_evidence": "request-derivation.json"
+}

@@ -1,0 +1,497 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T14:50:04.973718+00:00",
+  "status": "design_fixed_not_implemented",
+  "minimal_scope": "Strict success source-binding offline validation with old verifier unchanged. New native format only.",
+  "API_CLI": {
+    "function": "verify_public_capture_binding(binding_path, *, repository_root) -> dict",
+    "location_proposed": "scripts/verify_case_source_bundle.py beside existing private byte/path/comparison helpers",
+    "CLI": "python scripts/verify_case_source_bundle.py BINDING.json --repository-root ROOT --capture-binding",
+    "opt_in": "New boolean flag defaultsfalse. Existing positional/parser API and verify_case_source_bundle output are unchanged when omitted. No autodetection from provider/metadata.",
+    "error_contract": "ValueError for malformed known schema/syntax with generic field labels only. CLI exit2 via ordinary validation path; known mismatch exit1; completed audit unknown/matched exit0. Existing non-opt-in error contract unchanged.",
+    "scope": "One explicit sidecar/source/transport record. No multi-company orchestration, registry, DB, fetcher or migration."
+  },
+  "strict_required_schema": {
+    "binding": {
+      "required_keys": [
+        "format",
+        "version",
+        "case_root",
+        "source",
+        "transport"
+      ],
+      "source_required_keys": [
+        "artifact",
+        "pointer",
+        "snapshot_sha256",
+        "snapshot_hash_profile"
+      ],
+      "transport_required_keys": [
+        "artifact",
+        "record_pointer"
+      ],
+      "artifact_required_keys": [
+        "path",
+        "sha256",
+        "byte_count"
+      ],
+      "unknown_fields": "ValueError for recognized v1 at every defined object; no caller verified/approved flags"
+    },
+    "native_record": {
+      "required_keys": [
+        "format",
+        "version",
+        "request",
+        "response",
+        "artifacts",
+        "extraction"
+      ],
+      "request_required_keys": [
+        "method",
+        "url",
+        "user_agent_configured",
+        "user_agent_prepared",
+        "started_at"
+      ],
+      "response_required_keys": [
+        "url",
+        "status_code",
+        "complete_body",
+        "error",
+        "headers_received_at",
+        "body_completed_at",
+        "body_representation",
+        "content_length_header"
+      ],
+      "artifacts_required_keys": [
+        "raw",
+        "extracted_text"
+      ],
+      "extraction_required_keys": [
+        "profile",
+        "implementation",
+        "parameters",
+        "text"
+      ],
+      "profile_required_keys": [
+        "name",
+        "version"
+      ],
+      "implementation_required_keys": [
+        "name",
+        "version",
+        "sha256"
+      ],
+      "source_type_scope": "public_disclosure only in v1. Other otherwise-valid source types are outside scope/unknown, not silently adapted.",
+      "nullable_failure_fields": [
+        "response.status_code null when no HTTP response",
+        "response.headers_received_at null when absent",
+        "response.body_completed_at null for incomplete body",
+        "artifacts.extracted_text null and extraction null when no output exists"
+      ],
+      "success_requires_nonnull": "On 200/complete/error-null path: headers/body completion, extracted_text artifact and extraction object/text are all required nonnull."
+    },
+    "types": {
+      "versions": "type(value) is int, >=1; bool/float/null/containers rejected before dispatch",
+      "method": "GET only",
+      "status_code": "null or strict int100..599; bool/float rejected",
+      "complete_body": "strict bool",
+      "error": "null or nonempty string, never emitted",
+      "times": "offset-aware strings via models.timestamp; local wrapper returns generic label on malformed values, no offending value echoed",
+      "hash": "required lowercase64 hex; implementation.sha256 only may be null because no implementation identity verification is done",
+      "byte_count": "strict int>=0, including real0",
+      "URLs": "nonempty http(s) strings checked as references; exact lexical equality request.url=response.url=source.url for this no-redirect v1. No normalization/redirect lookup. Never emitted in audit/errors.",
+      "content_length_header": "null or decimal digit string only; shape declared, not compared to decoded entity bytes",
+      "UTF8_text": "strings encodable as strictUTF8; extracted bytes decoded directly, no universal newline translation or silent BOM stripping"
+    }
+  },
+  "synthetic_coherent_example_not_files_created": {
+    "binding": {
+      "format": "ir-public-source-binding",
+      "version": 1,
+      "case_root": "research/synthetic-native-capture-fixture",
+      "source": {
+        "artifact": {
+          "path": "source-bundle.json",
+          "sha256": "00890d2cdac8abfc235a6601420d21e351ea7ff58aff665ea3a846f9f0862a30",
+          "byte_count": 352
+        },
+        "pointer": "/sources/0",
+        "snapshot_sha256": "5638d98510d36568b64f40e5d6362ba39d7a75e351157c5d1b1c153813b91da3",
+        "snapshot_hash_profile": "ir_agent.models.json_text/UTF-8"
+      },
+      "transport": {
+        "artifact": {
+          "path": "capture.json",
+          "sha256": "60fe639fe52ae7f0087a7170c8628dec31df5c88f4d2dd662e7b226b175e2ae3",
+          "byte_count": 1080
+        },
+        "record_pointer": "/records/0"
+      }
+    },
+    "selected_native_transport_record": {
+      "format": "ir-public-response-capture",
+      "version": 1,
+      "request": {
+        "method": "GET",
+        "url": "https://issuer.invalid/document",
+        "user_agent_configured": "Synthetic-UA/1",
+        "user_agent_prepared": "Synthetic-UA/1",
+        "started_at": "2026-10-15T00:00:00+00:00"
+      },
+      "response": {
+        "url": "https://issuer.invalid/document",
+        "status_code": 200,
+        "complete_body": true,
+        "error": null,
+        "headers_received_at": "2026-10-15T00:00:01+00:00",
+        "body_completed_at": "2026-10-15T00:00:02+00:00",
+        "body_representation": "response_entity_after_content_decoding",
+        "content_length_header": null
+      },
+      "artifacts": {
+        "raw": {
+          "path": "raw/entity.bin",
+          "sha256": "7ea912a77246e2e06bc36d5836e27c2af57c8338d22d5634bec6ca7b2d2c27b6",
+          "byte_count": 13
+        },
+        "extracted_text": {
+          "path": "text.txt",
+          "sha256": "7ea912a77246e2e06bc36d5836e27c2af57c8338d22d5634bec6ca7b2d2c27b6",
+          "byte_count": 13
+        }
+      },
+      "extraction": {
+        "profile": {
+          "name": "plain_utf8_preserve",
+          "version": 1
+        },
+        "implementation": {
+          "name": "synthetic-only-not-an-extractor",
+          "version": "example",
+          "sha256": null
+        },
+        "parameters": {
+          "decoder": "utf-8",
+          "BOM": "preserve",
+          "line_endings": "preserve"
+        },
+        "text": "Line1\r\nLine2\n"
+      }
+    },
+    "transport_artifact_JSON": {
+      "records": [
+        {
+          "format": "ir-public-response-capture",
+          "version": 1,
+          "request": {
+            "method": "GET",
+            "url": "https://issuer.invalid/document",
+            "user_agent_configured": "Synthetic-UA/1",
+            "user_agent_prepared": "Synthetic-UA/1",
+            "started_at": "2026-10-15T00:00:00+00:00"
+          },
+          "response": {
+            "url": "https://issuer.invalid/document",
+            "status_code": 200,
+            "complete_body": true,
+            "error": null,
+            "headers_received_at": "2026-10-15T00:00:01+00:00",
+            "body_completed_at": "2026-10-15T00:00:02+00:00",
+            "body_representation": "response_entity_after_content_decoding",
+            "content_length_header": null
+          },
+          "artifacts": {
+            "raw": {
+              "path": "raw/entity.bin",
+              "sha256": "7ea912a77246e2e06bc36d5836e27c2af57c8338d22d5634bec6ca7b2d2c27b6",
+              "byte_count": 13
+            },
+            "extracted_text": {
+              "path": "text.txt",
+              "sha256": "7ea912a77246e2e06bc36d5836e27c2af57c8338d22d5634bec6ca7b2d2c27b6",
+              "byte_count": 13
+            }
+          },
+          "extraction": {
+            "profile": {
+              "name": "plain_utf8_preserve",
+              "version": 1
+            },
+            "implementation": {
+              "name": "synthetic-only-not-an-extractor",
+              "version": "example",
+              "sha256": null
+            },
+            "parameters": {
+              "decoder": "utf-8",
+              "BOM": "preserve",
+              "line_endings": "preserve"
+            },
+            "text": "Line1\r\nLine2\n"
+          }
+        }
+      ]
+    },
+    "source_bundle_artifact_JSON": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "synthetic:declared-not-derived",
+          "company_id": "jp:TEST",
+          "title": "Synthetic native capture",
+          "url": "https://issuer.invalid/document",
+          "source_type": "public_disclosure",
+          "published_at": null,
+          "retrieved_at": "2026-10-15T00:00:02+00:00",
+          "content": "Line1\r\nLine2\n",
+          "requires_research": true,
+          "metadata": {
+            "synthetic": true
+          }
+        }
+      ]
+    },
+    "raw_and_output_bytes_UTF8_representation": "Line1\r\nLine2\n",
+    "example_artifact_JSON_serialization": "UTF8 json.dumps ensure_ascii=False,sort_keys=True,separators comma-colon + finalLF. Snapshot hash alone uses existing json_text with no finalLF. These are illustrative synthetic bytes, not retrieved sources."
+  },
+  "profiles_declaration_only": {
+    "plain_utf8_preserve": {
+      "version": 1,
+      "parameters": {
+        "decoder": "utf-8",
+        "BOM": "preserve",
+        "line_endings": "preserve"
+      }
+    },
+    "html_visible_nodes_lf": {
+      "version": 1,
+      "parameters": {
+        "decoder": [
+          "utf-8",
+          "utf-8-sig"
+        ],
+        "ignored_elements": [
+          "script",
+          "style"
+        ],
+        "convert_charrefs": true,
+        "node_whitespace": "collapse",
+        "joiner": "LF",
+        "terminal_LF": true
+      }
+    },
+    "pdftotext_layout": {
+      "version": 1,
+      "parameters": {
+        "arguments": [
+          "-layout"
+        ],
+        "output_encoding": "UTF-8",
+        "form_feeds": "preserve",
+        "page_numbering": "one_based"
+      }
+    }
+  },
+  "pointer_contract": [
+    "RFC6901 string, empty root or slash-prefixed tokens; exact~0/~1 decoding once, no URL percent decoding.",
+    "Object key may be empty/01/-; array index must be0 or[1-9][0-9]*ASCII; no -, leadingzero, negative/floats. Missing valid ref=>unknown, malformed syntax/index=>validationerror.",
+    "Apply pointer only after artifact SHA/count matched. Selectednative record declares its ownformat/version; outercontainer schema not searched.",
+    "Strictparse entire pinnedJSON artifact rejects duplicate/nonfinite values even in unselected siblings."
+  ],
+  "path_contract": [
+    "binding path must stay repository_root, existing core API boundary. case_root explicit repository-relative resolved inside repository.",
+    "raw/transport/source/output artifact paths are relative to explicitcase_root only; reject absolute/../NUL/symlink escape before read. No parent/bundle-dir inference.",
+    "Missing declared file=>unknown; required schemafield absent=>ValueError. No read of missing/outside targets. Files assumedstable; no OSfd race-hardening or writer lock introduced."
+  ],
+  "binding_checks": [
+    "Read sidecar bytes strictUTF8 parse_json; commonformat/version typeguard then dispatch; unknownformat/version immediatelyunknown with no provider fallback.",
+    "Hash/count pin sourcebundle artifact, strictpointer select source; hash json_text(original source dict) before validationdefaults. validate_source separately without mutating original.",
+    "Hash/count pin capture artifact, strictpointer select one native record; exactformat/version dispatch. Recognizedrequired objects/enums/types validated.",
+    "Success requiresGET/status200/complete_bodytrue/errornull, known response_entity_after_content_decoding; failedresponse not a successfulsource even ifsamebytes. wire_capture knownenum but outsidefirstscope=>unknown, not entitymatch.",
+    "Aware instants: started<=headers<=bodycompleted, source.retrieved_at==bodycompleted. Compare datetime instants, not ISOlexical representations. Clocks remain callerclaims, not independent occurrence certification.",
+    "Exactstring request.url=response.url=source.url and configuredUA=preparedUA; no redirect/normalization. Values omitted from report/errors.",
+    "Raw/artifact SHA andbytecount compare. content_length_header is not raw/entitybytecount; under decodedcontentencoding theymaydiffer and is informationalonly.",
+    "Extraction output bytes strictUTF8 == nativeextraction.text UTF8 == source.content UTF8, no CRLF/BOM/formfeed normalization. OutputSHA/count pinned. Raw→output transformation is expressly NOT replayed.",
+    "Known profile enum/version/parameters shape only; pinnedimplementation declaration recordedbutnot executed/verified. No profileprose eval or installedtool matching.",
+    "Overallmismatch winsunknown; matched only means declaredbytes/knownfields agree. Missingartifact or validmissingpointerunknown. Knownmalformed input throws genericValueError, no secrets."
+  ],
+  "result_contract": {
+    "status": "matched|mismatch|unknown",
+    "scope": "native_declared_saved_bytes_and_fields_only",
+    "format_support": "matched|unknown",
+    "declared_artifact_bytes": {
+      "status": "matched|mismatch|unknown",
+      "checks": "path/hash/count and generic reason codes only"
+    },
+    "transport_source_binding": {
+      "status": "matched|mismatch|unknown",
+      "checks": "known typedURL/UA/time/success/text equality only, values omitted"
+    },
+    "profile_declaration": {
+      "status": "recognized|unknown",
+      "implementation_identity_verified": false
+    },
+    "all_declared_bindings_agree": "true for native successful knownschema+bytes/fields matched; false mismatch; nullunknown",
+    "source_snapshot_sha256": "Project json_text commitment, no ID derivation",
+    "reason_codes": "Stable generic labels, never URL/header/error/rawcontent",
+    "source_id_verification": "not_performed",
+    "extractor_reproduction": "not_performed",
+    "citation_byte_binding": "not_performed",
+    "citation_semantic_verification": "not_performed",
+    "issuer_authenticity_verification": "not_performed",
+    "semantic_financial_verification": "not_performed",
+    "current_collection_permission": "not_performed",
+    "DB_first_save_verification": "not_performed"
+  },
+  "gap_disposition": [
+    {
+      "gap_id": "format-dispatch",
+      "first_unit": "opt-in newformat/version validation; legacy untouched"
+    },
+    {
+      "gap_id": "typed-extraction-profile",
+      "first_unit": "Typeddeclaration only, profile replay deferred"
+    },
+    {
+      "gap_id": "transport-times-and-status",
+      "first_unit": "Strictsuccessconditions andawareinstant fieldbinding only"
+    },
+    {
+      "gap_id": "case-root-and-json-pointer",
+      "first_unit": "Explicit artifact/pointer/path schema using existinghelpers"
+    },
+    {
+      "gap_id": "raw-and-projection-boundary",
+      "first_unit": "Rawartifact andUTF8saved-output binding only; transformations/SDKprojections deferred"
+    },
+    {
+      "gap_id": "trust-status-separation",
+      "first_unit": "Independent resultdimensions withnot_performed domains"
+    },
+    {
+      "gap_id": "source-identity-and-history",
+      "first_unit": "IDderivation/migration deferred; snapshotSHAonly, no oldsource changes"
+    },
+    {
+      "gap_id": "collection-policy-not-byte-permission",
+      "first_unit": "Policy/robots evaluation deferred; artifact binding never permits nextGET"
+    }
+  ],
+  "helper_reuse": [
+    {
+      "helper": "models.parse_json/json_text/validate_source/timestamp/integer/text/object_value",
+      "use": "StrictJSON, originalsnapshot commitment, source shape/awareinstants/typeguards; wrap errors in nativebranch to avoid echoing untrusted values. No global helper behavior change."
+    },
+    {
+      "helper": "existing verifier _relative/_artifact/_comparison/_hash/_sha",
+      "use": "Remain samefile privatehelpers; native requiredguards precede legacy helpers that permitNone. Reuse forbytes/path/equality; do not alter legacy semantics."
+    },
+    {
+      "helper": "current tests/test_case_source_verifier.py",
+      "use": "Keep9tests unchanged; new small testmodule fornativeopt-in + targetedlegacycompat cases. No fullsuite atdesign time."
+    }
+  ],
+  "acceptance_cases": [
+    {
+      "id": "happy-CRLF-root-and-nested",
+      "input": "Synthetic plaintext bytes with CRLF/LF. Binding root source pointer and nested /records/0 alternative, pinned hashes/counts.",
+      "expected": "matched_declared_binding; all other verification dimensions not_performed; no files mutated."
+    },
+    {
+      "id": "strict-pointer",
+      "input": "Empty pointer root; /records/0; keys with ~0/~1 and empty key token.",
+      "expected": "Exact single node, no recursive search. ~01 decodes to literal~1 (decode once). Arrays accept only0 or nonzero ASCIIdecimal without leadingzero; - is rejected."
+    },
+    {
+      "id": "missing-vs-malformed-pointer",
+      "input": "Missing object key/out-of-range valid array index versus bad~ escape/no leading slash/array01/boolpointer.",
+      "expected": "Missing valid reference=>unknown; malformed pointer/evaluation index syntax=>ValueError. Scalar source target=>ValueError."
+    },
+    {
+      "id": "unknown-format-version-no-fallback",
+      "input": "Unknown binding/native format or positive version2, even with recognized legacy provider; unavailable referenced artifact.",
+      "expected": "unknown and no legacy fallback/unsupported-section deep reads. Versiontrue/1.0/null/container=>ValueError."
+    },
+    {
+      "id": "strict-JSON-and-types",
+      "input": "Duplicate key/nonfinite JSON in sidecar or pinned source/capture; malformed native enum/hash/count/list/dict/null.",
+      "expected": "Generic non-sensitive ValueError, CLIexit2; bool byte counts/status/version rejected; no traceback or token leak."
+    },
+    {
+      "id": "known-byte-field-mismatch",
+      "input": "Wrong SHA/count/source snapshot commitment; LF replacingCRLF while hashupdated; transport.text altered.",
+      "expected": "mismatch, never passed by visual equality. Known tampered artifact is not trusted for downstream record binding."
+    },
+    {
+      "id": "instant-time-not-string",
+      "input": "Source +09:00 and responseUTC sameinstant, exact age microseconds; naive/reversed/partial date strings.",
+      "expected": "Sameinstant accepted; malformed clocks=>ValueError; known out-of-order/equality disagreements=>mismatch. No DB firstsave/publication recognized."
+    },
+    {
+      "id": "failed-native-capture",
+      "input": "403/503/redirect status, completefalse/errornonnull; null completion/output.",
+      "expected": "Welltyped failed record=>mismatch for successful source binding, extraction not applicable/unknown; no manufactured empty content/full success. Missing/wrong typed required schema=>ValueError."
+    },
+    {
+      "id": "missing-declared-artifact",
+      "input": "Validrequired reference points to absent file, validpointer missesnode.",
+      "expected": "unknown with named reason;0byte existing file remains0, not missing. Permissions/I/O failure=>sanitized ordinary error, no secret values."
+    },
+    {
+      "id": "path-boundary",
+      "input": "Explicitalternate caseroot, absolute/../NUL path, source/transport/output symlink escape.",
+      "expected": "Explicit containedroot accepted; escapes rejected before reading destination (guarded read probe); no bundle-parent fallback."
+    },
+    {
+      "id": "profile-declaration-not-replay",
+      "input": "Known three profile name/version/params plus unsupported name/version and unsupportedwire representation.",
+      "expected": "Known declaration may be structurally recognized; replay alwaysnot_performed. Unknownprofile=>profile_support unknown/overallunknown; wire_capture=>unknown scope, never treated as responseentity. Knownprofile malformedparams=>ValueError."
+    },
+    {
+      "id": "URL-UA-and-sensitive-report",
+      "input": "Matching and mismatching URLs/UA; SECRET URL userinfo/query, header/error strings, invalid timestamp withSECRET.",
+      "expected": "Agreement fields only; mismatch knownconditions. Report/error do not contain URLs, headers, rawerror, original/extracted text or token; generic field reasoncodes."
+    },
+    {
+      "id": "old-regression-checkpoint",
+      "input": "Existing9 verifier tests plus saved3examples7525-policy1518-calendar1332statement.",
+      "expected": "Unmodified legacy API/output fields/status/counts: unknown/unknown/matched respectively. Native opt-in must not change default legacy dispatch."
+    },
+    {
+      "id": "read-only-no-semantics",
+      "input": "Allsynthetic artifacts+requests/Store/sqlite/subprocess guarded; before/after filehashes.",
+      "expected": "No GET/Store/DB/tool invocation/rewrites. source_id/profile_replay/citation/authenticity/financial/permission allnot_performed even byte matched."
+    }
+  ],
+  "not_in_first_implementation": [
+    "SourceID derivation/re-ID/canonical naming changes",
+    "Actual HTML/PDF extraction or CLI/tool replay; OCR/visual transcription validity",
+    "Citation byte offsets or quote meaning",
+    "Issuer identity/authenticity/publication-time/broker/financial adoption validation",
+    "Newcollector/sourcewriter/version migration or rewrite of oldAnritsu capture",
+    "SDK/JSONprojectionprofiles, redirects, dynamicexecution, retries, network diagnosis",
+    "Robots/UA policy permission replay/currentGET authorization, DBfirstsave",
+    "Universal keysearch, multi-document registry or generic schemaframework"
+  ],
+  "legacy_boundary": "Do not tag existingAnritsu/othercase captures as nativev1 or mutate oldsource IDs/metadata. Anyfuturecollector must intentionallyemit newnativeversion. Optional retro checks need separatelydatedsidecar under another agreedscope, never historicalnative claims.",
+  "evidence_files": {
+    "research/ir-public-capture-contract-review-2026-10-15/README.md": "b4d2846e2ca9d3d2430e92fdc49572ae6bea72e424591dbed939bb0abd0253fa",
+    "research/ir-public-capture-contract-review-2026-10-15/gaps.json": "24fb7e1bd88d8d8a3da76e00eee047a741b64c438c17961dd42041a07addb268",
+    "research/ir-public-capture-contract-review-2026-10-15/evidence.json": "7cd617c0f9ec6e4696a4f822566e673e6cbc4388d564a08ab35acf776036e26e",
+    "scripts/verify_case_source_bundle.py": "d728badabad0fb0883acaec768477c9566e9dc0a01ac43a3c16ea7fb50e5edc3",
+    "tests/test_case_source_verifier.py": "c5b6e0be5fed3b6b8d7cde337b4549d7ce851cd1cdcc52a33435ef881e02ad9a",
+    "src/ir_agent/models.py": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c",
+    "src/ir_agent/adapters/common.py": "a6ca5fdd16778706f8a4de072bcdb27f5dcd78efbc6768039d1116606ebbb095"
+  },
+  "design_validation_only": {
+    "all8_gap_ids_accounted": true,
+    "example_sha_counts_computed_from_syntheticbytes": true,
+    "production_or_tests_edited": false,
+    "existing_files_unchanged": true,
+    "GETs": 0,
+    "DB_accesses": 0,
+    "tests_run": 0,
+    "implementation_started": false
+  }
+}

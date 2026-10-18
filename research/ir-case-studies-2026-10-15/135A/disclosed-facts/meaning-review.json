@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "company_id": "jp:135A",
+  "reviewed_at": "2026-10-15T04:51:43.827086+00:00",
+  "status": "meaning_review_required",
+  "citations": [
+    {
+      "id": "nonconsolidated-japanese-gaap",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 1,
+      "printed_page": null,
+      "page_text_start": 10,
+      "page_text_end_exclusive": 49,
+      "quote": "2027年２月期      第２四半期（中間期）決算短信〔日本基準〕(非連結)"
+    },
+    {
+      "id": "interim-period",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 1,
+      "printed_page": null,
+      "page_text_start": 575,
+      "page_text_end_exclusive": 620,
+      "quote": "１．2027年２月期第２四半期（中間期）の業績（2026年３月１日～2026年８月31日）"
+    },
+    {
+      "id": "full-year-forecast-period",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 1,
+      "printed_page": null,
+      "page_text_start": 2388,
+      "page_text_end_exclusive": 2425,
+      "quote": "３．2027年２月期の業績予想（2026年３月１日～2027年２月28日）"
+    },
+    {
+      "id": "display-precision",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 1,
+      "printed_page": null,
+      "page_text_start": 564,
+      "page_text_end_exclusive": 574,
+      "quote": "(百万円未満切捨て)"
+    },
+    {
+      "id": "shares-and-forecast-caution",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 2,
+      "printed_page": null,
+      "page_text_start": 252,
+      "page_text_end_exclusive": 728,
+      "quote": "（３）発行済株式数（普通株式）\n  ① 期末発行済株式数 (自己株式を含む)   2027年２月期中間期    10,256,000株 2026年２月期      10,256,000株\n\n  ②   期末自己株式数            2027年２月期中間期          －株 2026年２月期                －株\n\n  ③   期中平均株式数（中間期）       2027年２月期中間期    10,256,000株 2026年２月期中間期   10,150,533株\n\n\n ※   第２四半期（中間期）決算短信は公認会計士又は監査法人のレビューの対象外です\n ※   業績予想の適切な利用に関する説明、その他特記事項\n （将来に関する記述等についてのご注意）\n  本資料に記載されている業績見通し等の将来に関する記述は、当社が現在入手している情報及び合理的であると判\n 断する一定の前提に基づいており、その達成を当社として約束するものではありません。また、実際の業績等は様々\n な要因により大きく異なる可能性があります。"
+    },
+    {
+      "id": "company-forecast-unchanged",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 5,
+      "printed_page": 3,
+      "page_text_start": 376,
+      "page_text_end_exclusive": 501,
+      "quote": "業績予想につきましては、2026年４月14日付「2026年２月期   決算短信」で公表いたしました通期の業績予想に変\n更はありません。業績予想値は、現在入手可能な情報に基づき作成したものであり、実際の業績等は様々な要因によ\nり異なる可能性があります。"
+    }
+  ],
+  "visual_table_review": {
+    "reviewed_by": "agent:/root/quote_normalization",
+    "pdf_page": 1,
+    "original_raw_sha256": "6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+    "temporary_image": "/tmp/vrain-135a-statement-p1.png",
+    "image_sha256": "d79053c24ba193c2ac7720274ca4b67bddf2ee466e78bed0db62aade377e8d32",
+    "method": "pdftoppm -f 1 -singlefile -scale-to 1800 -png; visually checked against saved PDF; not table-meaning automation"
+  },
+  "limitations": [
+    "All five metrics are non-consolidated, Japanese GAAP; do not relabel them consolidated.",
+    "Interim cumulative EPS and operating profit are not stand-alone Q2 or annualized results.",
+    "Basic EPS26.06 and diluted EPS25.94 are separate columns; prior-period values have a different period and share denominator.",
+    "Company FY guidance is not achieved results, a project forecast, or an approved valuation assumption.",
+    "The forecast annual dividend0.00 is an explicit numeric token in the total column, not a missing dash. A single-period zero forecast neither supplies future dividend years nor establishes zero intrinsic value.",
+    "Million-yen truncation is the disclosed display precision. Converting the displayed token to JPY does not establish underlying single-yen precision.",
+    "Forward EPS denominator, potential dilution, sustainable payout, reinvestment, normalized earnings and model fit remain unverified."
+  ],
+  "financial_inputs_verified": false,
+  "model_adopted": false
+}

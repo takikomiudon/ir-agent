@@ -1,0 +1,56 @@
+{
+  "status": "corrected_quote_bindings_frozen_awaiting_root_acceptance",
+  "recorded_at": "2026-10-16T07:28:22.473338+00:00",
+  "company_id": "jp:2459",
+  "source_id": "case-public:a6b2b42356d083a0660165eff244081ffa2b422ad9e0c79d143b33a9ffcbd393",
+  "source_native_SHA256": "5d77fce83d269479e511aa9a85738d161f2691d2ec040e760320616bdbf5a038",
+  "prior_review": {
+    "file": "review.json",
+    "sha256": "88f1fb9597c83391dd506706feef8de2cc005afd79a47355213ed94ad25fb99f",
+    "content_retained": true
+  },
+  "effective_quote_file": {
+    "file": "quotes-v2.json",
+    "sha256": "c4a8477233dc7f525d1613d26f25f86fbb30ef99b6cce78319a2690ab4a6c766"
+  },
+  "correction": {
+    "affected_id": "A4-FY-period-undetermined-earnings-guidance",
+    "old_defect": "Empty quote at Unicode2284..2284/UTF83298..3298. Old exact-substring check accepted empty string and counted it as valid; this was a producer validation error.",
+    "new_basis": "Actual cover FY2027 guidance block at physical1, including explicit FY period and issuer inability to give numeric forecast.",
+    "changed_fields": [
+      "quote",
+      "Unicode_end_exclusive",
+      "UTF8_end_exclusive"
+    ],
+    "other_quote_objects_unchanged": true,
+    "old_valid_quote_count": 10,
+    "new_verified_valid_quote_count": 11
+  },
+  "guidance_finding_effective_basis": {
+    "prior_review_pointer": "/findings/1",
+    "quote_ids": [
+      "A3-reported-and-forecast-dividend-not-earnings",
+      "A4-FY-period-undetermined-earnings-guidance",
+      "A8-FY-guidance-undetermined"
+    ],
+    "meaning": "Issuer FY2027/5 numeric earnings guidance is undetermined, not0. Cover now has valid nonempty A4; existing physical5 A8 was already nonempty and remains unchanged. No new financial interpretation or conclusion."
+  },
+  "remaining_prior_findings": "All other review.json findings/limits remain with effective quotes-v2 binding; this file corrects evidence/validation only.",
+  "boundaries": {
+    "source_bundle_or_raw_or_native_changed": false,
+    "financial_inputs_verified": false,
+    "financial_adoption": false,
+    "IR_value": "unproven",
+    "send_ready": false,
+    "actual_DB_firstsave": null
+  },
+  "operations": {
+    "GET": 0,
+    "DB": 0,
+    "Store": 0,
+    "old_file_edits": 0,
+    "shared_code": 0,
+    "financial_adoption": 0,
+    "IR": 0
+  }
+}

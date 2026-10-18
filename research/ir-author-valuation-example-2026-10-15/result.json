@@ -1,0 +1,178 @@
+{
+  "company": {
+    "name": "ローツェ",
+    "security_code": "6323",
+    "listing_label": "東証プライム",
+    "identity_quote_id": "security-identity"
+  },
+  "purpose": "Reproduce one external author valuation example from already saved original bytes; not current investment selection or recommendation.",
+  "status": "author_forecast_EPS_and_target_price_found_but_exact_valuation_not_reproducible",
+  "author": {
+    "organization": "岩井コスモ証券株式会社",
+    "department": "投資調査部",
+    "role": "シニアアナリスト",
+    "name": "有沢 正一",
+    "report_date": "2026-04-17",
+    "report_publication_time": null,
+    "first_retrieved_at": "2026-10-15T01:20:49.875615+00:00",
+    "quote_ids": [
+      "named-analyst",
+      "report-date",
+      "author-forecast-label"
+    ]
+  },
+  "source": {
+    "origin_manifest": "research/published-rating-policies-2026-10-15/sources.json",
+    "origin_manifest_sha256": "a47b717e3f73da5f5eff7d7e4c099ca43444c2af2590a6a1cd8bccb193eced73",
+    "source_id": "a8c457e4283d4d84-bounded8m",
+    "url": "https://www.iwaicosmo.co.jp/investment/net_report/pdf/sample_analyst.pdf",
+    "original_pdf_sha256": "0da22eb3eb8dab2280bb66626d8fbfb50dcb560053055caadcde5f3a87bf6c69",
+    "original_pdf_byte_count": 3855577,
+    "restored_from": "raw_pdf_base64 field; strict base64 decode and original SHA comparison",
+    "publication_date": "2026-04-17",
+    "publication_precision": "day",
+    "published_at": null,
+    "new_GET_count": 0,
+    "source_is_dated_public_sample": true,
+    "Sample_watermark": true,
+    "pages_newly_visually_reviewed": [
+      1,
+      2
+    ]
+  },
+  "inputs_explicitly_displayed": {
+    "author_forecasts": [
+      {
+        "concept": "EPS",
+        "value_jpy": "161.4",
+        "unit": "JPY/share",
+        "period_label": "2027/2",
+        "period_start": null,
+        "period_end": null,
+        "scope": "consolidated",
+        "status": "broker_forecast",
+        "author": "岩井コスモ証券",
+        "quote_ids": [
+          "author-forecast-label",
+          "forecast-eps-2027",
+          "EPS-unit-header"
+        ]
+      },
+      {
+        "concept": "EPS",
+        "value_jpy": "184.5",
+        "unit": "JPY/share",
+        "period_label": "2028/2",
+        "period_start": null,
+        "period_end": null,
+        "scope": "consolidated",
+        "status": "broker_forecast",
+        "author": "岩井コスモ証券",
+        "quote_ids": [
+          "author-forecast-label",
+          "forecast-eps-2028",
+          "EPS-unit-header"
+        ]
+      }
+    ],
+    "issuer_forecast_distinguished": {
+      "concept": "EPS",
+      "value_jpy": "160.3",
+      "period_label": "2027/2",
+      "scope": "consolidated",
+      "status": "company_forecast_row_with_broker_share_count_calculation_note",
+      "quote_id": "issuer-eps-reprint"
+    },
+    "target_price_jpy": "4500",
+    "target_price_basis_quote_id": "target-price-reason",
+    "target_price_selected_EPS_period": null,
+    "target_PER": null,
+    "explicit_target_valuation_formula": null,
+    "historical_quote_not_current": {
+      "price_jpy": "3819",
+      "label_date": "04/16",
+      "exact_observation_time": null,
+      "report_date": "2026-04-17",
+      "quote_id": "displayed-price"
+    },
+    "market_indicator_PER_not_target_PER": [
+      {
+        "value": "23.7",
+        "label": "PER(27.2予)",
+        "quote_id": "displayed-per-2027"
+      },
+      {
+        "value": "20.7",
+        "label": "PER(28.2予)",
+        "quote_id": "displayed-per-2028"
+      }
+    ]
+  },
+  "reproduction_assessment": {
+    "engine": "eps_multiple",
+    "required_inputs": [
+      "eps_jpy",
+      "pe"
+    ],
+    "one_or_more_author_EPS_candidates_present": true,
+    "EPS_period_selected_for_target_verified": false,
+    "target_PE_explicitly_present": false,
+    "full_inputs_available": false,
+    "calculation_run": false,
+    "author_target_reproduction_possible_from_checked_material": false,
+    "reason": "Author states a 4,500JPY target and forecasts EPS for two FYs, but does not identify a target PER or explicit valuation formula in pages1–2. Displayed market PER values are not target PER. Selecting an EPS period or deriving a multiple from target price would be project invention.",
+    "rounding": {
+      "forecast_EPS_display_precision": "0.1 JPY/share",
+      "market_PER_display_precision": "0.1 times",
+      "target_price_display_jpy": "4500",
+      "internal_unrounded_inputs": null,
+      "target_price_rounding_rule": null,
+      "do_not_claim_exact_product_from_rounded_display_values": true
+    },
+    "price_divided_by_EPS_reverse_engineering_performed": false,
+    "probabilities_assumed": false,
+    "costs_assumed_zero": false,
+    "numerical_input_adopted": false,
+    "target_observation_vs_formula_reproduction": {
+      "explicit_author_target_can_be_preserved_as_reference": true,
+      "target_price_jpy": "4500",
+      "own_forecast_EPS_values_are_external_author_forecasts_not_company_reprints": true,
+      "IR_input_change_revaluation_formula_verified": false,
+      "reason": "Observing an author target is distinct from reproducing a formula for changing EPS or another IR-sensitive input."
+    }
+  },
+  "horizon_and_rating": {
+    "sample_rating": "A→A",
+    "rating_definition_reused_from_existing_manifest": {
+      "quote_id": "iwaicosmo-rating-A",
+      "pdf_page": 3,
+      "quote": "今後半年以内に株価パフォーマンスがTOPIXを15%程度以上上回ると予想",
+      "horizon": "今後半年以内",
+      "basis": "relative stock-price performance versus TOPIX",
+      "threshold_literal": "15%程度以上",
+      "strict_formula_or_boundary": null,
+      "not_newly_visually_reviewed_here": true
+    },
+    "target_price_horizon": null,
+    "rating_horizon_not_automatically_target_price_horizon": true,
+    "relative_threshold_not_absolute_price_upside": true,
+    "TOPIX_forecast": null,
+    "dividends_included_in_rating": null,
+    "target_price_touch_not_mandatory_profit_taking": true,
+    "personal_sell_rule_adopted": false
+  },
+  "limits": {
+    "source_retrieved_on": "2026-10-15",
+    "not_evidence_of_saved_in_April_or_prospective_performance": true,
+    "current_forecast_validity_or_listing_status_not_checked": true,
+    "fees_taxes_spread_sizing_and_risk_policy_not_populated": true,
+    "author_conflicts_not_newly_investigated": true,
+    "no_claim_of_financial_input_validation": true,
+    "no_search_or_other_source_expansion": true,
+    "DB_access_or_modification": false,
+    "existing_files_modified": false,
+    "model_or_question_or_trade_created": false
+  },
+  "research_next_step_not_started": "If a future explicitly sourced target multiple/formula is available, verify EPS period and shares basis before reproduction. This finite task does not search for one or infer it.",
+  "checked_at": "2026-10-15T05:57:06.076536+00:00"
+}

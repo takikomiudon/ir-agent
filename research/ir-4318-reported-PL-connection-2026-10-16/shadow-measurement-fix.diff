@@ -1,0 +1,11 @@
+--- prepared runner
++++ reviewed runner
+@@ -164,7 +164,7 @@
+             assert {s['id'] for s in packet['sources']} == set(source_by_id)
+             assert all(store.source(source['id']) == source for source in sources)
+             worker = 'codex-4318-reported-PL-' + stage
+-            claim = invoke('claim', lambda: harness.claim(worker, now=clock(), measurement_synthetic=False,
++            claim = invoke('claim', lambda: harness.claim(worker, now=clock(), measurement_synthetic=(stage == 'shadow'),
+                 caller_namespace=worker, request_id='4318-reported-PL-one-20261016-1'))
+             claimed, lease = claim['original_response'], claim['current_lease']
+             assert not claim['replayed'] and claimed['job_id'] == lease['job_id'] == job_id

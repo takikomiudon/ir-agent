@@ -1,0 +1,92 @@
+{
+  "security_code": "5801",
+  "company_name": "古河電気工業",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "非鉄金属",
+  "investigation_status": "provisional",
+  "verification_level": "official_form_link_only",
+  "official_url": "https://www.furukawa.co.jp/",
+  "contact_url": "https://inquiry-fec-form.spiral-site.com/ir",
+  "channels": [
+    "form"
+  ],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T15:12:03.950564+00:00",
+  "completed_at": "2026-10-11T15:13:29.857418+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/5801/20261011T151203950642Z/01.json",
+      "url": "https://www.furukawaelectric.com/",
+      "retrieved_at": "2026-10-11T15:13:01.279684+00:00",
+      "quote": "IRに関するお問い合わせ",
+      "role": "official_ir_question_form_link",
+      "source_link_url": "https://inquiry-fec-form.spiral-site.com/ir"
+    },
+    {
+      "snapshot": "evidence/5801/20261011T151203950642Z/01.json",
+      "url": "https://www.furukawaelectric.com/",
+      "retrieved_at": "2026-10-11T15:13:01.279684+00:00",
+      "quote": "古河電気工業株式会社",
+      "role": "current_issuer_page_identity"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.furukawa.co.jp/",
+      "final_url": "https://www.furukawaelectric.com/",
+      "snapshot": "evidence/5801/20261011T151203950642Z/01.json",
+      "retrieved_at": "2026-10-11T15:13:01.279684+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://inquiry-fec-form.spiral-site.com/ir",
+      "final_url": null,
+      "snapshot": "evidence/5801/20261011T151203950642Z/02.json",
+      "retrieved_at": "2026-10-11T15:13:29.856381+00:00",
+      "http_status": null,
+      "error": "robots_disallowed"
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "https://inquiry-fec-form.spiral-site.com/ir: robots_disallowed",
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "保存現公式ページのIR専用実hrefは確認したがSpiralのrobots_disallowedにより本文GET0。未取得フォームのメール/質問/個人入力/会社必須/返答条件を補完しない。正当なrobots拒否を窓口不存在とせず、拒否済URLの再GET候補なし。IR配信メール登録を質問受付メールにしない。",
+    "保存済み公式ページ・実フォーム欄を手動点検。送信・配信成功・回答実績は未確認。"
+  ],
+  "discovery": {
+    "security_code": "5801",
+    "official_url": "https://www.furukawa.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "古河電気工業",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/5801/20261011T151203950642Z/01.json",
+      "normalized_name": "古河電気工業",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": null,
+  "http_get_attempt_count": 6,
+  "previous_attempts": [
+    "attempts/5801/20261011T045047549898Z.json",
+    "attempts/5801/20261011T151329857723Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_services",
+    "reviewed_at": "2026-10-11T15:36:38.912567+00:00",
+    "notes": "古河電気工業の現公式ホーム頁からIRに関するお問い合わせという専用実hrefがSpiral対象02と一致しUからP。同対象はrobots User-agent:* Disallow:/を尊重した本文GET0で、金融IRの実返信質問欄は未取得。IRメール配信登録や製品/採用/株式事務の入力欄を借用しない。古河電工のサイト移動で現公式本文の社名を確認し、古河別上場会社の窓口と区別する。",
+    "attempted_at_reviewed": "2026-10-11T15:12:03.950564+00:00",
+    "saved_evidence_only": true
+  }
+}

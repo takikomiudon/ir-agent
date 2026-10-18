@@ -1,0 +1,35 @@
+{
+  "recorded_at": "2026-10-11T06:06:39.071824+00:00",
+  "scope": "Two official public documentation pages, successfully retrieved after network recovery; no broader quota search claimed.",
+  "documents": [
+    {
+      "url": "https://learn.chatgpt.com/docs/cloud/internet-access.md",
+      "snapshot": "network-probes/20261011T060442784090Z.json",
+      "http_status": 200,
+      "started_at_jst": "2026-10-11T15:04:42.784090+09:00",
+      "product": "Codex Cloud (Legacy)",
+      "quotes": [
+        "These settings apply to [Codex Cloud\n  (Legacy)](https://learn.chatgpt.com/docs/environments/cloud-environment). For the current Codex Cloud\n  experience, see [Connect to\n  services](https://learn.chatgpt.com/docs/environments/cloud-environments#connect-to-services)."
+      ],
+      "current_product_link": "https://learn.chatgpt.com/docs/environments/cloud-environments#connect-to-services"
+    },
+    {
+      "url": "https://learn.chatgpt.com/docs/environments/cloud-environments.md",
+      "snapshot": "network-probes/20261011T060504182141Z.json",
+      "http_status": 200,
+      "started_at_jst": "2026-10-11T15:05:04.182141+09:00",
+      "product": "Current Codex Cloud",
+      "quotes": [
+        "Each new task gets its own isolated\nworkspace from the published environment.",
+        "Saving stores configuration; some settings apply to the active setup\n  immediately. Publishing captures the prepared filesystem for new tasks.",
+        "For services reached over the public internet that filter connections by source IP, use the [agent egress IP feed](https://openai.com/chatgpt-agents.json).\nAllow every published range, check the feed daily, and update the service's\nallowlist when ranges change. These ranges are shared across customers; keep\nthe service's authentication and authorization controls in place."
+      ]
+    }
+  ],
+  "findings": {
+    "http_request_rate_concurrency_daily_quota": "No numeric HTTP RPS, concurrent-request or daily retrieval quota found in these two pages. This does not establish absence of a limit.",
+    "network_policy_unknown": "No individual definition, transition rule or timeout for network_policy.state=unknown found in these two pages.",
+    "http_503_rate_limit_mapping": "No specification found in these pages that maps the observed Invalid argument Envoy 503 to rate limiting.",
+    "shared_egress_ip": "Current page states egress IP ranges are shared across customers. This is not evidence that a shared-IP quota or shared proxy rate limit caused this incident."
+  }
+}

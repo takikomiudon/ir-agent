@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "validated_at": "2026-10-15T08:57:17.310072+00:00",
+  "company_id": "jp:1833",
+  "status": "passed_token_quote_unit_reproduction_only",
+  "request_sha256": "f219d37b101afe4520cd7291e3f320acbf56f81e563a5f2642df91b8b6e949a6",
+  "bundle_sha256": "388e3055eff96b39ce871d161a5bdfa4e7f615b10eeb073acdce3100cb3be50f",
+  "original_bundle_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/ingest-bundle.json",
+  "original_bundle_sha256": "4cd3de024f803645547a00617f9b33811b43ad6a6c07176a223bb6a924210797",
+  "original_source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef",
+  "original_snapshot_sha256": "aa66823f71dc5fb700a3c7ffe404619bf0eb57765cfc4700e280c80fc17dd627",
+  "original_content_sha256": "eadabdf6da5245e070217266bc9c20e58cbc2abfa9589d9098c0390085e10399",
+  "original_source_snapshot_unchanged": true,
+  "original_retrieved_at": "2026-10-15T08:44:22.716950+00:00",
+  "published_at": null,
+  "review_recorded_at": "2026-10-15T08:57:17.294500+00:00",
+  "derived_retrieved_at": "2026-10-15T08:57:17.300250+00:00",
+  "derived_source_id": "disclosed-facts:cbcbb3a061e4b117782728462750f95eb85308bef6758e676d7be23777ea4148",
+  "facts": [
+    {
+      "id": "1833-q1-basic-eps-20260807",
+      "raw_value": "95.66",
+      "normalized_value": "95.66",
+      "kind": "reported_fact",
+      "canonical_unit": "JPY-per-share",
+      "decimal_and_fraction_match": true,
+      "quote_utf8_sha256": "5fab02ec761a70d03ba90e7c6c971f5fb1dbdcfb5a2425bbbe82eb2c7f09c675"
+    },
+    {
+      "id": "1833-annual-company-eps-20260807",
+      "raw_value": "428.91",
+      "normalized_value": "428.91",
+      "kind": "issuer_guidance",
+      "canonical_unit": "JPY-per-share",
+      "decimal_and_fraction_match": true,
+      "quote_utf8_sha256": "c6044a78e17bce49a0840c5692358e51892de817e958459641fdae250b303712"
+    },
+    {
+      "id": "1833-annual-company-dps-20260807",
+      "raw_value": "300.00",
+      "normalized_value": "300.00",
+      "kind": "issuer_guidance",
+      "canonical_unit": "JPY-per-share",
+      "decimal_and_fraction_match": true,
+      "quote_utf8_sha256": "2c4fbba598f50892eadc9508901b99281e5bfaefe3f146d723729d0c9f787922"
+    }
+  ],
+  "supporting_quote_count": 3,
+  "source_raw_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/raw/fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+  "raw_sha256": "fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+  "source_capture_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.json",
+  "capture_sha256": "269d8f711da47eb49a7c7e352e6ef0855ae5af2a6b01138ebc8c9d2e3000ec4b",
+  "saved_text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.pdf.txt",
+  "saved_text_sha256": "eadabdf6da5245e070217266bc9c20e58cbc2abfa9589d9098c0390085e10399",
+  "pdftotext_layout_reextraction_byte_identical": true,
+  "visual_table_review": {
+    "pdf_page": 1,
+    "image_file": "/workspace/ir-agent/research/ir-case-studies-2026-10-15/1833/initial-public-review/statement-cover.png",
+    "image_sha256": "8b033567d1e250b1bbcf72c5b9068e35878ba4440fea8126b0e4d8b351e23dcb",
+    "confirmed": "current basic EPS versus prior/diluted dash; annual EPS company forecast; current annual dividend total versus prior total/interim/yearend"
+  },
+  "cli_validation": {
+    "mode": "parser + run dispatcher with connection=None placeholder; no Store constructed",
+    "command": "normalize-facts request.json",
+    "same_as_library_replay": true,
+    "real_database_accesses": 0
+  },
+  "reproduce_result": {
+    "source_id": "disclosed-facts:cbcbb3a061e4b117782728462750f95eb85308bef6758e676d7be23777ea4148",
+    "applicable": true,
+    "status": "reproduced",
+    "reason_codes": [],
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "original_content_sha256_status": "matched",
+    "original_snapshot_sha256_status": "matched_supplied_snapshot",
+    "fact_kinds": [
+      {
+        "id": "1833-q1-basic-eps-20260807",
+        "kind": "reported_fact"
+      },
+      {
+        "id": "1833-annual-company-eps-20260807",
+        "kind": "issuer_guidance"
+      },
+      {
+        "id": "1833-annual-company-dps-20260807",
+        "kind": "issuer_guidance"
+      }
+    ],
+    "original_source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef"
+  },
+  "stable_derived_id_replay": true,
+  "later_now_changes_retrieval_only_not_id_or_content": true,
+  "request_input_unchanged": true,
+  "old_input_hashes": {
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/ingest-bundle.json": "4cd3de024f803645547a00617f9b33811b43ad6a6c07176a223bb6a924210797",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.txt": "df93c54da7b321d1aec0ea74e2982517f6bf71f14cf60bc7f0d7c594e56afb8d",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/03.json": "3c13815566d8e3755241cee61ba529178ee8432ad4032a8544f17ec3822acc4c",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/review.json": "625c23c595b9ed8a83d844289d861387e8b965b49fc027b2990da45526d1ecfe",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/ingest-timing-review.json": "a85b110739f478ea74f3d7171d6fbc388c62d585774a59289b1870260c3ed0d9",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/sources.json": "04f3cb9e92a83d9c542dbbe0e8772eb9272519984282232c931ed228f02dbee5",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/statement-cover.png": "8b033567d1e250b1bbcf72c5b9068e35878ba4440fea8126b0e4d8b351e23dcb",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.pdf.txt": "eadabdf6da5245e070217266bc9c20e58cbc2abfa9589d9098c0390085e10399",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/actual-intake.json": "8f145961d0b3ce0cbe59fbe86a059d40ce3b5a23bbd7c43f3a8b5498092a7b5b",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/byte-verifier-result.json": "9afc6e4f6eebfe3ccbeb34c3860c4d75f6b308162a55d4929050355390293a30",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/04.pdf.txt": "a5708f1ef28916a26d1067bcf020943f56eb1d7e767e22c083d6a47e6055111e",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/supplement-consolidated.png": "677bb6a3d64940c6efe8c91594a54c14dbfbec02632ede406658f62440371d69",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/01.json": "2958a464b491ef7979df2a9a77ca9fbd9eab97121f3d913c4aec7bfa83222284",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/independent-meaning-review.md": "e007e6f637a617dc7cbf9fda95cbc852abeb7fb7db50b98837f2236c0312568a",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/04.txt": "532f7e067a00453c01132048d89be632211fce82f8d81d8c26ae6cec5f172673",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/01.txt": "3a125e84a637dc3f5442bb6949fa200056f37db4627b4c2a3addc55bbb89b703",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.json": "269d8f711da47eb49a7c7e352e6ef0855ae5af2a6b01138ebc8c9d2e3000ec4b",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/README.md": "8336c0229e49a65b62daffb78326784ef6d0b117e71ef200f0aacac0b5684a37",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/transport-manifest.json": "20ca1026c444807581cf49fd237d957cb12dfd815882cfb105e657dfe5a260a4",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/validation.json": "240e117b1ff5d27317a9cc0cd1a1e2a64f2f602f9c75d63c27001d6023f6837e",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/independent-byte-recheck.json": "370935a40137e2d41d4c07ca251b7de4bbfd83352ca3445a4584888f745613ad",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/independent-meaning-review.json": "8f89fcd4f23761396ad75fc6d7460a8505cb6d7828f6ff67440d991be88d3186",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/robots-guard.json": "c2dc6624cda1cb4d491307a70d1d66e07a846fcf96fd4c15836c4b2d650133df",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/04.json": "9c80829db2785539ab9b24d0a4867f3275927f5ded6f89ca4741be37eddc34fd",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/source-bundle.json": "5d450cbd3119c3caf6246f13ee12dfe7e0b391b6aa13a1c83808d87171f8b0b5",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/03.txt": "8eda7ffde80c84a908f6847a47f33ee976cc0b3ecd453323dd917e56df5c615b",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/raw/3a125e84a637dc3f5442bb6949fa200056f37db4627b4c2a3addc55bbb89b703": "3a125e84a637dc3f5442bb6949fa200056f37db4627b4c2a3addc55bbb89b703",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/raw/fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005": "fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/raw/7df88f486e2b82404de6b5d88050c332f8ebe3742fa4e3f1da990864f5ad85e6": "7df88f486e2b82404de6b5d88050c332f8ebe3742fa4e3f1da990864f5ad85e6",
+    "research/ir-case-studies-2026-10-15/1833/initial-public-review/raw/2db0d7c9a0878f633bc04ecbfe90768fb5bd40ee30620c577ec54db13c8121e8": "2db0d7c9a0878f633bc04ecbfe90768fb5bd40ee30620c577ec54db13c8121e8"
+  },
+  "old_inputs_unchanged": true,
+  "financial_inputs_verified": false,
+  "meaning_review_required": true,
+  "model_adopted": false,
+  "new_network_GETs": 0,
+  "database_reads_or_writes": 0,
+  "production_or_existing_artifact_changes": 0,
+  "point_in_time_guarantee": false,
+  "latestness_verified": false,
+  "limits": [
+    "Quote/token/unit arithmetic checks do not validate period, scope, table-column or share-basis financial meaning.",
+    "Public issuer guidance is preserved as issuer guidance, not external author forecast or analyst-adopted EPS/DPS path.",
+    "Original published_at remains null. Review and derived availability use actual runtime and are not backdated to the issuer date or original GET.",
+    "No current price, target, probabilities, long-run forecast, valuation model or IR question is created."
+  ]
+}

@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "record_type": "research_only_question_preflight",
+  "recorded_at": "2026-10-15T13:02:55.688571+00:00",
+  "company_id": "jp:3774",
+  "company_name": "株式会社インターネットイニシアティブ",
+  "issue_id": "3774-ptc-gpu-public-basis-PU03",
+  "source_issue_reference": {
+    "path": "research/ir-case-studies-2026-10-15/3774/ptc-gpu-public-basis-review/comparison.json",
+    "issue_id": "PU03"
+  },
+  "candidate_id": "3774-ptc-gpu-period-label-reading-candidate",
+  "status": "research_draft_not_ready_for_formal_registration_or_send",
+  "question_count": 1,
+  "question_text": "2027年3月期第1四半期決算説明資料の印字23頁（大型案件の図）でPTCのGPU案件が置かれている「FY25下期」欄は何の時点を表し、同資料の印字2・11頁および同四半期短信の受注説明とはどう対応するか、公開済み資料の読み方をご教示ください。",
+  "question_scope": "GPU案件の半期欄とQ1受注説明の時点/区分基準をどう読むかという一つの資料解釈。受注額/運用採算を新たに尋ねる草案ではない。",
+  "resolved_publicly_not_asked_again": [
+    {
+      "point": "EC約60億円の受注/売上とGPU約120億円の受注は区別される。",
+      "quote_refs": [
+        "PT04",
+        "q1-ptc-ec-gpu-order-and-sales"
+      ]
+    },
+    {
+      "point": "GPU約120億円は構築100億円・運用保守20億円/5年間という会社表示。",
+      "quote_refs": [
+        "PT03"
+      ]
+    },
+    {
+      "point": "2Q26で一部売上計上予定、図では2Q26より計上という表記がある。運用単独開始日や実計上を意味しない。",
+      "quote_refs": [
+        "PT03"
+      ]
+    },
+    {
+      "point": "一般SIの構築/運用の相対粗利率説明は既存Q&Aで答えている。個別案件数値への保証ではない。",
+      "reference": "research/ir-case-studies-2026-10-15/3774/ptc-gpu-public-basis-review/comparison.json#PB04"
+    }
+  ],
+  "remaining_company_definition": {
+    "point": "図のFY25下期列が表す時点/集計基準と、Q1受注説明との対応。",
+    "why_company_explainable": "会社の公表図/文章の作成・集計基準であり、投資家の公正倍率や目標価格ではない。",
+    "not_presumed": [
+      "連結期ずれ",
+      "期末日が12月末",
+      "資料の誤り/修正",
+      "実際の契約/受注日",
+      "年度報告「直近」とPTC案件の厳密同一性"
+    ],
+    "scope_support": [
+      "research/ir-case-studies-2026-10-15/3774/ptc-gpu-public-basis-review/comparison.json#PU03",
+      "research/ir-case-studies-2026-10-15/3774/ptc-period-scope-followup/review.json#conclusion"
+    ],
+    "annual_report_control": "年度報告の直近GPU記述は正確な契約日を示さず、同箇所で当該PTC案件を厳密同定していない。決算日差異の持分法注記を連結子会社PTCへ移さない。"
+  },
+  "investor_model_missing": {
+    "numeric_thesis_version": null,
+    "canonical_model_path": null,
+    "conceptual_research_path": "公表案件の時点/区分比較の可否を整理する。会社単独の回答から利益/FCFを採用する経路は未設定。",
+    "unset": [
+      "案件別利益率/費用・工数と全社利益への対応",
+      "期別売上/CFの採用前提",
+      "EPSへの株数/対象期間の対応",
+      "評価法・価格根拠・投資閾値/費用/リスク条件",
+      "著者由来の採用投資規則"
+    ],
+    "not_company_questions": "利益率/時点を自己生成せず、割引率/公正倍率/価格差/本人予算や買売判断を会社に保証させない。",
+    "financial_input_changes": [],
+    "valuation": null,
+    "policy_id": null,
+    "decision_contract_created": false
+  },
+  "branches": [
+    {
+      "id": "A",
+      "condition": "同じ対象案件について、図の半期欄とQ1受注説明がそれぞれ表す時点/集計基準と、その対応が公開済み根拠により具体的に説明され、比較の読み方を定められる。",
+      "research_handling": "該当資料/頁/原文と説明された対応だけを追記し、資料の時点ラベル比較を整理する。",
+      "not_sufficient": [
+        "「同じ案件です」だけで半期欄の基準が不明な回答。",
+        "120億円/内訳/5年間/2Q計上予定という既答の繰返しだけ。"
+      ],
+      "still_unresolved": [
+        "実際の契約/受注/検収日や運用単独開始日を、回答された基準を超えて認定しない。",
+        "2Qの実際の計上、具体利益率/工数/EPSを確認済みにしない。"
+      ],
+      "financial_input_changes": [],
+      "canonical_model_path": null,
+      "financial_action": null,
+      "branch_observed": false
+    },
+    {
+      "id": "B",
+      "condition": "公開済み根拠により、図とQ1説明は対象範囲/集計時点等が違い直接比較できない、又は比較の読替えに追加の区分対応が必要と具体的に説明される。",
+      "research_handling": "どの範囲/基準が違うかを記録し、未対応の比較を保留する。会社の公表訂正が示された場合も原資料を上書きせず別根拠として保存する。",
+      "not_sufficient": [
+        "半期更新という表現だけから受注日や誤記を推測する。",
+        "基準が違うという語だけで相違箇所/公開根拠が不明な回答。"
+      ],
+      "still_unresolved": [
+        "会社の事業仮説の反証・利益下振れ・表示誤りを自動認定しない。",
+        "同額や時点差だけで別契約や連結期ずれと断定しない。"
+      ],
+      "financial_input_changes": [],
+      "canonical_model_path": null,
+      "financial_action": null,
+      "branch_observed": false
+    },
+    {
+      "id": "C",
+      "condition": "部分回答、曖昧、未確認、回答不能、無回答、又はリンク案内のみで時点基準と対応をまだ確認できない。",
+      "research_handling": "対応関係はunknownのまま、何が回答され何が残るかを分けて保存する。参照リンクに説明があれば実際に読んだ後にA/Bを再検討する。",
+      "not_sufficient": [
+        "無回答を誤り/相違/非公表の証明や悪材料へ変換する。"
+      ],
+      "still_unresolved": [
+        "元の図とQ1説明の対応は保留。旧根拠を削除/修正せず、数値を補完しない。"
+      ],
+      "financial_input_changes": [],
+      "canonical_model_path": null,
+      "financial_action": null,
+      "branch_observed": false
+    }
+  ],
+  "branches_scope": "全て研究上の資料解釈。正式question payload/返信評価API/売買actionではない。回答未受信、枝未選択。",
+  "public_information_gate": {
+    "status": "unresolved_in_bounded_saved_materials",
+    "reviewed": [
+      {
+        "artifact": "research/ir-case-studies-2026-10-15/3774/ptc-gpu-public-basis-review/comparison.json",
+        "scope": "Q&AとQ1説明の検索一致5頁、原図3頁"
+      },
+      {
+        "artifact": "research/ir-case-studies-2026-10-15/3774/ptc-period-scope-followup/review.json",
+        "scope": "Q1短信物理4頁と年度報告物理7/41/108頁の保存レビュー/引用"
+      }
+    ],
+    "reading_scope_this_task": "既存2レビュー/引用を統合し該当原典文字範囲を照合。全文再読/新たなPDF頁調査/最新Web確認は行わない。",
+    "all_public_sources_exhausted": false,
+    "latest_public_confirmation": false,
+    "skip_question_if": [
+      "追加の公開説明で時点対応が解消する。",
+      "採用する研究の比較にこの過去時点対応が不要と分かる。",
+      "残る不足が会社の定義ではなく投資家側のモデル/方針選択だけである。"
+    ]
+  },
+  "duplicate_check": {
+    "scope": "Saved jp:3774 research JSON question/question_text fields only; separate from operational DB.",
+    "json_md_files_in_inventory": 47,
+    "json_files_scanned": 38,
+    "field_hits": [
+      {
+        "file": "research/ir-case-studies-2026-10-15/3774/draft.json",
+        "jsonpath": "$.excluded_questions[0].question",
+        "text": "NWサービス粗利率が低下した理由は何か"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/3774/draft.json",
+        "jsonpath": "$.excluded_questions[1].question",
+        "text": "PTCのGPU基盤案件は運用になると粗利率が高いのか"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/3774/draft.json",
+        "jsonpath": "$.excluded_questions[2].question",
+        "text": "IFRS16でオペレーティングリース支払はどのCFへ移るのか"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/3774/draft.json",
+        "jsonpath": "$.excluded_questions[3].question",
+        "text": "設備投資額の現金支払とファイナンスリースの額はいくらか"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/3774/financial-input-meaning-review.json",
+        "jsonpath": "$.public_information_resolution.resolved[0].question",
+        "text": "この項目の定義/基準は公開資料でどこまで分かるか"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/3774/financial-input-meaning-review.json",
+        "jsonpath": "$.public_information_resolution.resolved[1].question",
+        "text": "この項目の定義/基準は公開資料でどこまで分かるか"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/3774/financial-input-meaning-review.json",
+        "jsonpath": "$.public_information_resolution.resolved[2].question",
+        "text": "この項目の定義/基準は公開資料でどこまで分かるか"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/3774/financial-input-meaning-review.json",
+        "jsonpath": "$.public_information_resolution.resolved[3].question",
+        "text": "この項目の定義/基準は公開資料でどこまで分かるか"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/3774/financial-input-meaning-review.json",
+        "jsonpath": "$.public_information_resolution.resolved[4].question",
+        "text": "この項目の定義/基準は公開資料でどこまで分かるか"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/3774/financial-input-meaning-review.json",
+        "jsonpath": "$.public_information_resolution.resolved[5].question",
+        "text": "この項目の定義/基準は公開資料でどこまで分かるか"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/3774/financial-input-meaning-review.json",
+        "jsonpath": "$.public_information_resolution.resolved[6].question",
+        "text": "この項目の定義/基準は公開資料でどこまで分かるか"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/3774/financial-input-meaning-review.json",
+        "jsonpath": "$.public_information_resolution.resolved[7].question",
+        "text": "この項目の定義/基準は公開資料でどこまで分かるか"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/3774/financial-input-meaning-review.json",
+        "jsonpath": "$.public_information_resolution.resolved[8].question",
+        "text": "この項目の定義/基準は公開資料でどこまで分かるか"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/3774/ptc-gpu-public-basis-review/comparison.json",
+        "jsonpath": "$.resolved_public_questions[0].question",
+        "text": "GPU案件に構築と運用保守の区別・規模の公表があるか。"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/3774/ptc-gpu-public-basis-review/comparison.json",
+        "jsonpath": "$.resolved_public_questions[1].question",
+        "text": "当該GPU案件について公表された売上計上の四半期表示はあるか。"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/3774/ptc-gpu-public-basis-review/comparison.json",
+        "jsonpath": "$.resolved_public_questions[2].question",
+        "text": "Q1のPTC大型約60億円を当該GPU案件の売上と扱えるか。"
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/3774/ptc-gpu-public-basis-review/comparison.json",
+        "jsonpath": "$.resolved_public_questions[3].question",
+        "text": "構築と運用保守の会社の売上分類は公表されているか。"
+      }
+    ],
+    "interpretation": "既存draft.jsonのPTC運用粗利率質問は公開回答で除外済みの論点として保持し再開しない。今回の半期欄対応と同義の正式草案はこの限定field点検では見当たらない。",
+    "formal_DB_or_inbox_checked": false,
+    "absence_of_registered_question_proved": false
+  },
+  "information_value": {
+    "status": "unknown_not_estimated",
+    "value": null,
+    "priority_score": null,
+    "reason": "数値モデル/判断変更経路・回答分布・費用等を採用していないため未推定。0とも正とも判定せず、問い合わせ必須とはしない。"
+  },
+  "contact_and_send_readiness": {
+    "current_official_contact_verified": false,
+    "current_contact_url": null,
+    "quiet_period_rule_verified": false,
+    "currently_in_quiet_period": null,
+    "send_approval_verified": false,
+    "ready_to_register": false,
+    "ready_to_send": false,
+    "reason": "窓口/沈黙規則/現在適用/正式重複/採用モデル/送信承認は本taskで確認していない。研究草案を送信許可としない。"
+  },
+  "method_attribution": {
+    "fixed_anthropic_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+    "principle_quotes": [
+      {
+        "id": "M01",
+        "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+        "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+        "quote": "**Thesis impact**: Does this strengthen, weaken, or neutralize a specific pillar?",
+        "character_start": 1388,
+        "character_end_exclusive": 1469,
+        "line": 30,
+        "attribution": "fixed Anthropic author principle",
+        "adaptation_in_this_draft": "対象を資料の時点対応の研究論点に限定。個別財務仮説や入力値を作らない。"
+      },
+      {
+        "id": "M02",
+        "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+        "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+        "quote": "A thesis should be falsifiable — if nothing could disprove it, it's not a thesis",
+        "character_start": 2339,
+        "character_end_exclusive": 2419,
+        "line": 63,
+        "attribution": "fixed Anthropic author principle",
+        "adaptation_in_this_draft": "草案の必要性も公開で解消/研究上不要なら取り下げ得る。資料表示の違いを会社の将来利益の反証にしない。"
+      },
+      {
+        "id": "M03",
+        "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+        "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+        "quote": "Track disconfirming evidence as rigorously as confirming evidence",
+        "character_start": 2422,
+        "character_end_exclusive": 2487,
+        "line": 64,
+        "attribution": "fixed Anthropic author principle",
+        "adaptation_in_this_draft": "説明不足/異なる基準を残し、期ずれ/誤記等の好都合な原因を先に埋めない。"
+      },
+      {
+        "id": "M04",
+        "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+        "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+        "quote": "Review the company's prior quarter earnings call for any guidance or commentary",
+        "character_start": 675,
+        "character_end_exclusive": 754,
+        "line": 15,
+        "attribution": "fixed Anthropic author principle",
+        "adaptation_in_this_draft": "既存会社Q&A/短信/説明/年度報告を先に照合する。この原文自体がIR再質問gateを指定したとはしない。"
+      },
+      {
+        "id": "M05",
+        "path": ".agents/skills/jp-equity-ir/SKILL.md",
+        "sha256": "d58897e57a2a103829987fe07636078fba9d7cc3eed3187e5ae12cc3d3136c4c",
+        "quote": "公開決算資料、公開Q&A、説明会等で既に答えられていないか先に確認する。質問は不明な定義や公開説明の解釈を確認する形にし、評価や判断を変えない質問の優先度を下げる。",
+        "character_start": 8296,
+        "character_end_exclusive": 8378,
+        "line": 91,
+        "attribution": "project adaptation; not an author-specified IR investment rule",
+        "adaptation_in_this_draft": "既答の案件規模/内訳/予定を再質問から除く。未解決の資料基準だけを候補とし、モデルへの経路が無い現状では送信必要性を確定しない。"
+      },
+      {
+        "id": "M06",
+        "path": "docs/decision-policy.md",
+        "sha256": "e687e70c70ec9ce4b40b935bb9e908cd2d1328f44dfa488fad639557fbba8de5",
+        "quote": "3. **質問前に回答分岐を固定する。** 明確な回答A、明確な回答B、曖昧・回答不能・無回答を用意する。各分岐に解釈、対象入力、根拠、点検候補を対応付ける。返信を見てから有利な分岐を作らない。",
+        "character_start": 3028,
+        "character_end_exclusive": 3125,
+        "line": 36,
+        "attribution": "project adaptation",
+        "adaptation_in_this_draft": "研究上のA/B/Cを今回固定するが、正式API分岐/数値モデル/売買条件には変換しない。"
+      },
+      {
+        "id": "M07",
+        "path": "docs/decision-policy.md",
+        "sha256": "e687e70c70ec9ce4b40b935bb9e908cd2d1328f44dfa488fad639557fbba8de5",
+        "quote": "公開情報の補足と確認できない返信は適用を保留する。",
+        "character_start": 3208,
+        "character_end_exclusive": 3233,
+        "line": 37,
+        "attribution": "project adaptation",
+        "adaptation_in_this_draft": "想定A/Bに見えても公開補足か不明なら解釈採用を保留し、元資料や金融入力を変更しない。"
+      }
+    ],
+    "boundary": "論点限定/反証/先行文脈確認は固定原典を参照。publicly-answered gate、IR草案ABC/unknown/公開性保留はこのプロジェクト適応であり、著者の数値投資規則ではない。"
+  },
+  "reply_information_boundary": "仮に回答が来ても公開情報の補足と確認する工程は別。A/Bらしい表現でも公開性不明なら採用保留。原文/解釈/旧資料を分けて追記する。",
+  "conclusion": "会社に説明可能な未解決の読み方を1問に固定した研究草案。現時点の送信必要性や利益/判断への寄与は未確定で、正式登録/送信には進めない。不要と分かれば質問しない。",
+  "financial_input_changes": [],
+  "financial_inputs_verified": false,
+  "model_adopted": false,
+  "investment_decision": null,
+  "formal_question_registered": false,
+  "sent": false,
+  "new_management_or_sell_deadline": null,
+  "execution": {
+    "new_GETs": 0,
+    "DB_accesses": 0,
+    "code_changes": 0,
+    "old_files_changed": 0,
+    "index_updates": 0,
+    "formal_registration_or_sends": 0
+  }
+}

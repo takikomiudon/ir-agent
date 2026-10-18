@@ -1,0 +1,38 @@
+{
+  "format": "two_recent_503_response_examples",
+  "observed_at": "2026-10-11T15:14:29.183227+00:00",
+  "actual_analysis_GET_count": 0,
+  "collection_progress_path": "research/ir-contacts-universe-2026-10-11/collection-runs/20261011T145328464298Z-progress.json",
+  "collection_progress_observed_at": "2026-10-11T15:14:29.104686+00:00",
+  "examples": [
+    {
+      "snapshot": "research/ir-contacts-universe-2026-10-11/evidence/5363/20261011T145329098998Z/01.json",
+      "snapshot_sha256": "b16fed0a10137b147ad719795c36abce9d5d1f30ce8056871e71a6243583c934",
+      "url": "https://www.tyk.co.jp/robots.txt",
+      "retrieved_at": "2026-10-11T14:53:29.099034+00:00",
+      "http_status": 503,
+      "response_headers": {
+        "date": "Sun, 11 Oct 2026 14:53:32 GMT",
+        "server": "envoy"
+      },
+      "response_text": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end",
+      "classification": "site_tls_503",
+      "classification_scope": "Saved response text category; does not identify which infrastructure layer failed or prove a rate limit."
+    },
+    {
+      "snapshot": "research/ir-contacts-universe-2026-10-11/evidence/5659/20261011T150103577257Z/01.json",
+      "snapshot_sha256": "7f4ec24be6fdbb94a68f218c473da74282956851013652fc0b5971297aacba82",
+      "url": "https://www.n-seisen.co.jp/robots.txt",
+      "retrieved_at": "2026-10-11T15:01:03.577302+00:00",
+      "http_status": 503,
+      "response_headers": {
+        "date": "Sun, 11 Oct 2026 15:01:19 GMT",
+        "server": "envoy"
+      },
+      "response_text": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout",
+      "classification": "http_503",
+      "classification_scope": "Saved response text category; does not identify which infrastructure layer failed or prove a rate limit."
+    }
+  ],
+  "conclusion": "Both responses identify envoy and upstream connection problems; TLS certificate verification failure and connection timeout have different response text. Neither example gives Retry-After or a numeric rate limit. These examples do not establish the cause of earlier common transport 503 errors."
+}

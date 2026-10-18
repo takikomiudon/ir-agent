@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "case_id": "3817-reported-annual-per-share-basis-monitor",
+  "company_id": "jp:3817",
+  "company_name": "株式会社ＳＲＡホールディングス",
+  "issue_id": "3817-annual-EPS-BPS-and-common-share-basis",
+  "recorded_at": "2026-10-16T09:55:44.089414+00:00",
+  "preparation_status": "file_only_not_registered_or_bootstrapped",
+  "purpose": "23社cohortの報告年次EPS/BPSと普通株basis・参考式適合の比較を継続する。会社全体の投資thesisではない。",
+  "author_and_project_boundary": {
+    "implementation_author": "maxgfr/crible maintainers",
+    "fixed_commit": "00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7",
+    "formula": "sqrt(22.5 × EPS × BVPS)",
+    "positive_guard": "EPS>0 AND BVPS>0",
+    "original_Graham_complete_rules_adopted": false,
+    "external_author_recommends_3817": false,
+    "project_method": "graham_number独立実装は既存受入済み。今回methodを追加/変更/再実装しない。",
+    "code_and_spec_vs_Japanese_mapping": "外部provider列の仕様、会社直接表示、抽出担当者のscope判断と日本原典への適合を区別する。"
+  },
+  "conditions": [
+    {
+      "id": "C1",
+      "topic": "年次reportedEPSの期間・利益基準と正値guard",
+      "external_implementation_rule": "maxgfr/cribleはnet_income/平均株数系をEPSとし、canonicalの既定はannual。ただし計算関数自体が年次/TTMを自動保証せずQ1年率化もしない。EPS>0かつBVPS>0にのみ平方根を適用する。",
+      "Japanese_source_mapping": "FY2025-04-01～2026-03-31の連結基本EPS直接表示443.34円だけを候補とする。物理18の親会社利益/普通株利益と普通株式の期中平均、物理2の平均株数へ既受入参照がある。正常利益/持続性の保証ではない。",
+      "compare_on_new_saved_source": "当期/比較期、年次/四半期累計/予想、連結/個別、基本/希薄化の区別を固定し、原表示や注記の訂正で候補basisが変わるか確認する。負/0/欠損を正の正常値へ補わない。",
+      "status": "input_candidate_only_meaning_not_adopted",
+      "do_not_substitute": [
+        "会社予想EPS435.34",
+        "個別EPS253.08",
+        "Q1年率化",
+        "丸め親NI/別精度株数からの逆算EPS"
+      ],
+      "refs": [
+        "issuer-annual-original",
+        "issuer-derived-twofacts",
+        "maintainer-annual-and-denominator-spec"
+      ]
+    },
+    {
+      "id": "C2",
+      "topic": "年度末BPSと普通株主scope・平均vs期末分母",
+      "external_implementation_rule": "maintainerのBVPSは持分/期末株数を優先し、provider欠損等では平均fallbackもある。EPSの平均分母とBPSの期末分母を同じものと決めない。StockholdersEquity/CommonStockEquityのprovider列と日本の会計名は別に照合する。",
+      "Japanese_source_mapping": "2026-03-31時点の連結BPS直接表示2659.88円だけを候補とする。EPSはduration、BPSは同年度末instantである。p2の発行済/自己/平均、p18の普通株/希薄化注記は既受入scope参照。詳細BPS分子の再構成、OCI/NCI等の完全調整や現在splitbasisは未認証。",
+      "compare_on_new_saved_source": "普通株持分、非支配/優先持分、自己株・株式分割等、平均/期末・株/千株の違いと当時基準を比較する。日本基準株主資本や純資産総額を無条件にupstream持分へ直訳せず、表示精度差を丸め補正しない。",
+      "status": "direct_BPS_candidate_detailed_mapping_unresolved",
+      "do_not_substitute": [
+        "個別BPS699.68",
+        "連結純資産総額",
+        "日本基準株主資本という名前だけの置換",
+        "p18の12633千株をp2の12633889株の正確代替にすること"
+      ],
+      "refs": [
+        "issuer-annual-original",
+        "issuer-derived-twofacts",
+        "maintainer-annual-and-denominator-spec"
+      ]
+    },
+    {
+      "id": "C3",
+      "topic": "正値式の範囲とlatestperiod価格・後日変更",
+      "external_implementation_rule": "参考式はsqrt(22.5×EPS×BVPS)。upstreamの価格依存比較はlatest fiscal period onlyで、価格を過去各行へbackdateしない。upstreamはGraham式自体もprice非None block内だが、独立実装の純式入力2項目の意味点検とupstream実行条件は分ける。",
+      "Japanese_source_mapping": "今回の443.34/2659.88は2026-05-13資料の報告年次値で、現在株数・価格や利益の将来持続性を確定しない。未取得の後発Q1locatorは予想維持・現在basis・業績更新の本文証拠ではない。",
+      "compare_on_new_saved_source": "新保存開示に訂正/資本異動/分母・連結範囲変更があれば同じ候補basisと比較し、別途価格を使う時は実際の価格日/通貨/対象株式/period対応を確認する。5月時点のscope変更なし/後発事象なしを現在へ移さない。",
+      "status": "price_and_financial_adoption_unset",
+      "not_an_investment_decision": "正/負のguardはこの式の定義域であり、負値を会社永久除外/売却へ結ばない。原著Graham全基準、買値・利確値、IR有効性や回答分岐は採用しない。",
+      "refs": [
+        "maintainer-formula-and-latestperiod",
+        "project-independent-formula-contract",
+        "issuer-annual-original"
+      ]
+    }
+  ],
+  "candidate_inputs_only": {
+    "eps_jpy": {
+      "value": "443.34",
+      "kind": "issuer_reported_annual",
+      "start": "2025-04-01",
+      "end": "2026-03-31",
+      "scope": "連結/日本基準/基本EPS",
+      "normal_earnings_assumed": false
+    },
+    "book_value_per_share_jpy": {
+      "value": "2659.88",
+      "kind": "issuer_reported_position",
+      "as_of": "2026-03-31",
+      "scope": "連結/日本基準/会社直接表示BPS",
+      "detailed_numerator_reconstruction": false
+    },
+    "unit": "JPY-per-share",
+    "calculation_executed_here": false,
+    "financial_inputs_verified": false,
+    "meaning_review_required": true
+  },
+  "source_reading_boundary": {
+    "original_full_content_pages": 19,
+    "root_accepted_meaning_image_pages": [
+      1,
+      2,
+      9,
+      18
+    ],
+    "new_meaning_pages_read_here": [],
+    "original_and_derived_are_one_original_not_independent_confirmations": true,
+    "source_quotes_are_existing_fixed_refs": "manifest.json",
+    "bootstrap_reviews": [],
+    "native_read_claim_created": false,
+    "first_qualitative_job_plan": "root実保存/分類の後、正当な凍結packetの原source+派生sourceを初回reviewする予定。登録/job/読了成功は先取りしない。"
+  },
+  "management_review": null,
+  "management_note": "準備では管理日を新作しない。rootはactual-inputsで既存Anthropic少なくとも四半期点検に沿うJan16内部管理basisを別設定する方針。会社予定/反証期限/売却期限とは区別し、この準備票は上書きしない。",
+  "next_saved_public_checks": [
+    "同じ年次・普通株basisの訂正/更新や後発資本異動が正当に保存された時にC1〜C3へ比較する。",
+    "未取得Q1はlocatorに留め、最新予想が維持されたとは認定しない。新GETや閉じたauthor/原文経路探索をここから再開しない。"
+  ],
+  "financial_and_IR_state": {
+    "actual_DB_first_save": null,
+    "DB_state_read_this_phase": false,
+    "native_case_version": null,
+    "native_job_or_CAS": null,
+    "price": null,
+    "valuation_or_reference_number_computed": null,
+    "financial_policy": null,
+    "forecast": null,
+    "financial_answer_branches": null,
+    "IR_question_priority": null,
+    "IR_value": "unproven",
+    "send_ready": false,
+    "orders_or_investment_action": null
+  }
+}

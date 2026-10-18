@@ -1,0 +1,443 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T12:13:48.443682+00:00",
+  "status": "RG01_stable_checkpoint_accepted_separate_adjacent_issue_recorded",
+  "checkpoint_implementation_sha256": "82d517a49c0cfbb69c0edc1a6187bf3a724cf9b3918e4a5d33cccb00260d1c46",
+  "implementation_snapshots": [
+    {
+      "path": "src/ir_agent/decision_lifecycle.py",
+      "sha256": "5741cbb3d1c4c11efc2b15b5ab64a57bb32b7ba50783d707c1fec6c9fc4c5934",
+      "byte_count": 14394
+    },
+    {
+      "path": "src/ir_agent/harness.py",
+      "sha256": "fc9647737d3386574a9d0999bcb1dd9cf9e887cf6e58eb815ab58e42d6dce8a2",
+      "byte_count": 38656
+    },
+    {
+      "path": "tests/test_dependency_information_gates.py",
+      "sha256": "f4714d67cf75fb2f9b032232b1251cc1eede962ae76f827e437360f66a77bc1b",
+      "byte_count": 16944
+    }
+  ],
+  "review_chronology": {
+    "initial_stable_code_hashes_verified": true,
+    "three_memory_probes_finished_before_later_source_change": true,
+    "full_old_code_copies_saved": false,
+    "later_finalization_hash_mismatch_detected": true,
+    "later_hash_only_observations": [
+      {
+        "path": "src/ir_agent/decision_lifecycle.py",
+        "checkpoint_sha256": "5741cbb3d1c4c11efc2b15b5ab64a57bb32b7ba50783d707c1fec6c9fc4c5934",
+        "later_observed_sha256": "6663f44f66cc20a097f0fff47b58751c161525c7339cf6a5b1356f5eeb14d9b3",
+        "same_as_checkpoint": false
+      },
+      {
+        "path": "src/ir_agent/harness.py",
+        "checkpoint_sha256": "fc9647737d3386574a9d0999bcb1dd9cf9e887cf6e58eb815ab58e42d6dce8a2",
+        "later_observed_sha256": "5f75ba6452a61f47eb96c0ae06629d7251c90c84b53c46c7181953bff4b5b7bd",
+        "same_as_checkpoint": false
+      },
+      {
+        "path": "tests/test_dependency_information_gates.py",
+        "checkpoint_sha256": "f4714d67cf75fb2f9b032232b1251cc1eede962ae76f827e437360f66a77bc1b",
+        "later_observed_sha256": "44910ea257fb8a07f5ee492659a90860a20b65edf601ed61a931784212816c33",
+        "same_as_checkpoint": false
+      }
+    ],
+    "postchange_code_content_used_as_old_evidence": false,
+    "old_source_snippets": "Captured from prior stable tool output; full byte offsets unavailable, checkpoint line/hash explicitly recorded."
+  },
+  "required_RG01_blocking_findings": 0,
+  "adjacent_findings": [
+    {
+      "id": "ADJ01",
+      "severity": "P2",
+      "classification": "pre_existing_adjacent_legacy_source_publicity_gap_not_RG01_regression",
+      "title": "Legacy apply can update a financial thesis when an origin starts unclear and has no correction row",
+      "source_types_and_metadata": {
+        "source_id": "independent-original-unclear",
+        "company_id": "demo-services",
+        "source_type": "ir_reply",
+        "metadata": {
+          "reply_id": "demo-reply-cost",
+          "information_status": "unclear",
+          "url_role": "contact or premise reference; reply is not a public web publication"
+        },
+        "source_origins": [],
+        "reply_information_review_rows": 0
+      },
+      "reproduction_case": {
+        "case": "original_metadata_unclear_no_correction_legacy_question",
+        "before_thesis_version": 3,
+        "after_thesis_version": 4,
+        "applied": true,
+        "own_information_status": "public_clarification",
+        "action": "unresolved",
+        "decision_status": "missing_decision_contract",
+        "dependency_hold": null,
+        "source_metadata_status": "unclear",
+        "review_classification_rows": 0,
+        "classification": "adjacent pre-existing legacy source-publicity gap, not a regression of the new classification-correction gate"
+      },
+      "impact": "Synthetic legacy model advances v3→v4 on existing fixture values. Current action stays unresolved/missing_decision_contract; no unguarded buy/sell was reproduced.",
+      "why_separate": "New RG01 helper deliberately reads assessment rows; legacy mutation path existed before and the scoped fix did not add raw-source classification validation. Contracted path already holds via pure source validation. Classification as pre-existing is based on unchanged mutation structure and saved baseline description, not reexecution of an old module snapshot.",
+      "parent_direction": "Finish and preserve this RG01 checkpoint review first; handle ADJ01 as a separate concrete next task/new checkpoint. No code change requested or performed by independent reviewer.",
+      "basis": [
+        {
+          "path": "src/ir_agent/decision_lifecycle.py",
+          "line": 41
+        },
+        {
+          "path": "src/ir_agent/information_review.py",
+          "line": 154
+        },
+        {
+          "path": "src/ir_agent/harness.py",
+          "line": 488
+        }
+      ],
+      "not_claimed": [
+        "Not a successful current buy/sell bypass.",
+        "Not a regression newly introduced by this correction gate.",
+        "Not justification to rewrite past applied models or invent a new financial threshold."
+      ]
+    }
+  ],
+  "acceptance_mapping": [
+    {
+      "id": "A01",
+      "scope": "required_RG01",
+      "result": "accepted_for_RG01",
+      "implementation_mapping": "freeze→plan and validate_send→plan use both cutoffs and force needs_review when any relevant correction holds.",
+      "stable_target_tests_read_not_rerun": [
+        "test_new_preflight_and_send_hold_current_dependency_correction"
+      ]
+    },
+    {
+      "id": "A02",
+      "scope": "required_RG01",
+      "result": "accepted_for_RG01",
+      "implementation_mapping": "Unconditional runtime guard runs before put_source/put_thesis; probe1 retains thesis and own public status.",
+      "stable_target_tests_read_not_rerun": [
+        "test_public_new_reply_does_not_update_model_over_held_dependency"
+      ]
+    },
+    {
+      "id": "A03",
+      "scope": "required_RG01",
+      "result": "accepted_for_RG01",
+      "implementation_mapping": "Existing sources_for/source_origins full traversal reused; second-parent/shared-DAG test reviewed.",
+      "stable_target_tests_read_not_rerun": [
+        "test_second_parent_correction_and_shared_dag_gate_plan_and_application"
+      ]
+    },
+    {
+      "id": "A04",
+      "scope": "required_RG01",
+      "result": "accepted_for_RG01",
+      "implementation_mapping": "Guard adds dependency_information_holds and reason code separately; probe1 public own reply remains public.",
+      "stable_target_tests_read_not_rerun": [
+        "test_public_new_reply_does_not_update_model_over_held_dependency"
+      ]
+    },
+    {
+      "id": "A05",
+      "scope": "required_RG01",
+      "result": "accepted_for_corrected_dependencies",
+      "implementation_mapping": "Guard applies independently of decision_contract presence. Original metadata/no-history limitation is B01, not silently counted covered.",
+      "stable_target_tests_read_not_rerun": [
+        "test_legacy_reply_has_the_same_dependency_application_guard"
+      ]
+    },
+    {
+      "id": "A06",
+      "scope": "required_RG01",
+      "result": "accepted_for_RG01",
+      "implementation_mapping": "Runtime sampled after transaction acquisition. Source assessments enforces recorded_at and first_saved_at cutoff; plan exposes both boundaries. Probe1 backdated evaluation is held.",
+      "stable_target_tests_read_not_rerun": [
+        "test_runtime_cutoff_is_sampled_after_writer_acquisition",
+        "test_send_rechecks_after_freeze_and_cannot_backdate_around_current_hold",
+        "test_delayed_correction_uses_both_cutoffs_and_backdated_freeze_still_holds"
+      ]
+    },
+    {
+      "id": "A07",
+      "scope": "required_RG01",
+      "result": "accepted_for_RG01",
+      "implementation_mapping": "No global classification scan: derive subjects from current thesis closure only. Both unrelated controls reviewed.",
+      "stable_target_tests_read_not_rerun": [
+        "test_unrelated_reply_correction_does_not_hold_selected_thesis",
+        "test_other_company_correction_does_not_hold_selected_thesis"
+      ]
+    },
+    {
+      "id": "A08",
+      "scope": "required_RG01",
+      "result": "accepted_for_RG01",
+      "implementation_mapping": "Unchanged request replays old held evaluation; reclassification alone is read-independent, a new explicit evaluation/CAS request performs recovery if other gates pass.",
+      "stable_target_tests_read_not_rerun": [
+        "test_reaffirmation_requires_explicit_reassessment_and_keeps_old_retry"
+      ]
+    },
+    {
+      "id": "A09",
+      "scope": "required_RG01",
+      "result": "accepted_for_RG01",
+      "implementation_mapping": "New guard and hold record are inside same writer transaction; current_evaluation_view failure rollback test reviewed. Earlier downstream-quote failure may be bypassed by correct early hold, not an atomicity regression.",
+      "stable_target_tests_read_not_rerun": [
+        "test_hold_evaluation_failure_rolls_back_and_retry_remains_idempotent"
+      ]
+    },
+    {
+      "id": "A10",
+      "scope": "required_RG01",
+      "result": "accepted_for_RG01",
+      "implementation_mapping": "Existing snapshots remain immutable; retry short-circuit keeps same-request history. Probe1 shows no second write.",
+      "stable_target_tests_read_not_rerun": [
+        "test_hold_evaluation_failure_rolls_back_and_retry_remains_idempotent"
+      ]
+    },
+    {
+      "id": "A11",
+      "scope": "required_RG01",
+      "result": "met_by_this_review",
+      "implementation_mapping": "Only three SQLite :memory: probes; no actual research DB opened. Parent full suite/result reused as attributed evidence, not rerun.",
+      "stable_target_tests_read_not_rerun": []
+    },
+    {
+      "id": "B01",
+      "scope": "bounded_adjacent_triage_not_automatic_new_requirement",
+      "result": "adjacent_issue_reproduced_deferred",
+      "implementation_mapping": "Original metadata unclear with no assessment row: contracted pure preflight holds; legacy application still appends a financial thesis. Parent explicitly scopes the next fix separately.",
+      "stable_target_tests_read_not_rerun": []
+    },
+    {
+      "id": "B02",
+      "scope": "preserve_existing_boundaries",
+      "result": "preserved_limitation",
+      "implementation_mapping": "No numeric/financial policy changes or automatic model rollback. Guard is a correction-review gate rather than general source-validity certification.",
+      "stable_target_tests_read_not_rerun": []
+    }
+  ],
+  "source_evidence": [
+    {
+      "path": "src/ir_agent/decision_lifecycle.py",
+      "sha256": "5741cbb3d1c4c11efc2b15b5ab64a57bb32b7ba50783d707c1fec6c9fc4c5934",
+      "line_at_reviewed_checkpoint": 38,
+      "quote_from_prior_stable_read": "pending.extend(source_origins(source))",
+      "character_start": null,
+      "character_end": null,
+      "full_source_copy_saved": false,
+      "capture_method": "Earlier stable tool output, with checkpoint file hashes verified before the subsequent mutable edit; no later code content is used.",
+      "claim": "Existing sources_for traverses every declared parent; shared IDs deduplicate. It is reused by the new guard."
+    },
+    {
+      "path": "src/ir_agent/decision_lifecycle.py",
+      "sha256": "5741cbb3d1c4c11efc2b15b5ab64a57bb32b7ba50783d707c1fec6c9fc4c5934",
+      "line_at_reviewed_checkpoint": 47,
+      "quote_from_prior_stable_read": "sources = self.sources_for(thesis, {})\n        reviews = source_assessments(self.store, [source['id'] for source in sources], as_of=as_of)",
+      "character_start": null,
+      "character_end": null,
+      "full_source_copy_saved": false,
+      "capture_method": "Earlier stable tool output, with checkpoint file hashes verified before the subsequent mutable edit; no later code content is used.",
+      "claim": "Correction review subjects derive from full thesis source closure, not unrelated reply rows."
+    },
+    {
+      "path": "src/ir_agent/decision_lifecycle.py",
+      "sha256": "5741cbb3d1c4c11efc2b15b5ab64a57bb32b7ba50783d707c1fec6c9fc4c5934",
+      "line_at_reviewed_checkpoint": 104,
+      "quote_from_prior_stable_read": "historical = self.dependency_information_holds(thesis, as_of=as_of)\n        current = self.dependency_information_holds(thesis, as_of=checked_at)",
+      "character_start": null,
+      "character_end": null,
+      "full_source_copy_saved": false,
+      "capture_method": "Earlier stable tool output, with checkpoint file hashes verified before the subsequent mutable edit; no later code content is used.",
+      "claim": "Historical and current correction holds are separately consulted."
+    },
+    {
+      "path": "src/ir_agent/decision_lifecycle.py",
+      "sha256": "5741cbb3d1c4c11efc2b15b5ab64a57bb32b7ba50783d707c1fec6c9fc4c5934",
+      "line_at_reviewed_checkpoint": 107,
+      "quote_from_prior_stable_read": "value.update(question_value='needs_review',\n                         dependency_information_holds={**historical, **current},\n                         dependency_information_check={'as_of': as_of, 'checked_at': checked_at,\n                                                       'as_of_holds': historical, 'current_holds': current})",
+      "character_start": null,
+      "character_end": null,
+      "full_source_copy_saved": false,
+      "capture_method": "Earlier stable tool output, with checkpoint file hashes verified before the subsequent mutable edit; no later code content is used.",
+      "claim": "Old as_of label cannot make a known current correction disappear; both boundaries are explicit."
+    },
+    {
+      "path": "src/ir_agent/harness.py",
+      "sha256": "fc9647737d3386574a9d0999bcb1dd9cf9e887cf6e58eb815ab58e42d6dce8a2",
+      "line_at_reviewed_checkpoint": 450,
+      "quote_from_prior_stable_read": "with self.store.transaction():\n            current_time = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)",
+      "character_start": null,
+      "character_end": null,
+      "full_source_copy_saved": false,
+      "capture_method": "Earlier stable tool output, with checkpoint file hashes verified before the subsequent mutable edit; no later code content is used.",
+      "claim": "evaluate_reply samples default runtime after BEGIN IMMEDIATE acquisition; now remains engine/test injection."
+    },
+    {
+      "path": "src/ir_agent/harness.py",
+      "sha256": "fc9647737d3386574a9d0999bcb1dd9cf9e887cf6e58eb815ab58e42d6dce8a2",
+      "line_at_reviewed_checkpoint": 488,
+      "quote_from_prior_stable_read": "dependency_holds = DecisionLifecycle(self.store).dependency_information_holds(\n                current, as_of=current_time.isoformat())",
+      "character_start": null,
+      "character_end": null,
+      "full_source_copy_saved": false,
+      "capture_method": "Earlier stable tool output, with checkpoint file hashes verified before the subsequent mutable edit; no later code content is used.",
+      "claim": "Current dependency guard precedes source and thesis writes and is not conditional on decision_contract."
+    },
+    {
+      "path": "src/ir_agent/harness.py",
+      "sha256": "fc9647737d3386574a9d0999bcb1dd9cf9e887cf6e58eb815ab58e42d6dce8a2",
+      "line_at_reviewed_checkpoint": 493,
+      "quote_from_prior_stable_read": "evaluation.update(dependency_information_holds=dependency_holds,\n                                  reason_codes=[\"dependency_information_held_for_review\"],\n                                  decision_status=\"dependency_information_held_for_review\")",
+      "character_start": null,
+      "character_end": null,
+      "full_source_copy_saved": false,
+      "capture_method": "Earlier stable tool output, with checkpoint file hashes verified before the subsequent mutable edit; no later code content is used.",
+      "claim": "Incoming reply information_status is not overwritten by the old dependency hold."
+    },
+    {
+      "path": "src/ir_agent/harness.py",
+      "sha256": "fc9647737d3386574a9d0999bcb1dd9cf9e887cf6e58eb815ab58e42d6dce8a2",
+      "line_at_reviewed_checkpoint": 500,
+      "quote_from_prior_stable_read": "elif dependency_holds:\n                evaluation[\"status\"] = \"held_for_review\"",
+      "character_start": null,
+      "character_end": null,
+      "full_source_copy_saved": false,
+      "capture_method": "Earlier stable tool output, with checkpoint file hashes verified before the subsequent mutable edit; no later code content is used.",
+      "claim": "Financial writes occur only in the else branch after classification/dependency/ambiguous checks."
+    },
+    {
+      "path": "src/ir_agent/store.py",
+      "sha256": "2b9e6f3a3170c9164c052bf98c3e36b23b52dcdadd83d49f0b351350a22bceb9",
+      "line_at_reviewed_checkpoint": 122,
+      "quote_from_prior_stable_read": "self.connection.execute(\"BEGIN IMMEDIATE\")",
+      "character_start": null,
+      "character_end": null,
+      "full_source_copy_saved": false,
+      "capture_method": "Earlier stable tool output, with checkpoint file hashes verified before the subsequent mutable edit; no later code content is used.",
+      "claim": "Existing transaction acquires the writer, with full rollback on errors."
+    },
+    {
+      "path": "src/ir_agent/information_review.py",
+      "sha256": "22df6e4a6e5d717a390e817bb311b091112eb1d44722e0651623548f09b7d9ee",
+      "line_at_reviewed_checkpoint": 166,
+      "quote_from_prior_stable_read": "if history:\n            result[subject] = history[-1]",
+      "character_start": null,
+      "character_end": null,
+      "full_source_copy_saved": false,
+      "capture_method": "Earlier stable tool output, with checkpoint file hashes verified before the subsequent mutable edit; no later code content is used.",
+      "claim": "source_assessments consults correction history only; original metadata unclear without a review is the separate adjacent issue."
+    }
+  ],
+  "independent_probes": {
+    "schema_version": 1,
+    "status": "three_finite_memory_probes_complete",
+    "cases": [
+      {
+        "case": "backdated_public_new_reply_on_current_corrected_dependency",
+        "applied": false,
+        "own_information_status": "public_clarification",
+        "dependency_reply_ids": [
+          "demo-reply-cost"
+        ],
+        "thesis_unchanged": true,
+        "old_source_and_new_reply_unchanged": true,
+        "exact_request_retry_no_new_write": true,
+        "status": "held_for_review"
+      },
+      {
+        "case": "original_metadata_unclear_no_correction_contracted_question",
+        "correction_hold_rows": {},
+        "pure_preflight": "needs_review",
+        "notes": "Pure source-publicity guards already hold; correction overlay alone is not a complete source-publicity validator."
+      },
+      {
+        "case": "original_metadata_unclear_no_correction_legacy_question",
+        "before_thesis_version": 3,
+        "after_thesis_version": 4,
+        "applied": true,
+        "own_information_status": "public_clarification",
+        "action": "unresolved",
+        "decision_status": "missing_decision_contract",
+        "dependency_hold": null,
+        "source_metadata_status": "unclear",
+        "review_classification_rows": 0,
+        "classification": "adjacent pre-existing legacy source-publicity gap, not a regression of the new classification-correction gate"
+      }
+    ],
+    "execution": {
+      "memory_SQLite_cases": 3,
+      "actual_DB_accesses": 0,
+      "new_GETs": 0,
+      "production_or_existing_test_or_research_edits": 0,
+      "full_suite_runs": 0
+    }
+  },
+  "producer_target_test_result_attributed": {
+    "new_module_tests": 12,
+    "related_existing_tests": 91,
+    "total_target_tests": 103,
+    "success": true,
+    "elapsed_seconds": "0.849",
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=tests .venv/bin/python -m unittest test_dependency_information_gates test_decision test_decision_lifecycle test_information_review test_source_provenance test_information_research test_workflow",
+    "full_suite_run": false
+  },
+  "parent_full_suite_attributed": {
+    "path": "research/ir-reply-runtime-gap-review-2026-10-15/parent-full-suite.json",
+    "sha256": "e7fc6325e30dbf9d4eeb145bae5f7fd9013bd44a6daeffe0591a5319ece8e7d7",
+    "tests": 1324,
+    "exit_code": 0,
+    "seconds": "40.812",
+    "rerun_by_independent_reviewer": false,
+    "actual_database_hash_and_unchanged_claim": "Parent evidence only; independent reviewer did not open/read actual DB."
+  },
+  "references": [
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/implementation.json",
+      "sha256": "82d517a49c0cfbb69c0edc1a6187bf3a724cf9b3918e4a5d33cccb00260d1c46"
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/root-review-preparation.json",
+      "sha256": "42d5592b162c27bb86e5c3a53e40099b82f016dae7676abefdbb52b4476cd7d4"
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/README.md",
+      "sha256": "c2f217692a612e487b81d0ad39c6454282b1741c9d0964059965eaf67e9196dc"
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/review.json",
+      "sha256": "28236371bea5b1b4b5818e291c2de95e427003bc7123f4c89fa14c50adf7dec8"
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/reproduction.json",
+      "sha256": "7dd4143669e6e673fef84730ff081898f5a75ef5aab72893f1061f2f4bec032a"
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/parent-full-suite.json",
+      "sha256": "e7fc6325e30dbf9d4eeb145bae5f7fd9013bd44a6daeffe0591a5319ece8e7d7"
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/independent-probe.py",
+      "sha256": "f54c83db00491207b3d2f1b42f9f4848f769ddeb632fe7a01d2589de47675ebd"
+    }
+  ],
+  "limits": [
+    "Independent runtime evidence is three finite memory cases; producer12+91 and parent1324 are attributed saved runs, not rerun here.",
+    "Historical classification result/current gate are distinct; source metadata remains immutable. Source publicity is not financial correctness.",
+    "Only actual thesis dependency correction closure is newly guarded; raw metadata/no-assessment legacy gap is a separately reproduced next task.",
+    "Existing pure calculation source/time/policy checks remain separate; no extra financial threshold/probability/source-independence claim.",
+    "This checkpoint review is not to be overwritten when the adjacent fix changes code; use a new review/supplement."
+  ],
+  "execution": {
+    "new_GETs": 0,
+    "actual_DB_accesses": 0,
+    "production_or_test_or_old_file_edits": 0,
+    "new_synthetic_memory_cases": 3,
+    "full_suite_runs": 0,
+    "financial_policy_changes": 0,
+    "external_sends_or_orders": 0
+  }
+}

@@ -1,0 +1,13 @@
+# 保存研究による判断保存：独立設計メモ
+
+新実装の最終レビューは、編集停止の連絡まで開始していない。既存helperの合成で見落としやすい条件だけを[11項目](independent-design-notes.json)に整理した。コード・実DB・network・test実行は0。
+
+最重要はpure decisionの早期return。policy不足やposition不明でquote/source検査まで到達しないため、wrapperが不正bindingをunresolvedとして保存しないよう、構造と参照は先に確認する。旧pureのreturn順序は変えず、価格bindingを狭い共通helperにするなら旧契約の回帰確認を行う。
+
+`sources_for`は閉包収集、`source_availability`は保存来歴/時点、`source_assessments`は可視訂正版の取得であり、それぞれ単独で全原典の公開性・synthetic・reply bindingを認証しない。thesisとquote双方の第二親まで対象にし、空のassessment結果をpublic-onlyの証明としない。旧source metadataのholdを後日の分類だけで消さない。
+
+raw最新版とstrict-current選択版の両方をCASへ使い、無関係な旧legacy除外に由来するaggregate partialだけで有効な最新選択を止めない。current availableは過去のthesis時点存在の証明ではないため、現在baselineとPITの意味を区別する。positionは既存の明示申告helperを使い、import時held=falseや古い申告へのfallbackを認めない。
+
+同id同要求はCASより前に最初の結果を返し、新しいpolicy最新版で固定版を置き換えない。current表示は価格の1µs境界、thesis版/期限/選択来歴、明示position、未消費の分類新版を確認してholdを追加するだけとし、過去unresolvedを昇格しない。
+
+新tableのfirst_saved_atとrequest digestで足りる。返信schema/旧table、汎用receipt、RecordAvailability entity、過去write、scheduler、採点等へ拡張する必要はない。既存pure計算を再利用し、wrapperはDBの入力解決・結合・不変保存に限定する。

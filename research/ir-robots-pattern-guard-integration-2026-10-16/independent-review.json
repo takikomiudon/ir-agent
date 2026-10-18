@@ -1,0 +1,95 @@
+{
+  "reviewer": "codex_audit_consumer",
+  "reviewed_at": "2026-10-16T14:36:37.354720+00:00",
+  "status": "ready_for_root_acceptance_within_finite_scope",
+  "scope": "robots patternの誤許可、旧group選択/raw対応、current/savedfollowupの本文GET前停止のみ。root指定の切詰めと明示HTML200の修正後で閉鎖し、RFC全体や別入力へ探索拡張していない。",
+  "reviewed_current_sha256": {
+    "scripts/research_ir_universe.py": "3ce30edbb5dbfabc13acf99718a1389dedca8d5d12c3de01864b9a32de0cd3ad",
+    "scripts/collect_ir_followups.py": "9b6390bad018cce8e5a4b6a495733efb199b40df0a222199361e432041808bb7",
+    "tests/test_ir_contact_research.py": "a7c0da32778f2d8d8e78eb273ef58c96aa4a1c4807dd69abd41df423024a19f3",
+    "tests/test_ir_followup_collection.py": "d1af77c903e7d22de5166fd07dd8f825779d216aaaeec3cfa3c068d98530c0e0",
+    "pyproject.toml": "7dd5b6eda08e31ed8cb953f8d17d7340541045c787524aced60798f7dcfb051a",
+    "uv.lock": "8e15e47d4481fc7144c0f44aa10befc9161ef225b849e9c4c2603d821aa60929",
+    "tests/test_robots_pattern_guard.py": "4305a294cd30c54e1c3370ed02916dabb4a64782cf3c70e8d0da99a86a3eca60"
+  },
+  "producer_validation": {
+    "path": "research/ir-robots-pattern-guard-integration-2026-10-16/validation-v2.json",
+    "sha256": "efff8f27f862df570c044a6230482fcaf8373571d94409efdc12b7e2a8658f6b",
+    "version": "v2"
+  },
+  "findings": [],
+  "resolved_findings": [
+    {
+      "id": "RPG-01-robots-truncated-text-false-permission",
+      "status": "resolved_in_v2",
+      "before": "独立mockで227531byteのrobots200末尾のDisallow: /*_pdfが200000文字cutoffから落ち、robotsと対象本文の2呼出へ進んだ。",
+      "after": "同じ独立入力はrobots_text_truncatedで停止し、mock本文呼出0。保存済みcap境界・truncationflagも許可/correctionを作らない。"
+    },
+    {
+      "id": "RPG-02-explicit-HTML200-unknown",
+      "reported_by": "root",
+      "status": "resolved_in_v2",
+      "after": "text/htmlとapplication/xhtml+xmlのrobots200をfresh/savedでunknown停止。独立mockは双方本文呼出0。"
+    }
+  ],
+  "substantive_checks": [
+    "旧literal最長一致とstdlibの先頭matching groupを許可上限にし、選択groupのpatternへProtegoを拒否側ANDとして適用する。",
+    "percent escapeを元raw directiveから扱い、raw欠落/衝突/再parseでbinding不明なら拒否する。",
+    "pattern Allowはlegacy拒否を昇格せず、saved denialを解除する新correctionを作らない。既存6383の厳密literal例外を維持する。",
+    "Fetcher.capture_oneとcollectのsaved-policy/旧stop correction入口が新factoryとinput-error判定を経由する。redirect本文もcapture_oneを再通過する。",
+    "実保存J-STAGE raw SHA970e4bff…のPDF実URLはfalse、既取得article/searchはtrueとなるオフライン回帰を確認した。",
+    "Protego==0.7.0のproject/lock/runtimeは一致し、既存外部package objectは全て不変。"
+  ],
+  "verification": {
+    "selected_offline_unittests": {
+      "passed": 16,
+      "selection": "専用pattern10 + savedfollowup4 + 404/410/6383保持2",
+      "fullsuite": "root担当・独立実行なし"
+    },
+    "independent_request_mock_matrix": [
+      {
+        "id": "original-227531-byte-policy",
+        "passed": true,
+        "mocked_body_calls": 0,
+        "reason": "robots_text_truncated"
+      },
+      {
+        "id": "HTML200",
+        "passed": true,
+        "mocked_body_calls": 0,
+        "reason": "robots_html_response"
+      },
+      {
+        "id": "XHTML200",
+        "passed": true,
+        "mocked_body_calls": 0,
+        "reason": "robots_html_response"
+      },
+      {
+        "id": "empty-plain200",
+        "passed": true,
+        "mocked_body_calls": 1,
+        "reason": null
+      },
+      {
+        "id": "complete404",
+        "passed": true,
+        "mocked_body_calls": 1,
+        "reason": null
+      }
+    ],
+    "ordinary_HTML_body": "空text/plain200および完全404から進める通常HTML本文のtitle/text抽出も維持",
+    "code_and_evidence_pins_rechecked": true
+  },
+  "boundaries": {
+    "real_network_GETs": 0,
+    "actual_PDF_GETs": 0,
+    "live_DB_or_Store_calls": 0,
+    "old_records_or_sources_or_holds_edits": 0,
+    "code_or_dependency_edits_by_reviewer": 0,
+    "whole_universe_recrawl_or_old_denial_reinterpretation": 0,
+    "output_files": [
+      "research/ir-robots-pattern-guard-integration-2026-10-16/independent-review.json"
+    ]
+  }
+}

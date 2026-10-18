@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T15:12:19.287113+00:00",
+  "status": "bounded_v2_recheck_pass_both_v1_findings_resolved",
+  "review_scope": "Two v1 findings, two added regression methods, and frozen/legacy compatibility only; no new broad audit.",
+  "reviewed_code_sha256": "65ba58f6183be3251247e83d16ae832bb868525ef60ea787e8706df2ad6bfb64",
+  "prior_review": {
+    "json": "research/ir-public-capture-validation-2026-10-15/independent-review.json",
+    "sha256": "71f377ce036f40c7e5b78be0959cd67f154bbd54c9275a230e8d0e2cd6cd04b4",
+    "unchanged": true,
+    "prior_findings": [
+      "NCB-01",
+      "NCB-02"
+    ]
+  },
+  "findings": [],
+  "resolved_findings": [
+    {
+      "id": "NCB-01",
+      "status": "resolved",
+      "code_location": "scripts/verify_case_source_bundle.py:488",
+      "reviewed_change": "UTF8 decode only when output_check.status==matched; untrusted output retained as None for binding comparisons.",
+      "independent_recheck": "Original stale-pin b\"\\xff\" now mismatch with all_declared_bindings_agree:false and output content comparisons unknown; direct record/source content comparison remains matched. CLI exits1 with mismatch JSON. Re-pinned invalidUTF8 still ValueError.",
+      "test_added": "test_unpinned_invalid_UTF8_output_remains_mismatch_without_content_trust"
+    },
+    {
+      "id": "NCB-02",
+      "status": "resolved",
+      "code_location": "scripts/verify_case_source_bundle.py:321",
+      "reviewed_change": "Implementation exact keys, nonempty name/version and nullable SHA validated before unsupported profile dispatch.",
+      "independent_recheck": "Both original malformed implementation cases now ValueError for unknown name or version. With valid common implementation, both unsupported profile cases remain unknown and identity_verified:false; profile-specific parameters are uninterpreted.",
+      "test_added": "test_unknown_profiles_still_validate_common_implementation_without_inferring_parameters"
+    }
+  ],
+  "regression_test_review": {
+    "new_methods_read": 2,
+    "prior_assertions_removed_or_weakened": false,
+    "producer_reported_target_count": 41,
+    "producer_target_tests_independently_rerun": false,
+    "full_suite_runs": 0,
+    "assessment": "Added methods exercise both mismatch versus validation classification and common versus profile-specific schema distinction, including API/CLI, read-only files, secret omission and valid unknown controls."
+  },
+  "legacy": {
+    "seven_functions_AST_exact": {
+      "_sha": true,
+      "_hash": true,
+      "_relative": true,
+      "_artifact": true,
+      "_comparison": true,
+      "_source_audit": true,
+      "verify_case_source_bundle": true
+    },
+    "three_full_reports_reexecuted_file_only": [
+      {
+        "id": "7525-policy",
+        "bundle": "research/ir-case-studies-2026-10-15/7525/issuer-ir-policy-review/source-bundle.json",
+        "status": "unknown",
+        "current_v2_full_report_deep_equal_original": true
+      },
+      {
+        "id": "1518-calendar",
+        "bundle": "research/ir-case-studies-2026-10-15/1518/catalyst-calendar-followup/source-bundle.json",
+        "status": "unknown",
+        "current_v2_full_report_deep_equal_original": true
+      },
+      {
+        "id": "1332-formal-statement",
+        "bundle": "research/ir-case-studies-2026-10-15/1332/statement-calendar-followup/source-bundle.json",
+        "status": "matched",
+        "current_v2_full_report_deep_equal_original": true
+      }
+    ],
+    "models_common_old_tests_unchanged": true
+  },
+  "freeze_checks": {
+    "start_three_live_files_equal_v2_copy_manifest": true,
+    "end_three_live_files_equal_v2_copy_manifest": true,
+    "files": [
+      {
+        "path": "scripts/verify_case_source_bundle.py",
+        "sha256": "65ba58f6183be3251247e83d16ae832bb868525ef60ea787e8706df2ad6bfb64",
+        "bytes": 31766,
+        "live_frozen_copy_manifest_equal": true
+      },
+      {
+        "path": "tests/test_public_capture_binding.py",
+        "sha256": "4e9506ffb121d9cfd3db75011ed9c706bfbf0e1505a832fb54f8df1224eb46dd",
+        "bytes": 21811,
+        "live_frozen_copy_manifest_equal": true
+      },
+      {
+        "path": "docs/public-capture-binding.md",
+        "sha256": "068db73ac695cc5ddf765f71c4d0458f0eba49ba2a9e99623fc80e27947ac4ab",
+        "bytes": 8279,
+        "live_frozen_copy_manifest_equal": true
+      }
+    ],
+    "implementation_v2_sha256": "625fe13f7df5f7f5412751f0350960752310c7c377af79f5ccb378ee9b8595bb",
+    "manifest_v2_sha256": "f3e7d9d9884b517716cf9f4bb6fb114b3c9e2011df078a8e03555980319ceebd",
+    "v1_evidence_files_checked_unchanged": {
+      "research/ir-public-capture-validation-2026-10-15/independent-review.md": "c9ee9c4c6f13247213a2ec8fab63d482fcc1c95d2834f9057ae3fc2e59a89286",
+      "research/ir-public-capture-validation-2026-10-15/planned-paths-before.json": "245d7632968285e8c6dcfabda23085446caa3d56196c45fbd1737f31e6c75f46",
+      "research/ir-public-capture-validation-2026-10-15/source-after-manifest.json": "44636b9d1afaf43695fc6c5caa83b33663eb220b34e2f34a00ce6831d22b18a5",
+      "research/ir-public-capture-validation-2026-10-15/implementation.json": "20c324dd35fc0e31a12919a72d0d3e9fa710de8f1bd3255dd6f8862321f3e170",
+      "research/ir-public-capture-validation-2026-10-15/independent-review.json": "71f377ce036f40c7e5b78be0959cd67f154bbd54c9275a230e8d0e2cd6cd04b4",
+      "research/ir-public-capture-validation-2026-10-15/independent-probe.py": "46875789c6603b9d20557061ca4a2b431ead17f495ca5c210e426036fc10f28a",
+      "research/ir-public-capture-validation-2026-10-15/legacy-before-reports.json": "ca588c7b2a1a4fc7a259d131b92b3112a60f1f637c591339183b3b45d9c8c401",
+      "research/ir-public-capture-validation-2026-10-15/legacy-after-reports.json": "76abe4438e4280a18b65e175fc561724dc52fc7bdc044effa9738bb3bddcc26d",
+      "research/ir-public-capture-validation-2026-10-15/source-before-manifest.json": "25003f8bc83031671467e14d25035541c3101aa8b9e89447e102e50b08c68cd8",
+      "research/ir-public-capture-validation-2026-10-15/design-v1.md": "8a10dbbe9f988bfdc12bf53060085f3fa70673e85d05e53e6f95c16e0835a160",
+      "research/ir-public-capture-validation-2026-10-15/design-v1.json": "eaa3d97d6ed8cf6841de7cc809e15017c94981068fd7454e3d60613b2ac912be",
+      "research/ir-public-capture-validation-2026-10-15/source-before/tests/test_case_source_verifier.py": "c5b6e0be5fed3b6b8d7cde337b4549d7ce851cd1cdcc52a33435ef881e02ad9a",
+      "research/ir-public-capture-validation-2026-10-15/source-before/scripts/verify_case_source_bundle.py": "d728badabad0fb0883acaec768477c9566e9dc0a01ac43a3c16ea7fb50e5edc3",
+      "research/ir-public-capture-validation-2026-10-15/source-before/src/ir_agent/models.py": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c",
+      "research/ir-public-capture-validation-2026-10-15/source-before/src/ir_agent/adapters/common.py": "a6ca5fdd16778706f8a4de072bcdb27f5dcd78efbc6768039d1116606ebbb095",
+      "research/ir-public-capture-validation-2026-10-15/source-after/tests/test_public_capture_binding.py": "351e56712e0683ee8a745cbdcc1f08614ee239c3c9e58ebd7de30cb0ace46f3f",
+      "research/ir-public-capture-validation-2026-10-15/source-after/scripts/verify_case_source_bundle.py": "5065fb52d6d15d3c71ab66fd097353788e071af85836d7c5535fc5ec895e5389",
+      "research/ir-public-capture-validation-2026-10-15/source-after/docs/public-capture-binding.md": "f79570f4da9617598de1f6d12bbc1b5b984497fd2f72e3381676a714daa0a6af"
+    }
+  },
+  "independent_probe": {
+    "path": "research/ir-public-capture-validation-2026-10-15/independent-probe-v2.py",
+    "sha256": "fc82b6f8e161b1d058a5d528420eb5293bdb0743a7b54abe4cc4a3a4f1313c6a",
+    "frozen_v1_fixture_helper_reused_without_running_v1_assertions": true,
+    "result": {
+      "status": "both_v1_findings_fixed_with_preserved_controls",
+      "baseline": {
+        "status": "matched",
+        "all_declared_bindings_agree": true,
+        "artifact_status": "matched",
+        "binding_checks": {
+          "source_snapshot_sha256": "matched",
+          "public_disclosure_source_scope": "matched",
+          "successful_complete_response": "matched",
+          "body_completion_consistency": "matched",
+          "request_response_URL": "matched",
+          "configured_prepared_UA": "matched",
+          "response_entity_scope": "matched",
+          "transport_time_order": "matched",
+          "response_source_URL": "matched",
+          "source_retrieved_completion_instant": "matched",
+          "extraction_record_text_bytes": "matched",
+          "extraction_source_content_bytes": "matched",
+          "record_source_content_bytes": "matched"
+        },
+        "profile_status": "recognized",
+        "implementation_identity_verified": false,
+        "reason_codes": [],
+        "files_unchanged_by_audit": true
+      },
+      "NCB-01": {
+        "tampered_nonUTF8": {
+          "status": "mismatch",
+          "all_declared_bindings_agree": false,
+          "artifact_status": "mismatch",
+          "binding_checks": {
+            "source_snapshot_sha256": "matched",
+            "public_disclosure_source_scope": "matched",
+            "successful_complete_response": "matched",
+            "body_completion_consistency": "matched",
+            "request_response_URL": "matched",
+            "configured_prepared_UA": "matched",
+            "response_entity_scope": "matched",
+            "transport_time_order": "matched",
+            "response_source_URL": "matched",
+            "source_retrieved_completion_instant": "matched",
+            "extraction_record_text_bytes": "unknown",
+            "extraction_source_content_bytes": "unknown",
+            "record_source_content_bytes": "matched"
+          },
+          "profile_status": "recognized",
+          "implementation_identity_verified": false,
+          "reason_codes": [
+            "extracted_text_sha_mismatch",
+            "extracted_text_byte_count_mismatch",
+            "extraction_record_text_bytes_unspecified",
+            "extraction_source_content_bytes_unspecified"
+          ],
+          "files_unchanged_by_audit": true
+        },
+        "CLI": {
+          "exit_code": 1,
+          "report_status": "mismatch",
+          "secret_omitted": true,
+          "files_unchanged": true
+        },
+        "pinned_nonUTF8_rejection_control": {
+          "exception": "ValueError",
+          "message": "Native saved extraction must be valid UTF-8",
+          "files_unchanged_by_audit": true
+        }
+      },
+      "NCB-02": {
+        "unknown_name_bad_implementation": {
+          "exception": "ValueError",
+          "message": "Native extraction implementation must contain exactly its required fields",
+          "files_unchanged_by_audit": true
+        },
+        "unknown_version_bad_implementation": {
+          "exception": "ValueError",
+          "message": "Native implementation name must be a nonempty string",
+          "files_unchanged_by_audit": true
+        },
+        "valid_common_implementation_unsupported_profiles_remain_unknown": [
+          {
+            "profile": {
+              "name": "future_profile",
+              "version": 1
+            },
+            "result": {
+              "status": "unknown",
+              "all_declared_bindings_agree": null,
+              "artifact_status": "matched",
+              "binding_checks": {
+                "source_snapshot_sha256": "matched",
+                "public_disclosure_source_scope": "matched",
+                "successful_complete_response": "matched",
+                "body_completion_consistency": "matched",
+                "request_response_URL": "matched",
+                "configured_prepared_UA": "matched",
+                "response_entity_scope": "matched",
+                "transport_time_order": "matched",
+                "response_source_URL": "matched",
+                "source_retrieved_completion_instant": "matched",
+                "extraction_record_text_bytes": "matched",
+                "extraction_source_content_bytes": "matched",
+                "record_source_content_bytes": "matched"
+              },
+              "profile_status": "unknown",
+              "implementation_identity_verified": false,
+              "reason_codes": [
+                "unsupported_extraction_profile"
+              ],
+              "files_unchanged_by_audit": true
+            }
+          },
+          {
+            "profile": {
+              "name": "plain_utf8_preserve",
+              "version": 2
+            },
+            "result": {
+              "status": "unknown",
+              "all_declared_bindings_agree": null,
+              "artifact_status": "matched",
+              "binding_checks": {
+                "source_snapshot_sha256": "matched",
+                "public_disclosure_source_scope": "matched",
+                "successful_complete_response": "matched",
+                "body_completion_consistency": "matched",
+                "request_response_URL": "matched",
+                "configured_prepared_UA": "matched",
+                "response_entity_scope": "matched",
+                "transport_time_order": "matched",
+                "response_source_URL": "matched",
+                "source_retrieved_completion_instant": "matched",
+                "extraction_record_text_bytes": "matched",
+                "extraction_source_content_bytes": "matched",
+                "record_source_content_bytes": "matched"
+              },
+              "profile_status": "unknown",
+              "implementation_identity_verified": false,
+              "reason_codes": [
+                "unsupported_extraction_profile"
+              ],
+              "files_unchanged_by_audit": true
+            }
+          }
+        ]
+      },
+      "execution": {
+        "synthetic_temporary_fixture_roots": 1,
+        "GETs": 0,
+        "Store_or_DB_constructors": 0,
+        "actual_DB_accesses": 0,
+        "production_or_test_edits": 0,
+        "full_suite_runs": 0
+      },
+      "limits": [
+        "Reuses only the frozen v1 synthetic fixture helper; v1 assertions and producer tests were not executed.",
+        "Only the two original findings and their controls were rechecked; no broad new bug hunt."
+      ]
+    }
+  },
+  "execution": {
+    "GETs": 0,
+    "Store_or_DB_constructors": 0,
+    "actual_DB_accesses": 0,
+    "production_test_or_old_artifact_edits": 0,
+    "full_suite_runs": 0,
+    "legacy_saved_case_report_rechecks": 3
+  },
+  "limits": [
+    "The original scope remains declaration consistency, not source-ID, extractor execution/identity, authenticity, financial meaning, public-release time, DBfirstsave or collection permission.",
+    "No new failure/path/format families were explored beyond the fixed findings and controls.",
+    "v1 review, probe, design and source snapshots were not overwritten."
+  ]
+}

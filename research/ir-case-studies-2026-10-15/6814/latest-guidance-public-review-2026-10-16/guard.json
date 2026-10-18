@@ -1,0 +1,62 @@
+{
+  "company_id": "jp:6814",
+  "recorded_at": "2026-10-16T11:16:32.764744+00:00",
+  "maximum_GETs": 3,
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu"
+  ],
+  "holds_index": {
+    "path": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+    "sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952"
+  },
+  "allowed_requests": [
+    {
+      "role": "fresh_robots",
+      "url": "https://www.furuno.co.jp/robots.txt"
+    },
+    {
+      "role": "guidance_revision_pdf",
+      "url": "https://www.furuno.co.jp/Portals/0/images/news/ir/pdf/2026/file01_20261009_001.pdf"
+    }
+  ],
+  "robots_reviews": {
+    "www.furuno.co.jp": {
+      "branch": "fresh_robots200",
+      "proceed": true,
+      "raw_file": "research/ir-case-studies-2026-10-15/6814/latest-guidance-public-review-2026-10-16/raw/a19fe12487b7e27905ca893e384499cd5783a338398a7c62aca3d0c99024f745",
+      "raw_sha256": "a19fe12487b7e27905ca893e384499cd5783a338398a7c62aca3d0c99024f745",
+      "exact_notice_path_allowed": true,
+      "explicit_AI_disallow_observed": false
+    }
+  },
+  "literal_route": {
+    "capture": "research/ir-case-studies-2026-10-15/6814/annual-accounting-input-discovery-2026-10-16/capture.json",
+    "sha256": "95f63bf8275ec37d33e48ee61e0ddcc792225967002647fba781608a9c34ac21",
+    "jsonpath": "$.GETs[1].html_visible_text.links[135]",
+    "link": {
+      "url": "https://www.furuno.co.jp/Portals/0/images/news/ir/pdf/2026/file01_20261009_001.pdf",
+      "href": "/Portals/0/images/news/ir/pdf/2026/file01_20261009_001.pdf",
+      "label": "連結業績予想及び配当予想の修正（増配）に関するお知らせ（152KB）"
+    },
+    "parent_body_completed_at": "2026-10-16T10:27:16.043251+00:00",
+    "raw_parent": "a0c72a57f8a4ee6d5d708e0495c318fb25ce04a54d3e8362947e764959f10552"
+  },
+  "scope": "New quarterly company-guidance vintage review, exactly the saved October9 revision notice. Not reopening annual/market/held routes. No Q2 statement or October6 notice fetch.",
+  "duplicate_check": "Exact target not in existing company capture GET URLs; saved literal only, not PDF body",
+  "collector_reuse": {
+    "path": "research/ir-case-studies-2026-10-15/6814/public-catalyst-calendar-discovery-2026-10-16/capture-once.py",
+    "sha256": "4e3bd5d3c0e277862b18f3f2511a411cba31d08c608347320e47a7cf9aa3f5bd",
+    "changes": []
+  }
+}

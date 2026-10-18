@@ -1,0 +1,9 @@
+# v42 candidate：保存済み原典の表示3値を追加
+
+v41の50親entry/247factsを全object同値のまま保持し、3612の表示年次1株利益171.36円と7388の表示EPS88.79円/BPS508.60円だけを追加した。実計数は35社・250facts・52親entry・54派生source・会社/原典45組。既存per-fact artifact/source_id overrideも解決して数えた。rawfact.source_idは原典IDなので、新index factの派生source overrideへコピーしていない。
+
+両原典の既存実保存は前phase root receiptのID/nativeSHA/firstsaveで照合した。一方、新2派生/3factsは初回依頼で実保存待ちだった準備状態を保持する。組立中にroot完了通知を受領済みだが、このcandidateではDB未照合。derived_imported=false・新firstsave=null・新接続観測nullのまま、v41のactiveconnectionとconnection_preparationをwholeの歴史snapshotへ保持した。false/nullは計画票の状態で現在DB不存在や保存前の事前性を主張しない。別canonicalへRO完了証跡を接続する。
+
+3612のIFRS18/分割遡及・basic/diluted/ordinaryと厳密scope/期間端点の未確認、7388の2025.11年度label・分割/丸め・exactdates/ordinary等nullを元factsどおり保持。7社年次Graham入力へ追加認定せず、参考計算・金融採用・新nativecase・IR0。
+
+本folderはcandidate-v42.json/validation.json/README.mdだけ。canonicalv42やconsumerdocsは更新していない。元v41・producer全files不変、GET/DB/Store/code変更0。新派生の実接続後、root receiptに基づいて別phaseでcurrent観測を接続する。

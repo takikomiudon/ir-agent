@@ -1,0 +1,53 @@
+{
+  "official_host": "www.berkshirehathaway.com",
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu"
+  ],
+  "holds": {
+    "path": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+    "sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952"
+  },
+  "maximum_GETs": 4,
+  "allowed_requests": [
+    {
+      "role": "fresh_robots",
+      "url": "https://www.berkshirehathaway.com/robots.txt"
+    },
+    {
+      "role": "official_root",
+      "url": "https://www.berkshirehathaway.com/",
+      "provenance": "origin of exact saved official 1989 letter, not a guessed 1986 URL"
+    },
+    {
+      "role": "shareholder_letters_index",
+      "url": "https://www.berkshirehathaway.com/letters/letters.html",
+      "provenance": "decoded-root.json $.html_visible_text.links[6] from GET2 original body; samehost actual href"
+    },
+    {
+      "role": "selected_1986_letter",
+      "url": "https://www.berkshirehathaway.com/letters/1986.html",
+      "provenance": "decoded-03.json $.html_visible_text.links[9], exact index href 1986.html"
+    }
+  ],
+  "robots_reviews": {
+    "www.berkshirehathaway.com": {
+      "branch": "complete404_missingrobots",
+      "proceed": true,
+      "raw_file": "research/ir-buffett-owner-earnings-author-source-2026-10-16/raw/cc0b4e42510d49c6decd464123ecf3b14ae9b47f9b4ed2ee64893e2d6520a264",
+      "raw_sha256": "cc0b4e42510d49c6decd464123ecf3b14ae9b47f9b4ed2ee64893e2d6520a264",
+      "observed_at": "2026-10-16T14:44:19.442529+00:00",
+      "scope": "Complete404 means no robots policy found; HTML error was not parsed as rules or an explicit permission."
+    }
+  }
+}

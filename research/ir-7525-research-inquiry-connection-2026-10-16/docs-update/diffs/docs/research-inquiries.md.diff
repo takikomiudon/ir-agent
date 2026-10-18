@@ -1,0 +1,11 @@
+--- before/docs/research-inquiries.md
++++ after/docs/research-inquiries.md
+@@ -68,6 +68,8 @@
+ 
+ reviewはappend-onlyのCAS版。原返信・事前分岐・caseのbindingを照合し、比較注記はcallerの新文ではなく固定分岐からserverが取り出す。public化はcase/files・公表原典の整合が必要。caseや古い根拠が変わった後でもunclear/potential_nonpublicへの安全側の訂正は保存でき、過去のpublicレビューを上書きしない。訂正で元caseや金融入力が変わることはない。初回レビューは返信の実保存後、後続レビューは前版の記録・実保存後とし、時刻逆行を拒否する。
+ 
++`status` は `research_inquiries` を状態別件数dict、`research_inquiry_replies` を保存返信件数、`research_inquiry_reviews` をappend-onlyのレビュー版件数として返す。旧金融 `questions/replies/evaluations` と別母数で、金融 `inbox` へ研究draftを混ぜない。状態件数は優先度・公開性・送信readyの認証ではなく、個別の現在の保留理由は `research-inquiry view` で確認する。
++
+ `add_inquiry/add_reply/add_review` と送信/閉鎖の同内容retryは元の不変recordを返す。ID同じ別本文・分岐・送信時刻・閉鎖理由への差替えは拒否する。retryは現在利用できるという認証ではなく、現在表示を別に読む。
+ 
+ ## 現在表示と限界

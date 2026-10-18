@@ -1,0 +1,11 @@
+# raw entity保存の独立レビュー
+
+指定3ファイルとbefore/diff/receiptを確認し、対応必須の不具合は見つからなかった。独立21チェックと新規focused 11テストは全て成功。実ネットワーク・実DB・旧capture変更・実装編集は0、full suiteは実行していない。
+
+保存先未指定時はHTTP200/301/403/429/503の5例で旧moduleと返値全体が一致した。既存の同内容symlink・dangling symlink・directory・壊れた通常ファイルを置換せず、link権限/unsupported filesystem/一時ファイル作成の失敗をnetwork errorへ混ぜない。HTTP403/429/503と保存失敗が重なっても、既存のfailure signature・rate調整・denied/failure countsは旧挙動と一致した。falseyな呼出側fetcherも置換されない。
+
+entity反復完了→保存/fsync→HTTP処理最終完了の時刻順を確認した。raw_body_completed_atは反復終了のローカル観測であり、wire完了・公表・DB保存ではない。requestsのContent-Encoding復号後entityを含み得る。既存11テストのpartial/oversize非保存、書込後失敗、並行atomic公開、旧CLI/collect wiringもネット接続禁止guard下で再確認した。
+
+保存は同directoryの一時ファイルwrite/flush/fsync後にhardlinkで完成名をatomic作成する。directory自体のfsyncはなく、電源断後の永続性までは認定しない。cleanup失敗時は完成SHAファイルを保持し、非SHAの一時ファイル残存をfull captureのraw_storage_cleanup_errorへ記録する。この追加診断はcompact request_metadataには含まれないが、保存状態や通信分類は変わらない。同一ユーザーによる敵対的path差替え・外部の保存後破損は今回の保証範囲外。
+
+チェック個別結果・対象SHAは[review.json](review.json)、focused実行結果は[focused-tests.log](focused-tests.log)。独立再現runnerは/tmp/ir_raw_entity_independent.py。旧captureは検証入力に使わず、一時directory内の架空応答のみを使用した。初回独立runnerの注入fakeが旧契約のstatsを欠いたため、適格なBoundedFetcher subclassへ修正して検証した。実装の問題ではない。

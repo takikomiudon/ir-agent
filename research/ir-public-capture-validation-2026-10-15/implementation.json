@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T15:00:14.620673+00:00",
+  "status": "implementation_frozen_targeted39pass_independent_review_pending",
+  "scope": "Strict success native source-binding offline declaration audit; legacy provider-based verifier preserved. No acquisition/version retrofits.",
+  "API": "verify_public_capture_binding(binding_path, *, repository_root) -> dict",
+  "CLI": "scripts/verify_case_source_bundle.py FILE --repository-root ROOT --capture-binding",
+  "dispatch_boundary": "Flag defaultfalse keeps existing verify_case_source_bundle. Unknown native format/version returnsunknown and does not fall back to provider.",
+  "implemented": [
+    "Explicit ir-public-source-binding/ir-public-response-capture v1 strict recognized schema, bool/float/version/count guards, finite duplicate-free JSON including nonselected siblings",
+    "Explicitcase_root and source/transport/raw/output SHA/count artifact checks using same legacy privatehelpers",
+    "StrictRFC6901 emptyroot/escapedkey/strictarray indices, missingvalidnodeunknown and no recursivekeysearch",
+    "Source original JSON json_text UTF8 snapshotSHA before validate_source defaults; originalfile/source preserved",
+    "GET/200/complete/errornull success, aware started<=headers<=completed and source.retrieved sameinstant, exact URL/UA fieldbinding",
+    "response_entity_after_content_decoding versus wire_capture scope; Content-Length not decodedbytecount",
+    "Saved UTF8outputbytes=record.text UTF8=source.content UTF8, CRLF/BOM/formfeed retained",
+    "Three known profile declarations with strictname/version/params, unknownprofileversionunknown; implementation identity not verified/replayed",
+    "Generic nativevalidation messages; audit does not emit URL/header/error/text, SECRET API/CLI regressions",
+    "Separate format/artifacts/transport/profile statuses; mismatch winsunknown and True/False/None declarationagreement"
+  ],
+  "not_performed_dimensions": [
+    "source_id_verification",
+    "extractor_reproduction",
+    "citation_byte_binding",
+    "citation_semantic_verification",
+    "issuer_authenticity_verification",
+    "semantic_financial_verification",
+    "current_collection_permission",
+    "DB_first_save_verification"
+  ],
+  "source_ID_derivation_run": false,
+  "profile_replay_run": false,
+  "legacy_Anritsu_or_other_source_retagged": false,
+  "schema_examples": "design-v1.json coherent synthetic illustration only; no actual source writer or native acquisition was created",
+  "legacy_before_copies": {
+    "manifest": "research/ir-public-capture-validation-2026-10-15/source-before-manifest.json",
+    "sha256": "25003f8bc83031671467e14d25035541c3101aa8b9e89447e102e50b08c68cd8",
+    "checks": [
+      {
+        "path": "scripts/verify_case_source_bundle.py",
+        "before_copy_hash_unchanged": true,
+        "current_equals_before": false,
+        "expected_current_change": true
+      },
+      {
+        "path": "tests/test_case_source_verifier.py",
+        "before_copy_hash_unchanged": true,
+        "current_equals_before": true,
+        "expected_current_change": false
+      },
+      {
+        "path": "src/ir_agent/models.py",
+        "before_copy_hash_unchanged": true,
+        "current_equals_before": true,
+        "expected_current_change": false
+      },
+      {
+        "path": "src/ir_agent/adapters/common.py",
+        "before_copy_hash_unchanged": true,
+        "current_equals_before": true,
+        "expected_current_change": false
+      }
+    ],
+    "legacy_functions_AST_equal": {
+      "_sha": true,
+      "_hash": true,
+      "_relative": true,
+      "_artifact": true,
+      "_comparison": true,
+      "_source_audit": true,
+      "verify_case_source_bundle": true
+    }
+  },
+  "legacy_real_case_regression": {
+    "file": "research/ir-public-capture-validation-2026-10-15/legacy-after-reports.json",
+    "sha256": "76abe4438e4280a18b65e175fc561724dc52fc7bdc044effa9738bb3bddcc26d",
+    "exact_before_reports_all_equal": true,
+    "statuses": {
+      "7525-policy": "unknown",
+      "1518-calendar": "unknown",
+      "1332-formal-statement": "matched"
+    }
+  },
+  "target_tests": {
+    "new_module_count": 19,
+    "final_command": "PYTHONPATH=src:tests .venv/bin/python -m unittest tests/test_public_capture_binding.py tests/test_case_source_verifier.py tests/test_case_source_bundle.py",
+    "final_result": {
+      "tests": 39,
+      "seconds": 0.19,
+      "exit_code": 0
+    },
+    "earlier_target_result": {
+      "tests": 28,
+      "seconds": 0.06,
+      "exit_code": 0,
+      "scope": "new19+legacy9 before documentation and casebundle regression included"
+    },
+    "full_suite_run": false,
+    "meaningful_boundaries": [
+      "sameinstantUTC/+09:00 and microsecond mismatch",
+      "root/nested/~0/~1/emptyobjectkey pointer and once-only~01 decoding",
+      "missing validindex vs invalid01/-/types; hugeout-of-rangeindex finite handling",
+      "duplicate/nonfiniteincluding1e999 andinvalidUTF8; malformednumber/enum/nullablefields",
+      "knownbadSHA/count/sourcecommit/content/CRLF vsLF mismatches",
+      "actual0-byteartifact vs absentfile, booleanbytecount invalid",
+      "unknownbinding/native/profileversions nolegacyfallback, knownwirecaptureunknown",
+      "failed403/503/redirect/partial/transporterrorcannotbindsuccess; completions/outputmissingguard",
+      "pathescape symlink/absolute/../NUL targets not read",
+      "sourcewithoutrequiresresearch hashedbeforedefaults, metadata verified flag notsemanticcertification",
+      "noSECRET URL/query/header/error/timestamp leak inAPI/CLI",
+      "filehashunchanged and network/DB/tool callguarded"
+    ]
+  },
+  "allowed_changed_files": [
+    {
+      "path": "scripts/verify_case_source_bundle.py",
+      "copy": "research/ir-public-capture-validation-2026-10-15/source-after/scripts/verify_case_source_bundle.py",
+      "sha256": "5065fb52d6d15d3c71ab66fd097353788e071af85836d7c5535fc5ec895e5389",
+      "byte_count": 31753
+    },
+    {
+      "path": "tests/test_public_capture_binding.py",
+      "copy": "research/ir-public-capture-validation-2026-10-15/source-after/tests/test_public_capture_binding.py",
+      "sha256": "351e56712e0683ee8a745cbdcc1f08614ee239c3c9e58ebd7de30cb0ace46f3f",
+      "byte_count": 18823
+    },
+    {
+      "path": "docs/public-capture-binding.md",
+      "copy": "research/ir-public-capture-validation-2026-10-15/source-after/docs/public-capture-binding.md",
+      "sha256": "f79570f4da9617598de1f6d12bbc1b5b984497fd2f72e3381676a714daa0a6af",
+      "byte_count": 7864
+    }
+  ],
+  "design_files_frozen": {
+    "design-v1.json": "eaa3d97d6ed8cf6841de7cc809e15017c94981068fd7454e3d60613b2ac912be",
+    "design-v1.md": "8a10dbbe9f988bfdc12bf53060085f3fa70673e85d05e53e6f95c16e0835a160"
+  },
+  "execution": {
+    "actual_DB_accesses": 0,
+    "GETs": 0,
+    "external_messages_orders": 0,
+    "existing_research_or_fixture_changes": 0,
+    "models_common_or_legacy_tests_changes": 0,
+    "other_production_files_changed": 0,
+    "full_suite_runs": 0
+  },
+  "limitations": [
+    "Caller controls expectedhashes/bytes/clocks/URLs/implementation labels. Internal agreement is not independent authenticity or evidence of actual historical retrieval.",
+    "Raw-to-output transformation and implementation identity are not replayed. Recognizedprofile declaration is not extraction correctness; even a matched raw0artifact cannot prove extracted content.",
+    "No citation byte/semantic checks or financial/model adoption, historicalavailability/currentpublication verification, currentGET authorization or DBfirstsave.",
+    "Files assumedstable duringaudit; existing resolve-then-read boundary retained, no OSfd racehardening/locks or multi-document registry.",
+    "Only native public_disclosure+GET200 responseentity success binding in v1; other valid source/representation modes remainunknown.",
+    "This audit does not require a native livecollector and does not migrate/tag oldAnritsu/others. Such writer/retroactive-sidecar work is separate."
+  ],
+  "source_after_manifest_sha256": "44636b9d1afaf43695fc6c5caa83b33663eb220b34e2f34a00ce6831d22b18a5"
+}

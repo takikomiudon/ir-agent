@@ -1,0 +1,112 @@
+{
+  "company_id": "jp:1870",
+  "recorded_at": "2026-10-16T00:59:24.429193+00:00",
+  "status": "finite_initial_research_completed_financial_body_obtained",
+  "GETs": 4,
+  "GET_cap_per_company": 5,
+  "batch_GETs": 8,
+  "batch_cap": 10,
+  "further_GETs_planned": 0,
+  "http_statuses": [
+    404,
+    200,
+    200,
+    200
+  ],
+  "source_count": 3,
+  "financial_body_count": 2,
+  "current_contact_revalidated": false,
+  "next_public_event_date": null,
+  "IR_question_drafts": [],
+  "formal_IR_send_readiness": false,
+  "financial_inputs_adopted": false,
+  "valuation_or_price_action": null,
+  "author_method": {
+    "Anthropic": "Public evidence first; distinguish issuer actuals, issuer guidance, explanations and unresolved investor assumptions.",
+    "Damodaran": "Check operating-earnings/cash-flow/reinvestment and comparability before routing; no construction-industry blanket exclusion or automatic cycle normalization.",
+    "local_references": [
+      "docs/workflow.md",
+      "docs/model-routing-inputs.md"
+    ]
+  },
+  "model_fit": {
+    "ordinary_business": "needs_model_specific_data",
+    "financial_equity": null,
+    "cyclical_normalization": null,
+    "young_loss": null,
+    "selected_method": null,
+    "future_normalized_profit_FCFF_tax_reinvestment_cost_of_capital_fair_multiple": null
+  },
+  "evidence_boundary": {
+    "accounting_basis": "Japanese_GAAP",
+    "consolidation": "consolidated",
+    "actual_period": {
+      "start": "2026-04-01",
+      "end": "2026-06-30"
+    },
+    "issuer_guidance_period": {
+      "start": "2026-04-01",
+      "end": "2027-03-31"
+    },
+    "amount_unit": "JPY millions; amounts below one million truncated per statement",
+    "share_basis": "Company amounts in financial-observations are not per-share. EPS, period-end/average shares and applicable issuer notes retained in original quotations.",
+    "financial_inputs_verified": false,
+    "source_publication_day_in_metadata_only": "No exact release clock available; published_at=null retained, source.retrieved_at is actual completion time.",
+    "PDF_scope": "Statement text original pages1–4 (p3 contents); image+semantic reading1,2,4 only; all remaining pages unreviewed. Presentation1–3 text/images only when present.",
+    "generic_byte_verifier": "unknown for reused provider; successful schema/offset checks are not a supported generic byte-verifier result."
+  },
+  "DB_writes": 0,
+  "external_send_or_orders": 0,
+  "thresholds_forecasts_probabilities_fair_values_created": false,
+  "public_answers": [
+    {
+      "issue": "Different directions of operating profit and parent profit",
+      "answer": "Q1 OP1,540m down57.8%, parent profit2,953m up15.3%; issuer presentation says special gains etc. support parent profit. No recurring earnings reconstruction performed.",
+      "quote_ids": [
+        "actual-table",
+        "special-gain-and-business-transfer"
+      ]
+    },
+    {
+      "issue": "Forecast revision",
+      "answer": "Presentationp2 reproduces2026-05-12 previous and2026-08-07 revised guidance; full-year revenue150,000m unchanged, OP9,000→9,500m, parent profit8,200→9,300m. All are issuer forecasts, not external estimates.",
+      "quote_ids": [
+        "issuer-guidance-table",
+        "guidance-revision-table"
+      ]
+    },
+    {
+      "issue": "Business-change explanation",
+      "answer": "Issuer expects building revenue decline plus condominium-business transfer reducing real-estate revenue, and special gains supporting full-year parent profit. This is guidance/explanation, not a verified future outcome.",
+      "quote_ids": [
+        "special-gain-and-business-transfer"
+      ]
+    },
+    {
+      "issue": "Consolidation comparability",
+      "answer": "Q1 adds株式会社アクエリアスインベスコ and株式会社海昌. Contribution and acquisition accounting not yet read.",
+      "quote_ids": [
+        "scope-two-additions"
+      ]
+    },
+    {
+      "issue": "Ordinary-share count basis",
+      "answer": "Period-end treasury and quarter-average outstanding shares deduct shares held in performance-linked director trust.",
+      "quote_ids": [
+        "ordinary-share-trust-basis"
+      ]
+    }
+  ],
+  "remaining_public_review": [
+    "Nature/amount/tax/cash timing of special gains; do not add them to operating income or remove without PL/cash-flow bridge",
+    "Timing and accounting/recurrence of condominium-business transfer, before/after group perimeter, retained exposure",
+    "Organic change versus two added subsidiaries: detailed consolidation/business-combination notes not reviewed",
+    "Order backlog, cancellations, revenue recognition and margin basis; aggregate order decline alone does not provide next-year revenue forecast",
+    "Further disclosure pages/public Q&A and exact next release date not obtained"
+  ],
+  "next_saved_source_work": [
+    "Within saved14-page statement inspect detailed PL, consolidation/CF notes, enterprise-combination notes and order appendix; see extracted contentsp3 for original printed labels.",
+    "Within saved29-page presentation further page selection may resolve special gains/transfer before an IR question is drafted; current reading is only1–3."
+  ],
+  "readiness": "Reasons for parent-profit growth, forecast revision and transfer-related expected revenue decline are publicly answered at high level. Unread detail must be checked before treating it as a remaining IR question."
+}

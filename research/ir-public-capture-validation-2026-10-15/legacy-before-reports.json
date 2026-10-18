@@ -1,0 +1,230 @@
+{
+  "recorded_at": "2026-10-15T14:48:41.140321+00:00",
+  "existing_verifier_sha256": "d728badabad0fb0883acaec768477c9566e9dc0a01ac43a3c16ea7fb50e5edc3",
+  "examples": [
+    {
+      "id": "7525-policy",
+      "bundle": "research/ir-case-studies-2026-10-15/7525/issuer-ir-policy-review/source-bundle.json",
+      "report": {
+        "status": "unknown",
+        "scope": "declared_saved_case_bytes_only",
+        "bundle_path": "research/ir-case-studies-2026-10-15/7525/issuer-ir-policy-review/source-bundle.json",
+        "bundle_sha256": "ad460edf0d1c398a941464bbaafc7a970c8729a5466b52c03300105735e2e749",
+        "source_count": 1,
+        "counts": {
+          "matched": 0,
+          "mismatch": 0,
+          "unknown": 1
+        },
+        "all_declared_bytes_match": null,
+        "sources": [
+          {
+            "id": "case-public:ab70ba3cb94244fbb792ad83afcf3f2b2f638f5e6eb69059663b2ca138a48d90",
+            "source_snapshot_sha256": "8478d77678dbd29dab60bde5c309cc2d4d266c8de2ad418a9e364642f48a2d67",
+            "source_content_sha256": "b041f5ec56bc5169b6b6078717a123d33da202f0a41a52c83c1a220b4fb55698",
+            "source_content_byte_count": 5254,
+            "status": "unknown",
+            "case_directory": null,
+            "checks": [],
+            "reason_codes": [
+              "unsupported_or_unspecified_provider"
+            ],
+            "source_id_verification": "not_performed",
+            "semantic_financial_verification": "not_performed"
+          }
+        ],
+        "limitations": [
+          "Expected hashes and saved files share the caller trust boundary; matching is not independent authenticity evidence.",
+          "No raw semantic re-extraction, source-ID derivation, citation support, financial validation, classification or ingestion is performed.",
+          "Files are assumed stable during this offline audit; CRLF and all other UTF-8 bytes are preserved.",
+          "Empty and unknown results do not establish a successful source verification."
+        ]
+      }
+    },
+    {
+      "id": "1518-calendar",
+      "bundle": "research/ir-case-studies-2026-10-15/1518/catalyst-calendar-followup/source-bundle.json",
+      "report": {
+        "status": "unknown",
+        "scope": "declared_saved_case_bytes_only",
+        "bundle_path": "research/ir-case-studies-2026-10-15/1518/catalyst-calendar-followup/source-bundle.json",
+        "bundle_sha256": "6ac2bf0386cb65c477d2bc6b0b353b7fee86781881c97166c672cf97388580a5",
+        "source_count": 1,
+        "counts": {
+          "matched": 0,
+          "mismatch": 0,
+          "unknown": 1
+        },
+        "all_declared_bytes_match": null,
+        "sources": [
+          {
+            "id": "case-public:33cee2019efecf72b0f431fc9c73c953d6a39b71b4d0a7f583de1c767b7fffb8",
+            "source_snapshot_sha256": "1b918de7056fc8589b9c2fa16325cd053667a33910d84a299eec9a27f29da5cd",
+            "source_content_sha256": "c15836758ab67d9332309031ed7258412a79d8f60aca3372b1488b23e5bf03f5",
+            "source_content_byte_count": 36286,
+            "status": "unknown",
+            "case_directory": null,
+            "checks": [],
+            "reason_codes": [
+              "unsupported_or_unspecified_provider"
+            ],
+            "source_id_verification": "not_performed",
+            "semantic_financial_verification": "not_performed"
+          }
+        ],
+        "limitations": [
+          "Expected hashes and saved files share the caller trust boundary; matching is not independent authenticity evidence.",
+          "No raw semantic re-extraction, source-ID derivation, citation support, financial validation, classification or ingestion is performed.",
+          "Files are assumed stable during this offline audit; CRLF and all other UTF-8 bytes are preserved.",
+          "Empty and unknown results do not establish a successful source verification."
+        ]
+      }
+    },
+    {
+      "id": "1332-formal-statement",
+      "bundle": "research/ir-case-studies-2026-10-15/1332/statement-calendar-followup/source-bundle.json",
+      "report": {
+        "status": "matched",
+        "scope": "declared_saved_case_bytes_only",
+        "bundle_path": "research/ir-case-studies-2026-10-15/1332/statement-calendar-followup/source-bundle.json",
+        "bundle_sha256": "2b4e0c082dc207d992b44dc7598d59f6a699710a07c42e0dfa50f47577a9be0b",
+        "source_count": 2,
+        "counts": {
+          "matched": 2,
+          "mismatch": 0,
+          "unknown": 0
+        },
+        "all_declared_bytes_match": true,
+        "sources": [
+          {
+            "id": "case-public:a6203650fe32b00c12d4b6f4c5b3f4fe252431cd4449a1f2716ea658fede985b",
+            "source_snapshot_sha256": "9deda8530ccba8cad302629d3f600be3cde91734dd99651688433450dd163921",
+            "source_content_sha256": "72d28309208a58fb0913db3e13d49f92eefad16c9d37c75015f4c1a7fecb7155",
+            "source_content_byte_count": 41634,
+            "status": "matched",
+            "case_directory": "research/ir-case-studies-2026-10-15",
+            "checks": [
+              {
+                "name": "raw",
+                "path": "1332/statement-calendar-followup/raw/69c3c5fe82b4d4fac46a0dda7eb2258345628664f4ac9a82cee979f042b9ac31",
+                "status": "matched",
+                "expected_sha256": "69c3c5fe82b4d4fac46a0dda7eb2258345628664f4ac9a82cee979f042b9ac31",
+                "actual_sha256": "69c3c5fe82b4d4fac46a0dda7eb2258345628664f4ac9a82cee979f042b9ac31",
+                "actual_byte_count": 835413,
+                "reason_codes": []
+              },
+              {
+                "name": "transport_snapshot",
+                "path": "1332/statement-calendar-followup/01.json",
+                "status": "matched",
+                "expected_sha256": "4d421acbbf3e282d24546a2afebbd3f4fb01dfe5f174c1bf0e2e18ab49df5121",
+                "actual_sha256": "4d421acbbf3e282d24546a2afebbd3f4fb01dfe5f174c1bf0e2e18ab49df5121",
+                "actual_byte_count": 43916,
+                "reason_codes": []
+              },
+              {
+                "name": "extraction",
+                "path": "1332/statement-calendar-followup/01.txt",
+                "status": "matched",
+                "expected_sha256": "72d28309208a58fb0913db3e13d49f92eefad16c9d37c75015f4c1a7fecb7155",
+                "actual_sha256": "72d28309208a58fb0913db3e13d49f92eefad16c9d37c75015f4c1a7fecb7155",
+                "actual_byte_count": 41634,
+                "reason_codes": []
+              },
+              {
+                "name": "extraction_source_content_bytes",
+                "status": "matched",
+                "reason_codes": []
+              },
+              {
+                "name": "transport_raw_sha",
+                "status": "matched",
+                "reason_codes": []
+              },
+              {
+                "name": "transport_raw_byte_count",
+                "status": "matched",
+                "reason_codes": []
+              },
+              {
+                "name": "transport_source_content_bytes",
+                "status": "matched",
+                "reason_codes": []
+              }
+            ],
+            "reason_codes": [],
+            "source_id_verification": "not_performed",
+            "semantic_financial_verification": "not_performed"
+          },
+          {
+            "id": "case-public:4ca42c264c3f7af4506f664ad01edbcf4c738bf920ea3efcd32a686fabec4edb",
+            "source_snapshot_sha256": "85a80377b7896a657a6af101c55a03f38d13d234c3a3376a5ac5cf442f82c6e5",
+            "source_content_sha256": "866ce9827bdbf89c093c1e7f563289a31f0fff5236d01aeb1394c63b074d069d",
+            "source_content_byte_count": 10804,
+            "status": "matched",
+            "case_directory": "research/ir-case-studies-2026-10-15",
+            "checks": [
+              {
+                "name": "raw",
+                "path": "1332/statement-calendar-followup/raw/ac2bc17427bf1a8cf5fc149ac59ec0b3ca147b85f193a71bfb95c05fbd2122b8",
+                "status": "matched",
+                "expected_sha256": "ac2bc17427bf1a8cf5fc149ac59ec0b3ca147b85f193a71bfb95c05fbd2122b8",
+                "actual_sha256": "ac2bc17427bf1a8cf5fc149ac59ec0b3ca147b85f193a71bfb95c05fbd2122b8",
+                "actual_byte_count": 93854,
+                "reason_codes": []
+              },
+              {
+                "name": "transport_snapshot",
+                "path": "1332/statement-calendar-followup/02.json",
+                "status": "matched",
+                "expected_sha256": "26dde56161bf02fddde2a1ac20771e5f281a4497e140a142f99a5b754ba238f0",
+                "actual_sha256": "26dde56161bf02fddde2a1ac20771e5f281a4497e140a142f99a5b754ba238f0",
+                "actual_byte_count": 69651,
+                "reason_codes": []
+              },
+              {
+                "name": "extraction",
+                "path": "1332/statement-calendar-followup/02.txt",
+                "status": "matched",
+                "expected_sha256": "866ce9827bdbf89c093c1e7f563289a31f0fff5236d01aeb1394c63b074d069d",
+                "actual_sha256": "866ce9827bdbf89c093c1e7f563289a31f0fff5236d01aeb1394c63b074d069d",
+                "actual_byte_count": 10804,
+                "reason_codes": []
+              },
+              {
+                "name": "extraction_source_content_bytes",
+                "status": "matched",
+                "reason_codes": []
+              },
+              {
+                "name": "transport_raw_sha",
+                "status": "matched",
+                "reason_codes": []
+              },
+              {
+                "name": "transport_raw_byte_count",
+                "status": "matched",
+                "reason_codes": []
+              },
+              {
+                "name": "transport_source_content_bytes",
+                "status": "matched",
+                "reason_codes": []
+              }
+            ],
+            "reason_codes": [],
+            "source_id_verification": "not_performed",
+            "semantic_financial_verification": "not_performed"
+          }
+        ],
+        "limitations": [
+          "Expected hashes and saved files share the caller trust boundary; matching is not independent authenticity evidence.",
+          "No raw semantic re-extraction, source-ID derivation, citation support, financial validation, classification or ingestion is performed.",
+          "Files are assumed stable during this offline audit; CRLF and all other UTF-8 bytes are preserved.",
+          "Empty and unknown results do not establish a successful source verification."
+        ]
+      }
+    }
+  ],
+  "GET_or_DB_or_source_changes": 0
+}

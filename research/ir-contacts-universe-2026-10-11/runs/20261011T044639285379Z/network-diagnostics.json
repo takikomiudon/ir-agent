@@ -1,0 +1,30 @@
+{
+  "observed_at": "2026-10-11T04:57:03.974826+00:00",
+  "environment_observation": {
+    "connectivity": "connected",
+    "observed_phase": "running",
+    "spec_revision": "6",
+    "observed_spec_revision": "6",
+    "desired_network_policy_mode": "unrestricted",
+    "network_policy_state": "unknown"
+  },
+  "http_observations": [
+    {
+      "site": "JPX",
+      "snapshot": "network-healthchecks/retry-jpx-20261011T045414610805+0000.json",
+      "http_status": 503
+    },
+    {
+      "site": "JPX",
+      "snapshot": "network-healthchecks/retry-jpx-20261011T050011147177+0000.json",
+      "http_status": 503
+    },
+    {
+      "site": "Rakus",
+      "snapshot": "network-healthchecks/retry-rakus-20261011T045414872171+0000.json",
+      "http_status": 503
+    }
+  ],
+  "interpretation": "Runtime reports connected/running. Public JPX and Rakus GETs still return the same Envoy503 Invalid argument tunnel error. This suggests a shared outbound-path failure but does not establish its root cause or a company IR policy. No proxy bypass, TLS weakening, form/email submission, or settings change. Worker increase preceded the repeated failure; causation not established.",
+  "last_checked_at": "2026-10-11T05:00:33.008318+00:00"
+}

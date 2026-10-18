@@ -1,0 +1,233 @@
+{
+  "status": "source_bound_historical_reference_arithmetic_reproduced",
+  "formula": "sqrt(22.5 * EPS * BPS)",
+  "method_author": "maxgfr/crible maintainers, fixed commit00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7",
+  "companies": [
+    {
+      "company_id": "jp:1975",
+      "security_code": "1975",
+      "source_bindings": [
+        {
+          "input": "eps_jpy",
+          "value": "358.13",
+          "fact_id": "1975-reported-annual-EPS-FY20260331-observed-20260514",
+          "kind": "reported_fact",
+          "unit": "JPY-per-share",
+          "period": {
+            "date_basis": "Physical15 current annual header gives 自2025-04-01 至2026-03-31; physical1 explicitly labels annual consolidated period.",
+            "end_date": "2026-03-31",
+            "frequency": "annual",
+            "label": "FY2026年3月期 連結年間実績",
+            "period_kind": "duration",
+            "start_date": "2025-04-01"
+          },
+          "source_id": "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+          "value_path": [
+            "content",
+            "facts",
+            0,
+            "value"
+          ],
+          "native_snapshot_sha256": "d6db7c7c2454470dba83cec46a48ba76814db7324ec1109c8b4e8e81d6f54bcf",
+          "original_source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f",
+          "financial_inputs_verified": false
+        },
+        {
+          "input": "book_value_per_share_jpy",
+          "value": "1965.51",
+          "fact_id": "1975-reported-year-end-BPS-20260331-observed-20260514",
+          "kind": "reported_fact",
+          "unit": "JPY-per-share",
+          "period": {
+            "as_of_basis": "BPS is the current year-end stock in physical15 one-share information/basis; physical1 consolidated financial position and physical7 current balance-sheet closing date corroborate2026-03-31, not an annual average.",
+            "as_of_date": "2026-03-31",
+            "end_date": "2026-03-31",
+            "label": "当連結会計年度末 2026-03-31",
+            "period_kind": "instant",
+            "start_date": null
+          },
+          "source_id": "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+          "value_path": [
+            "content",
+            "facts",
+            1,
+            "value"
+          ],
+          "native_snapshot_sha256": "d6db7c7c2454470dba83cec46a48ba76814db7324ec1109c8b4e8e81d6f54bcf",
+          "original_source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f",
+          "financial_inputs_verified": false
+        }
+      ],
+      "frozen_actual_input_audit_status": "source_values_matched",
+      "source_native_hashes": {
+        "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f": "ee28585481c9692e9374aed4ebc15cb04e5b71757d6c56f2d739c7c7265a3e25",
+        "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313": "d6db7c7c2454470dba83cec46a48ba76814db7324ec1109c8b4e8e81d6f54bcf"
+      },
+      "production": {
+        "path": "ir_agent.valuation._prepare -> _fair_value",
+        "context_precision": 80,
+        "reference_JPY_per_share_decimal80": "3979.6899586211486683373155286162093023648137229347629365140095190688480116947378",
+        "reference_JPY_per_share_display2_HALF_UP": "3979.69",
+        "exact_midpoint_interval_proof": {
+          "half_ulp_exact": {
+            "numerator": "1",
+            "denominator": "20000000000000000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "strict_lower_square_below_radicand": true,
+          "strict_upper_square_above_radicand": true
+        },
+        "public_wrapper_executed": false
+      },
+      "independent": {
+        "EPS_exact": {
+          "numerator": "35813",
+          "denominator": "100"
+        },
+        "BPS_exact": {
+          "numerator": "196551",
+          "denominator": "100"
+        },
+        "radicand_exact_JPY_squared_per_share_squared": {
+          "numerator": "63351728667",
+          "denominator": "4000"
+        },
+        "radicand_terminating_decimal_exact": "15837932.16675",
+        "sqrt_decimal60_HALF_EVEN": "3979.68995862114866833731552861620930236481372293476293651401",
+        "reference_display2_HALF_UP": "3979.69",
+        "exact_midpoint_interval_proof": {
+          "half_ulp_exact": {
+            "numerator": "1",
+            "denominator": "200000000000000000000000000000000000000000000000000000000"
+          },
+          "strict_lower_square_below_radicand": true,
+          "strict_upper_square_above_radicand": true
+        }
+      },
+      "production80_rounded60_equals_independent60": true,
+      "price_jpy": null,
+      "dummy_price_used": false,
+      "margin_of_safety": null,
+      "price_derived_ratios": null,
+      "expected_value": null,
+      "investment_action": null,
+      "financial_adopted": false,
+      "meaning_certified": false
+    },
+    {
+      "company_id": "jp:3817",
+      "security_code": "3817",
+      "source_bindings": [
+        {
+          "input": "eps_jpy",
+          "value": "443.34",
+          "fact_id": "3817-reported-annual-EPS-FY2026",
+          "kind": "reported_fact",
+          "unit": "JPY-per-share",
+          "period": {
+            "date_basis": "Exact annual duration dates printed in the same consolidated earnings heading",
+            "end_date": "2026-03-31",
+            "label": "2026年３月期",
+            "period_kind": "annual_reported_duration",
+            "start_date": "2025-04-01"
+          },
+          "source_id": "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf",
+          "value_path": [
+            "content",
+            "facts",
+            0,
+            "value"
+          ],
+          "native_snapshot_sha256": "2bd0faef543ce9659035c844d7d1722975b37e23fc2035a2a66a85c1e78940ce",
+          "original_source_id": "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e",
+          "financial_inputs_verified": false
+        },
+        {
+          "input": "book_value_per_share_jpy",
+          "value": "2659.88",
+          "fact_id": "3817-reported-BPS-at-20260331",
+          "kind": "reported_fact",
+          "unit": "JPY-per-share",
+          "period": {
+            "as_of_date": "2026-03-31",
+            "date_basis": "Consolidated financial-position current FY row, tied to same annual heading end2026-03-31; reviewer asserts balance-sheet instant, not duration",
+            "label": "2026年３月期",
+            "period_kind": "instant"
+          },
+          "source_id": "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf",
+          "value_path": [
+            "content",
+            "facts",
+            1,
+            "value"
+          ],
+          "native_snapshot_sha256": "2bd0faef543ce9659035c844d7d1722975b37e23fc2035a2a66a85c1e78940ce",
+          "original_source_id": "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e",
+          "financial_inputs_verified": false
+        }
+      ],
+      "frozen_actual_input_audit_status": "source_values_matched",
+      "source_native_hashes": {
+        "case-public:049f5867c00a555c66cc32cf539ff540a34a92e89cd9ef2058c30530bab73a7e": "cdb77fd2cb0d201dd8fbcba84a200665e0912216981ea79e200a601558d7a616",
+        "disclosed-facts:84c92721eb38270616b8b950310fe99807d0da323f438424710f435ddf574acf": "2bd0faef543ce9659035c844d7d1722975b37e23fc2035a2a66a85c1e78940ce"
+      },
+      "production": {
+        "path": "ir_agent.valuation._prepare -> _fair_value",
+        "context_precision": 80,
+        "reference_JPY_per_share_decimal80": "5150.9903884592912332754533149243680092878698749606378149670540961881664494357749",
+        "reference_JPY_per_share_display2_HALF_UP": "5150.99",
+        "exact_midpoint_interval_proof": {
+          "half_ulp_exact": {
+            "numerator": "1",
+            "denominator": "20000000000000000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "strict_lower_square_below_radicand": true,
+          "strict_upper_square_above_radicand": true
+        },
+        "public_wrapper_executed": false
+      },
+      "independent": {
+        "EPS_exact": {
+          "numerator": "22167",
+          "denominator": "50"
+        },
+        "BPS_exact": {
+          "numerator": "66497",
+          "denominator": "25"
+        },
+        "radicand_exact_JPY_squared_per_share_squared": {
+          "numerator": "13266350991",
+          "denominator": "500"
+        },
+        "radicand_terminating_decimal_exact": "26532701.982",
+        "sqrt_decimal60_HALF_EVEN": "5150.99038845929123327545331492436800928786987496063781496705",
+        "reference_display2_HALF_UP": "5150.99",
+        "exact_midpoint_interval_proof": {
+          "half_ulp_exact": {
+            "numerator": "1",
+            "denominator": "200000000000000000000000000000000000000000000000000000000"
+          },
+          "strict_lower_square_below_radicand": true,
+          "strict_upper_square_above_radicand": true
+        }
+      },
+      "production80_rounded60_equals_independent60": true,
+      "price_jpy": null,
+      "dummy_price_used": false,
+      "margin_of_safety": null,
+      "price_derived_ratios": null,
+      "expected_value": null,
+      "investment_action": null,
+      "financial_adopted": false,
+      "meaning_certified": false
+    }
+  ],
+  "prior_1975_lane_A_exact60_and_radicand_match": true,
+  "prior_lane_B_not_used": true,
+  "price_free_public_API_available": false,
+  "private_validated_production_core_used": true,
+  "public_wrapper_response": null,
+  "caller_decimal_context_unchanged": true,
+  "pins_before_after_unchanged": true,
+  "financial_adoption_or_original_Graham_strategy_certified": false,
+  "GET_DB_Store_upstream_import_normalize_or_sharedcode_changes": 0
+}

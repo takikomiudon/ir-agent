@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T11:45:21.131627+00:00",
+  "status": "fixed_eight_case_skill_enabled_regression_only",
+  "case_count": 8,
+  "exact_verdict_matches": 8,
+  "case_local_citation_checks_passed": 8,
+  "sufficient_citation_set_matches": 8,
+  "rows": [
+    {
+      "case_id": "B01",
+      "expected_verdict": "not_established_by_excerpt",
+      "actual_verdict": "not_established_by_excerpt",
+      "verdict_matches_fixed_key": true,
+      "all_cited_excerpt_ids_exist_in_case": true,
+      "contains_key_sufficient_excerpt_set": true
+    },
+    {
+      "case_id": "B02",
+      "expected_verdict": "supported_by_excerpt",
+      "actual_verdict": "supported_by_excerpt",
+      "verdict_matches_fixed_key": true,
+      "all_cited_excerpt_ids_exist_in_case": true,
+      "contains_key_sufficient_excerpt_set": true
+    },
+    {
+      "case_id": "B03",
+      "expected_verdict": "not_established_by_excerpt",
+      "actual_verdict": "not_established_by_excerpt",
+      "verdict_matches_fixed_key": true,
+      "all_cited_excerpt_ids_exist_in_case": true,
+      "contains_key_sufficient_excerpt_set": true
+    },
+    {
+      "case_id": "B04",
+      "expected_verdict": "supported_by_excerpt",
+      "actual_verdict": "supported_by_excerpt",
+      "verdict_matches_fixed_key": true,
+      "all_cited_excerpt_ids_exist_in_case": true,
+      "contains_key_sufficient_excerpt_set": true
+    },
+    {
+      "case_id": "B05",
+      "expected_verdict": "not_established_by_excerpt",
+      "actual_verdict": "not_established_by_excerpt",
+      "verdict_matches_fixed_key": true,
+      "all_cited_excerpt_ids_exist_in_case": true,
+      "contains_key_sufficient_excerpt_set": true
+    },
+    {
+      "case_id": "B06",
+      "expected_verdict": "not_established_by_excerpt",
+      "actual_verdict": "not_established_by_excerpt",
+      "verdict_matches_fixed_key": true,
+      "all_cited_excerpt_ids_exist_in_case": true,
+      "contains_key_sufficient_excerpt_set": true
+    },
+    {
+      "case_id": "B07",
+      "expected_verdict": "supported_by_excerpt",
+      "actual_verdict": "supported_by_excerpt",
+      "verdict_matches_fixed_key": true,
+      "all_cited_excerpt_ids_exist_in_case": true,
+      "contains_key_sufficient_excerpt_set": true
+    },
+    {
+      "case_id": "B08",
+      "expected_verdict": "contradicted_by_excerpt",
+      "actual_verdict": "contradicted_by_excerpt",
+      "verdict_matches_fixed_key": true,
+      "all_cited_excerpt_ids_exist_in_case": true,
+      "contains_key_sufficient_excerpt_set": true
+    }
+  ],
+  "confusion_counts": {
+    "supported_by_excerpt": {
+      "supported_by_excerpt": 3,
+      "contradicted_by_excerpt": 0,
+      "not_established_by_excerpt": 0
+    },
+    "contradicted_by_excerpt": {
+      "supported_by_excerpt": 0,
+      "contradicted_by_excerpt": 1,
+      "not_established_by_excerpt": 0
+    },
+    "not_established_by_excerpt": {
+      "supported_by_excerpt": 0,
+      "contradicted_by_excerpt": 0,
+      "not_established_by_excerpt": 4
+    }
+  },
+  "artifact_SHA256": {
+    "input-cases.json": "2cdf502ba703c36e998d0422a0745182eaabc0256dc35b2751d99e9b642f0a4c",
+    "answer-key.json": "8d4b65c7a5d512287219566bee9882b1cc85842881341d6a9096e1cd5e6bb100",
+    "root-pretrial-freeze.json": "afb07aae6005d7a0c960f0d2b0a48c8b599fb2db7fd856cd8ec7db694ae8a218",
+    "trial-1-answers.json": "473558da9784e24a82f512dcc3f68223291cc368d1c48f4291c156b7c06ed3ca",
+    "trial-1-execution.json": "7d73f73b11f9f2642727173c5965bd0fd58bd245599551950405afc8c48a7c4f",
+    "independent-key-review.json": "d228b7b56e91205d3033189d71ebad5b84fbd66bc625fbc1fda170252d64e0b2"
+  },
+  "grading_script_sha256": "af8a3df7d8ca61f3242f0f2b174a6f6e5b088b5f3d295b18892e655ce68ffd3f",
+  "key_unchanged_from_before_trial": true,
+  "execution_scope_self_reported": true,
+  "related_operational_example_exposure": {
+    "present": true,
+    "files": [
+      ".agents/skills/jp-equity-ir/SKILL.md",
+      "docs/workflow.md"
+    ],
+    "description": "必須運用文書には135Aの条件付きCAGR・継続顧客比率、5988の減損のP/L区分とCFO調整、1518の旧修正予想、会社予想と外部予想の帰属、予定と実施の区別に関係する説明・実例への参照が含まれていた。参照先の研究ファイルは開いていない。これらの運用文書は回答の引用根拠に用いず、各case内の抜粋だけを根拠とした。"
+  },
+  "generalization_holdout_or_model_performance_verified": false,
+  "financial_forecast_accuracy_calibration_or_investment_performance_verified": false,
+  "new_GETs": 0,
+  "DB_access": 0,
+  "key_changes": 0,
+  "investment_actions": 0
+}

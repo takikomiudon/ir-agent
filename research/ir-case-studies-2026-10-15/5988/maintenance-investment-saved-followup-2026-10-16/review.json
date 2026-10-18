@@ -1,0 +1,183 @@
+{
+  "read_at": "2026-10-16T14:47:10.926239+00:00",
+  "company_id": "jp:5988",
+  "company_name": "株式会社パイオラックス",
+  "status": "bounded_maintenance_and_growth_investment_scope_review_complete",
+  "source": {
+    "id": "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+    "URL": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf",
+    "source_native_JSON_SHA256": "3dd6c5db0b134340fc8f373e06e75490d064fa8e828d0a58a2782e4776176ae3",
+    "native_hash_domain": "SHA256 UTF8 json.dumps(source,ensure_ascii=False,sort_keys=True), default separators",
+    "content_SHA256": "a9acbc3544e789cae8369d1e45f02747928fadda584c1839780a12a55fe4bd01",
+    "raw_PDF_SHA256": "813f6500cd7716a3b527273c6817aeb507800030063847c35963cac4c72c74e4",
+    "source_object_ref": {
+      "path": "research/ir-case-studies-2026-10-15/5988/tax-disclosed-facts/normalization-input.json",
+      "SHA256": "307963386cf90b4678e488310a28bf0133bcb452623d3c114efa0059541f990a",
+      "bytes": 499649
+    },
+    "source_JSON_pointer": "/source",
+    "content_file": {
+      "path": "research/ir-case-studies-2026-10-15/5988/11.txt",
+      "SHA256": "a9acbc3544e789cae8369d1e45f02747928fadda584c1839780a12a55fe4bd01",
+      "bytes": 461025
+    },
+    "raw_file": {
+      "path": "research/ir-case-studies-2026-10-15/5988/raw/813f6500cd7716a3b527273c6817aeb507800030063847c35963cac4c72c74e4",
+      "SHA256": "813f6500cd7716a3b527273c6817aeb507800030063847c35963cac4c72c74e4",
+      "bytes": 2657587
+    },
+    "whole_source_equals_readonly_actual_DB": true,
+    "public_time_or_actual_firstsave_backfilled": false
+  },
+  "scope": {
+    "new_meaning_image_physical_pages": [
+      28,
+      32
+    ],
+    "printed_pages": [
+      25,
+      29
+    ],
+    "no_other_new_pages": true,
+    "page34_not_opened": true,
+    "previous_oneoff_tax_CFO_adjustments_not_reperformed": true,
+    "fulltext_extraction_not_full_134page_review": true,
+    "period_context": {
+      "source_phrase": "当連結会計年度",
+      "prior_accepted_annual_period": {
+        "start": "2025-04-01",
+        "end": "2026-03-31"
+      },
+      "period_reference": {
+        "file": {
+          "path": "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/normalization-input.json",
+          "SHA256": "fb25a22fa8d5c5b29a38593fd5c6ea27698ff55bb233e5396bfb135ad2446ced",
+          "bytes": 556933
+        },
+        "JSON_pointer": "/facts/7/period"
+      },
+      "qualification": "期間端点は既受入の同原典当連結年度文脈を参照。新p32には当連結会計年度との表現と主要設備の2026-03-31基準日があり、設備投資flowと帳簿価額stockを分離。"
+    },
+    "entity_scope": "p28当社グループ、p32当連結会計年度の事業別/国内海外別設備投資。主要設備の提出会社/国内子会社表は別のstock表示であり、その表の対象だけへ上段flowを狭めない。"
+  },
+  "findings": [
+    {
+      "id": "stated_investment_purposes",
+      "quote_ids": [
+        "5988-investment-purpose-and-operating-funds"
+      ],
+      "company_statement": "資金需要の投資活動は、新規対応・自動化及び生産性向上等を目的とした設備投資、金型投資及び国内リニューアル投資が主な内容。営業活動の材料/外注費/人件費等の運転資金・受注獲得費用等販管費とは分けている。",
+      "research_effect": "会社自身が目的を列挙していることは公開で確認できた。投資の全てを単一の維持目的又は成長目的と呼ぶ前提を置けない。",
+      "limits": "「国内リニューアル」を著者定義の維持必要額と同定しない。「新規」「自動化」「生産性向上」も成長投資だけに限定せず、目的間が排他的又は全件網羅とはしない。"
+    },
+    {
+      "id": "annual_amounts_not_maintenance_growth_allocation",
+      "quote_ids": [
+        "5988-annual-capex-segment-region-and-funding"
+      ],
+      "displayed_amounts": {
+        "unit": "百万円",
+        "period": "当連結会計年度",
+        "segment_partition": [
+          {
+            "label": "自動車関連等",
+            "raw_value": "6,529"
+          },
+          {
+            "label": "医療機器",
+            "raw_value": "60"
+          }
+        ],
+        "region_partition": [
+          {
+            "label": "国内関係",
+            "raw_value": "4,944"
+          },
+          {
+            "label": "海外関係",
+            "raw_value": "1,645"
+          }
+        ],
+        "funding_phrase": "自己資金"
+      },
+      "research_effect": "当期設備投資の事業別と地域別の公表額・自己資金という説明が得られる。これは2つの異なる分類軸で、4数値の合算/二重計上は行わない。",
+      "limits": "この2頁に維持更新/拡張/成長それぞれの対応額や配賦表は確認しない。金型/国内リニューアルがどの表示額にどれだけ含まれるか、償却・CF設備購入額との完全同一範囲/時点も不明。合計値や維持額を新規計算しない。"
+    },
+    {
+      "id": "funding_policy_not_reinvestment_requirement",
+      "quote_ids": [
+        "5988-internal-funding-policy"
+      ],
+      "company_statement": "通常の運転資金・設備資金は営業CFを源泉とする内部資金充当を基本方針とし、設備投資概要も自己資金を記す。一方でコミットメントライン/借入実行と主として自己株取得等資本政策への充当も同じp28に説明される。",
+      "limits": "内部資金の説明を借入不存在・投資不要・将来支出額・最低維持CAPEX又は恒常的なフリーCFとしない。資金源と支出の経済目的は別。借入額/未使用枠の新演算・将来資金余力の独立認証はしない。"
+    },
+    {
+      "id": "equipment_stock_is_not_annual_capex",
+      "quote_ids": [
+        "5988-equipment-stock-vs-flow-header"
+      ],
+      "company_statement": "主要設備は2026-03-31現在の帳簿価額（百万円）の表として開始する。",
+      "limits": "主要設備の帳簿価額を当期投資支出/維持必要額へ転用しない。下段の個別設備セルを新facts/全工場履歴へ構造化せず、次頁/設備計画p34へ広げない。"
+    }
+  ],
+  "maintenance_growth_definition_check": {
+    "explicit_operational_purpose_list": true,
+    "issuer_stated_maintenance_required_definition_in_two_pages": null,
+    "issuer_stated_growth_only_definition_in_two_pages": null,
+    "separate_maintenance_amount_in_two_pages": null,
+    "separate_growth_amount_in_two_pages": null,
+    "reason": "目的の列挙と事業/地域別金額はあるが、収益力維持に必要な支出を同定する算定規程・維持/成長の排他分類や金額配分はこの2頁では確認しない。未確認を0/false/not_applicableや全社非公表へ変えない。",
+    "total_CAPEX_or_DA_substituted_for_maintenance": false,
+    "independent_allocation_forecast_or_IR_question_created": false
+  },
+  "existing_research_connection": {
+    "model_assessment": {
+      "file": {
+        "path": "research/ir-case-studies-2026-10-15/5988/model-assessment.json",
+        "SHA256": "8bb5c8358e021b834dcdde0f21a8ed0b5f2b1a6dbf305e9fe1ba5f90a6290e1f",
+        "bytes": 61666
+      },
+      "JSON_pointer": "/facts/6",
+      "fact_id": "reinvestment_definition_compatible",
+      "current_saved_value": null,
+      "changed": false,
+      "assessment_status_not_promoted": "2頁の部分的説明は再投資モデル定義との適合全体を確定しない。成長再投資/資金調達の整合facts/18も未確認のまま。"
+    },
+    "native_case": {
+      "case_id": "5988-cost-tax-basis-monitor",
+      "version": 4,
+      "config_revision": 1,
+      "read_count": 15,
+      "issue_id": "5988-cost-tax-cashflow-basis",
+      "case_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5988/native-case-setup/case-context.json",
+        "sha256": "5da6f2db16a789b0214d6734f3b34d13c878ef28fcf2749140ae46d584952825"
+      },
+      "management_date": "2027-01-16",
+      "changed": false
+    },
+    "condition_link": "既存cost-tax-cashflow-basisのexpense-and-CFO-no-double-add/conditional-definition-gapsに対し、会社が挙げる投資活動の目的と資金源を区別する追加公開文脈。既読一時損失・税・CFO調整は再実施せず、総CAPEX/減価償却や帳簿価額を将来維持額・FCFへ自動移さない。",
+    "author_boundary": "Buffett原典は別taskで未受領。このtaskでは記憶によるowner earnings式や維持投資の著者定義を付加しない。既存Damodaran model-assessmentのnullと不明扱いを維持。"
+  },
+  "manual_handoff": {
+    "read_at": "2026-10-16T14:47:10.926239+00:00",
+    "source_id": "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+    "source_native_JSON_SHA256": "3dd6c5db0b134340fc8f373e06e75490d064fa8e828d0a58a2782e4776176ae3",
+    "new_scope": [
+      28,
+      32
+    ],
+    "purpose": "次の正当な既存論点比較で本review/quote fileSHA/read_at/nativeSHAを参照可能。新source/公表/新pending又は自動case更新としない。"
+  },
+  "operations": {
+    "GET": 0,
+    "Store": 0,
+    "DB_mutation": 0,
+    "new_sources": 0,
+    "normalizer": 0,
+    "financial_calculation_or_adoption": 0,
+    "IR_questions": 0,
+    "shared_docs_or_old_file_edits": 0,
+    "DB_access": "source/caseのmode=ro+query_only+contextlib.closingのみ"
+  }
+}

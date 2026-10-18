@@ -1,0 +1,60 @@
+{
+  "company_id": "jp:130A",
+  "source": {
+    "id": "synthetic-issuer-disclosure",
+    "company_id": "jp:130A",
+    "title": "架空企業の公表数値（原文保存の例）",
+    "url": "https://example.invalid/ir/synthetic-disclosure",
+    "source_type": "public_disclosure",
+    "published_at": null,
+    "retrieved_at": "2026-10-15T00:00:00+00:00",
+    "content": "2027年3月期通期予想（単位：百万円）：売上高63,000。1株当たり予想利益27.45円。参考説明：規制資本比率8%。",
+    "metadata": {"synthetic": true}
+  },
+  "review": {
+    "author": "synthetic-example-reviewer",
+    "recorded_at": "2026-10-15T00:10:00+00:00",
+    "rationale": "架空の明示単位変換と出典保存の例。列・期・対象・概念の妥当性を自動証明するものではない。"
+  },
+  "facts": [
+    {
+      "id": "synthetic-guidance-revenue",
+      "concept": "issuer_forecast_revenue",
+      "kind": "issuer_guidance",
+      "raw_value": "63,000",
+      "raw_unit_label": "百万円",
+      "unit": "JPY",
+      "raw_period_label": "2027年3月期通期予想",
+      "period": {"fiscal_year_end_month": "2027-03", "label": "通期予想"},
+      "basis_quote": "2027年3月期通期予想（単位：百万円）：売上高63,000。1株当たり予想利益27.45円。参考説明：規制資本比率8%。",
+      "definition": "会社が公表した売上高予想の抽出主張。分析者の将来シナリオとして採用していない。",
+      "scope": {"company_id": "jp:130A", "consolidation": "明示的な追加確認が必要"}
+    },
+    {
+      "id": "synthetic-guidance-eps",
+      "concept": "issuer_forecast_eps",
+      "kind": "issuer_guidance",
+      "raw_value": "27.45",
+      "raw_unit_label": "円",
+      "unit": "JPY-per-share",
+      "raw_period_label": "2027年3月期通期予想",
+      "period": {"fiscal_year_end_month": "2027-03", "label": "通期予想"},
+      "basis_quote": "2027年3月期通期予想（単位：百万円）：売上高63,000。1株当たり予想利益27.45円。参考説明：規制資本比率8%。",
+      "definition": "予想EPSの1株単位は抽出担当の主張であり、単位変換によって確認済みにならない。",
+      "scope": {"company_id": "jp:130A", "share_basis": "希薄化等の確認が必要"}
+    },
+    {
+      "id": "synthetic-regulatory-ratio",
+      "concept": "disclosed_regulatory_capital_ratio",
+      "kind": "general_explanation",
+      "raw_value": "8",
+      "raw_unit_label": "%",
+      "unit": "ratio",
+      "raw_period_label": "2027年3月期通期予想",
+      "period": {"label": "参考説明の対象時点との対応を追加確認"},
+      "basis_quote": "2027年3月期通期予想（単位：百万円）：売上高63,000。1株当たり予想利益27.45円。参考説明：規制資本比率8%。",
+      "definition": "規制資本比率。株主資本コスト、割引率、将来DPSへ自動採用しない。",
+      "scope": {"company_id": "jp:130A", "regulatory_scope": "参考説明、適用条件未確認"}
+    }
+  ]
+}

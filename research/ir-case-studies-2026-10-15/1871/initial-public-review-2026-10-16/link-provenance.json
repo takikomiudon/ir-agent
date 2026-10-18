@@ -1,0 +1,28 @@
+{
+  "literal_requests": [
+    {
+      "role": "issuer_robots",
+      "url": "https://www.psc.co.jp/robots.txt",
+      "basis": "robots endpoint for selected CSV official host"
+    },
+    {
+      "role": "issuer_root",
+      "url": "https://www.psc.co.jp/",
+      "basis": "selected CSV official_url"
+    },
+    {
+      "role": "results_index",
+      "url": "https://www.psc.co.jp/about/ir/library/financial_report.html",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[1].html_visible_text.links[60]",
+      "literal_href": "/about/ir/library/financial_report.html",
+      "label": "IR情報の決算短信に2027年3月期 第１四半期決算短信〔日本基準〕（連結）を追加しました。"
+    }
+  ],
+  "results_index_PDF_links": 0,
+  "results_index_raw_dot_pdf_count": 0,
+  "dynamic_script_hrefs_seen_but_not_requested": [
+    "https://azcms.ir-service.net/DATA/1871/js/financial_report.js"
+  ],
+  "no_script_or_alternate_host_follow": true
+}

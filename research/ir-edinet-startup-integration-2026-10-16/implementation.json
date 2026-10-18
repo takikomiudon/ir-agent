@@ -1,0 +1,55 @@
+{
+  "frozen_at": "2026-10-16T17:07:27.281074+00:00",
+  "status": "implementation_focused_verified_waiting_ROOT_independent_review",
+  "new_files": {
+    "scripts/start_edinet_research.py": "51599ebf51f4de34cfdda4a3cc460d51ad12d395fba84d3310bc24c46a5dccad",
+    "tests/test_edinet_startup.py": "3823442197b586e0d6fcd15a7282a7f1da27dfc7f3a9f7f34f8110c9cc656095"
+  },
+  "reused_core_pins": {
+    "src/ir_agent/adapters/edinet.py": "5a8878371aec1d28322cf8e500edbef7d317843ebdee2357a2f158dbc9a32f8c",
+    "src/ir_agent/adapters/common.py": "a6ca5fdd16778706f8a4de072bcdb27f5dcd78efbc6768039d1116606ebbb095"
+  },
+  "fixed_plan": {
+    "security_code": "6814",
+    "date": "2026-10-09",
+    "doc_type_code": "160",
+    "basis": "Parent verified issuer Q2 p1 planned semi-annual report submission day; not proof of actual filing.",
+    "selection": "ordinary6814 + code160 + xbrlFlag1, correction description excluded, unique only",
+    "output": "data/edinet-6814-2026-10-09/",
+    "maximum_GETs": 2,
+    "SDK_parser_source": "instance",
+    "period_start_end": "Returned metadata retained verbatim, no inferred endpoints."
+  },
+  "transport": {
+    "endpoint_contract": "Installed edinet_tools.api EDINET_API_BASE=https://api.edinet-fsa.go.jp/api/v2; documents.json date/type2 and documents/docID type1; Subscription-Key query",
+    "real_requests_import_only_at_fetch": true,
+    "optional_dependency": "existing data extra supplies requests/edinet-tools",
+    "request_max_retries": 0,
+    "automatic_redirects": false,
+    "TLS_verify": true,
+    "proxy_CA": "inherited normal requests trust_env/CA; no bypass",
+    "connect_read_timeout_seconds": [
+      10,
+      30
+    ],
+    "stream_elapsed_deadline_seconds": 40,
+    "deadline_limit_note": "Elapsed check before accepting each chunk plus finite read timeout; soft stream deadline, not an independent OS hard wall.",
+    "listing_cap_bytes": 8388608,
+    "ZIP_cap_bytes": 67108864,
+    "expanded_ZIP_cap_bytes": 134217728
+  },
+  "security": "Only env EDINET_API_KEY accepted. No key/authenticated URL/headers/exception body stored or printed. Key literal/URL-encoded/JSON-decoded reflection and expanded ZIP/parser return/diagnostic reflection stop saving. HTTP/parser diagnostics suppressed, error output uses fixed reason codes only.",
+  "once_only": "Exclusive output directory sentinel; existing output stops before requests; failed/uncertain attempts require inspection, no automatic retry or overwrite.",
+  "focused_tests": {
+    "startup": 10,
+    "adapter": 24
+  },
+  "full_suite_run": false,
+  "real_API_key_read": false,
+  "real_network_calls": 0,
+  "DB_Store_or_ingestion": false,
+  "financial_adoption_IR_price_schedule": false,
+  "actual_data_output_created": false,
+  "injected_empty_check_receipt": "injected-empty-check.json",
+  "ready_scope": "Code path prepared and synthetic tests verified. Actual credentials/network/API response/instance parse compatibility for this filing not yet executed."
+}

@@ -1,0 +1,48 @@
+{
+  "scope": "two bounded offline features only",
+  "arithmetic": {
+    "toyota_rows": 12,
+    "toyota_mean": "0.073283985287165616271727743555075071761178971784466963258127754292603342010352223",
+    "toyota_applied_income": "1660712.2078876783591589107082182116005783990627736358061554919315448294293827451",
+    "independent_fraction_mean_error": "1.82272103698177278683670596356209504890276065753959003311550792282183806402485341257097972482166568305644151903092412309E-82",
+    "independent_fraction_income_error": "1.42550523803380972198662315769718793584076352657718350107191287579140589466238011259630057112594333085089014606253456604E-74",
+    "working_precision_digits": 80,
+    "hostile_ambient_decimal_context_identical": true,
+    "synthetic_equal_mean": "0.1",
+    "synthetic_applied_income": "20",
+    "sales_weighted_comparison_mean": "0.2",
+    "sales_weighted_comparison_income": "40",
+    "negative_mean_retained": "-0.2",
+    "negative_applied_income_retained": "-40",
+    "invalid_cases_rejected_without_input_mutation": [
+      "missing_income",
+      "missing_application_sales",
+      "mixed_units",
+      "quarter",
+      "overlap",
+      "unspecified_method"
+    ],
+    "cli_matches_pure_and_does_not_write_db": true,
+    "all_verification_unverified": true,
+    "table_prose_discrepancy": "Compared original raw money ratios only; no assertion that discrepant rounded table/prose figures are corrected or equal."
+  },
+  "byte_verifier": {
+    "crlf_raw_text_transport_matched": true,
+    "byte_count": 44,
+    "one_byte_change_detected": true,
+    "wrong_declared_byte_count_detected": true,
+    "newline_change_detected_even_with_updated_extraction_hash": true,
+    "transport_content_change_detected_even_with_updated_snapshot_hash": true,
+    "unknown_provider": "unknown",
+    "empty_bundle": "empty",
+    "parent_and_symlink_escape_rejected_before_target_read": true,
+    "all_files_unchanged_during_each_audit": true,
+    "api_and_cli_omit_body_headers_and_url_credentials": true,
+    "semantic_financial_and_identity_verification": "not_performed"
+  },
+  "limits": [
+    "Historical author Table 2 arithmetic only; no present issuer facts, full-cycle coverage or forecast adopted.",
+    "Matching files and caller-controlled expected hashes is not authenticity, semantic extraction or financial validation.",
+    "Finite fixtures; no broad fuzz/performance/restore investigation, production edit, actual DB or network access."
+  ]
+}

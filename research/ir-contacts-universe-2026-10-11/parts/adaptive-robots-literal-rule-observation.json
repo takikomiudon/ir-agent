@@ -1,0 +1,43 @@
+{
+  "observed_at_utc": "2026-10-11T18:14:54.445568+00:00",
+  "observed_at_jst": "2026-10-12T03:14:54.445568+09:00",
+  "security_code": "6383",
+  "snapshot": "evidence/6383/20261011T173437506705Z/04.json",
+  "snapshot_json_sha256": "ef5be1a00499f786e1565479d3c7c6e0a1eafb9507d3f8a98dd78c5cc5176512",
+  "original_stopping_reason": "robots_disallowed",
+  "content_GET_attempted_in_original": false,
+  "robots_requested_url": "https://inquiry.daifuku.com/robots.txt",
+  "robots_http_status": 200,
+  "robots_body_sha256": "b4902b48c4f819eb34d3015998cfc35384f759ef18216eadcf341949b9fc31f9",
+  "robots_text_preserved": "User-agent: *\nDisallow: /\nAllow: /products_jp\nAllow: /after_salesservices_jp\nAllow: /others_jp\nAllow: /supplier\nAllow: /training\nAllow: /products_en\nAllow: /after_salesservices_en\nAllow: /others_en\nAllow: /newsletter_input\nAllow: /member/login\nAllow: /logimat_2024",
+  "requested_url": "https://inquiry.daifuku.com/others_jp",
+  "stdlib_can_fetch_result": false,
+  "matching_literal_rules": [
+    {
+      "path": "/",
+      "allow": false
+    },
+    {
+      "path": "/others_jp",
+      "allow": true
+    }
+  ],
+  "most_specific_literal_rule_expected_result": true,
+  "mechanism": "stdlib Entry.allowance returns the first matching line; initial Disallow:/ hides later specific Allow:/others_jp",
+  "correction_status": "candidate preparation only; no live collector/helper changes yet",
+  "candidate_writer": "/root/audit_manufacturing",
+  "candidate_authorized_files": [
+    "scripts/research_ir_universe.py",
+    "scripts/collect_ir_followups.py",
+    "tests/test_ir_contact_research.py",
+    "tests/test_ir_followup_collection.py"
+  ],
+  "limitations": [
+    "IR source/form not fetched by this reproduction",
+    "original robots stop/source/record retained",
+    "no claim that every robots pattern is RFC compliant",
+    "403/429/unreachable robot and host-denial stops remain mandatory"
+  ],
+  "HTTP_GET_attempt_count": 0,
+  "IR_messages_sent": 0
+}

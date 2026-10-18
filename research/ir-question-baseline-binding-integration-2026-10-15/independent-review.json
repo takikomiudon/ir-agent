@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T21:18:29.994882+00:00",
+  "status": "independent_review_complete_no_actionable_findings",
+  "review_role": "independent agent; implementation unchanged",
+  "check_count": 22,
+  "checks": [
+    {
+      "check": "actual_baseline_firstsave_created_boundary:equal",
+      "passed": true,
+      "observed": "saved"
+    },
+    {
+      "check": "actual_baseline_firstsave_created_boundary:one_us_before",
+      "passed": true,
+      "observed": "Research baseline must be saved and recorded before question creation"
+    },
+    {
+      "check": "existing_other_baseline_cannot_replace_on_retry",
+      "passed": true
+    },
+    {
+      "check": "contract_ID_swap_without_matching_server_binding_rejected",
+      "passed": true
+    },
+    {
+      "check": "even_correct_server_binding_cannot_be_caller_supplied",
+      "passed": true
+    },
+    {
+      "check": "same_held_different_position_provenance_allowed",
+      "passed": true
+    },
+    {
+      "check": "same_parameter_different_fixed_policy_version_rejected",
+      "passed": true,
+      "observed": "Research baseline must match the frozen decision policy"
+    },
+    {
+      "check": "historical_sent_record_preserved_despite_current_price_and_held",
+      "passed": true
+    },
+    {
+      "check": "late_quote_only_IR_hold_blocks_fresh_historical_sent_at",
+      "passed": true
+    },
+    {
+      "check": "exact_question_retry_returns_old_commitment_after_new_information",
+      "passed": true
+    },
+    {
+      "check": "unconsumed_restored_public_version_still_blocks_send",
+      "passed": true
+    },
+    {
+      "check": "prior_IR_basis_never_relabelled_public_only",
+      "passed": true
+    },
+    {
+      "check": "actual_prechange_contract_resends_exactly_on_new_Harness",
+      "passed": true
+    },
+    {
+      "check": "ID_absent_server_contract_full_JSON_unchanged",
+      "passed": true
+    },
+    {
+      "check": "unresolved_baseline_not_upgraded_by_later_position_proof_or_branches",
+      "passed": true
+    },
+    {
+      "check": "freeze_SHA:docs/question-baseline-binding.md",
+      "passed": true
+    },
+    {
+      "check": "freeze_SHA:src/ir_agent/decision_lifecycle.py",
+      "passed": true
+    },
+    {
+      "check": "freeze_SHA:src/ir_agent/harness.py",
+      "passed": true
+    },
+    {
+      "check": "freeze_SHA:tests/test_question_baseline_binding.py",
+      "passed": true
+    },
+    {
+      "check": "core_financial_schema_unchanged:src/ir_agent/research_decisions.py",
+      "passed": true
+    },
+    {
+      "check": "core_financial_schema_unchanged:src/ir_agent/decision.py",
+      "passed": true
+    },
+    {
+      "check": "core_financial_schema_unchanged:src/ir_agent/store.py",
+      "passed": true
+    }
+  ],
+  "findings": [],
+  "reviewed_file_sha256": {
+    "src/ir_agent/decision_lifecycle.py": "2fc7753f8c09a0c055a7340ffc8d53954e6f175c144231c1f306aa62cc110731",
+    "src/ir_agent/harness.py": "a1adc6dd29df103497498b159cacd555dc230d48f873051429ae55e979e6fae8",
+    "tests/test_question_baseline_binding.py": "7313957736118798936caa30eaa4f5b59efa8ae6372f5646afe6ab43ffb29ba9",
+    "docs/question-baseline-binding.md": "9047e1ab6273672449283d649375b52f33a5b161127e0db065781ce91c29cba1"
+  },
+  "manual_contract_review": [
+    "Server-only research_baseline_binding fixes native record SHA/table first_saved_at/recorded_at/basis/status; caller supplies only ID.",
+    "Same company/thesis snapshot SHA/fixed policy snapshot/quote/synthetic and effective held are checked; evidence subsets, branch status/action and position observation identity need not be equal.",
+    "Original source closure IDs/SHA and PIT availability at baseline and question time are checked separately from declared dates. No new schema or RecordAvailability entity.",
+    "Frozen unresolved baseline result remains needs_review even if branches distinguish; historical_result/current_view are not written back into the baseline.",
+    "Information checks include quote-only IR ancestors at created_at and trusted runtime now; unconsumed public classification versions are still held.",
+    "Under root scope mark_sent records an already-executed external send: quote/held remain evaluated at sent_at, current price/position is advisory, information corrections use trusted now. No new dispatch authorization rule is added.",
+    "ID-absent old contracts keep byte-equivalent canonical server JSON and exact retry behavior; ID addition/removal/replacement cannot be a retry."
+  ],
+  "root_scope_clarification": {
+    "independent_design_notes_corrected": true,
+    "path": "research/ir-question-baseline-binding-integration-2026-10-15/independent-design-notes.md",
+    "current_price_or_position_alone_new_sent_gate": false,
+    "trusted_now_information_hold_required": true
+  },
+  "execution": {
+    "real_DB_access": 0,
+    "network_requests": 0,
+    "implementation_edits": 0,
+    "full_suite_runs": 0,
+    "external_sends_orders": 0,
+    "only_synthetic_memory_fixtures": true,
+    "outputs_only": [
+      "independent-review.json",
+      "independent-review.md"
+    ],
+    "previous_design_note_updated_only_under_explicit_root_scope_correction": true
+  },
+  "limits": [
+    "Finite manual/focused contract review, not exhaustive proof or financial/issuer authenticity/assessment/position certification.",
+    "Existing18 producer tests plus37 legacy focused checks were read/reused as evidence, not relabelled as independently rerun tests. Root owns the full suite.",
+    "No broad direct SQL corruption audit or new financial thresholds/observations/schema/dispatch implementation was added.",
+    "Memory fixture setup reuses saved synthetic helpers; late information classification changes use the normal assessment API. All mark_sent calls are synthetic records, not external messages."
+  ]
+}

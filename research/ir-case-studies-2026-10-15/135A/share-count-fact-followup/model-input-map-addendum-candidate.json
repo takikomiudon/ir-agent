@@ -1,0 +1,58 @@
+{
+  "recorded_at": "2026-10-15T15:30:24.133560+00:00",
+  "company_id": "jp:135A",
+  "status": "prepared_share_display_candidate_supplement_not_normalized",
+  "prior_cash_map": {
+    "path": "research/ir-case-studies-2026-10-15/135A/balance-sheet-input-candidates/model-input-map-candidates.json",
+    "sha256": "b8c79b6ff6467d5a48ab53bc68357d8137d2e564a176ac98f6362eb14875be00",
+    "kept_unchanged": true
+  },
+  "existing_method_reference": "docs/explicit-equity-bridge-spec.md / dcf_explicit_terminal_equity_bridge",
+  "candidate_fact_id": "135A-20260831-issued-common-shares-including-treasury",
+  "possible_input_identifier": "shares_outstanding",
+  "raw_display": "10,256,000株",
+  "expected_display_normalization_if_later_executed": {
+    "value": "10256000",
+    "unit": "shares",
+    "explicit_multiplier": "1",
+    "status": "expectation_only_not_an_API_output"
+  },
+  "derived_source_id": null,
+  "normalized_value_path": null,
+  "all_nine_adopted_model_input_paths": {
+    "fcf_jpy": null,
+    "terminal_fcff_jpy": null,
+    "discount_rate": null,
+    "terminal_growth_rate": null,
+    "cash_jpy": null,
+    "non_operating_assets_jpy": null,
+    "debt_jpy": null,
+    "minority_interests_jpy": null,
+    "shares_outstanding": null
+  },
+  "all_nine_adopted_model_input_values": {
+    "fcf_jpy": null,
+    "terminal_fcff_jpy": null,
+    "discount_rate": null,
+    "terminal_growth_rate": null,
+    "cash_jpy": null,
+    "non_operating_assets_jpy": null,
+    "debt_jpy": null,
+    "minority_interests_jpy": null,
+    "shares_outstanding": null
+  },
+  "scenario": null,
+  "model_or_policy_adopted": false,
+  "valuation_run": false,
+  "remaining_review": [
+    "自己株含む発行済総数をnet sharesへ代用しない。自己株dashから0を補完しない。",
+    "期中平均/希薄化後分母/時点の適合・企業価値の株主帰属とmatchingは未検証。",
+    "過去2026-08-31の株数を現在株数としない。新株/権利/分母調整等の現在適合は不明。",
+    "cash2factsは既存別bundleのまま保持し再抽出・結合しない。株数単位整形の対応追加を金融値採用更新と扱わない。"
+  ],
+  "current_price": null,
+  "probabilities": null,
+  "thresholds": null,
+  "IR_condition_or_question": null,
+  "investment_action": null
+}

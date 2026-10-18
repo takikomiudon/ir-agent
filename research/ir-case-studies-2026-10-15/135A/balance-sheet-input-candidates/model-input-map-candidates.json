@@ -1,0 +1,79 @@
+{
+  "recorded_at": "2026-10-15T15:17:39.874347+00:00",
+  "company_id": "jp:135A",
+  "status": "input_candidates_only_not_a_runtime_model_request",
+  "method_reference": "dcf_explicit_terminal_equity_bridge",
+  "author_formula_reference": {
+    "document": "docs/explicit-equity-bridge-spec.md",
+    "sha256": "877723bc70071ecb56480bebe2e662cf1364c08d61c8f450cfc41bf0971872cd",
+    "author_scope": "Damodaran2009 Toyota illustrations separate operating asset value, cash/nonoperating assets, debt/minority and matching shares. This candidate map is project research adaptation, not author validation of VRAIN."
+  },
+  "all_nine_adopted_input_values": {
+    "fcf_jpy": null,
+    "terminal_fcff_jpy": null,
+    "discount_rate": null,
+    "terminal_growth_rate": null,
+    "cash_jpy": null,
+    "non_operating_assets_jpy": null,
+    "debt_jpy": null,
+    "minority_interests_jpy": null,
+    "shares_outstanding": null
+  },
+  "scenario": null,
+  "assigned_model_input_path": null,
+  "candidate_mappings": [
+    {
+      "possible_input_identifier": "cash_jpy",
+      "candidate_fact_ids": [
+        "135A-interim-BS-cash-and-deposits",
+        "135A-interim-CF-note-cash-and-equivalents"
+      ],
+      "candidate_display_JPY_each": "138000000",
+      "source_paths": [
+        [
+          "content",
+          "facts",
+          0,
+          "value"
+        ],
+        [
+          "content",
+          "facts",
+          1,
+          "value"
+        ]
+      ],
+      "derived_source_id": "disclosed-facts:882b2be82ecdf05c555cf2239653930a30291528ed656799a152554f118b1598",
+      "same_balance_not_additive": true,
+      "adopted_value": null,
+      "why_not_adopted": "中間期末の帳簿現金/現金同等物対応は公表されたが、評価時点との対応、運転資金需要/拘束・余剰性、営業価値との重複を点検していない。2つの138を足さない。"
+    },
+    {
+      "possible_input_identifier": "shares_outstanding",
+      "raw_candidate_ids": [
+        "135A-20260831-issued-common-including-treasury",
+        "135A-20260831-treasury-share-dash"
+      ],
+      "raw_display_issued_shares": "10,256,000株 (自己株含む)",
+      "adopted_value": null,
+      "why_not_adopted": "株単位は既存normalizer未対応。期末自己株はdashで0と確定せず、net shares/希薄化/権利・株主価値帰属と評価時点の適合も未確認。"
+    },
+    {
+      "possible_input_identifier": "debt_jpy",
+      "raw_candidate_ids": [
+        "135A-20260831-short-term-borrowing-dash"
+      ],
+      "adopted_value": null,
+      "why_not_adopted": "短期借入金の表示dashは全金融負債/他請求権の範囲を立証せず0化不可。残高/返済CF/負債時価の概念も同一視しない。"
+    }
+  ],
+  "other_required_inputs": "Future FCFF, terminal FCFF, cost/g, non-operating assets and minority inputs remain unresolved; nonconsolidated reporting is not a substitute for explicit adopted zero values.",
+  "CFO223_is_not_FCFF": "Existing interim CFO223百万円 is a reported half-year cashflow, not an adopted forecast FCFF or operating enterprise value. No CFO-to-FCFF bridge, extrapolation or new valuation is performed.",
+  "model_or_policy_adopted": false,
+  "valuation_run": false,
+  "current_price": null,
+  "probabilities": null,
+  "thresholds": null,
+  "IR_question": null,
+  "investment_action": null
+}

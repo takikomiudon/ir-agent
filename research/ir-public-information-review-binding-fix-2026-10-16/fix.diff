@@ -1,0 +1,110 @@
+--- v1/src/ir_agent/decision_lifecycle.py
++++ fix/src/ir_agent/decision_lifecycle.py
+@@ -77,9 +77,13 @@
+         reasons = check['reason_codes']
+         availability = {}
+         source_map = {source['id']: source for source in sources}
+-        for identity in check['source_ids']:
+-            result = self.store.source_availability(source_map[identity], as_of=reviewed,
+-                                                    knowledge_at=reviewed, now=now)
++        from .availability import RecordAvailability
++        ledger = RecordAvailability(self.store.connection)
++        # The pure check already traversed this complete DAG iteratively.
++        # Check each saved snapshot once, without recursing through it again.
++        for identity in check['source_closure_ids']:
++            result = ledger.at('source', identity, source_map[identity], as_of=reviewed,
++                               knowledge_at=reviewed, now=now)
+             availability[identity] = result
+             if result['available'] is not True:
+                 reasons.append('public_information_review_source_availability_unresolved')
+@@ -92,9 +96,16 @@
+             if not subject:
+                 reasons.append('public_information_review_reply_binding_unknown')
+                 continue
+-            reply = self.store.reply(text(subject, 'public review reply_id'))
+-            if self.store.question(reply['question_id'])['company_id'] != question['company_id']:
++            subject = text(subject, 'public review reply_id')
++            reply = self.store.reply(subject)
++            origin_id = text(reply.get('question_id'), 'public review reply.question_id')
++            origin_question = self.store.question(origin_id)
++            if reply.get('id') != subject or origin_question.get('id') != origin_id:
++                raise ValueError('Public information review reply/question identity mismatch')
++            if origin_question.get('company_id') != question['company_id']:
+                 raise ValueError('Public information review reply belongs to another company')
++            if source['content'] != reply.get('raw_text'):
++                raise ValueError('Public information review source differs from its saved reply')
+         corrections = {}
+         for label, boundary in (('at_review', reviewed), ('at_boundary', as_of), ('at_runtime', now)):
+             corrections[label] = source_assessments(self.store, list(source_map), as_of=boundary)
+--- v1/tests/test_public_information_review.py
++++ fix/tests/test_public_information_review.py
+@@ -251,6 +251,69 @@
+         with self.assertRaisesRegex(ValueError, 'reply belongs to another company'): self.save()
+         self.assertEqual(self.snapshot(), before)
+ 
++    def test_same_company_reply_with_different_content_is_not_a_correction_subject(self):
++        self.ir_source()
++        other = deepcopy(self.qa)
++        other.update(id='different-content-source', content='A different synthetic explanation, not this reply.')
++        self.store.put_source(validate_source(other), now=BEFORE); self.qa = other
++        before = self.snapshot()
++        with self.assertRaisesRegex(ValueError, 'differs from its saved reply'): self.save()
++        self.assertEqual(self.snapshot(), before)
++
++    def test_saved_reply_and_question_row_identities_must_match_the_references(self):
++        self.ir_source()
++        for table, identity in (('replies', 'prior-reply'), ('questions', 'prior-question')):
++            original = self.store.connection.execute('SELECT data FROM ' + table + ' WHERE id=?', (identity,)).fetchone()[0]
++            damaged = json.loads(original); damaged['id'] = 'different-stored-id'
++            self.store.connection.execute('UPDATE ' + table + ' SET data=? WHERE id=?', (json_text(damaged), identity))
++            before = self.snapshot()
++            with self.subTest(table=table), self.assertRaisesRegex(ValueError, 'identity mismatch'): self.save()
++            self.assertEqual(self.snapshot(), before)
++            self.store.connection.execute('UPDATE ' + table + ' SET data=? WHERE id=?', (original, identity))
++
++    def test_persistent_long_valid_chain_uses_one_flat_receipt_check_per_source(self):
++        root = source('long-root'); nodes = [root]; previous = root
++        for index in range(1100):
++            parent = source('long-parent-' + str(index))
++            previous['metadata']['original_source_id'] = parent['id']
++            nodes.append(parent); previous = parent
++        for node in nodes: self.store.put_source(validate_source(node), now=BEFORE)
++        self.qa = root
++        original_at = RecordAvailability.at
++        with patch.object(self.store, 'source_availability', side_effect=AssertionError('recursive reader used')):
++            with patch.object(RecordAvailability, 'at', autospec=True, side_effect=original_at) as checks:
++                saved = self.save(self.question(contracted=False))
++            self.assertEqual(checks.call_count, len(nodes))
++            check = self.check(saved)
++            self.assertEqual(len(check['availability_at_review']), len(nodes))
++            self.assertTrue(all(value['available'] is True for value in check['availability_at_review'].values()))
++            self.assertEqual(check['reason_codes'], [])
++            sent = self.harness.mark_sent(saved['id'], SENT.isoformat(), now=SENT)
++            self.assertEqual(sent['status'], 'awaiting_reply')
++
++    def test_flat_receipts_still_check_ancestors_not_just_direct_review_sources(self):
++        parent = self.qa; root = source('derived-review-root')
++        root['metadata']['original_source_id'] = parent['id']
++        self.store.put_source(validate_source(root), now=BEFORE); self.qa = root
++        self.store.connection.execute('UPDATE record_availability SET first_saved_at=?,presence_observed_at=? WHERE entity_type=? AND entity_id=?',
++            (CREATED.isoformat(), CREATED.isoformat(), 'source', parent['id']))
++        saved = self.save(self.question(contracted=False)); check = self.check(saved)
++        self.assertTrue(check['availability_at_review'][root['id']]['available'])
++        self.assertFalse(check['availability_at_review'][parent['id']]['available'])
++        self.assertIn('first_saved_after_knowledge_at', check['availability_at_review'][parent['id']]['reason_codes'])
++        self.assertIn('public_information_review_source_availability_unresolved', check['reason_codes'])
++
++    def test_missing_ancestor_remains_a_hold_after_flat_receipt_checks(self):
++        root = source('missing-ancestor-root'); root['metadata']['original_source_id'] = 'not-saved'
++        self.store.put_source(validate_source(root), now=BEFORE); self.qa = root
++        saved = self.save(self.question(contracted=False)); check = self.check(saved)
++        self.assertIn('missing_origin_source_snapshot', check['reason_codes'])
++        self.assertEqual(set(check['availability_at_review']), {root['id']})
++        before = self.snapshot()
++        with self.assertRaisesRegex(ValueError, 'needs review'):
++            self.harness.mark_sent(saved['id'], SENT.isoformat(), now=SENT)
++        self.assertEqual(self.snapshot(), before)
++
+     def test_insert_and_question_receipt_roll_back_atomically(self):
+         before = self.snapshot()
+         with patch('ir_agent.availability.RecordAvailability.record_first_save', side_effect=ValueError('injected receipt failure')):

@@ -1,0 +1,10 @@
+--- before/docs/upstream.md
++++ docs/upstream.md
+@@ -30,6 +30,7 @@
+ | [edinet-tools](https://github.com/matthelmer/edinet-tools/tree/94fb7ec5843b751c15379f053ee70ceb8d6d0445) | 提出書類一覧の取得・正規化と保存パッケージ解析のアダプタを実装。SDKは任意依存、APIのライブ接続は未検証 | 原文と抽出値を区別し、単位、コンテキスト、連結範囲、訂正、公表日時を確認。提出書類一覧の取得だけで本文の解析まで完了したとしない |
+ | [TradingAgents](https://github.com/TauricResearch/TradingAgents/tree/1394a3f72aa4393e1a98f51b382434c4b4c2d972) | 強気・弱気・リスクの分担を設計参照 | Codexの主担当・反証担当に役割を適応。LangGraph等の実行ランタイムは未導入 |
+ | [FinRobot](https://github.com/AI4Finance-Foundation/FinRobot/tree/2717499b8e30f242640af08c4ad9afd1113c2d45) | 計算・説明の分離と出典管理を設計参照。コードのコピーなし | 評価器は独自のPython/Decimal実装。FinRobot全体のランタイム・UI・計算器は未導入 |
++| [maxgfr/crible](https://github.com/maxgfr/crible/tree/00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7) | [ROC/ROIC/EYの局所実装](../research/ir-transparent-metric-core-review-2026-10-15/README.md)を研究参照。固定sourceとMIT本文を調査証拠へ保存し、ランタイム・取得基盤は未導入 | 税率clipや代替処理はmaintainer固有。日本原典の対応、将来ROCとの区別、データ利用条件は別確認。順位・売却規則やライブラリ全体の正しさを認定しない |
+ 
+ データSDKは、会社IDと証券コード・EDINETコード、原文URL、公表日時、取得日時、対象期間、単位等を保つアダプタの内側に置く。エージェントへ生のSDKオブジェクトや提供元固有の状態を渡す前提にしない。EDINET抽出の欠損はゼロとせず、原文へ戻れるようにする。SDKの採用はデータを取得・検証済みであることを意味しない。
+ 

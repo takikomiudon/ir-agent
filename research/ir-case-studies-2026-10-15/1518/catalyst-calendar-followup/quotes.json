@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T11:09:43.297199+00:00",
+  "company_id": "jp:1518",
+  "quotes": [
+    {
+      "id": "annual-schedule-heading-only",
+      "source_id": "case-public:33cee2019efecf72b0f431fc9c73c953d6a39b71b4d0a7f583de1c767b7fffb8",
+      "representation": "source.content",
+      "content_start": 1449,
+      "content_end": 1493,
+      "quote": "年間スケジュール\n※下図は画面に収まらない場合、\n左右にスライドしてご覧いただけます。\n",
+      "quote_utf8_sha256": "6c60c5b40d0ae8f305e9824b806029e21f1b4de032e7582d696fc4e88cdf157d",
+      "offset_unit": "zero-based Unicode characters; end exclusive",
+      "meaning": "Annual schedule is an image, not a concrete next date in extracted text."
+    },
+    {
+      "id": "latest-year-disclosure-list-Q1",
+      "source_id": "case-public:33cee2019efecf72b0f431fc9c73c953d6a39b71b4d0a7f583de1c767b7fffb8",
+      "representation": "source.content",
+      "content_start": 1493,
+      "content_end": 1641,
+      "quote": "2026年度（第171）期\n2026.08.07\nその他開示資料\n株式会社コウナンの株式取得（子会社化）に関するお知らせ\n2026.08.07\n決算短信\n2027年３月期第１四半期決算短信〔日本基準〕(連結)\n2026.08.07\n決算説明資料\nIR資料 2027年3月期第１四半期決算説明資料\n",
+      "quote_utf8_sha256": "00efe56a81bc930669e39c4bc6dd174e13eddaa0b93378705967edaef15fb33b",
+      "offset_unit": "zero-based Unicode characters; end exclusive",
+      "meaning": "FY2026 list begins with August7historical disclosure labels including FYMarch2027Q1; no next quarterly schedule claimed."
+    },
+    {
+      "id": "prior-year-interim-list-not-next-date",
+      "source_id": "case-public:33cee2019efecf72b0f431fc9c73c953d6a39b71b4d0a7f583de1c767b7fffb8",
+      "representation": "source.content",
+      "content_start": 2715,
+      "content_end": 2937,
+      "quote": "2025.11.07\nその他開示資料\n2026年３月期業績予想の上方修正に関するお知らせ\n2025.11.07\nその他開示資料\n剰余金の配当（中間配当）および配当予想の修正（増配）に関するお知らせ\n2025.11.07\n決算短信\n2026年３月期第２四半期（中間期）決算短信〔日本基準〕(連結)\n2025.11.07\n決算説明資料\nIR資料 2026年３月期第２四半期決算説明資料\n2025.11.07\n有価証券報告書\n第170期 半期報告書\n",
+      "quote_utf8_sha256": "a121771221ff759176e675f21ce35babf6f5db53086ab41ef8a8c3c1099686b0",
+      "offset_unit": "zero-based Unicode characters; end exclusive",
+      "meaning": "The November7label belongs to2025and FYMarch2026interim disclosures; not the next2026event."
+    },
+    {
+      "id": "unread-annual-image-tag",
+      "source_id": "case-public:33cee2019efecf72b0f431fc9c73c953d6a39b71b4d0a7f583de1c767b7fffb8",
+      "representation": "UTF-8-sig decoded raw HTML, original CRLF retained",
+      "content_start": 224466,
+      "content_end": 225088,
+      "quote": "<img src=\"https://www.mitsui-matsushima.co.jp/wp/wp-content/themes/mitsui-matsushima_2024/assets/images/page/ir/calendar/calendar-schedule.jpg\"\r\n          srcset=\"https://www.mitsui-matsushima.co.jp/wp/wp-content/themes/mitsui-matsushima_2024/assets/images/page/ir/calendar/calendar-schedule.jpg 770w, https://www.mitsui-matsushima.co.jp/wp/wp-content/themes/mitsui-matsushima_2024/assets/images/page/ir/calendar/calendar-schedule@2x.jpg 1540w\"\r\n          sizes=\"(min-width:385px) 770px, 385px\" decoding=\"async\" loading=\"lazy\" width=\"770\" height=\"190\"\r\n          class=\"mx-auto min-w-[77rem] md:min-w-full\" alt=\"年間スケジュール\">",
+      "quote_utf8_sha256": "479f08a9ae28f308af64a16e783807f5736641a2a02e325a093a1ec471b05358",
+      "offset_unit": "zero-based Unicode characters; end exclusive",
+      "meaning": "Literal asset tag saved, image body not requested; alt only says annualschedule."
+    },
+    {
+      "id": "historical-entry-time-metadata-not-next-event-zone",
+      "source_id": "case-public:33cee2019efecf72b0f431fc9c73c953d6a39b71b4d0a7f583de1c767b7fffb8",
+      "representation": "UTF-8-sig decoded raw HTML, original CRLF retained",
+      "content_start": 228841,
+      "content_end": 228981,
+      "quote": "<time datetime=\"2026-08-07T16:00:01+09:00\" class=\"mr-[2.5rem] flex shrink-0 grow-0 items-center text-[1.4rem] text-gray max-lg:mb-[0.5rem]\">",
+      "quote_utf8_sha256": "8eb0cf9eb926058141f0cd72b99b5fe1d067b79c2504c32adde38de1873c6e40",
+      "offset_unit": "zero-based Unicode characters; end exclusive",
+      "meaning": "Offset+09:00 is on a prior disclosure metadata tag, not an explicit timezone for an unidentified future event. Do not transfer it."
+    }
+  ]
+}

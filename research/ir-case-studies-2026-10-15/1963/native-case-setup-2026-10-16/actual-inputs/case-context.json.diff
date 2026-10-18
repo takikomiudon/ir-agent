@@ -1,0 +1,331 @@
+--- research/ir-case-studies-2026-10-15/1963/native-case-setup-2026-10-16/case-context.json
++++ research/ir-case-studies-2026-10-15/1963/native-case-setup-2026-10-16/actual-inputs/case-context.json
+@@ -2,13 +2,13 @@
+   "case_id": "1963-project-profit-period-and-disposal-basis-monitor",
+   "company_id": "jp:1963",
+   "issue_id": "1963-project-profit-period-disposal-and-backlog-basis",
+-  "status": "file_only_context_preparation_before_actual_source_ingest",
++  "status": "file_only_actual_source_handoff_prepared_not_registered",
+   "synthetic": false,
+   "prepared_at": "2026-10-16T03:55:35.038561+00:00",
+   "purpose": "公表済み説明を保持し、期間/粗利・利益段階/連結範囲/売却取引/受注残/還元時点の同じ論点を継続比較する。著者の企業固有価格予測は作らない。",
+-  "actual_source_first_saved_at": null,
+-  "bootstrap_handoff_reviewed_at": null,
+-  "bootstrap_or_register_request_created": false,
++  "actual_source_first_saved_at": "2026-10-16T04:05:54.189003+00:00",
++  "bootstrap_handoff_reviewed_at": "2026-10-16T04:09:42.375167+00:00",
++  "bootstrap_or_register_request_created": true,
+   "author_method_references": [
+     {
+       "id": "anthropic.earnings-preview",
+@@ -133,7 +133,7 @@
+       "publication_day": null,
+       "published_at_preserved": null,
+       "retrieved_at_preserved": "2026-10-16T03:24:54.237500+00:00",
+-      "actual_DB_first_saved_at": null
++      "actual_DB_first_saved_at": "2026-10-16T04:05:54.189003+00:00"
+     },
+     {
+       "source_id": "case-public:857ccc64117019f749deae2362782d39c1416e4dc8bedd5af1c9172e2cb59733",
+@@ -149,7 +149,7 @@
+       "publication_day": null,
+       "published_at_preserved": null,
+       "retrieved_at_preserved": "2026-10-16T03:25:14.329604+00:00",
+-      "actual_DB_first_saved_at": null
++      "actual_DB_first_saved_at": "2026-10-16T04:05:54.189003+00:00"
+     },
+     {
+       "source_id": "case-public:33917957734a3f4b705072164e8e3526e23fec79c9f1b2265a7131a17e6253b1",
+@@ -165,7 +165,7 @@
+       "publication_day": "2026-08-07",
+       "published_at_preserved": null,
+       "retrieved_at_preserved": "2026-10-16T03:25:36.380108+00:00",
+-      "actual_DB_first_saved_at": null
++      "actual_DB_first_saved_at": "2026-10-16T04:05:54.189003+00:00"
+     },
+     {
+       "source_id": "case-public:7b3cca883705399d58fd34b557295098bfafcc67ffbc8716a5d42787aa2ed681",
+@@ -181,7 +181,7 @@
+       "publication_day": "2026-08-07",
+       "published_at_preserved": null,
+       "retrieved_at_preserved": "2026-10-16T03:37:30.354315+00:00",
+-      "actual_DB_first_saved_at": null
++      "actual_DB_first_saved_at": "2026-10-16T04:05:54.189003+00:00"
+     },
+     {
+       "source_id": "case-public:46b5535b348373426d7a5a1f1445d0d7115bbb1e099757e7f4263e904c0757fb",
+@@ -197,7 +197,7 @@
+       "publication_day": "2026-08-10",
+       "published_at_preserved": null,
+       "retrieved_at_preserved": "2026-10-16T03:39:19.529991+00:00",
+-      "actual_DB_first_saved_at": null
++      "actual_DB_first_saved_at": "2026-10-16T04:05:54.189003+00:00"
+     },
+     {
+       "source_id": "disclosed-facts:e691939950fbeb9823ff565d34da55861f18a761249cb755efd3855193bfa91e",
+@@ -213,7 +213,7 @@
+       "publication_day": null,
+       "published_at_preserved": null,
+       "retrieved_at_preserved": "2026-10-16T03:39:37.631966+00:00",
+-      "actual_DB_first_saved_at": null
++      "actual_DB_first_saved_at": "2026-10-16T04:05:54.189003+00:00"
+     }
+   ],
+   "review_questions": [
+@@ -1085,5 +1085,256 @@
+     "quote_bindings_exact": true,
+     "only_context_and_management_files_created": true,
+     "GET_DB_API_code_or_oldfile_edits": 0
++  },
++  "handoff_process_metadata": {
++    "reviewed_at": "2026-10-16T04:09:42.375167+00:00",
++    "source_firstsave_and_classification_current_recheck_ref": {
++      "path": "research/ir-case-studies-2026-10-15/1963/native-case-setup-2026-10-16/actual-inputs/actual-readonly-check.json",
++      "sha256": "4d2e7b0b3bc99ea005bdea851e7a7700e4b6183fc973ce4b6fca11d32c13286c"
++    },
++    "original_context_ref": {
++      "path": "research/ir-case-studies-2026-10-15/1963/native-case-setup-2026-10-16/case-context.json",
++      "sha256": "6d043b71109d6a7ac21bd349e9ac257186443d19c87e3eea2b668303caa0e808"
++    },
++    "original_management_ref": {
++      "path": "research/ir-case-studies-2026-10-15/1963/native-case-setup-2026-10-16/management-basis.json",
++      "sha256": "b3379b8858bf334afc3e43f98133dd397b86ba90effb9b3c26d8112a22dc89d4"
++    },
++    "correction_ref": {
++      "path": "research/ir-case-studies-2026-10-15/1963/native-case-setup-2026-10-16/correction.json",
++      "sha256": "a43c8e34f39b4c3a80ccefb3eb7c66cf8af10fe7ba8b2e6df8acefd936df8fe2"
++    },
++    "parent_context_acceptance_ref": {
++      "path": "research/ir-case-studies-2026-10-15/1963/native-case-setup-2026-10-16/parent-context-acceptance.json",
++      "sha256": "c228f5c448dbc396ce96c307e03ff4f99663fef242d886c9d29c87ff577a3886"
++    },
++    "old_preparation_scope_statements_are_historical": "prepared_at/preparation_checks and inherited-reading presence flag describe the original pre-ingest preparation. This handoff explicitly checks current actual six sources without backdating earlier presence or turning old reading into financial certification.",
++    "residual_handoff": {
++      "parent_acceptance_ref": {
++        "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/parent-acceptance.json",
++        "sha256": "ec3135fbc92be6a7b9d4568d26287df00bc76cd91f99d6308d64537133fb1297"
++      },
++      "residual_map_ref": {
++        "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/residual-map.json",
++        "sha256": "f3cbed27783b73149520a66e9aab71d022429f915e817936f1b90aa0873ed4cb"
++      },
++      "worker_handoff_ref": {
++        "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/worker-handoff.json",
++        "sha256": "b59945af07a09092af3e663ded8d1d1e33cddba7d070d49ba71391d528b38a0d"
++      },
++      "known": [
++        {
++          "local_id": "K1",
++          "topic": "Q1とFY、9表示の系列",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "f3cbed27783b73149520a66e9aab71d022429f915e817936f1b90aa0873ed4cb",
++            "json_pointer": "/known_do_not_reask/0"
++          },
++          "existing_condition_ids": [
++            "quarter-annual-gross-profit-and-period-perimeter-comparison"
++          ]
++        },
++        {
++          "local_id": "K2",
++          "topic": "粗利上振れの比較軸と利益段階",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "f3cbed27783b73149520a66e9aab71d022429f915e817936f1b90aa0873ed4cb",
++            "json_pointer": "/known_do_not_reask/1"
++          },
++          "existing_condition_ids": [
++            "quarter-annual-gross-profit-and-period-perimeter-comparison"
++          ]
++        },
++        {
++          "local_id": "K3",
++          "topic": "据置・リスク・受注期待の当時性",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "f3cbed27783b73149520a66e9aab71d022429f915e817936f1b90aa0873ed4cb",
++            "json_pointer": "/known_do_not_reask/2"
++          },
++          "existing_condition_ids": [
++            "backlog-project-risk-guidance-and-capital-return-timing"
++          ]
++        },
++        {
++          "local_id": "K4",
++          "topic": "Indonesia期間変更とEmiratesを分離",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "f3cbed27783b73149520a66e9aab71d022429f915e817936f1b90aa0873ed4cb",
++            "json_pointer": "/known_do_not_reask/3"
++          },
++          "existing_condition_ids": [
++            "quarter-annual-gross-profit-and-period-perimeter-comparison"
++          ]
++        },
++        {
++          "local_id": "K5",
++          "topic": "segment調整と受注残定義",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "f3cbed27783b73149520a66e9aab71d022429f915e817936f1b90aa0873ed4cb",
++            "json_pointer": "/known_do_not_reask/4"
++          },
++          "existing_condition_ids": [
++            "quarter-annual-gross-profit-and-period-perimeter-comparison",
++            "backlog-project-risk-guidance-and-capital-return-timing"
++          ]
++        },
++        {
++          "local_id": "K6",
++          "topic": "税method・Q1CF未作成",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "f3cbed27783b73149520a66e9aab71d022429f915e817936f1b90aa0873ed4cb",
++            "json_pointer": "/known_do_not_reask/5"
++          },
++          "existing_condition_ids": [
++            "tax-NCI-cashflow-and-completed-disposal-basis"
++          ]
++        },
++        {
++          "local_id": "K7",
++          "topic": "水ing後発売却とFY guide",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "f3cbed27783b73149520a66e9aab71d022429f915e817936f1b90aa0873ed4cb",
++            "json_pointer": "/known_do_not_reask/6"
++          },
++          "existing_condition_ids": [
++            "tax-NCI-cashflow-and-completed-disposal-basis"
++          ]
++        },
++        {
++          "local_id": "K8",
++          "topic": "QA左質問と右会社回答",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "f3cbed27783b73149520a66e9aab71d022429f915e817936f1b90aa0873ed4cb",
++            "json_pointer": "/known_do_not_reask/7"
++          },
++          "existing_condition_ids": [
++            "tax-NCI-cashflow-and-completed-disposal-basis",
++            "backlog-project-risk-guidance-and-capital-return-timing"
++          ]
++        },
++        {
++          "local_id": "K9",
++          "topic": "既読範囲の進展・時刻",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "f3cbed27783b73149520a66e9aab71d022429f915e817936f1b90aa0873ed4cb",
++            "json_pointer": "/known_do_not_reask/8"
++          },
++          "existing_condition_ids": [
++            "quarter-annual-gross-profit-and-period-perimeter-comparison",
++            "tax-NCI-cashflow-and-completed-disposal-basis",
++            "backlog-project-risk-guidance-and-capital-return-timing"
++          ]
++        }
++      ],
++      "remaining": [
++        {
++          "local_id": "P1",
++          "topic": "未読の保存範囲",
++          "owner": "researcher_public_first",
++          "status": "unresolved_not_an_IR_draft",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "f3cbed27783b73149520a66e9aab71d022429f915e817936f1b90aa0873ed4cb",
++            "json_pointer": "/remaining_owner_tasks/0"
++          },
++          "existing_condition_ids": [
++            "quarter-annual-gross-profit-and-period-perimeter-comparison",
++            "tax-NCI-cashflow-and-completed-disposal-basis",
++            "backlog-project-risk-guidance-and-capital-return-timing"
++          ]
++        },
++        {
++          "local_id": "P2",
++          "topic": "後日更新と同条件比較",
++          "owner": "researcher_public_first",
++          "status": "unresolved_not_an_IR_draft",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "f3cbed27783b73149520a66e9aab71d022429f915e817936f1b90aa0873ed4cb",
++            "json_pointer": "/remaining_owner_tasks/1"
++          },
++          "existing_condition_ids": [
++            "quarter-annual-gross-profit-and-period-perimeter-comparison",
++            "tax-NCI-cashflow-and-completed-disposal-basis",
++            "backlog-project-risk-guidance-and-capital-return-timing"
++          ]
++        },
++        {
++          "local_id": "C1",
++          "topic": "採算/受注残の残る定義",
++          "owner": "issuer_definition_after_public_review",
++          "status": "unresolved_not_an_IR_draft",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "f3cbed27783b73149520a66e9aab71d022429f915e817936f1b90aa0873ed4cb",
++            "json_pointer": "/remaining_owner_tasks/2"
++          },
++          "existing_condition_ids": [
++            "quarter-annual-gross-profit-and-period-perimeter-comparison",
++            "backlog-project-risk-guidance-and-capital-return-timing"
++          ]
++        },
++        {
++          "local_id": "C2",
++          "topic": "連結・期間比較",
++          "owner": "issuer_definition_after_public_review",
++          "status": "unresolved_not_an_IR_draft",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "f3cbed27783b73149520a66e9aab71d022429f915e817936f1b90aa0873ed4cb",
++            "json_pointer": "/remaining_owner_tasks/3"
++          },
++          "existing_condition_ids": [
++            "quarter-annual-gross-profit-and-period-perimeter-comparison"
++          ]
++        },
++        {
++          "local_id": "C3",
++          "topic": "売却と配当のcash/税",
++          "owner": "issuer_definition_after_public_review",
++          "status": "unresolved_not_an_IR_draft",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "f3cbed27783b73149520a66e9aab71d022429f915e817936f1b90aa0873ed4cb",
++            "json_pointer": "/remaining_owner_tasks/4"
++          },
++          "existing_condition_ids": [
++            "tax-NCI-cashflow-and-completed-disposal-basis"
++          ]
++        },
++        {
++          "local_id": "I1",
++          "topic": "正常利益・金融入力とIR価値",
++          "owner": "investor_and_adopted_author_method",
++          "status": "unresolved_not_an_IR_draft",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1963/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "f3cbed27783b73149520a66e9aab71d022429f915e817936f1b90aa0873ed4cb",
++            "json_pointer": "/remaining_owner_tasks/5"
++          },
++          "existing_condition_ids": [
++            "quarter-annual-gross-profit-and-period-perimeter-comparison",
++            "tax-NCI-cashflow-and-completed-disposal-basis",
++            "backlog-project-risk-guidance-and-capital-return-timing"
++          ]
++        }
++      ],
++      "local_IDs_are_not_new_native_issues": true,
++      "no_IR_or_financial_adoption": true,
++      "use": "将来workerは実packet/prior_reviewとこの固定票を照合し、summary/case_observation.rationale双方で重要な既知/残余/原scopeを落とさない。source evidenceは実pending限定。自動packet同梱/機械的意味認証を主張しない。"
++    },
++    "bootstrap_is_meaning_certification": false,
++    "financial_inputs_adopted": false,
++    "register_request_is_file_only": true
+   }
+ }

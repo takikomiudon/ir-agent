@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T14:57:21.617980+00:00",
+  "company_id": "jp:6754",
+  "status": "bounded_four_page_notes_capture_and_meaning_recheck_pass",
+  "findings": [],
+  "scope": {
+    "physical_pages_interpreted_and_visually_read": [
+      1,
+      6,
+      7,
+      8
+    ],
+    "PDF_pages_mechanically_reextracted": 20,
+    "whole_PDF_semantically_read": false,
+    "new_GETs": 0,
+    "Store_or_DB_constructors": 0,
+    "DB_accesses": 0,
+    "verifier_script_executed": false
+  },
+  "capture": {
+    "captured_GETs": 1,
+    "maximum_GETs": 1,
+    "url": "https://dl.cdn-anritsu.com/ja-jp/about-anritsu/ir/financial-materials/fy2026/260730-03.pdf",
+    "route_id": "6754-route-112",
+    "saved_literal_href_JSONpath": "$.links[112]",
+    "raw_entity_bytes": 2160414,
+    "raw_sha256": "b0ecd188347a2df19a9f8c77b5a786c2f3846ebae00139ae2adb9e34267c77e6",
+    "raw_PDF_magic": true,
+    "status": 200,
+    "text_reextracted_byte_exact": true,
+    "text_sha256": "d5734f0e4425605b752dfc18f42ddeb408acbdf8af07e207f3dbc388b4d63df9",
+    "configured_prepared_UA": "Codex-IR-Research/0.1",
+    "TLS_verify": true,
+    "complete_at": "2026-10-15T14:51:04.162728+00:00",
+    "raw_saved_at": "2026-10-15T14:51:04.165111+00:00",
+    "first_saved_at": null,
+    "retrieved_at_equals_body_completion": true,
+    "retries_redirects_other_route_GETs": 0,
+    "wire_bytes_independently_attested": false
+  },
+  "robots": {
+    "same_exact_host_saved_capture_reused": true,
+    "source_capture": "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/capture.json",
+    "source_capture_sha256": "a8e11e7df627ba5e92c99e5e82a565afcdb0144c734bd5c1be2408b73f5378e3",
+    "raw_sha256": "53fa35e7042c21944d25db90dc405674b7a7e359263514c4752939f374ee22ba",
+    "status": 404,
+    "body": "XML NoSuchKey/robots.txt; not rules or explicit site/AI permission",
+    "fresh_robots_GETs": 0,
+    "central7_exact_host_nonmatch": true,
+    "legacy_raw_HTML_route_not_reverified": true
+  },
+  "source": {
+    "id": "case-public:b0ecd188347a2df19a9f8c77b5a786c2f3846ebae00139ae2adb9e34267c77e6",
+    "ID_contract": "case-public:<saved raw PDF entity SHA256>; internally reproduced",
+    "raw_SHA_ID_reproduced": true,
+    "common_stable_source_id_not_used": true,
+    "common_ID_for_contract_distinction_only": "case-public:0f34e7f1e7bcf10e3cefef7e9ab6a596e3931000c31e6a48d77d31c53e4eae8f",
+    "models_json_text_snapshot_sha256": "c5b6f9b6e985e08b55a88a8c8030ef30653b7cdc327566558b5c49b1c68c8b9c",
+    "schema_validation_invariant": true,
+    "source_content_equals_saved_extraction": true,
+    "DB_imported_record": false,
+    "limit": "Schema conformance does not certify use of common.stable_source_id. Original ID and metadata are unchanged."
+  },
+  "publication_and_presence": {
+    "displayed_document_date": "2026-07-30",
+    "precision": "day_as_displayed_document_date_only",
+    "published_at": null,
+    "exact_Web_publication_time": null,
+    "historical_first_saved_at": null,
+    "local_save_clock_recorded": "2026-10-15T14:51:04.165111+00:00",
+    "limit": "Cover date is a displayed document date, not independent web-release attestation. HTTP/PDF metadata are not substituted. Current raw save/completion do not reconstruct a DB first-save receipt."
+  },
+  "meaning_review": [
+    {
+      "physical_page": 1,
+      "supported": "2027年3月期第1四半期 業績概要、2026年7月30日、ノート部記載なしを確認。",
+      "limit": "日精度の資料日付のみ。正確なWeb公表時刻や歴史的first-saveは未確認。",
+      "quote_ids": [
+        "notes-cover-period",
+        "notes-cover-date",
+        "notes-cover-note-layout"
+      ]
+    },
+    {
+      "physical_page": 6,
+      "supported": "ノートは食品品質保証の自動化・省人化設備投資、品質検査への関心、特に北米食肉向けX線需要を説明し、「この結果」として同期間の増収増益へ定性的につなぐ。",
+      "limit": "需要量、製品mix、棚卸圧縮、費用の個別利益寄与や地域配賦、旧費用改善の継続/消失までは示さない。表示丸めから率を再計算しない。",
+      "quote_ids": [
+        "notes6-pqa-demand-to-results-narrative",
+        "notes6-rounding-limit"
+      ]
+    },
+    {
+      "physical_page": 7,
+      "supported": "図表とノートは当1Qの営業利益・利益率の表示補足/再掲。",
+      "limit": "ノート付きの別representationで、独立予測や新しい費用要因分解ではない。既知の9.8%を再正規化しない。",
+      "quote_ids": [
+        "notes7-quarterly-metrics-context"
+      ]
+    },
+    {
+      "physical_page": 8,
+      "supported": "2027年3月期（4–6月）の事業概況、PQA全地域/特に北米需要の説明。ノート部は明示的に記載なし。",
+      "limit": "この4頁の未確認を全PDFの記載不存在、費用改善消失、著者仮説の反証へ一般化しない。",
+      "quote_ids": [
+        "notes8-period",
+        "notes8-no-notes"
+      ]
+    }
+  ],
+  "same_period_representation_boundary": "p6/7/8 are note-bearing displays of the same issuer quarter presentation context; repeated graphs and reported margin are not additional independent estimates. Existing non-notes counterpart was not re-audited in full.",
+  "quotes": [
+    {
+      "quote_id": "notes-cover-period",
+      "physical_page": 1,
+      "quote": "2027年3月期第1四半期 業績概要",
+      "source_character_start": 0,
+      "source_character_end": 18,
+      "source_UTF8_byte_start": 0,
+      "source_UTF8_byte_end": 40,
+      "page_character_start": 0,
+      "page_character_end": 18,
+      "quote_sha256_utf8": "e5c039d24ee25903bb3c82aaa3da26e113e534e4a8b16fdd6d8f998e6a2b7743",
+      "all_offsets_exact": true,
+      "image": {
+        "file": "/tmp/ir_6754_notes_independent_page01.png",
+        "sha256": "fd2452ae4c1512866b5ddde8d4a44f3ccf36078828404451267dc95251d9b428",
+        "role": "Independent temporary pdftoppm rendering of this raw PDF; not a new source artifact"
+      }
+    },
+    {
+      "quote_id": "notes-cover-date",
+      "physical_page": 1,
+      "quote": "2026年7月30日",
+      "source_character_start": 55,
+      "source_character_end": 65,
+      "source_UTF8_byte_start": 119,
+      "source_UTF8_byte_end": 135,
+      "page_character_start": 55,
+      "page_character_end": 65,
+      "quote_sha256_utf8": "b1e4e44276b63415d374f2aaf6f8882fe1c773c8abc9d0bc51c838860c7701fc",
+      "all_offsets_exact": true,
+      "image": {
+        "file": "/tmp/ir_6754_notes_independent_page01.png",
+        "sha256": "fd2452ae4c1512866b5ddde8d4a44f3ccf36078828404451267dc95251d9b428",
+        "role": "Independent temporary pdftoppm rendering of this raw PDF; not a new source artifact"
+      }
+    },
+    {
+      "quote_id": "notes-cover-note-layout",
+      "physical_page": 1,
+      "quote": "(ノート部記載なし)",
+      "source_character_start": 130,
+      "source_character_end": 140,
+      "source_UTF8_byte_start": 224,
+      "source_UTF8_byte_end": 250,
+      "page_character_start": 130,
+      "page_character_end": 140,
+      "quote_sha256_utf8": "8d6cb1fda178a43fe2ae347fa9a3328dcd2c1f73beee32277282aab3c948245c",
+      "all_offsets_exact": true,
+      "image": {
+        "file": "/tmp/ir_6754_notes_independent_page01.png",
+        "sha256": "fd2452ae4c1512866b5ddde8d4a44f3ccf36078828404451267dc95251d9b428",
+        "role": "Independent temporary pdftoppm rendering of this raw PDF; not a new source artifact"
+      }
+    },
+    {
+      "quote_id": "notes6-pqa-demand-to-results-narrative",
+      "physical_page": 6,
+      "quote": "        PQA事業は、食品市場の品質保証プロセスの自動化、省人化を目的とした設備投資\n        需要や品質検査への関心の高まりを背景とした需要が好調に推移しました。特に北\n        米では、食肉市場を中心にX線検査機の需要を獲得しました。この結果、売上高は\n        前年同期比16％増の79億円、営業利益は前年同期比36%増の8億円（営業利益率\n        9.8%）の増収増益となりました。",
+      "source_character_start": 6481,
+      "source_character_end": 6693,
+      "source_UTF8_byte_start": 9563,
+      "source_UTF8_byte_end": 10079,
+      "page_character_start": 1867,
+      "page_character_end": 2079,
+      "quote_sha256_utf8": "29781e545dbd3a8e66eae1a3171259720f554e0b356ca984c091a87539a1753a",
+      "all_offsets_exact": true,
+      "image": {
+        "file": "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/physical-page-06.png",
+        "sha256": "90d3f5693ba3b49db7a69608f1e0ac24bc602f34f792aa2b0e8640b151f407e7",
+        "role": "Producer durable saved p6 image"
+      }
+    },
+    {
+      "quote_id": "notes6-rounding-limit",
+      "physical_page": 6,
+      "quote": "（注1）値はそれぞれの欄で四捨五入（前年同期比増減額を除く）",
+      "source_character_start": 6077,
+      "source_character_end": 6107,
+      "source_UTF8_byte_start": 8725,
+      "source_UTF8_byte_end": 8813,
+      "page_character_start": 1463,
+      "page_character_end": 1493,
+      "quote_sha256_utf8": "2c90cd5b59908448237c5664b260010aa0936b5d953837a2084734bc3ce67de3",
+      "all_offsets_exact": true,
+      "image": {
+        "file": "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/physical-page-06.png",
+        "sha256": "90d3f5693ba3b49db7a69608f1e0ac24bc602f34f792aa2b0e8640b151f407e7",
+        "role": "Producer durable saved p6 image"
+      }
+    },
+    {
+      "quote_id": "notes7-quarterly-metrics-context",
+      "physical_page": 7,
+      "quote": "        第1四半期の連結及び各事業セグメントの営業利益、営業利益率は下記のと\n        おりです。",
+      "source_character_start": 7451,
+      "source_character_end": 7507,
+      "source_UTF8_byte_start": 11277,
+      "source_UTF8_byte_end": 11409,
+      "page_character_start": 410,
+      "page_character_end": 466,
+      "quote_sha256_utf8": "b89c02ebb7960fbc4a5d3e719991b87f7fb70f6d9ef8882ae46fc876e5c00207",
+      "all_offsets_exact": true,
+      "image": {
+        "file": "/tmp/ir_6754_notes_independent_page07.png",
+        "sha256": "4b87d4480ef2654efd6ea4bdf84a3f10462f5682ec7d14e4e2453faabb057d23",
+        "role": "Independent temporary pdftoppm rendering of this raw PDF; not a new source artifact"
+      }
+    },
+    {
+      "quote_id": "notes8-period",
+      "physical_page": 8,
+      "quote": "2027年3月期（4-6月）の状況",
+      "source_character_start": 7841,
+      "source_character_end": 7858,
+      "source_UTF8_byte_start": 11879,
+      "source_UTF8_byte_end": 11914,
+      "page_character_start": 40,
+      "page_character_end": 57,
+      "quote_sha256_utf8": "0e581d7598ebaea71a5254fc7c0f22e9809699af4f3b44d23de5e1ff5f2b0733",
+      "all_offsets_exact": true,
+      "image": {
+        "file": "/tmp/ir_6754_notes_independent_page08.png",
+        "sha256": "8b9f0d1c2dfe0f110c6cb9852e2d97247106473fb25c0180e2d32523b8eb49da",
+        "role": "Independent temporary pdftoppm rendering of this raw PDF; not a new source artifact"
+      }
+    },
+    {
+      "quote_id": "notes8-no-notes",
+      "physical_page": 8,
+      "quote": "(ノート部記載なし)",
+      "source_character_start": 8633,
+      "source_character_end": 8643,
+      "source_UTF8_byte_start": 13249,
+      "source_UTF8_byte_end": 13275,
+      "page_character_start": 832,
+      "page_character_end": 842,
+      "quote_sha256_utf8": "8d6cb1fda178a43fe2ae347fa9a3328dcd2c1f73beee32277282aab3c948245c",
+      "all_offsets_exact": true,
+      "image": {
+        "file": "/tmp/ir_6754_notes_independent_page08.png",
+        "sha256": "8b9f0d1c2dfe0f110c6cb9852e2d97247106473fb25c0180e2d32523b8eb49da",
+        "role": "Independent temporary pdftoppm rendering of this raw PDF; not a new source artifact"
+      }
+    }
+  ],
+  "financial_input_changes": [],
+  "new_normalized_facts": 0,
+  "independent_forecasts_added": 0,
+  "model_adopted": false,
+  "company_forecasts_adopted": false,
+  "old_files_unchanged": {
+    "reviewed_followup_files": {
+      "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/README.md": "116be6643cf75a5d41e0654ea904c95278272cbb3f1b24cc95ff55cb4d53e498",
+      "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/capture.json": "b347f0fd411ae07581abbb0d2092555d9b6bdef8482fd96cd7579aae35626d75",
+      "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/guard.json": "945eef54e3cff16a30339b60d896dcb4f97d663a3043130c5d1a4e50387ae1fb",
+      "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/pdfinfo.txt": "283fa1ffb666be6701170469584dbe65869a7cb6ae228c828285d9d0d310b476",
+      "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/physical-page-06.png": "90d3f5693ba3b49db7a69608f1e0ac24bc602f34f792aa2b0e8640b151f407e7",
+      "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/quotes.json": "401868fd30865cb1fb9d8dd7e0e018b5d429edebf0d7257167725b17aa58e996",
+      "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/raw/b0ecd188347a2df19a9f8c77b5a786c2f3846ebae00139ae2adb9e34267c77e6": "b0ecd188347a2df19a9f8c77b5a786c2f3846ebae00139ae2adb9e34267c77e6",
+      "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/review.json": "b208363a9b1f340da6aba6821988580f5c73afef911c20315714613d11d31939",
+      "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/route.json": "f7ac4c6901919b4a85ecbce77999f449c68680734e5b93a3b3da79f6dbffc61d",
+      "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/sourcebundle.json": "8197ea82f091af23b15ba51bc4af19bf11abed7c6a46fc8773e984a04f5c40e8",
+      "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/text/document-layout.txt": "d5734f0e4425605b752dfc18f42ddeb408acbdf8af07e207f3dbc388b4d63df9",
+      "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/text/physical-page-01.txt": "bae1b18ca51f48e991b93e28c283463c637db712ff1560607dec031f9a6128b4",
+      "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/text/physical-page-06.txt": "5a0b85f4b96011a55ca010b464ea203ab0cf418bdd99dfd219d874457a3e517b",
+      "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/text/physical-page-07.txt": "07a1540230b5b2447f77ff232e02b7b0caeae0fe0560211a9047d46bac20c7bc",
+      "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/text/physical-page-08.txt": "dd75e382d1007756a191ea3c968f4811e5c80be45a21c0674711929d3b7e8779",
+      "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/validation.json": "e3622017c847f5ffd0d855fa2e4c5bd73a386b627cae8c831eab4d0e1aa7c396"
+    },
+    "protected_inputs": {
+      "research/ir-iwai-business-hypotheses-2026-10-15/issuer-route-inventory/routes.json": "d7b8d85910f5da0bece1cc68e6ec5ed9ae1338d4bcf6d2ac9d7a9e5ec2755a20",
+      "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T185726005673Z/02.json": "4c43c1c4984c190908439f4e69b403b03dd7f5dcd27b8a1d14944f841b149f50",
+      "research/ir-source-access-holds-2026-10-15/holds-v3.json": "ec1e9f85d378571c3d0f99eca73ec8e397ea8dd7b155aa4be80c2100d2294551",
+      "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/capture.json": "a8e11e7df627ba5e92c99e5e82a565afcdb0144c734bd5c1be2408b73f5378e3",
+      "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/raw/53fa35e7042c21944d25db90dc405674b7a7e359263514c4752939f374ee22ba": "53fa35e7042c21944d25db90dc405674b7a7e359263514c4752939f374ee22ba"
+    },
+    "all_matched_at_end": true
+  },
+  "execution": {
+    "GETs": 0,
+    "API_calls": 0,
+    "Store_or_DB_constructors": 0,
+    "DB_reads_or_writes": 0,
+    "verifier_executions": 0,
+    "code_or_old_file_edits": 0,
+    "IR_drafts_or_sends": 0
+  },
+  "limits": [
+    "No full-PDF semantic audit or whole-company financial review; only four authorized physical pages.",
+    "Issuer qualitative demand narrative is not quantified causal attribution, an independent prediction or a guarantee.",
+    "The original common-model APIs were used file-only; a newly developing verifier was not consulted or executed.",
+    "RawSHA source-ID contract is distinct from the shared stable-ID algorithm; no original ID replacement was made."
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "security_code": "6941",
+  "company_name": "山一電機",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "電気機器",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.yamaichi.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T19:33:42.678779+00:00",
+  "completed_at": "2026-10-11T19:35:13.980617+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/6941/20261011T193342678827Z/01.json",
+      "url": "https://www.yamaichi.co.jp/",
+      "retrieved_at": "2026-10-11T19:33:53.801216+00:00",
+      "http_status": 200,
+      "quote": "山一電機株式会社 | 半導体検査用ICソケット、コネクタ・フレキシブル配線基板YFLEX®",
+      "role": "issuer_identity",
+      "snapshot_json_sha256": "18b7191d4290d198a2dff433b30712da20b41b09da47580094d13305f3242731"
+    },
+    {
+      "snapshot": "evidence/6941/20261011T193342678827Z/02.json",
+      "url": "https://www.yamaichi.co.jp/ir/",
+      "retrieved_at": "2026-10-11T19:34:05.391170+00:00",
+      "http_status": 200,
+      "quote": "IR情報 中期経営計画 財務ハイライト IRライブラリ 株主総会 株主諸手続き 株主優待制度",
+      "role": "financial_ir_scope",
+      "snapshot_json_sha256": "74e6305021f98a33421d7e141f3e800089d306e4d52995e9fa92b505a9652079"
+    },
+    {
+      "snapshot": "evidence/6941/20261011T193342678827Z/04.json",
+      "url": "https://www.yamaichi.co.jp/contact/",
+      "retrieved_at": "2026-10-11T19:34:28.161898+00:00",
+      "http_status": 200,
+      "quote": "TOP お問い合わせ お問い合わせ",
+      "role": "generic_contact_shell_without_ir_reception",
+      "snapshot_json_sha256": "efe1e6b5ccee1f99542ea61123386c6e558e48ad8864cdc537a8cc8f89af1555"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.yamaichi.co.jp/",
+      "final_url": "https://www.yamaichi.co.jp/",
+      "snapshot": "evidence/6941/20261011T193342678827Z/01.json",
+      "retrieved_at": "2026-10-11T19:33:53.801216+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.yamaichi.co.jp/ir/",
+      "final_url": "https://www.yamaichi.co.jp/ir/",
+      "snapshot": "evidence/6941/20261011T193342678827Z/02.json",
+      "retrieved_at": "2026-10-11T19:34:05.391170+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.yamaichi.co.jp/aboutus/company_information/",
+      "final_url": "https://www.yamaichi.co.jp/aboutus/company_information/",
+      "snapshot": "evidence/6941/20261011T193342678827Z/03.json",
+      "retrieved_at": "2026-10-11T19:34:16.566191+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.yamaichi.co.jp/contact/",
+      "final_url": "https://www.yamaichi.co.jp/contact/",
+      "snapshot": "evidence/6941/20261011T193342678827Z/04.json",
+      "retrieved_at": "2026-10-11T19:34:28.161898+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.yamaichi.co.jp/ir/?anchor=irnews",
+      "final_url": "https://www.yamaichi.co.jp/ir/?anchor=irnews",
+      "snapshot": "evidence/6941/20261011T193342678827Z/05.json",
+      "retrieved_at": "2026-10-11T19:34:39.279106+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.yamaichi.co.jp/ir/result/",
+      "final_url": "https://www.yamaichi.co.jp/ir/result/",
+      "snapshot": "evidence/6941/20261011T193342678827Z/06.json",
+      "retrieved_at": "2026-10-11T19:34:50.483347+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.yamaichi.co.jp/ir/calendar/",
+      "final_url": "https://www.yamaichi.co.jp/ir/calendar/",
+      "snapshot": "evidence/6941/20261011T193342678827Z/07.json",
+      "retrieved_at": "2026-10-11T19:35:02.154769+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [
+    "山一電機の金融IR本文に決算/財務/IR資料/株式情報を確認した。contact04保存本文は一般お問い合わせの見出しだけで、captured nativeは検索GET2件と空GET1件であり質問POSTは確認できない。",
+    "method/actionの欠落や空controlsを推測して質問フォームにせず、genericお問い合わせnavと投資家情報footerの近接だけをIR質問用途にしない。"
+  ],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "IR用途の公開メールとsame-native返信/質問・会社/個人条件は保存資料で未実証のためU。追加GET/JS/実選択・送信は行わない。",
+    "saved-source-only人手監査。新GET・送信0、送信・返信実績、相手先の投資提案受諾は未確認。"
+  ],
+  "discovery": {
+    "security_code": "6941",
+    "official_url": "https://www.yamaichi.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "山一電機",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/6941/20261011T193342678827Z/01.json",
+      "normalized_name": "山一電機",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6941/20261011T193342678827Z/02.json",
+      "normalized_name": "山一電機",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6941/20261011T193342678827Z/03.json",
+      "normalized_name": "山一電機",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6941/20261011T193342678827Z/04.json",
+      "normalized_name": "山一電機",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6941/20261011T193342678827Z/05.json",
+      "normalized_name": "山一電機",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6941/20261011T193342678827Z/06.json",
+      "normalized_name": "山一電機",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6941/20261011T193342678827Z/07.json",
+      "normalized_name": "山一電機",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 7,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 8,
+  "previous_attempts": [
+    "attempts/6941/20261011T045047625634Z.json",
+    "attempts/6941/20261011T193513981198Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_consumer_67_batch21",
+    "reviewed_at": "2026-10-11T22:43:13.709181+00:00",
+    "reviewed_at_jst": "2026-10-12T07:43:13.709181+09:00",
+    "notes": "sameissuer金融IR正文/contact04 generic shellのGET・空nativeを照合U。欠落method/action/controlを補い金融IR formに推測しない。 保存公式原文だけを使用し、追加GET・送信・実入力検証は行わない。"
+  }
+}

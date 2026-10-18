@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-10-15T19:25:27.433870+00:00",
+  "problem": "A future pending-source-only packet retains the original case and previous job ID, but not the previous observation itself. The worker must fetch another result to know how an earlier unknown was resolved.",
+  "adopted_basis": {
+    "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+    "step": "Step2 Update Log",
+    "principle": "For each new data point record date, changed data and impact on the existing pillar."
+  },
+  "project_adaptation": "Freeze only the completed previous qualitative review summary/observation, result SHA and source snapshot bindings into the next packet. Preserve the original case; never turn new observations into original author conditions.",
+  "compatibility": "Old packets without the field remain readable/claimable, explicitly marked legacy in the opt-in view. No reconstruction on historical worker rendering, DB migration, finance or source rewrite.",
+  "validation_scope": "Prior job completed, same case/issue/version, matching actual completion and declared review time, and previous source hashes covered by current case. Invalid reference holds this case only. New workers never fetch a changing live previous result for their frozen view.",
+  "before_files": {
+    "src/ir_agent/qualitative_research.py": "81254bd13d2022be346bbeb4c009459a5a6da95f897540313df366715589d2d1",
+    "tests/test_qualitative_worker_view.py": "93ab509433ff468b9e6cc331bc8477c98c3c8f630432a80fc4f583e4c7da22f6"
+  },
+  "actual_DB_before_sha256": "90307d2c650642e7eff6150ee2877ae49d603a9192ccce45cba46b01c9330555"
+}

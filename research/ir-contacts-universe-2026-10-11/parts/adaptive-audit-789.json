@@ -1,0 +1,86 @@
+{
+  "reviewer": "codex_audit_services_adaptive789",
+  "reviewed_at": "2026-10-11T06:35:18.774273+00:00",
+  "adaptive_run_directory": "adaptive-runs/20261011T061206589723Z",
+  "manifest_snapshot": "adaptive-runs/20261011T061206589723Z/manifest.json",
+  "fixed_initial_followup_company_count": 312,
+  "assigned_fixed_followup_codes": [
+    "7013",
+    "7685",
+    "9661"
+  ],
+  "assigned_company_count": 3,
+  "eligibility_rule": "security_code starts with 7, 8 or 9; in the adaptive manifest fixed initial followup_codes; manual_review_required is not false; successful_official_page_count > 0",
+  "eligible_company_count": 0,
+  "eligible_company_codes": [],
+  "reviewed_company_count": 0,
+  "reviewed_company_codes": [],
+  "record_mutation_count": 0,
+  "additional_get_requests": 0,
+  "submitted": false,
+  "completed_fixed_set": true,
+  "inspections": [
+    {
+      "security_code": "7013",
+      "company_name": "ＩＨＩ",
+      "record_sha256_at_inspection": "edb967881627aa4b92177959b52ffc7a6232e4b494709f262716ecdb0afb267e",
+      "record_attempted_at": "2026-10-11T04:03:25.477278+00:00",
+      "record_completed_at": "2026-10-11T04:03:34.940543+00:00",
+      "investigation_status": "unconfirmed",
+      "manual_review_required": true,
+      "successful_official_page_count": 0,
+      "existing_manual_review": null,
+      "evidence_snapshots": [
+        "evidence/7013/01.json"
+      ],
+      "inspection_result": "excluded_no_successful_body",
+      "notes": "保存公式本文の成功がなく、IR受付・入力欄・会社同一性を確認できない。窓口不存在とは扱わない。"
+    },
+    {
+      "security_code": "7685",
+      "company_name": "ＢｕｙＳｅｌｌ　Ｔｅｃｈｎｏｌｏｇｉｅｓ",
+      "record_sha256_at_inspection": "6330ffadfb2ff6d4bdb2f42d4ba8577f58c8a996d7a62dddabaa723201a4045c",
+      "record_attempted_at": "2026-10-11T03:37:05.129793+00:00",
+      "record_completed_at": "2026-10-11T03:37:05.129793+00:00",
+      "investigation_status": "provisional",
+      "manual_review_required": false,
+      "successful_official_page_count": 0,
+      "existing_manual_review": {
+        "reviewer": "previous_codex_research",
+        "reviewed_at": "2026-10-11T03:37:05.129793+00:00",
+        "notes": "前回のCodexによる調査分類を引継ぎ。確認水準は昇格しない。"
+      },
+      "evidence_snapshots": [
+        "../ir-contacts-2026-10-11/evidence/svc-7685-contact.json"
+      ],
+      "inspection_result": "excluded_already_reviewed",
+      "notes": "既存レビューを維持し、改めて未レビュー扱いにしない。"
+    },
+    {
+      "security_code": "9661",
+      "company_name": "歌舞伎座",
+      "record_sha256_at_inspection": "42ac21465381f9bd194f2d488cae0b90796f7975bee02f758549493c244ae2fe",
+      "record_attempted_at": "2026-10-11T04:04:08.150382+00:00",
+      "record_completed_at": "2026-10-11T04:04:11.326725+00:00",
+      "investigation_status": "unconfirmed",
+      "manual_review_required": false,
+      "successful_official_page_count": 2,
+      "existing_manual_review": {
+        "reviewer": "codex_audit_consumer",
+        "reviewed_at": "2026-10-11T04:25:34.264899+00:00",
+        "notes": "保存済み公式トップとサイトマップの公開本文・全リンク・form controls を個別に点検。いずれも会社名は歌舞伎座と一致するが、IR情報は有価証券報告書・決算短信・事業報告等への導線、株主情報は株主総会・株式事務・株主優待への導線のみ。IR質問用メールアドレス、質問フォーム、IR問い合わせとして明示されたリンクは保存証拠にない。食事・催し物の予約と株式会社歌舞伎座の株主優待予約をIR質問窓口として扱わない。保存済み2ページの form 配列はいずれも空。株式事務等のリンク先本文はこの依頼では未取得なので窓口不存在とは判定せず unconfirmed を維持。新規GET/メール送信/フォーム送信は全て0件。"
+      },
+      "evidence_snapshots": [
+        "evidence/9661/01.json",
+        "evidence/9661/02.json"
+      ],
+      "inspection_result": "excluded_already_reviewed",
+      "notes": "既存レビューを維持し、改めて未レビュー扱いにしない。"
+    }
+  ],
+  "notes": [
+    "No eligible unreviewed record has a successful official public body in this fixed set.",
+    "Existing confirmed/provisional/unconfirmed classifications and review metadata were not modified.",
+    "A later request may assign newly collected records; they are not included in this fixed initial-set result."
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "status": "independent_review_complete_no_actionable_findings",
+  "checks": [
+    {
+      "name": "trusted predecessor whole JSON (0, 0)",
+      "pass": true,
+      "result_sha256": "ca394bfcf375e6bb3a3bc8a314fce2b80afd1a2bb71cb8c0026863b9c5d3b513"
+    },
+    {
+      "name": "trusted predecessor whole JSON (0, 1)",
+      "pass": true,
+      "result_sha256": "3dbb1858084e38d3497d6be62a18e034e54308f9e7683ad1d26963532baf9cbe"
+    },
+    {
+      "name": "trusted predecessor whole JSON (0, 2)",
+      "pass": true,
+      "result_sha256": "5ddc4739d3a681d134668db6b85aa06b464018c67282764e9fd9eb861a3c4d7e"
+    },
+    {
+      "name": "trusted predecessor whole JSON (1, 0)",
+      "pass": true,
+      "result_sha256": "90fd31d903eaa17f40f1de078c83e434f62690f7075ed5b714527021ccd1e3fa"
+    },
+    {
+      "name": "trusted predecessor whole JSON (1, 1)",
+      "pass": true,
+      "result_sha256": "e431a4239dd6c65771c1fcc028417931ea4fe07bec9528d89274eb51abd64a4f"
+    },
+    {
+      "name": "trusted predecessor whole JSON (1, 2)",
+      "pass": true,
+      "result_sha256": "a6ad4814bb09dee916d9749dfc0f0edeaa204cd1fc15bb5cf9a3025ca42e37bd"
+    },
+    {
+      "name": "trusted predecessor whole JSON (2, 0)",
+      "pass": true,
+      "result_sha256": "34f514e1018e9974253fa64ee6749a39cc2b3be7211da592294b47b20b497be9"
+    },
+    {
+      "name": "trusted predecessor whole JSON (2, 1)",
+      "pass": true,
+      "result_sha256": "1cf21196dce1d5876e2656c775bdad9ae8530c37710a87e2ed14310bac574e72"
+    },
+    {
+      "name": "trusted predecessor whole JSON (2, 2)",
+      "pass": true,
+      "result_sha256": "ab9d7057190226fbba65abd79cec61226f4d045032363bc4fc50e9e78250aa99"
+    },
+    {
+      "name": "read-only source checks preserve every memory row",
+      "pass": true
+    },
+    {
+      "name": "root classification arrives after known-by boundary",
+      "pass": true
+    },
+    {
+      "name": "bootstrap before root classification rejects",
+      "pass": true
+    },
+    {
+      "name": "root classification exact boundary permits known-by read",
+      "pass": true
+    },
+    {
+      "name": "bootstrap keeps claimed review separate from registration and receipt",
+      "pass": true
+    },
+    {
+      "name": "later parent legacy known-by holds historical use",
+      "pass": true
+    },
+    {
+      "name": "all ancestor cutoffs permit exactly at later known-by",
+      "pass": true
+    },
+    {
+      "name": "root known-by does not overwrite later ancestor bound",
+      "pass": true
+    },
+    {
+      "name": "mixed legacy DAG checks do not rewrite receipts or other rows",
+      "pass": true
+    },
+    {
+      "name": "bootstrap before legacy ancestor presence rejects",
+      "pass": true
+    },
+    {
+      "name": "bootstrap after all legacy presence succeeds",
+      "pass": true
+    },
+    {
+      "name": "legacy unread stays pending until real completion",
+      "pass": true
+    },
+    {
+      "name": "completed review receives current time without first-save backfill",
+      "pass": true
+    },
+    {
+      "name": "read-only monitor remains whole JSON unchanged after wrapper workflow",
+      "pass": true
+    },
+    {
+      "name": "legacy inventory hash mismatch remains hard failure",
+      "pass": true
+    },
+    {
+      "name": "all code AST outside _source_check unchanged",
+      "pass": true
+    },
+    {
+      "name": "freeze src/ir_agent/qualitative_research.py",
+      "pass": true
+    },
+    {
+      "name": "freeze tests/test_qualitative_known_by.py",
+      "pass": true
+    },
+    {
+      "name": "freeze research/ir-qualitative-known-by-availability-2026-10-15/before/src/ir_agent/qualitative_research.py",
+      "pass": true
+    },
+    {
+      "name": "freeze research/ir-qualitative-known-by-availability-2026-10-15/before-files.json",
+      "pass": true
+    },
+    {
+      "name": "freeze research/ir-qualitative-known-by-availability-2026-10-15/implementation.diff",
+      "pass": true
+    },
+    {
+      "name": "freeze research/ir-qualitative-known-by-availability-2026-10-15/focused-tests.log",
+      "pass": true
+    },
+    {
+      "name": "freeze research/ir-qualitative-known-by-availability-2026-10-15/README.md",
+      "pass": true
+    }
+  ],
+  "check_count": 32,
+  "failed_checks": 0,
+  "findings": [],
+  "focused_tests": {
+    "run": 11,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "scope": [
+    "Frozen _source_check method and new11 tests, before/diff/freeze; no wider audit.",
+    "Known-by grants current/declared-cutoff readability only after complete source/ancestor/classification checks. Exact first-save remains unknown and arrival nonfresh.",
+    "Top-level known_by_at is root snapshot presence, not a replacement for later ancestor cutoffs; full graph preserves each bound.",
+    "Current publicity correction focused case uses existing reader hook; public IR remains outside bounded _ScheduleReader scope, no new information-review route was introduced."
+  ],
+  "network_requests": 0,
+  "actual_database_operations": 0,
+  "implementation_or_producer_edits": 0,
+  "full_suite_run": false,
+  "reproduction_runner": "/tmp/ir_qual_knownby_independent.py",
+  "runner_note": "The initial mixed-legacy fixture attempted parent presence at06 then root presence at04. Existing receipt clock monotonicity correctly refused the latter. The synthetic setup order was corrected to04 then06; no implementation change."
+}

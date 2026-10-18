@@ -1,0 +1,1007 @@
+{
+  "artifact_type": "question_residual_preparation_v2_not_question_or_native_result",
+  "recorded_at": "2026-10-16T03:40:56.472647+00:00",
+  "company_id": "jp:1904",
+  "case_id": "1904-earnings-and-event-basis-monitor",
+  "issue_id": "1904-quarter-guidance-share-and-perimeter-basis",
+  "supersedes_preparation_for_future_use": {
+    "path": "research/ir-case-studies-2026-10-15/1904/question-residual-review-2026-10-16/residual-map.json",
+    "sha256": "cc2efb522ddef8b620eb89a770b4f8c097b2be42f17ef80dc7622be4119d8608"
+  },
+  "original_conditions": [
+    {
+      "id": "quarter-annual-profit-and-units",
+      "reference": {
+        "path": "research/ir-case-studies-2026-10-15/1904/native-case-setup-2026-10-16/case-context.json",
+        "sha256": "48c6b4edc78e884e14b6244f3edb4f84cdab53b4711bd280b4798abacbed1f6e",
+        "json_pointer": "/review_questions/0"
+      }
+    },
+    {
+      "id": "historical-share-trust-vs-later-split",
+      "reference": {
+        "path": "research/ir-case-studies-2026-10-15/1904/native-case-setup-2026-10-16/case-context.json",
+        "sha256": "48c6b4edc78e884e14b6244f3edb4f84cdab53b4711bd280b4798abacbed1f6e",
+        "json_pointer": "/review_questions/1"
+      }
+    },
+    {
+      "id": "quarter-perimeter-vs-later-acquisition-and-strategy",
+      "reference": {
+        "path": "research/ir-case-studies-2026-10-15/1904/native-case-setup-2026-10-16/case-context.json",
+        "sha256": "48c6b4edc78e884e14b6244f3edb4f84cdab53b4711bd280b4798abacbed1f6e",
+        "json_pointer": "/review_questions/2"
+      }
+    }
+  ],
+  "native_baseline": {
+    "case_version": 4,
+    "config_revision": 1,
+    "case_ref": {
+      "path": "research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/qualitative-review/case-after.json",
+      "sha256": "b16e29ebfeef3bcf3d6a4800fb9a507810609594335bf2f5de806c692362e141"
+    },
+    "case_first_saved_at": "2026-10-16T03:03:48.349828+00:00",
+    "case_record_native_sha256": "55ea3d6ee57977c8c811085a5b26a81e9607757d82bfe971a04b9dbfa0fc4c28",
+    "last_review_id": "qualitative-696f2ba839ab65d35eccf4c1",
+    "result_ref": {
+      "path": "research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/qualitative-review/result.json",
+      "sha256": "e141aa30f81579eb225ca3cad1c40420a0eaaeb5d52e0371e91de47ee7d5857f"
+    },
+    "result_native_sha256": "ad45c7f3e24c254accac1d21dd3a63f8592f258a8e40381fd35f2ea90ed7c6b9",
+    "summary_pointer": "/summary",
+    "case_observation_pointer": "/case_observation",
+    "historical_state": "p10-unread in savedv4 was correct at that review; not overwritten. Current local supplement is later and not yet native.",
+    "not_live_DB_or_future_authorization": true
+  },
+  "carried_known_K1_K8": [
+    {
+      "id": "K1",
+      "topic": "Q1/FY・利益/単位",
+      "known": "Q1実績3/当時FY会社予想3、日本基準/連結、要約百万円/PL千円、Aug6据置/May13参照、中間予想省略理由は既答。",
+      "exclude_from_new_questions": "汎用Q1値、変更有無、印字期/単位、中間予想省略理由を再質問しない。",
+      "not_resolved": "正常利益・営業/親NI橋渡し・October最新予想適用は未確定。",
+      "quote_ids": [
+        "actual-table",
+        "issuer-guidance-table",
+        "guidance-unchanged",
+        "quarter-PL-units-periods-oneoffs"
+      ]
+    },
+    {
+      "id": "K2",
+      "topic": "当時trust/範囲",
+      "known": "Q1信託株式の自己株式/平均株数控除と、Q1内の重要な範囲変更なしは既答。",
+      "exclude_from_new_questions": "当時の分母注記/範囲変更有無を一般質問しない。",
+      "not_resolved": "後日split/取得後の現在EPS/信託分母・取込/寄与を歴史注記で認定しない。",
+      "quote_ids": [
+        "scope-quarter-treatment-and-share-basis"
+      ]
+    },
+    {
+      "id": "K3",
+      "topic": "分割/DPS/優待",
+      "known": "1→4の公表日程（9/30基準、10/1効力）、99円00銭中間pre/24円75銭期末post、年間dash/単純合計不可。分割前参考年間198円00銭は会社表示。優待新基準2027-03-31、2026-09-30はpre判定。",
+      "exclude_from_new_questions": "比率/公表日程/公表DPSの分母/優待移行日を再質問しない。",
+      "not_resolved": "日程≠独立実施確認。原3表示はknownだが現在同一分母annualDPSではなく、今回数値fact/価格/forecast model未採用。進行中の新入力票/normalizer成果は含めない。",
+      "quote_ids": [
+        "split-method-and-dates",
+        "shareholder-benefits-basis",
+        "dividends-mixed-share-bases-no-annual-sum"
+      ]
+    },
+    {
+      "id": "K4",
+      "topic": "ユニティー全株取得",
+      "known": "会社は9月30日付で全株取得完了と明示。対象事業/戦略目的、FY2027連結業績影響が軽微という見込みを開示。資本金1,000万円は対価ではない。",
+      "exclude_from_new_questions": "全株式か/完了日/対象事業/定性見通しを再質問しない。",
+      "not_resolved": "軽微は会社FY業績見込みで実測取得寄与/0ではない。対価/会計/のれん/取込/寄与/現金時期は未確定。",
+      "quote_ids": [
+        "acquisition-completion-and-disclosure-scope",
+        "acquisition-purpose-and-synergy-intent",
+        "target-overview-capital-not-price-and-acquisition-date",
+        "issuer-outlook-minor-impact"
+      ]
+    },
+    {
+      "id": "K5",
+      "topic": "税計算方針",
+      "known": "見積年度税効果後実効税率を四半期税前利益へ適用し、著しく合理性を欠く場合は法定実効税率を使う方針。",
+      "exclude_from_new_questions": "税計算方法そのものを一般質問しない。",
+      "not_resolved": "実際の率/適用分岐、現金税・将来正常税率は別。",
+      "quote_ids": [
+        "quarter-tax-estimation-policy"
+      ]
+    },
+    {
+      "id": "K6",
+      "topic": "Q1連結CF",
+      "known": "Q1連結CF未作成。償却費/のれん償却は別掲。",
+      "exclude_from_new_questions": "同短信のQ1連結CF表の有無を再質問しない。",
+      "not_resolved": "未作成≠CFO0。償却からCFを復元せず、Q1のれんをSeptember取得へ帰属させない。",
+      "quote_ids": [
+        "quarter-CF-not-prepared-and-amortization"
+      ]
+    },
+    {
+      "id": "K7",
+      "topic": "工事高表の主体/期/単位",
+      "known": "物理12は個別受注/完成/繰越、千円、新築/改修保守等、当期Q1/前年Q1/前年度を分ける。",
+      "exclude_from_new_questions": "表の有無・印字された主体/期/単位を再質問しない。",
+      "not_resolved": "個別≠連結/国内限定。完成工事高≠無条件モデル売上、改修保守等≠全て反復stock収益。",
+      "quote_ids": [
+        "standalone-order-completion-carryforward-table"
+      ]
+    },
+    {
+      "id": "K8",
+      "topic": "契約変更/繰越関係",
+      "known": "過年度以前受注の契約変更増減は当期受注/完成に含む。会社は次期繰越=前期繰越+当期受注−当期完成と説明。",
+      "exclude_from_new_questions": "変更包含や公表関係式を再質問しない。",
+      "not_resolved": "新規/変更/取消別、反復性/利益率/回収時期は未確認。定義を読んだだけで再集計・売上予測しない。",
+      "quote_ids": [
+        "contract-change-amounts-in-orders-and-completions",
+        "issuer-stated-carryforward-relation"
+      ]
+    }
+  ],
+  "new_known_K9": {
+    "id": "K9",
+    "topic": "p10連結地域セグメントの公表比較定義",
+    "known": "前年Q1は2025-04-01〜2025-06-30、当Q1は2026-04-01〜2026-06-30の連結累計で両表千円。地域は日本/米国/中国/オーストラリア、合計/調整額/四半期連結財務諸表計上額を別列表示。注1は利益調整額をセグメント間取引消去額、注2はセグメント利益又は損失の合計額を連結PL営業利益へ調整すると説明。収益の一時点/一定期間、契約/その他、外部/内部売上又は振替も別表示。",
+    "exclude_from_new_questions": "p10の所在/期/千円/印字された地域名と各列/公表利益額そのもの、消去調整の説明と営業利益という利益段階、収益表示区分を汎用的に再質問しない。",
+    "not_resolved": "法人/契約の帰属、比較間の集計/配賦変更、p12個別工事高とのcrosswalk、価格数量mix/費用原因、税/CF/親NI・年度予想・正常利益/将来価値は未確定。本社費/全社費と消去額を同一視しない。",
+    "quote_ids": [
+      "prior-quarter-period-unit",
+      "prior-quarter-table-columns",
+      "prior-quarter-profit-and-adjustment-notes",
+      "current-quarter-period-unit",
+      "current-quarter-table-columns",
+      "current-quarter-revenue-presentation",
+      "current-quarter-profit-and-adjustment-notes"
+    ],
+    "new_read_at": "2026-10-16T03:09:02.366222+00:00"
+  },
+  "previous_P1_declaration_preserved": {
+    "id": "P1",
+    "lane": "public_first",
+    "owner": "公開資料読解担当",
+    "topic": "セグメント採算/営業と親会社利益",
+    "next_public_check": "保存物理10のセグメント注記は所在のみ既知/未読。必要なら別有限taskで同一範囲/調整を読む。今回開かない。May13原資料/後続会社説明も今回未確認で、全資料に説明なしとは言わない。",
+    "could_change": "比較主体/対象期/調整と、既答か残余かの対応。",
+    "do_not_infer": "未読p10≠非開示/会社未回答。正常利益/未来利益を先決しない。"
+  },
+  "remaining_work_by_owner": [
+    {
+      "id": "P1",
+      "lane": "public_first",
+      "owner": "公開資料読解担当",
+      "topic": "セグメント採算/営業と親会社利益",
+      "next_public_check": "保存p10の本文/画像は03:09の追補で読解・root受入済み。期/単位/列/営業利益への調整の説明はK9へ移すため、未読p10を読む作業や一般再質問は繰り返さない。原因分解/比較母集団・配賦変更/個別表との対応等は、この頁で解けないことと全社非開示を分け、必要な後続公表説明が正当に保存された場合に先に確認する。",
+      "could_change": "比較主体/対象期/調整と、既答か残余かの対応。",
+      "do_not_infer": "p10の単位/列/利益段階が分かっても、価格数量mix/費用原因・持続性、個別p12との対応、本社費、税CF/親NI・年度予想/正常利益は確定しない。",
+      "status": "partially_resolved_public_definitions_only",
+      "new_public_resolution": {
+        "quote_ids": [
+          "prior-quarter-period-unit",
+          "prior-quarter-table-columns",
+          "prior-quarter-profit-and-adjustment-notes",
+          "current-quarter-period-unit",
+          "current-quarter-table-columns",
+          "current-quarter-revenue-presentation",
+          "current-quarter-profit-and-adjustment-notes"
+        ],
+        "source_review_ref": {
+          "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/review.json",
+          "sha256": "203f0050015681097eab57f099fb4485062ddb80c48df26ceb4107f947a0ebef"
+        },
+        "read_at": "2026-10-16T03:09:02.366222+00:00",
+        "resolved_findings": [
+          {
+            "id": "P1-period-unit-columns",
+            "finding": "同じ頁が前年Q1連結累計期間と当Q1連結累計期間を別表で表示し、いずれも千円と明記。報告セグメントは日本・米国・中国・オーストラリアで、合計・調整額・四半期連結財務諸表計上額の別列がある。",
+            "quote_ids": [
+              "prior-quarter-period-unit",
+              "prior-quarter-table-columns",
+              "current-quarter-period-unit",
+              "current-quarter-table-columns"
+            ],
+            "limit": "同じ名称の列が存在することは、法人構成・配賦方法・集計定義に変更がない認証ではない。単体工事表への対応も示されていない。"
+          },
+          {
+            "id": "P1-profit-measure-adjustment",
+            "finding": "両表の注1はセグメント利益又は損失の調整額をセグメント間取引消去額と説明。注2は同利益又は損失の合計額をQ1連結損益計算書の営業利益へ調整すると説明している。",
+            "quote_ids": [
+              "prior-quarter-profit-and-adjustment-notes",
+              "current-quarter-profit-and-adjustment-notes"
+            ],
+            "limit": "全社費用・本社費の新しい定義や親会社純利益へのブリッジとは呼ばない。表示金額の加減算・再集計・丸め修復を行わない。"
+          },
+          {
+            "id": "P1-revenue-presentation",
+            "finding": "売上高に一時点で移転される財／一定期間にわたり移転される財、顧客との契約から生じる収益／その他の収益、外部顧客への売上高／内部売上高又は振替高を区別している。",
+            "quote_ids": [
+              "current-quarter-revenue-presentation"
+            ],
+            "limit": "ダッシュを数値0に変換しない。各行を新規工事/改修保守・反復収益と同一視しない。認識区分の表示は費用発生や現金回収時点の証明ではない。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P2",
+      "lane": "public_first",
+      "owner": "公開資料読解担当",
+      "topic": "現在株式基準/取得後会計",
+      "next_public_check": "正当に保存された後続公表資料で現在EPS/信託分母と連結取込開始/会計/寄与の明示を先に確認。独立split実施確認は日程表と別。",
+      "could_change": "取得/分割前後の同一条件比較。",
+      "do_not_infer": "資本金/軽微で対価や寄与を埋めず、新GETや再取得を自動開始しない。"
+    },
+    {
+      "id": "C1",
+      "lane": "company_definition_after_public_check",
+      "owner": "会社が知りうる歴史的定義/比較対応（公表可能な範囲）",
+      "topic": "新規/変更/取消と改修保守等の定義",
+      "candidate_definition": "既知の変更包含から先の新規分/変更/取消の扱い、反復サービス範囲、完成/認識/回収の同一個別期間での対応。",
+      "could_change": "採用可能な比較指標の分子/分母/期間。",
+      "condition_before_question": "保存未読/公表を先に確認し、採用指標/仮説への影響を別途立証。不明だけで問わない。",
+      "IR_value_status": "unproven",
+      "financial_branches": null
+    },
+    {
+      "id": "C2",
+      "lane": "company_definition_after_public_check",
+      "owner": "会社の公表済み会計/対象期説明",
+      "topic": "税の適用分岐/OP-NIの同期間対応",
+      "candidate_definition": "税方針そのものではなく対象期の実際の適用分岐や税費用/OPから親NIへの公表説明箇所。",
+      "could_change": "歴史的会計比較の適合/読み違い訂正。",
+      "condition_before_question": "p10等公開先行後に公表範囲へ限定。会社に正常/将来税率や利益予測を決めさせない。",
+      "IR_value_status": "unproven",
+      "financial_branches": null
+    },
+    {
+      "id": "C3",
+      "lane": "company_definition_after_public_check",
+      "owner": "会社の公表済み取得後会計/対象範囲",
+      "topic": "取込開始/比較範囲",
+      "candidate_definition": "取得完了日と連結損益取込開始/対象事業・期間、公表注記との対応。",
+      "could_change": "Q1無変更と取得後範囲の比較。",
+      "condition_before_question": "後続公表注記を優先。未公表進捗や軽微/シナジーの数値保証、将来寄与保証を要求しない。",
+      "IR_value_status": "unproven",
+      "financial_branches": null
+    },
+    {
+      "id": "I1",
+      "lane": "investor_or_adopted_author_assumption",
+      "owner": "投資家/採用済み著者方針の適用担当",
+      "topic": "正常利益/将来税CF/再投資、予測EPS、倍率/割引率、価格/買い保留退出条件",
+      "boundary": "会社報告の定義/会社予想と、投資家の正常値/モデル採用/公正倍率/価格条件は別主体。会社の1期予想・軽微・DPS参考を代用しない。",
+      "could_change": "採用方法の必要前提と公表入力適合の別点検。今回数値/金融条件を発明しない。",
+      "IR_value_status": "unproven",
+      "financial_branches": null
+    }
+  ],
+  "C2_progress_note": "C2の公開先行条件の一部p10定義確認は完了。税の具体率/適用分岐、OP-NI/税CFはこの頁で解消せず、C1–C3/I1の定義/owner/金融枝は変えない。",
+  "segment_additional_reading": {
+    "read_at": "2026-10-16T03:09:02.366222+00:00",
+    "read_time_pointer": "/new_read_at in source-ref.json",
+    "review_ref": {
+      "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/review.json",
+      "sha256": "203f0050015681097eab57f099fb4485062ddb80c48df26ceb4107f947a0ebef"
+    },
+    "source_ref": {
+      "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/source-ref.json",
+      "sha256": "0ed7a714c487c47a6dfcfee56ab032582e8b9c05c88562a0447062a6ac95136a"
+    },
+    "parent_acceptance_ref": {
+      "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/parent-acceptance.json",
+      "sha256": "a06d57e7ca4ac1d492f8742cc2cd5cf9fb9b5872e9d43580cfeeef9a04dc0e69"
+    },
+    "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+    "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+    "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+    "raw_sha256": "943a359359710b693dc31e0ff3d365b2b142096b4caa91cd14efb5c813001f75",
+    "new_semantic_page": [
+      10
+    ],
+    "native_case_updated": false,
+    "new_source_or_publication": false
+  },
+  "earlier9_11_12_context_already_in_native_v4": {
+    "read_at_as_recorded": "2026-10-16T02:44:48.729845+00:00",
+    "read_time_pointer": "/recorded_at",
+    "semantics": "producer additional-reading record time; not publication/retrieval/DB first-save",
+    "review_ref": {
+      "path": "research/ir-case-studies-2026-10-15/1904/operating-driver-followup-2026-10-16/review.json",
+      "sha256": "05a7964e0e9f057965f91f6c3e75433bae69572ca6b6bb55258f89bd81b4444c"
+    },
+    "parent_acceptance_ref": {
+      "path": "research/ir-case-studies-2026-10-15/1904/operating-driver-followup-2026-10-16/parent-acceptance.json",
+      "sha256": "7db9d3aa6bb405785744ed391458796892fd4b241cb40d55dd56aa14c7e1b2f4"
+    },
+    "new_pages": [
+      9,
+      11,
+      12
+    ],
+    "page10": "unread; not issuer non-disclosure",
+    "native_case_updated": false,
+    "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+    "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+    "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d"
+  },
+  "old_quote_bindings_21": [
+    {
+      "quote_id": "business",
+      "source_id": "case-public:edde5a3d6f888b51b4f2100cf94143a13cdbbd2981eceae9b2e6bcaa2b649eb7",
+      "source_snapshot_native_sha256": "e08bcf83373ad285eddf2ac780160c97a405b5fe20777b6e4e1c7918fbbd9fd4",
+      "source_content_sha256": "97ac96b43d9d93cea42bc909928080a4bb4f4dd04e0a1885c8c903282a8683be",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "f564ef1228d55e607abe0a3854f6f10f365ffac904300170862120678ac74c70",
+        "json_pointer": "/0"
+      },
+      "physical_pdf_page": null,
+      "character_start": 1873,
+      "character_end": 1928,
+      "original_quote_sha256": "fb769387c430fa8358e91b66b1e8fa1fb782847aaa62cbebb9fe820bc2d1b24f",
+      "short_exact_excerpt": "空気調和、給排水衛生、電気設備工事を 通じて安全で快適な環境づくりに取り組む 私たちの施工実績をご紹介します。",
+      "excerpt_character_start": 1873,
+      "excerpt_character_end": 1928
+    },
+    {
+      "quote_id": "later-split-notice",
+      "source_id": "case-public:edde5a3d6f888b51b4f2100cf94143a13cdbbd2981eceae9b2e6bcaa2b649eb7",
+      "source_snapshot_native_sha256": "e08bcf83373ad285eddf2ac780160c97a405b5fe20777b6e4e1c7918fbbd9fd4",
+      "source_content_sha256": "97ac96b43d9d93cea42bc909928080a4bb4f4dd04e0a1885c8c903282a8683be",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "f564ef1228d55e607abe0a3854f6f10f365ffac904300170862120678ac74c70",
+        "json_pointer": "/1"
+      },
+      "physical_pdf_page": null,
+      "character_start": 1311,
+      "character_end": 1373,
+      "original_quote_sha256": "f5a449e87cad182d57fd90ebf74c1a6799422dfc9d2716430896ba70b707ba0d",
+      "short_exact_excerpt": "2026年9月10日 IR 株式の分割、株式分割に伴う定款の一部変更、株主優待制度の変更および配当予想の修正に関するお知らせ",
+      "excerpt_character_start": 1311,
+      "excerpt_character_end": 1373
+    },
+    {
+      "quote_id": "later-subsidiary-notice",
+      "source_id": "case-public:edde5a3d6f888b51b4f2100cf94143a13cdbbd2981eceae9b2e6bcaa2b649eb7",
+      "source_snapshot_native_sha256": "e08bcf83373ad285eddf2ac780160c97a405b5fe20777b6e4e1c7918fbbd9fd4",
+      "source_content_sha256": "97ac96b43d9d93cea42bc909928080a4bb4f4dd04e0a1885c8c903282a8683be",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "f564ef1228d55e607abe0a3854f6f10f365ffac904300170862120678ac74c70",
+        "json_pointer": "/2"
+      },
+      "physical_pdf_page": null,
+      "character_start": 861,
+      "character_end": 903,
+      "original_quote_sha256": "2106ec449cbb8430efc977addc9ae3eb1d6e4c7725db4abd4d9a2e52227e2ba5",
+      "short_exact_excerpt": "2026年9月30日 IR 株式会社ユニティーの株式取得（子会社化）に関するお知らせ",
+      "excerpt_character_start": 861,
+      "excerpt_character_end": 903
+    },
+    {
+      "quote_id": "actual-table",
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "f564ef1228d55e607abe0a3854f6f10f365ffac904300170862120678ac74c70",
+        "json_pointer": "/3"
+      },
+      "physical_pdf_page": 1,
+      "character_start": 664,
+      "character_end": 1902,
+      "original_quote_sha256": "0a3dbd19af07ff49b6a1fed851c936a38b35006168b714b51b7094dd891f0557",
+      "short_exact_excerpt": "（百万円未満切捨て）\n１．2027年３月期第１四半期の連結業績（2026年４月１日～2026年６月30日）\n （１）連結経営成績（累計）  ",
+      "excerpt_character_start": 664,
+      "excerpt_character_end": 734
+    },
+    {
+      "quote_id": "issuer-guidance-table",
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "f564ef1228d55e607abe0a3854f6f10f365ffac904300170862120678ac74c70",
+        "json_pointer": "/4"
+      },
+      "physical_pdf_page": 1,
+      "character_start": 2918,
+      "character_end": 3641,
+      "original_quote_sha256": "3603bbb2fa07c39bb202c5b714c26937cf1a217ee04051d168e72fe6d40947a5",
+      "short_exact_excerpt": "３．2027年３月期の連結業績予想（2026年４月１日～2027年３月31日）\n                              ",
+      "excerpt_character_start": 2918,
+      "excerpt_character_end": 2988
+    },
+    {
+      "quote_id": "scope-quarter-treatment-and-share-basis",
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "f564ef1228d55e607abe0a3854f6f10f365ffac904300170862120678ac74c70",
+        "json_pointer": "/5"
+      },
+      "physical_pdf_page": 2,
+      "character_start": 3642,
+      "character_end": 4583,
+      "original_quote_sha256": "bf28332220ef56ec15b8e79d547f932f2bc42eea973e19bc36de30080672c20b",
+      "short_exact_excerpt": "※    注記事項\n    （１）当四半期連結累計期間における連結範囲の重要な変更： 無\n\n    （２）四半期連結財務諸表の作成に特有の会",
+      "excerpt_character_start": 3642,
+      "excerpt_character_end": 3712
+    },
+    {
+      "quote_id": "strategy-and-regions",
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "f564ef1228d55e607abe0a3854f6f10f365ffac904300170862120678ac74c70",
+        "json_pointer": "/6"
+      },
+      "physical_pdf_page": 4,
+      "character_start": 6769,
+      "character_end": 7551,
+      "original_quote_sha256": "3337bc474017bc577c0e33836f442aa48ff2201a9763e15045d7d16b8db86d68",
+      "short_exact_excerpt": "こうした状況の中、当社グループは、2026年５月に策定した中期経営計画「LIVZON DREAM 2030 2nd half!」の\n  ３つ",
+      "excerpt_character_start": 6769,
+      "excerpt_character_end": 6839
+    },
+    {
+      "quote_id": "guidance-unchanged",
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "f564ef1228d55e607abe0a3854f6f10f365ffac904300170862120678ac74c70",
+        "json_pointer": "/7"
+      },
+      "physical_pdf_page": 4,
+      "character_start": 8080,
+      "character_end": 8274,
+      "original_quote_sha256": "c4b87ac64a711ae1e9afdab674d6ca6503f35ce873aa34908c589c57a90fbbc4",
+      "short_exact_excerpt": "（３）連結業績予想などの将来予測情報に関する説明\n   連結業績予想につきましては、2026年５月13日に公表いたしました「2026年３月期",
+      "excerpt_character_start": 8080,
+      "excerpt_character_end": 8150
+    },
+    {
+      "quote_id": "quarter-PL-units-periods-oneoffs",
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "f564ef1228d55e607abe0a3854f6f10f365ffac904300170862120678ac74c70",
+        "json_pointer": "/8"
+      },
+      "physical_pdf_page": 7,
+      "character_start": 12612,
+      "character_end": 15186,
+      "original_quote_sha256": "7135cf4233831061101bb64744fe99fe857ea2879039414c11a0d95628e1a2d7",
+      "short_exact_excerpt": "                                大成温調㈱（1904）     2027年３月期    第１四半期決算短信\n",
+      "excerpt_character_start": 12612,
+      "excerpt_character_end": 12682
+    },
+    {
+      "quote_id": "split-method-and-dates",
+      "source_id": "case-public:d5515999569e0a44d30c01701d683bb136b302cc8166a9374e625fe753b23d83",
+      "source_snapshot_native_sha256": "1b588428313dee3fb574ce403fe45763e3f823ffc5cbf2a73d6345cbbb087cd2",
+      "source_content_sha256": "6a4e3da47cd76c9d2c2677b073ceae08c67b17c8c5e8c52efa4866f4b63785d9",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/source-quotes.json",
+        "sha256": "97dd1f18e09ef9e1de2c6e461894011ce05d137a01ecad07f158915fafe81779",
+        "json_pointer": "/0"
+      },
+      "physical_pdf_page": 1,
+      "character_start": 710,
+      "character_end": 1259,
+      "original_quote_sha256": "cf7dad4adf5df903fdc99fb25e795831772a0da7e29e577fc8c093afec8987db",
+      "short_exact_excerpt": "Ⅰ．株式の分割について\n １．株式分割の目的\n 当社株式の投資単位あたりの金額を引き下げることにより、投資家の皆さまが当社株式により投資しや",
+      "excerpt_character_start": 710,
+      "excerpt_character_end": 780
+    },
+    {
+      "quote_id": "shareholder-benefits-basis",
+      "source_id": "case-public:d5515999569e0a44d30c01701d683bb136b302cc8166a9374e625fe753b23d83",
+      "source_snapshot_native_sha256": "1b588428313dee3fb574ce403fe45763e3f823ffc5cbf2a73d6345cbbb087cd2",
+      "source_content_sha256": "6a4e3da47cd76c9d2c2677b073ceae08c67b17c8c5e8c52efa4866f4b63785d9",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/source-quotes.json",
+        "sha256": "97dd1f18e09ef9e1de2c6e461894011ce05d137a01ecad07f158915fafe81779",
+        "json_pointer": "/1"
+      },
+      "physical_pdf_page": 2,
+      "character_start": 1629,
+      "character_end": 2327,
+      "original_quote_sha256": "84ca486b6460b905261f2853cc70c245a51bee4dafd4762d3ba220cfff4564d3",
+      "short_exact_excerpt": "Ⅲ．株式分割に伴う株主優待制度の変更（実質的な変更なし）\n 当社では、毎年 3 月 31 日および 9 月 30 日を基準日とし、年 2 回",
+      "excerpt_character_start": 1629,
+      "excerpt_character_end": 1699
+    },
+    {
+      "quote_id": "dividends-mixed-share-bases-no-annual-sum",
+      "source_id": "case-public:d5515999569e0a44d30c01701d683bb136b302cc8166a9374e625fe753b23d83",
+      "source_snapshot_native_sha256": "1b588428313dee3fb574ce403fe45763e3f823ffc5cbf2a73d6345cbbb087cd2",
+      "source_content_sha256": "6a4e3da47cd76c9d2c2677b073ceae08c67b17c8c5e8c52efa4866f4b63785d9",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/source-quotes.json",
+        "sha256": "97dd1f18e09ef9e1de2c6e461894011ce05d137a01ecad07f158915fafe81779",
+        "json_pointer": "/2"
+      },
+      "physical_pdf_page": 2,
+      "character_start": 2327,
+      "character_end": 3225,
+      "original_quote_sha256": "e47d67070f6c1f46ed1885e5d9af55d745531f5e5b43740795effb5e3de9fe2a",
+      "short_exact_excerpt": "Ⅳ． 株式分割に伴う配当予想の修正（実質的な変更なし）\n  今回の株式分割に伴い、2026 年 5 月 13 日に公表した 2027 年 3",
+      "excerpt_character_start": 2327,
+      "excerpt_character_end": 2397
+    },
+    {
+      "quote_id": "acquisition-completion-and-disclosure-scope",
+      "source_id": "case-public:67e15b34d2b068979ae33edc50aef7eea3f08a0b4380f0fe19e156cf79dc9967",
+      "source_snapshot_native_sha256": "1db75e42d0726060be8177b412ed9ef6effb05150bf029d9c348858993146912",
+      "source_content_sha256": "7349d54e0f4e9e1b4b47f32773cc5f9155cb3d4c402c848605a644726217941a",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/source-quotes.json",
+        "sha256": "97dd1f18e09ef9e1de2c6e461894011ce05d137a01ecad07f158915fafe81779",
+        "json_pointer": "/3"
+      },
+      "physical_pdf_page": 1,
+      "character_start": 464,
+      "character_end": 620,
+      "original_quote_sha256": "b3628f9dc1dddb4e2e5240babb94496b99b0f0e24cd141317abfc44ebdef672a",
+      "short_exact_excerpt": "当社は、2026 年９月 10 日開催の取締役会において、株式会社ユニティー（以下「ユニティー」）の全株式を\n取得することを決議し、2026",
+      "excerpt_character_start": 464,
+      "excerpt_character_end": 534
+    },
+    {
+      "quote_id": "acquisition-purpose-and-synergy-intent",
+      "source_id": "case-public:67e15b34d2b068979ae33edc50aef7eea3f08a0b4380f0fe19e156cf79dc9967",
+      "source_snapshot_native_sha256": "1db75e42d0726060be8177b412ed9ef6effb05150bf029d9c348858993146912",
+      "source_content_sha256": "7349d54e0f4e9e1b4b47f32773cc5f9155cb3d4c402c848605a644726217941a",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/source-quotes.json",
+        "sha256": "97dd1f18e09ef9e1de2c6e461894011ce05d137a01ecad07f158915fafe81779",
+        "json_pointer": "/4"
+      },
+      "physical_pdf_page": 1,
+      "character_start": 620,
+      "character_end": 1206,
+      "original_quote_sha256": "8241696ae3960f642e1d14969c6d379bd830766b9b11fa98040b7c5c436eb231",
+      "short_exact_excerpt": "１．株式取得の目的\n 当社は、長期経営ビジョン「LIVZON DREAM 2030」において、2030 年の目指すべき姿として「総合たてもの",
+      "excerpt_character_start": 620,
+      "excerpt_character_end": 690
+    },
+    {
+      "quote_id": "target-overview-capital-not-price-and-acquisition-date",
+      "source_id": "case-public:67e15b34d2b068979ae33edc50aef7eea3f08a0b4380f0fe19e156cf79dc9967",
+      "source_snapshot_native_sha256": "1db75e42d0726060be8177b412ed9ef6effb05150bf029d9c348858993146912",
+      "source_content_sha256": "7349d54e0f4e9e1b4b47f32773cc5f9155cb3d4c402c848605a644726217941a",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/source-quotes.json",
+        "sha256": "97dd1f18e09ef9e1de2c6e461894011ce05d137a01ecad07f158915fafe81779",
+        "json_pointer": "/5"
+      },
+      "physical_pdf_page": 1,
+      "character_start": 1206,
+      "character_end": 1420,
+      "original_quote_sha256": "fe27f3a1fe63b1c65c4d13ea5c0afb947c779e36856a773a200d83fc1d7e08d4",
+      "short_exact_excerpt": "２．株式会社ユニティーの概要\n  （１）商号            株式会社ユニティー\n  （２）所在地           東京都品川区西",
+      "excerpt_character_start": 1206,
+      "excerpt_character_end": 1276
+    },
+    {
+      "quote_id": "issuer-outlook-minor-impact",
+      "source_id": "case-public:67e15b34d2b068979ae33edc50aef7eea3f08a0b4380f0fe19e156cf79dc9967",
+      "source_snapshot_native_sha256": "1db75e42d0726060be8177b412ed9ef6effb05150bf029d9c348858993146912",
+      "source_content_sha256": "7349d54e0f4e9e1b4b47f32773cc5f9155cb3d4c402c848605a644726217941a",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/source-quotes.json",
+        "sha256": "97dd1f18e09ef9e1de2c6e461894011ce05d137a01ecad07f158915fafe81779",
+        "json_pointer": "/6"
+      },
+      "physical_pdf_page": 1,
+      "character_start": 1420,
+      "character_end": 1580,
+      "original_quote_sha256": "bdb6b7a80641d3658935eeea74ed2768158b53aa5507beec0d0307cb11980903",
+      "short_exact_excerpt": "４．今後の見通し\n 本件による 2027 年３月期の当社連結業績への影響は軽微であると見込んでおります。なお、今後開示すべき事\n項が生じた場",
+      "excerpt_character_start": 1420,
+      "excerpt_character_end": 1490
+    },
+    {
+      "quote_id": "quarter-tax-estimation-policy",
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/operating-driver-followup-2026-10-16/source-quotes.json",
+        "sha256": "aa4118c99e7d587216edd6d94d038965fb61ee95a16ab040d5a040377bbf7ca8",
+        "json_pointer": "/0"
+      },
+      "physical_pdf_page": 9,
+      "character_start": 16104,
+      "character_end": 16374,
+      "original_quote_sha256": "bef93785f437493e9ba267288790b175b377145a965e523cb7f34f8b925bff15",
+      "short_exact_excerpt": "（３）四半期連結財務諸表に関する注記事項\n （四半期連結財務諸表の作成に特有の会計処理に関する注記）\n （税金費用の計算）\n  税金費用につ",
+      "excerpt_character_start": 16104,
+      "excerpt_character_end": 16174
+    },
+    {
+      "quote_id": "quarter-CF-not-prepared-and-amortization",
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/operating-driver-followup-2026-10-16/source-quotes.json",
+        "sha256": "aa4118c99e7d587216edd6d94d038965fb61ee95a16ab040d5a040377bbf7ca8",
+        "json_pointer": "/1"
+      },
+      "physical_pdf_page": 11,
+      "character_start": 20185,
+      "character_end": 20653,
+      "original_quote_sha256": "dd4b3c5474232bc6641c5f4468ccd07351940073fce4a200f3e5a18a4f0036d6",
+      "short_exact_excerpt": "（四半期連結キャッシュ・フロー計算書に関する注記）\n 当第１四半期連結累計期間に係る四半期連結キャッシュ・フロー計算書は作成しておりません。",
+      "excerpt_character_start": 20185,
+      "excerpt_character_end": 20255
+    },
+    {
+      "quote_id": "standalone-order-completion-carryforward-table",
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/operating-driver-followup-2026-10-16/source-quotes.json",
+        "sha256": "aa4118c99e7d587216edd6d94d038965fb61ee95a16ab040d5a040377bbf7ca8",
+        "json_pointer": "/2"
+      },
+      "physical_pdf_page": 12,
+      "character_start": 20753,
+      "character_end": 21977,
+      "original_quote_sha256": "4ed3bdeb32e37b82c120558bbf1e0215843b2ac518a1435decf256df2012cb8c",
+      "short_exact_excerpt": "３．補足情報\n  （個別受注工事高、完成工事高、繰越工事高の状況）\n                           前期繰越工事高  ",
+      "excerpt_character_start": 20753,
+      "excerpt_character_end": 20823
+    },
+    {
+      "quote_id": "contract-change-amounts-in-orders-and-completions",
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/operating-driver-followup-2026-10-16/source-quotes.json",
+        "sha256": "aa4118c99e7d587216edd6d94d038965fb61ee95a16ab040d5a040377bbf7ca8",
+        "json_pointer": "/3"
+      },
+      "physical_pdf_page": 12,
+      "character_start": 21977,
+      "character_end": 22080,
+      "original_quote_sha256": "046cd52cefa0fa51fcf8b5d04b8f7c0cbd5fad89bc080819669920d3c66f26b7",
+      "short_exact_excerpt": "（注）１．前事業年度以前に受注した工事で、契約の変更により請負金額の増減がある場合、当期受注工事高にその増減\n     額が含まれております",
+      "excerpt_character_start": 21977,
+      "excerpt_character_end": 22047
+    },
+    {
+      "quote_id": "issuer-stated-carryforward-relation",
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/operating-driver-followup-2026-10-16/source-quotes.json",
+        "sha256": "aa4118c99e7d587216edd6d94d038965fb61ee95a16ab040d5a040377bbf7ca8",
+        "json_pointer": "/4"
+      },
+      "physical_pdf_page": 12,
+      "character_start": 22083,
+      "character_end": 22182,
+      "original_quote_sha256": "6f5609aaee7d24a41c7445bbdc91f6d14cdf4bb0fb481f8b35d03305f859c568",
+      "short_exact_excerpt": "２．次期繰越工事高は（前期繰越工事高＋当期受注工事高－当期完成工事高）に一致しております。\n\n\n\n\n                    ",
+      "excerpt_character_start": 22083,
+      "excerpt_character_end": 22153
+    }
+  ],
+  "new_p10_quote_bindings_7": [
+    {
+      "quote_id": "prior-quarter-period-unit",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "df9fc371d8a06c6eee494f0dbf3952e908af4ea4194d41e76f0d98c55315dc12",
+        "json_pointer": "/quotes/0"
+      },
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "physical_pdf_page": 10,
+      "printed_page": "8",
+      "source_character_start": 16511,
+      "source_character_end": 16695,
+      "source_UTF8_byte_start": 27063,
+      "source_UTF8_byte_end": 27393,
+      "page_character_start": 136,
+      "page_character_end": 320,
+      "page_UTF8_byte_start": 220,
+      "page_UTF8_byte_end": 550,
+      "quote_sha256": "e7baa3e56f1157ca7ea73d84a0d36a139e23423241c47f07e1e3253c8d5d65bf",
+      "short_exact_excerpt": "Ⅰ   前第１四半期連結累計期間（自2025年４月１日 至2025年６月30日）\n     報告セグメントごとの売上高及び利益又は損失の金額",
+      "image_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/images/page10.png",
+        "sha256": "26b8857014289308a0bc6b6b9bb7abee104bf03907bc110924a2310c60296480"
+      }
+    },
+    {
+      "quote_id": "prior-quarter-table-columns",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "df9fc371d8a06c6eee494f0dbf3952e908af4ea4194d41e76f0d98c55315dc12",
+        "json_pointer": "/quotes/1"
+      },
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "physical_pdf_page": 10,
+      "printed_page": "8",
+      "source_character_start": 16696,
+      "source_character_end": 17238,
+      "source_UTF8_byte_start": 27394,
+      "source_UTF8_byte_end": 28018,
+      "page_character_start": 321,
+      "page_character_end": 863,
+      "page_UTF8_byte_start": 551,
+      "page_UTF8_byte_end": 1175,
+      "quote_sha256": "3cbf1261b391583f49991381582c814e866771d62db50d744fb010649ee8a1a7",
+      "short_exact_excerpt": "                                                                      ",
+      "image_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/images/page10.png",
+        "sha256": "26b8857014289308a0bc6b6b9bb7abee104bf03907bc110924a2310c60296480"
+      }
+    },
+    {
+      "quote_id": "prior-quarter-profit-and-adjustment-notes",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "df9fc371d8a06c6eee494f0dbf3952e908af4ea4194d41e76f0d98c55315dc12",
+        "json_pointer": "/quotes/2"
+      },
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "physical_pdf_page": 10,
+      "printed_page": "8",
+      "source_character_start": 18039,
+      "source_character_end": 18254,
+      "source_UTF8_byte_start": 29005,
+      "source_UTF8_byte_end": 29418,
+      "page_character_start": 1664,
+      "page_character_end": 1879,
+      "page_UTF8_byte_start": 2162,
+      "page_UTF8_byte_end": 2575,
+      "quote_sha256": "763be7a1dd55549f9194da761566b93932f0309ee236797de6431db09a112081",
+      "short_exact_excerpt": "セグメント利益又は損失\n                    649,412      19,626   △70,013      21,",
+      "image_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/images/page10.png",
+        "sha256": "26b8857014289308a0bc6b6b9bb7abee104bf03907bc110924a2310c60296480"
+      }
+    },
+    {
+      "quote_id": "current-quarter-period-unit",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "df9fc371d8a06c6eee494f0dbf3952e908af4ea4194d41e76f0d98c55315dc12",
+        "json_pointer": "/quotes/3"
+      },
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "physical_pdf_page": 10,
+      "printed_page": "8",
+      "source_character_start": 18256,
+      "source_character_end": 18440,
+      "source_UTF8_byte_start": 29420,
+      "source_UTF8_byte_end": 29750,
+      "page_character_start": 1881,
+      "page_character_end": 2065,
+      "page_UTF8_byte_start": 2577,
+      "page_UTF8_byte_end": 2907,
+      "quote_sha256": "173858079ac3e7c482ed1718a74354a31ee6ecb35a607e7ff863c317dd3611da",
+      "short_exact_excerpt": "Ⅱ   当第１四半期連結累計期間（自2026年４月１日 至2026年６月30日）\n     報告セグメントごとの売上高及び利益又は損失の金額",
+      "image_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/images/page10.png",
+        "sha256": "26b8857014289308a0bc6b6b9bb7abee104bf03907bc110924a2310c60296480"
+      }
+    },
+    {
+      "quote_id": "current-quarter-table-columns",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "df9fc371d8a06c6eee494f0dbf3952e908af4ea4194d41e76f0d98c55315dc12",
+        "json_pointer": "/quotes/4"
+      },
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "physical_pdf_page": 10,
+      "printed_page": "8",
+      "source_character_start": 18441,
+      "source_character_end": 18981,
+      "source_UTF8_byte_start": 29751,
+      "source_UTF8_byte_end": 30373,
+      "page_character_start": 2066,
+      "page_character_end": 2606,
+      "page_UTF8_byte_start": 2908,
+      "page_UTF8_byte_end": 3530,
+      "quote_sha256": "1936789f5c5494afffba3310d7dc1bd633b85d0a30584f4a01a88a5a79cfbc7e",
+      "short_exact_excerpt": "                                                                      ",
+      "image_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/images/page10.png",
+        "sha256": "26b8857014289308a0bc6b6b9bb7abee104bf03907bc110924a2310c60296480"
+      }
+    },
+    {
+      "quote_id": "current-quarter-revenue-presentation",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "df9fc371d8a06c6eee494f0dbf3952e908af4ea4194d41e76f0d98c55315dc12",
+        "json_pointer": "/quotes/5"
+      },
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "physical_pdf_page": 10,
+      "printed_page": "8",
+      "source_character_start": 18987,
+      "source_character_end": 19778,
+      "source_UTF8_byte_start": 30385,
+      "source_UTF8_byte_end": 31356,
+      "page_character_start": 2612,
+      "page_character_end": 3403,
+      "page_UTF8_byte_start": 3542,
+      "page_UTF8_byte_end": 4513,
+      "quote_sha256": "e4395911de4d13d0a1746b58b2a732c9e8bea14fbf1237652b234b879f84338d",
+      "short_exact_excerpt": "    一時点で移転される財    2,405,538   1,911,021         －           －   4,316,",
+      "image_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/images/page10.png",
+        "sha256": "26b8857014289308a0bc6b6b9bb7abee104bf03907bc110924a2310c60296480"
+      }
+    },
+    {
+      "quote_id": "current-quarter-profit-and-adjustment-notes",
+      "quote_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "df9fc371d8a06c6eee494f0dbf3952e908af4ea4194d41e76f0d98c55315dc12",
+        "json_pointer": "/quotes/6"
+      },
+      "source_id": "case-public:cd0710232d105dbfbd9a4fff16df1b2d631daf2d95337c50e771fa7d486d2e29",
+      "source_snapshot_native_sha256": "f7d887bf8ec9755a1fc8de0f4c2674db7e649b32a6d68a4bdb077ffd2c5f7c36",
+      "source_content_sha256": "18cb106d0f5e0b5a0de7528e2988f7d5967f091fa37dda78848464a6e8ea3f0d",
+      "physical_pdf_page": 10,
+      "printed_page": "8",
+      "source_character_start": 19780,
+      "source_character_end": 19994,
+      "source_UTF8_byte_start": 31358,
+      "source_UTF8_byte_end": 31772,
+      "page_character_start": 3405,
+      "page_character_end": 3619,
+      "page_UTF8_byte_start": 4515,
+      "page_UTF8_byte_end": 4929,
+      "quote_sha256": "92b0fe565e746d62bddb8d1b58362e711942591e235d04d7d0c706fa92c1bbc3",
+      "short_exact_excerpt": "セグメント利益又は損失\n                    538,404     123,182   △118,150     10,",
+      "image_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/images/page10.png",
+        "sha256": "26b8857014289308a0bc6b6b9bb7abee104bf03907bc110924a2310c60296480"
+      }
+    }
+  ],
+  "raw_three_display_financial_boundary": {
+    "ref": {
+      "path": "research/ir-case-studies-2026-10-15/1904/split-dividend-disclosed-facts-2026-10-16/raw-display-candidates.json",
+      "sha256": "435d3db31ad2c9218040106a5ae5b2ec1d6819ba1d49c16568d8f7628c18d87d"
+    },
+    "parent_acceptance_ref": {
+      "path": "research/ir-case-studies-2026-10-15/1904/split-dividend-disclosed-facts-2026-10-16/parent-acceptance.json",
+      "sha256": "086d1e223eb90ae0b9f88a328cade5fdc24b7f7e0559bce30f1c3c40c3715c46"
+    },
+    "records": [
+      {
+        "pointer": "/records/0",
+        "raw_display": "99 円 00 銭",
+        "concept": "issuer_forecast_interim_dividend_pre_split_display",
+        "normalization_not_missing_disclosure": true
+      },
+      {
+        "pointer": "/records/1",
+        "raw_display": "24 円 75 銭",
+        "concept": "issuer_forecast_final_dividend_post_split_display",
+        "normalization_not_missing_disclosure": true
+      },
+      {
+        "pointer": "/records/2",
+        "raw_display": "198 円 00 銭",
+        "concept": "issuer_reference_annual_dividend_pre_split_equivalent_display",
+        "normalization_not_missing_disclosure": true
+      }
+    ],
+    "new_input_or_normalizer_artifacts_included": false,
+    "three_numeric_facts_or_model_values_created_here": false,
+    "mixed_basis_simple_sum_permitted": false,
+    "issuer_reference198_not_current_annual_DPS_or_investor_calculation": true,
+    "price_forecast_model_adoption": false
+  },
+  "current_processing_state_overlay": {
+    "legacy_K3_and_raw_boundary": "Old preparation statements of ungenerated/input-not-included are historical process status only, kept unchanged in inherited records. Their financial meaning/limits persist.",
+    "current_casev4_state": "The three displays were already generated in version2, saved and reviewed in job qualitative-696f2ba839ab65d35eccf4c1. Exact99.00/24.75/198.00 composition is not current same-denominator annual DPS or financial/model adoption.",
+    "new_segment_task_generated_no_values": true
+  },
+  "readiness": {
+    "formal_question_created": false,
+    "formal_question_registered": false,
+    "send_ready": false,
+    "IR_value_status": "unproven",
+    "financial_branches": null,
+    "reason": "採用数値仮説/変更対象金融入力/評価・価格条件がなく、残る定義確認の判断価値は未立証。まず公表確認と比較範囲を整理。"
+  },
+  "method_adaptation_references": [
+    {
+      "path": "docs/ir-question-preparation.md",
+      "sections": "5–15/23–31",
+      "use": "Anthropic DD known/prioritized neutral comparison/followup and JIRA public-first adaptation; no author-created1904 question/trade rule."
+    },
+    {
+      "path": "docs/model-routing-inputs.md",
+      "sections": "13/35–50/58",
+      "use": "Existing Damodaran-model research adaptation separates company evidence/entity/period from project normal/forecast/model assumptions; not issuer-approved valuation."
+    }
+  ],
+  "input_SHA256": {
+    "research/ir-case-studies-2026-10-15/1904/question-residual-review-2026-10-16/README.md": "283dc45e9285bb2c71cb311869ea892c63a28f0868d36e5d9c03cd71efada2e9",
+    "research/ir-case-studies-2026-10-15/1904/question-residual-review-2026-10-16/residual-map.json": "cc2efb522ddef8b620eb89a770b4f8c097b2be42f17ef80dc7622be4119d8608",
+    "research/ir-case-studies-2026-10-15/1904/question-residual-review-2026-10-16/worker-handoff.json": "07d95e5dec85f398fd16d526fa3af7a584e6359b9a08438af428c6a2de90c85e",
+    "research/ir-case-studies-2026-10-15/1904/question-residual-review-2026-10-16/parent-acceptance.json": "9616e2b19bd7ea22fa7fb81ca9a2196a040be68d95b2ddc93db2e0b6a364cc8c",
+    "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/source-ref.json": "0ed7a714c487c47a6dfcfee56ab032582e8b9c05c88562a0447062a6ac95136a",
+    "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/review.json": "203f0050015681097eab57f099fb4485062ddb80c48df26ceb4107f947a0ebef",
+    "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/source-quotes.json": "df9fc371d8a06c6eee494f0dbf3952e908af4ea4194d41e76f0d98c55315dc12",
+    "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/parent-acceptance.json": "a06d57e7ca4ac1d492f8742cc2cd5cf9fb9b5872e9d43580cfeeef9a04dc0e69",
+    "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/input-pins.json": "7fda213e86bdabe3dff2dc944757effdc2bf71be5942b6a4d7b6d31e6ff9c389",
+    "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/manifest.json": "349a730bc9cc65c054a3f805ea6822129dcc563aa34fe0223f40b93c228ff69b",
+    "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/validation.json": "19d94e410e81683ad12a44cafe743a0b0a26c85b383143cb5f6b45e18e81e28d",
+    "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/pages/page10.txt": "2bb2ec80d9c995a2e8f0e7bf0c7b33fcb620035120afad8889927efb7e4db170",
+    "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/pages/page10-local-reextract.txt": "041e7b2d0227f577c85dcd635d3ea7e80325c5b46fb86943daa060922bfe81d5",
+    "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/images/page10.png": "26b8857014289308a0bc6b6b9bb7abee104bf03907bc110924a2310c60296480",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/qualitative-review/case-after.json": "b16e29ebfeef3bcf3d6a4800fb9a507810609594335bf2f5de806c692362e141",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/qualitative-review/result.json": "e141aa30f81579eb225ca3cad1c40420a0eaaeb5d52e0371e91de47ee7d5857f",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/qualitative-review/completion.json": "5afe5b74cbb410cc2aa90e261a7a676368dc13f61ea06be3b92f688fff947391",
+    "research/ir-case-studies-2026-10-15/1904/initial-public-review-2026-10-16/source-bundle.json": "a37f3b5d6671b0df21802de7180c8c21758d8eb8e6e93544a91a82e173a71ebc",
+    "research/ir-case-studies-2026-10-15/1904/initial-public-review-2026-10-16/raw/943a359359710b693dc31e0ff3d365b2b142096b4caa91cd14efb5c813001f75": "943a359359710b693dc31e0ff3d365b2b142096b4caa91cd14efb5c813001f75",
+    "docs/ir-question-preparation.md": "be39fd3d71b8b5428b63254bf509a559a76ce46299ddecebfc54cfac446fd987",
+    "docs/model-routing-inputs.md": "a0e8b7356e955e90909796c03c905f4455324c0b995db3f735697370aa410d8e",
+    ".agents/skills/jp-equity-ir/references/roles.md": "828168d64ef9598c483275610d99bbd60e145f56e9440cf72daa4c4e085b905c"
+  },
+  "historical_pin_refs": [
+    {
+      "path": "research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/input-pins.json",
+      "sha256": "7fda213e86bdabe3dff2dc944757effdc2bf71be5942b6a4d7b6d31e6ff9c389"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/1904/question-residual-review-2026-10-16/residual-map.json",
+      "sha256": "cc2efb522ddef8b620eb89a770b4f8c097b2be42f17ef80dc7622be4119d8608"
+    }
+  ],
+  "operations": {
+    "GET": 0,
+    "DB_access_or_write": 0,
+    "old_native_source_code_shared_edits": 0,
+    "new_numeric_facts_calculations_or_financial_adoption": 0,
+    "new_question_draft_branches_registration_or_send": 0,
+    "new_queue_or_case_job": 0,
+    "new_PDF_extraction": 0
+  }
+}

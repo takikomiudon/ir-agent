@@ -1,0 +1,75 @@
+{
+  "method_author": "maxgfr/crible maintainers",
+  "fixed_commit": "00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7",
+  "original_Graham_rules_verified": false,
+  "issuer_inputs_vs_method": "Companies authored annual reported EPS/BPS; maintainers described formula. Project production core is an independent implementation; no upstream import or execution.",
+  "quotes": [
+    {
+      "id": "maintainer-fixed-formula",
+      "file": "research/ir-transparent-metric-formula-review-2026-10-15/upstream-INDICATORS.md",
+      "file_sha256": "fb82b2d47596026ea75fa561169062c52622dcb153caffe37af5491111ad084f",
+      "quote": "graham_number = √( 22.5 · EPS · BVPS )        only when EPS > 0 AND BVPS > 0, else NaN",
+      "unicode_start": 13125,
+      "unicode_end_exclusive": 13211,
+      "UTF8_start": 13518,
+      "UTF8_end_exclusive": 13608
+    },
+    {
+      "id": "maintainer-EPS-basis",
+      "file": "research/ir-transparent-metric-formula-review-2026-10-15/upstream-INDICATORS.md",
+      "file_sha256": "fb82b2d47596026ea75fa561169062c52622dcb153caffe37af5491111ad084f",
+      "quote": "EPS  = net_income / shares_outstanding            (weighted average)",
+      "unicode_start": 12966,
+      "unicode_end_exclusive": 13034,
+      "UTF8_start": 13359,
+      "UTF8_end_exclusive": 13427
+    },
+    {
+      "id": "maintainer-BVPS-basis",
+      "file": "research/ir-transparent-metric-formula-review-2026-10-15/upstream-INDICATORS.md",
+      "file_sha256": "fb82b2d47596026ea75fa561169062c52622dcb153caffe37af5491111ad084f",
+      "quote": "BVPS = total_equity / shares_outstanding_end      (period-end count, average as fallback)",
+      "unicode_start": 13035,
+      "unicode_end_exclusive": 13124,
+      "UTF8_start": 13428,
+      "UTF8_end_exclusive": 13517
+    },
+    {
+      "id": "saved-upstream-core",
+      "file": "research/ir-transparent-metric-core-review-2026-10-15/upstream-extras.py",
+      "file_sha256": "3038a489679aa163f5a4d930ac7cb4dcf320d72a62122ccd45e9d9242b593631",
+      "quote": "graham_base = 22.5 * eps * bvps\n        out[\"graham_number\"] = np.sqrt(graham_base.where((eps > 0) & (bvps > 0)))",
+      "unicode_start": 5899,
+      "unicode_end_exclusive": 6012,
+      "UTF8_start": 5942,
+      "UTF8_end_exclusive": 6055
+    },
+    {
+      "id": "project-public-price-contract",
+      "file": "docs/graham-number-valuation-spec.md",
+      "file_sha256": "4ef4791993d6db68aea2a500e8aa0c99636ebe5f211e73efe77d9855a20841c1",
+      "quote": "価格の根拠がない場合は価格を補って実企業の比較を実行せず、式の参考計算と入力準備を進める。",
+      "unicode_start": 1044,
+      "unicode_end_exclusive": 1089,
+      "UTF8_start": 1802,
+      "UTF8_end_exclusive": 1937
+    }
+  ],
+  "API_contract": {
+    "public_calculate_valuation": "positive current_price_jpy is mandatory and generates ratios; no public price-free scalar entrypoint",
+    "used_existing_internal_path": [
+      "ir_agent.valuation._prepare",
+      "ir_agent.valuation._fair_value"
+    ],
+    "controlled_Decimal_context": {
+      "precision": 80,
+      "rounding": "ROUND_HALF_UP",
+      "Emin": -999999,
+      "Emax": 999999
+    },
+    "validated_scope": "_prepare validates exact two positive finite Graham inputs, scenario/aggregation and input size limits. Private kernel is called only for this prepared one-scenario unweighted pair in a bounded context. Full public wrapper is not claimed to have been executed.",
+    "design_limitation": "Price-free historical reference requires private production helpers today; fixed code hash binds reproduction, but this is not a new stable public API.",
+    "dummy_price_used": false,
+    "no_price_ratios_or_EV_generated": true
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "aggregation": "unweighted",
+  "research_context": {
+    "kind": "author_displayed_historical_example",
+    "author": "Aswath Damodaran",
+    "publication": "Ups and Downs: Valuing Cyclical and Commodity Companies, September 2009, Illustration 5, PDF pp.23–25; adjustments pp.17–18",
+    "readiness": "research/ir-toyota-author-valuation-readiness-2026-10-15/readiness.json",
+    "source_id": "damodaran.cyclical-commodity.2009",
+    "pdf_sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+    "source_quote_ids": ["TY11", "TY12", "TY17", "TY18", "TY23", "TY31", "TY32", "TY33"],
+    "basis": {
+      "company": "Toyota, author's early-2009 illustration",
+      "currency": "JPY",
+      "input_amount_unit": "JPY units, each displayed billion-yen amount multiplied by 1000000000",
+      "share_unit": "author shares, 3.448 billion multiplied by 1000000000",
+      "scope": "author consolidated-firm valuation; minority interests deducted separately",
+      "forecast_attribution": "external_estimate",
+      "explicit_forecast_years": 3,
+      "terminal_year": 4,
+      "cash_basis": "author displayed cash 2288 billion yen; no present applicability certified",
+      "non_operating_assets_basis": "author securities/other-company holdings 6845 billion yen; book value assumed market value in footnote3",
+      "debt_basis": "author displayed debt 11862 billion yen; no present applicability certified",
+      "minority_interests_basis": "author consolidated-subsidiary minority interests 583 billion yen; book value used in footnote3",
+      "shares_basis": "same author denominator as illustration3, 3.448 billion; no ADR/FX transformation",
+      "book_or_market_value_verified": false
+    },
+    "author_displayed_results": {
+      "terminal_value_billion_jpy": "19856",
+      "operating_value_billion_jpy": "16907",
+      "equity_value_billion_jpy": "13595",
+      "per_share_jpy": "3943"
+    },
+    "displayed_input_arithmetic_per_share_jpy": "3944.09",
+    "historical_comparison_price": {
+      "price_jpy": "3060",
+      "author_date_label": "February 2009",
+      "exact_observed_at": null,
+      "current_or_tradable_quote_verified": false
+    },
+    "limitations": [
+      "The printed terminal FCFF713 divided by (.0509-.015) differs from the author's printed terminal value19856; the final-price difference is not certified as only display rounding.",
+      "No unprinted terminal FCFF or precision is backsolved to force3943; Table3 ROC, taxes, NOL and rounding inconsistencies remain unresolved.",
+      "This is historical author arithmetic, not a current Toyota forecast, investment selection, policy adoption or forward backtest."
+    ],
+    "financial_inputs_verified": false,
+    "model_adopted": false
+  },
+  "scenarios": [
+    {
+      "name": "toyota-author-2009-displayed-cashflows",
+      "method": "dcf_explicit_terminal_equity_bridge",
+      "inputs": {
+        "fcf_jpy": ["-412000000000", "-88000000000", "314000000000"],
+        "terminal_fcff_jpy": "713000000000",
+        "discount_rate": "0.0509",
+        "terminal_growth_rate": "0.015",
+        "cash_jpy": "2288000000000",
+        "non_operating_assets_jpy": "6845000000000",
+        "debt_jpy": "11862000000000",
+        "minority_interests_jpy": "583000000000",
+        "shares_outstanding": "3448000000"
+      }
+    }
+  ]
+}

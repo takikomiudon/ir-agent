@@ -1,0 +1,151 @@
+{
+  "status": "intermediate_only",
+  "adoption": "unresolved",
+  "request": {
+    "assessment": {
+      "comparability_rationale": null,
+      "new_investment_roc_rationale": null,
+      "source_refs": [],
+      "stable_growth_rationale": null,
+      "tax_and_nol_rationale": null
+    },
+    "basis": {
+      "accounting_basis": "synthetic accounting fixture",
+      "amount_unit": "millions",
+      "company_id": "synthetic-company",
+      "currency": "JPY",
+      "scope": "consolidated"
+    },
+    "growth": {
+      "basis": {
+        "accounting_basis": "synthetic accounting fixture",
+        "amount_unit": "millions",
+        "company_id": "synthetic-company",
+        "currency": "JPY",
+        "scope": "consolidated"
+      },
+      "concept": "stable_operating_income_growth",
+      "data_kind": "synthetic_example",
+      "period": {
+        "end": null,
+        "kind": "full_fiscal_year",
+        "label": "synthetic next stable period",
+        "start": null
+      },
+      "rationale": "Synthetic arithmetic fixture, no forecast adoption.",
+      "source_refs": [],
+      "unit": "annual_decimal_ratio",
+      "value": "0"
+    },
+    "method": "stable_growth_new_investment_roc",
+    "nopat_next": {
+      "basis": {
+        "accounting_basis": "synthetic accounting fixture",
+        "amount_unit": "millions",
+        "company_id": "synthetic-company",
+        "currency": "JPY",
+        "scope": "consolidated"
+      },
+      "concept": "aftertax_operating_income_before_financing",
+      "data_kind": "synthetic_example",
+      "period": {
+        "end": null,
+        "kind": "full_fiscal_year",
+        "label": "synthetic next stable period",
+        "start": null
+      },
+      "rationale": "Synthetic arithmetic fixture, no forecast adoption.",
+      "source_refs": [],
+      "timing": "next_stable_period",
+      "value": "100"
+    },
+    "roc_new": {
+      "basis": {
+        "accounting_basis": "synthetic accounting fixture",
+        "amount_unit": "millions",
+        "company_id": "synthetic-company",
+        "currency": "JPY",
+        "scope": "consolidated"
+      },
+      "concept": "aftertax_return_on_new_investment",
+      "data_kind": "synthetic_example",
+      "period": {
+        "end": null,
+        "kind": "full_fiscal_year",
+        "label": "synthetic next stable period",
+        "start": null
+      },
+      "rationale": "Synthetic arithmetic fixture, no forecast adoption.",
+      "source_refs": [],
+      "unit": "annual_decimal_ratio",
+      "value": ".1"
+    }
+  },
+  "request_sha256": "fcd47ff007d601ca645c5b1b16e9eed7042131e00ef546473a9a7f0a6d43919d",
+  "arithmetic": {
+    "reinvestment_rate": "0",
+    "reinvestment_amount": "0",
+    "fcff": "100",
+    "basis": {
+      "accounting_basis": "synthetic accounting fixture",
+      "amount_unit": "millions",
+      "company_id": "synthetic-company",
+      "currency": "JPY",
+      "scope": "consolidated"
+    }
+  },
+  "calculation": {
+    "working_precision_digits": 80,
+    "rounding": "ROUND_HALF_UP",
+    "division_may_round": true,
+    "display_quantization": null,
+    "formula": {
+      "reinvestment_rate": "growth / roc_new",
+      "reinvestment_amount": "nopat_next * reinvestment_rate",
+      "fcff": "nopat_next - reinvestment_amount"
+    },
+    "author_reference": {
+      "author": "Aswath Damodaran",
+      "year": 2009,
+      "title": "Ups and Downs: Valuing Cyclical and Commodity Companies",
+      "source_id": "damodaran.cyclical-commodity.2009",
+      "pdf_sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+      "pdf_pages": [
+        17,
+        21
+      ],
+      "support": "Stable reinvestment rate g/ROC and the next-period after-tax operating-income valuation numerator; this function decomposes that numerator only."
+    },
+    "project_adaptation": "Explicit zero growth with positive NOPAT and positive ROC extends only the algebraic domain of g/ROC; the cited positive author examples do not establish zero-growth economic applicability. Strict metadata, isolated Decimal arithmetic and unresolved adoption remain local API rules."
+  },
+  "verification": {
+    "source_references": "unverified",
+    "declared_basis_semantics": "unverified",
+    "next_annual_period_and_comparability": "unverified",
+    "tax_and_nol_treatment": "unverified",
+    "stable_growth_applicability": "unverified",
+    "new_investment_roc_applicability": "unverified",
+    "funding_and_survival": "unverified"
+  },
+  "period_dates_incomplete": [
+    "nopat_next.period.start",
+    "nopat_next.period.end",
+    "growth.period.start",
+    "growth.period.end",
+    "roc_new.period.start",
+    "roc_new.period.end"
+  ],
+  "assessment_fields_unset": [
+    "assessment.comparability_rationale",
+    "assessment.new_investment_roc_rationale",
+    "assessment.stable_growth_rationale",
+    "assessment.tax_and_nol_rationale"
+  ],
+  "limitations": [
+    "Input labels, period equality and source/quote references are caller declarations, not independently verified documents, tax treatment, annual/52/53-week comparability, next-period timing or economic applicability.",
+    "NOPAT_next is supplied as after-tax operating income before financing; no tax/NOL calculation, (1+g) multiplication, historical ROC selection, WACC substitution or pretax-profit conversion is performed.",
+    "Explicit zero growth gives reinvestment rate and modeled reinvestment amount zero, and FCFF equal to the supplied next-period NOPAT. This does not establish zero gross capex or maintenance spending, a normalized forecast, or economic applicability; ROC=0 remains an undefined denominator.",
+    "Reinvestment rates above one and negative FCFF are retained without clamping; capital funding, growth sustainability and survival remain unverified.",
+    "No capex/D&A/working-capital parts, financing cash flows, DCF, terminal value, stock price, IR action or probability is generated, and intermediate arithmetic does not adopt a normalized forecast."
+  ]
+}

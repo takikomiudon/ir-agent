@@ -1,0 +1,101 @@
+{
+  "recorded_at": "2026-10-15T11:11:49.830068+00:00",
+  "quotes": [
+    {
+      "id": "loader_declared_comment",
+      "file": "01.js.txt",
+      "file_sha256": "379bf48b66201accd1cc790600a226643c8e812bf882e5a97e239c2afb4af87b",
+      "decode": "UTF-8-sig with CRLF retained",
+      "quote": "//財務情報　決算短信",
+      "character_start": 0,
+      "character_end": 11,
+      "quote_utf8_sha256": "683824dae4020d32ad0694c27c241978dbae546faf574fe25935ec6cd574130d",
+      "offset_unit": "Unicode codepoints, zero based, end exclusive",
+      "meaning": "Loader comment says earnings statements; not proof of response category or a presentation financial body."
+    },
+    {
+      "id": "domain_company_and_types",
+      "file": "01.js.txt",
+      "file_sha256": "379bf48b66201accd1cc790600a226643c8e812bf882e5a97e239c2afb4af87b",
+      "decode": "UTF-8-sig with CRLF retained",
+      "quote": "    var defaults = {\r\n      domain: '//www.xj-storage.jp',\r\n      company: '75250',\r\n      pdf: '1',\r\n      len: '',\r\n      documents_all: '',\r\n      documents_Kessan: '13,98,113'\r\n    };",
+      "character_start": 789,
+      "character_end": 976,
+      "quote_utf8_sha256": "63fab9b885891f89f04631219578d131cad5218b917ea182ee26c41e4bc2d545",
+      "offset_unit": "Unicode codepoints, zero based, end exclusive",
+      "meaning": "Static saved code only; no execution or financial adoption."
+    },
+    {
+      "id": "default_type_assignment",
+      "file": "01.js.txt",
+      "file_sha256": "379bf48b66201accd1cc790600a226643c8e812bf882e5a97e239c2afb4af87b",
+      "decode": "UTF-8-sig with CRLF retained",
+      "quote": "    this.ary_doc_Kessan = this.settings.documents_Kessan.split(\",\");\r\n    this.settings.documents_all = this.settings.documents_Kessan;\r\n\r\n    //初期読み込み対象指定\r\n    this.documents = this.settings.documents_all;\r\n    this.ary_doc_no = this.documents.split(\",\");",
+      "character_start": 1549,
+      "character_end": 1805,
+      "quote_utf8_sha256": "37a4d1f066e40b4eb484eeaaa1dc71073f2417cdef6e1f67a741b35c81189b89",
+      "offset_unit": "Unicode codepoints, zero based, end exclusive",
+      "meaning": "Static saved code only; no execution or financial adoption."
+    },
+    {
+      "id": "static_request_template",
+      "file": "01.js.txt",
+      "file_sha256": "379bf48b66201accd1cc790600a226643c8e812bf882e5a97e239c2afb4af87b",
+      "decode": "UTF-8-sig with CRLF retained",
+      "quote": "    xjurl += self.settings.domain + '/public-list/GetList2.aspx?company=';\r\n    xjurl += self.settings.company;\r\n    xjurl += '&len=10000';\r\n\r\n    // タイプ指定\r\n    if (this.documents && this.documents.length > 0) {\r\n      xjurl += '&doctype=' + this.documents;\r\n    }\r\n\r\n    xjurl += '&output=json&callback=?';",
+      "character_start": 2135,
+      "character_end": 2442,
+      "quote_utf8_sha256": "adcf7a4316ebf31f6a25dfe944bdd4b075246dae10e52c9c0eec875c1b72a213",
+      "offset_unit": "Unicode codepoints, zero based, end exclusive",
+      "meaning": "Static saved code only; no execution or financial adoption."
+    },
+    {
+      "id": "response_file_URLs",
+      "file": "01.js.txt",
+      "file_sha256": "379bf48b66201accd1cc790600a226643c8e812bf882e5a97e239c2afb4af87b",
+      "decode": "UTF-8-sig with CRLF retained",
+      "quote": "          if (item.files) {\r\n            $.each(item.files, function (j, file) {\r\n              if (file.type == 'PDF-GENERAL') {\r\n                url = file.url;\r\n                size = parseInt(file.size);\r\n                page = file.page;\r\n              } else if (file.type == 'HTML-GENERAL') {\r\n                url = file.url;\r\n\r\n              }\r\n\r\n            });\r\n          }",
+      "character_start": 13447,
+      "character_end": 13830,
+      "quote_utf8_sha256": "3d2d08f15c48389d00e78287c6a82bf0a95252059242ce2bcdcb20b8e11d7eb3",
+      "offset_unit": "Unicode codepoints, zero based, end exclusive",
+      "meaning": "Actual PDF/HTML hrefs would come from unreceived item.files[].url; the code does not itself provide them."
+    },
+    {
+      "id": "default_constructor_no_override",
+      "file": "01.js.txt",
+      "file_sha256": "379bf48b66201accd1cc790600a226643c8e812bf882e5a97e239c2afb4af87b",
+      "decode": "UTF-8-sig with CRLF retained",
+      "quote": "$(function () {\r\n  var xj_storage_loader = new XjStorageLoaderNews();\r\n});",
+      "character_start": 15314,
+      "character_end": 15388,
+      "quote_utf8_sha256": "a7c7e0add7de53dbc85d6d35844110c64bc69cc9ddc3166c187082cc56adf529",
+      "offset_unit": "Unicode codepoints, zero based, end exclusive",
+      "meaning": "Static saved code only; no execution or financial adoption."
+    },
+    {
+      "id": "new_datahost_robots_wildcard_deny",
+      "file": "02.txt",
+      "file_sha256": "7ea4052aea20413007bfc2686ba0ad7276882075c2606c86a9e6b08742b3a4ca",
+      "decode": "UTF-8-sig with CRLF retained",
+      "quote": "User-Agent: *\r\nDisallow: /",
+      "character_start": 0,
+      "character_end": 26,
+      "quote_utf8_sha256": "7ea4052aea20413007bfc2686ba0ad7276882075c2606c86a9e6b08742b3a4ca",
+      "offset_unit": "Unicode codepoints, zero based, end exclusive",
+      "meaning": "Exact www.xj-storage.jp robots response, wildcard Disallow /; data GET stopped. Not contents.xj-storage.jp or all subdomains."
+    }
+  ],
+  "original_HTML_script_reference": {
+    "file": "research/ir-case-studies-2026-10-15/7525/issuer-presentation-followup/raw/a6034902ee0642c286c121b7bdbe741917e615c552df41d6cce02a82d4e07e1a",
+    "raw_sha256": "a6034902ee0642c286c121b7bdbe741917e615c552df41d6cce02a82d4e07e1a",
+    "decode": "UTF-8-sig, CRLF preserved",
+    "quote": "<script src=\"/xj/XjStorageLoaderlibrary03.js\" defer>",
+    "character_start": 5131,
+    "character_end": 5183,
+    "quote_sha256_utf8": "906afbe9fac23932858bcedffebce6adcf84f6e73bb7df48255d408d1e81d18a",
+    "src_literal": "/xj/XjStorageLoaderlibrary03.js",
+    "resolved_url": "https://www.rix.co.jp/xj/XjStorageLoaderlibrary03.js",
+    "raw_parser_same_literal": true
+  }
+}

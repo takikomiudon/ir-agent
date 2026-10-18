@@ -1,0 +1,513 @@
+{
+  "case_id": "2341-product-profit-cost-and-authored-basis-monitor",
+  "company_id": "jp:2341",
+  "issue_id": "2341-comparable-operating-profit-scope",
+  "status": "file_only_actual_source_handoff_prepared_not_registered",
+  "synthetic": false,
+  "recorded_at": "2026-10-16T06:44:55.515394+00:00",
+  "purpose": "商品比較/利益費用scope/具体的著者評価basisの3既存候補を、共通の比較可能な営業利益scope issueで監視する。数値thesis/正式質問なし。",
+  "one_native_issue_selection": "既存candidate2341-comparable-operating-profit-scopeを共通nativeissueとして再利用。他2candidateIDは条件IDで保持し別case/issue登録を増やさない。",
+  "author_method_references": [
+    {
+      "id": "anthropic.earnings-preview",
+      "ref": {
+        "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+        "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sections": [
+        "Step 2: Key Metrics Framework",
+        "Step 4: Catalyst Checklist"
+      ],
+      "project_adaptation": "期間/segment/商品metrics・利益段階/費用bridge・当時guidanceを比較する。SaaS例示を全社や商品ARRへ機械適用しない。",
+      "author_did_not_state_2341_specific_conditions": true
+    },
+    {
+      "id": "anthropic.thesis-tracker",
+      "ref": {
+        "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+        "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sections": [
+        "Important Notes / quarterly review"
+      ],
+      "project_adaptation": "元論点に新資料の支持/反証候補/不変/不明を比較し、四半期内部管理日を置く。価格閾値や事前予測を作らない。",
+      "author_did_not_state_2341_specific_conditions": true
+    },
+    {
+      "id": "anthropic.dd-meeting-prep",
+      "ref": {
+        "path": "third_party/anthropic/skills/dd-meeting-prep/SKILL.md",
+        "sha256": "a74eecadece794106d515ce3d00e07b3857ed123e841e8962e26363d2413d94f"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sections": [
+        "Step 1: Meeting Context",
+        "Step 3: Benchmarks & Context",
+        "Important Notes"
+      ],
+      "project_adaptation": "既知/懸念/比較資料/残余の所有者を公開先行で分離。未知だけで質問を作らず非公開PE調査・問数・身振りを採用しない。",
+      "author_did_not_state_2341_specific_conditions": true
+    }
+  ],
+  "source_ids": [
+    "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+    "disclosed-facts:70638425611d516f8ba4c12f0e63b0fdca1d85f2104a0376f90052bc3b5ee668"
+  ],
+  "source_inventory": [
+    {
+      "source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+      "source_ref": {
+        "path": "research/ir-2341-initial-intake-2026-10-16/source-bundle.json",
+        "sha256": "1c876d9e586a00647691ffcdb24e5f9047bc1428cea8608ff2e718b37926f26c",
+        "json_pointer": "/sources/0"
+      },
+      "title": "アルバイトタイムス 2027年2月期 第2四半期（中間期）決算短信〔日本基準〕（連結）",
+      "native_snapshot_sha256": "7d1775aaf4804852a61779ac2bd108a2c135a9347410a785859bddcead91f7b8",
+      "source_content_sha256": "fbc025b1a2719fc5b61f37f2707f5479e80908119ba614de92de92a23c54c2ad",
+      "actual_first_saved_at": "2026-10-16T06:27:32.516249+00:00",
+      "original_retrieved_at_preserved": "2026-10-16T06:14:37.993737+00:00",
+      "published_at_preserved": null
+    },
+    {
+      "source_id": "disclosed-facts:70638425611d516f8ba4c12f0e63b0fdca1d85f2104a0376f90052bc3b5ee668",
+      "source_ref": {
+        "path": "research/ir-2341-disclosed-facts-intake-2026-10-16/source-bundle.json",
+        "sha256": "50df2d3ea886ea2b045255539a7dff615f34d225f5214d8124544968e463cba3",
+        "json_pointer": "/sources/0"
+      },
+      "title": "アルバイトタイムス 2027年2月期 第2四半期（中間期）決算短信〔日本基準〕（連結） — cited fact extraction (meaning review required)",
+      "native_snapshot_sha256": "8de58b6eb300f4e09dc6d5ce7f1b5064b5271793795f3f10024938e2292969f9",
+      "source_content_sha256": "b6aa31932b0ba6260a28878d346dc4c8a85f15f3e5abe74c2113e341b5238db4",
+      "actual_first_saved_at": "2026-10-16T06:38:21.789206+00:00",
+      "original_retrieved_at_preserved": "2026-10-16T06:28:30.498133+00:00",
+      "published_at_preserved": null
+    }
+  ],
+  "latest_actual_source_first_saved_at": "2026-10-16T06:38:21.789206+00:00",
+  "bootstrap_handoff_reviewed_at": "2026-10-16T06:44:55.515394+00:00",
+  "review_questions": [
+    {
+      "id": "2341-recurring-product-measurement",
+      "existing_candidate_ref": {
+        "path": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/research-ticket.json",
+        "sha256": "bfdb31c5d753b8041b9b1f7f9cf78f2e1cc405ad73af485b00451d32df4f3010",
+        "json_pointer": "/native_case_initial_issue_candidates/0"
+      },
+      "known": "会社はsubscription型課金を説明するが商品表は期間認識収益。ワガシャ945,215→946,113千円をARR/MRR/継続率/急成長とせず、その他人材をRPOへ全配賦しない。",
+      "next_comparison": "同期間/商品/契約・課金/認識単位を明示する新公表KPI/注記が実保存された場合だけ比較。顧客/件数/単価/継続率を逆算せず、未確定の契約mixを0/無回答扱いしない。",
+      "residual": "継続課金の説明と商品認識売上は既知。採用する比較が求める契約/課金単位・継続/初期/オプション等の同範囲定義は現在の受入scopeでは未確定。",
+      "activation_condition": "具体的な外部著者の成長/利益予測でこの定義が必要と説明でき、同期間の公開資料で未解決と確認できること。今は未成立。",
+      "next_public_evidence": "現FY27中間に一致する公式説明資料/factsheetが実際に保存された場合の当該KPI/注記。未取得の推定ファイル名・旧期代替へは進まない。",
+      "evidence_quote_ids": [
+        "2341-interim-physical-04",
+        "2341-segment-physical-13",
+        "2341-segment-physical-14"
+      ],
+      "question_now": false
+    },
+    {
+      "id": "2341-comparable-operating-profit-scope",
+      "existing_candidate_ref": {
+        "path": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/research-ticket.json",
+        "sha256": "bfdb31c5d753b8041b9b1f7f9cf78f2e1cc405ad73af485b00451d32df4f3010",
+        "json_pointer": "/native_case_initial_issue_candidates/1"
+      },
+      "known": "商品/segment外部売上と内部売上・消去前計を区別。当segment利益571,879/調整△420,453（消去+2,061・全社費用△422,515）/連結OP151,425は報告値のまま。証券売却益26,207は特別利益、当時NIguide139→167の説明は26m等で税後1対1bridgeではない。PL税とcash税、CF売却益調整と投資売却収入、消却実施/予定・帳簿減少/cash/株数を区分。",
+      "next_comparison": "新たな同scope費用bridge/内訳を採用著者の具体的予測と比較。表示千円差を丸め/会計誤りと断定せず修復しない。OP/親NI/CFを正常化・足戻しせず、消却だけでEPS増加・信託分母や現在分母を決めない。",
+      "residual": "セグメントからOPへの全社費用/内部調整は既答。将来OPを比較する場合の費用内訳・固定/変動と範囲一貫性は未確定だが、対象予測/モデルが未設定。",
+      "activation_condition": "特定著者の同一連結scopeのOP予測がどの公表費用定義に依存するか先に固定する。未知だけでは質問にしない。",
+      "next_public_evidence": "同期間の公式説明にある費用bridge/会計注記。CFの償却足戻しや特益除外から正常OPを自作しない。",
+      "evidence_quote_ids": [
+        "2341-segment-physical-13",
+        "2341-segment-physical-14",
+        "special-gain-tax-and-parent-profit",
+        "2341-interim-physical-06",
+        "2341-interim-CF-physical10",
+        "2341-interim-completed-cancellations-physical11",
+        "2341-interim-planned-cancellation-physical15",
+        "2341-interim-physical-02"
+      ],
+      "question_now": false
+    },
+    {
+      "id": "2341-authored-model-and-investor-policy",
+      "existing_candidate_ref": {
+        "path": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/research-ticket.json",
+        "sha256": "bfdb31c5d753b8041b9b1f7f9cf78f2e1cc405ad73af485b00451d32df4f3010",
+        "json_pointer": "/native_case_initial_issue_candidates/2"
+      },
+      "known": "モデル点検はrequested method null/needs_data。12factsと会社1period当時guide、一般著者手順は会社別外部forecast/採用valuation/policyではない。未知だけで質問せず現在0問。",
+      "next_comparison": "具体的な著者/版/日付/方法/対象期・連結/利益CFscopeと投資家条件を区別して照合。外部著者の選択や適用根拠ができた場合だけ必要な入力へ絞る。全model一律必須/通常default/業種除外とせず、価格・倍率・確率・正常税・将来列を補わない。",
+      "residual": "モデル点検はneeds_data/requested_valuation_method:null。会社1期予想と12factsだけでは他者の会社別予測・評価前提・投資家判断条件が揃わない。",
+      "activation_condition": "具体的な著者名・資料版/日付・方法・対象期/連結/利益定義とモデル入力を採用し、投資家側の目的/保有状態/価格時点/条件を根拠付きで分離する。",
+      "next_public_evidence": "既存の著者原典/会社別外部予測と、明示的に採用する投資家方針。一般モデル選択手順の存在を会社別forecastの採用済みとしない。",
+      "evidence_quote_ids": [
+        "2341-interim-physical-01",
+        "2341-interim-physical-06",
+        "2341-segment-physical-13",
+        "2341-segment-physical-14"
+      ],
+      "question_now": false
+    }
+  ],
+  "evidence_quote_bindings": {
+    "2341-interim-physical-01": {
+      "quote_id": "2341-interim-physical-01",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2341/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "ff3737cf433abf4e26fb1ee2fa4ab1aefe31c124cdc6ab6ca02860889c99214f",
+        "json_pointer": "/quotes/0"
+      },
+      "source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+      "source_snapshot_sha256": "7d1775aaf4804852a61779ac2bd108a2c135a9347410a785859bddcead91f7b8",
+      "source_character_start": 0,
+      "source_character_end": 4196,
+      "quote_sha256": "fc1945446d6fe0d65ed84a282ee08621e6dc56ef151387fdbf347111e07c4f5c",
+      "physical_page": 1,
+      "exact_to_current_source_Unicode_UTF8": true
+    },
+    "2341-interim-physical-02": {
+      "quote_id": "2341-interim-physical-02",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2341/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "ff3737cf433abf4e26fb1ee2fa4ab1aefe31c124cdc6ab6ca02860889c99214f",
+        "json_pointer": "/quotes/1"
+      },
+      "source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+      "source_snapshot_sha256": "7d1775aaf4804852a61779ac2bd108a2c135a9347410a785859bddcead91f7b8",
+      "source_character_start": 4197,
+      "source_character_end": 5088,
+      "quote_sha256": "39360ab3f18d84465eba85628e3d462f16688f2c8e3f823fb4bcf39339edec7e",
+      "physical_page": 2,
+      "exact_to_current_source_Unicode_UTF8": true
+    },
+    "2341-interim-physical-04": {
+      "quote_id": "2341-interim-physical-04",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2341/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "ff3737cf433abf4e26fb1ee2fa4ab1aefe31c124cdc6ab6ca02860889c99214f",
+        "json_pointer": "/quotes/2"
+      },
+      "source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+      "source_snapshot_sha256": "7d1775aaf4804852a61779ac2bd108a2c135a9347410a785859bddcead91f7b8",
+      "source_character_start": 6142,
+      "source_character_end": 7459,
+      "quote_sha256": "a248ec817688b242205fd82e892c3517b4aa7d4a3e140dcdb00eac31d700f6cd",
+      "physical_page": 4,
+      "exact_to_current_source_Unicode_UTF8": true
+    },
+    "2341-interim-physical-06": {
+      "quote_id": "2341-interim-physical-06",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2341/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "ff3737cf433abf4e26fb1ee2fa4ab1aefe31c124cdc6ab6ca02860889c99214f",
+        "json_pointer": "/quotes/3"
+      },
+      "source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+      "source_snapshot_sha256": "7d1775aaf4804852a61779ac2bd108a2c135a9347410a785859bddcead91f7b8",
+      "source_character_start": 8822,
+      "source_character_end": 9973,
+      "quote_sha256": "5d3ff4947d7ef564846302b48c672918efb99439786844042ee42f07e8c23e25",
+      "physical_page": 6,
+      "exact_to_current_source_Unicode_UTF8": true
+    },
+    "physical-8-full-PL-page": {
+      "quote_id": "physical-8-full-PL-page",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2341/profit-levels-saved-page-2026-10-16/source-quotes.json",
+        "sha256": "38d7faacd0481647409bc322e4315d233e5c171550ac592e5a2003625cd3de7d",
+        "json_pointer": "/quotes/0"
+      },
+      "source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+      "source_snapshot_sha256": "7d1775aaf4804852a61779ac2bd108a2c135a9347410a785859bddcead91f7b8",
+      "source_character_start": 13139,
+      "source_character_end": 15290,
+      "quote_sha256": "22359dd72b83415cd1fa2afc027102e06959b584803ecbd588f08846063cbfd6",
+      "physical_page": 8,
+      "exact_to_current_source_Unicode_UTF8": true
+    },
+    "interim-PL-period-unit-columns": {
+      "quote_id": "interim-PL-period-unit-columns",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2341/profit-levels-saved-page-2026-10-16/source-quotes.json",
+        "sha256": "38d7faacd0481647409bc322e4315d233e5c171550ac592e5a2003625cd3de7d",
+        "json_pointer": "/quotes/1"
+      },
+      "source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+      "source_snapshot_sha256": "7d1775aaf4804852a61779ac2bd108a2c135a9347410a785859bddcead91f7b8",
+      "source_character_start": 13225,
+      "source_character_end": 13491,
+      "quote_sha256": "b10b0bd27e8628eab3439b658fc4c3e27052ac33977ddb1503bcf570693145f5",
+      "physical_page": 8,
+      "exact_to_current_source_Unicode_UTF8": true
+    },
+    "operating-revenue-cost-and-OP": {
+      "quote_id": "operating-revenue-cost-and-OP",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2341/profit-levels-saved-page-2026-10-16/source-quotes.json",
+        "sha256": "38d7faacd0481647409bc322e4315d233e5c171550ac592e5a2003625cd3de7d",
+        "json_pointer": "/quotes/2"
+      },
+      "source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+      "source_snapshot_sha256": "7d1775aaf4804852a61779ac2bd108a2c135a9347410a785859bddcead91f7b8",
+      "source_character_start": 13491,
+      "source_character_end": 13841,
+      "quote_sha256": "a9da74e29c47c5a5683b6e39a1667397765adf6ef9b73c0177f10f72fc1427e0",
+      "physical_page": 8,
+      "exact_to_current_source_Unicode_UTF8": true
+    },
+    "nonoperating-revenues-costs-and-ordinary": {
+      "quote_id": "nonoperating-revenues-costs-and-ordinary",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2341/profit-levels-saved-page-2026-10-16/source-quotes.json",
+        "sha256": "38d7faacd0481647409bc322e4315d233e5c171550ac592e5a2003625cd3de7d",
+        "json_pointer": "/quotes/3"
+      },
+      "source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+      "source_snapshot_sha256": "7d1775aaf4804852a61779ac2bd108a2c135a9347410a785859bddcead91f7b8",
+      "source_character_start": 13841,
+      "source_character_end": 14692,
+      "quote_sha256": "1e062caa68866a70217d74ae997cf7525a09c60c5e08a08fef786dcef338a47b",
+      "physical_page": 8,
+      "exact_to_current_source_Unicode_UTF8": true
+    },
+    "special-gain-tax-and-parent-profit": {
+      "quote_id": "special-gain-tax-and-parent-profit",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2341/profit-levels-saved-page-2026-10-16/source-quotes.json",
+        "sha256": "38d7faacd0481647409bc322e4315d233e5c171550ac592e5a2003625cd3de7d",
+        "json_pointer": "/quotes/4"
+      },
+      "source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+      "source_snapshot_sha256": "7d1775aaf4804852a61779ac2bd108a2c135a9347410a785859bddcead91f7b8",
+      "source_character_start": 14692,
+      "source_character_end": 15256,
+      "quote_sha256": "b69afe34b048dbd75bcd48c74e7d0aaef7e48527220a874a53f204353291605e",
+      "physical_page": 8,
+      "exact_to_current_source_Unicode_UTF8": true
+    },
+    "2341-interim-CF-physical10": {
+      "quote_id": "2341-interim-CF-physical10",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2341/cash-and-share-notes-saved-pages-2026-10-16/source-quotes.json",
+        "sha256": "745475f3a1395d94d21e671f7434a72624386b66e693c36db9b1411f69e6ee6d",
+        "json_pointer": "/quotes/0"
+      },
+      "source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+      "source_snapshot_sha256": "7d1775aaf4804852a61779ac2bd108a2c135a9347410a785859bddcead91f7b8",
+      "source_character_start": 16168,
+      "source_character_end": 19130,
+      "quote_sha256": "f0cdeec87c70ff0123d55b1cadbaa101891f5ff394c3e64d67c410a5b35d91b9",
+      "physical_page": 10,
+      "exact_to_current_source_Unicode_UTF8": true
+    },
+    "2341-interim-completed-cancellations-physical11": {
+      "quote_id": "2341-interim-completed-cancellations-physical11",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2341/cash-and-share-notes-saved-pages-2026-10-16/source-quotes.json",
+        "sha256": "745475f3a1395d94d21e671f7434a72624386b66e693c36db9b1411f69e6ee6d",
+        "json_pointer": "/quotes/1"
+      },
+      "source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+      "source_snapshot_sha256": "7d1775aaf4804852a61779ac2bd108a2c135a9347410a785859bddcead91f7b8",
+      "source_character_start": 19282,
+      "source_character_end": 19561,
+      "quote_sha256": "074848aed6c1bf7c6f957c3f95ad430315ad8af0e9cfb0012bcbe49f4e63cf00",
+      "physical_page": 11,
+      "exact_to_current_source_Unicode_UTF8": true
+    },
+    "2341-interim-planned-cancellation-physical15": {
+      "quote_id": "2341-interim-planned-cancellation-physical15",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2341/cash-and-share-notes-saved-pages-2026-10-16/source-quotes.json",
+        "sha256": "745475f3a1395d94d21e671f7434a72624386b66e693c36db9b1411f69e6ee6d",
+        "json_pointer": "/quotes/2"
+      },
+      "source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+      "source_snapshot_sha256": "7d1775aaf4804852a61779ac2bd108a2c135a9347410a785859bddcead91f7b8",
+      "source_character_start": 24247,
+      "source_character_end": 24531,
+      "quote_sha256": "3b8c6fb8a13aea729a5556b8f61cbe96ce099862327f1f2f8027945969a6118c",
+      "physical_page": 15,
+      "exact_to_current_source_Unicode_UTF8": true
+    },
+    "2341-segment-physical-13": {
+      "quote_id": "2341-segment-physical-13",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2341/segment-and-model-scope-2026-10-16/company-quotes.json",
+        "sha256": "8d8ab39c396960a6c7652b32ac9dcfe1902d006d1ddcd022cfe1f65374213d09",
+        "json_pointer": "/new_quotes/0"
+      },
+      "source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+      "source_snapshot_sha256": "7d1775aaf4804852a61779ac2bd108a2c135a9347410a785859bddcead91f7b8",
+      "source_character_start": 21150,
+      "source_character_end": 22683,
+      "quote_sha256": "9ab0e423dfdc83c1a9b3937cbcb2c4646c79fd1d97daa34b0a9d0c03d8dea834",
+      "physical_page": 13,
+      "exact_to_current_source_Unicode_UTF8": true
+    },
+    "2341-segment-physical-14": {
+      "quote_id": "2341-segment-physical-14",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2341/segment-and-model-scope-2026-10-16/company-quotes.json",
+        "sha256": "8d8ab39c396960a6c7652b32ac9dcfe1902d006d1ddcd022cfe1f65374213d09",
+        "json_pointer": "/new_quotes/1"
+      },
+      "source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+      "source_snapshot_sha256": "7d1775aaf4804852a61779ac2bd108a2c135a9347410a785859bddcead91f7b8",
+      "source_character_start": 22684,
+      "source_character_end": 24186,
+      "quote_sha256": "68e103f7cdace68037759234a39e4f102e8cf3849a40e37402cf43d561977301",
+      "physical_page": 14,
+      "exact_to_current_source_Unicode_UTF8": true
+    }
+  },
+  "manual_residual_handoff": {
+    "ticket_ref": {
+      "path": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/research-ticket.json",
+      "sha256": "bfdb31c5d753b8041b9b1f7f9cf78f2e1cc405ad73af485b00451d32df4f3010"
+    },
+    "parent_acceptance_ref": {
+      "path": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/parent-acceptance.json",
+      "sha256": "e8941d1ad566255209e776a8e8d6c33be6c4cb4a0837d6fd1a2f40ac728af5e0"
+    },
+    "known_K1_to_K6_refs": [
+      {
+        "path": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/research-ticket.json",
+        "sha256": "bfdb31c5d753b8041b9b1f7f9cf78f2e1cc405ad73af485b00451d32df4f3010",
+        "json_pointer": "/public_known_do_not_reask/0"
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/research-ticket.json",
+        "sha256": "bfdb31c5d753b8041b9b1f7f9cf78f2e1cc405ad73af485b00451d32df4f3010",
+        "json_pointer": "/public_known_do_not_reask/1"
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/research-ticket.json",
+        "sha256": "bfdb31c5d753b8041b9b1f7f9cf78f2e1cc405ad73af485b00451d32df4f3010",
+        "json_pointer": "/public_known_do_not_reask/2"
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/research-ticket.json",
+        "sha256": "bfdb31c5d753b8041b9b1f7f9cf78f2e1cc405ad73af485b00451d32df4f3010",
+        "json_pointer": "/public_known_do_not_reask/3"
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/research-ticket.json",
+        "sha256": "bfdb31c5d753b8041b9b1f7f9cf78f2e1cc405ad73af485b00451d32df4f3010",
+        "json_pointer": "/public_known_do_not_reask/4"
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/research-ticket.json",
+        "sha256": "bfdb31c5d753b8041b9b1f7f9cf78f2e1cc405ad73af485b00451d32df4f3010",
+        "json_pointer": "/public_known_do_not_reask/5"
+      }
+    ],
+    "three_existing_candidate_refs": [
+      {
+        "path": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/research-ticket.json",
+        "sha256": "bfdb31c5d753b8041b9b1f7f9cf78f2e1cc405ad73af485b00451d32df4f3010",
+        "json_pointer": "/native_case_initial_issue_candidates/0"
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/research-ticket.json",
+        "sha256": "bfdb31c5d753b8041b9b1f7f9cf78f2e1cc405ad73af485b00451d32df4f3010",
+        "json_pointer": "/native_case_initial_issue_candidates/1"
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/research-ticket.json",
+        "sha256": "bfdb31c5d753b8041b9b1f7f9cf78f2e1cc405ad73af485b00451d32df4f3010",
+        "json_pointer": "/native_case_initial_issue_candidates/2"
+      }
+    ],
+    "question_decision_ref": {
+      "path": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/research-ticket.json",
+      "sha256": "bfdb31c5d753b8041b9b1f7f9cf78f2e1cc405ad73af485b00451d32df4f3010",
+      "json_pointer": "/research_question_decision"
+    },
+    "responsibility_split_ref": {
+      "path": "research/ir-case-studies-2026-10-15/2341/question-residual-review-2026-10-16/research-ticket.json",
+      "sha256": "bfdb31c5d753b8041b9b1f7f9cf78f2e1cc405ad73af485b00451d32df4f3010",
+      "json_pointer": "/responsibility_split"
+    },
+    "zero_questions": true,
+    "IR_value": "unproven",
+    "ready_to_send": false,
+    "worker_use": "既知K1–K6/残余3候補・当時scope・後続actualreceiptをsummaryとcase_observation.rationale双方へ手動引継ぎ。source_reviews/evidenceは実pendingだけ。自動同梱/機械受領/金融認証ではない。",
+    "source_history": "元票/派生のfile-onlyという当時申告を変更しない。原06:27:32.516249/派生06:38:21.789206trusted保存・分類は別receipt/今回ROでcurrentavailabilityを確認。public KPI indexは今もfile-only補助参照でsource/pending/bootstrapへ入れない。"
+  },
+  "model_scope": {
+    "ref": {
+      "path": "research/ir-case-studies-2026-10-15/2341/segment-and-model-scope-2026-10-16/model-routing-assessment.json",
+      "sha256": "cbf17d467e75b6160668b52a4afd125c50c5ad97195b0f68f0f7e8c4f08cf36e"
+    },
+    "parent_acceptance_ref": {
+      "path": "research/ir-case-studies-2026-10-15/2341/segment-and-model-scope-2026-10-16/parent-acceptance.json",
+      "sha256": "143a4fe11620fcde09d4f98f4c2152ecb0851bd7a0aafadc5b80e02ba3dd740b"
+    },
+    "requested_valuation_method": null,
+    "result": "needs_data"
+  },
+  "file_only_public_index_auxiliary": {
+    "review_ref": {
+      "path": "research/ir-case-studies-2026-10-15/2341/public-kpi-presentation-followup-2026-10-16/review.json",
+      "sha256": "0fe5ff64748cbe6e9e80d39ba56f2f927949652997c0657e6fd246af3187ace7"
+    },
+    "parent_acceptance_ref": {
+      "path": "research/ir-case-studies-2026-10-15/2341/public-kpi-presentation-followup-2026-10-16/parent-acceptance.json",
+      "sha256": "06ecf2b107fde5e30b931515fad50ec3c0d6a0ef5f58c4f0458a1bc205a60661"
+    },
+    "source_pending_bootstrap_added": false,
+    "scope": "静的index1GETで現期PDF未確認。全サイト不存在/公表拒否・説明会未開催でない。calendar限定文脈は決算発表日/旧沈黙期間だけ。予定を実施/資料公表にしない。"
+  },
+  "current_source_check_ref": {
+    "path": "research/ir-case-studies-2026-10-15/2341/native-case-setup-2026-10-16/actual-inputs/actual-readonly-check.json",
+    "sha256": "37278e2bda7a4d07c8ea3408eb39466de0d3f4cbe204d3a9a87a73def13a7647"
+  },
+  "reading_scope": {
+    "statement_initial_pages": [
+      1,
+      2,
+      4,
+      6
+    ],
+    "same_source_additional_pages": [
+      8,
+      10,
+      11,
+      13,
+      14,
+      15
+    ],
+    "saved_fulltext_pages": 15,
+    "full_document_meaning_read": false,
+    "outside_current_scope": [
+      3,
+      5,
+      7,
+      9,
+      12
+    ],
+    "derived12": "旧公表値の構造化再表現で新会社開示・著者forecast・金融採用ではない。",
+    "chronology": "元source metadataの未読・file-only等の履歴は変更せず、追加受入/actual保存を別scope/receiptで扱う。"
+  },
+  "comparison_protocol": {
+    "supports": "同scope/定義/期の特定観測を支持する新根拠のみ。",
+    "counterevidence": "実際の矛盾/訂正の範囲のみ。未知/株価/未指定閾値から反証を作らない。",
+    "unchanged": "既知再表現のみの不変を許す。",
+    "unresolved": "未読/未確認は0/永久欠損/会社無回答/投資除外に変換しない。"
+  },
+  "management_review": {
+    "date": "2027-01-16",
+    "timezone": "Asia/Tokyo",
+    "purpose": "internal quarterly research date, not issuer event or exit deadline"
+  },
+  "bootstrap_is_meaning_certification": false,
+  "financial_inputs_verified": false,
+  "financial_input_adoption": false,
+  "financial_thesis_or_investment_action": null,
+  "new_numeric_forecasts_prices_probabilities_valuationbranches_IRdrafts": 0,
+  "IR_boundary": "現在質問0。定義研究を数値thesis不存在だけで禁止もしないが、具体的利用目的/重要性ができたときだけ公開先行で再検討。会社へ適正株価/将来正常利益・CF/リターン保証を求めない。"
+}

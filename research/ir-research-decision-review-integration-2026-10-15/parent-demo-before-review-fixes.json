@@ -1,0 +1,859 @@
+{
+  "synthetic": true,
+  "network_requests": 0,
+  "external_sends": 0,
+  "orders": 0,
+  "policy_id": "synthetic-example-only",
+  "frozen_policy_version": 1,
+  "public_baseline": {
+    "assessment": {
+      "evidence_ids": [
+        "demo-public-q2",
+        "demo-public-update"
+      ],
+      "rationale": "Fictional pre-question assessment; this is not an investment recommendation.",
+      "reviewer": "synthetic-demo",
+      "thesis_status": "intact"
+    },
+    "assessment_is_reviewer_assertion_not_engine_fact": true,
+    "availability": {
+      "source_roots": {
+        "demo-public-q2": {
+          "available": true,
+          "checks": [
+            {
+              "as_of": "2026-10-09T01:00:00+00:00",
+              "available": true,
+              "effective_fields": {
+                "published_at": "2026-10-01T06:00:00+00:00",
+                "retrieved_at": "2026-10-01T06:05:00+00:00"
+              },
+              "entity_id": "demo-public-q2",
+              "entity_type": "source",
+              "first_save_known": true,
+              "knowledge_at": "2026-10-09T01:00:00+00:00",
+              "known_by_at": "2026-10-08T06:06:00.000000+00:00",
+              "limitations": [
+                "Clock provenance is trusted runtime input, not independently certified.",
+                "Receipt confirms presence of this snapshot; origin closure, company, public status and mutable-state history are separate checks.",
+                "Legacy presence is a known-by bound, not a reconstructed first-save time."
+              ],
+              "reason_codes": [],
+              "receipt": {
+                "basis": "trusted_insert",
+                "entity_id": "demo-public-q2",
+                "entity_type": "source",
+                "first_saved_at": "2026-10-08T06:06:00.000000+00:00",
+                "presence_observed_at": "2026-10-08T06:06:00.000000+00:00",
+                "snapshot_sha256": "4174a6eab38d6f69f84fa993e5bf82bcd055f5aa1128b4f7cfd950f51b6dbbe8",
+                "version": 0
+              },
+              "snapshot_sha256": "4174a6eab38d6f69f84fa993e5bf82bcd055f5aa1128b4f7cfd950f51b6dbbe8",
+              "source_id": "demo-public-q2",
+              "status": "available",
+              "version": 0
+            }
+          ],
+          "reason_codes": []
+        },
+        "demo-public-update": {
+          "available": true,
+          "checks": [
+            {
+              "as_of": "2026-10-09T01:00:00+00:00",
+              "available": true,
+              "effective_fields": {
+                "published_at": "2026-10-08T06:00:00+00:00",
+                "retrieved_at": "2026-10-08T06:05:00+00:00"
+              },
+              "entity_id": "demo-public-update",
+              "entity_type": "source",
+              "first_save_known": true,
+              "knowledge_at": "2026-10-09T01:00:00+00:00",
+              "known_by_at": "2026-10-08T06:06:00.000000+00:00",
+              "limitations": [
+                "Clock provenance is trusted runtime input, not independently certified.",
+                "Receipt confirms presence of this snapshot; origin closure, company, public status and mutable-state history are separate checks.",
+                "Legacy presence is a known-by bound, not a reconstructed first-save time."
+              ],
+              "reason_codes": [],
+              "receipt": {
+                "basis": "trusted_insert",
+                "entity_id": "demo-public-update",
+                "entity_type": "source",
+                "first_saved_at": "2026-10-08T06:06:00.000000+00:00",
+                "presence_observed_at": "2026-10-08T06:06:00.000000+00:00",
+                "snapshot_sha256": "46774345860e39f9278b5fa10f285dd077ce374f702a4882fa4fe54b2c66acbf",
+                "version": 0
+              },
+              "snapshot_sha256": "46774345860e39f9278b5fa10f285dd077ce374f702a4882fa4fe54b2c66acbf",
+              "source_id": "demo-public-update",
+              "status": "available",
+              "version": 0
+            }
+          ],
+          "reason_codes": []
+        },
+        "synthetic-price": {
+          "available": true,
+          "checks": [
+            {
+              "as_of": "2026-10-09T01:00:00+00:00",
+              "available": true,
+              "effective_fields": {
+                "retrieved_at": "2026-10-09T00:56:00+00:00"
+              },
+              "entity_id": "synthetic-price",
+              "entity_type": "source",
+              "first_save_known": true,
+              "knowledge_at": "2026-10-09T01:00:00+00:00",
+              "known_by_at": "2026-10-09T00:56:00.000000+00:00",
+              "limitations": [
+                "Clock provenance is trusted runtime input, not independently certified.",
+                "Receipt confirms presence of this snapshot; origin closure, company, public status and mutable-state history are separate checks.",
+                "Legacy presence is a known-by bound, not a reconstructed first-save time."
+              ],
+              "reason_codes": [],
+              "receipt": {
+                "basis": "trusted_insert",
+                "entity_id": "synthetic-price",
+                "entity_type": "source",
+                "first_saved_at": "2026-10-09T00:56:00.000000+00:00",
+                "presence_observed_at": "2026-10-09T00:56:00.000000+00:00",
+                "snapshot_sha256": "47cbb30b38db3a02ea17e9862a27797f9192c9abb6064e932357d5500b5bcd2a",
+                "version": 0
+              },
+              "snapshot_sha256": "47cbb30b38db3a02ea17e9862a27797f9192c9abb6064e932357d5500b5bcd2a",
+              "source_id": "synthetic-price",
+              "status": "available",
+              "version": 0
+            }
+          ],
+          "reason_codes": []
+        }
+      },
+      "thesis_selection": {
+        "as_of": "2026-10-09T01:00:00+00:00",
+        "availability_status": "known",
+        "excluded": [],
+        "knowledge_at": "2026-10-09T01:00:00+00:00",
+        "limitations": [
+          "A declared record time is distinct from trusted DB presence.",
+          "Legacy presence is a known-by bound, not an exact first save.",
+          "This read-only view does not reconstruct mutable company or question states."
+        ],
+        "record": {
+          "company_id": "demo-services",
+          "current_price_jpy": "1000",
+          "evidence_ids": [
+            "demo-public-q2",
+            "demo-public-update"
+          ],
+          "exit_conditions": [
+            "仮説が否定された場合は売却を検討",
+            "評価額に達した場合は利確を検討"
+          ],
+          "invalidation_conditions": [
+            "費用増加が恒常的で利益率回復を妨げる",
+            "既存顧客売上が縮小する"
+          ],
+          "next_review_date": "2026-10-30",
+          "pillars": [
+            "継続課金売上の成長",
+            "採用費が一時的である可能性"
+          ],
+          "recorded_at": "2026-10-09T09:00:00+09:00",
+          "statement": "採用費の一部は一時的で、既存事業の成長によって利益率が回復するという架空の仮説。",
+          "valuation": {
+            "scenarios": [
+              {
+                "inputs": {
+                  "eps_jpy": "45",
+                  "pe": "15"
+                },
+                "method": "eps_multiple",
+                "name": "bear",
+                "probability": "0.25"
+              },
+              {
+                "inputs": {
+                  "eps_jpy": "65",
+                  "pe": "20"
+                },
+                "method": "eps_multiple",
+                "name": "base",
+                "probability": "0.50"
+              },
+              {
+                "inputs": {
+                  "eps_jpy": "80",
+                  "pe": "23"
+                },
+                "method": "eps_multiple",
+                "name": "bull",
+                "probability": "0.25"
+              }
+            ]
+          },
+          "version": 2
+        },
+        "selected_availability": {
+          "sources": [
+            {
+              "available": true,
+              "checks": [
+                {
+                  "as_of": "2026-10-09T01:00:00+00:00",
+                  "available": true,
+                  "effective_fields": {
+                    "published_at": "2026-10-01T06:00:00+00:00",
+                    "retrieved_at": "2026-10-01T06:05:00+00:00"
+                  },
+                  "entity_id": "demo-public-q2",
+                  "entity_type": "source",
+                  "first_save_known": true,
+                  "knowledge_at": "2026-10-09T01:00:00+00:00",
+                  "known_by_at": "2026-10-08T06:06:00.000000+00:00",
+                  "limitations": [
+                    "Clock provenance is trusted runtime input, not independently certified.",
+                    "Receipt confirms presence of this snapshot; origin closure, company, public status and mutable-state history are separate checks.",
+                    "Legacy presence is a known-by bound, not a reconstructed first-save time."
+                  ],
+                  "reason_codes": [],
+                  "receipt": {
+                    "basis": "trusted_insert",
+                    "entity_id": "demo-public-q2",
+                    "entity_type": "source",
+                    "first_saved_at": "2026-10-08T06:06:00.000000+00:00",
+                    "presence_observed_at": "2026-10-08T06:06:00.000000+00:00",
+                    "snapshot_sha256": "4174a6eab38d6f69f84fa993e5bf82bcd055f5aa1128b4f7cfd950f51b6dbbe8",
+                    "version": 0
+                  },
+                  "snapshot_sha256": "4174a6eab38d6f69f84fa993e5bf82bcd055f5aa1128b4f7cfd950f51b6dbbe8",
+                  "source_id": "demo-public-q2",
+                  "status": "available",
+                  "version": 0
+                }
+              ],
+              "reason_codes": []
+            },
+            {
+              "available": true,
+              "checks": [
+                {
+                  "as_of": "2026-10-09T01:00:00+00:00",
+                  "available": true,
+                  "effective_fields": {
+                    "published_at": "2026-10-08T06:00:00+00:00",
+                    "retrieved_at": "2026-10-08T06:05:00+00:00"
+                  },
+                  "entity_id": "demo-public-update",
+                  "entity_type": "source",
+                  "first_save_known": true,
+                  "knowledge_at": "2026-10-09T01:00:00+00:00",
+                  "known_by_at": "2026-10-08T06:06:00.000000+00:00",
+                  "limitations": [
+                    "Clock provenance is trusted runtime input, not independently certified.",
+                    "Receipt confirms presence of this snapshot; origin closure, company, public status and mutable-state history are separate checks.",
+                    "Legacy presence is a known-by bound, not a reconstructed first-save time."
+                  ],
+                  "reason_codes": [],
+                  "receipt": {
+                    "basis": "trusted_insert",
+                    "entity_id": "demo-public-update",
+                    "entity_type": "source",
+                    "first_saved_at": "2026-10-08T06:06:00.000000+00:00",
+                    "presence_observed_at": "2026-10-08T06:06:00.000000+00:00",
+                    "snapshot_sha256": "46774345860e39f9278b5fa10f285dd077ce374f702a4882fa4fe54b2c66acbf",
+                    "version": 0
+                  },
+                  "snapshot_sha256": "46774345860e39f9278b5fa10f285dd077ce374f702a4882fa4fe54b2c66acbf",
+                  "source_id": "demo-public-update",
+                  "status": "available",
+                  "version": 0
+                }
+              ],
+              "reason_codes": []
+            }
+          ],
+          "thesis": {
+            "as_of": "2026-10-09T01:00:00+00:00",
+            "available": true,
+            "effective_fields": {
+              "recorded_at": "2026-10-09T00:00:00+00:00"
+            },
+            "entity_id": "demo-services",
+            "entity_type": "thesis",
+            "first_save_known": true,
+            "knowledge_at": "2026-10-09T01:00:00+00:00",
+            "known_by_at": "2026-10-09T00:00:00.000000+00:00",
+            "limitations": [
+              "Clock provenance is trusted runtime input, not independently certified.",
+              "Receipt confirms presence of this snapshot; origin closure, company, public status and mutable-state history are separate checks.",
+              "Legacy presence is a known-by bound, not a reconstructed first-save time."
+            ],
+            "reason_codes": [],
+            "receipt": {
+              "basis": "trusted_insert",
+              "entity_id": "demo-services",
+              "entity_type": "thesis",
+              "first_saved_at": "2026-10-09T00:00:00.000000+00:00",
+              "presence_observed_at": "2026-10-09T00:00:00.000000+00:00",
+              "snapshot_sha256": "f24a4d3a2e78b22206a50cb5d04e905bbb909f5cac3e3b141f6a16c7eaaac4c8",
+              "version": 2
+            },
+            "snapshot_sha256": "f24a4d3a2e78b22206a50cb5d04e905bbb909f5cac3e3b141f6a16c7eaaac4c8",
+            "status": "available",
+            "version": 2
+          }
+        },
+        "temporal_mode": "pit"
+      }
+    },
+    "basis": {
+      "has_IR_reply_origin": false,
+      "kind": "saved_research",
+      "meaning": "Mechanical saved-source type/metadata/availability checks; not independent issuer authenticity or external publicity verification.",
+      "public_information_check": true,
+      "public_only": true,
+      "source_availability_check": true
+    },
+    "company_id": "demo-services",
+    "context": {
+      "evidence_ids": [
+        "demo-public-q2",
+        "demo-public-update"
+      ],
+      "held": true,
+      "information_review_versions": {},
+      "information_status": "public_disclosure",
+      "thesis_status": "intact"
+    },
+    "external_sends_orders": 0,
+    "financial_inputs_verified": false,
+    "id": "synthetic-public-baseline",
+    "information_review_snapshots": {},
+    "missing_source_ids": [],
+    "policy_id": "synthetic-example-only",
+    "policy_registered_at": "2026-10-09T00:01:00+00:00",
+    "policy_sha256": "e64ee0dae8242eb4ae2f3fe051b9f1f48e82c2aebaddb1b30e5213133f0fbfd5",
+    "policy_snapshot": {
+      "id": "synthetic-example-only",
+      "parameter_sources": {
+        "entry_cost_pct": {
+          "kind": "synthetic_example",
+          "rationale": "Arbitrary test value, not an investment recommendation",
+          "reference": "unit-test fixture"
+        },
+        "exit_cost_pct": {
+          "kind": "synthetic_example",
+          "rationale": "Arbitrary test value, not an investment recommendation",
+          "reference": "unit-test fixture"
+        },
+        "max_quote_age_seconds": {
+          "kind": "synthetic_example",
+          "rationale": "Arbitrary test value, not an investment recommendation",
+          "reference": "unit-test fixture"
+        },
+        "maximum_downside_pct": {
+          "kind": "synthetic_example",
+          "rationale": "Arbitrary test value, not an investment recommendation",
+          "reference": "unit-test fixture"
+        },
+        "minimum_upside_pct": {
+          "kind": "synthetic_example",
+          "rationale": "Arbitrary test value, not an investment recommendation",
+          "reference": "unit-test fixture"
+        },
+        "target_scenario": {
+          "kind": "synthetic_example",
+          "rationale": "Arbitrary test value, not an investment recommendation",
+          "reference": "unit-test fixture"
+        }
+      },
+      "parameters": {
+        "entry_cost_pct": "0",
+        "exit_cost_pct": "0",
+        "max_quote_age_seconds": 3600,
+        "maximum_downside_pct": "35",
+        "minimum_upside_pct": "20",
+        "target_scenario": "base"
+      },
+      "recorded_at": "2026-10-01T17:00:00+09:00",
+      "version": 1
+    },
+    "policy_version": 1,
+    "position_snapshot": {
+      "broker_verified": false,
+      "company_id": "demo-services",
+      "declared_at": "2026-10-09T00:59:30+00:00",
+      "held": true,
+      "kind": "user_declaration",
+      "observation_id": 4,
+      "observed_at": "2026-10-09T00:59:30+00:00",
+      "origin": "explicit_user_declaration"
+    },
+    "quote": {
+      "company_id": "demo-services",
+      "currency": "JPY",
+      "observed_at": "2026-10-09T09:55:00+09:00",
+      "observed_at_path": [
+        "metadata",
+        "observed_at"
+      ],
+      "price_jpy": "1000",
+      "price_path": [
+        "metadata",
+        "price_jpy"
+      ],
+      "retrieved_at": "2026-10-09T09:56:00+09:00",
+      "source_id": "synthetic-price"
+    },
+    "recorded_at": "2026-10-09T01:00:00+00:00",
+    "reply_bindings": {},
+    "request": {
+      "assessment": {
+        "evidence_ids": [
+          "demo-public-q2",
+          "demo-public-update"
+        ],
+        "rationale": "Fictional pre-question assessment; this is not an investment recommendation.",
+        "reviewer": "synthetic-demo",
+        "thesis_status": "intact"
+      },
+      "company_id": "demo-services",
+      "decision_quote": {
+        "company_id": "demo-services",
+        "currency": "JPY",
+        "observed_at": "2026-10-09T09:55:00+09:00",
+        "observed_at_path": [
+          "metadata",
+          "observed_at"
+        ],
+        "price_jpy": "1000",
+        "price_path": [
+          "metadata",
+          "price_jpy"
+        ],
+        "retrieved_at": "2026-10-09T09:56:00+09:00",
+        "source_id": "synthetic-price"
+      },
+      "expected_thesis_version": 2,
+      "id": "synthetic-public-baseline",
+      "policy_id": "synthetic-example-only",
+      "policy_version": 1,
+      "synthetic": true
+    },
+    "request_sha256": "7c9fdcee41ed9d0c7e9a7131ac258024f538275ddaf49f0fb352d72b9f7393b9",
+    "result": {
+      "as_of": "2026-10-09T01:00:00+00:00",
+      "company_id": "demo-services",
+      "evidence_ids": [
+        "demo-public-q2",
+        "demo-public-update"
+      ],
+      "metrics": {
+        "entry_price_ceiling_jpy": "1065.625",
+        "entry_upside_pass": true,
+        "net_expected_upside_pct": "27.87500",
+        "scenario_downside_pass": true,
+        "scenario_downside_pct": "32.500",
+        "target_price_jpy_before_exit_cost": "1300"
+      },
+      "policy_id": "synthetic-example-only",
+      "policy_snapshot": {
+        "id": "synthetic-example-only",
+        "parameter_sources": {
+          "entry_cost_pct": {
+            "kind": "synthetic_example",
+            "rationale": "Arbitrary test value, not an investment recommendation",
+            "reference": "unit-test fixture"
+          },
+          "exit_cost_pct": {
+            "kind": "synthetic_example",
+            "rationale": "Arbitrary test value, not an investment recommendation",
+            "reference": "unit-test fixture"
+          },
+          "max_quote_age_seconds": {
+            "kind": "synthetic_example",
+            "rationale": "Arbitrary test value, not an investment recommendation",
+            "reference": "unit-test fixture"
+          },
+          "maximum_downside_pct": {
+            "kind": "synthetic_example",
+            "rationale": "Arbitrary test value, not an investment recommendation",
+            "reference": "unit-test fixture"
+          },
+          "minimum_upside_pct": {
+            "kind": "synthetic_example",
+            "rationale": "Arbitrary test value, not an investment recommendation",
+            "reference": "unit-test fixture"
+          },
+          "target_scenario": {
+            "kind": "synthetic_example",
+            "rationale": "Arbitrary test value, not an investment recommendation",
+            "reference": "unit-test fixture"
+          }
+        },
+        "parameters": {
+          "entry_cost_pct": "0",
+          "exit_cost_pct": "0",
+          "max_quote_age_seconds": 3600,
+          "maximum_downside_pct": "35",
+          "minimum_upside_pct": "20",
+          "target_scenario": "base"
+        },
+        "recorded_at": "2026-10-01T17:00:00+09:00",
+        "version": 1
+      },
+      "policy_version": 1,
+      "proposed_action": "hold_review",
+      "quote": {
+        "company_id": "demo-services",
+        "currency": "JPY",
+        "observed_at": "2026-10-09T09:55:00+09:00",
+        "observed_at_path": [
+          "metadata",
+          "observed_at"
+        ],
+        "price_jpy": "1000",
+        "price_path": [
+          "metadata",
+          "price_jpy"
+        ],
+        "retrieved_at": "2026-10-09T09:56:00+09:00",
+        "source_id": "synthetic-price"
+      },
+      "reason_codes": [
+        "thesis_intact_below_target"
+      ],
+      "status": "reviewed",
+      "thesis_version": 2,
+      "valuation": {
+        "expected_upside_pct": "27.88",
+        "expected_value_jpy": "1278.75",
+        "scenarios": [
+          {
+            "fair_value_jpy": "675.00",
+            "method": "eps_multiple",
+            "name": "bear",
+            "probability": "0.25",
+            "upside_pct": "-32.50"
+          },
+          {
+            "fair_value_jpy": "1300.00",
+            "method": "eps_multiple",
+            "name": "base",
+            "probability": "0.5",
+            "upside_pct": "30.00"
+          },
+          {
+            "fair_value_jpy": "1840.00",
+            "method": "eps_multiple",
+            "name": "bull",
+            "probability": "0.25",
+            "upside_pct": "84.00"
+          }
+        ],
+        "worst_case_downside_pct": "32.50"
+      }
+    },
+    "schema_version": 1,
+    "source_ids": [
+      "demo-public-q2",
+      "demo-public-update",
+      "synthetic-price"
+    ],
+    "source_information_holds": {},
+    "source_sha256": {
+      "demo-public-q2": "4174a6eab38d6f69f84fa993e5bf82bcd055f5aa1128b4f7cfd950f51b6dbbe8",
+      "demo-public-update": "46774345860e39f9278b5fa10f285dd077ce374f702a4882fa4fe54b2c66acbf",
+      "synthetic-price": "47cbb30b38db3a02ea17e9862a27797f9192c9abb6064e932357d5500b5bcd2a"
+    },
+    "source_snapshots": [
+      {
+        "company_id": "demo-services",
+        "content": "架空の資料。売上は成長しているが、採用費の増加で営業利益率が低下。",
+        "id": "demo-public-q2",
+        "metadata": {
+          "currency": "JPY",
+          "synthetic": true
+        },
+        "published_at": "2026-10-01T15:00:00+09:00",
+        "requires_research": true,
+        "retrieved_at": "2026-10-01T15:05:00+09:00",
+        "source_type": "public_disclosure",
+        "title": "第2四半期説明資料（架空）",
+        "url": "https://example.invalid/services/q2"
+      },
+      {
+        "company_id": "demo-services",
+        "content": "架空の資料。新規部署の採用計画について説明。一時費用と継続費用の内訳は未説明。",
+        "id": "demo-public-update",
+        "metadata": {
+          "synthetic": true
+        },
+        "published_at": "2026-10-08T15:00:00+09:00",
+        "requires_research": true,
+        "retrieved_at": "2026-10-08T15:05:00+09:00",
+        "source_type": "public_disclosure",
+        "title": "採用施策の補足（架空）",
+        "url": "https://example.invalid/services/update"
+      },
+      {
+        "company_id": "demo-services",
+        "content": "Synthetic market data only",
+        "id": "synthetic-price",
+        "metadata": {
+          "observed_at": "2026-10-09T09:55:00+09:00",
+          "price_jpy": "1000"
+        },
+        "published_at": null,
+        "requires_research": false,
+        "retrieved_at": "2026-10-09T09:56:00+09:00",
+        "source_type": "market_data",
+        "title": "Synthetic quote",
+        "url": "https://example.invalid/quote"
+      }
+    ],
+    "synthetic": true,
+    "thesis_sha256": "f24a4d3a2e78b22206a50cb5d04e905bbb909f5cac3e3b141f6a16c7eaaac4c8",
+    "thesis_snapshot": {
+      "company_id": "demo-services",
+      "current_price_jpy": "1000",
+      "evidence_ids": [
+        "demo-public-q2",
+        "demo-public-update"
+      ],
+      "exit_conditions": [
+        "仮説が否定された場合は売却を検討",
+        "評価額に達した場合は利確を検討"
+      ],
+      "invalidation_conditions": [
+        "費用増加が恒常的で利益率回復を妨げる",
+        "既存顧客売上が縮小する"
+      ],
+      "next_review_date": "2026-10-30",
+      "pillars": [
+        "継続課金売上の成長",
+        "採用費が一時的である可能性"
+      ],
+      "recorded_at": "2026-10-09T09:00:00+09:00",
+      "statement": "採用費の一部は一時的で、既存事業の成長によって利益率が回復するという架空の仮説。",
+      "valuation": {
+        "scenarios": [
+          {
+            "inputs": {
+              "eps_jpy": "45",
+              "pe": "15"
+            },
+            "method": "eps_multiple",
+            "name": "bear",
+            "probability": "0.25"
+          },
+          {
+            "inputs": {
+              "eps_jpy": "65",
+              "pe": "20"
+            },
+            "method": "eps_multiple",
+            "name": "base",
+            "probability": "0.50"
+          },
+          {
+            "inputs": {
+              "eps_jpy": "80",
+              "pe": "23"
+            },
+            "method": "eps_multiple",
+            "name": "bull",
+            "probability": "0.25"
+          }
+        ]
+      },
+      "version": 2
+    },
+    "thesis_version": 2
+  },
+  "comparison_limit": "Prices differ before and after the reply; this is not an estimate of IR effectiveness.",
+  "preflight": "decision_distinguishing",
+  "precommitted_proposal": "buy_review",
+  "price_checked_action": "exit_review",
+  "price_checked_reasons": [
+    "valuation_target_reached"
+  ],
+  "stored_review": {
+    "company_id": "demo-services",
+    "context": {
+      "evidence_ids": [
+        "demo-public-q2",
+        "demo-public-update",
+        "reply:demo-reply-cost"
+      ],
+      "held": true,
+      "information_status": "public_clarification",
+      "position_snapshot": {
+        "broker_verified": false,
+        "company_id": "demo-services",
+        "declared_at": "2026-10-09T00:59:30+00:00",
+        "held": true,
+        "kind": "user_declaration",
+        "observation_id": 4,
+        "observed_at": "2026-10-09T00:59:30+00:00",
+        "origin": "explicit_user_declaration"
+      },
+      "thesis_status": "intact"
+    },
+    "evaluation_version": 1,
+    "id": "decision-a2b9f6b3ea2c908120e9202602ca5b00",
+    "policy_id": "synthetic-example-only",
+    "policy_version": 1,
+    "question_id": "demo-question-cost",
+    "recorded_at": "2026-10-09T17:00:00+09:00",
+    "reply_id": "demo-reply-cost",
+    "result": {
+      "as_of": "2026-10-09T08:00:00+00:00",
+      "company_id": "demo-services",
+      "evidence_ids": [
+        "demo-public-q2",
+        "demo-public-update",
+        "reply:demo-reply-cost"
+      ],
+      "metrics": {
+        "entry_price_ceiling_jpy": "1107.2916666666666666666666666666666666666666666666666666666666666666666666666667",
+        "entry_upside_pass": false,
+        "net_expected_upside_pct": "-16.95312500",
+        "scenario_downside_pass": false,
+        "scenario_downside_pct": "57.812500",
+        "target_price_jpy_before_exit_cost": "1400"
+      },
+      "policy_id": "synthetic-example-only",
+      "policy_snapshot": {
+        "id": "synthetic-example-only",
+        "parameter_sources": {
+          "entry_cost_pct": {
+            "kind": "synthetic_example",
+            "rationale": "Arbitrary test value, not an investment recommendation",
+            "reference": "unit-test fixture"
+          },
+          "exit_cost_pct": {
+            "kind": "synthetic_example",
+            "rationale": "Arbitrary test value, not an investment recommendation",
+            "reference": "unit-test fixture"
+          },
+          "max_quote_age_seconds": {
+            "kind": "synthetic_example",
+            "rationale": "Arbitrary test value, not an investment recommendation",
+            "reference": "unit-test fixture"
+          },
+          "maximum_downside_pct": {
+            "kind": "synthetic_example",
+            "rationale": "Arbitrary test value, not an investment recommendation",
+            "reference": "unit-test fixture"
+          },
+          "minimum_upside_pct": {
+            "kind": "synthetic_example",
+            "rationale": "Arbitrary test value, not an investment recommendation",
+            "reference": "unit-test fixture"
+          },
+          "target_scenario": {
+            "kind": "synthetic_example",
+            "rationale": "Arbitrary test value, not an investment recommendation",
+            "reference": "unit-test fixture"
+          }
+        },
+        "parameters": {
+          "entry_cost_pct": "0",
+          "exit_cost_pct": "0",
+          "max_quote_age_seconds": 3600,
+          "maximum_downside_pct": "35",
+          "minimum_upside_pct": "20",
+          "target_scenario": "base"
+        },
+        "recorded_at": "2026-10-01T17:00:00+09:00",
+        "version": 1
+      },
+      "policy_version": 1,
+      "proposed_action": "exit_review",
+      "quote": {
+        "company_id": "demo-services",
+        "currency": "JPY",
+        "observed_at": "2026-10-09T16:58:00+09:00",
+        "observed_at_path": [
+          "metadata",
+          "observed_at"
+        ],
+        "price_jpy": "1600",
+        "price_path": [
+          "metadata",
+          "price_jpy"
+        ],
+        "retrieved_at": "2026-10-09T16:59:00+09:00",
+        "source_id": "synthetic-price-after-reply"
+      },
+      "reason_codes": [
+        "valuation_target_reached"
+      ],
+      "status": "reviewed",
+      "thesis_version": 3,
+      "valuation": {
+        "expected_upside_pct": "-16.95",
+        "expected_value_jpy": "1328.75",
+        "scenarios": [
+          {
+            "fair_value_jpy": "675.00",
+            "method": "eps_multiple",
+            "name": "bear",
+            "probability": "0.25",
+            "upside_pct": "-57.81"
+          },
+          {
+            "fair_value_jpy": "1400.00",
+            "method": "eps_multiple",
+            "name": "base",
+            "probability": "0.5",
+            "upside_pct": "-12.50"
+          },
+          {
+            "fair_value_jpy": "1840.00",
+            "method": "eps_multiple",
+            "name": "bull",
+            "probability": "0.25",
+            "upside_pct": "15.00"
+          }
+        ],
+        "worst_case_downside_pct": "57.81"
+      }
+    },
+    "source_ids": [
+      "demo-public-q2",
+      "demo-public-update",
+      "reply:demo-reply-cost",
+      "synthetic-price-after-reply"
+    ],
+    "source_sha256": {
+      "demo-public-q2": "4174a6eab38d6f69f84fa993e5bf82bcd055f5aa1128b4f7cfd950f51b6dbbe8",
+      "demo-public-update": "46774345860e39f9278b5fa10f285dd077ce374f702a4882fa4fe54b2c66acbf",
+      "reply:demo-reply-cost": "9688ab7f2a64f0714e267470b06d611f170b68f07352622adfdee1d414e7bbd4",
+      "synthetic-price-after-reply": "61c11413f34114fdce78ab2b8c09053836d045cf050dd94bc3ac6890c0a3fbdd"
+    },
+    "thesis_version": 3
+  },
+  "records": {
+    "companies": 3,
+    "sources": 5,
+    "theses": 3,
+    "replies": 1,
+    "evaluations": 1,
+    "decision_policies": 1,
+    "decision_reviews": 1,
+    "signal_predictions": 0,
+    "evaluation_protocol_versions": 0,
+    "jobs": {
+      "completed": 1
+    },
+    "questions": {
+      "answered": 1
+    }
+  }
+}

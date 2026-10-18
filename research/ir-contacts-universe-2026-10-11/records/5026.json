@@ -1,0 +1,66 @@
+{
+  "security_code": "5026",
+  "company_name": "トリプルアイズ",
+  "market": "グロース（内国株式）",
+  "jpx_sector": "情報・通信業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.3-ize.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T13:40:47.396542+00:00",
+  "completed_at": "2026-10-11T13:41:19.976775+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/5026/20261011T134047396944Z/01.json",
+      "url": "https://www.3-ize.jp/",
+      "retrieved_at": "2026-10-11T13:41:04.242312+00:00",
+      "http_status": 200,
+      "quote": "TOP｜画像認識プラットフォーム・AIZE",
+      "purpose": "product_title_only_no_ir_or_issuer_identity",
+      "snapshot_json_sha256": "66a6b855317d202df0dc6027cf9ca641c6a8c3e7b008056a13f1514421d595ee"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.3-ize.jp/",
+      "final_url": "https://www.3-ize.jp/",
+      "snapshot": "evidence/5026/20261011T134047396944Z/01.json",
+      "retrieved_at": "2026-10-11T13:41:04.242312+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得200でも保存本文21文字・実リンク/フォームなし。金融IR窓口と発行体同一性を実本文で確認できない。",
+    "個人受付/個別回答条件未確認。JS等による本文取得不足の可能性を含み、窓口不存在を意味しない。"
+  ],
+  "discovery": {
+    "security_code": "5026",
+    "official_url": "https://www.3-ize.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "トリプルアイズ",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "unverified",
+  "identity_matches": [],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "saved_homepage_has_product_title_only_no_financial_ir_links_or_native_contact",
+  "http_get_attempt_count": 2,
+  "previous_attempts": [
+    "attempts/5026/20261011T045047522202Z.json",
+    "attempts/5026/20261011T134119977103Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_consumer_50_batch05",
+    "reviewed_at": "2026-10-11T13:53:54.282059+00:00",
+    "notes": "保存済みofficial候補https://www.3-ize.jp/は200だが本文は製品タイトルTOP画像認識プラットフォームAIZEの21文字だけ、links/forms/headings0。発行体名/コード/金融IR用途/実返信質問欄/メールを一次本文で確認できない。元identity unverifiedを維持し、トリプルアイズのIR窓口不存在やAIZE製品窓口との同一性を推論しない。実hrefなしで推測URL/TODO追加0。 保存本文/実native controlsの個別監査。GET/送信0、旧quote/条件/取得時刻/全attempt履歴をfreezeに保全。窓口不存在/個人無条件受付/人間の投資判断承認を推論しない。"
+  }
+}

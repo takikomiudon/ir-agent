@@ -1,0 +1,156 @@
+{
+  "recorded_at": "2026-10-15T23:17:37.928060+00:00",
+  "status": "finite_static_review_completed_no_execution_no_adoption",
+  "fixed_repository": "crdcj/MagicFormula",
+  "fixed_commit": "ac05a3bd3e146aa924b2b5e11ebffa3484c2c81d",
+  "fixed_src_tree_SHA": "6904ad3e5b093b372d18081bc8b875a3bcba1900",
+  "scope": "Exactly parent-selected ranking and total-return blobs, no other source/data read",
+  "findings": [
+    {
+      "id": "R01",
+      "file": "4_rank_stocks.ipynb",
+      "cells": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "finding": "未調整価格のローカルfeather2本から、指定市場種別、2011年以降、通常batch及びON/PN/PNA表示をfilterし、ticker先頭4字をissuer keyにする。銘柄別の取引件数30観測rolling平均は最低1観測から算出する。",
+      "limits": "入力データとブラジル市場コード/issuer keyの完全性、上場廃止/銘柄変更、元データ時点/修正は未確認。30という窓幅はソース行の観測数で、暦日30日や最低30日履歴を保証しない。"
+    },
+    {
+      "id": "R02",
+      "file": "4_rank_stocks.ipynb",
+      "cells": [
+        3,
+        5,
+        6,
+        7
+      ],
+      "finding": "価格日時から年内通算日と年を作り、年内通算日が100以上の行に絞り、年ごと全体の最小通算日を選んで同じ年/通算日で結合する。作者説明の100日目以降という選択を具体的処理に対応付けられる。",
+      "limits": "各銘柄ごとに別々の最初取引日を選ぶ処理ではなく、対象データ全体の年ごとの最小日。元日時のtimezone/取引カレンダーや当日データ欠損、同時点売買可能性は未確認。"
+    },
+    {
+      "id": "R03",
+      "file": "4_rank_stocks.ipynb",
+      "cells": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "finding": "除外会社CSVと銘柄→CVMコードpickle、財務CSVを外部ローカル入力として読む。財務期間終了年の翌年を利用年に置き、年/CVMコードで結合する。",
+      "limits": "除外理由/financial field定義/負純負債等のfilterは未読のupstream依存。財務期間の開始列は落とされ、非12月期や各fieldの期末/flow対応が正しいという検証は行わない。元資料の公表時刻・当時利用可能なuniverseをこの年対応だけで認定しない。"
+    },
+    {
+      "id": "R04",
+      "file": "4_rank_stocks.ipynb",
+      "cells": [
+        15,
+        16,
+        17
+      ],
+      "finding": "時価総額を入力株数×当該平均価格、企業価値を時価総額+入力純負債、益回りを入力EBIT/企業価値で計算する。企業価値が100超という作者追加filterがある。",
+      "limits": "会計列に代入するcell15は同じ列への代入で、明示的な単位変換ではない。株数/純負債/EBITの尺度・税/ROIC定義・企業価値100の通貨/倍率を未読入力から認証しない。企業価値除算がfilterより先であり、全0/欠損/無限が安全に処理されると保証しない。コメントの説明をGreenblatt原典ルールや日本株閾値へ移さない。"
+    },
+    {
+      "id": "R05",
+      "file": "4_rank_stocks.ipynb",
+      "cells": [
+        18,
+        19
+      ],
+      "finding": "財務送信/公表用とされる入力日時の日付が価格日より前の行に絞り、当該日時でsortして銘柄/利用年ごと最後の財務版を残す処理を示す。",
+      "limits": "コードの比較は日付前後であり、コメントにある1週間lagを実装したとはしない。入力日時が何を証明するか、後日修正の収録/vintage、日時型比較の実行妥当性、申告送信日が実際に当時入手可能だったことは未検証。look-aheadを完全排除した保証ではない。"
+    },
+    {
+      "id": "R06",
+      "file": "4_rank_stocks.ipynb",
+      "cells": [
+        20,
+        22
+      ],
+      "finding": "同じissuer/年で取引件数平均の大きい銘柄classを残す。時価総額250超と30観測取引件数平均100超でさらに絞る。コメントは前者を250百万BRLの意図として説明する。",
+      "limits": "入力尺度の独立確認なしに実数通貨へ換算せず、USD50百万というコメントを普遍のGreenblatt条件として採用しない。流動性平均同値時の経済的第二基準やticker先頭4字のissuer識別妥当性は未確認。"
+    },
+    {
+      "id": "R07",
+      "file": "4_rank_stocks.ipynb",
+      "cells": [
+        23,
+        25,
+        29,
+        30,
+        32
+      ],
+      "finding": "年別にROICと益回りを高い順のdense順位とし、順位和を小さい順に並べる。最終順位同点はfirst方式なので既存行順で分かれる。最終順位30以下を選び、再構成日と順位でsortして選択CSVへ書く。複数年で同銘柄が選ばれ得る。",
+      "limits": "最大30の条件であり各年に必ず30を検証するassertはない。順位和同点の経済的第二基準や独立乱数は示されず、入力/merge/sortの行順への依存を残す。上位30選択は数値売買閾値/個別利確ではない。"
+    },
+    {
+      "id": "T01",
+      "file": "7_total_return.ipynb",
+      "cells": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "finding": "別入力の調整価格CSVを読み、銘柄×再構成期ごとの最初の観測価格を基準に100へ正規化し、日付×次再構成日ごとの正規化価格を単純平均する。",
+      "limits": "各銘柄各日1行で完全な系列なら、期間開始の各銘柄等額を仮定した指数の平均に相当する。日々の等時価ウェイト売買や実保有数量を計算する処理ではない。欠損/重複/日々の構成数変化を補正・検証するコードは当該処理にはなく、行平均の実質構成が変わり得る。入力CSVは未取得で、選択CSVとの完全一致/配当調整生成工程6は未読。"
+    },
+    {
+      "id": "T02",
+      "file": "7_total_return.ipynb",
+      "cells": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "finding": "次再構成日でgroup化した期間末の指数を持ち、価格日=次再構成日の行だけ期間末値/100の倍率を立て、累積積で期間指数を接続する。境界日の重複は最後の行を残す。",
+      "limits": "数学的な期間リセット/接続を示すが、全既保有を売却するのかrank外だけ替えるか、継続銘柄の売却買戻し/税lot/端株/現金/約定時刻は扱わない。次再構成日/期間境界は未読入力で与えられ、欠損境界や重複行が想定通りか未検証。長期の同銘柄保有を排除したり全銘柄1年売却を実装した証拠ではない。"
+    },
+    {
+      "id": "T03",
+      "file": "7_total_return.ipynb",
+      "cells": [
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "finding": "別のIBOVローカル系列を100基準へ正規化してinner結合し図示、末尾指数から11年という固定指数で年率化する処理がある。",
+      "limits": "cached画像/出力/実行カウントは作者保存artifactで、本担当の実行検証ではない。成績/alpha/税引後returnを再計算せず、固定11年と実期間の一致を認証しない。選択returnコード内に取引費用/spread/税の独立控除は見当たらず、前phaseの作者による費用除外説明を実際の費用0として採用しない。"
+    },
+    {
+      "id": "B01",
+      "file": null,
+      "cells": [],
+      "finding": "この2fileで順位/最大選択数・同点処理・再構成候補日の選択・期間等額指数に相当する算術・指数接続を静的に確認できた。売却注文/保有数量を含む運用engine全体の完成は確認していない。",
+      "limits": "財務指標計算2、再構成日説明3、調整価格生成6、最新rank8、全データ、別repo AlgebraQuantは未取得。license不明で移植/依存導入0。日本株の会計/尺度/取引/universe適合やIR判断規則・金融policy採用は0。"
+    }
+  ],
+  "evidence_map_file": "research/ir-brazil-magic-formula-ranking-sale-code-2026-10-15/evidence-map.json",
+  "evidence_map_sha256": "2d7796a394abb555a62573ae1f25ceb7b7827c4601c2838e5c9d3ba5827dbec1",
+  "quote_budget": {
+    "previous_phase_words": 64,
+    "new_phase_English_verbatim_words": 0,
+    "cumulative": 64,
+    "new_less_than20_and_total_less_than90": true
+  },
+  "license_unverified": true,
+  "maintainer_code_execution_import_install": 0,
+  "new_model_policy_or_financial_adoption": 0,
+  "actual_DB": 0,
+  "shared_files_edits": 0,
+  "additional_GETs_planned": 0
+}

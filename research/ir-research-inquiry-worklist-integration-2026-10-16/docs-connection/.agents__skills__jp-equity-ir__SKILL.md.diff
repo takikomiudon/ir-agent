@@ -1,0 +1,9 @@
+--- .agents/skills/jp-equity-ir/SKILL.md before
++++ .agents/skills/jp-equity-ir/SKILL.md after
+@@ -164,3 +164,6 @@
+ 
+ 
+ [Acquirer’s Multipleの研究手順](../../../docs/acquirers-multiple-research.md)を使う場合は、OIADPと国内の報告営業利益の対応、原価/販管費に含む償却の二重控除、EVの構成と時点を点検する。2016年記事の条件は上昇銘柄の期日と画面内の継続例外、下落銘柄の画面内/外を組で読む。所属不明を退出へ変換せず、四半期の必要性点検を強制入替としない。日本への適合未確認の条件を実行方針に補完しない。
++
++
++研究IRの継続確認では `.venv/bin/python scripts/report_research_inquiries.py --db PATH` で[全質問・全返信の現在作業一覧](../../../docs/research-inquiries.md#全質問全返信の現在作業を一覧にする)も読む。通常の金融inboxと別に、古い未レビュー返信、公開性/根拠保留、利用可能な固定比較注記を拾う。無回答を否定材料にせず、一覧順をIR優先順位や送信許可としない。読取のみで、本文一括出力・過去時点の認証・金融更新は行わない。

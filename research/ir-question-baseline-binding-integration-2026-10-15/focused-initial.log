@@ -1,0 +1,52 @@
+test_baseline_actual_first_save_and_recording_cannot_postdate_question (test_question_baseline_binding.QuestionBaselineBindingTests.test_baseline_actual_first_save_and_recording_cannot_postdate_question) ... ok
+test_baseline_addition_removal_and_replacement_are_not_retries (test_question_baseline_binding.QuestionBaselineBindingTests.test_baseline_addition_removal_and_replacement_are_not_retries) ... ok
+test_baseline_current_source_holds_are_checked_during_freeze (test_question_baseline_binding.QuestionBaselineBindingTests.test_baseline_current_source_holds_are_checked_during_freeze) ... ERROR
+test_baseline_quote_mismatch_is_rejected_even_when_price_is_equivalent (test_question_baseline_binding.QuestionBaselineBindingTests.test_baseline_quote_mismatch_is_rejected_even_when_price_is_equivalent) ... ok
+test_binding_freezes_record_not_current_view_and_retries_exactly (test_question_baseline_binding.QuestionBaselineBindingTests.test_binding_freezes_record_not_current_view_and_retries_exactly) ... ok
+test_caller_cannot_supply_binding_snapshots_or_unknown_baseline (test_question_baseline_binding.QuestionBaselineBindingTests.test_caller_cannot_supply_binding_snapshots_or_unknown_baseline) ... ok
+test_changed_effective_held_or_unknown_question_position_cannot_bypass_binding (test_question_baseline_binding.QuestionBaselineBindingTests.test_changed_effective_held_or_unknown_question_position_cannot_bypass_binding) ... ok
+test_current_source_snapshot_changes_or_late_receipts_cannot_be_hidden (test_question_baseline_binding.QuestionBaselineBindingTests.test_current_source_snapshot_changes_or_late_receipts_cannot_be_hidden) ... ok
+test_historical_send_uses_sent_at_price_and_position_not_current_view (test_question_baseline_binding.QuestionBaselineBindingTests.test_historical_send_uses_sent_at_price_and_position_not_current_view) ... ok
+test_legacy_contract_resend_and_no_baseline_behavior_unchanged (test_question_baseline_binding.QuestionBaselineBindingTests.test_legacy_contract_resend_and_no_baseline_behavior_unchanged) ... ok
+test_prior_ir_is_not_public_only_and_quote_only_current_correction_blocks_send (test_question_baseline_binding.QuestionBaselineBindingTests.test_prior_ir_is_not_public_only_and_quote_only_current_correction_blocks_send) ... ERROR
+test_subset_evidence_new_same_held_observation_and_branch_status_are_allowed (test_question_baseline_binding.QuestionBaselineBindingTests.test_subset_evidence_new_same_held_observation_and_branch_status_are_allowed) ... ok
+test_thesis_policy_and_synthetic_mismatches_do_not_write_questions (test_question_baseline_binding.QuestionBaselineBindingTests.test_thesis_policy_and_synthetic_mismatches_do_not_write_questions) ... ok
+test_unresolved_baseline_stays_a_hold_when_branches_become_distinguishing (test_question_baseline_binding.QuestionBaselineBindingTests.test_unresolved_baseline_stays_a_hold_when_branches_become_distinguishing) ... ok
+test_verify_rejects_changed_baseline_record_or_actual_first_save (test_question_baseline_binding.QuestionBaselineBindingTests.test_verify_rejects_changed_baseline_record_or_actual_first_save) ... ok
+
+======================================================================
+ERROR: test_baseline_current_source_holds_are_checked_during_freeze (test_question_baseline_binding.QuestionBaselineBindingTests.test_baseline_current_source_holds_are_checked_during_freeze)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ir-agent/tests/test_question_baseline_binding.py", line 275, in test_baseline_current_source_holds_are_checked_during_freeze
+    reply_id = self.quote_only_ir()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ir-agent/tests/test_question_baseline_binding.py", line 244, in quote_only_ir
+    ledger.record_first_save(kind, record['id'], record, now=BEFORE.isoformat())
+  File "/workspace/ir-agent/src/ir_agent/availability.py", line 191, in record_first_save
+    return self._record(entity_type, entity_id, snapshot, version=version, now=now,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ir-agent/src/ir_agent/availability.py", line 140, in _record
+    raise ValueError("Availability write requires the base INSERT's open transaction")
+ValueError: Availability write requires the base INSERT's open transaction
+
+======================================================================
+ERROR: test_prior_ir_is_not_public_only_and_quote_only_current_correction_blocks_send (test_question_baseline_binding.QuestionBaselineBindingTests.test_prior_ir_is_not_public_only_and_quote_only_current_correction_blocks_send)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/ir-agent/tests/test_question_baseline_binding.py", line 258, in test_prior_ir_is_not_public_only_and_quote_only_current_correction_blocks_send
+    reply_id = self.quote_only_ir()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ir-agent/tests/test_question_baseline_binding.py", line 244, in quote_only_ir
+    ledger.record_first_save(kind, record['id'], record, now=BEFORE.isoformat())
+  File "/workspace/ir-agent/src/ir_agent/availability.py", line 191, in record_first_save
+    return self._record(entity_type, entity_id, snapshot, version=version, now=now,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/ir-agent/src/ir_agent/availability.py", line 140, in _record
+    raise ValueError("Availability write requires the base INSERT's open transaction")
+ValueError: Availability write requires the base INSERT's open transaction
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.129s
+
+FAILED (errors=2)

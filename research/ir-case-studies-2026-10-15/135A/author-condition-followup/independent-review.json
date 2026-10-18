@@ -1,0 +1,151 @@
+{
+  "record_type": "bounded_independent_review_of_135A_author_condition_case",
+  "reviewed_at": "2026-10-15T06:05:16.925364+00:00",
+  "reviewed_case_record_sha256": "e13658aa268218a9abb76f16ed782fdc4be7ba54c52527b15439821a2f329e2b",
+  "reviewed_case_markdown_sha256": "47ca964c978ff99773597aac3ff13af4b26b4d020eaf5f8e02c4b44830b5ad97",
+  "status": "one_period_label_correction_required_other_requested_boundaries_supported",
+  "scope": {
+    "new_GETs": 0,
+    "database_accesses": 0,
+    "production_changes": false,
+    "original_record_modified": false,
+    "new_preview_registry_or_financial_inputs": false,
+    "independent_raw_reextraction_performed": false,
+    "saved_rendered_PDF_pages_visually_checked": [
+      5,
+      6,
+      7,
+      8,
+      17,
+      47
+    ]
+  },
+  "findings": [
+    {
+      "id": "prior_year_end_mislabels_358",
+      "severity": "period_label_correction",
+      "json_pointer": "/latest_observed_KPIs/1/published_series_context/1/attribution",
+      "record_text": "7/14会社想定問答。前期末取引358社への質問文と当時の通期５割程度想定を分離。",
+      "original_quote_id": "qa-prior-q1-repeat-share-and-outlook",
+      "original_wording": "現在の取引社数 358 社",
+      "related_figure": {
+        "source_quote_id": "issuer-customer-repeat-values-graph-and-formula",
+        "FY26_4Q_display": "337",
+        "FY27_1Q_display": "358",
+        "FY27_2Q_display": "394",
+        "basis": "受注ベース"
+      },
+      "issue": "7/14問答の当時「現在358社」を「前期末358社」と呼ぶのはp5図の前期末337社と食い違う。比率そのものやQ1 513/79.1の値には影響しないが、顧客数の期間比較を誤らせる。",
+      "suggested_correction": "原文の「現在の取引社数358社」をそのまま帰属させる。p5 FY27 1Qの表示358社との対応は別に記し、問答が明示しない正確な期末日を追加しない。",
+      "original_is_history": "親へ報告済み。原recordを編集せず、修正は新規版で扱う方針。"
+    }
+  ],
+  "requested_boundary_checks": [
+    {
+      "id": 1,
+      "subject": "394社の受注基準とretention",
+      "result": "supported_except_the_separate_358_period_label_finding",
+      "basis": [
+        "issuer-customer-repeat-values-graph-and-formula"
+      ],
+      "interpretation": "p5の394/前期末+57、FY26 4Q337/FY27 1Q358、※1受注ベースを画像/本文で確認。売上計上顧客や顧客維持率としない扱いは正しい。"
+    },
+    {
+      "id": 2,
+      "subject": "継続売上1,084/公表57.5%と中間総売上1,884",
+      "result": "supported",
+      "basis": [
+        "issuer-customer-repeat-values-graph-and-formula",
+        "issuer-cumulative-income-and-kanazawa-start",
+        "statement-period-basis-sales-denominator",
+        "qa-prior-q1-repeat-share-and-outlook"
+      ],
+      "interpretation": "p5のFY27 2Q表示と売上全体比、p7の2Q累計1,884、短信1頁の2026/3/1〜8/31を照合。年度売上から当年度新規売上を控除する式はあるが厳密なコホート/未丸め比率は未確立。Q1の79.1%、DXコンサル90%以上、ARR/retentionとは区別できている。"
+    },
+    {
+      "id": 3,
+      "subject": "単価20/22/18の集計期間",
+      "result": "supported",
+      "basis": [
+        "issuer-ai-price-cumulative-graph-and-mix",
+        "faq-price-mix-not-first-repeat"
+      ],
+      "interpretation": "p6図FY26 4Q18→FY27 1Q22→2Q20、脚注の年度内累計平均を確認。Q2単独平均を逆算せず、機器単体案件構成の会社説明と+7.5%公表表示を保持する扱いは正しい。"
+    },
+    {
+      "id": 4,
+      "subject": "営業利益率21.7/35.7/30.1と著者FY29近傍35",
+      "result": "supported",
+      "basis": [
+        "issuer-cumulative-income-and-kanazawa-start",
+        "issuer-quarter-only-income",
+        "issuer-office-plan",
+        "author-monitoring-benchmarks"
+      ],
+      "interpretation": "p7/17の中間累計21.7と通期予想30.1、p8のQ2単独35.7を画像/本文で確認。FY29対象期実績でも近傍許容幅でもなく、達成/未達を確定しない扱いは正しい。"
+    },
+    {
+      "id": 5,
+      "subject": "拠点遅延AND比率45近辺頭打ち",
+      "result": "not_established_is_appropriate",
+      "basis": [
+        "author-conditional-slowdown",
+        "author-office-half-year-context",
+        "issuer-office-plan",
+        "issuer-office-plan-and-hiring",
+        "issuer-customer-repeat-values-graph-and-formula"
+      ],
+      "interpretation": "原著は「もし…遅延し、かつ…45%近辺で頭打ち…なら」。会社p17/47の金沢開設済/他4予定は上期中5拠点という著者目安と相違するが、実営業開始/初受注/寄与のmilestoneは別。比率の近辺許容幅と頭打ち期間が未定なのでANDの成立、CAGR適用、反証済みのいずれも確定できない。57.5は当該中間の観測点として保持し、outside-bandという機械判定にはしない。"
+    },
+    {
+      "id": 6,
+      "subject": "著者5/11表示とperiod不整合/10/15後日比較",
+      "result": "supported",
+      "basis": [
+        "author saved report header",
+        "author FY27 Q1（2026年4-7月期） context",
+        "attribution_and_time"
+      ],
+      "interpretation": "著者保存本文の5/11表示とFY27 Q1（2026年4-7月期）を確認。会社の正式中間は3/1〜8/31。厳密公表時刻/改訂履歴を未確認のまま10/15保存後の比較とし、5月時点の事前検証と称さない扱いは正しい。"
+    },
+    {
+      "id": 7,
+      "subject": "Jan15の管理再点検日",
+      "result": "supported",
+      "basis": [
+        "research_review_cadence",
+        "Anthropic thesis-tracker quarterly review quote"
+      ],
+      "interpretation": "2027/1/15は実レビュー10/15から3カ月後というproject管理日。原著が日付指定したものでも、会社決算予定日・売却期限でもなく、新資料が保存された時は前倒しする区別が明示されている。"
+    }
+  ],
+  "validation": {
+    "source_provenance_files_hash_matched": 15,
+    "verbatim_quotes_and_source_offsets_matched": 15,
+    "original_files_hashes": {
+      "research/ir-case-studies-2026-10-15/135A/author-condition-followup/case-record.json": "e13658aa268218a9abb76f16ed782fdc4be7ba54c52527b15439821a2f329e2b",
+      "research/ir-case-studies-2026-10-15/135A/author-condition-followup/case-record.md": "47ca964c978ff99773597aac3ff13af4b26b4d020eaf5f8e02c4b44830b5ad97",
+      "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/93eb46606d41dc10c91870d9481310fcf5fda5c107d318ef7424e1a6ce89fb99": "93eb46606d41dc10c91870d9481310fcf5fda5c107d318ef7424e1a6ce89fb99",
+      "research/ir-case-studies-2026-10-15/135A/presentation-followup/03.txt": "73bccf42aec37efb174f09c8160dbd20878f97f4b5a4622f0b02bc0210c63818",
+      "research/ir-case-studies-2026-10-15/135A/presentation-followup/03.json": "aaf30a8f8194132baf4b822dc15d714bba5e60417983a3b4ed94aba94f1da638",
+      "research/ir-case-studies-2026-10-15/135A/library-followup/raw/6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515": "6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+      "research/ir-case-studies-2026-10-15/135A/library-followup/03.txt": "3ecc1fb61cc34cf0abd0cdae3c36fed637e5257b94062cb2ed00f71e3ba52b2b",
+      "research/ir-case-studies-2026-10-15/135A/library-followup/03.json": "04a2fa967b8e0acef2629141247a8f3a2e69095ac7bba95782790bde4febca38",
+      "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/1cd0433a17587f9b2d4169740a2205d4f5871aeefdce1c08f74b80844e31beba": "1cd0433a17587f9b2d4169740a2205d4f5871aeefdce1c08f74b80844e31beba",
+      "research/ir-case-studies-2026-10-15/135A/presentation-followup/04.txt": "2a34cf7b7c665856900a638ea5df9eddad71183275c2d81f24a9fac99a73448d",
+      "research/ir-case-studies-2026-10-15/135A/presentation-followup/04.json": "7ceba600be7b290ab0157c7150ca3c5c132a00f85341c7e5b9cea5dfd68b27a0",
+      "research/ir-case-studies-2026-10-15/135A/presentation-followup/raw/e88cf537930d5f0364dad6c918920473cee30c89b47f951bedd32e5ce41ae763": "e88cf537930d5f0364dad6c918920473cee30c89b47f951bedd32e5ce41ae763",
+      "research/ir-case-studies-2026-10-15/135A/presentation-followup/02.visible.txt": "c4a87b43ed157d61f87b258102e89eb54c5e369b96ca8a00b2c8cc6f760cf017",
+      "research/ir-case-studies-2026-10-15/135A/presentation-followup/02.json": "40318a884cc071e567a8315ca3abc7af205189026d60d04f4856286e7ac734ca",
+      "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/raw/0cfe0cdb8d1eff0d6814dd514e99e4684b4ff73b888cc318398061aee0247ad5": "0cfe0cdb8d1eff0d6814dd514e99e4684b4ff73b888cc318398061aee0247ad5",
+      "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/02.visible.txt": "01f71124b8560b08217782c3f6b7b5f4061885eb1ded3ad3ad35b1770c9888b1",
+      "research/ir-case-studies-2026-10-15/135A/external-forecast-discovery/02.json": "18461a56789f69d9dda5da2819b48e06e1610bec5ba525af5b2292cdfa74451b"
+    },
+    "interpretation_check_only": "PDF画像は保存済み6頁を独立に視認。原PDFの新規再描画/全HTML再抽出は今回行っていない。"
+  },
+  "limits": [
+    "原著の条件の意味を確認する限定レビューであり、著者仮説や会社予想の採用・予測精度・投資判断を認定しない。",
+    "DX90%以上等の初期ページの定義全体を再調査したものではない。区別の妥当性を既存保存資料の範囲で点検。",
+    "元recordは変更せず、指摘は親へ伝達した。"
+  ]
+}

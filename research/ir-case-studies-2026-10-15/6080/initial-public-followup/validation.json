@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "validated_at": "2026-10-15T14:27:03.804701+00:00",
+  "status": "fixed_failure_evidence_no_HTTP_source",
+  "files": {
+    "README.md": {
+      "sha256": "9c6f9ecf531684142da646364a624f7a9127fb7d3b9d84ea8a2505c350bdc446",
+      "bytes": 2268
+    },
+    "access-guard.json": {
+      "sha256": "24c56f2f3637bdaccca73beb7fa3f1b8592d3aea222172ab88541b13b1f15beb",
+      "bytes": 1353
+    },
+    "capture.json": {
+      "sha256": "726e36b38eb33ec8cf7ffa67e8a763c75b453b3956e1658d523364c3318a68c8",
+      "bytes": 2284
+    },
+    "raw/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "review.json": {
+      "sha256": "41c2fd482614f304c883ce0e58df84d551bfb6a303add6d43f796afcbcf4d457",
+      "bytes": 2593
+    },
+    "route-quotes.json": {
+      "sha256": "85c77e2a952e6c7f6254f4ec0bd4bcb1d8dd76bfee021082dd76589fb3d5432e",
+      "bytes": 2633
+    },
+    "sourcebundle.json": {
+      "sha256": "f5b90a8bde558bbf077b2975f4f82a049548dad42a9077f45c040ceb28a68ee3",
+      "bytes": 564
+    },
+    "text/acquisition-status.txt": {
+      "sha256": "fe8f570fe4b05ac7a256d3d6ec8be67474bb28c285ff9605cb2eb72ac78d5010",
+      "bytes": 158
+    }
+  },
+  "checks": {
+    "saved_snapshot_hash_matches_inventory": true,
+    "route_literal_resolves_to_exact_selected_URL": true,
+    "short_saved_JSON_quotes_and_offsets_match": true,
+    "prepared_request_UA_fixed": true,
+    "single_attempt_no_retry_within_4GET_budget": true,
+    "TLS_not_disabled": true,
+    "no_HTTP_response_claimed": true,
+    "empty_local_marker_not_response_body": true,
+    "sourcebundle_sources_empty": true,
+    "issuer_selected_pages_zero": true,
+    "new_files_only": true
+  },
+  "GET_attempts": 1,
+  "HTTP_responses": 0,
+  "source_count": 0,
+  "financial_inputs_adopted": false,
+  "source_first_save_verified": false,
+  "publication_precision": "unknown",
+  "limitations": [
+    "No wire capture. Prepared request UA is configuration evidence only. TLS failure does not establish remote receipt of an HTTP GET.",
+    "Response/raw SHA is null. Empty marker SHA is local artifact integrity only.",
+    "No latest issuer document, company fact or author-thesis conclusion established."
+  ]
+}

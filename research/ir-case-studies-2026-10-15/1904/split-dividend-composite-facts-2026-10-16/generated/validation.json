@@ -1,0 +1,407 @@
+{
+  "status": "frozen_three_composite_display_facts_pending_parent_independent_review_no_DB_registration",
+  "recorded_at": "2026-10-16T02:56:03.042917+00:00",
+  "primary_generation_success": true,
+  "primary_generation_calls": 1,
+  "explicit_same_now_replay_calls": 1,
+  "existing_reproducer_calls": 1,
+  "reproducer_internal_normalizer_reconstruction_is_separate_from_primary_generation": true,
+  "code_sha256": "d434b41cfa19568d0cef1a2e6710365f447012d75a4b07ca950cc62b6bd9db51",
+  "normalization_version": 2,
+  "original_source_id": "case-public:d5515999569e0a44d30c01701d683bb136b302cc8166a9374e625fe753b23d83",
+  "derived_source_id": "disclosed-facts:b14c45dfc511d39e0057a06c1f014a00335b13b2858679660fa76319ec18e0c2",
+  "source_count": 2,
+  "fact_count": 3,
+  "request_sha256": "ee8b6262c98876caef213647a2d6dd44f3f8d84a0a58e484aeae94499bb80f49",
+  "bundle_sha256": "681c31d6a3274ba0f0b851f0f44e56caefe5b97a16a1462e981640f7ac5ffff8",
+  "original_whole_object_unchanged": true,
+  "whole_bundle_and_ID_same_now_exact": true,
+  "reproducer_result": {
+    "source_id": "disclosed-facts:b14c45dfc511d39e0057a06c1f014a00335b13b2858679660fa76319ec18e0c2",
+    "applicable": true,
+    "status": "reproduced",
+    "reason_codes": [],
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "original_content_sha256_status": "matched",
+    "original_snapshot_sha256_status": "matched_supplied_snapshot",
+    "fact_kinds": [
+      {
+        "id": "1904-split-dividend-composite-display-interim-pre-split-20260910",
+        "kind": "issuer_guidance"
+      },
+      {
+        "id": "1904-split-dividend-composite-display-final-post-split-20260910",
+        "kind": "issuer_guidance"
+      },
+      {
+        "id": "1904-split-dividend-composite-display-annual-reference-pre-split-20260910",
+        "kind": "issuer_guidance"
+      }
+    ],
+    "original_source_id": "case-public:d5515999569e0a44d30c01701d683bb136b302cc8166a9374e625fe753b23d83"
+  },
+  "preparation_request_delta": [
+    {
+      "path": "/facts/0/scope/normalization_performed",
+      "operation": "remove",
+      "old": false
+    },
+    {
+      "path": "/facts/1/scope/normalization_performed",
+      "operation": "remove",
+      "old": false
+    },
+    {
+      "path": "/facts/2/scope/normalization_performed",
+      "operation": "remove",
+      "old": false
+    },
+    {
+      "path": "/review/author",
+      "operation": "replace",
+      "old": "Codex offline input preparer; issuer authored the displayed forecasts/reference",
+      "new": "Codex offline extraction reviewer; issuer 大成温調株式会社 authored the forecasts and annual comparative reference"
+    },
+    {
+      "path": "/review/rationale",
+      "operation": "replace",
+      "old": "Input preparation only against accepted explicit jpy_yen_sen design. Three exact original contiguous displays with different share bases/issuer annual reference. No normalizer/API execution, canonical numeric value, derived source, DB or model adoption. Generation requires separate root instruction after implementation independent review/fulltests.",
+      "new": "Generate three source-bound yen/sen displays after accepted parser implementation and accepted input semantics. Preserve interim pre-split, final post-split and issuer annual pre-split comparative reference as distinct declarations. Exact display composition only; no annual addition, split adjustment, payment/execution certification, current forecast recognition, DDM/valuation/thesis or financial-model adoption."
+    },
+    {
+      "path": "/review/recorded_at",
+      "operation": "replace",
+      "old": "2026-10-16T02:50:57.156154+00:00",
+      "new": "2026-10-16T02:54:48.858078+00:00"
+    }
+  ],
+  "only_authorized_two_difference_groups": true,
+  "review_updated_truthfully_for_generation": true,
+  "preparation_state_not_in_new_fact_scope": true,
+  "original_retrieved_at": "2026-10-16T02:03:26.069103+00:00",
+  "original_publication_day": "2026-09-10",
+  "original_published_at": null,
+  "new_derived_published_at": null,
+  "new_derived_retrieved_at": "2026-10-16T02:54:48.862530+00:00",
+  "new_derived_actual_firstsave": null,
+  "new_derived_known_by_receipt": null,
+  "knownby_scope": "No DB connection/write or receipt mutation. Original entire object and saved input pins unchanged; file-only generated source has no actual ledger availability receipt. No firstsave inferred from retrieval/review/processing.",
+  "component_checks_and_value_paths": [
+    {
+      "fact_id": "1904-split-dividend-composite-display-interim-pre-split-20260910",
+      "concept": "issuer_forecast_interim_dividend_pre_split_display",
+      "kind": "issuer_guidance",
+      "raw_value": "99 円 00 銭",
+      "value": "99.00",
+      "unit": "JPY-per-share",
+      "normalization": {
+        "canonical_unit": "JPY-per-share",
+        "component_span_basis": "Half-open Unicode character offsets within raw_value",
+        "components": {
+          "sen": {
+            "raw_token": "00",
+            "raw_unit": "銭",
+            "raw_value_span": [
+              5,
+              7
+            ],
+            "unit_multiplier_to_JPY": "0.01"
+          },
+          "sign": {
+            "multiplier": "1",
+            "raw_token": "",
+            "raw_value_span": [
+              0,
+              0
+            ]
+          },
+          "yen": {
+            "raw_token": "99",
+            "raw_unit": "円",
+            "raw_value_span": [
+              0,
+              2
+            ],
+            "unit_multiplier_to_JPY": "1"
+          }
+        },
+        "exact_quote_and_label_presence_verified": true,
+        "format": "jpy_yen_sen",
+        "raw_display_verified": true,
+        "raw_numeric_token_verified": false,
+        "status": "composite_display_normalized"
+      },
+      "share_basis": "pre_split",
+      "issuer_comparative_reference_only": false,
+      "dividend_record_date_as_explicitly_noted": "2026-09-30",
+      "start_date": null,
+      "end_date": null,
+      "accounting_basis": null,
+      "consolidation_scope": null,
+      "financial_inputs_verified": false,
+      "meaning_review_required": true,
+      "financial_input_adoption": false,
+      "current_annual_column_dash_not_numeric": true,
+      "simple_annual_addition_permitted": false,
+      "current_annual_DPS_adopted": false,
+      "investor_DDM_dividend_column_adopted": false,
+      "value_path": "facts.0.value",
+      "location": {
+        "annotated_display": "99 円 00 銭（注 1）",
+        "annotated_display_UTF8_byte_end": 5542,
+        "annotated_display_UTF8_byte_start": 5518,
+        "annotated_display_source_character_end": 2968,
+        "annotated_display_source_character_start": 2954,
+        "column": "中間（第2四半期末）",
+        "image_check_recorded_at": "2026-10-16T02:50:57.156154+00:00",
+        "image_file": "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/images/01-page02.png",
+        "image_sha256": "73b90d9de0b2a9c4a4d96144b367321c7d98393f77f22f10ecfdd933b2fce401",
+        "image_visually_checked_in_this_task": true,
+        "offset_basis": "zero-based source.content Unicode code points and UTF-8 bytes; end exclusive",
+        "pdf_page": 2,
+        "quote_reference": "dividends-mixed-share-bases-no-annual-sum",
+        "raw_display_UTF8_byte_end": 5531,
+        "raw_display_UTF8_byte_start": 5518,
+        "raw_display_source_character_end": 2963,
+        "raw_display_source_character_start": 2954,
+        "row": "今回修正 / 2027 年 3 月期（予想）",
+        "source_UTF8_byte_end": 6097,
+        "source_UTF8_byte_start": 4421,
+        "source_character_end": 3225,
+        "source_character_start": 2327,
+        "table": "Ⅳ 株式分割に伴う配当予想の修正"
+      }
+    },
+    {
+      "fact_id": "1904-split-dividend-composite-display-final-post-split-20260910",
+      "concept": "issuer_forecast_final_dividend_post_split_display",
+      "kind": "issuer_guidance",
+      "raw_value": "24 円 75 銭",
+      "value": "24.75",
+      "unit": "JPY-per-share",
+      "normalization": {
+        "canonical_unit": "JPY-per-share",
+        "component_span_basis": "Half-open Unicode character offsets within raw_value",
+        "components": {
+          "sen": {
+            "raw_token": "75",
+            "raw_unit": "銭",
+            "raw_value_span": [
+              5,
+              7
+            ],
+            "unit_multiplier_to_JPY": "0.01"
+          },
+          "sign": {
+            "multiplier": "1",
+            "raw_token": "",
+            "raw_value_span": [
+              0,
+              0
+            ]
+          },
+          "yen": {
+            "raw_token": "24",
+            "raw_unit": "円",
+            "raw_value_span": [
+              0,
+              2
+            ],
+            "unit_multiplier_to_JPY": "1"
+          }
+        },
+        "exact_quote_and_label_presence_verified": true,
+        "format": "jpy_yen_sen",
+        "raw_display_verified": true,
+        "raw_numeric_token_verified": false,
+        "status": "composite_display_normalized"
+      },
+      "share_basis": "post_split",
+      "issuer_comparative_reference_only": false,
+      "dividend_record_date_as_explicitly_noted": "2027-03-31",
+      "start_date": null,
+      "end_date": null,
+      "accounting_basis": null,
+      "consolidation_scope": null,
+      "financial_inputs_verified": false,
+      "meaning_review_required": true,
+      "financial_input_adoption": false,
+      "current_annual_column_dash_not_numeric": true,
+      "simple_annual_addition_permitted": false,
+      "current_annual_DPS_adopted": false,
+      "investor_DDM_dividend_column_adopted": false,
+      "value_path": "facts.1.value",
+      "location": {
+        "annotated_display": "24 円 75 銭（注 2）",
+        "annotated_display_UTF8_byte_end": 5459,
+        "annotated_display_UTF8_byte_start": 5435,
+        "annotated_display_source_character_end": 2917,
+        "annotated_display_source_character_start": 2903,
+        "column": "期末",
+        "image_check_recorded_at": "2026-10-16T02:50:57.156154+00:00",
+        "image_file": "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/images/01-page02.png",
+        "image_sha256": "73b90d9de0b2a9c4a4d96144b367321c7d98393f77f22f10ecfdd933b2fce401",
+        "image_visually_checked_in_this_task": true,
+        "offset_basis": "zero-based source.content Unicode code points and UTF-8 bytes; end exclusive",
+        "pdf_page": 2,
+        "quote_reference": "dividends-mixed-share-bases-no-annual-sum",
+        "raw_display_UTF8_byte_end": 5448,
+        "raw_display_UTF8_byte_start": 5435,
+        "raw_display_source_character_end": 2912,
+        "raw_display_source_character_start": 2903,
+        "row": "今回修正 / 2027 年 3 月期（予想）",
+        "source_UTF8_byte_end": 6097,
+        "source_UTF8_byte_start": 4421,
+        "source_character_end": 3225,
+        "source_character_start": 2327,
+        "table": "Ⅳ 株式分割に伴う配当予想の修正"
+      }
+    },
+    {
+      "fact_id": "1904-split-dividend-composite-display-annual-reference-pre-split-20260910",
+      "concept": "issuer_reference_annual_dividend_pre_split_equivalent_display",
+      "kind": "issuer_guidance",
+      "raw_value": "198 円 00 銭",
+      "value": "198.00",
+      "unit": "JPY-per-share",
+      "normalization": {
+        "canonical_unit": "JPY-per-share",
+        "component_span_basis": "Half-open Unicode character offsets within raw_value",
+        "components": {
+          "sen": {
+            "raw_token": "00",
+            "raw_unit": "銭",
+            "raw_value_span": [
+              6,
+              8
+            ],
+            "unit_multiplier_to_JPY": "0.01"
+          },
+          "sign": {
+            "multiplier": "1",
+            "raw_token": "",
+            "raw_value_span": [
+              0,
+              0
+            ]
+          },
+          "yen": {
+            "raw_token": "198",
+            "raw_unit": "円",
+            "raw_value_span": [
+              0,
+              3
+            ],
+            "unit_multiplier_to_JPY": "1"
+          }
+        },
+        "exact_quote_and_label_presence_verified": true,
+        "format": "jpy_yen_sen",
+        "raw_display_verified": true,
+        "raw_numeric_token_verified": false,
+        "status": "composite_display_normalized"
+      },
+      "share_basis": "issuer_pre_split_comparative_reference",
+      "issuer_comparative_reference_only": true,
+      "dividend_record_date_as_explicitly_noted": null,
+      "start_date": null,
+      "end_date": null,
+      "accounting_basis": null,
+      "consolidation_scope": null,
+      "financial_inputs_verified": false,
+      "meaning_review_required": true,
+      "financial_input_adoption": false,
+      "current_annual_column_dash_not_numeric": true,
+      "simple_annual_addition_permitted": false,
+      "current_annual_DPS_adopted": false,
+      "investor_DDM_dividend_column_adopted": false,
+      "value_path": "facts.2.value",
+      "location": {
+        "annotated_display": "【198 円 00 銭】",
+        "annotated_display_UTF8_byte_end": 5628,
+        "annotated_display_UTF8_byte_start": 5608,
+        "annotated_display_source_character_end": 3038,
+        "annotated_display_source_character_start": 3026,
+        "column": "年間・【本株式分割前換算】",
+        "image_check_recorded_at": "2026-10-16T02:50:57.156154+00:00",
+        "image_file": "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/images/01-page02.png",
+        "image_sha256": "73b90d9de0b2a9c4a4d96144b367321c7d98393f77f22f10ecfdd933b2fce401",
+        "image_visually_checked_in_this_task": true,
+        "offset_basis": "zero-based source.content Unicode code points and UTF-8 bytes; end exclusive",
+        "pdf_page": 2,
+        "quote_reference": "dividends-mixed-share-bases-no-annual-sum",
+        "raw_display_UTF8_byte_end": 5625,
+        "raw_display_UTF8_byte_start": 5611,
+        "raw_display_source_character_end": 3037,
+        "raw_display_source_character_start": 3027,
+        "row": "今回修正 / 2027 年 3 月期（予想）",
+        "source_UTF8_byte_end": 6097,
+        "source_UTF8_byte_start": 4421,
+        "source_character_end": 3225,
+        "source_character_start": 2327,
+        "table": "Ⅳ 株式分割に伴う配当予想の修正"
+      }
+    }
+  ],
+  "per_fact_declarations_byte_equivalent_JSON_values_retained": true,
+  "all_original_and_old_1904six_pins_unchanged": true,
+  "immutable_existing_pins": {
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/input-validation.json": "391cbff7befbfc6284582c30b2a63154450ee18f13aec944939b26263ddf256e",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/parent-input-acceptance.json": "1092007b56f1b7c8dac59bd9d1e75cb9137e639707329a35cc20af9721cc0f69",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/source-reference.json": "5362b6a66e2e3b04116b14f9855bd654c4c8bea5a75f81a55c53336dc1520c55",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/quotes.json": "8818be3dd5e003c444f728cec503b37d44dd984227b860f5c1ffabf6f4c115b5",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/README.md": "404510b24b6634fccc7d1e442e58dff6cc654714162afacedbb921a60b191653",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/normalization-input.json": "b370dd0d488fbd07153a23b62bcf1cacc2df8cfade162e68471eb10051141edb",
+    "research/ir-case-studies-2026-10-15/1904/disclosed-facts-2026-10-16/manifest.json": "d72e569d5a3f796f93fa834978b972d69c9e030ab2c679e092c658a7b9b1660a",
+    "research/ir-case-studies-2026-10-15/1904/disclosed-facts-2026-10-16/normalization-input.json": "9e4e708c4afa9d679d71731452b796078911a207b39786b11318adfcf169d3d2",
+    "research/ir-case-studies-2026-10-15/1904/disclosed-facts-2026-10-16/normalized-bundle.json": "07e79894f6727dba572e63852bf7093e3fe805547742c832e48168e14efd0ea0",
+    "research/ir-case-studies-2026-10-15/1904/disclosed-facts-2026-10-16/qualitative-review/case-after.json": "3480889cbe1d9213c8fd0faf66ef7efe1bbcfe8e3aa037059d844e6c99b60834",
+    "research/ir-case-studies-2026-10-15/1904/disclosed-facts-2026-10-16/qualitative-review/parent-acceptance.json": "19ee331e9cf7e4e4bebfeab5b49fb8f1e93a93cf6a905333b1b3dcec3d4d9c53",
+    "research/ir-case-studies-2026-10-15/1904/disclosed-facts-2026-10-16/qualitative-review/result.json": "0db038f3628305c50aaf94476377a8dad454dd2ce4aeae81b76b278f16d4feb7",
+    "research/ir-case-studies-2026-10-15/1904/disclosed-facts-2026-10-16/reproduce.py": "e0dde78bd85074da5333ced6c770d73deafdf780613ad8857a8efd86f1a12f0c",
+    "research/ir-case-studies-2026-10-15/1904/disclosed-facts-2026-10-16/reproduction.json": "e10af368fa644e0b0dd8a7732a0cc69d94505c2a4562675cfe423be863ae0ffa",
+    "research/ir-case-studies-2026-10-15/1904/disclosed-facts-2026-10-16/reproduction.log": "f098bfd1d9467b76bb3e25cf29e085f900f164b9ea386b170970c139f4f0dfdb",
+    "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/01-builder-snapshot.json": "e60eb6bb8208e947391477e519949f84850c03955aeefdb10bbe17d55c38a983",
+    "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/images/01-page02.png": "73b90d9de0b2a9c4a4d96144b367321c7d98393f77f22f10ecfdd933b2fce401",
+    "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/parent-acceptance.json": "a3187fd0b97583cf0705265350ed78f67edecf4d43b1b684e6ee20d7942ebb72",
+    "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/qualitative-review/parent-acceptance.json": "2b78d86ef62ab2d6472991470f3c67d60ed4a49ae5ae37dfb8364475afc0fd3e",
+    "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/raw/a161b4ca4ed3522db288dc50e7c5439f12a7e4b9b6e8581d0a537caca40f36d6": "a161b4ca4ed3522db288dc50e7c5439f12a7e4b9b6e8581d0a537caca40f36d6",
+    "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/source-bundle.json": "22abeef446081df6fa541badcfdef897dfb7aab901aa99f0fb974621e882b6c5",
+    "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/source-quotes.json": "97dd1f18e09ef9e1de2c6e461894011ce05d137a01ecad07f158915fafe81779",
+    "research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/text/01-full.txt": "6a4e3da47cd76c9d2c2677b073ceae08c67b17c8c5e8c52efa4866f4b63785d9",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-disclosed-facts-2026-10-16/README.md": "b5ca9badbfcd1630f4ab90041d2cf5190c3d24075dad1fd4217955b483f5db0b",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-disclosed-facts-2026-10-16/before-existing-file-hashes.json": "181458d8a70c95bef871af80dd0270b025f0a8c06d1c1b94e144859398f1f04e",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-disclosed-facts-2026-10-16/manifest.json": "2a18439a439391e6368ce70fa056d845c81e1f1b9d03f5f36bde4b67fe2d1c79",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-disclosed-facts-2026-10-16/normalizer-boundary.log": "da561b4b89557b192ce492a61ae1f759d078802823c1a45d7ff6868cd5423577",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-disclosed-facts-2026-10-16/parent-acceptance.json": "086d1e223eb90ae0b9f88a328cade5fdc24b7f7e0559bce30f1c3c40c3715c46",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-disclosed-facts-2026-10-16/quote.json": "58d95068b8ecb7b86965567814f7be7a3aab57a9b41b7bf0fc04ba9a427289ba",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-disclosed-facts-2026-10-16/raw-display-candidates.json": "435d3db31ad2c9218040106a5ae5b2ec1d6819ba1d49c16568d8f7628c18d87d",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-disclosed-facts-2026-10-16/reproduce_boundary.py": "ab53268d8edb180b61a35a50da444cee53b2d8cf809395a1450605dea0095ca6",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-disclosed-facts-2026-10-16/source-reference.json": "0ea5762246ea03ce678772f9362daaf743d4860b8bd84a751dfeccd267841d87",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-disclosed-facts-2026-10-16/unsupported-token-probe.json": "c1e1cdb68defe18f790a122dd4c533000f798582e8e3ba5dfc2099e733a98927",
+    "research/ir-case-studies-2026-10-15/1904/split-dividend-disclosed-facts-2026-10-16/validation.json": "769c9026079d777d9b5eadfe4bddc2ba7596972d4f64317fcd3150f05ca4ed8e",
+    "research/ir-yen-sen-normalization-design-2026-10-16/README.md": "5cfba875062d0cf21923324648c71112f8707fa1d60616ffecc1fa144ae9e68a",
+    "research/ir-yen-sen-normalization-design-2026-10-16/design.json": "3d2331a08fa3e94dbdc6cb5a46774e5e1e281ded65de00f569d3dd27feb57bdf",
+    "research/ir-yen-sen-normalization-design-2026-10-16/parent-design-acceptance.json": "b164906d6ee767ff57e16f3d146d097d8497ffd690526f8d9debd575273048c6",
+    "research/ir-yen-sen-normalization-integration-2026-10-16/parent-acceptance.json": "183c7d5df777d815ac6fcadf77b31663fb344eb0e2bbbc5db4ae83d96b81c7da"
+  },
+  "index_read_for_duplicate_ID_only": {
+    "path": "research/ir-case-studies-2026-10-15/disclosed-fact-index-v29.json",
+    "sha256": "105c79dc46d1543b56d35f32c447dadd1da407a481ba4ecf1f540d2aa0e5f234",
+    "all_three_fact_IDs_absent": true,
+    "index_changed": false
+  },
+  "DB_connections": 0,
+  "DB_writes": 0,
+  "GETs": 0,
+  "production_code_edits": 0,
+  "old_file_edits": 0,
+  "financial_adoptions": 0,
+  "new_forecasts_created": 0,
+  "annual_addition_or_split_adjustment": 0,
+  "DDM_column_adoptions": 0,
+  "IR_questions_or_external_actions": 0,
+  "actual_connection_authorized_by_this_receipt": false,
+  "failures": []
+}

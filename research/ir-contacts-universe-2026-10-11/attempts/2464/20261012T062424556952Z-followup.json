@@ -1,0 +1,105 @@
+{
+  "security_code": "2464",
+  "company_name": "Ａｏｂａ‐ＢＢＴ",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "サービス業",
+  "investigation_status": "provisional",
+  "verification_level": "official_form_link_only",
+  "official_url": "https://aoba-bbt.com/",
+  "contact_url": "https://www.bbt757.com/inquiry/mailform.asp?id=23",
+  "channels": [
+    "form"
+  ],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "candidate",
+  "attempted_at": "2026-10-11T04:48:21.162467+00:00",
+  "completed_at": "2026-10-11T04:48:26.119718+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/2464/20261011T044821162486Z/02.json",
+      "quote": "投資家の皆さまへ IR（投資家関係）や投資に関するお問い合わせは こちら から",
+      "purpose": "official_ir_form_assignment",
+      "source_link_url": "https://www.bbt757.com/inquiry/mailform.asp?id=23",
+      "url": "https://aoba-bbt.com/inquiry/",
+      "retrieved_at": "2026-10-11T04:48:22.769712+00:00",
+      "http_status": 200
+    },
+    {
+      "snapshot": "evidence/2464/20261011T044821162486Z/03.json",
+      "quote": "会社のドメインでのメールアドレスをご記入ください。Gmail、Yahoo!メール、Hotmail等個人のメールアドレスには、ご案内できません。",
+      "purpose": "training_form_limit_not_ir",
+      "url": "https://business.aoba-bbt.com/inquiry/",
+      "retrieved_at": "2026-10-11T04:48:25.479661+00:00",
+      "http_status": 200
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://aoba-bbt.com/",
+      "final_url": "https://aoba-bbt.com/",
+      "snapshot": "evidence/2464/20261011T044821162486Z/01.json",
+      "retrieved_at": "2026-10-11T04:48:21.964261+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://aoba-bbt.com/inquiry/",
+      "final_url": "https://aoba-bbt.com/inquiry/",
+      "snapshot": "evidence/2464/20261011T044821162486Z/02.json",
+      "retrieved_at": "2026-10-11T04:48:22.769712+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://aoba-bbt.com/business/inquiry/",
+      "final_url": "https://business.aoba-bbt.com/inquiry/",
+      "snapshot": "evidence/2464/20261011T044821162486Z/03.json",
+      "retrieved_at": "2026-10-11T04:48:25.479661+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "公式IR割当リンクのみ。最終メール/質問欄・会社名必須・個人条件・返信条件は未取得。"
+  ],
+  "discovery": {
+    "security_code": "2464",
+    "official_url": "https://aoba-bbt.com/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "Ａｏｂａ‐ＢＢＴ",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/2464/20261011T044821162486Z/01.json",
+      "normalized_name": "aobabbt",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/2464/20261011T044821162486Z/02.json",
+      "normalized_name": "aobabbt",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/2464/20261011T044821162486Z/03.json",
+      "normalized_name": "aobabbt",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 3,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "previous_attempts": [
+    "attempts/2464/20261011T044640525154Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_adaptive_old_audit_12",
+    "reviewed_at": "2026-10-11T07:02:34.833611+00:00",
+    "notes": "公式連絡先02が投資家IR質問を bbt757.com mailform.asp?id=23 に明示割当。実取得03は別の企業研修フォームでフリーメール拒否も研修用途の条件なのでIRへ転用しない。IR最終欄は未取得。 保存された公開本文・リンク・フォーム controls に基づく Codex 個別監査。追加 GET・送信 0 件。IR 窓口の不存在は判定していない。"
+  }
+}

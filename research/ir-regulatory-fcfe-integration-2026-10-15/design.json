@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-10-15T19:28:50.739890+00:00",
+  "author_source_id": "damodaran.financial-services.2009",
+  "author_pdf_sha256": "2e1b2d45a8d04ab14b8ed48825b64e7765dd896d59e1db34cce32ded23d07472",
+  "author_pdf_page": 22,
+  "formula": "FCFE_financial = NetIncome - ReinvestmentInRegulatoryCapital",
+  "not_implemented": [
+    "Required/target capital from regulatory balances or RWA",
+    "FCFE terminal value, equity value or share price",
+    "Forecast/dilution/capital-policy/decision adoption"
+  ],
+  "metadata_contract": "Exact common company/currency/amount-unit/entity/equity scope; separate income accounting basis and capital measurement definition; explicit annual nonoverlapping rows; matching per-row basis and period; no day-count certification.",
+  "numeric_domain": "Explicit signed finite decimal strings; zero and negative NI/reinvestment/FCFE retained; no clamping.",
+  "reuse": "Existing stable-reinvestment input/source/Decimal helper contracts, load_json and no-Store CLI path. No source provenance certification.",
+  "real_company_calculation": "Not requested.5831 historical quarter balances do not supply annual forward regulatory-capital reinvestment.",
+  "database_sha256": "90307d2c650642e7eff6150ee2877ae49d603a9192ccce45cba46b01c9330555"
+}

@@ -1,0 +1,35 @@
+{
+  "status": "accepted_current_qualitative_known_by_reading_only",
+  "recorded_at": "2026-10-15T22:45:13.783937+00:00",
+  "implementation": {
+    "path": "research/ir-qualitative-known-by-availability-2026-10-15/freeze.json",
+    "sha256": "09f539066ddd10895ae4a1e0faee5b70ae39716ba3f811de654e811f6714c4fb"
+  },
+  "independent_review": {
+    "path": "research/ir-qualitative-known-by-availability-2026-10-15/independent-review/review.json",
+    "sha256": "76930f78932c7e1cc706bd0b971e5217775d0d4052d7782efc7a7edae77ac284",
+    "checks": 32,
+    "findings": 0,
+    "trusted_old_whole_JSON_equivalent_cases": 9
+  },
+  "full_suite": {
+    "path": "research/ir-qualitative-known-by-availability-2026-10-15/parent-full-suite.json",
+    "sha256": "119168a83396ca2533901820d2207926a6226b291f975addcbb7c51239d2216e",
+    "test_count": 1523,
+    "unittest_seconds": "36.556"
+  },
+  "code_sha256": {
+    "src/ir_agent/qualitative_research.py": "2ca2058af8bbda868cbd24ad36408d14afcd075d35ac8a4140fc472997d675a5",
+    "tests/test_qualitative_known_by.py": "430b7da21532117bb0d82515b6a77844c754c56f798e1e08f87e255052d44778"
+  },
+  "actual_database_unchanged": true,
+  "actual_database_main_sha256": "956e9628f2f8c9094426f07a7ce67abb48ec4d42e86291b6fbea253be8ab5291",
+  "actual_database_writes": 0,
+  "new_GETs": 0,
+  "limits": [
+    "Qualitative wrapper only: sole exact-first-save unknown may be nonblocking only after verified legacy presence and full historical/current DAG usability",
+    "Null first_saved_at/first_save_known false/old arrival retained; no receipt or source rewriting",
+    "Bootstrap remains bounded by reviewed_at; ancestors/classification must already be usable then",
+    "Read-only monitor results and trusted receipt branch unchanged; no new financial inputs or policy thresholds"
+  ]
+}

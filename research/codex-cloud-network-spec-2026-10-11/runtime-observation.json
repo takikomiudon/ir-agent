@@ -1,0 +1,51 @@
+{
+  "observed_at": "2026-10-11T05:10:25.617412+00:00",
+  "runtime": {
+    "connectivity": "connected",
+    "observed_phase": "running",
+    "observations_current": true,
+    "spec_revision": "6",
+    "observed_spec_revision": "6",
+    "network_policy": {
+      "mode": "unrestricted",
+      "state": "unknown"
+    }
+  },
+  "configuration_draft": {
+    "draft_id": null,
+    "network_policy": {
+      "type": "unrestricted"
+    },
+    "pending_runtime_requirements": []
+  },
+  "startup_network_policy": {
+    "version": 1,
+    "vpn_configured": false,
+    "http_proxy": "http://proxy:8080",
+    "http_network_policy": {
+      "type": "unrestricted"
+    },
+    "tcp_connect_proxy": "http://proxy:8088",
+    "tcp_network_access": {
+      "domains": [],
+      "ip_ranges": []
+    }
+  },
+  "single_curl_probe": {
+    "requested_url": "https://www.jpx.co.jp/listing/stocks/new/index.html",
+    "http_status": 503,
+    "curl_exit_code": 22,
+    "curl_tls_verify_result": 0,
+    "submitted": false,
+    "response_body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: immediate connect error: Invalid argument|remote address:envoy://cloudflare_https_tunnel/"
+  },
+  "native_git_probe": {
+    "operation": "git ls-remote https://github.com/openai/codex-universal.git HEAD",
+    "exit_code": 128,
+    "http_status": 503,
+    "error_excerpt": "Invalid argument|remote address:envoy://cloudflare_https_tunnel/"
+  },
+  "settings_changed": false,
+  "proxy_bypassed": false,
+  "tls_verification_disabled": false
+}

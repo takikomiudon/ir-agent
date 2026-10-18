@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T13:25:09.448843+00:00",
+  "status": "finite_static_review_closed_documented_limited_view_no_new_contract_defect",
+  "scope": "current_decision_viewの保有状態再点検欠如だけ。位置来歴の主修正中はruntimeを実行せず、主修正の妥当性を本記録で認定しない。",
+  "conclusion": {
+    "new_P2_or_blocking_findings": [],
+    "finding_count": 0,
+    "current_position_revalidated": false,
+    "historical_raw_retention_is_intended": true,
+    "fresh_price_certifies_current_position": false,
+    "reason": "表示処理は情報訂正/最新thesis/価格の既存資格だけを再点検し、docsもfreshを保有状態再検証とはしない。旧履歴が残ることだけをbug扱いせず、既知限定viewを今回の契約違反へ拡張しない。"
+  },
+  "static_facts": [
+    {
+      "fact": "current_decision_viewはposition_at/declared_position_at又は宣言receiptを参照しない。",
+      "evidence": [
+        "PV03"
+      ]
+    },
+    {
+      "fact": "他の現行holdがなければ保存reviewのproposed_actionが表示に残り得るが、表示だけで現在heldや古いpositionの来歴が確認されたことにはならない。",
+      "evidence": [
+        "PV01",
+        "PV03",
+        "PV04"
+      ]
+    },
+    {
+      "fact": "保存されたposition/context/resultを歴史記録として保持することと、現在の保有/来歴を別途確認することは区別する。過去へ現在位置を投影して修復したとは扱わない。",
+      "evidence": [
+        "PV02",
+        "PV04",
+        "PV05"
+      ]
+    },
+    {
+      "fact": "既存historical-position testは過去時点のreview/再送を維持する意図を示す。ただし旧runtime注入のため、後日現在時刻でのposition mismatch再現を済ませたという証拠にはしない。",
+      "evidence": [
+        "PV06"
+      ]
+    }
+  ],
+  "author_vs_project": "情報/価格/仮説の現在表示資格は本プロジェクトの限定実装であり、著者の数値売買規則や現在保有の外部確認を表すものではない。",
+  "sources": {
+    "view_code": {
+      "file": "src/ir_agent/information_review.py",
+      "sha256": "22df6e4a6e5d717a390e817bb311b091112eb1d44722e0651623548f09b7d9ee"
+    },
+    "view_doc": {
+      "file": "docs/current-price-views.md",
+      "sha256": "55d776377d6ed58cd7926099520956e7af7666adca2b9ab5920bfdc97e74f24c"
+    },
+    "workflow": {
+      "file": "docs/workflow.md",
+      "sha256": "6415612b8dca5bdd3c9070cdacc94117292968ac1c05dc8cbfe63d4395028ec3"
+    },
+    "policy_doc": {
+      "file": "docs/decision-policy.md",
+      "sha256": "e687e70c70ec9ce4b40b935bb9e908cd2d1328f44dfa488fad639557fbba8de5"
+    },
+    "existing_test_snapshot": {
+      "file": "research/ir-catalog-position-boundary-review-2026-10-15/source-before/test_decision_lifecycle.py",
+      "sha256": "cea2467f3a6096e6fdc5960bf9e64f915386063cce70ee58547c1033c27c360d"
+    },
+    "existing_price_test": {
+      "file": "tests/test_stale_decision_workflow.py",
+      "sha256": "5fa7f2bd36212b60cf26ab9e90cc1eba81dd406a46419f5bd2cf75b54dad2768"
+    }
+  },
+  "anchors": {
+    "PV01": {
+      "source_key": "view_doc",
+      "quote": "freshは価格の時間条件だけの確認で、現在の仮説・保有・全根拠・金融入力を再検証した意味ではない。",
+      "character_start": 775,
+      "character_end_exclusive": 825,
+      "line_start": 11,
+      "meaning": "An explicit limit of current_quote_check; do not read a fresh price as verification of present holdings."
+    },
+    "PV02": {
+      "source_key": "view_doc",
+      "quote": "元JSONをそのまま取得するStoreの読取りと、現在利用の可否を示す表示を区別する。",
+      "character_start": 1323,
+      "character_end_exclusive": 1366,
+      "line_start": 17,
+      "meaning": "Historical immutable raw and dynamic views are separate; this sentence does not promise every possible qualification is rechecked."
+    },
+    "PV03": {
+      "source_key": "view_code",
+      "quote": "requirements = ((['requires_information_review'] if changes else [])\n                    + (['requires_thesis_review'] if thesis_hold else [])\n                    + (['requires_price_review'] if price_hold else []))",
+      "character_start": 12504,
+      "character_end_exclusive": 12719,
+      "line_start": 241,
+      "meaning": "The current requirement list is limited to information corrections, latest thesis version and quote timing. No position qualification is added here."
+    },
+    "PV04": {
+      "source_key": "view_code",
+      "quote": "viewed = deepcopy(review)\n    checked_at = _current_time(now)",
+      "character_start": 11817,
+      "character_end_exclusive": 11878,
+      "line_start": 230,
+      "meaning": "Display works from a copy; it does not rewrite the stored review/context."
+    },
+    "PV05": {
+      "source_key": "workflow",
+      "quote": "保有状態も初めて観測した日時と変更を保存する。過去時点の保有履歴がなければ `position_history_unknown` として判断を保留し、現在の保有状態を過去へ投影しない。",
+      "character_start": 16672,
+      "character_end_exclusive": 16764,
+      "line_start": 269,
+      "meaning": "Historical decision-time position requirements are separate from the limited current display."
+    },
+    "PV06": {
+      "source_key": "existing_test_snapshot",
+      "quote": "def test_later_position_change_does_not_rewrite_historical_review_or_retry(self):",
+      "character_start": 9178,
+      "character_end_exclusive": 9259,
+      "line_start": 155,
+      "meaning": "Existing historical test intent. Its replay supplies the old injected runtime EVALUATED, so it is not a probe of current display after a later real runtime."
+    }
+  },
+  "offset_unit": "zero-based Unicode characters from byte-preserving UTF-8 decode; end exclusive",
+  "runtime_probe": {
+    "count": 0,
+    "engine_imports_or_executions": 0,
+    "reason": "親から主修正freeze前のprobe禁止を受領。さらにdocsの既知限定に沿ってprobe不要で閉じる指示を受領したため、freeze待ちで実行を広げない。"
+  },
+  "required_code_or_gate_changes": [],
+  "new_design_proposals": [],
+  "validation": {
+    "source_files_hash_unchanged": true,
+    "exact_anchor_count": 6,
+    "position_lookup_absent_in_function_static_check": true,
+    "actual_DB_accesses": 0,
+    "new_GETs": 0,
+    "production_or_old_file_changes": 0,
+    "test_runs": 0,
+    "fullsuite_runs": 0
+  },
+  "limits": [
+    "runtimeでmetadata由来/来歴不明position又は後の変更を再現したものではない。",
+    "保有宣言receiptの別担当実装を、この記録で安定済み/検証済みとはしない。",
+    "currentの三つの既存holdを通過したことを、全根拠/全現在資格の認証へ広げない。",
+    "将来の全資格gate又はcurrentviewコード変更は提案/実装しない。"
+  ]
+}

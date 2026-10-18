@@ -1,0 +1,992 @@
+{
+  "schema_version": 1,
+  "artifact_type": "offline_financial_input_meaning_review",
+  "company_id": "jp:5988",
+  "recorded_at": "2026-10-15T02:33:08.715202+00:00",
+  "reviewer": "Codex / saved issuer disclosure review",
+  "research_only": true,
+  "financial_inputs_verified": false,
+  "model_inputs_adopted": false,
+  "new_get_count": 0,
+  "scope_note": "保存済み原sourceのみの有限点検。supportedは当該記述と期間・範囲の対応が保存原文に支持されるという意味で、モデル入力の採用・予想達成・現在の最新版を保証しない。unknownは今回の保存コーパスで未確認であり非公表や不存在の断定ではない。",
+  "input_artifact": "disclosed-facts-draft.json",
+  "reviewed_source_ids": [
+    "case-public:0c8258cb856d65dc9647ba810a3b76eecfc1ac6038e7335390dc5b3b93eca3f3",
+    "case-public:f36c0056d343f1f49fb8b7e241ca005e91bd82601781168a533f748e0b7000be",
+    "case-public:05b94597b13d0b685c2d3328947b252a4122da9ab8abeb374944a6ab678f149d",
+    "case-public:d02afabf8f4cf9fd098129bb188f78f1cd4d2af75aafe4b1fbe050f4ed0e1774",
+    "case-public:34d8d32eef9a632ed1565f06c199af7dbd5a355cfdac1e9e6ad318fa40a17c94",
+    "case-public:a195dc46d270d743a5e6b6496666e44f8a242d7a9bac9670d8102d3ad5e9b0af",
+    "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+    "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12"
+  ],
+  "source_inventory": [
+    {
+      "id": "case-public:0c8258cb856d65dc9647ba810a3b76eecfc1ac6038e7335390dc5b3b93eca3f3",
+      "title": "2027年３月期 第１四半期決算短信〔日本基準〕（連結） – 株式会社パイオラックス",
+      "url": "https://www.piolax.co.jp/jp/202608052048-6738/",
+      "retrieved_at": "2026-10-15T01:10:48.713383+00:00",
+      "publication_date": "2026-08-05",
+      "content_sha256": "0b74679cd0be8087bbf1ec05875d9cc15ff9caff62871ef5535141dea3fac2cf",
+      "saved_extraction": "5988/02.json"
+    },
+    {
+      "id": "case-public:f36c0056d343f1f49fb8b7e241ca005e91bd82601781168a533f748e0b7000be",
+      "title": "財務レポート – 株式会社パイオラックス",
+      "url": "https://www.piolax.co.jp/jp/shareholder/ir/financial-reports/",
+      "retrieved_at": "2026-10-15T01:12:05.111556+00:00",
+      "publication_date": null,
+      "content_sha256": "1b35213b1778230efa32499a47f39c6439ca15057edeabd0e68f6632c700813e",
+      "saved_extraction": "5988/10.json"
+    },
+    {
+      "id": "case-public:05b94597b13d0b685c2d3328947b252a4122da9ab8abeb374944a6ab678f149d",
+      "title": "IRカレンダー – 株式会社パイオラックス",
+      "url": "https://www.piolax.co.jp/jp/shareholder/ir/ir-information/",
+      "retrieved_at": "2026-10-15T01:11:08.159846+00:00",
+      "publication_date": null,
+      "content_sha256": "3dd829d188b27188e970f7d564abcf4e9e6e313a75840bd356e586a456a92106",
+      "saved_extraction": "5988/06.json"
+    },
+    {
+      "id": "case-public:d02afabf8f4cf9fd098129bb188f78f1cd4d2af75aafe4b1fbe050f4ed0e1774",
+      "title": "IRライブラリ – 株式会社パイオラックス",
+      "url": "https://www.piolax.co.jp/jp/shareholder/ir/library/",
+      "retrieved_at": "2026-10-15T01:10:46.649948+00:00",
+      "publication_date": null,
+      "content_sha256": "107f72c6b7a4201a1cb714a7b69fb9851486459acf98c9e03414e7e1e097bc6a",
+      "saved_extraction": "5988/01.json"
+    },
+    {
+      "id": "case-public:34d8d32eef9a632ed1565f06c199af7dbd5a355cfdac1e9e6ad318fa40a17c94",
+      "title": "2025-2027_management-plan_R.pdf",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/2025-2027_management-plan_R.pdf",
+      "retrieved_at": "2026-10-15T01:11:50.219184+00:00",
+      "publication_date": "2026-05-12",
+      "content_sha256": "e64d2a5f5826236801b5dd06945eaed585e901d778bedf6539b5473882f8fd1f",
+      "saved_extraction": "5988/09.txt"
+    },
+    {
+      "id": "case-public:a195dc46d270d743a5e6b6496666e44f8a242d7a9bac9670d8102d3ad5e9b0af",
+      "title": "20260512_2025-q4_summary_R2.pdf",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/20260512_2025-q4_summary_R2.pdf",
+      "retrieved_at": "2026-10-15T01:11:46.331748+00:00",
+      "publication_date": "2026-05-12",
+      "content_sha256": "f730f4c2b6d56fccefec43d7ae99fb478b8b1451114be6c4d9c595ca34121d64",
+      "saved_extraction": "5988/08.txt"
+    },
+    {
+      "id": "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+      "title": "20260618_2025-q4_report.pdf",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf",
+      "retrieved_at": "2026-10-15T01:12:38.091035+00:00",
+      "publication_date": "2026-06-18",
+      "content_sha256": "a9acbc3544e789cae8369d1e45f02747928fadda584c1839780a12a55fe4bd01",
+      "saved_extraction": "5988/11.txt"
+    },
+    {
+      "id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+      "title": "20260805_2026-q1_tanshin.pdf",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+      "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+      "publication_date": "2026-08-05",
+      "content_sha256": "3b1258cc4e95b63a6a355a8e96091887651f2d42e175492f328ff1564aa7749c",
+      "saved_extraction": "5988/07.txt"
+    }
+  ],
+  "items": [
+    {
+      "id": "forecast_eps_period_and_consolidation",
+      "label": "通期予想EPSの期間・範囲",
+      "status": "supported",
+      "value": {
+        "raw_value": "27.45",
+        "unit": "JPY-per-share",
+        "kind": "issuer_guidance",
+        "consolidation": "consolidated",
+        "accounting_basis": "Japanese GAAP",
+        "label": "１株当たり当期純利益"
+      },
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "親会社所有者/株主に帰属する利益を示す連結業績予想の1株値",
+      "evidence": [
+        {
+          "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+          "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+          "publication_date": "2026-08-05",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "３．2027年３月期の連結業績予想（2026年４月１日～2027年３月31日）\n                                               （％表示は、通期は対前期、四半期は対前年同四半期増減率）\n                                                                          親会社株主に帰属                １株当たり\n                   売上高                営業利益              経常利益\n                                                                           する当期純利益                当期純利益\n                百万円           ％     百万円         ％      百万円          ％      百万円   ％                   円 銭\n     通期         63,000       1.5    1,500      2.0     1,500       3.2       700 －                   27.45\n（注）１．直近に公表されている業績予想からの修正の有無： 無\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "連結業績予想・通期EPS欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+          "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+          "publication_date": "2026-08-05",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "2027年３月期            第１四半期決算短信〔日本基準〕（連結）\n                                                                                                 2026年８月５日\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "決算短信表紙の会計基準・連結表示",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "見出しの対象日・連結表示と通期EPSの列を同じ原短信で確認。実績値や半期値とは別。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "forecast_annual_dps_and_installments",
+      "label": "年間配当予想の期間・合計・内訳",
+      "status": "supported",
+      "value": {
+        "raw_value": "92.00",
+        "unit": "JPY-per-share",
+        "kind": "issuer_guidance",
+        "interim_jpy": "39.00",
+        "fiscal_year_end_jpy": "53.00",
+        "entity": "issuer distribution per share, not consolidated earnings"
+      },
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "当期予想行の年間配当金・合計欄",
+      "evidence": [
+        {
+          "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+          "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+          "publication_date": "2026-08-05",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "２．配当の状況\n                                              年間配当金\n               第１四半期末         第２四半期末          第３四半期末             期末                合計\n                   円 銭            円 銭             円 銭                   円 銭             円 銭\n2026年３月期             －            39.00             －                   53.00           92.00\n2027年３月期             －\n2027年３月期（予想）                          39.00             －               53.00           92.00\n\n（注）１．直近に公表されている配当予想からの修正の有無： 無\n\n\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "提出会社の年間1株配当予想・合計欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "合計は期末のみの額でなく年間予想。配当は提出会社の株式への分配で、連結利益額の測定値と同一視しない。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "quarter_actual_share_counts",
+      "label": "当四半期期末株式数・自己株式数と期中平均",
+      "status": "supported",
+      "value": {
+        "share_class": "ordinary shares",
+        "issued_including_treasury": "37054100",
+        "treasury_at_period_end": "13003582",
+        "quarter_weighted_average": "24155623"
+      },
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2026-06-30",
+        "label": "2027年3月期第1四半期・実績"
+      },
+      "scope": "短信に記載された当第1四半期普通株式数",
+      "evidence": [
+        {
+          "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+          "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+          "publication_date": "2026-08-05",
+          "pdf_page": 2,
+          "printed_page": null,
+          "quote": "（４）発行済株式数（普通株式）\n      ①    期末発行済株式数（自己株式を含む）         2027年３月期１Ｑ   37,054,100株   2026年３月期     37,054,100株\n      ②    期末自己株式数                   2027年３月期１Ｑ   13,003,582株   2026年３月期     12,787,708株\n      ③   期中平均株式数（四半期累計）             2027年３月期１Ｑ   24,155,623株   2026年３月期１Ｑ   27,582,886株\n      (注)\n      １．当社は、役員向け株式報酬制度を導入しており、信託に残存する自社の株式は、期中平均株式数の計算におい\n      て控除する自己株式に含めております。（前第１四半期連結会計期間 87,376株、当第１四半期連結会計期間\n      87,376株）\n      ２．当社は、従業員向け株式報酬制度を導入しており、信託に残存する自社の株式は、期中平均株式数の計算にお\n      いて控除する自己株式に含めております。（前第１四半期連結会計期間 63,919株、当第１四半期連結会計期間\n      62,400株）\n\n\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2026-06-30",
+            "label": "2027年3月期第1四半期・実績"
+          },
+          "scope": "普通株式数と自己株式、四半期累計の期中平均株式数",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "期末株式数（自己株式含む）、自己株式数、四半期累計の期中平均はそれぞれ異なる表示。今回の期間を超える予想株式数ではない。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "forecast_eps_weighted_average_share_count",
+      "label": "通期予想EPSに使った将来加重平均株式数",
+      "status": "unknown",
+      "value": null,
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "通期予想EPSの分母",
+      "evidence": [
+        {
+          "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+          "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+          "publication_date": "2026-08-05",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "３．2027年３月期の連結業績予想（2026年４月１日～2027年３月31日）\n                                               （％表示は、通期は対前期、四半期は対前年同四半期増減率）\n                                                                          親会社株主に帰属                １株当たり\n                   売上高                営業利益              経常利益\n                                                                           する当期純利益                当期純利益\n                百万円           ％     百万円         ％      百万円          ％      百万円   ％                   円 銭\n     通期         63,000       1.5    1,500      2.0     1,500       3.2       700 －                   27.45\n（注）１．直近に公表されている業績予想からの修正の有無： 無\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "連結業績予想・通期EPS欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+          "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+          "publication_date": "2026-08-05",
+          "pdf_page": 2,
+          "printed_page": null,
+          "quote": "（４）発行済株式数（普通株式）\n      ①    期末発行済株式数（自己株式を含む）         2027年３月期１Ｑ   37,054,100株   2026年３月期     37,054,100株\n      ②    期末自己株式数                   2027年３月期１Ｑ   13,003,582株   2026年３月期     12,787,708株\n      ③   期中平均株式数（四半期累計）             2027年３月期１Ｑ   24,155,623株   2026年３月期１Ｑ   27,582,886株\n      (注)\n      １．当社は、役員向け株式報酬制度を導入しており、信託に残存する自社の株式は、期中平均株式数の計算におい\n      て控除する自己株式に含めております。（前第１四半期連結会計期間 87,376株、当第１四半期連結会計期間\n      87,376株）\n      ２．当社は、従業員向け株式報酬制度を導入しており、信託に残存する自社の株式は、期中平均株式数の計算にお\n      いて控除する自己株式に含めております。（前第１四半期連結会計期間 63,919株、当第１四半期連結会計期間\n      62,400株）\n\n\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2026-06-30",
+            "label": "2027年3月期第1四半期・実績"
+          },
+          "scope": "普通株式数と自己株式、四半期累計の期中平均株式数",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "保存資料は通期EPSと四半期実績株式数を開示するが、その通期予想の正確な分母・自己株取得処分や新株発行の時期別織込みは特定できなかった。EPSと丸められた利益の逆算は採用しない。",
+      "remaining_missing": [
+        "会社が使用した通期加重平均普通株式数と予想期内の自己株式取得・処分・発行の織込み時点"
+      ],
+      "model_input_adopted": false
+    },
+    {
+      "id": "forecast_uncertainty",
+      "label": "会社予想の不確実性",
+      "status": "supported",
+      "value": {
+        "issuer_forecast_not_guarantee": true
+      },
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "会社が公表した見通しに付された注意書き",
+      "evidence": [
+        {
+          "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+          "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+          "publication_date": "2026-08-05",
+          "pdf_page": 2,
+          "printed_page": null,
+          "quote": "（将来に関する記述等についてのご注意）\n      本資料に記載されている業績見通し等の将来に関する記述は、当社が現在入手している情報及び合理的であると判\n     断する一定の前提に基づいており、実際の業績等は様々な要因により大きく異なる可能性があります。業績予想の前\n     提となる条件及び業績予想のご利用にあたっての注意事項等については、添付資料P.2「（３）連結業績予想などの\n     将来予測情報に関する説明」をご覧ください。\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "予想は公表時点の情報・仮定であり不確実性を伴うという開示",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "会社自身が入手可能情報・前提と実際の結果の乖離可能性を説明している。確率分布・シナリオ確率を公表したという意味ではない。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "reported_eps_method",
+      "label": "直前通期実績EPSの計算基礎",
+      "status": "supported",
+      "value": {
+        "basis": "ordinary-share attributable profit/loss and average ordinary shares are separately disclosed",
+        "weighted_average_ordinary_shares": "25497076"
+      },
+      "target_period": {
+        "start_date": "2025-04-01",
+        "end_date": "2026-03-31",
+        "label": "2026年3月期・実績"
+      },
+      "scope": "連結1株当たり情報",
+      "evidence": [
+        {
+          "source_id": "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf",
+          "retrieved_at": "2026-10-15T01:12:38.091035+00:00",
+          "publication_date": "2026-06-18",
+          "pdf_page": 103,
+          "printed_page": 100,
+          "quote": "   （１株当たり情報）\n         前連結会計年度                                    当連結会計年度\n       （自 2024年４月１日                               （自 2025年４月１日\n        至 2025年３月31日）                              至 2026年３月31日）\n １株当たり純資産額              2,642.64円        １株当たり純資産額                  2,672.60円\n １株当たり当期純利益金額             52.67円         １株当たり当期純損失金額（△）              △0.85円\n  なお、潜在株式調整後１株当たり当期純利益金額                  なお、潜在株式調整後１株当たり当期純利益金額\n については、潜在株式が存在しないため記載してお                 については、潜在株式が存在しないため記載してお\n りません。                                   りません。\n（注）１．当社は、役員向け株式報酬制度を導入しており、信託に残存する自社の株式は、「１株当たり純資産額」の\n     算定上、期末発行済株式総数から控除する自己株式に含めております。（前連結会計年度 87,376株、当連\n     結会計年度 87,376株）\n      また、「１株当たり当期純利益」又は「１株当たり当期純損失」の算定上、期中平均株式数の計算におい\n     て控除する自己株式に含めております。（前連結会計年度 96,916株、当連結会計年度 87,376株）\n   ２．当社は、従業員向け株式報酬制度を導入しており、信託に残存する自社の株式は、「１株当たり純資産額」\n     の算定上、期末発行済株式総数から控除する自己株式に含めております。（前連結会計年度 63,919株 当\n     連結会計年度 63,319株）\n      また、「１株当たり当期純利益」又は「１株当たり当期純損失」の算定上、期中平均株式数の計算におい\n     て控除する自己株式に含めております。（前連結会計年度 64,485株 当連結会計年度 63,873株）\n\n   ２．１株当たり純資産額の算定上の基礎は、以下のとおりであります。\n                                      前連結会計年度                当連結会計年度\n                                    （2025年３月31日）           （2026年３月31日）\n純資産の部の合計額（百万円）                               91,781                 66,144\n純資産の部の合計額から控除する金額（百万円）                        1,335                  1,289\n（うち非支配株主持分）                                 (1,335)                (1,289)\n普通株式に係る期末の純資産額（百万円）                           90,446                 64,854\n１株当たり純資産額の算定に用いられた期末の普通\n                                          34,225,790             24,266,392\n株式の数（株）\n\n   ３．１株当たり当期純利益金額又は１株当たり当期純損失金額の算定上の基礎は、以下のとおりであります。\n                                      前連結会計年度                当連結会計年度\n                                    （自 2024年４月１日           （自 2025年４月１日\n                                     至 2025年３月31日）          至 2026年３月31日）\n１株当たり当期純利益金額又は１株当たり当期純損\n失金額（△）\n 親会社株主に帰属する当期純利益金額又は親会社\n                                                  1,792                  △21\n 株主に帰属する当期純損失金額（△）（百万円）\n 普通株主に帰属しない金額（百万円）                                     －                      －\n 普通株式に係る親会社株主に帰属する当期純利益\n 金額又は普通株式に係る親会社株主に帰属する当                          1,792                   △21\n 期純損失金額（△）（百万円）\n 普通株式の期中平均株式数（株）                            34,034,731             25,497,076\n\n   （重要な後発事象）\n    該当事項はありません。\n\n\n\n\n                               - 100 -\n",
+          "target_period": {
+            "start_date": "2025-04-01",
+            "end_date": "2026-03-31",
+            "label": "2026年3月期・実績"
+          },
+          "scope": "連結1株当たり情報、潜在株式不存在と信託株の控除",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "有報は普通株式に係る利益/損失と普通株式の期中平均株式数を計算基礎として示す。予想期の分母数値とは別。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "trust_treasury_shares_treatment",
+      "label": "信託保有株式の自己株式としての控除",
+      "status": "supported",
+      "value": {
+        "officer_trust_current_quarter_shares": "87376",
+        "employee_trust_current_quarter_shares": "62400",
+        "treatment": "deducted as treasury shares when calculating quarter-average shares"
+      },
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2026-06-30",
+        "label": "2027年3月期第1四半期・実績"
+      },
+      "scope": "当第1四半期の株式報酬信託",
+      "evidence": [
+        {
+          "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+          "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+          "publication_date": "2026-08-05",
+          "pdf_page": 2,
+          "printed_page": null,
+          "quote": "（４）発行済株式数（普通株式）\n      ①    期末発行済株式数（自己株式を含む）         2027年３月期１Ｑ   37,054,100株   2026年３月期     37,054,100株\n      ②    期末自己株式数                   2027年３月期１Ｑ   13,003,582株   2026年３月期     12,787,708株\n      ③   期中平均株式数（四半期累計）             2027年３月期１Ｑ   24,155,623株   2026年３月期１Ｑ   27,582,886株\n      (注)\n      １．当社は、役員向け株式報酬制度を導入しており、信託に残存する自社の株式は、期中平均株式数の計算におい\n      て控除する自己株式に含めております。（前第１四半期連結会計期間 87,376株、当第１四半期連結会計期間\n      87,376株）\n      ２．当社は、従業員向け株式報酬制度を導入しており、信託に残存する自社の株式は、期中平均株式数の計算にお\n      いて控除する自己株式に含めております。（前第１四半期連結会計期間 63,919株、当第１四半期連結会計期間\n      62,400株）\n\n\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2026-06-30",
+            "label": "2027年3月期第1四半期・実績"
+          },
+          "scope": "普通株式数と自己株式、四半期累計の期中平均株式数",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "最新四半期注記に役員・従業員向け信託保有株を期中平均株式数計算で控除すると明記。年次の信託保有株数と混同しない。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "reported_dilution_basis",
+      "label": "直前通期の潜在株式調整後EPSがない理由",
+      "status": "supported",
+      "value": {
+        "potential_shares_exist": false,
+        "diluted_eps_presentation": "not presented because no potential shares existed"
+      },
+      "target_period": {
+        "start_date": "2025-04-01",
+        "end_date": "2026-03-31",
+        "label": "2026年3月期・実績"
+      },
+      "scope": "2026年3月期有報の連結1株当たり情報",
+      "evidence": [
+        {
+          "source_id": "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf",
+          "retrieved_at": "2026-10-15T01:12:38.091035+00:00",
+          "publication_date": "2026-06-18",
+          "pdf_page": 103,
+          "printed_page": 100,
+          "quote": "   （１株当たり情報）\n         前連結会計年度                                    当連結会計年度\n       （自 2024年４月１日                               （自 2025年４月１日\n        至 2025年３月31日）                              至 2026年３月31日）\n １株当たり純資産額              2,642.64円        １株当たり純資産額                  2,672.60円\n １株当たり当期純利益金額             52.67円         １株当たり当期純損失金額（△）              △0.85円\n  なお、潜在株式調整後１株当たり当期純利益金額                  なお、潜在株式調整後１株当たり当期純利益金額\n については、潜在株式が存在しないため記載してお                 については、潜在株式が存在しないため記載してお\n りません。                                   りません。\n（注）１．当社は、役員向け株式報酬制度を導入しており、信託に残存する自社の株式は、「１株当たり純資産額」の\n     算定上、期末発行済株式総数から控除する自己株式に含めております。（前連結会計年度 87,376株、当連\n     結会計年度 87,376株）\n      また、「１株当たり当期純利益」又は「１株当たり当期純損失」の算定上、期中平均株式数の計算におい\n     て控除する自己株式に含めております。（前連結会計年度 96,916株、当連結会計年度 87,376株）\n   ２．当社は、従業員向け株式報酬制度を導入しており、信託に残存する自社の株式は、「１株当たり純資産額」\n     の算定上、期末発行済株式総数から控除する自己株式に含めております。（前連結会計年度 63,919株 当\n     連結会計年度 63,319株）\n      また、「１株当たり当期純利益」又は「１株当たり当期純損失」の算定上、期中平均株式数の計算におい\n     て控除する自己株式に含めております。（前連結会計年度 64,485株 当連結会計年度 63,873株）\n\n   ２．１株当たり純資産額の算定上の基礎は、以下のとおりであります。\n                                      前連結会計年度                当連結会計年度\n                                    （2025年３月31日）           （2026年３月31日）\n純資産の部の合計額（百万円）                               91,781                 66,144\n純資産の部の合計額から控除する金額（百万円）                        1,335                  1,289\n（うち非支配株主持分）                                 (1,335)                (1,289)\n普通株式に係る期末の純資産額（百万円）                           90,446                 64,854\n１株当たり純資産額の算定に用いられた期末の普通\n                                          34,225,790             24,266,392\n株式の数（株）\n\n   ３．１株当たり当期純利益金額又は１株当たり当期純損失金額の算定上の基礎は、以下のとおりであります。\n                                      前連結会計年度                当連結会計年度\n                                    （自 2024年４月１日           （自 2025年４月１日\n                                     至 2025年３月31日）          至 2026年３月31日）\n１株当たり当期純利益金額又は１株当たり当期純損\n失金額（△）\n 親会社株主に帰属する当期純利益金額又は親会社\n                                                  1,792                  △21\n 株主に帰属する当期純損失金額（△）（百万円）\n 普通株主に帰属しない金額（百万円）                                     －                      －\n 普通株式に係る親会社株主に帰属する当期純利益\n 金額又は普通株式に係る親会社株主に帰属する当                          1,792                   △21\n 期純損失金額（△）（百万円）\n 普通株式の期中平均株式数（株）                            34,034,731             25,497,076\n\n   （重要な後発事象）\n    該当事項はありません。\n\n\n\n\n                               - 100 -\n",
+          "target_period": {
+            "start_date": "2025-04-01",
+            "end_date": "2026-03-31",
+            "label": "2026年3月期・実績"
+          },
+          "scope": "連結1株当たり情報、潜在株式不存在と信託株の控除",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "原文は潜在株式が存在しないため記載しないと明記。最新四半期の「－」や将来年度の発行可能性全体へは自動拡張しない。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "current_forecast_split_assumptions",
+      "label": "現在の通期予想EPS/DPSの株式分割調整基準",
+      "status": "unknown",
+      "value": null,
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "発行会社自身の2027年3月期予想1株表示",
+      "evidence": [
+        {
+          "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+          "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+          "publication_date": "2026-08-05",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "３．2027年３月期の連結業績予想（2026年４月１日～2027年３月31日）\n                                               （％表示は、通期は対前期、四半期は対前年同四半期増減率）\n                                                                          親会社株主に帰属                １株当たり\n                   売上高                営業利益              経常利益\n                                                                           する当期純利益                当期純利益\n                百万円           ％     百万円         ％      百万円          ％      百万円   ％                   円 銭\n     通期         63,000       1.5    1,500      2.0     1,500       3.2       700 －                   27.45\n（注）１．直近に公表されている業績予想からの修正の有無： 無\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "連結業績予想・通期EPS欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+          "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+          "publication_date": "2026-08-05",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "２．配当の状況\n                                              年間配当金\n               第１四半期末         第２四半期末          第３四半期末             期末                合計\n                   円 銭            円 銭             円 銭                   円 銭             円 銭\n2026年３月期             －            39.00             －                   53.00           92.00\n2027年３月期             －\n2027年３月期（予想）                          39.00             －               53.00           92.00\n\n（注）１．直近に公表されている配当予想からの修正の有無： 無\n\n\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "提出会社の年間1株配当予想・合計欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+          "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+          "publication_date": "2026-08-05",
+          "pdf_page": 2,
+          "printed_page": null,
+          "quote": "（４）発行済株式数（普通株式）\n      ①    期末発行済株式数（自己株式を含む）         2027年３月期１Ｑ   37,054,100株   2026年３月期     37,054,100株\n      ②    期末自己株式数                   2027年３月期１Ｑ   13,003,582株   2026年３月期     12,787,708株\n      ③   期中平均株式数（四半期累計）             2027年３月期１Ｑ   24,155,623株   2026年３月期１Ｑ   27,582,886株\n      (注)\n      １．当社は、役員向け株式報酬制度を導入しており、信託に残存する自社の株式は、期中平均株式数の計算におい\n      て控除する自己株式に含めております。（前第１四半期連結会計期間 87,376株、当第１四半期連結会計期間\n      87,376株）\n      ２．当社は、従業員向け株式報酬制度を導入しており、信託に残存する自社の株式は、期中平均株式数の計算にお\n      いて控除する自己株式に含めております。（前第１四半期連結会計期間 63,919株、当第１四半期連結会計期間\n      62,400株）\n\n\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2026-06-30",
+            "label": "2027年3月期第1四半期・実績"
+          },
+          "scope": "普通株式数と自己株式、四半期累計の期中平均株式数",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "保存資料で見つかった株式分割への言及には保有株式/取引先の分割が含まれ、この会社自身の予想1株値の調整根拠に利用できない。対象会社自身の分割調整注記は特定できなかった。",
+      "remaining_missing": [
+        "発行会社自身の分割/併合がある場合の効力日・比率・予想値調整基準。存在/不存在を推測しない"
+      ],
+      "model_input_adopted": false
+    },
+    {
+      "id": "dividend_basic_policy",
+      "label": "公表された配当基本方針・決定機関",
+      "status": "supported",
+      "value": {
+        "payments_per_year": 2,
+        "year_end_decider": "shareholder general meeting or board of directors",
+        "interim_decider": "board of directors",
+        "post_fy2026_statement": "endeavour to maintain stable and continuous dividends"
+      },
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "提出会社普通株式の配当と計画終了後の定性的方針",
+      "evidence": [
+        {
+          "source_id": "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf",
+          "retrieved_at": "2026-10-15T01:12:38.091035+00:00",
+          "publication_date": "2026-06-18",
+          "pdf_page": 41,
+          "printed_page": 38,
+          "quote": "３【配当政策】\n 当社グループは、最大より最良を目指す「質重視」の経営方針に基づいて収益力の向上及び資本効率性の向上を実\n現すべく、自己株式の取得など総還元性向に軸足を置いた諸施策を機動的に実施しております。\n なお、資本政策として、2023年３月期から2027年３月期までの５期間は、自己資本の積み増しの抑制とグループキ\nャッシュマネジメントの徹底により、連結配当性向100％の実施、2027年３月期まで１株当たりの年間配当金を92円\n以上とすることの維持を掲げております。\n 当社は、中間配当と期末配当の年２回の剰余金の配当を行うことを基本方針としております。これらの剰余金の配\n当の決定機関は、期末配当については株主総会又は取締役会、中間配当については取締役会であります。\n 当期の期末配当は当社普通株式１株につき53円とし、すでに実施した中間配当39円とあわせ、１株当たり年間配当\n92円を実施することを予定しております。\n  また、内部留保金は、中長期的な企業価値増大のため、研究開発並びに生産設備投資に充当することを予定してお\nります。\n  ",
+          "target_period": {
+            "label": "2023年3月期から2027年3月期までの資本政策; 当期配当説明は2026年3月期"
+          },
+          "scope": "提出会社の配当基本方針と期限付き連結配当性向/年間配当下限",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:34d8d32eef9a632ed1565f06c199af7dbd5a355cfdac1e9e6ad318fa40a17c94",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/2025-2027_management-plan_R.pdf",
+          "retrieved_at": "2026-10-15T01:11:50.219184+00:00",
+          "publication_date": "2026-05-12",
+          "pdf_page": 17,
+          "printed_page": 17,
+          "quote": "２．中期経営計画の見直し\n資本政策\n 自己株式取得\n ◼ FY2024から３年累計で300億円の自己株式取得を実施中\n ◼ FY2025は約23億円分を取得、過去取得分と約265億円分を取得済み\n ◼ 追加取得についても機動的に実施検討\n                                                            自己株式300億円取得後\n        2025年３月末                             2026年３月末\n                                                               のイメージ\n\n\n\n\n 配当方針\n ◼ FY2026まで連結配当性向100%＋下限配当92円\n ◼ 以後も安定的・継続的な配当を行うよう努める                                  連結配当性向 100%\n                                                           下限配当 92円\n\n\n\n          All Rights Reserved, Copyright © PIOLAX, INC.                    17\n",
+          "target_period": {
+            "label": "FY2026まで; 暦月対応は有報と説明資料で確認"
+          },
+          "scope": "中期経営計画の見直し・資本政策",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "有報は普通株式1株当たり配当と年2回の剰余金配当を記載。終了後は安定・継続に努める旨であり数値下限延長ではない。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "payout_and_dividend_floor_until_fy2027",
+      "label": "期限付きの連結配当性向・1株年間配当下限",
+      "status": "supported",
+      "value": {
+        "consolidated_payout_ratio_percent": "100",
+        "annual_dividend_floor_jpy": "92",
+        "policy_through_fiscal_year_end": "2027-03-31"
+      },
+      "target_period": {
+        "label": "2023年3月期〜2027年3月期の5期間。年間92円以上の維持は2027年3月期まで"
+      },
+      "scope": "提出会社が公表した期限付き資本政策",
+      "evidence": [
+        {
+          "source_id": "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf",
+          "retrieved_at": "2026-10-15T01:12:38.091035+00:00",
+          "publication_date": "2026-06-18",
+          "pdf_page": 41,
+          "printed_page": 38,
+          "quote": "３【配当政策】\n 当社グループは、最大より最良を目指す「質重視」の経営方針に基づいて収益力の向上及び資本効率性の向上を実\n現すべく、自己株式の取得など総還元性向に軸足を置いた諸施策を機動的に実施しております。\n なお、資本政策として、2023年３月期から2027年３月期までの５期間は、自己資本の積み増しの抑制とグループキ\nャッシュマネジメントの徹底により、連結配当性向100％の実施、2027年３月期まで１株当たりの年間配当金を92円\n以上とすることの維持を掲げております。\n 当社は、中間配当と期末配当の年２回の剰余金の配当を行うことを基本方針としております。これらの剰余金の配\n当の決定機関は、期末配当については株主総会又は取締役会、中間配当については取締役会であります。\n 当期の期末配当は当社普通株式１株につき53円とし、すでに実施した中間配当39円とあわせ、１株当たり年間配当\n92円を実施することを予定しております。\n  また、内部留保金は、中長期的な企業価値増大のため、研究開発並びに生産設備投資に充当することを予定してお\nります。\n  ",
+          "target_period": {
+            "label": "2023年3月期から2027年3月期までの資本政策; 当期配当説明は2026年3月期"
+          },
+          "scope": "提出会社の配当基本方針と期限付き連結配当性向/年間配当下限",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:a195dc46d270d743a5e6b6496666e44f8a242d7a9bac9670d8102d3ad5e9b0af",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/20260512_2025-q4_summary_R2.pdf",
+          "retrieved_at": "2026-10-15T01:11:46.331748+00:00",
+          "publication_date": "2026-05-12",
+          "pdf_page": 10,
+          "printed_page": 10,
+          "quote": "    2026年度                        配当予想（資本政策）\n■年間92円継続(27/3期まで配当性向100%、下限配当92円）\n■3年間で300億円の自己株取得実施(24年11月発表、累計約265億円実施済み)\n\n\n\n                                    2026年度              2025年度     増減\n                                        予想               実績\n\n       １    株    当     た     り\n       当 期 純 利 益                       ¥27.45            ▲¥0.85    28.30\n\n       １ 株 配 当 予 想\n                                       ¥92.00             ¥92.00      －\n\n       配     当       性      向         335.2%                  －\n\n\n\n\n        All Rights Reserved, Copyright © PIOLAX, INC.                      10\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "2026年度配当予想・27/3期までの資本政策",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:34d8d32eef9a632ed1565f06c199af7dbd5a355cfdac1e9e6ad318fa40a17c94",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/2025-2027_management-plan_R.pdf",
+          "retrieved_at": "2026-10-15T01:11:50.219184+00:00",
+          "publication_date": "2026-05-12",
+          "pdf_page": 17,
+          "printed_page": 17,
+          "quote": "２．中期経営計画の見直し\n資本政策\n 自己株式取得\n ◼ FY2024から３年累計で300億円の自己株式取得を実施中\n ◼ FY2025は約23億円分を取得、過去取得分と約265億円分を取得済み\n ◼ 追加取得についても機動的に実施検討\n                                                            自己株式300億円取得後\n        2025年３月末                             2026年３月末\n                                                               のイメージ\n\n\n\n\n 配当方針\n ◼ FY2026まで連結配当性向100%＋下限配当92円\n ◼ 以後も安定的・継続的な配当を行うよう努める                                  連結配当性向 100%\n                                                           下限配当 92円\n\n\n\n          All Rights Reserved, Copyright © PIOLAX, INC.                    17\n",
+          "target_period": {
+            "label": "FY2026まで; 暦月対応は有報と説明資料で確認"
+          },
+          "scope": "中期経営計画の見直し・資本政策",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "有報の暦年表示と説明資料の「27/3期まで」によりFY2026の期限を確認。92円予想をEPSとの大小だけで安全/危険判定する必要はなく、会社は下限政策を公表している。実現・継続を保証するという解釈もしない。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "dividend_floor_after_fy2027",
+      "label": "2027年3月期後の数値下限・配当性向延長",
+      "status": "unknown",
+      "value": null,
+      "target_period": {
+        "label": "2028年3月期以降"
+      },
+      "scope": "既存政策の期限後",
+      "evidence": [
+        {
+          "source_id": "case-public:34d8d32eef9a632ed1565f06c199af7dbd5a355cfdac1e9e6ad318fa40a17c94",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/2025-2027_management-plan_R.pdf",
+          "retrieved_at": "2026-10-15T01:11:50.219184+00:00",
+          "publication_date": "2026-05-12",
+          "pdf_page": 17,
+          "printed_page": 17,
+          "quote": "２．中期経営計画の見直し\n資本政策\n 自己株式取得\n ◼ FY2024から３年累計で300億円の自己株式取得を実施中\n ◼ FY2025は約23億円分を取得、過去取得分と約265億円分を取得済み\n ◼ 追加取得についても機動的に実施検討\n                                                            自己株式300億円取得後\n        2025年３月末                             2026年３月末\n                                                               のイメージ\n\n\n\n\n 配当方針\n ◼ FY2026まで連結配当性向100%＋下限配当92円\n ◼ 以後も安定的・継続的な配当を行うよう努める                                  連結配当性向 100%\n                                                           下限配当 92円\n\n\n\n          All Rights Reserved, Copyright © PIOLAX, INC.                    17\n",
+          "target_period": {
+            "label": "FY2026まで; 暦月対応は有報と説明資料で確認"
+          },
+          "scope": "中期経営計画の見直し・資本政策",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf",
+          "retrieved_at": "2026-10-15T01:12:38.091035+00:00",
+          "publication_date": "2026-06-18",
+          "pdf_page": 41,
+          "printed_page": 38,
+          "quote": "３【配当政策】\n 当社グループは、最大より最良を目指す「質重視」の経営方針に基づいて収益力の向上及び資本効率性の向上を実\n現すべく、自己株式の取得など総還元性向に軸足を置いた諸施策を機動的に実施しております。\n なお、資本政策として、2023年３月期から2027年３月期までの５期間は、自己資本の積み増しの抑制とグループキ\nャッシュマネジメントの徹底により、連結配当性向100％の実施、2027年３月期まで１株当たりの年間配当金を92円\n以上とすることの維持を掲げております。\n 当社は、中間配当と期末配当の年２回の剰余金の配当を行うことを基本方針としております。これらの剰余金の配\n当の決定機関は、期末配当については株主総会又は取締役会、中間配当については取締役会であります。\n 当期の期末配当は当社普通株式１株につき53円とし、すでに実施した中間配当39円とあわせ、１株当たり年間配当\n92円を実施することを予定しております。\n  また、内部留保金は、中長期的な企業価値増大のため、研究開発並びに生産設備投資に充当することを予定してお\nります。\n  ",
+          "target_period": {
+            "label": "2023年3月期から2027年3月期までの資本政策; 当期配当説明は2026年3月期"
+          },
+          "scope": "提出会社の配当基本方針と期限付き連結配当性向/年間配当下限",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "公開方針は期限と、それ以後は安定・継続配当に努める旨まで。100%や92円下限をそのまま翌期以降へ延長する公表規則は確認できなかった。",
+      "remaining_missing": [
+        "期限後の定量的方針、各年度DPS会社予想。恒久的な92円下限へ延長しない"
+      ],
+      "model_input_adopted": false
+    },
+    {
+      "id": "doe_policy",
+      "label": "DOEによる配当計算規則",
+      "status": "unknown",
+      "value": null,
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "今回の保存公開資料内の配当方針",
+      "evidence": [
+        {
+          "source_id": "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf",
+          "retrieved_at": "2026-10-15T01:12:38.091035+00:00",
+          "publication_date": "2026-06-18",
+          "pdf_page": 41,
+          "printed_page": 38,
+          "quote": "３【配当政策】\n 当社グループは、最大より最良を目指す「質重視」の経営方針に基づいて収益力の向上及び資本効率性の向上を実\n現すべく、自己株式の取得など総還元性向に軸足を置いた諸施策を機動的に実施しております。\n なお、資本政策として、2023年３月期から2027年３月期までの５期間は、自己資本の積み増しの抑制とグループキ\nャッシュマネジメントの徹底により、連結配当性向100％の実施、2027年３月期まで１株当たりの年間配当金を92円\n以上とすることの維持を掲げております。\n 当社は、中間配当と期末配当の年２回の剰余金の配当を行うことを基本方針としております。これらの剰余金の配\n当の決定機関は、期末配当については株主総会又は取締役会、中間配当については取締役会であります。\n 当期の期末配当は当社普通株式１株につき53円とし、すでに実施した中間配当39円とあわせ、１株当たり年間配当\n92円を実施することを予定しております。\n  また、内部留保金は、中長期的な企業価値増大のため、研究開発並びに生産設備投資に充当することを予定してお\nります。\n  ",
+          "target_period": {
+            "label": "2023年3月期から2027年3月期までの資本政策; 当期配当説明は2026年3月期"
+          },
+          "scope": "提出会社の配当基本方針と期限付き連結配当性向/年間配当下限",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:34d8d32eef9a632ed1565f06c199af7dbd5a355cfdac1e9e6ad318fa40a17c94",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/2025-2027_management-plan_R.pdf",
+          "retrieved_at": "2026-10-15T01:11:50.219184+00:00",
+          "publication_date": "2026-05-12",
+          "pdf_page": 17,
+          "printed_page": 17,
+          "quote": "２．中期経営計画の見直し\n資本政策\n 自己株式取得\n ◼ FY2024から３年累計で300億円の自己株式取得を実施中\n ◼ FY2025は約23億円分を取得、過去取得分と約265億円分を取得済み\n ◼ 追加取得についても機動的に実施検討\n                                                            自己株式300億円取得後\n        2025年３月末                             2026年３月末\n                                                               のイメージ\n\n\n\n\n 配当方針\n ◼ FY2026まで連結配当性向100%＋下限配当92円\n ◼ 以後も安定的・継続的な配当を行うよう努める                                  連結配当性向 100%\n                                                           下限配当 92円\n\n\n\n          All Rights Reserved, Copyright © PIOLAX, INC.                    17\n",
+          "target_period": {
+            "label": "FY2026まで; 暦月対応は有報と説明資料で確認"
+          },
+          "scope": "中期経営計画の見直し・資本政策",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "今回保存資料で確認したのは連結配当性向100%と期限付き年間92円下限。DOEの定義・率・対象自己資本の基準は特定できない。",
+      "remaining_missing": [
+        "DOEを使うならその定義・率・分母期間・適用期間の一次根拠"
+      ],
+      "model_input_adopted": false
+    },
+    {
+      "id": "forecast_future_dilution_and_treasury_path",
+      "label": "予想期の増資・自己株式取得処分と希薄化の全経路",
+      "status": "unknown",
+      "value": null,
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "予想EPSと将来DPSを投資モデルへ拡張する際の株式数シナリオ",
+      "evidence": [
+        {
+          "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+          "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+          "publication_date": "2026-08-05",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "３．2027年３月期の連結業績予想（2026年４月１日～2027年３月31日）\n                                               （％表示は、通期は対前期、四半期は対前年同四半期増減率）\n                                                                          親会社株主に帰属                １株当たり\n                   売上高                営業利益              経常利益\n                                                                           する当期純利益                当期純利益\n                百万円           ％     百万円         ％      百万円          ％      百万円   ％                   円 銭\n     通期         63,000       1.5    1,500      2.0     1,500       3.2       700 －                   27.45\n（注）１．直近に公表されている業績予想からの修正の有無： 無\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "連結業績予想・通期EPS欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+          "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+          "publication_date": "2026-08-05",
+          "pdf_page": 2,
+          "printed_page": null,
+          "quote": "（４）発行済株式数（普通株式）\n      ①    期末発行済株式数（自己株式を含む）         2027年３月期１Ｑ   37,054,100株   2026年３月期     37,054,100株\n      ②    期末自己株式数                   2027年３月期１Ｑ   13,003,582株   2026年３月期     12,787,708株\n      ③   期中平均株式数（四半期累計）             2027年３月期１Ｑ   24,155,623株   2026年３月期１Ｑ   27,582,886株\n      (注)\n      １．当社は、役員向け株式報酬制度を導入しており、信託に残存する自社の株式は、期中平均株式数の計算におい\n      て控除する自己株式に含めております。（前第１四半期連結会計期間 87,376株、当第１四半期連結会計期間\n      87,376株）\n      ２．当社は、従業員向け株式報酬制度を導入しており、信託に残存する自社の株式は、期中平均株式数の計算にお\n      いて控除する自己株式に含めております。（前第１四半期連結会計期間 63,919株、当第１四半期連結会計期間\n      62,400株）\n\n\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2026-06-30",
+            "label": "2027年3月期第1四半期・実績"
+          },
+          "scope": "普通株式数と自己株式、四半期累計の期中平均株式数",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "現時点/過去の株式数や取得計画の存在は、会社予想に織り込んだ取得株数・取得価格・実行時期・処分/発行/オプション行使の全経路を確定しない。",
+      "remaining_missing": [
+        "将来の分母変化と希薄化/自己株式取引を反映した明示株数シナリオ。公表済み以上の実行確約を補わない"
+      ],
+      "model_input_adopted": false
+    },
+    {
+      "id": "forecast_dps_cashflow_calendar",
+      "label": "DDMへ使う場合の配当キャッシュフロー時点",
+      "status": "unknown",
+      "value": null,
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "年間会社予想DPSを予測年末のキャッシュフローへ写像する条件",
+      "evidence": [
+        {
+          "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+          "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+          "publication_date": "2026-08-05",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "２．配当の状況\n                                              年間配当金\n               第１四半期末         第２四半期末          第３四半期末             期末                合計\n                   円 銭            円 銭             円 銭                   円 銭             円 銭\n2026年３月期             －            39.00             －                   53.00           92.00\n2027年３月期             －\n2027年３月期（予想）                          39.00             －               53.00           92.00\n\n（注）１．直近に公表されている配当予想からの修正の有無： 無\n\n\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "提出会社の年間1株配当予想・合計欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "年間DPS予想は中間と期末の合計表示。モデルの各年末の割引時点や取得後受取可能額との対応まで自動確認できない。過去の基準日/効力発生日は将来の受取日を確定しない。",
+      "remaining_missing": [
+        "投資評価時点、対象となる配当基準日/効力日、既経過分と未経過分、モデルの期末近似の明示"
+      ],
+      "model_input_adopted": false
+    },
+    {
+      "id": "multi_year_forecast_and_terminal_inputs",
+      "label": "多年予測と終価の入力",
+      "status": "unknown",
+      "value": null,
+      "target_period": {
+        "label": "当会社予想期を超える予測期および安定期"
+      },
+      "scope": "DDM/評価シナリオの期間拡張",
+      "evidence": [
+        {
+          "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+          "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+          "publication_date": "2026-08-05",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "２．配当の状況\n                                              年間配当金\n               第１四半期末         第２四半期末          第３四半期末             期末                合計\n                   円 銭            円 銭             円 銭                   円 銭             円 銭\n2026年３月期             －            39.00             －                   53.00           92.00\n2027年３月期             －\n2027年３月期（予想）                          39.00             －               53.00           92.00\n\n（注）１．直近に公表されている配当予想からの修正の有無： 無\n\n\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "提出会社の年間1株配当予想・合計欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+          "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+          "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+          "publication_date": "2026-08-05",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "３．2027年３月期の連結業績予想（2026年４月１日～2027年３月31日）\n                                               （％表示は、通期は対前期、四半期は対前年同四半期増減率）\n                                                                          親会社株主に帰属                １株当たり\n                   売上高                営業利益              経常利益\n                                                                           する当期純利益                当期純利益\n                百万円           ％     百万円         ％      百万円          ％      百万円   ％                   円 銭\n     通期         63,000       1.5    1,500      2.0     1,500       3.2       700 －                   27.45\n（注）１．直近に公表されている業績予想からの修正の有無： 無\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "連結業績予想・通期EPS欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "通期1期分の会社予想は、多年配当予測・明示終価翌期DPS・株主資本コスト・安定期成長率やEPS評価倍率を供給しない。配当方針を機械的に数値外挿しない。",
+      "remaining_missing": [
+        "モデル適合の点検、独立に根拠を付けた多年予測、両期の株主資本コスト、終価翌期配当、終価成長率。EPS×PERなら倍率の根拠も別途必要"
+      ],
+      "model_input_adopted": false
+    }
+  ],
+  "public_information_resolution": {
+    "resolved": [
+      {
+        "item_id": "forecast_eps_period_and_consolidation",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      },
+      {
+        "item_id": "forecast_annual_dps_and_installments",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      },
+      {
+        "item_id": "quarter_actual_share_counts",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      },
+      {
+        "item_id": "forecast_uncertainty",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      },
+      {
+        "item_id": "reported_eps_method",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      },
+      {
+        "item_id": "trust_treasury_shares_treatment",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      },
+      {
+        "item_id": "reported_dilution_basis",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      },
+      {
+        "item_id": "dividend_basic_policy",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      },
+      {
+        "item_id": "payout_and_dividend_floor_until_fy2027",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      }
+    ],
+    "unresolved": [
+      {
+        "item_id": "forecast_eps_weighted_average_share_count",
+        "status": "unknown",
+        "resolution": "unresolved_in_this_saved_corpus",
+        "ir_action": "not_registered_or_scheduled",
+        "reason": "投資モデルへの必要性と公開資料の追加価値を別途立証するまで送信対象としない。未確認が非公表を意味するわけではない。"
+      },
+      {
+        "item_id": "current_forecast_split_assumptions",
+        "status": "unknown",
+        "resolution": "unresolved_in_this_saved_corpus",
+        "ir_action": "not_registered_or_scheduled",
+        "reason": "投資モデルへの必要性と公開資料の追加価値を別途立証するまで送信対象としない。未確認が非公表を意味するわけではない。"
+      },
+      {
+        "item_id": "dividend_floor_after_fy2027",
+        "status": "unknown",
+        "resolution": "unresolved_in_this_saved_corpus",
+        "ir_action": "not_registered_or_scheduled",
+        "reason": "投資モデルへの必要性と公開資料の追加価値を別途立証するまで送信対象としない。未確認が非公表を意味するわけではない。"
+      },
+      {
+        "item_id": "doe_policy",
+        "status": "unknown",
+        "resolution": "unresolved_in_this_saved_corpus",
+        "ir_action": "not_registered_or_scheduled",
+        "reason": "投資モデルへの必要性と公開資料の追加価値を別途立証するまで送信対象としない。未確認が非公表を意味するわけではない。"
+      },
+      {
+        "item_id": "forecast_future_dilution_and_treasury_path",
+        "status": "unknown",
+        "resolution": "unresolved_in_this_saved_corpus",
+        "ir_action": "not_registered_or_scheduled",
+        "reason": "投資モデルへの必要性と公開資料の追加価値を別途立証するまで送信対象としない。未確認が非公表を意味するわけではない。"
+      },
+      {
+        "item_id": "forecast_dps_cashflow_calendar",
+        "status": "unknown",
+        "resolution": "unresolved_in_this_saved_corpus",
+        "ir_action": "not_registered_or_scheduled",
+        "reason": "投資モデルへの必要性と公開資料の追加価値を別途立証するまで送信対象としない。未確認が非公表を意味するわけではない。"
+      },
+      {
+        "item_id": "multi_year_forecast_and_terminal_inputs",
+        "status": "unknown",
+        "resolution": "unresolved_in_this_saved_corpus",
+        "ir_action": "not_registered_or_scheduled",
+        "reason": "投資モデルへの必要性と公開資料の追加価値を別途立証するまで送信対象としない。未確認が非公表を意味するわけではない。"
+      }
+    ]
+  },
+  "case_constraints_preserved": {
+    "iij_capex_question": "closed_no_send_insufficient_incremental_value",
+    "piolax_question_readiness": "not_ready",
+    "question_registration_or_send": false,
+    "company_state_changes": false
+  },
+  "source_preservation": {
+    "read_only_builder_matches_saved_bundle": true,
+    "protected_file_sha256": {
+      "data/case-source-bundle.json": "09dc53022739abfdc8d4e88957de1ec01c33b26566c4e63564330a3a72d2118d",
+      "research/ir-case-studies-2026-10-15/5988/01.json": "9ca5b908441141a04f5b6cebeb7e2beede99c6f53e1c919e82dec55022d3d387",
+      "research/ir-case-studies-2026-10-15/5988/02.json": "c86f73eace1a03f054f2f4db20adcbc7ea488a682cea05d72f376f81c5a087d0",
+      "research/ir-case-studies-2026-10-15/5988/06.json": "c45624d8b09d61b9f9c113a3c9cbe62c3c15db0d93d0f79efd28e0805ebaaee2",
+      "research/ir-case-studies-2026-10-15/5988/07.json": "6aca01f0741d3fe2386880591ed08b1649094f866c70c48fcf58be9f231fe9f1",
+      "research/ir-case-studies-2026-10-15/5988/07.txt": "3b1258cc4e95b63a6a355a8e96091887651f2d42e175492f328ff1564aa7749c",
+      "research/ir-case-studies-2026-10-15/5988/08.json": "6288a56cd74ac6c2975dd0dd4906ab93881972527041c062bd489324b3d31155",
+      "research/ir-case-studies-2026-10-15/5988/08.txt": "f730f4c2b6d56fccefec43d7ae99fb478b8b1451114be6c4d9c595ca34121d64",
+      "research/ir-case-studies-2026-10-15/5988/09.json": "46119351c9c2db0e0f5fd56eaa7175dfccf0229367036a196a1c02b1552ae55d",
+      "research/ir-case-studies-2026-10-15/5988/09.txt": "e64d2a5f5826236801b5dd06945eaed585e901d778bedf6539b5473882f8fd1f",
+      "research/ir-case-studies-2026-10-15/5988/10.json": "7360a61ff77eb33cfd32481fd89289af4c210b0ef9ecfa7778364d90c1e5f91b",
+      "research/ir-case-studies-2026-10-15/5988/11.json": "9fe5f764785c119f413c66b7879c4b599060fd473a1e40f371f8f3f6c2a9f96a",
+      "research/ir-case-studies-2026-10-15/5988/11.txt": "a9acbc3544e789cae8369d1e45f02747928fadda584c1839780a12a55fe4bd01",
+      "research/ir-case-studies-2026-10-15/5988/README.md": "6948bd633cf5f5f3cf26fab6ea7084c9fc48a14cb919059eeb0ea06c0b44a714",
+      "research/ir-case-studies-2026-10-15/5988/disclosed-facts-draft.json": "385f35de728e2a2ab6fe4c4a6e75ae4cf116899029e8dfb84f282614f3d0b783",
+      "research/ir-case-studies-2026-10-15/5988/draft.json": "56709af47fbb1fe80d390e5431f59ce756144d61ffbe06924f7f676c47e01293",
+      "research/ir-case-studies-2026-10-15/5988/manifest.json": "7665c941d866d4599510e15db31780466880da30d344c458b81ec065450c55d4",
+      "research/ir-case-studies-2026-10-15/5988/raw/33cb13c658a36f4cce093b64b38b07c404b02b6aead830431ba25ec3a4e198b4": "33cb13c658a36f4cce093b64b38b07c404b02b6aead830431ba25ec3a4e198b4",
+      "research/ir-case-studies-2026-10-15/5988/raw/41d8e511943ae02f5107e8c9fc217ed4b6ffc782f4d69ad994061fc5d21d9c70": "41d8e511943ae02f5107e8c9fc217ed4b6ffc782f4d69ad994061fc5d21d9c70",
+      "research/ir-case-studies-2026-10-15/5988/raw/600eea36e3dc58755b2aa8ddc1bb402f7db34589e1a45dc6db730ad6d0d42b16": "600eea36e3dc58755b2aa8ddc1bb402f7db34589e1a45dc6db730ad6d0d42b16",
+      "research/ir-case-studies-2026-10-15/5988/raw/813f6500cd7716a3b527273c6817aeb507800030063847c35963cac4c72c74e4": "813f6500cd7716a3b527273c6817aeb507800030063847c35963cac4c72c74e4",
+      "research/ir-case-studies-2026-10-15/5988/raw/985b5b53a0524968f34a4b8b64e5f19863ca1df9b598e048a8efa8ad86c73e26": "985b5b53a0524968f34a4b8b64e5f19863ca1df9b598e048a8efa8ad86c73e26",
+      "research/ir-case-studies-2026-10-15/5988/raw/9960235822c9f224e178472064f39186645ca411b754621bd9ed6fdd91a0f9ff": "9960235822c9f224e178472064f39186645ca411b754621bd9ed6fdd91a0f9ff",
+      "research/ir-case-studies-2026-10-15/5988/raw/b6bd87c0a694102282f94af40815df694d160c3f48402f7d323e20d45358734f": "b6bd87c0a694102282f94af40815df694d160c3f48402f7d323e20d45358734f",
+      "research/ir-case-studies-2026-10-15/5988/raw/ebc523f5a2c0877aa61cad8267d6dbb009b6dfaff92eefce3976c048f15684a3": "ebc523f5a2c0877aa61cad8267d6dbb009b6dfaff92eefce3976c048f15684a3",
+      "research/ir-case-studies-2026-10-15/manifest-source-map.json": "498f6f979e830ea95885b4c9ad5d2ce06d8bb8bf7bd65ddfa6fc2e86d77e4f62"
+    },
+    "verified_at": "2026-10-15T02:33:58.687617+00:00",
+    "guard_scope_note": "原source、raw、snapshot、保存抽出本文、manifest、case原draft、数値抽出request、source bundleを照合。別担当がCLI実行記録を追記する派生extraction-notes.mdとnormalize出力bundleは原資料保持guardの対象外（当担当から変更なし）。"
+  }
+}

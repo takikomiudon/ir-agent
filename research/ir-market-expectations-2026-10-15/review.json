@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "record_type": "market_price_expectation_research_scope",
+  "recorded_at": "2026-10-15T06:17:32.907358+00:00",
+  "status": "source_backed_question_selection_only_no_reverse_valuation",
+  "source_quote_ids": [
+    "ME-D01",
+    "ME-D02",
+    "ME-D03",
+    "ME-D04",
+    "ME-D05",
+    "ME-D06",
+    "ME-D07",
+    "ME-Y01",
+    "ME-Y02",
+    "ME-Y03",
+    "ME-A01",
+    "ME-A02",
+    "ME-A03",
+    "ME-A04",
+    "ME-A05",
+    "ME-A06"
+  ],
+  "new_GET_count": 0,
+  "database_accesses": 0,
+  "production_or_existing_artifact_changes": false,
+  "new_reverse_DCF_or_registry": false,
+  "main_finding": "価格と一致するdriverは、他の仮定とdriverとの関係を採用モデル通りに定めた条件付き整合値。driverを変えた時の全入力不変を意味せず、市場参加者の真の予想/一意consensus/確率分布を価格一つから同定したとはしない。",
+  "author_attribution": {
+    "direct_example": "Aswath Damodaran, cyclical/commodity2009 PDF p22",
+    "project_description": "価格との整合条件を逆向きに点検するという名称・数式表現と、135Aへの接続はproject adaptation",
+    "not_verified": "Mauboussin/Rappaport Expectations Investing本文未取得。両著者への引用/固有手順帰属は行わない。"
+  },
+  "identity_limits": {
+    "conditional_on_other_inputs": true,
+    "single_observed_price_does_not_identify_multiple_free_inputs": true,
+    "unique_solution_promised": false,
+    "price_match_is_attainment_guarantee": false,
+    "price_match_is_uncertainty_resolution": false,
+    "price_match_is_buy_rule": false,
+    "price_match_is_probability_distribution": false,
+    "driver_relationships_may_link_other_inputs": true,
+    "commodity_specific_relationships_transferred_to_135A": false
+  },
+  "135A": {
+    "baseline": "research/ir-case-studies-2026-10-15/135A/author-condition-followup/case-record-v2.json",
+    "author_AND_condition": "拠点立上げが遅延し、かつ継続顧客比率が45%近辺で頭打ち→FY28時点でCAGR+35-40%",
+    "AND_status": "not_established",
+    "condition_is": "AENTRO conditional narrative; not measured market expectations",
+    "stock_price": null,
+    "actual_canonical_model_path": null,
+    "current_KPI_context": [
+      {
+        "value": "394",
+        "concept": "受注ベース累計取引社数",
+        "cannot_substitute_for": "当年度売上顧客数/retention/価格が必要とする社数"
+      },
+      {
+        "value": "57.5% / 1,084百万円",
+        "concept": "中間累計継続顧客売上と全売上比率",
+        "cannot_substitute_for": "ARR/45近辺頭打ちの確定/市場consensus"
+      },
+      {
+        "value": "20百万円",
+        "concept": "年度内累計AI平均単価",
+        "cannot_substitute_for": "Q2単独単価/顧客あたり売上/恒久将来単価"
+      },
+      {
+        "value": "21.7/35.7/30.1%",
+        "concept": "中間累計/単独Q2実績/会社通期予想",
+        "cannot_substitute_for": "FY29著者35近傍や永久利益率"
+      }
+    ],
+    "missing_financial_and_semantic_inputs": [
+      "同じ評価時点の相場/株式・希薄化基準",
+      "cash/debt等のequity-to-firm対応",
+      "基準/予測/移行/安定の期間・会計範囲",
+      "KPIのcohort/受注→納品→売上と数量/構成への対応",
+      "税/NOL・再投資・能力増強/ROCの整合",
+      "根拠を伴い採用された割引率/終価条件と、動かすdriverの範囲"
+    ],
+    "missing_software_function_is_separate": "既存valuerは順方向。solver追加で上記採用/意味入力は埋まらない。今回演算器は作らない。",
+    "historical_price_caution": "AENTROの5/11表示株価を現在価格や正確な改訂履歴とせず、10/15保存後比較を前向き検証へ変換しない。",
+    "Jan15_caution": "会社の決算日、価格差修正期限、売却期限ではなく研究管理日。"
+  },
+  "question_selection": [
+    {
+      "owner": "会社公開指標の定義",
+      "topic": "顧客集計/当年度新規・継続cohort/受注→納品→売上と単価・原価/再投資の対応",
+      "connection": "財務driverへの意味写像を変え得るが、評価path未設定。公開先行。",
+      "not_question_now": "継続売上の算式、年度内累計平均、金沢7/1は公開解決済み。"
+    },
+    {
+      "owner": "外部著者",
+      "topic": "45近辺/35近傍の幅、plateau期間、CAGR基準/終点",
+      "connection": "著者条件の検証可能性の問題。会社IRで保証させない。"
+    },
+    {
+      "owner": "投資家の評価分析",
+      "topic": "価格source、他入力/モデルの採用、価格と一致するdriver",
+      "connection": "会社guidance/外部forecast/市場集計と区別。WACCや現在価格を会社IRへ確定させない。"
+    }
+  ],
+  "catalyst_boundary": {
+    "source_quotes": [
+      "ME-A03",
+      "ME-D06"
+    ],
+    "valuation_gap_does_not_supply_timing": true,
+    "public_event_must_be_observed_or_explicitly_scheduled": true,
+    "nonresponse_or_unobtained_material_is_not_expectation_miss": true
+  },
+  "next_minimal_task": {
+    "code_required_now": false,
+    "use_existing_case_record": true,
+    "now": "未解決論点の説明主体を会社の指標/著者条件/投資家前提に分け、定義質問と市場価格分析を混同しない。",
+    "before_any_numeric_reverse": "同じ時点の相場/株式基準と保存資料の利益・cash/debt・株数・再投資/期間の対応、および他入力の採用根拠を点検する。",
+    "if_not_available": "公開KPIの比較は維持、市場期待差や逆算値は保留。自作前提で値を出さずsolver taskへ進まない。"
+  },
+  "not_created": [
+    "WACC/margin/multiple defaults",
+    "market implied growth number",
+    "company income/FCFF forecast",
+    "probability or signal likelihood",
+    "IR registration/send action",
+    "buy/sell or profit-taking rule"
+  ],
+  "source_input_snapshots": [
+    {
+      "path": "research/valuation-model-routing-2026-10-15/sources.json",
+      "sha256": "a9b8c046d3ff5b23eb65fdaabdd4ee8ef55c66498b52cbcad9fc5099c3cc7538",
+      "byte_count": 3114599
+    },
+    {
+      "path": "research/cyclical-normalization-2026-10-15/source-audit.json",
+      "sha256": "dad3e161c9cf978afd2be3b681a4dd53458bec72562ec26b1b98fde83a88f365",
+      "byte_count": 14334
+    },
+    {
+      "path": "research/ir-policy-adoption-2026-10-15/README.md",
+      "sha256": "9320cf6b56952d9a2458a81256e46ddda681a884d32bd6f74763087fe2b92356",
+      "byte_count": 9762
+    },
+    {
+      "path": "research/ir-policy-adoption-2026-10-15/sources.json",
+      "sha256": "4b4f591641916b002ab37cb547bc11b5a0726f5a03647d0230ef4c85c32125f1",
+      "byte_count": 26625
+    },
+    {
+      "path": "research/ir-policy-adoption-2026-10-15/evidence/e52613a01405bfcd.txt",
+      "sha256": "112d65a5682bd4205f5f82294b001b913fa9ee9295cecae018936f71a59c0864",
+      "byte_count": 18610
+    },
+    {
+      "path": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt",
+      "sha256": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106",
+      "byte_count": 5841
+    },
+    {
+      "path": "third_party/anthropic/manifest.json",
+      "sha256": "45ff843e1c334454b63221fec6311f0c6bf525e79b99096e35f8f2542a405fdf",
+      "byte_count": 4591
+    },
+    {
+      "path": "third_party/anthropic/skills/idea-generation/SKILL.md",
+      "sha256": "e5f49f0f513fc434bb3448c8a942f6f99f66457e425a65b9375bb230922e9a45",
+      "byte_count": 3855
+    },
+    {
+      "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+      "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+      "byte_count": 2757
+    },
+    {
+      "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+      "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+      "byte_count": 2736
+    },
+    {
+      "path": "third_party/anthropic/skills/catalyst-calendar/SKILL.md",
+      "sha256": "12ac4ae7659ab848a8910dfceadab5b21479f23c8d3e0c57a3f5bf814bcf8186",
+      "byte_count": 3111
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/135A/author-condition-followup/case-record-v2.json",
+      "sha256": "2e566e72a04a89938357220715a10603a51ce1ce744207599ac921de6e81328b",
+      "byte_count": 65898
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/135A/author-condition-followup/case-record-v2.md",
+      "sha256": "33b7bcaf95da6af3854d9a4e1f0c11eca4cab91f22d240a0fff17edc3c240dae",
+      "byte_count": 7832
+    },
+    {
+      "path": "src/ir_agent/valuation.py",
+      "sha256": "af42500de82d824ee29bde15fc44cfe66db1db7bbf2f00abed59ab26474e8a2a",
+      "byte_count": 21023
+    }
+  ]
+}

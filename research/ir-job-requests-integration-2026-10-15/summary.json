@@ -1,0 +1,36 @@
+{
+  "recorded_at": "2026-10-15T04:07:03.812579+00:00",
+  "tests": {
+    "count": 1111,
+    "seconds": "36.360",
+    "result": "passed",
+    "command": ".venv/bin/python -m unittest discover -s tests -v"
+  },
+  "target_tests": 34,
+  "author_basis": [
+    "AWS Builders Library: Malcolm Featonby, Making retries safe with idempotent APIs",
+    "Google AIP-155"
+  ],
+  "behavior": {
+    "optional_identity_pair_legacy_shape_preserved": true,
+    "same_request_no_extra_claim_or_renew": true,
+    "no_job_response_frozen_until_new_poll": true,
+    "original_response_separate_from_current_lease": true,
+    "atomic_job_event_receipt_save": true,
+    "runtime_sampled_after_writer_acquisition": true
+  },
+  "independent_recheck": "passed",
+  "independent_recheck_artifact": "independent-recheck.json",
+  "actual_schema_change": "empty job_request_receipts added",
+  "actual_receipts": 0,
+  "actual_sources": 28,
+  "historical_raw_and_availability_unchanged": true,
+  "external_sends": 0,
+  "orders": 0,
+  "limitations": [
+    "No exactly-once analysis execution",
+    "Caller namespace is not authentication",
+    "No TTL/deletion or silent restored-history-loss detection",
+    "Lease elapsed is not active analysis time or capacity estimate"
+  ]
+}

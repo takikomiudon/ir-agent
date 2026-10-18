@@ -1,0 +1,97 @@
+{
+  "recorded_at": "2026-10-16T09:00:21.056450+00:00",
+  "company_id": "jp:1975",
+  "status": "frozen_bounded_ncav_arithmetic_parent_review_pending",
+  "new_purpose": "maintainer開示式への実保存会計入力2項目の限定binding。旧ROC/rank等の閉鎖taskとは別。",
+  "method_author": {
+    "maintainer": "maxgfr/crible",
+    "fixed_commit": "00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7",
+    "definition": {
+      "file": "research/ir-transparent-metric-formula-review-2026-10-15/upstream-INDICATORS.md",
+      "bytes": 53818,
+      "sha256": "fb82b2d47596026ea75fa561169062c52622dcb153caffe37af5491111ad084f"
+    },
+    "implementation_corroboration": {
+      "file": "research/ir-transparent-metric-core-review-2026-10-15/upstream-extras.py",
+      "bytes": 7912,
+      "sha256": "3038a489679aa163f5a4d930ac7cb4dcf320d72a62122ccd45e9d9242b593631"
+    },
+    "used_method": "current_assets - total_liabilities; market_cap <= 2/3 NCAV",
+    "maintainer_Graham_attribution": "maintainer exposition only; Graham原典の独立確認ではない。",
+    "author_original_Graham_verified": false,
+    "upstream_import_or_execution": false,
+    "other_metrics_or_Graham_number_selected": false
+  },
+  "accounting_source": {
+    "original_statement_existing_source": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
+    "snapshot_file": {
+      "file": "research/ir-case-studies-2026-10-15/1975/native-case-setup-2026-10-16/actual-inputs/actual-source-snapshots.json",
+      "bytes": 164256,
+      "sha256": "ccb0f348aead27cde26cf4321102979f919d8deb64457dca1794aad5c95240a2"
+    },
+    "json_pointer": "/sources/1",
+    "source_native_snapshot_sha256": "2aae3878ce397e408f088338e4b9728e4a3c4e594a247fdbb3adfff34c27dfce",
+    "source_content_utf8_sha256": "5b590ae0edd7df00cc1b165437bc4e81d23fa117addbbbd948ff827668b95c83",
+    "original_raw": {
+      "file": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/raw/197dbf719ededc450d856e3eb9dda745a2fe92c1ac0325847aa150cfb4487a85",
+      "bytes": 263639,
+      "sha256": "197dbf719ededc450d856e3eb9dda745a2fe92c1ac0325847aa150cfb4487a85"
+    },
+    "url": "https://www.asahikogyosha.co.jp/wp-content/uploads/2026/08/98_1st-quarter-financial-results.pdf",
+    "publication_day": "2026-08-04",
+    "publication_exact_time": null,
+    "original_retrieved_at": "2026-10-16T04:18:59.234370+00:00",
+    "new_render_and_text_page": 5,
+    "printed_page": "3",
+    "manual_image_read": true,
+    "physical6_needed": false,
+    "page_text_matches_actual_source_content": true,
+    "scope": "四半期連結貸借対照表。流動資産合計と負債合計を同一列・同一日付・単位で取得。負債合計は流動負債だけではなく固定負債も含む表の合計値。",
+    "rounding": "公表値は百万円未満切捨て。未表示端数を復元しない。算術のexactは表示値に対してのもの。"
+  },
+  "new_numerical_result": {
+    "current_date": "2026-06-30",
+    "current_NCAV_million_JPY": "21,537",
+    "current_screen_company_market_cap_ceiling_million_JPY": "14,358",
+    "current_screen_ceiling_reported_equivalent_JPY": "14358000000",
+    "current_screen_ceiling_reported_equivalent_oku_JPY": "143.58",
+    "comparative_date": "2026-03-31",
+    "comparative_NCAV_million_JPY": "22,835",
+    "comparative_ceiling_million_JPY_exact": "45670/3",
+    "market_cap_or_price_comparison": null,
+    "screen_pass": null
+  },
+  "boundary_caveats": [
+    "表示済み合計値から計算し、構成明細の再合計・端数補完・流動負債への代用はしない。",
+    "maintainerは優先株を別項目として追跡・控除していない。優先株が存在しない/残高ゼロとの認定はしない。",
+    "連結NCAVを普通株主だけの請求権・分配可能価値・清算価値・fair valueへ認定しない。非支配持分/優先請求/簿価の回収可能性や費用を未検証。",
+    "2/3は当該maintainer説明のscreen ruleの限定再現。日本株全社の普遍的合否・自動除外・投資成績・買い判断へ適用しない。",
+    "価格/時価総額/対応株数が未取得のため比率・screen判定・1株閾値はnull。過去に価格がこの会計値で利用可能だったというPIT主張もしない。",
+    "Q1 EPSの年率化、会社予想EPS357.49、成長率/Beta/PE/CF/price-per-shareを入力に使わない。",
+    "今回のexact thresholdは切捨て公表入力に対する厳密算術。元帳円単位の精密な清算閾値ではない。"
+  ],
+  "operations": {
+    "new_issuer_semantic_pages": [
+      5
+    ],
+    "new_GET": 0,
+    "DB_or_Store_access": 0,
+    "source_ingest_or_candidate_creation": 0,
+    "normalizer_runs": 0,
+    "IR_draft_or_dispatch": 0,
+    "new_forecast_valuation_price_or_investment_decision": 0,
+    "shared_code_docs_or_old_file_changes": 0,
+    "upstream_code_import_run": 0
+  },
+  "replay": {
+    "command": ".venv/bin/python -B research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/reproduce.py",
+    "stdout_artifact": {
+      "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/calculation.json",
+      "bytes": 1783,
+      "sha256": "8f30a5d9e4e83336a3e8894688edf36fac56aa70a9ad9590579334bce2ac24bb"
+    },
+    "runtime": "Python stdlib Decimal/Fraction/json/pathlib only",
+    "other_side_effects": "none beyond reads of local inputs; no DB/network"
+  },
+  "read_only_probe_note": "An initial metadata lookup treated an existing quote list as a mapping and stopped with AttributeError; read-only/no writes. Corrected list access recovered only the existing accepted rounding annotation; no old page re-extraction or semantic-task reissue."
+}

@@ -1,0 +1,116 @@
+{
+  "recorded_at": "2026-10-15T05:49:39.035082+00:00",
+  "company_id": "jp:1379",
+  "status": "completed_bounded_followup_stopped_by_current_robots_no_annual_body",
+  "research_only": true,
+  "network_scope": {
+    "maximum_gets_after_parent_revision": 4,
+    "actual_http_gets": 2,
+    "successful_http_captures": 2,
+    "robots_blocked_before_HTTP": 1,
+    "financial_PDF_GETs": 0,
+    "retry_count": 0,
+    "redirects_followed": 0,
+    "javascript_execution": false,
+    "authenticated_or_paid_access": false,
+    "further_host_or_route_attempted": false
+  },
+  "acquired_route_evidence": [
+    {
+      "capture": "01.json",
+      "meaning": "公式短信索引が明示参照する一覧表示script。財務本文ではない。",
+      "source_id": "case-public:a0858f4f6fb0f018ca55313de8d5556b6738bebfc366973e07995344d0f90a80"
+    },
+    {
+      "capture": "02.json",
+      "meaning": "配信先hostの今回確認したrobots規則。会社財務資料ではない。",
+      "source_id": "case-public:a14e2fe9689cdf44b70fc9837f7848322481a2a6ed1f5da083a2de7bb9708901"
+    }
+  ],
+  "why_stopped": {
+    "quote_id": "distribution-robots-disallow",
+    "robots_retrieved_at": "2026-10-15T05:47:01.557531+00:00",
+    "exact_rule": "User-agent: *\nDisallow: /\n",
+    "next_feed_url": "https://ssl4.eir-parts.net/V4Public/EIR/1379/ja/press/press_1.js",
+    "next_feed_http_get_attempted": false,
+    "annual_PDF_URL": null,
+    "annual_pdf_http_get_attempted": false,
+    "statement": "規則判定でfeedへのHTTP前に停止。HTTPエラーではない。残予算は使わず迂回・新host・検索・障害診断なし。"
+  },
+  "source_classification": {
+    "research_route_source_count": 2,
+    "annual_financial_statement_body_count": 0,
+    "CB_note_body_count": 0,
+    "current_financial_coverage_increase": 0,
+    "database_ingestion_recommended": false,
+    "financial_inputs_verified": false,
+    "model_adopted": false
+  },
+  "wanted_financial_evidence": [
+    {
+      "topic": "annual_operating_cashflow",
+      "status": "not_obtained_in_this_followup",
+      "document_page_or_location": null,
+      "needed_scope": "2026年3月期の正式連結年間CF本文・前期比較・期間/単位",
+      "not_inferred": "Q1営業利益/D&Aや会社予想から年間CFOを補わない。"
+    },
+    {
+      "topic": "annual_investing_cashflow_and_capital_expenditures",
+      "status": "not_obtained_in_this_followup",
+      "document_page_or_location": null,
+      "needed_scope": "同じ年間CFの投資区分と資産取得支出の行・注記",
+      "not_inferred": "投資CF純額、設備投資指標、現金取得支出を同定しない。"
+    },
+    {
+      "topic": "cash_taxes_and_interest",
+      "status": "not_obtained_in_this_followup",
+      "document_page_or_location": null,
+      "needed_scope": "同じ年間CFで税/利息の支払/受取と区分・起点利益",
+      "not_inferred": "利益の税額と現金税、支払利息PLと支払CFを同定しない。"
+    },
+    {
+      "topic": "interest_bearing_debt_and_financing",
+      "status": "not_obtained_in_this_followup",
+      "document_page_or_location": null,
+      "needed_scope": "年末BS/借入・社債・返済条件・CF財務区分の注記",
+      "not_inferred": "総負債を有利子負債とせず、年度末残高を現在資金条件にしない。"
+    },
+    {
+      "topic": "convertible_bond_and_potential_shares",
+      "status": "not_obtained_in_this_followup",
+      "document_page_or_location": null,
+      "needed_scope": "正式CB/新株予約権付社債の条件、行使/転換価格・期間、株数/希薄化注記",
+      "not_inferred": "CB条件の存在/数値を推測せず、現在又は将来の希薄化株数を自己設定しない。"
+    }
+  ],
+  "difference_from_existing_Q1": {
+    "existing_statement_source_id": "case-public:92d3398dc3d1cb38b6be2afbda4f4131aeab2494e4fe3a2835f4a1adef1397a0",
+    "existing_quote_ref": "../sources.json / statement-cashflow-not-prepared",
+    "Q1_actual_period": {
+      "start": "2026-04-01",
+      "end": "2026-06-30"
+    },
+    "existing_note": "保存済みQ1短信PDF11頁は四半期連結CF未作成と明記し、減価償却費は別途公表。今回その原典を改変/削除していない。",
+    "annual_target": "2026/3通期。正式通期本文を取得していないため、その原文上の正確な期首期末・比較期・単位・会計範囲・CF作成状況の位置は未確認。",
+    "company_forecast_period": {
+      "start": "2026-04-01",
+      "end": "2027-03-31",
+      "kind": "issuer_guidance_existing_Q1_statement"
+    },
+    "concept_limits": [
+      "過去通期実績、現在Q1実績、当年度会社予想は期間/概念が異なる。",
+      "過去年間CFOを将来FCFF/安定期CFへ転用しない。",
+      "基本/潜在株式調整後EPSの列があることは、将来株数又はCB条件の採用ではない。",
+      "新たな公表数値の正規化は0件。モデルroute/割引率/税率/ROC/倍率/確率は補わない。"
+    ]
+  },
+  "public_access_timing_limit": "robotsの今回の200取得結果を、既存PDF取得時にも同一規則が存在し認知していたという履歴へ遡及しない。既存公開原文・取得履歴は保持する。",
+  "next_action_boundary": "今回の最大4GET枠の追補phaseは行わず終了。保存済みQ1/説明資料は既存どおり読取可能な証跡として保持。別経路へ進まない。",
+  "financial_inputs_verified": false,
+  "meaning_review_required": true,
+  "model_adopted": false,
+  "future_FCFF_or_share_assumptions_created": false,
+  "database_reads_or_writes": 0,
+  "production_changes": false,
+  "existing_artifacts_changed": false
+}

@@ -1,0 +1,158 @@
+{
+  "synthetic": true,
+  "as_of": "2026-10-09T10:00:00+09:00",
+  "thesis": {
+    "company_id": "demo-services",
+    "version": 1,
+    "recorded_at": "2026-10-01T16:00:00+09:00",
+    "statement": "採用費の一部は一時的で、既存事業の成長によって利益率が回復するという架空の仮説。",
+    "pillars": [
+      "継続課金売上の成長",
+      "採用費が一時的である可能性"
+    ],
+    "invalidation_conditions": [
+      "費用増加が恒常的で利益率回復を妨げる",
+      "既存顧客売上が縮小する"
+    ],
+    "exit_conditions": [
+      "仮説が否定された場合は売却を検討",
+      "評価額に達した場合は利確を検討"
+    ],
+    "current_price_jpy": "1000",
+    "next_review_date": "2026-10-30",
+    "evidence_ids": [
+      "demo-public-q2"
+    ],
+    "valuation": {
+      "scenarios": [
+        {
+          "name": "bear",
+          "probability": "0.25",
+          "method": "eps_multiple",
+          "inputs": {
+            "eps_jpy": "45",
+            "pe": "15"
+          }
+        },
+        {
+          "name": "base",
+          "probability": "0.50",
+          "method": "eps_multiple",
+          "inputs": {
+            "eps_jpy": "65",
+            "pe": "20"
+          }
+        },
+        {
+          "name": "bull",
+          "probability": "0.25",
+          "method": "eps_multiple",
+          "inputs": {
+            "eps_jpy": "80",
+            "pe": "23"
+          }
+        }
+      ]
+    }
+  },
+  "policy": {
+    "id": "synthetic-example-only",
+    "version": 1,
+    "recorded_at": "2026-10-01T17:00:00+09:00",
+    "parameters": {
+      "minimum_upside_pct": "20",
+      "maximum_downside_pct": "35",
+      "entry_cost_pct": "0",
+      "exit_cost_pct": "0",
+      "max_quote_age_seconds": 3600,
+      "target_scenario": "base"
+    },
+    "parameter_sources": {
+      "minimum_upside_pct": {
+        "kind": "synthetic_example",
+        "reference": "unit-test fixture",
+        "rationale": "Arbitrary test value, not an investment recommendation"
+      },
+      "maximum_downside_pct": {
+        "kind": "synthetic_example",
+        "reference": "unit-test fixture",
+        "rationale": "Arbitrary test value, not an investment recommendation"
+      },
+      "entry_cost_pct": {
+        "kind": "synthetic_example",
+        "reference": "unit-test fixture",
+        "rationale": "Arbitrary test value, not an investment recommendation"
+      },
+      "exit_cost_pct": {
+        "kind": "synthetic_example",
+        "reference": "unit-test fixture",
+        "rationale": "Arbitrary test value, not an investment recommendation"
+      },
+      "max_quote_age_seconds": {
+        "kind": "synthetic_example",
+        "reference": "unit-test fixture",
+        "rationale": "Arbitrary test value, not an investment recommendation"
+      },
+      "target_scenario": {
+        "kind": "synthetic_example",
+        "reference": "unit-test fixture",
+        "rationale": "Arbitrary test value, not an investment recommendation"
+      }
+    }
+  },
+  "quote": {
+    "company_id": "demo-services",
+    "source_id": "synthetic-price",
+    "currency": "JPY",
+    "price_jpy": "1000",
+    "observed_at": "2026-10-09T09:55:00+09:00",
+    "retrieved_at": "2026-10-09T09:56:00+09:00",
+    "price_path": [
+      "metadata",
+      "price_jpy"
+    ],
+    "observed_at_path": [
+      "metadata",
+      "observed_at"
+    ]
+  },
+  "context": {
+    "held": false,
+    "thesis_status": "intact",
+    "information_status": "public_disclosure",
+    "evidence_ids": [
+      "demo-public-q2"
+    ]
+  },
+  "sources": [
+    {
+      "id": "demo-public-q2",
+      "company_id": "demo-services",
+      "title": "第2四半期説明資料（架空）",
+      "url": "https://example.invalid/services/q2",
+      "source_type": "public_disclosure",
+      "published_at": "2026-10-01T15:00:00+09:00",
+      "retrieved_at": "2026-10-01T15:05:00+09:00",
+      "content": "架空の資料。売上は成長しているが、採用費の増加で営業利益率が低下。",
+      "requires_research": true,
+      "metadata": {
+        "synthetic": true,
+        "currency": "JPY"
+      }
+    },
+    {
+      "id": "synthetic-price",
+      "company_id": "demo-services",
+      "title": "Synthetic quote",
+      "url": "https://example.invalid/quote",
+      "source_type": "market_data",
+      "published_at": null,
+      "retrieved_at": "2026-10-09T09:56:00+09:00",
+      "content": "Synthetic market data only",
+      "metadata": {
+        "price_jpy": "1000",
+        "observed_at": "2026-10-09T09:55:00+09:00"
+      }
+    }
+  ]
+}

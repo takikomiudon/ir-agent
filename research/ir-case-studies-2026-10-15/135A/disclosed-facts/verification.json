@@ -1,0 +1,93 @@
+{
+  "verified_at": "2026-10-15T04:52:41.638063+00:00",
+  "offline_only": true,
+  "new_get_count": 0,
+  "database_reads_or_writes": 0,
+  "existing_files_unchanged": true,
+  "raw_hashes_verified": 3,
+  "text_hashes_verified": 3,
+  "snapshot_hashes_verified": 3,
+  "raw_text_reextractions_matched": 3,
+  "source_ids_recomputed": 3,
+  "source_checks": [
+    {
+      "source_id": "case-public:6ef4a4da4cf440a6b96b92a27da164346c8435107d658eb0b17b3bdf842c3498",
+      "capture_id": "vrain-loader-01",
+      "raw_sha256": "1028a4dfb7e6d5cf7e02edfe597e1eb1350daca0d83e4240b1a35c53609eed9b",
+      "text_sha256": "1028a4dfb7e6d5cf7e02edfe597e1eb1350daca0d83e4240b1a35c53609eed9b",
+      "snapshot_sha256": "ca2960b7b28e4e443313c7fdf54864c583391cdfb0aa0f855e82ab9581226310",
+      "raw_text_reextraction_matched": true
+    },
+    {
+      "source_id": "case-public:f39107af487a6db103cc1cd8bfcc162f7173c6602899eaba453ac532c2f02824",
+      "capture_id": "vrain-loader-02",
+      "raw_sha256": "3b62d5db50c382b0968bbba9c13c486f2a7d17438a2208ffc963fdef0b4f17a3",
+      "text_sha256": "3b62d5db50c382b0968bbba9c13c486f2a7d17438a2208ffc963fdef0b4f17a3",
+      "snapshot_sha256": "4fe4b9260d9360e22c70a684d6ccb23ebd01b9d55b4b219bbbfc6263746b135e",
+      "raw_text_reextraction_matched": true
+    },
+    {
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "capture_id": "vrain-loader-03",
+      "raw_sha256": "6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+      "text_sha256": "3ecc1fb61cc34cf0abd0cdae3c36fed637e5257b94062cb2ed00f71e3ba52b2b",
+      "snapshot_sha256": "04a2fa967b8e0acef2629141247a8f3a2e69095ac7bba95782790bde4febca38",
+      "raw_text_reextraction_matched": true
+    }
+  ],
+  "fact_quote_page_offsets_verified": 5,
+  "meaning_review_quotes_verified": 6,
+  "visual_table_review": {
+    "reviewed_by": "agent:/root/quote_normalization",
+    "pdf_page": 1,
+    "original_raw_sha256": "6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+    "temporary_image": "/tmp/vrain-135a-statement-p1.png",
+    "image_sha256": "d79053c24ba193c2ac7720274ca4b67bddf2ee466e78bed0db62aade377e8d32",
+    "method": "pdftoppm -f 1 -singlefile -scale-to 1800 -png; visually checked against saved PDF; not table-meaning automation"
+  },
+  "reviewed_at": "2026-10-15T04:51:43.827086+00:00",
+  "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+  "original_retrieved_at": "2026-10-15T04:42:37.094960+00:00",
+  "derived_source_id": "disclosed-facts:3a6c2eaebf52cba09b060669bfb00dea510dc16d5be6fb370045e9b2e8171911",
+  "derived_first_retrieved_at": "2026-10-15T04:51:43.917962+00:00",
+  "normalized_fact_count": 5,
+  "reproduction": {
+    "source_id": "disclosed-facts:3a6c2eaebf52cba09b060669bfb00dea510dc16d5be6fb370045e9b2e8171911",
+    "applicable": true,
+    "status": "reproduced",
+    "reason_codes": [],
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "original_content_sha256_status": "matched",
+    "original_snapshot_sha256_status": "matched_supplied_snapshot",
+    "fact_kinds": [
+      {
+        "id": "vrain135a-2027interim-basic-eps",
+        "kind": "reported_fact"
+      },
+      {
+        "id": "vrain135a-2027fy-company-eps",
+        "kind": "issuer_guidance"
+      },
+      {
+        "id": "vrain135a-2027interim-operating-income",
+        "kind": "reported_fact"
+      },
+      {
+        "id": "vrain135a-2027fy-company-operating-income",
+        "kind": "issuer_guidance"
+      },
+      {
+        "id": "vrain135a-2027fy-company-annual-dividend",
+        "kind": "issuer_guidance"
+      }
+    ],
+    "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb"
+  },
+  "normalization_request_sha256": "b2540cff0cdeb73599cd4a994b14582a32f4fcadb6a25abc0dec54c4f70ab2e0",
+  "normalized_bundle_sha256": "cd6ec111de870b91f6a3be37fecfd0cdfe3221b6b19132c8d8c0b02c6b00f36e",
+  "financial_inputs_verified": false,
+  "meaning_review_required": true,
+  "model_adopted": false,
+  "single_year_dividend_forecast_extended": false
+}

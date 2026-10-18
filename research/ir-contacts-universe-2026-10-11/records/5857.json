@@ -1,0 +1,86 @@
+{
+  "security_code": "5857",
+  "company_name": "ＡＲＥホールディングス",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "非鉄金属",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.asahiholdings.com/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T15:20:27.951214+00:00",
+  "completed_at": "2026-10-11T15:22:20.288864+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/5857/20261011T152027951274Z/01.json",
+      "url": "https://www.are-holdings.com:443/",
+      "retrieved_at": "2026-10-11T15:22:03.555299+00:00",
+      "quote": "AREホールディングス",
+      "role": "issuer_identity"
+    },
+    {
+      "snapshot": "evidence/5857/20261011T152027951274Z/01.json",
+      "url": "https://www.are-holdings.com:443/",
+      "retrieved_at": "2026-10-11T15:22:03.555299+00:00",
+      "quote": "お問い合わせ",
+      "role": "unverified_general_contact_link",
+      "source_link_url": "https://www.are-holdings.com:443/contact/"
+    },
+    {
+      "snapshot": "evidence/5857/20261011T152027951274Z/01.json",
+      "url": "https://www.are-holdings.com:443/",
+      "retrieved_at": "2026-10-11T15:22:03.555299+00:00",
+      "quote": "よくあるご質問",
+      "role": "unverified_IR_faq_discovery_link",
+      "source_link_url": "https://www.are-holdings.com:443/ir/faq/"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.asahiholdings.com/",
+      "final_url": "https://www.are-holdings.com:443/",
+      "snapshot": "evidence/5857/20261011T152027951274Z/01.json",
+      "retrieved_at": "2026-10-11T15:22:03.555299+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "旧asahiholdings.comからHTTP301で現AREホールディングスのare-holdings.com:443へ移行した保存traceを確認。成功本文は現トップ1頁だけ。",
+    "現サイトの一般contact/IR FAQの実hrefはあるが受付用途/メール/質問返信欄は未確認。現窓口不存在や個人拒否とは判定しない。seed公式URLは元の値を保全し港番号を手動変更しない。"
+  ],
+  "discovery": {
+    "security_code": "5857",
+    "official_url": "https://www.asahiholdings.com/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ＡＲＥホールディングス",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/5857/20261011T152027951274Z/01.json",
+      "normalized_name": "are",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 7,
+  "previous_attempts": [
+    "attempts/5857/20261011T045047553067Z.json",
+    "attempts/5857/20261011T152220289010Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "ir_operations_58_batch12",
+    "reviewed_at": "2026-10-11T15:56:57.524137+00:00",
+    "notes": "現JPX発行体AREホールディングスと301移行先題名を照合。保存homeの実hrefだけを後続発見へ、旧社名の別会社/子会社受付や新パスを推定せずU。現authority :443を含むURL/redirectを原文どおり保持。"
+  }
+}

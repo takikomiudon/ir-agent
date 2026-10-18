@@ -1,0 +1,5 @@
+# 1723 会社sourceだけの取込候補
+
+入口・企業概要・リスクの3sourceを元object不変で選び、既存validate_sourceと一致することを確認した。プラットフォーム規約のcompany_id:null行は旧研究bundleに保持し、会社固有契約や1723sourceへ改変しない。規約はraw/quote/file参照として残す。
+
+この新bundleは構造の準備だけで、独立した原文/意味点検と実DB保存は未実施。元bundleや引用は変更0、金融入力・モデル採用・IRは0。

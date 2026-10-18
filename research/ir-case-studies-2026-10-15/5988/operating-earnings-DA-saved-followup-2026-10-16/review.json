@@ -1,0 +1,178 @@
+{
+  "read_at": "2026-10-16T15:24:32.166669+00:00",
+  "status": "single_saved_page_SGA_DA_scope_followup_complete",
+  "company_id": "jp:5988",
+  "source": {
+    "id": "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+    "URL": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf",
+    "native_full_JSON_SHA256": "3dd6c5db0b134340fc8f373e06e75490d064fa8e828d0a58a2782e4776176ae3",
+    "native_hash_algorithm": "SHA256 UTF8 json.dumps(source,ensure_ascii=False,sort_keys=True), default separators",
+    "content_SHA256": "a9acbc3544e789cae8369d1e45f02747928fadda584c1839780a12a55fe4bd01",
+    "raw_PDF_SHA256": "813f6500cd7716a3b527273c6817aeb507800030063847c35963cac4c72c74e4",
+    "saved_source_ref": {
+      "path": "research/ir-case-studies-2026-10-15/5988/tax-disclosed-facts/normalization-input.json",
+      "SHA256": "307963386cf90b4678e488310a28bf0133bcb452623d3c114efa0059541f990a",
+      "bytes": 499649
+    },
+    "source_pointer": "/source",
+    "fulltext_file": {
+      "path": "research/ir-case-studies-2026-10-15/5988/11.txt",
+      "SHA256": "a9acbc3544e789cae8369d1e45f02747928fadda584c1839780a12a55fe4bd01",
+      "bytes": 461025
+    },
+    "raw_file": {
+      "path": "research/ir-case-studies-2026-10-15/5988/raw/813f6500cd7716a3b527273c6817aeb507800030063847c35963cac4c72c74e4",
+      "SHA256": "813f6500cd7716a3b527273c6817aeb507800030063847c35963cac4c72c74e4",
+      "bytes": 2657587
+    },
+    "native_source_content_equals_fulltext": true,
+    "actual_DB_opened_this_task": false
+  },
+  "scope": {
+    "new_targeted_meaning_and_image_page": 78,
+    "printed_page": 75,
+    "new_p65_or_p69_meaning_image_review": false,
+    "old_p78_impairment_quote_preserved_not_rereviewed": true,
+    "prior_semantic_scope_ref": {
+      "file": {
+        "path": "research/ir-case-studies-2026-10-15/5988/cashflow-oneoff-bridge-review.json",
+        "SHA256": "be9c272aebab8e53d9abe65a60fe5838430634e46f2e47913e4a3d15b64649ed",
+        "bytes": 46609
+      },
+      "pointer": "/scope/new_semantic_pages",
+      "prior_p78_quote_pointer": "/quotations/10"
+    },
+    "new_p78_sections": [
+      "※1収益の区分表示",
+      "※2販管費主要費目と減価償却費",
+      "※3研究開発費の内包範囲",
+      "※4棚卸資産評価損の原価内包"
+    ],
+    "new_other_pages": 0,
+    "printed_vs_physical_preserved": true
+  },
+  "periods": {
+    "previous": {
+      "label": "前連結会計年度",
+      "start": "2024-04-01",
+      "end": "2025-03-31"
+    },
+    "current": {
+      "label": "当連結会計年度",
+      "start": "2025-04-01",
+      "end": "2026-03-31"
+    }
+  },
+  "findings": [
+    {
+      "id": "SGA_DA_included",
+      "quote_id": "5988-p78-SGA-major-items-DA",
+      "supported": "販管費の主要な費目という見出し下の減価償却費は前741/当984百万円。同じ前/当連結年度の期間列が明示され、給与/発送費等と同じ内訳表の行として記載。",
+      "limits": "販管費全体とは別の追加費用でない。表の全主要項目を合計して販管費総額を再作成せず、984を全社総D&A・cash CAPEX・必要維持投資又は成長再投資にしない。"
+    },
+    {
+      "id": "other_costs_inclusion",
+      "quote_ids": [
+        "5988-p78-RD-inclusion",
+        "5988-p78-inventory-loss-in-COGS"
+      ],
+      "supported": "研究開発費前687/当744百万円は一般管理費及び当期製造費用に含むと明記し、棚卸資産評価損前45/当40百万円は売上原価に含むと明記。",
+      "limits": "R&D全額をSG&Aのみへ追加/全額除外せず、製造費用を当期売上原価と無条件同一視しない。原価の償却額や維持/成長分類をこの記載から推計しない。"
+    },
+    {
+      "id": "revenue_scope",
+      "quote_id": "5988-p78-revenue-note",
+      "supported": "売上高の顧客契約収益とそれ以外の収益を区分して記載していないという会社注記を確認。分解情報は別注記へ参照される。",
+      "limits": "売上高を全て顧客契約収益/純額/物販売上と認定せず、他注記頁へ広げない。"
+    },
+    {
+      "id": "CF_depreciation_is_a_different_display",
+      "old_quote_refs": [
+        {
+          "file": {
+            "path": "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/quotes.json",
+            "SHA256": "2942983dd3dd3887582c2b58373c05071db94aa2a07a3492099901be4f2d4d25",
+            "bytes": 18149
+          },
+          "JSON_pointer": "/quotes/2",
+          "quote_id": "Q65",
+          "physical_page": 65,
+          "printed_page": 62,
+          "native_exact_reuse_verified": true,
+          "full_text_start": 127303,
+          "full_text_end_exclusive": 129787,
+          "no_new_meaning_or_image_review_of_this_page": true
+        },
+        {
+          "file": {
+            "path": "research/ir-case-studies-2026-10-15/5988/cashflow-oneoff-bridge-review.json",
+            "SHA256": "be9c272aebab8e53d9abe65a60fe5838430634e46f2e47913e4a3d15b64649ed",
+            "bytes": 46609
+          },
+          "JSON_pointer": "/quotations/0",
+          "quote_id": "OC01",
+          "physical_page": 69,
+          "printed_page": 66,
+          "native_exact_reuse_verified": true,
+          "full_text_start": 135729,
+          "full_text_end_exclusive": 135913,
+          "no_new_meaning_or_image_review_of_this_page": true
+        },
+        {
+          "file": {
+            "path": "research/ir-case-studies-2026-10-15/5988/cashflow-oneoff-bridge-review.json",
+            "SHA256": "be9c272aebab8e53d9abe65a60fe5838430634e46f2e47913e4a3d15b64649ed",
+            "bytes": 46609
+          },
+          "JSON_pointer": "/quotations/14",
+          "quote_id": "OC15",
+          "physical_page": 69,
+          "printed_page": 66,
+          "native_exact_reuse_verified": true,
+          "full_text_start": 135996,
+          "full_text_end_exclusive": 136058,
+          "no_new_meaning_or_image_review_of_this_page": true
+        }
+      ],
+      "supported": "受入済p69の同年度CF減価償却費は4,353/4,436百万円。p78の販管費償却741/984と値/表示文脈を分けて保持する。",
+      "limits": "差額の演算・売上原価への帰属は未実施。営業利益からCF総D&Aを再控除、原価/販管費に含まれた償却を追加控除する二重計算はしない。P/LとCFの完全D&Abridge/著者D&A分類は不明。"
+    }
+  ],
+  "accounting_mapping_ref": "accounting-label-mapping.json",
+  "method_adoption": "Carlisle方法/公式分母・OIADP・EV/ratio/ranking/買売を認証又は生成していない。現英語ラベルとの対応候補だけ。著者用語のv2固定後のレビューはroot担当。",
+  "case_boundary": {
+    "case_id": "5988-cost-tax-basis-monitor",
+    "issue_id": "5988-cost-tax-cashflow-basis",
+    "version": 4,
+    "config_revision": 1,
+    "reviewed_sources": 15,
+    "state_basis": "root指定と既受入maintenance followupを再利用。DB未接続で現在の全台帳を再認証しない。",
+    "reference": {
+      "path": "research/ir-case-studies-2026-10-15/5988/maintenance-investment-saved-followup-2026-10-16/review.json",
+      "SHA256": "0532b31856ae979846eedbef7ad6bb9ba937c3a95c5f58d8ad3dc411f311e3f9",
+      "bytes": 9700
+    },
+    "changed": false,
+    "manual_next_legitimate_job_only": true
+  },
+  "handoff": {
+    "read_at": "2026-10-16T15:24:32.166669+00:00",
+    "source_id": "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+    "source_native_JSON_SHA256": "3dd6c5db0b134340fc8f373e06e75490d064fa8e828d0a58a2782e4776176ae3",
+    "new_scope": "p78の販管費D&A/費用内包用途への追加読解",
+    "review_path": "research/ir-case-studies-2026-10-15/5988/operating-earnings-DA-saved-followup-2026-10-16/review.json",
+    "quotes_path": "research/ir-case-studies-2026-10-15/5988/operating-earnings-DA-saved-followup-2026-10-16/quotes.json",
+    "mapping_path": "research/ir-case-studies-2026-10-15/5988/operating-earnings-DA-saved-followup-2026-10-16/accounting-label-mapping.json",
+    "next_use": "次の正当な既存論点jobでfile/SHA/read_at/source-nativeを手動参照し、新source/公表・新pending・金融採用へ自動昇格しない。"
+  },
+  "operations": {
+    "GET": 0,
+    "DB": 0,
+    "Store": 0,
+    "new_source": 0,
+    "normalizer": 0,
+    "IR": 0,
+    "EV_ratio_rank_model_action": 0,
+    "old_files_or_shared_docs_edits": 0
+  }
+}

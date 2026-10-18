@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T12:11:33.092102+00:00",
+  "status": "unfixed_adjacent_source_metadata_gap_frozen",
+  "probe": {
+    "path": "research/ir-reply-runtime-gap-review-2026-10-15/independent-probe.py",
+    "sha256": "f54c83db00491207b3d2f1b42f9f4848f769ddeb632fe7a01d2589de47675ebd"
+  },
+  "output": {
+    "path": "research/ir-reply-runtime-gap-review-2026-10-15/adjacent-source-gap-reproduction.json",
+    "sha256": "6f78bf4c329657f56e9678ce5af2f690e7bd5a740774d8ef8710cfe000f5fd43"
+  },
+  "baseline_production_and_test_snapshots": [
+    {
+      "path": "src/ir_agent/harness.py",
+      "sha256": "fc9647737d3386574a9d0999bcb1dd9cf9e887cf6e58eb815ab58e42d6dce8a2"
+    },
+    {
+      "path": "src/ir_agent/decision_lifecycle.py",
+      "sha256": "5741cbb3d1c4c11efc2b15b5ab64a57bb32b7ba50783d707c1fec6c9fc4c5934"
+    },
+    {
+      "path": "src/ir_agent/decision.py",
+      "sha256": "2c441f1d94a38453427dd8be3f589565dd7170a4c8cd7ec248be71d1ec516934"
+    },
+    {
+      "path": "src/ir_agent/information_review.py",
+      "sha256": "22df6e4a6e5d717a390e817bb311b091112eb1d44722e0651623548f09b7d9ee"
+    },
+    {
+      "path": "tests/test_dependency_information_gates.py",
+      "sha256": "f4714d67cf75fb2f9b032232b1251cc1eede962ae76f827e437360f66a77bc1b"
+    }
+  ],
+  "old_research_snapshots": [
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/README.md",
+      "sha256": "c2f217692a612e487b81d0ad39c6454282b1741c9d0964059965eaf67e9196dc",
+      "bytes": 3914
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/implementation.json",
+      "sha256": "82d517a49c0cfbb69c0edc1a6187bf3a724cf9b3918e4a5d33cccb00260d1c46",
+      "bytes": 2917
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/independent-probe.py",
+      "sha256": "f54c83db00491207b3d2f1b42f9f4848f769ddeb632fe7a01d2589de47675ebd",
+      "bytes": 4252
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/parent-before-code-change.json",
+      "sha256": "3671a7f51dca355ca8e5142d3878c1b823106a3d06d42a3b362f36c22ab91530",
+      "bytes": 1002
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/parent-full-suite.json",
+      "sha256": "e7fc6325e30dbf9d4eeb145bae5f7fd9013bd44a6daeffe0591a5319ece8e7d7",
+      "bytes": 1303
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/parent-full-suite.log",
+      "sha256": "a73f2c2b7db3495a70392c9707651dbc0557aa2ad9730970b7701d7f7dd93623",
+      "bytes": 256437
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/reproduce.py",
+      "sha256": "0bcb5734e290e715d72f01e98702f2501a59503a2e6a6c4c5aced011b7e0cb53",
+      "bytes": 8105
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/reproduction.json",
+      "sha256": "7dd4143669e6e673fef84730ff081898f5a75ef5aab72893f1061f2f4bec032a",
+      "bytes": 27074
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/review.json",
+      "sha256": "28236371bea5b1b4b5818e291c2de95e427003bc7123f4c89fa14c50adf7dec8",
+      "bytes": 13880
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/root-review-preparation.json",
+      "sha256": "42d5592b162c27bb86e5c3a53e40099b82f016dae7676abefdbb52b4476cd7d4",
+      "bytes": 12190
+    },
+    {
+      "path": "research/ir-reply-runtime-gap-review-2026-10-15/validation.json",
+      "sha256": "8d18c71e073ab38abf97c3a228a9d175091745a906aad1334c4343336b370219",
+      "bytes": 1408
+    }
+  ],
+  "finding": "No classification correction exists. An original ir_reply source snapshot marked unclear is already held by pure plan but a legacy new public reply still applies v3->v4.",
+  "intended_semantics": "Match pure decision source-origin classification rule. Original source snapshot holds and reply correction records remain separate; an append-only public correction does not rewrite or automatically release an unclear source snapshot.",
+  "execution": {
+    "synthetic_memory_cases": 3,
+    "actual_db_accesses": 0,
+    "new_gets": 0,
+    "production_edits_before_freeze": 0
+  }
+}

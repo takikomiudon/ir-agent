@@ -1,0 +1,549 @@
+--- research/ir-case-studies-2026-10-15/1975/native-case-setup-2026-10-16/case-context.json
++++ research/ir-case-studies-2026-10-15/1975/native-case-setup-2026-10-16/actual-inputs/case-context.json
+@@ -2,7 +2,7 @@
+   "case_id": "1975-segment-earnings-order-and-cash-basis-monitor",
+   "company_id": "jp:1975",
+   "issue_id": "1975-segment-profit-orders-and-cash-basis",
+-  "status": "file_only_prepared_not_registrable_before_actual_source_save",
++  "status": "file_only_actual_source_handoff_prepared_not_registered",
+   "synthetic": false,
+   "prepared_at": "2026-10-16T04:29:04.986382+00:00",
+   "purpose": "設備工事と機器の売上/粗利/営業損益、受注回復見込みと実績、利益段階と現金化を同じ公表定義で継続比較する。",
+@@ -54,7 +54,9 @@
+   ],
+   "source_ids": [
+     "case-public:f13100626c01d39255de178a6e37d14566e477cb6a9083095b79ab659d1d7eef",
+-    "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea"
++    "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
++    "case-public:b02c62df4645398a714ef96c978579c6d0e31e90754f12b2b389c7495d18a54c",
++    "disclosed-facts:145cc30798194e4ec4e26d62eec8fa408c9c9e94125a587653d5cb19cc3664e5"
+   ],
+   "source_inventory": [
+     {
+@@ -70,7 +72,7 @@
+       "publication_day": null,
+       "published_at_preserved": null,
+       "retrieved_at_preserved": "2026-10-16T04:18:36.768102+00:00",
+-      "actual_DB_first_saved_at": null
++      "actual_DB_first_saved_at": "2026-10-16T04:37:22.269407+00:00"
+     },
+     {
+       "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
+@@ -85,7 +87,37 @@
+       "publication_day": "2026-08-04",
+       "published_at_preserved": null,
+       "retrieved_at_preserved": "2026-10-16T04:18:59.234370+00:00",
+-      "actual_DB_first_saved_at": null
++      "actual_DB_first_saved_at": "2026-10-16T04:37:22.269407+00:00"
++    },
++    {
++      "source_id": "case-public:b02c62df4645398a714ef96c978579c6d0e31e90754f12b2b389c7495d18a54c",
++      "source_ref": {
++        "path": "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/source-bundle.json",
++        "sha256": "2b0a0e006a7c5019c41a58e01018b5fe9b4b3109d77a2bf5b92add760739f594",
++        "json_pointer": "/sources/0"
++      },
++      "native_snapshot_sha256": "5fd00583b3fa98ac0296d4f7b97549f071b2d63517a8f5a3b4cfd6034e6837d6",
++      "snapshot_algorithm": "SHA256 UTF8 sorted JSON default separators; native registry domain",
++      "content_sha256": "4e10f40dc1b1e4b31de3f1b61296133a7adf1e924d0139538cb86dea349f490f",
++      "publication_day": "2026-08-04",
++      "published_at_preserved": null,
++      "retrieved_at_preserved": "2026-10-16T04:26:06.566587+00:00",
++      "actual_DB_first_saved_at": "2026-10-16T04:37:22.269407+00:00"
++    },
++    {
++      "source_id": "disclosed-facts:145cc30798194e4ec4e26d62eec8fa408c9c9e94125a587653d5cb19cc3664e5",
++      "source_ref": {
++        "path": "research/ir-case-studies-2026-10-15/1975/disclosed-facts-2026-10-16/normalized-bundle.json",
++        "sha256": "6d678bd2209ec9f0a90a0f7545ca612a3c51844a67a3116ee3e7440aeede465f",
++        "json_pointer": "/sources/1"
++      },
++      "native_snapshot_sha256": "aecdec942a09926c83f60fad3b446f96edcea461c5ae1a5aeecb732aba0f94ef",
++      "snapshot_algorithm": "SHA256 UTF8 sorted JSON default separators; native registry domain",
++      "content_sha256": "120a18af398589fee96ab83a5cd0835b827c41934b4234a6559bf5b7370fefff",
++      "publication_day": null,
++      "published_at_preserved": null,
++      "retrieved_at_preserved": "2026-10-16T04:29:53.220107+00:00",
++      "actual_DB_first_saved_at": "2026-10-16T04:37:22.269407+00:00"
+     }
+   ],
+   "review_questions": [
+@@ -197,10 +229,10 @@
+     "path": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/parent-acceptance.json",
+     "sha256": "c79b599fa5f5b1a87c4862893bdef21a736699c892765b61a29550455aa3a81a"
+   },
+-  "actual_source_first_saved_at": null,
+-  "bootstrap_handoff_reviewed_at": null,
+-  "bootstrap_or_register_request_created": false,
+-  "actual_DB_checked_by_preparer": false,
++  "actual_source_first_saved_at": "2026-10-16T04:37:22.269407+00:00",
++  "bootstrap_handoff_reviewed_at": "2026-10-16T04:40:47.343675+00:00",
++  "bootstrap_or_register_request_created": true,
++  "actual_DB_checked_by_preparer": true,
+   "limited_reading_scope": {
+     "HTML": "初期rootのQ1資料リンク掲載部分のみ。全サイト/現在の全公表状態ではない。",
+     "statement_full_text_saved_pages": 12,
+@@ -302,5 +334,463 @@
+     "future_unfrozen_other_agent_outputs_pinned": 0,
+     "all_dependency_pins_unchanged": true,
+     "DB_GET_API_code_shared_or_oldfile_edits": 0
++  },
++  "handoff_process_metadata": {
++    "reviewed_at": "2026-10-16T04:40:47.343675+00:00",
++    "actual_source_check_ref": {
++      "path": "research/ir-case-studies-2026-10-15/1975/native-case-setup-2026-10-16/actual-inputs/actual-readonly-check.json",
++      "sha256": "1d6c118ad3cede10e14fa9439cc52fa323c7aec1fb839bb25335ac7b5e7bb57f"
++    },
++    "original_context_ref": {
++      "path": "research/ir-case-studies-2026-10-15/1975/native-case-setup-2026-10-16/case-context.json",
++      "sha256": "e95da235e353dc5d485e43d02a699aa62e6dec6e9063ad2e29c82fb84714e184"
++    },
++    "original_management_ref": {
++      "path": "research/ir-case-studies-2026-10-15/1975/native-case-setup-2026-10-16/management-basis.json",
++      "sha256": "e8ede00ae50b942423b59a53a6ecf3072755a6e99f3fd0eba03cec5b04dddca0"
++    },
++    "parent_context_acceptance_ref": {
++      "path": "research/ir-case-studies-2026-10-15/1975/native-case-setup-2026-10-16/parent-context-acceptance.json",
++      "sha256": "8ed54f6f646436427d62265cba112e67e0a296b3836b0a9e7912c6e7d8a5ed91"
++    },
++    "historical_scope_note": "Original prepared_at/initial reading scope/future-material boundary describe the accepted initial2-source stage. It remains unchanged as history; the current additional source/reading is explicitly added here after root acceptance, never backdated.",
++    "current_accepted_supplement": {
++      "parent_refs": [
++        {
++          "path": "research/ir-case-studies-2026-10-15/1975/statement-note-followup-2026-10-16/parent-acceptance.json",
++          "sha256": "37405c7575697691be42a30bb47821af83755f13b03a42b7af9cabdacb730801"
++        },
++        {
++          "path": "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/parent-acceptance.json",
++          "sha256": "778b5e0c3346de6f55a636454c0cda93305caf0ca136a9ee24e245da9dd9ff67"
++        },
++        {
++          "path": "research/ir-case-studies-2026-10-15/1975/disclosed-facts-2026-10-16/parent-acceptance.json",
++          "sha256": "3afdf51a4c2b912226477cba84452c35cf36c212dd5ef0880188c9fe307b8fc6"
++        }
++      ],
++      "source_reading_scope": {
++        "initial_statement_pages": [
++          1,
++          2,
++          4,
++          7
++        ],
++        "additional_same_statement_pages": [
++          9,
++          10
++        ],
++        "statement_pages_saved": 12,
++        "additional_note_is_new_source_or_publication": false,
++        "presentation_pages": [
++          6,
++          7,
++          14
++        ],
++        "presentation_pages_saved": 17,
++        "other_pages_unread_in_this_scope": true
++      },
++      "current_known_additions_by_old_condition": [
++        {
++          "condition_id": "construction-versus-equipment-sales-gross-margin-and-operating-profit",
++          "accepted_known": "説明p6のQ1高粗利は竣工件数と竣工に向けた利益計上の時期による。p7機器売上減は主要顧客の生産計画調整を説明し、新規主要顧客獲得等は施策。機器粗利率改善と赤字拡大は両立。",
++          "limits": "Q1高粗利を年次正常率や将来利益に延長せず、施策を顧客獲得済/調整終了にしない。"
++        },
++        {
++          "condition_id": "orders-recovery-expectation-versus-results-and-dated-guidance",
++          "accepted_known": "説明p14は機器FY受注のFPD需要回復見込みと、2025年3月期に大型受注したドライヤ既受注案件のFY売上計上見込みを分ける。設備工事FY受注は施工体制考慮、売上は手持工事進捗。注記p10の連結受注31,261→36,232百万円と個別31,107→35,156は別Q1フロー。",
++          "limits": "新規受注回復と既受注売上計上を一つの成功としない。Q1受注増を年度全体へ延長せず、連結差を子会社寄与/stockへ変換しない。"
++        },
++        {
++          "condition_id": "profit-stages-historical-share-basis-and-cash-realization",
++          "accepted_known": "注記p9はsegment利益合計がOPに一致、当Q1 CF未作成、D&A前年170/当年172百万円を説明。これにより初期のCF未読という残余は当scopeで解消したが、旧初期読解履歴は不変。",
++          "limits": "CF未作成はCFO0でなく、D&A/現金残高差/受注額をCFO・維持投資・FCFFにしない。正常税・cash税・現金化は未確認。"
++        }
++      ],
++      "accepted_quote_bindings": {
++        "Q1-explanation-physical-6": {
++          "quote_id": "Q1-explanation-physical-6",
++          "quote_ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/source-quotes.json",
++            "sha256": "764b119eb721504010721803216d444ef06dcf4e2ba7609452034bfb4e7f13a2",
++            "json_pointer": "/0"
++          },
++          "source_id": "case-public:b02c62df4645398a714ef96c978579c6d0e31e90754f12b2b389c7495d18a54c",
++          "source_character_start": 4717,
++          "source_character_end": 6540,
++          "quote_sha256": "48ec3589925aa72f7e91dedca92746d28e0292e96de16492ac9f02b773140f05",
++          "physical_pdf_page": 6,
++          "exact_to_actual_source_content": true
++        },
++        "Q1-explanation-physical-7": {
++          "quote_id": "Q1-explanation-physical-7",
++          "quote_ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/source-quotes.json",
++            "sha256": "764b119eb721504010721803216d444ef06dcf4e2ba7609452034bfb4e7f13a2",
++            "json_pointer": "/1"
++          },
++          "source_id": "case-public:b02c62df4645398a714ef96c978579c6d0e31e90754f12b2b389c7495d18a54c",
++          "source_character_start": 6541,
++          "source_character_end": 8206,
++          "quote_sha256": "3ff0d4600e4bed9e944da5f7881d4a46304c7ff76b07e1aebfa50cffe491151d",
++          "physical_pdf_page": 7,
++          "exact_to_actual_source_content": true
++        },
++        "Q1-explanation-physical-14": {
++          "quote_id": "Q1-explanation-physical-14",
++          "quote_ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/public-explanation-followup-2026-10-16/source-quotes.json",
++            "sha256": "764b119eb721504010721803216d444ef06dcf4e2ba7609452034bfb4e7f13a2",
++            "json_pointer": "/2"
++          },
++          "source_id": "case-public:b02c62df4645398a714ef96c978579c6d0e31e90754f12b2b389c7495d18a54c",
++          "source_character_start": 17112,
++          "source_character_end": 18957,
++          "quote_sha256": "d8ede64a07e82ea457a57555f71eef66613ffba506bd21be98d20c032e0e151f",
++          "physical_pdf_page": 14,
++          "exact_to_actual_source_content": true
++        },
++        "physical-9-full-page": {
++          "quote_id": "physical-9-full-page",
++          "quote_ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/statement-note-followup-2026-10-16/source-quotes.json",
++            "sha256": "015d1089b31e518e96dd58c3734ed3b80959df4a23a5978ea6dd4a2317c8a81a",
++            "json_pointer": "/quotes/0"
++          },
++          "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
++          "source_character_start": 14215,
++          "source_character_end": 16719,
++          "quote_sha256": "6bd727e0fb3ae77ad50687faa4d85a85bc90db7313de4fbc2a4fea50078f3555",
++          "physical_pdf_page": 9,
++          "exact_to_actual_source_content": true
++        },
++        "physical-10-full-page": {
++          "quote_id": "physical-10-full-page",
++          "quote_ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/statement-note-followup-2026-10-16/source-quotes.json",
++            "sha256": "015d1089b31e518e96dd58c3734ed3b80959df4a23a5978ea6dd4a2317c8a81a",
++            "json_pointer": "/quotes/1"
++          },
++          "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
++          "source_character_start": 16719,
++          "source_character_end": 18230,
++          "quote_sha256": "612294211ed8c690e761c6b33f6b3f077babea187902d24a93b72b96e12702de",
++          "physical_pdf_page": 10,
++          "exact_to_actual_source_content": true
++        },
++        "segment-comparative-q1": {
++          "quote_id": "segment-comparative-q1",
++          "quote_ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/statement-note-followup-2026-10-16/source-quotes.json",
++            "sha256": "015d1089b31e518e96dd58c3734ed3b80959df4a23a5978ea6dd4a2317c8a81a",
++            "json_pointer": "/quotes/2"
++          },
++          "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
++          "source_character_start": 14350,
++          "source_character_end": 15265,
++          "quote_sha256": "6d3ef5202d56ababd3ce4a9cb26e57444eeaad1a9896482e60e342091ee54589",
++          "physical_pdf_page": 9,
++          "exact_to_actual_source_content": true
++        },
++        "segment-current-q1-operating-profit": {
++          "quote_id": "segment-current-q1-operating-profit",
++          "quote_ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/statement-note-followup-2026-10-16/source-quotes.json",
++            "sha256": "015d1089b31e518e96dd58c3734ed3b80959df4a23a5978ea6dd4a2317c8a81a",
++            "json_pointer": "/quotes/3"
++          },
++          "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
++          "source_character_start": 15265,
++          "source_character_end": 16159,
++          "quote_sha256": "ae331af241b92566a75cbd802ba750ef2f9c20d8a310d787a199bc14536d48c3",
++          "physical_pdf_page": 9,
++          "exact_to_actual_source_content": true
++        },
++        "specified-no-applicable-notes": {
++          "quote_id": "specified-no-applicable-notes",
++          "quote_ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/statement-note-followup-2026-10-16/source-quotes.json",
++            "sha256": "015d1089b31e518e96dd58c3734ed3b80959df4a23a5978ea6dd4a2317c8a81a",
++            "json_pointer": "/quotes/4"
++          },
++          "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
++          "source_character_start": 16159,
++          "source_character_end": 16228,
++          "quote_sha256": "1d1c2cb7a970e2fe2c3090d596075071092a553ed928394372597f4327c4dff5",
++          "physical_pdf_page": 9,
++          "exact_to_actual_source_content": true
++        },
++        "cf-not-prepared-and-da": {
++          "quote_id": "cf-not-prepared-and-da",
++          "quote_ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/statement-note-followup-2026-10-16/source-quotes.json",
++            "sha256": "015d1089b31e518e96dd58c3734ed3b80959df4a23a5978ea6dd4a2317c8a81a",
++            "json_pointer": "/quotes/5"
++          },
++          "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
++          "source_character_start": 16228,
++          "source_character_end": 16678,
++          "quote_sha256": "17ad0df8ead572490a68a1534a9e6ef9229e46f9bb42e268e4bc4171bb5ea8e2",
++          "physical_pdf_page": 9,
++          "exact_to_actual_source_content": true
++        },
++        "consolidated-orders-q1": {
++          "quote_id": "consolidated-orders-q1",
++          "quote_ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/statement-note-followup-2026-10-16/source-quotes.json",
++            "sha256": "015d1089b31e518e96dd58c3734ed3b80959df4a23a5978ea6dd4a2317c8a81a",
++            "json_pointer": "/quotes/6"
++          },
++          "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
++          "source_character_start": 16818,
++          "source_character_end": 17495,
++          "quote_sha256": "8a4d70b9e8d532a81d3739958b65d93f5043f1f583a3cca7c48aa9caceae6512",
++          "physical_pdf_page": 10,
++          "exact_to_actual_source_content": true
++        },
++        "separate-company-orders-q1": {
++          "quote_id": "separate-company-orders-q1",
++          "quote_ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/statement-note-followup-2026-10-16/source-quotes.json",
++            "sha256": "015d1089b31e518e96dd58c3734ed3b80959df4a23a5978ea6dd4a2317c8a81a",
++            "json_pointer": "/quotes/7"
++          },
++          "source_id": "case-public:1be0616e6cd3190c24777d4fc73d7e98da23fef874d4049aa38b667dbefdbdea",
++          "source_character_start": 17495,
++          "source_character_end": 18178,
++          "quote_sha256": "75b440e1129a2ab7ec959680e0e1fb3246e8e0ea7e6a6b0128214dfe7877ceaa",
++          "physical_pdf_page": 10,
++          "exact_to_actual_source_content": true
++        }
++      },
++      "future_forecasts_valuation_or_IR_adoption": false
++    },
++    "residual_manual_handoff": {
++      "parent_acceptance_ref": {
++        "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/parent-acceptance.json",
++        "sha256": "f20e55be737a98808628498127d87007b35145052f37941c270d2bb291f79999"
++      },
++      "residual_map_ref": {
++        "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
++        "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37"
++      },
++      "worker_handoff_ref": {
++        "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/worker-handoff.json",
++        "sha256": "a861e9c52e87192a212b077247f72065476b5256031559f906175b8bbd9ed141"
++      },
++      "known": [
++        {
++          "local_id": "K1",
++          "topic": "期間・利益段階・当時予想",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37",
++            "json_pointer": "/known_do_not_reask/0"
++          },
++          "existing_condition_ids": [
++            "orders-recovery-expectation-versus-results-and-dated-guidance",
++            "profit-stages-historical-share-basis-and-cash-realization"
++          ]
++        },
++        {
++          "local_id": "K2",
++          "topic": "Q1竣工時期と高粗利",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37",
++            "json_pointer": "/known_do_not_reask/1"
++          },
++          "existing_condition_ids": [
++            "construction-versus-equipment-sales-gross-margin-and-operating-profit"
++          ]
++        },
++        {
++          "local_id": "K3",
++          "topic": "設備工事と機器を分離",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37",
++            "json_pointer": "/known_do_not_reask/2"
++          },
++          "existing_condition_ids": [
++            "construction-versus-equipment-sales-gross-margin-and-operating-profit"
++          ]
++        },
++        {
++          "local_id": "K4",
++          "topic": "受注期待と既受注売上は別機構",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37",
++            "json_pointer": "/known_do_not_reask/3"
++          },
++          "existing_condition_ids": [
++            "orders-recovery-expectation-versus-results-and-dated-guidance"
++          ]
++        },
++        {
++          "local_id": "K5",
++          "topic": "segment利益とOP",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37",
++            "json_pointer": "/known_do_not_reask/4"
++          },
++          "existing_condition_ids": [
++            "construction-versus-equipment-sales-gross-margin-and-operating-profit",
++            "profit-stages-historical-share-basis-and-cash-realization"
++          ]
++        },
++        {
++          "local_id": "K6",
++          "topic": "CF未作成と利益/cash",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37",
++            "json_pointer": "/known_do_not_reask/5"
++          },
++          "existing_condition_ids": [
++            "profit-stages-historical-share-basis-and-cash-realization"
++          ]
++        },
++        {
++          "local_id": "K7",
++          "topic": "連結/個別受注flowと未知stock",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37",
++            "json_pointer": "/known_do_not_reask/6"
++          },
++          "existing_condition_ids": [
++            "orders-recovery-expectation-versus-results-and-dated-guidance"
++          ]
++        },
++        {
++          "local_id": "K8",
++          "topic": "歴史的株数・表示精度・指定注記",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37",
++            "json_pointer": "/known_do_not_reask/7"
++          },
++          "existing_condition_ids": [
++            "profit-stages-historical-share-basis-and-cash-realization"
++          ]
++        }
++      ],
++      "remaining": [
++        {
++          "local_id": "P1",
++          "topic": "保存済み未読箇所",
++          "owner": "researcher_public_unread",
++          "status": "remaining_not_prioritized_for_IR",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37",
++            "json_pointer": "/remaining_owner_tasks/0"
++          },
++          "existing_condition_ids": [
++            "construction-versus-equipment-sales-gross-margin-and-operating-profit",
++            "orders-recovery-expectation-versus-results-and-dated-guidance",
++            "profit-stages-historical-share-basis-and-cash-realization"
++          ]
++        },
++        {
++          "local_id": "P2",
++          "topic": "公開QA・後日更新",
++          "owner": "researcher_public_update",
++          "status": "remaining_not_prioritized_for_IR",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37",
++            "json_pointer": "/remaining_owner_tasks/1"
++          },
++          "existing_condition_ids": [
++            "construction-versus-equipment-sales-gross-margin-and-operating-profit",
++            "orders-recovery-expectation-versus-results-and-dated-guidance",
++            "profit-stages-historical-share-basis-and-cash-realization"
++          ]
++        },
++        {
++          "local_id": "C1",
++          "topic": "竣工/採算の残る比較定義",
++          "owner": "issuer_definition_after_public_review",
++          "status": "remaining_not_prioritized_for_IR",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37",
++            "json_pointer": "/remaining_owner_tasks/2"
++          },
++          "existing_condition_ids": [
++            "construction-versus-equipment-sales-gross-margin-and-operating-profit"
++          ]
++        },
++        {
++          "local_id": "C2",
++          "topic": "受注stock/flow・取消変更",
++          "owner": "issuer_definition_after_public_review",
++          "status": "remaining_not_prioritized_for_IR",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37",
++            "json_pointer": "/remaining_owner_tasks/3"
++          },
++          "existing_condition_ids": [
++            "orders-recovery-expectation-versus-results-and-dated-guidance"
++          ]
++        },
++        {
++          "local_id": "C3",
++          "topic": "利益とcash/税の残余",
++          "owner": "issuer_definition_after_public_review",
++          "status": "remaining_not_prioritized_for_IR",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37",
++            "json_pointer": "/remaining_owner_tasks/4"
++          },
++          "existing_condition_ids": [
++            "profit-stages-historical-share-basis-and-cash-realization"
++          ]
++        },
++        {
++          "local_id": "A1",
++          "topic": "著者固有forecast未採用",
++          "owner": "external_author_forecast_and_method",
++          "status": "remaining_not_prioritized_for_IR",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37",
++            "json_pointer": "/remaining_owner_tasks/5"
++          },
++          "existing_condition_ids": [
++            "construction-versus-equipment-sales-gross-margin-and-operating-profit",
++            "orders-recovery-expectation-versus-results-and-dated-guidance",
++            "profit-stages-historical-share-basis-and-cash-realization"
++          ]
++        },
++        {
++          "local_id": "I1",
++          "topic": "正常利益・評価とIR価値",
++          "owner": "investor_valuation_using_adopted_method",
++          "status": "remaining_not_prioritized_for_IR",
++          "ref": {
++            "path": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
++            "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37",
++            "json_pointer": "/remaining_owner_tasks/6"
++          },
++          "existing_condition_ids": [
++            "construction-versus-equipment-sales-gross-margin-and-operating-profit",
++            "orders-recovery-expectation-versus-results-and-dated-guidance",
++            "profit-stages-historical-share-basis-and-cash-realization"
++          ]
++        }
++      ],
++      "not_new_native_issue_IDs_or_financial_branches": true,
++      "worker_use": "実packet/prior_reviewと固定票を手動比較し、summaryとcase_observation.rationale双方で既知/残余・読解時点・原scope/fileSHAを落とさない。source evidenceは実pendingだけ。自動同梱/機械受領や金融認証を保証しない。"
++    },
++    "bootstrap_is_meaning_certification": false,
++    "financial_inputs_adopted": false,
++    "register_request_is_file_only": true
+   }
+ }

@@ -1,0 +1,127 @@
+{
+  "security_code": "7066",
+  "company_name": "ピアズ",
+  "market": "グロース（内国株式）",
+  "jpx_sector": "サービス業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://peers.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T19:55:23.478606+00:00",
+  "completed_at": "2026-10-11T19:57:05.074211+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/7066/20261011T195523478687Z/01.json",
+      "url": "https://peers.jp/",
+      "retrieved_at": "2026-10-11T19:55:33.813647+00:00",
+      "quote": "株式会社ピアズ",
+      "role": "company_identity"
+    },
+    {
+      "snapshot": "evidence/7066/20261011T195523478687Z/03.json",
+      "url": "https://peers.jp/contact",
+      "retrieved_at": "2026-10-11T19:56:30.759210+00:00",
+      "quote": "お問い合わせ項目 必 須 商材・サービスの導入を検討中 新卒で就職活動中／転職活動中 報道／取材関連 営業としての提案 アライアンス・パートナーとしての提案 M&Aに関するお問い合わせ 問い合わせ内容 必 須 企業名 お名前 必 須 フリガナ 必 須 電話番号 E-mail 必 須 E-mail（確認用） 必 須",
+      "role": "general_non_ir_native_form",
+      "form_index": 0,
+      "source_form_index": 0
+    },
+    {
+      "snapshot": "evidence/7066/20261011T195523478687Z/03.json",
+      "url": "https://peers.jp/contact",
+      "retrieved_at": "2026-10-11T19:56:30.759210+00:00",
+      "quote": "サービスに関するご質問やお見積り、取材に関するご連絡等、何でもお気軽にお問合せください。 なお、お問合せの際、お預かりするお客様の個人情報については、 プライバシーポリシー に基づき取扱わせていただきます。",
+      "role": "outreach_condition"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://peers.jp/",
+      "final_url": "https://peers.jp/",
+      "snapshot": "evidence/7066/20261011T195523478687Z/01.json",
+      "retrieved_at": "2026-10-11T19:55:33.813647+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://peers.jp/ir/",
+      "final_url": null,
+      "snapshot": "evidence/7066/20261011T195523478687Z/02.json",
+      "retrieved_at": "2026-10-11T19:55:56.497498+00:00",
+      "http_status": null,
+      "error": "ReadTimeout"
+    },
+    {
+      "url": "https://peers.jp/contact/",
+      "final_url": "https://peers.jp/contact",
+      "snapshot": "evidence/7066/20261011T195523478687Z/03.json",
+      "retrieved_at": "2026-10-11T19:56:30.759210+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://peers.jp/informationsecurity/",
+      "final_url": "https://peers.jp/informationsecurity",
+      "snapshot": "evidence/7066/20261011T195523478687Z/04.json",
+      "retrieved_at": "2026-10-11T19:56:53.341010+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [
+    "サービスに関するご質問やお見積り、取材に関するご連絡等、何でもお気軽にお問合せください。 なお、お問合せの際、お預かりするお客様の個人情報については、 プライバシーポリシー に基づき取扱わせていただきます。"
+  ],
+  "limitations": [
+    "https://peers.jp/ir/: ReadTimeout",
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "現ピアズ正式名01/generalcontact03とsecurity04を読解。03solePOST0 typedemail11+confirmation12/questiontextarea6があるがnativecontentItem0..5の分類は商材導入・就職/転職・報道取材・営業・提携・M&Aだけ、金融株主投資家IR受付目的は保存範囲で実証されずU維持。M&A問い合わせ/どんなことでもというgeneric案内とIRnavを金融IR質問用途へ転用0、企業名company7にpublic必須なし/native required absentでも個人IR受付可とは推定0。radio0/question/name/カナ/emailのrequired:null属性存在と任意TEL/企業欄を区別。金融IR02は実ReadTimeoutで本文未取得、過去共通503/ローカル回路停止も履歴保全しIR窓口不存在/拒否とは判定0。セキュリティ04をIRpolicyやprivacy取扱フォームに借用0、実POSTactionをGET候補にせず入力送信0。"
+  ],
+  "discovery": {
+    "security_code": "7066",
+    "official_url": "https://peers.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ピアズ",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/7066/20261011T195523478687Z/01.json",
+      "normalized_name": "ピアズ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/7066/20261011T195523478687Z/03.json",
+      "normalized_name": "ピアズ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/7066/20261011T195523478687Z/04.json",
+      "normalized_name": "ピアズ",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 3,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 8,
+  "previous_attempts": [
+    "attempts/7066/20261011T045047635065Z.json",
+    "attempts/7066/20261011T195705074394Z.json"
+  ],
+  "automatic_conditions_before_review": [],
+  "outreach_reason": "保存公式原文で現発行体の金融IR受付・実IRメール又は同native formの返信質問欄を確認する。一般顧客・製品・採用・保守・個人情報・株式事務・他社の窓口をIR受付に借用しない。",
+  "route_type": null,
+  "ir_url": null,
+  "manual_review": {
+    "reviewer": "codex_audit_data_70_batch24",
+    "reviewed_at": "2026-10-11T23:50:50.348859+00:00",
+    "notes": "現ピアズ正式名01/generalcontact03とsecurity04を読解。03solePOST0 typedemail11+confirmation12/questiontextarea6があるがnativecontentItem0..5の分類は商材導入・就職/転職・報道取材・営業・提携・M&Aだけ、金融株主投資家IR受付目的は保存範囲で実証されずU維持。M&A問い合わせ/どんなことでもというgeneric案内とIRnavを金融IR質問用途へ転用0、企業名company7にpublic必須なし/native required absentでも個人IR受付可とは推定0。radio0/question/name/カナ/emailのrequired:null属性存在と任意TEL/企業欄を区別。金融IR02は実ReadTimeoutで本文未取得、過去共通503/ローカル回路停止も履歴保全しIR窓口不存在/拒否とは判定0。セキュリティ04をIRpolicyやprivacy取扱フォームに借用0、実POSTactionをGET候補にせず入力送信0。"
+  }
+}

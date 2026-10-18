@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T20:41:14.016177+00:00",
+  "review_role": "independent code reviewer; implementation unchanged",
+  "status": "reviewed_no_actionable_findings",
+  "findings": [],
+  "check_count": 34,
+  "independent_checks": [
+    {
+      "check": "invalid_scope_stops_before_call:generator-empty",
+      "passed": true,
+      "exception_type": "ValueError",
+      "message": "J-Quants financial summaries require a nonempty existing company scope"
+    },
+    {
+      "check": "no_client_call:generator-empty",
+      "passed": true
+    },
+    {
+      "check": "invalid_scope_stops_before_call:mixed-valid-invalid",
+      "passed": true,
+      "exception_type": "ValueError",
+      "message": "company_ids must contain canonical jp:CODE IDs"
+    },
+    {
+      "check": "no_client_call:mixed-valid-invalid",
+      "passed": true
+    },
+    {
+      "check": "invalid_scope_stops_before_call:lowercase",
+      "passed": true,
+      "exception_type": "ValueError",
+      "message": "company_ids must contain canonical jp:CODE IDs"
+    },
+    {
+      "check": "no_client_call:lowercase",
+      "passed": true
+    },
+    {
+      "check": "invalid_scope_stops_before_call:noncanonical-whitespace",
+      "passed": true,
+      "exception_type": "ValueError",
+      "message": "company_ids must contain canonical jp:CODE IDs"
+    },
+    {
+      "check": "no_client_call:noncanonical-whitespace",
+      "passed": true
+    },
+    {
+      "check": "invalid_scope_stops_before_call:boolean",
+      "passed": true,
+      "exception_type": "ValueError",
+      "message": "company_ids must contain canonical jp:CODE IDs"
+    },
+    {
+      "check": "no_client_call:boolean",
+      "passed": true
+    },
+    {
+      "check": "wrong_date_outside_scope_excluded_without_changing_target",
+      "passed": true
+    },
+    {
+      "check": "invalid_target_DiscDate_rejected:pd-NaT",
+      "passed": true,
+      "exception_type": "ValueError",
+      "message": "J-Quants financial summary requires a valid DiscDate"
+    },
+    {
+      "check": "invalid_target_DiscDate_rejected:pandas-NA",
+      "passed": true,
+      "exception_type": "ValueError",
+      "message": "J-Quants financial summary requires a valid DiscDate"
+    },
+    {
+      "check": "invalid_target_DiscDate_rejected:empty",
+      "passed": true,
+      "exception_type": "ValueError",
+      "message": "J-Quants financial summary requires a valid DiscDate"
+    },
+    {
+      "check": "invalid_target_DiscDate_rejected:mixed-invalid-time",
+      "passed": true,
+      "exception_type": "ValueError",
+      "message": "J-Quants financial summary requires a valid DiscDate"
+    },
+    {
+      "check": "numpy_pandas_decimal_and_missing_distinctions",
+      "passed": true
+    },
+    {
+      "check": "SDK_midnight_not_publication_time",
+      "passed": true
+    },
+    {
+      "check": "offset_date_label_preserved_without_JST_reinterpretation",
+      "passed": true
+    },
+    {
+      "check": "mixed_target_dates_abort_fetch_not_partial_import",
+      "passed": true,
+      "exception_type": "DataAdapterError",
+      "message": "J-Quants financial-summary DiscDate differs from the requested disclosure day"
+    },
+    {
+      "check": "reordered_repeated_rows_and_duplicate_scope_stable_ID",
+      "passed": true
+    },
+    {
+      "check": "source_schema_has_no_extra_unvalidated_fields",
+      "passed": true
+    },
+    {
+      "check": "later_receipt_reimport_preserves_first_source_and_receipt",
+      "passed": true
+    },
+    {
+      "check": "excluded_company_status_name_and_held_not_reactivated",
+      "passed": true
+    },
+    {
+      "check": "same_DiscNo_correction_appends_keeps_old_rows",
+      "passed": true
+    },
+    {
+      "check": "memory_ingest_has_no_financial_or_intake_side_effect",
+      "passed": true
+    },
+    {
+      "check": "price_like_financial_row_still_rejected_by_quote",
+      "passed": true,
+      "exception_type": "ValueError",
+      "message": "Expected a normalized J-Quants V2 daily-bar market-data source"
+    },
+    {
+      "check": "SDK_error_redaction:HTTP",
+      "passed": true
+    },
+    {
+      "check": "SDK_error_redaction:SDKparse",
+      "passed": true
+    },
+    {
+      "check": "SDK_error_redaction:SDKcontract",
+      "passed": true
+    },
+    {
+      "check": "SDK_original_copy_SHA:client_v2.py.txt",
+      "passed": true
+    },
+    {
+      "check": "SDK_original_copy_SHA:fins.py.txt",
+      "passed": true
+    },
+    {
+      "check": "SDK_original_copy_SHA:constants.py.txt",
+      "passed": true
+    },
+    {
+      "check": "SDK_original_copy_SHA:upstream-LICENSE",
+      "passed": true
+    },
+    {
+      "check": "SDK_installed_version_evidence",
+      "passed": true
+    }
+  ],
+  "fault_injections_and_boundaries": [
+    {
+      "fault": "injected DataFrame.to_dict ValueError",
+      "observed_type": "ValueError",
+      "observed_message": "SYNTHETIC-NORMALIZATION-FAILURE",
+      "interpretation": "Normalization/helper errors are outside SDK-call generic error wrapping. Normal SDK DataFrame.to_dict has no credential inputs; no actual credential leak was established."
+    }
+  ],
+  "reviewed_file_sha256": {
+    "src/ir_agent/adapters/jquants_financials.py": "153fc9df09a0cf7a09ca271044f4c63a3f4425e0db98a21397c2037f922c96d4",
+    "src/ir_agent/adapters/__init__.py": "d1a71b0992717016f31829b618e3185deb947f2c4fe146c853d28684ee905be8",
+    "src/ir_agent/cli.py": "2598b5fae3b86a3a8ed728fc4ae38cfd883ee7c3a01d438c30b5a462e1b4b6d2",
+    "tests/test_jquants_financial_summary.py": "ddbb64c6019e6190435c2f8a183608a5695e4ae85b477047a0ab8ba6b47909fd",
+    "docs/jquants-financial-summary.md": "bfe0540ef7b1dc3c28f96e742ca73f174b240ca40d325c8e19de4ffc05f0247b"
+  },
+  "manual_review": [
+    {
+      "area": "scope/date",
+      "lines": "jquants_financials.py:23-45,63-79,128-129,147-149",
+      "result": "Canonical nonempty scope before client init; only selected rows require valid DiscDate; fetch rejects selected wrong-day rows before ingest."
+    },
+    {
+      "area": "values/meaning",
+      "lines": "jquants_financials.py:67,82-97",
+      "result": "Shared JSON helper preserves SDK-returned JSON-compatible values, including missing versus string/dash. Units, forecast/calendar/accounting/ordinary security legal type are not inferred. Fifth nonzero suffix filtering is the existing code convention, not an issuer/security-master audit."
+    },
+    {
+      "area": "credentials",
+      "lines": "jquants_financials.py:130-145",
+      "result": "Client init/read exceptions suppress original error messages; no api_key/cursor appears in output metadata/URL. No live auth or environment secrets inspected."
+    },
+    {
+      "area": "immutable identity",
+      "lines": "jquants_financials.py:98-105; store.py:274-292",
+      "result": "ID binds company/date reference/raw SDK row/metadata, excludes received time. Later retry retains original saved evidence and receipt; changed row gets distinct ID."
+    },
+    {
+      "area": "CLI/provider",
+      "lines": "cli.py:376-389; adapters/__init__.py; quotes.py:63",
+      "result": "Only new explicit provider branch; companies=[] means no company refresh, provider/dataset differ from price source, quote normalizer rejects summary."
+    }
+  ],
+  "limitations": [
+    "No live SDK auth/API/financial rows/current data-rights or provider coverage check. SDK contract evidence is installed implementation, not a fresh official API service test.",
+    "No production DB was read or written. Only a new memory DB and fully synthetic data were used for reimport/immutability failure checks.",
+    "Raw SDK-returned JSON representation is preserved, not original pre-SDK HTTP lexemes. SDK date coercion and111-column projection remain upstream transformations.",
+    "Injected DataFrame conversion error is recorded as an exception-wrapping boundary; it does not establish an actual credential leakage or supported SDK failure path.",
+    "No full suite run by reviewer; root will run it once after acceptance. Financial semantics/valuation/model adoption/market freshness are not certified."
+  ],
+  "execution": {
+    "real_API_calls": 0,
+    "production_DB_reads_writes": 0,
+    "memory_test_DB_only": true,
+    "code_test_doc_edits": 0,
+    "environment_credential_reads": 0,
+    "new_primary_GETs": 0,
+    "full_suite_runs": 0,
+    "external_sends_orders": 0,
+    "output_files_only": [
+      "independent-review.json",
+      "independent-review.md"
+    ]
+  }
+}

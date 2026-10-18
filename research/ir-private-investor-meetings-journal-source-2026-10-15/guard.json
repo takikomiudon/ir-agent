@@ -1,0 +1,42 @@
+{
+  "recorded_at": "2026-10-15T23:27:25.485721+00:00",
+  "scope": "Selected journal version of the exact discovered paper; no Crossref abstract substitution",
+  "exact_host": "www.journals.uchicago.edu",
+  "hold_ref": {
+    "path": "research/ir-source-access-holds-2026-10-15/holds-v7.json",
+    "sha256": "ef162bac356672e342fafce1ef1d785d7050f79d6a94c2778a49a03fbc23cffd",
+    "host_count": 11,
+    "exact_host_held": false
+  },
+  "selection": {
+    "source": "research/ir-private-investor-meetings-paper-discovery-2026-10-15/metadata-extraction.json",
+    "sha256": "83ddbf4c352beb711c96a30c5631fa5559260e9e87241baf0a1d0e2217b7f27b",
+    "jsonpath": "$.records[1].resource.primary.URL",
+    "literal_URL": "https://www.journals.uchicago.edu/doi/10.1086/684038",
+    "DOI": "10.1086/684038"
+  },
+  "robots_url": "https://www.journals.uchicago.edu/robots.txt",
+  "maximum_GETs": 3,
+  "user_agent": "ir-agent-public-research/0.1",
+  "user_agent_basis": "Unchanged existing collector configured UA, not independently wire verified",
+  "limits": {
+    "retry": 0,
+    "redirect_follow": 0,
+    "other_host": 0,
+    "UA_change": 0,
+    "JS": 0,
+    "authentication": 0,
+    "payment": 0,
+    "diagnostics": 0,
+    "DB": 0,
+    "source_or_shared_edit": 0,
+    "Crossref_similarity_checking_PDF_URL_rewrite": 0
+  },
+  "rules": "Stop on 403/429/5xx/redirect/transport failure/restriction; complete robots404 is not-installed per docs/data-sources.md:24. Optional fulltext requires saved page literal link and confirmed free accessibility.",
+  "robots_gate": {
+    "can_continue_operationally": false,
+    "reason": "AI-specific prohibition observed; bounded operational stop",
+    "rule_check": "robots-rule-check.json",
+    "remaining_GET_budget_unused": 2
+  }
+}

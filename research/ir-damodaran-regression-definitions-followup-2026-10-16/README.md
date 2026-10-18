@@ -1,0 +1,9 @@
+DamodaranのDataVariables入口を保存literalから確認し、本文が明示した同host definitions.htmlだけへ進んだ。受入済freshrobots200 rawb6c31d…を選択2URLでcan_fetch再照合して再利用し、独自TTLは設定していない。入口20011373bytes＋定義200104742bytesの2 GETで終了、redirect/retry/JS/別host/会社rawdata0。
+
+一般定義でPE=株価/EPS又は時価総額/NetIncome、負利益のPE留保、primary/dilutedやoptionの扱いの注意を確認した。optionを考慮する著者のaggregate案を、Japan2026回帰で実装済みの分母とは扱わない。PEのtrailing/forward/current、観測日/株式basisは未特定。
+
+PayoutはDividends/NetIncomeで負利益・100%超の留保あり、期は未指定。Betaは株式return対市場indexreturnの傾きという一般説明で、期間/index/日週月依存と後向き/誤差問題を伴う。2年/5年の説明は一般例でJapan回帰の推定窓を確定しない。g5は既受入回帰の今後5年EPS成長という定義を保持し、別のretention×ROEを代用しない。
+
+定義は一部明確になったが、一般概念から個別回帰の実測仕様へ飛躍しない。次の適合reviewは実際に使うPE/g5/Beta/Payoutの同定義性に限り、n等を一律新gateにしない。2983原資料再読/計算/金融採用は0。
+
+原HTML・対象3行のcontiguous raw slice、6短引用・文字/UTF8spanを保存。定義頁そのものの更新日時は未確認。旧回帰capture/manifest/table/quote/親受入SHA不変、DB/Store/code/docs/新売買0。ここでfreezeしroot受入待ち。

@@ -1,0 +1,86 @@
+{
+  "security_code": "7461",
+  "company_name": "キムラ",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "卸売業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.kimuranet.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T21:06:20.976342+00:00",
+  "completed_at": "2026-10-11T21:06:53.504513+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/7461/20261011T210620976370Z/01.json",
+      "url": "https://www.kimuranet.jp/",
+      "retrieved_at": "2026-10-11T21:06:37.476899+00:00",
+      "quote": "総合トップページ | 株式会社キムラ",
+      "role": "company_identity"
+    },
+    {
+      "snapshot": "evidence/7461/20261011T210620976370Z/01.json",
+      "url": "https://www.kimuranet.jp/",
+      "retrieved_at": "2026-10-11T21:06:37.476899+00:00",
+      "quote": "総合トップページ | 株式会社キムラ 製品情報 サイト コーポレート サイト Copyright © KIMURA CO., LTD. All rights reserved.",
+      "role": "portal_only_with_no_financial_ir_reception"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.kimuranet.jp/",
+      "final_url": "https://www.kimuranet.jp/",
+      "snapshot": "evidence/7461/20261011T210620976370Z/01.json",
+      "retrieved_at": "2026-10-11T21:06:37.476899+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "成功した保存範囲は総合portal01のみ。実corporatehrefは未取得で金融IR受付を判断できない。",
+    "保存公開本文・native欄の確認であり、フォーム入力・確認・送信・メール送付・返信受領は行っていない。受付送信稼働・返信実績は未検証。",
+    "個人投資家の実choice又は入力方法の明示は保存範囲で未実証。会社欄の有無や一般個人ナビから可否を推測していない。",
+    "保存範囲で現発行体の金融IR用途とメール/質問フォームを結び付ける受付根拠は未実証。窓口不存在・受付拒否の判定ではない。"
+  ],
+  "discovery": {
+    "security_code": "7461",
+    "official_url": "https://www.kimuranet.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "キムラ",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/7461/20261011T210620976370Z/01.json",
+      "normalized_name": "キムラ",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 2,
+  "previous_attempts": [
+    "attempts/7461/20261011T045047662354Z.json",
+    "attempts/7461/20261011T210653504690Z.json"
+  ],
+  "automatic_conditions_before_review": [],
+  "automatic_limitations_before_review": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。"
+  ],
+  "outreach_reason": "保存公式原文の現在の発行体・金融IR質問受付と同native返信質問又は指定public IRmailを監査。顧客・製品・採用・privacy・株式事務等の目的へ借用しない。",
+  "route_type": null,
+  "ir_url": null,
+  "manual_review": {
+    "reviewer": "codex_audit_data_70_batch27",
+    "reviewed_at": "2026-10-12T03:28:11.117813+00:00",
+    "notes": "現キムラ正式名01だが88文字の総合portal1本文のみ取得成功、forms[]/publicIRmailなしで金融IR質問受付未実証U維持。actual1./corporate/と製品0/採用2を原ままpart観測、未取得corporate先の金融IR/個人/現issuer受付を推定せず4false・eligibleIRfollowupfalse。名にキムラを含む別上場会社/住宅資材営業・採用portalを金融IR窓口へ借用0、少ない取得範囲で不存在/拒否/企業投資不適格と判定0。旧503/localcircuit・全attemptと実GET数は保全、一般URL探査や追加scope0。 旧automatic条件/limitations全配列は同名archiveとINITIAL原recordにexact保全、activeは現在の保存範囲・残制約だけを示す。"
+  }
+}

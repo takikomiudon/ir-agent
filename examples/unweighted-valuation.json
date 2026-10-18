@@ -1,0 +1,17 @@
+{
+  "synthetic": true,
+  "aggregation": "unweighted",
+  "note": "架空の強気・基本・弱気の条件比較。数値は計算例であり投資方針の推奨ではない。確率は未設定で、均等確率・確率1・平均評価を補わない。",
+  "method_reference": {
+    "source": "Anthropic earnings-preview",
+    "preserved_skill": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+    "commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+    "adopted_principle": "Build bull/base/bear scenarios and operational conditions.",
+    "project_adaptation": "Keep missing probabilities unset and return only conditional scenario values; the author does not supply fixed probabilities."
+  },
+  "scenarios": [
+    {"name": "bear", "method": "eps_multiple", "inputs": {"eps_jpy": "45", "pe": "15"}},
+    {"name": "base", "probability": null, "method": "eps_multiple", "inputs": {"eps_jpy": "65", "pe": "20"}},
+    {"name": "bull", "method": "eps_multiple", "inputs": {"eps_jpy": "80", "pe": "23"}}
+  ]
+}

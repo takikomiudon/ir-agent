@@ -1,0 +1,486 @@
+{
+  "format": "adaptive_ir_followup_audit",
+  "format_version": 1,
+  "reviewer": "codex_adaptive_followup_456",
+  "reviewed_at": "2026-10-11T06:18:10.984392+00:00",
+  "scope": "security code first character 4/5/6; current non-confirmed and excluding environment_transport_failure",
+  "scope_count": 5,
+  "scope_security_codes": [
+    "4058",
+    "4475",
+    "6240",
+    "6278",
+    "6387"
+  ],
+  "status_counts": {
+    "provisional": 5
+  },
+  "records": [
+    {
+      "security_code": "4058",
+      "company_name": "トヨクモ",
+      "current_investigation_status": "provisional",
+      "current_record": "records/4058.json",
+      "verification_level": "official_form_link_only",
+      "official_ir_purpose_demonstrated": true,
+      "confirmation_gaps": {
+        "public_ir_email": "not_verified",
+        "reply_email_input": "not_verified",
+        "question_input": "not_verified",
+        "individual_access": "not_stated",
+        "company_name_required": "not_verified",
+        "robots_status": "not_saved_in_legacy_snapshot"
+      },
+      "individual_access": "not_stated",
+      "individual_reply_policy": "no_individual_reply",
+      "current_outreach_suitability": "no_individual_reply",
+      "stopping_reasons": [
+        {
+          "kind": "js_waiting_page",
+          "snapshot": "../ir-contacts-2026-10-11/evidence/it-4058-form.json",
+          "http_status": 200,
+          "notes": "公開 iframe URL の GET は waiting ページへリダイレクト。表示は IR Contact のみ、forms=[]。"
+        }
+      ],
+      "notes": "IR 専用窓口の案内は成立。公式 contact の唯一の受付用 embedded frame 先は実入力欄なしの待機ページへ移動していた。個別質問への回答を取次も含めて行わない旨が明示されているので、返信による投資判断の運用には適さない。受付実欄の調査は未了であり、投資対象からの除外判断とは異なる。",
+      "evidence": [
+        {
+          "snapshot": "../ir-contacts-2026-10-11/evidence/it-4058-contact.json",
+          "url": "https://www.toyokumo.co.jp/ir/contact",
+          "retrieved_at": "2026-10-11T03:37:41.274706+00:00",
+          "quote": "当社では、IR活動について、効率的に業務を行うため、個別の問い合わせにつきましては取次も含めて回答しない方針としております。",
+          "role": "no_individual_reply"
+        },
+        {
+          "snapshot": "../ir-contacts-2026-10-11/evidence/it-4058-contact.json",
+          "url": "https://www.toyokumo.co.jp/ir/contact",
+          "retrieved_at": "2026-10-11T03:37:41.274706+00:00",
+          "quote": "上記ご了承の上、何かございましたら当社の プライバシーポリシー に同意の上、以下のフォームに必要事項をご記載いただき、ご連絡下さい。",
+          "role": "ir_form_guidance"
+        },
+        {
+          "snapshot": "../ir-contacts-2026-10-11/evidence/it-4058-form.json",
+          "url": "https://toyokumo-ir.form.kintoneapp.com/waiting/?iframe=true&_formCode=ir-contact-jp",
+          "retrieved_at": "2026-10-11T03:39:52.897026+00:00",
+          "quote": "IR Contact",
+          "role": "waiting_page"
+        }
+      ],
+      "additional_get_candidates": [
+        {
+          "security_code": "4058",
+          "url": "https://toyokumo-ir.form.kintoneapp.com/public/ir-contact-jp?iframe=true",
+          "parent_url": "https://www.toyokumo.co.jp/ir/contact",
+          "parent_snapshot": "../ir-contacts-2026-10-11/evidence/it-4058-contact.json",
+          "retrieved_at": "2026-10-11T03:37:41.274706+00:00",
+          "quote": "上記ご了承の上、何かございましたら当社の プライバシーポリシー に同意の上、以下のフォームに必要事項をご記載いただき、ご連絡下さい。",
+          "source_link_label": "embedded frame",
+          "source_link_index": 43,
+          "relationship": "embedded_frame",
+          "method": "GET",
+          "already_fetched": true,
+          "next_step": "single_low_rate_recheck_then_review_js_waiting_page",
+          "priority": "low_due_to_explicit_no_reply"
+        }
+      ],
+      "rejected_links": []
+    },
+    {
+      "security_code": "4475",
+      "company_name": "ＨＥＮＮＧＥ",
+      "current_investigation_status": "provisional",
+      "current_record": "records/4475.json",
+      "verification_level": "official_form_link_only",
+      "official_ir_purpose_demonstrated": true,
+      "confirmation_gaps": {
+        "public_ir_email": "not_verified",
+        "reply_email_input": "not_verified",
+        "question_input": "not_verified",
+        "individual_access": "not_stated",
+        "company_name_required": "not_verified",
+        "robots_status": "not_saved_in_legacy_snapshot"
+      },
+      "individual_access": "not_stated",
+      "individual_reply_policy": "not_stated",
+      "current_outreach_suitability": "candidate",
+      "stopping_reasons": [
+        {
+          "kind": "empty_form_controls",
+          "snapshot": "../ir-contacts-2026-10-11/evidence/it-4475-contact.json",
+          "http_status": 200,
+          "notes": "form action=null、非 hidden controls=0。フォームの描画方式と外部対象先の保存証拠は不明。"
+        }
+      ],
+      "notes": "専用 IR フォームでのみ受付する案内が明示される一方、保存 form は action=null、controls=[]。公開質問欄と返信先入力は未取得。Google Tag Manager iframe と他用途への「こちらのフォーム」は IR 対象先にしない。保存済みの links から IR 専用外部フォーム URL は見つからないため、実際に案内された公式 IR ページを一度点検し、空シェルが続けば JavaScript 表示を伴う公開ページ観察へ回す。",
+      "evidence": [
+        {
+          "snapshot": "../ir-contacts-2026-10-11/evidence/it-4475-contact.json",
+          "url": "https://hennge.com/jp/ir/inquiry/",
+          "retrieved_at": "2026-10-11T03:36:22.909850+00:00",
+          "quote": "このフォームは業績・財務・株式等、IRに関するお問い合わせ専用です。その他のお問い合わせについては、 こちらのフォーム からお問い合わせください。 ※お問い合わせはフォームでのみ受け付けております。",
+          "role": "ir_exclusive_form_only"
+        }
+      ],
+      "additional_get_candidates": [
+        {
+          "security_code": "4475",
+          "url": "https://hennge.com/jp/ir/inquiry/",
+          "parent_url": "https://hennge.com/jp/ir/",
+          "parent_snapshot": "../ir-contacts-2026-10-11/evidence/it-4475-ir.json",
+          "retrieved_at": "2026-10-11T03:35:42.144952+00:00",
+          "quote": "IRお問い合わせ",
+          "source_link_label": "IRお問い合わせ",
+          "source_link_index": 97,
+          "relationship": "official_hyperlink",
+          "method": "GET",
+          "already_fetched": true,
+          "next_step": "single_low_rate_recheck_then_review_public_js_rendering",
+          "priority": "normal"
+        }
+      ],
+      "rejected_links": [
+        {
+          "url": "https://www.googletagmanager.com/ns.html?id=GTM-W86FZZ3",
+          "parent_snapshot": "../ir-contacts-2026-10-11/evidence/it-4475-contact.json",
+          "parent_url": "https://hennge.com/jp/ir/inquiry/",
+          "source_link_index": 0,
+          "source_link_label": "embedded frame",
+          "reason": "analytics iframe; not an investor question form"
+        }
+      ]
+    },
+    {
+      "security_code": "6240",
+      "company_name": "ヤマシンフィルタ",
+      "current_investigation_status": "provisional",
+      "current_record": "records/6240.json",
+      "verification_level": "official_form_link_only",
+      "official_ir_purpose_demonstrated": true,
+      "confirmation_gaps": {
+        "public_ir_email": "not_verified",
+        "reply_email_input": "not_verified",
+        "question_input": "not_verified",
+        "individual_access": "not_stated",
+        "company_name_required": "not_verified",
+        "robots_status": "not_saved_in_legacy_snapshot"
+      },
+      "individual_access": "not_stated",
+      "individual_reply_policy": "not_stated",
+      "current_outreach_suitability": "candidate",
+      "stopping_reasons": [
+        {
+          "kind": "http_403_access_denied",
+          "snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6240-external-form.json",
+          "http_status": 403,
+          "notes": "CloudFront の Request blocked。自動再試行やアクセス制御の迂回は行わない。"
+        }
+      ],
+      "notes": "公式問い合わせ一覧の IR 用リンクは relay ページへ接続し、その公開 JavaScript の location.href が外部問い合わせを指す。外部取得は 403 Request blocked。原稿の入力欄と個人向け条件は未確認。会社名や個人名の必須／任意を推定しない。電話営業時間はフォーム返信期限ではない。外部 403 先は自動反復 GET せず停止状態として残し、公式 relay に公開されたリンク先の変更有無を先に一度確認する。",
+      "evidence": [
+        {
+          "snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6240-contact.json",
+          "url": "https://www.yamashin-filter.co.jp/ja/form.html#ca01",
+          "retrieved_at": "2026-10-11T03:36:17.222128+00:00",
+          "quote": "IR等に関するお問い合わせ 広報・IR担当 TEL：045-680-1680 (ご対応時間：平日9:00～16:00) IR等に関するお問い合わせフォーム",
+          "role": "ir_form_guidance"
+        },
+        {
+          "snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6240-public-redirect.json",
+          "url": "https://www.yamashin-filter.co.jp/ja/form/form_redirect7.html",
+          "retrieved_at": "2026-10-11T03:40:59.250153+00:00",
+          "quote": "location.href=\"https://ssl.swcms.net/yamashin-filter-corpPublic/ja/contactus/inquiry58463.html\"",
+          "role": "public_js_redirect"
+        },
+        {
+          "snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6240-external-form.json",
+          "url": "https://ssl.swcms.net/yamashin-filter-corpPublic/ja/contactus/inquiry58463.html",
+          "retrieved_at": "2026-10-11T03:40:45.770100+00:00",
+          "quote": "403 ERROR The request could not be satisfied. Request blocked.",
+          "role": "access_denied"
+        }
+      ],
+      "additional_get_candidates": [
+        {
+          "security_code": "6240",
+          "url": "https://www.yamashin-filter.co.jp/ja/form/form_redirect7.html",
+          "parent_url": "https://www.yamashin-filter.co.jp/ja/form.html#ca01",
+          "parent_snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6240-contact.json",
+          "retrieved_at": "2026-10-11T03:36:17.222128+00:00",
+          "quote": "IR等に関するお問い合わせ 広報・IR担当 TEL：045-680-1680 (ご対応時間：平日9:00～16:00) IR等に関するお問い合わせフォーム",
+          "source_link_label": "IR等に関するお問い合わせフォーム",
+          "source_link_index": 24,
+          "relationship": "official_hyperlink",
+          "method": "GET",
+          "already_fetched": true,
+          "next_step": "single_low_rate_official_relay_recheck",
+          "priority": "normal"
+        },
+        {
+          "security_code": "6240",
+          "url": "https://ssl.swcms.net/yamashin-filter-corpPublic/ja/contactus/inquiry58463.html",
+          "parent_url": "https://www.yamashin-filter.co.jp/ja/form/form_redirect7.html",
+          "parent_snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6240-public-redirect.json",
+          "retrieved_at": "2026-10-11T03:40:59.250153+00:00",
+          "quote": "location.href=\"https://ssl.swcms.net/yamashin-filter-corpPublic/ja/contactus/inquiry58463.html\"",
+          "source_link_label": "public JavaScript form redirect",
+          "source_link_index": 0,
+          "relationship": "public_javascript_redirect",
+          "method": "GET",
+          "already_fetched": true,
+          "next_step": "stop_previous_403_do_not_auto_retry",
+          "priority": "blocked"
+        }
+      ],
+      "rejected_links": []
+    },
+    {
+      "security_code": "6278",
+      "company_name": "ユニオンツール",
+      "current_investigation_status": "provisional",
+      "current_record": "records/6278.json",
+      "verification_level": "official_form_link_only",
+      "official_ir_purpose_demonstrated": true,
+      "confirmation_gaps": {
+        "public_ir_email": "not_verified",
+        "reply_email_input": "not_verified",
+        "question_input": "not_verified",
+        "individual_access": "not_stated",
+        "company_name_required": "not_verified",
+        "robots_status": "not_saved_in_legacy_snapshot"
+      },
+      "individual_access": "not_stated",
+      "individual_reply_policy": "conditional_delay_or_no_reply",
+      "current_outreach_suitability": "candidate",
+      "stopping_reasons": [
+        {
+          "kind": "js_loading_page",
+          "snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6278-ir-form.json",
+          "http_status": 200,
+          "notes": "読み込み案内のみ、form method=post・非 hidden controls=0。リンクされた HTTP での公開取得証拠を採用。"
+        }
+      ],
+      "notes": "公式一覧の IR 段落から cd=ir の HTTP URL へ接続する。保存取得の表示は読み込み中のみで actual controls=0。HTTP の実リンクを保持し、未掲載の HTTPS 版を作らない。form の action は CreateDocument の POST 用なので追加 GET 対象にしない。後続動的読込の入力欄・個人受付・会社名必須は未確認。",
+      "evidence": [
+        {
+          "snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6278-contact.json",
+          "url": "https://www.uniontool.co.jp/contact/",
+          "retrieved_at": "2026-10-11T03:40:18.108984+00:00",
+          "quote": "IRに関するお問い合わせ お問い合わせはこちら",
+          "role": "ir_link_purpose"
+        },
+        {
+          "snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6278-contact.json",
+          "url": "https://www.uniontool.co.jp/contact/",
+          "retrieved_at": "2026-10-11T03:40:18.108984+00:00",
+          "quote": "お問い合わせの内容によっては、回答に時間がかかる場合やお答えできない場合もございます。",
+          "role": "conditional_reply_policy"
+        },
+        {
+          "snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6278-contact.json",
+          "url": "https://www.uniontool.co.jp/contact/",
+          "retrieved_at": "2026-10-11T03:40:18.108984+00:00",
+          "quote": "また、営業・セールス・勧誘はご遠慮くださいますようお願い致します。",
+          "role": "outreach_exclusion"
+        },
+        {
+          "snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6278-ir-form.json",
+          "url": "http://ynirnem.uniontool.co.jp/info/Inqform.nsf/fmLoad?OpenForm&cd=ir",
+          "retrieved_at": "2026-10-11T03:40:45.835873+00:00",
+          "quote": "ただいま読み込み中です。しばらくお待ちください．．．",
+          "role": "loading_page"
+        }
+      ],
+      "additional_get_candidates": [
+        {
+          "security_code": "6278",
+          "url": "http://ynirnem.uniontool.co.jp/info/Inqform.nsf/fmLoad?OpenForm&cd=ir",
+          "parent_url": "https://www.uniontool.co.jp/contact/",
+          "parent_snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6278-contact.json",
+          "retrieved_at": "2026-10-11T03:40:18.108984+00:00",
+          "quote": "IRに関するお問い合わせ お問い合わせはこちら",
+          "source_link_label": "お問い合わせはこちら",
+          "source_link_index": 54,
+          "relationship": "official_hyperlink",
+          "method": "GET",
+          "already_fetched": true,
+          "next_step": "single_low_rate_recheck_then_review_public_js_rendering",
+          "priority": "normal"
+        }
+      ],
+      "rejected_links": []
+    },
+    {
+      "security_code": "6387",
+      "company_name": "サムコ",
+      "current_investigation_status": "provisional",
+      "current_record": "records/6387.json",
+      "verification_level": "official_form_link_only",
+      "official_ir_purpose_demonstrated": true,
+      "confirmation_gaps": {
+        "public_ir_email": "not_verified",
+        "reply_email_input": "not_verified",
+        "question_input": "not_verified",
+        "individual_access": "not_stated",
+        "company_name_required": "not_verified",
+        "robots_status": "not_saved_in_legacy_snapshot"
+      },
+      "individual_access": "not_stated",
+      "individual_reply_policy": "department_reviews_then_contacts_sender",
+      "current_outreach_suitability": "candidate",
+      "stopping_reasons": [
+        {
+          "kind": "js_fields_not_captured",
+          "snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6387-contact.json",
+          "http_status": 200,
+          "notes": "forms はサイト内検索 2 個だけで、IR の入力欄は 0。JS による埋込は以前の調査メモであり、保存 links から追加外部先は導出できない。"
+        }
+      ],
+      "notes": "専用 IR フォームの案内・担当部門が確認後に連絡する方針を確認。保存 HTML にある form はサイト内検索 search 入力のみで返信先メールや質問 textarea がない。埋込先の実 URL は保存 links にないため推定せず、公式ホームページで IR に関してと実リンクされた専用窓口を一度確認する。静的取得で不足が続く場合は公開 JavaScript 描画の観察が必要。",
+      "evidence": [
+        {
+          "snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6387-contact.json",
+          "url": "https://www.samco.co.jp/contact/investor/",
+          "retrieved_at": "2026-10-11T03:36:16.203831+00:00",
+          "quote": "IRに関する お問い合わせ",
+          "role": "ir_purpose"
+        },
+        {
+          "snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6387-contact.json",
+          "url": "https://www.samco.co.jp/contact/investor/",
+          "retrieved_at": "2026-10-11T03:36:16.203831+00:00",
+          "quote": "下記フォームにてお問い合わせいただくと、担当部門より内容を確認した後、ご連絡させていただきます。",
+          "role": "reply_process"
+        },
+        {
+          "snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6387-contact.json",
+          "url": "https://www.samco.co.jp/contact/investor/",
+          "retrieved_at": "2026-10-11T03:36:16.203831+00:00",
+          "quote": "必要事項をご入力の上、「確認画面へ進む」ボタンを押してください。",
+          "role": "form_guidance"
+        }
+      ],
+      "additional_get_candidates": [
+        {
+          "security_code": "6387",
+          "url": "https://www.samco.co.jp/contact/investor/",
+          "parent_url": "https://www.samco.co.jp/",
+          "parent_snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6387-home.json",
+          "retrieved_at": "2026-10-11T03:35:40.608259+00:00",
+          "quote": "IRに関して",
+          "source_link_label": "IRに関して",
+          "source_link_index": 176,
+          "relationship": "official_hyperlink",
+          "method": "GET",
+          "already_fetched": true,
+          "next_step": "single_low_rate_recheck_then_review_public_js_rendering",
+          "priority": "normal"
+        }
+      ],
+      "rejected_links": []
+    }
+  ],
+  "followups": [
+    {
+      "security_code": "4058",
+      "url": "https://toyokumo-ir.form.kintoneapp.com/public/ir-contact-jp?iframe=true",
+      "parent_url": "https://www.toyokumo.co.jp/ir/contact",
+      "parent_snapshot": "../ir-contacts-2026-10-11/evidence/it-4058-contact.json",
+      "retrieved_at": "2026-10-11T03:37:41.274706+00:00",
+      "quote": "上記ご了承の上、何かございましたら当社の プライバシーポリシー に同意の上、以下のフォームに必要事項をご記載いただき、ご連絡下さい。",
+      "source_link_label": "embedded frame",
+      "source_link_index": 43,
+      "relationship": "embedded_frame",
+      "method": "GET",
+      "already_fetched": true,
+      "next_step": "single_low_rate_recheck_then_review_js_waiting_page",
+      "priority": "low_due_to_explicit_no_reply"
+    },
+    {
+      "security_code": "4475",
+      "url": "https://hennge.com/jp/ir/inquiry/",
+      "parent_url": "https://hennge.com/jp/ir/",
+      "parent_snapshot": "../ir-contacts-2026-10-11/evidence/it-4475-ir.json",
+      "retrieved_at": "2026-10-11T03:35:42.144952+00:00",
+      "quote": "IRお問い合わせ",
+      "source_link_label": "IRお問い合わせ",
+      "source_link_index": 97,
+      "relationship": "official_hyperlink",
+      "method": "GET",
+      "already_fetched": true,
+      "next_step": "single_low_rate_recheck_then_review_public_js_rendering",
+      "priority": "normal"
+    },
+    {
+      "security_code": "6240",
+      "url": "https://www.yamashin-filter.co.jp/ja/form/form_redirect7.html",
+      "parent_url": "https://www.yamashin-filter.co.jp/ja/form.html#ca01",
+      "parent_snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6240-contact.json",
+      "retrieved_at": "2026-10-11T03:36:17.222128+00:00",
+      "quote": "IR等に関するお問い合わせ 広報・IR担当 TEL：045-680-1680 (ご対応時間：平日9:00～16:00) IR等に関するお問い合わせフォーム",
+      "source_link_label": "IR等に関するお問い合わせフォーム",
+      "source_link_index": 24,
+      "relationship": "official_hyperlink",
+      "method": "GET",
+      "already_fetched": true,
+      "next_step": "single_low_rate_official_relay_recheck",
+      "priority": "normal"
+    },
+    {
+      "security_code": "6240",
+      "url": "https://ssl.swcms.net/yamashin-filter-corpPublic/ja/contactus/inquiry58463.html",
+      "parent_url": "https://www.yamashin-filter.co.jp/ja/form/form_redirect7.html",
+      "parent_snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6240-public-redirect.json",
+      "retrieved_at": "2026-10-11T03:40:59.250153+00:00",
+      "quote": "location.href=\"https://ssl.swcms.net/yamashin-filter-corpPublic/ja/contactus/inquiry58463.html\"",
+      "source_link_label": "public JavaScript form redirect",
+      "source_link_index": 0,
+      "relationship": "public_javascript_redirect",
+      "method": "GET",
+      "already_fetched": true,
+      "next_step": "stop_previous_403_do_not_auto_retry",
+      "priority": "blocked"
+    },
+    {
+      "security_code": "6278",
+      "url": "http://ynirnem.uniontool.co.jp/info/Inqform.nsf/fmLoad?OpenForm&cd=ir",
+      "parent_url": "https://www.uniontool.co.jp/contact/",
+      "parent_snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6278-contact.json",
+      "retrieved_at": "2026-10-11T03:40:18.108984+00:00",
+      "quote": "IRに関するお問い合わせ お問い合わせはこちら",
+      "source_link_label": "お問い合わせはこちら",
+      "source_link_index": 54,
+      "relationship": "official_hyperlink",
+      "method": "GET",
+      "already_fetched": true,
+      "next_step": "single_low_rate_recheck_then_review_public_js_rendering",
+      "priority": "normal"
+    },
+    {
+      "security_code": "6387",
+      "url": "https://www.samco.co.jp/contact/investor/",
+      "parent_url": "https://www.samco.co.jp/",
+      "parent_snapshot": "../ir-contacts-2026-10-11/evidence/mfg-6387-home.json",
+      "retrieved_at": "2026-10-11T03:35:40.608259+00:00",
+      "quote": "IRに関して",
+      "source_link_label": "IRに関して",
+      "source_link_index": 176,
+      "relationship": "official_hyperlink",
+      "method": "GET",
+      "already_fetched": true,
+      "next_step": "single_low_rate_recheck_then_review_public_js_rendering",
+      "priority": "normal"
+    }
+  ],
+  "followup_url_count": 6,
+  "blocked_followup_url_count": 1,
+  "external_get_count": 0,
+  "submitted_count": 0,
+  "records_changed_count": 0,
+  "scripts_changed_count": 0,
+  "limitations": [
+    "保存された本文・links・controls と引継ぎ証拠のみを点検した。追加 GET、フォーム入力・送信、メール送付は実施していない。",
+    "5 社とも IR 用途の案内が成立するが実質問欄／返信用メール入力が未取得。個人受付と会社名必須は未検証。",
+    "robots の状態は旧保存に残っておらず許可済みとはみなさない。root collector はその時点の robots とネットワーク条件を確認する。",
+    "各追加 URL は保存済み公式親リンク／公開 redirect の完全一致に限定。JS 描画不足が続くときは同一 GET を反復して確認済みにしない。"
+  ]
+}

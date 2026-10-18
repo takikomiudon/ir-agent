@@ -1,0 +1,326 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <title>Magic Formula Investing</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="pragma" content="NO-CACHE" />
+    <meta name="Keywords" content="Value Investing, Stock Selection, Investment Books, Magic Formula Investing, Joel Greenblatt, The Little Book That Beats The Market, Magic Formula, Magic Formula Investing, Magicformulainvesting.com, Asset Management, Wealth Management" />
+    <meta name="Description" content="Use a free and simple stock screening tool to select Magic Formula stocks, as described in Joel Greenblatt's book The Little Book That Beats the Market." />
+
+    <link href="/css/bundle.css?v=O-jqQtpNw6pHwxMtc7VIl3Tlsbk" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js" type="text/javascript"></script>
+    <script src="https://www.google.com/recaptcha/api.js" type="text/javascript" async defer></script>
+    <script src="/js/bundle.js?v=M16Fku_7Lr0B_ZHFdU9SeuxXw8o" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(document).bind('contextmenu', function (e) {
+                e.preventDefault();
+            });
+
+            $('.cluetip').cluetip({ splitTitle: '|', width: '400px', showTitle: false });
+
+            if (self == top) {
+                document.documentElement.style.visibility = 'visible';
+            }
+            else {
+                top.location = self.location;
+            }
+
+            $('.preventDupSubmit input:submit').removeAttr('disabled').each(function () {
+                $('<img/>')[0].src = '~/images/button_disabled_right.gif'; // preload the disable image
+            });
+            var validator = $(".preventDupSubmit").data("validator");
+            if (validator) {
+                validator.settings.submitHandler = function(form) {
+                    $(form).find('input:submit').prop('disabled', true).addClass("dupSubmitPrevented");
+                    setTimeout(function() { form.submit(); }, 10);
+                };
+            }
+        });
+    </script>
+    
+    <!-- Google tag (gtag.js) -->
+
+<!-- Facebook Pixel Code -->
+<!-- End Facebook Pixel Code -->
+
+</head>
+
+
+<body>
+    <div id="outer">
+        <!--START HEADER -->
+        <div id="header">
+            <div id="headerLogo">
+                <a href="/"></a>
+            </div>
+            <div id="headerNav">
+                <div class="headerNavLinks">
+                    <!--<ul id="blogin" style="display:none"> -->
+                        <ul id="blogin"> 
+                            <li><a class="header" href="/Account/Register">Register</a></li>
+                            <li><a class="header" href="/Account/LogOn">Login</a></li>
+                        </ul>
+                    <ul id="blogin">
+                    </ul>
+                </div>
+                <div id="username" style="float: left;">
+                </div>
+            </div>
+        </div>
+        <!-- END HEADER -->
+
+        <!-- START BANNER -->
+        <div id="globalheader">
+            <ul id="globalnav">
+                <li id="gn-welcome"><a class="welcome" href="/">Welcome</a></li>
+                <li id="sep"><a href="#">&nbsp;</a></li>
+                <li id="gn-book"><a class="aboutTheBook" href="/Home/AboutTheBook">About the Book</a></li>
+                <li id="sep"><a href="#">&nbsp;</a></li>
+                <li id="gn-works"><a class="howItWorks" href="/Home/HowItWorks">How it Works</a></li>
+                <li id="sep"><a href="#">&nbsp;</a></li>
+                <li id="gn-stockscreener"><a class="stockScreener" href="/Screening/StockScreening">Stock Screener</a></li>
+                <li id="sep"><a href="#">&nbsp;</a></li>
+                <li id="gn-faq"><a class="faq" href="/Home/Faqs">FAQs</a></li>
+            </ul>
+        </div>
+        <div id="headerBar">
+        </div>
+        <!-- END BANNER-->
+
+        <!-- START PAGE-->
+        <span class="popup" id="Layer">
+    <table style="background: #d1dce7; text-align: center" width="700">
+        <tbody>
+            <tr width="700px">
+                <td style="background: #ffffff; width: 700px; text-align: left">
+                    <div style="padding-right: 10px; padding-left: 10px; padding-bottom: 10px; padding-top: 10px">
+                        Please note you are about to launch a new webpage that will navigate you to FormulaInvesting.com.
+                        <br>
+                        FormulaInvesting.com is operated by Gotham Asset Management, LLC, which is a registered
+                        investment advisor.
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 300px; background: #d1dce7">
+                    <div class=" button_left">
+                        <input class="button" onkeypress="viewpage(event);" onclick="viewpage(event);" type="button"
+                               value="   Ok   " name="confirm">
+                    </div>
+                    <div class="button_left">
+                        <input class="button" onkeypress="cancelpage(event);" onclick="cancelpage(event);"
+                               type="button" value="Cancel" name="cancel">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</span>
+<!-- START PAGE-->
+<div id="page">
+    <div id="content" style="text-align: center;">
+        <!-- START LEFT DIV-->
+        <!-- END LEFT DIV-->
+        <!-- START RIGHT DIV -->
+        <div style="padding-left: 90px; padding-right: 90px; padding-top: 10px; text-align: center;">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+                <colgroup>
+                <col width="53px" />
+                <col width="99%" />
+                <col width="1%" />
+                </colgroup>
+                <tr>
+                    <td background="~/images/arrowbg.gif" valign="middle" rowspan="2" bgcolor="#f2f2f2">
+                        <img height="124" width="47" src="/images/arrow1.gif" />
+                    </td>
+                    <td bgcolor="#f2f2f2">
+                        <div align="left">
+                            <img height="22" width="254" src="/images/title1.gif" />
+                        </div>
+                    </td>
+                    <td bgcolor="#f2f2f2">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" bgcolor="#f2f2f2">
+                        <h5>
+                            Use the Stock Screener to select the top-rated stocks from the S&P CompuStat database.
+                            Choose the number of stocks to view, and choose the size of the companies you want
+                            in the list. Choosing more companies leads to greater diversification, and choosing
+                            larger companies generally leads to less volatility. Eliminate any companies you
+                            do not want to own for any reason; however, you should keep at least 20 stocks in
+                            an effort to properly manage risk.
+                        </h5>
+                    </td>
+                    <td valign="top" bgcolor="#f2f2f2">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#f2f2f2" background="~/images/arrowbg.gif" />
+                    <td bgcolor="#f2f2f2">
+                        <h5>
+                            <img height="22" width="392" src="/images/htidivider.gif" />
+                        </h5>
+                    </td>
+                    <td bgcolor="#f2f2f2">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td background="~/images/arrowbg.gif" bgcolor="#f2f2f2" rowspan="2">
+                        <img height="124" width="47" src="/images/arrow2.gif" />
+                    </td>
+                    <td bgcolor="#f2f2f2">
+                        <div align="left">
+                            <img height="22" width="254" src="/images/title2.gif" />
+                        </div>
+                    </td>
+                    <td bgcolor="#f2f2f2">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" bgcolor="#f2f2f2">
+                        <h5>
+                            Use a cost effective way to purchase the stocks. If the amount you are investing
+                            represents a large percentage of your long-term investment portfolio, you may want
+                            to consider making multiple portfolio purchases over a 12 month period.
+                        </h5>
+                    </td>
+                    <td valign="top" bgcolor="#f2f2f2">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td background="~/images/arrowbg.gif" bgcolor="#f2f2f2">
+                        &nbsp;
+                    </td>
+                    <td bgcolor="#f2f2f2">
+                        <img height="22" width="392" src="/images/htidivider.gif" />
+                    </td>
+                    <td bgcolor="#f2f2f2">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td background="~/images/arrowbg.gif" bgcolor="#f2f2f2" rowspan="2">
+                        <img height="124" width="47" src="/images/arrow3.gif" />
+                    </td>
+                    <td bgcolor="#f2f2f2">
+                        <h2 align="left">
+                            <img height="22" width="254" src="/images/title3.gif" />
+                        </h2>
+                    </td>
+                    <td bgcolor="#f2f2f2">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#f2f2f2" valign="top">
+                        <h5>
+                            In our opinion it is good idea to keep your stocks for approximately one year. The
+                            system is designed to maximize your after-tax returns; therefore, you want any gains
+                            to become long-term by holding them for a year, and you want to sell any losses
+                            before the one year holding period is reached.
+                        </h5>
+                    </td>
+                    <td bgcolor="#f2f2f2" valign="top">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td background="~/images/arrowbg.gif" bgcolor="#f2f2f2">
+                        &nbsp;
+                    </td>
+                    <td bgcolor="#f2f2f2">
+                        <img height="22" width="392" src="/images/htidivider.gif" />
+                    </td>
+                    <td bgcolor="#f2f2f2">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td background="~/images/arrowbg.gif" valign="top" bgcolor="#f2f2f2" rowspan="2">
+                        <img height="124" width="47" src="/images/arrow4.gif" />
+                    </td>
+                    <td bgcolor="#f2f2f2">
+                        <h2 align="left">
+                            <img height="22" width="254" src="/images/title4.gif" />
+                        </h2>
+                    </td>
+                    <td bgcolor="#f2f2f2">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#f2f2f2" valign="top">
+                        <h5>
+                            Once you have sold any gains and any losses, select and purchase a new portfolio
+                            of screened stocks.
+                        </h5>
+                    </td>
+                    <td bgcolor="#f2f2f2" valign="top">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#f2f2f2">
+                        &nbsp;
+                    </td>
+                    <td bgcolor="#f2f2f2" valign="top">
+                        <img height="22" width="392" src="/images/htidivider.gif" />
+                    </td>
+                    <td bgcolor="#f2f2f2" valign="top">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        &nbsp;
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--END RIGHT DIV-->
+    </div>
+</div>
+        <!-- END PAGE-->
+
+        <!-- START FOOTER-->
+        <div id="footerContainer">
+            <div class="disclaimer">
+                <div class="disclaimertxt">
+                    <div style="float: left; width: 9%">
+                        <b>Disclaimer:</b></div>
+                    <div style="float: left; width: 89%">
+
+                        MagicFormulaInvesting.com is not an investment adviser, brokerage firm, or investment company. "Magic Formula" is a term used to describe the investment strategy explained in <i>The Little Book That Beats the Market</i>. There is nothing "magical" about the formula, and the use of the formula does not guarantee performance or investment success. MagicFormulaInvesting.com is owned by an entity controlled in part by Joel Greenblatt.
+
+                    </div>
+
+                </div>
+                <div id="footer">
+                    &copy; 2026 Magic Formula Investing. Magic Formula is a registered trademark. All
+                    Rights Reserved. <span style="float: right; padding-right: 20px; font-size: 11px;"><a href="/Home/Privacy">Privacy Policy</a></span>
+                </div>
+            </div>
+        </div>
+        <!-- END FOOTER-->
+    </div>
+</body>
+</html>

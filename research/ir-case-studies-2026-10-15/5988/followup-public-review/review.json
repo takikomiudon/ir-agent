@@ -1,0 +1,599 @@
+{
+  "schema_version": 1,
+  "artifact_type": "bounded_public_followup_research_only",
+  "company_id": "jp:5988",
+  "recorded_at": "2026-10-15T04:10:01.089790+00:00",
+  "scope": [
+    "中国関連一時費用約6億円/減損337百万円の集計・期間・重複",
+    "会社予想EPS27.45円/年間DPS92円の根拠と期間"
+  ],
+  "original_case_changed": false,
+  "original_draft_issues_not_registered_or_overwritten": true,
+  "adopted_method_references": [
+    {
+      "author": "Anthropic financial-services-plugins",
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "paths": [
+        "third_party/anthropic/skills/earnings-preview/SKILL.md",
+        "third_party/anthropic/skills/thesis-tracker/SKILL.md"
+      ],
+      "application": "企業固有指標/条件別説明の記録と、反証・変更なし・追加公開確認を残す。数値売買戦略は移植しない。"
+    },
+    {
+      "author": "Aswath Damodaran",
+      "paths": [
+        "docs/financial-equity-valuation-spec.md",
+        "research/valuation-model-routing-2026-10-15/routing.json"
+      ],
+      "application": "公表実績/会社予想/将来仮定と配当可能額を区別する。単年DPSを多年列/終価へ外挿せず、再投資・資金・株数の整合がない正常化をしない。"
+    }
+  ],
+  "get_summary": {
+    "url_limit": 3,
+    "actual_unique_urls": 3,
+    "actual_get_attempts": 3,
+    "http200_count": 1,
+    "http503_count": 2,
+    "retry_count": 0,
+    "redirects_followed": 0,
+    "searches": 0,
+    "extra_url_discovery": false,
+    "connection_diagnosis": false
+  },
+  "additional_sources": [
+    {
+      "source_id": "piolax-followup-01",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/20260512_2025-q4_tanshin.pdf",
+      "title": "2026年３月期 決算短信",
+      "retrieved_at": "2026-10-15T04:06:18.537796+00:00",
+      "http_status": 503,
+      "error": null,
+      "raw_file": "raw/2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+      "raw_sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+      "byte_count": 91,
+      "text_file": null,
+      "text_sha256": null,
+      "snapshot": "01.json",
+      "snapshot_sha256": "219b114de7b29e22b95a48c7fb6d8eb533ac9134c723a134701a589c18cfbbed",
+      "scope_note": "HTTP error body, not a financial document",
+      "retry_count": 0,
+      "redirects_followed": 0
+    },
+    {
+      "source_id": "piolax-followup-02",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/02/20260212_2025-q3_tanshin.pdf",
+      "title": "2026年３月期 第３四半期決算短信",
+      "retrieved_at": "2026-10-15T04:06:24.932119+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_file": "raw/e0cc45129845f2b14601f761fd46f7d3bd2c3871f9f6ee3368f50eeeef333e68",
+      "raw_sha256": "e0cc45129845f2b14601f761fd46f7d3bd2c3871f9f6ee3368f50eeeef333e68",
+      "byte_count": 255691,
+      "text_file": "02.txt",
+      "text_sha256": "04d385088befc6a5d2ec66c94adffb2342f42b699c3737f9c41c13953b022ff5",
+      "snapshot": "02.json",
+      "snapshot_sha256": "5c31b12e5be605f9873bb3fe1ee943d68537bd29baf42d11e93b3b07e12ed8e0",
+      "scope_note": "Official public issuer PDF; numerical/model input adoption not performed",
+      "retry_count": 0,
+      "redirects_followed": 0,
+      "bundle_source_id": "case-public:b0f92e40871daf214475beab6df2eb02f2d5626b2ee0ccdb5c1e8c5c7cd6f038"
+    },
+    {
+      "source_id": "piolax-followup-03",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2025/12/20251204_2025-q2_presentation_R.pdf",
+      "title": "2026年３月期 第２四半期決算説明会資料",
+      "retrieved_at": "2026-10-15T04:06:27.910298+00:00",
+      "http_status": 503,
+      "error": null,
+      "raw_file": "raw/2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+      "raw_sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+      "byte_count": 91,
+      "text_file": null,
+      "text_sha256": null,
+      "snapshot": "03.json",
+      "snapshot_sha256": "5a46344988a85d514eda39f5e3253827afe71e38a1ed04a9860c49452ea789a3",
+      "scope_note": "HTTP error body, not a financial document",
+      "retry_count": 0,
+      "redirects_followed": 0
+    }
+  ],
+  "original_source_ids_reviewed": [
+    "case-public:0c8258cb856d65dc9647ba810a3b76eecfc1ac6038e7335390dc5b3b93eca3f3",
+    "case-public:f36c0056d343f1f49fb8b7e241ca005e91bd82601781168a533f748e0b7000be",
+    "case-public:05b94597b13d0b685c2d3328947b252a4122da9ab8abeb374944a6ab678f149d",
+    "case-public:d02afabf8f4cf9fd098129bb188f78f1cd4d2af75aafe4b1fbe050f4ed0e1774",
+    "case-public:34d8d32eef9a632ed1565f06c199af7dbd5a355cfdac1e9e6ad318fa40a17c94",
+    "case-public:a195dc46d270d743a5e6b6496666e44f8a242d7a9bac9670d8102d3ad5e9b0af",
+    "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+    "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12"
+  ],
+  "evidence_references": [
+    {
+      "id": "china-six-hundred-context",
+      "source_id": "case-public:34d8d32eef9a632ed1565f06c199af7dbd5a355cfdac1e9e6ad318fa40a17c94",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/2025-2027_management-plan_R.pdf",
+      "retrieved_at": "2026-10-15T01:11:50.219184+00:00",
+      "publication_date": "2026-05-12",
+      "published_at": null,
+      "quote": "２．中期経営計画の見直し\n地域戦略\n                      ① 設計開発から生産まで国内で完結できる体制を活かし、             億円            売上高の推移\n      【売上高の目標】            スピードと対応力で現地のニーズに応える                 100\n      FY30：100億円      ② 中国で利益が出せる商品の絞り込みと現地材採用による             75\n      （非日系 40億円）\n                                  自動車生産工場MAP\n                          コスト競争力の強化                           50\n\n      FY27：88億円         FY25       中華系拡販が奏功、生産再配置で反転へ         25\n中国    （非日系 26億円）\n                                                               0\n                       • 売上高は、計画比で非日系拡販効果が日系減産影響を\n                                                                    FY24      FY25    FY26    FY27\n                          打ち消し過達。生産再配置による一時費用（約６億円）の\n      【主な取り組み】\n                          計上で営業利益は未達                                  FY25 売上高の構成\n      ・中華系拡販強化\n      ・現地化の推進          • FY26は補助金減額等による自動車需要減が見込まれる                        74.1%             25.9%\n\n                          が、現地材採用等で利益確保を図る                                   日系      非日系\n\n\n                      ① FY2033 売上高 100億円                      億円            売上高の推移\n                      ② 第２工場稼働による生産能力の増強                      40\n\n      【売上高の目標】        ③ マルチスズキ、地場OEMへの拡販強化                    30\n\n      FY30：62億円       ④ 部品サイズ拡大、堅調な２輪向け商品の拡販                  20\n      FY27：32億円\n                      ⑤ R&D体制の増強（既存及び先行開発の商品）                 10\nインド\n                                                               0\n                        FY25       売上は順調、第２工場始動で成長加速\n      【主な取り組み】                                                      FY24      FY25    FY26    FY27\n      ・成長市場への          • FY25は売上過達。一時費用の計上で営業利益は未達に\n       積極投資                                                           FY25 売上高の構成\n                          終わるも実力ベースでは増収増益\n                                                                    45.8%            45.1%    9.1%\n                       • 第２工場の立ち上げは予定通り。プネ地区に位置する\n                          地場OEMをターゲットに拡販・生産体制を強化                    マルチ/地場OEM         日系     その他\n\n              All Rights Reserved, Copyright © PIOLAX, INC.                                          15\n",
+      "location": {
+        "pdf_page": 15,
+        "printed_page": 15,
+        "section": "中計見直し・地域戦略の中国FY25欄（引用頁の他地域は分析対象外）",
+        "saved_text_file": "5988/09.txt"
+      },
+      "target_period": {
+        "presentation_label": "FY25",
+        "parent_consolidated_year": {
+          "start_date": "2025-04-01",
+          "end_date": "2026-03-31",
+          "label": "親会社連結2026年3月期 / presentation FY2025"
+        },
+        "subsidiary_specific_booking_period": null
+      },
+      "scope": "中計見直し・地域戦略の中国FY25欄（引用頁の他地域は分析対象外）",
+      "verification": "exact unchanged saved-source substring within declared one-based PDF page"
+    },
+    {
+      "id": "group-special-loss-classification",
+      "source_id": "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf",
+      "retrieved_at": "2026-10-15T01:12:38.091035+00:00",
+      "publication_date": "2026-06-18",
+      "published_at": null,
+      "quote": "  ②【連結損益計算書及び連結包括利益計算書】\n   【連結損益計算書】\n                                                        (単位：百万円)\n                              前連結会計年度               当連結会計年度\n                            (自 2024年４月１日          (自 2025年４月１日\n                             至 2025年３月31日)         至 2026年３月31日)\n売上高                                   ※１ 63,351             ※１ 62,045\n売上原価                               ※３,※４ 49,079          ※３,※４ 48,316\n\n売上総利益                                    14,271                13,728\n販売費及び一般管理費                            ※２ 11,888             ※２ 12,258\n\n営業利益                                      2,382                 1,470\n営業外収益\n 受取利息                                       657                   398\n 受取配当金                                       84                   164\n 投資有価証券売却益                                    3                    15\n 持分法による投資利益                                 316                     5\n その他                                        486                   335\n 営業外収益合計                                  1,548                   918\n営業外費用\n 支払利息                                        14                   254\n 有価証券売却損                                      0                     1\n 固定資産廃棄損                                     15                    21\n デリバティブ評価損                                   －                     62\n 為替差損                                       195                   137\n 賃貸収入原価                                       7                     5\n 支払手数料                                      119                   205\n 建物解体費用                                      72                   107\n その他                                        103                   140\n 営業外費用合計                                    528                   935\n経常利益                                      3,402                 1,453\n特別利益\n 減損損失戻入益                                     －                 ※５ 59\n\n 特別利益合計                                      －                     59\n特別損失\n 早期割増退職金                                     －                    325\n 減損損失                                        －                 ※６ 423\n\n 特別損失合計                                      －                    749\n税金等調整前当期純利益                               3,402                   763\n法人税、住民税及び事業税                              1,369                   516\n法人税等調整額                                     180                   253\n法人税等合計                                    1,549                   769\n当期純利益又は当期純損失（△）                           1,852                   △5\n非支配株主に帰属する当期純利益                              60                    15\n親会社株主に帰属する当期純利益又は親会社株主に\n                                          1,792                  △21\n帰属する当期純損失（△）\n\n\n\n\n                          - 62 -\n",
+      "location": {
+        "pdf_page": 65,
+        "printed_page": 62,
+        "section": "連結損益計算書・減損損失は特別損失欄",
+        "saved_text_file": "5988/11.txt"
+      },
+      "target_period": {
+        "start_date": "2025-04-01",
+        "end_date": "2026-03-31",
+        "label": "親会社連結2026年3月期 / presentation FY2025"
+      },
+      "scope": "連結損益計算書・減損損失は特別損失欄",
+      "verification": "exact unchanged saved-source substring within declared one-based PDF page"
+    },
+    {
+      "id": "china-impairment-337",
+      "source_id": "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf",
+      "retrieved_at": "2026-10-15T01:12:38.091035+00:00",
+      "publication_date": "2026-06-18",
+      "published_at": null,
+      "quote": "※６．減損損失\n 当社グループは以下の資産グループについて減損損失を計上しました。\n  前連結会計年度（自 2024年４月１日      至   2025年３月31日）\n   該当事項はありません。\n\n  当連結会計年度（自   2025年４月１日    至   2026年３月31日）\n     場所               用途                     種類   減損損失額\n                                  建物及び構築物\n                                  機械装置及び運搬具\n 中国広東省\n              事業用資産               工具、器具及び備品         337百万円\n 東莞市\n                                  建設仮勘定\n                                  無形固定資産のその他\n\n 英国\n                                  機械装置及び運搬具\n ランカシャー州      事業用資産                                 86百万円\n                                  工具、器具及び備品\n アルサム\n\n   当社の連結子会社である東莞百楽仕汽車精密配件有限公司において、収益性の低下のため、その帳簿価額を回収\n 可能価額まで減額し、当該減少額を減損損失に計上しております。なお、回収可能価額は、外部の専門家から入手\n した鑑定評価書を用いて合理的に算出した正味売却価額を使用しております。\n  また、当社の連結子会社であるパイオラックス リミテッドにおいて、将来の生産再配置に伴い使用見込みのな\n い固定資産につきまして、その帳簿価額を備忘価額まで減額し、当該減少額を減損損失に計上しております。\n\n\n\n\n                                   - 76 -\n",
+      "location": {
+        "pdf_page": 79,
+        "printed_page": 76,
+        "section": "中国広東省東莞市・固定資産減損337百万円と英国86百万円の別表示",
+        "saved_text_file": "5988/11.txt"
+      },
+      "target_period": {
+        "start_date": "2025-04-01",
+        "end_date": "2026-03-31",
+        "label": "親会社連結2026年3月期 / presentation FY2025"
+      },
+      "scope": "中国広東省東莞市・固定資産減損337百万円と英国86百万円の別表示",
+      "verification": "exact unchanged saved-source substring within declared one-based PDF page"
+    },
+    {
+      "id": "subsidiary-closing-and-adjustments",
+      "source_id": "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf",
+      "retrieved_at": "2026-10-15T01:12:38.091035+00:00",
+      "publication_date": "2026-06-18",
+      "published_at": null,
+      "quote": "３．連結子会社の事業年度等に関する事項\n  連結子会社のうち、次の９社の決算日は、12月31日であり、連結財務諸表の作成にあたっては、同決算日現\n 在の財務諸表を使用しておりますが、連結決算日との間に生じた重要な取引については、連結上必要な調整を\n 行っております。\n 連結子会社名\n ・パイオラックス コーポレーション\n ・パイオラックス リミテッド\n ・パイオラックス株式会社\n ・パイオラックス（タイランド）リミテッド\n ・東莞百楽仕汽車精密配件有限公司\n ・パイオラックス メキシカーナ\n ・ピーティー パイオラックス インドネシア\n ・武漢百楽仕汽車精密配件有限公司\n ・百奥来仕（中国）投資有限公司\n",
+      "location": {
+        "pdf_page": 70,
+        "printed_page": 67,
+        "section": "東莞・武漢・中国投資会社等の12月31日決算と連結上の重要取引調整",
+        "saved_text_file": "5988/11.txt"
+      },
+      "target_period": {
+        "parent_consolidated_year": {
+          "start_date": "2025-04-01",
+          "end_date": "2026-03-31",
+          "label": "親会社連結2026年3月期 / presentation FY2025"
+        },
+        "subsidiary_year_end_month_day": "12-31",
+        "individual_cost_booking_period": null
+      },
+      "scope": "東莞・武漢・中国投資会社等の12月31日決算と連結上の重要取引調整",
+      "verification": "exact unchanged saved-source substring within declared one-based PDF page"
+    },
+    {
+      "id": "q3-pnl",
+      "source_id": "case-public:b0f92e40871daf214475beab6df2eb02f2d5626b2ee0ccdb5c1e8c5c7cd6f038",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/02/20260212_2025-q3_tanshin.pdf",
+      "retrieved_at": "2026-10-15T04:06:24.932119+00:00",
+      "publication_date": "2026-02-12",
+      "published_at": null,
+      "quote": "                                ㈱パイオラックス（5988）2026年３月期     第３四半期決算短信\n\n\n（２）四半期連結損益計算書及び四半期連結包括利益計算書\n （四半期連結損益計算書）\n                                                      （単位：百万円）\n                        前第３四半期連結累計期間            当第３四半期連結累計期間\n                         (自 2024年４月１日            (自 2025年４月１日\n                          至 2024年12月31日)          至 2025年12月31日)\n売上高                                    47,953               46,058\n売上原価                                   36,853               35,907\n売上総利益                                  11,100               10,150\n販売費及び一般管理費                              8,908                8,937\n営業利益                                    2,191                1,212\n営業外収益\n 受取利息                                     523                 312\n 受取配当金                                     84                 164\n 持分法による投資利益                               317                   2\n その他                                      200                 179\n 営業外収益合計                                1,125                 658\n営業外費用\n 支払利息                                       8                  164\n 固定資産廃棄損                                   13                   11\n デリバティブ評価損                                 17                   52\n 賃貸収入原価                                     5                    4\n 為替差損                                      66                  142\n 建物解体費用                                    72                   －\n 支払手数料                                    100                  205\n その他                                       70                  115\n 営業外費用合計                                  353                  696\n経常利益                                    2,962                1,174\n特別損失\n 早期割増退職金                                   －                  271\n 特別損失合計                                    －                  271\n税金等調整前四半期純利益                            2,962                 902\n法人税等                                    1,051                 241\n四半期純利益                                  1,911                 660\n非支配株主に帰属する四半期純利益                           38                  12\n親会社株主に帰属する四半期純利益                        1,872                 648\n\n\n\n\n                        - 5 -\n",
+      "location": {
+        "pdf_page": 7,
+        "printed_page": 5,
+        "section": "当第3四半期連結累計の特別損失表示（減損行を新たに補完しない）",
+        "saved_text_file": "5988/followup-public-review/02.txt"
+      },
+      "target_period": {
+        "start_date": "2025-04-01",
+        "end_date": "2025-12-31",
+        "label": "親会社第3四半期連結累計"
+      },
+      "scope": "当第3四半期連結累計の特別損失表示（減損行を新たに補完しない）",
+      "verification": "exact unchanged saved-source substring within declared one-based PDF page"
+    },
+    {
+      "id": "q3-segment-impairment",
+      "source_id": "case-public:b0f92e40871daf214475beab6df2eb02f2d5626b2ee0ccdb5c1e8c5c7cd6f038",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/02/20260212_2025-q3_tanshin.pdf",
+      "retrieved_at": "2026-10-15T04:06:24.932119+00:00",
+      "publication_date": "2026-02-12",
+      "published_at": null,
+      "quote": "                                ㈱パイオラックス（5988）2026年３月期   第３四半期決算短信\n\n\nⅡ 当第３四半期連結累計期間（自2025年４月１日 至2025年12月31日）\n１．報告セグメントごとの売上高及び利益又は損失の金額に関する情報\n                              （単位:百万円）\n                 自動車関連等         医療機器         合計\n\n売上高\n\n 外部顧客に対する売上高        42,102           3,955   46,058\n セグメント間の内部売上高\n                        -               -         -\n 又は振替高\n       計            42,102           3,955   46,058\n\nセグメント利益             1,805             256     2,061\n\n\n２．報告セグメントの利益又は損失の金額の合計額と四半期連結損益計算書計上額との差額及び当該差額の\n  主な内容（差異調整に関する事項）\n                 （単位:百万円）\n           利益           金額\n\n報告セグメント計                     2,061\n\n 全社費用（注）                     △857\n\n セグメント間取引消去                     10\n\n その他の調整額                        △1\n\n四半期連結損益計算書の営業利益              1,212\n（注）全社費用は、主に報告セグメントに帰属しない一般管理費であります。\n\n３．報告セグメントごとの固定資産の減損損失又はのれん等に関する情報\n 重要な該当事項はありません。\n\n\n\n\n                        - 9 -\n",
+      "location": {
+        "pdf_page": 11,
+        "printed_page": 9,
+        "section": "当第3四半期連結累計のセグメント減損注記・重要な該当事項なし",
+        "saved_text_file": "5988/followup-public-review/02.txt"
+      },
+      "target_period": {
+        "start_date": "2025-04-01",
+        "end_date": "2025-12-31"
+      },
+      "scope": "当第3四半期連結累計のセグメント減損注記・重要な該当事項なし",
+      "verification": "exact unchanged saved-source substring within declared one-based PDF page"
+    },
+    {
+      "id": "latest-forecast-eps-period",
+      "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+      "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+      "publication_date": "2026-08-05",
+      "published_at": null,
+      "quote": "３．2027年３月期の連結業績予想（2026年４月１日～2027年３月31日）\n                                               （％表示は、通期は対前期、四半期は対前年同四半期増減率）\n                                                                          親会社株主に帰属                １株当たり\n                   売上高                営業利益              経常利益\n                                                                           する当期純利益                当期純利益\n                百万円           ％     百万円         ％      百万円          ％      百万円   ％                   円 銭\n     通期         63,000       1.5    1,500      2.0     1,500       3.2       700 －                   27.45\n（注）１．直近に公表されている業績予想からの修正の有無： 無\n",
+      "location": {
+        "pdf_page": 1,
+        "printed_page": null,
+        "section": "短信「１株当たり当期純利益」通期欄の会社公表予想。当期実績・分析者独自予測・確率加重シナリオとは区別し、評価入力として自動採用しない。",
+        "saved_text_file": "5988/07.txt"
+      },
+      "target_period": {
+        "label": "2027年３月期の連結業績予想",
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "duration": "fiscal_year",
+        "disclosure_basis": "issuer_forecast"
+      },
+      "scope": "短信「１株当たり当期純利益」通期欄の会社公表予想。当期実績・分析者独自予測・確率加重シナリオとは区別し、評価入力として自動採用しない。",
+      "verification": "exact unchanged saved-source substring within declared one-based PDF page"
+    },
+    {
+      "id": "latest-forecast-dps-period",
+      "source_id": "case-public:9e8b6afc70e3e312c989be58aa52f253e9d49b2699a3d7662eb2e0add624ef12",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/08/20260805_2026-q1_tanshin.pdf",
+      "retrieved_at": "2026-10-15T01:11:44.134787+00:00",
+      "publication_date": "2026-08-05",
+      "published_at": null,
+      "quote": "２．配当の状況\n                                              年間配当金\n               第１四半期末         第２四半期末          第３四半期末             期末                合計\n                   円 銭            円 銭             円 銭                   円 銭             円 銭\n2026年３月期             －            39.00             －                   53.00           92.00\n2027年３月期             －\n2027年３月期（予想）                          39.00             －               53.00           92.00\n\n（注）１．直近に公表されている配当予想からの修正の有無： 無\n\n\n",
+      "location": {
+        "pdf_page": 1,
+        "printed_page": null,
+        "section": "短信「年間配当金」の当期予想行・合計欄の会社公表1株配当予想。中間・期末それぞれの額や前期実績とは区別する。連結利益の測定値ではなく発行会社の1株配当表示であり、多年DPS配列・終価翌期DPS・持続可能配当を生成しない。",
+        "saved_text_file": "5988/07.txt"
+      },
+      "target_period": {
+        "label": "2027年３月期（予想）",
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "duration": "fiscal_year",
+        "disclosure_basis": "issuer_forecast"
+      },
+      "scope": "短信「年間配当金」の当期予想行・合計欄の会社公表1株配当予想。中間・期末それぞれの額や前期実績とは区別する。連結利益の測定値ではなく発行会社の1株配当表示であり、多年DPS配列・終価翌期DPS・持続可能配当を生成しない。",
+      "verification": "exact unchanged saved-source substring within declared one-based PDF page"
+    },
+    {
+      "id": "capital-policy-27mar",
+      "source_id": "case-public:a195dc46d270d743a5e6b6496666e44f8a242d7a9bac9670d8102d3ad5e9b0af",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/20260512_2025-q4_summary_R2.pdf",
+      "retrieved_at": "2026-10-15T01:11:46.331748+00:00",
+      "publication_date": "2026-05-12",
+      "published_at": null,
+      "quote": "    2026年度                        配当予想（資本政策）\n■年間92円継続(27/3期まで配当性向100%、下限配当92円）\n■3年間で300億円の自己株取得実施(24年11月発表、累計約265億円実施済み)\n\n\n\n                                    2026年度              2025年度     増減\n                                        予想               実績\n\n       １    株    当     た     り\n       当 期 純 利 益                       ¥27.45            ▲¥0.85    28.30\n\n       １ 株 配 当 予 想\n                                       ¥92.00             ¥92.00      －\n\n       配     当       性      向         335.2%                  －\n\n\n\n\n        All Rights Reserved, Copyright © PIOLAX, INC.                      10\n",
+      "location": {
+        "pdf_page": 10,
+        "printed_page": 10,
+        "section": "会社予想EPS27.45円・配当92円と27/3期までの資本政策",
+        "saved_text_file": "5988/08.txt"
+      },
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "親会社連結2027年3月期 / presentation FY2026会社予想"
+      },
+      "scope": "会社予想EPS27.45円・配当92円と27/3期までの資本政策",
+      "verification": "exact unchanged saved-source substring within declared one-based PDF page"
+    },
+    {
+      "id": "annual-dividend-policy",
+      "source_id": "case-public:5d5a98a7770af91318e9bb24fd4bdac483b20cb5fc96a79f58474dbd77f57365",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/06/20260618_2025-q4_report.pdf",
+      "retrieved_at": "2026-10-15T01:12:38.091035+00:00",
+      "publication_date": "2026-06-18",
+      "published_at": null,
+      "quote": "３【配当政策】\n 当社グループは、最大より最良を目指す「質重視」の経営方針に基づいて収益力の向上及び資本効率性の向上を実\n現すべく、自己株式の取得など総還元性向に軸足を置いた諸施策を機動的に実施しております。\n なお、資本政策として、2023年３月期から2027年３月期までの５期間は、自己資本の積み増しの抑制とグループキ\nャッシュマネジメントの徹底により、連結配当性向100％の実施、2027年３月期まで１株当たりの年間配当金を92円\n以上とすることの維持を掲げております。\n 当社は、中間配当と期末配当の年２回の剰余金の配当を行うことを基本方針としております。これらの剰余金の配\n当の決定機関は、期末配当については株主総会又は取締役会、中間配当については取締役会であります。\n 当期の期末配当は当社普通株式１株につき53円とし、すでに実施した中間配当39円とあわせ、１株当たり年間配当\n92円を実施することを予定しております。\n  また、内部留保金は、中長期的な企業価値増大のため、研究開発並びに生産設備投資に充当することを予定してお\nります。\n  なお、当事業年度に係る剰余金の配当は以下の通りであります。期末配当に関する配当金の総額1,294百万円及び\n１株当たり配当額53円につきましては、2026年６月25日開催予定の定時株主総会の決議事項となっております。\n\n\n                 配当金の総額       １株当たり配当額\n     決議年月日\n                 （百万円）          （円）\n   2025年11月12日\n                      972             39.00\n    取締役会決議\n   2026年６月25日\n                     1,294            53.00\n 定時株主総会決議（予定）\n\n\n\n\n                             - 38 -\n",
+      "location": {
+        "pdf_page": 41,
+        "printed_page": 38,
+        "section": "連結配当性向100％・2027年3月期まで年間92円以上の維持",
+        "saved_text_file": "5988/11.txt"
+      },
+      "target_period": {
+        "policy_from_fiscal_year_end": "2023-03-31",
+        "policy_through_fiscal_year_end": "2027-03-31"
+      },
+      "scope": "連結配当性向100％・2027年3月期まで年間92円以上の維持",
+      "verification": "exact unchanged saved-source substring within declared one-based PDF page"
+    },
+    {
+      "id": "post-policy-caveat",
+      "source_id": "case-public:34d8d32eef9a632ed1565f06c199af7dbd5a355cfdac1e9e6ad318fa40a17c94",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/2025-2027_management-plan_R.pdf",
+      "retrieved_at": "2026-10-15T01:11:50.219184+00:00",
+      "publication_date": "2026-05-12",
+      "published_at": null,
+      "quote": "２．中期経営計画の見直し\n資本政策\n 自己株式取得\n ◼ FY2024から３年累計で300億円の自己株式取得を実施中\n ◼ FY2025は約23億円分を取得、過去取得分と約265億円分を取得済み\n ◼ 追加取得についても機動的に実施検討\n                                                            自己株式300億円取得後\n        2025年３月末                             2026年３月末\n                                                               のイメージ\n\n\n\n\n 配当方針\n ◼ FY2026まで連結配当性向100%＋下限配当92円\n ◼ 以後も安定的・継続的な配当を行うよう努める                                  連結配当性向 100%\n                                                           下限配当 92円\n\n\n\n          All Rights Reserved, Copyright © PIOLAX, INC.                    17\n",
+      "location": {
+        "pdf_page": 17,
+        "printed_page": 17,
+        "section": "FY2026までの定量方針と以後の安定・継続配当に努めるという定性的方針",
+        "saved_text_file": "5988/09.txt"
+      },
+      "target_period": {
+        "quantitative_policy_through": "2027-03-31",
+        "later_period": "2028年3月期以降は定量下限未確認"
+      },
+      "scope": "FY2026までの定量方針と以後の安定・継続配当に努めるという定性的方針",
+      "verification": "exact unchanged saved-source substring within declared one-based PDF page"
+    },
+    {
+      "id": "older-eps-is-different-period",
+      "source_id": "case-public:b0f92e40871daf214475beab6df2eb02f2d5626b2ee0ccdb5c1e8c5c7cd6f038",
+      "url": "https://www.piolax.co.jp/jp/wp-content/uploads/2026/02/20260212_2025-q3_tanshin.pdf",
+      "retrieved_at": "2026-10-15T04:06:24.932119+00:00",
+      "publication_date": "2026-02-12",
+      "published_at": null,
+      "quote": "３．2026年３月期の連結業績予想（2025年４月１日～2026年３月31日）\n                                                                                          （％表示は、対前期増減率）\n                                                                                 親会社株主に帰属                 １株当たり\n                      売上高                 営業利益                   経常利益\n                                                                                 する当期純利益                  当期純利益\n                   百万円          ％       百万円          ％         百万円         ％      百万円     ％                  円 銭\n      通期           61,200     △3.4      1,600     △32.8         1,500   △55.9      700 △61.0                 27.44\n（注）直近に公表されている業績予想からの修正の有無：有\n",
+      "location": {
+        "pdf_page": 1,
+        "printed_page": null,
+        "section": "旧年度2026年3月期予想27.44円を2027年3月期27.45円と混同しない",
+        "saved_text_file": "5988/followup-public-review/02.txt"
+      },
+      "target_period": {
+        "start_date": "2025-04-01",
+        "end_date": "2026-03-31",
+        "label": "親会社連結2026年3月期 / presentation FY2025"
+      },
+      "scope": "旧年度2026年3月期予想27.44円を2027年3月期27.45円と混同しない",
+      "verification": "exact unchanged saved-source substring within declared one-based PDF page"
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "china_oneoff_wording",
+      "status": "closed_public_answer",
+      "conclusion": "約6億円を会社が一時費用と呼んだかは既に公表済み。FY25中国欄で営業利益の計画未達に結び付けて説明する。",
+      "evidence_ids": [
+        "china-six-hundred-context"
+      ],
+      "remaining_unknown": [
+        "これだけで約6億円の全額が営業費用だけであること、減損337百万円との非重複まで確定しない。"
+      ],
+      "ir_question_needed_for_this_definition": false
+    },
+    {
+      "id": "impairment_scope_classification",
+      "status": "closed_public_answer",
+      "conclusion": "337百万円は東莞の事業用固定資産で、子会社の収益性低下による減損。有報の連結P/L減損423百万円は特別損失欄、英国86百万円は別拠点。減損を営業利益へ加算しない区分は公開で分かる。",
+      "evidence_ids": [
+        "china-impairment-337",
+        "group-special-loss-classification"
+      ],
+      "remaining_unknown": [
+        "約6億円に含む/含まない対応表はない。"
+      ],
+      "ir_question_needed_for_this_definition": false
+    },
+    {
+      "id": "china_period",
+      "status": "partly_resolved",
+      "conclusion": "発表上はFY25中国欄と2026年3月期連結有報の費用として照合できる。在外9社（東莞/武漢/中国投資会社を含む）は12月31日決算を使い連結決算日までの重要取引を調整する。",
+      "evidence_ids": [
+        "china-six-hundred-context",
+        "china-impairment-337",
+        "subsidiary-closing-and-adjustments",
+        "q3-pnl",
+        "q3-segment-impairment"
+      ],
+      "remaining_unknown": [
+        "約6億円の子会社別の対象期間/認識時期/連結調整との対応。3Qの『重要な該当事項なし』だけでゼロ・個別損失の正確な認識四半期と断定しない。"
+      ],
+      "ir_question_needed_for_this_definition": null
+    },
+    {
+      "id": "china_overlap",
+      "status": "unresolved_scope",
+      "conclusion": null,
+      "evidence_ids": [
+        "china-six-hundred-context",
+        "group-special-loss-classification",
+        "china-impairment-337"
+      ],
+      "remaining_unknown": [
+        "約6億円の費用科目別/企業別範囲と337百万円の包含・重複関係。営業利益への影響という文脈はあるが明示対応は確認できない。"
+      ],
+      "ir_question_needed_for_this_definition": null
+    },
+    {
+      "id": "eps_and_dps_current_period",
+      "status": "closed_public_answer",
+      "conclusion": "EPS27.45円は2027年3月期連結通期の会社予想。年間DPS92円も同年度の会社予想（中間39円/期末53円）。予想であり利益・配当の永続保証ではない。今回追加3Q資料の27.44円は旧年度予想で別期。",
+      "evidence_ids": [
+        "latest-forecast-eps-period",
+        "latest-forecast-dps-period",
+        "capital-policy-27mar",
+        "older-eps-is-different-period"
+      ],
+      "remaining_unknown": [],
+      "ir_question_needed_for_this_definition": false
+    },
+    {
+      "id": "dividend_policy_through_27mar",
+      "status": "closed_public_answer",
+      "conclusion": "2027年3月期まで年間92円以上と連結配当性向100%を掲げる方針は既に明示。DPSとEPSの大小だけから独自の安全/危険判断をしない。",
+      "evidence_ids": [
+        "annual-dividend-policy",
+        "capital-policy-27mar",
+        "post-policy-caveat"
+      ],
+      "remaining_unknown": [],
+      "ir_question_needed_for_this_definition": false
+    },
+    {
+      "id": "future_eps_dps_continuation",
+      "status": "unresolved_not_public_guarantee_question",
+      "conclusion": "以後は安定的・継続的な配当に努めるという定性的説明まで。27.45円EPSや92円配当を翌期以降へ固定する公表予測/定量下限は今回の資料では確認できない。",
+      "evidence_ids": [
+        "post-policy-caveat",
+        "latest-forecast-eps-period",
+        "annual-dividend-policy"
+      ],
+      "remaining_unknown": [
+        "期限後の数値方針・年度別予想、将来収益・資金・株数を結ぶモデルの根拠。会社に保証を求める質問へ転換しない。"
+      ],
+      "ir_question_needed_for_this_definition": false
+    }
+  ],
+  "public_qa_review": {
+    "status": "not_identified_in_saved_index; supplemental_presentation_body_unavailable",
+    "dedicated_qa_link_found": false,
+    "bounded_scope": "既存IRライブラリ/財務レポート索引と保存PDF内の明示リンク/語句、および追加3 URLだけ。全Web/動画を調査した意味ではない。",
+    "question_closed_by_new_qa": false,
+    "pending_http503_urls": [
+      "https://www.piolax.co.jp/jp/wp-content/uploads/2026/05/20260512_2025-q4_tanshin.pdf",
+      "https://www.piolax.co.jp/jp/wp-content/uploads/2025/12/20251204_2025-q2_presentation_R.pdf"
+    ]
+  },
+  "closed_question_topics": [
+    "一時費用と呼ばれているか",
+    "減損337百万円の所在地・損失種別とP/L区分",
+    "27.45円EPSと92円DPSはどの年度の予想か",
+    "27/3期までの配当方針の率/下限/期限"
+  ],
+  "research_question_drafts": [
+    {
+      "id": "research-only-china-accounting-bridge",
+      "status": "research_draft_not_send_ready",
+      "research_only": true,
+      "external_send_eligible": false,
+      "based_on_existing_issue_id": "5988-china-oneoff-scope",
+      "question": "2026年5月12日公表「中期経営計画の見直し」15ページでは、中国FY25の生産再配置による「一時費用（約6億円）」が営業利益の計画未達の要因として説明されています。一方、2026年3月期有価証券報告書76ページでは中国東莞の固定資産減損337百万円が示され、連結損益計算書では減損は特別損失に区分されています。公表済みのこれらの額を重複して調整しないため、約6億円の集計範囲と連結損益区分の対応、337百万円との包含・重複の有無について、既に公表されている範囲または参照可能な資料をご教示いただけますでしょうか。あわせて、約6億円のFY25表示が、在外子会社の12月決算と連結上の調整を含むどの対象期間を指す説明なのか、公表済みの説明箇所があればご教示ください。",
+      "evidence_ids": [
+        "china-six-hundred-context",
+        "china-impairment-337",
+        "group-special-loss-classification",
+        "subsidiary-closing-and-adjustments"
+      ],
+      "target_research_parameters": [
+        "prior_period_cost_bridge.china_relocation_scope",
+        "prior_period_cost_bridge.overlap_with_impairment",
+        "prior_period_cost_bridge.period_alignment"
+      ],
+      "current_model_parameter_values": null,
+      "branches": [
+        {
+          "id": "scope_excludes_impairment",
+          "condition": "営業費用の範囲と減損を含まない対応が公開根拠に結び付いて説明される",
+          "research_action": "過年度の費用区分・期間だけを整理。将来費用消失、EPS加算、倍率上昇を仮定しない。",
+          "decision": "unresolved",
+          "valuation_change": null
+        },
+        {
+          "id": "scope_overlaps_impairment",
+          "condition": "約6億円と337百万円に包含・重複があると公開根拠で説明される",
+          "research_action": "約6億円全額の営業利益への足戻しを採用せず、明示区分だけ整理して二重計上を除く。",
+          "decision": "unresolved",
+          "valuation_change": null
+        },
+        {
+          "id": "scope_unresolved",
+          "condition": "説明が曖昧/未回答/範囲未確認/公開性不明",
+          "research_action": "加算・正常化・予想変更を保留。無回答を業績悪化や売却条件に変換しない。",
+          "decision": "unresolved",
+          "valuation_change": null
+        }
+      ],
+      "why_not_send_ready": [
+        "通期短信と2Q説明会資料の本文確認は503で保留。専用公開Q&Aがないと断定できない。",
+        "過年度会計区分を変えることが、既存の採用済みモデル/評価入力/判断をどこまで変えるか未設定。",
+        "現時点価格・評価日、保有状態、採用済み数値判断方針、正常化/税・非支配持分・株数の入力が不足。",
+        "回答尤度/状態確率/効用・調査費用を設定していないのでIRの情報価値を数値立証していない。",
+        "窓口受付の過去確認だけで、沈黙期間や現在送信適格性を確認したことにはならない。"
+      ]
+    }
+  ],
+  "investment_readiness": {
+    "status": "not_ready",
+    "inputs_verified": false,
+    "actual_forecasts_adopted": false,
+    "future_eps": null,
+    "future_dps": null,
+    "scenario_probabilities": null,
+    "valuation": null,
+    "current_price_jpy": null,
+    "buy_sell_rules": null,
+    "order_or_send": false
+  },
+  "source_preservation": {
+    "protected_file_sha256": {
+      "research/ir-case-studies-2026-10-15/5988/raw/b6bd87c0a694102282f94af40815df694d160c3f48402f7d323e20d45358734f": "b6bd87c0a694102282f94af40815df694d160c3f48402f7d323e20d45358734f",
+      "research/ir-case-studies-2026-10-15/5988/manifest.json": "7665c941d866d4599510e15db31780466880da30d344c458b81ec065450c55d4",
+      "research/ir-case-studies-2026-10-15/5988/raw/33cb13c658a36f4cce093b64b38b07c404b02b6aead830431ba25ec3a4e198b4": "33cb13c658a36f4cce093b64b38b07c404b02b6aead830431ba25ec3a4e198b4",
+      "research/ir-case-studies-2026-10-15/5988/11.json": "9fe5f764785c119f413c66b7879c4b599060fd473a1e40f371f8f3f6c2a9f96a",
+      "research/ir-case-studies-2026-10-15/5988/raw/ebc523f5a2c0877aa61cad8267d6dbb009b6dfaff92eefce3976c048f15684a3": "ebc523f5a2c0877aa61cad8267d6dbb009b6dfaff92eefce3976c048f15684a3",
+      "research/ir-case-studies-2026-10-15/5988/raw/600eea36e3dc58755b2aa8ddc1bb402f7db34589e1a45dc6db730ad6d0d42b16": "600eea36e3dc58755b2aa8ddc1bb402f7db34589e1a45dc6db730ad6d0d42b16",
+      "research/ir-case-studies-2026-10-15/5988/raw/985b5b53a0524968f34a4b8b64e5f19863ca1df9b598e048a8efa8ad86c73e26": "985b5b53a0524968f34a4b8b64e5f19863ca1df9b598e048a8efa8ad86c73e26",
+      "research/ir-case-studies-2026-10-15/5988/financial-input-meaning-review.json": "07a63867f04d2fd479ca0cc07a906a831ede574cd9f0ddb34879153d85b3cee6",
+      "research/ir-case-studies-2026-10-15/5988/07.txt": "3b1258cc4e95b63a6a355a8e96091887651f2d42e175492f328ff1564aa7749c",
+      "research/ir-case-studies-2026-10-15/5988/raw/41d8e511943ae02f5107e8c9fc217ed4b6ffc782f4d69ad994061fc5d21d9c70": "41d8e511943ae02f5107e8c9fc217ed4b6ffc782f4d69ad994061fc5d21d9c70",
+      "research/ir-case-studies-2026-10-15/5988/10.json": "7360a61ff77eb33cfd32481fd89289af4c210b0ef9ecfa7778364d90c1e5f91b",
+      "research/ir-case-studies-2026-10-15/5988/06.json": "c45624d8b09d61b9f9c113a3c9cbe62c3c15db0d93d0f79efd28e0805ebaaee2",
+      "research/ir-case-studies-2026-10-15/5988/raw/9960235822c9f224e178472064f39186645ca411b754621bd9ed6fdd91a0f9ff": "9960235822c9f224e178472064f39186645ca411b754621bd9ed6fdd91a0f9ff",
+      "research/ir-case-studies-2026-10-15/5988/raw/813f6500cd7716a3b527273c6817aeb507800030063847c35963cac4c72c74e4": "813f6500cd7716a3b527273c6817aeb507800030063847c35963cac4c72c74e4",
+      "research/ir-case-studies-2026-10-15/5988/README.md": "6948bd633cf5f5f3cf26fab6ea7084c9fc48a14cb919059eeb0ea06c0b44a714",
+      "research/ir-case-studies-2026-10-15/5988/draft.json": "56709af47fbb1fe80d390e5431f59ce756144d61ffbe06924f7f676c47e01293",
+      "research/ir-case-studies-2026-10-15/5988/07.json": "6aca01f0741d3fe2386880591ed08b1649094f866c70c48fcf58be9f231fe9f1",
+      "research/ir-case-studies-2026-10-15/5988/02.json": "c86f73eace1a03f054f2f4db20adcbc7ea488a682cea05d72f376f81c5a087d0",
+      "research/ir-case-studies-2026-10-15/5988/disclosed-facts-draft.json": "385f35de728e2a2ab6fe4c4a6e75ae4cf116899029e8dfb84f282614f3d0b783",
+      "research/ir-case-studies-2026-10-15/5988/09.json": "46119351c9c2db0e0f5fd56eaa7175dfccf0229367036a196a1c02b1552ae55d",
+      "research/ir-case-studies-2026-10-15/5988/financial-input-meaning-review.md": "62da5d653198e1f2849eecc77d62a4de16babc388c52bf281374f1c5ad008d25",
+      "research/ir-case-studies-2026-10-15/5988/08.json": "6288a56cd74ac6c2975dd0dd4906ab93881972527041c062bd489324b3d31155",
+      "research/ir-case-studies-2026-10-15/5988/11.txt": "a9acbc3544e789cae8369d1e45f02747928fadda584c1839780a12a55fe4bd01",
+      "research/ir-case-studies-2026-10-15/5988/09.txt": "e64d2a5f5826236801b5dd06945eaed585e901d778bedf6539b5473882f8fd1f",
+      "data/case-source-bundle.json": "09dc53022739abfdc8d4e88957de1ec01c33b26566c4e63564330a3a72d2118d",
+      "research/ir-case-studies-2026-10-15/5988/01.json": "9ca5b908441141a04f5b6cebeb7e2beede99c6f53e1c919e82dec55022d3d387",
+      "research/ir-case-studies-2026-10-15/5988/08.txt": "f730f4c2b6d56fccefec43d7ae99fb478b8b1451114be6c4d9c595ca34121d64"
+    },
+    "original_source_id_retrieved_at_content_unchanged": true
+  },
+  "limitations": [
+    "6億円は約の表記であり正確な600百万円へ数値正規化・足戻しをしていない。",
+    "337百万円の単一損失と約6億円の集計関係を、単なる大小比較や差引きから作らない。",
+    "第3四半期注記と通期注記の差は確認したが、在外決算期差・重要性基準・連結調整があり、個別認識月/四半期や非重複を自動確定しない。",
+    "503は取得失敗という事実だけを保存し、企業側の非開示やIR拒否の証拠に使わない。"
+  ]
+}

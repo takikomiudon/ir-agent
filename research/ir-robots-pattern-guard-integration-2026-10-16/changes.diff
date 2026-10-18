@@ -1,0 +1,334 @@
+--- before/scripts/research_ir_universe.py
++++ after/scripts/research_ir_universe.py
+@@ -30,6 +30,7 @@
+ from urllib.robotparser import RobotFileParser
+ 
+ import requests
++from protego import Protego
+ 
+ USER_AGENT = "ir-agent-public-research/0.1"
+ IR = re.compile(r"(?<![A-Za-z0-9])IR(?![A-Za-z0-9])|ＩＲ|投資家|investor|investor relations", re.I)
+@@ -118,7 +119,8 @@
+ 
+     The second result proves a FIRST-match block was overridden by a strictly
+     longer Allow. Ties allow fresh reads but do not clear saved denial events.
+-    Unsupported pattern semantics remain on the existing stdlib path.
++    Pattern groups retain the legacy result as an upper bound; callers also
++    apply the separate deny-only Protego guard below.
+     """
+     legacy = parser.can_fetch(useragent, url)
+     if parser.disallow_all or parser.allow_all or not parser.mtime():
+@@ -138,8 +140,65 @@
+     return bool(best.allowance), bool(correction)
+ 
+ 
++class _RawRobotsParser(RobotFileParser):
++    def parse(self, lines):
++        raw_lines = list(lines)
++        first_parse = not getattr(self, "_ir_parse_seen", False)
++        self._ir_parse_seen = True
++        self._ir_raw_robots_text = None
++        super().parse(raw_lines)
++        # stdlib parse() appends rather than replacing all prior groups.
++        # Reparsed mutable objects no longer have a single proven raw policy.
++        if first_parse:
++            self._ir_raw_robots_text = "\n".join(raw_lines)
++
++
++def parse_robots(raw_text: str) -> RobotFileParser:
++    """Keep exact directive text for the pattern library; never reconstruct it
++    by unquoting stdlib paths (which loses escaped literal '*' and '$').
++    """
++    if not isinstance(raw_text, str):
++        raise ValueError("robots raw text must be a string")
++    parser = _RawRobotsParser()
++    parser.parse(raw_text.splitlines())
++    parser._ir_raw_robots_text = raw_text
++    return parser
++
++
++def _pattern_robots_guard(parser: RobotFileParser, useragent: str, url: str) -> bool:
++    entry = next((e for e in parser.entries if e.applies_to(useragent)), parser.default_entry)
++    if entry is None or not any("*" in unquote(r.path) or "$" in unquote(r.path)
++                                for r in entry.rulelines):
++        return True
++    raw = getattr(parser, "_ir_raw_robots_text", None)
++    if not isinstance(raw, str):
++        return False  # stdlib's encoded rules do not establish original patterns.
++    # Use stdlib itself to bind original directives to the selected legacy
++    # group's rules. Do not reimplement RFC matching or choose Protego's
++    # different user-agent/group-merging policy. Ambiguous raw bindings stop.
++    directives = {}
++    for line in raw.splitlines():
++        line = line.split("#", 1)[0].strip()
++        single = RobotFileParser()
++        single.parse(["User-agent: *", line])
++        if single.default_entry and len(single.default_entry.rulelines) == 1:
++            rule = single.default_entry.rulelines[0]
++            directives.setdefault((rule.path, rule.allowance), set()).add(line)
++    selected = []
++    for rule in entry.rulelines:
++        candidates = directives.get((rule.path, rule.allowance), set())
++        if len(candidates) != 1:
++            return False
++        selected.append(next(iter(candidates)))
++    try:
++        return Protego.parse("User-agent: *\n" + "\n".join(selected)).can_fetch(url, useragent)
++    except (TypeError, ValueError):
++        return False
++
++
+ def robots_can_fetch(parser: RobotFileParser, useragent: str, url: str) -> bool:
+-    return _literal_robots_decision(parser, useragent, url)[0]
++    allowed = _literal_robots_decision(parser, useragent, url)[0]
++    return allowed and _pattern_robots_guard(parser, useragent, url)
+ 
+ 
+ def robots_specific_allow_correction(parser: RobotFileParser, useragent: str, url: str) -> bool:
+@@ -569,8 +628,7 @@
+                 evidence["robots_failure_reason"] = redirect_failure
+             parser = None
+             if not evidence.get("error") and evidence.get("http_status") == 200 and evidence.get("text"):
+-                parser = RobotFileParser()
+-                parser.parse(evidence["text"].splitlines())
++                parser = parse_robots(evidence["text"])
+                 delay = parser.crawl_delay(USER_AGENT)
+                 if delay:
+                     with self.guard:
+--- before/scripts/collect_ir_followups.py
++++ after/scripts/collect_ir_followups.py
+@@ -23,7 +23,6 @@
+ from datetime import datetime, timezone
+ from pathlib import Path
+ from urllib.parse import parse_qsl, unquote, urldefrag, urlsplit
+-from urllib.robotparser import RobotFileParser
+ 
+ sys.dont_write_bytecode = True  # A cold --plan-only invocation must not create caches.
+ sys.path.insert(0, str(Path(__file__).resolve().parent))
+@@ -397,8 +396,7 @@
+                 return False
+         except (TypeError, ValueError):
+             return False
+-        parser = RobotFileParser()
+-        parser.parse(robot.get("text", "").splitlines())
++        parser = research.parse_robots(robot.get("text", ""))
+         return research.robots_specific_allow_correction(parser, research.USER_AGENT, url)
+ 
+     if not blocked or not qualifies(latest):
+@@ -1409,8 +1407,7 @@
+         if robot.get("error") or not isinstance(status, int) or status >= 500 or 300 <= status < 400:
+             unreachable.add(origin)
+         elif status == 200:
+-            parser = RobotFileParser()
+-            parser.parse(robot.get("text", "").splitlines())
++            parser = research.parse_robots(robot.get("text", ""))
+             robots[origin] = parser
+     for fetch in record.get("fetches", []):
+         if fetch.get("error") not in NO_CONTENT_GET and fetch.get("failure_signature") != "common_transport_503":
+--- before/tests/test_ir_contact_research.py
++++ after/tests/test_ir_contact_research.py
+@@ -62,9 +62,7 @@
+         return '<form>' + text + '<input type="email" name="email"><textarea name="message"></textarea></form>'
+ 
+     def robots_parser(self, lines):
+-        parser = research.RobotFileParser()
+-        parser.parse(lines.splitlines())
+-        return parser
++        return research.parse_robots(lines)
+ 
+     def test_actual_6383_literal_allow_permits_only_its_observed_path_without_network(self):
+         # Exact body of saved 6383/20261011T173437506705Z/04.json nested robots.
+@@ -122,13 +120,13 @@
+         for target in ("https://issuer.invalid/IR情報/private", "https://issuer.invalid/ir;ask?kind=product"):
+             self.assertFalse(research.robots_can_fetch(parser, research.USER_AGENT, target))
+ 
+-    def test_unsupported_robots_patterns_flags_and_unread_keep_legacy_decision(self):
++    def test_pattern_guard_never_promotes_legacy_denials_or_saved_corrections(self):
+         target = "https://issuer.invalid/ir/private"
+         for pattern in ("/ir/*", "/ir/private$", "/other%2A", "/ir/%24"):
+             with self.subTest(pattern=pattern):
+                 parser = self.robots_parser("User-agent: *\nDisallow: /\nAllow: /ir/\nDisallow: " + pattern)
+-                self.assertEqual(parser.can_fetch(research.USER_AGENT, target),
+-                                 research.robots_can_fetch(parser, research.USER_AGENT, target))
++                self.assertFalse(parser.can_fetch(research.USER_AGENT, target))
++                self.assertFalse(research.robots_can_fetch(parser, research.USER_AGENT, target))
+                 self.assertFalse(research.robots_specific_allow_correction(parser, research.USER_AGENT, target))
+         parser = research.RobotFileParser()
+         self.assertFalse(research.robots_can_fetch(parser, research.USER_AGENT, target))
+--- before/tests/test_ir_followup_collection.py
++++ after/tests/test_ir_followup_collection.py
+@@ -29,6 +29,23 @@
+     def save(self, relative, value):
+         self.research.write_json(self.output / relative, value)
+         return relative
++
++    def test_saved_wildcard_policy_blocks_proposal_without_network_or_record_rewrite(self):
++        root = 'https://issuer500a.example/'
++        target = root + 'ir/_pdf/contact'
++        record = self.fixture(links=[{'url': target, 'label': 'IRお問い合わせ'}])
++        ref = record['fetches'][0]['snapshot']
++        page = followups.read_json(self.output / ref)
++        page['robots'] = {'url': root + 'robots.txt', 'http_status': 200,
++                          'retrieved_at': '2026-10-11T00:00:00+00:00',
++                          'text': 'User-agent: *\nDisallow: /*_pdf'}
++        self.save(ref, page)
++        before = {str(p): p.read_bytes() for p in self.output.rglob('*') if p.is_file()}
++        with patch.object(self.research.requests, 'get', side_effect=AssertionError('No network')):
++            plan = followups.build_plan(self.output)
++        self.assertEqual(plan['selected'], [])
++        self.assertEqual(plan['rejected_counts']['saved_access_denial'], 1)
++        self.assertEqual(before, {str(p): p.read_bytes() for p in self.output.rglob('*') if p.is_file()})
+ 
+     def fixture(self, code="500A", links=None, status="provisional"):
+         root = f"https://issuer{code.lower()}.example/"
+--- before/pyproject.toml
++++ after/pyproject.toml
+@@ -7,7 +7,9 @@
+ version = "0.1.0"
+ description = "A hypothesis-first Japanese equity research harness for Codex"
+ requires-python = ">=3.11"
+-dependencies = []
++dependencies = [
++    "protego==0.7.0",
++]
+ 
+ [project.optional-dependencies]
+ data = ["jquants-api-client==2.8.0", "edinet-tools==0.9.0"]
+--- before/uv.lock
++++ after/uv.lock
+@@ -191,6 +191,9 @@
+ name = "ir-agent"
+ version = "0.1.0"
+ source = { editable = "." }
++dependencies = [
++    { name = "protego" },
++]
+ 
+ [package.optional-dependencies]
+ data = [
+@@ -202,6 +205,7 @@
+ requires-dist = [
+     { name = "edinet-tools", marker = "extra == 'data'", specifier = "==0.9.0" },
+     { name = "jquants-api-client", marker = "extra == 'data'", specifier = "==2.8.0" },
++    { name = "protego", specifier = "==0.7.0" },
+ ]
+ provides-extras = ["data"]
+ 
+@@ -459,6 +463,15 @@
+ ]
+ 
+ [[package]]
++name = "protego"
++version = "0.7.0"
++source = { registry = "https://pypi.org/simple" }
++sdist = { url = "https://files.pythonhosted.org/packages/7a/d9/5026b9e75db1172f02441a84eaf42efb199b4cea14dda7651a620d1acd40/protego-0.7.0.tar.gz", hash = "sha256:2c032d9736a1f4f0c4318f3558353ae34da5cd038f1a5e064ded7548df315e5a", size = 3144321, upload-time = "2026-09-21T10:54:00.107Z" }
++wheels = [
++    { url = "https://files.pythonhosted.org/packages/c0/20/e4382a85e4cf4746d11746481f83360b990165725dd36ba73d55e029e6a9/protego-0.7.0-py3-none-any.whl", hash = "sha256:944638aaee608f6c83fcad442695f3f9381a60be8d5007248f46b00f201fa5fc", size = 13714, upload-time = "2026-09-21T10:53:58.812Z" },
++]
++
++[[package]]
+ name = "python-dateutil"
+ version = "2.9.0.post0"
+ source = { registry = "https://pypi.org/simple" }
+--- /dev/null
++++ after/tests/test_robots_pattern_guard.py
+@@ -0,0 +1,99 @@
++"""Offline robots pattern regressions, including the saved J-STAGE policy."""
++from hashlib import sha256
++import json
++from pathlib import Path
++import unittest
++from unittest.mock import patch
++from urllib.robotparser import RobotFileParser
++
++from test_ir_contact_research import research
++
++ROOT = Path(__file__).resolve().parents[1]
++
++
++class RobotsPatternGuardTests(unittest.TestCase):
++    def allowed(self, rules, path, agent=None):
++        return research.robots_can_fetch(research.parse_robots(rules), agent or research.USER_AGENT,
++                                         'https://issuer.invalid' + path)
++
++    def test_saved_JSTAGE_PDF_is_denied_while_article_and_search_remain_allowed(self):
++        folder = ROOT/'research/ir-japan-earnings-drift-method-discovery-2026-10-16'
++        raw = (folder/'raw/970e4bff469232281c2c01fc7246a6d43090f0f3f697de6ceccb3447fa9fe5c1').read_bytes()
++        self.assertEqual(sha256(raw).hexdigest(), '970e4bff469232281c2c01fc7246a6d43090f0f3f697de6ceccb3447fa9fe5c1')
++        capture = json.loads((folder/'capture.json').read_bytes())
++        pdf = capture['GETs'][3]['html_visible_text']['links'][70]['url']
++        self.assertIn('/_pdf/', pdf)
++        parser = research.parse_robots(raw.decode('utf-8'))
++        self.assertTrue(parser.can_fetch(research.USER_AGENT, pdf))  # Original stdlib bug.
++        self.assertFalse(research.robots_can_fetch(parser, research.USER_AGENT, pdf))
++        self.assertFalse(research.robots_specific_allow_correction(parser, research.USER_AGENT, pdf))
++        for i in (1, 2, 3):
++            self.assertTrue(research.robots_can_fetch(parser, research.USER_AGENT, capture['GETs'][i]['url']))
++
++    def test_multiple_wildcards_terminal_anchor_and_query_are_library_matched(self):
++        rules = 'User-agent: *\nDisallow: /reports/*/draft*/*.pdf$'
++        self.assertFalse(self.allowed(rules, '/reports/2026/draft-v1/report.pdf'))
++        self.assertFalse(self.allowed(rules, '/reports//draft/report.pdf'))
++        self.assertTrue(self.allowed(rules, '/reports/2026/final/report.pdf'))
++        self.assertTrue(self.allowed(rules, '/reports/2026/draft/report.pdf?download=1'))
++        query = 'User-agent: *\nDisallow: /search?key=a+b.[x]*$'
++        self.assertFalse(self.allowed(query, '/search?key=a+b.[x]anything'))
++        self.assertTrue(self.allowed(query, '/search?key=axbZxanything'))
++
++    def test_percent_encoded_literal_star_and_dollar_are_not_rewritten_to_patterns(self):
++        star = 'User-agent: *\nDisallow: /literal%2Aend'
++        self.assertFalse(self.allowed(star, '/literal%2Aend'))
++        self.assertTrue(self.allowed(star, '/literal-anything-end'))
++        dollar = 'User-agent: *\nDisallow: /literal%24end'
++        self.assertFalse(self.allowed(dollar, '/literal%24end'))
++        self.assertTrue(self.allowed(dollar, '/literalend'))
++
++    def test_legacy_first_matching_group_is_kept_instead_of_library_merging(self):
++        rules = ('User-agent: ir-agent\nDisallow: /blocked*\n\n'
++                 'User-agent: ir-agent-public-research\nAllow: /')
++        self.assertFalse(self.allowed(rules, '/blocked/path'))
++        self.assertTrue(self.allowed(rules, '/allowed'))
++        self.assertTrue(self.allowed(rules, '/blocked/path', agent='unrelated/1'))
++        rules = 'User-agent: named\nAllow: /\n\nUser-agent: *\nDisallow: /blocked*'
++        self.assertTrue(self.allowed(rules, '/blocked/path', agent='named/1'))
++
++    def test_pattern_allow_never_promotes_legacy_denial_or_saved_denial_recovery(self):
++        rules = 'User-agent: *\nDisallow: /\nAllow: /public/*'
++        parser = research.parse_robots(rules)
++        target = 'https://issuer.invalid/public/notice'
++        self.assertFalse(parser.can_fetch(research.USER_AGENT, target))
++        self.assertFalse(research.robots_can_fetch(parser, research.USER_AGENT, target))
++        self.assertFalse(research.robots_specific_allow_correction(parser, research.USER_AGENT, target))
++
++    def test_unknown_raw_ambiguous_directive_or_reparsed_adapter_stops(self):
++        target = 'https://issuer.invalid/public'
++        vanilla = RobotFileParser()
++        vanilla.parse(['User-agent: *', 'Disallow: /blocked*'])
++        self.assertTrue(vanilla.can_fetch(research.USER_AGENT, target))
++        self.assertFalse(research.robots_can_fetch(vanilla, research.USER_AGENT, target))
++        ambiguous = research.parse_robots('User-agent: *\nDisallow: /x*\n\n'
++            'User-agent: another\nDisallow: /x%2A')
++        self.assertFalse(research.robots_can_fetch(ambiguous, research.USER_AGENT, target))
++        adapter = research.parse_robots('User-agent: *\nDisallow: /x*')
++        self.assertTrue(research.robots_can_fetch(adapter, research.USER_AGENT, target))
++        adapter.parse(['User-agent: *', 'Disallow: /x%2A'])
++        self.assertIsNone(adapter._ir_raw_robots_text)
++        self.assertFalse(research.robots_can_fetch(adapter, research.USER_AGENT, target))
++
++    def test_fresh_fetcher_stops_before_body_GET_for_pattern_denial(self):
++        url = 'https://issuer.invalid/article/_pdf/report'
++        robots_url = 'https://issuer.invalid/robots.txt'
++        fetcher = research.Fetcher()
++        def only_robots(target):
++            self.assertEqual(target, robots_url, 'Body GET must remain unattempted')
++            return {'url': target, 'http_status': 200, 'text': 'User-agent: *\nDisallow: /*_pdf'}
++        with patch.object(fetcher, 'raw_get', side_effect=only_robots) as raw_get, \
++                patch.object(research.requests, 'get', side_effect=AssertionError('No actual network')):
++            result = fetcher.capture_one(url)
++        raw_get.assert_called_once_with(robots_url)
++        self.assertEqual(result['error'], 'robots_disallowed')
++        self.assertFalse(result['http_get_attempted'])
++
++
++if __name__ == '__main__':
++    unittest.main()

@@ -1,0 +1,96 @@
+{
+  "recorded_at": "2026-10-16T12:34:42.288833+00:00",
+  "company_id": "jp:2929",
+  "company_name": "株式会社ファーマフーズ",
+  "scope": {
+    "whole_saved_FAQ_text_locator": true,
+    "max_selected_QAs": 2,
+    "selected_QA_ids": [
+      "2929-FAQ-main-business-referral",
+      "2929-FAQ-main-indicators-referral"
+    ],
+    "new_child_link_read": false,
+    "financial_original_re_read": false,
+    "not_all_site_public_material_review": true
+  },
+  "findings": [
+    {
+      "quote_id": "2929-FAQ-main-business-referral",
+      "public_answer": "主な事業内容は「ファーマフーズってどんな会社？」ページへ案内する。",
+      "not_answered": "このQ/A自体は事業別売上/利益の定義、当期変動要因や金額を説明しない。案内先本文を読了扱いにしない。"
+    },
+    {
+      "quote_id": "2929-FAQ-main-indicators-referral",
+      "public_answer": "主要経営指標の推移は「主な経営指標」ページへ案内する。",
+      "not_answered": "このQ/A自体は利益/EPS/BPSの計算定義・連単・比較期・9/17訂正の効果を示さない。案内があることと同一年度比較可能性を分ける。"
+    }
+  ],
+  "disposition": {
+    "status": "two_public_referrals_reviewed_no_new_financial_definition_or_comparison_resolved",
+    "already_answered_do_not_reask": [
+      "主な事業紹介をどこで読むか",
+      "主な経営指標の推移をどこで読むか"
+    ],
+    "still_unresolved": "年度比較・訂正の適用範囲、売上/利益/株主範囲等の定義は選択2QAでは追加解決せず、案内先/正式注記の公表確認が先。全社非公表/IRだけで解決とはしない。",
+    "company_expectations_not_authored_forecast": "将来の会社計画・期待を外部著者独自予測/正常EPS/持続利益としない。FAQの一般案内から独自投資仮説や値決めを作らない。",
+    "new_IR_question_draft": false
+  },
+  "accepted_annual_boundaries_reused_not_reaudited": {
+    "references": [
+      {
+        "path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/README.md",
+        "sha256": "685e41ee7e27d5ee37dc07907fdd25c1405c813ed8e20b799286d7531d0f2be9"
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/README.md",
+        "sha256": "d1b93e9c822d595efcc94d85477db4facbf68285b1975c6110259b147f643ed7"
+      },
+      {
+        "path": "research/ir-case-studies-2026-10-15/2929/annual-per-share-disclosed-facts-2026-10-16/README.md",
+        "sha256": "fee5230afe1c4d5a4022c0d95ca7e49d6b289927dd9aa3c5f2d9c37f7310fa23"
+      }
+    ],
+    "reported_EPS_BPS_as_existing_record": [
+      "68.61円",
+      "453.35円"
+    ],
+    "period": "EPS annual2025-08-01..2026-07-31; BPS instant2026-07-31 per accepted existing fact record, not derived from FAQ.",
+    "correction": "9/17は9/11年次原本の純資産項目訂正。元原本/訂正別sourceとscopeを保ち、FAQが訂正適用やEPS/BPS無影響を認証したとしない。",
+    "issuer_next_year_guidance": "75.75円は既存会社予想としてreported68.61へ混ぜない。",
+    "individual_statement": "個別損失/個別EPSを連結年次ordinary実績へ移さない。",
+    "old_values_sources_or_scopes_changed": false,
+    "new_fact_or_model_adoption": false
+  },
+  "5480_reuse_sufficiency": {
+    "source_id": "case-public:398e1d4b1dff093ff66ccf43997d0cd40dc13d33cbfafac879719e531976bb99",
+    "source_URL": "https://www.nyk.co.jp/investors/faq/",
+    "prior_quote_refs": "quotes.json#/5480_existing_quote_reuse_only",
+    "sufficient_for": "既読の証券コード/業種と決算期のFAQ回答・既知背景については既存quoteとsnapshotを再利用すれば足りる。",
+    "not_sufficient_for": "この既読scopeは事業収益/循環正常化/現期入力の意味や金融入力採用を追加で解決した範囲ではない。",
+    "new_semantic_read_or_source": false,
+    "closed_C1_route_reopened": false
+  },
+  "method_application": "Anthropic DD known-information/comparisonと、JIRA2018由来の公開FAQ先行照合という既存project手順を適用。未解決を金融悪化/売り条件/追加承認ブロックへ変換しない。",
+  "boundaries": {
+    "GET": 0,
+    "DB_Store": 0,
+    "new_source_registration": 0,
+    "financial_calculation_forecast_normal_EPS_valuation_IRdraft": 0,
+    "old_file_edits": 0,
+    "financial_inputs_verified": false
+  },
+  "input_pins": {
+    "research/ir-jpx-smallmid-public-IR-FAQ-inventory-2026-10-16/inventory.json": "e359cf59fb0dc86182ac3852c3a524145cb1cbeb5c47eac8bf6f55b93303c83d",
+    "research/ir-contacts-universe-2026-10-11/evidence/2929/20261011T062046742163Z/05.json": "17bf5852310b6307b5413e6608877a50c312bcf6b297a8ec4d41dfb80a08761f",
+    "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/capture.json": "34a44b179860f2d24131ec2ae02ff1de2d8154ac71af8c7f892ba4887b35c3db",
+    "third_party/anthropic/skills/dd-meeting-prep/SKILL.md": "a74eecadece794106d515ce3d00e07b3857ed123e841e8962e26363d2413d94f",
+    "docs/ir-question-preparation.md": "c5e881e0a0874edfc28dcc67d8d48c69600a4916254131477f71b961218d7a7f",
+    "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/README.md": "685e41ee7e27d5ee37dc07907fdd25c1405c813ed8e20b799286d7531d0f2be9",
+    "research/ir-case-studies-2026-10-15/2929/annual-accounting-input-discovery-2026-10-16/original-annual-followup/README.md": "d1b93e9c822d595efcc94d85477db4facbf68285b1975c6110259b147f643ed7",
+    "research/ir-case-studies-2026-10-15/2929/annual-per-share-disclosed-facts-2026-10-16/README.md": "fee5230afe1c4d5a4022c0d95ca7e49d6b289927dd9aa3c5f2d9c37f7310fa23",
+    "research/ir-case-studies-2026-10-15/2929/annual-per-share-disclosed-facts-2026-10-16/parent-acceptance.json": "9a94e846653f013996d6218fbd50633019d7a5e590e78fc53c3629444e049c65",
+    "research/ir-case-studies-2026-10-15/5480/draft.json": "c91b38aaaabac307170affa9f158a869cacda92f98ed4bc7c5a7eac44dfa10f7",
+    "research/ir-case-studies-2026-10-15/5480/06.json": "d086aaebc5f3cb900a02d141f5398c6f68e705f0cc91b9eab93f56a2601bbd5f",
+    "research/ir-case-studies-2026-10-15/5480/source-bundle.json": "60f3f834c25eca360cac7c53a64b22b477282f9c1337d8160ba8b8300ef78047"
+  }
+}

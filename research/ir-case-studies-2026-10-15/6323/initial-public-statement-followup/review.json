@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "company_id": "jp:6323",
+  "recorded_at": "2026-10-15T15:48:28.228010+00:00",
+  "status": "bounded_primary_statement_partial_business_evidence_only",
+  "source_id": "case-public:27f85d208c1d6ecc4faa1df0b5a9491cc70f577b1808c98b5b8dd630b5e33b4a",
+  "acquisition": {
+    "GETs": 2,
+    "robots_GETs": 1,
+    "PDF_GETs": 1,
+    "PDF_HTTP_status": 200,
+    "complete_body": true,
+    "PDF_bytes": 438390,
+    "filename_year_repaired": false,
+    "no_extra_GETs_or_redirects_or_retries": true
+  },
+  "reading_scope": {
+    "mechanical_page_candidates": 11,
+    "interpreted_physical_pages": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "images_viewed": [
+      1,
+      2,
+      4,
+      10
+    ],
+    "maximum_pages": 4,
+    "all_pages_interpreted": false
+  },
+  "periods_and_attribution": {
+    "issuer_reported_actual": "2027年2月期中間期（2026年3月1日～8月31日）の連結実績。単独Q2へ変換しない。",
+    "issuer_full_year_forecast": "2027年2月期通期（2026年3月1日～2027年2月28日）会社予想、修正有の表示。作者独自予測ではない。",
+    "author_business_topics": "Parent-supplied context only: orders/sales continuation, advanced capability/inventory for stable supply, Vietnam factory/staged expansion. External report itself was not read in this task.",
+    "author_period_definition_match": "not independently established; no author-thesis support/refutation verdict"
+  },
+  "source_bound_observations": [
+    {
+      "id": "reported-interim-sales-and-profit-growth",
+      "quote_ids": [
+        "6323-interim-actuals-and-EPS",
+        "6323-sector-demand-and-results",
+        "6323-reported-segment-results"
+      ],
+      "observation": "同中間期の連結増収増益、半導体・FPD関連装置事業の増収増益を会社が表示する。会社の定性説明は半導体産業・データセンター投資環境の好調と、生成AI等の需要拡大見通しを述べる。",
+      "limit": "会社の業界見通しと実績の説明を、受注/売上成長の将来継続保証や作者予測と同一視しない。"
+    },
+    {
+      "id": "reported-orders-and-backlog-by-category",
+      "quote_ids": [
+        "6323-interim-orders-and-backlog"
+      ],
+      "observation": "当中間連結会計期間のセグメント/品目別の受注高・受注残高が、百万円および前年同期比％で表示される。合計と半導体関連装置について前年同期比100%超の表示があり、同期間の増加方向を確認できる。",
+      "percent_boundary": "表の255.5などは前年同期比の水準。+255.5%という増減率へ書き換えず、独自の差分を計算しない。",
+      "limit": "販売価格基準の受注を製造原価基準の生産高や売上実現へ変換しない。"
+    },
+    {
+      "id": "inventory-increase-as-balance-sheet-factor",
+      "quote_ids": [
+        "6323-inventory-asset-increase"
+      ],
+      "observation": "会社は前連結会計年度末から当中間期末への棚卸資産増加を資産増加の主因の一つとして述べる。",
+      "limit": "増加の目的・先端仕様の在庫構成・供給安定への寄与はこの記述から確認できず、在庫積み増しの成功/過剰や回転改善へ変換しない。"
+    }
+  ],
+  "company_forecast_EPS_share_boundary": {
+    "quote_ids": [
+      "6323-full-year-issuer-guidance",
+      "6323-actual-share-categories",
+      "6323-guidance-risk-disclaimer",
+      "6323-current-forecast-revision-reference"
+    ],
+    "interpretation": "表紙の実績EPS91.33円（基本/潜在調整後の列を区別）と通期会社予想EPS217.84円を分離。p2の期末発行済株式、自己株式、期中平均株式は実績株式カテゴリであり、会社通期予想EPSの将来分母を再計算・認証していない。株式分割の有無や将来希薄化前提も補わない。",
+    "numeric_fact_or_valuation_adoption": false
+  },
+  "remaining_unresolved": [
+    {
+      "topic": "continuation-of-growth",
+      "status": "future_continuity_not_established",
+      "reason": "当中間期の増加と会社の需要見通しを示すが、将来各期の受注/売上の成長継続や著者の定義/対象期への一致は確定しない。"
+    },
+    {
+      "topic": "advanced-capability-and-inventory-for-supply-stability",
+      "status": "not_established_by_selected4pages",
+      "reason": "棚卸増加の表示から先端対応能力や供給安定の因果を補わない。選択4頁に具体的な仕様・供給KPI・在庫目的の裏付けを確認できない。"
+    },
+    {
+      "topic": "Vietnam-new-factory-staged-expansion",
+      "status": "not_established_by_selected4pages",
+      "reason": "機械探索でベトナム/新工場/拡張の該当語hitはなく、選択4頁でも説明を特定できない。全文意味監査や他資料の不存在の認定ではない。"
+    }
+  ],
+  "parent_DB_context": {
+    "reference": "research/ir-case-studies-2026-10-15/6323/parent-target-membership.json",
+    "meaning": "Parent reports actual1819 table watch/source0 at its read-only observation. This task did not reopen DB or register the new source."
+  },
+  "publication": "Cover date2026-10-08 at day precision; exact public release instant unknown.",
+  "original_href_provenance": "Saved home snapshot literal preserved. Acquiring target PDF does not recover old homepage original HTML or prove old HTML href offsets.",
+  "actions": {
+    "DB_access": 0,
+    "code_or_verifier_changes": 0,
+    "old_sources_changed": 0,
+    "index_or_monitor_changes": 0,
+    "financial_model_or_trading_adoption": 0,
+    "IR_questions_or_sends": 0,
+    "new_facts_normalized": 0
+  }
+}

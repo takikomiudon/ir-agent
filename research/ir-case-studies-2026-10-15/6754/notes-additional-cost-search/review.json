@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T15:14:27.560108+00:00",
+  "company_id": "jp:6754",
+  "existing_issue_id": "6754-author-watch-communications-recovery",
+  "existing_comparison_id": "PQA-demand-and-cost",
+  "source_id": "case-public:b0ecd188347a2df19a9f8c77b5a786c2f3846ebae00139ae2adb9e34267c77e6",
+  "status": "limited_additional_reading_inventory_CF_display_found_PQA_cost_bridge_unresolved",
+  "source_reference": {
+    "raw_file": "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/raw/b0ecd188347a2df19a9f8c77b5a786c2f3846ebae00139ae2adb9e34267c77e6",
+    "raw_sha256": "b0ecd188347a2df19a9f8c77b5a786c2f3846ebae00139ae2adb9e34267c77e6",
+    "text_file": "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/text/document-layout.txt",
+    "text_sha256": "d5734f0e4425605b752dfc18f42ddeb408acbdf8af07e207f3dbc388b4d63df9",
+    "old_sourcebundle": "research/ir-case-studies-2026-10-15/6754/notes-cost-explanation-followup/sourcebundle.json",
+    "old_sourcebundle_sha256": "8197ea82f091af23b15ba51bc4af19bf11abed7c6a46fc8773e984a04f5c40e8",
+    "new_source_created": false,
+    "independent_forecasts_added": 0,
+    "historical_first_saved_at": null,
+    "publication_precision": "Preserved from existing source; no date repaired or inferred."
+  },
+  "scope": {
+    "mechanically_scanned_pages": [
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "mechanical_hit_pages": [
+      2,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12,
+      14
+    ],
+    "additional_physical_pages_interpreted": [
+      5,
+      9,
+      10,
+      11
+    ],
+    "additional_physical_pages_imaged": [
+      5,
+      9,
+      10,
+      11
+    ],
+    "old4_pages_reinterpreted": false,
+    "newly_interpreted_total": 4,
+    "full_document_interpreted": false,
+    "new_GETs": 0,
+    "new_pdf_extraction": false,
+    "rendered_chart_detail_same_page11": true
+  },
+  "newly_observed": [
+    {
+      "id": "inventory-related-cashflow-display",
+      "status": "visually_supported_scoped_company_display",
+      "observation": "同FY2026（4月～6月）の会社全体CF内訳図に「棚卸資産 △24」（単位億円）が表示されている。",
+      "quote_ids": [
+        "add11-cash-period",
+        "add11-inventory-CF-graphic"
+      ],
+      "meaning_limit": "負の営業CF内訳表示として保存するだけで、PQAの在庫残高減少、PQAの費用削減、営業利益寄与又は旧著者期間からの継続とは認定しない。独自の在庫増減・利益bridge・CF再計算を行わない。"
+    },
+    {
+      "id": "same-quarter-PQA-orders-and-backlog-context",
+      "status": "issuer_display_observed_not_refactored",
+      "observation": "p9は同1QのPQA受注と受注残の前年同期比拡大を説明しており、需要・案件残高側の追加文脈となる。",
+      "quote_ids": [
+        "add9-segment-orders",
+        "add9-backlog-scope"
+      ],
+      "meaning_limit": "受注/受注残を売上実現、需要mixの利益寄与、費用改善効果又は将来利益の保証へ変換しない。数値の新fact化はしない。"
+    },
+    {
+      "id": "other-group-displays",
+      "status": "scope_distinguished",
+      "observation": "p5はグループ全体の業績結果、p10は地域別売上高、p11ノートはCFの収支と配当支払を説明する。",
+      "quote_ids": [
+        "add5-group-results-not-bridge",
+        "add10-regional-title",
+        "add10-regional-growth",
+        "add11-cash-notes"
+      ],
+      "meaning_limit": "地域別売上グラフをPQA地域別利益へ、配当やCFをPQA営業費用へ読み替えない。"
+    }
+  ],
+  "remaining_unresolved": [
+    {
+      "id": "PQA-cost-management-continuity",
+      "status": "not_established_by_limited_reading",
+      "reason": "追加4頁にもPQAの棚卸圧縮・コスト管理の継続効果や原価/販管費の説明を特定できない。CF図の棚卸資産項目はPQA費用改善を示さず、継続又は消失の判断には足りない。"
+    },
+    {
+      "id": "PQA-profit-contribution-bridge",
+      "status": "not_established_by_limited_reading",
+      "reason": "PQAの需要量/価格/製品mix/費用/棚卸を分けた営業利益増減bridgeは追加4頁では確認できない。会社説明や受注成長から独立した利益寄与額を自作しない。"
+    },
+    {
+      "id": "old-to-current-period-attribution",
+      "status": "not_tested",
+      "reason": "旧26.3期Q3累計と今回27.3期Q1の期間差を維持し、旧著者条件の支持/反証を確定しない。"
+    }
+  ],
+  "search_limitations": [
+    "16未精読頁の保存テキストに対する機械検索と、追加4頁の本文/画像精読を実施。残る12頁は見出し/検索hit以外の意味を精読していない。",
+    "費用/棚卸等の語のtext missは抽出textに限定。実際にp11図の棚卸資産がtextから欠落していた。",
+    "選定外頁や会社の他公表資料に説明が存在しないという結論ではない。"
+  ],
+  "actions": {
+    "new_GETs": 0,
+    "reacquisition": 0,
+    "new_facts_normalized": 0,
+    "numeric_model_or_probability_adopted": 0,
+    "DB_access": 0,
+    "old_quotes_review_source_or_PDF_modified": 0,
+    "index_monitor_code_changed": 0,
+    "support_buy_sell_rules_created": 0,
+    "IR_or_external_send": 0
+  }
+}

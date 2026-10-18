@@ -1,0 +1,440 @@
+{
+  "artifact_type": "delta_disposition_of_existing_1975_IR_topics_after_accepted_public_review",
+  "frozen_at": {
+    "utc": "2026-10-16T09:20:01.629899+00:00",
+    "jst": "2026-10-16T18:20:01.629899+09:00"
+  },
+  "company_id": "jp:1975",
+  "existing_case_id": "1975-segment-earnings-order-and-cash-basis-monitor",
+  "existing_issue_id": "1975-segment-profit-orders-and-cash-basis",
+  "existing_condition_ids_preserved": [
+    "construction-versus-equipment-sales-gross-margin-and-operating-profit",
+    "orders-recovery-expectation-versus-results-and-dated-guidance",
+    "profit-stages-historical-share-basis-and-cash-realization"
+  ],
+  "status": "file_only_disposition_complete_awaiting_root_acceptance",
+  "conclusion": {
+    "new_question_texts": 0,
+    "currently_prioritized_IR_questions": 0,
+    "conditional_comparability_topic": "Existing C2 only; no new candidate ID or repeated preflight.",
+    "current_method_numeric_paths_changed_by_old_candidates": [],
+    "reason": "公開で解けた項目を削ると、残余は比較定義と将来予測の用途次第となる。現NCAVはbacklog/利益計上時期/CFを直接使わないため、未知だけで旧候補を質問へ昇格しない。",
+    "no_numeric_path_universal_ban": "数値pathがない定義研究を一律禁止する結論ではない。C2の比較価値は保持するが、現時点では公開確認と既存観測の保留更新で足り、正式質問は別の現行契約に従う。"
+  },
+  "native_v2_reference_only": {
+    "version": 2,
+    "config_revision": 1,
+    "outcome": "unresolved",
+    "actual_first_saved_at_as_frozen_case_receipt": "2026-10-16T08:57:33.980351+00:00",
+    "management_review": {
+      "basis_quote": "次回の内部研究管理日は2027-01-16（Asia/Tokyo）とする。",
+      "basis_ref": {
+        "path": "research/ir-case-studies-2026-10-15/1975/native-case-setup-2026-10-16/actual-inputs/management-basis.json",
+        "sha256": "6b9a32e11bdb7e482d1ec246446e0303bf22ab5cae761656d67d5ac49d4991f5"
+      },
+      "date": "2027-01-16",
+      "timezone": "Asia/Tokyo"
+    },
+    "no_DB_observation_or_update_here": true,
+    "new_source_ids_not_added": true
+  },
+  "delta_dispositions": [
+    {
+      "old_local_candidate_id": "C1",
+      "existing_condition_id": "construction-versus-equipment-sales-gross-margin-and-operating-profit",
+      "old_pointer": "/remaining_owner_tasks/2",
+      "disposition": "drop_answered_broad_questions; residual_not_prioritized_for_IR",
+      "remove": [
+        "Q1高粗利の大要因が竣工件数/利益計上時期かという確認",
+        "設備工事/機器の当時の業績方向、主要顧客調整/施策が説明されているか",
+        "segment利益がどの全社利益段階へ接続するか"
+      ],
+      "public_resolution": "既存p6/7/注記に加え8月6日資料p33が竣工に向かう利益計上を再説明。p13はFY利益額増加と利益率低下を同時に示し、Q1高粗利→通期EPS上方修正という読みを採らない。",
+      "residual_only": "費用/mix/採算という同一定義比較に本当に不足する範囲は残るが、現NCAVの直接入力でも、採用済みEPS/DCF予測の変更経路でもない。正常率や将来利益を会社に決めさせない。",
+      "public_check_first": "新たに正当保存された同期間の会社説明・採算/利益計上注記。現時点で別頁を一律に読み足さない。",
+      "qualitative_A_B_unclear": {
+        "A": "同じ対象期/事業範囲の公表説明なら、既知/比較注記を更新するだけ。",
+        "B": "対象期/mix等が異なるなら異なる範囲として保持し、一般化を保留。",
+        "unclear": "未解決を維持し、高粗利持続や反証を認定しない。"
+      },
+      "prospective_research_result_paths": [
+        "/summary",
+        "/case_observation/rationale"
+      ],
+      "authorized_financial_input_paths_changed": [],
+      "input_effect": "現在参照するNCAV各入力・会社EPS・PER・将来CFは全ケース不変。"
+    },
+    {
+      "old_local_candidate_id": "C2",
+      "existing_condition_id": "orders-recovery-expectation-versus-results-and-dated-guidance",
+      "old_pointer": "/remaining_owner_tasks/3",
+      "disposition": "remove_public_stock_existence; retain_one_conditional_comparability_topic_not_question_payload",
+      "remove": [
+        "繰越高が公表されているか/どこにあるかという一般確認",
+        "連結Q1繰越高の存在・公表表示値/単位の再確認",
+        "豊富な繰越高と当時売上見込み、施工体制と受注計画の会社説明があるか"
+      ],
+      "public_resolution": "p10の施設別stock110,795と、p33の明示された連結Q1stock117,864をそれぞれ公開既知へ移す。受注flow36,232は別概念。",
+      "residual_only": "p10の連結/個別・機器包含・calendar基準日とp33の対応、取消/契約変更等をstock/flowへどう含むかは未解決。両表の差を機器/子会社へ帰属させず、stockflow identityや取消ゼロを作らない。",
+      "why_not_IR_now": "同一定義の比較を誤らないための残余として意味はある。ただし現NCAVにはbacklog入力がなく、受注→引渡→利益/税→EPS又はcashを変換する採用予測経路もない。現時点で新質問文や送信優先を作らず、既存C2の保留理由を具体化する。",
+      "public_check_first": "既存p10/p33の公表scopeを保持し、今後実際に保存された同期の受注/繰越の脚注・公開Q&A又は11/12決算/11/17説明資料の当該欄を確認候補にする。予定資料の存在/公表/回答は仮定しない。",
+      "qualitative_A_B_unclear": {
+        "A": "公表根拠が同じ連結範囲・基準期と取消/変更控除後等の定義を明示した場合、その系列に限り比較可能と注記し二重控除を避ける。数値の差を未表示構成へ配賦しない。",
+        "B": "対象範囲/計上期/商品や調整の違いが明示された場合、別系列として保持し同一定義の増減比較を保留する。未知の取消額を補正しない。",
+        "unclear": "現在の比較保留を継続。曖昧/無回答を業績悪化・価値0・著者予測反証にしない。"
+      },
+      "prospective_research_result_paths": [
+        "/summary",
+        "/case_observation/rationale"
+      ],
+      "authorized_financial_input_paths_changed": [],
+      "input_effect": "A/B/曖昧で変え得るのは研究上の系列定義/支持・反証候補の説明。NCAV/株数/EPS/倍率/価格/将来CFを変えるpathは現在0。"
+    },
+    {
+      "old_local_candidate_id": "C3",
+      "existing_condition_id": "profit-stages-historical-share-basis-and-cash-realization",
+      "old_pointer": "/remaining_owner_tasks/4",
+      "disposition": "drop_CF_presence_question; route_future_cash_or_tax_to_selected_method_owner",
+      "remove": [
+        "当Q1連結CFを作成したか、D&A表示があるかという既答確認",
+        "受注又はBS現金差をCFOとして確認する問い",
+        "会社に正常税率・将来cash又は収益の実現保証を求める方向"
+      ],
+      "public_resolution": "CF非作成とD&Aは以前から既答。p13のFY親NI・率やp33のQ1利益表もCF/納税/回収時期を認証しない。",
+      "residual_only": "利益と回収の時期、税費用と納税、必要再投資は将来CFを使う方法で必要になった場合に限る残余。NCAVは公表BSの流動資産と負債合計を使い、cash回収時期/税率を直接入力しない。",
+      "public_check_first": "必要性が具体化した時の同期間CF表/税・工事契約の公開注記。11/12という予定をCF作成/公表済みとしない。",
+      "qualitative_A_B_unclear": {
+        "A": "公表された同scopeのcash/税分類が確認できれば利益とcashの比較注記へ記録する。歴史BS値を回答で書換えない。",
+        "B": "未収/期間差/別範囲が説明されれば、その違いと比較留保を記録する。独自足戻しや正常値を作らない。",
+        "unclear": "cash/税の未解決を維持し、CFゼロや永久未回収と認定しない。"
+      },
+      "prospective_research_result_paths": [
+        "/summary",
+        "/case_observation/rationale"
+      ],
+      "authorized_financial_input_paths_changed": [],
+      "input_effect": "現NCAV/期末株数とEPSは不変。DCF等を後で選ぶなら予測作者が別の出典付きbridgeを準備する作業で、ここで金融分岐を作らない。"
+    }
+  ],
+  "method_input_connection": {
+    "method": "maxgfr/crible maintainer NCAV = current_assets - total_liabilities; accepted historical per-share screen bridge",
+    "attribution": "Maintainer説明・固定commitへの限定再現。Graham原典検証/公正価値/購入・退出方針の採用ではない。",
+    "evidence_refs": [
+      "NCAV_method_review:/method_author",
+      "NCAV_acceptance:/scope",
+      "share_acceptance:/scope"
+    ],
+    "existing_direct_numeric_input_semantics_unchanged": [
+      {
+        "reference_id": "NCAV_inputs",
+        "json_pointer": "/periods/0/current_assets/raw_value",
+        "meaning": "同一日付の連結流動資産合計"
+      },
+      {
+        "reference_id": "NCAV_inputs",
+        "json_pointer": "/periods/0/total_liabilities/raw_value",
+        "meaning": "同一日付の負債合計、流動負債だけではない"
+      },
+      {
+        "reference_id": "share_inputs",
+        "json_pointer": "/end_issued_common_including_treasury_raw",
+        "meaning": "同Q1の期末発行済普通株、自己株を含む"
+      },
+      {
+        "reference_id": "share_inputs",
+        "json_pointer": "/end_treasury_common_raw",
+        "meaning": "同Q1の公表期末自己株を1回控除"
+      }
+    ],
+    "backlog_is_direct_input": false,
+    "cashflow_timing_is_direct_input": false,
+    "EPS_is_direct_input": false,
+    "market_price_owner": "対象時点/株式基準付き市場観測と利用判断は研究者/投資家側。会社IRに現在価格・適正PERを決めさせない。",
+    "limits": "簿価回収性、NCI/普通株請求権、信託/現在corporate actions等の既存限界を保持するが、この票でそれら全てを新しい一律停止gate又は会社への質問へ変換しない。",
+    "researcher_next_input_if_NCAV_comparison_chosen": "比較目的を特定した上で、実際の価格/時価総額観測と、6月末会計・期末株式basisをその比較へ使う範囲/限界を判断する。backlog定義の回答をこの市場入力の代わりにしない。新しい値・比較/合否はここでは作らない。"
+  },
+  "roles_and_old_noncompany_topics": {
+    "P1_P2": "公開未読/更新は必要な当該定義/期の資料へ限定。全冊読了を新gateとせず、カレンダー予定と実際に保存された公表資料を区別。",
+    "A1": "会社予想を使える方法もある。独立著者forecastを全方法の一律必須にしない。EPS/DCF等を別に採る場合は必要な対象期/仮定を予測作者又は明示仮定の研究者が担う。",
+    "I1": "正常利益/再投資/倍率・価格・費用・保有/退出条件は採用する投資家側の担当。現NCAV再現はそれらを確定せず、会社へ保証を求めない。"
+  },
+  "next_public_review_context": {
+    "calendar_only_events": [
+      "2026-11-12 決算発表予定",
+      "2026-11-17 中間期説明会予定",
+      "2027-02-09 決算発表予定",
+      "2027-02-16 個人向け説明会予定"
+    ],
+    "event_execution_or_release_not_confirmed": true,
+    "scheduled_management_date_retained": "2027-01-16 Asia/Tokyo",
+    "no_new_due_date_queue_or_job": "実新資料保存又は既存管理日による正当な次レビューだけ。予定日経過を実施/源泉追加にしない。"
+  },
+  "provenance": {
+    "references": {
+      "old_residual": {
+        "file": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/residual-map.json",
+        "sha256": "b826f739d40ef77d124d63cdb3299c186315a0605e13872b157b9ed6850aeb37",
+        "bytes": 44939,
+        "json_pointers": [
+          "/prepared_case_context/condition_bindings",
+          "/known_do_not_reask",
+          "/remaining_owner_tasks/2",
+          "/remaining_owner_tasks/3",
+          "/remaining_owner_tasks/4",
+          "/remaining_owner_tasks/5",
+          "/remaining_owner_tasks/6"
+        ]
+      },
+      "old_acceptance": {
+        "file": "research/ir-case-studies-2026-10-15/1975/question-residual-preparation-2026-10-16/parent-acceptance.json",
+        "sha256": "f20e55be737a98808628498127d87007b35145052f37941c270d2bb291f79999",
+        "bytes": 875,
+        "json_pointers": []
+      },
+      "p10p13": {
+        "file": "research/ir-case-studies-2026-10-15/1975/backlog-and-full-year-input-followup-2026-10-16/review.json",
+        "sha256": "355d2ab6d70fca914334075f1a5a5aebe623b4e1e14c1837c1c246f1eb04baa1",
+        "bytes": 24726,
+        "json_pointers": [
+          "/source",
+          "/answered_now",
+          "/still_missing"
+        ]
+      },
+      "p10p13_acceptance": {
+        "file": "research/ir-case-studies-2026-10-15/1975/backlog-and-full-year-input-followup-2026-10-16/parent-acceptance.json",
+        "sha256": "966459668e803013c7b908e45c0869c83dcdae16aeb105f8b7c14aa49fe34bbe",
+        "bytes": 780,
+        "json_pointers": [
+          "/accepted_at",
+          "/scope",
+          "/conclusion"
+        ]
+      },
+      "p33_calendar_result": {
+        "file": "research/ir-case-studies-2026-10-15/1975/public-source-calendar-and-presentation-connection-2026-10-16/qualitative-review/worker-result/result.json",
+        "sha256": "4e11d62e346e70d69760179ef03c266e55a0a3bc4bd432c357f98a55e5a2bf2b",
+        "bytes": 10580,
+        "json_pointers": [
+          "/summary",
+          "/source_reviews/0",
+          "/source_reviews/1",
+          "/case_observation",
+          "/management_review_update"
+        ]
+      },
+      "result_acceptance": {
+        "file": "research/ir-case-studies-2026-10-15/1975/public-source-calendar-and-presentation-connection-2026-10-16/qualitative-review/parent-result-acceptance.json",
+        "sha256": "faabc7391aa03eddd1fa9ba75f8f4223ed9f85ad343c9c83b1efa8c6a8565919",
+        "bytes": 543,
+        "json_pointers": [
+          "/accepted_at",
+          "/result_SHA256",
+          "/case_outcome",
+          "/management"
+        ]
+      },
+      "native_v2": {
+        "file": "research/ir-case-studies-2026-10-15/1975/public-source-calendar-and-presentation-connection-2026-10-16/qualitative-review/case-after.json",
+        "sha256": "acb7fd0e1e58a4e700ced4de1f1f9802f35a724a18c4af3706fe9741efc72599",
+        "bytes": 357596,
+        "json_pointers": [
+          "/version",
+          "/config_revision",
+          "/first_saved_at",
+          "/record/issue_id",
+          "/record/management_review"
+        ]
+      },
+      "actual_v2_receipt": {
+        "file": "research/ir-case-studies-2026-10-15/1975/public-source-calendar-and-presentation-connection-2026-10-16/qualitative-review/actual-verification.json",
+        "sha256": "6c14df9f58eb2d0f5459e83fb480eaa4c3baa037a1a7a89925a45f1dae87de93",
+        "bytes": 1044,
+        "json_pointers": [
+          "/completed_and_verified_at",
+          "/case_head_version",
+          "/config_revision",
+          "/management_date",
+          "/numeric_financial_or_formal_IR_or_trade_changes"
+        ]
+      },
+      "NCAV_method_review": {
+        "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/review.json",
+        "sha256": "059046bc0031bde4d636a29d03db2708eb290d14ccf6df2c7c7e46f9e33c56f2",
+        "bytes": 5789,
+        "json_pointers": [
+          "/method_author",
+          "/boundary_caveats"
+        ]
+      },
+      "NCAV_inputs": {
+        "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/inputs.json",
+        "sha256": "6407bf097c4e8c758f28a1cc8f9d22e22dfb88ab5519b3ba00bf377e308ef186",
+        "bytes": 2145,
+        "json_pointers": [
+          "/periods/0/as_of",
+          "/periods/0/current_assets/raw_value",
+          "/periods/0/total_liabilities/raw_value"
+        ]
+      },
+      "NCAV_acceptance": {
+        "file": "research/ir-case-studies-2026-10-15/1975/ncav-accounting-input-review-2026-10-16/parent-acceptance.json",
+        "sha256": "51cab0047dba6d3128f7901ff7fe9a5d1d772477cd949a6f271ff4b45ce59bff",
+        "bytes": 760,
+        "json_pointers": [
+          "/accepted_at",
+          "/scope"
+        ]
+      },
+      "share_inputs": {
+        "file": "research/ir-case-studies-2026-10-15/1975/ncav-per-share-input-bridge-2026-10-16/inputs.json",
+        "sha256": "50a44c72aa6e290fca5884d655033fe1111841d6022a6b0184d2cd8dd1f2c0a4",
+        "bytes": 1893,
+        "json_pointers": [
+          "/historical_accounting_as_of",
+          "/end_issued_common_including_treasury_raw",
+          "/end_treasury_common_raw",
+          "/period_average_common_Q1_raw_not_used",
+          "/price_or_current_corporate_action_input"
+        ]
+      },
+      "share_acceptance": {
+        "file": "research/ir-case-studies-2026-10-15/1975/ncav-per-share-input-bridge-2026-10-16/parent-acceptance.json",
+        "sha256": "4ca21e8afabb4b008331b885e318474a8a562fb80c0b7f94db6f53c9bffd85a4",
+        "bytes": 646,
+        "json_pointers": [
+          "/accepted_at",
+          "/scope"
+        ]
+      },
+      "Anthropic_DD": {
+        "file": "third_party/anthropic/skills/dd-meeting-prep/SKILL.md",
+        "sha256": "a74eecadece794106d515ce3d00e07b3857ed123e841e8962e26363d2413d94f",
+        "bytes": 4331,
+        "json_pointers": []
+      },
+      "Anthropic_thesis": {
+        "file": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+        "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b",
+        "bytes": 2736,
+        "json_pointers": []
+      },
+      "decision_flow": {
+        "file": "docs/ir-decision-flow.md",
+        "sha256": "651839dd83d79e1c56af64d6a15f6f51151724b8aa77b36ad33ddc385bc473d7",
+        "bytes": 5232,
+        "json_pointers": []
+      }
+    },
+    "old_p10p13_source_id": "case-public:b02c62df4645398a714ef96c978579c6d0e31e90754f12b2b389c7495d18a54c",
+    "old_p10p13_native_source_SHA256": "5fd00583b3fa98ac0296d4f7b97549f071b2d63517a8f5a3b4cfd6034e6837d6",
+    "old_p10p13_content_UTF8_SHA256": "4e10f40dc1b1e4b31de3f1b61296133a7adf1e924d0139538cb86dea349f490f",
+    "old_candidates_and_native_v2_are_separate_times": "Old preparation keeps then-null registration history; later frozen root case/actual receipts establish v2. No old source or case file rewritten.",
+    "no_new_pdf_or_image_meaning_review": true
+  },
+  "author_method_references": [
+    {
+      "id": "DD-priority",
+      "reference_id": "Anthropic_DD",
+      "quote": "Organize questions by priority and topic. Structure depends on meeting type:",
+      "Unicode_span": [
+        967,
+        1043
+      ],
+      "UTF8_span": [
+        969,
+        1045
+      ],
+      "quote_UTF8_SHA256": "88310c30d485ab8b26259281ca2c209f0088489e1a476ecb7a4f4c664eae7d24",
+      "application": "既答を除き、必要な比較に関係する定義だけを残す。"
+    },
+    {
+      "id": "DD-neutral",
+      "reference_id": "Anthropic_DD",
+      "quote": "- Don't lead the witness — ask neutral questions, not \"isn't it true that...\"",
+      "Unicode_span": [
+        4014,
+        4091
+      ],
+      "UTF8_span": [
+        4024,
+        4103
+      ],
+      "quote_UTF8_SHA256": "9eab780136ea203b39aa6f6ec4ec213834c8b68ca400866927a5e0a9247e2ae7",
+      "application": "持続的高粗利、取消ゼロ、将来cashという期待する回答へ誘導しない。"
+    },
+    {
+      "id": "thesis-evidence",
+      "reference_id": "Anthropic_thesis",
+      "quote": "- Track disconfirming evidence as rigorously as confirming evidence",
+      "Unicode_span": [
+        2420,
+        2487
+      ],
+      "UTF8_span": [
+        2424,
+        2491
+      ],
+      "quote_UTF8_SHA256": "139199b0e39a524d729a3edaac4370fb6bb4047fc73c5f7552d2a72879636e7c",
+      "application": "同じissue/conditionへ支持と反対根拠を対応し、未知/予定を反証成立へしない。原著のaction例を売買として実行しない。"
+    },
+    {
+      "id": "thesis-quarterly",
+      "reference_id": "Anthropic_thesis",
+      "quote": "- Review theses at least quarterly, even when nothing dramatic has happened",
+      "Unicode_span": [
+        2488,
+        2563
+      ],
+      "UTF8_span": [
+        2492,
+        2567
+      ],
+      "quote_UTF8_SHA256": "238a5d0fde056680770ebbb975871f5cc7554554878d1a8232d4d60784f7a55f",
+      "application": "既存Jan16内部管理日を維持。実際に新資料が保存されれば既存の正当な再点検へ接続し、カレンダー予定だけで完了扱いにしない。"
+    },
+    {
+      "id": "owner-flow",
+      "reference_id": "decision_flow",
+      "quote": "外部の会社別予測は全方法の共通必須条件ではない。一方、方法を選んだことだけでは、その方法に必要な実入力が揃ったことにはならない。出典のない値を補って処理を進めない。",
+      "Unicode_span": [
+        1247,
+        1329
+      ],
+      "UTF8_span": [
+        2878,
+        3124
+      ],
+      "quote_UTF8_SHA256": "57413d6c99f196c10142c9b92d7f2ee8649170e9654b7a97dde42d40738a7da0",
+      "application": "方法入力を特定し、会社の公表定義、予測/相場、投資家条件を分ける。完全valuationをすべての定義研究の一律gateにはしない。"
+    }
+  ],
+  "financial_and_formal_state": {
+    "financial_input_adoption": false,
+    "financial_branches": null,
+    "EPS_PER_price_forecast_generated": false,
+    "formal_question_payload": null,
+    "ready_to_register_question": false,
+    "ready_to_send": false,
+    "IR_value": "unproven"
+  },
+  "validation": {
+    "all_reference_files_and_JSON_pointers_resolved": true,
+    "all_method_quotes_nonempty_positive_Unicode_UTF8_exact": true,
+    "same_issue_and_three_condition_IDs_preserved": true,
+    "old_artifacts_not_reissued_or_modified": true,
+    "single_delta_artifact_only": true,
+    "no_financial_or_production_tests_run": true
+  },
+  "operations": {
+    "GET": 0,
+    "DB_Store_access": 0,
+    "old_artifact_or_shared_docs_edit": 0,
+    "new_source_or_facts": 0,
+    "code_change": 0,
+    "calculation_or_new_forecast": 0,
+    "native_case_or_job_mutation": 0,
+    "formal_question_financial_branch_IR_send_or_order": 0
+  },
+  "stop": "One delta artifact complete. Root is sole DB writer; no further research or acquisition from this task."
+}

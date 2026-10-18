@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T14:22:29.259905+00:00",
+  "status": "stable_seven_facts_normalized_not_adopted",
+  "review_recorded_at": "2026-10-15T14:22:29.236933+00:00",
+  "original_HTTP_body_completed_at": "2026-10-15T14:13:32.155129+00:00",
+  "CLI_derived_retrieved_at": "2026-10-15T14:22:29.245062+00:00",
+  "DB_first_saved_at": null,
+  "CLI": {
+    "argv": [
+      "normalize-facts",
+      "research/ir-case-studies-2026-10-15/6754/disclosed-facts/input.json"
+    ],
+    "invocation": "ir_agent.cli.main real parser and dispatch in Python process; stdout bytes saved",
+    "Store_constructor_calls": 0,
+    "SQLite_connect_calls": 0,
+    "guard": "Both functions patched to raise if invoked; no :memory: DB or actual DB touched.",
+    "exit_code": 0
+  },
+  "checks": {
+    "seven_facts_only": true,
+    "three_actual_four_guidance": true,
+    "source_snapshot_unchanged": true,
+    "source_content_original_saved_bytes": true,
+    "CLI_Store_calls_zero": true,
+    "CLI_SQLite_connect_calls_zero": true,
+    "CLI_return_code_zero": true,
+    "API_replay_full_bundle_equal": true,
+    "existing_reproducer_succeeds": true,
+    "Decimal_independent_unit_arithmetic": true,
+    "expected_seven_JPY_values": true,
+    "all_explicit_unit_multiplier_100million": true,
+    "all_same_quote_value_unit_period_exact": true,
+    "all_global_and_page_offsets_exact": true,
+    "only_requested_physical_pages": true,
+    "p9_orders_IFRS_not_invented": true,
+    "p6_and_p12_IFRS_in_quote": true,
+    "no_calendar_boundaries_invented": true,
+    "profit_attribution_not_strengthened": true,
+    "financial_meaning_false_all": true,
+    "derived_available_only_after_review_and_source": true,
+    "all_original_artifacts_unchanged": true
+  },
+  "check_count": 22,
+  "independent_expected_values_JPY": {
+    "6754-fy2026-1q-communication-revenue": "19400000000",
+    "6754-fy2026-1q-communication-operating-profit": "3200000000",
+    "6754-fy2026-1q-communication-orders": "33600000000",
+    "6754-fy2027march-company-revenue": "140000000000",
+    "6754-fy2027march-company-operating-profit": "20000000000",
+    "6754-fy2027march-company-profit-before-tax": "20000000000",
+    "6754-fy2027march-company-profit-for-year": "15000000000"
+  },
+  "reproduce": {
+    "source_id": "disclosed-facts:d918400f13006de3e28e597c43d9c70b14e668277afab5c695ad98b83f86d1af",
+    "applicable": true,
+    "status": "reproduced",
+    "reason_codes": [],
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "original_content_sha256_status": "matched",
+    "original_snapshot_sha256_status": "matched_supplied_snapshot",
+    "fact_kinds": [
+      {
+        "id": "6754-fy2026-1q-communication-revenue",
+        "kind": "reported_fact"
+      },
+      {
+        "id": "6754-fy2026-1q-communication-operating-profit",
+        "kind": "reported_fact"
+      },
+      {
+        "id": "6754-fy2026-1q-communication-orders",
+        "kind": "reported_fact"
+      },
+      {
+        "id": "6754-fy2027march-company-revenue",
+        "kind": "issuer_guidance"
+      },
+      {
+        "id": "6754-fy2027march-company-operating-profit",
+        "kind": "issuer_guidance"
+      },
+      {
+        "id": "6754-fy2027march-company-profit-before-tax",
+        "kind": "issuer_guidance"
+      },
+      {
+        "id": "6754-fy2027march-company-profit-for-year",
+        "kind": "issuer_guidance"
+      }
+    ],
+    "original_source_id": "case-public:7fc71674df064d3203d00e97d4637c43ba4126201741b52d2dabc9d5355966c7"
+  },
+  "original_source_id": "case-public:7fc71674df064d3203d00e97d4637c43ba4126201741b52d2dabc9d5355966c7",
+  "original_source_snapshot_sha256": "536383dcea25a9a0a23e9f578269d527b5edd93821b434b1a7aa10bd254bbaa2",
+  "derived_source_id": "disclosed-facts:d918400f13006de3e28e597c43d9c70b14e668277afab5c695ad98b83f86d1af",
+  "derived_source_snapshot_sha256": "4420434515d7fa7efccc5010d5ba0d2abc58178dc3eb861f0fa117475038c07e",
+  "normalization_version": 1,
+  "fact_count": 7,
+  "kind_counts": {
+    "reported_fact": 3,
+    "issuer_guidance": 4
+  },
+  "original_artifacts_hashes": {
+    "research/ir-case-studies-2026-10-15/6754/quarter-presentation-followup/page-06.png": "da9f0af04c17b59a939aa7f5d17bae7b5cb261aeef944650fc51ce7cd1e329cd",
+    "research/ir-case-studies-2026-10-15/6754/quarter-presentation-followup/review.json": "be9fe67138d4f1ae4afc249d2cb5defbfb528066f838fbcadc5304143c1bbdde",
+    "research/ir-case-studies-2026-10-15/6754/quarter-presentation-followup/page-01.png": "a6fcc3f9ad3ec7847a2b046147fd1022a92eb3343b2ed8b00ab4ac3bd5b5c8c0",
+    "research/ir-case-studies-2026-10-15/6754/quarter-presentation-followup/page-09.png": "9658fa716bafa4550eb82cd50d58f149a236ef17fbb5156255fa13cfad0ebdbf",
+    "research/ir-case-studies-2026-10-15/6754/quarter-presentation-followup/quotes.json": "4a83e79799922d9e491ddc2a712ab5c425b0c37b0fc462acb7a0b75264357ccd",
+    "research/ir-case-studies-2026-10-15/6754/quarter-presentation-followup/01.json": "2b251176c302c196a6f0b25e7a765cd5f75464b190a70a807fe34cd09d2fe8ed",
+    "research/ir-case-studies-2026-10-15/6754/quarter-presentation-followup/01.txt": "cd9f4419cc650535f4003c2fa65d958e0ed3c17805df3d2387dc5090dad53e7f",
+    "research/ir-case-studies-2026-10-15/6754/quarter-presentation-followup/README.md": "8c71581471bd0700733aa657216cb4da736c83948ce2522967ddc3a037e94f90",
+    "research/ir-case-studies-2026-10-15/6754/quarter-presentation-followup/page-12.png": "13c2f8b994529d28cd9646669aadcd91e480149ea4c41b524a4497770f5bae5e",
+    "research/ir-case-studies-2026-10-15/6754/quarter-presentation-followup/validation.json": "341d9237af7b0f9386bfd0bea05ca47c20376e5ff867e775477e43c14090077d",
+    "research/ir-case-studies-2026-10-15/6754/quarter-presentation-followup/page-14.png": "d7f6610e00d8ef922bb01fe0423344fec65aba7ecee0b44f4fb87e470ab0709c",
+    "research/ir-case-studies-2026-10-15/6754/quarter-presentation-followup/capture.json": "232cd889f85f0e92f1050e6a5a36ac3e7de01b1e5a332e57ecab28d157d9a07f",
+    "research/ir-case-studies-2026-10-15/6754/quarter-presentation-followup/independent-recheck.json": "b3b3bc18015283facbcc3fcd112bbab9c0b6bfed6acd1614907215be900d5028",
+    "research/ir-case-studies-2026-10-15/6754/quarter-presentation-followup/pdfinfo.txt": "e28bdc106c4a408e50d2aaaf735cd25a0c7427ebf2d6c4d75bca7cee50e425fb",
+    "research/ir-case-studies-2026-10-15/6754/quarter-presentation-followup/source-bundle.json": "996b0942c785a7c62fe88bcb264cf4ebfd6ca47f20c3cfd1264bfd796e659333",
+    "research/ir-case-studies-2026-10-15/6754/quarter-presentation-followup/independent-recheck.md": "b1b5df69d33b9cfeb157fd3e23d4d9d2263a01f37af4e86f6de56d695440eb74",
+    "research/ir-case-studies-2026-10-15/6754/quarter-presentation-followup/raw/486a24e5e28b1701935c86924bef9179b81773e1a718d3be0d38961e25f4aa74": "486a24e5e28b1701935c86924bef9179b81773e1a718d3be0d38961e25f4aa74",
+    "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/02.txt": "b78f62805d9dfd3e88d992f2227efd47db221d5b24d5bf03bc85f38107feeb4e",
+    "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/review.json": "61b04c28a2984441ab7de84d3c5ac2373bd119568316175057194f8140c2e8e4",
+    "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/page-01.png": "fc247241e8805bb4fb40bac9ccf3c711acb2f251c425c6df93d076a4fc636d03",
+    "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/quotes.json": "da0ebcb830281244960437f135439a157485a9e3fc1b8da76de908385f1a5cd4",
+    "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/01.json": "68f0ffcc7dcf0c6b4f4761fc1d3c8d1d1cc7a709d6d087134cfabcf6a7a0c5ed",
+    "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/01.txt": "53fa35e7042c21944d25db90dc405674b7a7e359263514c4752939f374ee22ba",
+    "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/02.json": "006db2cd3342dbbc56ea141b90e7d125ca8f2a90d810c2cdf6ec14ec6c19eaa0",
+    "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/README.md": "eaebd7624264ce4ec0195fdd281ca9a0c5f341a89fbbaf9a8dbb88a548e02c85",
+    "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/validation.json": "8ca59ad4a402182345f53c36e96f5abca4d516048b3f9d1627c42fcfeba60cd1",
+    "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/capture.json": "a8e11e7df627ba5e92c99e5e82a565afcdb0144c734bd5c1be2408b73f5378e3",
+    "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/independent-recheck.json": "8b9285d462e5fc5d1fc42e55636b101bc5d2cd094ee6e666f4d0854b9c831e26",
+    "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/pdfinfo.txt": "176b06cd841cfa1c72d0598172cd87f7285e86f61fffbeed6a497488e38aadf5",
+    "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/source-bundle.json": "c83ebef7952dac7d1bc752aaeda408bd1301766f2a7f2e32b8c9a692898d5808",
+    "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/independent-recheck.md": "7e31340a2f40f4f35cdc0524819246a19eb1fa7133dea22e1c51f5f970742636",
+    "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/raw/518e618338b5d9a046f744f9110536c8bf8837bbf4977173d9953ec2913f598d": "518e618338b5d9a046f744f9110536c8bf8837bbf4977173d9953ec2913f598d",
+    "research/ir-case-studies-2026-10-15/6754/initial-public-qa-followup/raw/53fa35e7042c21944d25db90dc405674b7a7e359263514c4752939f374ee22ba": "53fa35e7042c21944d25db90dc405674b7a7e359263514c4752939f374ee22ba"
+  },
+  "new_artifact_hashes": {
+    "input.json": "5f0785b4e7482f7155d5c2c539ebefb349c3d11e908c58abd187f9674ce1c897",
+    "normalized-bundle.json": "2ec58902101391f1523cb61eaa469d0ea804987c8eea89425cef074f51bd8d78",
+    "README.md": "54642fb05c0489d33aa67081bd93e870bd8cc272020666dcb1d742b87f31ac75"
+  },
+  "execution": {
+    "GETs": 0,
+    "Store_open_calls": 0,
+    "SQLite_connect_calls": 0,
+    "actual_DB_accesses": 0,
+    "tests_or_production_changes": 0,
+    "old_file_changes": 0,
+    "index_or_monitoring_changes": 0,
+    "new_financial_inputs_adopted": 0
+  },
+  "limits": [
+    "Token/quote/unit arithmetic is reproducible; scope/period/table column/graph series remain reviewer assertions, financial meaning not independently verified.",
+    "p9 orders do not declare IFRS; no borrowed IFRS phrase added to quote.",
+    "All exact calendar boundaries remain null; source FY2026 vs Japanese fiscal-ending FY2027/3 labels both retained.",
+    "Raw rounded issuer values converted into JPY do not gain unrounded precision.",
+    "No actual DB receipt or prospective forecast commitment manufactured."
+  ]
+}

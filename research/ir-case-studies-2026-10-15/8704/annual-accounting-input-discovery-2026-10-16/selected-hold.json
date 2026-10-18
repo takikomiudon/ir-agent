@@ -1,0 +1,91 @@
+{
+  "holds_index_ref": {
+    "path": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+    "sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952",
+    "json_pointer": "/holds/1"
+  },
+  "selected_entry_unchanged": {
+    "UA_evidence": {
+      "actual_header_configuration_recorded_in_validation": true,
+      "declaration_file": "research/ir-case-studies-2026-10-15/1379/annual-cashflow-followup/not-requested.json",
+      "declaration_file_sha256": "5feaf73e6fd7e067def3411232bf539133ef05afddef7b8240ec0a5fa79027c2",
+      "declaration_jsonpath": "$.user_agent",
+      "declared_for_original_task": "ir-agent-public-research",
+      "outbound_wire_or_per_response_request_headers_verified": false,
+      "wire_User_Agent": null
+    },
+    "basis_quotes": [
+      {
+        "byte_end": 26,
+        "byte_start": 0,
+        "character_end": 26,
+        "character_start": 0,
+        "offset_unit": "zero-based Unicode characters / UTF8 bytes; end exclusive; original line endings preserved",
+        "path": "research/ir-case-studies-2026-10-15/1379/annual-cashflow-followup/raw/331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+        "quote": "User-agent: *\nDisallow: /\n",
+        "representation": "raw_utf8",
+        "whole_file_sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1"
+      }
+    ],
+    "exact_host": "ssl4.eir-parts.net",
+    "historical_chronology": {
+      "note": "No permission, noncompliance finding or financial classification is backfilled onto unrelated older captures.",
+      "prior_bodies_retroactively_reclassified": false,
+      "target_body_GET_after_stop": false
+    },
+    "hold_basis_category": "wildcard_disallow",
+    "id": "access-hold:ssl4.eir-parts.net",
+    "issuer_case": "1379/annual-cashflow-followup",
+    "literal_parser_permission_for_declared_UA": false,
+    "named_agent_parser_permissions": {},
+    "observed_rule_or_failure": "wildcard_full_path_disallow_observed",
+    "operational_action": {
+      "alternate_host_proxy_route_or_repost": false,
+      "change_UA": false,
+      "execute_JavaScript_or_browser_workaround": false,
+      "new_GETs_in_index_task": 0,
+      "resume_condition": "Only a separately scoped explicit review may revisit saved constraints; workers must not automatically re-GET as a retry or diagnose around the hold.",
+      "retry_robots_or_target": false
+    },
+    "project_interpretation": "Do not request body because saved robots explicitly denies matching wildcard group.",
+    "requested_target_before_hold": "https://ssl4.eir-parts.net/V4Public/EIR/1379/ja/press/press_1.js",
+    "robots_capture": {
+      "Content_Encoding": null,
+      "HTTP_status": 200,
+      "actual_saved_response_entity_bytes": 26,
+      "body_completed_at": "2026-10-15T05:47:07.304744+00:00",
+      "capture_declared_retrieved_at": "2026-10-15T05:47:01.557531+00:00",
+      "capture_file": "research/ir-case-studies-2026-10-15/1379/annual-cashflow-followup/02.json",
+      "capture_file_sha256": "db3504fa300f2ecdbb0d578c97d6d3d52762d72efd20c78d8cd460ed719e7125",
+      "capture_jsonpath": "$",
+      "complete_body": true,
+      "declared_Content_Length": "26",
+      "headers_received_at": "2026-10-15T05:47:07.304633+00:00",
+      "raw_file": "research/ir-case-studies-2026-10-15/1379/annual-cashflow-followup/raw/331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+      "raw_sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+      "request_started_at": "2026-10-15T05:47:01.557531+00:00",
+      "response_byte_semantics": "Saved response entity bytes, not a wire capture; compressed Content-Length need not equal saved bytes.",
+      "timestamp_note": "Start/declaration and completed-body clocks preserved separately; old retrieved_at is not silently relabelled as completion.",
+      "url": "https://ssl4.eir-parts.net/robots.txt"
+    },
+    "scope": {
+      "all_provider_paths_current_access_tested": false,
+      "company_excluded_from_investment_universe": false,
+      "current_robots_policy_beyond_saved_observation_verified": false,
+      "match": "exact hostname only",
+      "other_subdomains_included": false,
+      "permanent_prohibition_established": false,
+      "user_domain_allowance_waives_site_robots": false
+    },
+    "status": "hold_for_further_collection",
+    "wildcard_group": {
+      "Disallow": "/",
+      "interpretation": "All paths in observed exact-host robots group at capture time; no permanent or cross-host claim.",
+      "user_agent": "*"
+    }
+  },
+  "requested_after_observation": false,
+  "target_body_GET": 0,
+  "target_robots_GET": 0,
+  "UA_or_host_or_path_bypass": false
+}

@@ -1,0 +1,1027 @@
+{
+  "requested_url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+  "retrieved_at": "2026-10-12T15:23:30.607570+00:00",
+  "publication_time": null,
+  "submitted": false,
+  "http_get_attempted": true,
+  "http_get_started_at": "2026-10-12T15:23:30.607745+00:00",
+  "http_response_received_at": "2026-10-12T15:23:30.858363+00:00",
+  "http_get_completed_at": "2026-10-12T15:23:30.893618+00:00",
+  "host_wait_seconds": 2.8139911592006683e-06,
+  "global_wait_seconds": 1.2620002962648869e-06,
+  "wait_seconds": 4.075991455465555e-06,
+  "extraction_method": "HTTP GET; visible HTML text, links, non-hidden form controls",
+  "global_rps_at_dispatch": 0.25,
+  "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+  "http_status": 200,
+  "response_headers": {
+    "date": "Mon, 12 Oct 2026 12:08:29 GMT",
+    "server": "envoy",
+    "x-request-id": "aa9b1bab-44f4-4fea-86d3-f67300d8ef81"
+  },
+  "retry_after_seconds": null,
+  "byte_count": 88844,
+  "sha256": "f6f0d3692eac9b7f0276883d8daed1558d20727e01dd2bf3a9ef7b130860a912",
+  "content_type": "text/html; charset=UTF-8",
+  "encoding": "utf-8",
+  "encoding_source": "http_charset",
+  "http_charset": "utf-8",
+  "html_meta_charset": "UTF-8",
+  "text": "Wikidata:SPARQL query service - Wikidata Jump to content Main menu Main menu move to sidebar hide Navigation Main page Community portal Project chat Create a new Item Recent changes Random Item Query Service Nearby Help Special pages Lexicographical data Create a new Lexeme Recent changes Random Lexeme In Wikipedia العربية Edit links Search Search English Appearance Donate Create account Log in Personal tools Donate Create account Log in Contents move to sidebar hide Beginning 1 What is SPARQL 2 Learning SPARQL Toggle Learning SPARQL subsection 2.1 Help for new queries 2.2 Other materials 3 Interfacing 4 Wikimedia SPARQL query services 5 Federated queries 6 Stats 7 Further resources Toggle the table of contents Wikidata : SPARQL query service Shortcuts : WD:WDQ, WD:WDQS, WD:SPARQL Project page Discussion English Read View source View history Tools Tools move to sidebar hide Actions Read View source View history General What links here Related changes Permanent link Page information Get shortened URL Print/export Create a book Download as PDF Printable version In other projects Wikimedia Commons Wikidata item Appearance move to sidebar hide From Wikidata Translate this page ; This page contains changes . Please contact a translation admin to mark them for translation. Other languages: Bahasa Indonesia Bahasa Melayu British English Deutsch English Esperanto Hausa Lëtzebuergesch Nederlands Tiếng Việt català dansk eesti español euskara français italiano lietuvių polski português português do Brasil slovenščina svenska čeština Ελληνικά беларуская (тарашкевіца) български къумукъ македонски русский українська հայերեն עברית العربية فارسی مصرى 中文 日本語 閩南語 / Bân-lâm-gí 한국어 What is SPARQL SPARQL (pronounced \"sparkle\") is an RDF query language, that is, a semantic query language for databases. Wikidata provides an SPARQL endpoint including a powerful web GUI since September 2015. With SPARQL, you can extract any kind of data, with a query composed of logical combinations of triples. Learning SPARQL Presentation \"SPARQL and Wikidata intro\" by shonagon- École de Bibliothécaires Documentalistes (French) (2016-04-04) Help for new queries Wikidata Query Service help portal Wikidata:SPARQL query service/queries Wikidata:SPARQL query service/queries/examples Wikidata:SPARQL query service/queries/examples/advanced Wikidata:SPARQL query service/queries/examples/human Wikidata:SPARQL query service/queries/examples/maintenance Lexemes examples If you can't adjust the examples to create a new query, you could request the query , try using the query helper tool , or try using the Spinach Wikidata bot to create a new query or adjust an existing one using natural language Queries from Wikidata status update weekly summaries Other materials SPARQL in 11 minutes (video, English) SPARQL Tutorial at the Apache Jena website (English) 2016 SPARQL Workshop presented by the Wikimedia Foundation (English) Querying Wikidata with SPARQL for Absolute Beginners , 2-hour video tutorial (English) Wikidata:SPARQL tutorial (multiple languages) Query optimization Query limits {{ Item documentation }} and other generic queries templates Interfacing In 2026-2027, the Wikidata Query Service is migrating to a new backend. This migration includes new endpoint URLs for v2, and may require you to revise existing queries. Learn more about the backend migration . SPARQL queries can be submitted directly to the SPARQL endpoint with GET request to https://query.wikidata.org/bigdata/namespace/wdq/sparql?query={SPARQL} or the endpoint's alias https://query.wikidata.org/sparql?query={SPARQL} . The result is returned as XML by default, or as JSON if either the query parameter format=json or the header Accept: application/sparql-results+json are provided. See the user manual for more detailed information. The R package WikidataQueryServiceR which queries the WDQS SPARQL endpoint and returns data.frames . The R script leprosyInAmerica.r that plots Wikidata content on a world map. (Andra Waagmeester, mailing list discussion ) An introduction to Observable for Wikidata users Python example, how to make a plot of causes of death for U.S. Presidents An example of using SPARQLWrapper library to query WDQS in Python: https://people.wikimedia.org/~bearloga/notes/wdqs-python.html An example using the Apache Jena command line tools . (This is useful e.g. for very large SPARQL statements with +2000 lines which WDQS UI currently cannot handle properly because of the parsing, or e.g., for scripting a batch of queries to run every week (via cron) and report the results by email) Convert WDQ (the previous tool to query Wikidata) queries syntax to SPARQL (by Stas Malyshev) Generate plots for results by cutting-and-pasting queries to (Visual) SPARQL query tool . Some examples by User:Pyb : U.S. States by date of creation , Burial counts for Père Lachaise cemetery by year , Dates of birth of 2000 centenarians Wikimedia SPARQL query services On Wikidata, the WDQS allows practicing SPARQL queries creation in an intuitive way. Human interface Machine's endpoint Description Wikidata Query Service (WDQS) https://query.wikidata.org/sparql Run SPARQL Queries on the \"main\" subset upon the Wikidata Wikibase instance. Run, test, download the data as XML, JSON, CSV, or TSV. Data with geographical coordinates can also be downloaded as GeoJSON, GPX or KML (using the first column for name values). Has advanced user-friendly features such as: word hovering to see a term's meaning, code optimization, etc. Wikidata Query Service (WDQS) https://query-scholarly.wikidata.org/sparql Run SPARQL Queries on the \"scholarly\" subset upon the Wikidata Wikibase instance (cf. WDQS graph split for more information). Run, test, download the data as XML, JSON, CSV, or TSV. Data with geographical coordinates can also be downloaded as GeoJSON, GPX or KML (using the first column for name values). Has advanced user-friendly features such as: word hovering to see a term's meaning, code optimization, etc. Wikimedia Commons Query Service (WCQS) https://commons-query.wikimedia.org/sparql Run SPARQL Queries upon the Wikimedia Commons Wikibase instance. LinguaLibre Query Service (LLQS) https://lingualibre.org/bigdata/#query Run SPARQL Queries upon the LinguaLibre Wikibase instance. Run, test, download the data as XML, JSON, CSV, or TSV. The Wikidata Query Service operates on an RDF dataset from Wikidata, as described in the RDF dump format documentation . The service's dataset does not exactly match the dataset produced by RDF dumps, mainly for performance reasons. Federated queries Up-to-date federation documentation is gathered on the page Wikidata:SPARQL_query_service/Federated_queries . Stats WDQS Metrics Dashboard Report on SPARQL endpoints available for federation Further resources Migration page - page for ongoing WDQS backend migration updates Special:ListDatatypes - covers approximate prefixes and explanation of some values Help:Dates - additional notes about dates Wikidata:SPARQL query service/Documentation - a hub for documents about the WDQS, organized under the Diátaxis framework SPARQL 1.1 W3C Recommendation Blazegraph wiki - Blazegraph is the query engine used by the Wikidata SPARQL query service. The wiki provides useful insights. Alternative endpoints Blazegraph comparison and limitations Retrieved from \" https://www.wikidata.org/w/index.php?title=Wikidata:SPARQL_query_service&oldid=2551846291 \" Categories : SPARQL Wikidata:SPARQL query service Wikidata-en Wikidata front ends This page was last edited on 1 October 2026, at 17:25. All structured data from the main, Property, Lexeme, and EntitySchema namespaces is available under the Creative Commons CC0 License ; text in the other namespaces is available under the Creative Commons Attribution-ShareAlike License ; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy . Privacy policy About Wikidata Disclaimers Legal & safety contacts Code of Conduct Developers Statistics Cookie statement Mobile view Data access Search Search Toggle the table of contents Wikidata : SPARQL query service Add topic",
+  "title": "Wikidata:SPARQL query service - Wikidata",
+  "headings": [
+    "Contents",
+    "Wikidata : SPARQL query service",
+    "What is SPARQL",
+    "Learning SPARQL",
+    "Interfacing",
+    "Wikimedia SPARQL query services",
+    "Federated queries",
+    "Stats",
+    "Further resources"
+  ],
+  "base_href": null,
+  "base_hrefs": [],
+  "base_url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+  "base_resolution_error": null,
+  "links": [
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service#bodyContent",
+      "href": "#bodyContent",
+      "label": "Jump to content"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:Main_Page",
+      "href": "/wiki/Wikidata:Main_Page",
+      "label": "Visit the main page [z] Main page"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Project:Community_portal",
+      "href": "/wiki/Special:MyLanguage/Project:Community_portal",
+      "label": "About the project, what you can do, where to find things Community portal"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:Project_chat",
+      "href": "/wiki/Wikidata:Project_chat",
+      "label": "Project chat"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:NewItem",
+      "href": "/wiki/Special:NewItem",
+      "label": "Create a new Item"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:RecentChanges",
+      "href": "/wiki/Special:RecentChanges",
+      "label": "A list of recent changes in the wiki [r] Recent changes"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:Random/Main",
+      "href": "/wiki/Special:Random/Main",
+      "label": "[x] Random Item"
+    },
+    {
+      "url": "https://query.wikidata.org/",
+      "href": "//query.wikidata.org/",
+      "label": "Query Service"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:Nearby",
+      "href": "/wiki/Special:Nearby",
+      "label": "Nearby"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Help:Contents",
+      "href": "/wiki/Special:MyLanguage/Help:Contents",
+      "label": "The place to find out Help"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:SpecialPages",
+      "href": "/wiki/Special:SpecialPages",
+      "label": "A list of all special pages [q] Special pages"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:NewLexeme",
+      "href": "/wiki/Special:NewLexeme",
+      "label": "Create a new Lexeme"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:RecentChanges?namespace=146%3B147",
+      "href": "https://www.wikidata.org/wiki/Special:RecentChanges?namespace=146%3B147",
+      "label": "Recent changes"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:Random/Lexeme",
+      "href": "/wiki/Special:Random/Lexeme",
+      "label": "Random Lexeme"
+    },
+    {
+      "url": "https://ar.wikipedia.org/wiki/%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9:%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85%D8%A7%D8%AA_%D9%88%D9%8A%D9%83%D9%8A_%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA",
+      "href": "https://ar.wikipedia.org/wiki/%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9:%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85%D8%A7%D8%AA_%D9%88%D9%8A%D9%83%D9%8A_%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA",
+      "label": "مساعدة:استعلامات ويكي بيانات – Arabic العربية"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:EntityPage/Q97621285#sitelinks-wikipedia",
+      "href": "https://www.wikidata.org/wiki/Special:EntityPage/Q97621285#sitelinks-wikipedia",
+      "label": "Edit interlanguage links Edit links"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:Main_Page",
+      "href": "/wiki/Wikidata:Main_Page",
+      "label": "Wikidata"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:Search",
+      "href": "/wiki/Special:Search",
+      "label": "Search Wikidata [f] Search"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+      "href": "#",
+      "label": "English"
+    },
+    {
+      "url": "https://donate.wikimedia.org/?wmf_source=donate&wmf_medium=sidebar&wmf_campaign=www.wikidata.org&uselang=en",
+      "href": "https://donate.wikimedia.org/?wmf_source=donate&wmf_medium=sidebar&wmf_campaign=www.wikidata.org&uselang=en",
+      "label": "Donate"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Special:CreateAccount&returnto=Wikidata%3ASPARQL+query+service",
+      "href": "/w/index.php?title=Special:CreateAccount&returnto=Wikidata%3ASPARQL+query+service",
+      "label": "You are encouraged to create an account and log in; however, it is not mandatory Create account"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Special:UserLogin&returnto=Wikidata%3ASPARQL+query+service",
+      "href": "/w/index.php?title=Special:UserLogin&returnto=Wikidata%3ASPARQL+query+service",
+      "label": "You are encouraged to log in; however, it is not mandatory [o] Log in"
+    },
+    {
+      "url": "https://donate.wikimedia.org/?wmf_source=donate&wmf_medium=sidebar&wmf_campaign=www.wikidata.org&uselang=en",
+      "href": "https://donate.wikimedia.org/?wmf_source=donate&wmf_medium=sidebar&wmf_campaign=www.wikidata.org&uselang=en",
+      "label": "Donate"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Special:CreateAccount&returnto=Wikidata%3ASPARQL+query+service",
+      "href": "/w/index.php?title=Special:CreateAccount&returnto=Wikidata%3ASPARQL+query+service",
+      "label": "You are encouraged to create an account and log in; however, it is not mandatory Create account"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Special:UserLogin&returnto=Wikidata%3ASPARQL+query+service",
+      "href": "/w/index.php?title=Special:UserLogin&returnto=Wikidata%3ASPARQL+query+service",
+      "label": "You are encouraged to log in; however, it is not mandatory [o] Log in"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+      "href": "#",
+      "label": "Beginning"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service#What_is_SPARQL",
+      "href": "#What_is_SPARQL",
+      "label": "1 What is SPARQL"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service#Learning_SPARQL",
+      "href": "#Learning_SPARQL",
+      "label": "2 Learning SPARQL"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service#Help_for_new_queries",
+      "href": "#Help_for_new_queries",
+      "label": "2.1 Help for new queries"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service#Other_materials",
+      "href": "#Other_materials",
+      "label": "2.2 Other materials"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service#Interfacing",
+      "href": "#Interfacing",
+      "label": "3 Interfacing"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service#Wikimedia_SPARQL_query_services",
+      "href": "#Wikimedia_SPARQL_query_services",
+      "label": "4 Wikimedia SPARQL query services"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service#Federated_queries",
+      "href": "#Federated_queries",
+      "label": "5 Federated queries"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service#Stats",
+      "href": "#Stats",
+      "label": "6 Stats"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service#Further_resources",
+      "href": "#Further_resources",
+      "label": "7 Further resources"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Help:Shortcut",
+      "href": "/wiki/Special:MyLanguage/Help:Shortcut",
+      "label": "Special:MyLanguage/Help:Shortcut Shortcuts"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+      "href": "/wiki/Wikidata:SPARQL_query_service",
+      "label": "View the project page [c] Project page"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata_talk:SPARQL_query_service",
+      "href": "/wiki/Wikidata_talk:SPARQL_query_service",
+      "label": "Discussion about the content page [t] Discussion"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+      "href": "/wiki/Wikidata:SPARQL_query_service",
+      "label": "Read"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Wikidata:SPARQL_query_service&action=edit",
+      "href": "/w/index.php?title=Wikidata:SPARQL_query_service&action=edit",
+      "label": "This page is protected. You can view its source [e] View source"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Wikidata:SPARQL_query_service&action=history",
+      "href": "/w/index.php?title=Wikidata:SPARQL_query_service&action=history",
+      "label": "Past revisions of this page [h] View history"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+      "href": "/wiki/Wikidata:SPARQL_query_service",
+      "label": "Read"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Wikidata:SPARQL_query_service&action=edit",
+      "href": "/w/index.php?title=Wikidata:SPARQL_query_service&action=edit",
+      "label": "This page is protected. You can view its source [e] View source"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Wikidata:SPARQL_query_service&action=history",
+      "href": "/w/index.php?title=Wikidata:SPARQL_query_service&action=history",
+      "label": "Past revisions of this page [h] View history"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:WhatLinksHere/Wikidata:SPARQL_query_service",
+      "href": "/wiki/Special:WhatLinksHere/Wikidata:SPARQL_query_service",
+      "label": "A list of all wiki pages that link here [j] What links here"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:RecentChangesLinked/Wikidata:SPARQL_query_service",
+      "href": "/wiki/Special:RecentChangesLinked/Wikidata:SPARQL_query_service",
+      "label": "Recent changes in pages linked from this page [k] Related changes"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Wikidata:SPARQL_query_service&oldid=2551846291",
+      "href": "/w/index.php?title=Wikidata:SPARQL_query_service&oldid=2551846291",
+      "label": "Permanent link to this revision of this page Permanent link"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Wikidata:SPARQL_query_service&action=info",
+      "href": "/w/index.php?title=Wikidata:SPARQL_query_service&action=info",
+      "label": "More information about this page Page information"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Special:UrlShortener&url=https%3A%2F%2Fwww.wikidata.org%2Fwiki%2FWikidata%3ASPARQL_query_service",
+      "href": "/w/index.php?title=Special:UrlShortener&url=https%3A%2F%2Fwww.wikidata.org%2Fwiki%2FWikidata%3ASPARQL_query_service",
+      "label": "Get shortened URL"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Wikidata%3ASPARQL+query+service",
+      "href": "/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Wikidata%3ASPARQL+query+service",
+      "label": "Create a book"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Special:DownloadAsPdf&page=Wikidata%3ASPARQL_query_service&action=show-download-screen",
+      "href": "/w/index.php?title=Special:DownloadAsPdf&page=Wikidata%3ASPARQL_query_service&action=show-download-screen",
+      "label": "Download as PDF"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Wikidata:SPARQL_query_service&printable=yes",
+      "href": "/w/index.php?title=Wikidata:SPARQL_query_service&printable=yes",
+      "label": "Printable version of this page [p] Printable version"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Commons:SPARQL_query_service",
+      "href": "https://commons.wikimedia.org/wiki/Commons:SPARQL_query_service",
+      "label": "Wikimedia Commons"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:EntityPage/Q97621285",
+      "href": "https://www.wikidata.org/wiki/Special:EntityPage/Q97621285",
+      "label": "Link to connected data repository item [g] Wikidata item"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Special:Translate&group=page-Wikidata%3ASPARQL+query+service&action=page&filter=&action_source=translate_page",
+      "href": "/w/index.php?title=Special:Translate&group=page-Wikidata%3ASPARQL+query+service&action=page&filter=&action_source=translate_page",
+      "label": "Special:Translate Translate this page"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Wikidata:SPARQL_query_service&oldid=2444045411&diff=2551846291",
+      "href": "https://www.wikidata.org/w/index.php?title=Wikidata:SPARQL_query_service&oldid=2444045411&diff=2551846291",
+      "label": "changes"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:Translation_administrators",
+      "href": "/wiki/Special:MyLanguage/Wikidata:Translation_administrators",
+      "label": "Special:MyLanguage/Wikidata:Translation administrators translation admin"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/id",
+      "href": "/wiki/Wikidata:SPARQL_query_service/id",
+      "label": "Wikidata:Layanan kueri SPARQL (92% translated) Bahasa Indonesia"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/ms",
+      "href": "/wiki/Wikidata:SPARQL_query_service/ms",
+      "label": "Wikidata:Perkhidmatan pertanyaan SPARQL (17% translated) Bahasa Melayu"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/en-gb",
+      "href": "/wiki/Wikidata:SPARQL_query_service/en-gb",
+      "label": "Wikidata:SPARQL query service (25% translated) British English"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/de",
+      "href": "/wiki/Wikidata:SPARQL_query_service/de",
+      "label": "Wikidata:SPARQL Abfragedienst (27% translated) Deutsch"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/eo",
+      "href": "/wiki/Wikidata:SPARQL_query_service/eo",
+      "label": "Wikidata:SPARQL query service/eo (2% translated) Esperanto"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/ha",
+      "href": "/wiki/Wikidata:SPARQL_query_service/ha",
+      "label": "Wikidata: Sabis ɗin tambaya na SPARQL (98% translated) Hausa"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/lb",
+      "href": "/wiki/Wikidata:SPARQL_query_service/lb",
+      "label": "Wikidata:SPARQL query service/lb (5% translated) Lëtzebuergesch"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/nl",
+      "href": "/wiki/Wikidata:SPARQL_query_service/nl",
+      "label": "Wikidata:SPARQL-queryservice (100% translated) Nederlands"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/vi",
+      "href": "/wiki/Wikidata:SPARQL_query_service/vi",
+      "label": "Wikidata:SPARQL query service/vi (2% translated) Tiếng Việt"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/ca",
+      "href": "/wiki/Wikidata:SPARQL_query_service/ca",
+      "label": "Wikidata:Servei de consultes SPARQL (47% translated) català"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/da",
+      "href": "/wiki/Wikidata:SPARQL_query_service/da",
+      "label": "Wikidata:SPARQL-forespørgselstjeneste (37% translated) dansk"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/et",
+      "href": "/wiki/Wikidata:SPARQL_query_service/et",
+      "label": "Wikidata:SPARQL query service/et (2% translated) eesti"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/es",
+      "href": "/wiki/Wikidata:SPARQL_query_service/es",
+      "label": "Wikidata:Servicio de consultas SPARQL (25% translated) español"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/eu",
+      "href": "/wiki/Wikidata:SPARQL_query_service/eu",
+      "label": "Wikidata:SPARQL query service (8% translated) euskara"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/fr",
+      "href": "/wiki/Wikidata:SPARQL_query_service/fr",
+      "label": "Wikidata:Service des requêtes SPARQL (100% translated) français"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/it",
+      "href": "/wiki/Wikidata:SPARQL_query_service/it",
+      "label": "Wikidata:Servizio query SPARQL (75% translated) italiano"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/lt",
+      "href": "/wiki/Wikidata:SPARQL_query_service/lt",
+      "label": "Vikiduomenys:SPARQL užklausų paslauga (17% translated) lietuvių"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/pl",
+      "href": "/wiki/Wikidata:SPARQL_query_service/pl",
+      "label": "Wikidane:Obsługa zapytań SPARQL (47% translated) polski"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/pt",
+      "href": "/wiki/Wikidata:SPARQL_query_service/pt",
+      "label": "Wikidados:Serviço de consulta SPARQL (25% translated) português"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/pt-br",
+      "href": "/wiki/Wikidata:SPARQL_query_service/pt-br",
+      "label": "Wikidata:Serviço de consulta SPARQL (47% translated) português do Brasil"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/sl",
+      "href": "/wiki/Wikidata:SPARQL_query_service/sl",
+      "label": "Wikidata:Storitev poizvedbe SPARQL (53% translated) slovenščina"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/sv",
+      "href": "/wiki/Wikidata:SPARQL_query_service/sv",
+      "label": "Wikidata:SPARQL-frågetjänst (81% translated) svenska"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/cs",
+      "href": "/wiki/Wikidata:SPARQL_query_service/cs",
+      "label": "Wikidata:SPARQL dotazovací služba (17% translated) čeština"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/el",
+      "href": "/wiki/Wikidata:SPARQL_query_service/el",
+      "label": "Wikidata:SPARQL query service (5% translated) Ελληνικά"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/be-tarask",
+      "href": "/wiki/Wikidata:SPARQL_query_service/be-tarask",
+      "label": "Вікізьвесткі:Сэрвіс запытаў SPARQL (66% translated) беларуская (тарашкевіца)"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/bg",
+      "href": "/wiki/Wikidata:SPARQL_query_service/bg",
+      "label": "Wikidata:SPARQL query service/bg (5% translated) български"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/kum",
+      "href": "/wiki/Wikidata:SPARQL_query_service/kum",
+      "label": "Викиданные:Сервис запросов SPARQL (14% translated) къумукъ"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/mk",
+      "href": "/wiki/Wikidata:SPARQL_query_service/mk",
+      "label": "Википодатоци:Побарувач SPARQL (20% translated) македонски"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/ru",
+      "href": "/wiki/Wikidata:SPARQL_query_service/ru",
+      "label": "Викиданные:Сервис запросов SPARQL (27% translated) русский"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/uk",
+      "href": "/wiki/Wikidata:SPARQL_query_service/uk",
+      "label": "Вікідані:Сервіс запитів SPARQL (19% translated) українська"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/hy",
+      "href": "/wiki/Wikidata:SPARQL_query_service/hy",
+      "label": "Wikidata:SPARQL query service/hy (3% translated) հայերեն"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/he",
+      "href": "/wiki/Wikidata:SPARQL_query_service/he",
+      "label": "ויקינתונים:שירות שאילתות SPARQL (93% translated) עברית"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/ar",
+      "href": "/wiki/Wikidata:SPARQL_query_service/ar",
+      "label": "ويكي بيانات: خدمة الاستعلام سباركل (29% translated) العربية"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/fa",
+      "href": "/wiki/Wikidata:SPARQL_query_service/fa",
+      "label": "ویکی‌داده: سرویس کوئری اسپارکل (7% translated) فارسی"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/arz",
+      "href": "/wiki/Wikidata:SPARQL_query_service/arz",
+      "label": "Wikidata:SPARQL query service/arz (2% translated) مصرى"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/zh",
+      "href": "/wiki/Wikidata:SPARQL_query_service/zh",
+      "label": "维基数据:SPARQL查询服务 (100% translated) 中文"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/ja",
+      "href": "/wiki/Wikidata:SPARQL_query_service/ja",
+      "label": "ウィキデータ:SPARQLクエリサービス (85% translated) 日本語"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/nan",
+      "href": "/wiki/Wikidata:SPARQL_query_service/nan",
+      "label": "Uikidata:SPARQL tsa-sûn ho̍k-bū (15% translated) 閩南語 / Bân-lâm-gí"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/ko",
+      "href": "/wiki/Wikidata:SPARQL_query_service/ko",
+      "label": "위키데이터:SPARQL 질의 서비스 (5% translated) 한국어"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/SPARQL",
+      "href": "https://en.wikipedia.org/wiki/SPARQL",
+      "label": "w:SPARQL SPARQL"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/File:SparQL_-_Wikidata_-_%C3%89cole_de_Biblioth%C3%A9caires_Documentalistes_-_2016-04-04.pdf",
+      "href": "/wiki/File:SparQL_-_Wikidata_-_%C3%89cole_de_Biblioth%C3%A9caires_Documentalistes_-_2016-04-04.pdf",
+      "label": ""
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/Wikidata_Query_Help",
+      "href": "/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/Wikidata_Query_Help",
+      "label": "Special:MyLanguage/Wikidata:SPARQL query service/Wikidata Query Help Wikidata Query Service help portal"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/queries",
+      "href": "/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/queries",
+      "label": "Special:MyLanguage/Wikidata:SPARQL query service/queries Wikidata:SPARQL query service/queries"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/queries/examples",
+      "href": "/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/queries/examples",
+      "label": "Special:MyLanguage/Wikidata:SPARQL query service/queries/examples Wikidata:SPARQL query service/queries/examples"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/queries/examples/advanced",
+      "href": "/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/queries/examples/advanced",
+      "label": "Special:MyLanguage/Wikidata:SPARQL query service/queries/examples/advanced Wikidata:SPARQL query service/queries/examples/advanced"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/queries/examples/human",
+      "href": "/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/queries/examples/human",
+      "label": "Special:MyLanguage/Wikidata:SPARQL query service/queries/examples/human Wikidata:SPARQL query service/queries/examples/human"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/queries/examples/maintenance",
+      "href": "/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/queries/examples/maintenance",
+      "label": "Special:MyLanguage/Wikidata:SPARQL query service/queries/examples/maintenance Wikidata:SPARQL query service/queries/examples/maintenance"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/queries/examples#lexemes",
+      "href": "/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/queries/examples#lexemes",
+      "label": "Special:MyLanguage/Wikidata:SPARQL query service/queries/examples Lexemes examples"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:Request_a_query",
+      "href": "/wiki/Special:MyLanguage/Wikidata:Request_a_query",
+      "label": "Special:MyLanguage/Wikidata:Request a query request the query"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/Query_Helper",
+      "href": "/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/Query_Helper",
+      "label": "Special:MyLanguage/Wikidata:SPARQL query service/Query Helper query helper tool"
+    },
+    {
+      "url": "https://spinach.genie.stanford.edu/",
+      "href": "https://spinach.genie.stanford.edu/",
+      "label": "Spinach Wikidata bot"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/qotw",
+      "href": "/wiki/Wikidata:SPARQL_query_service/qotw",
+      "label": "Wikidata:SPARQL query service/qotw Queries from Wikidata status update weekly summaries"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=FvGndkpa4K0",
+      "href": "https://www.youtube.com/watch?v=FvGndkpa4K0",
+      "label": "SPARQL in 11 minutes"
+    },
+    {
+      "url": "https://jena.apache.org/tutorials/sparql.html",
+      "href": "https://jena.apache.org/tutorials/sparql.html",
+      "label": "SPARQL Tutorial"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/2016_SPARQL_Workshop",
+      "href": "/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/2016_SPARQL_Workshop",
+      "label": "Special:MyLanguage/Wikidata:SPARQL query service/2016 SPARQL Workshop 2016 SPARQL Workshop"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/File:Querying_Wikidata_with_SPARQL_for_Absolute_Beginners.webm",
+      "href": "/wiki/File:Querying_Wikidata_with_SPARQL_for_Absolute_Beginners.webm",
+      "label": "File:Querying Wikidata with SPARQL for Absolute Beginners.webm Querying Wikidata with SPARQL for Absolute Beginners"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:SPARQL_tutorial",
+      "href": "/wiki/Special:MyLanguage/Wikidata:SPARQL_tutorial",
+      "label": "Special:MyLanguage/Wikidata:SPARQL tutorial Wikidata:SPARQL tutorial"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/query_optimization",
+      "href": "/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/query_optimization",
+      "label": "Special:MyLanguage/Wikidata:SPARQL query service/query optimization Query optimization"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/query_limits",
+      "href": "/wiki/Wikidata:SPARQL_query_service/query_limits",
+      "label": "Wikidata:SPARQL query service/query limits Query limits"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Template:Item_documentation",
+      "href": "/wiki/Template:Item_documentation",
+      "label": "Template:Item documentation Item documentation"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Category:Generic_SPARQL_query_templates",
+      "href": "/wiki/Category:Generic_SPARQL_query_templates",
+      "label": "Category:Generic SPARQL query templates generic queries templates"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_backend_update",
+      "href": "/wiki/Wikidata:SPARQL_query_service/WDQS_backend_update",
+      "label": "Wikidata:SPARQL query service/WDQS backend update Learn more about the backend migration"
+    },
+    {
+      "url": "https://query.wikidata.org/bigdata/namespace/wdq/sparql?query={SPARQL}",
+      "href": "https://query.wikidata.org/bigdata/namespace/wdq/sparql?query={SPARQL}",
+      "label": "https://query.wikidata.org/bigdata/namespace/wdq/sparql?query={SPARQL}"
+    },
+    {
+      "url": "https://query.wikidata.org/sparql?query={SPARQL}",
+      "href": "https://query.wikidata.org/sparql?query={SPARQL}",
+      "label": "https://query.wikidata.org/sparql?query={SPARQL}"
+    },
+    {
+      "url": "https://www.mediawiki.org/wiki/Special:MyLanguage/Wikidata_Query_Service/User_Manual#SPARQL_endpoint",
+      "href": "https://www.mediawiki.org/wiki/Special:MyLanguage/Wikidata_Query_Service/User_Manual#SPARQL_endpoint",
+      "label": "mw:Special:MyLanguage/Wikidata Query Service/User Manual user manual"
+    },
+    {
+      "url": "https://cran.r-project.org/package=WikidataQueryServiceR",
+      "href": "https://cran.r-project.org/package=WikidataQueryServiceR",
+      "label": "WikidataQueryServiceR"
+    },
+    {
+      "url": "https://www.mediawiki.org/wiki/Special:MyLanguage/Wikidata_query_service/User_Manual#SPARQL_endpoint",
+      "href": "https://www.mediawiki.org/wiki/Special:MyLanguage/Wikidata_query_service/User_Manual#SPARQL_endpoint",
+      "label": "mw:Special:MyLanguage/Wikidata query service/User Manual SPARQL endpoint"
+    },
+    {
+      "url": "https://gist.github.com/andrawaag/2b8c831ab4dd70b16cf2",
+      "href": "https://gist.github.com/andrawaag/2b8c831ab4dd70b16cf2",
+      "label": "leprosyInAmerica.r"
+    },
+    {
+      "url": "https://lists.wikimedia.org/pipermail/wikidata/2015-September/007080.html",
+      "href": "https://lists.wikimedia.org/pipermail/wikidata/2015-September/007080.html",
+      "label": "mailing list discussion"
+    },
+    {
+      "url": "https://observablehq.com/@pac02/an-introduction-to-observable-for-wikidata-users",
+      "href": "https://observablehq.com/@pac02/an-introduction-to-observable-for-wikidata-users",
+      "label": "An introduction to Observable for Wikidata users"
+    },
+    {
+      "url": "http://ramiro.org/notebook/us-presidents-causes-of-death/",
+      "href": "http://ramiro.org/notebook/us-presidents-causes-of-death/",
+      "label": "causes of death for U.S. Presidents"
+    },
+    {
+      "url": "https://rdflib.github.io/sparqlwrapper/",
+      "href": "https://rdflib.github.io/sparqlwrapper/",
+      "label": "SPARQLWrapper"
+    },
+    {
+      "url": "https://people.wikimedia.org/~bearloga/notes/wdqs-python.html",
+      "href": "https://people.wikimedia.org/~bearloga/notes/wdqs-python.html",
+      "label": "https://people.wikimedia.org/~bearloga/notes/wdqs-python.html"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/apache-jena",
+      "href": "/wiki/Wikidata:SPARQL_query_service/apache-jena",
+      "label": "Wikidata:SPARQL query service/apache-jena Apache Jena command line tools"
+    },
+    {
+      "url": "https://wdq2sparql.toolforge.org/w2s.php",
+      "href": "https://wdq2sparql.toolforge.org/w2s.php",
+      "label": "Convert WDQ (the previous tool to query Wikidata) queries syntax to SPARQL"
+    },
+    {
+      "url": "http://demo.seco.tkk.fi/visu",
+      "href": "http://demo.seco.tkk.fi/visu",
+      "label": "(Visual) SPARQL query tool"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/User:Pyb",
+      "href": "/wiki/User:Pyb",
+      "label": "User:Pyb User:Pyb"
+    },
+    {
+      "url": "https://twitter.com/Pyb75/status/648084172582617088",
+      "href": "https://twitter.com/Pyb75/status/648084172582617088",
+      "label": "U.S. States by date of creation"
+    },
+    {
+      "url": "https://twitter.com/Pyb75/status/647440739350220800",
+      "href": "https://twitter.com/Pyb75/status/647440739350220800",
+      "label": "Burial counts for Père Lachaise cemetery by year"
+    },
+    {
+      "url": "https://twitter.com/Pyb75/status/648749003346214912",
+      "href": "https://twitter.com/Pyb75/status/648749003346214912",
+      "label": "Dates of birth of 2000 centenarians"
+    },
+    {
+      "url": "https://query.wikidata.org/",
+      "href": "https://query.wikidata.org/",
+      "label": "Wikidata Query Service (WDQS)"
+    },
+    {
+      "url": "https://query.wikidata.org/sparql",
+      "href": "https://query.wikidata.org/sparql",
+      "label": "https://query.wikidata.org/sparql"
+    },
+    {
+      "url": "https://query-scholarly.wikidata.org/",
+      "href": "https://query-scholarly.wikidata.org/",
+      "label": "Wikidata Query Service (WDQS)"
+    },
+    {
+      "url": "https://query-scholarly.wikidata.org/sparql",
+      "href": "https://query-scholarly.wikidata.org/sparql",
+      "label": "https://query-scholarly.wikidata.org/sparql"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split",
+      "href": "/wiki/Wikidata:SPARQL_query_service/WDQS_graph_split",
+      "label": "Wikidata:SPARQL query service/WDQS graph split WDQS graph split"
+    },
+    {
+      "url": "https://commons-query.wikimedia.org/",
+      "href": "https://commons-query.wikimedia.org/",
+      "label": "Wikimedia Commons Query Service (WCQS)"
+    },
+    {
+      "url": "https://commons-query.wikimedia.org/sparql",
+      "href": "https://commons-query.wikimedia.org/sparql",
+      "label": "https://commons-query.wikimedia.org/sparql"
+    },
+    {
+      "url": "https://lingualibre.org/bigdata/#query",
+      "href": "https://lingualibre.org/bigdata/#query",
+      "label": "LinguaLibre Query Service (LLQS)"
+    },
+    {
+      "url": "https://lingualibre.org/bigdata/#query",
+      "href": "https://lingualibre.org/bigdata/#query",
+      "label": "https://lingualibre.org/bigdata/#query"
+    },
+    {
+      "url": "https://www.mediawiki.org/wiki/Wikibase/Indexing/RDF_Dump_Format",
+      "href": "https://www.mediawiki.org/wiki/Wikibase/Indexing/RDF_Dump_Format",
+      "label": "mw:Wikibase/Indexing/RDF Dump Format RDF dump format documentation"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Federated_queries",
+      "href": "/wiki/Wikidata:SPARQL_query_service/Federated_queries",
+      "label": "Wikidata:SPARQL query service/Federated queries Wikidata:SPARQL_query_service/Federated_queries"
+    },
+    {
+      "url": "https://discovery.wmflabs.org/wdqs/",
+      "href": "https://discovery.wmflabs.org/wdqs/",
+      "label": "WDQS Metrics Dashboard"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Federation_report",
+      "href": "/wiki/Wikidata:SPARQL_query_service/Federation_report",
+      "label": "Wikidata:SPARQL query service/Federation report Report on SPARQL endpoints available for federation"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/WDQS_backend_update",
+      "href": "/wiki/Wikidata:SPARQL_query_service/WDQS_backend_update",
+      "label": "Wikidata:SPARQL query service/WDQS backend update Migration page"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:ListDatatypes",
+      "href": "/wiki/Special:ListDatatypes",
+      "label": "Special:ListDatatypes Special:ListDatatypes"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Help:Dates",
+      "href": "/wiki/Special:MyLanguage/Help:Dates",
+      "label": "Special:MyLanguage/Help:Dates Help:Dates"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Documentation",
+      "href": "/wiki/Wikidata:SPARQL_query_service/Documentation",
+      "label": "Wikidata:SPARQL query service/Documentation Wikidata:SPARQL query service/Documentation"
+    },
+    {
+      "url": "https://diataxis.fr/",
+      "href": "https://diataxis.fr/",
+      "label": "Diátaxis"
+    },
+    {
+      "url": "https://www.w3.org/TR/sparql11-overview/",
+      "href": "https://www.w3.org/TR/sparql11-overview/",
+      "label": "SPARQL 1.1 W3C Recommendation"
+    },
+    {
+      "url": "https://github.com/blazegraph/database/wiki/Main_Page",
+      "href": "https://github.com/blazegraph/database/wiki/Main_Page",
+      "label": "Blazegraph wiki"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/Alternative_endpoints",
+      "href": "/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/Alternative_endpoints",
+      "label": "Special:MyLanguage/Wikidata:SPARQL query service/Alternative endpoints Alternative endpoints"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/Blazegraph_comparison_and_limitations",
+      "href": "/wiki/Special:MyLanguage/Wikidata:SPARQL_query_service/Blazegraph_comparison_and_limitations",
+      "label": "Special:MyLanguage/Wikidata:SPARQL query service/Blazegraph comparison and limitations Blazegraph comparison and limitations"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Wikidata:SPARQL_query_service&oldid=2551846291",
+      "href": "https://www.wikidata.org/w/index.php?title=Wikidata:SPARQL_query_service&oldid=2551846291",
+      "label": "https://www.wikidata.org/w/index.php?title=Wikidata:SPARQL_query_service&oldid=2551846291"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:Categories",
+      "href": "/wiki/Special:Categories",
+      "label": "Special:Categories Categories"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Category:SPARQL",
+      "href": "/wiki/Category:SPARQL",
+      "label": "Category:SPARQL SPARQL"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Category:Wikidata:SPARQL_query_service",
+      "href": "/wiki/Category:Wikidata:SPARQL_query_service",
+      "label": "Category:Wikidata:SPARQL query service Wikidata:SPARQL query service"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Category:Wikidata-en",
+      "href": "/wiki/Category:Wikidata-en",
+      "label": "Category:Wikidata-en Wikidata-en"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Category:Wikidata_front_ends",
+      "href": "/wiki/Category:Wikidata_front_ends",
+      "label": "Category:Wikidata front ends Wikidata front ends"
+    },
+    {
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "href": "//creativecommons.org/publicdomain/zero/1.0/",
+      "label": "Creative Commons CC0 License"
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "href": "//creativecommons.org/licenses/by-sa/4.0/",
+      "label": "Creative Commons Attribution-ShareAlike License"
+    },
+    {
+      "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use",
+      "href": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use",
+      "label": "Terms of Use"
+    },
+    {
+      "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy",
+      "href": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy",
+      "label": "Privacy Policy"
+    },
+    {
+      "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy",
+      "href": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy",
+      "label": "Privacy policy"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Project:Introduction",
+      "href": "/wiki/Special:MyLanguage/Project:Introduction",
+      "label": "About Wikidata"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Project:General_disclaimer",
+      "href": "/wiki/Special:MyLanguage/Project:General_disclaimer",
+      "label": "Disclaimers"
+    },
+    {
+      "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Legal:Wikimedia_Foundation_Legal_and_Safety_Contact_Information",
+      "href": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Legal:Wikimedia_Foundation_Legal_and_Safety_Contact_Information",
+      "label": "Legal & safety contacts"
+    },
+    {
+      "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct",
+      "href": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct",
+      "label": "Code of Conduct"
+    },
+    {
+      "url": "https://developer.wikimedia.org",
+      "href": "https://developer.wikimedia.org",
+      "label": "Developers"
+    },
+    {
+      "url": "https://stats.wikimedia.org/#/www.wikidata.org",
+      "href": "https://stats.wikimedia.org/#/www.wikidata.org",
+      "label": "Statistics"
+    },
+    {
+      "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement",
+      "href": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement",
+      "label": "Cookie statement"
+    },
+    {
+      "url": "https://www.wikidata.org/w/index.php?title=Wikidata:SPARQL_query_service&mobileaction=toggle_view_mobile",
+      "href": "//www.wikidata.org/w/index.php?title=Wikidata:SPARQL_query_service&mobileaction=toggle_view_mobile",
+      "label": "Mobile view"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Special:MyLanguage/Wikidata:Data_access",
+      "href": "/wiki/Special:MyLanguage/Wikidata:Data_access",
+      "label": "Data access"
+    },
+    {
+      "url": "https://www.wikimedia.org/",
+      "href": "https://www.wikimedia.org/",
+      "label": "Wikimedia Foundation"
+    },
+    {
+      "url": "https://www.mediawiki.org/",
+      "href": "https://www.mediawiki.org/",
+      "label": "Powered by MediaWiki"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+      "href": "#",
+      "label": ""
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+      "href": "#",
+      "label": ""
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+      "href": "#",
+      "label": ""
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+      "href": "#",
+      "label": ""
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+      "href": "#",
+      "label": ""
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+      "href": "#",
+      "label": ""
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+      "href": "#",
+      "label": ""
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service",
+      "href": "#",
+      "label": "Add topic"
+    }
+  ],
+  "unresolved_links": [],
+  "forms": [
+    {
+      "action": "/w/index.php",
+      "method": "get",
+      "controls": [
+        {
+          "tag": "input",
+          "type": "search",
+          "name": "search",
+          "placeholder": "Search Wikidata",
+          "aria-label": "Search Wikidata",
+          "id": "searchInput"
+        }
+      ],
+      "text": "Search"
+    },
+    {
+      "action": "/w/index.php",
+      "method": "get",
+      "controls": [
+        {
+          "tag": "input",
+          "type": "search",
+          "name": "search",
+          "placeholder": "Search Wikidata"
+        }
+      ],
+      "text": "Search"
+    }
+  ],
+  "http_get_elapsed_seconds": 0.2859081269998569,
+  "failure_signature": null
+}

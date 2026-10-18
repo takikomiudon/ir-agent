@@ -1,0 +1,17 @@
+/tmp/ir-recover-held.py:27: XMLParsedAsHTMLWarning: It looks like you're using an HTML parser to parse an XML document.
+
+Assuming this really is an XML document, what you're doing might work, but you should know that using an XML parser will be more reliable. To parse this document as XML, make sure you have the Python package 'lxml' installed, and pass the keyword argument `features="xml"` into the BeautifulSoup constructor.
+
+If you want or need to use an HTML parser on this document, you can make this warning go away by filtering it. To do that, run this code before calling the BeautifulSoup constructor:
+
+    from bs4 import XMLParsedAsHTMLWarning
+    import warnings
+
+    warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
+
+  soup=BeautifulSoup(decoded,'html5lib');navigation=[]
+{"event": "global_rate_reduced", "observed_at": "2026-10-12T15:19:00.776507+00:00", "origin": "https://kawagishi.co.jp", "failure_signature": "http_503", "previous_rps": 0.5, "global_rps": 0.4, "minimum_rps": 0.25}
+{"event": "global_rate_reduced", "observed_at": "2026-10-12T15:19:21.632582+00:00", "origin": "https://www.topculture.co.jp", "failure_signature": "http_503", "previous_rps": 0.4, "global_rps": 0.32000000000000006, "minimum_rps": 0.25}
+{"event": "global_rate_reduced", "observed_at": "2026-10-12T15:19:49.070015+00:00", "origin": "https://ecomic.jp", "failure_signature": "http_503", "previous_rps": 0.32000000000000006, "global_rps": 0.25600000000000006, "minimum_rps": 0.25}
+{"event": "global_rate_reduced", "observed_at": "2026-10-12T15:23:02.763963+00:00", "origin": "https://www.himacs.jp", "failure_signature": "http_503", "previous_rps": 0.25600000000000006, "global_rps": 0.25, "minimum_rps": 0.25}
+{"mode": "primary", "selected": 157, "sources": 157, "primary_companies": 157, "GETs": 189}

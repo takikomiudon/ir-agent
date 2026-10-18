@@ -1,0 +1,11 @@
+# 5988年次14fact・実接続前の独立レビュー
+
+**固定script/bundle/shadow証拠をpass、11確認・指摘0件。** スクリプト全18,680bytesを読み、指定3SHAとshadow実行時のpinsが一致した。派生only bundleは受入済み標準bundleの新派生sourceと全object同値で、原source/companies/thesesを取り込まない。
+
+実行時のmainSHA、pending/leased0、派生source未存在、旧84jobs/30case版/16currentcase・97既読、既存原source一致をguardする。mode=ro/query_onlyのsnapshotから全rows/schema同値のbackupを作り、独立pass＋親acceptedの双方が固定4pinsとfileSHAを持ち、親receiptが独立reviewSHAも束縛することを確認した。actualのactor=rootは親運用の宣言で、認証機構ではないというscriptの限界も保持する。
+
+成功shadowは27tableのうち7tableだけに期待追加（source/availability/classification/job/attempt/receipt各1、event2）を記録し、残り20tableは全row/hash同値、旧全rowを保持する。旧84jobs/30case版と97既読は不変で、新job1のみsource_classificationを完了している。金融/thesis/policy/position等は変化しない。journalはingest/queue/claim/complete各1回のbegin/success、計10行でverifiedへ終わる。過去のfailed-shadow履歴を成功証拠として採用していない。
+
+各stageは別コミットで、全体を原子的な一操作とは扱っていない。同modeのjournal/completion/errorがあれば再実行を止め、begin前後をfsyncする。partial/不確実な失敗後の無条件再送は許可しない。原sourceの日時を保ち、新たなtrustedfirstsaveを派生生成時刻へ遡らせない。shadowの時刻も実DB初保存にはしない。
+
+原14factは公表表示額の限定受入であり、今回の保存/分類を金融入力・EBIT/税率/NOPAT/ROC/評価額/方針の採用へ昇格しない。機械receiptと全参照SHA、限界は[connection-independent-review.json](connection-independent-review.json)。実適用はこのreceiptに加えて親の別accepted receiptが必要で、今回script/追加test/DB/GET/元file編集の実行は0である。

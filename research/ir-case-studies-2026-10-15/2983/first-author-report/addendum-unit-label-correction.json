@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T17:01:28.087348+00:00",
+  "recorded_at_jst": "2026-10-16T02:01:28.087348+09:00",
+  "company_id": "jp:2983",
+  "status": "limited_unit_label_finding_resolved_original_records_retained",
+  "resolved_finding_id": "2983-R01-NI-unit-key",
+  "resolution_scope": "Only effective reading of the two NI English unit keys through the fixed correction; original finding/history retained.",
+  "findings": [],
+  "correction_inputs": [
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/review-unit-label-correction.json",
+      "sha256": "e9ef391e79e989047580d00455419fa4d612d7ced2dc8360b0f16c2097175d8c"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/review-unit-label-correction.md",
+      "sha256": "db39fc4da5245a99e1bf28681876b799b23e97c1dbbfd09883260a997b43877b"
+    }
+  ],
+  "original_independent_finding": {
+    "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/independent-recheck.json",
+    "sha256": "856647d85b733bfa0198f7e6512a20b14a416e425f940f8d524fed2c5e34c1b0",
+    "original_finding_count_unchanged": 1
+  },
+  "effective_reading": [
+    {
+      "old_path": "$.forecast_capability.visible_company_vs_author_example.company_plan_as_reported_NI_10billion_JPY",
+      "effective_path": "$.forecast_capability.visible_company_vs_author_example.company_plan_as_reported_NI_billion_JPY",
+      "effective_unit": "billion JPY",
+      "printed_unit_as_source": "10億円",
+      "JPY_per_one_printed_unit": "1000000000",
+      "raw_token_unchanged": "3.25"
+    },
+    {
+      "old_path": "$.forecast_capability.visible_company_vs_author_example.author_new_NI_10billion_JPY",
+      "effective_path": "$.forecast_capability.visible_company_vs_author_example.author_new_NI_billion_JPY",
+      "effective_unit": "billion JPY",
+      "printed_unit_as_source": "10億円",
+      "JPY_per_one_printed_unit": "1000000000",
+      "raw_token_unchanged": "3.28"
+    }
+  ],
+  "checks": [
+    {
+      "check": "exact_finding_and_old_independent_unchanged",
+      "passed": true,
+      "basis": "旧finding1件とindependent記録を保持し、このunit-key指摘のみを解消対象とする。"
+    },
+    {
+      "check": "two_effective_keys_tokens_and_raw_unit",
+      "passed": true,
+      "basis": "訂正は2キーの単位読替えに限定。旧JSONの誤keyを消去しない。"
+    },
+    {
+      "check": "effective_key_and_value:company_plan_as_reported_NI_billion_JPY",
+      "passed": true,
+      "basis": "1表示単位=1,000,000,000 JPYとbillion JPYは一致。原印字/会社・著者帰属は不変。NI額の換算/正規化はしない。"
+    },
+    {
+      "check": "effective_key_and_value:author_new_NI_billion_JPY",
+      "passed": true,
+      "basis": "1表示単位=1,000,000,000 JPYとbillion JPYは一致。原印字/会社・著者帰属は不変。NI額の換算/正規化はしない。"
+    },
+    {
+      "check": "reused_p4_p8_quote_references_only",
+      "passed": true,
+      "basis": "既存p4/p8の意味確認のみreuseし、他の頁や原画像を読み直さない。"
+    },
+    {
+      "check": "pinned_quote_reference:issuer-table-heading",
+      "passed": true,
+      "basis": "旧quotesのID/offset/SHAと単位リテラル参照を照合。raw/capture/全PDFの意味再監査はしない。"
+    },
+    {
+      "check": "pinned_quote_reference:author-forecast-NI-row-unit",
+      "passed": true,
+      "basis": "旧quotesのID/offset/SHAと単位リテラル参照を照合。raw/capture/全PDFの意味再監査はしない。"
+    },
+    {
+      "check": "source_ID_EPS_and_snapshot_preserved",
+      "passed": true,
+      "basis": "source ID/旧review時刻/EPS3値は不変。source-bundle・transport snapshot・provenanceは旧21file SHAで固定されたまま。"
+    },
+    {
+      "check": "no_financial_or_model_adoption",
+      "passed": true,
+      "basis": "単位の英語読替えであり、EPS基準・予測妥当性・会計期間/連結範囲・モデル採用を解消したとはしない。"
+    }
+  ],
+  "check_count": 9,
+  "old_inputs_unchanged": [
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/guard.json",
+      "sha256": "8aeaf70599363b5e91070fc9124111b9424ca79b6d031322a9d8ec536569239c"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/review.json",
+      "sha256": "0df6bbe9f380d5c34770e715d200e7755ceefb413f272499031979b702de0971"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/02.snapshot.json",
+      "sha256": "0901c1eafe4de9b19b150f96e557ab1cbf0ec9729744c9924d3e0c6899686794"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/route.json",
+      "sha256": "5e05942315f6cb83cfb26a494a3c625494dbb393872706cf4fc1a2a8b81c8f74"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/quotes.json",
+      "sha256": "e563a1fa7afafed752e057a8f9a546f059e923181f417bb122281dfab88de515"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/provenance.json",
+      "sha256": "07124b370091b7c5b5159bf9e75cf9c7494d2954cbeafc0b622f608cebfe2a6e"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/README.md",
+      "sha256": "5f2901d67f7d694f7bb93557ffc9eff563ca0f2180de08f563957e57ef088cfb"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/validation.json",
+      "sha256": "5fdfd0f94955cb6eb17334159bcbd60d1228d57262e61d6ba2002e27b41a3c79"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/capture.json",
+      "sha256": "326c2d4409ce703ea59a2dae2fc56157a887bd83e7f4d1c8582c83d1bd6a5f20"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/independent-recheck.json",
+      "sha256": "856647d85b733bfa0198f7e6512a20b14a416e425f940f8d524fed2c5e34c1b0"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/source-bundle.json",
+      "sha256": "7243e688cbc173b5bf52b36e4290346c952acc78c2f00e7a4785cd5e3782cf15"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/independent-recheck.md",
+      "sha256": "a30ccdef78c74f95bdd33cbb3c753c368051d2a8b326fd787d2a1697be4cf88b"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/images/page-8.png",
+      "sha256": "4970438a2591260df14f18732c8daec14179bfcac9c53a196e0411cee1a4934b"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/images/page-4.png",
+      "sha256": "dc5aa5440d8959150a6d33156d0ea9b82a067c46736938b52c47240986027add"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/images/page-11.png",
+      "sha256": "7d6a075f87cb151e6bceea8bea7ceffaf7e4372b1a8919c4620d7a3226303884"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/images/page-7.png",
+      "sha256": "94f59cf9bf080d0daca9135584bb290a728fd19f2dc394ac15d1b67d6a67f01b"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/images/page-1.png",
+      "sha256": "c2835fe96465a4e9229425ed6549f7455c380982acb3bf673e091a6003774afc"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/text/02.txt",
+      "sha256": "861065412a3063fb067f361a4d7ab25f574cdd58cd236c9c0c0f48f11168000a"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/text/01.txt",
+      "sha256": "bbcea0f58b71958989d351d7cf2da32c71acea9c61fe8a94204b3d6e827f4e28"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/raw/6553d51e7ddfca6495a17c70d8bd3718382d03c7871bf519e8a0f08bb7037abc",
+      "sha256": "6553d51e7ddfca6495a17c70d8bd3718382d03c7871bf519e8a0f08bb7037abc"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/raw/bbcea0f58b71958989d351d7cf2da32c71acea9c61fe8a94204b3d6e827f4e28",
+      "sha256": "bbcea0f58b71958989d351d7cf2da32c71acea9c61fe8a94204b3d6e827f4e28"
+    }
+  ],
+  "unchanged_boundaries": {
+    "source_id": "case-public:cc1056ccbd3204206ab15aceab33c1b05c85f4dace3f235e12f454bd7169b328",
+    "source_snapshot_SHA256": "b48276389faeaa754fcdf84b8e7f4296303619c97dab947ef7fa96ad3cec63c9",
+    "EPS_raw_tokens": [
+      "308.31",
+      "339.81",
+      "369.46"
+    ],
+    "financial_inputs_verified": false,
+    "model_adopted": false,
+    "original_EPS_split_dilution_fiscal_accounting_scope_unresolved": true,
+    "old_finding_not_rewritten_or_removed": true
+  },
+  "review_scope": {
+    "previous_p4_p8_image_meaning_reused": true,
+    "new_images_or_PDF_semantic_reads": 0,
+    "new_rendering": 0,
+    "new_raw_capture_or_full_source_reaudit": 0
+  },
+  "execution": {
+    "GETs": 0,
+    "DB_accesses": 0,
+    "code_or_tests_changes": 0,
+    "old_file_edits": 0,
+    "index_or_monitor_changes": 0,
+    "new_financial_normalization_or_adoption": 0,
+    "IR_drafts_registration_sends_orders": 0
+  },
+  "markdown_artifact": {
+    "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/addendum-unit-label-correction.md",
+    "sha256": "8034a080a6ce8046ca1be8f79acaf8b621c3a3ca9139bd407388c37ad2428321"
+  }
+}

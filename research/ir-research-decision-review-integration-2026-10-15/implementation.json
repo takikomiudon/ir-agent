@@ -1,0 +1,119 @@
+{
+  "RecordAvailability_entity_types_modified": false,
+  "actual_operating_DB_access": 0,
+  "actual_operating_DB_writes": 0,
+  "before_full_bytes_verified": true,
+  "changed_files": {
+    "docs/research-decision-reviews.md": {
+      "bytes": 7789,
+      "sha256": "2c824a3af275f28613d2e42fd50b336d25e7f071570cbfc05d2062d7f72971ed"
+    },
+    "src/ir_agent/cli.py": {
+      "bytes": 26938,
+      "sha256": "149e43c4a0a645127f1180fca0567fcf29d06b4e0ea4dad96006e4820ddcc37f"
+    },
+    "src/ir_agent/decision.py": {
+      "bytes": 24403,
+      "sha256": "a37bbc586c0aa7c00a924ecc54db7e7132417fa89e350915b9fe2215646b064b"
+    },
+    "src/ir_agent/harness.py": {
+      "bytes": 42027,
+      "sha256": "159207b515b2aad5cf1cbe2ec98acee369247ce6d91524e1b47a7a862d6dcb99"
+    },
+    "src/ir_agent/research_decisions.py": {
+      "bytes": 22506,
+      "sha256": "21acc2364aef6313bed9ea5384d5db68489055483b0c6ec2fd25631cd2bacf16"
+    },
+    "src/ir_agent/store.py": {
+      "bytes": 27583,
+      "sha256": "00a88a2a3378a4d38fd754ff1c1425272638033280949da49f223940ef9efef5"
+    },
+    "tests/test_research_decisions.py": {
+      "bytes": 27427,
+      "sha256": "7776c21612a836e49476a05a6541bf11161bd6ddb6d9ecf1ebe16fb97d0c8337"
+    }
+  },
+  "contract": [
+    "research-decision-review add/show and Harness.review_research_decision; envelope record/first_saved_at/added/current_view",
+    "Current writer runtime only; no caller time/held/action/raw input overrides",
+    "Same logical ID/request returns original before latest CAS; changed request rejects",
+    "Strict current/raw latest version and full source/quote DAG with receipts/publicity/synthetic/structural binding checks",
+    "Independent research_decision_reviews table; fixed policy snapshots and source/reply/question/position bindings",
+    "Current quote/thesis receipt/management deadline/information version/position holds without upgrading historical results",
+    "public_only is mechanical complete saved no-IR lineage with metadata/availability checks, not external issuer authenticity or financial certification"
+  ],
+  "decision_py_change_scope": "Two narrow shared quote-source/field binding helpers; old pure order/default behavior retained, new wrapper validates supplied partial bindings before unrelated policy/position gates.",
+  "design_file": "research/ir-public-decision-review-design-2026-10-15/design.json",
+  "design_sha256": "bf26470201669c608d18ad203a39636fde0bf16e5e5d9d457fdf2c4b7f133c23",
+  "development_corrections": [
+    "Extracted quote field helper initially referred to outer observed variable; corrected and all old decision regressions passed.",
+    "Source snapshot schema validation now preserves original raw snapshot rather than incorporating validation defaults into receipt bindings.",
+    "Synthetic fixtures normalize direct SQL position timestamps to stored UTC format and assert equivalent normalized runtime timestamp.",
+    "Raw reply initial classification is retained separately; no-assessment fallback uses immutable applied IR source classification, preserving existing unclear-receive/public-apply path."
+  ],
+  "external_sends_orders": 0,
+  "final_focused_verification_completed_at": "2026-10-15T21:00:22.470968+00:00",
+  "financial_models_or_threshold_defaults_modified": false,
+  "focused_old_regressions_rechecked_after_final_partial_binding_helper_change": true,
+  "focused_runs": [
+    {
+      "log": "research/ir-research-decision-review-integration-2026-10-15/focused-tests.log",
+      "pattern": "test_research_decisions.py",
+      "sha256": "229b160dca5c7509396f6be3e88c5480f0bc22def26cde1d1fbcdfc8429b7ef1",
+      "status": "pass",
+      "test_count": 29
+    },
+    {
+      "log": "research/ir-research-decision-review-integration-2026-10-15/regression-0.log",
+      "pattern": "test_decision.py",
+      "sha256": "5e5b9c19bb7138d966f26f74a4b7563f473dfbfcf01c77d6b3290d1a61f8d420",
+      "status": "pass",
+      "test_count": 24
+    },
+    {
+      "log": "research/ir-research-decision-review-integration-2026-10-15/regression-1.log",
+      "pattern": "test_*quote*.py",
+      "sha256": "27cca92a4f1b63f9e282f89cc4481885713037cd657531f6f5de63fdf60879b2",
+      "status": "pass",
+      "test_count": 21
+    },
+    {
+      "log": "research/ir-research-decision-review-integration-2026-10-15/regression-2.log",
+      "pattern": "test_*thesis*.py",
+      "sha256": "eb0fcdf201ef011f06c478532159095fca0f2093b7e484b4bc715f7943f2fdce",
+      "status": "pass",
+      "test_count": 8
+    },
+    {
+      "log": "research/ir-research-decision-review-integration-2026-10-15/regression-3.log",
+      "pattern": "test_decision_lifecycle.py",
+      "sha256": "4bd1ce1239ab6058038bc5a6dce484a6fdd3bb662fbc758b72fbc9e00c885f1d",
+      "status": "pass",
+      "test_count": 17
+    },
+    {
+      "log": "research/ir-research-decision-review-integration-2026-10-15/regression-4.log",
+      "pattern": "test_policy_cli.py",
+      "sha256": "6deb8a88bf735965a53f6325ea374c6f7cbc97f1763c61ab39aa00896d2ba3b2",
+      "status": "pass",
+      "test_count": 8
+    }
+  ],
+  "full_suite_run_by_producer": false,
+  "independent_review_completed": false,
+  "limitations": [
+    "No live data, source authenticity, issuer identity, financial meaning, assessment truth or broker position verification.",
+    "No past-time writer, current policy auto-migration, baseline/question linkage, scheduler, quote fetch, IR send or order.",
+    "First-save clock is engine/runtime evidence, not independently certified commit chronology.",
+    "Focused tests are functional contract checks, not strategy performance or source coverage validation."
+  ],
+  "network_requests": 0,
+  "old_reply_schema_or_JSON_modified": false,
+  "real_investment_case_or_policy_adoption": 0,
+  "recorded_at": "2026-10-15T21:00:00.398402+00:00",
+  "related_old_regressions": 78,
+  "root_owned_demo_not_run_by_producer": true,
+  "status": "implementation_focused_verified_pending_independent_review_and_parent_full_suite",
+  "tests_only_synthetic_memory_or_temp_DB": true,
+  "unique_new_tests": 29
+}

@@ -1,0 +1,88 @@
+{
+  "status": "prepared_file_only_not_shadow_or_actual_executed",
+  "recorded_at": "2026-10-16T03:52:27.414663+00:00",
+  "source_count": 6,
+  "company_id": "jp:1963",
+  "classification_kinds": [
+    "business_description",
+    "index_only",
+    "financial_statement",
+    "earnings_presentation",
+    "qa",
+    "other"
+  ],
+  "financial_content": [
+    false,
+    false,
+    true,
+    true,
+    true,
+    true
+  ],
+  "all_source_whole_objects_equal_accepted_inputs": true,
+  "normalization_original_equal_initial_source": true,
+  "preferred_derived_ID": "disclosed-facts:e691939950fbeb9823ff565d34da55861f18a761249cb755efd3855193bfa91e",
+  "source_duplicates": 0,
+  "all_six_quote_unicode_UTF8_and_native_hash_checks": true,
+  "classification_enum_basis": "Current Intake.KINDS and docs/workflow.md. earnings_presentation is allowed; financial_presentation is not the enum.",
+  "source_original_retrieval_publication_and_metadata_unchanged": true,
+  "reproduction_status": "reproduced",
+  "old_input_pin_count": 90,
+  "old_input_pins_unchanged": true,
+  "runner_sha256": "2aea8dda730b31620a2323d1b6e88ab9faf62f6b40714671bb654bb8d88f7808",
+  "runner_AST_parse_only": true,
+  "runner_import_or_execution": false,
+  "shadow_executions": 0,
+  "actual_executions": 0,
+  "prepared_code_manifest_sha256": "36163a600056264d49016c26291fd954ac06e115f2bd168134016b6b6bc9c739",
+  "prepared_code_file_count": 43,
+  "current_code_same_as_prepared_snapshot": false,
+  "current_code_changes_since_preparation": {
+    "src/ir_agent/decision.py": {
+      "prepared": "a37bbc586c0aa7c00a924ecc54db7e7132417fa89e350915b9fe2215646b064b",
+      "current": "5243aa9c51d42d1abc9a2cd95cc65d8b9671be1625a30d8cdeaddfdade026614"
+    },
+    "src/ir_agent/decision_lifecycle.py": {
+      "prepared": "2fc7753f8c09a0c055a7340ffc8d53954e6f175c144231c1f306aa62cc110731",
+      "current": "aae37c53b5df34a4ef13bdf49c191d3211cfba605fb0a78d19efb58109ae61be"
+    },
+    "src/ir_agent/harness.py": {
+      "prepared": "a1adc6dd29df103497498b159cacd555dc230d48f873051429ae55e979e6fae8",
+      "current": "23e145a1487fe2a529f64e842a1468b23131d61a260c6746147cbe42ccd25d3e"
+    },
+    "src/ir_agent/models.py": {
+      "prepared": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c",
+      "current": "e0d0444fda0e730de6c6e9beaa110bbd796de00f3228c041daa016284a8e234e"
+    },
+    "src/ir_agent/public_information_review.py": {
+      "prepared": null,
+      "current": "62d60a34c116ed523de25e09a6e2c59232675e283a19f17bb275f30546ec2255"
+    }
+  },
+  "execution_code_acceptance": "Parent must review current code and explicitly pass a same-path-set current source-code SHA mapping and file SHA at root execution. Prepared code pins are historical and are not rewritten automatically. Actual requires successful shadow with the same runner/data/execution-code hashes.",
+  "actual_DB_SHA_unchanged": true,
+  "expected_only_future_table_deltas": {
+    "sources": 6,
+    "record_availability": 6,
+    "source_classifications": 6,
+    "jobs": 1,
+    "job_attempts": 1,
+    "job_attempt_events": 2,
+    "job_request_receipts": 1
+  },
+  "expected_future_case_table_delta": 0,
+  "expected_future_case_state_unchanged": {
+    "heads": 20,
+    "versions": 41,
+    "reviewed": 119
+  },
+  "all_other_old_rows_must_remain_exact_in_future_runner": true,
+  "full_pipeline_not_one_transaction": true,
+  "source_reception_scope_or_numeric_financial_adoption": false,
+  "new_normalized_fact_generation": 0,
+  "GETs": 0,
+  "DB_writes": 0,
+  "production_or_shared_doc_edits": 0,
+  "stop_pending_parent_review": true,
+  "actual_precondition_root_receipt": "parent-input-acceptance.json (post-execution parent-acceptance.json is separate and must not be overwritten)"
+}

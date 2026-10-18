@@ -1,0 +1,115 @@
+{
+  "security_code": "3003",
+  "company_name": "ヒューリック",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "不動産業",
+  "investigation_status": "confirmed",
+  "verification_level": "form_fields_verified",
+  "official_url": "https://www.hulic.co.jp/",
+  "contact_url": "https://www.hulic.co.jp/ir/inquiry/entry",
+  "channels": [
+    "form"
+  ],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "candidate",
+  "attempted_at": "2026-10-11T06:28:32.162513+00:00",
+  "completed_at": "2026-10-11T06:28:46.535127+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/3003/20261011T062832162549Z/01.json",
+      "url": "https://www.hulic.co.jp/",
+      "retrieved_at": "2026-10-11T06:28:38.606831+00:00",
+      "quote": "ヒューリック株式会社",
+      "role": "issuer_identity"
+    },
+    {
+      "snapshot": "evidence/3003/20261011T062832162549Z/02.json",
+      "url": "https://www.hulic.co.jp/ir/inquiry/entry",
+      "retrieved_at": "2026-10-11T06:28:43.596446+00:00",
+      "quote": "IRお問い合わせ PRINT 内容入力 内容確認 送信完了 メールでのお問い合わせ お問い合わせ内容の入力",
+      "role": "contact_scope"
+    },
+    {
+      "snapshot": "evidence/3003/20261011T062832162549Z/02.json",
+      "url": "https://www.hulic.co.jp/ir/inquiry/entry",
+      "retrieved_at": "2026-10-11T06:28:43.596446+00:00",
+      "quote": "すべてのお問い合わせ 名前 姓 名 メールアドレス 必須 （半角英数字） メールアドレス（確認用） 必須 （半角英数字） 社名 住所 電話番号 （半角数字） 性別 年齢 お問い合わせの種類 必須 お問い合わせ内容 必須",
+      "role": "contact_controls"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.hulic.co.jp/",
+      "final_url": "https://www.hulic.co.jp/",
+      "snapshot": "evidence/3003/20261011T062832162549Z/01.json",
+      "retrieved_at": "2026-10-11T06:28:38.606831+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.hulic.co.jp/ir/inquiry/entry",
+      "final_url": "https://www.hulic.co.jp/ir/inquiry/entry",
+      "snapshot": "evidence/3003/20261011T062832162549Z/02.json",
+      "retrieved_at": "2026-10-11T06:28:43.596446+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "公開窓口の用途・同一フォーム欄又は公開IRメールまで確認。認証・入力・送信・回答実績は未検証。",
+    "個人投資家の利用条件は明示されていない。"
+  ],
+  "discovery": {
+    "security_code": "3003",
+    "official_url": "https://www.hulic.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ヒューリック",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/3003/20261011T062832162549Z/01.json",
+      "normalized_name": "ヒューリック",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/3003/20261011T062832162549Z/02.json",
+      "normalized_name": "ヒューリック",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 2,
+  "http_get_attempt_count": 3,
+  "previous_attempts": [
+    "attempts/3003/20261011T045047368731Z.json",
+    "attempts/3003/20261011T062846535493Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "ir_operations_adaptive3",
+    "reviewed_at": "2026-10-11T06:39:17.998303+00:00",
+    "notes": "ヒューリック公式のIRお問い合わせ専用ページの同一フォームでmail/mail_conf入力とbody textareaを確認。社名欄に必須表示はないが、個人受付の明示とはしない。全てのお問い合わせの選択と名前・メール・質問本文を確認し、電話案内をメール宛先にはしない。",
+    "GET_count": 0,
+    "external_submission_count": 0,
+    "form_control_review": {
+      "snapshot": "evidence/3003/20261011T062832162549Z/02.json",
+      "source_sha256": "f0a1f783f005bce5ca699b4bbf099fe1631a832a9ba4dafe51bf527da22d37db",
+      "form_index": 2,
+      "form_action": "https://www.hulic.co.jp/ir/inquiry/confirm",
+      "form_method": "post",
+      "same_form_reply_and_question_verified": true,
+      "reply_and_question_control_names": [
+        "mail",
+        "mail_conf",
+        "body"
+      ],
+      "actual_controls_count": 13,
+      "IR_scope_verified": true
+    }
+  }
+}

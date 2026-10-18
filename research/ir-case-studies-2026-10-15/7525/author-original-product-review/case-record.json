@@ -1,0 +1,391 @@
+{
+  "recorded_at": "2026-10-15T09:46:27.858429+00:00",
+  "company_id": "jp:7525",
+  "status": "one_existing_author_monitoring_issue_only",
+  "claim": {
+    "id": "7525-author-watch-original-product-ratio",
+    "previous_issue_reference": {
+      "file": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/review.json",
+      "jsonpath": "$.operating_author_monitoring_candidates",
+      "source_quote_file": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/quotes.json",
+      "source_quote_id": "author-monitor-original-product-plateau",
+      "note": "Stable ID for the same existing operating-monitoring topic, not another investment thesis."
+    },
+    "author_organization": "QUICK企業価値研究所",
+    "individual_authors": [
+      "佐久間聰",
+      "中村宏司"
+    ],
+    "report_publication_date": "2026-10-02",
+    "exact_publication_time": null,
+    "body_first_GET_completed_at": "2026-10-15T09:22:11.560623+00:00",
+    "source_id": "case-public:b87e707ca4bec9077ffecb14be83767b1b4311e45b1d25d26a051c7e59a06656",
+    "author_monitoring_statement": "他のKPIに比べオリジナル品比率が伸び悩む様子を注視したい。",
+    "attribution_split": {
+      "issuer_intent": "Higher comparatively profitable original-product mix is intended to improve operating margin and ROE.",
+      "lag_description": "同社によればと会社へ帰属させた伸び悩みの説明。",
+      "author_action": "動向を注視したいという定性注視。"
+    },
+    "continuous_quote_id": "author-watch-ratio-plateau",
+    "current_judgment": "unresolved",
+    "author_rules": {
+      "falsification_period": null,
+      "minimum_progress": null,
+      "ratio_tolerance_or_allowable_stagnation": null,
+      "valuation_multiple": null,
+      "target_price": null,
+      "exit_price_or_condition": null,
+      "probability": null,
+      "buy_sell_rule": null
+    }
+  },
+  "definition_review": [
+    {
+      "item": "ratio_concept",
+      "resolved": "売上高構成比/売上高に占める比率と説明。利益寄与率・営業利益率・ROEではない。",
+      "quote_ids": [
+        "p6-original-categories-and-sales-ratio",
+        "p44-original-definition-and-longterm-goal"
+      ],
+      "unresolved": "売上計上基準、分母の対象範囲、総額/純額等の技術的定義。"
+    },
+    {
+      "item": "own_manufacturing",
+      "resolved": "自社工場で作る自社製品が構成要素と説明。福岡と海外の製造拠点の説明もある。",
+      "quote_ids": [
+        "p6-original-categories-and-sales-ratio",
+        "p10-manufacturing-geography"
+      ],
+      "unresolved": "外注/OEM/共同開発等がこの区分へ入る条件。製造地がそのままKPI算入範囲を定めるとはしない。"
+    },
+    {
+      "item": "group_company_manufacturing",
+      "resolved": "グループ会社が作る製品を含む。例にはバルブ、ベアリング再生/修理等が挙がる。",
+      "quote_ids": [
+        "p6-original-categories-and-sales-ratio",
+        "p6-group-bearings-renewal-repair-example"
+      ],
+      "unresolved": "全子会社直販が含まれるか、親会社経由販売に限るか、連結内部取引の消去。"
+    },
+    {
+      "item": "exclusive_bought_trading_products",
+      "resolved": "独占販売権を持つ専売仕入品を含み、自社製造品だけではない。海外製インバーター/ダンフォス例がある。",
+      "quote_ids": [
+        "p6-original-categories-and-sales-ratio",
+        "p7-exclusive-bought-danfoss-example"
+      ],
+      "unresolved": "p44は国内パートナー製造と記す。地域/独占権/認定要件が例示なのか、集計上の限定なのかは未確定。"
+    },
+    {
+      "item": "brand_PB_and_general_goods",
+      "resolved": "p32会社計画図中に自社製品・ブランド商品・PB商品という表現と一般商品区分が見える。",
+      "quote_ids": [
+        "p32-visual-category-names",
+        "p32-chart-caption-scope"
+      ],
+      "unresolved": "文章中の自社/グループ/専売仕入品との一対一対応。一般の商社商材を全て外すという独自ルールは作らない。"
+    },
+    {
+      "item": "OEM",
+      "resolved": null,
+      "quote_ids": [],
+      "unresolved": "NFKC検索でOEM/受託/相手先/委託製造に対応する定義文を同定できず。OEMの不存在や全除外の証明ではない。"
+    },
+    {
+      "item": "service_repair_regeneration",
+      "resolved": "グループ製品の例にはベアリング再生/修理が含まれる。",
+      "quote_ids": [
+        "p6-group-bearings-renewal-repair-example"
+      ],
+      "unresolved": "全サービス/メンテナンス/修理売上を算入する規則や、製品との複合契約の区分は確認できない。"
+    },
+    {
+      "item": "consolidated_vs_standalone",
+      "resolved": "長期計画の連結売上高700億円の文脈で売上高全体55%以上と記載。",
+      "quote_ids": [
+        "p31-LV2030-consolidated-plan-context",
+        "p32-chart-caption-scope"
+      ],
+      "unresolved": "29.3%実績の連結/単体、目標と実績の算入境界、内部消去、グループ直販の扱いを明示した算定定義は未確認。グループ製品という語だけで連結と認証しない。"
+    }
+  ],
+  "observations_company_goals_and_author_tolerance": {
+    "historical_and_approximate_observations": [
+      {
+        "value": "29.3%",
+        "kind": "issuer_result_republished",
+        "labels_as_printed": [
+          "25年度実績(p6)",
+          "26/3期実績(p31/p34)"
+        ],
+        "measurement_end_date_exact": null,
+        "ratio_formula_scope_verified": false,
+        "quote_ids": [
+          "p6-original-categories-and-sales-ratio",
+          "p31-LV2030-consolidated-plan-context",
+          "p34-company-intermediate-plan-ratio40"
+        ]
+      },
+      {
+        "value": "30%程度",
+        "kind": "approximate_at_foot_in_report",
+        "period_label": "足元",
+        "exact_measurement_period": null,
+        "quote_ids": [
+          "p44-original-definition-and-longterm-goal"
+        ]
+      }
+    ],
+    "issuer_midterm_goal": {
+      "value": "40%以上",
+      "period_label": "27/3期",
+      "goal_type": "会社GP2026中計のKPI目標",
+      "quote_ids": [
+        "p34-company-intermediate-plan-ratio40"
+      ],
+      "author_minimum_progress": false
+    },
+    "issuer_longterm_goal": {
+      "value": "55%以上",
+      "period_label": "31/3期（p6:30年度）",
+      "goal_type": "会社LV2030長期目標",
+      "quote_ids": [
+        "p31-LV2030-consolidated-plan-context",
+        "p32-chart-caption-scope"
+      ],
+      "p44_shorthand": "55%へ引き上げる会社の長期目標",
+      "author_forecast_or_exit_threshold": false
+    },
+    "do_not_infer": [
+      "29.3%から足元約30%への0.7ポイント進捗を作らない。測定期・精度が同一と確認していない。",
+      "40%以上と55%以上を同じ期の目標や著者の反証閾値へ合成しない。",
+      "2031目標を利用者の数カ月〜1年で達成すべき条件にしない。",
+      "目標までの年次/四半期最低進捗を線形補間しない。"
+    ]
+  },
+  "research_monitoring_adaptation": {
+    "purpose": "Make relevant public observations and unresolved definitions explicit; not a QUICK-authored rule or numerical investment thesis.",
+    "intermediate_observations": [
+      "算定範囲/分類/期間/再分類を揃えた、オリジナル品売上と総売上の各公表値（入手できる場合）および比率。",
+      "開発・販売開始・採用等の活動/商業化の説明が公開された場合は段階を区別し、比率や利益達成と同一視しない。",
+      "製品/顧客業種mixや設備投資環境の公開説明。p46の景気リスクは解釈の文脈であり、新しい別投資論点へ増やさない。"
+    ],
+    "ultimate_business_results": [
+      "同じ会計/連結/期間で実現した営業利益率/ROE等。比率は途中KPIで、財務成果そのものではない。"
+    ],
+    "comparison_prerequisites": [
+      "比率だけの変化からオリジナル品の絶対売上増加を断定しない。分母の変化も別に確認する。",
+      "比率のポイント変化と売上高成長率を同じ単位の進捗差として直接引かない。",
+      "p45の注視を単一四半期の機械的支持/反証へ変えない。"
+    ],
+    "numerator_denominator_values_reconstructed": false,
+    "linear_ratio_to_profit_or_EPS_conversion": false,
+    "new_margin_sensitivity_or_valuation_formula": null
+  },
+  "publicly_resolved_no_need_to_ask": [
+    "オリジナル品は自社製造だけか：グループ製品・専売仕入品も含むとの公開説明がある。",
+    "比率は利益寄与率か：売上高構成比と明示されている。",
+    "会社の目標は何か：長期31/3期55%以上と中計27/3期40%以上を別目標として本文に確認できる。",
+    "著者は何を注視するか：比率の伸び悩みを注視する定性文がある。数値許容幅は記されていない。"
+  ],
+  "next_public_confirmation": [
+    {
+      "topic": "レポートが出所とする会社ホームページのLV2030/GP2026、26/3期決算説明会資料等でKPI算定範囲・版・精度・過去との定義変更を確認。",
+      "new_documents_obtained": false
+    },
+    {
+      "topic": "同じ算定定義・期間の最新比率/絶対売上/分類別売上が公表されている場合に、足元約30%と29.3%を混同せず照合。",
+      "new_documents_obtained": false
+    },
+    {
+      "topic": "比率と利益/ROEを結ぶ前に、分類別利益率や費用/税等の必要根拠が公開で揃うかを確認。未公表値を推測しない。",
+      "new_documents_obtained": false
+    }
+  ],
+  "possible_company_IR_definition_topics": {
+    "only_after_public_check": "会社が定める集計方法が公開資料でも不明な場合のみの論点。IR本文や登録ではない。",
+    "topics": [
+      "連結/単体、外部売上/グループ経由販売、内部取引消去、分母の売上計上範囲。",
+      "自社/グループ製品/専売仕入品と、図中のブランド/PB商品との分類対応。",
+      "専売仕入品の地域・独占販売権・認定要件、OEM/外注/共同開発の算入基準。",
+      "修理/再生/保守サービスや複合契約の算入区分、過年度比較の再分類。",
+      "29.3%等の測定期・表示精度と目標/実績の定義の同一性。"
+    ],
+    "drafts": 0,
+    "registrations": 0
+  },
+  "author_or_investor_only_not_company_guarantees": [
+    "著者が何期/何ポイントの停滞まで許容するか、何を反証とするか。",
+    "55%目標未達を売却・40%超を購入とするような投資家の判断。",
+    "公正倍率/価格、EPS増分、将来利益や目標達成の保証、著者の評価意図。"
+  ],
+  "timing": {
+    "routine_management_date": null,
+    "new_publication_date": null,
+    "verification_deadline": null,
+    "note": "Parent will record management timing separately; no new company announcement or monitoring date assigned."
+  },
+  "provenance": {
+    "source_bundle": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/source-bundle.json",
+    "source_bundle_sha256": "f2feb89d3464ea4c9167764d2dac2a0ad6853b97efc7576fd572ffdc33719e13",
+    "source_id": "case-public:b87e707ca4bec9077ffecb14be83767b1b4311e45b1d25d26a051c7e59a06656",
+    "report_date": "2026-10-02",
+    "authors_from_existing_record": [
+      "佐久間聰",
+      "中村宏司"
+    ],
+    "publisher": "QUICK企業価値研究所",
+    "sponsored_report": true,
+    "economic_independence_verified": false,
+    "raw_file": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/raw/301a29465db9ba9b7d62e9c285ded59540e65a6dedb07d4c885db295e74764b8",
+    "raw_sha256": "301a29465db9ba9b7d62e9c285ded59540e65a6dedb07d4c885db295e74764b8",
+    "text_file": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/report.pdf.txt",
+    "text_sha256": "e548061378e9a4879a3031d0214d92178e25a8029b7a4baa08c1e56d569cd6c1",
+    "capture_file": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/capture.json",
+    "capture_sha256": "2f129a6b161e7ecec48f2b7d0ca504861a3bbab1b5475d86ec3bd2ca5151711f",
+    "old_input_hashes": {
+      "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/source-bundle.json": "f2feb89d3464ea4c9167764d2dac2a0ad6853b97efc7576fd572ffdc33719e13",
+      "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/quotes.json": "82e8b8b987e75a50aafe2e2cda64e88cbb7304e5898a264e1a2c8c0d4a4bc962",
+      "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/review.json": "d30a9d72c0f59dc7ec22b4c3d026c02c007cdd8fa05dc9799685184999fa68c2",
+      "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/validation.json": "86c43e3fc4da188ce4f2eba0773c9736bbdc6281fd229bc7663023b3157fe00d",
+      "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/capture.json": "2f129a6b161e7ecec48f2b7d0ca504861a3bbab1b5475d86ec3bd2ca5151711f",
+      "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/report.pdf.txt": "e548061378e9a4879a3031d0214d92178e25a8029b7a4baa08c1e56d569cd6c1",
+      "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/raw/301a29465db9ba9b7d62e9c285ded59540e65a6dedb07d4c885db295e74764b8": "301a29465db9ba9b7d62e9c285ded59540e65a6dedb07d4c885db295e74764b8"
+    },
+    "original_report_issue_file": "research/ir-case-studies-2026-10-15/7525/pdf-size-followup/review.json",
+    "original_report_issue_jsonpath": "$.operating_author_monitoring_candidates"
+  },
+  "reading_scope": {
+    "core_text_pages": [
+      44,
+      45,
+      46
+    ],
+    "additional_definition_or_scope_pages_read": [
+      6,
+      7,
+      10,
+      31,
+      32,
+      34
+    ],
+    "PDF_images_viewed": [
+      6,
+      31,
+      32,
+      34
+    ],
+    "whole_saved_text_keyword_location_search": {
+      "オリジナル": {
+        "pages": [
+          1,
+          6,
+          7,
+          14,
+          27,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          44,
+          45,
+          47,
+          48,
+          50,
+          61,
+          66,
+          69
+        ],
+        "method": "NFKC casefold keyword-location search only; quoted evidence uses original non-normalized text."
+      },
+      "専売": {
+        "pages": [
+          6,
+          7,
+          10,
+          44
+        ],
+        "method": "NFKC casefold keyword-location search only; quoted evidence uses original non-normalized text."
+      },
+      "OEM": {
+        "pages": [],
+        "method": "NFKC casefold keyword-location search only; quoted evidence uses original non-normalized text."
+      },
+      "受託": {
+        "pages": [],
+        "method": "NFKC casefold keyword-location search only; quoted evidence uses original non-normalized text."
+      },
+      "相手先": {
+        "pages": [],
+        "method": "NFKC casefold keyword-location search only; quoted evidence uses original non-normalized text."
+      },
+      "委託製造": {
+        "pages": [],
+        "method": "NFKC casefold keyword-location search only; quoted evidence uses original non-normalized text."
+      },
+      "単体": {
+        "pages": [
+          78,
+          81
+        ],
+        "method": "NFKC casefold keyword-location search only; quoted evidence uses original non-normalized text."
+      },
+      "連結売上": {
+        "pages": [
+          20,
+          30,
+          31,
+          32,
+          34,
+          47
+        ],
+        "method": "NFKC casefold keyword-location search only; quoted evidence uses original non-normalized text."
+      },
+      "サービス": {
+        "pages": [
+          2,
+          4,
+          5,
+          13,
+          16,
+          18,
+          30,
+          31,
+          32,
+          33,
+          35,
+          39,
+          42,
+          76,
+          77,
+          78,
+          92
+        ],
+        "method": "NFKC casefold keyword-location search only; quoted evidence uses original non-normalized text."
+      }
+    },
+    "not_full_report_reading": true,
+    "no_new_appendix_or_external_source": true,
+    "visual_text_not_in_pdftotext": {
+      "page": 32,
+      "recorded_in_quote": "p32-visual-category-names",
+      "machine_text_offsets": null
+    }
+  },
+  "boundaries": {
+    "new_GETs": 0,
+    "DB_access": 0,
+    "code_changes": 0,
+    "old_file_changes": 0,
+    "new_IR_drafts": 0,
+    "IR_registrations": 0,
+    "IR_sends": 0,
+    "orders": 0,
+    "financial_model_adopted": false,
+    "forecast_or_probability_created": false,
+    "financial_input_meaning_verified": false,
+    "current_author_claim_supported_or_refuted": false
+  }
+}

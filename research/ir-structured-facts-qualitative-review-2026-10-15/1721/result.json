@@ -1,0 +1,25 @@
+{
+  "summary": "取得済み会社HTMLの2026年3月期実績と2027年3月期計画12値を構造化した新保存を読んだ。受注・売上・各利益概念と実績/計画の列を分けて比較できるが、SRの6つの構造的な強み/弱みの判断や、純利益37,800百万円対37,860百万円の表示差の原因は引き続き未解決。新しい短信・新期実績の取得ではない。",
+  "recorded_at": "2026-10-15T22:51:28.338463+00:00",
+  "source_reviews": [
+    {
+      "source_id": "disclosed-facts:cb587f9b7360d133abce4fd9813667b7fe691011c630f8f2788eb0c68a391200",
+      "snapshot_sha256": "185b09cf267b740563696fd36b20b043562bcb283f6ec63fbee4dc93819095e4",
+      "read_state": "reviewed",
+      "outcome": "unchanged",
+      "basis_quote": "\"concept\":\"profit_attributable_to_owners_of_parent\",\"definition\":\"会社予想HTMLの連結業績表の親会社株主に帰属する当期純利益。2027年3月期（計画）列。表示単位の換算であり、表示丸め前の正確な金額は不明。\",\"financial_inputs_verified\":false,\"id\":\"1721-profit_attributable_to_owners_of_parent-2027-03-issuer_guidance\",\"kind\":\"issuer_guidance\",\"location\":{\"column\":\"2027年3月期（計画）\",\"end\":1195,\"kind\":\"HTML_visible_text\",\"row\":\"親会社株主に帰属する当期純利益\",\"start\":1035},\"meaning_review_required\":true,\"normalization\":{\"canonical_unit\":\"JPY\",\"exact_quote_and_label_presence_verified\":true,\"explicit_unit_multiplier\":\"100000000\",\"raw_numeric_token_verified\":true,\"status\":\"numeric_token_normalized\"},\"original_source_id\":\"case-public:c40a0892e6a19ffb1e94b85e4d2d26d5a66c4b7021eaf2c50a47d6a69e0363aa\",\"period\":{\"fiscal_year_end_month\":\"2027-03\",\"label\":\"2027年3月期（計画）\"},\"raw_period_label\":\"2027年3月期（計画）\",\"raw_unit_label\":\"億円\",\"raw_value\":\"378\",\"scope\":{\"accounting_standard\":null,\"column\":\"2027年3月期（計画）\",\"company_id\":\"jp:1721\",\"consolidation\":\"consolidated as labeled by issuer\",\"exact_start_end_dates\":null,\"forecast_author\":\"issuer\",\"latest_as_of_retrieval_verified\":false,\"page_last_updated_date\":\"2026-05-12\",\"table\":\"連結業績（計画）\",\"table_column_index_zero_based\":2,\"values_inferred_from_growth_rate\":false},\"unit\":\"JPY\",\"value\":\"37800000000\"",
+      "rationale": "受注高、売上高、売上総利益、営業利益、経常利益、親会社株主帰属利益の6指標について、2026年3月期実績と2027年3月期会社計画を別kind/別列で保持している。億円表示の単位換算で、計画を実績やSR独自予想へ置き換えない。親会社帰属利益の計画378億円=37,800百万円という既存表示は保持され、SRが転載した37,860百万円との差60百万円について表示精度・予想版・転記等の原因は選んでいない。集計利益はSRの高利益率/合理化の検討入口になるが、同業比較・合理化寄与の内訳なしに優位性や実行力を認定できない。IT/DX・国土強靭化・脱炭素への露出、大手通信事業者依存、市場構造/シェア制約、同業比ITの遅れについても、全社の年度比較だけで対象事業・顧客・市場の根拠にはならない。事業区分別表とグループ表を同一視せず、受注を売上/利益へ換算しない。既存の公開済み季節性・通期据置説明を再質問せず、正式原表/同一版/丸め規約の不足を別の将来予想で埋めない。"
+    }
+  ],
+  "case_observation": {
+    "issue_id": "1721-author-condition-case-monitor",
+    "outcome": "unresolved",
+    "rationale": "同じHTML内の年度別実績/会社計画と指標定義を照合する資料が可参照化された。これは新しい実現値ではなく、6つのSR定性見解を確定する同業・顧客・事業/合理化の比較証拠は増えていない。NI表示差の原因、予想版/精度、期首期末・会計基準の未確認を維持する。集計値の増加から構造優位や投資条件を作らず、既存の論点を未解決として保つ。",
+    "evidence_source_ids": [
+      "disclosed-facts:cb587f9b7360d133abce4fd9813667b7fe691011c630f8f2788eb0c68a391200"
+    ]
+  },
+  "management_review_update": {
+    "mode": "retain"
+  }
+}

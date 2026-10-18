@@ -1,0 +1,11 @@
+--- before/docs/workflow.md
++++ docs/workflow.md
+@@ -118,6 +118,8 @@
+ 
+ - eps_multiple：`eps_jpy`（1株JPY）、`pe`。両方正。
+ - graham_number：正の有限な`eps_jpy`、`book_value_per_share_jpy`（どちらも1株JPY）の2入力から固定式`sqrt(22.5 × EPS × BVPS)`を計算する。[原典・入力範囲と参考値の扱い](graham-number-valuation-spec.md)を参照し、実績・予想や普通株持分の意味を別に確認する。
++
++価格をまだ採用していない研究は、[価格なしの参考計算](reference-value-spec.md) `reference-value FILE` を使える。既存6methodの出典付き入力を計算し、価格・比率・売買actionを生成しない。確率が未設定ならunweightedのまま、計算と金融採用を分ける。
+ - dividend_discount：`dividends_per_share_jpy`（空でない年末予想DPS配列）、`cost_of_equity`（予測期）、`terminal_cost_of_equity`（安定期）、`terminal_dividend_per_share_jpy`（明示n+1期DPS）、`terminal_growth_rate`。5入力だけを受け取る。[原典と適用限界](financial-equity-valuation-spec.md)を参照。
+ - dcf：`fcf_jpy`（会社全体の年末のアンレバードFCF予測配列）、`discount_rate`, `terminal_growth_rate`, `cash_jpy`, `debt_jpy`, `shares_outstanding`。金利は0.10=10%、割引率は成長率より大きくする。株式価値が負になるモデルはエラー。
+ - dcf_explicit_terminal：上の6入力に `terminal_fcff_jpy` を加えた**7入力だけ**を受け取る。[原典と時点の仕様](explicit-terminal-fcff-spec.md)に従い、明示したn+1期のFCFFを `(discount_rate − terminal_growth_rate)` で割り、n期分割り引く。分子へ成長率・税・再投資を再適用しない。予測配列は空にせず、金額は会社全体のJPY、割引率は予測期/安定期で同じという限定を残す。負FCFFは保持し、負株主価値のエラーは現行どおり。

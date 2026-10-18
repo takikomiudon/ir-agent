@@ -1,0 +1,380 @@
+{
+  "recorded_at": "2026-10-16T00:42:53.043814+00:00",
+  "company_id": "jp:5988",
+  "legacy_issue_id": "5988-china-oneoff-scope",
+  "native_issue_id": "5988-cost-tax-cashflow-basis",
+  "existing_draft_id": "research-only-china-accounting-bridge",
+  "purpose": "Concrete deletion/retention instructions for next preparation sheet; not a new question draft or a new source hunt",
+  "original_background_was_not_reasked": "R01/R02 were already background premises in the old draft, not questions. Move to known context and prevent repetition; do not claim the old draft had asked them.",
+  "clause_dispositions": [
+    {
+      "id": "R01",
+      "old_json_pointer": "/question",
+      "old_clause": "「一時費用（約6億円）」が営業利益の計画未達の要因として説明されています。",
+      "old_clause_role": "known_background_not_a_question",
+      "disposition": "move_to_known_context",
+      "next_preparation_instruction": "「一時費用と呼ばれるか」「計画でどう説明されたか」を新たに問わない。次回票では既知欄へ移し、残る範囲照合に必要なp15の参照だけ残す。約6億円を正確600百万円へ変換しない。",
+      "evidence_ids": [
+        "E01",
+        "E04"
+      ]
+    },
+    {
+      "id": "R02",
+      "old_json_pointer": "/question",
+      "old_clause": "中国東莞の固定資産減損337百万円が示され、連結損益計算書では減損は特別損失に区分されています。",
+      "old_clause_role": "known_background_not_a_question",
+      "disposition": "move_to_known_context",
+      "next_preparation_instruction": "所在地/減損の種類/特損区分の確認は既答として削除指示。元文は既知前提なので再質問していたとは判定しない。337/423の会計CFO対応も既知欄へ置き、CFOへ再加算する是非を追加質問にしない。",
+      "evidence_ids": [
+        "E02",
+        "E03"
+      ]
+    },
+    {
+      "id": "R03",
+      "old_json_pointer": "/question",
+      "old_clause": "約6億円の集計範囲と連結損益区分の対応",
+      "old_clause_role": "actual_company_definition_request",
+      "disposition": "retain_conditional_on_decision_relevance",
+      "next_preparation_instruction": "既存論点の条件付き残余として維持。公表済みの勘定/対象会社/損益区分の対応があれば参照箇所を確認する対象。全額営業費用との前提や矛盾の断定は置かず、採用入力/判断への影響が未設定の間は質問化・送信を保留。",
+      "evidence_ids": [
+        "E04",
+        "E16",
+        "E13"
+      ]
+    },
+    {
+      "id": "R04",
+      "old_json_pointer": "/question",
+      "old_clause": "337百万円との包含・重複の有無",
+      "old_clause_role": "actual_company_definition_request",
+      "disposition": "retain_in_same_residual_topic",
+      "next_preparation_instruction": "R03と同じ残余論点へまとめて保持し、独立した追加質問へ増やさない。連結減損423とCFOの対応が判明したことを、約6億円への包含判明と取り違えない。",
+      "evidence_ids": [
+        "E04",
+        "E03"
+      ]
+    },
+    {
+      "id": "R05",
+      "old_json_pointer": "/question",
+      "old_clause": "約6億円のFY25表示が、在外子会社の12月決算と連結上の調整を含むどの対象期間を指す説明なのか",
+      "old_clause_role": "actual_company_period_alignment_request",
+      "disposition": "partially_answered_generic_context_retain_specific_bridge",
+      "next_preparation_instruction": "親連結年度の期首/期末、海外9社12/31と重要取引の連結調整方針は既知欄へ移す。その一般説明を再質問しない。約6億円自体の計上対象期/月・子会社期と連結調整の対応だけは未解決なので条件付き残余。子会社期間や金額を自己補完しない。",
+      "evidence_ids": [
+        "E08",
+        "E07",
+        "E06"
+      ]
+    },
+    {
+      "id": "R06",
+      "old_json_pointer": "/question",
+      "old_clause": "既に公表されている範囲または参照可能な資料をご教示",
+      "old_clause_role": "public_information_scope_qualification",
+      "disposition": "retain",
+      "next_preparation_instruction": "将来問う条件が整う場合もこの公開範囲/資料案内の限定を維持する。資料案内なら版/該当箇所/期/対象系列を照合し、公開で既答と分かれば残余を削除する。回答不能/未回答を悪材料にしない。",
+      "evidence_ids": [
+        "E17",
+        "E18",
+        "E15"
+      ]
+    }
+  ],
+  "remaining_company_confirmation_topics": [
+    {
+      "id": "same_scope_overlap_topic",
+      "mapping_ids": [
+        "R03",
+        "R04"
+      ],
+      "status": "hold_unresolved_no_send_ready",
+      "formal_question_created": false
+    },
+    {
+      "id": "same_approx_amount_period_topic",
+      "mapping_ids": [
+        "R05"
+      ],
+      "status": "hold_only_specific_amount_period_bridge",
+      "formal_question_created": false
+    }
+  ],
+  "do_not_append_as_new_questions": [
+    {
+      "topic": "cash timing",
+      "was_in_original_question": false,
+      "owner": "Company can clarify an actually published historical payment/recognition mapping; investor owns its use in valuation",
+      "instruction": "未解決の記録だけ維持。旧文にない現金内訳/支払月を今回の改稿へ足さない。将来の支出ゼロ/費用消失保証や連結CFOからの中国別配分は要求しない。",
+      "evidence_ids": [
+        "E05",
+        "E13",
+        "E16"
+      ]
+    },
+    {
+      "topic": "historical tax/DTA",
+      "was_in_original_question": false,
+      "owner": "Already saved company historical disclosure",
+      "instruction": "法定/歴史負担率、DTAの繰越欠損金行があるかを再質問しない。税注記は中国費用の税務帰属やgross NOL/利用可能額の答えではないと残す。",
+      "evidence_ids": [
+        "E09",
+        "E10",
+        "E11"
+      ]
+    },
+    {
+      "topic": "normal tax/future NOL/normalCF/forecast guarantees",
+      "was_in_original_question": false,
+      "owner": "Investor/model assumption; public entity-specific historical facts may support research but cannot guarantee future outcomes",
+      "instruction": "正常税率・将来税/NOL利用・正常CF・EPS回復/目標達成保証を会社へ決めてもらう問いを追加しない。採用済み著者方針と入力の点検課題として保留する。",
+      "evidence_ids": [
+        "E12",
+        "E13"
+      ]
+    }
+  ],
+  "next_preparation_sheet_edits": [
+    "既知欄へp15/東莞337/特損・CFO対応/連結年度・12月決算一般方針を移し、確認問としては削る。",
+    "残余は約6億円の範囲/337重複と、その額の期間対応の2論点に限定。今回質問文の新規作成は0。",
+    "残余が判断/採用入力へどう影響するかを未設定のまま、質問優先・正式登録・送信準備完了にしない。",
+    "公開で既答の案内を得た時だけ該当箇所を照合して残余を減らす。closed取得経路や金額全文の再探索は再開しない。"
+  ],
+  "old_branch_contract": {
+    "path": "research/ir-case-studies-2026-10-15/5988/followup-public-review/research-question-draft.json",
+    "json_pointer": "/branches",
+    "original_branch_ids": [
+      "scope_excludes_impairment",
+      "scope_overlaps_impairment",
+      "scope_unresolved"
+    ],
+    "all_decision_unresolved": true,
+    "all_valuation_change_null": true,
+    "new_or_changed_branch_count": 0,
+    "original_file_unchanged": true
+  },
+  "readiness": {
+    "external_send_eligible": false,
+    "numeric_thesis_or_financial_adoption": false,
+    "new_question_created": false,
+    "reply_received": false,
+    "IR_value_or_probability_adopted": false,
+    "old_503_note": "Original why_not_send_ready[0] is a historical acquisition note, not current HTTP status or an instruction to retry closed paths; financial/acceptance conditions remain separately unverified."
+  },
+  "saved_native_case3_selected_fields": {
+    "case_id": "5988-cost-tax-basis-monitor",
+    "version": 3,
+    "head_version": 3,
+    "config_revision": 1,
+    "first_saved_at": "2026-10-16T00:25:08.812516+00:00",
+    "financial_inputs_verified": false,
+    "issue_id": "5988-cost-tax-cashflow-basis",
+    "last_review_id": "qualitative-fd4d5c15f617003b37c41bfb",
+    "last_review_at": "2026-10-16T00:20:06.786545+00:00",
+    "management_review": {
+      "basis_quote": "次回の内部研究管理日は2027-01-16（Asia/Tokyo）とする。",
+      "basis_ref": {
+        "path": "research/ir-case-studies-2026-10-15/5988/native-case-setup/management-basis.json",
+        "sha256": "0ec7ea2dea66cad7e499541eb3feb0e3105e88dcb4b4f8840e1c4c8dd18985b1"
+      },
+      "date": "2027-01-16",
+      "timezone": "Asia/Tokyo"
+    }
+  },
+  "native_case3_read_scope": "Selected identity/version/last observation/management keys only; files.content not used or reproduced. Not a new live DB query.",
+  "method_attribution": {
+    "project_preparation_doc": "docs/ir-question-preparation.md",
+    "Anthropic_fixed_skill": "third_party/anthropic/skills/dd-meeting-prep/SKILL.md",
+    "borrowed_steps": "Prior known information/concerns, purposeful neutral questions and document comparison/follow-up; PE nonpublic requests and fixed meeting sizes not imported",
+    "JIRA_record": "research/ir-jira-question-method-adoption-2026-10-15/manifest.json",
+    "JIRA_boundary": "2018 company-side recommendations adapted by project to prior-public checks and post-dialogue artifact comparison; not a compulsory investor sequence/answer guarantee."
+  },
+  "evidence": [
+    {
+      "id": "E01",
+      "path": "research/ir-case-studies-2026-10-15/5988/cashflow-oneoff-bridge-review.json",
+      "file_sha256": "be9c272aebab8e53d9abe65a60fe5838430634e46f2e47913e4a3d15b64649ed",
+      "json_pointer": "/change_from_prior_review/previously_public_answers_not_reasked/0",
+      "short_quote": "one-off wording exists",
+      "character_start_in_resolved_string": 0,
+      "character_end_exclusive": 22
+    },
+    {
+      "id": "E02",
+      "path": "research/ir-case-studies-2026-10-15/5988/cashflow-oneoff-bridge-review.json",
+      "file_sha256": "be9c272aebab8e53d9abe65a60fe5838430634e46f2e47913e4a3d15b64649ed",
+      "json_pointer": "/change_from_prior_review/previously_public_answers_not_reasked/1",
+      "short_quote": "337location/asset nature and special-loss classification",
+      "character_start_in_resolved_string": 0,
+      "character_end_exclusive": 56
+    },
+    {
+      "id": "E03",
+      "path": "research/ir-case-studies-2026-10-15/5988/cashflow-oneoff-bridge-review.json",
+      "file_sha256": "be9c272aebab8e53d9abe65a60fe5838430634e46f2e47913e4a3d15b64649ed",
+      "json_pointer": "/bridges/0/cash_boundary",
+      "short_quote": "CFO3003 already includes the adjustment; do not add423 again",
+      "character_start_in_resolved_string": 175,
+      "character_end_exclusive": 235
+    },
+    {
+      "id": "E04",
+      "path": "research/ir-case-studies-2026-10-15/5988/cashflow-oneoff-bridge-review.json",
+      "file_sha256": "be9c272aebab8e53d9abe65a60fe5838430634e46f2e47913e4a3d15b64649ed",
+      "json_pointer": "/bridges/3/unknown/0",
+      "short_quote": "Accounts/entities included, all-operating-expense status and overlap with special-loss impairment337.",
+      "character_start_in_resolved_string": 0,
+      "character_end_exclusive": 101
+    },
+    {
+      "id": "E05",
+      "path": "research/ir-case-studies-2026-10-15/5988/cashflow-oneoff-bridge-review.json",
+      "file_sha256": "be9c272aebab8e53d9abe65a60fe5838430634e46f2e47913e4a3d15b64649ed",
+      "json_pointer": "/bridges/3/unknown/1",
+      "short_quote": "Which amounts were paid, accrued, prepaid, provided or noncash and corresponding timing.",
+      "character_start_in_resolved_string": 0,
+      "character_end_exclusive": 88
+    },
+    {
+      "id": "E06",
+      "path": "research/ir-case-studies-2026-10-15/5988/cashflow-oneoff-bridge-review.json",
+      "file_sha256": "be9c272aebab8e53d9abe65a60fe5838430634e46f2e47913e4a3d15b64649ed",
+      "json_pointer": "/bridges/3/unknown/3",
+      "short_quote": "Subsidiary December year and parent consolidation adjustment relationship.",
+      "character_start_in_resolved_string": 0,
+      "character_end_exclusive": 74
+    },
+    {
+      "id": "E07",
+      "path": "research/ir-case-studies-2026-10-15/5988/cashflow-oneoff-bridge-review.json",
+      "file_sha256": "be9c272aebab8e53d9abe65a60fe5838430634e46f2e47913e4a3d15b64649ed",
+      "json_pointer": "/quotations/15/quote",
+      "short_quote": "次の９社の決算日は、12月31日",
+      "character_start_in_resolved_string": 9,
+      "character_end_exclusive": 25
+    },
+    {
+      "id": "E08",
+      "path": "research/ir-case-studies-2026-10-15/5988/cashflow-oneoff-bridge-review.json",
+      "file_sha256": "be9c272aebab8e53d9abe65a60fe5838430634e46f2e47913e4a3d15b64649ed",
+      "json_pointer": "/quotations/23/quote",
+      "short_quote": "当連結会計年度（自   2025年４月１日    至   2026年３月31日）",
+      "character_start_in_resolved_string": 0,
+      "character_end_exclusive": 40
+    },
+    {
+      "id": "E09",
+      "path": "research/ir-case-studies-2026-10-15/5988/tax-basis-review/review.json",
+      "file_sha256": "2f431b17b78a0775c874014be534807492f83201812b4801420105d250d72235",
+      "json_pointer": "/findings/0/finding",
+      "short_quote": "法定実効税率30.58%と税効果会計適用後法人税等負担率100.77%は異なる。",
+      "character_start_in_resolved_string": 8,
+      "character_end_exclusive": 48
+    },
+    {
+      "id": "E10",
+      "path": "research/ir-case-studies-2026-10-15/5988/tax-basis-review/review.json",
+      "file_sha256": "2f431b17b78a0775c874014be534807492f83201812b4801420105d250d72235",
+      "json_pointer": "/findings/2/finding",
+      "short_quote": "当期338百万円は「繰延税金資産」の発生原因別内訳の「繰越欠損金」行。",
+      "character_start_in_resolved_string": 0,
+      "character_end_exclusive": 35
+    },
+    {
+      "id": "E11",
+      "path": "research/ir-case-studies-2026-10-15/5988/tax-basis-review/review.json",
+      "file_sha256": "2f431b17b78a0775c874014be534807492f83201812b4801420105d250d72235",
+      "json_pointer": "/findings/4/finding",
+      "short_quote": "中国約6億円の損金算入/支払/税率の回答にはならない。",
+      "character_start_in_resolved_string": 64,
+      "character_end_exclusive": 91
+    },
+    {
+      "id": "E12",
+      "path": "research/ir-case-studies-2026-10-15/5988/tax-basis-review/review.json",
+      "file_sha256": "2f431b17b78a0775c874014be534807492f83201812b4801420105d250d72235",
+      "json_pointer": "/still_unresolved/2",
+      "short_quote": "Normal operating tax rate, future cash taxes, NOPAT/FCFF/EPS forecasts",
+      "character_start_in_resolved_string": 0,
+      "character_end_exclusive": 70
+    },
+    {
+      "id": "E13",
+      "path": "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/qualitative-review/result.json",
+      "file_sha256": "6eb6ca578a7f63e2b63ce2603601baa2342cc2cc13410c93ca6de712084ad250",
+      "json_pointer": "/case_observation/rationale",
+      "short_quote": "費用の現金時期、中国損失の税務帰属、将来税/NOL利用、正常CFや新規投資利回りを追加しない。",
+      "character_start_in_resolved_string": 143,
+      "character_end_exclusive": 190
+    },
+    {
+      "id": "E14",
+      "path": "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/qualitative-review/result.json",
+      "file_sha256": "6eb6ca578a7f63e2b63ce2603601baa2342cc2cc13410c93ca6de712084ad250",
+      "json_pointer": "/case_observation/outcome",
+      "short_quote": "unchanged",
+      "character_start_in_resolved_string": 0,
+      "character_end_exclusive": 9
+    },
+    {
+      "id": "E15",
+      "path": "research/ir-case-studies-2026-10-15/5988/followup-public-review/research-question-draft.json",
+      "file_sha256": "c33f931af2d35cd4707d1385ccf10ca9f262057e04d17a7ebe2a5679eab1927b",
+      "json_pointer": "/branches/2/research_action",
+      "short_quote": "無回答を業績悪化や売却条件に変換しない。",
+      "character_start_in_resolved_string": 15,
+      "character_end_exclusive": 35
+    },
+    {
+      "id": "E16",
+      "path": "research/ir-case-studies-2026-10-15/5988/followup-public-review/research-question-draft.json",
+      "file_sha256": "c33f931af2d35cd4707d1385ccf10ca9f262057e04d17a7ebe2a5679eab1927b",
+      "json_pointer": "/why_not_send_ready/1",
+      "short_quote": "既存の採用済みモデル/評価入力/判断をどこまで変えるか未設定。",
+      "character_start_in_resolved_string": 15,
+      "character_end_exclusive": 46
+    },
+    {
+      "id": "E17",
+      "path": "research/ir-jira-question-method-adoption-2026-10-15/manifest.json",
+      "file_sha256": "63c019b229c3d336745efbc197a6dbde7af6bf87a768956ccb4ca297713b2805",
+      "json_pointer": "/method_mapping/0/project_adaptation",
+      "short_quote": "事前に既公表資料/FAQ/会社方針を照合して既答の問いを除く",
+      "character_start_in_resolved_string": 0,
+      "character_end_exclusive": 30
+    },
+    {
+      "id": "E18",
+      "path": "research/ir-jira-question-method-adoption-2026-10-15/manifest.json",
+      "file_sha256": "63c019b229c3d336745efbc197a6dbde7af6bf87a768956ccb4ca297713b2805",
+      "json_pointer": "/method_mapping/1/project_adaptation",
+      "short_quote": "期/作者/範囲を示した質問対象候補",
+      "character_start_in_resolved_string": 0,
+      "character_end_exclusive": 17
+    }
+  ],
+  "input_SHA256": {
+    "research/ir-case-studies-2026-10-15/5988/followup-public-review/research-question-draft.json": "c33f931af2d35cd4707d1385ccf10ca9f262057e04d17a7ebe2a5679eab1927b",
+    "research/ir-case-studies-2026-10-15/5988/cashflow-oneoff-bridge-review.json": "be9c272aebab8e53d9abe65a60fe5838430634e46f2e47913e4a3d15b64649ed",
+    "research/ir-case-studies-2026-10-15/5988/tax-basis-review/review.json": "2f431b17b78a0775c874014be534807492f83201812b4801420105d250d72235",
+    "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/qualitative-review/result.json": "6eb6ca578a7f63e2b63ce2603601baa2342cc2cc13410c93ca6de712084ad250",
+    "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/qualitative-review/case-after.json": "d420a305535f8589c1b0de56e5409d6f175e18476c3e660f91e0acc484c8e925",
+    "research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/qualitative-review/completion.json": "9916415f9f2a716b28ddd58b447cc0cbe684918e80e7faecc63098e1d0c279a4",
+    "docs/ir-question-preparation.md": "be39fd3d71b8b5428b63254bf509a559a76ce46299ddecebfc54cfac446fd987",
+    "third_party/anthropic/skills/dd-meeting-prep/SKILL.md": "a74eecadece794106d515ce3d00e07b3857ed123e841e8962e26363d2413d94f",
+    "research/ir-jira-question-method-adoption-2026-10-15/manifest.json": "63c019b229c3d336745efbc197a6dbde7af6bf87a768956ccb4ca297713b2805"
+  },
+  "operations": {
+    "GET": 0,
+    "DB": 0,
+    "code_shared_original_draft_or_branch_edit": 0,
+    "external_reply_or_send": 0,
+    "new_question_branch_financial_value_probability": 0,
+    "new_files_only": [
+      "README.md",
+      "residual-map.json"
+    ]
+  }
+}

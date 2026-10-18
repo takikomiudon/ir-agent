@@ -1,0 +1,121 @@
+{
+  "security_code": "146A",
+  "company_name": "コロンビア・ワークス",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "不動産業",
+  "investigation_status": "confirmed",
+  "verification_level": "form_fields_verified",
+  "official_url": "https://columbiaworks.jp/",
+  "contact_url": "https://columbiaworks.jp/contact/",
+  "channels": [
+    "form"
+  ],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "candidate",
+  "attempted_at": "2026-10-11T03:58:55.461285+00:00",
+  "completed_at": "2026-10-11T03:59:00.754044+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/146A/03.json",
+      "url": "https://columbiaworks.jp/contact/",
+      "retrieved_at": "2026-10-11T03:58:59.357472+00:00",
+      "quote": "お問い合わせ項目 必須 事業に関するご連絡・お問い合わせ IR取材・投資家の方からのお問い合わせ 求人に対するご応募",
+      "http_status": 200,
+      "role": "contact_channel"
+    },
+    {
+      "snapshot": "evidence/146A/03.json",
+      "url": "https://columbiaworks.jp/contact/",
+      "retrieved_at": "2026-10-11T03:58:59.357472+00:00",
+      "quote": "会社名・学校名・所属 任意",
+      "http_status": 200,
+      "role": "conditions"
+    },
+    {
+      "snapshot": "evidence/146A/03.json",
+      "url": "https://columbiaworks.jp/contact/",
+      "retrieved_at": "2026-10-11T03:58:59.357472+00:00",
+      "quote": "メールアドレス 必須 電話番号 必須 住所 必須 お問い合わせ内容 必須",
+      "http_status": 200,
+      "role": "conditions"
+    },
+    {
+      "snapshot": "evidence/146A/03.json",
+      "url": "https://columbiaworks.jp/contact/",
+      "retrieved_at": "2026-10-11T03:58:59.357472+00:00",
+      "quote": "Q. 証券コードは何番ですか？ A. 146Aです。",
+      "http_status": 200,
+      "role": "conditions"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://columbiaworks.jp/",
+      "final_url": "https://columbiaworks.jp/",
+      "snapshot": "evidence/146A/01.json",
+      "retrieved_at": "2026-10-11T03:58:56.862826+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://columbiaworks.jp/ir/",
+      "final_url": "https://columbiaworks.jp/ir/",
+      "snapshot": "evidence/146A/02.json",
+      "retrieved_at": "2026-10-11T03:58:58.249032+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://columbiaworks.jp/contact/",
+      "final_url": "https://columbiaworks.jp/contact/",
+      "snapshot": "evidence/146A/03.json",
+      "retrieved_at": "2026-10-11T03:58:59.357472+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [
+    "共通フォームにIR取材・投資家の問い合わせ選択肢がある。会社名・学校名・所属は任意。",
+    "氏名・メールアドレス・電話番号・住所・問い合わせ内容が必須表示。内容により回答まで時間がかかる場合がある。"
+  ],
+  "limitations": [
+    "公開ページの保存済みGET証拠による確認。フォーム入力・送信、メール到達、実返信は未検証。",
+    "窓口の確認は投資適性、業績・株価の評価や個人への回答保証を示さない。"
+  ],
+  "discovery": {
+    "security_code": "146A",
+    "official_url": "https://columbiaworks.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "コロンビア・ワークス",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/146A/01.json",
+      "normalized_name": "コロンビアワークス",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/146A/02.json",
+      "normalized_name": "コロンビアワークス",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/146A/03.json",
+      "normalized_name": "コロンビアワークス",
+      "security_code_observed": false
+    }
+  ],
+  "classification_version": 2,
+  "successful_official_page_count": 3,
+  "manual_review": {
+    "reviewer": "codex_audit_alpha",
+    "reviewed_at": "2026-10-11T04:11:06.681993+00:00",
+    "notes": "フォーム内のIR投資家選択肢とメール/質問入力欄を確認。所属任意とFAQの146Aを確認。個人投資家という明示選択肢はないためindividual_accessはnot_statedのまま。"
+  }
+}

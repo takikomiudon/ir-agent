@@ -1,0 +1,92 @@
+{
+  "security_code": "2193",
+  "company_name": "クックパッド",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "サービス業",
+  "investigation_status": "confirmed",
+  "verification_level": "form_fields_verified",
+  "official_url": "https://info.cookpad.com/",
+  "contact_url": "https://info.cookpad.com/contact/ir",
+  "channels": [
+    "form"
+  ],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "candidate",
+  "attempted_at": "2026-10-11T04:01:47.658609+00:00",
+  "completed_at": "2026-10-11T04:01:51.986026+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/2193/03.json",
+      "url": "https://info.cookpad.com/contact/ir",
+      "retrieved_at": "2026-10-11T04:01:50.495464+00:00",
+      "quote": "IRに関するお問い合わせ | クックパッド株式会社 IRに関するお問い合わせ お名前 ※ メールアドレス ※ 会社名 電話番号(半角数字) お問い合わせ内容 ※ ご入力いただいた個人情報は、 サービスプラ",
+      "role": "contact_channel"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://info.cookpad.com/",
+      "final_url": "https://info.cookpad.com/",
+      "snapshot": "evidence/2193/01.json",
+      "retrieved_at": "2026-10-11T04:01:48.276422+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://info.cookpad.com/ir/news/",
+      "final_url": "https://info.cookpad.com/ir/news/",
+      "snapshot": "evidence/2193/02.json",
+      "retrieved_at": "2026-10-11T04:01:49.296336+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://info.cookpad.com/contact/ir",
+      "final_url": "https://info.cookpad.com/contact/ir",
+      "snapshot": "evidence/2193/03.json",
+      "retrieved_at": "2026-10-11T04:01:50.495464+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "公開 GET の保存本文と非 hidden 入力欄を点検。送信、JavaScript・CAPTCHA の動作、実際の返信は未検証。"
+  ],
+  "discovery": {
+    "security_code": "2193",
+    "official_url": "https://info.cookpad.com/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "クックパッド",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/2193/01.json",
+      "normalized_name": "クックパッド",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/2193/02.json",
+      "normalized_name": "クックパッド",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/2193/03.json",
+      "normalized_name": "クックパッド",
+      "security_code_observed": false
+    }
+  ],
+  "classification_version": 2,
+  "successful_official_page_count": 3,
+  "manual_review": {
+    "reviewer": "ir_operations",
+    "reviewed_at": "2026-10-11T04:15:43.401508+00:00",
+    "notes": "公式IR専用ページ／公式IR用途リンクに対応する実フォームと返信メール欄・問い合わせ本文 textarea を確認。「IRに関するお問い合わせ」。"
+  }
+}

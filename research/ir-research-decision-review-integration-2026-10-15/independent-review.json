@@ -1,0 +1,2540 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T21:05:09.178247+00:00",
+  "status": "independent_review_complete_two_P2_resolved_pending_parent_full_suite",
+  "review_role": "independent agent; no implementation edits",
+  "findings": [
+    {
+      "id": "RD-R01",
+      "severity": "P2",
+      "status": "resolved_and_independently_rechecked",
+      "original_location": "src/ir_agent/research_decisions.py:add_review before quote identity/field helper calls",
+      "trigger": "A source-bound zero/negative price with missing position or incomplete policy was saved unresolved; a partial quote could bypass numerical validation too.",
+      "before_proof": [
+        {
+          "case": "zero",
+          "saved": true,
+          "action": "unresolved",
+          "reasons": [
+            "position_not_verified",
+            "position_history_unknown"
+          ],
+          "rows": 1
+        },
+        {
+          "case": "negative",
+          "saved": true,
+          "action": "unresolved",
+          "reasons": [
+            "position_not_verified",
+            "position_history_unknown"
+          ],
+          "rows": 1
+        }
+      ],
+      "fix_location": "src/ir_agent/research_decisions.py:261",
+      "minimal_fix": "Validate every supplied price_jpy with existing finite number parser and require positive value before policy/position missingness; leave old pure order unchanged.",
+      "verified": "21 price/gate combinations rejected with zero new review rows; original pure cases still match."
+    },
+    {
+      "id": "RD-R02",
+      "severity": "P2",
+      "status": "resolved_and_independently_rechecked",
+      "original_location": "src/ir_agent/research_decisions.py:_sources raw snapshot passed to quote helpers expecting validation defaults",
+      "trigger": "A schema-valid low-level/raw market source omitting optional metadata/requires_research, with valid price/observation paths inside content, raised KeyError(metadata).",
+      "before_proof": [
+        {
+          "case": "raw_metadata_omitted",
+          "saved": false,
+          "error_type": "KeyError",
+          "message": "'metadata'",
+          "rows": 0
+        }
+      ],
+      "fix_location": "src/ir_agent/research_decisions.py:274",
+      "minimal_fix": "Keep raw source for receipt/hash/persistence and pass separate validated copies to quote helpers/calculation; optional raw IR metadata must use safe missingness/hold checks.",
+      "verified": "Valid raw market source computes buy_review while original raw/source SHA/receipt are unchanged; raw IR omission becomes explicit unresolved identity hold."
+    }
+  ],
+  "unresolved_actionable_findings": [],
+  "initial_reproduction": [
+    {
+      "case": "zero",
+      "saved": true,
+      "action": "unresolved",
+      "reasons": [
+        "position_not_verified",
+        "position_history_unknown"
+      ],
+      "rows": 1
+    },
+    {
+      "case": "negative",
+      "saved": true,
+      "action": "unresolved",
+      "reasons": [
+        "position_not_verified",
+        "position_history_unknown"
+      ],
+      "rows": 1
+    },
+    {
+      "case": "raw_metadata_omitted",
+      "saved": false,
+      "error_type": "KeyError",
+      "message": "'metadata'",
+      "rows": 0
+    }
+  ],
+  "checks": [
+    {
+      "check": "fixed_invalid_supplied_price:'0':unknown_position",
+      "passed": true,
+      "observed": "A supplied research decision quote price must be positive and finite"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:'0':missing_policy",
+      "passed": true,
+      "observed": "A supplied research decision quote price must be positive and finite"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:'0':partial_quote",
+      "passed": true,
+      "observed": "A supplied research decision quote price must be positive and finite"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:'-1':unknown_position",
+      "passed": true,
+      "observed": "A supplied research decision quote price must be positive and finite"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:'-1':missing_policy",
+      "passed": true,
+      "observed": "A supplied research decision quote price must be positive and finite"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:'-1':partial_quote",
+      "passed": true,
+      "observed": "A supplied research decision quote price must be positive and finite"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:'NaN':unknown_position",
+      "passed": true,
+      "observed": "quote.price_jpy must be finite"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:'NaN':missing_policy",
+      "passed": true,
+      "observed": "quote.price_jpy must be finite"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:'NaN':partial_quote",
+      "passed": true,
+      "observed": "quote.price_jpy must be finite"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:'Infinity':unknown_position",
+      "passed": true,
+      "observed": "quote.price_jpy must be finite"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:'Infinity':missing_policy",
+      "passed": true,
+      "observed": "quote.price_jpy must be finite"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:'Infinity':partial_quote",
+      "passed": true,
+      "observed": "quote.price_jpy must be finite"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:'-Infinity':unknown_position",
+      "passed": true,
+      "observed": "quote.price_jpy must be finite"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:'-Infinity':missing_policy",
+      "passed": true,
+      "observed": "quote.price_jpy must be finite"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:'-Infinity':partial_quote",
+      "passed": true,
+      "observed": "quote.price_jpy must be finite"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:True:unknown_position",
+      "passed": true,
+      "observed": "quote.price_jpy must be a finite number or numeric string"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:True:missing_policy",
+      "passed": true,
+      "observed": "quote.price_jpy must be a finite number or numeric string"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:True:partial_quote",
+      "passed": true,
+      "observed": "quote.price_jpy must be a finite number or numeric string"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:'not-number':unknown_position",
+      "passed": true,
+      "observed": "quote.price_jpy must be a finite number or numeric string"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:'not-number':missing_policy",
+      "passed": true,
+      "observed": "quote.price_jpy must be a finite number or numeric string"
+    },
+    {
+      "check": "fixed_invalid_supplied_price:'not-number':partial_quote",
+      "passed": true,
+      "observed": "quote.price_jpy must be a finite number or numeric string"
+    },
+    {
+      "check": "fixed_valid_raw_market_without_metadata_calculates",
+      "passed": true
+    },
+    {
+      "check": "fixed_raw_market_snapshot_receipt_exact",
+      "passed": true
+    },
+    {
+      "check": "fixed_raw_IR_missing_metadata_holds_without_KeyError",
+      "passed": true
+    },
+    {
+      "check": "old_schema_temp_fixture_new_table_added_without_schema_bump",
+      "passed": true
+    },
+    {
+      "check": "old_reply_schema_still_reply_id_NOT_NULL",
+      "passed": true
+    },
+    {
+      "check": "root_demo_public_baseline_and_reply_review_separate",
+      "passed": true
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:reviewed_baseline",
+      "passed": true,
+      "before": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "reviewed",
+          "proposed_action": "buy_review",
+          "reason_codes": [
+            "entry_conditions_met"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ],
+          "metrics": {
+            "net_expected_upside_pct": "27.87500",
+            "scenario_downside_pct": "32.500",
+            "target_price_jpy_before_exit_cost": "1300",
+            "entry_price_ceiling_jpy": "1065.625",
+            "entry_upside_pass": true,
+            "scenario_downside_pass": true
+          },
+          "valuation": {
+            "scenarios": [
+              {
+                "name": "bear",
+                "probability": "0.25",
+                "method": "eps_multiple",
+                "fair_value_jpy": "675.00",
+                "upside_pct": "-32.50"
+              },
+              {
+                "name": "base",
+                "probability": "0.5",
+                "method": "eps_multiple",
+                "fair_value_jpy": "1300.00",
+                "upside_pct": "30.00"
+              },
+              {
+                "name": "bull",
+                "probability": "0.25",
+                "method": "eps_multiple",
+                "fair_value_jpy": "1840.00",
+                "upside_pct": "84.00"
+              }
+            ],
+            "expected_value_jpy": "1278.75",
+            "expected_upside_pct": "27.88",
+            "worst_case_downside_pct": "32.50"
+          },
+          "quote": {
+            "company_id": "demo-services",
+            "source_id": "synthetic-price",
+            "currency": "JPY",
+            "price_jpy": "1000",
+            "observed_at": "2026-10-09T09:55:00+09:00",
+            "retrieved_at": "2026-10-09T09:56:00+09:00",
+            "price_path": [
+              "metadata",
+              "price_jpy"
+            ],
+            "observed_at_path": [
+              "metadata",
+              "observed_at"
+            ]
+          }
+        }
+      },
+      "after": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "reviewed",
+          "proposed_action": "buy_review",
+          "reason_codes": [
+            "entry_conditions_met"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ],
+          "metrics": {
+            "net_expected_upside_pct": "27.87500",
+            "scenario_downside_pct": "32.500",
+            "target_price_jpy_before_exit_cost": "1300",
+            "entry_price_ceiling_jpy": "1065.625",
+            "entry_upside_pass": true,
+            "scenario_downside_pass": true
+          },
+          "valuation": {
+            "scenarios": [
+              {
+                "name": "bear",
+                "probability": "0.25",
+                "method": "eps_multiple",
+                "fair_value_jpy": "675.00",
+                "upside_pct": "-32.50"
+              },
+              {
+                "name": "base",
+                "probability": "0.5",
+                "method": "eps_multiple",
+                "fair_value_jpy": "1300.00",
+                "upside_pct": "30.00"
+              },
+              {
+                "name": "bull",
+                "probability": "0.25",
+                "method": "eps_multiple",
+                "fair_value_jpy": "1840.00",
+                "upside_pct": "84.00"
+              }
+            ],
+            "expected_value_jpy": "1278.75",
+            "expected_upside_pct": "27.88",
+            "worst_case_downside_pct": "32.50"
+          },
+          "quote": {
+            "company_id": "demo-services",
+            "source_id": "synthetic-price",
+            "currency": "JPY",
+            "price_jpy": "1000",
+            "observed_at": "2026-10-09T09:55:00+09:00",
+            "retrieved_at": "2026-10-09T09:56:00+09:00",
+            "price_path": [
+              "metadata",
+              "price_jpy"
+            ],
+            "observed_at_path": [
+              "metadata",
+              "observed_at"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:missing_quote",
+      "passed": true,
+      "before": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "missing_market_quote"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      },
+      "after": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "missing_market_quote"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:unknown_position_precedes_invalid_quote",
+      "passed": true,
+      "before": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "position_not_verified"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      },
+      "after": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "position_not_verified"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:missing_policy_precedes_wrong_currency",
+      "passed": true,
+      "before": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": null,
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "policy_not_configured"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ],
+          "missing_parameters": [
+            "minimum_upside_pct"
+          ]
+        }
+      },
+      "after": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": null,
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "policy_not_configured"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ],
+          "missing_parameters": [
+            "minimum_upside_pct"
+          ]
+        }
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:uncertain",
+      "passed": true,
+      "before": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "thesis_uncertain"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      },
+      "after": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "thesis_uncertain"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:invalidated",
+      "passed": true,
+      "before": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "reviewed",
+          "proposed_action": "watch",
+          "reason_codes": [
+            "thesis_invalidated"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ],
+          "metrics": {
+            "net_expected_upside_pct": "27.87500",
+            "scenario_downside_pct": "32.500",
+            "target_price_jpy_before_exit_cost": "1300",
+            "entry_price_ceiling_jpy": "1065.625",
+            "entry_upside_pass": true,
+            "scenario_downside_pass": true
+          },
+          "valuation": {
+            "scenarios": [
+              {
+                "name": "bear",
+                "probability": "0.25",
+                "method": "eps_multiple",
+                "fair_value_jpy": "675.00",
+                "upside_pct": "-32.50"
+              },
+              {
+                "name": "base",
+                "probability": "0.5",
+                "method": "eps_multiple",
+                "fair_value_jpy": "1300.00",
+                "upside_pct": "30.00"
+              },
+              {
+                "name": "bull",
+                "probability": "0.25",
+                "method": "eps_multiple",
+                "fair_value_jpy": "1840.00",
+                "upside_pct": "84.00"
+              }
+            ],
+            "expected_value_jpy": "1278.75",
+            "expected_upside_pct": "27.88",
+            "worst_case_downside_pct": "32.50"
+          },
+          "quote": {
+            "company_id": "demo-services",
+            "source_id": "synthetic-price",
+            "currency": "JPY",
+            "price_jpy": "1000",
+            "observed_at": "2026-10-09T09:55:00+09:00",
+            "retrieved_at": "2026-10-09T09:56:00+09:00",
+            "price_path": [
+              "metadata",
+              "price_jpy"
+            ],
+            "observed_at_path": [
+              "metadata",
+              "observed_at"
+            ]
+          }
+        }
+      },
+      "after": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "reviewed",
+          "proposed_action": "watch",
+          "reason_codes": [
+            "thesis_invalidated"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ],
+          "metrics": {
+            "net_expected_upside_pct": "27.87500",
+            "scenario_downside_pct": "32.500",
+            "target_price_jpy_before_exit_cost": "1300",
+            "entry_price_ceiling_jpy": "1065.625",
+            "entry_upside_pass": true,
+            "scenario_downside_pass": true
+          },
+          "valuation": {
+            "scenarios": [
+              {
+                "name": "bear",
+                "probability": "0.25",
+                "method": "eps_multiple",
+                "fair_value_jpy": "675.00",
+                "upside_pct": "-32.50"
+              },
+              {
+                "name": "base",
+                "probability": "0.5",
+                "method": "eps_multiple",
+                "fair_value_jpy": "1300.00",
+                "upside_pct": "30.00"
+              },
+              {
+                "name": "bull",
+                "probability": "0.25",
+                "method": "eps_multiple",
+                "fair_value_jpy": "1840.00",
+                "upside_pct": "84.00"
+              }
+            ],
+            "expected_value_jpy": "1278.75",
+            "expected_upside_pct": "27.88",
+            "worst_case_downside_pct": "32.50"
+          },
+          "quote": {
+            "company_id": "demo-services",
+            "source_id": "synthetic-price",
+            "currency": "JPY",
+            "price_jpy": "1000",
+            "observed_at": "2026-10-09T09:55:00+09:00",
+            "retrieved_at": "2026-10-09T09:56:00+09:00",
+            "price_path": [
+              "metadata",
+              "price_jpy"
+            ],
+            "observed_at_path": [
+              "metadata",
+              "observed_at"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:information_held",
+      "passed": true,
+      "before": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "information_held_for_review"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      },
+      "after": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "information_held_for_review"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:missing_evidence",
+      "passed": true,
+      "before": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "missing_decision_evidence"
+          ],
+          "evidence_ids": []
+        }
+      },
+      "after": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "missing_decision_evidence"
+          ],
+          "evidence_ids": []
+        }
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:missing_sources",
+      "passed": true,
+      "before": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "missing_source_snapshots"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      },
+      "after": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "missing_source_snapshots"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:wrong_company",
+      "passed": true,
+      "before": {
+        "raised": "ValueError",
+        "message": "Thesis evidence snapshot belongs to a different company"
+      },
+      "after": {
+        "raised": "ValueError",
+        "message": "Thesis evidence snapshot belongs to a different company"
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:bad_path",
+      "passed": true,
+      "before": {
+        "raised": "ValueError",
+        "message": "Quote source path does not resolve to a saved field"
+      },
+      "after": {
+        "raised": "ValueError",
+        "message": "Quote source path does not resolve to a saved field"
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:missing_path",
+      "passed": true,
+      "before": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "quote_not_bound_to_source_fields"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      },
+      "after": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "quote_not_bound_to_source_fields"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:wrong_price",
+      "passed": true,
+      "before": {
+        "raised": "ValueError",
+        "message": "Quote price differs from the cited source field"
+      },
+      "after": {
+        "raised": "ValueError",
+        "message": "Quote price differs from the cited source field"
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:bad_observed",
+      "passed": true,
+      "before": {
+        "raised": "ValueError",
+        "message": "Invalid isoformat string: 'invalid'"
+      },
+      "after": {
+        "raised": "ValueError",
+        "message": "Invalid isoformat string: 'invalid'"
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:nonpositive_complete_quote",
+      "passed": true,
+      "before": {
+        "raised": "ValueError",
+        "message": "current_price_jpy must be greater than zero"
+      },
+      "after": {
+        "raised": "ValueError",
+        "message": "current_price_jpy must be greater than zero"
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:negative_complete_quote",
+      "passed": true,
+      "before": {
+        "raised": "ValueError",
+        "message": "current_price_jpy must be greater than zero"
+      },
+      "after": {
+        "raised": "ValueError",
+        "message": "current_price_jpy must be greater than zero"
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:bad_precision",
+      "passed": true,
+      "before": {
+        "raised": "ValueError",
+        "message": "Unknown or malformed quote observation precision"
+      },
+      "after": {
+        "raised": "ValueError",
+        "message": "Unknown or malformed quote observation precision"
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:quote_source_information_hold",
+      "passed": true,
+      "before": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "source_information_held_for_review"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      },
+      "after": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "source_information_held_for_review"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:quote_stale_1us",
+      "passed": true,
+      "before": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:55:00.000001+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "market_quote_stale"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      },
+      "after": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:55:00.000001+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "market_quote_stale"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:observed_after_retrieved",
+      "passed": true,
+      "before": {
+        "raised": "ValueError",
+        "message": "A quote cannot be retrieved before its observation"
+      },
+      "after": {
+        "raised": "ValueError",
+        "message": "A quote cannot be retrieved before its observation"
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:missing_quote_parent",
+      "passed": true,
+      "before": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "missing_origin_source_snapshot"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      },
+      "after": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "unresolved",
+          "proposed_action": "unresolved",
+          "reason_codes": [
+            "missing_origin_source_snapshot"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ]
+        }
+      }
+    },
+    {
+      "check": "old_pure_exact_result_or_exception:held",
+      "passed": true,
+      "before": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "reviewed",
+          "proposed_action": "hold_review",
+          "reason_codes": [
+            "thesis_intact_below_target"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ],
+          "metrics": {
+            "net_expected_upside_pct": "27.87500",
+            "scenario_downside_pct": "32.500",
+            "target_price_jpy_before_exit_cost": "1300",
+            "entry_price_ceiling_jpy": "1065.625",
+            "entry_upside_pass": true,
+            "scenario_downside_pass": true
+          },
+          "valuation": {
+            "scenarios": [
+              {
+                "name": "bear",
+                "probability": "0.25",
+                "method": "eps_multiple",
+                "fair_value_jpy": "675.00",
+                "upside_pct": "-32.50"
+              },
+              {
+                "name": "base",
+                "probability": "0.5",
+                "method": "eps_multiple",
+                "fair_value_jpy": "1300.00",
+                "upside_pct": "30.00"
+              },
+              {
+                "name": "bull",
+                "probability": "0.25",
+                "method": "eps_multiple",
+                "fair_value_jpy": "1840.00",
+                "upside_pct": "84.00"
+              }
+            ],
+            "expected_value_jpy": "1278.75",
+            "expected_upside_pct": "27.88",
+            "worst_case_downside_pct": "32.50"
+          },
+          "quote": {
+            "company_id": "demo-services",
+            "source_id": "synthetic-price",
+            "currency": "JPY",
+            "price_jpy": "1000",
+            "observed_at": "2026-10-09T09:55:00+09:00",
+            "retrieved_at": "2026-10-09T09:56:00+09:00",
+            "price_path": [
+              "metadata",
+              "price_jpy"
+            ],
+            "observed_at_path": [
+              "metadata",
+              "observed_at"
+            ]
+          }
+        }
+      },
+      "after": {
+        "returned": {
+          "company_id": "demo-services",
+          "thesis_version": 1,
+          "as_of": "2026-10-09T01:00:00+00:00",
+          "policy_id": "synthetic-example-only",
+          "policy_version": 1,
+          "policy_snapshot": {
+            "id": "synthetic-example-only",
+            "version": 1,
+            "recorded_at": "2026-10-01T17:00:00+09:00",
+            "parameters": {
+              "minimum_upside_pct": "20",
+              "maximum_downside_pct": "35",
+              "entry_cost_pct": "0",
+              "exit_cost_pct": "0",
+              "max_quote_age_seconds": 3600,
+              "target_scenario": "base"
+            },
+            "parameter_sources": {
+              "minimum_upside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "maximum_downside_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "entry_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "exit_cost_pct": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "max_quote_age_seconds": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              },
+              "target_scenario": {
+                "kind": "synthetic_example",
+                "reference": "unit-test fixture",
+                "rationale": "Arbitrary test value, not an investment recommendation"
+              }
+            }
+          },
+          "status": "reviewed",
+          "proposed_action": "hold_review",
+          "reason_codes": [
+            "thesis_intact_below_target"
+          ],
+          "evidence_ids": [
+            "demo-public-q2"
+          ],
+          "metrics": {
+            "net_expected_upside_pct": "27.87500",
+            "scenario_downside_pct": "32.500",
+            "target_price_jpy_before_exit_cost": "1300",
+            "entry_price_ceiling_jpy": "1065.625",
+            "entry_upside_pass": true,
+            "scenario_downside_pass": true
+          },
+          "valuation": {
+            "scenarios": [
+              {
+                "name": "bear",
+                "probability": "0.25",
+                "method": "eps_multiple",
+                "fair_value_jpy": "675.00",
+                "upside_pct": "-32.50"
+              },
+              {
+                "name": "base",
+                "probability": "0.5",
+                "method": "eps_multiple",
+                "fair_value_jpy": "1300.00",
+                "upside_pct": "30.00"
+              },
+              {
+                "name": "bull",
+                "probability": "0.25",
+                "method": "eps_multiple",
+                "fair_value_jpy": "1840.00",
+                "upside_pct": "84.00"
+              }
+            ],
+            "expected_value_jpy": "1278.75",
+            "expected_upside_pct": "27.88",
+            "worst_case_downside_pct": "32.50"
+          },
+          "quote": {
+            "company_id": "demo-services",
+            "source_id": "synthetic-price",
+            "currency": "JPY",
+            "price_jpy": "1000",
+            "observed_at": "2026-10-09T09:55:00+09:00",
+            "retrieved_at": "2026-10-09T09:56:00+09:00",
+            "price_path": [
+              "metadata",
+              "price_jpy"
+            ],
+            "observed_at_path": [
+              "metadata",
+              "observed_at"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "check": "old_IR_plan_exact_result_or_exception:base",
+      "passed": true
+    },
+    {
+      "check": "old_IR_plan_exact_result_or_exception:wrong_branch_price",
+      "passed": true
+    },
+    {
+      "check": "old_IR_plan_exact_result_or_exception:unset_policy",
+      "passed": true
+    },
+    {
+      "check": "independent_wrapper_combination:uncertain_plus_bad_quote",
+      "passed": true
+    },
+    {
+      "check": "independent_wrapper_combination:empty_quote_exact_retry",
+      "passed": true
+    },
+    {
+      "check": "independent_wrapper_combination:held_quote_ancestor_with_unknown_position",
+      "passed": true
+    },
+    {
+      "check": "independent_wrapper_combination:late_second_quote_parent",
+      "passed": true
+    },
+    {
+      "check": "independent_wrapper_combination:all_roots_synthetic_no_policy_synthetic",
+      "passed": true
+    },
+    {
+      "check": "independent_wrapper_combination:source_receipt_hold_before_pure",
+      "passed": true
+    },
+    {
+      "check": "independent_wrapper_combination:normal_rawreply_unclear_publicsource",
+      "passed": true
+    },
+    {
+      "check": "refreeze_SHA_matches:docs/research-decision-reviews.md",
+      "passed": true
+    },
+    {
+      "check": "refreeze_SHA_matches:src/ir_agent/research_decisions.py",
+      "passed": true
+    },
+    {
+      "check": "refreeze_SHA_matches:tests/test_research_decisions.py",
+      "passed": true
+    },
+    {
+      "check": "old_pure_not_changed_in_fix",
+      "passed": true
+    }
+  ],
+  "check_count": 63,
+  "failures": [],
+  "focused_summary": {
+    "price_gate_cases": 21,
+    "raw_source_cases": 3,
+    "old_schema_cases": 2,
+    "root_demo_cases": 1,
+    "old_pure_exact_cases": 22,
+    "old_IR_plan_exact_cases": 3,
+    "additional_wrapper_combinations": 7,
+    "refreeze_SHA_checks": 4,
+    "full_suite_run_by_reviewer": false
+  },
+  "reviewed_file_sha256": {
+    "src/ir_agent/research_decisions.py": "913f467e2f768404742d5330a4e6f2433c4ea8ddd4b07d1abdb9a6276be791fa",
+    "src/ir_agent/decision.py": "a37bbc586c0aa7c00a924ecc54db7e7132417fa89e350915b9fe2215646b064b",
+    "src/ir_agent/store.py": "00a88a2a3378a4d38fd754ff1c1425272638033280949da49f223940ef9efef5",
+    "src/ir_agent/harness.py": "159207b515b2aad5cf1cbe2ec98acee369247ce6d91524e1b47a7a862d6dcb99",
+    "src/ir_agent/cli.py": "149e43c4a0a645127f1180fca0567fcf29d06b4e0ea4dad96006e4820ddcc37f",
+    "tests/test_research_decisions.py": "4042f61e8923e2ff95f26638323372f7c0f30292ab8be113decfd7c6e32b8ea9",
+    "docs/research-decision-reviews.md": "78c93ace57cf8c5bb3907befb54ba6d25c894037abdee1190a7da79aaa2d579d",
+    "scripts/demo_ir_policy_workflow.py": "066bcd365fc5affe00b016cac56f07f2cd448ff84d30c3455335229a302445e1"
+  },
+  "manual_review_summary": [
+    "All11 design-note failure groups were checked against implementation/tests; no additional actionable issue remained after the two fixes.",
+    "Source closure includes both quote and thesis roots, detects cycles separately, preserves raw SHA and availability receipts, and distinguishes current unknown inputs from malformed references.",
+    "Raw-latest CAS plus selected strict-current availability, fixed policy/registered-time and consumed classification versions are saved. Exact request retry precedes latest CAS.",
+    "Initial unclear reply classification is not confused with applied public source metadata; original metadata holds survive later public assessments.",
+    "Current projection only adds holds for quote timing, thesis/version/receipt/deadline, explicit position and unconsumed classification changes; it does not promote historical unresolved results.",
+    "Only new table/Harness/CLI wiring added. Old reply JSON/schema and RecordAvailability entity taxonomy stay unchanged; no numerical financial policy or valuation calculation was introduced."
+  ],
+  "reviewed_demo_summary": {
+    "public_baseline_id": "synthetic-public-baseline",
+    "public_baseline_action": "hold_review",
+    "reply_review_id": "decision-a2b9f6b3ea2c908120e9202602ca5b00",
+    "reply_action": "exit_review",
+    "comparison_limit": "Prices differ before and after the reply; this is not an estimate of IR effectiveness."
+  },
+  "reproduction_code": {
+    "nonpositive": "Use tests.test_research_decisions fixture. Copy saved market source under new ID, set both source.metadata.price_jpy and decision_quote.price_jpy to0/-1; remove explicit position declarations; old ResearchDecisions.add_review saves1 unresolved row. New code raises ValueError and saves0.",
+    "legacy_raw": "Copy valid market source under new ID, remove metadata/requires_research, put price/observed_at into content JSON; bind quote paths into content and save source through lowlevel Store with receipt. Old add_review raises KeyError(metadata); new code saves using validated copies while raw SHA/receipt remain exact.",
+    "pure_comparison": "Load preserved before/src/ir_agent/decision.py under ir_agent package with importlib.util; compare evaluate_decision/evaluate_ir_plan returned objects or exception type/message on22+3 fully synthetic representative cases."
+  },
+  "execution": {
+    "real_DB_reads_writes": 0,
+    "network_requests": 0,
+    "implementation_test_doc_edits": 0,
+    "external_sends_orders": 0,
+    "full_suite_runs": 0,
+    "only_memory_or_temp_synthetic_DB": true,
+    "output_files_only": [
+      "independent-review.json",
+      "independent-review.md"
+    ]
+  },
+  "limits": [
+    "Functional and manual contract review, not exhaustive proof, financial meaning/assessment truth, source authenticity, brokerage position verification or investment performance.",
+    "Future/current trusted-clock injections and limited preexisting fixture SQL were used only inside memory fixtures; no production database or old DB copy was opened.",
+    "Prior producer29+old78 and fixed32 logs remain historical producer checks. Reviewer did not rerun the full suite; parent owns final full-suite acceptance.",
+    "Root synthetic demo compares different prices before/after a reply and does not estimate IR effectiveness.",
+    "New source/price collection, automated trading/dispatch, historical-write/performance APIs and broad database corruption hardening were not added or audited."
+  ]
+}

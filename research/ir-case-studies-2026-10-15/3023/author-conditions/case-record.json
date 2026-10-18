@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "artifact_type": "author_condition_case_record_before_financial_model",
+  "company_id": "jp:3023",
+  "company_name": "ラサ商事",
+  "recorded_at": "2026-10-15T17:30:22.829878+00:00",
+  "status": "one_author_business_inference_recorded_no_financial_adoption",
+  "issue_id": "3023-author-watch-large-project-reversal",
+  "condition_count": 1,
+  "conditions": [
+    {
+      "id": "3023-B01-large-project-reversal",
+      "parent_issue_id": "3023-author-watch-large-project-reversal",
+      "topic": "前期大型案件の反動減と今期減益の関係",
+      "author_view": "著者は、前期に大型案件を獲得した環境設備関連の営業利益が過去トレンドから乖離した大きさ等から、今期減益要因としてその反動減の影響が大きいと推察する。",
+      "claim_type": "author_qualitative_inference_not_quantitative_causal_decomposition",
+      "evidence": [
+        {
+          "quote_file": "research/ir-case-studies-2026-10-15/3023/first-author-report/quotes.json",
+          "quote_file_sha256": "166b2f20c4af01e1f2580e64496963a8a458d6181dc0114679814637001bcc88",
+          "quote_id": "company-plan-and-author-inference-on-project-reversal",
+          "source_id": "case-public:1a46d5d95c39a234a9a73073accf5b0df19c71cb293d9a1b055f243d0353ac1f",
+          "physical_page": 13,
+          "printed_page": 11,
+          "source_character_start": 34937,
+          "source_character_end_exclusive": 35215,
+          "source_UTF8_byte_start": 54583,
+          "source_UTF8_byte_end_exclusive": 55317,
+          "image_path": "research/ir-case-studies-2026-10-15/3023/first-author-report/images/page-13.png",
+          "image_sha256": "ae28d9bd99672daf695f48339b334c472baba5ab55c0de3fcb00efe1c427dc16",
+          "quote": "2027年3月期通期の連結業績は、売上高で前期比1.1%増の28,500百万円、営業利益で同15.5%減の2,500百万\n円、経常利益で同14.8%減の2,750百万円、親会社株主に帰属する当期純利益で同15.9%減の2,000百万円と増\n収減益の見通しである。この見通しには前期の大型案件獲得による反動減が反映されているが、定量的な増減要\n因は開示されていない。もっとも、大型案件を獲得した環境設備関連の営業利益は明らかに過去のトレンドから\n乖離しており、その乖離の大きさなどから見て、減益要因として大型案件獲得による反動減の影響が大きいと推\n察される。"
+        }
+      ],
+      "company_forecast_context": "27/3期通期連結会社見通しは増収減益で、報告書は大型案件反動減を反映すると説明する。p14の表は「決算短信よりフィスコ作成」で会社計画転載。著者独自数値予測にはしない。",
+      "company_context_evidence": [
+        {
+          "quote_file": "research/ir-case-studies-2026-10-15/3023/first-author-report/quotes.json",
+          "quote_file_sha256": "166b2f20c4af01e1f2580e64496963a8a458d6181dc0114679814637001bcc88",
+          "quote_id": "forecast-table-issuer-origin",
+          "source_id": "case-public:1a46d5d95c39a234a9a73073accf5b0df19c71cb293d9a1b055f243d0353ac1f",
+          "physical_page": 14,
+          "printed_page": 12,
+          "source_character_start": 36250,
+          "source_character_end_exclusive": 36986,
+          "source_UTF8_byte_start": 56852,
+          "source_UTF8_byte_end_exclusive": 57736,
+          "image_path": "research/ir-case-studies-2026-10-15/3023/first-author-report/images/page-14.png",
+          "image_sha256": "4f31ba9abcbeeb63cc48d078876e98c785ee6fefe7251714590a735705114098"
+        }
+      ],
+      "author_explicit_limit": "定量的な増減要因は開示されていない。",
+      "current_observation": "保存著者レポート内の推察と留保は確認済み。会社一次資料による大型案件別/segment別の減益寄与、反動減の主要性、通常利益や後続案件の認定は未実施。",
+      "author_period_label": "2027年3月期通期／比較前期2026年3月期",
+      "exact_fiscal_start_and_end_dates": null,
+      "public_check_project_adaptation": [
+        {
+          "check": "同じ会社一次資料の連結通期予想と前期実績を確認し、環境設備関連/プラント・設備工事関連の区分・利益指標と比較期間をそろえる。",
+          "comparison_basis": "26/3通期実績対27/3通期予想。百万円と連結/segment利益を分離し、区分変更や配賦/消去の説明があれば保持。会社原典未確認なので同一定義とは認定しない。"
+        },
+        {
+          "check": "会社が公開した減益要因表やsegment説明で、大型案件の売上/利益計上期と反動減の寄与を確認できるかを先に点検する。",
+          "comparison_basis": "著者が指す前期大型案件を特定できる公開根拠が必要。案件総額を年割りせず、売上を営業利益へ代用せず、未開示の寄与額/正常利益を計算しない。"
+        },
+        {
+          "check": "後続公表の実績を使う場合は、同じ四半期/累計期間の前年同期と会社予想改定のvintageを分けて比較する。",
+          "comparison_basis": "途中累計を通期実績と直接比較せず、通期予想を機械的に日割りしない。会社説明と著者推察の支持/相違/未解決を記録するだけで、条件成否や投資actionへ自動変換しない。"
+        }
+      ],
+      "interpretation_limits": [
+        "将来会社開示が減益要因を示した場合に著者推察との対応を再点検する。定量説明がないだけで著者推察の成立/反証としない。",
+        "他事業の要因や費用・mix等が示されれば別説明として照合するが、独自確率/反証率/許容差は付けない。",
+        "大口案件の反動減を把握しても、正常利益、利益回復、次の大型案件実現、現在価格の割安を確認したことにはならない。"
+      ],
+      "next_public_material_candidates": [
+        {
+          "kind": "issuer_annual_earnings_release_and_segment_notes",
+          "purpose": "原会社通期予想/前期実績とsegment定義を確認",
+          "exact_document_URL": null,
+          "published_at": null,
+          "already_acquired_in_this_task": false
+        },
+        {
+          "kind": "issuer_results_presentation_or_published_QA",
+          "purpose": "会社が公表した大型案件/減益要因の橋渡しと明示留保の有無を確認",
+          "exact_document_URL": null,
+          "published_at": null,
+          "already_acquired_in_this_task": false
+        },
+        {
+          "kind": "subsequent_issuer_periodic_results_and_guidance_revision_if_published",
+          "purpose": "比較可能な同期間実績と予想vintageによる再点検",
+          "exact_document_URL": null,
+          "published_at": null,
+          "already_acquired_in_this_task": false
+        }
+      ],
+      "status": "author_inference_recorded_issuer_original_comparison_pending",
+      "formal_AND_or_sufficient_trade_condition": false,
+      "numeric_falsification_threshold": null,
+      "permitted_variation": null,
+      "validation_deadline": null,
+      "management_review_date": null,
+      "probability": null,
+      "success_or_failure": null,
+      "canonical_financial_path": null,
+      "financial_input_changes": [],
+      "IR_question_draft": null,
+      "IR_registered_or_sent": false
+    }
+  ],
+  "why_one_condition": "p13に著者自身の具体的な推察がある。segment需要見通しは会社定性開示の紹介と著者 commentaryが混在するため、独立した2つ目の著者条件を枠埋めで作らない。",
+  "author": {
+    "organization": "株式会社フィスコ",
+    "individual_as_printed": "古川 聖治",
+    "English_name_as_printed": "Seiji Furukawa",
+    "role_as_printed": "客員アナリスト",
+    "commissioned_and_paid_by_company": true,
+    "fee_or_contract_details": null,
+    "paid_relationship_is_independent_forecast_or_fact_truth_verification": false,
+    "evidence": [
+      {
+        "quote_file": "research/ir-case-studies-2026-10-15/3023/first-author-report/quotes.json",
+        "quote_file_sha256": "166b2f20c4af01e1f2580e64496963a8a458d6181dc0114679814637001bcc88",
+        "quote_id": "cover-company-code-date-author",
+        "source_id": "case-public:1a46d5d95c39a234a9a73073accf5b0df19c71cb293d9a1b055f243d0353ac1f",
+        "physical_page": 1,
+        "printed_page": null,
+        "source_character_start": 82,
+        "source_character_end_exclusive": 271,
+        "source_UTF8_byte_start": 98,
+        "source_UTF8_byte_end_exclusive": 371,
+        "image_path": "research/ir-case-studies-2026-10-15/3023/first-author-report/images/page-1.png",
+        "image_sha256": "9c55bda1dd7fa9e3af5bd7aec70c5a0cd7db160dfc9697daa3db01dcb7174ad6"
+      },
+      {
+        "quote_file": "research/ir-case-studies-2026-10-15/3023/first-author-report/quotes.json",
+        "quote_file_sha256": "166b2f20c4af01e1f2580e64496963a8a458d6181dc0114679814637001bcc88",
+        "quote_id": "disclaimer-commission-and-analysis",
+        "source_id": "case-public:1a46d5d95c39a234a9a73073accf5b0df19c71cb293d9a1b055f243d0353ac1f",
+        "physical_page": 19,
+        "printed_page": null,
+        "source_character_start": 46892,
+        "source_character_end_exclusive": 47003,
+        "source_UTF8_byte_start": 75934,
+        "source_UTF8_byte_end_exclusive": 76263,
+        "image_path": "research/ir-case-studies-2026-10-15/3023/first-author-report/images/page-19.png",
+        "image_sha256": "97d72a3246087d2023b8e34af30c417133bb279bfefe5d6bd53e56662460be9e"
+      }
+    ]
+  },
+  "source_scope": {
+    "source_id": "case-public:1a46d5d95c39a234a9a73073accf5b0df19c71cb293d9a1b055f243d0353ac1f",
+    "report_date_as_printed": "2026年7月15日（水）",
+    "report_date_precision": "date_only",
+    "published_at": null,
+    "retrieved_at": "2026-10-15T17:18:48.956807+00:00",
+    "historical_first_saved_at": null,
+    "reused_meaning_pages": [
+      1,
+      13,
+      14,
+      17,
+      18,
+      19
+    ],
+    "reused_independent_review_file": "research/ir-case-studies-2026-10-15/3023/first-author-report/independent-recheck.json",
+    "reused_independent_review_sha256": "2dfb9a622b28e4b5ae4c22dbe5e53eb11bd93dc64b64573eaf61f976c4be96fb",
+    "new_semantic_pages_or_GETs": 0,
+    "full_PDF_reread": false,
+    "current_reconstruction_not_historical_preregistration": true
+  },
+  "not_author_investment_rules": {
+    "company_plan_reprint": "27/3通期予想は会社計画転載。独立EPS/予測/達成保証としない。",
+    "capital_cost_and_expected_return": "会社がCAPM約4〜7%、投資家期待8%程度を認識する文脈。project r/WACC/購入閾値/fairPEではない。",
+    "payout": "配当性向40%前後/総還元性向50%以上/DPS維持予定は会社方針で、著者の利確/退出条件や将来配当列にしない。",
+    "evidence": [
+      {
+        "quote_file": "research/ir-case-studies-2026-10-15/3023/first-author-report/quotes.json",
+        "quote_file_sha256": "166b2f20c4af01e1f2580e64496963a8a458d6181dc0114679814637001bcc88",
+        "quote_id": "company-capital-cost-and-relative-cheapness",
+        "source_id": "case-public:1a46d5d95c39a234a9a73073accf5b0df19c71cb293d9a1b055f243d0353ac1f",
+        "physical_page": 17,
+        "printed_page": 15,
+        "source_character_start": 43151,
+        "source_character_end_exclusive": 43332,
+        "source_UTF8_byte_start": 69173,
+        "source_UTF8_byte_end_exclusive": 69668,
+        "image_path": "research/ir-case-studies-2026-10-15/3023/first-author-report/images/page-17.png",
+        "image_sha256": "205244a374922056ecf899e9e6fea1f5b67c2af129515ac37b76a4630bf5bdab"
+      },
+      {
+        "quote_file": "research/ir-case-studies-2026-10-15/3023/first-author-report/quotes.json",
+        "quote_file_sha256": "166b2f20c4af01e1f2580e64496963a8a458d6181dc0114679814637001bcc88",
+        "quote_id": "company-payout-policy-and-planned-DPS",
+        "source_id": "case-public:1a46d5d95c39a234a9a73073accf5b0df19c71cb293d9a1b055f243d0353ac1f",
+        "physical_page": 18,
+        "printed_page": 16,
+        "source_character_start": 44706,
+        "source_character_end_exclusive": 44961,
+        "source_UTF8_byte_start": 72174,
+        "source_UTF8_byte_end_exclusive": 72871,
+        "image_path": "research/ir-case-studies-2026-10-15/3023/first-author-report/images/page-18.png",
+        "image_sha256": "4e30ea732427960464e4d06c4790ed9b4e256289376b8206d6143605fa13869b"
+      }
+    ]
+  },
+  "financial_input_slots_not_adopted": {
+    "discount_rate": null,
+    "terminal_growth_rate": null,
+    "cash_jpy": null,
+    "debt_jpy": null,
+    "shares_outstanding": null,
+    "fcf_jpy": null,
+    "terminal_fcff_jpy": null,
+    "non_operating_assets_jpy": null,
+    "minority_interests_jpy": null
+  },
+  "financial_slot_boundary": "既存9入力の未設定表示で、DCFの採用を意味しない。事業論点からcanonical pathへの橋渡しは未設定。",
+  "valuation_and_decision": {
+    "method": null,
+    "EPS": null,
+    "fair_multiple": null,
+    "price_jpy": null,
+    "target_price_jpy": null,
+    "probabilities": null,
+    "canonical_financial_paths": null,
+    "decision_policy_adopted": false,
+    "buy_sell_take_profit_branch": null,
+    "information_value": null,
+    "information_value_state": "unknown_not_estimated_neither_zero_nor_positive_established"
+  },
+  "research_method_basis": {
+    "upstream": "Anthropic thesis-trackerの反証可能性/反対根拠の追跡を設計参照。FISCOがこの研究手順や売買規則を指示したという意味ではない。",
+    "upstream_path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+    "upstream_short_quotes": [
+      "A thesis should be falsifiable",
+      "Track disconfirming evidence as rigorously as confirming evidence"
+    ],
+    "project_reference": "docs/decision-policy.md#数値評価が未完成の段階の研究",
+    "project_adaptation": "不明な因果を未解決のまま、会社原資料を同期間/定義で点検する研究作業へ対応。条件成績や数値判断へ自動変換しない。"
+  },
+  "public_information_before_IR": {
+    "next_task": "会社一次資料の同期間通期/segment・大型案件反動減の開示範囲確認",
+    "already_known_in_saved_report": [
+      "会社見通しは増収減益",
+      "前期大型案件反動減の影響という説明と著者の推察",
+      "定量増減要因未開示という報告書の留保"
+    ],
+    "primary_issuer_verification_still_pending": true,
+    "repeat_generic_question_not_created": true,
+    "formal_IR_drafts": 0,
+    "current_contact_quiet_period_or_sending_eligibility": null
+  },
+  "DB_boundary": {
+    "input_scope_here": "File-only source/review objects; no DB queried or constructed.",
+    "parent_report_at_assignment": {
+      "DB_source_count": 111,
+      "source_3023_import": "preparing; unregistered at assignment as reported by parent"
+    },
+    "current_DB_membership_or_count_verified_here": false,
+    "actual_save_receipt_consumed_here": false,
+    "actual_first_save_time": null,
+    "HTTP_completion_is_DB_presence_proof": false,
+    "future_parent_receipt_attribution": "Only a separate parent trusted-save receipt can establish subsequent actual DB presence; it does not alter this input scope."
+  },
+  "fixed_inputs_SHA256": {
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/guard.json": "b6a6fe367bf8b7306d0dc875632d08d171884139d2fab065de70d0298517af27",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/review.json": "4cbf3cf7b6ec588d1cfb9e53875a9d2a16682c90a6d2ea2be95416b2d7439be9",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/02.snapshot.json": "648435ef2c478c85d86bc8fc12ad16c56afbbdf354eb55215752e077efad0230",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/route.json": "90374a065200d2000a67961787c7904a08e8e19c23f1cf317980625f87452a9e",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/quotes.json": "166b2f20c4af01e1f2580e64496963a8a458d6181dc0114679814637001bcc88",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/provenance.json": "78006008a262d03b1d918594a4b3787866a9aa9266f16e40a73beecdfd756963",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/README.md": "24f082094c4028c0f39e35aa669ebe1145be84579d9b37390caf05fe35cf5bf8",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/validation.json": "2a9f76ad1d9c62474e2a55aac5ce7726914d6fb902cee460c75494ffb2808aac",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/capture.json": "be5780b76331a1d98a34815cb12a40db7f39bac2afc45179c7e87719767ac3e1",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/independent-recheck.json": "2dfb9a622b28e4b5ae4c22dbe5e53eb11bd93dc64b64573eaf61f976c4be96fb",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/source-bundle.json": "187115caaab1abdef0d6ee0818033cd61973bb9b8243a28b6632ce063d8fbf36",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/independent-recheck.md": "a8a87b9f2fa689a178b4f286a6a5bcf715d24910705dd754c743d7cdcc5cf978",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/images/page-17.png": "205244a374922056ecf899e9e6fea1f5b67c2af129515ac37b76a4630bf5bdab",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/images/page-13.png": "ae28d9bd99672daf695f48339b334c472baba5ab55c0de3fcb00efe1c427dc16",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/images/page-18.png": "4e30ea732427960464e4d06c4790ed9b4e256289376b8206d6143605fa13869b",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/images/page-1.png": "9c55bda1dd7fa9e3af5bd7aec70c5a0cd7db160dfc9697daa3db01dcb7174ad6",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/images/page-14.png": "4f31ba9abcbeeb63cc48d078876e98c785ee6fefe7251714590a735705114098",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/images/page-19.png": "97d72a3246087d2023b8e34af30c417133bb279bfefe5d6bd53e56662460be9e",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/text/02.txt": "a1ef6be6037e71abda0641ca9f38dc6b9d847e36e44f16a14072577234b70042",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/text/01.txt": "447dcb29719aac911bfef6110aed03f96296d7b033e0884e4560c6d308d6989a",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/raw/447dcb29719aac911bfef6110aed03f96296d7b033e0884e4560c6d308d6989a": "447dcb29719aac911bfef6110aed03f96296d7b033e0884e4560c6d308d6989a",
+    "research/ir-case-studies-2026-10-15/3023/first-author-report/raw/ea45b06915b955b66a3afaaa244597e1f72bf7e58e7ee21dfa3c4c2dfd3ddf86": "ea45b06915b955b66a3afaaa244597e1f72bf7e58e7ee21dfa3c4c2dfd3ddf86",
+    "docs/decision-policy.md": "e687e70c70ec9ce4b40b935bb9e908cd2d1328f44dfa488fad639557fbba8de5",
+    "third_party/anthropic/skills/thesis-tracker/SKILL.md": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b"
+  },
+  "execution": {
+    "GETs": 0,
+    "DB_Store_SQLite_CLI": 0,
+    "old_file_code_docs_index_monitor_edits": 0,
+    "new_normalized_facts_or_model_inputs": 0,
+    "financial_thesis_or_action_created": 0,
+    "IR_draft_registration_send": 0,
+    "new_files": 3
+  }
+}

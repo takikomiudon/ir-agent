@@ -1,0 +1,590 @@
+{
+  "schema_version": 1,
+  "artifact_type": "independent_public_document_meaning_review",
+  "company_id": "jp:1833",
+  "company_name": "奥村組",
+  "recorded_at": "2026-10-15T08:53:01.515993+00:00",
+  "status": "focused_meaning_review_complete_no_material_contradiction_found_with_scope_clarifications",
+  "result_scope": "Independent reading of saved source text and19existing quote spans. This is not automatic/general meaning certification, model adoption, a financialdecision policy or fullPDF byte reextraction audit.",
+  "documents": {
+    "statement": {
+      "source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef",
+      "url": "https://www.okumuragumi.co.jp/ir/irinfo/data/20260807_kessan.pdf",
+      "retrieved_at": "2026-10-15T08:44:21.459768+00:00",
+      "published_at": null,
+      "publication_date": "2026-08-07",
+      "document_asof_date": null,
+      "raw_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/raw/fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+      "raw_sha256": "fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.pdf.txt",
+      "text_sha256": "eadabdf6da5245e070217266bc9c20e58cbc2abfa9589d9098c0390085e10399",
+      "capture_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.json",
+      "capture_sha256": "269d8f711da47eb49a7c7e352e6ef0855ae5af2a6b01138ebc8c9d2e3000ec4b",
+      "boundary": "IDs and byte-evidence references inherited from saved bundle; no DB access. Independent raw/PDF reextraction review is assigned to another reviewer, not repeated here."
+    },
+    "supplement": {
+      "source_id": "case-public:26fd85fd0e106c01dbdbdcfd9893d156d94c4d3b434d76a9d1a4774874df76ee",
+      "url": "https://www.okumuragumi.co.jp/ir/irinfo/data/20260807_kessan_fact.pdf",
+      "retrieved_at": "2026-10-15T08:44:41.025231+00:00",
+      "published_at": null,
+      "publication_date": null,
+      "document_asof_date": "2026-08-07",
+      "raw_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/raw/7df88f486e2b82404de6b5d88050c332f8ebe3742fa4e3f1da990864f5ad85e6",
+      "raw_sha256": "7df88f486e2b82404de6b5d88050c332f8ebe3742fa4e3f1da990864f5ad85e6",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/04.pdf.txt",
+      "text_sha256": "a5708f1ef28916a26d1067bcf020943f56eb1d7e767e22c083d6a47e6055111e",
+      "capture_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/04.json",
+      "capture_sha256": "9c80829db2785539ab9b24d0a4867f3275927f5ded6f89ca4741be37eddc34fd",
+      "boundary": "IDs and byte-evidence references inherited from saved bundle; no DB access. Independent raw/PDF reextraction review is assigned to another reviewer, not repeated here."
+    }
+  },
+  "read_scope": {
+    "statement_physical_pages_close_read": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      9,
+      11,
+      12,
+      13,
+      14
+    ],
+    "supplement_physical_pages_read": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "physical_page_counts": {
+      "statement": 14,
+      "supplement": 8
+    },
+    "existing_quote_spans_checked": 19,
+    "PDF_reextraction_repeated": false,
+    "current_beyond_August7_verified": false
+  },
+  "findings": [
+    {
+      "id": "period-and-consolidation",
+      "status": "meaning_aligned",
+      "observation": "FY2027/3 Q1 actual covers2026-04-01–06-30; priorQ1 is2025-04-01–06-30. Annual issuer plan covers2026-04-01–2027-03-31. The statement is JapanGAAP consolidated, while its reference individual figures and supplement sections are separate. Supplementphysical3/printed1 is consolidated; physical4/printed2 and orders/individualfinancials onphysical5–8 are standalone.",
+      "quote_ids": [
+        "quarter-actual-period-and-profit-rows",
+        "annual-company-forecast",
+        "supplement-consolidated-column-vintages",
+        "supplement-standalone-scope"
+      ],
+      "interpretation_limit": "Do not compare Q1 actual to previous full-year actual as sameperiod, annualizeQ1, or combine individual/consolidated profits just because the same forecastEPS appears."
+    },
+    {
+      "id": "segment-recast-and-aggregate-line",
+      "status": "meaning_aligned_with_scope_clarification",
+      "observation": "Reportsegments changed from3to5: investmentdevelopment split into realestate/infrastructureoperation; machinery moved outofOther. PriorQ1 segment data is recast to the new basis. The supplement PL heading不動産事業等 is a renamed aggregate reportingline, not the新5区分の不動産事業 alone.",
+      "quote_ids": [
+        "segment-change-and-recast",
+        "supplement-renamed-aggregate-lines",
+        "consolidated-aggregate-sales-line"
+      ],
+      "interpretation_limit": "Use the recast comparison and distinguish externalcustomer sales from segmentinternal sales, grossprofit from segmentOP. The group PLaggregate cannot be relabeled as a single realestate segment margin or used to reconcile individual and consolidated earnings without a disclosed bridge."
+    },
+    {
+      "id": "earnings-vintage-versus-order-mix",
+      "status": "scope_clarification",
+      "observation": "August7 states nochange to May15 full-year earningsguidance. The supplement separately revises standalone orderforecast components: civil public85000vs70000, private25000vs40000mJPY; civil total110000 and allorders total280000 are unchanged.",
+      "quote_ids": [
+        "forecast-vintage-and-FX-exclusion",
+        "supplement-consolidated-column-vintages",
+        "order-forecast-composition-revised-total-unchanged"
+      ],
+      "interpretation_limit": "Unchanged earningsforecast does not mean all company assumptions, ordercomposition or plans unchanged. The compositionrevision is not a revenue/profitrevision or an independently inferred demand/collectionforecast."
+    },
+    {
+      "id": "FX-exclusion-not-future-zero",
+      "status": "meaning_aligned",
+      "observation": "Annual consolidated nonoperating forecast excludes both group currencydifferences and Ishikari FXforwardvaluation effects. Individual forecast note excludes the company’s currencydifferences. Actual currentQ1 includes FXforwardvaluation gain1463mJPY in nonoperatingincome; priorQ1 shows FXforwardvaluation loss1176mJPY.",
+      "quote_ids": [
+        "forecast-vintage-and-FX-exclusion",
+        "income-classification",
+        "standalone-FX-exclusion-scope"
+      ],
+      "interpretation_limit": "Unmodeled forecast exposure is not a prediction of zero or nonrecurrence. Currentgain is not a currentloss. Do not add the gain mechanically to annual issuerguidance, carry it forward, annualize it, or addback all historical currencylosses. Cash/valuation/settlement/tax/time paths and any sensitivities remain unestablished."
+    },
+    {
+      "id": "PL-and-oneoff-boundary",
+      "status": "meaning_aligned",
+      "observation": "CurrentQ1 consolidated dividendincome923mJPY and FXforwardvaluationgain1463mJPY are nonoperating. Securities-salegain304mJPY is specialprofit, fixedassetdisposalloss425mJPY specialloss. Priorperiod securitiesvaluationloss6mJPY versus current dash is not a newly disclosed current impairmentloss. Overseaslarge-project loss and Ishikari lowutilization/maintenance appear in operatingbusiness explanations without separately disclosed addback amounts here.",
+      "quote_ids": [
+        "income-classification",
+        "civil-large-project-loss",
+        "infrastructure-restart-costs",
+        "tax-and-noncontrolling-interest-distinction"
+      ],
+      "interpretation_limit": "Do not move receiveddividends, specialprofits/losses or an assumed impairment intoOP. Do not set dash tozero in financial inputs or turn an unexplained cost into a verified oneoff. Taxes/noncontrolling interests and dividend distributions remain separate from revenue/OP, so a nonoperating gain is not a one-for-one parentNI orEPS uplift."
+    },
+    {
+      "id": "CF-and-amortization",
+      "status": "meaning_aligned",
+      "observation": "Q1 consolidated CF is explicitly not prepared. Disclosed D&A880mJPY versus742mJPY includes intangible amortization and is a quarter note.",
+      "quote_ids": [
+        "CF-not-prepared-and-depreciation"
+      ],
+      "interpretation_limit": "This note is neither CFO norFCFF and does not establish capex/workingcapital/cash settlement. A reply confirming the definition cannot fill a complete cashflow model or add depreciation twice."
+    },
+    {
+      "id": "treasury-disposal-and-quarter-shares",
+      "status": "meaning_aligned",
+      "observation": "The reportedJune-quarter issued/treasury/weightedaverage shares and employeebenefittrust exclusions are explicit. The company separately states July15 resolution/July31 restricted-stock-remuneration treasuryshare disposal is considered in forecastDPS and annualEPS.",
+      "quote_ids": [
+        "shares-and-trust",
+        "forecast-treasury-disposal-basis"
+      ],
+      "interpretation_limit": "The laterJuly transaction is not a June30 actualsharecount. Do not replace annualforecast sharebasis with JuneQ1average, deduce an undisclosed futuredenominator, reapply disposal on top of the issuer’s stated forecast or extend300JPY DPS into a future dividendstream. These disclosed notes do not quantify the annual averagefuturepath."
+    },
+    {
+      "id": "Ishikari-covenant-asof",
+      "status": "meaning_aligned",
+      "observation": "The August7 statement reports a nonrecourse-loan covenantbreach at Ishikari, a parent additionalloan contract for liquiditysupport, and no lender exercise of acceleration-relatedrights.",
+      "quote_ids": [
+        "subsidiary-covenant-breach"
+      ],
+      "interpretation_limit": "This is the disclosure’s dateddescription, not verifiedresolution or October15 status. Noexercise does not establish waiver/remediation/riskzero; parentcontract is not a quantified completedcashtransfer or fullparentguarantee. No maturity/amount/condition/sensitivity is invented."
+    }
+  ],
+  "reply_interpretation_constraints": {
+    "nature": "Project application of the cited meaning boundaries; no new authorinvestment rule or numeric threshold.",
+    "items": [
+      {
+        "id": "definition-answer",
+        "rule": "A reply clarifying a publicdefinition/column/accountingcategory can update the research explanation after public-information review; it does not itself change a profitforecast, valuation multiple, target or investmentaction.",
+        "based_on_findings": [
+          "period-and-consolidation",
+          "segment-recast-and-aggregate-line",
+          "PL-and-oneoff-boundary"
+        ]
+      },
+      {
+        "id": "forecast-answer",
+        "rule": "Treat an issuer plan revision as a new dated publicforecast, preserving priorvintage, period, consolidation and exclusions. The two stated FXexclusions do not create a numerical replybranch or zero futureFXinput.",
+        "based_on_findings": [
+          "earnings-vintage-versus-order-mix",
+          "FX-exclusion-not-future-zero"
+        ]
+      },
+      {
+        "id": "operating-loss-answer",
+        "rule": "An answer about scope or occurrence of loss/maintenance does not supply a permitted amount, recurrenceassumption or OPaddback unless these are explicitly source-backed and separately reviewed. PublicPL classification cannot be overruled by an informal normalisation label.",
+        "based_on_findings": [
+          "PL-and-oneoff-boundary",
+          "CF-and-amortization"
+        ]
+      },
+      {
+        "id": "share-or-covenant-answer",
+        "rule": "Keep answerasof dates; confirmation of July31 treatment or August7 noacceleration is not a fresh futuredenominator, new dividendschedule, or proof of current financingresolution. Require later publicevidence for later state.",
+        "based_on_findings": [
+          "treasury-disposal-and-quarter-shares",
+          "Ishikari-covenant-asof"
+        ]
+      }
+    ],
+    "canonical_model_path": null,
+    "precommitted_answer_branches_created": false,
+    "numerical_input_adoption": false
+  },
+  "publicly_resolved_without_new_IR_draft": [
+    "Q1versusFY/consolidated-versus-individual period andcolumnscope.",
+    "Five-segment recast of priorQ1 and separateaggregatePLnames.",
+    "Dated earningsforecast unchanged, specificFXexclusions, ordermix revision rather than blanket unchangedplans.",
+    "ReportedQ1 nonoperating/special classifications and noncontrollingprofit distinction.",
+    "Q1CFnotprepared and D&A includesintangible.",
+    "Quartertrustshares and July31disposal reflected in forecastEPS/DPS.",
+    "The report’s August7covenant/parentloans/noexercise disclosure."
+  ],
+  "remaining_public_dependencies": [
+    "Publicforecast revisions and results afterAugust7; no nextrelease date established.",
+    "Public explanations of currencyvaluation versus settlement/taxes/time exposure; not a selfgenerated sensitivity.",
+    "Any later quantified scope/recurrence evidence for projectloss/maintenance and fresh covenant/funding status."
+  ],
+  "next_company_publication_date": null,
+  "investment_action": null,
+  "valuation": null,
+  "financial_inputs_verified": false,
+  "meaning_review_required": true,
+  "model_adopted": false,
+  "quotations": [
+    {
+      "id": "annual-company-forecast",
+      "source_key": "statement",
+      "source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef",
+      "pdf_page": 1,
+      "printed_page": null,
+      "quote": "３．2027年３月期の連結業績予想（2026年４月１日～2027年３月31日）\n\n                                                                          (％表示は、対前期増減率)\n                                                                      親会社株主に帰属  １株当たり\n                    売上高                営業利益               経常利益\n                                                                       する当期純利益  当期純利益\n                   百万円           ％    百万円          ％     百万円      ％       百万円        ％              円 銭\n       通期     304,000 △1.0 20,500 28.7 20,700 △18.2                   15,400 △16.1                 428.91\n(注) 直近に公表されている業績予想からの修正の有無 ： 無",
+      "page_character_start": 2599,
+      "page_character_end": 3203,
+      "file_character_start": 2599,
+      "file_character_end": 3203,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "8f6974c1ad303491dcd26d8f2f523b4c06a7550215521654f36ee9f2c015a4bc",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.pdf.txt",
+      "text_sha256": "eadabdf6da5245e070217266bc9c20e58cbc2abfa9589d9098c0390085e10399",
+      "raw_pdf_sha256": "fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+      "upstream_quote_id": "annual-company-forecast"
+    },
+    {
+      "id": "shares-and-trust",
+      "source_key": "statement",
+      "source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef",
+      "pdf_page": 2,
+      "printed_page": null,
+      "quote": "（４）発行済株式数（普通株式）\n  ① 期末発行済株式数（自己株式を含む)       2027年３月期１Ｑ   38,665,226株   2026年３月期     38,665,226株\n\n  ②   期末自己株式数               2027年３月期１Ｑ   2,788,910株    2026年３月期     2,794,557株\n\n  ③   期中平均株式数（四半期累計）        2027年３月期１Ｑ   35,875,815株   2026年３月期１Ｑ   35,894,058株\n\n （注）当社は、「従業員向け株式給付信託」を導入しており、本制度に係る信託口が保有する当社株式を期末自己株\n    式数に含めています（2027年３月期１Ｑ 262,200株、2026年３月期 268,200株）。また、同信託口が保有す\n    る当社株式を期中平均株式数の計算において控除する自己株式に含めています（2027年３月期１Ｑ 262,844\n    株、2026年３月期１Ｑ 269,476株）。",
+      "page_character_start": 352,
+      "page_character_end": 815,
+      "file_character_start": 3557,
+      "file_character_end": 4020,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "248d41c1502a90eb5a12fdccc228f690262ec0527eb507f29964b599f85dce48",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.pdf.txt",
+      "text_sha256": "eadabdf6da5245e070217266bc9c20e58cbc2abfa9589d9098c0390085e10399",
+      "raw_pdf_sha256": "fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+      "upstream_quote_id": "shares-and-trust"
+    },
+    {
+      "id": "forecast-treasury-disposal-basis",
+      "source_key": "statement",
+      "source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef",
+      "pdf_page": 2,
+      "printed_page": null,
+      "quote": "・2026年７月15日開催の取締役会の決議に基づき、2026年７月31日付で譲渡制限付株式報酬としての自己株式の処\n  分を行いました。「２．配当の状況」における「2027年３月期(予想)」及び「３．2027年３月期の連結業績予想」\n  における「１株当たり当期純利益」については、当該自己株式の処分の影響を考慮しています。",
+      "page_character_start": 899,
+      "page_character_end": 1061,
+      "file_character_start": 4104,
+      "file_character_end": 4266,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "ae9a3bdeb19f9df362c0694844b2cc6e3c17269a27ee0ff13e092221bf43ef90",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.pdf.txt",
+      "text_sha256": "eadabdf6da5245e070217266bc9c20e58cbc2abfa9589d9098c0390085e10399",
+      "raw_pdf_sha256": "fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+      "upstream_quote_id": "forecast-treasury-disposal-basis"
+    },
+    {
+      "id": "civil-large-project-loss",
+      "source_key": "statement",
+      "source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef",
+      "pdf_page": 5,
+      "printed_page": 2,
+      "quote": "（土木事業）\n 売上高は前年同期間に比べ22.0％増加した28,906百万円、前期からの繰越工事は全般的に追加工事の獲得や原価低\n減等により採算が向上したものの、特定の海外大型工事で多額の損失を計上したことから、営業利益は同29.1％減少\nした1,474百万円となりました。",
+      "page_character_start": 803,
+      "page_character_end": 940,
+      "file_character_start": 8495,
+      "file_character_end": 8632,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "ec7f49e06900e53130a8dcf624b24275bdd970399fcd3868d10cc1667566d9f1",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.pdf.txt",
+      "text_sha256": "eadabdf6da5245e070217266bc9c20e58cbc2abfa9589d9098c0390085e10399",
+      "raw_pdf_sha256": "fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+      "upstream_quote_id": "civil-large-project-loss"
+    },
+    {
+      "id": "infrastructure-restart-costs",
+      "source_key": "statement",
+      "source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef",
+      "pdf_page": 5,
+      "printed_page": 2,
+      "quote": "（インフラ運営事業等）\n インフラ運営事業等は再生可能エネルギーによる発電・売電事業等で、前年同期間において商業運転を停止してい\nた連結子会社である石狩バイオエナジー（同）が運転を再開したことにより、売上高は前年同期間に比べ376.4％増加\nした1,366百万円となりました。損益面においては、同社は商業運転を再開したものの、稼働率が低調であったことに\n加え、一部設備において追加のメンテナンス費用が発生したことから、営業損失は1,477百万円（前年同期間は585百\n万円の営業損失）となりました。",
+      "page_character_start": 1235,
+      "page_character_end": 1484,
+      "file_character_start": 8927,
+      "file_character_end": 9176,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "afca8afc611d8f68785bc8f9de63d37265c73e88830ab7dcb2a668538107f776",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.pdf.txt",
+      "text_sha256": "eadabdf6da5245e070217266bc9c20e58cbc2abfa9589d9098c0390085e10399",
+      "raw_pdf_sha256": "fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+      "upstream_quote_id": "infrastructure-restart-costs"
+    },
+    {
+      "id": "forecast-vintage-and-FX-exclusion",
+      "source_key": "statement",
+      "source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef",
+      "pdf_page": 6,
+      "printed_page": 3,
+      "quote": "2026年５月15日の決算発表時に公表しました2027年３月期の通期の業績予想に変更はありません。業績予想の詳細\nについては、本日別途公表しました「2027年３月期第１四半期決算補足資料」１ページ「１．連結業績の実績と予\n想」及び２ページ「２．個別業績の実績と予想」も併せてご覧ください。\n なお、連結業績予想における営業外損益には、当社グループの為替差損益及び連結子会社である石狩バイオエナジ\nー（同）の為替予約評価損益を織り込んでいません。今後、当社の連結業績は為替相場等の動向に大きく影響を受け\nる可能性があります。",
+      "page_character_start": 343,
+      "page_character_end": 604,
+      "file_character_start": 9839,
+      "file_character_end": 10100,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "37fdf95c52e50695ce384a4c7e06f53323cd2ab38d3a18072ebde1cb1a06b85a",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.pdf.txt",
+      "text_sha256": "eadabdf6da5245e070217266bc9c20e58cbc2abfa9589d9098c0390085e10399",
+      "raw_pdf_sha256": "fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+      "upstream_quote_id": "forecast-vintage-and-FX-exclusion"
+    },
+    {
+      "id": "income-classification",
+      "source_key": "statement",
+      "source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef",
+      "pdf_page": 9,
+      "printed_page": 6,
+      "quote": "営業外収益\n 受取利息                                                 35                   25\n 受取配当金                                               668                  923\n 為替予約評価益                                               -                1,463\n その他                                                 637                  569\n 営業外収益合計                                           1,341                2,982\n営業外費用\n 支払利息                                                194                  266\n 為替予約評価損                                           1,176                    -\n その他                                                 125                   78\n 営業外費用合計                                           1,496                  344\n経常利益                                               3,983                5,265\n特別利益\n 投資有価証券売却益                                           882                  304\n その他                                                   0                    -\n 特別利益合計                                              883                  304\n特別損失\n 投資有価証券評価損                                             6                    -\n 固定資産除却損                                              16                  425\n 特別損失合計",
+      "page_character_start": 1344,
+      "page_character_end": 2543,
+      "file_character_start": 15012,
+      "file_character_end": 16211,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "5b3dc42bb30679dfc07a5959d07d17a86a769f2f5edfc3c00737c5dde10b00ac",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.pdf.txt",
+      "text_sha256": "eadabdf6da5245e070217266bc9c20e58cbc2abfa9589d9098c0390085e10399",
+      "raw_pdf_sha256": "fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+      "upstream_quote_id": "income-classification"
+    },
+    {
+      "id": "segment-change-and-recast",
+      "source_key": "statement",
+      "source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef",
+      "pdf_page": 12,
+      "printed_page": 9,
+      "quote": "２．報告セグメントの変更等に関する事項\n  当社グループは、2030年に向けたビジョンにおいて、「持続的な成長に向け事業領域を拡大し、強固な収益基\n 盤を築く」の実現を掲げており、新事業開発と不動産事業を通じた事業領域の拡大及び収益基盤の強化を加速さ\n せるため、当第１四半期連結会計期間の期首から当社グループ内の組織体制を変更しています。\n  組織体制の変更に併せて業績管理区分を見直し、従来「投資開発事業」に区分していた不動産の販売及び賃貸\n に関する事業及び再生可能エネルギーによる発電・売電事業等をそれぞれ「不動産事業」及び「インフラ運営事\n 業等」に区分を変更しています。\n  さらに、従来「その他」に区分していた建設資機材等の製造及び販売に関する事業等について、今後の事業展\n 開を踏まえ、報告セグメントとして記載する方法に変更しており、名称を「機械事業」としています。\n  その結果、「土木事業」「建築事業」「投資開発事業」の３区分としていた報告セグメントを、「土木事業」\n 「建築事業」「不動産事業」「インフラ運営事業等」「機械事業」の５区分に変更しています。各報告セグメン\n トの概要は以下のとおりです。\n  土木事業：土木工事その他建設工事全般に関する事業\n  建築事業：建築工事その他建設工事全般に関する事業\n  不動産事業：不動産の販売及び賃貸に関する事業\n  インフラ運営事業等：再生可能エネルギーによる発電・売電事業等\n  機械事業：建設資機材等の製造及び販売に関する事業等\n  なお、前第１四半期連結累計期間のセグメント情報については、変更後の報告セグメントの区分に基づき作成\n したものを記載しています。",
+      "page_character_start": 63,
+      "page_character_end": 781,
+      "file_character_start": 20848,
+      "file_character_end": 21566,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "b4e38de86f9e25bce0c98b9f4f6ba76633c930d273ade997ef175ae0dbfdb7ad",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.pdf.txt",
+      "text_sha256": "eadabdf6da5245e070217266bc9c20e58cbc2abfa9589d9098c0390085e10399",
+      "raw_pdf_sha256": "fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+      "upstream_quote_id": "segment-change-and-recast"
+    },
+    {
+      "id": "CF-not-prepared-and-depreciation",
+      "source_key": "statement",
+      "source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef",
+      "pdf_page": 12,
+      "printed_page": 9,
+      "quote": "当第１四半期連結累計期間に係る四半期連結キャッシュ・フロー計算書は作成していません。\n なお、第１四半期連結累計期間に係る減価償却費(無形固定資産に係る償却費を含む。)は、次のとおりです。\n                      前第１四半期連結累計期間        当第１四半期連結累計期間\n                       (自 2025年４月１日        (自 2026年４月１日\n                        至 2025年６月30日)       至 2026年６月30日)\n  減価償却費                      742百万円                880百万円",
+      "page_character_start": 875,
+      "page_character_end": 1196,
+      "file_character_start": 21660,
+      "file_character_end": 21981,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "f0ac7b43d5885e4855898a87d6e1eaee81fff3c069971e9f10616539568299ab",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.pdf.txt",
+      "text_sha256": "eadabdf6da5245e070217266bc9c20e58cbc2abfa9589d9098c0390085e10399",
+      "raw_pdf_sha256": "fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+      "upstream_quote_id": "CF-not-prepared-and-depreciation"
+    },
+    {
+      "id": "subsidiary-covenant-breach",
+      "source_key": "statement",
+      "source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef",
+      "pdf_page": 12,
+      "printed_page": 9,
+      "quote": "（財務制限条項）\n 連結子会社である石狩バイオエナジー（同）のノンリコース借入金において、財務制限条項への抵触が確認され\nました。当社は、同社に対して、資金繰り支援のため追加の融資契約を締結しており、債権者から期限の利益喪失\nに関わる条項の権利行使は受けていません。",
+      "page_character_start": 1488,
+      "page_character_end": 1621,
+      "file_character_start": 22273,
+      "file_character_end": 22406,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "4f4c320a702bc6076378f9b221b8c582b1f48814684d00dbd47bca6e0b2eec61",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.pdf.txt",
+      "text_sha256": "eadabdf6da5245e070217266bc9c20e58cbc2abfa9589d9098c0390085e10399",
+      "raw_pdf_sha256": "fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+      "upstream_quote_id": "subsidiary-covenant-breach"
+    },
+    {
+      "id": "supplement-consolidated-column-vintages",
+      "source_key": "supplement",
+      "source_id": "case-public:26fd85fd0e106c01dbdbdcfd9893d156d94c4d3b434d76a9d1a4774874df76ee",
+      "pdf_page": 3,
+      "printed_page": 1,
+      "quote": "１．連結業績の実績と予想\n\n                                                                                                                       (単位：百万円)\n                                     第１四半期累計期間                                            通                   期\n\n                                前期実績       当期実績                   前期実績             前回予想          今回予想\n                                                                                  2026.5.15      2026.8.7\n                                                      対前期実績                                       （※）         対前期実績 対前回予想\n                                 ①          ②          ②-①            ③              ④              ⑤          ⑤-③   ⑤-④",
+      "page_character_start": 0,
+      "page_character_end": 705,
+      "file_character_start": 758,
+      "file_character_end": 1463,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "90e3a0c56585f9e05d3a359fe17e1e22c7604c057f05c4bd12a198ac77c5da24",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/04.pdf.txt",
+      "text_sha256": "a5708f1ef28916a26d1067bcf020943f56eb1d7e767e22c083d6a47e6055111e",
+      "raw_pdf_sha256": "7df88f486e2b82404de6b5d88050c332f8ebe3742fa4e3f1da990864f5ad85e6",
+      "upstream_quote_id": "supplement-consolidated-column-vintages"
+    },
+    {
+      "id": "supplement-standalone-scope",
+      "source_key": "supplement",
+      "source_id": "case-public:26fd85fd0e106c01dbdbdcfd9893d156d94c4d3b434d76a9d1a4774874df76ee",
+      "pdf_page": 4,
+      "printed_page": 2,
+      "quote": "２．個別業績の実績と予想\n\n                                                                                                                       (単位：百万円)\n                                     第１四半期累計期間                                            通                   期\n\n                                前期実績       当期実績                   前期実績             前回予想          今回予想\n                                                                                  2026.5.15      2026.8.7",
+      "page_character_start": 0,
+      "page_character_end": 462,
+      "file_character_start": 5201,
+      "file_character_end": 5663,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "0c3a0257f49eecafc965325598930f7b5893aa49719784bff3d5cb535bb13e3d",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/04.pdf.txt",
+      "text_sha256": "a5708f1ef28916a26d1067bcf020943f56eb1d7e767e22c083d6a47e6055111e",
+      "raw_pdf_sha256": "7df88f486e2b82404de6b5d88050c332f8ebe3742fa4e3f1da990864f5ad85e6",
+      "upstream_quote_id": "supplement-standalone-scope"
+    },
+    {
+      "id": "quarter-actual-period-and-profit-rows",
+      "source_key": "statement",
+      "source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef",
+      "pdf_page": 1,
+      "printed_page": null,
+      "quote": "１．2027年３月期第１四半期の連結業績（2026年４月１日～2026年６月30日）\n（１）連結経営成績(累計)                        (％表示は、対前年同四半期増減率)\n                                                                                     親会社株主に帰属\n                      売上高                     営業利益                経常利益\n                                                                                     する四半期純利益\n                      百万円             ％           百万円        ％     百万円          ％            百万円       ％\n2027年３月期第１四半期     65,363 △6.3   2,627 △36.5    5,265  32.2  3,431 △7.1\n2026年３月期第１四半期     69,792  5.1   4,139    －     3,983 245.8  3,693 195.2\n",
+      "page_character_start": 649,
+      "page_character_end": 1254,
+      "file_character_start": 649,
+      "file_character_end": 1254,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "0773e685195b0bc728936bc517b74656ba61dc3f672f40a339420cb65f7e0d6b",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.pdf.txt",
+      "text_sha256": "eadabdf6da5245e070217266bc9c20e58cbc2abfa9589d9098c0390085e10399",
+      "raw_pdf_sha256": "fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+      "upstream_quote_id": null
+    },
+    {
+      "id": "tax-and-noncontrolling-interest-distinction",
+      "source_key": "statement",
+      "source_id": "case-public:b3d7eae14ab4d5ea66c5b6161d9376583ea324c5bfb5946e98096f47ec0181ef",
+      "pdf_page": 9,
+      "printed_page": 6,
+      "quote": "税金等調整前四半期純利益                                       4,844                5,145\n法人税、住民税及び事業税                                       1,837                1,528\n法人税等調整額                                              222                  149\n法人税等合計                                             2,060                1,678\n四半期純利益                                             2,783                3,466\n非支配株主に帰属する四半期純利益又は非支配株主\n                                                   △909                    34\nに帰属する四半期純損失（△）\n親会社株主に帰属する四半期純利益                                   3,693                3,431",
+      "page_character_start": 2614,
+      "page_character_end": 3198,
+      "file_character_start": 16282,
+      "file_character_end": 16866,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "85e2114e7c5ac1d834ee1d3a670bd05ada0870385d53d5f5cad2cd7d11242661",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.pdf.txt",
+      "text_sha256": "eadabdf6da5245e070217266bc9c20e58cbc2abfa9589d9098c0390085e10399",
+      "raw_pdf_sha256": "fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+      "upstream_quote_id": null
+    },
+    {
+      "id": "order-forecast-composition-revised-total-unchanged",
+      "source_key": "supplement",
+      "source_id": "case-public:26fd85fd0e106c01dbdbdcfd9893d156d94c4d3b434d76a9d1a4774874df76ee",
+      "pdf_page": 5,
+      "printed_page": 3,
+      "quote": "３．受注工事高の実績と予想（個別）\n\n                                                                                                  (単位：百万円)\n                         第１四半期累計期間                                             通       期\n\n                    前期実績       当期実績                  前期実績           前回予想       今回予想\n                                                                   2026.5.15   2026.8.7\n                                          対前期実績                                 （※）          対前期実績 対前回予想\n                     ①          ②          ②-①           ③            ④           ⑤           ⑤-③   ⑤-④\n土   木\n\n        官公庁            7,876      8,029        152        86,582      70,000        85,000    △ 1,582     15,000\n\n        民       間     14,282     7,967     △ 6,314        45,690      40,000        25,000   △ 20,690   △ 15,000\n\n                     (45.2%)    (64.4%)                  (37.5%)     (39.3%)       (39.3%)\n\n            計         22,158     15,997    △ 6,161       132,273     110,000       110,000   △ 22,273         ―\n\n建   築\n\n        官公庁              901         16     △ 884         19,918      35,000        35,000     15,081         ―\n\n        民       間     25,928     8,813    △ 17,114       200,090     135,000       135,000   △ 65,090         ―\n\n                     (54.8%)    (35.6%)                  (62.5%)     (60.7%)       (60.7%)\n\n            計         26,829     8,829    △ 17,999       220,008     170,000       170,000   △ 50,008         ―\n\n合   計\n\n        官公庁            8,777      8,046     △ 731        106,501     105,000       120,000     13,498     15,000\n\n        民       間     40,210     16,780   △ 23,429       245,781     175,000       160,000   △ 85,781   △ 15,000\n\n                      (100%)     (100%)                   (100%)      (100%)        (100%)\n\n            計         48,988     24,827   △ 24,161       352,282     280,000       280,000   △ 72,282         ―\n※   2026年５月15日の決算発表時に公表しました受注工事高予想（前回予想）を修正しています。",
+      "page_character_start": 0,
+      "page_character_end": 1963,
+      "file_character_start": 9301,
+      "file_character_end": 11264,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "bb2a136ae5f6a3ace3698f6fea4f879e0166de7687aa2bdde357bc417742271c",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/04.pdf.txt",
+      "text_sha256": "a5708f1ef28916a26d1067bcf020943f56eb1d7e767e22c083d6a47e6055111e",
+      "raw_pdf_sha256": "7df88f486e2b82404de6b5d88050c332f8ebe3742fa4e3f1da990864f5ad85e6",
+      "upstream_quote_id": null
+    },
+    {
+      "id": "supplement-renamed-aggregate-lines",
+      "source_key": "supplement",
+      "source_id": "case-public:26fd85fd0e106c01dbdbdcfd9893d156d94c4d3b434d76a9d1a4774874df76ee",
+      "pdf_page": 2,
+      "printed_page": null,
+      "quote": "（注１）当期より、従来「投資開発事業等支出金」「投資開発事業等売上高」「投資開発事業等売上\n     原価」「投資開発事業等総利益」と表示していた兼業事業に関連する科目名称を、「不動産\n     事業等支出金」「不動産事業等売上高」「不動産事業等売上原価」「不動産事業等総利益」\n     に変更しています。\n ",
+      "page_character_start": 459,
+      "page_character_end": 615,
+      "file_character_start": 510,
+      "file_character_end": 666,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "c1d28650312fa356307079a192bd606e9f5eefbe94b73d32e708c2a2a7f48b51",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/04.pdf.txt",
+      "text_sha256": "a5708f1ef28916a26d1067bcf020943f56eb1d7e767e22c083d6a47e6055111e",
+      "raw_pdf_sha256": "7df88f486e2b82404de6b5d88050c332f8ebe3742fa4e3f1da990864f5ad85e6",
+      "upstream_quote_id": null
+    },
+    {
+      "id": "consolidated-aggregate-sales-line",
+      "source_key": "supplement",
+      "source_id": "case-public:26fd85fd0e106c01dbdbdcfd9893d156d94c4d3b434d76a9d1a4774874df76ee",
+      "pdf_page": 3,
+      "printed_page": 1,
+      "quote": "    不動産事業等                         2,128      3,501       1,373        11,811         20,000         20,000          8,188   －",
+      "page_character_start": 1116,
+      "page_character_end": 1242,
+      "file_character_start": 1874,
+      "file_character_end": 2000,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "23c271d4056b5b9795dffa60e94d31e68607f0ac2a5064bb6b3e1d29b5adddf0",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/04.pdf.txt",
+      "text_sha256": "a5708f1ef28916a26d1067bcf020943f56eb1d7e767e22c083d6a47e6055111e",
+      "raw_pdf_sha256": "7df88f486e2b82404de6b5d88050c332f8ebe3742fa4e3f1da990864f5ad85e6",
+      "upstream_quote_id": null
+    },
+    {
+      "id": "standalone-FX-exclusion-scope",
+      "source_key": "supplement",
+      "source_id": "case-public:26fd85fd0e106c01dbdbdcfd9893d156d94c4d3b434d76a9d1a4774874df76ee",
+      "pdf_page": 4,
+      "printed_page": 2,
+      "quote": "※）         対前期実績 対前回予想\n                                 ①          ②          ②-①            ③              ④              ⑤          ⑤-③   ⑤-④\n売       上           高\n\n    建 設 事 業                       67,663     61,861    △ 5,802        295,390        284,000        284,000       △ 11,390    －\n\n        土           木             23,686     28,906       5,220       115,248        117,000        117,000          1,751    －\n\n        建           築             43,977     32,954    △ 11,023       180,142        167,000        167,000       △ 13,142    －\n\n    不動産事業等                         1,371      1,589         218           5,999        6,600          6,600            600   －\n\n                計                 69,034     63,450    △ 5,583        301,390        290,600        290,600       △ 10,790    －\n\n売 上 総 利 益\n\n                                 (13.1%)    (14.0%)      (0.9%)       (12.5%)        (13.9%)        (13.9%)         (1.4%)   －\n\n    建 設 事 業                        8,858      8,640      △ 217         36,818         39,600         39,600          2,781   －\n\n                                 (16.0%)    (12.9%)    (△3.1%)        (15.2%)        (16.2%)        (16.2%)         (1.0%)   －\n\n        土           木              3,797      3,736       △ 61         17,514         19,000         19,000          1,485   －\n\n                                 (11.5%)    (14.9%)      (3.4%)       (10.7%)        (12.3%)        (12.3%)         (1.6%)   －\n\n        建           築              5,061      4,904      △ 156         19,303         20,600         20,600          1,296   －\n\n                                 (59.1%)    (58.2%)    (△0.9%)        (56.6%)        (54.5%)        (54.5%)       (△2.1%)    －\n\n    不動産事業等                           810        924         114        3,393             3,600        3,600            206   －\n\n                                 (14.0%)    (15.1%)      (1.1%)       (13.3%)        (14.9%)        (14.9%)         (1.6%)   －\n\n                計                  9,668      9,565      △ 103         40,211         43,200         43,200          2,988   －\n\n一 般 管 理 費                          5,132      5,440         307        21,652         22,900         22,900          1,247   －\n\n営       業       利       益          4,536      4,125      △ 411         18,559         20,300         20,300          1,740   －\n\n営 業 外 損 益\n\n    営 業 外 収 益                      1,498      1,310      △ 187            2,780        2,100          2,100         △ 680    －\n\n    営 業 外 費 用                        230        191       △ 38         1,079             1,400        1,400            320   －\n\n経       常       利       益          5,803      5,243      △ 559         20,259         21,000         21,000            740   －\n\n特       別       損       益\n\n    特       別       利       益        883        304      △ 578         2,045             3,000        3,000            954   －\n\n    特       別       損       失         22        425         402             685        1,000          1,000            314   －\n税引前\n                                   6,664      5,123    △ 1,540         21,619         23,000         23,000          1,380   －\n当期（四半期）純利益\n法       人       税       等          2,033      1,676      △ 357            5,961        7,600          7,600          1,638   －\n\n当期（四半期）純利益                        4,630      3,446     △ 1,183         15,658         15,400         15,400         △ 258    －\n※    営業外損益には、当社の為替差損益を織り込んでいません。",
+      "page_character_start": 562,
+      "page_character_end": 4026,
+      "file_character_start": 5763,
+      "file_character_end": 9227,
+      "offset_unit": "Unicode code points, zero-based, end exclusive, UTF-8 saved extraction with formfeeds retained",
+      "quote_utf8_sha256": "6d02101471206afa8096e5035580a30a16463f53d82a6ee4bd2f89a9e03b9ee4",
+      "text_file": "research/ir-case-studies-2026-10-15/1833/initial-public-review/04.pdf.txt",
+      "text_sha256": "a5708f1ef28916a26d1067bcf020943f56eb1d7e767e22c083d6a47e6055111e",
+      "raw_pdf_sha256": "7df88f486e2b82404de6b5d88050c332f8ebe3742fa4e3f1da990864f5ad85e6",
+      "upstream_quote_id": null
+    }
+  ],
+  "source_preservation": {
+    "prior_input_hashes": {
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.txt": "df93c54da7b321d1aec0ea74e2982517f6bf71f14cf60bc7f0d7c594e56afb8d",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/03.json": "3c13815566d8e3755241cee61ba529178ee8432ad4032a8544f17ec3822acc4c",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/review.json": "625c23c595b9ed8a83d844289d861387e8b965b49fc027b2990da45526d1ecfe",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/sources.json": "04f3cb9e92a83d9c542dbbe0e8772eb9272519984282232c931ed228f02dbee5",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/statement-cover.png": "8b033567d1e250b1bbcf72c5b9068e35878ba4440fea8126b0e4d8b351e23dcb",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.pdf.txt": "eadabdf6da5245e070217266bc9c20e58cbc2abfa9589d9098c0390085e10399",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/byte-verifier-result.json": "9afc6e4f6eebfe3ccbeb34c3860c4d75f6b308162a55d4929050355390293a30",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/04.pdf.txt": "a5708f1ef28916a26d1067bcf020943f56eb1d7e767e22c083d6a47e6055111e",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/supplement-consolidated.png": "677bb6a3d64940c6efe8c91594a54c14dbfbec02632ede406658f62440371d69",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/01.json": "2958a464b491ef7979df2a9a77ca9fbd9eab97121f3d913c4aec7bfa83222284",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/04.txt": "532f7e067a00453c01132048d89be632211fce82f8d81d8c26ae6cec5f172673",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/01.txt": "3a125e84a637dc3f5442bb6949fa200056f37db4627b4c2a3addc55bbb89b703",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/02.json": "269d8f711da47eb49a7c7e352e6ef0855ae5af2a6b01138ebc8c9d2e3000ec4b",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/README.md": "8336c0229e49a65b62daffb78326784ef6d0b117e71ef200f0aacac0b5684a37",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/transport-manifest.json": "20ca1026c444807581cf49fd237d957cb12dfd815882cfb105e657dfe5a260a4",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/validation.json": "240e117b1ff5d27317a9cc0cd1a1e2a64f2f602f9c75d63c27001d6023f6837e",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/robots-guard.json": "c2dc6624cda1cb4d491307a70d1d66e07a846fcf96fd4c15836c4b2d650133df",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/04.json": "9c80829db2785539ab9b24d0a4867f3275927f5ded6f89ca4741be37eddc34fd",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/source-bundle.json": "5d450cbd3119c3caf6246f13ee12dfe7e0b391b6aa13a1c83808d87171f8b0b5",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/03.txt": "8eda7ffde80c84a908f6847a47f33ee976cc0b3ecd453323dd917e56df5c615b",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/raw/3a125e84a637dc3f5442bb6949fa200056f37db4627b4c2a3addc55bbb89b703": "3a125e84a637dc3f5442bb6949fa200056f37db4627b4c2a3addc55bbb89b703",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/raw/fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005": "fd391d89b516796667117bfb9be5f8d35014454ecf48099a1f218b8fca05b005",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/raw/7df88f486e2b82404de6b5d88050c332f8ebe3742fa4e3f1da990864f5ad85e6": "7df88f486e2b82404de6b5d88050c332f8ebe3742fa4e3f1da990864f5ad85e6",
+      "research/ir-case-studies-2026-10-15/1833/initial-public-review/raw/2db0d7c9a0878f633bc04ecbfe90768fb5bd40ee30620c577ec54db13c8121e8": "2db0d7c9a0878f633bc04ecbfe90768fb5bd40ee30620c577ec54db13c8121e8"
+    },
+    "prior_files_unchanged": true,
+    "new_files_only": [
+      "independent-meaning-review.json",
+      "independent-meaning-review.md"
+    ],
+    "path_basis": "All source/input paths repositoryroot relative; metadata pathbase reused exactly as declared. Saved UTF-8 text decoded via read_bytes, preserving newlines/formfeeds."
+  },
+  "execution": {
+    "GET_calls": 0,
+    "DB_accesses": 0,
+    "old_files_changed": 0,
+    "production_changes": 0,
+    "new_forecasts_thresholds_probabilities_multiples": 0,
+    "new_IR_drafts": 0,
+    "external_sends": 0,
+    "full_suite_runs": 0
+  }
+}

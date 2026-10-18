@@ -1,0 +1,31 @@
+{
+  "id": "demo-question-cost", "company_id": "demo-services", "thesis_version": 2,
+  "created_at": "2026-10-09T10:00:00+09:00", "topic": "temporary-hiring-cost",
+  "contact_url": "https://example.invalid/services/ir", "priority": 80,
+  "target_parameter": "base scenario EPS assumption",
+  "evidence_ids": ["demo-public-q2", "demo-public-update"],
+  "question": "公開済みの第2四半期説明資料と補足資料について、採用費増加には一時的な費用と継続的な費用のどちらが含まれていますか。公開情報の範囲で費用の性質をご説明いただけますか。これは架空の質問で、送信しません。",
+  "branches": [
+    {
+      "id": "temporary", "condition": "公開資料の補足として、費用の一部が一時的であることが説明される",
+      "interpretation": "仮説を支持する証拠として扱い、他の根拠と照合して基本シナリオを検討する。",
+      "action": "buy_review",
+      "valuation": {"scenarios": [
+        {"name": "bear", "probability": "0.25", "method": "eps_multiple", "inputs": {"eps_jpy": "45", "pe": "15"}},
+        {"name": "base", "probability": "0.50", "method": "eps_multiple", "inputs": {"eps_jpy": "70", "pe": "20"}},
+        {"name": "bull", "probability": "0.25", "method": "eps_multiple", "inputs": {"eps_jpy": "80", "pe": "23"}}
+      ]}
+    },
+    {
+      "id": "persistent", "condition": "費用増加が恒常的であるとの説明があり、利益率回復の前提と矛盾する",
+      "interpretation": "仮説を弱め、利益率と評価額を再点検する。",
+      "action": "exit_review",
+      "valuation": {"scenarios": [
+        {"name": "bear", "probability": "0.25", "method": "eps_multiple", "inputs": {"eps_jpy": "30", "pe": "15"}},
+        {"name": "base", "probability": "0.50", "method": "eps_multiple", "inputs": {"eps_jpy": "40", "pe": "15"}},
+        {"name": "bull", "probability": "0.25", "method": "eps_multiple", "inputs": {"eps_jpy": "65", "pe": "20"}}
+      ]}
+    },
+    {"id": "unclear", "condition": "説明が曖昧、回答不能、または回答に根拠がない", "interpretation": "評価額と仮説を維持し、未解決として記録する。", "action": "unresolved"}
+  ]
+}

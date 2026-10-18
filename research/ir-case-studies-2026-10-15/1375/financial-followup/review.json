@@ -1,0 +1,49 @@
+{
+  "company_id": "jp:1375",
+  "status": "canonical_results_index_and_loader_obtained_financial_body_still_unobtained",
+  "research_only": true,
+  "scope": "Separate3GET followup after initial5GET ended; no initial artifact edits or DB mutations",
+  "get_cap": 3,
+  "get_count": 3,
+  "http_statuses": [
+    200,
+    200,
+    200
+  ],
+  "retry_count": 0,
+  "automatic_redirect_follow_count": 0,
+  "parent_authorized_separate_location_GET": true,
+  "initial_redirect_snapshot": "../04.json",
+  "javascript_executed": false,
+  "company_endpoint_or_slash_guessed": false,
+  "financial_body_count": 0,
+  "latest_financial_release": {
+    "status": "unknown",
+    "title": null,
+    "publication_date": null,
+    "period_start": null,
+    "period_end": null,
+    "basis": null,
+    "scope": null,
+    "comparison_period": null,
+    "units": null,
+    "actual_or_forecast": null,
+    "values": null
+  },
+  "reason": "Canonical results HTML has a dynamic E-IR container rather than dated PDF URLs. Static literal config/core references were fetched as data; next common config was seen only after GET3. No data feed/financial PDF was obtained.",
+  "not_an_access_failure": "All followup GETs succeeded; budget/finite dynamic-reference depth prevented financial-body retrieval. Initial301 was a separate canonical-location response, not503.",
+  "remaining_needs": [
+    "Explicit dated financial-release list and latest actual financial PDF",
+    "Official report period/comparison/basis/consolidation/unit and actual-versus-company-forecast labels",
+    "Public earnings Q&A distinct from generic initial IR FAQ",
+    "Model-specific earnings/reinvestment/funding/history inputs and current calendar dates"
+  ],
+  "no_new_public_financial_answers": true,
+  "public_IR_questions_ready": [],
+  "financial_inputs_verified": false,
+  "financial_values_automatically_adopted": false,
+  "new_predictions_probabilities_thresholds_model_values": [],
+  "actual_DB_accessed_or_modified": false,
+  "company_state_changed": false,
+  "initial_artifacts_modified": false
+}

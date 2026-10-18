@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "artifact_type": "adoption_prerequisites_market_supplement",
+  "company_id": "jp:1379",
+  "recorded_at": "2026-10-15T05:45:53.053741+00:00",
+  "status": "market_candidate_available_policy_and_valuation_not_adopted",
+  "original_packet": {
+    "artifact": "adoption-prerequisites.json",
+    "recorded_at": "2026-10-15T05:34:42.045465+00:00",
+    "sha256": "274679fe65d56a522424ef3726ff390703b884379287112d34b656fd8bf60219",
+    "preserved": true,
+    "note": "先05:34packetのprice未取得という当時の状態は書換えず、この追補で追加事実を分ける。"
+  },
+  "market_candidate": {
+    "source_id": "sharedresearch-stock:14c38b71b93e2f60a03c639c0071bbd8d21a10036b54969a1c3402a83be9639b",
+    "source_snapshot_sha256": "25253843d4dfca32a037d35b72781dbdf9660b0e563b8db0f9fc6db7e1d8632c",
+    "provider": "Shared Research",
+    "price_jpy": "2048",
+    "currency": "JPY",
+    "provider_observed_at": "2026-10-14T06:30:00.000Z",
+    "same_instant_in_JST": "2026-10-14T15:30:00+09:00",
+    "time_conversion_note": "UTCからJSTへの同一瞬間の表示変換。15:30を取引所終値/実約定時刻と独立確認した意味ではない。",
+    "published_at": null,
+    "original_HTML_retrieved_at": "2026-10-15T05:28:30.141744+00:00",
+    "derived_extraction_retrieved_at": "2026-10-15T05:40:23.213016+00:00",
+    "actual_DB_first_saved_at": "2026-10-15T05:43:42.850582+00:00",
+    "actual_ingest_recorded_at": "2026-10-15T05:43:42.888417+00:00",
+    "clock_note": "quote時刻、原HTML取得、派生抽出、trusted DB初回保存、取り込み報告の記録時計は別。quotedAtを公表/取得/DB保存へ転用しない。",
+    "source_bundle": "provider-market-snapshot/source-bundle.json",
+    "quote_candidate": "provider-market-snapshot/quote-candidate.json",
+    "price_path": [
+      "content",
+      "price_jpy"
+    ],
+    "observed_at_path": [
+      "content",
+      "observed_at"
+    ],
+    "original_source_ids": [
+      "case-public:a14372edbaf8c2897b8553a1a93dc1e4b1dc63859a14ce2f716bdb571a862e7b"
+    ],
+    "raw_field_proof": "provider-market-snapshot/stock-field-extraction.json",
+    "parent_and_raw_scope": "親source.contentはreportContentの可視本文。stockは元raw HTMLのwindow.state/保存embedded JSONから4fieldを辿る証跡で結ぶ。",
+    "live_quote_verified": false,
+    "exchange_independently_verified": false,
+    "price_type": null,
+    "adjustment_basis": null
+  },
+  "newly_resolved": [
+    {
+      "previous_gap": "保存market_data価格候補が未取得",
+      "new_evidence": "4原fieldのsource/quote候補とraw/state/SHA/field pathを保持し、親が独立照合後に実DBへ1source登録した。",
+      "scope_limit": "提供者申告の過去snapshot候補の存在/来歴だけ。現在採用価格や取引所独立検証ではない。"
+    },
+    {
+      "previous_gap": "候補quoteの実DB保存が未実施",
+      "new_evidence": "trusted_insert receiptは2026-10-15T05:43:42.850582Z。market sourceのcanonical snapshotがbundleと一致。",
+      "scope_limit": "原HTML取得日やquote観測日時から初回保存を推定したものではない。過去as-ofの利用を遡及させない。"
+    }
+  ],
+  "still_unresolved": [
+    {
+      "gap": "現在の評価/判断時点とquote鮮度",
+      "max_quote_age_seconds": null,
+      "policy_ref": null,
+      "status": "not_adopted",
+      "note": "既存鮮度条件を採用していないのでfresh/staleを判定しない。quote取得/DB保存が現在actionの採用を意味しない。"
+    },
+    {
+      "gap": "評価入力とモデルの適合",
+      "status": "not_adopted",
+      "note": "EPS/PER、将来FCFF/税/再投資/ROC/g/WACC、配当/権利/支払・安定期の不足は元packetどおり。独立予測を今回取得したわけではない。"
+    },
+    {
+      "gap": "費用・期待上昇余地・下落幅・target scenario等の実行policy",
+      "status": "not_adopted",
+      "parameters": {
+        "entry_cost_pct": null,
+        "exit_cost_pct": null,
+        "minimum_upside_pct": null,
+        "maximum_downside_pct": null,
+        "max_quote_age_seconds": null,
+        "target_scenario": null
+      }
+    },
+    {
+      "gap": "確率と期待値/IR価値",
+      "aggregation": "unweighted",
+      "scenario_probabilities": null,
+      "expected_value_jpy": null,
+      "EVSI": null,
+      "note": "均等確率や平均を入れず、予測/尤度/効用の不足は保持。"
+    },
+    {
+      "gap": "市場データの意味と現在性",
+      "status": "provider_claim_only",
+      "note": "非live、取引所独立未検証。価格種別/調整基準/feed遅延・売買可能性は未確認。"
+    }
+  ],
+  "excluded_fields_not_promoted": [
+    "priceToEarningsRatio",
+    "marketCap",
+    "sharesOutstanding",
+    "priceToBookRatio",
+    "returnOnEquity"
+  ],
+  "excluded_fields_note": "PE12.2等の対象外指標を公正倍率/将来利益/採用株数へ昇格させない。今回抽出対象はticker/currency/price/quotedAtの4fieldだけ。",
+  "receipt_check": {
+    "method": "同セッションにmode=ro/query_only=ON/BEGINで当該sourceとrecord_availabilityの1snapshotを読取。Store constructor/DDL/更新は実行しない。",
+    "record": {
+      "entity_type": "source",
+      "entity_id": "sharedresearch-stock:14c38b71b93e2f60a03c639c0071bbd8d21a10036b54969a1c3402a83be9639b",
+      "version": 0,
+      "snapshot_sha256": "25253843d4dfca32a037d35b72781dbdf9660b0e563b8db0f9fc6db7e1d8632c",
+      "first_saved_at": "2026-10-15T05:43:42.850582+00:00",
+      "presence_observed_at": "2026-10-15T05:43:42.850582+00:00",
+      "basis": "trusted_insert"
+    },
+    "source_JSON_equals_local_bundle": true,
+    "database": "data/ir-research-2026-10-15.sqlite3",
+    "count_scope": "全DB件数を再集計せず、下記countsは親actual-ingest報告を参照。"
+  },
+  "parent_reported_counts": {
+    "sources": 61,
+    "companies": 1819,
+    "source_classifications": 60,
+    "jobs": 13,
+    "job_attempts": 10,
+    "job_attempt_events": 20,
+    "job_request_receipts": 10,
+    "theses": 0,
+    "questions": 0,
+    "replies": 0
+  },
+  "parent_recheck_reference": "provider-market-snapshot/root-recheck.json",
+  "source_artifact_hashes": {
+    "adoption-prerequisites.json": "274679fe65d56a522424ef3726ff390703b884379287112d34b656fd8bf60219",
+    "adoption-prerequisites.md": "44ca4357e935519cba8c9950f79c16613c221d4cfaaf8c33084aa9c30ed50578",
+    "earnings-preview-candidate.json": "14f935ea63edf1ca19fab4aa314a81b9f71bcd754c9ebfe7ea36797bfc6f3d29",
+    "earnings-preview-candidate.md": "65937a353367d2ab67943885bf6d3a1c3f59e52c92b4d890acfa4ed25c844c88",
+    "provider-market-snapshot/source-bundle.json": "6c5f4edea16dfc8e10df466e3e06c0f606211732035dd1b34f3fd3bd0e744244",
+    "provider-market-snapshot/quote-candidate.json": "8a39952ff953a101e2d28d32c00f9a491cf3acda5ef7fefbf5770874bd9bd21f",
+    "provider-market-snapshot/stock-field-extraction.json": "8dfb2a4b53f04f32fbe49e0325dc4ff3848a270130c9811ae0eaee942d5570e2",
+    "provider-market-snapshot/root-recheck.json": "42fec8c568a3ea1ad57ca85e7afe6b3d59ae01d63aba7f4ddd8fbcb3a8e44888",
+    "provider-market-snapshot/actual-ingest.json": "be7791dc8e1480d9558cb4e085b9558d289576eca077a0944d1c7ae48c93da73"
+  },
+  "conclusion": {
+    "current_decision_adopted": false,
+    "financial_inputs_verified": false,
+    "model_adopted": false,
+    "new_code_required": false,
+    "note": "価格候補の調達という不足だけが一部解消。元packet/preview/market artifactを変更せず、将来予測・実行方針・現在価格の採用は別作業。"
+  },
+  "side_effects": {
+    "new_GETs": 0,
+    "DB_read_sessions": 1,
+    "DB_writes": 0,
+    "existing_artifacts_modified": false,
+    "new_code_or_registry": false,
+    "valuation_runs": 0,
+    "theses": 0,
+    "questions": 0,
+    "orders": 0,
+    "sends": 0
+  }
+}

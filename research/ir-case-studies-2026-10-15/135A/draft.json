@@ -1,0 +1,745 @@
+{
+  "schema_version": 1,
+  "artifact_type": "single_issuer_initial_public_research",
+  "company_id": "jp:135A",
+  "security_code": "135A",
+  "company_name": "株式会社 VRAIN Solution",
+  "recorded_at": "2026-10-15T04:34:00.235436+00:00",
+  "status": "needs_data",
+  "research_sample_only": true,
+  "investment_selection": false,
+  "selection_record": "selection.json",
+  "source_bundle_file": "source-bundle.json",
+  "source_id_map": {
+    "vrain135a-01": "case-public:90b6430f1c3db281a436c38b4ee9dd31a4442fe456569cf317ac9ccf5cfebf60",
+    "vrain135a-02": "case-public:bdae3949d5e7a93f60ac5675ecd9635ca759a4362dd71bdf0984e70e4738a3e1",
+    "vrain135a-03": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+    "vrain135a-04": "case-public:b38c20a96b55fca35f28d4aadc31ce0d21cccb72c0a675936c574bcc0c5fd438",
+    "vrain135a-05": "case-public:decc7b41b89118944070d42554aef7998516b16bba1bd993c6afcd6c5076d98c"
+  },
+  "methods": [
+    {
+      "author": "Anthropic financial-services-plugins",
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "paths": [
+        "third_party/anthropic/skills/earnings-preview/SKILL.md",
+        "third_party/anthropic/skills/thesis-tracker/SKILL.md"
+      ],
+      "application": "公開資料を先に確認し、事実/未確認/反証に必要な入力を残す。公開Q&A未取得を確認済みへ昇格しない。"
+    },
+    {
+      "author": "Aswath Damodaran",
+      "path": "research/valuation-model-routing-2026-10-15/routing.json",
+      "application": "企業自身の事業/履歴/再投資/資金の観測を優先し、AIや業種・市場タグだけで分類/除外しない。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "vrain135a-01",
+      "requested_url": "https://vrain.co.jp/robots.txt",
+      "url": "https://vrain.co.jp/robots.txt",
+      "retrieved_at": "2026-10-15T04:30:00.550844+00:00",
+      "http_status": 200,
+      "error": null,
+      "title": "",
+      "content_type": "text/plain; charset=utf-8",
+      "raw_file": "raw/4b59547488224f1725258fa9a43f18834da9d22c2dcf2f5216e5d77aacdb4339",
+      "sha256": "4b59547488224f1725258fa9a43f18834da9d22c2dcf2f5216e5d77aacdb4339",
+      "byte_count": 167,
+      "text_file": null,
+      "complete_body": true,
+      "snapshot": "01.json",
+      "bundle_source_id": "case-public:90b6430f1c3db281a436c38b4ee9dd31a4442fe456569cf317ac9ccf5cfebf60",
+      "snapshot_sha256": "8669c273cbce9d4fcfe5c840f81c82c6a545e3b46468b5ceb31ded603ae0c816",
+      "saved_text_file": "01.txt",
+      "text_sha256": "4b59547488224f1725258fa9a43f18834da9d22c2dcf2f5216e5d77aacdb4339",
+      "publication_date": null
+    },
+    {
+      "source_id": "vrain135a-02",
+      "requested_url": "https://vrain.co.jp/",
+      "url": "https://vrain.co.jp/",
+      "retrieved_at": "2026-10-15T04:30:04.908390+00:00",
+      "http_status": 200,
+      "error": null,
+      "title": "株式会社VRAIN Solution | 製造業に特化したAI技術でDXを実現 株式会社 VRAIN Solution",
+      "content_type": "text/html; charset=UTF-8",
+      "raw_file": "raw/d5921b52744981b535e8881c9587701d4dc969b943085b96653024e31b3cdc72",
+      "sha256": "d5921b52744981b535e8881c9587701d4dc969b943085b96653024e31b3cdc72",
+      "byte_count": 85941,
+      "text_file": null,
+      "complete_body": true,
+      "snapshot": "02.json",
+      "bundle_source_id": "case-public:bdae3949d5e7a93f60ac5675ecd9635ca759a4362dd71bdf0984e70e4738a3e1",
+      "snapshot_sha256": "6e4b66bb7019992ef4172be9325b332ebd10c00648496b957e378ccc73aa5786",
+      "saved_text_file": "02.txt",
+      "text_sha256": "3c505bce5430af3e6349d3cd00f5ca45147609a4e0cdea7a5d5f1db9c042316e",
+      "publication_date": null
+    },
+    {
+      "source_id": "vrain135a-03",
+      "requested_url": "https://vrain.co.jp/ir/",
+      "url": "https://vrain.co.jp/ir/",
+      "retrieved_at": "2026-10-15T04:30:16.640989+00:00",
+      "http_status": 200,
+      "error": null,
+      "title": "IR情報 | 株式会社 VRAIN Solution IR情報 | 株式会社 VRAIN Solution",
+      "content_type": "text/html; charset=UTF-8",
+      "raw_file": "raw/f64122f77526d55799a71843be7c153bd43eb37f5773a6ad963c04da6de07fd6",
+      "sha256": "f64122f77526d55799a71843be7c153bd43eb37f5773a6ad963c04da6de07fd6",
+      "byte_count": 69187,
+      "text_file": null,
+      "complete_body": true,
+      "snapshot": "03.json",
+      "bundle_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "snapshot_sha256": "c7c748b7693648186c983367bed80260879a0c0dd6e095cff81be81233f87c5a",
+      "saved_text_file": "03.txt",
+      "text_sha256": "e12d206157ea40fa183a4cc79162ffc3fab31fa3cbd5883aa33909d1dae218d5",
+      "publication_date": null
+    },
+    {
+      "source_id": "vrain135a-04",
+      "requested_url": "https://vrain.co.jp/ir/library/",
+      "url": "https://vrain.co.jp/ir/library/",
+      "retrieved_at": "2026-10-15T04:30:46.115175+00:00",
+      "http_status": 200,
+      "error": null,
+      "title": "IRライブラリ | 株式会社 VRAIN Solution IRライブラリ | 株式会社 VRAIN Solution",
+      "content_type": "text/html; charset=UTF-8",
+      "raw_file": "raw/c73d37a5c3656e020bdd7ca94da4e4f8add5eb2a938c2aba9d21d06065cc711b",
+      "sha256": "c73d37a5c3656e020bdd7ca94da4e4f8add5eb2a938c2aba9d21d06065cc711b",
+      "byte_count": 72041,
+      "text_file": null,
+      "complete_body": true,
+      "snapshot": "04.json",
+      "bundle_source_id": "case-public:b38c20a96b55fca35f28d4aadc31ce0d21cccb72c0a675936c574bcc0c5fd438",
+      "snapshot_sha256": "9162395f9446524163e2dafcf6d0ee6c592252dae93ca048a71c489dc089d7e7",
+      "saved_text_file": "04.txt",
+      "text_sha256": "9d7ed6ecdd7675837026a0f830f43e22518dde3d7ce9ebdbff3a5a474dabb93a",
+      "publication_date": null
+    },
+    {
+      "source_id": "vrain135a-05",
+      "requested_url": "https://vrain.co.jp/ir/calendar/",
+      "url": "https://vrain.co.jp/ir/calendar/",
+      "retrieved_at": "2026-10-15T04:31:04.492114+00:00",
+      "http_status": 200,
+      "error": null,
+      "title": "IRカレンダー | 株式会社 VRAIN Solution IRカレンダー | 株式会社 VRAIN Solution",
+      "content_type": "text/html; charset=UTF-8",
+      "raw_file": "raw/68c649899100272a34559aa50ec2ea947c99801cfed03b9933a39db205303f40",
+      "sha256": "68c649899100272a34559aa50ec2ea947c99801cfed03b9933a39db205303f40",
+      "byte_count": 69567,
+      "text_file": null,
+      "complete_body": true,
+      "snapshot": "05.json",
+      "bundle_source_id": "case-public:decc7b41b89118944070d42554aef7998516b16bba1bd993c6afcd6c5076d98c",
+      "snapshot_sha256": "4e9a11db4a6f151655c8054afc12e0629907787ffbaf62d48fea9b70238991b3",
+      "saved_text_file": "05.txt",
+      "text_sha256": "d59baed319f648c2af82ec86494898a02fe5d0515c8ba244449331812deb69fa",
+      "publication_date": null
+    }
+  ],
+  "evidence_references": [
+    {
+      "id": "business-introduction",
+      "source_id": "case-public:bdae3949d5e7a93f60ac5675ecd9635ca759a4362dd71bdf0984e70e4738a3e1",
+      "url": "https://vrain.co.jp/",
+      "retrieved_at": "2026-10-15T04:30:04.908390+00:00",
+      "publication_date": null,
+      "quote": "BUSINESS 事業紹介 製造現場の業務効率化に貢献 「最先端のAI技術」と「豊富な現場知識」で 製造業のあらゆる課題を解決し続けます ",
+      "location": {
+        "representation": "saved extracted visible text",
+        "pdf_page": null,
+        "character_start": 831,
+        "character_end": 900,
+        "offset_unit": "Unicode code points, zero-based/end-exclusive, preserving CRLF where present",
+        "saved_text_file": "135A/02.txt"
+      },
+      "target_period": null,
+      "scope": "製造現場向けの事業紹介本文。売上・利益実績を証明する引用ではない。",
+      "supports_only": "製造現場向けの事業紹介本文。売上・利益実績を証明する引用ではない。",
+      "body_support_anchors": [
+        "製造現場の業務効率化に貢献",
+        "製造業のあらゆる課題"
+      ],
+      "verification": "exact substring at original saved content offsets; substantive support checked within stated scope"
+    },
+    {
+      "id": "ai-product-offering",
+      "source_id": "case-public:bdae3949d5e7a93f60ac5675ecd9635ca759a4362dd71bdf0984e70e4738a3e1",
+      "url": "https://vrain.co.jp/",
+      "retrieved_at": "2026-10-15T04:30:04.908390+00:00",
+      "publication_date": null,
+      "quote": "AI PRODUCT AI プロダクト 独自のAI技術を活用したアプリケーション\"Phoenixシリーズ\"で 従来の手法では難しかったような外観検査の自動化を実現させます AI学習・検証用ソフトウェア Phoenix Vision 詳しくはこちら > AI外観検査ソフトウェア Phoenix Eye 詳しくはこちら > AI異音振動検査ソフトウェア Phoenix Analyzer 詳しくはこちら > ",
+      "location": {
+        "representation": "saved extracted visible text",
+        "pdf_page": null,
+        "character_start": 912,
+        "character_end": 1115,
+        "offset_unit": "Unicode code points, zero-based/end-exclusive, preserving CRLF where present",
+        "saved_text_file": "135A/02.txt"
+      },
+      "target_period": null,
+      "scope": "Phoenixシリーズの外観検査等ソフトウェア提供を会社が説明。認識済売上/継続課金の形態は未確認。",
+      "supports_only": "Phoenixシリーズの外観検査等ソフトウェア提供を会社が説明。認識済売上/継続課金の形態は未確認。",
+      "body_support_anchors": [
+        "独自のAI技術を活用したアプリケーション",
+        "外観検査の自動化",
+        "Phoenix Vision",
+        "Phoenix Eye",
+        "Phoenix Analyzer"
+      ],
+      "verification": "exact substring at original saved content offsets; substantive support checked within stated scope"
+    },
+    {
+      "id": "consulting-and-repeat-claim",
+      "source_id": "case-public:bdae3949d5e7a93f60ac5675ecd9635ca759a4362dd71bdf0984e70e4738a3e1",
+      "url": "https://vrain.co.jp/",
+      "retrieved_at": "2026-10-15T04:30:04.908390+00:00",
+      "publication_date": null,
+      "quote": "DX CONSULTING DX コンサルティング 製造業のお客様のあらゆる課題を解決するお手伝いさせていただきます。 その内容は人材育成から開発実装支援まで幅広いサービスを展開しています。 サービス開始時よりご好評いただき、リピート率は90%以上を維持しています。 DX コンサルティング 詳しくはこちら > ",
+      "location": {
+        "representation": "saved extracted visible text",
+        "pdf_page": null,
+        "character_start": 1115,
+        "character_end": 1271,
+        "offset_unit": "Unicode code points, zero-based/end-exclusive, preserving CRLF where present",
+        "saved_text_file": "135A/02.txt"
+      },
+      "target_period": null,
+      "scope": "DX支援の内容と会社マーケティング上のリピート率表示。期間/母集団/定義の妥当性は未確認。",
+      "supports_only": "DX支援の内容と会社マーケティング上のリピート率表示。期間/母集団/定義の妥当性は未確認。",
+      "body_support_anchors": [
+        "人材育成から開発実装支援",
+        "リピート率は90%以上"
+      ],
+      "verification": "exact substring at original saved content offsets; substantive support checked within stated scope"
+    },
+    {
+      "id": "issuer-footer-identity",
+      "source_id": "case-public:bdae3949d5e7a93f60ac5675ecd9635ca759a4362dd71bdf0984e70e4738a3e1",
+      "url": "https://vrain.co.jp/",
+      "retrieved_at": "2026-10-15T04:30:04.908390+00:00",
+      "publication_date": null,
+      "quote": "株式会社 VRAIN Solution 〒104-6034 東京都中央区晴海1-8-10 晴海アイランドトリトンスクエア オフィスタワーX 34階 ",
+      "location": {
+        "representation": "saved extracted visible text",
+        "pdf_page": null,
+        "character_start": 1466,
+        "character_end": 1540,
+        "offset_unit": "Unicode code points, zero-based/end-exclusive, preserving CRLF where present",
+        "saved_text_file": "135A/02.txt"
+      },
+      "target_period": null,
+      "scope": "公式会社名と本社表示による既存台帳URL/会社名への照合。証券コードは既存台帳/DB由来。",
+      "supports_only": "公式会社名と本社表示による既存台帳URL/会社名への照合。証券コードは既存台帳/DB由来。",
+      "body_support_anchors": [
+        "株式会社 VRAIN Solution",
+        "東京都中央区晴海"
+      ],
+      "verification": "exact substring at original saved content offsets; substantive support checked within stated scope"
+    },
+    {
+      "id": "ir-section-pointers",
+      "source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "url": "https://vrain.co.jp/ir/",
+      "retrieved_at": "2026-10-15T04:30:16.640989+00:00",
+      "publication_date": null,
+      "quote": "IR情報 ホーム IR情報 IRニュース IRニュース一覧 経営情報 トップメッセージ 会社概要 コーポレート・ガバナンス 業績・財務情報 経営成績 財政状態 キャッシュ・フローの状況 IRライブラリ 最新IR資料 決算短信 決算説明資料 有価証券報告書 株主総会関連資料 その他IR資料 適時開示情報 株式情報 株式基本情報 株価情報 その他IR情報 IRカレンダー FAQ ディスクロージャーポリシー 免責事項 IRについてのお問い合わせ ",
+      "location": {
+        "representation": "saved extracted visible text",
+        "pdf_page": null,
+        "character_start": 477,
+        "character_end": 699,
+        "offset_unit": "Unicode code points, zero-based/end-exclusive, preserving CRLF where present",
+        "saved_text_file": "135A/03.txt"
+      },
+      "target_period": null,
+      "scope": "IR入口に財務/決算資料/カレンダー/FAQ窓口の各区分・明示リンクがあるという範囲だけ。財務本文の取得・最新期を支持しない。",
+      "supports_only": "IR入口に財務/決算資料/カレンダー/FAQ窓口の各区分・明示リンクがあるという範囲だけ。財務本文の取得・最新期を支持しない。",
+      "body_support_anchors": [
+        "決算短信",
+        "決算説明資料",
+        "IRカレンダー",
+        "IRについてのお問い合わせ"
+      ],
+      "verification": "exact substring at original saved content offsets; substantive support checked within stated scope"
+    },
+    {
+      "id": "library-index-only",
+      "source_id": "case-public:b38c20a96b55fca35f28d4aadc31ce0d21cccb72c0a675936c574bcc0c5fd438",
+      "url": "https://vrain.co.jp/ir/library/",
+      "retrieved_at": "2026-10-15T04:30:46.115175+00:00",
+      "publication_date": null,
+      "quote": "IRライブラリ ホーム IR情報 IRライブラリ IRライブラリ 決算短信 過去の資料 決算説明資料 過去の資料 有価証券報告書等法定開示資料 過去の資料 株主総会関連資料 過去の資料 その他IR資料 過去の資料 適時開示情報 過去の資料 ",
+      "location": {
+        "representation": "saved extracted visible text",
+        "pdf_page": null,
+        "character_start": 483,
+        "character_end": 603,
+        "offset_unit": "Unicode code points, zero-based/end-exclusive, preserving CRLF where present",
+        "saved_text_file": "135A/04.txt"
+      },
+      "target_period": null,
+      "scope": "保存静的本文に資料区分・過去資料への案内があることだけ。最新期・PDF実体の確認ではない。",
+      "supports_only": "保存静的本文に資料区分・過去資料への案内があることだけ。最新期・PDF実体の確認ではない。",
+      "body_support_anchors": [
+        "決算短信 過去の資料",
+        "決算説明資料 過去の資料",
+        "有価証券報告書等法定開示資料"
+      ],
+      "verification": "exact substring at original saved content offsets; substantive support checked within stated scope"
+    },
+    {
+      "id": "generic-calendar",
+      "source_id": "case-public:decc7b41b89118944070d42554aef7998516b16bba1bd993c6afcd6c5076d98c",
+      "url": "https://vrain.co.jp/ir/calendar/",
+      "retrieved_at": "2026-10-15T04:31:04.492114+00:00",
+      "publication_date": null,
+      "quote": "IRカレンダー ホーム IR情報 IRカレンダー IRカレンダー ４月中旬 通期決算発表 ５月下旬 定時株主総会 ７月中旬 第１四半期決算発表 10月中旬 第２四半期決算発表 １月中旬 第３四半期決算発表 ※都合により予告なく変更する場合があります。ご了承ください。 ",
+      "location": {
+        "representation": "saved extracted visible text",
+        "pdf_page": null,
+        "character_start": 483,
+        "character_end": 617,
+        "offset_unit": "Unicode code points, zero-based/end-exclusive, preserving CRLF where present",
+        "saved_text_file": "135A/05.txt"
+      },
+      "target_period": {
+        "year": null,
+        "exact_date": null,
+        "label": "Webページの月内区分のみ"
+      },
+      "scope": "年/具体日/時刻のないカレンダーの月内区分と変更可能の注記。実際の開催済み判定や次回ISO日付は支持しない。",
+      "supports_only": "年/具体日/時刻のないカレンダーの月内区分と変更可能の注記。実際の開催済み判定や次回ISO日付は支持しない。",
+      "body_support_anchors": [
+        "４月中旬 通期決算発表",
+        "10月中旬 第２四半期決算発表",
+        "予告なく変更する場合"
+      ],
+      "verification": "exact substring at original saved content offsets; substantive support checked within stated scope"
+    }
+  ],
+  "raw_implementation_observations": [
+    {
+      "source_id": "case-public:b38c20a96b55fca35f28d4aadc31ce0d21cccb72c0a675936c574bcc0c5fd438",
+      "raw_file": "raw/c73d37a5c3656e020bdd7ca94da4e4f8add5eb2a938c2aba9d21d06065cc711b",
+      "raw_sha256": "c73d37a5c3656e020bdd7ca94da4e4f8add5eb2a938c2aba9d21d06065cc711b",
+      "quote": "<script src=\"//www.xj-storage.jp/resources/AS06543/XjStorageLoaderLibrary.js\">",
+      "location": {
+        "representation": "original raw HTML decoded UTF8, not the visible source content",
+        "character_start": 54433,
+        "character_end": 54511,
+        "pdf_page": null
+      },
+      "literal_reference": "//www.xj-storage.jp/resources/AS06543/XjStorageLoaderLibrary.js",
+      "reference_resolved_without_GET": "https://www.xj-storage.jp/resources/AS06543/XjStorageLoaderLibrary.js",
+      "scope": "An explicit external loader-script reference exists; script/remote data/PDF not retrieved or executed. It does not establish a latest filing date or that financial documents are unavailable."
+    }
+  ],
+  "initial_checks": [
+    {
+      "id": "business_offer",
+      "status": "supported_public_description",
+      "finding": "製造現場向けAI外観/異音振動検査ソフトと、人材育成から開発実装までのDXコンサルティングを公式に説明。",
+      "evidence_ids": [
+        "business-introduction",
+        "ai-product-offering",
+        "consulting-and-repeat-claim"
+      ],
+      "missing": [
+        "各製品/サービスの販売単位・売上認識/ライセンス/保守/継続課金、セグメント/顧客構成。製品提供の説明は認識済売上の証明ではない。"
+      ]
+    },
+    {
+      "id": "repeat_kpi_meaning",
+      "status": "needs_definition",
+      "finding": "会社はDXコンサル欄でリピート率90%以上と表示。",
+      "evidence_ids": [
+        "consulting-and-repeat-claim"
+      ],
+      "missing": [
+        "計測対象・期間・母数・リピートの定義。企業全体の売上継続率・ARRや回答確率/購入閾値へ変換しない。"
+      ]
+    },
+    {
+      "id": "latest_financial_material",
+      "status": "needs_data",
+      "finding": "IR/資料一覧の静的本文と導線はあるが、最新期・日付付き決算本文/PDFは今回未取得。",
+      "evidence_ids": [
+        "ir-section-pointers",
+        "library-index-only"
+      ],
+      "missing": [
+        "公開script参照の明示先から届く正式決算資料の本文。ただし本5 GETでは追加取得しない。会社が資料を非公開としたとは断定しない。"
+      ]
+    },
+    {
+      "id": "public_earnings_qa",
+      "status": "needs_data",
+      "finding": "IR FAQへの明示リンクは保存。決算説明会の公開Q&A本文は未取得。",
+      "evidence_ids": [
+        "ir-section-pointers"
+      ],
+      "missing": [
+        "IR FAQ/決算説明資料に公表Q&Aがあるか、その本文と対象期。商品FAQとIR FAQを同一視しない。"
+      ]
+    },
+    {
+      "id": "reporting_period_and_basis",
+      "status": "unknown",
+      "finding": null,
+      "evidence_ids": [],
+      "missing": [
+        "正式な会計年度末・期首期末、連結/単体、日本基準/IFRS、比較期間・株数。4月通期発表の目安から2月期と推測しない。"
+      ]
+    },
+    {
+      "id": "scheduled_event_dates",
+      "status": "partial_calendar_only",
+      "finding": "通期4月中旬/1Q7月中旬/2Q10月中旬/3Q1月中旬、総会5月下旬という目安と変更可能注記を確認。",
+      "evidence_ids": [
+        "generic-calendar"
+      ],
+      "missing": [
+        "対象年・実際の予定日/時刻・開催済み確認。取得日が10月15日だから発表済みとみなさない。"
+      ]
+    },
+    {
+      "id": "ordinary_model_fit",
+      "status": "needs_data",
+      "finding": null,
+      "evidence_ids": [
+        "ai-product-offering",
+        "consulting-and-repeat-claim"
+      ],
+      "missing": [
+        "認識済売上/費用・利益・CF・再投資・税/株数、前提と定義。売上構造が分からないままEPS×PERやDCFへ進めない。"
+      ]
+    },
+    {
+      "id": "cyclical_or_commodity_fit",
+      "status": "unknown",
+      "finding": null,
+      "evidence_ids": [
+        "business-introduction"
+      ],
+      "missing": [
+        "製造業顧客向けという説明だけでは自身の利益循環を確定できない。多年度履歴、顧客設備投資/採用期間、原価/再投資・現在規模の根拠。"
+      ]
+    },
+    {
+      "id": "young_loss_fit",
+      "status": "unknown",
+      "finding": null,
+      "evidence_ids": [],
+      "missing": [
+        "創業/商用化履歴、営業赤字の有無、収益化と資金/希薄化。AI・グロース市場・製品の存在だけでyoung-lossへ分類しない。"
+      ]
+    },
+    {
+      "id": "financial_equity_fit",
+      "status": "unknown",
+      "finding": null,
+      "evidence_ids": [],
+      "missing": [
+        "規制資本/金融仲介の実態確認。業種タグから機械的にモデルを確定/排除しない。"
+      ]
+    }
+  ],
+  "public_qa_review": {
+    "earnings_qa_body_obtained": false,
+    "questions_closed_by_public_qa": [],
+    "existence_of_any_public_earnings_qa": null,
+    "not_an_absence_claim": true
+  },
+  "questions_resolved_by_other_public_text": [
+    {
+      "topic": "会社はどの用途の製品/サービスを説明しているか",
+      "evidence_ids": [
+        "business-introduction",
+        "ai-product-offering",
+        "consulting-and-repeat-claim"
+      ],
+      "resolution": "公開会社説明があるため同じ一般的質問を未解決IR質問にしない。数値モデルの不足は別。"
+    },
+    {
+      "topic": "会社が公表する決算/総会の月内目安は何か",
+      "evidence_ids": [
+        "generic-calendar"
+      ],
+      "resolution": "月内目安と変更可能という範囲は公開済み。具体的日付は未確認のまま。"
+    }
+  ],
+  "calendar": {
+    "events": [
+      {
+        "raw_month_window": "４月中旬",
+        "event": "通期決算発表",
+        "calendar_year": null,
+        "exact_date": null,
+        "time": null,
+        "status": "generic_month_window_change_possible"
+      },
+      {
+        "raw_month_window": "５月下旬",
+        "event": "定時株主総会",
+        "calendar_year": null,
+        "exact_date": null,
+        "time": null,
+        "status": "generic_month_window_change_possible"
+      },
+      {
+        "raw_month_window": "７月中旬",
+        "event": "第１四半期決算発表",
+        "calendar_year": null,
+        "exact_date": null,
+        "time": null,
+        "status": "generic_month_window_change_possible"
+      },
+      {
+        "raw_month_window": "10月中旬",
+        "event": "第２四半期決算発表",
+        "calendar_year": null,
+        "exact_date": null,
+        "time": null,
+        "status": "generic_month_window_change_possible"
+      },
+      {
+        "raw_month_window": "１月中旬",
+        "event": "第３四半期決算発表",
+        "calendar_year": null,
+        "exact_date": null,
+        "time": null,
+        "status": "generic_month_window_change_possible"
+      }
+    ],
+    "next_exact_announcement_date": null,
+    "event_occurrence_confirmed": false
+  },
+  "unfetched_official_pointers": [
+    {
+      "label": "事業概要",
+      "url": "https://vrain.co.jp/service/",
+      "found_in_source_id": "case-public:bdae3949d5e7a93f60ac5675ecd9635ca759a4362dd71bdf0984e70e4738a3e1",
+      "fetched": false
+    },
+    {
+      "label": "会社概要",
+      "url": "https://vrain.co.jp/company/",
+      "found_in_source_id": "case-public:bdae3949d5e7a93f60ac5675ecd9635ca759a4362dd71bdf0984e70e4738a3e1",
+      "fetched": false
+    },
+    {
+      "label": "IR情報",
+      "url": "https://vrain.co.jp/ir/",
+      "found_in_source_id": "case-public:bdae3949d5e7a93f60ac5675ecd9635ca759a4362dd71bdf0984e70e4738a3e1",
+      "fetched": true
+    },
+    {
+      "label": "FAQ",
+      "url": "https://vrain.co.jp/qa/",
+      "found_in_source_id": "case-public:bdae3949d5e7a93f60ac5675ecd9635ca759a4362dd71bdf0984e70e4738a3e1",
+      "fetched": false
+    },
+    {
+      "label": "IRニュース一覧",
+      "url": "https://vrain.co.jp/ir/news/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "トップメッセージ",
+      "url": "https://vrain.co.jp/ir/message/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "会社概要",
+      "url": "https://vrain.co.jp/ir/overview/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "コーポレート・ガバナンス",
+      "url": "https://vrain.co.jp/ir/governance/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "経営成績",
+      "url": "https://vrain.co.jp/ir/performance/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "財政状態",
+      "url": "https://vrain.co.jp/ir/finance/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "キャッシュ・フローの状況",
+      "url": "https://vrain.co.jp/ir/cashflow/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "最新IR資料",
+      "url": "https://vrain.co.jp/ir/library/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": true
+    },
+    {
+      "label": "決算短信",
+      "url": "https://vrain.co.jp/ir/results/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "決算説明資料",
+      "url": "https://vrain.co.jp/ir/presentations/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "有価証券報告書",
+      "url": "https://vrain.co.jp/ir/securities/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "株主総会関連資料",
+      "url": "https://vrain.co.jp/ir/meeting/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "その他IR資料",
+      "url": "https://vrain.co.jp/ir/others/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "適時開示情報",
+      "url": "https://vrain.co.jp/ir/disclosure/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "株式基本情報",
+      "url": "https://vrain.co.jp/ir/stock/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "株価情報",
+      "url": "https://vrain.co.jp/ir/quote/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "IRカレンダー",
+      "url": "https://vrain.co.jp/ir/calendar/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": true
+    },
+    {
+      "label": "FAQ",
+      "url": "https://vrain.co.jp/ir/faq/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "ディスクロージャーポリシー",
+      "url": "https://vrain.co.jp/ir/policy/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "免責事項",
+      "url": "https://vrain.co.jp/ir/disclaimer/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "IRについてのお問い合わせ",
+      "url": "https://vrain.co.jp/ir/inquiry/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "当社の電子公告はこちらのページでご覧いただけます。",
+      "url": "https://vrain.co.jp/ir/notice/",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "PAGE TOP",
+      "url": "https://vrain.co.jp/ir/#root",
+      "found_in_source_id": "case-public:7abdacb4446a0478f245779f761e16a1a7abf612150e23f9d370f59aa46d7eeb",
+      "fetched": false
+    },
+    {
+      "label": "PAGE TOP",
+      "url": "https://vrain.co.jp/ir/library/#root",
+      "found_in_source_id": "case-public:b38c20a96b55fca35f28d4aadc31ce0d21cccb72c0a675936c574bcc0c5fd438",
+      "fetched": false
+    },
+    {
+      "label": "PAGE TOP",
+      "url": "https://vrain.co.jp/ir/calendar/#root",
+      "found_in_source_id": "case-public:decc7b41b89118944070d42554aef7998516b16bba1bd993c6afcd6c5076d98c",
+      "fetched": false
+    }
+  ],
+  "model_routes": {
+    "ordinary_model_review": "needs_data",
+    "financial_equity_review": null,
+    "cyclical_normalization_review": null,
+    "young_loss_review": null,
+    "quantitative_financial_inputs": null
+  },
+  "investment_readiness": {
+    "financial_inputs_verified": false,
+    "forecasts_adopted": false,
+    "valuation": null,
+    "probabilities": null,
+    "thresholds": null,
+    "price": null,
+    "question_drafts": [],
+    "external_send_eligible": false
+  },
+  "next_missing_public_materials": [
+    "明示された最新IR資料/決算短信/説明資料の本文。静的本文にPDF/期/日付がないため最新性を確定できない。",
+    "IR FAQまたは公開決算Q&Aの本文、正式な期間/会計範囲/株数と多年度の利益・CF履歴。",
+    "事業モデルの売上認識/顧客と案件・継続収益の区分、リピート率の母集団/対象期。",
+    "現在規模と再投資/資金条件、必要モデルと不足する入力。",
+    "具体的な発表予定日・時刻・対象年の公式開示。月内目安をISO日付へ補わない。"
+  ],
+  "operational_constraints": {
+    "max_gets": 5,
+    "actual_gets": 5,
+    "distinct_urls": 5,
+    "http200": 5,
+    "retry": 0,
+    "redirect": 0,
+    "url_or_endpoint_guessing": false,
+    "external_script_or_data_get": false,
+    "javascript_executed": false,
+    "db_access_read_only": true,
+    "actual_db_changed": false,
+    "company_status_or_position_changed": false,
+    "company_newly_created": false,
+    "intake_completed": false,
+    "form_entry_or_send": false,
+    "contact_revalidated": false
+  },
+  "limitations": [
+    "公開Webの説明/索引/カレンダーの限定5資料で、決算本文・IR FAQ本文は未取得。公開財務資料/公開Q&Aの不存在とは異なる。",
+    "掲載製品やマーケティングKPIを認識済財務や将来収益/確率/売買閾値へ転用しない。",
+    "月内目安から決算年度末・今年の発表日・発表済みを推測しない。",
+    "過去台帳の個人受付explicitは現在の問い合わせ受付条件/沈黙期間/送信適格性を再確認した意味ではない。"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "security_code": "4616",
+  "company_name": "川上塗料",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "化学",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.kawakami-paint.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T12:25:19.084645+00:00",
+  "completed_at": "2026-10-11T12:25:59.950415+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/4616/20261011T122519084675Z/03.json",
+      "url": "https://www.kawakami-paint.co.jp/form.cgi",
+      "retrieved_at": "2026-10-11T12:25:48.875975+00:00",
+      "http_status": 200,
+      "quote": "お問い合わせフォーム お名前 ※ 会社名 メールアドレス ※",
+      "purpose": "general_fields_ir_unverified",
+      "snapshot_json_sha256": "7ed44577082b1758173692fbc97184f4c76b3d9ff7f4657b7a6aad8b1fa9e316"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.kawakami-paint.co.jp/",
+      "final_url": "https://www.kawakami-paint.co.jp/",
+      "snapshot": "evidence/4616/20261011T122519084675Z/01.json",
+      "retrieved_at": "2026-10-11T12:25:25.899804+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.kawakami-paint.co.jp/kessan.html",
+      "final_url": "https://www.kawakami-paint.co.jp/kessan.html",
+      "snapshot": "evidence/4616/20261011T122519084675Z/02.json",
+      "retrieved_at": "2026-10-11T12:25:37.859256+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.kawakami-paint.co.jp/form.cgi",
+      "final_url": "https://www.kawakami-paint.co.jp/form.cgi",
+      "snapshot": "evidence/4616/20261011T122519084675Z/03.json",
+      "retrieved_at": "2026-10-11T12:25:48.875975+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。"
+  ],
+  "discovery": {
+    "security_code": "4616",
+    "official_url": "https://www.kawakami-paint.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "川上塗料",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/4616/20261011T122519084675Z/01.json",
+      "normalized_name": "川上塗料",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/4616/20261011T122519084675Z/02.json",
+      "normalized_name": "川上塗料",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/4616/20261011T122519084675Z/03.json",
+      "normalized_name": "川上塗料",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 3,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 4,
+  "previous_attempts": [
+    "attempts/4616/20261011T045047498515Z.json",
+    "attempts/4616/20261011T122559950579Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_consumer_46_batch01",
+    "reviewed_at": "2026-10-11T12:41:50.648691+00:00",
+    "notes": "numeric item3返信入力/textarea item6を確認したが一般フォームにIR用途/種別なし。決算TOPの一般連絡先ナビをIR割当としない。会社名必須表示なしでも個人IR受付未実証。 保存原文/実controlsの個別監査、GET/送信0。明示根拠で判断し窓口不存在は判定しない。"
+  }
+}

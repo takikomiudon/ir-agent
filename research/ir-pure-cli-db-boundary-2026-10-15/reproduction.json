@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "status": "one_CLI_DB_side_effect_reproduced_in_two_isolated_cases",
+  "cases": [
+    {
+      "case": "valid_normalize_facts_creates_default_database",
+      "CLI_arguments": [
+        "normalize-facts",
+        "<repo>/examples/disclosed-facts.json"
+      ],
+      "before_default_DB_exists": false,
+      "exit_code": 0,
+      "stderr": "",
+      "after_default_DB_exists": true,
+      "default_DB_relative_path": "data/ir-agent.sqlite3",
+      "DB_bytes": 241664,
+      "schema_version": "1",
+      "tables_created": [
+        "companies",
+        "decision_policies",
+        "decision_reviews",
+        "evaluations",
+        "ir_evaluation_protocol_versions",
+        "ir_observation_versions",
+        "ir_observations",
+        "ir_prediction_models",
+        "ir_predictions",
+        "job_attempt_events",
+        "job_attempts",
+        "job_request_receipts",
+        "jobs",
+        "metadata",
+        "position_observations",
+        "questions",
+        "record_availability",
+        "replies",
+        "reply_information_research_checks",
+        "reply_information_reviews",
+        "source_classifications",
+        "source_reviews",
+        "sources",
+        "theses"
+      ],
+      "table_count": 24,
+      "core_domain_row_counts": {
+        "sources": 0,
+        "theses": 0,
+        "companies": 0
+      },
+      "normalized_bundle_sources": 2,
+      "financial_input_adoption": false,
+      "temporary_directory_removed_after_probe": true
+    },
+    {
+      "case": "same_valid_normalization_fails_before_calculation_when_default_DB_parent_is_a_file",
+      "CLI_arguments": [
+        "normalize-facts",
+        "<repo>/examples/disclosed-facts.json"
+      ],
+      "exit_code": 1,
+      "stdout_empty": true,
+      "stderr": "ir-agent: [Errno 17] File exists: 'data'\n",
+      "default_DB_created": false,
+      "blocker_bytes_unchanged": true,
+      "type_of_failure": "Default database parent data is a regular file; mkdir raises FileExistsError. This is a deterministic path nonwritability/collision, not a tested chmod/EACCES scenario.",
+      "same_valid_fixture_as_success_case": true,
+      "temporary_directory_removed_after_probe": true
+    }
+  ],
+  "execution": {
+    "temporary_case_count": 2,
+    "actual_DB_accesses": 0,
+    "network_GETs": 0,
+    "production_test_or_old_file_changes": 0,
+    "full_suite_runs": 0,
+    "financial_decision_or_IR": 0
+  }
+}

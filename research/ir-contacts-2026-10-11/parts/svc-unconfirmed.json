@@ -1,0 +1,95 @@
+[
+  {
+    "security_code": "2154",
+    "company_name": "株式会社オープンアップグループ",
+    "url": "https://www.openupgroup.co.jp/ir/",
+    "reason": "公式IRページのGETがHTTP403。アクセス制御の回避や繰り返し取得は行わず、IRメール/フォームの受付経路は未確認。",
+    "snapshot": "evidence/svc-2154-ir.json",
+    "retrieved_at": "2026-10-11T03:39:19.741043+00:00",
+    "http_status": 403,
+    "supporting_snapshots": [
+      "evidence/svc-2154-ir.json"
+    ]
+  },
+  {
+    "security_code": "2157",
+    "company_name": "株式会社コシダカホールディングス",
+    "url": "https://www.koshidakaholdings.co.jp/ja/contact/contact1.html",
+    "reason": "公式IRサイトからIRお問い合わせページへのリンク・IR見出しは確認できるが、公開GETでは実際の質問フォーム/メール表示を確認できない。IR専用ページの存在とメール/フォーム受付の確認を区別し、未確認へ収録。",
+    "snapshot": "evidence/svc-2157-contact-current.json",
+    "retrieved_at": "2026-10-11T03:42:30.976420+00:00",
+    "http_status": 200,
+    "supporting_snapshots": [
+      "evidence/svc-2157-ir.json",
+      "evidence/svc-2157-contact.json",
+      "evidence/svc-2157-contact-current.json"
+    ]
+  },
+  {
+    "security_code": "3064",
+    "company_name": "株式会社MonotaRO",
+    "url": "https://corp.monotaro.com/ir/",
+    "reason": "IRページはHTTP200だが取得本文が0バイト。別の会社サイト問い合わせページは403であり追跡を中止。IRメール/フォーム経路は確認できていない。",
+    "snapshot": "evidence/svc-3064-contact.json",
+    "retrieved_at": "2026-10-11T03:37:04.354359+00:00",
+    "http_status": 403,
+    "supporting_snapshots": [
+      "evidence/svc-3064-ir.json",
+      "evidence/svc-3064-contact.json"
+    ]
+  },
+  {
+    "security_code": "3563",
+    "company_name": "株式会社FOOD & LIFE COMPANIES",
+    "url": "https://food-and-life.co.jp/faq",
+    "reason": "株式全般は証券代行部の電話を案内。「その他」のフォームはブランド・都道府県・店舗を選ぶ顧客問い合わせで、業績IRの受付カテゴリ/メールの明示は確認できない。",
+    "snapshot": "evidence/svc-3563-contact.json",
+    "retrieved_at": "2026-10-11T03:37:04.306069+00:00",
+    "http_status": 200,
+    "supporting_snapshots": [
+      "evidence/svc-3563-ir-current.json",
+      "evidence/svc-3563-contact.json",
+      "evidence/svc-3563-form.json"
+    ]
+  },
+  {
+    "security_code": "6071",
+    "company_name": "株式会社IBJ",
+    "url": "https://www.ibjapan.jp/contact",
+    "reason": "株主・投資家情報の問い合わせはLINE@を案内。今回の対象であるメール/フォームでのIR受付を確認できない。",
+    "snapshot": "evidence/svc-6071-contact.json",
+    "retrieved_at": "2026-10-11T03:37:06.156435+00:00",
+    "http_status": 200,
+    "supporting_snapshots": [
+      "evidence/svc-6071-ir.json",
+      "evidence/svc-6071-contact.json"
+    ]
+  },
+  {
+    "security_code": "7373",
+    "company_name": "株式会社アイドマ・ホールディングス",
+    "url": "https://www.aidma-hd.jp/contact/",
+    "reason": "一般問い合わせフォームには事業・プレス・採用・資料請求・セミナー等の項目があるが、IRカテゴリやIR受付を示すメールの明示は確認できない。事業一般をIR受付と推定しない。",
+    "snapshot": "evidence/svc-7373-contact.json",
+    "retrieved_at": "2026-10-11T03:37:05.590245+00:00",
+    "http_status": 200,
+    "supporting_snapshots": [
+      "evidence/svc-7373-ir.json",
+      "evidence/svc-7373-contact.json"
+    ]
+  },
+  {
+    "security_code": "9341",
+    "company_name": "株式会社GENOVA",
+    "url": "https://genova.co.jp/contactform",
+    "reason": "一般お問い合わせのAIチャットを案内。個人投資家ページも確認したが、人によるIRメール/質問フォームの受付経路は確認できない。",
+    "snapshot": "evidence/svc-9341-contact.json",
+    "retrieved_at": "2026-10-11T03:37:05.668394+00:00",
+    "http_status": 200,
+    "supporting_snapshots": [
+      "evidence/svc-9341-ir.json",
+      "evidence/svc-9341-individual.json",
+      "evidence/svc-9341-contact.json"
+    ]
+  }
+]

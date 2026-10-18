@@ -1,0 +1,61 @@
+{
+  "recorded_at": "2026-10-16T03:58:50.867466+00:00",
+  "GETs": 0,
+  "actual_DB_connections_or_writes": 0,
+  "synthetic_memory_only": true,
+  "checks": [
+    {
+      "id": "legacy_pure_differential",
+      "status": "pass",
+      "cases": [
+        {
+          "variant": "plain",
+          "exact_JSON_equal": true,
+          "sha256": "44fca4929395d4215a39b50d165e7450855c654cdb38667f68b4b4971b9a0ec7"
+        },
+        {
+          "variant": "same_named_legacy_extra",
+          "exact_JSON_equal": true,
+          "sha256": "44fca4929395d4215a39b50d165e7450855c654cdb38667f68b4b4971b9a0ec7"
+        },
+        {
+          "variant": "found_status",
+          "exact_JSON_equal": true,
+          "sha256": "76278d8ca5e7b3a00726cd3682fc41322ddbcddb1c526336a9806f63ddbdb4d5"
+        }
+      ],
+      "scope": "Frozen prior decision.py with current no-newfield models validator; conditional model change separately read. No older packages imported or production code altered."
+    },
+    {
+      "id": "review_time_only_correction",
+      "status": "pass",
+      "at_review": "unclear",
+      "at_boundary_and_runtime": "public_clarification",
+      "new_sent_record_rejected_and_memory_DB_unchanged": true
+    },
+    {
+      "id": "persistent_long_DAG",
+      "status": "counterexample",
+      "ancestor_count": 1100,
+      "error_type": "RecursionError",
+      "error": "maximum recursion depth exceeded",
+      "memory_DB_unchanged_after_rejected_save": true,
+      "traceback_tail": [
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/workspace/ir-agent/src/ir_agent/availability.py\", line 105, in _snapshot_binding",
+        "    return sha256(json_text(snapshot).encode(\"utf-8\")).hexdigest()",
+        "                  ^^^^^^^^^^^^^^^^^^^",
+        "  File \"/workspace/ir-agent/src/ir_agent/models.py\", line 21, in json_text",
+        "    return json.dumps(value, ensure_ascii=False, sort_keys=True, allow_nan=False)",
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py\", line 238, in dumps",
+        "    **kw).encode(obj)",
+        "          ^^^^^^^^^^^",
+        "  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py\", line 200, in encode",
+        "    chunks = self.iterencode(o, _one_shot=True)",
+        "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "RecursionError: maximum recursion depth exceeded"
+      ]
+    }
+  ]
+}

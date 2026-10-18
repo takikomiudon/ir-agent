@@ -1,0 +1,10 @@
+{
+  "recorded_at": "2026-10-16T03:37:23.676021+00:00",
+  "first_readonly_aggregation_error": "sqlite3.OperationalError: no such column: data",
+  "cause": "Read-only query tried jobs.data; schema inspection showed the job packet is stored in jobs.packet, with status a separate column.",
+  "documents_edited_at_failure": 0,
+  "DB_connection": "mode=ro/query_only/contextlib.closing",
+  "DB_main_sha256_after_error": "9204bf1af5260b61e81ab50b77e90ea914009e750723dcd17752d46ed55bce4d",
+  "DB_writes": 0,
+  "correction": "Group json_extract(jobs.packet, $.kind) and jobs.status; no schema or code change."
+}

@@ -1,0 +1,27 @@
+{
+  "synthetic": true,
+  "note": "架空の計算例。DPS、確率、予測期・安定期の株主資本コスト、永久成長率は任意の検証値で、投資方針の推奨ではない。配当と配当可能利益は異なる。配当の持続可能性、規制資本、希薄化を反映する1株前提は外部で根拠付きに検証する。",
+  "method_reference": {
+    "author": "Aswath Damodaran",
+    "title": "Valuing Financial Service Firms",
+    "publication": "April 2009",
+    "url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/finfirm09.pdf",
+    "pdf_pages": [14, 15],
+    "formula": "sum(DPS_t/(1+k_forecast)^t, t=1..n) + DPS_(n+1)/((k_terminal-g)*(1+k_forecast)^n)",
+    "application_note": "DPS_tとn+1 DPSは全て明示入力。配当可能利益から自動推定せず、予測期コストと安定期コストも補完しない。金融企業に自動適用できることや計算用入力が検証済みであることは、この例から推定しない。"
+  },
+  "scenarios": [
+    {
+      "name": "synthetic-base",
+      "probability": "1",
+      "method": "dividend_discount",
+      "inputs": {
+        "dividends_per_share_jpy": ["10", "12", "14"],
+        "cost_of_equity": "0.12",
+        "terminal_cost_of_equity": "0.08",
+        "terminal_dividend_per_share_jpy": "15",
+        "terminal_growth_rate": "0.02"
+      }
+    }
+  ]
+}

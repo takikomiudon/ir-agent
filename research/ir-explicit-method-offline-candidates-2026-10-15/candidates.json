@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "artifact_type": "offline_explicit_valuation_method_route_candidates",
+  "recorded_at": "2026-10-15T10:59:57.510022+00:00",
+  "status": "no_qualifying_route_in_bounded_saved_scope",
+  "candidate_count": 0,
+  "maximum_candidates": 3,
+  "candidates": [],
+  "scope_file": "scope.json",
+  "scope_sha256": "cad69a6cd6c658fb82bf6f5f8a40e832b3d27f8e6f17f00b51f49776d07c95f0",
+  "basis": {
+    "source_files": "Previously saved official-page snapshot JSON only; no raw HTML/PDF scan.",
+    "qualification": "Require an actual anchor to an unread external report, linked by issuer-page wording specifically identifying DCF/stock-price calculation/enterprise valuation/target-price method. A provider/report label alone does not qualify.",
+    "searched_fields": [
+      "$.text",
+      "$.links[*].label"
+    ],
+    "method_query": "DCF|discounted cash flow|株価算定|株価算出|株価評価|企業価値評価|目標株価|理論株価|公正価値|適正株価|妥当株価|想定株価|valuation",
+    "query_semantics": "Case-insensitive broad string matches, including valuation inside Evaluation; actual relation and context must be reviewed. Never infer a formula from a URL or provider name.",
+    "relation_rule": "An exact external href and method-specific issuer explanation must support the same report. An unrelated finance, governance or sustainability word on the same page is insufficient.",
+    "old_indices": "Other-authors six retained routes are generic report entries/notices or explicit noncandidate examples; 7525/8151/9765 targets are now read and excluded, 6200/1861 do not specifically identify an external valuation report."
+  },
+  "coverage": {
+    "official_count": 194,
+    "all_official_links": 35992,
+    "skip_counts": {
+      "nonofficial_source_host": 7,
+      "not_HTTP200_text_source": 64
+    },
+    "snapshot_JSON_parsed": 265,
+    "companies_enumerated": 34,
+    "method_string_hit_snapshots": 4,
+    "method_string_hit_companies": [
+      "4290",
+      "7513"
+    ],
+    "qualifying_unread_external_method_anchors": 0
+  },
+  "noncandidate_matches": [
+    {
+      "security_code": "4290",
+      "snapshot_path": "research/ir-contacts-universe-2026-10-11/evidence/4290/20261011T105029583303Z/04.json",
+      "snapshot_sha256": "de6f000dd3f4fb8a0c6f2b22ee894dfa881ecd231d88864e2bd4ade0f92ffdad",
+      "source_url": "https://www.prestigein.com/IR/finance/performance_summary.html",
+      "source_retrieved_at": "2026-10-11T10:51:33.924507+00:00",
+      "text_sha256": "ce611391855d479a733d0da45ff92a42283c6048b9d667615b0149ef44698491",
+      "text_hits": [
+        {
+          "term": "valuation",
+          "jsonpath": "$.text",
+          "character_start": 6389,
+          "character_end": 6818,
+          "quote": "eトップ Corporate Governance Corporate Governanceトップ Appointment or Dismissal of Officers Corporate Officer Remuneration System Board of Directors’ Effectiveness Evaluation Compliance Internal Control System Risk Management Risk Managementトップ Information Security Initiatives External Evaluation News Investor Relations Investor Relationsトップ IR News Management Policy Management Policyトップ Message from CEO Medium Term Business Plan "
+        },
+        {
+          "term": "valuation",
+          "jsonpath": "$.text",
+          "character_start": 6512,
+          "character_end": 6941,
+          "quote": "m Board of Directors’ Effectiveness Evaluation Compliance Internal Control System Risk Management Risk Managementトップ Information Security Initiatives External Evaluation News Investor Relations Investor Relationsトップ IR News Management Policy Management Policyトップ Message from CEO Medium Term Business Plan Corporate Governance Business Risks IR Policy To Our Individual Investors To Our Individual Investorsトップ Further understand"
+        }
+      ],
+      "anchor_hits": [
+        {
+          "jsonpath": "$.links[531]",
+          "label": "Board of Directors’ Effectiveness Evaluation",
+          "url": "https://www.prestigein.com/english/sustainability/governance/governance/effectiveness_evaluation/",
+          "original_href": "/english/sustainability/governance/governance/effectiveness_evaluation/",
+          "target_host": "www.prestigein.com"
+        },
+        {
+          "jsonpath": "$.links[537]",
+          "label": "External Evaluation",
+          "url": "https://www.prestigein.com/english/sustainability/evaluation/",
+          "original_href": "/english/sustainability/evaluation/",
+          "target_host": "www.prestigein.com"
+        }
+      ],
+      "candidate": false,
+      "reason": "Corporate-board effectiveness and sustainability/external evaluation labels; not an external stock valuation research report or method.",
+      "valuation_formula_expectation_supported": false,
+      "target_body_read": false
+    },
+    {
+      "security_code": "4290",
+      "snapshot_path": "research/ir-contacts-universe-2026-10-11/evidence/4290/20261011T105029583303Z/05.json",
+      "snapshot_sha256": "72c4eecf742b2206978537483d4fecf2fbb161c5a233e57b245508ec38357182",
+      "source_url": "https://www.prestigein.com/IR/stock/stock_information.html",
+      "source_retrieved_at": "2026-10-11T10:51:52.196350+00:00",
+      "text_sha256": "51e144d335d17ba70f999f7c693439b8d7294411d5494a12c25cbd70befc2a74",
+      "text_hits": [
+        {
+          "term": "valuation",
+          "jsonpath": "$.text",
+          "character_start": 6752,
+          "character_end": 7181,
+          "quote": "eトップ Corporate Governance Corporate Governanceトップ Appointment or Dismissal of Officers Corporate Officer Remuneration System Board of Directors’ Effectiveness Evaluation Compliance Internal Control System Risk Management Risk Managementトップ Information Security Initiatives External Evaluation News Investor Relations Investor Relationsトップ IR News Management Policy Management Policyトップ Message from CEO Medium Term Business Plan "
+        },
+        {
+          "term": "valuation",
+          "jsonpath": "$.text",
+          "character_start": 6875,
+          "character_end": 7304,
+          "quote": "m Board of Directors’ Effectiveness Evaluation Compliance Internal Control System Risk Management Risk Managementトップ Information Security Initiatives External Evaluation News Investor Relations Investor Relationsトップ IR News Management Policy Management Policyトップ Message from CEO Medium Term Business Plan Corporate Governance Business Risks IR Policy To Our Individual Investors To Our Individual Investorsトップ Further understand"
+        }
+      ],
+      "anchor_hits": [
+        {
+          "jsonpath": "$.links[531]",
+          "label": "Board of Directors’ Effectiveness Evaluation",
+          "url": "https://www.prestigein.com/english/sustainability/governance/governance/effectiveness_evaluation/",
+          "original_href": "/english/sustainability/governance/governance/effectiveness_evaluation/",
+          "target_host": "www.prestigein.com"
+        },
+        {
+          "jsonpath": "$.links[537]",
+          "label": "External Evaluation",
+          "url": "https://www.prestigein.com/english/sustainability/evaluation/",
+          "original_href": "/english/sustainability/evaluation/",
+          "target_host": "www.prestigein.com"
+        }
+      ],
+      "candidate": false,
+      "reason": "Corporate-board effectiveness and sustainability/external evaluation labels; not an external stock valuation research report or method.",
+      "valuation_formula_expectation_supported": false,
+      "target_body_read": false
+    },
+    {
+      "security_code": "4290",
+      "snapshot_path": "research/ir-contacts-universe-2026-10-11/evidence/4290/20261011T105029583303Z/06.json",
+      "snapshot_sha256": "e798d325356b217a412a466d4aaa66c3cc1e0f3f9d88b88839c9701e45bedaca",
+      "source_url": "https://www.prestigein.com/IR/faq.html",
+      "source_retrieved_at": "2026-10-11T10:52:07.405157+00:00",
+      "text_sha256": "32a29de33e7e8699c1a668028c67dfe897e3785bbfa0833bd78ed56d8eb71be7",
+      "text_hits": [
+        {
+          "term": "valuation",
+          "jsonpath": "$.text",
+          "character_start": 8623,
+          "character_end": 9052,
+          "quote": "eトップ Corporate Governance Corporate Governanceトップ Appointment or Dismissal of Officers Corporate Officer Remuneration System Board of Directors’ Effectiveness Evaluation Compliance Internal Control System Risk Management Risk Managementトップ Information Security Initiatives External Evaluation News Investor Relations Investor Relationsトップ IR News Management Policy Management Policyトップ Message from CEO Medium Term Business Plan "
+        },
+        {
+          "term": "valuation",
+          "jsonpath": "$.text",
+          "character_start": 8746,
+          "character_end": 9175,
+          "quote": "m Board of Directors’ Effectiveness Evaluation Compliance Internal Control System Risk Management Risk Managementトップ Information Security Initiatives External Evaluation News Investor Relations Investor Relationsトップ IR News Management Policy Management Policyトップ Message from CEO Medium Term Business Plan Corporate Governance Business Risks IR Policy To Our Individual Investors To Our Individual Investorsトップ Further understand"
+        }
+      ],
+      "anchor_hits": [
+        {
+          "jsonpath": "$.links[560]",
+          "label": "Board of Directors’ Effectiveness Evaluation",
+          "url": "https://www.prestigein.com/english/sustainability/governance/governance/effectiveness_evaluation/",
+          "original_href": "/english/sustainability/governance/governance/effectiveness_evaluation/",
+          "target_host": "www.prestigein.com"
+        },
+        {
+          "jsonpath": "$.links[566]",
+          "label": "External Evaluation",
+          "url": "https://www.prestigein.com/english/sustainability/evaluation/",
+          "original_href": "/english/sustainability/evaluation/",
+          "target_host": "www.prestigein.com"
+        }
+      ],
+      "candidate": false,
+      "reason": "Corporate-board effectiveness and sustainability/external evaluation labels; not an external stock valuation research report or method.",
+      "valuation_formula_expectation_supported": false,
+      "target_body_read": false
+    },
+    {
+      "security_code": "7513",
+      "snapshot_path": "research/ir-contacts-universe-2026-10-11/evidence/7513/20261011T211736016505Z/02.json",
+      "snapshot_sha256": "54fc71e312c3fa7aed225e98578f718d796721617e89dafca1df854c924c4091",
+      "source_url": "https://www.kojima.net/corporation/",
+      "source_retrieved_at": "2026-10-11T21:18:26.067683+00:00",
+      "text_sha256": "591097ad7a8b88de810df6221fd6870352c065654cee51c55b11c856b687cb17",
+      "text_hits": [
+        {
+          "term": "valuation",
+          "jsonpath": "$.text",
+          "character_start": 4390,
+          "character_end": 4819,
+          "quote": "ービー』コラボ企画 ビックカメラグループコラボグッズ 先行販売実施（PDF：1.62MB） May.21.2026 サステナ お知らせ Kojima Selected for the First Time as a “Supplier Engagement Leader,”Receiving the Highest Evaluation in CDP’s 2025 Supplier Engagement Assessment（PDF：115KB） 2026年5月21日（木） サステナ お知らせ 株式会社コジマ ＣＤＰ2025 サプライヤーエンゲージメント評価における最高評価「サプライヤーエンゲージメント・リーダー」初選定のお知らせ（PDF：137KB） 2026年5月19日（火） PR お知らせ コジマ×ビックカメラCOTOE橋本店5月29日（金）オープン（PDF:633KB） 2026年5月18日（月） PR お知らせ コジマ×ブルーロック コ"
+        },
+        {
+          "term": "valuation",
+          "jsonpath": "$.text",
+          "character_start": 16625,
+          "character_end": 17054,
+          "quote": "） サステナ お知らせ 「統合報告書2025 英語版」発行のお知らせ（PDF：126KB） May.21.2026 サステナ お知らせ Kojima Selected for the First Time as a “Supplier Engagement Leader,”Receiving the Highest Evaluation in CDP’s 2025 Supplier Engagement Assessment（PDF：115KB） 2026年5月21日（木） サステナ お知らせ 株式会社コジマ ＣＤＰ2025 サプライヤーエンゲージメント評価における最高評価「サプライヤーエンゲージメント・リーダー」初選定のお知らせ（PDF：137KB） 2026年5月15日（金） サステナ お知らせ 第5回 ブレックス×コジマ バスケットボール教室を開催（PDF：433KB） 2026年3月9日（月） サステナ お知らせ コジマが健康経営優良法人"
+        },
+        {
+          "term": "valuation",
+          "jsonpath": "$.text",
+          "character_start": 17150,
+          "character_end": 17579,
+          "quote": " 第７回 栃木ゴールデンブレーブス×コジマ野球教室を開催（PDF：523KB） Dec.11.2025 サステナ お知らせ Kojima Selected for CDP’s 2025 Climate Change “A List” for the First Time, Receiving the Highest Evaluation（PDF：117KB） 2025年12月11日（木） サステナ お知らせ 株式会社コジマ ＣＤＰ2025気候変動分野において最高評価「Ａリスト」企業に初選定（PDF：93KB） 2025年7月9日（水） サステナ お知らせ コジマ子どもサイエンスパーク ネーミングライツ契約締結のお知らせ 2025年5月30日（金） サステナ お知らせ 「統合報告書2024 英語版」作成のお知らせ（PDF:102KB） May.30.2025 サステナ お知らせ Notice of Preparation of the Integr"
+        }
+      ],
+      "anchor_hits": [
+        {
+          "jsonpath": "$.links[135]",
+          "label": "Kojima Selected for the First Time as a “Supplier Engagement Leader,”Receiving the Highest Evaluation in CDP’s 2025 Supplier Engagement Assessment（PDF：115KB）",
+          "url": "https://www.kojima.net/corporation/ir/pdf/release20260521e.pdf",
+          "original_href": "/corporation/ir/pdf/release20260521e.pdf",
+          "target_host": "www.kojima.net"
+        },
+        {
+          "jsonpath": "$.links[300]",
+          "label": "Kojima Selected for the First Time as a “Supplier Engagement Leader,”Receiving the Highest Evaluation in CDP’s 2025 Supplier Engagement Assessment（PDF：115KB）",
+          "url": "https://www.kojima.net/corporation/ir/pdf/release20260521e.pdf",
+          "original_href": "/corporation/ir/pdf/release20260521e.pdf",
+          "target_host": "www.kojima.net"
+        },
+        {
+          "jsonpath": "$.links[306]",
+          "label": "Kojima Selected for CDP’s 2025 Climate Change “A List” for the First Time, Receiving the Highest Evaluation（PDF：117KB）",
+          "url": "https://www.kojima.net/corporation/ir/pdf/release20251211e.pdf",
+          "original_href": "/corporation/ir/pdf/release20251211e.pdf",
+          "target_host": "www.kojima.net"
+        }
+      ],
+      "candidate": false,
+      "reason": "CDP supplier/climate evaluation company notices; not stock price or enterprise valuation.",
+      "valuation_formula_expectation_supported": false,
+      "target_body_read": false
+    }
+  ],
+  "references": [
+    {
+      "path": "research/ir-author-report-routing-other-authors-2026-10-15/README.md",
+      "sha256": "db188802fd0084da4f48e47bcb5c62877fcc553846fbaa912446a0d3394972bc",
+      "role": "saved index/exclusion/hold reference; not target report rereading"
+    },
+    {
+      "path": "research/ir-author-report-routing-other-authors-2026-10-15/routes.json",
+      "sha256": "1903e05eebaf4428242f687ff443c13d1861a05997ab46a6e80255f3281f7cae",
+      "role": "saved index/exclusion/hold reference; not target report rereading"
+    },
+    {
+      "path": "research/ir-author-report-routing-other-authors-2026-10-15/validation.json",
+      "sha256": "b74a343bd562b81ea76d9c8430631c85729a543d9994b2d31df0aa808df4c668",
+      "role": "saved index/exclusion/hold reference; not target report rereading"
+    },
+    {
+      "path": "research/ir-author-report-routing-wide-2026-10-15/routes.json",
+      "sha256": "3b13aae4c44bd07b8bf9df2f63db837ee51884f917f756c8dcf5242fcb03ef26",
+      "role": "saved index/exclusion/hold reference; not target report rereading"
+    },
+    {
+      "path": "research/ir-source-access-holds-2026-10-15/holds.json",
+      "sha256": "f3b5ab3f27cd7d7049c898753ffae035d83ae829c8aad0efb3450e7bad27c154",
+      "role": "saved index/exclusion/hold reference; not target report rereading"
+    },
+    {
+      "path": "research/ir-author-source-capabilities-2026-10-15/capabilities.json",
+      "sha256": "e3aa3104449f6f3406d51a8e053f696b96231eb9e58884311c63e9bed690f27a",
+      "role": "saved index/exclusion/hold reference; not target report rereading"
+    }
+  ],
+  "remaining_unknown": [
+    "No claim about method wording in the other339-scope companies not selected by this prior-hit filter.",
+    "No claim about unstored issuer pages, unread provider/report bodies, future publications or current website state.",
+    "No conclusion that an author has no valuation method, or that a company is excluded from investment research.",
+    "Independent author forecasts, selected target period, fair multiple/formula and application deadline remain unverified without a qualifying new source."
+  ],
+  "stopping_reason": "Fixed34-company/265-JSON scope exhausted; no specific method-linked unread external report anchor. End with0 instead of repeating known samples or extending GET/search routes.",
+  "financial_inputs_verified": false,
+  "current_forecast_or_method_adopted": false,
+  "investment_action": null,
+  "execution": {
+    "new_GETs": 0,
+    "database_accesses": 0,
+    "production_changes": 0,
+    "old_file_changes": 0,
+    "original_PDF_or_raw_HTML_rereads": 0,
+    "new_IR_or_sends": 0,
+    "new_forecasts_thresholds_probabilities": 0,
+    "full_test_runs": 0
+  }
+}

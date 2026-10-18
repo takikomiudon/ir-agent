@@ -1,0 +1,11 @@
+v41候補：6814の10月9日修正予想4項目
+
+確定済みnormalizer bundleから1親・4factだけを追加した候補。33社244fact・49親entry・51派生source・42会社/原典組となる。EPS旧411.28/修正537.80、年間DPS旧160.00/修正210.00はすべてissuer_guidance、2027年2月期通期。旧/修正のvintage・scope・期間を正規化結果からそのまま保存し、独自予測や実績にしない。
+
+v40の48親240factはwhole同一。旧6814年次EPS/BPS・4月予想の当時の記載や「10/9資料未取得」という履歴も書き換えていない。旧v40 actual全体（227資料/48接続派生233fact）はprevious_v40_actual_research_source_connections_snapshotへwhole保存し、旧connection_preparationも履歴へ残した。
+
+新actual欄はpending_ROOT_actual_connection_receipt。接続後の期待値49派生237fact・対象外2派生7factは別の期待値欄に置き、実DB資料数・初保存・分類・現在有効な数値採用は認定していない。calendar追加後232資料等の別時点をv40の歴史へ混ぜず、今後の原典追加数も推測しない。8331/9702のfile-only7factは不変。
+
+全244項目についてper-fact artifact/source overrideを優先して実bundleへ解決し、索引に存在するid/concept/kind/value/unit/period/scope各fieldを原factと照合した。古い索引にないscope等を補完していない。新4factのscopeを含む全投影と原wholeobject/nativeSHAを確認。10月通知内の旧予想再掲は4月の初保存証拠ではなく、DPS合計210を全額支払済みとも扱わない。
+
+候補はproposed-index-v41.json、来歴と検証はvalidation.json。canonical v41作成・共有docs/既存索引/DB/Store/GET/normalizer再実行/金融採用0。rootの実保存・分類receipt後の別指示を待つ。

@@ -1,0 +1,61 @@
+{
+  "recorded_at": "2026-10-16T10:31:32.050151+00:00",
+  "result": "no_mandatory_issues",
+  "findings": [],
+  "input_pins_ref": {
+    "path": "research/ir-reference-value-integration-2026-10-16/independent-review/input-pins.json",
+    "sha256": "f9ea19a39e3cdbffa57970db5d68120e93b0f831e02a69d3f9b03e00b1c3f008"
+  },
+  "source_review": {
+    "old_function_source_exact": {
+      "calculate_valuation": true,
+      "_prepare": true,
+      "_fair_value": true,
+      "_number": true,
+      "_aggregation": true
+    },
+    "precision_change": "Optional None excludes price only in new route; old price-dependent branch unchanged",
+    "CLI_dispatch": "reference-value belongs to file commands and returns before Store/Harness startup",
+    "no_dummy_price_or_price_ratios": "Common _fair_value kernels called directly; output has reference labels, no price, MOS, upside/downside or action",
+    "weights": "Weighted requires supplied valid probabilities summing exactly1; unweighted leaves expected reference null and exposes min/max only",
+    "meaning_and_adoption": "financial_inputs_verified false and meaning_review_required true; period/share/forecast/strategy applicability not certified",
+    "bounded_context": "New parsing isolated by localcontext, calculation has private Context; Graham combined precision guard precedes allocation, legacy-only models do not acquire the guard",
+    "finite_precision_explanation": "Unrounded output is finite-context arithmetic, not an exact irrational or policy certificate"
+  },
+  "independent_checks": {
+    "new_focused_test_command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests -p test_reference_value.py -v",
+    "new_focused_tests_passed": 12,
+    "old_current_complete_priced_JSON_matches": 48,
+    "old_current_error_type_message_and_flag_matches": 8,
+    "caller_context_success_failure_preservation_checks": 18,
+    "Graham_extreme_probability_mixed_input_horizon_cases_rejected_before_Context": 6,
+    "enormous_Context_actually_allocated": 0,
+    "CLI_success_and_failure_input_directory_unchanged_cases": 3,
+    "CLI_Store_calls": 0,
+    "all_input_pins_unchanged_after_checks": true
+  },
+  "reported_worker_compatibility_proof": {
+    "path": "/tmp/ir-reference-value-compatibility.json",
+    "sha256": "6edd8f049307f34aa88f083fe72f4467bc730071489b2e95ab1a02ff809ab6e5",
+    "cases": 111,
+    "independently_reran_all_111": false
+  },
+  "root_full_suite_report_received": {
+    "passed": 1585,
+    "started_at": "2026-10-16T10:29:37.106841+00:00",
+    "completed_at": "2026-10-16T10:30:14.981709+00:00",
+    "log_path": "research/ir-reference-value-integration-2026-10-16/full-suite.log",
+    "log_sha256": "e7470b7d74be66e4a2d03804faa16c98452eca7a411df0b6ccfa2063798128f8",
+    "execution_owner": "root",
+    "not_rerun_here": true
+  },
+  "operations": {
+    "production_test_spec_edits": 0,
+    "DB_Store_real_access": 0,
+    "GET": 0,
+    "financial_adoption_or_IR": 0,
+    "full_suite_execution": 0,
+    "new_files_only_under": "research/ir-reference-value-integration-2026-10-16/independent-review"
+  },
+  "frozen": true
+}

@@ -1,0 +1,63 @@
+{
+  "checked_at_utc": "2026-10-11T23:52:32.392337+00:00",
+  "checked_at_jst": "2026-10-12T08:52:32.392337+09:00",
+  "collector_run_path": "collection-runs/20261011T230808937161Z.json",
+  "observations": [
+    {
+      "security_code": "7991",
+      "snapshot": "evidence/7991/20261011T231026165904Z/01.json",
+      "snapshot_sha256": "6ba10377ba33f639f8ed3959ccac644c0d65c58c0c485342d892d6bbe4958acc",
+      "actual_request_pointer": "/robots",
+      "site_body_GET_performed": false,
+      "robots_actual_GET_performed": true,
+      "requested_url": "https://www.mamiya-op.co.jp/robots.txt",
+      "url": "https://www.mamiya-op.co.jp/robots.txt",
+      "http_status": 503,
+      "failure_signature": "site_tls_503",
+      "http_get_started_at": "2026-10-11T23:10:40.944664+00:00",
+      "http_get_completed_at": "2026-10-11T23:10:41.928732+00:00",
+      "global_rps_at_dispatch": 0.25,
+      "response_headers": {
+        "date": "Sun, 11 Oct 2026 23:10:41 GMT",
+        "server": "envoy"
+      },
+      "retry_after_seconds": null,
+      "text": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end",
+      "http_get_elapsed_seconds": 0.9840939590067137,
+      "completed_at_jst": "2026-10-12T08:10:41.928732+09:00"
+    },
+    {
+      "security_code": "8113",
+      "snapshot": "evidence/8113/20261011T234238091580Z/02.json",
+      "snapshot_sha256": "1a02b738377b79143e54f51fa5fdce944b394076b84498bd35aca6ce4c614dc2",
+      "actual_request_pointer": "/robots",
+      "site_body_GET_performed": false,
+      "robots_actual_GET_performed": true,
+      "requested_url": "https://www.support.unicharm.co.jp/robots.txt",
+      "url": "https://www.support.unicharm.co.jp/robots.txt",
+      "http_status": 503,
+      "failure_signature": "site_tls_503",
+      "http_get_started_at": "2026-10-11T23:43:41.046051+00:00",
+      "http_get_completed_at": "2026-10-11T23:43:41.666482+00:00",
+      "global_rps_at_dispatch": 0.25,
+      "response_headers": {
+        "date": "Sun, 11 Oct 2026 23:43:41 GMT",
+        "server": "envoy"
+      },
+      "retry_after_seconds": null,
+      "text": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end",
+      "http_get_elapsed_seconds": 0.6204573860013625,
+      "completed_at_jst": "2026-10-12T08:43:41.666482+09:00"
+    }
+  ],
+  "scope": "Two saved TLS-signature failures only; not a completed-run total or fresh network probe.",
+  "interpretation": [
+    "Both responses explicitly report certificate verification failure while global dispatch was0.25 RPS.",
+    "They differ from the earlier Invalid argument|remote address:envoy://cloudflare_https_tunnel/ common signature.",
+    "Envoy header alone cannot locate the underlying fault, and absent Retry-After does not prove the absence of rate limiting.",
+    "These robots failures stopped the corresponding site body GET; they do not establish financial IR refusal or nonexistence."
+  ],
+  "http_GETs_in_this_check": 0,
+  "source_changes": 0,
+  "setting_changes": 0
+}

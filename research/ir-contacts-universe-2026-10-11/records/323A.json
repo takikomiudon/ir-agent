@@ -1,0 +1,67 @@
+{
+  "security_code": "323A",
+  "company_name": "フライヤー",
+  "market": "グロース（内国株式）",
+  "jpx_sector": "情報・通信業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://corp.flierinc.com",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T06:45:33.433795+00:00",
+  "completed_at": "2026-10-11T06:45:42.297103+00:00",
+  "manual_review_required": false,
+  "evidence": [],
+  "fetches": [
+    {
+      "url": "https://corp.flierinc.com",
+      "final_url": "https://corp.flierinc.com/",
+      "snapshot": "evidence/323A/20261011T064533433857Z/01.json",
+      "retrieved_at": "2026-10-11T06:45:37.781332+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "保存済み公式ページ・実フォーム欄を手動点検。送信・配信成功・回答実績は未確認。"
+  ],
+  "discovery": {
+    "security_code": "323A",
+    "official_url": "https://corp.flierinc.com",
+    "discovery_url": "https://www.jpx.co.jp/listing/stocks/new/00-archives-01.html",
+    "discovered_at": "2026-10-11T03:59:12.667702+00:00",
+    "discovery_type": "official_jpx_listing_link",
+    "seed_company_name": "（株）フライヤー",
+    "source_data_as_of": "2025-01-17",
+    "listing_date": "2025-02-20",
+    "discovery_snapshot": "/tmp/ir-all-seeds/jpx-ipo-2025.html",
+    "discovery_row_text": "2025/02/20 （2025/01/17） （株）フライヤー 323A 590～680 275 100"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/323A/20261011T064533433857Z/01.json",
+      "normalized_name": "フライヤー",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "rendered_ir_channel_not_observed",
+  "http_get_attempt_count": 2,
+  "previous_attempts": [
+    "attempts/323A/20261011T045047384101Z.json",
+    "attempts/323A/20261011T064542297240Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_services",
+    "reviewed_at": "2026-10-11T07:05:47.221691+00:00",
+    "notes": "フライヤーHTTP200保存本文は株式会社フライヤー9文字のみ、links/forms空。JSshellに近い取得結果でIR実窓口が不明なためunconfirmed維持、企業IR受付の不存在とは断定しない。",
+    "attempted_at_reviewed": "2026-10-11T06:45:33.433795+00:00",
+    "saved_evidence_only": true
+  }
+}

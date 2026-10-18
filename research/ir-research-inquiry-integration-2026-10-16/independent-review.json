@@ -1,0 +1,56 @@
+{
+  "reviewer": "codex_audit_consumer",
+  "reviewed_at": "2026-10-16T13:17:26.789672+00:00",
+  "status": "no_blocker_within_reviewed_scope",
+  "scope": "Freeze後の既報R1/R2/R3とclockの反例に限定した独立再確認。全機能の再監査ではない。",
+  "files_sha256": {
+    "src/ir_agent/research_inquiries.py": "0b7841eef2b8cf0515f479167a2fe681eace7b1bf692903af6b83a3ad415e482",
+    "tests/test_research_inquiries.py": "4aa9e9606cfbdca2a241504c34cc688070a144248cbb12f89135bec13909b0c9",
+    "docs/research-inquiries.md": "db85de7c84927717e286c47ff599a7caf88e4a36e1477487b9d5f2a131f9c896"
+  },
+  "documentation_update": {
+    "producer_frozen_sha256": "9a2278ed3adfd3b4dd8a9e4826831aa4ab3f42d9565d17a4bda06877df9e2fea",
+    "current_sha256": "db85de7c84927717e286c47ff599a7caf88e4a36e1477487b9d5f2a131f9c896",
+    "reason": "Root承認のStore自動導入・CLI・双方向重複確認の追記を別SHAとして照合。producer freezeの不一致とは扱わない。"
+  },
+  "findings": [],
+  "resolution": {
+    "R1": "case.reviewed_sourcesを既存QualitativeResearch._source_checkとnative SHAで再点検。別sourceを直接引用していてもcase根拠だけの保留を無視しない。",
+    "R2": "stale caseの肯定的公開比較は拒否する一方、unclear/potential_nonpublicはCAS・逐語引用・時刻制約を保って追記できる。旧publicレビューは不変。",
+    "R3": "実caseの公開レビューは根拠DAG全体のsynthetic=Trueを拒否。質問・返信レビュー・current_viewの共通経路で適用。",
+    "clock": "送信/閉鎖を含む新規書込は新3表の既存実保存時計より逆行できず、送信の実記録前の受信書込も拒否。"
+  },
+  "independent_counterexamples": [
+    {
+      "id": "R1-case-basis-current-use-and-R2-safety",
+      "status": "passed",
+      "observed": "S1-only classification correction holds current note, new inquiry, sent registration, affirmative review; unclear correction still appends; case and inquiry unchanged"
+    },
+    {
+      "id": "R3-real-reply-nested-synthetic",
+      "status": "passed",
+      "observed": "real-case reply review rejects synthetic root and synthetic ancestor through two unflagged descendants without partial append; actual public source remains usable"
+    },
+    {
+      "id": "R2-stale-head-CAS",
+      "status": "passed",
+      "observed": "stale case head accepts append-only potential_nonpublic then unclear; current note remains held; stale CAS rejected"
+    },
+    {
+      "id": "clock-cross-inquiry-and-sent-receipt",
+      "status": "passed",
+      "observed": "later unrelated inquiry prevents rollback of sent/closure save clock; delayed send receipt unavailable before actual save; rejected writes leave state unchanged"
+    }
+  ],
+  "execution_boundary": {
+    "database": "SQLite :memory: のみ。case/reviewファイルはTemporaryDirectory内。",
+    "production_db_or_store_opened": false,
+    "network_requests": 0,
+    "code_or_test_or_live_doc_edits": 0,
+    "financial_or_case_application": 0,
+    "output_files": [
+      "research/ir-research-inquiry-integration-2026-10-16/independent-review.json"
+    ]
+  },
+  "limitations": "金融判断、実IR送信、意味判断の自動承認は点検・実行していない。Rootのfocused27/fullsuite結果はこの独立4反例の実行数へ合算していない。"
+}

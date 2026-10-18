@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-15T10:29:09.280069+00:00",
+  "purpose": "Offline route discovery for a broker-authored Japanese-equity target valuation with explicitly selected EPS period and target multiple/formula; no investment selection.",
+  "scope": {
+    "saved_directories": [
+      "research/ir-policy-adoption-2026-10-15",
+      "research/published-rating-policies-2026-10-15",
+      "research/ir-author-valuation-example-2026-10-15"
+    ],
+    "policy_retrieval_records": 21,
+    "rating_retrieval_records": 13,
+    "new_HTTP_GETs": 0,
+    "new_report_PDF_or_image_reads": 0,
+    "DB_access": false,
+    "existing_files_modified": false,
+    "code_model_question_or_forecast_created": false,
+    "maximum_new_actual_report_hrefs": 5,
+    "maximum_sample_entry_pages": 3,
+    "boundary": "Only saved official broker captures in these bundles and prior 6323 interpretation. No claim of exhaustive brokers or the public web."
+  },
+  "result": {
+    "new_actual_report_href_candidates": 0,
+    "formula_ready_candidates": 0,
+    "sample_entry_pages_with_supporting_sample_label": 1,
+    "summary": "No new recoverable report href or complete author target valuation was found in the bounded saved captures. One exact fetched sample-entry URL has supporting Sample labels, but its report hrefs are not retained. This does not establish that public reports or formulas do not exist."
+  },
+  "routes": [],
+  "sample_entry_routes": [
+    {
+      "id": "iwaicosmo-net-report-sample-entry",
+      "classification": "saved_official_public_sample_entry_report_href_not_retained",
+      "source": {
+        "original_file": "research/published-rating-policies-2026-10-15/sources.json",
+        "original_file_sha256": "a47b717e3f73da5f5eff7d7e4c099ca43444c2af2590a6a1cd8bccb193eced73",
+        "jsonpath": "$.retrievals[10]",
+        "source_id": "e0173556f1ef30b4",
+        "url": "https://www.iwaicosmo.co.jp/investment/net_report/",
+        "resolved_url": "https://www.iwaicosmo.co.jp/investment/net_report/",
+        "title": "ネット取引・プラスネット閲覧レポート｜岩井コスモ証券",
+        "original_retrieved_at": "2026-10-15T01:19:22.901295+00:00",
+        "historical_http_status": 200,
+        "declared_original_body_sha256": "2ccf0a4d3c0f6d079aec3aa696a4c9ad2987fc2d07b3f3c5f4e5649c62185aeb",
+        "declared_original_body_byte_count": 27928,
+        "visible_text_sha256": "f2a08f2f9236f337ac8e1947615b7b9c329c45020428e99e60bedcf8b89afe31",
+        "raw_HTML_bytes_available_in_this_record": false,
+        "original_links_array_available": false,
+        "original_href": null,
+        "provenance_limit": "URL is the recorded fetched entry page itself, not a recovered report anchor href; declared body SHA cannot be recomputed without original HTML bytes."
+      },
+      "label": "ネット取引・プラスネット閲覧レポート / アナリスト銘柄情報 / Sampleはこちら",
+      "supporting_quote_ids": [
+        "iwaicosmo-analyst-sample-label",
+        "iwaicosmo-account-description"
+      ],
+      "report_href": null,
+      "new_unread_report_discovered": false,
+      "report_author_selected_EPS_FY": null,
+      "target_PER_or_formula": null,
+      "target_price": null,
+      "next_step_not_started": "A separately authorized finite GET could inspect literal anchors on this exact entry page; do not construct PDF paths. Do not reread known 6323 merely to repeat the missing formula result."
+    }
+  ],
+  "other_saved_broker_entries_not_sample_candidates": [
+    {
+      "source": {
+        "original_file": "research/published-rating-policies-2026-10-15/sources.json",
+        "original_file_sha256": "a47b717e3f73da5f5eff7d7e4c099ca43444c2af2590a6a1cd8bccb193eced73",
+        "jsonpath": "$.retrievals[0]",
+        "source_id": "04287c29f4193dde",
+        "url": "https://www.nomura.co.jp/market/research/",
+        "resolved_url": "https://www.nomura.co.jp/market/research/",
+        "title": "野村のリサーチ｜投資情報｜野村證券",
+        "original_retrieved_at": "2026-10-15T01:18:57.989249+00:00",
+        "historical_http_status": 200,
+        "declared_original_body_sha256": "6be74285c70caf51f8a1cc5856833b0cdd48c09a04d89d23f93fdbe37cb1f955",
+        "declared_original_body_byte_count": 195077,
+        "visible_text_sha256": "65d6ba0d79d5aa15025f56b6cc6535572b753aa91439666e8bef065bb2ef83f0",
+        "raw_HTML_bytes_available_in_this_record": false,
+        "original_links_array_available": false,
+        "original_href": null,
+        "provenance_limit": "URL is the recorded fetched entry page itself, not a recovered report anchor href; declared body SHA cannot be recomputed without original HTML bytes."
+      },
+      "classification": "research_service_overview_not_sample_href_evidence",
+      "supporting_quote_ids": [
+        "nomura-account-section"
+      ],
+      "sample_link_label_found_in_saved_visible_text": false,
+      "reason": "Saved text describes account-viewable report services. No report href retained and no sample label found in saved visible_text; not a public-report absence finding."
+    },
+    {
+      "source": {
+        "original_file": "research/published-rating-policies-2026-10-15/sources.json",
+        "original_file_sha256": "a47b717e3f73da5f5eff7d7e4c099ca43444c2af2590a6a1cd8bccb193eced73",
+        "jsonpath": "$.retrievals[1]",
+        "source_id": "255618adb365ee7d",
+        "url": "https://www.daiwa.jp/onlinetrade/tool/library.html",
+        "resolved_url": "https://www.daiwa.jp/onlinetrade/tool/library.html",
+        "title": "ダイワのネット図書館 | オンライントレード | 大和証券",
+        "original_retrieved_at": "2026-10-15T01:19:26.251854+00:00",
+        "historical_http_status": 200,
+        "declared_original_body_sha256": "766a274b9b012d507ddafc8853d16dbaaff28fd258d33f33c207a50f45a3b537",
+        "declared_original_body_byte_count": 212668,
+        "visible_text_sha256": "fdc2df5af6e8e463e8dc44082dec7dc9efbdfcc887a2890352d56d583dc9f161",
+        "raw_HTML_bytes_available_in_this_record": false,
+        "original_links_array_available": false,
+        "original_href": null,
+        "provenance_limit": "URL is the recorded fetched entry page itself, not a recovered report anchor href; declared body SHA cannot be recomputed without original HTML bytes."
+      },
+      "classification": "research_library_service_not_sample_href_evidence",
+      "supporting_quote_ids": [
+        "daiwa-service-section"
+      ],
+      "sample_link_label_found_in_saved_visible_text": false,
+      "reason": "Saved text describes a research-library service; no sample label or report href is retained. Do not treat service existence or a free trial as an unauthenticated report."
+    }
+  ],
+  "known_route_excluded_without_rereading": {
+    "company": "6323 ローツェ",
+    "prior_result_file": "research/ir-author-valuation-example-2026-10-15/result.json",
+    "prior_result_sha256": "95486a9da55fde245adb2b73e08a19184170c684b738151369b757eea68dbf5f",
+    "report_url": "https://www.iwaicosmo.co.jp/investment/net_report/pdf/sample_analyst.pdf",
+    "report_url_origin_jsonpath": "$.source.url in prior result; rating retrievals[6].requested_url",
+    "original_anchor_href_retained": false,
+    "report_date": "2026-04-17",
+    "reason": "Already interpreted: author EPS forecasts and target price are explicit, but selected target EPS period and target multiple/formula are unverified. No new PDF/image read in this review.",
+    "prior_assessment_jsonpath": "$.reproduction_assessment",
+    "formula_reproducible": false,
+    "do_not_repurpose_market_PER_or_reverse_engineer_target_PER": true
+  },
+  "source_quotes": [
+    {
+      "id": "iwaicosmo-analyst-sample-label",
+      "original_file": "research/published-rating-policies-2026-10-15/sources.json",
+      "original_file_sha256": "a47b717e3f73da5f5eff7d7e4c099ca43444c2af2590a6a1cd8bccb193eced73",
+      "jsonpath": "$.retrievals[10].visible_text",
+      "source_id": "e0173556f1ef30b4",
+      "offset_start": 1149,
+      "offset_end": 1219,
+      "quote": "アナリスト銘柄情報 タイムリー配信。厳選した有望銘柄を詳細な分析に基づいたレポートとしてお届けいたします。［随時更新］ Sampleはこちら",
+      "offset_convention": "Python Unicode code points, zero-based, end-exclusive, within saved visible_text; not original HTML offsets",
+      "visible_text_sha256": "f2a08f2f9236f337ac8e1947615b7b9c329c45020428e99e60bedcf8b89afe31",
+      "quote_sha256": "75c5a3c2702e0cee0bbf71c410faa6a396ff837944ad2e8cdcd2d4c11a8f9a6c"
+    },
+    {
+      "id": "iwaicosmo-account-description",
+      "original_file": "research/published-rating-policies-2026-10-15/sources.json",
+      "original_file_sha256": "a47b717e3f73da5f5eff7d7e4c099ca43444c2af2590a6a1cd8bccb193eced73",
+      "jsonpath": "$.retrievals[10].visible_text",
+      "source_id": "e0173556f1ef30b4",
+      "offset_start": 863,
+      "offset_end": 911,
+      "quote": "「プラスネット」「ネット取引」口座を開設すれば、以下のような投資に役立つレポートを参照できます。",
+      "offset_convention": "Python Unicode code points, zero-based, end-exclusive, within saved visible_text; not original HTML offsets",
+      "visible_text_sha256": "f2a08f2f9236f337ac8e1947615b7b9c329c45020428e99e60bedcf8b89afe31",
+      "quote_sha256": "5a4a01026d5d6eca4fd558544c6da92d583cba34f72a378409c517a19300a0c8"
+    },
+    {
+      "id": "nomura-account-section",
+      "original_file": "research/published-rating-policies-2026-10-15/sources.json",
+      "original_file_sha256": "a47b717e3f73da5f5eff7d7e4c099ca43444c2af2590a6a1cd8bccb193eced73",
+      "jsonpath": "$.retrievals[0].visible_text",
+      "source_id": "04287c29f4193dde",
+      "offset_start": 8798,
+      "offset_end": 8819,
+      "quote": "口座を開設すると閲覧できるレポートのご紹介",
+      "offset_convention": "Python Unicode code points, zero-based, end-exclusive, within saved visible_text; not original HTML offsets",
+      "visible_text_sha256": "65d6ba0d79d5aa15025f56b6cc6535572b753aa91439666e8bef065bb2ef83f0",
+      "quote_sha256": "b9e55fa1f51b1d5b197355a27161ed3536bb224a8622012e6021d8b478c71a0c"
+    },
+    {
+      "id": "daiwa-service-section",
+      "original_file": "research/published-rating-policies-2026-10-15/sources.json",
+      "original_file_sha256": "a47b717e3f73da5f5eff7d7e4c099ca43444c2af2590a6a1cd8bccb193eced73",
+      "jsonpath": "$.retrievals[1].visible_text",
+      "source_id": "255618adb365ee7d",
+      "offset_start": 4875,
+      "offset_end": 4906,
+      "quote": "トップアナリストのレポートを即日チェック！ダイワのネット図書館",
+      "offset_convention": "Python Unicode code points, zero-based, end-exclusive, within saved visible_text; not original HTML offsets",
+      "visible_text_sha256": "fdc2df5af6e8e463e8dc44082dec7dc9efbdfcc887a2890352d56d583dc9f161",
+      "quote_sha256": "61ac658a1a99468501fbf398435b0326d7cb824b42a7b5e7c3a7ece2cacd708c"
+    }
+  ],
+  "limitations": [
+    "Successful HTML records retain extracted visible_text, historical requested/resolved URLs and a declared body SHA, but not raw HTML bytes or anchor mappings; a label cannot identify its href.",
+    "No requested_url is relabeled as an original report href. The sample entry URL is an observed previously fetched page URL.",
+    "Policy-adoption sources are academic/author methodology sources, not an additional broker report capture.",
+    "Existing prior 6323 findings are reused as prior findings, not independently reverified here.",
+    "No target EPS period, multiple, probability, costs, forecast vintage or current company eligibility has been completed by inference.",
+    "No new network policy or live reachability check was performed because GET count is zero."
+  ],
+  "input_files": [
+    {
+      "path": "research/ir-policy-adoption-2026-10-15/sources.json",
+      "sha256_before": "4b4f591641916b002ab37cb547bc11b5a0726f5a03647d0230ef4c85c32125f1"
+    },
+    {
+      "path": "research/ir-policy-adoption-2026-10-15/README.md",
+      "sha256_before": "9320cf6b56952d9a2458a81256e46ddda681a884d32bd6f74763087fe2b92356"
+    },
+    {
+      "path": "research/published-rating-policies-2026-10-15/sources.json",
+      "sha256_before": "a47b717e3f73da5f5eff7d7e4c099ca43444c2af2590a6a1cd8bccb193eced73"
+    },
+    {
+      "path": "research/published-rating-policies-2026-10-15/policy-profiles.json",
+      "sha256_before": "2c8f2e67fce829f8725fbc50e2ae4ecde58571abf148d0954c755f4085ad51d7"
+    },
+    {
+      "path": "research/published-rating-policies-2026-10-15/README.md",
+      "sha256_before": "7e9f523ef6679e59bc05588069700fdfc241722b62fdd5b0631c310ca1a102da"
+    },
+    {
+      "path": "research/ir-author-valuation-example-2026-10-15/result.json",
+      "sha256_before": "95486a9da55fde245adb2b73e08a19184170c684b738151369b757eea68dbf5f"
+    },
+    {
+      "path": "research/ir-author-valuation-example-2026-10-15/README.md",
+      "sha256_before": "9dd2e9dfbc01620dd09042cd617871ae7c9ba0d379cf726ad807de4509dc1f65"
+    }
+  ]
+}

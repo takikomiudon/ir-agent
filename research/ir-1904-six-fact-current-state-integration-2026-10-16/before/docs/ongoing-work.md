@@ -1,0 +1,71 @@
+# 継続作業の状態
+
+利用者の停止指示があるまで、目前のタスクからIRに基づく投資判断ロジックを構築する。既存著者の手順を優先し、金融予測・倍率・確率・売買条件を独自に補わない。サブエージェント利用は許可済み。実送信・注文・有料契約・deploymentは指示されていない。
+
+## 現在の台帳と受入
+
+2026-10-16 02:17 UTC。[最新の完了照合](../research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/qualitative-review/parent-acceptance.json)時点の実DB `data/ir-research-2026-10-15.sqlite3` は170資料（公開169・市場1）、公開資料あり28社・財務内容あり24社、分類169。全99job完了（intake81・定性18）、attempt96/event192/request receipt96、pending/leased0。source来歴はlegacy28/trusted142。main DB SHA256は `5f994743088375674de94e79d15fd9a95ff3493bc3ebe01626782f3c6d13d26a`。
+
+native監視は19case・38版・112既読資料。[1904の原2source登録](../research/ir-case-studies-2026-10-15/1904/native-case-setup-2026-10-16/actual-completion.json)後に後日通知2件を新保存して既存3論点へ照合した。両sourceは公表定義の確認としてsupports、case全体は取得会計/連結寄与/現EPS/OP-NI橋渡し等が残りunresolved。旧全行と旧元条件を保持し、1904再queue0・no_new_triggerを確認済み。September公表とOctober新保存を区別し、同じ比較を根拠なく繰り返さない。
+
+[索引v28](../research/ir-case-studies-2026-10-15/disclosed-fact-index-v28.json)は20社144fact・32親entry・34解決済み派生source。32source/137factを実保存・分類済み、対象外8331/9702の2source/7factはfile-only。旧129fact/29親entryの全objectを保持し、1866/1870の実績・新旧予想15値を追加した。1870の旧予想3値は8月資料に遡及掲載された5月予想で、暦日境界・会計基準・端数処理のunknownを維持。金融モデル入力としては全て未採用。
+
+1,819社のwatch/held:falseは実保有確認ではない。明示保有申告・金融thesis・正式質問・返信・実policy・research_decision_reviews・送信・注文は0。管理日は12caseが2027-01-15、5831/7325/7157/5988/1866/1870/1904が2027-01-16 Asia/Tokyo。会社予定・売却期限ではない。外部scheduler・定時Web取得・LLMの定時実行は未設置。
+
+コードの最新受入は[1,523件・36.556秒成功](../research/ir-qualitative-known-by-availability-2026-10-15/parent-acceptance.json)。独立32項目・指摘0、trusted旧9例の全JSON同値。valid legacy_presenceのknown-by以後の現在の定性読解だけを認め、正確なfirstsave不明・非新着・元receiptを維持する。実行中のleaseはない。以後は研究/data/docsだけで、コード変更がなければ全件検証を反復しない。
+
+## 直近に完了したこと
+
+- [25source/91factのbatch接続](../research/ir-normalized-facts-batch-db-integration-2026-10-15/README-actual.md)、[5988税6値の接続](../research/ir-case-studies-2026-10-15/5988/tax-disclosed-facts/actual-connection/README.md)、[5988の元9原本によるcase登録](../research/ir-case-studies-2026-10-15/5988/native-case-setup/known-by-native-acceptance/README.md)。旧全行を保持。旧v1/v2の拒否/copy候補は履歴で、現在の実登録を再実行しない。
+- [Anthropicの5番目のDD技能を参照採用](../research/ir-management-meeting-skill-adoption-2026-10-15/adoption-receipt.json)。旧4技能/LICENSE/manifest旧entry不変、独立15項目・指摘0。[既存3問への適用](../research/ir-dd-question-application-2026-10-15/README.md)は独立22項目・指摘0、rootも元草案/3票/全入力と旧分岐SHAを照合済み。正式登録・送信は未準備。技能の質問手順へ実例と期間比較の参照を接続した。
+- [3社の期間比較](../research/ir-three-draft-horizon-comparison-2026-10-15/README.md)。135A/7525/2983の著者条件・会社期・次観測・内部管理日・最大1年の比較windowを分離。定義回答だけで長期目標や売買を判定しない。root読解・全10入力SHAと27pointer/引用の照合済み。現行DBや原PDFを再認証した記録ではない。
+- [入力所有者](../research/ir-decision-input-ownership-2026-10-15/README.md)。v1の6必須はproject契約で、既にuser/external_policyの両方を受け付ける。費用/保有は実執行と利用者、quote鮮度/精度は明示したデータ利用方針、将来予測/投資閾値は適合する採用方針と分ける。rootもコード/契約と6出典SHAを照合。値や採用記録は補わず、共通gateは維持。
+- [最初のMagic Formula maintainer](../research/ir-greenblatt-maintainer-implementation-review-2026-10-15/parent-acceptance.json)は追加4GET・全25cellを確認しscreen-onlyで終了。購入数/保有/入替/売却はなく、TEV近似・US/長期条件・許諾未確認を残す。
+- Brazil候補は[作者説明4GET](../research/ir-brazil-magic-formula-maintainer-review-2026-10-15/parent-acceptance.json)、[順位/returnコード3GET](../research/ir-brazil-magic-formula-ranking-sale-code-2026-10-15/parent-acceptance.json)、[財務列の定義1GET](../research/ir-brazil-magic-formula-financial-definitions-2026-10-15/parent-acceptance.json)を終了。dense順位和/first行順/最大30と期間指数は確認したが、ROIC構成式は未読の前処理データ依存。宣言税率0.34は未使用、要約の負NetDebt除外も選択コードに対応せず。日本適合/実売買/金融採用0。[独立設計検討](../research/ir-author-ranking-intermediate-feasibility-2026-10-15/README.md)に従い、実入力がない順位API/CLIを増やさず、privateデータ/別repo等の探索へ広げない。
+- [10jobの初回実測](../research/ir-structured-cohort-capacity-observation-2026-10-15/README.md)は窓396.428602秒、lease経過p50=395.990073/p90=396.048264秒。同じworker名を保持したまま重複を除くと占有区間unionは396.428601秒。実作業/並列分析者数/全社分析の処理能力ではない。利用量・予算は不明、会社数上限は未推定。親も全12pinと区間/分位点を直接再現した。同じcohortの再計測は次taskにしない。
+
+## 進行中と、次の具体作業
+
+日本IR協議会の[2026年調査](../research/ir-jira-practice-survey-discovery-2026-10-15/parent-acceptance.json)を4GET、[2018年対話指針](../research/ir-jira-dialogue-best-practices-2026-10-15/parent-acceptance.json)を追加2GETで確認済み。調査の個人投資家対応強化率をメール受付率へ変換せず、前年度とは設問が異なる点を保持する。指針の9/14/25頁から公表実績の変動理由・計画の前提・FAQ照合を[質問準備](ir-question-preparation.md)へ反映した。[変更の受入](../research/ir-jira-question-method-adoption-2026-10-15/parent-acceptance.json)は独立12項目・指摘0、親も34pinと全差分を照合済み。会社側の当時の推奨を、現在の法令判定・返答保証・売買規則にはしない。
+
+固定契約の[入力変更範囲の監査](../research/ir-precommitted-parameter-boundary-review-2026-10-15/README.md)も完了。`target_parameter`は説明ラベルであり、新しい正式利用は`decision_contract`と`parameter_paths`を使う。旧APIは事前固定した枝全体を使い、個別path制約は提供しない。workflowと技能にこの差を明記し、コードと旧分岐は変更していない。
+
+既存候補4の[maxgfr/crible](../research/ir-transparent-metric-library-discovery-2026-10-15/README.md)は4GETの固定commit/tree/README/MIT確認、[3GETの式とデータ条件](../research/ir-transparent-metric-formula-review-2026-10-15/README.md)、[3GETの計算本体](../research/ir-transparent-metric-core-review-2026-10-15/README.md)を終了。局所ROIC/ROC/EYと平均期/株数/非有限除去を特定した。日本原典の取込はYahoo scraped依存というmaintainer記載があり、導入で原典対応が済むわけではない。税率clip0〜50%・資本10%guardはmaintainer固有の慣行で、原会計税率・将来税後ROC_new・Greenblatt本人規則と混同しない。追加のrank/外部依存探索はしない。
+
+[5988年次14fact](../research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/parent-acceptance.json)は独立14fact/9契約確認・指摘0、親も62pin/14換算を照合した。[実保存](../research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/actual-connection/parent-actual-verification.json)のfirstsaveは00:15:52.528146 UTC。旧全rowを保持しintake1件完了後、[nativecase比較](../research/ir-case-studies-2026-10-15/5988/annual-capital-disclosed-facts/qualitative-review/parent-acceptance.json)を独立12確認・指摘0で完了した。5988case v3・source/case unchanged、2027-01-16管理日を維持、再queue0/mainSHA不変。比較結果は新しい会社開示や将来税/CFの採用ではない。
+
+[独立scalar算術](../research/ir-capital-metric-scalar-reproduction-2026-10-16/parent-acceptance.json)は元14factにbindingし、2期のEBIT/WC/税前ROCとmaintainer税clip/NOPATを再記述。親は別のexact Fraction計算で全分子/分母を一致確認した。ROIC/EY/valuation/rank/futureROC_newは不足理由つきnullで、product API/依存runtimeの追加はない。
+
+[資本残高8fact](../research/ir-case-studies-2026-10-15/5988/annual-capital-balance-disclosed-facts/parent-acceptance.json)は表示行の独立意味確認とroot受入を完了し、[実保存・分類](../research/ir-case-studies-2026-10-15/5988/annual-capital-balance-disclosed-facts/actual-connection/root-actual-verification.json)後に[既存caseへ照合](../research/ir-case-studies-2026-10-15/5988/annual-capital-balance-disclosed-facts/qualitative-review/parent-acceptance.json)した。5988 v4/source・case unchanged、管理日Jan16JST維持、再queue0。完了後のroot検証はattempt rowが書換わるとの誤った期待で一度停止したが、保存は再送せずprequeue backup全行と期待追加差分を照合して受入した。debtの当期首/末のnull暦日は維持した。
+
+[条件付き歴史ROIC](../research/ir-historical-roic-role-reproduction-2026-10-16/parent-acceptance.json)は明示した研究role/scope対応でFY2026だけを算術再現し、平均資本63,740.5百万円、maintainer clip後NOPAT508.5百万円、比率1017/127481（約0.7978%）をrootの別Fraction計算と一致確認した。strict日付窓のFY2026、FY2025、futureROC_new/EY/valuation/rankは理由付きnull。crible固有の税率clipや範囲仮定を将来税・正常利益・売買条件に移さない。
+
+[5988次回準備票](../research/ir-case-studies-2026-10-15/5988/question-residual-review-2026-10-16/parent-acceptance.json)は旧文6句を18根拠へ対応し、既知の前提を再質問せず、約6億円の範囲/337との重複と、その額の期間対応だけを保留した。旧草案の背景は元々質問ではなく、元3分岐も不変。
+
+[新3社の原8source](../research/ir-new-company-intake-2026-10-16/README.md)を保存・分類済み。1861は静的索引のみで財務0、1866/1870は完全テキストを保存した原本と限定した意味レビューの範囲を分けた。1870の[利益橋渡し](../research/ir-case-studies-2026-10-15/1870/profit-bridge-review-2026-10-16/README.md)で、特別利益2620百万円・管理事業譲渡益1000百万円・開発販売事業譲渡の損益なし・Q1 CF未作成が公表済みと分かった。これらを再質問せず、[買収注記2頁の追加読解](../research/ir-case-studies-2026-10-15/1870/acquisition-note-followup-2026-10-16/parent-acceptance.json)で取得対価/原価2500・暫定のれん3398百万円/10年・損益算入5月1日〜6月30日を確認した。4月1日取引とみなし取得日を区別し、仮定期首効果省略を0としない。[準備票](../research/ir-case-studies-2026-10-15/1870/question-residual-review-2026-10-16/parent-acceptance.json)は7既答/6残前提で、追加IR価値は未立証。既読sourceの追加読解は[監視手順](research-stage-monitoring.md)に従いfile-only補足として時刻・source/quote・解消論点を残す。新source/config/管理日を偽装してnative再実行しない。1375の旧503停止は維持。
+
+[1866の追加読解](../research/ir-case-studies-2026-10-15/1866/operating-driver-followup-2026-10-16/parent-acceptance.json)はp10/11を確認。受注/完成/繰越は提出会社単独建設で契約変更額を含み、Q1連結CF計算書は非作成と明記。採算/工期/現金化を補わず、p9セグメント表は未読のまま。[残余準備票と固定handoff](../research/ir-case-studies-2026-10-15/1866/question-residual-review-2026-10-16/parent-acceptance.json)を受入済み。4既答群/残る3比較前提、IR価値未立証を保持。
+
+[既読資料の追補handoff設計](../research/ir-1870-additional-reading-native-handoff-design-2026-10-16/parent-acceptance.json)は新API不要。次の正当なjobへ原source/file/SHA/read_atを明示して渡し、summaryとcase_observationへ既知/残余を残す。packet自動探索/機械受領保証はない。[役割テンプレートの1節追加](../research/ir-additional-reading-role-integration-2026-10-16/parent-acceptance.json)は独立10項目・指摘0、旧全文を保持。
+
+[1871の初期研究](../research/ir-case-studies-2026-10-15/1871/initial-public-review-2026-10-16/parent-acceptance.json)は3GETで公式root/静的一覧2source、財務本文0。財務PDF literalなしで有限停止後、[原2sourceを実保存・分類](../research/ir-next-company-intake-2026-10-16/parent-acceptance.json)した。技術/掲載告知を金融本文の確認へ格上げしない。
+
+[金融庁公式資料の限定確認](ir-fd-source-context.md)は入口4GET/新たに明示された本文1GETを完了し、原9頁のうち物理5/7だけを意味/画像確認した。公表済み補足の一般的/それ自体という限定と、補足内の重要情報に関する留保を保持。project3分類の法的自動mapping、2018当時版とのbyte同一性/版履歴・現行法全体は未確認。[方針への参照追加](../research/ir-fsa-fd-context-integration-2026-10-16/parent-acceptance.json)は独立所見0で、新gate/金融条件0。
+
+1904はQ1後の分割/配当修正とユニティー取得通知を[取得・意味確認](../research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/parent-acceptance.json)し、[実保存・分類](../research/ir-case-studies-2026-10-15/1904/post-quarter-corporate-action-followup-2026-10-16/actual-connection/actual-completion.json)とnative定性比較を完了。中間99pre/期末24.75post/年間dash・会社参考198、優待新基準2027-03-31、9月30日取得完了を既答へ移した。分割日程の独立実施確認、現在EPS、取得価格・正確な連結開始と寄与は残る。資本金1000万円を対価、軽微見込みを0としない。Q1実績/8月会社予想の6公表値はfile-only正規化を準備中で、まだ索引/実台帳へ追加していない。
+
+1. IR効果の[研究候補の書誌確認](../research/ir-private-investor-meetings-paper-discovery-2026-10-15/README.md)を2GETで終了。2011年SSRN登録の要旨はNYSE1社の個別面談が対象で、2015年掲載版と内容同一性/因果/日本の個人メールIR効果は未確認。公式掲載siteの[robots1GET](../research/ir-private-investor-meetings-journal-source-2026-10-15/README.md)はGPTBot個別禁止のため本文0で停止。旧v7全11entryを保持した[中央holds-v8/12host](../research/ir-source-access-holds-2026-10-15/README-v8.md)への更新を完了し、active4fileの旧bytesと限定差分を保存した。旧Crossref要旨を掲載本文の結論に昇格させず、予測尤度/金融値を設定しない。
+2. 3社の期間比較を踏まえ、次の公表観測で照合する元条件を使う。会社系列内の定義確認と、著者予測/評価前提の不足を分け、FY29/31/3期等の目標を1年の退出期限へ縮めない。
+3. 新しい原典/明示された著者仕様/正しい入力が得られた課題へ進む。[31taskの進捗v5](../research/ir-issue-owner-backlog-2026-10-15/README-v5.md)のowner/DAG/未解決を保持し、取得停止や金融入力不足を新機能・架空値で隠さない。optionalな投資スタイル質問は未回答で、回答を仮定しない。
+
+## 引継ぎの規則
+
+[技能](../.agents/skills/jp-equity-ir/SKILL.md)、[担当依頼](../.agents/skills/jp-equity-ir/references/roles.md)、[workflow](workflow.md)、[定性job](qualitative-research-jobs.md)を使う。packet.kind/stageを確認し、intake分類・定性観測・金融researchの契約を混ぜない。会社の保存担当を一人にし、rootだけが実DBを書き込む。状態確認はURI mode=roとquery_onlyを使い、Store初期化を呼ばない。旧receipt・原文・引用位置・実firstsaveとknown-byを保持する。
+
+金融条件は[判断方針](decision-policy.md)、[モデル点検](model-routing-inputs.md)、[13段階の運用](ir-operation-design.md)に従う。Anthropicの仮説/反証/四半期/DD準備、Damodaranの説明→数値/モデル適合、Tweedyの原典/対話研究、EVSI原式を研究手順へ採用済み。具体的な将来予測・公正倍率・価格条件・IR尤度の採用とは別で、会社予想転載を著者独自予測にしない。
+
+公開GET前に[12 exact hostの収集保留v8](../research/ir-source-access-holds-2026-10-15/README-v8.md)と後続記録を確認する。alphaarchitect.comはrobots403の1GETで本文0・原因不明として終了。QuantConnect/AAII/旧Graham・Greenblatt原典/Tweedy What Has Worked/Piotroski/Fisher/動的E-IR/各社取得停止の既存有限経路を再開せず、UA/別host/JS/Cloud診断で迂回しない。9702の専用IRフォームは過去GET200だが入力field/個人受付未確認、旧HTML/rawなしであり、未試行/受付拒否へ書き換えない。将来raw保存の修正で過去captureが復元されたとはしない。
+
+## 過去の完全記録
+
+[23:25までの旧継続記録](research-history-2026-10-15-through-2325.md)を完全byteで保存した。さらに前の[20:05までの詳細記録](research-history-2026-10-15-through-2005.md)も保持する。旧件数・作業中・未確認・テスト数・source予算は当時の状態であり、現在の再実行指示ではない。個社原典と後続比較は[事例索引](../research/ir-case-studies-2026-10-15/README.md)へ。

@@ -1,0 +1,451 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T12:42:52.319948+00:00",
+  "status": "one_concrete_pure_CLI_DB_boundary_issue_reproduced",
+  "finding_count": 1,
+  "findings": [
+    {
+      "id": "PCDB01",
+      "severity": "P2",
+      "title": "File-only calculations open/create/migrate the default Store before calculation",
+      "trigger": "Run normalize-facts FILE without --db from another worker directory, or with an unusable default DB path. Same issue structurally applies to allowlisted DB-independent branches.",
+      "observed": "Valid normalization created data/ir-agent.sqlite3 and24tables; same valid fixture with a file at data failed before calculation.",
+      "impact": "Unnecessary unrelated DB filesystem/schema/legacy-presence coupling; cannot run valid file calculations when that DB path is unusable. On existing compatible DB, Store startup can perform DDL/migration/presence observations. No actual research DB was opened to claim a concrete mutation there.",
+      "contract_assessment": "Default --db is documented globally, but these calculation branches/documented unimported results do not consume it. Shared initialization is an implementation side effect, not an explicit requirement to access DB state for normalization. Existing CLI tests check no domain-row adoption, not no DB creation/migration.",
+      "no_claim_of_financial_corruption_or_source_import": true,
+      "reproduction": "reproduce.py / reproduction.json",
+      "minimal_fix": "Route the exact file-only/explicit-dry-run branches before creating Store and Harness. Retain existing calculation functions, flags, trusted clocks, JSON validation/output/error handling. Instantiate Store only for remaining branches. In observations file-summary skip registry creation; in contacts explicit dry-run reuse existing catalog builder/result instead of a dummy DB."
+    }
+  ],
+  "allowlist_without_default_Store": [
+    {
+      "command": "value",
+      "operation": null,
+      "condition": "always for this file-input command",
+      "function": "calculate_valuation",
+      "scope": "Explicit valuation JSON and --price; no Store use."
+    },
+    {
+      "command": "cycle-margin",
+      "operation": null,
+      "condition": "always for this file-input command",
+      "function": "calculate_cyclical_margin",
+      "scope": "Explicit annual input/evidence JSON."
+    },
+    {
+      "command": "decision",
+      "operation": null,
+      "condition": "always for this file-input command",
+      "function": "evaluate_decision",
+      "scope": "Snapshot JSON calculator confirmed by current branch and docs; does NOT read live corrections, DB receipts or historical state."
+    },
+    {
+      "command": "ir-plan",
+      "operation": null,
+      "condition": "always for this file-input command",
+      "function": "evaluate_ir_plan",
+      "scope": "Snapshot branch comparison confirmed by current branch and docs; Store-backed freeze/send remain stateful."
+    },
+    {
+      "command": "information-value",
+      "operation": null,
+      "condition": "always for this file-input command",
+      "function": "calculate_information_value",
+      "scope": "Explicit utility/prior/signal/cost configuration."
+    },
+    {
+      "command": "screen",
+      "operation": null,
+      "condition": "always for this file-input command",
+      "function": "evaluate_screening",
+      "scope": "Explicit supplied policy/metric/source JSON, not DB candidate state."
+    },
+    {
+      "command": "capacity",
+      "operation": null,
+      "condition": "always for this file-input command",
+      "function": "report_research_capacity",
+      "scope": "Supplied measured-record JSON and explicit budget, not DB job history loading."
+    },
+    {
+      "command": "stable-reinvestment",
+      "operation": null,
+      "condition": "always for this file-input command",
+      "function": "calculate_stable_reinvestment",
+      "scope": "Supplied input/evidence JSON."
+    },
+    {
+      "command": "model-inputs",
+      "operation": null,
+      "condition": "always for this file-input command",
+      "function": "audit_model_inputs",
+      "scope": "File-contained valuation/source/provenance snapshots; not current DB publicity or trusted availability certification."
+    },
+    {
+      "command": "score-probabilities",
+      "operation": null,
+      "condition": "always for this file-input command",
+      "function": "score_categorical_forecast",
+      "scope": "Explicit probability/label input; no forecast registry binding or calibration."
+    },
+    {
+      "command": "normalize-quote",
+      "operation": null,
+      "condition": "always for this file-input command",
+      "function": "normalize_jquants_quote",
+      "scope": "Supplied raw source -> normalized bundle, distinct from quote from-source persistence."
+    },
+    {
+      "command": "normalize-facts",
+      "operation": null,
+      "condition": "always for this file-input command",
+      "function": "normalize_disclosed_facts",
+      "scope": "Supplied source/review/facts plus trusted now_iso; preserve runtime-clock validation and derived-retrieval semantics. DB-independent, not necessarily time-independent."
+    }
+  ],
+  "conditional_allowlist_without_default_Store": [
+    {
+      "command": "observations",
+      "operation": "summarize",
+      "condition": "args.file is truthy (the existing file-input branch); no-file summarize is DB-backed",
+      "function": "summarize_observations(load_json(file).get(\"records\"), as_of=...)",
+      "implementation_boundary": "Current run creates ObservationStore(store.connection) before choosing input; it must skip registry construction for explicit file input. No evidence binding/firstsave is read from DB in this file branch."
+    },
+    {
+      "command": "contacts",
+      "operation": "import",
+      "condition": "args.dry_run is True",
+      "function": "build_contact_bundle -> existing summary/rejected_rows/dry_run status",
+      "implementation_boundary": "Current Harness method returns before Store access in explicit dry-run. Normal imports and schema-dependent state merge remain DB-backed."
+    }
+  ],
+  "DB_required_routes": {
+    "always_DB_top_commands": [
+      "claim",
+      "company",
+      "complete",
+      "daily",
+      "decision-review",
+      "evaluation-protocol",
+      "inbox",
+      "ingest",
+      "init",
+      "intake",
+      "packet",
+      "policy",
+      "predictions",
+      "question",
+      "quote",
+      "renew",
+      "reply",
+      "source-classification",
+      "status",
+      "sync",
+      "thesis",
+      "thesis-view"
+    ],
+    "conditional_DB_routes": [
+      {
+        "command": "observations",
+        "operations": [
+          "register",
+          "append",
+          "show"
+        ],
+        "summarize_without_file": "DB snapshots at as_of, including actual firstsave and classification binding"
+      },
+      {
+        "command": "contacts",
+        "operation": "import",
+        "condition": "--dry-run absent; original state merge/import is DB-backed"
+      }
+    ],
+    "explicit_do_not_bypass": [
+      {
+        "route": "thesis / thesis-view",
+        "reason": "Resolve immutable versions, RecordAvailability/PIT knowledge cutoff and saved sources."
+      },
+      {
+        "route": "decision-review add/show; reply evaluate/show/classify",
+        "reason": "Persisted policy/reply/source state, current corrections/thesis/price checks and history, distinct from decision FILE."
+      },
+      {
+        "route": "question add/mark-sent/show/close",
+        "reason": "Immutable contracts, live dependency corrections, saved state and trusted runtime."
+      },
+      {
+        "route": "quote from-source",
+        "reason": "Loads stored source then ingests derived quote; normalize-quote FILE is different."
+      },
+      {
+        "route": "observations summarize without FILE",
+        "reason": "Reads persisted visibility/history; do not replace with a user JSON guess."
+      },
+      {
+        "route": "contacts import without --dry-run",
+        "reason": "Uses current companies/state and writes merge atomically."
+      }
+    ]
+  },
+  "allowlist_completeness": {
+    "parsed_top_commands": [
+      "capacity",
+      "claim",
+      "company",
+      "complete",
+      "contacts",
+      "cycle-margin",
+      "daily",
+      "decision",
+      "decision-review",
+      "evaluation-protocol",
+      "inbox",
+      "information-value",
+      "ingest",
+      "init",
+      "intake",
+      "ir-plan",
+      "model-inputs",
+      "normalize-facts",
+      "normalize-quote",
+      "observations",
+      "packet",
+      "policy",
+      "predictions",
+      "question",
+      "quote",
+      "renew",
+      "reply",
+      "score-probabilities",
+      "screen",
+      "source-classification",
+      "stable-reinvestment",
+      "status",
+      "sync",
+      "thesis",
+      "thesis-view",
+      "value"
+    ],
+    "top_command_count": 36,
+    "always_file_only_count": 12,
+    "conditional_top_command_count": 2,
+    "always_DB_count": 22,
+    "parse_help_note": "argparse --help/usage errors already terminate before Store; not a calculation-route change."
+  },
+  "read_tests_summary": [
+    {
+      "path": "tests/test_policy_cli.py",
+      "observation": "Normalization/value/model/score/file-observation tests pass a temporary persistent --db and then check sources/theses remain0. They do not assert no Store opening, no schema creation, or success with unusable DB."
+    },
+    {
+      "path": "tests/test_cli.py",
+      "observation": "Shared invoke always supplies a temporary --db. Valuable persistence tests should stay stateful."
+    },
+    {
+      "path": "tests/test_stable_reinvestment_cli.py",
+      "observation": "Uses --db :memory:; prevents disk DB but still constructs Store."
+    },
+    {
+      "path": "tests/test_observation_cli.py",
+      "observation": "Saved registry lifecycle/asof tests require DB; do not move them into the file-only allowlist."
+    }
+  ],
+  "minimal_regression_acceptance": [
+    "For each static allowlisted route and the two explicit conditional routes, prove Store constructor is never called; valid results and existing JSON errors remain unchanged under a pinned existing clock when needed.",
+    "normalize-facts without --db in temp cwd must not create data/SQLite/WAL sidecars; valid input must still succeed when --db points to an impossible temporary path.",
+    "Bad pure input should return the ordinary CLI validation error and leave any supplied/default DB untouched.",
+    "Persisted/PIT/current-review commands still construct/use Store and retain existing firstsave, current correction, transactional and idempotent behaviour.",
+    "--help, CLI names, argument schema, financial calculations, source IDs/metadata and trusted runtime normalization remain unchanged; no generic plugin/dispatch framework needed."
+  ],
+  "reproduction_summary": {
+    "schema_version": 1,
+    "status": "one_CLI_DB_side_effect_reproduced_in_two_isolated_cases",
+    "cases": [
+      {
+        "case": "valid_normalize_facts_creates_default_database",
+        "CLI_arguments": [
+          "normalize-facts",
+          "<repo>/examples/disclosed-facts.json"
+        ],
+        "before_default_DB_exists": false,
+        "exit_code": 0,
+        "stderr": "",
+        "after_default_DB_exists": true,
+        "default_DB_relative_path": "data/ir-agent.sqlite3",
+        "DB_bytes": 241664,
+        "schema_version": "1",
+        "tables_created": [
+          "companies",
+          "decision_policies",
+          "decision_reviews",
+          "evaluations",
+          "ir_evaluation_protocol_versions",
+          "ir_observation_versions",
+          "ir_observations",
+          "ir_prediction_models",
+          "ir_predictions",
+          "job_attempt_events",
+          "job_attempts",
+          "job_request_receipts",
+          "jobs",
+          "metadata",
+          "position_observations",
+          "questions",
+          "record_availability",
+          "replies",
+          "reply_information_research_checks",
+          "reply_information_reviews",
+          "source_classifications",
+          "source_reviews",
+          "sources",
+          "theses"
+        ],
+        "table_count": 24,
+        "core_domain_row_counts": {
+          "sources": 0,
+          "theses": 0,
+          "companies": 0
+        },
+        "normalized_bundle_sources": 2,
+        "financial_input_adoption": false,
+        "temporary_directory_removed_after_probe": true
+      },
+      {
+        "case": "same_valid_normalization_fails_before_calculation_when_default_DB_parent_is_a_file",
+        "CLI_arguments": [
+          "normalize-facts",
+          "<repo>/examples/disclosed-facts.json"
+        ],
+        "exit_code": 1,
+        "stdout_empty": true,
+        "stderr": "ir-agent: [Errno 17] File exists: 'data'\n",
+        "default_DB_created": false,
+        "blocker_bytes_unchanged": true,
+        "type_of_failure": "Default database parent data is a regular file; mkdir raises FileExistsError. This is a deterministic path nonwritability/collision, not a tested chmod/EACCES scenario.",
+        "same_valid_fixture_as_success_case": true,
+        "temporary_directory_removed_after_probe": true
+      }
+    ],
+    "execution": {
+      "temporary_case_count": 2,
+      "actual_DB_accesses": 0,
+      "network_GETs": 0,
+      "production_test_or_old_file_changes": 0,
+      "full_suite_runs": 0,
+      "financial_decision_or_IR": 0
+    }
+  },
+  "source_evidence": [
+    {
+      "path": "src/ir_agent/cli.py",
+      "sha256": "57254a8e24df6b7be8c772e637821a0546b66ece40088238bf3a5643a4c13979",
+      "line": 333,
+      "character_start": 21309,
+      "character_end": 21365,
+      "quote": "store = Store(args.db)\n        result = run(args, store)",
+      "meaning": "Every successfully parsed operation enters mutable Store setup before actual branch/input calculation."
+    },
+    {
+      "path": "src/ir_agent/cli.py",
+      "sha256": "57254a8e24df6b7be8c772e637821a0546b66ece40088238bf3a5643a4c13979",
+      "line": 180,
+      "character_start": 12953,
+      "character_end": 12977,
+      "quote": "harness = Harness(store)",
+      "meaning": "run also constructs Harness/store.connection before selecting a file-only branch; passing None without changing this ordering is insufficient."
+    },
+    {
+      "path": "src/ir_agent/store.py",
+      "sha256": "2b9e6f3a3170c9164c052bf98c3e36b23b52dcdadd83d49f0b351350a22bceb9",
+      "line": 72,
+      "character_start": 3132,
+      "character_end": 3184,
+      "quote": "Path(path).parent.mkdir(parents=True, exist_ok=True)",
+      "meaning": "Default DB parent filesystem creation happens even for a file-only calculator."
+    },
+    {
+      "path": "src/ir_agent/store.py",
+      "sha256": "2b9e6f3a3170c9164c052bf98c3e36b23b52dcdadd83d49f0b351350a22bceb9",
+      "line": 78,
+      "character_start": 3482,
+      "character_end": 3519,
+      "quote": "self.connection.executescript(SCHEMA)",
+      "meaning": "Store creation performs schema DDL, not a read-only handle."
+    },
+    {
+      "path": "src/ir_agent/store.py",
+      "sha256": "2b9e6f3a3170c9164c052bf98c3e36b23b52dcdadd83d49f0b351350a22bceb9",
+      "line": 112,
+      "character_start": 5749,
+      "character_end": 5956,
+      "quote": "presence = ledger.observe_existing(kind, old[id_column], json.loads(old['data']),\n                                                       version=old[version_column] if version_column else None, now=observed)",
+      "meaning": "Existing DB startup can observe old record availability; do not claim existing DB bytes are untouched by opening Store. This was code-reviewed, not probed on an actual DB."
+    },
+    {
+      "path": "docs/workflow.md",
+      "sha256": "6415612b8dca5bdd3c9070cdacc94117292968ac1c05dc8cbfe63d4395028ec3",
+      "line": 377,
+      "character_start": 23033,
+      "character_end": 23053,
+      "quote": "DBへの取り込みや仮説の作成は行わない。",
+      "meaning": "normalize-facts documented output is an unimported bundle; this is not documentation requiring stateful DB startup."
+    },
+    {
+      "path": "docs/workflow.md",
+      "sha256": "6415612b8dca5bdd3c9070cdacc94117292968ac1c05dc8cbfe63d4395028ec3",
+      "line": 159,
+      "character_start": 10118,
+      "character_end": 10182,
+      "quote": "両方とも入力を評価してJSONを返す。仮説・質問・評価履歴をDBへ追加する操作や、実際の返信の受信・分岐適用を表す操作ではない。",
+      "meaning": "decision FILE and ir-plan FILE explicitly mean snapshot calculators; names alone were not used to classify them."
+    },
+    {
+      "path": "docs/historical-availability-design.md",
+      "sha256": "f0aec43a7f6bbeeb499c56df950f65441e1f5f6b11e36883178707a953d68afe",
+      "line": 79,
+      "character_start": 4503,
+      "character_end": 4551,
+      "quote": "未保存のcaller snapshotを渡すpure計算は、DBでの当時の存在証明とは別である。",
+      "meaning": "DB-free decision file calculation must not be presented as a persisted/PIT/current-review workflow."
+    },
+    {
+      "path": "src/ir_agent/harness.py",
+      "sha256": "5f75ba6452a61f47eb96c0ae06629d7251c90c84b53c46c7181953bff4b5b7bd",
+      "line": 71,
+      "character_start": 3173,
+      "character_end": 3238,
+      "quote": "if dry_run or catalog[\"rejected_rows\"]:\n            return result",
+      "meaning": "Only explicit contacts import --dry-run is statically allowlisted, not input-dependent rejected-row outcomes of normal import."
+    }
+  ],
+  "input_file_hashes_at_review": {
+    "src/ir_agent/cli.py": "57254a8e24df6b7be8c772e637821a0546b66ece40088238bf3a5643a4c13979",
+    "src/ir_agent/store.py": "2b9e6f3a3170c9164c052bf98c3e36b23b52dcdadd83d49f0b351350a22bceb9",
+    "src/ir_agent/harness.py": "5f75ba6452a61f47eb96c0ae06629d7251c90c84b53c46c7181953bff4b5b7bd",
+    "src/ir_agent/observation_store.py": "b45963702be43b84be10c91e10c63a03f6887a90f567f1d3c23add90ae258105",
+    "src/ir_agent/decision.py": "2c441f1d94a38453427dd8be3f589565dd7170a4c8cd7ec248be71d1ec516934",
+    "docs/workflow.md": "6415612b8dca5bdd3c9070cdacc94117292968ac1c05dc8cbfe63d4395028ec3",
+    "docs/historical-availability-design.md": "f0aec43a7f6bbeeb499c56df950f65441e1f5f6b11e36883178707a953d68afe",
+    "tests/test_cli.py": "5b0d6e8790776a0fade7038089a0683fb797532c98587957cde7a1edc575c0f3",
+    "tests/test_policy_cli.py": "58ba7b9cbbc29f3281fd173784c6e88847b06f0e4457b57322a7f886e95f6751",
+    "tests/test_observation_cli.py": "1101afe00bf2675565dba3cb8c5405d4102a1134ceb8deec4d943554cf6bcb70",
+    "tests/test_stable_reinvestment_cli.py": "5786f5536b041805a0dded9eac272d23b596b5084634be4322b472ad966c6414",
+    "tests/test_intake_cli.py": "88e36eaf9cb4d2698200d2ac2a567cfd8c95950e373bae3398adccf93b0c76c6",
+    "tests/test_cyclical_margin_cli.py": "22f25fcbd728e6d7dfed471b14ba7ed4302e931198b20956208e8716d094210f",
+    "examples/disclosed-facts.json": "dd3c3c0cef6cbc49b2b4c2135b3e11975256c5c764867bc8434a746e89985064"
+  },
+  "not_done": [
+    "No broad dispatch refactor, new financial policy, new command names or change to decision/PIT semantics.",
+    "No existing compatible DB migration probe beyond the two authorized cases; startup-write effect there is code analysis only.",
+    "No chmod/EACCES claim; probe2 is a deterministic path collision.",
+    "No production/test/oldfile fix, real DB access, network or full-suite run."
+  ],
+  "execution": {
+    "temporary_case_count": 2,
+    "actual_DB_accesses": 0,
+    "network_GETs": 0,
+    "production_test_or_old_file_changes": 0,
+    "full_suite_runs": 0,
+    "financial_decision_or_IR": 0
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu"
+  ],
+  "hold_index": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+  "hold_index_sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952",
+  "robots_reviews": {
+    "www.asahikogyosha.co.jp": {
+      "proceed": true,
+      "branch": "fresh_robots200",
+      "raw_file": "research/ir-case-studies-2026-10-15/1975/initial-public-review-2026-10-16/raw/958404cba9df989cc15ffb8ac355e6d078076091295c359032253c8103640626",
+      "raw_sha256": "958404cba9df989cc15ffb8ac355e6d078076091295c359032253c8103640626",
+      "root_can_fetch": true,
+      "rules_text": "User-agent: *\r\nDisallow: /wp-admin/\r\nAllow: /wp-admin/admin-ajax.php\r\nDisallow: /wp-content/uploads/wpo/wpo-plugins-tables-list.json\r\n\r\nSitemap: https://www.asahikogyosha.co.jp/sitemap.xml\r\nSitemap: https://www.asahikogyosha.co.jp/sitemap.rss\n",
+      "selected_target_checks": [
+        {
+          "url": "https://www.asahikogyosha.co.jp/ir/library/presentation/",
+          "can_fetch": true
+        },
+        {
+          "url": "https://www.asahikogyosha.co.jp/wp-content/uploads/2026/08/20260806_Individual-Invester-Briefing.pdf",
+          "can_fetch": true
+        }
+      ]
+    }
+  },
+  "allowed_requests": [
+    {
+      "role": "presentation-index",
+      "url": "https://www.asahikogyosha.co.jp/ir/library/presentation/"
+    },
+    {
+      "role": "August6-individual-presentation",
+      "url": "https://www.asahikogyosha.co.jp/wp-content/uploads/2026/08/20260806_Individual-Invester-Briefing.pdf",
+      "literal_pointer": "/GETs/0/html_visible_text/links/79",
+      "label": "個人投資家向け会社説明会資料（2026年08月06日） PDF：4.00MB",
+      "selection": "Root selected currentFY samehost published explanation; older logmi/video remain unacquired."
+    }
+  ],
+  "maximum_GETs": 4,
+  "alternate_literal_variant_if_failure": false
+}

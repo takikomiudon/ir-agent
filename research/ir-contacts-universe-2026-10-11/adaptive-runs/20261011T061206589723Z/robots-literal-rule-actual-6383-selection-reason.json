@@ -1,0 +1,53 @@
+{
+  "record_sha256": "71bed8c25cdd2d077b6cee535520908c7ac0fba502c0c1c4383bdd11f12d65fb",
+  "actual_target": "https://inquiry.daifuku.com/others_jp",
+  "actual_target_in_seen": false,
+  "saved_robots_disallowed_event_count": 1,
+  "stop_body_get_attempted": false,
+  "latest_robots_status": 200,
+  "literal_order_correction_proof": {
+    "basis": "saved_same_origin_more_specific_literal_allow_corrects_first_match",
+    "source_snapshot_sha256": {
+      "evidence/6383/20261011T173437506705Z/04.json": "ef5be1a00499f786e1565479d3c7c6e0a1eafb9507d3f8a98dd78c5cc5176512"
+    },
+    "latest_robots_source_snapshots": [
+      "evidence/6383/20261011T173437506705Z/04.json"
+    ],
+    "latest_robots_retrieved_at": "2026-10-11T17:35:34.132724+00:00",
+    "latest_robots_text_sha256": "b4902b48c4f819eb34d3015998cfc35384f759ef18216eadcf341949b9fc31f9",
+    "historical_stop_snapshots": [
+      "evidence/6383/20261011T173437506705Z/04.json"
+    ],
+    "historical_events_preserved": true,
+    "financial_ir_reception_verified": false
+  },
+  "manual_exact_financial_route_quote": "製品以外のお問い合わせ 採用、IR、サステナビリティ、広報、日に新た館については、こちらからお問い合わせください。",
+  "quote_ir_intake_pattern_match": false,
+  "actual_routes": [
+    {
+      "parent_snapshot": "evidence/6383/20261011T173437506705Z/03.json",
+      "parent_sha256": "09cf4f1e8719aa64f34d5ff4635efc79cc8e0d235b666ba10b94c7520acc89b7",
+      "parent_url": "https://www.daifuku.com/jp/contact/",
+      "parent_title": "お問い合わせ | ダイフク",
+      "parent_first_heading": "ソリューション",
+      "actual_link_index": 177,
+      "actual_link": {
+        "url": "https://inquiry.daifuku.com/others_jp",
+        "href": "https://inquiry.daifuku.com/others_jp",
+        "label": "製品以外のお問い合わせ 採用、IR、サステナビリティ、広報、日に新た館については、こちらからお問い合わせください。"
+      },
+      "link_priority": null,
+      "ir_parent": false,
+      "ir_contact_label_match": true,
+      "ir_path": false,
+      "contact_route": false,
+      "quoted_link_binding_present": false,
+      "other_label_regex_first_match": "製品",
+      "other_label_gate_precedes_ir_contact_label_gate": true,
+      "actual_link_is_mixed_purpose": true,
+      "record_exact_source_link_url_present": true,
+      "record_source_link_index_absent": true
+    }
+  ],
+  "conclusion": "Actual target is not in seen: stop04 has http_get_attempted=false and robots_disallowed in NO_CONTENT_GET. Parent03 link177 carries its full mixed-purpose label. The existing OTHER gate matches 製品 (and 採用) before its otherwise true IR_CONTACT label match, so link_priority=None. Exact cited URL/quote is present, but IR_INTAKE does not match the comma-separated mixed-purpose instruction, so quoted_link_bindings does not override that filter. already_fetched6 counts other eligible saved routes, not /others_jp. No global or finite IR-route binding change has been made."
+}

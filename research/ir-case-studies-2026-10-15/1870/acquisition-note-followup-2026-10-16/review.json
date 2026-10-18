@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "company_id": "jp:1870",
+  "purpose": "Existing stored public source additional reading only; not native completion or new disclosure",
+  "read_at": "2026-10-16T01:34:19.246111+00:00",
+  "source_reference": {
+    "source_id": "case-public:08da739f9283478997dbe73a4e83cf1a13ebba6d3dcafb250614bd227ff93ebe",
+    "source_bundle": {
+      "file": "research/ir-case-studies-2026-10-15/1870/initial-public-review-2026-10-16/full-extraction-variant/source-bundle.json",
+      "sha256": "b4caa29856f668d8bda0e51bd90203c26c65b478bacd9132ebdfa2486e7a38d9"
+    },
+    "source_pointer": "/sources/1",
+    "source_snapshot_sha256": "1609f1fd7c0506825d08bf40348dd7524403469f9315cb799e6829587f58bc00",
+    "snapshot_algorithm": "SHA256 UTF-8 json.dumps(source, ensure_ascii=False, sort_keys=True) default separators; native models.json_text domain",
+    "source_compact_sha256": "ab8ea15bd1e339cd9746ba846136b3f0ac9fdd5f0b5472b3e10b7f02d3f9b031",
+    "compact_algorithm": "SHA256 UTF-8 sorted compact JSON; separate hash domain",
+    "content_sha256": "27fb9d792969cd6c45ae383a3200555402d7138a773e50a7eb08cd59e697fe57",
+    "raw_pdf": {
+      "file": "research/ir-case-studies-2026-10-15/1870/initial-public-review-2026-10-16/full-extraction-variant/raw/a1fc1a2de7a3082c5e5f3bee9c3be6d222530391492a6b09f145aa4474174e0f",
+      "sha256": "a1fc1a2de7a3082c5e5f3bee9c3be6d222530391492a6b09f145aa4474174e0f"
+    },
+    "raw_pdf_bytes": 291677,
+    "url": "https://www.yahagi.co.jp/ir_news/pdf/2027%E5%B9%B43%E6%9C%88%E6%9C%9F%20%20%E7%AC%AC1%E5%9B%9B%E5%8D%8A%E6%9C%9F%E6%B1%BA%E7%AE%97%E7%9F%AD%E4%BF%A1.pdf",
+    "publication_date_preserved": "2026-08-07",
+    "published_at_preserved": null,
+    "retrieved_at_preserved": "2026-10-16T00:54:14.401134+00:00",
+    "read_at_is_not_retrieval_or_first_save": true
+  },
+  "selection": {
+    "previous_review_pages": [
+      7,
+      9,
+      11
+    ],
+    "previous_page_text_vs_same_raw_and_full_content": "byte-exact for all three; prior images/semantic review already completed and unchanged",
+    "headings_only_screened_remaining_pages": [
+      12,
+      13,
+      14
+    ],
+    "headings": {
+      "12": "（取得による企業結合）",
+      "13": "６．企業結合日に受け入れた資産及び引き受けた負債…／７．期首結合仮定のP/L影響",
+      "14": "３．補足情報／受注及び販売の状況（連結）"
+    },
+    "new_semantic_and_image_review_pages": [
+      12,
+      13
+    ],
+    "printed_pages": [
+      10,
+      11
+    ],
+    "physical14_not_semantically_reviewed": true,
+    "full_document_read": false
+  },
+  "comparison_to_existing_case": "旧2社追加・Q1CF未作成の既答は維持。買収原価/暫定のれん/取込期間の旧unknownを追加公表注記で部分解消。旧事業譲渡の1,000百万円益と今回の取得対価を混同しない。既存case/予測/数値入力/管理日を編集しない。",
+  "findings": [
+    {
+      "topic": "acquisition_dates",
+      "status": "partially_resolved",
+      "quote_ids": [
+        "AN-12"
+      ],
+      "direct_disclosure": "冒頭の実施日2026年４月１日と、企業結合日2026年５月１日（みなし取得日）を別々に確認。",
+      "remaining_or_boundary": "単一取得日へ置換しない。登記・決済実行の追加証憑は今回未確認。"
+    },
+    {
+      "topic": "pl_inclusion_period",
+      "status": "resolved_as_disclosed",
+      "quote_ids": [
+        "AN-12"
+      ],
+      "direct_disclosure": "被取得企業の業績を含む期間は2026年５月１日〜６月30日。",
+      "remaining_or_boundary": "前年同一範囲比較・実際の連結売上/営業/税/NI寄与の個別額はこの注記に表示なし。"
+    },
+    {
+      "topic": "cash_consideration_and_cost",
+      "status": "resolved_as_displayed",
+      "quote_ids": [
+        "AN-12"
+      ],
+      "direct_disclosure": "取得の対価（現金）2,500百万円、取得原価2,500百万円。",
+      "remaining_or_boundary": "取得現金残高控除後の純CF流出・支払日・支払内訳・資金調達・将来CFを認定しない。事業譲渡の受領対価とは別の買収。"
+    },
+    {
+      "topic": "advisory_fees",
+      "status": "resolved_as_displayed",
+      "quote_ids": [
+        "AN-12"
+      ],
+      "direct_disclosure": "主要取得関連費用はアドバイザリー費用等101百万円。",
+      "remaining_or_boundary": "特定P/L科目/期間への全額対応、通常費用からの除外、税/現金支払時期は未確認。"
+    },
+    {
+      "topic": "goodwill_and_allocation",
+      "status": "partially_resolved",
+      "quote_ids": [
+        "AN-12"
+      ],
+      "direct_disclosure": "のれん3,398百万円。取得原価配分未完了のため暫定、10年間均等償却。会社は将来超過収益力を発生原因と記載。",
+      "remaining_or_boundary": "最終PPA/識別無形資産/最終のれん・税効果等は未確定又は今回の記載で未確認。将来超過収益の実現保証や四半期償却額を計算しない。"
+    },
+    {
+      "topic": "assets_and_liabilities",
+      "status": "resolved_as_displayed",
+      "quote_ids": [
+        "AN-13"
+      ],
+      "direct_disclosure": "受入資産は流動878・固定270・合計1,148、引受負債は流動215・固定1,831・合計2,046（全て百万円）。",
+      "remaining_or_boundary": "受入現金・有利子負債・繰延税項目の個別額や最終時価配分をこの集計表から補わない。取得原価/純資産/のれんを逆算して丸め差を調整しない。"
+    },
+    {
+      "topic": "comparability_and_proforma",
+      "status": "partially_resolved",
+      "quote_ids": [
+        "AN-13"
+      ],
+      "direct_disclosure": "年度期首に結合が完了した仮定の四半期P/L影響概算と算定方法は、会社が重要性が乏しいとして記載省略。",
+      "remaining_or_boundary": "省略は0の開示ではない。実際の追加2社の寄与額や前年同一範囲比較を与えず、全ての買収影響が軽微とは一般化しない。"
+    },
+    {
+      "topic": "tax_cashflow",
+      "status": "unresolved_after_limited_reading",
+      "quote_ids": [
+        "AN-12",
+        "AN-13"
+      ],
+      "direct_disclosure": "取得対価の種類は現金と確認したが、この2頁には取得の税費用/税支払・取得現金控除後CFの個別表示なし。旧物理9のQ1CF未作成説明は維持。",
+      "remaining_or_boundary": "税率/税引後手取/取得CF/正常利益/将来CFを補完しない。全Web/全資料に説明なしとは言わない。"
+    }
+  ],
+  "method_reference": {
+    "file": {
+      "file": "docs/ir-question-preparation.md",
+      "sha256": "be39fd3d71b8b5428b63254bf509a559a76ce46299ddecebfc54cfac446fd987"
+    },
+    "use": "既存Anthropic/JIRAの公開情報先行・既答除外・資料間比較へ適応した手順。新IR問/草案を作らず残る範囲を保存。"
+  },
+  "prohibitions_preserved": {
+    "new_GET": 0,
+    "DB_connections": 0,
+    "DB_writes": 0,
+    "native_case_registration": 0,
+    "date_updates": 0,
+    "financial_input_adoption": false,
+    "normalizer_runs": 0,
+    "new_IR_drafts_or_messages": 0,
+    "original_files_edited": 0
+  }
+}

@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js'></script>
+<link rel='preconnect' href='https://fonts.googleapis.com' />
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+
+<link
+  href='https://fonts.googleapis.com/css2?family=Fahkwang:wght@200;400;500;600&family=Noto+Sans+JP:wght@100..900&display=swap'
+  rel='stylesheet'
+/>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css' />
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanjp.min.css' />
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/3.2.7/css/froala_style.min.css' />
+<link href='https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css' rel='stylesheet' />
+<link rel='apple-touch-icon' href='apple-touch-icon.png' />
+<link rel='stylesheet' href='/assets/itbook-corp/css/template.css?20230628133403' />
+
+<style>
+  :root { --color-base-primary: #236099; --color-base-primaryFaded: #D4E6F3; --color-base-primaryInside: #ffffff;
+  --color-base-secondary: #80C8D1; --color-base-secondaryInside: #1B1B1B; --color-base-background: #F0F6F6;
+  --color-base-text: #1B1B1B; --color-base-text-gray: #666666; --color-base-footerBackground: #1A3758;
+  --color-base-footerText: #ffffff; --color-base-gray: #eeeeee; --color-header-bg: black; --color-header-text: white;
+  --color-btn-bg: #fddb3a; --color-btn-text: black; --font-size-xs: 12px; --font-size-xs-sp: 12px; --font-size-s: 15px;
+  --font-size-s-sp: 15px; --font-size-m: 18px; --font-size-m-sp: 16px; --font-size-l: 24px; --font-size-l-sp: 18px;
+  --font-size-xl: 28px; --font-size-xl-sp: 20px; --font-size-xxl: 44px; --font-size-xxl-sp: 24px; --border-radius: 5px;
+  --border-radius-button: 5px; --font-family-ja: YakuHanJP, "Noto Sans JP", -apple-system, BlinkMacSystemFont,
+  "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  --font-family-en: "Barlow Semi Condensed", sans-serif; }
+</style>
+        <link rel="icon" href="https://www.saaf-hd.co.jp/media/YkB4cb3kh0VFYh4dHFQ116tlABkyzbKW0bOe16Rp.png">
+<link rel="apple-touch-icon" href="https://www.saaf-hd.co.jp/media/YkB4cb3kh0VFYh4dHFQ116tlABkyzbKW0bOe16Rp.png">
+        <meta charset='UTF-8'>
+            <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+            <meta name='format-detection' content='telephone=no'>
+            <meta property='og:image:width' content='1200'>
+            <meta property='og:image:height' content='630'>
+            <meta name='twitter:card' content='summary_large_image'>
+        <meta property='og:site_name' content='SAAFホールディングス株式会社'><meta property='og:type' content='website'><title>SAAFホールディングス株式会社</title><meta name="description" content="SAAFホールディングス株式会社は、さまざまな分野でお客様に寄り添い、心のこもったサービスを提供する社会問題解決型企業です。しなやかに、社会を支える。社会に欠かせない土台となるべく、多様な業界にサービスを提供しています。"><meta property="og:title" content="SAAFホールディングス株式会社"><meta property="og:description" content="SAAFホールディングス株式会社は、さまざまな分野でお客様に寄り添い、心のこもったサービスを提供する社会問題解決型企業です。しなやかに、社会を支える。社会に欠かせない土台となるべく、多様な業界にサービスを提供しています。"><meta property="og:locale" content="ja_JP"><meta name="twitter:title" content="SAAFホールディングス株式会社"><meta name="twitter:description"  content="SAAFホールディングス株式会社は、さまざまな分野でお客様に寄り添い、心のこもったサービスを提供する社会問題解決型企業です。しなやかに、社会を支える。社会に欠かせない土台となるべく、多様な業界にサービスを提供しています。"><meta property="twitter:image" content="https://www.saaf-hd.co.jp/media/eSPHOEuwp5RwVWyVFu0mEvbpN8hmqEmSLQbcVgiS.png"><meta property="og:url" content="https://www.saaf-hd.co.jp"><link rel="canonical" href="https://www.saaf-hd.co.jp"><meta property="og:image" content="https://www.saaf-hd.co.jp/media/eSPHOEuwp5RwVWyVFu0mEvbpN8hmqEmSLQbcVgiS.png"><meta property="og:image:secure_url" content="https://www.saaf-hd.co.jp/media/eSPHOEuwp5RwVWyVFu0mEvbpN8hmqEmSLQbcVgiS.png">
+        <link rel="stylesheet" href="https://sdk.gig.goleadgrid.com/section-assets/template_sections.css?88184b810f6faf14e3b3b5c92230d4c16674691f" type="text/css" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.1.1/dist/css/yakuhanjp.css" type="text/css" /><style>:root{--leadgrid-base-primary:#0055A4;--leadgrid-base-primary-faded:#E0F2FF;--leadgrid-base-primary-inside:#FFFFFF;--leadgrid-base-secondary:#193F63;--leadgrid-base-secondary-inside:#FFFFFF;--leadgrid-base-background:#F0F6F6;--leadgrid-base-text:#1B1B1B;--leadgrid-base-footer-background:#1A354E;--leadgrid-base-footer-inside:#FFFFFF;--leadgrid-base-body:#777777;--leadgrid-base-white:#ffffff;--leadgrid-base-black:#000000;--leadgrid-base-lightgray:#D3D3D3;--leadgrid-base-border:#CCCCCC}</style><style>:root{--leadgrid-border-radius-button:calc(5 / 1440 * 100vw) calc(5 / 1440 * 100vw) calc(5 / 1440 * 100vw) calc(5 / 1440 * 100vw);--leadgrid-border-radius-button-tl:calc(5 / 1440 * 100vw);--leadgrid-border-radius-button-tr:calc(5 / 1440 * 100vw);--leadgrid-border-radius-button-br:calc(5 / 1440 * 100vw);--leadgrid-border-radius-button-bl:calc(5 / 1440 * 100vw);--leadgrid-border-radius-img:calc(5 / 1440 * 100vw) calc(5 / 1440 * 100vw) calc(5 / 1440 * 100vw) calc(5 / 1440 * 100vw);--leadgrid-border-radius-img-tl:calc(5 / 1440 * 100vw);--leadgrid-border-radius-img-tr:calc(5 / 1440 * 100vw);--leadgrid-border-radius-img-br:calc(5 / 1440 * 100vw);--leadgrid-border-radius-img-bl:calc(5 / 1440 * 100vw);--leadgrid-border-radius-container:calc(5 / 1440 * 100vw) calc(5 / 1440 * 100vw) calc(5 / 1440 * 100vw) calc(5 / 1440 * 100vw);--leadgrid-border-radius-container-tl:calc(5 / 1440 * 100vw);--leadgrid-border-radius-container-tr:calc(5 / 1440 * 100vw);--leadgrid-border-radius-container-br:calc(5 / 1440 * 100vw);--leadgrid-border-radius-container-bl:calc(5 / 1440 * 100vw);--leadgrid-border-radius-other:calc(5 / 1440 * 100vw) calc(5 / 1440 * 100vw) calc(5 / 1440 * 100vw) calc(5 / 1440 * 100vw);--leadgrid-border-radius-other-tl:calc(5 / 1440 * 100vw);--leadgrid-border-radius-other-tr:calc(5 / 1440 * 100vw);--leadgrid-border-radius-other-br:calc(5 / 1440 * 100vw);--leadgrid-border-radius-other-bl:calc(5 / 1440 * 100vw);--leadgrid-border-radius-small:calc(4 / 1440 * 100vw) calc(4 / 1440 * 100vw) calc(4 / 1440 * 100vw) calc(4 / 1440 * 100vw);--leadgrid-border-radius-small-tl:calc(4 / 1440 * 100vw);--leadgrid-border-radius-small-tr:calc(4 / 1440 * 100vw);--leadgrid-border-radius-small-br:calc(4 / 1440 * 100vw);--leadgrid-border-radius-small-bl:calc(4 / 1440 * 100vw);--leadgrid-border-radius-medium:calc(8 / 1440 * 100vw) calc(8 / 1440 * 100vw) calc(8 / 1440 * 100vw) calc(8 / 1440 * 100vw);--leadgrid-border-radius-medium-tl:calc(8 / 1440 * 100vw);--leadgrid-border-radius-medium-tr:calc(8 / 1440 * 100vw);--leadgrid-border-radius-medium-br:calc(8 / 1440 * 100vw);--leadgrid-border-radius-medium-bl:calc(8 / 1440 * 100vw);--leadgrid-border-radius-large:calc(20 / 1440 * 100vw) calc(20 / 1440 * 100vw) calc(20 / 1440 * 100vw) calc(20 / 1440 * 100vw);--leadgrid-border-radius-large-tl:calc(20 / 1440 * 100vw);--leadgrid-border-radius-large-tr:calc(20 / 1440 * 100vw);--leadgrid-border-radius-large-br:calc(20 / 1440 * 100vw);--leadgrid-border-radius-large-bl:calc(20 / 1440 * 100vw)}@media (max-width:768px){:root{--leadgrid-border-radius-small:calc(2 / 375 * 100vw) calc(2 / 375 * 100vw) calc(2 / 375 * 100vw) calc(2 / 375 * 100vw);--leadgrid-border-radius-small-tl:calc(2 / 375 * 100vw);--leadgrid-border-radius-small-tr:calc(2 / 375 * 100vw);--leadgrid-border-radius-small-br:calc(2 / 375 * 100vw);--leadgrid-border-radius-small-bl:calc(2 / 375 * 100vw);--leadgrid-border-radius-medium:calc(6 / 375 * 100vw) calc(6 / 375 * 100vw) calc(6 / 375 * 100vw) calc(6 / 375 * 100vw);--leadgrid-border-radius-medium-tl:calc(6 / 375 * 100vw);--leadgrid-border-radius-medium-tr:calc(6 / 375 * 100vw);--leadgrid-border-radius-medium-br:calc(6 / 375 * 100vw);--leadgrid-border-radius-medium-bl:calc(6 / 375 * 100vw);--leadgrid-border-radius-large:calc(12 / 375 * 100vw) calc(12 / 375 * 100vw) calc(12 / 375 * 100vw) calc(12 / 375 * 100vw);--leadgrid-border-radius-large-tl:calc(12 / 375 * 100vw);--leadgrid-border-radius-large-tr:calc(12 / 375 * 100vw);--leadgrid-border-radius-large-br:calc(12 / 375 * 100vw);--leadgrid-border-radius-large-bl:calc(12 / 375 * 100vw)}}</style><style>:root{--leadgrid-shadow-small:calc(0 / 1440 * 100vw) calc(0 / 1440 * 100vw) calc(0 / 1440 * 100vw) calc(0 / 1440 * 100vw) rgba(0,0,0,0);--leadgrid-shadow-medium:calc(0 / 1440 * 100vw) calc(0 / 1440 * 100vw) calc(0 / 1440 * 100vw) calc(0 / 1440 * 100vw) rgba(0,0,0,0)}@media (max-width:768px){:root{--leadgrid-shadow-small:calc(0 / 375 * 100vw) calc(0 / 375 * 100vw) calc(0 / 375 * 100vw) calc(0 / 375 * 100vw) rgba(0,0,0,0);--leadgrid-shadow-medium:calc(0 / 375 * 100vw) calc(0 / 375 * 100vw) calc(0 / 375 * 100vw) calc(0 / 375 * 100vw) rgba(0,0,0,0)}}</style><style>.leadgrid-font-size-bl{font-size:16px;line-height:160%;@media (max-width:768px){font-size:14px;line-height:160%}}.leadgrid-font-size-bm{font-size:14px;line-height:160%;@media (max-width:768px){font-size:13px;line-height:160%}}.leadgrid-font-size-dl-md{font-size:var(--leadgrid-font-size-dl-md)}.leadgrid-font-size-dl-sm{font-size:var(--leadgrid-font-size-dl-sm)}.leadgrid-font-size-dl-xl{font-size:var(--leadgrid-font-size-dl-xl)}.leadgrid-font-size-dl-xs{font-size:var(--leadgrid-font-size-dl-xs)}.leadgrid-font-size-dl-xxl{font-size:var(--leadgrid-font-size-dl-xxl)}.leadgrid-font-size-dl-xxs{font-size:var(--leadgrid-font-size-dl-xxs)}.leadgrid-font-size-dl-xxxl{font-size:var(--leadgrid-font-size-dl-xxxl)}.leadgrid-font-size-dl-xxxs{font-size:var(--leadgrid-font-size-dl-xxxs)}.leadgrid-font-size-hl{font-size:44px;line-height:130%;@media (max-width:768px){font-size:24px;line-height:145%}}.leadgrid-font-size-hm{font-size:24px;line-height:145%;@media (max-width:768px){font-size:20px;line-height:150%}}.leadgrid-font-size-hs{font-size:20px;line-height:150%;@media (max-width:768px){font-size:16px;line-height:160%}}.leadgrid-font-size-s{font-size:12px;line-height:160%;@media (max-width:768px){font-size:10px;line-height:160%}}</style><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/vs2015.min.css" integrity="sha384-5LReBeMD31EW6049nqxZ1eFZBh5d0Bjz2Y9KkEy+yg8o+0oKpw+8AnDqvgqGdDkV" crossorigin="anonymous"><style>:root{--leadgrid-base-window-size:1440;--leadgrid-width-middle:1192px;--leadgrid-width-default:992px;--leadgrid-fs-default:14px;--leadgrid-fs-small:12px;--leadgrid-transition:all 0.3s cubic-bezier(0,1,0.64,1);--leadgrid-box-shadow:0 2px 32px 0 rgba(0,0,0,0.1);--leadgrid-header-height:0px;--leadgrid-font-weight-normal:400;--leadgrid-font-weight-bold:700;--leadgrid-font-size-dl-xxxs:calc(11 / 1440 * 100vw);--leadgrid-font-size-dl-xxs:calc(12 / 1440 * 100vw);--leadgrid-font-size-dl-xs:calc(14 / 1440 * 100vw);--leadgrid-font-size-dl-sm:calc(16 / 1440 * 100vw);--leadgrid-font-size-dl-md:calc(20 / 1440 * 100vw);--leadgrid-font-size-dl-xl:calc(28 / 1440 * 100vw);--leadgrid-font-size-dl-xxl:calc(36 / 1440 * 100vw);--leadgrid-font-size-dl-xxxl:calc(48 / 1440 * 100vw)}@media screen and (max-width:768px){:root{--leadgrid-base-window-size:375;--leadgrid-font-size-dl-xxxs:calc(11 / 375 * 100vw);--leadgrid-font-size-dl-xxs:calc(12 / 375 * 100vw);--leadgrid-font-size-dl-xs:calc(14 / 375 * 100vw);--leadgrid-font-size-dl-sm:calc(16 / 375 * 100vw);--leadgrid-font-size-dl-md:calc(20 / 375 * 100vw);--leadgrid-font-size-dl-xl:calc(28 / 375 * 100vw);--leadgrid-font-size-dl-xxl:calc(36 / 375 * 100vw);--leadgrid-font-size-dl-xxxl:calc(48 / 375 * 100vw)}}.fr-view .fr-img-caption .fr-img-wrap a{display:initial}.hljs-ln-numbers{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;text-align:center;color:#ccc;border-right:1px solid #CCC;vertical-align:top;padding-right:5px !important}.hljs-ln-code{padding-left:10px !important}.hljs{display:block;white-space:pre;overflow-x:auto;counter-reset:linenum;position:relative}.leadgrid-blogcard{margin:0 !important;width:100% !important;max-width:600px !important;display:block !important;height:initial !important;padding:16px !important;border:1px solid #cccccc !important;background:#ffffff !important;box-sizing:border-box !important;position:relative !important;transition:opacity .25s !important;margin-top:20px !important}.leadgrid-blogcard:hover{opacity:0.6 !important;transition:opacity .25s !important}.leadgrid-blogcard__cover{display:none}.leadgrid-blogcard__link{background:#ffffff !important;padding:0 !important;margin:0 !important;display:flex !important;align-items:center !important;text-decoration:none !important;font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,Arial,メイリオ,Meiryo,sans-serif !important}.leadgrid-blogcard__link::before,.leadgrid-blogcard__link::after{display:none !important}.leadgrid-blogcard__meta{display:block !important;width:100% !important}.leadgrid-blogcard__title{pointer-events:none !important;margin:0 0 8px !important;font-size:18px !important;color:#1b1b1b !important;display:-webkit-box !important;-webkit-box-orient:vertical !important;-webkit-line-clamp:2 !important;overflow:hidden !important;font-weight:bold !important;letter-spacing:0em !important;line-height:1.4 !important;font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,Arial,メイリオ,Meiryo,sans-serif !important}.leadgrid-blogcard__description{pointer-events:none !important;margin:0 0 8px !important;font-size:12px !important;color:#555555 !important;display:-webkit-box !important;-webkit-box-orient:vertical !important;-webkit-line-clamp:3 !important;overflow:hidden !important;letter-spacing:0em !important;line-height:1.6 !important;font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,Arial,メイリオ,Meiryo,sans-serif !important}.leadgrid-blogcard__domain{pointer-events:none !important;margin:0 !important;font-size:10px !important;color:#555555 !important;display:-webkit-box !important;-webkit-box-orient:vertical !important;-webkit-line-clamp:1 !important;overflow:hidden !important;letter-spacing:0em !important;line-height:1 !important;font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,Arial,メイリオ,Meiryo,sans-serif !important}.leadgrid-blogcard__eyecatch{display:block !important;width:206px !important;height:133px !important;position:relative !important;flex-shrink:0 !important;margin:0 0 0 8px !important;border:1px solid #eeeeee !important}.leadgrid-blogcard__eyecatch img{pointer-events:none !important;position:absolute !important;width:100% !important;height:100% !important;object-fit:cover !important;margin:0 !important;border-radius:0 !important;left:0 !important;top:0 !important}@media screen and (max-width:768px){.leadgrid-blogcard__title{font-size:16px !important}.leadgrid-blogcard__eyecatch{width:120px !important;height:77px !important}.leadgrid-blogcard__description{-webkit-line-clamp:2 !important}}.leadgrid-sp-br{display:none;@media screen and (max-width:768px){display:block}}.leadgrid-pc-br{display:block;@media screen and (max-width:768px){display:none}}.instagram-media{position:static !important}.fr-view img.fr-dii.leadgrid-wysiwyg-img-center{display:block;margin-left:auto;margin-right:auto}.fr-view img.leadgrid-wysiwyg-img-center,.fr-view .fr-img-caption.leadgrid-wysiwyg-img-center{display:block !important;margin-left:auto !important;margin-right:auto !important}mjx-math{white-space:pre-wrap !important}.fr-view p:has(> .fr-fir){display:inline-block;width:100%}.fr-view p > .fr-fir{float:right !important}.c-form__agreeText{overflow-y:scroll;max-height:300px;border:1px solid #ccc;padding-top:24px;padding-right:20px;padding-left:20px}</style>
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NZVJH3VD');</script>
+<!-- End Google Tag Manager -->
+<script src="https://form.mrc-s.com/web/mrcform.js" charset="utf-8" data-id="n4n8tt" async></script><script type="application/ld+json"></script>
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZVJH3VD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+        
+
+
+        <header class='itbook-corp-c-header' id='js-header'>
+  <div class='c-header__inner'>
+    <a href="/" class="c-header__logo" >
+    <img src="https://www.saaf-hd.co.jp/assets/itbook-corp/img/common/logo.svg" class="js-upload-src" alt="SAAFホールディングス">
+    </a>
+
+    <nav class='c-header__nav' id='js-header-menu'>
+      <div class='c-header__navWrap'>
+        <div class='c-header__navLogoWrap'>
+          <a href="/" class="c-header__logo2" >
+          <img src="/assets/itbook-corp/img/common/logo.svg"  alt=" ">
+          </a>
+
+          <div class='c-header__language'>
+            <a href='/' class='c-header__languageBtn --ja is-select js-textAnimTrigger'>
+              <span class='c-header__languageBtnText js-checkLink__hasJaPage js-textSplit'>JP</span>
+            </a>
+            <a href='/en' class='c-header__languageBtn --en js-textAnimTrigger'>
+              <span class='c-header__languageBtnText js-checkLink__hasEnPage js-textSplit'>EN</span>
+            </a>
+          </div>
+        </div>
+        <ul class='c-header__navList'>
+          <li class='c-header__navItem u-mobile'>
+            <a href="/" class="c-header__navLink js-textAnimTrigger" >
+            <span class='c-header__navTextEn'>
+              Top
+            </span>
+            <span class='c-header__navTextJa js-textSplit'>
+              トップページ
+            </span>
+            </a>
+
+          </li>
+          <li class='c-header__navItem'>
+            <a href="/about" class="c-header__navLink js-textAnimTrigger" >
+            <span class='c-header__navTextEn'>
+              Company
+            </span>
+            <span class='c-header__navTextJa js-textSplit'>
+              企業情報
+            </span>
+            </a>
+
+            <ul class='c-header__subNavList'>
+
+                <li class="c-header__subNavItem">
+                <a href="/about/message" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  トップメッセージ
+                </span>
+                </a>
+                </li>
+                <li class="c-header__subNavItem">
+                <a href="/about/management_philosophy" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  経営理念
+                </span>
+                </a>
+                </li>
+                <li class="c-header__subNavItem">
+                <a href="/about/company" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  会社概要
+                </span>
+                </a>
+                </li>
+                <li class="c-header__subNavItem">
+                <a href="/about/officer" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  役員一覧
+                </span>
+                </a>
+                </li>
+                <li class="c-header__subNavItem">
+                <a href="/about/group-company" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  グループ会社
+                </span>
+                </a>
+                </li>
+                <li class="c-header__subNavItem">
+                <a href="/about/logo" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  社名・ロゴにかける想い
+                </span>
+                </a>
+                </li>
+
+            </ul>
+          </li>
+          <li class='c-header__navItem'>
+            <a href="/business" class="c-header__navLink js-textAnimTrigger" >
+            <span class='c-header__navTextEn'>
+              Services
+            </span>
+            <span class='c-header__navTextJa js-textSplit'>
+              事業情報
+            </span>
+            </a>
+
+            <ul class='c-header__subNavList'>
+
+                <li class="c-header__subNavItem">
+                <a href="/business/consulting" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  コンサルティング事業
+                </span>
+                </a>
+                </li>
+                <li class="c-header__subNavItem">
+                <a href="/business/construction" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  建設土木事業
+                </span>
+                </a>
+                </li>
+                <li class="c-header__subNavItem">
+                <a href="/business/system" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  システム開発事業
+                </span>
+                </a>
+                </li>
+                <li class="c-header__subNavItem">
+                <a href="/business/human_resources" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  人材事業
+                </span>
+                </a>
+                </li>
+
+            </ul>
+          </li>
+          <li class='c-header__navItem'>
+            <a href="/news" class="c-header__navLink js-textAnimTrigger" >
+            <span class='c-header__navTextEn'>
+              News
+            </span>
+            <span class='c-header__navTextJa js-textSplit'>
+              ニュース
+            </span>
+            </a>
+
+          </li>
+          <li class='c-header__navItem'>
+            <a href="/ir" class="c-header__navLink js-textAnimTrigger" >
+            <span class='c-header__navTextEn'>
+              IR Information
+            </span>
+            <span class='c-header__navTextJa js-textSplit'>
+              IR
+            </span>
+            </a>
+
+            <ul class='c-header__subNavList'>
+                <li class="c-header__subNavItem">
+                <a href="/ir/news" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  IRニュース
+                </span>
+                </a>
+                </li>
+                <li class="c-header__subNavItem">
+                <a href="/ir/highlights" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  業績ハイライト
+                </span>
+                </a>
+                </li>
+                <li class="c-header__subNavItem">
+                <a href="/ir/tanshin" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  IRライブラリ
+                </span>
+                </a>
+                </li>
+                <li class="c-header__subNavItem">
+                <a href="/ir/stock" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  株式・株主情報
+                </span>
+                </a>
+                </li>
+                <li class="c-header__subNavItem">
+                <a href="/ir/calendar" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  IRカレンダー
+                </span>
+                </a>
+                </li>
+                <li class="c-header__subNavItem">
+                <a href="/ir/notice" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  電子公告
+                </span>
+                </a>
+                </li>
+                <li class="c-header__subNavItem">
+                <a href="/ir/individual" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  個人投資家の皆様へ
+                </span>
+                </a>
+                </li>
+                <li class="c-header__subNavItem">
+                <a href="/ir/disclosure_policy" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  ディスクロージャーポリシー
+                </span>
+                </a>
+                </li>
+                <li class="c-header__subNavItem">
+                <a href="/ir/governance" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  コーポレートガバナンス
+                </span>
+                </a>
+                </li>
+                <li class="c-header__subNavItem">
+                <a href="/ir/ir_archive" class="c-header__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  IR アーカイブ
+                </span>
+                </a>
+                </li>
+
+            </ul>
+          </li>
+          <li class='c-header__navItem'>
+            <a href="/recruit" class="c-header__navLink js-textAnimTrigger" >
+            <span class='c-header__navTextEn'>
+              Recruit
+            </span>
+            <span class='c-header__navTextJa js-textSplit'>
+              採用情報
+            </span>
+            </a>
+
+          </li>
+        </ul>
+        <ul class='c-header__otherNavList'>
+
+            <li class="c-header__otherNavItem">
+            <a href="/contact" class="c-header__otherNavLink" >
+            <span class='c-header__otherNavText'>
+              お問い合わせ
+            </span>
+            </a>
+            </li>
+            <li class="c-header__otherNavItem">
+            <a href="/policy" class="c-header__otherNavLink" >
+            <span class='c-header__otherNavText'>
+              サイトポリシー
+            </span>
+            </a>
+            </li>
+            <li class="c-header__otherNavItem">
+            <a href="/privacy" class="c-header__otherNavLink" >
+            <span class='c-header__otherNavText'>
+              個人情報方針
+            </span>
+            </a>
+            </li>
+            <li class="c-header__otherNavItem">
+            <a href="/compliance" class="c-header__otherNavLink" >
+            <span class='c-header__otherNavText'>
+              コンプライアンス基本方針
+            </span>
+            </a>
+            </li>
+
+        </ul>
+      </div>
+    </nav>
+    <button class='c-header__menuButton' id='js-header-menu-button'>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+        <main>
+            <section class='itbook-corp-s-opening'>
+  <img class='s-opening__text' src='/assets/itbook-corp/img/common/title.svg' alt='' />
+  <div class='s-opening__load'>
+    <div class='s-opening__loadText'>LOADING...</div>
+  </div>
+</section><section class='itbook-corp-s-bg'>
+  <div class='s-bg__movie'>
+    <!-- <video preload="auto" loop autoplay muted src="/assets/itbook-corp/movie/bg.mp4"></video> -->
+    <img src='/assets/itbook-corp/img/common/bg.webp' alt='' />
+  </div>
+</section><section class='itbook-corp-s-mv'>
+  <div class='s-mv__container'>
+    <img class='s-mv__circleMain' src='/assets/itbook-corp/img/top/mv_main.webp' alt='' />
+    <img class='s-mv__circleShadow' src='/assets/itbook-corp/img/top/mv_shadow.webp' alt='' />
+    <div class='itbook-corp-l-inner s-mv__inner'>
+      <div class='s-mv__wrap'>
+        <h1 class='s-mv__title'>
+          <img src="https://www.saaf-hd.co.jp/assets/itbook-corp/img/common/title.svg" class="js-upload-src u-desktop" alt="しなやかに、社会を支える。">
+          <img src="/assets/itbook-corp/img/common/title_sp.svg" class="u-mobile" alt=" ">
+        </h1>
+        <a href="#top_02" class="s-mv__scroll" >
+        SCROLL
+        </a>
+
+        <div class='s-mv__tabWrap'>
+          <div class='s-mv__panelList'>
+            <div class='s-mv__panelItem is-active'>
+              <a href='' class='s-mv__panelItemWrap'>
+                <div class='s-mv__panelItemInner'>
+                  <!-- E-IR Parts -->
+                  <div class='s-mv__panelItemLink'>
+                    <div class='eir' data-area-name='area_top_034'></div>
+                  </div>
+                  <!-- /E-IR Parts -->
+                </div>
+              </a>
+            </div>
+            <div class='s-mv__panelItem'>
+              <a href='' class='s-mv__panelItemWrap'>
+                <div class='s-mv__panelItemInner'>
+                  <!-- E-IR Parts -->
+                  <div class='s-mv__panelItemLink'>
+                    <div class='eir' data-area-name='area_top_035'></div>
+                  </div>
+                  <!-- /E-IR Parts -->
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class='s-mv__tabBody'>
+            <div class='s-mv__tabList'>
+              <div class='s-mv__tabItem is-active'>News</div>
+              <div class='s-mv__tabItem'>IR News</div>
+            </div>
+            <a href='/news' class='s-mv__newsBtn --ja'>
+              <span class='s-mv__newsBtnText'>Go to Latest News</span>
+              <span class='s-mv__newsBtnIcon'></span>
+            </a>
+            <a href='/ir/news' class='s-mv__newsBtn --en'>
+              <span class='s-mv__newsBtnText'>Go to Latest News</span>
+              <span class='s-mv__newsBtnIcon'></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='s-mv__loop'>
+      <ul class='s-mv__loopItems'>
+        <li class='s-mv__loopItem'>Support As A Foundation. Support As A Foundation.</li>
+        <li class='s-mv__loopItem'>Support As A Foundation. Support As A Foundation.</li>
+        <li class='s-mv__loopItem'>Support As A Foundation. Support As A Foundation.</li>
+      </ul>
+      <ul class='s-mv__loopItems'>
+        <li class='s-mv__loopItem'>Support As A Foundation. Support As A Foundation.</li>
+        <li class='s-mv__loopItem'>Support As A Foundation. Support As A Foundation.</li>
+        <li class='s-mv__loopItem'>Support As A Foundation. Support As A Foundation.</li>
+      </ul>
+    </div>
+  </div>
+</section><section class='itbook-corp-s-sustainability'>
+  <div class='itbook-corp-l-inner --md'>
+    <h2 class='itbook-corp-c-title3'>
+      社名に込めた想い<br>
+
+    </h2>
+    <div class='s-sustainability__items'>
+      <div class='s-sustainability__item'>
+        <div class='s-sustainability__body'>
+          <h3 class='s-sustainability__lead'>
+            Support As A Foundation の頭文字をとって「SAAF（サーフ）」と読みます。
+          </h3>
+          <p class='s-sustainability__text'>
+            「SAAF」は「Support As A Foundation（土台として支える）」の頭文字をとって名付けたもので、直訳の「土台として支える」のとおり、さまざまな分野でお客様に寄り添い、心のこもったサービスを提供するプロフェッショナルとして、安定的・⾧期的に社会を支える存在でありたいとの想いを込めております。
+
+          </p>
+          <div class='s-sustainability__btn'>
+
+            <a href="/about/logo" class="itbook-corp-c-btn2 js-textAnimTrigger" >
+            <span class='c-btn2__text js-textSplit'>
+              社名に込めた想い
+            </span>
+            <span class='c-btn2__arrow'></span>
+            </a>
+
+
+          </div>
+        </div>
+        <div class='s-sustainability__img'>
+        <img src="/media/cv58A503h0GZo4TCN3FcVYm8zFP71DJe57tYlbsH.png" class="js-upload-src js-upload-src js-upload-src js-upload-src js-upload-src" alt="社名に込めた想い">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section><section class='itbook-corp-s-topAbout' id='about'>
+  <div class='itbook-corp-l-inner s-topAbout__inner'>
+    <div class='s-topAbout__title'>
+      <hgroup class='itbook-corp-c-title1'>
+        <p class='c-title1__en' lang='en'>
+          About
+        </p>
+        <h2 class='c-title1__ja'>
+          私たちについて
+
+        </h2>
+      </hgroup>
+    </div>
+    <div class='s-topAbout__wrap'>
+      <div class='s-topAbout__img'>
+        <img src="https://www.saaf-hd.co.jp/assets/itbook-corp/img/top/about_img.webp" class="js-upload-src" alt="SAAFホールディングス　イメージ">
+      </div>
+      <div class='s-topAbout__body'>
+        <h3 class='s-topAbout__lead'>
+          社会課題解決型の<br>企業を目指して
+        </h3>
+        <p class='s-topAbout__text'>
+          SAAFホールディングス株式会社は、「コンサルティング事業」「システム開発事業」「人材事業」「建設土木事業」を4つの柱とし、多岐に渡る事業を展開して付加価値の高いサービスを官公庁、独立行政法人、地方自治体等の公共機関や民間企業等に提供することで、豊かな社会の創造に貢献していきます。<br>さまざまな分野でお客様に寄り添い、心のこもったサービスを提供するプロフェッショナルとして、社会課題を解決できる企業集団を目指しております。
+        </p>
+        <div class='s-topAbout__btn'>
+          <a href="/about" class="itbook-corp-c-btn1 js-textAnimTrigger" >
+          <span class='c-btn1__text js-textSplit'>会社概要へ</span>
+          <span class='c-btn1__arrow'></span>
+          </a>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section><section class='itbook-corp-s-slide'>
+  <div class='s-slide__inner'>
+    <div class='splide js-slide-slider' role='group'>
+      <div class='splide__track'>
+        <div class='splide__list s-slide__items'>
+
+              <div class='splide__slide s-slide__item'>
+                <img src='/media/YpNRkUkgaAiFEicavakg5JvzJlIsQLJCfGZsru8d.png' alt="４" />
+              </div>
+              <div class='splide__slide s-slide__item'>
+                <img src='/media/rRQUYdnqVH10wnliYtLZIvJCNOBIB9fGeWibxYpH.png' alt="３" />
+              </div>
+              <div class='splide__slide s-slide__item'>
+                <img src='/media/lclFvXSXLmBGKPVLwSw83Nakll6xi6NCgZUbLl2d.jpg' alt="２" />
+              </div>
+              <div class='splide__slide s-slide__item'>
+                <img src='/media/rlkxJLLf7QxXT0LIKUJ9PISnTWvXIMavZL5XwxDv.png' alt="１" />
+              </div>
+              <div class='splide__slide s-slide__item'>
+                <img src='/media/YpNRkUkgaAiFEicavakg5JvzJlIsQLJCfGZsru8d.png' alt="４" />
+              </div>
+              <div class='splide__slide s-slide__item'>
+                <img src='/media/rRQUYdnqVH10wnliYtLZIvJCNOBIB9fGeWibxYpH.png' alt="３" />
+              </div>
+              <div class='splide__slide s-slide__item'>
+                <img src='/media/lclFvXSXLmBGKPVLwSw83Nakll6xi6NCgZUbLl2d.jpg' alt="２" />
+              </div>
+              <div class='splide__slide s-slide__item'>
+                <img src='/media/rlkxJLLf7QxXT0LIKUJ9PISnTWvXIMavZL5XwxDv.png' alt="１" />
+              </div>
+        </div>
+      </div>
+      <button class="s-slide__button splide__toggle" id="pause-button">
+        <span class="splide__toggle__play">
+          <img src="/assets/itbook-corp/img/common/icon_play.svg" alt="" />
+        </span>
+        <span class="splide__toggle__pause">
+          <img src="/assets/itbook-corp/img/common/icon_pause.svg" alt="" />
+        </span>
+      </button>
+    </div>
+  </div>
+</section><section class='itbook-corp-s-topService'>
+  <div class='itbook-corp-l-inner s-topService__inner'>
+    <h2 class='itbook-corp-c-title2 --white'>
+      Services
+    </h2>
+    <div class='s-topService__lead'>
+      私たちは、様々な事業を通して<br class='u-desktop' />ステークホルダー、そして社会を支えることで、<br class='u-desktop' />サステナブルな社会の実現をめざす<br class='u-desktop' />企業集団です。
+
+    </div>
+    <img class="s-topService__mainImg u-desktop" src="/assets/itbook-corp/img/common/illust_main.webp" alt="" />
+    <img class="s-topService__mainImg u-mobile" src="/assets/itbook-corp/img/common/illust_main_sp.webp" alt="" />
+    <span class='s-topService__border'></span>
+  </div>
+  <div class='itbook-corp-l-inner s-topService__main'>
+    <div class='s-topService__area'>
+      <div class='s-topService__logo'>
+        <img src="https://www.saaf-hd.co.jp/assets/itbook-corp/img/common/logo2.svg" class="js-upload-src" alt="会社ロゴマーク">
+
+        <span class='s-topService__logoBorder'></span>
+      </div>
+      <p class='s-topService__text'>
+        当社グループが事業を行う上で重要視していることは、社会課題を解決するとともに新しい価値を創造し、社会を支えることです。当社グループが保有する各事業セグメントが社会課題を認識し、顧客第一主義をつらぬきながら解決に向けて最良品質のサービスを提供します。
+
+      </p>
+      <div class='s-topService__btn'>
+        <a href="/business" class="itbook-corp-c-btn1 js-textAnimTrigger --white" >
+        <span class='c-btn1__text js-textSplit'>当社グループの事業一覧へ</span>
+        <span class='c-btn1__arrow'></span>
+        </a>
+
+      </div>
+    </div>
+    <ul class='s-topService__items'>
+
+        <li class="s-topService__item">
+        <a href="/business/consulting" class="itbook-corp-c-card1" >
+        <div class='c-card1__wrap'>
+          <figure class='c-card1__img'>
+            <img src="https://www.saaf-hd.co.jp/assets/itbook-corp/img/top/service_img1.webp" class="js-upload-src js-upload-src" alt="SAAFホールディングス コンサルティング事業">
+          </figure>
+          <div class='c-card1__title'>
+            コンサルティング事業
+
+          </div>
+          <ul class='c-card1__list'>
+            ITコンサルティング/業務システム最適化支援/ITガバナンス構築支援/IT戦略の推進バックアップ/地方創生支援/スポーツ関連事業
+          </ul>
+        </div>
+        <div class='c-card1__arrow'></div>
+        </a>
+        </li>
+        <li class="s-topService__item">
+        <a href="/business/system" class="itbook-corp-c-card1" >
+        <div class='c-card1__wrap'>
+          <figure class='c-card1__img'>
+            <img src="https://www.saaf-hd.co.jp/assets/itbook-corp/img/top/service_img2.webp" class="js-upload-src js-upload-src" alt="SAAFホールディングス システム開発事業">
+          </figure>
+          <div class='c-card1__title'>
+            システム開発事業
+
+          </div>
+          <ul class='c-card1__list'>
+            システム開発/アプリケーション、ソフトウェア開発/システム関連商品の販売、レンタル/動画ソリューション/電子認証サービス/建設テック
+          </ul>
+        </div>
+        <div class='c-card1__arrow'></div>
+        </a>
+        </li>
+        <li class="s-topService__item">
+        <a href="/business/human_resources" class="itbook-corp-c-card1" >
+        <div class='c-card1__wrap'>
+          <figure class='c-card1__img'>
+            <img src="https://www.saaf-hd.co.jp/assets/itbook-corp/img/top/service_img3.webp" class="js-upload-src js-upload-src" alt="SAAFホールディングス 人材事業">
+          </figure>
+          <div class='c-card1__title'>
+            人材事業
+
+          </div>
+          <ul class='c-card1__list'>
+            人材派遣 / 技術者派遣 / 教育人材サービス / 採用サービス / 研修サポート
+          </ul>
+        </div>
+        <div class='c-card1__arrow'></div>
+        </a>
+        </li>
+        <li class="s-topService__item">
+        <a href="/business/construction" class="itbook-corp-c-card1" >
+        <div class='c-card1__wrap'>
+          <figure class='c-card1__img'>
+            <img src="/media/HYfPAxG3u42QKnnax0e0gCoCZ67qKyGYUdi1erl9.jpg" class="js-upload-src js-upload-src" alt="SAAFホールディングス 地盤調査改良事業">
+          </figure>
+          <div class='c-card1__title'>
+            建設土木事業
+
+          </div>
+          <ul class='c-card1__list'>
+            地盤調査/地盤改良工事/土木工事/沈下修正工事/擁壁工事/測量/土質調査/建設/地盤保証/住宅完成保証/住宅検査関連業務/住宅建築請負
+          </ul>
+        </div>
+        <div class='c-card1__arrow'></div>
+        </a>
+        </li>
+
+    </ul>
+  </div>
+  <img class='s-topService__parts' src='/assets/itbook-corp/img/top/topService_parts.webp' alt='' />
+  <img class='s-topService__parts' src='/assets/itbook-corp/img/top/topService_parts.webp' alt='' />
+</section><section class='itbook-corp-s-topInfo'>
+  <div class='itbook-corp-l-inner s-topInfo__inner'>
+    <div class='s-topInfo__title'>
+      <hgroup class='itbook-corp-c-title1'>
+        <p class='c-title1__en' lang='en'>
+          IR <br class='u-mobile' />Information
+
+        </p>
+        <h2 class='c-title1__ja'>
+          IR情報
+
+        </h2>
+      </hgroup>
+    </div>
+    <ul class='s-topInfo__items'>
+
+        <li class="s-topInfo__item">
+        <a href="/ir/news" class="itbook-corp-c-card3" >
+        <div class='c-card3__bgList u-desktop'>
+          <div class='c-card3__bgItem'>
+            <img src="/assets/itbook-corp/img/top/card3_bg1_pc.webp" class="c-card3__bg --default" alt="""">
+          </div>
+          <div class='c-card3__bgItem'>
+            <img src="/assets/itbook-corp/img/top/card3_bg1_pc_hover.webp" class="c-card3__bg --hover" alt="""">
+
+          </div>
+        </div>
+        <div class='c-card3__bgList u-mobile'>
+          <div class='c-card3__bgItem'>
+            <img src="/assets/itbook-corp/img/top/card3_bg1_sp.webp" class="c-card3__bg --default" alt="""">
+
+          </div>
+          <div class='c-card3__bgItem'>
+            <img src="/assets/itbook-corp/img/top/card3_bg1_sp_hover.webp" class="c-card3__bg --hover" alt="""">
+
+          </div>
+        </div>
+        <div class='c-card3__wrap'>
+          <div class='c-card3__title'>
+            IRニュース・資料
+
+          </div>
+          <p class='c-card3__text'>
+            適時開示や決算短信、決算説明会資料など当社の開示資料をご確認いただけます。
+          </p>
+          <div class='c-card3__arrow'></div>
+        </div>
+        </a>
+        </li>
+        <li class="s-topInfo__item">
+        <a href="/ir/individual" class="itbook-corp-c-card3" >
+        <div class='c-card3__bgList u-desktop'>
+          <div class='c-card3__bgItem'>
+            <img src="/assets/itbook-corp/img/top/card3_bg2_pc.webp" class="c-card3__bg --default" alt="""">
+          </div>
+          <div class='c-card3__bgItem'>
+            <img src="/assets/itbook-corp/img/top/card3_bg2_pc_hover.webp" class="c-card3__bg --hover" alt="""">
+
+          </div>
+        </div>
+        <div class='c-card3__bgList u-mobile'>
+          <div class='c-card3__bgItem'>
+            <img src="/assets/itbook-corp/img/top/card3_bg2_sp.webp" class="c-card3__bg --default" alt="""">
+
+          </div>
+          <div class='c-card3__bgItem'>
+            <img src="/assets/itbook-corp/img/top/card3_bg2_sp_hover.webp" class="c-card3__bg --hover" alt="""">
+
+          </div>
+        </div>
+        <div class='c-card3__wrap'>
+          <div class='c-card3__title'>
+            個人投資家の皆様へ
+
+          </div>
+          <p class='c-card3__text'>
+            皆様へのメッセージ、株主のメリット、よくある質問を掲載しています。
+          </p>
+          <div class='c-card3__arrow'></div>
+        </div>
+        </a>
+        </li>
+        <li class="s-topInfo__item">
+        <a href="/ir/highlights" class="itbook-corp-c-card3" >
+        <div class='c-card3__bgList u-desktop'>
+          <div class='c-card3__bgItem'>
+            <img src="/assets/itbook-corp/img/top/card3_bg3_pc.webp" class="c-card3__bg --default" alt="""">
+          </div>
+          <div class='c-card3__bgItem'>
+            <img src="/assets/itbook-corp/img/top/card3_bg3_pc_hover.webp" class="c-card3__bg --hover" alt="""">
+
+          </div>
+        </div>
+        <div class='c-card3__bgList u-mobile'>
+          <div class='c-card3__bgItem'>
+            <img src="/assets/itbook-corp/img/top/card3_bg3_sp.webp" class="c-card3__bg --default" alt="""">
+
+          </div>
+          <div class='c-card3__bgItem'>
+            <img src="/assets/itbook-corp/img/top/card3_bg3_sp_hover.webp" class="c-card3__bg --hover" alt="""">
+
+          </div>
+        </div>
+        <div class='c-card3__wrap'>
+          <div class='c-card3__title'>
+            財務情報
+
+          </div>
+          <p class='c-card3__text'>
+            経営成績や財務状況に関する情報を掲載しています。
+          </p>
+          <div class='c-card3__arrow'></div>
+        </div>
+        </a>
+        </li>
+
+    </ul>
+    <div class='s-topInfo__btn'>
+      <a href="/ir" class="itbook-corp-c-btn1 js-textAnimTrigger" >
+      <span class='c-btn1__text js-textSplit'>IRトップページへ</span>
+      <span class='c-btn1__arrow'></span>
+      </a>
+
+    </div>
+  </div>
+</section><section class='itbook-corp-s-topNews'>
+  <div class='itbook-corp-l-inner s-topNews__inner'>
+    <div class='s-topNews__wrap'>
+      <div class='s-topNews__box'>
+        <hgroup class='s-topNews__title'>
+          <p class='s-topNews__en' lang='en'>
+            News
+
+          </p>
+          <h2 class='s-topNews__ja'>
+            お知らせ
+
+          </h2>
+        </hgroup>
+      <!-- E-IR Parts -->
+        <div class="s-topNews__items itbook-corp-c-newsList">
+          <div class="eir" data-area-name="area_top_036"></div>
+        </div>
+        <!-- /E-IR Parts -->
+        <div class='s-topNews__btn'>
+
+          <a href="/news" class="itbook-corp-c-btn1 js-textAnimTrigger" >
+          <span class='c-btn1__text js-textSplit'>お知らせ一覧へ</span>
+          <span class='c-btn1__arrow'></span>
+          </a>
+
+        </div>
+      </div>
+      <div class='s-topNews__box'>
+        <hgroup class='s-topNews__title'>
+          <p class='s-topNews__en' lang='en'>
+            IR News
+
+          </p>
+          <h2 class='s-topNews__ja'>
+            IRニュース
+
+          </h2>
+        </hgroup>
+         <!-- E-IR Parts -->
+        <div class="s-topNews__items itbook-corp-c-newsList">
+          <div class="eir" data-area-name="area_top_037"></div>
+          <script type="text/javascript" src="/assets/itbook-corp/js/eir/eir_v5.js" charset="utf-8"></script>
+          <script type="text/javascript">
+          scriptLoader.setSrc(eirPassCore + 'eir_common.js');
+          scriptLoader.load(
+          function(){setParts('file_top_036');  }, showMaintenanceMessage);
+          </script>
+        </div>
+        <!-- /E-IR Parts -->
+        <div class='s-topNews__btn'>
+          <a href="/ir/news" class="itbook-corp-c-btn1 js-textAnimTrigger" >
+          <span class='c-btn1__text js-textSplit'>IRニュース一覧へ</span>
+          <span class='c-btn1__arrow'></span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section><section class='itbook-corp-s-cta'>
+  <ul class='s-cta__list'>
+
+      <li class="s-cta__item">
+      <a href="/recruit" class="s-cta__link js-textAnimTrigger" >
+      <div class='s-cta__bg'>
+        <img src="/assets/itbook-corp/img/common/cta_bg1.webp"  alt=" ">
+      </div>
+      <div class='s-cta__body'>
+        <hgroup class='itbook-corp-c-title1 --white --sm'>
+          <p class='c-title1__en js-textSplit' lang='en'>
+            Recruit
+          </p>
+          <h2 class='c-title1__ja js-textSplit'>
+            採用情報
+
+          </h2>
+        </hgroup>
+        <p class='s-cta__text'>
+          グループ各社にて新卒採用、キャリア採用を行なっております。<br class="u-desktop">皆さまのご応募をお待ちしております。
+        </p>
+      </div>
+      <div class='s-cta__arrow'></div>
+      </a>
+      </li>
+      <li class="s-cta__item">
+      <a href="/contact" class="s-cta__link js-textAnimTrigger" >
+      <div class='s-cta__bg'>
+        <img src="/assets/itbook-corp/img/common/cta_bg2.webp"  alt=" ">
+      </div>
+      <div class='s-cta__body'>
+        <hgroup class='itbook-corp-c-title1 --white --sm'>
+          <p class='c-title1__en js-textSplit' lang='en'>
+            Contact
+          </p>
+          <h2 class='c-title1__ja js-textSplit'>
+            お問い合わせ
+
+          </h2>
+        </hgroup>
+        <p class='s-cta__text'>
+          当社の事業やIR情報に関するお問い合わせは<br>こちらからお願いいたします。
+        </p>
+      </div>
+      <div class='s-cta__arrow'></div>
+      </a>
+      </li>
+
+  </ul>
+</section>
+        </main>
+    
+        <footer class='itbook-corp-c-footer'>
+  <div class='c-footer__top'>
+    <img src='/assets/itbook-corp/img/common/footer_bg.webp' alt='' class='c-footer__bg u-desktop' />
+    <img src='/assets/itbook-corp/img/common/footer_bg_sp.webp' alt='' class='c-footer__bg u-mobile' />
+    <div class='itbook-corp-l-inner c-footer__topInner'>
+      <div class='c-footer__nav'>
+        <ul class='c-footer__navList'>
+          <li class='c-footer__navItem'>
+            <a href="/" class="c-footer__navLink js-textAnimTrigger" >
+            <span class='c-header__navText js-textSplit'>
+              TOP
+            </span>
+            </a>
+
+          </li>
+        </ul>
+        <ul class='c-footer__navList'>
+          <li class='c-footer__navItem'>
+            <a href="/about" class="c-footer__navLink js-textAnimTrigger" >
+            <span class='c-header__navText js-textSplit'>
+              企業情報
+            </span>
+            </a>
+
+            <ul class='c-footer__subNavList'>
+
+                <li class="c-footer__subNavItem">
+                <a href="/about/message" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  トップメッセージ
+                </span>
+                </a>
+                </li>
+                <li class="c-footer__subNavItem">
+                <a href="/about/management_philosophy" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  経営理念
+                </span>
+                </a>
+                </li>
+                <li class="c-footer__subNavItem">
+                <a href="/about/company" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  会社概要
+                </span>
+                </a>
+                </li>
+                <li class="c-footer__subNavItem">
+                <a href="/about/officer" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  役員一覧
+                </span>
+                </a>
+                </li>
+                <li class="c-footer__subNavItem">
+                <a href="/about/group-company" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  グループ会社
+                </span>
+                </a>
+                </li>
+                <li class="c-footer__subNavItem">
+                <a href="/about/logo" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  社名・ロゴにかける想い
+                </span>
+                </a>
+                </li>
+
+            </ul>
+          </li>
+        </ul>
+        <ul class='c-footer__navList'>
+          <li class='c-footer__navItem'>
+            <a href="/business" class="c-footer__navLink js-textAnimTrigger" >
+            <span class='c-header__navText js-textSplit'>
+              事業情報
+            </span>
+            </a>
+
+            <ul class='c-footer__subNavList'>
+
+                <li class="c-footer__subNavItem">
+                <a href="/business/consulting" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  コンサルティング事業
+                </span>
+                </a>
+                </li>
+                <li class="c-footer__subNavItem">
+                <a href="/business/construction" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  建設土木事業
+                </span>
+                </a>
+                </li>
+                <li class="c-footer__subNavItem">
+                <a href="/business/system" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  システム開発事業
+                </span>
+                </a>
+                </li>
+                <li class="c-footer__subNavItem">
+                <a href="/business/human_resources" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  人材事業
+                </span>
+                </a>
+                </li>
+
+            </ul>
+          </li>
+        </ul>
+        <ul class='c-footer__navList'>
+          <li class='c-footer__navItem'>
+            <a href="/news" class="c-footer__navLink js-textAnimTrigger" >
+            <span class='c-header__navText js-textSplit'>
+              ニュース
+            </span>
+            </a>
+
+          </li>
+        </ul>
+        <ul class='c-footer__navList'>
+          <li class='c-footer__navItem'>
+            <a href="/ir" class="c-footer__navLink js-textAnimTrigger" >
+            <span class='c-header__navText js-textSplit'>
+              IR
+            </span>
+            </a>
+
+            <ul class='c-footer__subNavList'>
+                <li class="c-footer__subNavItem">
+                <a href="/ir/news" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  IRニュース
+                </span>
+                </a>
+                </li>
+                <li class="c-footer__subNavItem">
+                <a href="/ir/highlights" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  業績ハイライト
+                </span>
+                </a>
+                </li>
+                <li class="c-footer__subNavItem">
+                <a href="/ir/notice" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  電子公告
+                </span>
+                </a>
+                </li>
+                <li class="c-footer__subNavItem">
+                <a href="/ir/tanshin" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  IRライブラリ
+                </span>
+                </a>
+                </li>
+                <li class="c-footer__subNavItem">
+                <a href="/ir/calendar" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  IRカレンダー
+                </span>
+                </a>
+                </li>
+                <li class="c-footer__subNavItem">
+                <a href="/ir/individual" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  個人投資家の皆様へ
+                </span>
+                </a>
+                </li>
+                <li class="c-footer__subNavItem">
+                <a href="/ir/stock" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  株式・株主情報
+                </span>
+                </a>
+                </li>
+                <li class="c-footer__subNavItem">
+                <a href="/ir/governance" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  コーポレートガバナンス
+                </span>
+                </a>
+                </li>
+                <li class="c-footer__subNavItem">
+                <a href="/ir/disclosure_policy" class="c-footer__subNavLink js-textAnimTrigger" >
+                <span class='c-header__navSubText js-textSplit'>
+                  ディスクロージャーポリシー
+                </span>
+                </a>
+                </li>
+
+            </ul>
+          </li>
+        </ul>
+        <ul class='c-footer__navList'>
+          <li class='c-footer__navItem'>
+            <a href="/recruit" class="c-footer__navLink js-textAnimTrigger" >
+            <span class='c-header__navText js-textSplit'>
+              採用情報
+            </span>
+            </a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class='c-footer__bottom'>
+    <img src='/assets/itbook-corp/img/common/footer_bg2.webp' alt='' class='c-footer__bottomBg js-bottomBg' />
+    <button class='c-footer__pagetop js-textAnimTrigger js-pagetop'>
+      <span class='c-footer__pagetopText js-textSplit'>
+        PAGE TOP
+      </span>
+    </button>
+    <a href="/" class="c-footer__logo" >
+    <img src="https://www.saaf-hd.co.jp/assets/itbook-corp/img/common/logo.svg" class="js-upload-src" alt="SAAFホールディングス">
+    </a>
+
+    <div class='c-footer__loop'>
+      <ul class='c-footer__loopItems'>
+        <li class='c-footer__loopItem'>Support As A Foundation. Support As A Foundation.</li>
+        <li class='c-footer__loopItem'>Support As A Foundation. Support As A Foundation.</li>
+        <li class='c-footer__loopItem'>Support As A Foundation. Support As A Foundation.</li>
+        <li class='c-footer__loopItem'>Support As A Foundation. Support As A Foundation.</li>
+        <li class='c-footer__loopItem'>Support As A Foundation. Support As A Foundation.</li>
+        <li class='c-footer__loopItem'>Support As A Foundation. Support As A Foundation.</li>
+      </ul>
+    </div>
+    <div class='c-footer__wrap'>
+      <div class='c-footer__title'>
+        <img src="https://www.saaf-hd.co.jp/assets/itbook-corp/img/common/title.svg" class="js-upload-src u-desktop" alt="しなやかに、社会を支える。">
+        <img src="/assets/itbook-corp/img/common/title.svg" class="u-mobile" alt=" ">
+
+      </div>
+      <div class='c-footer__bottomNav'>
+        <ul class='c-footer__bottomList'>
+
+            <li class="c-footer__bottomItem">
+            <a href="/contact" class="c-footer__bottomLink js-textAnimTrigger" >
+            <span class='c-footer__bottomText js-textSplit'>
+              お問い合わせ
+            </span>
+            </a>
+            </li>
+            <li class="c-footer__bottomItem">
+            <a href="/policy" class="c-footer__bottomLink js-textAnimTrigger" >
+            <span class='c-footer__bottomText js-textSplit'>
+              サイトポリシー
+            </span>
+            </a>
+            </li>
+            <li class="c-footer__bottomItem">
+            <a href="/privacy" class="c-footer__bottomLink js-textAnimTrigger" >
+            <span class='c-footer__bottomText js-textSplit'>
+              個人情報保護方針<br>
+            </span>
+            </a>
+            </li>
+            <li class="c-footer__bottomItem">
+            <a href="/compliance" class="c-footer__bottomLink js-textAnimTrigger" >
+            <span class='c-footer__bottomText js-textSplit'>
+              企業方針
+            </span>
+            </a>
+            </li>
+
+        </ul>
+        <small class='c-footer__copy'>
+          Copyright(c) SAAF Holdings Co.,Ltd. All Rights Reserved.<br>
+        </small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+        <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js'></script>
+<script
+  src='https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js'
+></script>
+
+<script src='/assets/itbook-corp/js/template.js?20221230220707'></script>
+
+        <script src="https://cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js" integrity="sha384-DmE/PJ3PvpXS92Z4Sn7vSRTqJd0T/2xkGtNgm2JaZFczBOZdCf3XbZOwnRHDgjAA" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js" integrity="sha384-+ch8x/dgaV//v6Sa8m4v5+7KScnpCuxHqilN8njQ013CEKg3Fbd8Q3oN9tfpouLh" crossorigin="anonymous"></script><script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+            <script>
+                window.addEventListener("DOMContentLoaded", (event) => {
+                    const hlElements = document.querySelectorAll(".leadgrid-codehighlighter");
+                    if(hlElements){
+                        hlElements.forEach(elem => {
+                            elem.className = elem.dataset.language;
+                        });
+                        hljs.highlightAll();
+                        hljs.initLineNumbersOnLoad();
+                    }
+
+                    const imgCaptions = document.querySelectorAll(`.fr-img-space-wrap .fr-img-caption span[contenteditable="true"]`);
+                    if(imgCaptions){
+                        imgCaptions.forEach(elem => {
+                            elem.contentEditable = "false";
+                        });
+                    }
+
+                    // header高さのCSS変数を設定
+                    (function() {
+                        function updateHeaderHeight() {
+                            const header = document.querySelector("header");
+                            if (header) {
+                                const height = header.offsetHeight;
+                                document.documentElement.style.setProperty("--leadgrid-header-height", height + "px");
+                            }
+                        }
+                        updateHeaderHeight();
+                        window.addEventListener("resize", updateHeaderHeight);
+                    })();
+                });
+
+                // 画像読み込み後にも更新（header内の画像による高さ変化に対応）
+                window.addEventListener("load", function() {
+                    const header = document.querySelector("header");
+                    if (header) {
+                        document.documentElement.style.setProperty("--leadgrid-header-height", header.offsetHeight + "px");
+                    }
+                });
+            </script>
+        
+            <script>
+                window.addEventListener("DOMContentLoaded", function() {
+                    if (!("IntersectionObserver" in window)) return;
+                    const isYoutubeEmbed = function(resolvedSrc) {
+                        if (!resolvedSrc) return false;
+                        return resolvedSrc.indexOf("youtube.com/embed/") !== -1
+                            || resolvedSrc.indexOf("youtube-nocookie.com/embed/") !== -1;
+                    };
+                    const iframes = document.querySelectorAll("iframe");
+                    if (!iframes.length) return;
+                    const observer = new IntersectionObserver(function(entries, obs) {
+                        entries.forEach(function(entry) {
+                            if (!entry.isIntersecting) return;
+                            const iframe = entry.target;
+                            const src = iframe.dataset.src;
+                            if (src) {
+                                iframe.src = src;
+                                delete iframe.dataset.src;
+                            }
+                            obs.unobserve(iframe);
+                        });
+                    }, { rootMargin: "300px" });
+                    iframes.forEach(function(iframe) {
+                        if (iframe.dataset.src) return;
+                        const src = iframe.src;
+                        if (!src) return;
+                        if (!isYoutubeEmbed(src)) return;
+                        iframe.dataset.src = src;
+                        iframe.removeAttribute("src");
+                        observer.observe(iframe);
+                    });
+                });
+            </script>
+        <script type="text/javascript" src="https://sdk.gig.goleadgrid.com/section-assets/template_sections.js?88184b810f6faf14e3b3b5c92230d4c16674691f" defer></script>
+        
+    </body>
+</html>

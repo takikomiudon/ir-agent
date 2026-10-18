@@ -1,0 +1,165 @@
+{
+  "created_at": "2026-10-11T04:00:13.589239+00:00",
+  "universe_data_as_of": "2026-09-30",
+  "ordinary_share_count": 3695,
+  "seed_count": 3695,
+  "missing_codes": [],
+  "duplicate_codes": [],
+  "excluded_in_universe_types": "5桁の優先株・社債型種類株式7行。母集団の除外一覧は親担当が保存。",
+  "seed_verification": "discovery_only; official IR contact verification has not been performed for this complete dataset",
+  "files": {
+    "initial_seeds": "seeds.json",
+    "official_ipo_additions": "seed-additions-jpx-ipo.json",
+    "complete_seeds": "seeds-complete.json",
+    "initial_missing": "seed-missing.json",
+    "remaining_missing": "seed-missing-after-ipo.json",
+    "current_seeds": "seeds-current.json",
+    "current_seed_validation": "seed-current-validation.json",
+    "new_listing_evidence": "seed-new-listing-evidence.json",
+    "discovery_path_map": "seed-discovery-path-map.json"
+  },
+  "complete_seeds_sha256": "2c17a82e04d566572bfa82cc586eddd787f2e193e01356a242218f1e9eb67f5d",
+  "source_counts": {
+    "official_jpx_listing_link": 116,
+    "third_party_unverified": 3579
+  },
+  "sources": [
+    {
+      "name": "toushiro_20241008",
+      "url": "https://toushiro.com/data/list_20241008.xlsx",
+      "retrieved_at": "2026-10-11T03:55:56.638289+00:00",
+      "http_status": 200,
+      "sha256": "4b38f33868e7d8de1cfa3cbe7cf300825ce46ac7cb62e6beed4a5baf1b97c96e",
+      "snapshot": "evidence/discovery/toushiro-list_20241008.xlsx",
+      "response_body_sha256": "4b38f33868e7d8de1cfa3cbe7cf300825ce46ac7cb62e6beed4a5baf1b97c96e",
+      "archive_file_sha256": "4b38f33868e7d8de1cfa3cbe7cf300825ce46ac7cb62e6beed4a5baf1b97c96e",
+      "archive_format": "raw_response_body",
+      "response_body_archived": true
+    },
+    {
+      "name": "jpx_ipo_2026",
+      "url": "https://www.jpx.co.jp/listing/stocks/new/index.html",
+      "retrieved_at": "2026-10-11T03:58:42.612048+00:00",
+      "http_status": 200,
+      "sha256": "df7af48ee566c9d2d6cf50aa091b2ddd2b902368411c5d13dc39f9c04630f373",
+      "snapshot": "evidence/discovery/jpx-new-listings.html",
+      "response_body_sha256": "df7af48ee566c9d2d6cf50aa091b2ddd2b902368411c5d13dc39f9c04630f373",
+      "archive_file_sha256": "df7af48ee566c9d2d6cf50aa091b2ddd2b902368411c5d13dc39f9c04630f373",
+      "archive_format": "raw_response_body",
+      "response_body_archived": true
+    },
+    {
+      "name": "jpx_ipo_2025",
+      "url": "https://www.jpx.co.jp/listing/stocks/new/00-archives-01.html",
+      "retrieved_at": "2026-10-11T03:59:12.667702+00:00",
+      "http_status": 200,
+      "sha256": "bce6e5a781196c9f5f65eaab9ba4ab512c8ab2c46da57b492f3bd9aee1f11c0b",
+      "snapshot": "evidence/discovery/jpx-ipo-2025.html",
+      "response_body_sha256": "bce6e5a781196c9f5f65eaab9ba4ab512c8ab2c46da57b492f3bd9aee1f11c0b",
+      "archive_file_sha256": "bce6e5a781196c9f5f65eaab9ba4ab512c8ab2c46da57b492f3bd9aee1f11c0b",
+      "archive_format": "raw_response_body",
+      "response_body_archived": true
+    },
+    {
+      "name": "jpx_ipo_2024",
+      "url": "https://www.jpx.co.jp/listing/stocks/new/00-archives-02.html",
+      "retrieved_at": "2026-10-11T03:59:12.421414+00:00",
+      "http_status": 200,
+      "sha256": "180eb4fa44c84c7e1c4f81f0ee1a5c074aff85a604f999df2aed588fab6f52fd",
+      "snapshot": "evidence/discovery/jpx-ipo-2024.html",
+      "response_body_sha256": "180eb4fa44c84c7e1c4f81f0ee1a5c074aff85a604f999df2aed588fab6f52fd",
+      "archive_file_sha256": "180eb4fa44c84c7e1c4f81f0ee1a5c074aff85a604f999df2aed588fab6f52fd",
+      "archive_format": "raw_response_body",
+      "response_body_archived": true
+    },
+    {
+      "name": "eightban_prime_20260331",
+      "url": "https://memo.eightban.com/kabu/marketsprimeurl",
+      "retrieved_at": "2026-10-11T03:55:06.222171+00:00",
+      "http_status": 200,
+      "sha256": "8bb369c6584d2b73dfb274cf908bf06be5da3a08be6f1bbeb18638b020075537",
+      "snapshot": "evidence/discovery/eightban-prime-url.json",
+      "response_body_sha256": "8bb369c6584d2b73dfb274cf908bf06be5da3a08be6f1bbeb18638b020075537",
+      "archive_file_sha256": "c95f1f18dd55d06a200bd4519bb60e90e592724476198bdb080fe6209dad0f5c",
+      "archive_format": "extracted_html_evidence_json",
+      "response_body_archived": false,
+      "hash_note": "sha256/response_body_sha256 is the original HTTP response body hash recorded by the capture tool. archive_file_sha256 is the stored extraction JSON hash. The original raw HTML bytes were not saved by that initial tool; its extracted visible text, links and non-hidden form fields are preserved."
+    }
+  ],
+  "archived_at": "2026-10-11T04:04:29.087580+00:00",
+  "current_universe_as_of": "2026-10-11",
+  "current_seed_count": 3686,
+  "current_seeds_sha256": "a82c5e1d3c59fb2f1ad6617c01314b6c12013a64d3dbb8fcbeed4b31b2e65d5c",
+  "archive_files": [
+    {
+      "snapshot": "evidence/discovery/toushiro-list_20241008.xlsx",
+      "archive_file_sha256": "4b38f33868e7d8de1cfa3cbe7cf300825ce46ac7cb62e6beed4a5baf1b97c96e",
+      "byte_count": 240442
+    },
+    {
+      "snapshot": "evidence/discovery/jpx-new-listings.html",
+      "archive_file_sha256": "df7af48ee566c9d2d6cf50aa091b2ddd2b902368411c5d13dc39f9c04630f373",
+      "byte_count": 154807
+    },
+    {
+      "snapshot": "evidence/discovery/jpx-ipo-2025.html",
+      "archive_file_sha256": "bce6e5a781196c9f5f65eaab9ba4ab512c8ab2c46da57b492f3bd9aee1f11c0b",
+      "byte_count": 215074
+    },
+    {
+      "snapshot": "evidence/discovery/jpx-ipo-2024.html",
+      "archive_file_sha256": "180eb4fa44c84c7e1c4f81f0ee1a5c074aff85a604f999df2aed588fab6f52fd",
+      "byte_count": 290166
+    },
+    {
+      "snapshot": "evidence/discovery/eightban-prime-url.json",
+      "archive_file_sha256": "c95f1f18dd55d06a200bd4519bb60e90e592724476198bdb080fe6209dad0f5c",
+      "byte_count": 265658
+    },
+    {
+      "snapshot": "evidence/discovery/toushiro-list-meta.json",
+      "archive_file_sha256": "3b00a54e293e9337a7de0bf74d44b06b2f04e217399e6dd097629871cfa9e748",
+      "byte_count": 354
+    },
+    {
+      "snapshot": "evidence/discovery/toushiro-url-list.json",
+      "archive_file_sha256": "e68c68c647250f7317b547633b33c4c58a2547bdedb04a48aa339426c577f100",
+      "byte_count": 3674
+    },
+    {
+      "snapshot": "evidence/discovery/toushiro-extracted-rows.json",
+      "archive_file_sha256": "fed7aef53f544c239b2fbea60bc41c18ea21f91d525efd62a3daba534305d7db",
+      "byte_count": 656577
+    },
+    {
+      "snapshot": "evidence/discovery/jpx-new-listings-raw-meta.json",
+      "archive_file_sha256": "bf96921d169d0578ca3c7ac7d406f26f1b7be1d9ee239ab4771c4f46596d7b37",
+      "byte_count": 270
+    },
+    {
+      "snapshot": "evidence/discovery/jpx-new-listings.json",
+      "archive_file_sha256": "48c4702d973ab75028e52bdfb94cccde468370b38230f4b25b8b3c3169c2a355",
+      "byte_count": 62097
+    },
+    {
+      "snapshot": "evidence/discovery/jpx-ipo-2025-meta.json",
+      "archive_file_sha256": "0c19e3df2c770e1375353905fa35095797deee6541903acec5988749cb0cd522",
+      "byte_count": 279
+    },
+    {
+      "snapshot": "evidence/discovery/jpx-ipo-2024-meta.json",
+      "archive_file_sha256": "df548e0f9c7cc9030821ef4c2f31bf735ff3580379af3185a94ea3742dafd613",
+      "byte_count": 279
+    },
+    {
+      "snapshot": "evidence/discovery/jpx-ipo-company-urls.json",
+      "archive_file_sha256": "2ce4937f7539c402e91a0d2e25e10d020e8b8f3dd485416c1aec2122df72473e",
+      "byte_count": 125267
+    }
+  ],
+  "baseline_count_scope": "seed_count, ordinary_share_count and source_counts describe the 2026-09-30 baseline seeds-complete.json. current_seed_count and current_source_counts describe seeds-current.json as of 2026-10-11.",
+  "current_source_counts": {
+    "third_party_unverified": 3567,
+    "official_jpx_listing_link": 119
+  }
+}

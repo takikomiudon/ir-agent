@@ -1,0 +1,100 @@
+{
+  "recorded_at": "2026-10-16T12:51:37.398192+00:00",
+  "status": "proposal_ready_for_independent_review_not_applied",
+  "before": [
+    {
+      "target": ".agents/skills/jp-equity-ir/SKILL.md",
+      "before_sha256": "1fc19003146ab2bf216fc514071918b56918bd2d1bb47416cc1ec0b5a07b4959",
+      "before_file": "before/.agents/skills/jp-equity-ir/SKILL.md",
+      "proposed_after_sha256": "6c8bc50975b2c1ec0314a0ddc575c6106c4ad696f5da3086e9e52eec608baada",
+      "change": "one paragraph insertion only",
+      "added_paragraph": "公開Q&Aを使うときは[読解の手順](../../../docs/public-qa-reading.md)で、質問者の前提と会社回答、当時予想と将来中計の期・人員範囲、採用flowと人員stockを分ける。既答部分を除き、回答が変え得る比較や既存入力の意味だけを特定する。これは公開研究の手順で、正式質問の登録や金融入力の採用を増やすものではない。"
+    },
+    {
+      "target": "docs/ir-question-preparation.md",
+      "before_sha256": "c5e881e0a0874edfc28dcc67d8d48c69600a4916254131477f71b961218d7a7f",
+      "before_file": "before/docs/ir-question-preparation.md",
+      "proposed_after_sha256": "7bde8289aa6925c8f1ba535c39f8c4162115802ac89b889e43aa39257a7a9087",
+      "change": "one paragraph insertion only",
+      "added_paragraph": "公開Q&Aの具体的な読み分けは[読解の手順](public-qa-reading.md)を使う。質問者の前提を会社の認証済み数値へ移さず、当時業績予想と将来中計、採用flowと人員stockの違いを揃えてから比較する。既答を再質問から除き、残る定義がどの比較/既存入力を変えるかに絞る。"
+    }
+  ],
+  "new_doc": {
+    "proposed_file": "proposed/docs/public-qa-reading.md",
+    "target": "docs/public-qa-reading.md",
+    "sha256": "894a0ad1e392b0e050bfa83bb17da999ad9668978a5f0c2e997af7f98f24db2b",
+    "target_existed_at_prepare": false
+  },
+  "patch": {
+    "file": "minimal-links.patch",
+    "sha256": "20f1b5c758693bb9dff046ba5439ed0da390bc87abe9e23784558dedb0d6f278",
+    "modified_shared_targets": [
+      ".agents/skills/jp-equity-ir/SKILL.md",
+      "docs/ir-question-preparation.md"
+    ],
+    "hunks": 2,
+    "new_paragraphs": 2,
+    "production_files_changed": 0
+  },
+  "dry_run": {
+    "command": "patch --batch --dry-run -p1 -i minimal-links.patch",
+    "scope": "disposable temporary copies of before files only; shared targets untouched",
+    "returncode": 0,
+    "stdout": "checking file .agents/skills/jp-equity-ir/SKILL.md\nchecking file docs/ir-question-preparation.md\n",
+    "stderr": ""
+  },
+  "meaning_checklist": [
+    {
+      "check": "質問者OJT/41%/40名と会社回答の帰属を分離",
+      "result": "pass",
+      "examples": [
+        "Q3-question-OJT-not-confirmed",
+        "Q8-future-plan-distinct-scope",
+        "Q9-question-hiring-premise-and-intention"
+      ]
+    },
+    {
+      "check": "当時予想/将来中計/採用flowと人員stockの期/範囲を分離",
+      "result": "pass",
+      "examples": [
+        "Q7-AI-staffing-assumption",
+        "Q8-future-plan-distinct-scope",
+        "Q9-question-hiring-premise-and-intention"
+      ]
+    },
+    {
+      "check": "4318翌期費用見通しを当期実績や完全税後bridgeへ移さない",
+      "result": "pass",
+      "examples": [
+        "4318-QA-FY2026-annual-Q2-FY2027-SG&A-cost-outlook"
+      ]
+    },
+    {
+      "check": "6200May11文書/会合とMay13URLを区別",
+      "result": "pass",
+      "examples": [
+        "identity-date-edited-QA"
+      ]
+    },
+    {
+      "check": "公開既答を再質問から除き残余の比較/入力の意味へ絞る",
+      "result": "pass"
+    },
+    {
+      "check": "新normalize/金融contract必須field・universal gate・値/式/予測/送信を足さない",
+      "result": "pass"
+    },
+    {
+      "check": "著者直接投資規則とproject適用を分離、他既存著者5技能/license不変更",
+      "result": "pass"
+    }
+  ],
+  "operational_checks": {
+    "current_shared_before_SHA_still_match": true,
+    "old_source_and_author_pins_still_match": true,
+    "quote_pointers_and_selected_source_substrings_match": true,
+    "only_new_research_folder_written": true,
+    "GET_DB_Store_CLI_financial_calculation": 0
+  },
+  "apply_conditions": "Root independently reviews and applies after source ingest/qual phase; not performed here. Compare current target beforeSHA first. If changed, do not blindly overwrite—rebuild/review the minimal insertion against latest bytes. After apply copy newdoc and resolve links, preserve author originals/license/oldproof. No new permission gate is proposed."
+}

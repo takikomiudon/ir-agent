@@ -1,0 +1,109 @@
+{
+  "reviewed_at": "2026-10-15T22:52:35.512914+00:00",
+  "reviewer": "delegated independent counter-review; not result writer",
+  "status": "no_blocking_issue_found_in_bounded_review",
+  "reviewed_result_file": "research/ir-structured-facts-qualitative-review-2026-10-15/135A/result.json",
+  "reviewed_result_sha256": "35052f43e982076e8a023fd9a3a6903453a75f665552ea3909f9d999becc7ab2",
+  "worker_packet_file": "research/ir-structured-facts-qualitative-review-2026-10-15/135A/worker-packet.json",
+  "worker_packet_file_sha256": "9feda8df182ed65a0c1166d6b076940b886b79b457024b1d7d463de1f2412a11",
+  "canonical_packet_sha256": "aadabf311d86082515751bedcb2d75c1e30b92b26eb3d8956753e97a25f3f3ad",
+  "case_reference": {
+    "path": "research/ir-research-monitoring-integration-2026-10-15/135A-combined-review-checkpoint.json",
+    "sha256": "118e52687c5eb7afc12d276794c618a271e92d1c059cf2b753df10049cf12e1e"
+  },
+  "prior_review": null,
+  "semantic_findings": [
+    "元caseが参照するauthor-condition-followup/case-record-v2.jsonの3候補と照合。FY28条件は拠点立上げ遅延AND継続顧客売上比率45%近辺頭打ちであり、結果はOR化・57.5%の顧客維持率/ARR化・近辺幅/観測期間の補完・条件付きCAGR適用をしていない。FY29の利益率/顧客数目安を現中間の達成へ変えていない。",
+    "非連結中間実績EPS26.06/営業利益409百万円と会社通期予想EPS94.85/営業利益1449百万円/DPS0.00を区別。現金及び預金と現金同等物138百万円を加算せず、BS比較期427とCF比較期89も分けている。",
+    "CF4factはCFO223/減価償却30/有形固定資産取得△100/売上債権・契約資産調整154百万円。rationale内の小計425は同じsource内の引用表にもあり、第5の正規化factや再加算にはしていない。実績CFO≠正常将来FCFF、期末株数10256000を将来分母へ流用せず、自己株ダッシュを0補完していない。"
+  ],
+  "contract_checks": {
+    "five_top_level_fields": true,
+    "pending_each_exactly_once": true,
+    "source_ID_and_snapshot_SHA": true,
+    "all_quotes_direct_content_substrings": true,
+    "same_issue_and_pending_only_observation_evidence": true,
+    "read_state_and_outcome_enum": true,
+    "not_yet_due_management_date_retained": true,
+    "new_fiscal_disclosure_or_forecast_success_claimed": false,
+    "financial_adoption_or_new_action_claimed": false
+  },
+  "source_quote_trace": [
+    {
+      "source_id": "disclosed-facts:3a6c2eaebf52cba09b060669bfb00dea510dc16d5be6fb370045e9b2e8171911",
+      "snapshot_sha256": "03b567961d1734455579bda1578f6834d765bfba225f530d52f246a36223c75d",
+      "source_content_sha256": "94b252506a625471c07ec5a9d364248835476fdc8f8e4ca9c41d58f7ffa7bccc",
+      "quote_source_file": "research/ir-structured-facts-qualitative-review-2026-10-15/135A/worker-packet.json",
+      "quote_source_location": "sources[id=disclosed-facts:3a6c2eaebf52cba09b060669bfb00dea510dc16d5be6fb370045e9b2e8171911].content",
+      "quote_character_start": 2090,
+      "quote_character_end": 2753,
+      "quote_exact_substring": true,
+      "fact_ids": [
+        "vrain135a-2027interim-basic-eps",
+        "vrain135a-2027fy-company-eps",
+        "vrain135a-2027interim-operating-income",
+        "vrain135a-2027fy-company-operating-income",
+        "vrain135a-2027fy-company-annual-dividend"
+      ],
+      "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb"
+    },
+    {
+      "source_id": "disclosed-facts:882b2be82ecdf05c555cf2239653930a30291528ed656799a152554f118b1598",
+      "snapshot_sha256": "7a7ac5c6845dc78825f774b6853d36b76296ad184754c4527362bbd7b511c267",
+      "source_content_sha256": "4ae748e7a21d5debf415d4b0108f768e9e6e8021d78e62db5bc4ef35f574a644",
+      "quote_source_file": "research/ir-structured-facts-qualitative-review-2026-10-15/135A/worker-packet.json",
+      "quote_source_location": "sources[id=disclosed-facts:882b2be82ecdf05c555cf2239653930a30291528ed656799a152554f118b1598].content",
+      "quote_character_start": 2696,
+      "quote_character_end": 3102,
+      "quote_exact_substring": true,
+      "fact_ids": [
+        "135A-interim-BS-cash-and-deposits",
+        "135A-interim-CF-note-cash-and-equivalents"
+      ],
+      "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb"
+    },
+    {
+      "source_id": "disclosed-facts:8d3e2fabf17b9e9476c9d99e5237ca7c39fd707df13927c7d19ba994881ab224",
+      "snapshot_sha256": "140be3f2c3a76cea6eafc0e5db967d96172d801be3254e656ca56404556dc1ce",
+      "source_content_sha256": "935110ce07611b3beafc874112e3314c376fbf11648381b6c9556684fbb9bf3e",
+      "quote_source_file": "research/ir-structured-facts-qualitative-review-2026-10-15/135A/worker-packet.json",
+      "quote_source_location": "sources[id=disclosed-facts:8d3e2fabf17b9e9476c9d99e5237ca7c39fd707df13927c7d19ba994881ab224].content",
+      "quote_character_start": 211,
+      "quote_character_end": 1608,
+      "quote_exact_substring": true,
+      "fact_ids": [
+        "vrain135a-2027interim-operating-cashflow",
+        "vrain135a-2027interim-depreciation-cf-adjustment",
+        "vrain135a-2027interim-ppe-acquisition-cashflow",
+        "vrain135a-2027interim-receivables-contract-assets-cf-adjustment"
+      ],
+      "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb"
+    },
+    {
+      "source_id": "disclosed-facts:c7be36460e1fc23dd43cc82acdcb407ea129dc6f27049e9e956f880cae340026",
+      "snapshot_sha256": "7bca1fed6190c1cca52977fe2bb5f06eacb819fce78666c1454b7a4e48120887",
+      "source_content_sha256": "04cf3155633464dcb857bd4d380f64e324ddc0486405e90fe8360ba9b43cd286",
+      "quote_source_file": "research/ir-structured-facts-qualitative-review-2026-10-15/135A/worker-packet.json",
+      "quote_source_location": "sources[id=disclosed-facts:c7be36460e1fc23dd43cc82acdcb407ea129dc6f27049e9e956f880cae340026].content",
+      "quote_character_start": 211,
+      "quote_character_end": 483,
+      "quote_exact_substring": true,
+      "fact_ids": [
+        "135A-20260831-issued-common-shares-including-treasury"
+      ],
+      "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb"
+    }
+  ],
+  "limits": [
+    "保存済みpacket/resultと凍結caseの限定点検であり、元PDF全文の再監査・金融意味の独立認証ではない。",
+    "leaseの現在有効性・完了権限をこのfile確認で保証しない。rootが実行時に既存APIで確認する。"
+  ],
+  "actual_DB_operations": 0,
+  "Store_connections": 0,
+  "network_requests": 0,
+  "result_edits": 0,
+  "specific_condition_reference": {
+    "path": "research/ir-case-studies-2026-10-15/135A/author-condition-followup/case-record-v2.json",
+    "sha256": "2e566e72a04a89938357220715a10603a51ce1ce744207599ac921de6e81328b"
+  }
+}

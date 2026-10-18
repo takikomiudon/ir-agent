@@ -1,0 +1,100 @@
+{
+  "security_code": "4772",
+  "company_name": "ＳＭ　ＥＮＴＥＲＴＡＩＮＭＥＮＴ　ＪＡＰＡＮ",
+  "market": "グロース（内国株式）",
+  "jpx_sector": "情報・通信業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.streammedia.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T12:53:14.592663+00:00",
+  "completed_at": "2026-10-11T12:54:11.639824+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/4772/20261011T125314592705Z/01.json",
+      "url": "https://smej.co.jp/",
+      "retrieved_at": "2026-10-11T12:54:00.178027+00:00",
+      "quote": "INVESTOR RELATIONS IR情報 株式会社SM ENTERTAINMENT JAPANの株式情報、IRライブラリ、経営計画などの株主様・投資家向け情報をご覧いただけます。 IR情報を見る",
+      "role": "issuer_identity"
+    },
+    {
+      "snapshot": "evidence/4772/20261011T125314592705Z/01.json",
+      "url": "https://smej.co.jp/",
+      "retrieved_at": "2026-10-11T12:54:00.178027+00:00",
+      "quote": "CONTACT お問い合わせ",
+      "role": "general_contact_link_ir_purpose_unproven",
+      "source_link_url": "https://smej.co.jp/contact/"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.streammedia.co.jp/",
+      "final_url": "https://smej.co.jp/",
+      "snapshot": "evidence/4772/20261011T125314592705Z/01.json",
+      "retrieved_at": "2026-10-11T12:54:00.178027+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "現公式発行体名を確認したが取得ホーム1頁でIRメール/フォーム受付は未実証。未取得と窓口不存在を区別。推測メールは記載しない。",
+    "保存済み公式ページ・実フォーム欄を手動点検。送信・配信成功・回答実績は未確認。"
+  ],
+  "discovery": {
+    "security_code": "4772",
+    "official_url": "https://www.streammedia.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ストリームメディアコーポレーション",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/4772/20261011T125314592705Z/01.json",
+      "normalized_name": "smentertainmentjapan",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 5,
+  "previous_attempts": [
+    "attempts/4772/20261011T045047509299Z.json",
+    "attempts/4772/20261011T125411639957Z.json"
+  ],
+  "manual_followup_candidates": [
+    {
+      "url": "https://smej.co.jp/contact/",
+      "quote": "CONTACT お問い合わせ",
+      "source_link_label": "お問い合わせ",
+      "method": "GET",
+      "IR_channel_verified": false,
+      "reason": "公式実contact。音楽/ファン/会員/採用と金融IRの区分、現発行体、実質問/返信欄を未確認から点検する。",
+      "parent_snapshot": "evidence/4772/20261011T125314592705Z/01.json"
+    },
+    {
+      "url": "https://smej.co.jp/ir/faq/",
+      "quote": "よくあるご質問",
+      "source_link_label": "よくあるご質問",
+      "method": "GET",
+      "IR_channel_verified": false,
+      "reason": "公式金融IRの実FAQ href。公開IR質問受付・宛先・回答/個人条件の案内を追加確認する。",
+      "parent_snapshot": "evidence/4772/20261011T125314592705Z/01.json"
+    }
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_services",
+    "reviewed_at": "2026-10-11T13:16:56.761938+00:00",
+    "notes": "SM ENTERTAINMENT JAPANの現公式名・株主投資家向けIR案内をホームで確認したが、保存成功はホーム1頁のみ、問い合わせ本体や実IR返信/質問欄・公開IRメールは未取得でU。音楽アーティスト/ファンクラブ/ライブ/旅行/採用の問い合わせをIR金融質問に移さず、公式実contactとIR FAQの2hrefだけ追加候補に記録。",
+    "attempted_at_reviewed": "2026-10-11T12:53:14.592663+00:00",
+    "saved_evidence_only": true
+  }
+}

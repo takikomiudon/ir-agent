@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "case_id": "4318-reported-annual-per-share-basis-monitor",
+  "company_id": "jp:4318",
+  "company_name": "株式会社クイック",
+  "issue_id": "4318-annual-EPS-BPS-and-common-share-basis",
+  "recorded_at": "2026-10-16T10:25:04.619805+00:00",
+  "preparation_status": "file_only_not_registered_or_bootstrapped",
+  "purpose": "報告年次EPS/BPSと普通株basisを既存外部参考式の仕様に比較し新保存開示で継続点検。会社全体の投資thesisではない。",
+  "author_and_project_boundary": {
+    "implementation_author": "maxgfr/crible maintainers",
+    "fixed_commit": "00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7",
+    "formula": "sqrt(22.5 × EPS × BVPS)",
+    "positive_guard": "EPS>0 AND BVPS>0",
+    "original_Graham_complete_rules_adopted": false,
+    "external_author_recommends_4318": false,
+    "limits": "既存純式2inputs仕様と日本原典mappingを区別。式計算/金融採用は今回しない。"
+  },
+  "conditions": [
+    {
+      "id": "C1",
+      "topic": "報告年次EPSの利益・期間と予想/個別の区別",
+      "author_rule": "annual既定のEPS/平均株数系を参照。正値guardは式の定義域。四半期年率化/正常利益化は自動実行しない。",
+      "company_candidate": "日本基準連結基本EPS74.11円、2025-04-01〜2026-03-31。p19普通株利益4,158,976千円/平均56,121千株の説明を保持。",
+      "compare_on_new_saved_source": "年次/四半期累計/予想、連結/個別、利益段階、単位・対象期の訂正や基準変更を照合。",
+      "do_not_substitute": [
+        "当時会社guideEPS50.00",
+        "個別EPS66.80",
+        "丸め親利益や別精度株数による逆算",
+        "希薄化dashの0化"
+      ],
+      "status": "reported_candidate_not_meaning_or_financial_adoption"
+    },
+    {
+      "id": "C2",
+      "topic": "BPS普通株範囲・ESOP平均対末と分割調整",
+      "author_rule": "BVPSの期末持分/株数優先とEPS平均分母を区別。provider equity列と日本会計名の同一性は別照合。",
+      "company_candidate": "2026-03-31連結BPS345.24円の直接表示。2025-12-01普通株1→3splitを前年度期首に実施と仮定し両期EPS/BPS/株数が既調整。二重調整なし。",
+      "compare_on_new_saved_source": "ESOP自己株控除のBPS末/EPS平均、株式異動/訂正・持分範囲/対象日/表示精度を照合。p2平均56,121,515株とp19平均56,121千株は同精度でない。ESOPも期末419,052株/平均419,811株とp19各419千株を区別。",
+      "do_not_substitute": [
+        "個別BPS282.57",
+        "純資産19,379百万円と自己資本19,375百万円の無条件同一視",
+        "総純資産から株数を推定してBPS再計算",
+        "追加3倍/3分の1split調整"
+      ],
+      "status": "direct_BPS_candidate_detailed_numerator_not_reconstructed"
+    },
+    {
+      "id": "C3",
+      "topic": "後日公表比較と価格の別入力・式の限界",
+      "author_rule": "価格関連比較はlatest fiscal periodだけで過去行へbackdateしない。正値式と価格選定/金融政策を区別。",
+      "company_candidate": "年次資料は2026-04-30公表の過去basis。後発Q1literalは一覧で所在だけ確認し本文未取得。",
+      "compare_on_new_saved_source": "後日訂正/資本異動/株式基準・最新期を元候補へ比較。価格を使う場合は別資料で実際の通貨/価格日/時刻精度/対象株式を確認。上海子会社の当期連結除外印字を期間不変保証へ変えない。",
+      "limits": "価格/予想現在維持/正常利益/金融policy/IR価値は未認証。負/0/欠損はこの式適用の保留で会社永久投資除外/売却ではない。",
+      "status": "price_and_financial_adoption_unset"
+    }
+  ],
+  "candidate_inputs_only": {
+    "eps_jpy": {
+      "value": "74.11",
+      "kind": "reported_annual",
+      "start": "2025-04-01",
+      "end": "2026-03-31"
+    },
+    "book_value_per_share_jpy": {
+      "value": "345.24",
+      "kind": "reported_position",
+      "as_of": "2026-03-31"
+    },
+    "unit": "JPY-per-share",
+    "split_already_adjusted": true,
+    "normal_earnings_assumed": false,
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "calculation_executed_here": false
+  },
+  "reading_scope": {
+    "full_original_pages": 25,
+    "root_accepted_meaning_image_pages": [
+      1,
+      2,
+      19
+    ],
+    "TOC_locator_only_page": 3,
+    "other_pages_unread": true,
+    "derived_two_facts_same_original_not_independent_evidence": true,
+    "bootstrap_reviews": [],
+    "future_pending_plan": "root実保存/分類後の正当packetに原+派生2sourceが含まれる想定。実DB/queue未確認で件数を保証しない。"
+  },
+  "management_review": null,
+  "management_note": "準備はnull。rootが実登録時に既存Anthropic四半期レビュー適応の内部管理日を別actual入力へ設定する場合も、本票を書換えず会社予定/売却期限と分離する。",
+  "next_public_checks": [
+    "後発Q1/訂正/資本異動が正当に保存された場合、同じC1〜C3へ比較。今回新GETや未読頁追加をしない。"
+  ],
+  "financial_and_IR_state": {
+    "actual_DB_firstsave": null,
+    "DB_state_checked": false,
+    "native_case_version": null,
+    "job_or_CAS": null,
+    "price": null,
+    "financial_policy": null,
+    "forecast": null,
+    "valuation_reference_number": null,
+    "financial_answer_branches": null,
+    "IR_question_priority": 0,
+    "IR_value": "unproven",
+    "send_ready": false,
+    "investment_action": null
+  }
+}

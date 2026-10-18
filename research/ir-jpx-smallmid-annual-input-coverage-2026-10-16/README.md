@@ -1,0 +1,13 @@
+# 固定23社：年次入力coverageとqueue進捗overlay v2
+
+公表順23社の有限な対象経路は全て着手済みで、未着手企業は0。年次原典取得7社、静的HTMLに対象年次PDF literalなし14社、年次literalはあるが既存host保留1社（8704）、旧feed503で終了1社（5480）だった。これは全社のPDF本文を試した、資料が存在しない、全財務調査が完了した、という意味ではない。14社には非財務PDFがある場合もある。
+
+原典取得7社は1518・1975・2929・3817・4318・6200・6814。意味確認頁・年度/直接EPS/BPS・ordinary平均/期末の注意はJSONの各社annual_sourceに、原資料/引用/manifest/受入receiptへの固定参照と共に保存した。原全冊抽出と限定頁読解を分け、会社予想や現在株式basisへ読み替えない。2929は後発訂正と原本を別sourceで保持している。
+
+workerfreeze済み当該年次2値の構造化は7社14factsで、root受入済み6社12factsと1518のroot受入待ち1社2factsを区別した。1518派生のfreeze通知と固定SHAを照合して今回pinへ含めた。snapshot後のroot受入を先取りしない。実DBで当該年次原典と派生ペアが完全一致保存済みなのは1975・2929・3817・4318の4社。1518新年次・6200/6814の原/派生はfile-onlyで、1518には別の既存監視caseがある。cohort内native caseは1518・1975・2929・3817・4318・5480の6社であり、年次資料の取得社数と混同しない。
+
+固定work-queue.jsonの23行・順序・内容は一切変更していない。progress-overlay-v2.jsonは旧rowsへのSHA/pointer/個別canonicalSHA参照と別code-key mapping、coverage.csvは同じ公表順。旧queueの時点付きdocs/CLI等pinを現在値へ書き換えず、今回必要な凍結済み会社成果だけを参照した。投資順位や現在JPX構成の認証ではない。
+
+実DBはmain SHA9e71dc753365d105df1235e50395dc39d909383fc53f0e9d87069fe3937ebf92、221sources/220分類/130完了job/30head59version170readsの読取専用snapshot。mode=ro・query_only・closingを用い、rootはfreezeまで書込みを保留した。当該sourceの完全一致/分類/保存来歴とcaseの既読IDを照合したが、公開性全DAGや金融意味を新たに認定したわけではない。
+
+次のtask/ownerは各行に1つだけ。6200/6814はroot実接続準備、1518は新年次2表示のroot受入待ち、既存caseは新根拠又は管理日で比較。閉じた動的一覧・8704host保留・5480旧503を未試行に戻して再探索しない。欠損欄は空/nullで、0・負値・式適用外や会社投資除外へ変えない。今回GET・DB/Store/API/CLI・個社旧成果・code/docs/index変更0。

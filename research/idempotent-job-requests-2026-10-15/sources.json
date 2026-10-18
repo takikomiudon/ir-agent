@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T03:46:44.715349+00:00",
+  "sources": [
+    {
+      "source_id": "idempotency-01",
+      "requested_url": "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
+      "retrieved_at": "2026-10-15T03:44:23.868701+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_file": "raw/9d581a2c3191890c012ac6dffdb431c3446e0759e742ec79fbd3f9b76ffcfe46",
+      "raw_sha256": "9d581a2c3191890c012ac6dffdb431c3446e0759e742ec79fbd3f9b76ffcfe46",
+      "byte_count": 455581,
+      "text_file": "01.txt",
+      "text_sha256": "e6d820ca591abde6f45b72b42d23fcaac5ac925e3b1f9eebaec93a8cfd1c5ed6",
+      "snapshot": "01.json",
+      "title": "Making retries safe with idempotent APIs",
+      "author_or_organization": "Malcolm Featonby / Amazon Builders’ Library",
+      "published_at": null,
+      "publication_date": null,
+      "snapshot_sha256": "7c4e986909339b9d4b8ae9cb6c41bc7d79658616017e64007fdb409865720148",
+      "snapshot_title_note": "Saved HTML title extraction is references-details-empty; curated title is identified by visible article heading. Original snapshot unchanged.",
+      "initial_retrieval_preserved": true,
+      "redirects_followed": 0,
+      "retry_count": 0,
+      "text_extraction_method": "existing research_ir_universe.Page visible text with whitespace normalization; raw bytes separately retained. Quotes match the saved extraction, not raw HTML markup."
+    },
+    {
+      "source_id": "idempotency-02",
+      "requested_url": "https://google.aip.dev/155",
+      "retrieved_at": "2026-10-15T03:44:24.304986+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_file": "raw/b3910f3fba876eabbea6c1d45ba20163adf1d7a497c1be03cdf3f57a9a8f746a",
+      "raw_sha256": "b3910f3fba876eabbea6c1d45ba20163adf1d7a497c1be03cdf3f57a9a8f746a",
+      "byte_count": 28316,
+      "text_file": "02.txt",
+      "text_sha256": "32d78066b225bf52843a0a70f1793b625159dcd02c324aa90c4d84265812dac6",
+      "snapshot": "02.json",
+      "title": "AIP-155: Request identification",
+      "author_or_organization": "Google API Improvement Proposals",
+      "published_at": null,
+      "publication_date": null,
+      "snapshot_sha256": "04ad2255a510651a5408c3eb9c7465a48acd319f4c87e98735173661d8866b55",
+      "snapshot_title_note": null,
+      "initial_retrieval_preserved": true,
+      "redirects_followed": 0,
+      "retry_count": 0,
+      "text_extraction_method": "existing research_ir_universe.Page visible text with whitespace normalization; raw bytes separately retained. Quotes match the saved extraction, not raw HTML markup."
+    }
+  ],
+  "quotes": [
+    {
+      "id": "aws-author",
+      "source_id": "idempotency-01",
+      "quote": "Introduction By Malcolm Featonby | PDF",
+      "location": {
+        "representation": "saved extracted visible HTML text",
+        "text_file": "01.txt",
+        "section": "Introduction",
+        "character_start": 4956,
+        "character_end": 4994,
+        "offset_unit": "Unicode code points, zero-based, end-exclusive",
+        "pdf_page": null
+      },
+      "verification": "exact substring at stored character offsets"
+    },
+    {
+      "id": "aws-id-intent",
+      "source_id": "idempotency-01",
+      "quote": "At Amazon, our preferred approach is to incorporate a unique caller-provided client request identifier into our API contract. Requests from the same caller with the same client request identifier can be considered duplicate requests and can be dealt with accordingly.",
+      "location": {
+        "representation": "saved extracted visible HTML text",
+        "text_file": "01.txt",
+        "section": "Reducing client complexity",
+        "character_start": 10760,
+        "character_end": 11027,
+        "offset_unit": "Unicode code points, zero-based, end-exclusive",
+        "pdf_page": null
+      },
+      "verification": "exact substring at stored character offsets"
+    },
+    {
+      "id": "aws-parameters-not-intent",
+      "source_id": "idempotency-01",
+      "quote": "Any request that looks exactly like a previous request is considered a duplicate. However, we have found that this approach doesn’t work in all cases. For example, it might be reasonable to assume that two exact duplicate requests from the same caller to create an Amazon DynamoDB table received very close together in time are duplicates of the same request. However, if those requests were for launching an Amazon EC2 instance, then our assumption might not hold. It’s possible that the caller actually wants two identical EC2 instances. ",
+      "location": {
+        "representation": "saved extracted visible HTML text",
+        "text_file": "01.txt",
+        "section": "Reducing client complexity",
+        "character_start": 10220,
+        "character_end": 10760,
+        "offset_unit": "Unicode code points, zero-based, end-exclusive",
+        "pdf_page": null
+      },
+      "verification": "exact substring at stored character offsets"
+    },
+    {
+      "id": "aws-atomic",
+      "source_id": "idempotency-01",
+      "quote": "An important consideration is that the process that combines recording the idempotent token and all mutating operations related to servicing the request must meet the properties for an atomic, consistent, isolated, and durable (ACID) operation. An ACID server-side operation needs to be an “all or nothing” or atomic process. This ensures that we avoid situations where we could potentially record the idempotent token and fail to create some resources or, alternatively, create the resources and fail to record the idempotent token. ",
+      "location": {
+        "representation": "saved extracted visible HTML text",
+        "text_file": "01.txt",
+        "section": "Reducing client complexity",
+        "character_start": 12522,
+        "character_end": 13056,
+        "offset_unit": "Unicode code points, zero-based, end-exclusive",
+        "pdf_page": null
+      },
+      "verification": "exact substring at stored character offsets"
+    },
+    {
+      "id": "aws-equivalent",
+      "source_id": "idempotency-01",
+      "quote": "The previous diagram shows the preparation of a semantically equivalent response in cases where the request has already been seen.",
+      "location": {
+        "representation": "saved extracted visible HTML text",
+        "text_file": "01.txt",
+        "section": "Reducing client complexity",
+        "character_start": 13056,
+        "character_end": 13186,
+        "offset_unit": "Unicode code points, zero-based, end-exclusive",
+        "pdf_page": null
+      },
+      "verification": "exact substring at stored character offsets"
+    },
+    {
+      "id": "aws-late",
+      "source_id": "idempotency-01",
+      "quote": "The best way to deal with this scenario can vary from service to service. The approach we have taken for EC2 RunInstances is to honor the initial idempotent contract even in the scenario we just described. In this situation we hold with the principle of least astonishment. This means that a semantically equivalent response, even in cases where the resource has been deleted, is the least surprising approach that still delivers a consistent experience when using tools like the AWS SDK and AWS CLI. ",
+      "location": {
+        "representation": "saved extracted visible HTML text",
+        "text_file": "01.txt",
+        "section": "Late arriving requests",
+        "character_start": 18911,
+        "character_end": 19412,
+        "offset_unit": "Unicode code points, zero-based, end-exclusive",
+        "pdf_page": null
+      },
+      "verification": "exact substring at stored character offsets"
+    },
+    {
+      "id": "aws-retention",
+      "source_id": "idempotency-01",
+      "quote": "To support this behavior we need to retain knowledge of the initial idempotent request in our service. However, it’s impractical to retain that knowledge indefinitely. Indefinite retention could also have an undesirable impact on the customer experience if some future request identifier collides with one used much earlier. Requirements for retention vary across services and service resources. We have found that, for EC2 instances, it works to limit the time period to the lifetime of the resource, plus an interval after which it is reasonable to assume that any late arriving requests would either have arrived or would no longer be valid. ",
+      "location": {
+        "representation": "saved extracted visible HTML text",
+        "text_file": "01.txt",
+        "section": "Late arriving requests",
+        "character_start": 20926,
+        "character_end": 21571,
+        "offset_unit": "Unicode code points, zero-based, end-exclusive",
+        "pdf_page": null
+      },
+      "verification": "exact substring at stored character offsets"
+    },
+    {
+      "id": "aws-mismatch",
+      "source_id": "idempotency-01",
+      "quote": "We design our APIs to allow our customers to explicitly state their intent. Take the situation where we receive a unique client request token that we have seen before, but there is a parameter combination that is different from the earlier request. We find that it is safest to assume that the customer intended a different outcome, and that this might not be the same request. In response to this situation, we return a validation error indicating a parameter mismatch between idempotent requests. To support this deep validation, we also store the parameters used to make the initial request along with the client request identifier. ",
+      "location": {
+        "representation": "saved extracted visible HTML text",
+        "text_file": "01.txt",
+        "section": "Same client request ID, different intent",
+        "character_start": 21730,
+        "character_end": 22366,
+        "offset_unit": "Unicode code points, zero-based, end-exclusive",
+        "pdf_page": null
+      },
+      "verification": "exact substring at stored character offsets"
+    },
+    {
+      "id": "google-request-field",
+      "source_id": "idempotency-02",
+      "quote": "APIs may add a string request_id parameter to request messages (including those of standard methods) in order to uniquely identify particular requests.",
+      "location": {
+        "representation": "saved extracted visible HTML text",
+        "text_file": "02.txt",
+        "section": "Guidance",
+        "character_start": 2861,
+        "character_end": 3012,
+        "offset_unit": "Unicode code points, zero-based, end-exclusive",
+        "pdf_page": null
+      },
+      "verification": "exact substring at stored character offsets"
+    },
+    {
+      "id": "google-replay",
+      "source_id": "idempotency-02",
+      "quote": "Providing a request ID must guarantee idempotency. If a duplicate request is detected, the server should return the response for the previously successful request, because the client most likely did not receive the previous response. APIs may choose any reasonable timeframe for honoring request IDs. ",
+      "location": {
+        "representation": "saved extracted visible HTML text",
+        "text_file": "02.txt",
+        "section": "Guidance",
+        "character_start": 3859,
+        "character_end": 4160,
+        "offset_unit": "Unicode code points, zero-based, end-exclusive",
+        "pdf_page": null
+      },
+      "verification": "exact substring at stored character offsets"
+    },
+    {
+      "id": "google-optional-format",
+      "source_id": "idempotency-02",
+      "quote": "The request_id field must be provided on the request message to which it applies (and it must not be a field on resources themselves). Request IDs should be optional. Request IDs should be able to be UUIDs, and may allow UUIDs to be the only valid format. The format restrictions for request IDs must be documented. Request IDs that are UUIDs must be annotated with the google.api.FieldInfo.Format value UUID4 using the extension (google.api.field_info).format = UUID4 . See AIP-202 for more. ",
+      "location": {
+        "representation": "saved extracted visible HTML text",
+        "text_file": "02.txt",
+        "section": "Guidance",
+        "character_start": 4160,
+        "character_end": 4653,
+        "offset_unit": "Unicode code points, zero-based, end-exclusive",
+        "pdf_page": null
+      },
+      "verification": "exact substring at stored character offsets"
+    },
+    {
+      "id": "google-stale",
+      "source_id": "idempotency-02",
+      "quote": "In some unusual situations, it may not be possible to return an identical success response. For example, a duplicate request to create a resource may arrive after the resource has not only been created, but subsequently updated; because the service has no other need to retain the historical data, it is no longer feasible to return an identical success response. In this situation, the method may return the current state of the resource instead. In other words, it is permissible to substitute the historical success response with a similar response that reflects more current data. ",
+      "location": {
+        "representation": "saved extracted visible HTML text",
+        "text_file": "02.txt",
+        "section": "Stale success responses",
+        "character_start": 4677,
+        "character_end": 5262,
+        "offset_unit": "Unicode code points, zero-based, end-exclusive",
+        "pdf_page": null
+      },
+      "verification": "exact substring at stored character offsets"
+    }
+  ],
+  "validation": {
+    "unique_urls": 2,
+    "get_attempts": 2,
+    "redirects_followed": 0,
+    "retry_count": 0,
+    "raw_sha256_verified": 2,
+    "extracted_text_sha256_verified": 2,
+    "exact_quote_and_position_verified": 12
+  },
+  "limits": [
+    "Finite read-only review of these two official URLs only; linked AIP194/AIP4221/EC2/API details were not fetched.",
+    "Response equivalence is not necessarily byte-for-byte equality; both sources allow or illustrate changing resource state.",
+    "Neither document specifies SQLite transactions, claim/renew lease fencing, lease expiry semantics, an unknown response code, a numeric retention default, or a particular lease request namespace."
+  ]
+}

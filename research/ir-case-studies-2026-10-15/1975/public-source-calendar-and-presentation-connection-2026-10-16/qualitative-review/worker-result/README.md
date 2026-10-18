@@ -1,0 +1,1 @@
+1975 新規公開資料2件のfile-only定性結果。result.json は既存5項目だけ、source_reviews/evidenceは frozen pending 2件だけです。新PDFは物理33のみ、カレンダーは将来4予定として読解。旧p10/13受入文脈はsummary/rationale双方へfile/SHA/読解・受入時刻/native参照で明記しました。overall unresolved、内部管理日2027-01-16 Asia/Tokyo retain。DB/Store/GET/旧file/code/queue/claim/complete/IR送信0。rootが独立点検し一度だけ適用する前の未適用成果物です。

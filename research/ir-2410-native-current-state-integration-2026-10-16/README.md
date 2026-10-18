@@ -1,0 +1,13 @@
+# 2341/2410 native登録後の現在値統合
+
+README.md、会社事例README、docs/research-stage-monitoring.mdの3文書だけを更新した。各全文の変更前bytesをbefore/へ保存し、before-manifest.jsonで固定した。rootの実登録受入後の現在値をSQLite mode=ro/query_only/contextlib.closingで確認し、210source/209分類、117完了job、114attempt/228event/114receipt、26case/48版/149既読へ反映した。公開209+市場1、公開資料36社/財務内容31社、legacy28/trusted182、内部管理Jan15=12/Jan16=14である。
+
+2341の原1+派生1/12値・v1既読2と、2410の原4+派生1/12値・v1既読5を記録した。両caseの全recordは保存済みactual-caseとDB最新が一致し、初回queue0はroot受入で確認した。2410の会社公表Prime継続結果、公開QAの普通/特別配当と取消認識を既答として扱う一方、会社の3,000円目標や終了年度向け7月予想を投資家の現在評価・売買条件へ転換していない。具体的著者法/入力の不足とIR価値未立証は保持した。
+
+v37は28社226fact/41親entry/43派生source/34会社原典組、実41派生219fact・対象外2派生7fact。v37の210source・25case/47版/144既読はnative登録前の歴史snapshotで、index本体も過去記録も変更していない。2163の同原本帰属追補、2327静的入口、2445 robots302の規則未確認停止/source0、2459のfile-only候補は実資料件数へ加算していない。これらを資料不存在・投資除外と認定していない。
+
+changes.diffで限定差分を確認した。旧事例表42行を全て保持し2社行だけ追加、監視docs旧全文は新文書の完全prefix、READMEの最新1558/従前1534テスト段落も同値。local link275件は全て存在した。44productionコードSHAは最新1558受入pinsと一致し、実DB前後SHAはcbf81671f41ec320a4b08c96df53520e5300ffffbc5530e10bcba1d88f60b7a8のまま。今回はGET/Store/DB書込み/再登録/コード変更/テスト再実行0、金融thesis/policy/position/正式質問/返信/送信/注文0、外部scheduler未設置を維持する。
+
+readonly-check.pyは上記の有限RO観測記録、update-docs.pyは変更前bytes一致を要求する一度限りの編集記録である。既に適用済みなので編集scriptを再送しない。validate.pyは静的差分・リンク・index件数/pinsを確認する。最初の静的検証はparagraphのsubstringと完全paragraph一致を混同したassertだけで失敗したため、完全paragraph比較へ修正した。共有文書・実データの再変更やmutatorはなく、修正後の実出力はvalidation-log.jsonに保存した。
+
+rootの07:29:39受入通知を受け、2459の語句だけを未受入からfile-only・DB外へ訂正した。新調査・加算はしていない。全成果をmanifest.jsonで固定し、root独立レビュー待ちで停止する。docs/ongoing-work.mdやその他共有文書、旧成果物は編集していない。

@@ -1,0 +1,776 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T16:56:44.123446+00:00",
+  "recorded_at_jst": "2026-10-16T01:56:44.123446+09:00",
+  "company_id": "jp:2983",
+  "company_name": "アールプランナー",
+  "status": "bounded_entry_and_five_page_report_recheck_one_finite_unit_label_finding",
+  "findings": [
+    {
+      "id": "2983-R01-NI-unit-key",
+      "severity": "medium",
+      "scope": "two_unit_bearing_JSON_keys_only",
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/review.json",
+      "JSONpaths": [
+        "$.forecast_capability.visible_company_vs_author_example.company_plan_as_reported_NI_10billion_JPY",
+        "$.forecast_capability.visible_company_vs_author_example.author_new_NI_10billion_JPY"
+      ],
+      "description": "原表は10億円（one billion JPY）単位であるが、2つの英語JSON keyは10billion_JPY（ten billion JPY）と名付けられ、単位の意味が10倍異なる。",
+      "printed_tokens_unchanged": {
+        "company_plan": "3.25",
+        "author_new_forecast": "3.28",
+        "raw_unit_label": "10億円"
+      },
+      "evidence": [
+        {
+          "physical_page": 4,
+          "image": "images/page-4.png",
+          "table": "FY1/27 修正後の会社予想と下期予想",
+          "unit_quote_id": "issuer-table-heading",
+          "meaning": "修正後会社予想の当期純利益は3.25、表単位は10億円。"
+        },
+        {
+          "physical_page": 8,
+          "image": "images/page-8.png",
+          "unit_quote_id": "author-forecast-NI-row-unit",
+          "meaning": "当期純利益 (10 億円) の新FY1/27E列は3.28。"
+        }
+      ],
+      "material_boundary": "元PDFの数値・会社/著者帰属・EPS区分の誤りとはしていない。モデルへの採用や金額換算も行っていない。",
+      "disposition": "旧reviewを変更せず本findingを固定。後続のunit-label訂正は別記録で確認する。"
+    }
+  ],
+  "review_scope": {
+    "fixed_folders": [
+      "research/ir-case-studies-2026-10-15/2983/author-entry-followup",
+      "research/ir-case-studies-2026-10-15/2983/first-author-report"
+    ],
+    "PDF_physical_pages": 11,
+    "PDF_semantic_pages_read": [
+      1,
+      4,
+      7,
+      8,
+      11
+    ],
+    "whole_PDF_semantic_review": false,
+    "other_company_numeric_or_author_evidence_reused": false,
+    "prior_8151_parser_use_is_producer_implementation_only": true
+  },
+  "frozen_input_guard": {
+    "frozen_at": "2026-10-15T16:49:19.459999+00:00",
+    "files": [
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/02.actualanchors.json",
+        "sha256": "e67b12ad96ec741e7e7aeb0f508e54ae2f8526acc81e9859abe3dc75e1bc72be",
+        "bytes": 713
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/02.embedded-reports.json",
+        "sha256": "fa6aa6f69dfb41eef178ba0db97af87ed24178dccfee6c2d18b85a18ad4a1d56",
+        "bytes": 1475
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/02.embedded-script.txt",
+        "sha256": "8c0fb5dd197760179039b9eab6a3a4221ff7957194eba43957f90df861717a63",
+        "bytes": 1430
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/README.md",
+        "sha256": "92eeab9dadac67dccce429b19e7ac8a499e19606d80902505f55bd32517b1dc1",
+        "bytes": 3488
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/capture.json",
+        "sha256": "a23f05f8855abb44ce36da0181562ec6efdd2531b75f350621824cd64e897c54",
+        "bytes": 5638
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/guard.json",
+        "sha256": "8b4542156b490458e9675cc48d6e855df3e0cac33e00d337b92eab393796c0f0",
+        "bytes": 2086
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/inventory.json",
+        "sha256": "f4bd466612ce99ec99d1c282a0d25c2c0bac154bc42b4626d4444045ba4a9681",
+        "bytes": 7605
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/quotes.json",
+        "sha256": "df4fc2d508fe94fad677936f9f3f1011859f845f66b15fd091eb2ce6c3bec0c6",
+        "bytes": 10594
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/raw/915987bf8990b925caa8513d10724cc4c82186872f6fefb8ed7195b1813b30c5",
+        "sha256": "915987bf8990b925caa8513d10724cc4c82186872f6fefb8ed7195b1813b30c5",
+        "bytes": 19252
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/raw/bbcea0f58b71958989d351d7cf2da32c71acea9c61fe8a94204b3d6e827f4e28",
+        "sha256": "bbcea0f58b71958989d351d7cf2da32c71acea9c61fe8a94204b3d6e827f4e28",
+        "bytes": 210
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/route.json",
+        "sha256": "21e7d0ed3ae5fc14ee2e720ebf975ffed3bbff95565d81842576616b9462dacb",
+        "bytes": 4682
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/source-bundle.json",
+        "sha256": "af3b4cec853415dfcbe55296fb4cd6bf8146964c92a8c960a3c42195bfe43d56",
+        "bytes": 3069
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/text/01.txt",
+        "sha256": "bbcea0f58b71958989d351d7cf2da32c71acea9c61fe8a94204b3d6e827f4e28",
+        "bytes": 210
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/text/02.txt",
+        "sha256": "42eb7a32651bc18bf56d07e3741039f0338ad9e97bdbea733cf55ce3c38af3ad",
+        "bytes": 520
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/validation.json",
+        "sha256": "fad73f3c9abb4ac8d3f884e36df864897d0cde4bde6dbf5d8690b185b80ac862",
+        "bytes": 5522
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/02.snapshot.json",
+        "sha256": "0901c1eafe4de9b19b150f96e557ab1cbf0ec9729744c9924d3e0c6899686794",
+        "bytes": 56307
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/README.md",
+        "sha256": "5f2901d67f7d694f7bb93557ffc9eff563ca0f2180de08f563957e57ef088cfb",
+        "bytes": 4420
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/capture.json",
+        "sha256": "326c2d4409ce703ea59a2dae2fc56157a887bd83e7f4d1c8582c83d1bd6a5f20",
+        "bytes": 3653
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/guard.json",
+        "sha256": "8aeaf70599363b5e91070fc9124111b9424ca79b6d031322a9d8ec536569239c",
+        "bytes": 3952
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/images/page-1.png",
+        "sha256": "c2835fe96465a4e9229425ed6549f7455c380982acb3bf673e091a6003774afc",
+        "bytes": 594560
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/images/page-11.png",
+        "sha256": "7d6a075f87cb151e6bceea8bea7ceffaf7e4372b1a8919c4620d7a3226303884",
+        "bytes": 340274
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/images/page-4.png",
+        "sha256": "dc5aa5440d8959150a6d33156d0ea9b82a067c46736938b52c47240986027add",
+        "bytes": 383843
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/images/page-7.png",
+        "sha256": "94f59cf9bf080d0daca9135584bb290a728fd19f2dc394ac15d1b67d6a67f01b",
+        "bytes": 216971
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/images/page-8.png",
+        "sha256": "4970438a2591260df14f18732c8daec14179bfcac9c53a196e0411cee1a4934b",
+        "bytes": 277277
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/provenance.json",
+        "sha256": "07124b370091b7c5b5159bf9e75cf9c7494d2954cbeafc0b622f608cebfe2a6e",
+        "bytes": 4188
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/quotes.json",
+        "sha256": "e563a1fa7afafed752e057a8f9a546f059e923181f417bb122281dfab88de515",
+        "bytes": 16767
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/raw/6553d51e7ddfca6495a17c70d8bd3718382d03c7871bf519e8a0f08bb7037abc",
+        "sha256": "6553d51e7ddfca6495a17c70d8bd3718382d03c7871bf519e8a0f08bb7037abc",
+        "bytes": 778034
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/raw/bbcea0f58b71958989d351d7cf2da32c71acea9c61fe8a94204b3d6e827f4e28",
+        "sha256": "bbcea0f58b71958989d351d7cf2da32c71acea9c61fe8a94204b3d6e827f4e28",
+        "bytes": 210
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/review.json",
+        "sha256": "0df6bbe9f380d5c34770e715d200e7755ceefb413f272499031979b702de0971",
+        "bytes": 7627
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/route.json",
+        "sha256": "5e05942315f6cb83cfb26a494a3c625494dbb393872706cf4fc1a2a8b81c8f74",
+        "bytes": 2452
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/source-bundle.json",
+        "sha256": "7243e688cbc173b5bf52b36e4290346c952acc78c2f00e7a4785cd5e3782cf15",
+        "bytes": 57371
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/text/01.txt",
+        "sha256": "bbcea0f58b71958989d351d7cf2da32c71acea9c61fe8a94204b3d6e827f4e28",
+        "bytes": 210
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/text/02.txt",
+        "sha256": "861065412a3063fb067f361a4d7ab25f574cdd58cd236c9c0c0f48f11168000a",
+        "bytes": 54016
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/validation.json",
+        "sha256": "5fdfd0f94955cb6eb17334159bcbd60d1228d57262e61d6ba2002e27b41a3c79",
+        "bytes": 10105
+      }
+    ]
+  },
+  "mechanical_check_count": 20,
+  "mechanical_checks": [
+    {
+      "check": "author-entry-followup:capture_budget",
+      "passed": true,
+      "basis": "各hostでrobots→targetの記録2GET。今回の新規GETではない。"
+    },
+    {
+      "check": "author-entry-followup:raw_and_clocks:1",
+      "passed": true,
+      "basis": "保存entity byte/SHA/bytes/200完全受信/時計/固定UAと設定を照合。wire attestationではない。"
+    },
+    {
+      "check": "author-entry-followup:raw_and_clocks:2",
+      "passed": true,
+      "basis": "保存entity byte/SHA/bytes/200完全受信/時計/固定UAと設定を照合。wire attestationではない。"
+    },
+    {
+      "check": "author-entry-followup:separate_exact_host_robot_permission",
+      "passed": true,
+      "basis": "両hostそれぞれの保存robotsを同じUA/exact targetでオフライン再評価し、入口hostの許可をPDF hostへ移さない。"
+    },
+    {
+      "check": "author-entry-followup:UTF8_source_and_time",
+      "passed": true,
+      "basis": "UTF8本文/抽出SHA/canonical company/実受信完了を照合し、公表瞬間と歴史初回保存はnullを保持。"
+    },
+    {
+      "check": "author-entry-followup:schema_shape_no_adoption",
+      "passed": true,
+      "basis": "1sourceのみ。robotsを金融sourceへ入れず、会社/仮説追加や金融採用なし。"
+    },
+    {
+      "check": "first-author-report:capture_budget",
+      "passed": true,
+      "basis": "各hostでrobots→targetの記録2GET。今回の新規GETではない。"
+    },
+    {
+      "check": "first-author-report:raw_and_clocks:1",
+      "passed": true,
+      "basis": "保存entity byte/SHA/bytes/200完全受信/時計/固定UAと設定を照合。wire attestationではない。"
+    },
+    {
+      "check": "first-author-report:raw_and_clocks:2",
+      "passed": true,
+      "basis": "保存entity byte/SHA/bytes/200完全受信/時計/固定UAと設定を照合。wire attestationではない。"
+    },
+    {
+      "check": "first-author-report:separate_exact_host_robot_permission",
+      "passed": true,
+      "basis": "両hostそれぞれの保存robotsを同じUA/exact targetでオフライン再評価し、入口hostの許可をPDF hostへ移さない。"
+    },
+    {
+      "check": "first-author-report:UTF8_source_and_time",
+      "passed": true,
+      "basis": "UTF8本文/抽出SHA/canonical company/実受信完了を照合し、公表瞬間と歴史初回保存はnullを保持。"
+    },
+    {
+      "check": "first-author-report:schema_shape_no_adoption",
+      "passed": true,
+      "basis": "1sourceのみ。robotsを金融sourceへ入れず、会社/仮説追加や金融採用なし。"
+    },
+    {
+      "check": "entry_one_static_payload_four_rows",
+      "passed": true,
+      "basis": "application/json1件を独立HTMLParser+重複/非有限値拒否JSONで再解析。4rows、a6/PDF href0。JS/API実行なし。"
+    },
+    {
+      "check": "entry_static_raw_HTML_offsets",
+      "passed": true,
+      "basis": "元HTML内scriptのUnicode/UTF8半開offsetが完全一致。旧会社HTMLのliteral href復元とはしない。"
+    },
+    {
+      "check": "entry_18_quote_positions",
+      "passed": true,
+      "basis": "入口可視本文2引用と静的JSON16引用の別representation/JSONpath/保存位置を照合。"
+    },
+    {
+      "check": "PDF_entity_magic_type_count_and_text_reextract",
+      "passed": true,
+      "basis": "PDF完全778034entity bytes/11頁とpdftotext-layout再抽出のbyte一致。全11頁は機械処理のみで意味再監査ではない。"
+    },
+    {
+      "check": "transport_snapshot_and_source",
+      "passed": true,
+      "basis": "native transport snapshotのraw/text/url宣言を独立照合。"
+    },
+    {
+      "check": "report_18_quotes_selected_pages_offsets_and_image_SHA",
+      "passed": true,
+      "basis": "18引用の頁内/全保存本文Unicode・UTF8半開offset、印字/物理頁、指定5PNGのSHAが一致。"
+    },
+    {
+      "check": "literal_PDF_URL_and_parent_origin_ID",
+      "passed": true,
+      "basis": "entry source b09d26…を保持しhubdb_rows[0].file_url完全一致を辿る。cc1056…PDF sourceに元IDをoriginal_source_idsで結ぶ。"
+    },
+    {
+      "check": "index_date_cover_day_and_first_save_boundaries",
+      "passed": true,
+      "basis": "索引日と表紙日が同じ日表示であることのみ確認。正確な公表時刻/現在最新/歴史的初回保存は認証しない。"
+    }
+  ],
+  "entry_quote_checks": [
+    {
+      "id": "entry-company-identity",
+      "exact_saved_offsets_and_source": true
+    },
+    {
+      "id": "entry-business-description",
+      "exact_saved_offsets_and_source": true
+    },
+    {
+      "id": "index-report-1-name",
+      "exact_saved_offsets_and_source": true
+    },
+    {
+      "id": "index-report-1-date",
+      "exact_saved_offsets_and_source": true
+    },
+    {
+      "id": "index-report-1-content",
+      "exact_saved_offsets_and_source": true
+    },
+    {
+      "id": "index-report-1-file_url",
+      "exact_saved_offsets_and_source": true
+    },
+    {
+      "id": "index-report-2-name",
+      "exact_saved_offsets_and_source": true
+    },
+    {
+      "id": "index-report-2-date",
+      "exact_saved_offsets_and_source": true
+    },
+    {
+      "id": "index-report-2-content",
+      "exact_saved_offsets_and_source": true
+    },
+    {
+      "id": "index-report-2-file_url",
+      "exact_saved_offsets_and_source": true
+    },
+    {
+      "id": "index-report-3-name",
+      "exact_saved_offsets_and_source": true
+    },
+    {
+      "id": "index-report-3-date",
+      "exact_saved_offsets_and_source": true
+    },
+    {
+      "id": "index-report-3-content",
+      "exact_saved_offsets_and_source": true
+    },
+    {
+      "id": "index-report-3-file_url",
+      "exact_saved_offsets_and_source": true
+    },
+    {
+      "id": "index-report-4-name",
+      "exact_saved_offsets_and_source": true
+    },
+    {
+      "id": "index-report-4-date",
+      "exact_saved_offsets_and_source": true
+    },
+    {
+      "id": "index-report-4-content",
+      "exact_saved_offsets_and_source": true
+    },
+    {
+      "id": "index-report-4-file_url",
+      "exact_saved_offsets_and_source": true
+    }
+  ],
+  "report_quote_checks": [
+    {
+      "id": "cover-date-identity",
+      "physical_page": 1,
+      "printed_page": 1,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    },
+    {
+      "id": "forecast-year-headings",
+      "physical_page": 1,
+      "printed_page": 1,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    },
+    {
+      "id": "author-EPS-row-yen",
+      "physical_page": 1,
+      "printed_page": 1,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    },
+    {
+      "id": "table-source-and-current-price-multiples-note",
+      "physical_page": 1,
+      "printed_page": 1,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    },
+    {
+      "id": "author-market-valuation-statement",
+      "physical_page": 1,
+      "printed_page": 1,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    },
+    {
+      "id": "company-guidance-revision-as-reported",
+      "physical_page": 4,
+      "printed_page": 4,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    },
+    {
+      "id": "issuer-table-heading",
+      "physical_page": 4,
+      "printed_page": 4,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    },
+    {
+      "id": "issuer-table-EPS-row-yen",
+      "physical_page": 4,
+      "printed_page": 4,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    },
+    {
+      "id": "company-table-DPS-split-scope",
+      "physical_page": 4,
+      "printed_page": 4,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    },
+    {
+      "id": "peer-comparison-trading-discount",
+      "physical_page": 7,
+      "printed_page": 7,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    },
+    {
+      "id": "author-revision-and-operating-assumptions",
+      "physical_page": 8,
+      "printed_page": 8,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    },
+    {
+      "id": "author-excluded-macro-and-MA",
+      "physical_page": 8,
+      "printed_page": 8,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    },
+    {
+      "id": "author-new-and-old-forecast-columns",
+      "physical_page": 8,
+      "printed_page": 8,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    },
+    {
+      "id": "author-forecast-NI-row-unit",
+      "physical_page": 8,
+      "printed_page": 8,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    },
+    {
+      "id": "author-preconditions-market-expansion-and-2033",
+      "physical_page": 8,
+      "printed_page": 8,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    },
+    {
+      "id": "author-profitability-expectation",
+      "physical_page": 8,
+      "printed_page": 8,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    },
+    {
+      "id": "creator-and-unverified-public-information",
+      "physical_page": 11,
+      "printed_page": 11,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    },
+    {
+      "id": "commission-and-payment",
+      "physical_page": 11,
+      "printed_page": 11,
+      "exact_page_global_characters_UTF8_and_image_SHA": true
+    }
+  ],
+  "meaning_review": [
+    {
+      "item": "identity_date_and_columns",
+      "status": "supported_in_five_pages",
+      "pages": [
+        1,
+        4,
+        8
+      ],
+      "meaning": "アールプランナー2983、2026年10月1日、FY1/27第2四半期update。p1の1/25・1/26歴史列、1/27E・1/28E・1/29E将来列、p4会社予想/上期実績/差引下期、p8Astris旧/新の列を区分。正確な期首末日/会計連結範囲は補完しない。"
+    },
+    {
+      "item": "forecast_author_and_raw_tokens",
+      "status": "supported_with_basis_unconfirmed",
+      "pages": [
+        1,
+        4,
+        8
+      ],
+      "meaning": "会社予想転載のEPS304.27・NI3.25と、Astris自身のEPS308.31/339.81/369.46・新NI3.28を別表示と確認。会社原本/EPS換算者・同じ分母や範囲は未確認。EPS/NIから株数や差分を作らない。"
+    },
+    {
+      "item": "NI_English_unit_keys",
+      "status": "finite_finding",
+      "finding_id": "2983-R01-NI-unit-key",
+      "meaning": "10億円に対する英語keyの10billion_JPY表記だけが不整合。原印字3.25/3.28や会社/著者区分は正しい。"
+    },
+    {
+      "item": "split_note_scope",
+      "status": "supported_only_for_DPS_comparison",
+      "pages": [
+        4
+      ],
+      "meaning": "p4下部の1株当たり配当比較が株式分割調整後という注記を確認。分割実施日・倍率・全EPSの基準/希薄化は未確認のnullを保持。"
+    },
+    {
+      "item": "market_peer_multiples_not_fair_PE",
+      "status": "supported_no_target_adoption",
+      "pages": [
+        1,
+        7
+      ],
+      "meaning": "p1 FY1/27予想PER5.2/PBR1.6は直近株価による取引水準。p7は12か月forward同業比較で2983行PER6.1という別基準。いずれも公正/目標PERや目標算式ではなく、値を相互訂正・逆算しない。1607円も掲載参照価格で現在価格ではない。"
+    },
+    {
+      "item": "business_conditions",
+      "status": "author_premises_only_not_support_refutation",
+      "pages": [
+        8
+      ],
+      "meaning": "販売棟数・上期並み粗利・販管費効率/営業レバレッジ、ASP・高付加価値mix・首都圏成長は著者前提。2033目標は会社ビジョン。金利/不動産方向変化とM&Aは未織込。支持/反証の判定、十分条件、最低進捗/許容幅/確率/期限/IR草案を補わない。"
+    },
+    {
+      "item": "author_commission_and_payment",
+      "status": "explicit_company_funded_scope_only",
+      "pages": [
+        1,
+        11
+      ],
+      "meaning": "作成組織はアストリス・アドバイザリー・ジャパン。対象企業が委託し費用負担する旨と基礎公開情報の独自検証なしを確認。個人名は指定5頁で未特定のnull、報酬額/契約詳細・全レポートでの個人名不存在・経済的独立性は認証しない。"
+    }
+  ],
+  "source_origin": {
+    "entry_source_id": "case-public:b09d26eefd2fcd9929a26acea3e455d41644892d76d1579f0194e54f17fba65b",
+    "PDF_source_id": "case-public:cc1056ccbd3204206ab15aceab33c1b05c85f4dace3f235e12f454bd7169b328",
+    "original_source_ids": [
+      "case-public:b09d26eefd2fcd9929a26acea3e455d41644892d76d1579f0194e54f17fba65b"
+    ],
+    "literal_entry_JSONpath": "$.hubdb_rows[0].file_url",
+    "actual_PDF_URL": "https://www.astrisadvisory.com/hubfs/Corporate%20Advisory/Corporate%20Research%20Reports/ARR%20PLANNER%2010012026%20(JPN).pdf",
+    "report_date_precision": "date_only",
+    "published_at": null,
+    "historical_first_saved_at": null
+  },
+  "verifier_outcomes": {
+    "script": "scripts/verify_case_source_bundle.py",
+    "script_sha256_at_final_check": "65ba58f6183be3251247e83d16ae832bb868525ef60ea787e8706df2ad6bfb64",
+    "executed_offline_in_this_recheck": true,
+    "entry": {
+      "status": "unknown",
+      "reason_codes": [
+        "unsupported_or_unspecified_provider"
+      ],
+      "all_declared_bytes_match": null,
+      "provider": "finite_issuer_author_entry_review"
+    },
+    "PDF": {
+      "status": "matched",
+      "all_declared_bytes_match": true,
+      "provider": "finite_issuer_statement_calendar_followup",
+      "scope": "declared_saved_case_bytes_only",
+      "source_id_verification": "not_performed",
+      "semantic_financial_verification": "not_performed"
+    },
+    "boundary": "Entry unsupported providerを成功にしない。PDF matchedは既存native宣言raw/snapshot/text byte契約の一致のみで、著者属性/予測正確性/ID導出/金融採用の認証ではない。"
+  },
+  "protected_files_unchanged": [
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/02.actualanchors.json",
+      "sha256": "e67b12ad96ec741e7e7aeb0f508e54ae2f8526acc81e9859abe3dc75e1bc72be"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/02.embedded-reports.json",
+      "sha256": "fa6aa6f69dfb41eef178ba0db97af87ed24178dccfee6c2d18b85a18ad4a1d56"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/02.embedded-script.txt",
+      "sha256": "8c0fb5dd197760179039b9eab6a3a4221ff7957194eba43957f90df861717a63"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/README.md",
+      "sha256": "92eeab9dadac67dccce429b19e7ac8a499e19606d80902505f55bd32517b1dc1"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/capture.json",
+      "sha256": "a23f05f8855abb44ce36da0181562ec6efdd2531b75f350621824cd64e897c54"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/guard.json",
+      "sha256": "8b4542156b490458e9675cc48d6e855df3e0cac33e00d337b92eab393796c0f0"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/inventory.json",
+      "sha256": "f4bd466612ce99ec99d1c282a0d25c2c0bac154bc42b4626d4444045ba4a9681"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/quotes.json",
+      "sha256": "df4fc2d508fe94fad677936f9f3f1011859f845f66b15fd091eb2ce6c3bec0c6"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/raw/915987bf8990b925caa8513d10724cc4c82186872f6fefb8ed7195b1813b30c5",
+      "sha256": "915987bf8990b925caa8513d10724cc4c82186872f6fefb8ed7195b1813b30c5"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/raw/bbcea0f58b71958989d351d7cf2da32c71acea9c61fe8a94204b3d6e827f4e28",
+      "sha256": "bbcea0f58b71958989d351d7cf2da32c71acea9c61fe8a94204b3d6e827f4e28"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/route.json",
+      "sha256": "21e7d0ed3ae5fc14ee2e720ebf975ffed3bbff95565d81842576616b9462dacb"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/source-bundle.json",
+      "sha256": "af3b4cec853415dfcbe55296fb4cd6bf8146964c92a8c960a3c42195bfe43d56"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/text/01.txt",
+      "sha256": "bbcea0f58b71958989d351d7cf2da32c71acea9c61fe8a94204b3d6e827f4e28"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/text/02.txt",
+      "sha256": "42eb7a32651bc18bf56d07e3741039f0338ad9e97bdbea733cf55ce3c38af3ad"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/author-entry-followup/validation.json",
+      "sha256": "fad73f3c9abb4ac8d3f884e36df864897d0cde4bde6dbf5d8690b185b80ac862"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/02.snapshot.json",
+      "sha256": "0901c1eafe4de9b19b150f96e557ab1cbf0ec9729744c9924d3e0c6899686794"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/README.md",
+      "sha256": "5f2901d67f7d694f7bb93557ffc9eff563ca0f2180de08f563957e57ef088cfb"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/capture.json",
+      "sha256": "326c2d4409ce703ea59a2dae2fc56157a887bd83e7f4d1c8582c83d1bd6a5f20"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/guard.json",
+      "sha256": "8aeaf70599363b5e91070fc9124111b9424ca79b6d031322a9d8ec536569239c"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/images/page-1.png",
+      "sha256": "c2835fe96465a4e9229425ed6549f7455c380982acb3bf673e091a6003774afc"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/images/page-11.png",
+      "sha256": "7d6a075f87cb151e6bceea8bea7ceffaf7e4372b1a8919c4620d7a3226303884"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/images/page-4.png",
+      "sha256": "dc5aa5440d8959150a6d33156d0ea9b82a067c46736938b52c47240986027add"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/images/page-7.png",
+      "sha256": "94f59cf9bf080d0daca9135584bb290a728fd19f2dc394ac15d1b67d6a67f01b"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/images/page-8.png",
+      "sha256": "4970438a2591260df14f18732c8daec14179bfcac9c53a196e0411cee1a4934b"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/provenance.json",
+      "sha256": "07124b370091b7c5b5159bf9e75cf9c7494d2954cbeafc0b622f608cebfe2a6e"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/quotes.json",
+      "sha256": "e563a1fa7afafed752e057a8f9a546f059e923181f417bb122281dfab88de515"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/raw/6553d51e7ddfca6495a17c70d8bd3718382d03c7871bf519e8a0f08bb7037abc",
+      "sha256": "6553d51e7ddfca6495a17c70d8bd3718382d03c7871bf519e8a0f08bb7037abc"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/raw/bbcea0f58b71958989d351d7cf2da32c71acea9c61fe8a94204b3d6e827f4e28",
+      "sha256": "bbcea0f58b71958989d351d7cf2da32c71acea9c61fe8a94204b3d6e827f4e28"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/review.json",
+      "sha256": "0df6bbe9f380d5c34770e715d200e7755ceefb413f272499031979b702de0971"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/route.json",
+      "sha256": "5e05942315f6cb83cfb26a494a3c625494dbb393872706cf4fc1a2a8b81c8f74"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/source-bundle.json",
+      "sha256": "7243e688cbc173b5bf52b36e4290346c952acc78c2f00e7a4785cd5e3782cf15"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/text/01.txt",
+      "sha256": "bbcea0f58b71958989d351d7cf2da32c71acea9c61fe8a94204b3d6e827f4e28"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/text/02.txt",
+      "sha256": "861065412a3063fb067f361a4d7ab25f574cdd58cd236c9c0c0f48f11168000a"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/validation.json",
+      "sha256": "5fdfd0f94955cb6eb17334159bcbd60d1228d57262e61d6ba2002e27b41a3c79"
+    }
+  ],
+  "markdown_artifact": {
+    "file": "research/ir-case-studies-2026-10-15/2983/first-author-report/independent-recheck.md",
+    "sha256": "a30ccdef78c74f95bdd33cbb3c753c368051d2a8b326fd787d2a1697be4cf88b"
+  },
+  "execution": {
+    "new_GETs": 0,
+    "DB_accesses": 0,
+    "code_or_tests_changes": 0,
+    "old_file_edits": 0,
+    "index_or_monitor_changes": 0,
+    "other_PDF_semantic_pages": 0,
+    "financial_adoptions": 0,
+    "IR_drafts_registration_sends_orders": 0,
+    "offline_pdfinfo_pdftotext_only": true
+  },
+  "limits": [
+    "Capture/byte correspondence concerns saved response entity bytes, not independent wire/request attestation or publisher release time.",
+    "Selected five pages only; neither exact fiscal/EPS denominator suitability nor entire-report absence of targets/authors/terms is established.",
+    "The single finding is the English NI unit-key inconsistency. Raw tokens, forecast actors, source/quote evidence and nonadoption are preserved."
+  ]
+}

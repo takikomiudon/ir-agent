@@ -1,0 +1,166 @@
+{
+  "security_code": "6841",
+  "company_name": "横河電機",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "電気機器",
+  "investigation_status": "provisional",
+  "verification_level": "official_form_link_only",
+  "official_url": "https://www.yokogawa.co.jp/",
+  "contact_url": "https://contact.yokogawa.com/cs/gw?c-id=000124",
+  "channels": [
+    "form"
+  ],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "candidate",
+  "attempted_at": "2026-10-11T19:18:24.721687+00:00",
+  "completed_at": "2026-10-11T19:19:59.385454+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/6841/20261011T191824721802Z/01.json",
+      "url": "https://www.yokogawa.co.jp/",
+      "retrieved_at": "2026-10-11T19:18:35.902400+00:00",
+      "quote": "横河電機",
+      "role": "company_identity"
+    },
+    {
+      "snapshot": "evidence/6841/20261011T191824721802Z/02.json",
+      "url": "https://www.yokogawa.co.jp/about/ir/",
+      "retrieved_at": "2026-10-11T19:18:48.168123+00:00",
+      "quote": "株主・投資家情報 (IR) | 横河電機",
+      "role": "financial_ir_context"
+    },
+    {
+      "snapshot": "evidence/6841/20261011T191824721802Z/02.json",
+      "url": "https://www.yokogawa.co.jp/about/ir/",
+      "retrieved_at": "2026-10-11T19:18:48.168123+00:00",
+      "quote": "サポート情報 RSSフィードの登録 メール配信のご登録 よくいただく質問 IRに関するお問い合わせ/資料のご請求",
+      "role": "contact_channel",
+      "source_link_url": "https://contact.yokogawa.com/cs/gw?c-id=000124",
+      "source_link_index": 602,
+      "source_link_label": "IRに関するお問い合わせ/資料のご請求"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.yokogawa.co.jp/",
+      "final_url": "https://www.yokogawa.co.jp/",
+      "snapshot": "evidence/6841/20261011T191824721802Z/01.json",
+      "retrieved_at": "2026-10-11T19:18:35.902400+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.yokogawa.co.jp/about/ir/",
+      "final_url": "https://www.yokogawa.co.jp/about/ir/",
+      "snapshot": "evidence/6841/20261011T191824721802Z/02.json",
+      "retrieved_at": "2026-10-11T19:18:48.168123+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://contact.yokogawa.com/cs/gw?c-id=000124",
+      "final_url": null,
+      "snapshot": "evidence/6841/20261011T191824721802Z/03.json",
+      "retrieved_at": "2026-10-11T19:19:14.872616+00:00",
+      "http_status": null,
+      "error": "robots_unreachable_stopped"
+    },
+    {
+      "url": "https://www.yokogawa.co.jp/contact/",
+      "final_url": "https://www.yokogawa.co.jp/contact/",
+      "snapshot": "evidence/6841/20261011T191824721802Z/04.json",
+      "retrieved_at": "2026-10-11T19:19:14.873673+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.yokogawa.co.jp/solutions/solutions/information-solutions/",
+      "final_url": "https://www.yokogawa.co.jp/solutions/solutions/information-solutions/",
+      "snapshot": "evidence/6841/20261011T191824721802Z/05.json",
+      "retrieved_at": "2026-10-11T19:19:25.264960+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.yokogawa.co.jp/solutions/solutions/oprex-integrated-solutions/asset-performance-reliability/",
+      "final_url": "https://www.yokogawa.co.jp/solutions/solutions/oprex-integrated-solutions/asset-performance-reliability/",
+      "snapshot": "evidence/6841/20261011T191824721802Z/06.json",
+      "retrieved_at": "2026-10-11T19:19:37.258978+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.yokogawa.co.jp/solutions/solutions/information-solutions/erp-solution/",
+      "final_url": "https://www.yokogawa.co.jp/solutions/solutions/information-solutions/erp-solution/",
+      "snapshot": "evidence/6841/20261011T191824721802Z/07.json",
+      "retrieved_at": "2026-10-11T19:19:49.157923+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "https://contact.yokogawa.com/cs/gw?c-id=000124: robots_unreachable_stopped",
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "現横河電機正式名01/金融IRprimary02のサポート情報区画actual602『IRに関するお問い合わせ/資料のご請求』→原contact.yokogawa.com/cs/gw?c-id=000124を実証しP/link_only保持、同target03本文はrobots_unreachable_stopped/http_get_attempted:falseで未着手。nestedrobots.txtの実GET502/5.296秒とMicrosoft-Azure-Application-Gateway/v2本文/http_502は原診断のまま、企業本文GET成功や受付不存在/拒否・個人禁止に変換0。blocked実href台帳を保存するが再試行候補へ追加0、原c-id/query保持。04genericcontact及び05..07製品solutions/別YokogawaSolutionService窓口をJPX横河電機IRに借用0、RSS/メール配信購読/資料請求だけから質問nativeや公開IRmailを推定0。actualIR目的は親02で確認、targetnative/reply/会社入力/個人条件/返信policyは未保存not_stated、full source metadata/time/hash不変。"
+  ],
+  "discovery": {
+    "security_code": "6841",
+    "official_url": "https://www.yokogawa.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "横河電機",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/6841/20261011T191824721802Z/01.json",
+      "normalized_name": "横河電機",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6841/20261011T191824721802Z/02.json",
+      "normalized_name": "横河電機",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6841/20261011T191824721802Z/04.json",
+      "normalized_name": "横河電機",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6841/20261011T191824721802Z/05.json",
+      "normalized_name": "横河電機",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6841/20261011T191824721802Z/06.json",
+      "normalized_name": "横河電機",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6841/20261011T191824721802Z/07.json",
+      "normalized_name": "横河電機",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 6,
+  "http_get_attempt_count": 8,
+  "previous_attempts": [
+    "attempts/6841/20261011T045047619427Z.json",
+    "attempts/6841/20261011T191959386783Z.json"
+  ],
+  "automatic_conditions_before_review": [],
+  "outreach_reason": "保存公式原文で現発行体の金融IR受付・実IRメール又は同native formの返信質問欄を確認する。一般顧客・製品・採用・保守・個人情報・株式事務・他社の窓口をIR受付に借用しない。",
+  "route_type": "officially_linked_form",
+  "ir_url": "https://www.yokogawa.co.jp/about/ir/",
+  "manual_review": {
+    "reviewer": "codex_audit_data_67_batch22",
+    "reviewed_at": "2026-10-11T21:41:38.652332+00:00",
+    "notes": "現横河電機正式名01/金融IRprimary02のサポート情報区画actual602『IRに関するお問い合わせ/資料のご請求』→原contact.yokogawa.com/cs/gw?c-id=000124を実証しP/link_only保持、同target03本文はrobots_unreachable_stopped/http_get_attempted:falseで未着手。nestedrobots.txtの実GET502/5.296秒とMicrosoft-Azure-Application-Gateway/v2本文/http_502は原診断のまま、企業本文GET成功や受付不存在/拒否・個人禁止に変換0。blocked実href台帳を保存するが再試行候補へ追加0、原c-id/query保持。04genericcontact及び05..07製品solutions/別YokogawaSolutionService窓口をJPX横河電機IRに借用0、RSS/メール配信購読/資料請求だけから質問nativeや公開IRmailを推定0。actualIR目的は親02で確認、targetnative/reply/会社入力/個人条件/返信policyは未保存not_stated、full source metadata/time/hash不変。"
+  }
+}

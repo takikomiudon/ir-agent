@@ -1,0 +1,145 @@
+{
+  "security_code": "6488",
+  "company_name": "ヨシタケ",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "機械",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.yoshitake.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T17:58:55.679688+00:00",
+  "completed_at": "2026-10-11T17:59:51.793080+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/6488/20261011T175855679721Z/02.json",
+      "url": "https://www.yoshitake.co.jp/ir/index.html",
+      "retrieved_at": "2026-10-11T17:59:23.989425+00:00",
+      "quote": "IR情報|自動弁（バルブ）の総合メーカー 株式会社ヨシタケ",
+      "role": "current_issuer_financial_ir_library_title"
+    },
+    {
+      "snapshot": "evidence/6488/20261011T175855679721Z/02.json",
+      "url": "https://www.yoshitake.co.jp/ir/index.html",
+      "retrieved_at": "2026-10-11T17:59:23.989425+00:00",
+      "quote": "（証券コード：6488）",
+      "role": "current_issuer_security_code"
+    },
+    {
+      "snapshot": "evidence/6488/20261011T175855679721Z/03.json",
+      "url": "https://www.yoshitake.co.jp/contact/index.html",
+      "retrieved_at": "2026-10-11T17:59:38.424016+00:00",
+      "quote": "403 Forbidden Forbidden You don't have permission to access this resource.",
+      "role": "actual_site_http403_contact_access_denied"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.yoshitake.co.jp/",
+      "final_url": "https://www.yoshitake.co.jp/",
+      "snapshot": "evidence/6488/20261011T175855679721Z/01.json",
+      "retrieved_at": "2026-10-11T17:59:09.333367+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.yoshitake.co.jp/ir/index.html",
+      "final_url": "https://www.yoshitake.co.jp/ir/index.html",
+      "snapshot": "evidence/6488/20261011T175855679721Z/02.json",
+      "retrieved_at": "2026-10-11T17:59:23.989425+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.yoshitake.co.jp/contact/index.html",
+      "final_url": "https://www.yoshitake.co.jp/contact/index.html",
+      "snapshot": "evidence/6488/20261011T175855679721Z/03.json",
+      "retrieved_at": "2026-10-11T17:59:38.424016+00:00",
+      "http_status": 403,
+      "error": null
+    },
+    {
+      "url": "https://www.yoshitake.co.jp/support/sup01.html",
+      "final_url": null,
+      "snapshot": "evidence/6488/20261011T175855679721Z/04.json",
+      "retrieved_at": "2026-10-11T17:59:51.792122+00:00",
+      "http_status": null,
+      "error": "host_access_denied_stopped"
+    },
+    {
+      "url": "https://www.yoshitake.co.jp/ir/ir05.html",
+      "final_url": null,
+      "snapshot": "evidence/6488/20261011T175855679721Z/05.json",
+      "retrieved_at": "2026-10-11T17:59:51.792309+00:00",
+      "http_status": null,
+      "error": "host_access_denied_stopped"
+    },
+    {
+      "url": "https://www.yoshitake.co.jp/ir/ir02.html",
+      "final_url": null,
+      "snapshot": "evidence/6488/20261011T175855679721Z/06.json",
+      "retrieved_at": "2026-10-11T17:59:51.792498+00:00",
+      "http_status": null,
+      "error": "host_access_denied_stopped"
+    },
+    {
+      "url": "https://www.yoshitake.co.jp/ir/ir09.html",
+      "final_url": null,
+      "snapshot": "evidence/6488/20261011T175855679721Z/07.json",
+      "retrieved_at": "2026-10-11T17:59:51.792780+00:00",
+      "http_status": null,
+      "error": "host_access_denied_stopped"
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "https://www.yoshitake.co.jp/contact/index.html: HTTP 403",
+    "https://www.yoshitake.co.jp/support/sup01.html: host_access_denied_stopped",
+    "https://www.yoshitake.co.jp/ir/ir05.html: host_access_denied_stopped",
+    "https://www.yoshitake.co.jp/ir/ir02.html: host_access_denied_stopped",
+    "https://www.yoshitake.co.jp/ir/ir09.html: host_access_denied_stopped",
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "一般contact本文は403なのでフォーム/メール/個人条件を確認できない。後続host_access_denied_stoppedは本文を送信せず停止したローカル記録であり新しい403応答数とは区別。403回避・再試行候補・メーリング登録・IR送信0、個別回答方針は未確認。",
+    "保存済み公式ページ・実フォーム欄を手動点検。送信・配信成功・回答実績は未確認。"
+  ],
+  "discovery": {
+    "security_code": "6488",
+    "official_url": "https://www.yoshitake.co.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ヨシタケ",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/6488/20261011T175855679721Z/01.json",
+      "normalized_name": "ヨシタケ",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6488/20261011T175855679721Z/02.json",
+      "normalized_name": "ヨシタケ",
+      "security_code_observed": true
+    }
+  ],
+  "successful_official_page_count": 2,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 4,
+  "previous_attempts": [
+    "attempts/6488/20261011T045047597583Z.json",
+    "attempts/6488/20261011T175951793394Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_services",
+    "reviewed_at": "2026-10-11T19:06:32.307799+00:00",
+    "notes": "現ヨシタケのIR02銘柄6488は資料/株価/メーリングサービスを案内。一般contact03はHTTP403、以降04–07はhost_access_denied_stoppedのローカル停止で実本文GET0、同host拒否を尊重する。既存金融IR情報から顧客contactの金融IR用途を継承せず、開示資料メール登録も質問返信受付ではないU。正当403を環境共通503/レート原因/窓口不存在と同一視せず、拒否先再GET候補は追加しない。",
+    "attempted_at_reviewed": "2026-10-11T17:58:55.679688+00:00",
+    "saved_evidence_only": true
+  }
+}

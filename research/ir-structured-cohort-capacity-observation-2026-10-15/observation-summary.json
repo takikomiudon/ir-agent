@@ -1,0 +1,79 @@
+{
+  "recorded_at": "2026-10-15T23:56:36.673995+00:00",
+  "scope": "Initial observed capacity report for the exact10claimed qualitative review attempts; not end-to-end company analysis",
+  "as_of": "2026-10-15T23:56:01.196870+00:00",
+  "window": {
+    "started_at": "2026-10-15T22:47:30.438013+00:00",
+    "ended_at": "2026-10-15T22:54:06.866615+00:00",
+    "elapsed_seconds": "396.428602",
+    "semantics": "Terminal events in [start,end); elapsed intervals clipped to window; events exactly at end listed separately"
+  },
+  "first_claim": "2026-10-15T22:47:30.438013+00:00",
+  "last_completion": "2026-10-15T22:54:06.866614+00:00",
+  "window_end_plus_one_microsecond": true,
+  "exact_selected_attempt_count": 10,
+  "all_attempt_projection_audit": {
+    "stored_header_rows_current_snapshot": 81,
+    "not_yet_visible_headers": 0,
+    "projected_attempts": 81,
+    "excluded_attempts": 0,
+    "unmeasured_jobs_current_snapshot": 3,
+    "orphan_events": 0
+  },
+  "selected_terminal_results": "all10matched_current_job_snapshot",
+  "stage": "lease:qualitative_review:author_condition_review",
+  "original_worker_id": "codex-structured-facts-qualitative-review",
+  "worker_reassignment": false,
+  "elapsed_whole_attempt_samples": {
+    "count": 10,
+    "total": "3960.006894",
+    "mean": "396.0006894",
+    "min": "395.93114",
+    "p50": "395.990073",
+    "p90": "396.048264",
+    "max": "396.07018"
+  },
+  "lease_ownership_intervals": {
+    "sum_record_elapsed_seconds": "3960.006894",
+    "occupied_elapsed_seconds_union_by_worker": "396.428601",
+    "overlapping_same_worker_elapsed_seconds": "3563.578293",
+    "any_worker_occupied_wall_seconds": "396.428601",
+    "maximum_distinct_workers_overlapping": 1,
+    "per_worker_occupied_elapsed_seconds": {
+      "codex-structured-facts-qualitative-review": "396.428601"
+    },
+    "note": "Unioned elapsed/reservation intervals, not active CPU/analyst time or available worker capacity"
+  },
+  "measurement_gaps": {
+    "active_seconds": null,
+    "tokens": null,
+    "cost": null,
+    "operator_worker_seconds_budget": null,
+    "operator_cost_budget": null,
+    "queue_wait": null,
+    "overdue": null,
+    "actual_analyst_concurrency": null
+  },
+  "capacity_status": "not_estimated",
+  "company_upper_bound": null,
+  "DB_main_SHA_before_after_unchanged": true,
+  "no_followup_remeasurement_or_future_capacity_task_created": true,
+  "reporter_next_measurements": "Existing reporter emits generic advice; it is retained unchanged in capacity-report.json, not adopted as a new task or capability forecast",
+  "input_code_reference_pins": {
+    "docs/job-attempt-measurement.md": "76793d0981863dbe318b56103e26747c27bb21271df795a97318364eaed8d709",
+    "docs/capacity-measurement.md": "bc98447d047d40642f39dd3a39fe2e7c9d28e985accf51c6a00928b691a34e4d",
+    "scripts/report_job_attempts.py": "d1d3879b32c48ef8182243499f6f9d4671f509c23a215e3a383c4f62924a5018",
+    "scripts/report_research_capacity.py": "529aa0a3ceb02cc334ad274281c299b6b33d275aec4c4d86a27af8303f871a11",
+    "src/ir_agent/attempt_measurements.py": "a0e92887cc72da998012976f9992acaf0e6a2facceafc7b6c20de1048e546d58",
+    "src/ir_agent/capacity.py": "16918d21a0e6c04272fa7498d015eaba49ab05c8668101d892e9db4895537bcb"
+  },
+  "artifact_pins": {
+    "cohort-boundary-evidence.json": "e04e298241b1950edf29f42b1819b5d6e28a8c1f279d20d933d95f35033bb4b2",
+    "db-read-verification.json": "faf06880f7b221c003c6b032b90b99de1c900363162e679b0f55208f73761c01",
+    "all-attempts-projection.json": "16333b5ee102da42933c16a10f1eb5ac1c1d69b963c03292910405c4fa4a19cc",
+    "capacity-report.json": "7c655f512838ae7480b6ff6502d174d21a7adb35ce08a928dedffcdcacbc92ad",
+    "cohort-capacity-request.json": "0046e32f7556786ed5109750c4da612a35cdb73a485a14c175364d1493bfaa70",
+    "cohort-selection-audit.json": "1087aa14cede31601814aaba2698ef1fe28cae09af80da55993c13bb97aa7f81"
+  },
+  "errors": []
+}

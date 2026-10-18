@@ -1,0 +1,180 @@
+{
+  "status": "intermediate_only",
+  "adoption": "unresolved",
+  "request": {
+    "assessment": {
+      "comparability_rationale": null,
+      "new_investment_roc_rationale": "Author uses normalized ROC for future investments; this is an explicit historical assumption, not a general historical-to-future rule.",
+      "source_refs": [
+        {
+          "id": "damodaran.cyclical-commodity.2009",
+          "location": "PDF p21, Exxon historical stable-growth assumptions and equation",
+          "quote": "Exxon Mobil is in stable growth with the operating income growing at 2% a year in\n         perpetuity. New investments are expected to generate a return on capital that reflects\n         the normalized operating income and current capital invested; this return on capital is\n         used to compute a reinvestment rate.",
+          "sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+          "version": null
+        }
+      ],
+      "stable_growth_rationale": "Author historical stable-growth assumption; economic applicability unresolved.",
+      "tax_and_nol_rationale": "Historical author applies marginal tax 38%; no independent NOL or present issuer tax review."
+    },
+    "basis": {
+      "accounting_basis": "Author valuation example; financial accounting basis not independently established",
+      "amount_unit": "millions",
+      "company_id": "author-example:exxon-2009",
+      "currency": "USD",
+      "scope": "Historical author example operating assets"
+    },
+    "growth": {
+      "basis": {
+        "accounting_basis": "Author valuation example; financial accounting basis not independently established",
+        "amount_unit": "millions",
+        "company_id": "author-example:exxon-2009",
+        "currency": "USD",
+        "scope": "Historical author example operating assets"
+      },
+      "concept": "stable_operating_income_growth",
+      "data_kind": "author_estimate",
+      "period": {
+        "end": null,
+        "kind": "full_fiscal_year",
+        "label": "Author next annual stable period; calendar bounds unspecified",
+        "start": null
+      },
+      "rationale": "Historical author stable operating-income growth assumption, p21; not adopted for any present issuer.",
+      "source_refs": [
+        {
+          "id": "damodaran.cyclical-commodity.2009",
+          "location": "PDF p21, Exxon historical stable-growth assumptions and equation",
+          "quote": "Exxon Mobil is in stable growth with the operating income growing at 2% a year in\n         perpetuity. New investments are expected to generate a return on capital that reflects\n         the normalized operating income and current capital invested; this return on capital is\n         used to compute a reinvestment rate.",
+          "sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+          "version": null
+        }
+      ],
+      "unit": "annual_decimal_ratio",
+      "value": "0.02"
+    },
+    "method": "stable_growth_new_investment_roc",
+    "nopat_next": {
+      "basis": {
+        "accounting_basis": "Author valuation example; financial accounting basis not independently established",
+        "amount_unit": "millions",
+        "company_id": "author-example:exxon-2009",
+        "currency": "USD",
+        "scope": "Historical author example operating assets"
+      },
+      "concept": "aftertax_operating_income_before_financing",
+      "data_kind": "author_estimate",
+      "period": {
+        "end": null,
+        "kind": "full_fiscal_year",
+        "label": "Author next annual stable period; calendar bounds unspecified",
+        "start": null
+      },
+      "rationale": "Derived exactly from displayed author p21 numerator 34614 million USD × 1.02 × (1−0.38). Already next-period and after-tax; not an independently estimated present issuer NOPAT.",
+      "source_refs": [
+        {
+          "id": "damodaran.cyclical-commodity.2009",
+          "location": "PDF p21, Exxon historical stable-growth assumptions and equation",
+          "quote": "Exxon Mobil is in stable growth with the operating income growing at 2% a year in\n         perpetuity. New investments are expected to generate a return on capital that reflects\n         the normalized operating income and current capital invested; this return on capital is\n         used to compute a reinvestment rate.",
+          "sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+          "version": null
+        }
+      ],
+      "timing": "next_stable_period",
+      "value": "21889.8936"
+    },
+    "roc_new": {
+      "basis": {
+        "accounting_basis": "Author valuation example; financial accounting basis not independently established",
+        "amount_unit": "millions",
+        "company_id": "author-example:exxon-2009",
+        "currency": "USD",
+        "scope": "Historical author example operating assets"
+      },
+      "concept": "aftertax_return_on_new_investment",
+      "data_kind": "author_estimate",
+      "period": {
+        "end": null,
+        "kind": "full_fiscal_year",
+        "label": "Author next annual stable period; calendar bounds unspecified",
+        "start": null
+      },
+      "rationale": "Displayed author rounded 21% new-investment ROC in p21 valuation formula. Retained separately from 21.1% footnote estimate and raw capital-based ratio; not recomputed or corrected.",
+      "source_refs": [
+        {
+          "id": "damodaran.cyclical-commodity.2009",
+          "location": "PDF p21, Exxon historical stable-growth assumptions and equation",
+          "quote": "Exxon Mobil is in stable growth with the operating income growing at 2% a year in\n         perpetuity. New investments are expected to generate a return on capital that reflects\n         the normalized operating income and current capital invested; this return on capital is\n         used to compute a reinvestment rate.",
+          "sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+          "version": null
+        }
+      ],
+      "unit": "annual_decimal_ratio",
+      "value": "0.21"
+    }
+  },
+  "request_sha256": "83e860827ce8a401f7799cffd24b15f44b9a08b127f1bb70b9cd3092ded524b8",
+  "arithmetic": {
+    "reinvestment_rate": "0.095238095238095238095238095238095238095238095238095238095238095238095238095238095",
+    "reinvestment_amount": "2084.7517714285714285714285714285714285714285714285714285714285714285714285714286",
+    "fcff": "19805.141828571428571428571428571428571428571428571428571428571428571428571428571",
+    "basis": {
+      "accounting_basis": "Author valuation example; financial accounting basis not independently established",
+      "amount_unit": "millions",
+      "company_id": "author-example:exxon-2009",
+      "currency": "USD",
+      "scope": "Historical author example operating assets"
+    }
+  },
+  "calculation": {
+    "working_precision_digits": 80,
+    "rounding": "ROUND_HALF_UP",
+    "division_may_round": true,
+    "display_quantization": null,
+    "formula": {
+      "reinvestment_rate": "growth / roc_new",
+      "reinvestment_amount": "nopat_next * reinvestment_rate",
+      "fcff": "nopat_next - reinvestment_amount"
+    },
+    "author_reference": {
+      "author": "Aswath Damodaran",
+      "year": 2009,
+      "title": "Ups and Downs: Valuing Cyclical and Commodity Companies",
+      "source_id": "damodaran.cyclical-commodity.2009",
+      "pdf_sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+      "pdf_pages": [
+        17,
+        21
+      ],
+      "support": "Stable reinvestment rate g/ROC and the next-period after-tax operating-income valuation numerator; this function decomposes that numerator only."
+    },
+    "project_adaptation": "Strict next-stable-period metadata, positive author-example scope, isolated Decimal arithmetic and unresolved adoption are local API rules, not a universal author policy or verified forecast."
+  },
+  "verification": {
+    "source_references": "unverified",
+    "declared_basis_semantics": "unverified",
+    "next_annual_period_and_comparability": "unverified",
+    "tax_and_nol_treatment": "unverified",
+    "stable_growth_applicability": "unverified",
+    "new_investment_roc_applicability": "unverified",
+    "funding_and_survival": "unverified"
+  },
+  "period_dates_incomplete": [
+    "nopat_next.period.start",
+    "nopat_next.period.end",
+    "growth.period.start",
+    "growth.period.end",
+    "roc_new.period.start",
+    "roc_new.period.end"
+  ],
+  "assessment_fields_unset": [
+    "assessment.comparability_rationale"
+  ],
+  "limitations": [
+    "Input labels, period equality and source/quote references are caller declarations, not independently verified documents, tax treatment, annual/52/53-week comparability, next-period timing or economic applicability.",
+    "NOPAT_next is supplied as after-tax operating income before financing; no tax/NOL calculation, (1+g) multiplication, historical ROC selection, WACC substitution or pretax-profit conversion is performed.",
+    "Only the positive author-example scope is implemented; zero growth has a defined algebraic value with nonzero ROC but is unsupported here, distinct from the ROC=0 denominator error.",
+    "Reinvestment rates above one and negative FCFF are retained without clamping; capital funding, growth sustainability and survival remain unverified.",
+    "No capex/D&A/working-capital parts, financing cash flows, DCF, terminal value, stock price, IR action or probability is generated, and intermediate arithmetic does not adopt a normalized forecast."
+  ]
+}

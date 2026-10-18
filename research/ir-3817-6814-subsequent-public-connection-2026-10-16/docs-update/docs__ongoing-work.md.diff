@@ -1,0 +1,56 @@
+--- before/docs/ongoing-work.md
++++ after/docs/ongoing-work.md
+@@ -1,31 +1,31 @@
+ # 継続作業の状態
+ 
+-更新時刻：2026-10-16T16:29:52.949443+00:00。利用者の停止指示があるまで目前のタスクから進める。過去の段階別記録は[移動前の全文](research-history-2026-10-16-through-1628.md)に保存した。このページの現在値を過去snapshotへ上書きしない。
++更新時刻：2026-10-16T16:29:52.949443+00:00。利用者はAPIキー設定直前の良い区切りでの停止を指定した。現在はEDINET初回起動の仕上げと最終検証だけを行い、完了後は停止する。過去の段階別記録は[移動前の全文](research-history-2026-10-16-through-1628.md)に保存した。このページの現在値を過去snapshotへ上書きしない。
+ 
+ ## 利用者の指定
+ 
+ - 保有期間は数カ月〜1年。投資スタイルは指定なし、公開ルールとの適合を優先。
+-- 積立額は月1万円。証券会社はSBIを継続利用する想定。[回答原文と解釈](../research/ir-user-operating-constraints-2026-10-16/constraints-v2.json)を保持する。
++- 積立額は月1万円。証券会社はSBIを継続利用する想定。[回答原文と解釈](../research/ir-user-operating-constraints-2026-10-16/constraints-v4.json)を保持する。
+ - 現在残高・初期資金・1社配分・口座区分・S株利用設定は未確認。月額から補完しない。
+ - 既存著者の方針を優先し、予測・倍率・確率・投資閾値を独自に埋めない。サブエージェント利用は許可済み。
+ - IRの実送信・注文・有料契約・deploymentは指示されていない。
+ 
+ ## 現在の実台帳と実装
+ 
+-実DBは `data/ir-research-2026-10-15.sqlite3`。最新の変更は[4318後発Q1の接続](../research/ir-4318-subsequent-Q1-connection-2026-10-16/actual-verification.json)。SHA256は `c3bdbbf82f4e88553e8bb1dec89cc42488c4a5147f228cb4da6b4e0d95ccf93d`。
++実DBは `data/ir-research-2026-10-15.sqlite3`。最新の変更は[3817・6814後発短信の接続](../research/ir-3817-6814-subsequent-public-connection-2026-10-16/actual-verification.json)。SHA256は `02517d47f4f862da3a74048f38dd60ecd1a08027fdd6e18daca394ee26dc3ba1`。
+ 
+ | 項目 | 現在の状態 |
+ |---|---|
+ | 会社 | 1,819社。watch/held:falseを実保有申告としない |
+-| 資料 | 263件（公開262・市場1）、分類262・availability263 |
+-| job | 183件全完了（intake137・定性46）、attempt180・event360・receipt180 |
+-| native監視 | 34case・81版・199既読。4318はv6/config1・6既読 |
++| 資料 | 265件（公開264・市場1）、分類264・availability265 |
++| job | 187件全完了（intake139・定性48）、attempt184・event368・receipt184 |
++| native監視 | 34case・83版・201既読。3817はv4/4既読、4318はv6/6既読、6814はv6/7既読（全config1） |
+ | 研究IR | 7388・135A・7525の3draft、全未送信/no_reply。返信・レビュー各0 |
+ | 金融判断 | 数値thesis・実policy・正式金融質問/返信・明示保有・研究判断記録・送信・注文0 |
+ 
+ [索引v43](../research/ir-case-studies-2026-10-15/disclosed-fact-index-v43.json)は35社254fact・53親entry・55派生source。実53派生/247fact、対象外8331・9702の2派生/7factはfile-only。4318のPL4行は年次報告値であり、正常EPS・OIADP・TTMへ自動変換していない。表示差2千円の原因も未確認。
+ 
+-コードの最新受入は[全1,641テスト成功・独立必須指摘0](../research/ir-research-inquiry-worklist-integration-2026-10-16/parent-acceptance.json)。研究IRの全返信作業一覧を追加し、古い未レビュー返信を後の返信で隠さない。以後は資料/文書作業のみで、同じ全suiteを再実行していない。
++コードの直近受入は[全1,653テスト成功・独立必須指摘0](../research/ir-saved-issuer-case-verifier-integration-2026-10-16/parent-acceptance.json)。保存PDFの明示形式にも宣言bytes検証を追加した。研究IRの全返信作業一覧を追加し、古い未レビュー返信を後の返信で隠さない。現在はEDINET起動用の新scriptを別の最終taskとして検証中。この追加分の検証を終えて停止する。
+ 
+ 内部管理日は2027-01-15が12case、01-16が22case（Asia/Tokyo）。会社の決算予定や売却期限とは別。外部scheduler・定時Web取得・LLMの定時実行は未設置。[研究段階の監視](research-stage-monitoring.md)と[日付のみの材料監視](catalyst-monitor-design.md)を再利用し、新情報なし・未確認なし・管理日未到来のcaseで同義のpreview/jobを増やさない。
+ 
+@@ -37,11 +37,11 @@
+ 
+ [月1万円・SBIの実行条件](monthly-sbi-execution-research.md)は公式7GETを終了し、1株単位・積立との違い・対象市場・NISA成長枠・時間別約定・ネット取引の費用/spreadを確認した。本人への適用、銘柄別取扱い、余力、実約定は未確認。[市場との結合](../research/ir-SBI-market-IR-universe-fit-2026-10-16/parent-acceptance.json)では歴史一覧1,819社すべて東証3市場、追加市場除外0。現在上場/個別S株取扱いは未確認で、最低20保有等の著者条件を月額に合わせて変更していない。
+ 
+-## いま進めること
++## 区切りまでの完了事項と再開時の扱い
+ 
+ 1. **研究IR3件と次の公開観測を接続する。** [3件の最少action比較](../research/ir-three-inquiry-next-observation-gap-2026-10-16/README.md)は受入済み。会社定義の確認後も、採用する方法がどの入力・条件へ使うかが残る。[保存一覧の後発coverage](../research/ir-three-inquiry-subsequent-public-coverage-2026-10-16/inventory.md)も確認済み。135Aは一覧の最新短信/説明資料を既読、7388/7525は空の静的一覧から後発資料の有無を判定できない。 [既存確認パケット](../research/ir-three-draft-review-packet-2026-10-16/README.md)、[質問準備](ir-question-preparation.md)、現在のcase/inquiryを使い、回答で変わる比較、次の公表で検証できる事実、数値判断までに別途足りない入力を区別する。価格待ちだけで完成するとは決めない。新草案・独自順位・分岐の後付けはしない。
+-2. **4318の後発Q1は接続完了。** [単一PDF・限定3頁の読解](../research/ir-case-studies-2026-10-15/4318/subsequent-Q1-public-review-2026-10-16/parent-acceptance.json)を保存/分類し、既存C1〜C3へ比較した。年次74.11/345.24を保持し、Q1 36.77/361.88・予想50.27を別期/当時予想として記録。利益予想2,805百万円不変と自己株取得/処分の注記を結び、EPS表示差を増益予想へ変換しない。四半期財表の千円→百万円変更も記録。Q1未取得gapは解消、元issueは未解決、管理Jan16retain・再queue0。索引v43は新factなしで据置き、そのDB snapshotは当時のまま。7社の残る後発資料coverageをGET0で確認中。
+-3. **株価は利用可能な正規データ経路が判明してから進める。** 利用者へ既存API契約の有無を任意確認中。新しい有料契約を前提にしない。利用可能になった場合も、同一銘柄/通貨/価格日・精度/株式basisを確認し、明示方針で採用する。
++2. **4318の後発Q1は接続完了。** [単一PDF・限定3頁の読解](../research/ir-case-studies-2026-10-15/4318/subsequent-Q1-public-review-2026-10-16/parent-acceptance.json)を保存/分類し、既存C1〜C3へ比較した。年次74.11/345.24を保持し、Q1 36.77/361.88・予想50.27を別期/当時予想として記録。利益予想2,805百万円不変と自己株取得/処分の注記を結び、EPS表示差を増益予想へ変換しない。四半期財表の千円→百万円変更も記録。Q1未取得gapは解消、元issueは未解決、管理Jan16retain・再queue0。索引v43は新factなしで据置き、そのDB snapshotは当時のまま。[7社coverage](../research/ir-seven-annual-input-subsequent-coverage-2026-10-16/parent-acceptance.json)の後発確認を完了し、3817/6814の新本文を実比較した。6200の[取得/消却の追加読解](../research/ir-case-studies-2026-10-15/6200/subsequent-buyback-saved-followup-2026-10-16/parent-acceptance.json)はfile-onlyで、次の正当jobへの手動引継ぎを残す。3817の年次p8/12追補は今回のjobのsummary/観測へ実際に継承した。
++3. **株価は利用可能な正規データ経路が判明してから進める。** 利用者はe-Stat/EIA/EDINET/FRED/Gビズインフォの利用を回答。個別株価APIは未確定で、新しい有料契約を前提にしない。EDINETはSDK導入済み・envキー未設定のため、[固定対象の初回起動](edinet-first-run.md)を仕上げる。利用可能になった場合も、同一銘柄/通貨/価格日・精度/株式basisを確認し、明示方針で採用する。
+ 4. **将来の実返信を事前分岐と照合する。** 未送信3件は送信readyではない。受信時は原文・公開根拠・case版・対象期を別に確認し、曖昧/拒否/無回答を悪材料へ変換しない。金融入力が変わる場合は既存の正式金融契約へ進む。
+ 
+ ## 閉じた経路を繰り返さない

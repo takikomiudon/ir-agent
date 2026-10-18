@@ -1,0 +1,550 @@
+{
+  "artifact_type": "company_specific_authored_relative_valuation_method_input_mapping",
+  "authored_relation": {
+    "R_squared_as_published": "34.5%",
+    "R_squared_role": "Cross-sectional fit statistic; not prediction success rate, event probability, causal identification or expected stock return.",
+    "as_published": "PE = 4.51 + 4.28 Beta + 42.26 gEPS + 10.46 Payout",
+    "current_January_to_October_reuse_approved": false,
+    "not_sector_only": "Japan market-wide sample; not housing-sector regression",
+    "output_role": "conditional relative PE under author regression; not an adopted fairPE/target for2983",
+    "price_horizon_or_trade_deadline": null,
+    "ratio_scale": "decimal;25%=0.25 as author instructs",
+    "sample_filters": null,
+    "sample_n": null
+  },
+  "company_id": "jp:2983",
+  "execution": {
+    "DB_Store_access": 0,
+    "company_financial_calculations": 0,
+    "new_GETs": 0,
+    "new_PDF_or_image_read": 0,
+    "new_forecasts_or_probabilities_or_trade_thresholds": 0,
+    "normalizer_calls": 0,
+    "production_edits": 0,
+    "shared_docs_index_monitor_updates": 0
+  },
+  "input_mapping": [
+    {
+      "candidate_search_scope": "Only fixed accepted2983 EPS/case/table quotes; no candidate there, not a whole-source absence claim.",
+      "definition_status": "named_in_author_formula_estimator_unknown",
+      "existing2983_candidate": null,
+      "input": "Beta",
+      "method_quote_ids": [
+        "M3-Japan-PE-output"
+      ],
+      "next_original_needed": "Author Beta measurement definition, then a source-bound2983 estimate with matching basis.",
+      "not_substitutes": [
+        "Default1",
+        "Operating leverage or debt ratio",
+        "Another issuer Beta"
+      ],
+      "owner": "Investor/researcher selects a justified compatible financial-data/risk estimate; method/data provider defines estimator.",
+      "required_meaning": "Beta risk variable; benchmark/window/frequency/levering/date require source specification.",
+      "status": "needs_variable_definition_and_value"
+    },
+    {
+      "definition_status": "supported_next5years_analyst_expected_EPS_growth",
+      "exact_fiveyear_start_end_or_growth_averaging_definition": null,
+      "existing2983_candidates": [
+        {
+          "JSONpointer": "/direct_EPS_candidates/0",
+          "author": "アストリス・アドバイザリー・ジャパン株式会社",
+          "fact_id": "2983-astris-1-27e-EPS",
+          "model_adopted": false,
+          "period_label": "1/27E",
+          "reference": "research/ir-case-studies-2026-10-15/2983/eps-applicability-review/review.json",
+          "role": "external_estimate_EPS_level_not_fiveyear_growth",
+          "source_id": "case-public:cc1056ccbd3204206ab15aceab33c1b05c85f4dace3f235e12f454bd7169b328",
+          "unit": "JPY-per-share",
+          "value_as_unchanged_dated_candidate": "308.31"
+        },
+        {
+          "JSONpointer": "/direct_EPS_candidates/1",
+          "author": "アストリス・アドバイザリー・ジャパン株式会社",
+          "fact_id": "2983-astris-1-28e-EPS",
+          "model_adopted": false,
+          "period_label": "1/28E",
+          "reference": "research/ir-case-studies-2026-10-15/2983/eps-applicability-review/review.json",
+          "role": "external_estimate_EPS_level_not_fiveyear_growth",
+          "source_id": "case-public:cc1056ccbd3204206ab15aceab33c1b05c85f4dace3f235e12f454bd7169b328",
+          "unit": "JPY-per-share",
+          "value_as_unchanged_dated_candidate": "339.81"
+        },
+        {
+          "JSONpointer": "/direct_EPS_candidates/2",
+          "author": "アストリス・アドバイザリー・ジャパン株式会社",
+          "fact_id": "2983-astris-1-29e-EPS",
+          "model_adopted": false,
+          "period_label": "1/29E",
+          "reference": "research/ir-case-studies-2026-10-15/2983/eps-applicability-review/review.json",
+          "role": "external_estimate_EPS_level_not_fiveyear_growth",
+          "source_id": "case-public:cc1056ccbd3204206ab15aceab33c1b05c85f4dace3f235e12f454bd7169b328",
+          "unit": "JPY-per-share",
+          "value_as_unchanged_dated_candidate": "369.46"
+        }
+      ],
+      "holding_horizon_distinction": "5years is a valuation explanatory forecast horizon; user holding/review horizon months-to1year differs without alone invalidating the method.",
+      "input": "gEPS_next5years",
+      "method_quote_ids": [
+        "M4-fiveyear-growth",
+        "M2-decimal-scale"
+      ],
+      "next_original_needed": "Actual source specifying a2983 next5year EPS growth estimate and date/method, or a separately justified explicit projection; not a re-read of the completed three-EPS identification.",
+      "own_estimate_context": "The source introductory Disney/PBV illustration permits using own estimates when analyst estimates are unavailable. That is an illustrative option, not an existing2983 fiveyear forecast or authorization to invent one here.",
+      "owner": "Forecast author/analyst or explicitly adopted researcher forecast with attributable assumptions, not issuer IR guarantee.",
+      "status": "definition_supported_fiveyear_value_missing",
+      "why": "Three annual EPS levels provide at most two adjacent forecast intervals; they do not specify expected next5year EPS growth. No two-year-to-five-year extension, annualization, or assumed continuation."
+    },
+    {
+      "definition_status": "supported_Dividends_over_Earnings_but_period_unknown",
+      "existing2983_context": [
+        {
+          "quote_id": "company-guidance-revision-as-reported",
+          "role": "Issuer FY1/27 annualDPS55 reprinted in Astris report; not payout ratio or independent author dividend forecast."
+        },
+        {
+          "quote_id": "statement-full-year-guidance-period-table",
+          "role": "Issuer full-year EPS304.27,2026/2/1–2027/1/31,consolidatedJGAAP guidance, separate actor from Astris308.31."
+        },
+        {
+          "quote_id": "statement-DPS-split-basis",
+          "role": "Issuer states FY1/27 dividends on post-split basis; does not establish required regression period."
+        }
+      ],
+      "input": "Payout",
+      "method_quote_ids": [
+        "M5-payout",
+        "M2-decimal-scale"
+      ],
+      "next_original_needed": "Author payout numerator/denominator measurement period and conventions, then matched2983 facts; forecastpolicy is not automatically historical realized payout.",
+      "owner": "Issuer supplies dividends/earnings facts; method author supplies measurement definition; investor adopts matched-period ratio if justified.",
+      "status": "ratio_definition_supported_compatible_period_value_missing",
+      "value": null,
+      "why": "Dividends/Earnings is defined, but historical/current/forecast period and loss/negative-income conventions are not specified in reviewed original. Do not divide reprinted55 by Astris308.31 or issuer304.27 to create a regression input."
+    },
+    {
+      "definition_status": "unknown_trailing_current_forward_price_EPS_clock_and_share_basis",
+      "existing2983_context": [
+        {
+          "quote_id": "author-market-valuation-statement",
+          "role": "Astris FY1/27 forecast tradingPER; not adopted regression output/fairPE.",
+          "value_as_printed": "5.2"
+        },
+        {
+          "quote_id": "peer-comparison-trading-discount",
+          "role": "Separate12month-forward peer comparison; not silently equated with p1PER.",
+          "value_from_existing_case_not_new_table_read": "6.1"
+        }
+      ],
+      "input": "PE_dependent_variable_and_EPS_denominator",
+      "method_quote_ids": [
+        "M3-Japan-PE-output",
+        "C1-general-TTM-timing"
+      ],
+      "next_original_needed": "The exact PE definition used by January2026 Japan regression, preferably the linked author definitions/computation note; this is the first concrete next source priority.",
+      "owner": "Author/data methodology defines dependent variable; investor documents applicable matched-basis inputs.",
+      "selected_EPS": null,
+      "status": "needs_author_PE_measurement_spec_before_EPS_selection",
+      "why": "General CurrentData statement about prior-yearQ3 TTM does not independently define this regression PE. Do not select1/27E or actual EPS by convenience. Preserve price/earnings numerator-denominator dates, accounting, company scope and split comparability."
+    },
+    {
+      "definition_status": "needed_for_price_or_mispricing_comparison_not_formula_evaluation_itself",
+      "existing2983_context": {
+        "current_price_candidate": false,
+        "exact_quote_time": null,
+        "report_date": "2026-10-01",
+        "role": "Historical report reference only",
+        "source_id": "case-public:cc1056ccbd3204206ab15aceab33c1b05c85f4dace3f235e12f454bd7169b328",
+        "value_as_printed": "1,607JPY"
+      },
+      "input": "current_price_if_company_comparison",
+      "next_original_needed": "A real timed, matched-share-basis2983 price only if/when a current comparison is actually performed.",
+      "not_needed_for": "This definition/input mapping and algebraic coefficient sensitivities.",
+      "owner": "A source-bound market-data observation plus explicit use time/policy; not corporate IR or regression author.",
+      "status": "not_configured_for_current_comparison",
+      "value": null
+    }
+  ],
+  "mathematical_sensitivity_only": {
+    "calculation_executed": false,
+    "meaning": "Pure algebra holding the other inputs fixed; no company scenario, probability, causal effect, selected input or stock-price sensitivity has been calculated.",
+    "partial_derivatives_from_published_linear_coefficients": {
+      "dPE_dBeta": "4.28",
+      "dPE_dPayout_decimal": "10.46",
+      "dPE_dgEPS_decimal": "42.26"
+    }
+  },
+  "next_public_definition_check": {
+    "exclude_from_company_IR": [
+      "Author Beta window/benchmark or gEPS estimation",
+      "Author PE/ratio conventions or model fit",
+      "Whether regression valuation is appropriate for investor",
+      "EPS revision from cancellation definition without an authored mapping"
+    ],
+    "known_literal_currentdata_specification_route": null,
+    "no_repeated_work": [
+      "ThreeEPS candidate identification complete; no precise future-denominator universal gate.",
+      "Cancellation definition question and A/B/C annotation-only scope closed and preserved.",
+      "No re-opening of old baseline ticket, broker report or geographic/data URL closures."
+    ],
+    "priority": "Author regression PE denominator/measurement specification, with Beta/Payout specification if same literal source supplies it.",
+    "route_limit": "Root may inspect already-saved official author actual anchors to select one relevant specification route; no guessed URL, oldclosedroute retry, extra market dataset or companyreport expansion here."
+  },
+  "recorded_at": "2026-10-16T07:46:06.940544+00:00",
+  "research_method_adoption": {
+    "adopter": "Codex /root/adoption_research under existing user authorization and parent scoped task",
+    "author": "Aswath Damodaran",
+    "current_company_PE_or_price_calculation": false,
+    "financial_model_input_or_investment_policy_adoption": false,
+    "method": "Japan market-wide PE regression on Beta, next5yearEPSgrowth and Payout",
+    "numeric_parameters_preserved_as_published_facts": {
+      "Beta": "+4.28",
+      "Payout": "+10.46",
+      "constant": "+4.51",
+      "g_EPS": "+42.26"
+    },
+    "procedure": "Use the authored conditional regression relation to organize required matched-basis inputs. Compare relative PE/value only after actual input definitions/values and current applicability are assessed. Do not require an external issuer-specific target report as the universal route.",
+    "source_URL": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/MReg26.html",
+    "source_method_and_inputs_have_separate_authors": true,
+    "source_root_accepted_at": "2026-10-16T07:43:04.091182+00:00",
+    "source_vintage_label": "January2026",
+    "status": "adopted_for_this_bounded_research_input_mapping"
+  },
+  "result": {
+    "actual_company_value_PE_price_or_threshold_calculated": false,
+    "company_input_completeness": "insufficient_for_numerical_application",
+    "financial_inputs_verified": false,
+    "most_immediate_missing_original": "Exact January2026 Japan regression PE dependent-variable/earnings-denominator measurement specification",
+    "new_IR_or_trade": false,
+    "not_another_independent_company_forecast_requirement": true,
+    "research_procedure_adopted": true,
+    "valuation_thesis_or_policy_created": false
+  },
+  "scope_and_clock": {
+    "Astris": {
+      "HTTP_body_completed_at": "2026-10-15T16:42:23.293822+00:00",
+      "actual_source_first_saved_at_from_existing_receipt": "2026-10-15T17:02:48.778046+00:00",
+      "company_commission_payment": true,
+      "exact_author_fiscal_dates_accounting_consolidation_all_EPS_split_or_dilution_basis": null,
+      "firstsave_not_faked_by_HTTP": true,
+      "published_at": null,
+      "receipt_basis": "trusted_insert",
+      "report_date_as_printed": "2026-10-01",
+      "source_id": "case-public:cc1056ccbd3204206ab15aceab33c1b05c85f4dace3f235e12f454bd7169b328",
+      "source_information_independently_verified": false,
+      "source_native_SHA_from_receipt": "b48276389faeaa754fcdf84b8e7f4296303619c97dab947ef7fa96ad3cec63c9"
+    },
+    "issuer": {
+      "accounting": "Japanese GAAP",
+      "author_EPS_common_denominator_certified": false,
+      "full_year_period": [
+        "2026-02-01",
+        "2027-01-31"
+      ],
+      "guidance_not_actual": true,
+      "guidance_vintage": "2026-09-10",
+      "issuer_split_note_not_propagated_to_all_Astris_EPS": true,
+      "scope": "consolidated"
+    },
+    "regression": {
+      "DB_use_not_performed": true,
+      "January_snapshot_not_October_refit": true,
+      "body_completed_at": "2026-10-16T07:34:47.199030+00:00",
+      "exact_published_at": null,
+      "raw_sha256": "fe3a70f1e0bee3b01913c377d4572e0bd1abdfde38ca939146782b74a923d761",
+      "source_URL": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/MReg26.html",
+      "source_clock_label": "January2026",
+      "source_first_saved_in_DB": null
+    }
+  },
+  "source_quotes": {
+    "existing_company_author_quote_references_no_reread": [
+      {
+        "JSONpointer": "/1",
+        "file_sha256": "e563a1fa7afafed752e057a8f9a546f059e923181f417bb122281dfab88de515",
+        "image_path_as_existing": "images/page-1.png",
+        "image_sha256_as_existing": "c2835fe96465a4e9229425ed6549f7455c380982acb3bf673e091a6003774afc",
+        "path": "research/ir-case-studies-2026-10-15/2983/first-author-report/quotes.json",
+        "pdf_physical_page": 1,
+        "quote_id": "forecast-year-headings",
+        "reading_scope": "Reference to fixed accepted quote; no PDF/image reread or new fact extraction.",
+        "source_UTF8_byte_end": 5135,
+        "source_UTF8_byte_start": 5064,
+        "source_character_end": 3189,
+        "source_character_start": 3122,
+        "source_id": "case-public:cc1056ccbd3204206ab15aceab33c1b05c85f4dace3f235e12f454bd7169b328"
+      },
+      {
+        "JSONpointer": "/2",
+        "file_sha256": "e563a1fa7afafed752e057a8f9a546f059e923181f417bb122281dfab88de515",
+        "image_path_as_existing": "images/page-1.png",
+        "image_sha256_as_existing": "c2835fe96465a4e9229425ed6549f7455c380982acb3bf673e091a6003774afc",
+        "path": "research/ir-case-studies-2026-10-15/2983/first-author-report/quotes.json",
+        "pdf_physical_page": 1,
+        "quote_id": "author-EPS-row-yen",
+        "reading_scope": "Reference to fixed accepted quote; no PDF/image reread or new fact extraction.",
+        "source_UTF8_byte_end": 5791,
+        "source_UTF8_byte_start": 5717,
+        "source_character_end": 3629,
+        "source_character_start": 3561,
+        "source_id": "case-public:cc1056ccbd3204206ab15aceab33c1b05c85f4dace3f235e12f454bd7169b328"
+      },
+      {
+        "JSONpointer": "/3",
+        "file_sha256": "e563a1fa7afafed752e057a8f9a546f059e923181f417bb122281dfab88de515",
+        "image_path_as_existing": "images/page-1.png",
+        "image_sha256_as_existing": "c2835fe96465a4e9229425ed6549f7455c380982acb3bf673e091a6003774afc",
+        "path": "research/ir-case-studies-2026-10-15/2983/first-author-report/quotes.json",
+        "pdf_physical_page": 1,
+        "quote_id": "table-source-and-current-price-multiples-note",
+        "reading_scope": "Reference to fixed accepted quote; no PDF/image reread or new fact extraction.",
+        "source_UTF8_byte_end": 7836,
+        "source_UTF8_byte_start": 7567,
+        "source_character_end": 5296,
+        "source_character_start": 5149,
+        "source_id": "case-public:cc1056ccbd3204206ab15aceab33c1b05c85f4dace3f235e12f454bd7169b328"
+      },
+      {
+        "JSONpointer": "/4",
+        "file_sha256": "e563a1fa7afafed752e057a8f9a546f059e923181f417bb122281dfab88de515",
+        "image_path_as_existing": "images/page-1.png",
+        "image_sha256_as_existing": "c2835fe96465a4e9229425ed6549f7455c380982acb3bf673e091a6003774afc",
+        "path": "research/ir-case-studies-2026-10-15/2983/first-author-report/quotes.json",
+        "pdf_physical_page": 1,
+        "quote_id": "author-market-valuation-statement",
+        "reading_scope": "Reference to fixed accepted quote; no PDF/image reread or new fact extraction.",
+        "source_UTF8_byte_end": 4964,
+        "source_UTF8_byte_start": 4679,
+        "source_character_end": 3040,
+        "source_character_start": 2883,
+        "source_id": "case-public:cc1056ccbd3204206ab15aceab33c1b05c85f4dace3f235e12f454bd7169b328"
+      },
+      {
+        "JSONpointer": "/5",
+        "file_sha256": "e563a1fa7afafed752e057a8f9a546f059e923181f417bb122281dfab88de515",
+        "image_path_as_existing": "images/page-4.png",
+        "image_sha256_as_existing": "dc5aa5440d8959150a6d33156d0ea9b82a067c46736938b52c47240986027add",
+        "path": "research/ir-case-studies-2026-10-15/2983/first-author-report/quotes.json",
+        "pdf_physical_page": 4,
+        "quote_id": "company-guidance-revision-as-reported",
+        "reading_scope": "Reference to fixed accepted quote; no PDF/image reread or new fact extraction.",
+        "source_UTF8_byte_end": 18724,
+        "source_UTF8_byte_start": 18374,
+        "source_character_end": 11802,
+        "source_character_start": 11626,
+        "source_id": "case-public:cc1056ccbd3204206ab15aceab33c1b05c85f4dace3f235e12f454bd7169b328"
+      },
+      {
+        "JSONpointer": "/9",
+        "file_sha256": "e563a1fa7afafed752e057a8f9a546f059e923181f417bb122281dfab88de515",
+        "image_path_as_existing": "images/page-7.png",
+        "image_sha256_as_existing": "94f59cf9bf080d0daca9135584bb290a728fd19f2dc394ac15d1b67d6a67f01b",
+        "path": "research/ir-case-studies-2026-10-15/2983/first-author-report/quotes.json",
+        "pdf_physical_page": 7,
+        "quote_id": "peer-comparison-trading-discount",
+        "reading_scope": "Reference to fixed accepted quote; no PDF/image reread or new fact extraction.",
+        "source_UTF8_byte_end": 26303,
+        "source_UTF8_byte_start": 25990,
+        "source_character_end": 16927,
+        "source_character_start": 16814,
+        "source_id": "case-public:cc1056ccbd3204206ab15aceab33c1b05c85f4dace3f235e12f454bd7169b328"
+      },
+      {
+        "JSONpointer": "/10",
+        "file_sha256": "e563a1fa7afafed752e057a8f9a546f059e923181f417bb122281dfab88de515",
+        "image_path_as_existing": "images/page-8.png",
+        "image_sha256_as_existing": "4970438a2591260df14f18732c8daec14179bfcac9c53a196e0411cee1a4934b",
+        "path": "research/ir-case-studies-2026-10-15/2983/first-author-report/quotes.json",
+        "pdf_physical_page": 8,
+        "quote_id": "author-revision-and-operating-assumptions",
+        "reading_scope": "Reference to fixed accepted quote; no PDF/image reread or new fact extraction.",
+        "source_UTF8_byte_end": 31004,
+        "source_UTF8_byte_start": 30520,
+        "source_character_end": 20782,
+        "source_character_start": 20562,
+        "source_id": "case-public:cc1056ccbd3204206ab15aceab33c1b05c85f4dace3f235e12f454bd7169b328"
+      },
+      {
+        "JSONpointer": "/16",
+        "file_sha256": "e563a1fa7afafed752e057a8f9a546f059e923181f417bb122281dfab88de515",
+        "image_path_as_existing": "images/page-11.png",
+        "image_sha256_as_existing": "7d6a075f87cb151e6bceea8bea7ceffaf7e4372b1a8919c4620d7a3226303884",
+        "path": "research/ir-case-studies-2026-10-15/2983/first-author-report/quotes.json",
+        "pdf_physical_page": 11,
+        "quote_id": "creator-and-unverified-public-information",
+        "reading_scope": "Reference to fixed accepted quote; no PDF/image reread or new fact extraction.",
+        "source_UTF8_byte_end": 49814,
+        "source_UTF8_byte_start": 49454,
+        "source_character_end": 34965,
+        "source_character_start": 34829,
+        "source_id": "case-public:cc1056ccbd3204206ab15aceab33c1b05c85f4dace3f235e12f454bd7169b328"
+      },
+      {
+        "JSONpointer": "/17",
+        "file_sha256": "e563a1fa7afafed752e057a8f9a546f059e923181f417bb122281dfab88de515",
+        "image_path_as_existing": "images/page-11.png",
+        "image_sha256_as_existing": "7d6a075f87cb151e6bceea8bea7ceffaf7e4372b1a8919c4620d7a3226303884",
+        "path": "research/ir-case-studies-2026-10-15/2983/first-author-report/quotes.json",
+        "pdf_physical_page": 11,
+        "quote_id": "commission-and-payment",
+        "reading_scope": "Reference to fixed accepted quote; no PDF/image reread or new fact extraction.",
+        "source_UTF8_byte_end": 52244,
+        "source_UTF8_byte_start": 52028,
+        "source_character_end": 35921,
+        "source_character_start": 35835,
+        "source_id": "case-public:cc1056ccbd3204206ab15aceab33c1b05c85f4dace3f235e12f454bd7169b328"
+      },
+      {
+        "JSONpointer": "/4",
+        "file_sha256": "ace031016736e97f9489939850b6b31ea7e43dfc6f0562c8fd7034b239047f4e",
+        "image_path_as_existing": "images/02-page-1.png",
+        "image_sha256_as_existing": "5e881e3b77caed5f7c5ccfb77f20a48b9839e0a943b23e7d8759c1cb1960a60b",
+        "path": "research/ir-case-studies-2026-10-15/2983/issuer-quarter-followup/quotes.json",
+        "pdf_physical_page": 1,
+        "quote_id": "statement-DPS-split-basis",
+        "reading_scope": "Reference to fixed accepted quote; no PDF/image reread or new fact extraction.",
+        "source_UTF8_byte_end": 4589,
+        "source_UTF8_byte_start": 4355,
+        "source_character_end": 3023,
+        "source_character_start": 2933,
+        "source_id": "case-public:5821dbeed9379e81fd7f06f757447eb0b6413ed466b63dc5f38a51fde1f4a119"
+      },
+      {
+        "JSONpointer": "/5",
+        "file_sha256": "ace031016736e97f9489939850b6b31ea7e43dfc6f0562c8fd7034b239047f4e",
+        "image_path_as_existing": "images/02-page-1.png",
+        "image_sha256_as_existing": "5e881e3b77caed5f7c5ccfb77f20a48b9839e0a943b23e7d8759c1cb1960a60b",
+        "path": "research/ir-case-studies-2026-10-15/2983/issuer-quarter-followup/quotes.json",
+        "pdf_physical_page": 1,
+        "quote_id": "statement-full-year-guidance-period-table",
+        "reading_scope": "Reference to fixed accepted quote; no PDF/image reread or new fact extraction.",
+        "source_UTF8_byte_end": 5305,
+        "source_UTF8_byte_start": 4591,
+        "source_character_end": 3555,
+        "source_character_start": 3025,
+        "source_id": "case-public:5821dbeed9379e81fd7f06f757447eb0b6413ed466b63dc5f38a51fde1f4a119"
+      },
+      {
+        "JSONpointer": "/11",
+        "file_sha256": "ace031016736e97f9489939850b6b31ea7e43dfc6f0562c8fd7034b239047f4e",
+        "image_path_as_existing": "images/04-page-1.png",
+        "image_sha256_as_existing": "80435592e05fe09788c0c29a87f5dde9821f25aaaddab86596979c6ccc6cb505",
+        "path": "research/ir-case-studies-2026-10-15/2983/issuer-quarter-followup/quotes.json",
+        "pdf_physical_page": 1,
+        "quote_id": "revision-full-year-EPS-split-note",
+        "reading_scope": "Reference to fixed accepted quote; no PDF/image reread or new fact extraction.",
+        "source_UTF8_byte_end": 4190,
+        "source_UTF8_byte_start": 3908,
+        "source_character_end": 2756,
+        "source_character_start": 2652,
+        "source_id": "case-public:c75788675e0b606f2c00bf372044f545e6ac53f77357a50556ae7f52d6a82290"
+      }
+    ],
+    "new_accepted_method_quotes_with_exact_spans": [
+      {
+        "JSONpointer": "/quotes/2",
+        "UTF8_end_exclusive": 1088,
+        "UTF8_start": 1021,
+        "Unicode_end_exclusive": 1088,
+        "Unicode_start": 1021,
+        "body_received_complete_at": "2026-10-16T07:34:02.168355+00:00",
+        "quote": "trailing 12-month data through the third quarter of the prior year.",
+        "quote_id": "C1-general-TTM-timing",
+        "quotes_file": "research/ir-damodaran-regional-regression-discovery-2026-10-16/quotes.json",
+        "quotes_sha256": "f2d02f96919b7305f46f8aeaa1a6026d16031425c4fce0218e18c3c16818e7c5",
+        "raw_sha256": "a8214c92d0c562b548b5293e571de23e4ad8c95fa3760f2625c2a2eca45a29a1",
+        "saved_visible_text": "research/ir-damodaran-regional-regression-discovery-2026-10-16/text/03.txt",
+        "source_URL": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html",
+        "visible_text_sha256": "3833caa2a057a4443786d155577334d0ea2c439da48e10026e774e350228ff9a"
+      },
+      {
+        "JSONpointer": "/quotes/3",
+        "UTF8_end_exclusive": 540,
+        "UTF8_start": 470,
+        "Unicode_end_exclusive": 540,
+        "Unicode_start": 470,
+        "body_received_complete_at": "2026-10-16T07:34:47.199030+00:00",
+        "quote": "The fourth set of regressions were run across just Japanese companies.",
+        "quote_id": "M1-Japan-only",
+        "quotes_file": "research/ir-damodaran-regional-regression-discovery-2026-10-16/quotes.json",
+        "quotes_sha256": "f2d02f96919b7305f46f8aeaa1a6026d16031425c4fce0218e18c3c16818e7c5",
+        "raw_sha256": "fe3a70f1e0bee3b01913c377d4572e0bd1abdfde38ca939146782b74a923d761",
+        "saved_visible_text": "research/ir-damodaran-regional-regression-discovery-2026-10-16/text/04.txt",
+        "source_URL": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/MReg26.html",
+        "visible_text_sha256": "8126c4c37499f6d5e99705f102ce1d7f8212c4f17720a8b5614ae617cd3f49aa"
+      },
+      {
+        "JSONpointer": "/quotes/4",
+        "UTF8_end_exclusive": 1151,
+        "UTF8_start": 1095,
+        "Unicode_end_exclusive": 1151,
+        "Unicode_start": 1095,
+        "body_received_complete_at": "2026-10-16T07:34:47.199030+00:00",
+        "quote": "stay true to decimal format. (25% gets entered as 0.25).",
+        "quote_id": "M2-decimal-scale",
+        "quotes_file": "research/ir-damodaran-regional-regression-discovery-2026-10-16/quotes.json",
+        "quotes_sha256": "f2d02f96919b7305f46f8aeaa1a6026d16031425c4fce0218e18c3c16818e7c5",
+        "raw_sha256": "fe3a70f1e0bee3b01913c377d4572e0bd1abdfde38ca939146782b74a923d761",
+        "saved_visible_text": "research/ir-damodaran-regional-regression-discovery-2026-10-16/text/04.txt",
+        "source_URL": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/MReg26.html",
+        "visible_text_sha256": "8126c4c37499f6d5e99705f102ce1d7f8212c4f17720a8b5614ae617cd3f49aa"
+      },
+      {
+        "JSONpointer": "/quotes/5",
+        "UTF8_end_exclusive": 4800,
+        "UTF8_start": 4716,
+        "Unicode_end_exclusive": 4784,
+        "Unicode_start": 4700,
+        "body_received_complete_at": "2026-10-16T07:34:47.199030+00:00",
+        "quote": "PE = 4.51 + 4.28 Beta + 42.26 g EPS + 10.46 Payout (3.50) (7.32) (9.05) (5.78) 34.5%",
+        "quote_id": "M3-Japan-PE-output",
+        "quotes_file": "research/ir-damodaran-regional-regression-discovery-2026-10-16/quotes.json",
+        "quotes_sha256": "f2d02f96919b7305f46f8aeaa1a6026d16031425c4fce0218e18c3c16818e7c5",
+        "raw_sha256": "fe3a70f1e0bee3b01913c377d4572e0bd1abdfde38ca939146782b74a923d761",
+        "saved_visible_text": "research/ir-damodaran-regional-regression-discovery-2026-10-16/text/04.txt",
+        "source_URL": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/MReg26.html",
+        "visible_text_sha256": "8126c4c37499f6d5e99705f102ce1d7f8212c4f17720a8b5614ae617cd3f49aa"
+      },
+      {
+        "JSONpointer": "/quotes/6",
+        "UTF8_end_exclusive": 5343,
+        "UTF8_start": 5271,
+        "Unicode_end_exclusive": 5323,
+        "Unicode_start": 5251,
+        "body_received_complete_at": "2026-10-16T07:34:47.199030+00:00",
+        "quote": "g EPS = Expected growth rate in EPS for next 5 years (analyst estimates)",
+        "quote_id": "M4-fiveyear-growth",
+        "quotes_file": "research/ir-damodaran-regional-regression-discovery-2026-10-16/quotes.json",
+        "quotes_sha256": "f2d02f96919b7305f46f8aeaa1a6026d16031425c4fce0218e18c3c16818e7c5",
+        "raw_sha256": "fe3a70f1e0bee3b01913c377d4572e0bd1abdfde38ca939146782b74a923d761",
+        "saved_visible_text": "research/ir-damodaran-regional-regression-discovery-2026-10-16/text/04.txt",
+        "source_URL": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/MReg26.html",
+        "visible_text_sha256": "8126c4c37499f6d5e99705f102ce1d7f8212c4f17720a8b5614ae617cd3f49aa"
+      },
+      {
+        "JSONpointer": "/quotes/7",
+        "UTF8_end_exclusive": 5456,
+        "UTF8_start": 5429,
+        "Unicode_end_exclusive": 5436,
+        "Unicode_start": 5409,
+        "body_received_complete_at": "2026-10-16T07:34:47.199030+00:00",
+        "quote": "Payout = Dividends/Earnings",
+        "quote_id": "M5-payout",
+        "quotes_file": "research/ir-damodaran-regional-regression-discovery-2026-10-16/quotes.json",
+        "quotes_sha256": "f2d02f96919b7305f46f8aeaa1a6026d16031425c4fce0218e18c3c16818e7c5",
+        "raw_sha256": "fe3a70f1e0bee3b01913c377d4572e0bd1abdfde38ca939146782b74a923d761",
+        "saved_visible_text": "research/ir-damodaran-regional-regression-discovery-2026-10-16/text/04.txt",
+        "source_URL": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/MReg26.html",
+        "visible_text_sha256": "8126c4c37499f6d5e99705f102ce1d7f8212c4f17720a8b5614ae617cd3f49aa"
+      }
+    ]
+  },
+  "validation": {
+    "existing_closed_scope_unchanged": true,
+    "existing_sources_or_facts_changed": false,
+    "parent_new_method_source_accepted_before_this_record": true,
+    "six_method_quotes_Unicode_UTF8_exact": true,
+    "source_clock_published_retrieval_firstsave_separated": true,
+    "three_direct_EPS_candidates_preserved": true
+  }
+}

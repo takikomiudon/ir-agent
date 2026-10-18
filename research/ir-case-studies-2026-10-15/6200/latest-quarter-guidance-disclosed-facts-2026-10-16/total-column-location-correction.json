@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-10-16T11:33:18.767701+00:00",
+  "reason": "同じ35.00が期末・合計の両列にある。年間DPSのraw token位置を期末側のfirstmatchから合計側rightmostへ訂正。値・quote・period/kind・原source・固定nowは不変。",
+  "before_files_SHA256": {
+    "normalization-input.json": "826ebe5b0f77f4c816d654b45625f26031773b723380db94c2a3069ef9677444",
+    "normalized-bundle.json": "ea78cfb5df94f4dfd50c09d7cb34ebc79120366d8bb793a7c9692345e2276b05",
+    "reproduction.json": "63469d7219ab9ec53640319be96d2a6d3724c87d10842fa6f20d843c52499568",
+    "validation.json": "be67f7d2280781c4e45c33e8ab65903184f713b1ef00f1c77a405d815deb9b5b",
+    "audit.json": "0ca3f1503dcd681fd1e87d9c274c0451520dbff5ae4080cc15e27502dde9f19f"
+  },
+  "after_input_SHA256": "54b732288d5a7f6b9a658dbec5fe46574b0f820c1cc943ff47dc75c61a9682c2",
+  "after_bundle_SHA256": "79909900d58e13a43597c9eb63d951a914fcf4825e7a764acb0b33da466eece4",
+  "old_derived_source_id": "disclosed-facts:df205f90dfaee65e5373d0c56d2d66a3c5702dd733ffaaac01c77d62c90e540b",
+  "new_derived_source_id": "disclosed-facts:a4b5f5b2639c5d29b6fc7c7e506acfa775d8d8ad67dffc37596ecbf48fea2258",
+  "old_and_new_sources_not_registered": true,
+  "no_value_rewrite_or_additional_fact": true,
+  "changed_input_field_paths": [
+    "facts.2.location.raw_token_source_character_start",
+    "facts.2.location.raw_token_source_character_end",
+    "facts.2.location.raw_token_UTF8_byte_start",
+    "facts.2.location.raw_token_UTF8_byte_end"
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "security_code": "4716",
+  "company_name": "日本オラクル",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "情報・通信業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.oracle.com/jp/corporate/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T12:43:08.320936+00:00",
+  "completed_at": "2026-10-11T12:44:01.789478+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/4716/20261011T124308320972Z/02.json",
+      "url": "https://investor.oracle.com/home/default.aspx",
+      "retrieved_at": "2026-10-11T12:43:42.003715+00:00",
+      "quote": "Mailing Lists * Press releases Events and presentations SEC filings End of day stock quote Enter the code shown above. Unsubscribe Email Alert Sign Up Confirmation Contact information +1.512.501.7078 investor_us@oracle.com Oracle on Facebook Oracle on Twitter Oracle on LinkedIn Oracle on YouTube Oracle Integrated Cloud A",
+      "role": "contact_channel"
+    },
+    {
+      "snapshot": "evidence/4716/20261011T124308320972Z/01.json",
+      "url": "https://www.oracle.com/jp/corporate/",
+      "retrieved_at": "2026-10-11T12:43:18.724940+00:00",
+      "quote": "投資家向け情報（日本オラクル） 日本オラクルのIRに関連する資料をご紹介しています。 投資家情報を見る",
+      "role": "saved_scope_review"
+    },
+    {
+      "snapshot": "evidence/4716/20261011T124308320972Z/02.json",
+      "url": "https://investor.oracle.com/home/default.aspx",
+      "retrieved_at": "2026-10-11T12:43:42.003715+00:00",
+      "quote": "By providing your email address below, you are providing consent to Oracle Corporation to send you the requested Investor Email Alert updates.",
+      "role": "rejected_parent_company_channel"
+    },
+    {
+      "snapshot": "evidence/4716/20261011T124308320972Z/02.json",
+      "url": "https://investor.oracle.com/home/default.aspx",
+      "retrieved_at": "2026-10-11T12:43:42.003715+00:00",
+      "quote": "Contact information +1.512.501.7078 investor_us@oracle.com",
+      "role": "rejected_parent_company_channel"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.oracle.com/jp/corporate/",
+      "final_url": "https://www.oracle.com/jp/corporate/",
+      "snapshot": "evidence/4716/20261011T124308320972Z/01.json",
+      "retrieved_at": "2026-10-11T12:43:18.724940+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://investor.oracle.com/home/default.aspx",
+      "final_url": "https://investor.oracle.com/home/default.aspx",
+      "snapshot": "evidence/4716/20261011T124308320972Z/02.json",
+      "retrieved_at": "2026-10-11T12:43:42.003715+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "米国親会社Oracle CorporationのIR宛先を日本オラクルの窓口として使用しない。日本法人IRポータルは実公開リンクのみ確認、金融IRメール・質問フォーム・個人受付・返信方針は未確認。"
+  ],
+  "discovery": {
+    "security_code": "4716",
+    "official_url": "https://www.oracle.com/jp/corporate/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "日本オラクル",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/4716/20261011T124308320972Z/01.json",
+      "normalized_name": "日本オラクル",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 2,
+  "http_get_attempt_count": 4,
+  "previous_attempts": [
+    "attempts/4716/20261011T045047505386Z.json",
+    "attempts/4716/20261011T124401789676Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_manufacturing",
+    "reviewed_at": "2026-10-11T13:03:02.764037+00:00",
+    "notes": "日本法人を区別する公開会社情報は確認したが取得済IR窓口investor_us@oracle.comはOracle Corporation米国親会社のSEC/US連絡先で日本オラクル4716への対応実証がない。旧CをUに訂正しUSメールを現在のIR窓口から除外。日本法人専用IR資料ポータルの公開実リンクを未取得候補に保存。資料リンクだけで受信P/Cへ昇格しない。",
+    "saved_evidence_only": true,
+    "attempted_at_reviewed": "2026-10-11T12:43:08.320936+00:00",
+    "reviewed_snapshot_count": 2,
+    "original_evidence_sha256": {
+      "evidence/4716/20261011T124308320972Z/01.json": "fd00c00a6d419013c2d30b609953c3d05b4a4227495c7e6ba8d9e5e02fee34e3",
+      "evidence/4716/20261011T124308320972Z/02.json": "90c65593aa5e7d7f04ef0358132683db18fcef2ef2967aceec9fa8ffb67f01e8"
+    }
+  },
+  "previous_classification_before_manual_review": {
+    "investigation_status": "confirmed",
+    "verification_level": "ir_email_verified",
+    "contact_url": "https://investor.oracle.com/home/default.aspx",
+    "channels": [
+      "email"
+    ],
+    "public_ir_emails": [
+      "investor_us@oracle.com"
+    ],
+    "individual_access": "not_stated",
+    "outreach_suitability": "candidate",
+    "limitations": [
+      "自動抽出。個人の利用条件・会社名必須・返信条件は人の点検が必要。送信・回答実績は未確認。"
+    ],
+    "unconfirmed_reason": null,
+    "identity_status": "name_or_security_code_observed",
+    "identity_matches": [
+      {
+        "snapshot": "evidence/4716/20261011T124308320972Z/01.json",
+        "normalized_name": "日本オラクル",
+        "security_code_observed": false
+      }
+    ]
+  },
+  "previous_conditions_before_manual_review": [],
+  "unconfirmed_reason": "official_channel_not_demonstrated_in_saved_evidence"
+}

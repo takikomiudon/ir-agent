@@ -1,0 +1,99 @@
+{
+  "recorded_at": "2026-10-16T03:57:25.999085+00:00",
+  "status": "frozen_for_root_and_independent_review",
+  "design_ref": {
+    "path": "research/ir-public-information-review-binding-2026-10-16/design.md",
+    "sha256": "ad8c3150c2f71f5819d5793174c47bd1e1cc3ec9a560b745723b725609717430"
+  },
+  "changed_files": [
+    {
+      "path": "src/ir_agent/models.py",
+      "sha256": "e0d0444fda0e730de6c6e9beaa110bbd796de00f3228c041daa016284a8e234e",
+      "bytes": 10337,
+      "frozen_copy": "research/ir-public-information-review-binding-2026-10-16/after/src/ir_agent/models.py"
+    },
+    {
+      "path": "src/ir_agent/decision.py",
+      "sha256": "5243aa9c51d42d1abc9a2cd95cc65d8b9671be1625a30d8cdeaddfdade026614",
+      "bytes": 24954,
+      "frozen_copy": "research/ir-public-information-review-binding-2026-10-16/after/src/ir_agent/decision.py"
+    },
+    {
+      "path": "src/ir_agent/decision_lifecycle.py",
+      "sha256": "aae37c53b5df34a4ef13bdf49c191d3211cfba605fb0a78d19efb58109ae61be",
+      "bytes": 28641,
+      "frozen_copy": "research/ir-public-information-review-binding-2026-10-16/after/src/ir_agent/decision_lifecycle.py"
+    },
+    {
+      "path": "src/ir_agent/harness.py",
+      "sha256": "23e145a1487fe2a529f64e842a1468b23131d61a260c6746147cbe42ccd25d3e",
+      "bytes": 43737,
+      "frozen_copy": "research/ir-public-information-review-binding-2026-10-16/after/src/ir_agent/harness.py"
+    },
+    {
+      "path": "src/ir_agent/public_information_review.py",
+      "sha256": "1c7d19a0cf79d1628144196217cd84bfd0c656a48a1308934a13943e70b249aa",
+      "bytes": 5582,
+      "frozen_copy": "research/ir-public-information-review-binding-2026-10-16/after/src/ir_agent/public_information_review.py"
+    },
+    {
+      "path": "tests/test_public_information_review.py",
+      "sha256": "5f8e89e61c7b013d359e02ca7138b0fcb85f1932817d3110b6abfd8024da3f7e",
+      "bytes": 20140,
+      "frozen_copy": "research/ir-public-information-review-binding-2026-10-16/after/tests/test_public_information_review.py"
+    }
+  ],
+  "unchanged_baseline_files": [
+    "src/ir_agent/store.py",
+    "src/ir_agent/availability.py",
+    "src/ir_agent/information_review.py",
+    "tests/test_decision.py",
+    "tests/test_decision_lifecycle.py",
+    "tests/test_workflow.py",
+    "tests/test_question_baseline_binding.py",
+    "tests/test_dependency_information_gates.py"
+  ],
+  "focused_tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=tests .venv/bin/python -m unittest test_public_information_review test_decision test_decision_lifecycle test_workflow test_question_baseline_binding test_dependency_information_gates test_unweighted_decision -v",
+    "new_test_methods": 19,
+    "total_test_methods": 136,
+    "elapsed_seconds_as_unittest_reported": "0.888",
+    "status": "passed",
+    "log_sha256": "cd7dbff3ec8a8a4645262ee4f6fb06415f72aa0c862a4ed0fbe7c235d28048fc",
+    "full_suite_executed": false
+  },
+  "behavior": {
+    "opt_in_field": "question.public_information_review",
+    "review_item_fields": [
+      "source_id",
+      "source_snapshot_sha256",
+      "scope",
+      "basis_quote"
+    ],
+    "scope_type": "nonempty string only",
+    "native_hash_method": "SHA256(models.json_text(original_passed_source).encode(UTF8))",
+    "reviewed_at_self_reported": true,
+    "answer_absence_verified": false,
+    "review_sources_not_added_to_thesis_or_sources_for_other_uses": true,
+    "same_source_different_scope_preserved_in_immutable_question": true,
+    "pure_shape_hash_quote_company_market_cycle": "ValueError",
+    "pure_temporal_missing_origin_or_information_hold": "needs_review using existing plan status",
+    "persistence": "DAG source_availability at reviewed_at on both event and knowledge axes; corrections at reviewed_at/as_of/trusted runtime; metadata publicity and actual reply-subject company checked",
+    "draft_notready_reasons": "contract preflight or server-computed public_information_review_check for newfield/noncontract",
+    "server_check_spoof": "newfield present: caller cannot set server check on first INSERT; same original-request retry retains saved observation; changed retry rejects. Absent newfield: same-named arbitrary legacy JSON remains untrusted/unconsumed with old behavior.",
+    "retry_contract": "Use original request. API response adds row-state fields and is not an add request; exact stored raw noncontract JSON may replay only if it matches frozen bytes.",
+    "send": "New opt-in requests recheck binding at trusted runtime before a new external-sent-state record; old same-sent_at retries remain original history. No external message sent.",
+    "compatibility": "No new output/check/gate for absent public_information_review. Old contractless recording is not a newly verified financial send-preparation route."
+  },
+  "development_note": "First dedicated test run had1fixture SQL error (assumed4company columns; actual2). Corrected fixture only. Iterative source-DAG traversal follows root review and has a1100ancestor regression test. No saved real data touched.",
+  "scope": {
+    "GETs": 0,
+    "actual_operational_DB_connections_or_writes": 0,
+    "synthetic_memory_DB_tests": true,
+    "new_tables_or_CLI": 0,
+    "shared_docs_edits": 0,
+    "financial_thresholds_forecasts_or_adoptions": 0,
+    "new_real_questions_or_sends": 0,
+    "production_code_frozen_after_this_record": true
+  }
+}

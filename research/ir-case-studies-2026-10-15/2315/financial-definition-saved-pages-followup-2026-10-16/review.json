@@ -1,0 +1,152 @@
+{
+  "recorded_at": {
+    "utc": "2026-10-16T05:34:52.706807+00:00",
+    "jst": "2026-10-16T14:34:52.706807+09:00"
+  },
+  "company_id": "jp:2315",
+  "status": "finite_three_saved_pages_complete_awaiting_root_acceptance",
+  "existing_source_id": "case-public:0051f6135d00f49b58835386348f9c7c3bdac9e38c0bd18e42cf2ad86c7dac74",
+  "source_url": "https://www.caica.jp/wp-content/uploads/2026/09/20260914_4_kaiji.pdf",
+  "publication_date": "2026-09-14",
+  "publication_time_known": false,
+  "original_retrieved_at": "2026-10-16T05:23:49.080878+00:00",
+  "scope": {
+    "new_text_and_image_read_pages": [
+      20,
+      57,
+      58
+    ],
+    "printed_pages": [
+      "20",
+      "57",
+      "58"
+    ],
+    "prior_accepted_supplement_pages_unchanged": [
+      9,
+      17,
+      22
+    ],
+    "full_document_semantic_review": false,
+    "heading_check": "matched; p20 quarterly revenue / p57 financial-business introduction / p58 coin introduction",
+    "manual_image_read_completed": true,
+    "new_images": [
+      {
+        "file": "research/ir-case-studies-2026-10-15/2315/financial-definition-saved-pages-followup-2026-10-16/images/physical-20.png",
+        "sha256": "287200732c2b18c9fab17b38b39e241328f8b168f906afe6c79b585c5b4c62b7",
+        "bytes": 233327
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2315/financial-definition-saved-pages-followup-2026-10-16/images/physical-57.png",
+        "sha256": "bf93ec5165b19799972a1d1688d81c9aaa72b61ad2784dd360cd1caed29230b3",
+        "bytes": 253234
+      },
+      {
+        "file": "research/ir-case-studies-2026-10-15/2315/financial-definition-saved-pages-followup-2026-10-16/images/physical-58.png",
+        "sha256": "85c35160d386532e369f5cb134589e21fed13ae591b210d8f994a7ed6e5d026d",
+        "bytes": 202331
+      }
+    ],
+    "new_scope_not_added_to_old_source_metadata": true,
+    "old_model_scope_assessment_not_rewritten": true
+  },
+  "definition_results": [
+    {
+      "definition": "内部取引/連結",
+      "status": "resolved_for_p20_chart_only",
+      "source_quote_ids": [
+        "p20-quarterly-consolidated-chart-scope",
+        "p20-caption-segment-internal-elimination",
+        "p20-footnote-internal-elimination"
+      ],
+      "finding": "p20は四半期毎の連結売上推移で、セグメント売上は内部取引控除後と2か所で明記。",
+      "limit": "この図表に限る。9か月累計/単体/内部取引込segment売上や暗号資産の取得原価控除gross/netと同一視しない。"
+    },
+    {
+      "definition": "自己/顧客",
+      "status": "issuer_identity_resolved_only; asset_ownership_unresolved",
+      "source_quote_ids": [
+        "p57-business-introduction-only",
+        "p58-own-token-issuer-not-holdings"
+      ],
+      "finding": "当社がカイカコインを発行すること、INO Fine運営と自社発行暗号資産を活用する事業紹介は明示。",
+      "limit": "自己発行は当社の現在保有残高・顧客資産/預り負債の区分ではない。発行枚数/時価総額/取引価格を当社の保有資産・株主価値へ変換しない。"
+    },
+    {
+      "definition": "手数料",
+      "status": "no_additional_accounting_definition_on_these_pages",
+      "source_quote_ids": [
+        "p57-business-introduction-only"
+      ],
+      "finding": "INO Fine/NFTと会員特典のサービス紹介。",
+      "limit": "この3頁には販売手数料率、総取扱高との比率、損益との相殺定義がない。以前受入済みの短信手数料説明は変更/再コピーしない。"
+    },
+    {
+      "definition": "実現損益/評価損益",
+      "status": "unresolved_in_three_read_pages",
+      "source_quote_ids": [],
+      "finding": "3頁読了したが、負の金融売上を構成する実現/評価の会計内訳は確認できない。",
+      "limit": "コインの市場情報・事業成長方針を損益認識基準とみなさず、資料全体に存在しないとも主張しない。"
+    },
+    {
+      "definition": "gross/net",
+      "status": "unresolved_except_intersegment_elimination",
+      "source_quote_ids": [
+        "p20-caption-segment-internal-elimination"
+      ],
+      "finding": "内部取引控除は明示されたが、暗号資産の売却代金/簿価・売却損益/評価損益/手数料の総額/純額ルールは確認できない。",
+      "limit": "内部控除という語だけで売上/原価/損益のnet表示を確定しない。"
+    },
+    {
+      "definition": "法人/規制/市場値の範囲",
+      "status": "partial_business_scope_only",
+      "source_quote_ids": [
+        "p57-business-introduction-only",
+        "p58-own-token-issuer-not-holdings",
+        "p58-market-reference-date-only"
+      ],
+      "finding": "金融サービス事業と当社発行・Zaif上場という紹介。市場参考値の基準は2026年9月9日。",
+      "limit": "各保有法人/支配/顧客資金/営業負債/規制資本は未解決。暗号資産の時価情報は7月末Q3実績や10月16日現在値、当社株式の価格/時価総額ではない。"
+    }
+  ],
+  "minimal_residual": "同頁の内部取引控除は回答済み。なお残る会社定義は、金融segment負売上に含める売却/評価/手数料の認識・gross/net及び自己/顧客資産の法的scope。事業紹介と会計定義を混同しない。",
+  "chart_value_handling": "Series values and token market values remain in the raw page artifacts only; no new forecast, normalized fact, arithmetic bridge or financial adoption.",
+  "evidence": {
+    "source_pins": {
+      "file": "research/ir-case-studies-2026-10-15/2315/financial-definition-saved-pages-followup-2026-10-16/source-pins.json",
+      "sha256": "b34b8ddd73ccc48adfa841799529f3b6201cc7cf12a9aec87712b042e157b657",
+      "bytes": 3353
+    },
+    "page_quotes": {
+      "file": "research/ir-case-studies-2026-10-15/2315/financial-definition-saved-pages-followup-2026-10-16/page-quotes.json",
+      "sha256": "c9640878504b75ce68aa458b880c681ef23ae67ad7779c5d72e0ac88862ea044",
+      "bytes": 12002
+    },
+    "extraction": {
+      "file": "research/ir-case-studies-2026-10-15/2315/financial-definition-saved-pages-followup-2026-10-16/extraction.json",
+      "sha256": "160527752134a01768b2d415090e4b2ad768acdb389e709d8adf509650997437",
+      "bytes": 7081
+    }
+  },
+  "local_validation": {
+    "status": "passed",
+    "heading_match": true,
+    "three_native_slices_equal_independent_reextraction": true,
+    "exact_quote_count": 6,
+    "old_quotes_recopied": false,
+    "all_quote_unicode_UTF8_offsets_and_sha_exact": true,
+    "images_manual_read_for_definition_scope": true,
+    "source_raw_native_bundle_and_selected_old_artifact_pins_unchanged": true,
+    "no_24facts_or_template_regeneration": true
+  },
+  "operations": {
+    "GET": 0,
+    "DB": 0,
+    "new_source": 0,
+    "IRdraft": 0,
+    "old_artifact_change": 0,
+    "new_financial_fact_normalization": 0,
+    "forecast": 0,
+    "valuation": 0
+  },
+  "stop": "Exactly three pages read; no further locator expansion; root acceptance pending"
+}

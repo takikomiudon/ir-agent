@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "artifact_type": "bounded_author_value_price_policy_scope_review",
+  "recorded_at": "2026-10-15T11:41:27.161736+00:00",
+  "status": "value_price_comparison_confirmed_explicit_purchase_rule_not_verified",
+  "question": "出典付き単一DCF価値と価格を比較する著者の明示購入規則は、確率加重期待上昇余地を必須にする現在decisionと別の方法か。",
+  "bounded_scope": {
+    "saved_sources_only": true,
+    "new_gets": 0,
+    "toyota_physical_pdf_pages": [
+      18,
+      25
+    ],
+    "policy_adoption_original_locations": [
+      {
+        "source_id": "damodaran.valuation-introduction.spring2025",
+        "physical_pdf_page": 6
+      },
+      {
+        "source_id": "damodaran.valuation-project.spring2025",
+        "physical_pdf_page": 8
+      }
+    ],
+    "full_pdf_rereads": 0,
+    "other_original_sources": 0,
+    "scope_exclusion": "既に解決済みの定性研究段階/既存codegate再現/全tests/別資料探索は行わない。"
+  },
+  "conclusion": {
+    "explicit_purchase_policy_candidates": [],
+    "candidate_count": 0,
+    "value_price_comparison_only": true,
+    "author_explicit_buy_sell_discount_threshold_rule_verified": false,
+    "reading": "本範囲では、割安という評価と購入を指示する操作可能な規則を区別する。Toyotaは評価額と当時価格の比較、課題文は推薦の要求までで、採用できる新しい単一DCF購入規則は未確認。",
+    "not_universal_probability_requirement": "Toyota p25は期待値には確率評価が必要とする一方、値の範囲も投資判断に使う選択肢と述べる。従って全ての著者の投資判断に確率加重期待上昇余地が必須とは帰属できない。ただし範囲の利用だけで具体的buy規則が得られたわけではない。"
+  },
+  "separations": {
+    "author_vs_project": {
+      "author": "単一の条件付きDCF評価と価格比較、確率を要する期待値又はシナリオの範囲による判断の言及、推薦前の新情報/評価整合と価格差修正への見通し。",
+      "current_project": "docs/decision-policy.mdの現行数値判断契約は、新規購入の期待上昇余地を確率なしには算定しない。この実装選択を本原著の唯一の規則とは呼ばない。既存gateは変更しない。",
+      "user_unspecified": "本人が採用する別購入規則、取引費用、許容損失、価格差修正時期などは本原典の読取で埋めない。"
+    },
+    "single_valuation_vs_three_scenarios": {
+      "toyota": "p18即時正常化とp25段階的正常化の異なる仮定による歴史的比較。段階的DCFの予測3年は3つのシナリオではない。各比較に確率の提示はこの2頁では未確認。単一値にprobability=1を付けて平均値へ偽装しない。",
+      "generic_scenario_paragraph": "boom/stagnation/recessionは一般的な経済シナリオの例。Toyotaのbull/base/bear3入力や確率分布の提示とは扱わない。",
+      "three_models_in_project": "DCF/relative/optionは評価法の種類であり強気/基本/弱気3シナリオではない。"
+    },
+    "price_and_date": {
+      "currency": "JPY per share",
+      "author_price_display": "3060",
+      "comparison_month": "2009-02",
+      "comparison_exact_date": null,
+      "p18_date_wording": "early 2009",
+      "paper_publication_month": "2009-09",
+      "current_market_price": null,
+      "price_timing_note": "論文公表月・歴史的比較価格月・本研究の取得日を別に保持する。"
+    },
+    "displayed_values": {
+      "instant_normalization_author_jpy_per_share": "4735",
+      "adaptive_normalization_author_jpy_per_share": "3943",
+      "independent_display_input_reproduction": "既存Toyota独立記録は3944.08966…との表示入力再現差を保存。本タスクでは再計算せず、著者3943を未表示精度の推測で訂正しない。",
+      "current_toyota_forecast": null
+    }
+  },
+  "missing_or_not_established": {
+    "purchase_margin_threshold": null,
+    "reverse_engineered_discount_threshold": null,
+    "sell_profit_target": null,
+    "scenario_probabilities": null,
+    "user_specific_costs": null,
+    "acceptable_downside_rule": null,
+    "position_sizing": null,
+    "price_difference_correction_within_months_to_one_year": null,
+    "note": "DCFのcost of capitalと本人の取引費用・税を混同しない。本範囲に規則が未確認という限定結論であり、著者の他頁/他著作にも存在しないという主張ではない。"
+  },
+  "next_step_boundary": {
+    "new_api_or_gate_change_needed_from_this_review": false,
+    "task_result": "値比較の出典記録までで有限終了。新しいbuy policy候補0。",
+    "if_future_explicit_rule_found": "明示規則が見つかっても、その対象期/価格/モデル/リスク条件への適合と、採用者による採用・本人費用は別途必要。規則の読取だけで金融採用にしない。"
+  },
+  "sources": [
+    {
+      "source_id": "damodaran.cyclical-commodity.2009",
+      "author": "Aswath Damodaran",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/commodity.pdf",
+      "publication_date": "2009-09",
+      "publication_precision": "month",
+      "retrieved_at": "2026-10-15T01:26:14.401821+00:00",
+      "raw_reference": {
+        "path": "research/valuation-model-routing-2026-10-15/sources.json",
+        "json_pointer": "/sources/2/raw_pdf_base64",
+        "encoding": "base64"
+      },
+      "text_reference": {
+        "path": "research/valuation-model-routing-2026-10-15/sources.json",
+        "json_pointer": "/sources/2/extracted_text"
+      },
+      "raw_sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+      "raw_byte_count": 670511,
+      "saved_full_text_sha256_utf8": "bc0de814b9bac9a6923a09919084071f4342e1fbfe5f9665c678d32ce096ea5b",
+      "physical_pdf_pages_read": [
+        18,
+        25
+      ]
+    },
+    {
+      "source_id": "damodaran.valuation-introduction.spring2025",
+      "author": "Aswath Damodaran",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/ValIntroSpr25.pdf",
+      "publication_label": "Spring 2025",
+      "publication_date": null,
+      "retrieved_at": "2026-10-15T01:06:24.603590+00:00",
+      "raw_reference": {
+        "path": "research/ir-policy-adoption-2026-10-15/evidence/87e538f104e6822b09f0a9026291a01350240bc1def49c6f74500c676ee9a7a8.raw"
+      },
+      "text_reference": {
+        "path": "research/ir-policy-adoption-2026-10-15/evidence/e52613a01405bfcd.txt"
+      },
+      "raw_sha256": "87e538f104e6822b09f0a9026291a01350240bc1def49c6f74500c676ee9a7a8",
+      "raw_byte_count": 852784,
+      "saved_full_text_sha256_utf8": "112d65a5682bd4205f5f82294b001b913fa9ee9295cecae018936f71a59c0864",
+      "physical_pdf_pages_read": [
+        6
+      ]
+    },
+    {
+      "source_id": "damodaran.valuation-project.spring2025",
+      "author": "Aswath Damodaran",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/eqprojspr25.pdf",
+      "publication_label": "Spring 2025",
+      "publication_date": null,
+      "retrieved_at": "2026-10-15T01:06:25.777410+00:00",
+      "raw_reference": {
+        "path": "research/ir-policy-adoption-2026-10-15/evidence/454e360e2efebcc9616e6eddd46b0dcc7f477d15aca75412a377b2d4db9e0dce.raw"
+      },
+      "text_reference": {
+        "path": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt"
+      },
+      "raw_sha256": "454e360e2efebcc9616e6eddd46b0dcc7f477d15aca75412a377b2d4db9e0dce",
+      "raw_byte_count": 293527,
+      "saved_full_text_sha256_utf8": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106",
+      "physical_pdf_pages_read": [
+        8
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "VP01",
+      "source_id": "damodaran.cyclical-commodity.2009",
+      "physical_pdf_page": 18,
+      "quote": "Toyota looks significantly undervalued at its stock\n    price of 3060 yen per share in early 2009.",
+      "location": {
+        "representation": "saved pdftotext -layout text, UTF-8; original line breaks preserved",
+        "page_character_start": 327,
+        "page_character_end_exclusive": 425,
+        "full_text_character_start": 38167,
+        "full_text_character_end_exclusive": 38265,
+        "offset_unit": "Unicode code points"
+      },
+      "reading": "歴史的な正常化評価について割安と述べる。具体的buy/sell条件ではない。"
+    },
+    {
+      "id": "VP02",
+      "source_id": "damodaran.cyclical-commodity.2009",
+      "physical_pdf_page": 25,
+      "quote": "value of equity per share of 3,943 Yen.",
+      "location": {
+        "representation": "saved pdftotext -layout text, UTF-8; original line breaks preserved",
+        "page_character_start": 552,
+        "page_character_end_exclusive": 591,
+        "full_text_character_start": 53248,
+        "full_text_character_end_exclusive": 53287,
+        "offset_unit": "Unicode code points"
+      },
+      "reading": "段階的正常化による著者表示評価額。現在価値や購入価格閾値へ転用しない。"
+    },
+    {
+      "id": "VP03",
+      "source_id": "damodaran.cyclical-commodity.2009",
+      "physical_pdf_page": 25,
+      "quote": "it is still significantly higher than the price per\nshare of 3,060 Yen in February 2009.",
+      "location": {
+        "representation": "saved pdftotext -layout text, UTF-8; original line breaks preserved",
+        "page_character_start": 678,
+        "page_character_end_exclusive": 766,
+        "full_text_character_start": 53374,
+        "full_text_character_end_exclusive": 53462,
+        "offset_unit": "Unicode code points"
+      },
+      "reading": "当時の株価との比較。差から安全余裕や購入閾値を逆算しない。"
+    },
+    {
+      "id": "VP04",
+      "source_id": "damodaran.cyclical-commodity.2009",
+      "physical_pdf_page": 25,
+      "quote": "either the expected value across scenarios (which would require probability\n       assessments of the scenarios) or the range in values across the scenarios (as a\n       measure of risk) to make our investment judgments.",
+      "location": {
+        "representation": "saved pdftotext -layout text, UTF-8; original line breaks preserved",
+        "page_character_start": 1267,
+        "page_character_end_exclusive": 1487,
+        "full_text_character_start": 53963,
+        "full_text_character_end_exclusive": 54183,
+        "offset_unit": "Unicode code points"
+      },
+      "reading": "一般的な循環/商品企業の手順では期待値か値の範囲を判断に使える。どちらも具体的なbuy閾値の提示ではない。"
+    },
+    {
+      "id": "VP05",
+      "source_id": "damodaran.valuation-introduction.spring2025",
+      "physical_pdf_page": 6,
+      "quote": "an assumption about how and when these inefficiencies will get\n     corrected",
+      "location": {
+        "representation": "saved pdftotext -layout text, UTF-8; original line breaks preserved",
+        "page_character_start": 165,
+        "page_character_end_exclusive": 242,
+        "full_text_character_start": 3768,
+        "full_text_character_end_exclusive": 3845,
+        "offset_unit": "Unicode code points"
+      },
+      "reading": "価値と価格の差に加え、修正の仕方・時期の仮定を要求。数カ月〜1年で修正する保証ではない。"
+    },
+    {
+      "id": "VP06",
+      "source_id": "damodaran.valuation-project.spring2025",
+      "physical_pdf_page": 8,
+      "quote": "Make a final recommendation on your stock. Your choices are buy,\n   sell or hold (but only if you absolutely get forced into that choice)",
+      "location": {
+        "representation": "saved pdftotext -layout text, UTF-8; original line breaks preserved",
+        "page_character_start": 340,
+        "page_character_end_exclusive": 477,
+        "full_text_character_start": 4417,
+        "full_text_character_end_exclusive": 4554,
+        "offset_unit": "Unicode code points"
+      },
+      "reading": "推薦を求める課題文。buy/sell/holdを機械的に分ける数値規則はこの箇所にない。"
+    },
+    {
+      "id": "VP07",
+      "source_id": "damodaran.valuation-project.spring2025",
+      "physical_pdf_page": 8,
+      "quote": "How would you reconcile the different estimates of value?",
+      "location": {
+        "representation": "saved pdftotext -layout text, UTF-8; original line breaks preserved",
+        "page_character_start": 278,
+        "page_character_end_exclusive": 335,
+        "full_text_character_start": 4355,
+        "full_text_character_end_exclusive": 4412,
+        "offset_unit": "Unicode code points"
+      },
+      "reading": "DCF/相対/オプション評価をどう整合するかを先に検討する。異なる評価法を強気/基本/弱気の3シナリオや確率へ置換しない。"
+    }
+  ],
+  "selected_page_checks": [
+    {
+      "source_id": "damodaran.cyclical-commodity.2009",
+      "physical_pdf_page": 18,
+      "fresh_extraction_matches_saved_page": true,
+      "saved_page_sha256_utf8": "fb21f287505d0a7cef7830e728e86c0074ba1bda604189e6e2e3f35a5207842c"
+    },
+    {
+      "source_id": "damodaran.cyclical-commodity.2009",
+      "physical_pdf_page": 25,
+      "fresh_extraction_matches_saved_page": true,
+      "saved_page_sha256_utf8": "208a2972ad59709035995f48e1c8b38a1cb044827bb605160c821fd47f0d444b"
+    },
+    {
+      "source_id": "damodaran.valuation-introduction.spring2025",
+      "physical_pdf_page": 6,
+      "fresh_extraction_matches_saved_page": true,
+      "saved_page_sha256_utf8": "c60dd8150a0bfcf139bf66eb869a542d79b5d6d6e9e0f59e1b41f2a9b6187f66"
+    },
+    {
+      "source_id": "damodaran.valuation-project.spring2025",
+      "physical_pdf_page": 8,
+      "fresh_extraction_matches_saved_page": true,
+      "saved_page_sha256_utf8": "c0fbe583102d0c5bd739bf42109d0541e3503ebe3c06f9d82156d836da045ff7"
+    }
+  ],
+  "execution": {
+    "new_gets": 0,
+    "db_access": 0,
+    "production_code_changes": 0,
+    "old_artifact_changes": 0,
+    "codegate_reproductions": 0,
+    "test_suite_runs": 0,
+    "financial_adoptions": 0,
+    "new_targets_or_forecasts_or_probabilities": 0,
+    "IR_drafts_or_registrations_or_sends": 0
+  },
+  "financial_inputs_verified": false,
+  "model_adopted": false,
+  "investment_decision": null
+}

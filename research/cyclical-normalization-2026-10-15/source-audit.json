@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "scope": "Saved-author arithmetic and quotation audit only; no current issuer normalization, forecast adoption or financial parameter defaults.",
+  "source": {
+    "source_id": "damodaran.cyclical-commodity.2009",
+    "registry": "../valuation-model-routing-2026-10-15/sources.json",
+    "raw_field": "raw_pdf_base64",
+    "url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/commodity.pdf",
+    "publication_date": "2009-09",
+    "retrieved_at": "2026-10-15T01:26:14.401821+00:00",
+    "pdf_sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+    "byte_count": 670511,
+    "pdf_page_count": 40,
+    "extracted_text_sha256": "bc0de814b9bac9a6923a09919084071f4342e1fbfe5f9665c678d32ce096ea5b",
+    "raw_hash_reproduced": true,
+    "saved_text_equal_to_fresh_layout_extraction": true,
+    "new_GET_calls": 0
+  },
+  "quotations": [
+    {
+      "id": "CYC-Q01",
+      "pdf_pages": [
+        10
+      ],
+      "quote": "we also have to normalize return on capital, reinvestment and cost of financing",
+      "comparison": "exact after whitespace normalization",
+      "matched": true
+    },
+    {
+      "id": "CYC-Q02",
+      "pdf_pages": [
+        11
+      ],
+      "quote": "we are double counting growth, once by normalizing earnings and again by using a higher growth rate.",
+      "comparison": "exact after whitespace normalization",
+      "matched": true
+    },
+    {
+      "id": "CYC-Q03",
+      "pdf_pages": [
+        14
+      ],
+      "quote": "the averaging should occur over a period long enough to cover an entire cycle.",
+      "comparison": "exact after whitespace normalization",
+      "matched": true
+    },
+    {
+      "id": "CYC-Q04",
+      "pdf_pages": [
+        14
+      ],
+      "quote": "we can average profit margins over time, instead of net profits",
+      "comparison": "exact after whitespace normalization",
+      "matched": true
+    },
+    {
+      "id": "CYC-Q05",
+      "pdf_pages": [
+        14
+      ],
+      "quote": "apply the average profit margin to revenues in the most recent period to estimate normalized earnings.",
+      "comparison": "exact after whitespace normalization",
+      "matched": true
+    },
+    {
+      "id": "CYC-Q06",
+      "pdf_pages": [
+        14
+      ],
+      "quote": "by looking at ratios of revenue or book capital over time, rather than the absolute values.",
+      "comparison": "exact after whitespace normalization",
+      "matched": true
+    },
+    {
+      "id": "CYC-Q07",
+      "pdf_pages": [
+        15
+      ],
+      "quote": "this approach will also fail to incorporate the characteristics (operating efficiencies or inefficiencies) that may lead a firm to be different from the rest of the sector.",
+      "comparison": "exact after whitespace normalization",
+      "matched": true
+    },
+    {
+      "id": "CYC-Q08",
+      "pdf_pages": [
+        16
+      ],
+      "quote": "Averaging the pre-tax operating margin from 1998 to 2009 yields an average operating margin of 7.33%.",
+      "comparison": "exact after whitespace normalization",
+      "matched": true
+    },
+    {
+      "id": "CYC-Q09",
+      "pdf_pages": [
+        17
+      ],
+      "quote": "since neither the debt ratio nor the cost of capital has moved substantially over time, we will use this as the normalized cost of capital.",
+      "comparison": "exact after whitespace normalization",
+      "matched": true
+    },
+    {
+      "id": "CYC-Q10",
+      "pdf_pages": [
+        17
+      ],
+      "quote": "We will also assume that the firm will be able to generate a return on capital equal to its cost of capital on its investments.",
+      "comparison": "exact after whitespace normalization",
+      "matched": true
+    },
+    {
+      "id": "CYC-Q11",
+      "pdf_pages": [
+        21
+      ],
+      "quote": "Return on capital = Operating Income (1-tax rate)/ Invested Capital",
+      "comparison": "exact after whitespace normalization",
+      "matched": true
+    },
+    {
+      "id": "CYC-Q12",
+      "pdf_pages": [
+        18,
+        19
+      ],
+      "quote": "With reinvestment and cost of financing, it will require some subjective judgments",
+      "comparison": "exact after whitespace normalization",
+      "matched": true
+    },
+    {
+      "id": "CYC-Q13",
+      "pdf_pages": [
+        23
+      ],
+      "quote": "allow earnings to follow the current cycle for the short term",
+      "comparison": "exact after whitespace normalization",
+      "matched": true
+    }
+  ],
+  "toyota_table": {
+    "pdf_page": 15,
+    "table": "Table 2",
+    "amount_unit": "million JPY",
+    "profit_concept": "pretax operating income",
+    "row_count": 12,
+    "rows": [
+      {
+        "label": "FY1 1998",
+        "revenue": "11678400",
+        "ebit": "779800",
+        "margin_pct": "6.68",
+        "basis_quote": "FY1 1998        ¥11,678,400      ¥779,800 ¥1,382,950        6.68%     11.84%",
+        "period_start": null,
+        "period_end": null,
+        "data_kind_claim": "reported_fact"
+      },
+      {
+        "label": "FY1 1999",
+        "revenue": "12749010",
+        "ebit": "774947",
+        "margin_pct": "6.08",
+        "basis_quote": "FY1 1999        ¥12,749,010      ¥774,947 ¥1,415,997        6.08%     11.11%",
+        "period_start": null,
+        "period_end": null,
+        "data_kind_claim": "reported_fact"
+      },
+      {
+        "label": "FY1 2000",
+        "revenue": "12879560",
+        "ebit": "775982",
+        "margin_pct": "6.02",
+        "basis_quote": "FY1 2000        ¥12,879,560      ¥775,982 ¥1,430,982        6.02%     11.11%",
+        "period_start": null,
+        "period_end": null,
+        "data_kind_claim": "reported_fact"
+      },
+      {
+        "label": "FY1 2001",
+        "revenue": "13424420",
+        "ebit": "870131",
+        "margin_pct": "6.48",
+        "basis_quote": "FY1 2001        ¥13,424,420      ¥870,131 ¥1,542,631        6.48%     11.49%",
+        "period_start": null,
+        "period_end": null,
+        "data_kind_claim": "reported_fact"
+      },
+      {
+        "label": "FY1 2002",
+        "revenue": "15106300",
+        "ebit": "1123475",
+        "margin_pct": "7.44",
+        "basis_quote": "FY1 2002        ¥15,106,300 ¥1,123,475 ¥1,822,975           7.44%     12.07%",
+        "period_start": null,
+        "period_end": null,
+        "data_kind_claim": "reported_fact"
+      },
+      {
+        "label": "FY1 2003",
+        "revenue": "16054290",
+        "ebit": "1363680",
+        "margin_pct": "8.49",
+        "basis_quote": "FY1 2003        ¥16,054,290 ¥1,363,680 ¥2,101,780           8.49%     13.09%",
+        "period_start": null,
+        "period_end": null,
+        "data_kind_claim": "reported_fact"
+      },
+      {
+        "label": "FY1 2004",
+        "revenue": "17294760",
+        "ebit": "1666894",
+        "margin_pct": "9.64",
+        "basis_quote": "FY1 2004        ¥17,294,760 ¥1,666,894 ¥2,454,994           9.64%     14.20%",
+        "period_start": null,
+        "period_end": null,
+        "data_kind_claim": "reported_fact"
+      },
+      {
+        "label": "FY1 2005",
+        "revenue": "18551530",
+        "ebit": "1672187",
+        "margin_pct": "9.01",
+        "basis_quote": "FY1 2005        ¥18,551,530 ¥1,672,187 ¥2,447,987           9.01%     13.20%",
+        "period_start": null,
+        "period_end": null,
+        "data_kind_claim": "reported_fact"
+      },
+      {
+        "label": "FY1 2006",
+        "revenue": "21036910",
+        "ebit": "1878342",
+        "margin_pct": "8.93",
+        "basis_quote": "FY1 2006        ¥21,036,910 ¥1,878,342 ¥2,769,742           8.93%     13.17%",
+        "period_start": null,
+        "period_end": null,
+        "data_kind_claim": "reported_fact"
+      },
+      {
+        "label": "FY1 2007",
+        "revenue": "23948090",
+        "ebit": "2238683",
+        "margin_pct": "9.35",
+        "basis_quote": "FY1 2007        ¥23,948,090 ¥2,238,683 ¥3,185,683           9.35%     13.30%",
+        "period_start": null,
+        "period_end": null,
+        "data_kind_claim": "reported_fact"
+      },
+      {
+        "label": "FY1 2008",
+        "revenue": "26289240",
+        "ebit": "2270375",
+        "margin_pct": "8.64",
+        "basis_quote": "FY1 2008        ¥26,289,240 ¥2,270,375 ¥3,312,775           8.64%     12.60%",
+        "period_start": null,
+        "period_end": null,
+        "data_kind_claim": "reported_fact"
+      },
+      {
+        "label": "FY 2009 (Est)",
+        "revenue": "22661325",
+        "ebit": "267904",
+        "margin_pct": "1.18",
+        "basis_quote": "FY 2009 (Est) ¥22,661,325        ¥267,904 ¥1,310,304        1.18%      5.78%",
+        "period_start": null,
+        "period_end": null,
+        "data_kind_claim": "author_estimate"
+      }
+    ],
+    "application_revenue_million_jpy": "22661325",
+    "basis_note": "Reported/estimate categories describe the author table, not independently checked issuer disclosures; exact period dates are not inferred."
+  },
+  "arithmetic": {
+    "engine": "independent Python Decimal, local precision 60",
+    "formulas": {
+      "arithmetic_mean_ebit_million_jpy": "sum(table EBIT)/12",
+      "mean_displayed_annual_margin": "sum(displayed annual margin percent/100)/12",
+      "mean_unrounded_annual_ratio": "sum(table EBIT/table revenue)/12",
+      "sales_weighted_margin": "sum(table EBIT)/sum(table revenue)",
+      "normal_ebit_using_mean_unrounded_ratios_million_jpy": "mean_unrounded_annual_ratio * 22661325",
+      "toyota_reinvestment_rate": ".015/.0509",
+      "toyota_wacc_using_displayed_weights": ".0865*.471 + .0325*(1-.407)*.529",
+      "toyota_value_using_displayed_inputs_billion_jpy": "1660.7*1.015*(1-.407)*(1-.2946)/(.0509-.015)",
+      "exxon_capital_million_usd": "126044+9566-33981",
+      "exxon_roc_from_footnote_inputs": "34614*(1-.38)/101629",
+      "exxon_reinvestment_from_displayed_21_pct": ".02/.21",
+      "exxon_value_using_displayed_inputs_million_usd": "34614*1.02*(1-.38)*(1-.02/.21)/(.0818-.02)"
+    },
+    "results": {
+      "sum_ebit_million_jpy": "15682400",
+      "arithmetic_mean_ebit_million_jpy": "1306866.66666666666666666666666666666666666666666666666666667",
+      "mean_displayed_annual_margin": "0.0732833333333333333333333333333333333333333333333333333333333",
+      "mean_unrounded_annual_ratio": "0.0732839852871656162717277435550750717611789717844669632581277",
+      "sales_weighted_margin": "0.0740875696800220962595589577710443050271187272626302632065980",
+      "normal_ebit_using_mean_displayed_margins_million_jpy": "1660697.43375000000000000000000000000000000000000000000000000",
+      "normal_ebit_using_mean_unrounded_ratios_million_jpy": "1660712.20788767835915891070821821160057839906277363580615549",
+      "normal_ebit_using_displayed_7_33_pct_million_jpy": "1661075.1225",
+      "normal_ebit_using_weighted_margin_million_jpy": "1678922.49497912673051914989871091058561867129208482474936026",
+      "toyota_reinvestment_rate": "0.294695481335952848722986247544204322200392927308447937131631",
+      "toyota_debt_weight_from_displayed_values": "0.529246419488689599785838575826529246419488689599785838575827",
+      "toyota_wacc_using_displayed_weights": "0.0509366525",
+      "toyota_value_using_displayed_inputs_billion_jpy": "19640.5175624818941504178272980501392757660167130919220055710",
+      "toyota_equity_using_displayed_value_jpy": "4735.49883990719257540603248259860788863109048723897911832947",
+      "exxon_regression_million_usd": "34614.40",
+      "exxon_capital_million_usd": "101629",
+      "exxon_roc_from_footnote_inputs": "0.211166891340070255537297424947603538360113747060386307058025",
+      "exxon_reinvestment_from_displayed_21_pct": "0.0952380952380952380952380952380952380952380952380952380952381",
+      "exxon_reinvestment_from_reproduced_roc": "0.0947118171465209862874801730420471299138703899410456705006551",
+      "exxon_value_using_displayed_inputs_million_usd": "320471.550624133148404993065187239944521497919556171983356450"
+    }
+  },
+  "discrepancies": [
+    {
+      "pdf_pages": [
+        15,
+        16
+      ],
+      "issue": "absolute_income_average",
+      "table_display_million_jpy": "1306867",
+      "prose_display_billion_jpy": "1332.9",
+      "reproduced_million_jpy": "1306866.66666666666666666666666666666666666666666666666666667",
+      "resolution": "Unresolved source inconsistency; no correction or fit-to-prose adjustment."
+    },
+    {
+      "pdf_pages": [
+        16,
+        17
+      ],
+      "issue": "displayed_margin_precision",
+      "displayed_average_margin_percent": "7.33",
+      "author_normalized_income_billion_jpy": "1660.7",
+      "literal_displayed_average_application_million_jpy": "1661075.1225",
+      "resolution": "Unrounded annual ratio and displayed annual ratio paths both approximately reproduce author income, but displayed average itself differs; do not infer hidden precision."
+    },
+    {
+      "pdf_pages": [
+        17
+      ],
+      "issue": "displayed_reinvestment_division",
+      "author_display": "0.2946",
+      "literal_result": "0.294695481335952848722986247544204322200392927308447937131631",
+      "resolution": "Not exact; unprinted inputs are unknown, not invented."
+    },
+    {
+      "pdf_pages": [
+        21
+      ],
+      "issue": "income_unit",
+      "prose_display": "$34,614 billion",
+      "equations_and_footnote_basis": "million USD",
+      "resolution": "Keep source inconsistency visible; the independent example equations use their stated million basis."
+    },
+    {
+      "pdf_pages": [
+        21,
+        22
+      ],
+      "issue": "invested_capital",
+      "footnote_5_sum_million_usd": "101629",
+      "page_22_prose_million_usd": "10629",
+      "resolution": "Unresolved source inconsistency verified on PDF image; no silent repair or current-company application."
+    }
+  ],
+  "implementation_boundary": {
+    "pure_calculator": "src/ir_agent/cyclical_margin.py",
+    "test_fixture": "tests/test_cyclical_margin.py::TOYOTA_ROWS",
+    "status": "intermediate_only",
+    "adoption": "unresolved",
+    "method": "arithmetic_equal_annual_periods",
+    "equal_annual_weights": "Project contract consistent with the author example, not a universal author rule.",
+    "full_cycle_or_semantic_verification": false,
+    "parameter_defaults": null,
+    "production_or_DB_changes_by_audit": false
+  }
+}

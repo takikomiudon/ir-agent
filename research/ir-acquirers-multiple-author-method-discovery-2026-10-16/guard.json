@@ -1,0 +1,53 @@
+{
+  "official_host": "acquirersmultiple.com",
+  "host_is_seed_not_yet_officially_verified": true,
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu"
+  ],
+  "holds": {
+    "path": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+    "sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952"
+  },
+  "maximum_GETs": 4,
+  "allowed_requests": [
+    {
+      "role": "fresh_robots",
+      "url": "https://acquirersmultiple.com/robots.txt"
+    },
+    {
+      "role": "seed_root",
+      "url": "https://acquirersmultiple.com/"
+    },
+    {
+      "role": "selected_FAQ_method_page",
+      "url": "https://acquirersmultiple.com/faq/",
+      "provenance": "capture.json $.GETs[1].html_visible_text.links[15]; exact literal FAQ link"
+    }
+  ],
+  "robots_reviews": {
+    "acquirersmultiple.com": {
+      "branch": "fresh_robots200",
+      "proceed": true,
+      "raw_file": "research/ir-acquirers-multiple-author-method-discovery-2026-10-16/raw/e1f21c9aa28d50ca112ed357f34b67c550597effd4d42fd55b4e27300dd8f9c1",
+      "raw_sha256": "e1f21c9aa28d50ca112ed357f34b67c550597effd4d42fd55b4e27300dd8f9c1",
+      "observed_at": "2026-10-16T15:04:24.062684+00:00",
+      "exact_seed_path_checks": {
+        "Codex-IR-Research/0.1": true,
+        "GPTBot": true,
+        "*": true
+      },
+      "AI_specific_groups": "None in acquired complete policy."
+    }
+  }
+}

@@ -1,0 +1,9 @@
+2410 キャリアデザインセンターの公表数値索引v37候補です。共有索引は更新していません。旧v36の40エントリ・214事実の全objectと、各事実の既存source/artifact overrideを保持して12事実を追加しました。合計28社・226事実・41親エントリ・43派生source・34会社/原典組です。
+
+新しい各事実のid/concept/kind/period/scope/unit/valueは受入済みnormalized-bundleからそのままコピーしています。数値事実内の原典source_idを索引のoverrideへコピーせず、索引のsource_idは派生資料を指します。非連結のnet_incomeを親会社帰属利益へ変更していません。年間配当160円は普通140円＋特別20円の会社表示とそのscopeを保持し、恒久配当・支払実績・DDM入力にはしていません。7月31日観測の通期会社予想は、研究時点で終了した年度に対する当時の予想であり、実績や現在予想へ変更していません。
+
+原典の実初回保存2026-10-16T06:50:38.803336+00:00は、初期2資料の親受入記録を参照した値です。本作業はDBを確認していません。派生1資料/12事実は準備依頼時のfile-onlyとしてactual firstsave=null、imported=falseを保持し、親の実保存・分類受入後に別の接続作業を要します。旧v36の実接続40派生/207事実および205資料のDB snapshotは歴史記録のまま保持しています。今回の現在DB状態ではありません。追加12を含む候補上の未接続は3派生/19事実ですが、旧2派生/7事実の範囲を変更していません。
+
+build_candidate.py --writeはこのfolderの候補とvalidationを排他的に新規作成するだけです。引数なしは同じ固定入力から候補+validationをstdoutへ再現します。実行したstdout replayと保存JSON全objectの一致、旧40エントリのnative JSON SHA一致、全入力pins不変を確認しました。sourceのmodels.json_text SHAとnormalizerの空白なしcanonical_json SHAを区別しています。既存再現結果の引用であり、normalizerや原PDF抽出は再実行していません。
+
+新GET、DB/Store、productionコード編集、共有索引編集、金融入力採用、予測、質問・送信は0です。manifestでこの6ファイルを固定し、以降同名編集しません。追加の実接続は親からの別指示で行います。

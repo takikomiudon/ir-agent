@@ -1,0 +1,55 @@
+{
+  "UA": "Codex-IR-Research/0.1",
+  "constraints": {
+    "DB": 0,
+    "README_code_license_body_GETs": 0,
+    "authentication": 0,
+    "code_execution_or_edit": 0,
+    "code_search": 0,
+    "other_host": 0,
+    "paging": 0,
+    "policy_adoption": 0,
+    "query_change": 0,
+    "redirect": 0,
+    "retry": 0,
+    "search_requests": 1
+  },
+  "explicit_allowed_urls": [
+    "https://api.github.com/robots.txt",
+    "https://api.github.com/search/repositories?order=desc&per_page=5&q=magic+formula+investing&sort=stars"
+  ],
+  "fixed_API_query": {
+    "order": "desc",
+    "per_page": 5,
+    "q": "magic formula investing",
+    "sort": "stars"
+  },
+  "hold_ref": {
+    "api.github.com_held": false,
+    "host_count": 11,
+    "index_version": 7,
+    "path": "research/ir-source-access-holds-2026-10-15/holds-v7.json",
+    "sha256": "ef162bac356672e342fafce1ef1d785d7050f79d6a94c2778a49a03fbc23cffd"
+  },
+  "local_pre_GET_check": {
+    "error": "Shell argument parameter order differed from predeclared allowed URL; assertion stopped before any network operation.",
+    "network_requests_from_failed_invocation": 0,
+    "recovery": "Use the exact previously declared URL; same q/sort/order/per_page values, no query change."
+  },
+  "maximum_GETs": 2,
+  "prior_search": {
+    "same_API_query_attempt_found": false,
+    "scope": [
+      "research",
+      "/workspace/research",
+      "/tmp saved JSON/Markdown/text"
+    ],
+    "term_matches": "Only closed Greenblatt official-site evidence; its saved README/capture route inventory is not this GitHub repository query and is not being resumed."
+  },
+  "recorded_at": "2026-10-15T23:01:26.511552+00:00",
+  "robots_decision": {
+    "basis": "Complete404 missing-robots branch in docs/data-sources.md, not interpretation of JSON error body as explicit allow.",
+    "status": "complete404_missing_robots"
+  },
+  "scope": "Repository metadata inventory only; independent maintainers, no attribution of implementation correctness to Greenblatt and no Japanese-equity suitability/adoption."
+}

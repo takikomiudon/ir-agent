@@ -1,0 +1,61 @@
+--- before/README.md
++++ README.md
+@@ -100,7 +100,9 @@
+ 
+ [質問準備](docs/ir-question-preparation.md)には日本IR協議会の公開指針も参照し、公表済み業績の変動理由や計画の前提を質問対象として整理する。企業側への当時の推奨を投資家用に適応した手順で、個別の返信や価格判断を保証するものではない。
+ 
+-現在の実台帳は窓口1,819社のうち公開資料あり29社・175資料（公開174・市場1）、公開資料174件を分類済み。[公表数値索引v30](research/ir-case-studies-2026-10-15/disclosed-fact-index-v30.json)は21社153項目で、実台帳には146項目を派生資料34件として保存した。[大成温調の配当表示と追補の比較](research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/qualitative-review/parent-acceptance.json)まで完了。分割前後の配当と会社参考値を別に保持し、税・CF・個別受注の公表定義も次回要約へ引き継いだ。native監視は19case・40版・114既読、全104job完了・pending/leased0。金融仮説・実policy・正式質問・返信・送信・注文は0件。最新状態と未解決の入力は[継続作業の記録](docs/ongoing-work.md)へまとめた。
++現在の実台帳は窓口1,819社のうち公開資料あり30社・財務内容あり25社、180資料（公開179・市場1）・分類179。全105job完了（intake85・定性20）、attempt102/event204/request receipt102・pending/leased0、source来歴はlegacy28/trusted152。native監視は20case・41版・119既読。[公表数値索引v31](research/ir-case-studies-2026-10-15/disclosed-fact-index-v31.json)は22社162項目・35親entry・37派生source・会社/原典28組で、実台帳には155項目を派生35件として保存した。対象外8331/9702の2派生7項目はfile-only。
++
++[日本電設工業の原4資料と推奨9値](research/ir-1950-initial-with-facts-intake-2026-10-16/parent-acceptance.json)を保存・分類し、[native case v1・既読5](research/ir-case-studies-2026-10-15/1950/native-case-setup-2026-10-16/parent-acceptance.json)と[索引の受入](research/ir-case-studies-2026-10-15/1950/disclosed-facts-2026-10-16/context-reference-only/index-connection/parent-acceptance.json)まで完了。推奨参照表現だけを採用し、旧full-context版85fe…は実台帳へ投入していない。Q1/当時FY予想・EPS/DPS、季節性と利益/NCIの区別を保持し、金融入力へは未採用。[大成温調の配当表示と追補の比較](research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/qualitative-review/parent-acceptance.json)も完了済みで、後続p10読解はfile-onlyのまま。金融仮説・実policy・正式質問・返信・送信・注文は0件。最新状態と未解決の入力は[継続作業の記録](docs/ongoing-work.md)へまとめた。
+ 
+ [定性レビューjob](docs/qualitative-research-jobs.md)は新資料/管理日に対応する明示opt-inで、数値thesis前の監視を扱う。外部scheduler・定時Web取得・LLMの定時実行は未設置。分類や定性jobの件数を、全研究工程の日次能力へ換算しない。
+ 
+--- before/research/ir-case-studies-2026-10-15/README.md
++++ research/ir-case-studies-2026-10-15/README.md
+@@ -2,12 +2,13 @@
+ 
+ 公開資料を読んで質問を減らし、事実・会社予想・未確認のモデル入力を分ける。会社別研究と追加の比較研究を収録し、投資先の選定や共通の金融条件を作るものではない。
+ 
+-現在は実DB175資料（公開174・市場1）・公開資料あり29社、native監視19case/40版/114既読。[構造化v30](disclosed-fact-index-v30.json)は21社153factで、34親entryからfact別参照を解決すると36派生sourceになる。[大成温調の3配当表示と追補の比較](1904/split-dividend-composite-facts-2026-10-16/qualitative-review/parent-acceptance.json)まで完了し、34source/146factを実台帳へ保存・分類した。対象外8331/9702の2source/7factはfile-only。[歴史ROICの参考計算](../ir-historical-roic-role-reproduction-2026-10-16/README.md)は明示した研究mappingに限る。金融入力・実policy・正式IRは未採用。個社記録内の旧件数と未確認は各時点の履歴として保持する。
++現在は実DB180資料（公開179・市場1）・公開資料あり30社・財務内容あり25社、分類179。全105job完了（intake85・定性20）、attempt102/event204/request receipt102、pending/leased0。source来歴はlegacy28/trusted152、native監視20case/41版/119既読。[構造化v31](disclosed-fact-index-v31.json)は22社162fact・35親entry・37派生source・会社/原典28組で、35source/155factを実台帳へ保存・分類した。[1950のnative登録](1950/native-case-setup-2026-10-16/parent-acceptance.json)と[索引受入](1950/disclosed-facts-2026-10-16/context-reference-only/index-connection/parent-acceptance.json)まで完了。推奨9fact表現だけを登録し旧85fe…代替版は未投入。対象外8331/9702の2source/7factはfile-only。[歴史ROICの参考計算](../ir-historical-roic-role-reproduction-2026-10-16/README.md)は明示した研究mappingに限る。金融入力・実policy・正式IRは未採用。個社記録内の旧件数と未確認は各時点の履歴として保持する。
+ 
+ 後続研究では、[コムシスの著者6論点](1721/author-conditions/case-record.md)を3社の[研究監視v4](../ir-research-monitoring-integration-2026-10-15/README.md)へ接続し、[リックスの製品構成比](7525/author-original-product-review/case-record.md)は会社目標と著者の判断条件を分離した。[東陽テクニカの正式資料追補](8151/issuer-annual-followup/README.md)はrobots確認で停止し、著者予測との実績比較は未確認のままである。
+ 
+ | 会社 | 保存資料から分かったこと | 現在の扱い |
+ |---|---|---|
++| [日本電設工業 1950](1950/statement-followup-2026-10-16/README.md) | Q1実績/当時FY会社予想、直接EPSと年間DPS合計、Q4季節性・営業/経常/特別/NCIを区別。 | [原4sourceと推奨派生1source/9値を保存・分類](../ir-1950-initial-with-facts-intake-2026-10-16/parent-acceptance.json)。[case v1・既読5](1950/native-case-setup-2026-10-16/parent-acceptance.json)、初回queue0。旧full-context版85fe…は未投入。配当の年度両端/基準日/連結範囲はnull、後日自己株買付本文は未読で現在EPSへ繰り越さない。金融採用/IR0。 |
+ | [ライト工業 1926](1926/initial-public-review-2026-10-16/README.md) | 特殊土木の会社説明と静的資料室を確認。短信一覧は空の動的containerでPDF literalなし。 | [原3sourceを保存・分類](../ir-1926-1904-intake-2026-10-16/parent-acceptance.json)。4GETで有限終了、財務本文0。取得エラーや投資除外とは区別する。 |
+ | [大成温調 1904](1904/initial-public-review-2026-10-16/README.md) | Q1/通期、百万円/千円、信託株式、分割前後のDPSと会社参考を区別。税/CF非作成/個別工事高の定義も公開で確認。 | 原4sourceと派生2source/9値を保存し[比較](1904/split-dividend-composite-facts-2026-10-16/qualitative-review/parent-acceptance.json)でcase v4/既読6。源別unchanged・全体unresolved。追補9/11/12は次回要約へ引継ぎ済み。[後続p10読解](1904/segment-note-followup-2026-10-16/parent-acceptance.json)で消去額と営業利益への調整を確認した補足はfile-only。年間DPSを合算しない。 |
+ | [ピーエス・コンストラクション 1871](1871/initial-public-review-2026-10-16/README.md) | 技術説明と決算掲載告知を確認。静的一覧に財務PDFの直接リンクなし。 | [原2sourceを保存・分類](../ir-next-company-intake-2026-10-16/parent-acceptance.json)。財務本文0、投資除外ではない。 |
+--- before/docs/ongoing-work.md
++++ docs/ongoing-work.md
+@@ -4,13 +4,13 @@
+ 
+ ## 現在の台帳と受入
+ 
+-2026-10-16 03:04 UTC。[最新の完了照合](../research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/qualitative-review/parent-acceptance.json)時点の実DB `data/ir-research-2026-10-15.sqlite3` は175資料（公開174・市場1）、公開資料あり29社・財務内容あり24社、分類174。全104job完了（intake84・定性20）、attempt101/event202/request receipt101、pending/leased0。source来歴はlegacy28/trusted147。main DB SHA256は `7f7092e3f51ffe76de9924056148577e797a5b7884063d949f1fd6c6aec2767f`。
++2026-10-16 03:37 UTC（read-only再照合）。[最新の登録完了照合](../research/ir-case-studies-2026-10-15/1950/native-case-setup-2026-10-16/parent-acceptance.json)時点の実DB `data/ir-research-2026-10-15.sqlite3` は180資料（公開179・市場1）、公開資料あり30社・財務内容あり25社、分類179。全105job完了（intake85・定性20）、attempt102/event204/request receipt102、pending/leased0。source来歴はlegacy28/trusted152。main DB SHA256は `9204bf1af5260b61e81ab50b77e90ea914009e750723dcd17752d46ed55bce4d`。
+ 
+-native監視は19case・40版・114既読資料。1904は既読通知の3配当表示を円銭版2で再表現した派生1sourceを比較し、source unchanged/case unresolvedを保持した。旧元条件と旧全行不変、再queue0。公表済みの税method/CF未作成/個別千円・契約変更の[追加読解](../research/ir-case-studies-2026-10-15/1904/operating-driver-followup-2026-10-16/parent-acceptance.json)も[固定handoff](../research/ir-case-studies-2026-10-15/1904/question-residual-review-2026-10-16/parent-acceptance.json)からsummaryとcase_observationへ日時・file/SHA/source-nativeSHA付きで引き継ぎ、現prior投影に両方残ることを確認した。旧Q1/追補を新pending証拠へ追加せず、自動受領保証とも扱わない。
++native監視は20case・41版・119既読資料。1904は既読通知の3配当表示を円銭版2で再表現した派生1sourceを比較し、source unchanged/case unresolvedを保持した。旧元条件と旧全行不変、再queue0。公表済みの税method/CF未作成/個別千円・契約変更の[追加読解](../research/ir-case-studies-2026-10-15/1904/operating-driver-followup-2026-10-16/parent-acceptance.json)も[固定handoff](../research/ir-case-studies-2026-10-15/1904/question-residual-review-2026-10-16/parent-acceptance.json)からsummaryとcase_observationへ日時・file/SHA/source-nativeSHA付きで引き継ぎ、現prior投影に両方残ることを確認した。旧Q1/追補を新pending証拠へ追加せず、自動受領保証とも扱わない。
+ 
+-[索引v30](../research/ir-case-studies-2026-10-15/disclosed-fact-index-v30.json)は21社153fact・34親entry・36解決済み派生source。34source/146factを実保存・分類済み、対象外8331/9702の2source/7factはfile-only。[親の照合](../research/ir-case-studies-2026-10-15/1904/split-dividend-composite-facts-2026-10-16/generated/index-connection/parent-acceptance.json)で旧150fact/33親entryを全object保持した。1904の中間99.00pre/期末24.75post/会社分割前参考198.00を別concept・分母・期・参考scopeで保持する。通常年間欄dashを置換せず、合算/独自split計算/DDM列採用をしない。全financial model入力は未採用。
++[索引v31](../research/ir-case-studies-2026-10-15/disclosed-fact-index-v31.json)は22社162fact・35親entry・37解決済み派生source・会社/原典28組。35source/155factを実保存・分類済み、対象外8331/9702の2source/7factはfile-only。[親の照合](../research/ir-case-studies-2026-10-15/1950/disclosed-facts-2026-10-16/context-reference-only/index-connection/parent-acceptance.json)で旧153fact/34親entryを全object保持した。index SHA256は `a8e962de6cc25e2f10b0108816f08eff3f7007a03a71d5e1978d65cdc2211424`。1950の推奨9factを1親entryで追加し、旧full-context版85fe…は追加していない。1904の中間99.00pre/期末24.75post/会社分割前参考198.00は別concept・分母・期・参考scopeを保持し、通常年間欄dashを置換せず、合算/独自split計算/DDM列採用をしない。全financial model入力は未採用。
+ 
+-1,819社のwatch/held:falseは実保有確認ではない。明示保有申告・金融thesis・正式質問・返信・実policy・research_decision_reviews・送信・注文は0。管理日は12caseが2027-01-15、5831/7325/7157/5988/1866/1870/1904が2027-01-16 Asia/Tokyo。会社予定・売却期限ではない。外部scheduler・定時Web取得・LLMの定時実行は未設置。
++1,819社のwatch/held:falseは実保有確認ではない。明示保有申告・金融thesis・正式質問・返信・実policy・research_decision_reviews・送信・注文は0。管理日は12caseが2027-01-15、5831/7325/7157/5988/1866/1870/1904/1950が2027-01-16 Asia/Tokyo。会社予定・売却期限ではない。外部scheduler・定時Web取得・LLMの定時実行は未設置。
+ 
+ コードの最新受入は[1,534件・37.088秒成功](../research/ir-yen-sen-normalization-integration-2026-10-16/parent-acceptance.json)。円・銭を明示指定時だけ変換し、原表示・成分・位置を保持する。独立175合成組合せと拒否/改変/消費側の点検は指摘0、旧33source/143factの全再現結果は編集前後でbyte一致。旧形式は版1/JSON/ID不変、新形式ありだけ版2。モデル点検・意味確認の保留を維持し、金融採用0。従来のvalid legacy_presenceのknown-by以後の現在の定性読解と、firstsave不明・非新着・元receiptの区別も維持する。実行中のleaseはない。1904配当3表示の生成・原文照合・実保存・定性比較・索引v30接続まで完了した。
+ 
+@@ -58,6 +58,10 @@
+ 
+ [1904セグメント注記p10](../research/ir-case-studies-2026-10-15/1904/segment-note-followup-2026-10-16/parent-acceptance.json)はcase v4後の追加読解で、比較期・千円・地域列・セグメント間取引消去・営業利益への調整を確認した。P1の定義は部分解消、原因分解/親会社利益/税CF/正常予測は残る。旧v4の未読表示は当時の状態として保持し、この追補はまだfile-onlyでnative更新なし。個別工事表へ自動対応させず、調整額を本社費と読まない。
+ 
++[1950の完全短信](../research/ir-case-studies-2026-10-15/1950/statement-followup-2026-10-16/parent-acceptance.json)は13頁全文と限定意味1/2/4/8頁を保存。[原4sourceと推奨派生1sourceの初期分類](../research/ir-1950-initial-with-facts-intake-2026-10-16/parent-acceptance.json)、[firstsave記録](../research/ir-1950-initial-with-facts-intake-2026-10-16/source-firstsave.json)、[native case v1/既読5](../research/ir-case-studies-2026-10-15/1950/native-case-setup-2026-10-16/parent-acceptance.json)を受入済み、初回queue0。[推奨9値](../research/ir-case-studies-2026-10-15/1950/disclosed-facts-2026-10-16/context-reference-only/parent-acceptance.json)は主引用・金融scopeを保持し文脈引用の重複だけを参照へ置換した表現を索引採用した。旧full-context版85fe…は未投入で二重計上しない。Q1年率化、当時予想を現在へ持越し、EPS分母再構築、正常利益/将来DPS列への採用は0。配当年度両端/recorddate/会計/連結nullを維持する。
++
++1963の[初回公開研究](../research/ir-case-studies-2026-10-15/1963/initial-public-review-2026-10-16/parent-acceptance.json)はfile-onlyで、この現在値に実台帳資料としては含めていない。
++
+ 1. IR効果の[研究候補の書誌確認](../research/ir-private-investor-meetings-paper-discovery-2026-10-15/README.md)を2GETで終了。2011年SSRN登録の要旨はNYSE1社の個別面談が対象で、2015年掲載版と内容同一性/因果/日本の個人メールIR効果は未確認。公式掲載siteの[robots1GET](../research/ir-private-investor-meetings-journal-source-2026-10-15/README.md)はGPTBot個別禁止のため本文0で停止。旧v7全11entryを保持した[中央holds-v8/12host](../research/ir-source-access-holds-2026-10-15/README-v8.md)への更新を完了し、active4fileの旧bytesと限定差分を保存した。旧Crossref要旨を掲載本文の結論に昇格させず、予測尤度/金融値を設定しない。
+ 2. 3社の期間比較を踏まえ、次の公表観測で照合する元条件を使う。会社系列内の定義確認と、著者予測/評価前提の不足を分け、FY29/31/3期等の目標を1年の退出期限へ縮めない。
+ 3. 新しい原典/明示された著者仕様/正しい入力が得られた課題へ進む。[31taskの進捗v5](../research/ir-issue-owner-backlog-2026-10-15/README-v5.md)のowner/DAG/未解決を保持し、取得停止や金融入力不足を新機能・架空値で隠さない。optionalな投資スタイル質問は未回答で、回答を仮定しない。

@@ -1,0 +1,136 @@
+{
+  "company_id": "jp:2341",
+  "source_id": "case-public:5bba6d35a328266c886aa3e2f56c5dc5dd19771e46715df14083d7868fb3ee32",
+  "native_source_sha256": "7d1775aaf4804852a61779ac2bd108a2c135a9347410a785859bddcead91f7b8",
+  "new_read_pages": [
+    13,
+    14
+  ],
+  "already_accepted_read_pages": [
+    1,
+    2,
+    4,
+    6
+  ],
+  "other_auditor_pages_not_read": [
+    10,
+    11,
+    15
+  ],
+  "as_reported_tables": [
+    {
+      "physical_page": 13,
+      "period": {
+        "start": "2025-03-01",
+        "end": "2025-08-31",
+        "kind": "actual"
+      },
+      "unit": "千円",
+      "scope": "JGAAP consolidated interim; segment/internal elimination columns kept separate",
+      "as_reported": {
+        "DOMO": 310409,
+        "wagasha_de_DOMO": 945215,
+        "instore_media": 125104,
+        "other_human_services": 920974,
+        "other_promotion": 102651,
+        "customer_contract_revenue_total": 2404354,
+        "external_customer_sales_human": 2176599,
+        "external_customer_sales_promotion": 227755,
+        "external_customer_sales_total": 2404354,
+        "internal_sales_human": 277,
+        "internal_sales_promotion": 2817,
+        "internal_sales_total": 3095,
+        "internal_sales_human_dash_not_zero": false,
+        "revenue_segment_total_before_elimination": 2407449,
+        "revenue_elimination": -3095,
+        "segment_profit_human": 449972,
+        "segment_profit_promotion": 12402,
+        "segment_profit_total": 462375,
+        "profit_adjustment": -380214,
+        "profit_intersegment_elimination": 2061,
+        "corporate_expense": -382276,
+        "consolidated_operating_profit": 82160
+      },
+      "authority": "Reported issuer cells only, not normalized model inputs",
+      "quote_id": "2341-segment-physical-13"
+    },
+    {
+      "physical_page": 14,
+      "period": {
+        "start": "2026-03-01",
+        "end": "2026-08-31",
+        "kind": "actual"
+      },
+      "unit": "千円",
+      "scope": "JGAAP consolidated interim; segment/internal elimination columns kept separate",
+      "as_reported": {
+        "DOMO": 276336,
+        "wagasha_de_DOMO": 946113,
+        "instore_media": 112795,
+        "other_human_services": 1016552,
+        "other_promotion": 89365,
+        "customer_contract_revenue_total": 2441162,
+        "external_customer_sales_human": 2239001,
+        "external_customer_sales_promotion": 202160,
+        "external_customer_sales_total": 2441162,
+        "internal_sales_human": null,
+        "internal_sales_promotion": 2200,
+        "internal_sales_total": 2200,
+        "internal_sales_human_dash_not_zero": true,
+        "revenue_segment_total_before_elimination": 2443363,
+        "revenue_elimination": -2200,
+        "segment_profit_human": 537085,
+        "segment_profit_promotion": 34793,
+        "segment_profit_total": 571879,
+        "profit_adjustment": -420453,
+        "profit_intersegment_elimination": 2061,
+        "corporate_expense": -422515,
+        "consolidated_operating_profit": 151425
+      },
+      "authority": "Reported issuer cells only, not normalized model inputs",
+      "quote_id": "2341-segment-physical-14"
+    }
+  ],
+  "display_arithmetic_checks": [
+    {
+      "physical_page": 13,
+      "unit": "千円",
+      "scope": "Displayed-row addition check only; original reported cells unchanged",
+      "display_segment_profit_components_sum": 462374,
+      "reported_segment_profit_total": 462375,
+      "display_profit_adjustment_components_sum": -380215,
+      "reported_profit_adjustment": -380214,
+      "display_segment_total_plus_adjustment": 82161,
+      "reported_consolidated_OP": 82160,
+      "rounding_cause": "Not stated on these2pages; do not certify rounding or repair1thousand differences."
+    },
+    {
+      "physical_page": 14,
+      "unit": "千円",
+      "scope": "Displayed-row addition check only; original reported cells unchanged",
+      "display_segment_profit_components_sum": 571878,
+      "reported_segment_profit_total": 571879,
+      "display_profit_adjustment_components_sum": -420454,
+      "reported_profit_adjustment": -420453,
+      "display_segment_total_plus_adjustment": 151426,
+      "reported_consolidated_OP": 151425,
+      "rounding_cause": "Not stated on these2pages; do not certify rounding or repair1thousand differences."
+    }
+  ],
+  "meaning_findings": [
+    "Bothperiods customer-contract revenue equals reported external-customer sales, but no transaction-recognition timing or ARR-definition note is on these2pages.",
+    "Current promotion total204361 includes internal2200, external202160; p4 rounded204million must not be compared directly as external202million.",
+    "Segmentprofit summed/totals before corporateexpense/elimination are not consolidated OP. Current571879 segmentprofit and -420453 adjustment reconcile in structure to reported151425 OP; displayedunits have1thousand differences, no patch.",
+    "Wagasha945215→946113 is the product revenue reported; qualitative HRtech/fulltime sales firm wording from acceptedp4 is not proof that this single product grew rapidly.",
+    "Otherhuman-services1016552 combines unspecifiedproducts; RPO/fulltime unit growth not identifiable from thisbucket.",
+    "Companyp4 calls Wagasha subscription model; these revenues are actualperiodrecognizedsales, not ARR/MRR/retention/customercount/forwardCF."
+  ],
+  "unresolved": [
+    "Corporateexpense composition/fixed versus variable allocation basis and cause of change not detailed in these2pages.",
+    "Product customer count/price/retention and otherbucket decomposition unestablished.",
+    "Recognition timing and gross/net transaction rules not shown in these2pages; do not certify absent elsewhere.",
+    "Previous/current comparable product definitions or segmentscope change beyond reportedperiodnotes require relevant publicsource before model adoption.",
+    "Source display1thousand arithmetic differences are preserved and not escalated into unsupported accounting-error claims."
+  ],
+  "no_financial_input_adoption": true
+}

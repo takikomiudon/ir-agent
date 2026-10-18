@@ -1,0 +1,338 @@
+{
+  "already_implemented_do_not_repropose": [
+    {
+      "code": {
+        "lines": [
+          84,
+          147,
+          160
+        ],
+        "path": "src/ir_agent/decision_lifecycle.py",
+        "sha256": "33c73746954002012984dd720924bca5cf62608ebaaa3867bd6f58731ec2149e"
+      },
+      "feature": "Frozen question branches/policy and permitted valuation parameter paths",
+      "test": {
+        "lines": [
+          73,
+          93,
+          134
+        ],
+        "path": "tests/test_decision_lifecycle.py",
+        "sha256": "70400c7a6e90dab2dc229798b8916d21a93762f9cb9087e3c9402630df3fbd99"
+      }
+    },
+    {
+      "code": {
+        "lines": [
+          481,
+          530,
+          540
+        ],
+        "path": "src/ir_agent/harness.py",
+        "sha256": "ea6eb15ba4945c81f68f700d52fe23c4cddc36c9927195d857ef6aff5ab1b847"
+      },
+      "feature": "Unclear/nonpublic reply preserves model; reply corrections and dependency holds",
+      "test": {
+        "lines": [
+          160,
+          196,
+          353
+        ],
+        "path": "tests/test_dependency_information_gates.py",
+        "sha256": "44910ea257fb8a07f5ee492659a90860a20b65edf601ed61a931784212816c33"
+      }
+    },
+    {
+      "code": {
+        "lines": [
+          57,
+          237
+        ],
+        "path": "src/ir_agent/decision.py",
+        "sha256": "2c441f1d94a38453427dd8be3f589565dd7170a4c8cd7ec248be71d1ec516934"
+      },
+      "feature": "Current quotes/position, unweighted probability hold and price rereview without reply reapplication",
+      "tests": [
+        {
+          "lines": [
+            30,
+            43
+          ],
+          "path": "tests/test_current_quote.py",
+          "sha256": "c26d378e9aed6144ce192e3d62bbd2f0ed47b05827ae21903d96063206430c76"
+        },
+        {
+          "lines": [
+            25,
+            36,
+            46
+          ],
+          "path": "tests/test_unweighted_decision.py",
+          "sha256": "1970736136b77b73478adc039ef83233575462957d08e65170c80c8689748664"
+        },
+        {
+          "lines": [
+            141
+          ],
+          "path": "tests/test_decision_lifecycle.py",
+          "sha256": "70400c7a6e90dab2dc229798b8916d21a93762f9cb9087e3c9402630df3fbd99"
+        }
+      ]
+    },
+    {
+      "code": {
+        "lines": [
+          1
+        ],
+        "path": "src/ir_agent/qualitative_research.py",
+        "sha256": "f528b674341e1482bdfc8eea634dc33cf964e7806657ce1d49f6fc2bb9ce3fc8"
+      },
+      "feature": "Pre-thesis qualitative review jobs, original-source review context and recovery",
+      "tests": [
+        {
+          "lines": [
+            1
+          ],
+          "path": "tests/test_qualitative_research_integration.py",
+          "sha256": "14df8319496075a23c2a6c49ddcd48ad89d5b105250732a1b3d8c0cb49904447"
+        },
+        {
+          "lines": [
+            1
+          ],
+          "path": "tests/test_qualitative_prior_review.py",
+          "sha256": "40654c7a010c8d028b43ee7b7492cd2708aaebabd634f6d6060d1b4ae5fe1a8f"
+        },
+        {
+          "lines": [
+            1
+          ],
+          "path": "tests/test_qualitative_recovery.py",
+          "sha256": "65789455dd8a39e3e3729b487ca27139a2fa8476de856e138dec62cebec52542"
+        }
+      ]
+    },
+    {
+      "code": {
+        "lines": [
+          229,
+          241,
+          258
+        ],
+        "path": "src/ir_agent/observations.py",
+        "sha256": "f06d5da689d81af73630103a50ad0ee154133114a6583e9348c1ea021e530a33"
+      },
+      "feature": "Observation dispatch/deadline/no-response-check distinction and unsent denominator exclusion",
+      "test": {
+        "lines": [
+          61,
+          68,
+          89
+        ],
+        "path": "tests/test_observations.py",
+        "sha256": "fe7791fa82165ad99dfb36dcf20aecd9cc4f35b70de36777c74e7f47194334f8"
+      }
+    }
+  ],
+  "current_operational_limit": "Latest ongoing-work records zero real financial theses/questions/replies/adopted numerical policies. Do not infer live buying readiness from test coverage or solve missing inputs with defaults. J-Quants financial-summary work already in progress is not re-proposed.",
+  "next_finite_tasks": [
+    {
+      "author_basis": [
+        {
+          "adaptation": "Track distinct research/dispatch/response outcomes accurately. The closure state machine is a project adaptation, not an Anthropic-prescribed transition table.",
+          "line": 113,
+          "path": "third_party/anthropic/skills/idea-generation/SKILL.md",
+          "quote": "Track idea hit rates over time — which screens and approaches produce the best ideas?",
+          "source": "anthropic.idea-generation"
+        },
+        {
+          "adaptation": "Do not label a question never sent as company refusal or non-response evidence.",
+          "line": 64,
+          "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+          "quote": "Track disconfirming evidence as rigorously as confirming evidence",
+          "source": "anthropic.thesis-tracker"
+        }
+      ],
+      "classification": "confirmed_state_transition_defect_and_missing_negative_test",
+      "cohort_boundary": "Operational closure_reason=no_response is not proof of no_response_by_deadline. Existing observation dispatch must be sent; cutoff must reach separately frozen reply_deadline, and visible response_check.checked_through must reach it. Do not wire question closed_at/status into that signal or invent a common waiting period.",
+      "evidence": [
+        {
+          "lines": [
+            449,
+            454,
+            456,
+            471,
+            473
+          ],
+          "path": "src/ir_agent/harness.py",
+          "sha256": "ea6eb15ba4945c81f68f700d52fe23c4cddc36c9927195d857ef6aff5ab1b847"
+        },
+        {
+          "lines": [
+            74,
+            75
+          ],
+          "path": "src/ir_agent/models.py",
+          "sha256": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c"
+        },
+        {
+          "lines": [
+            94,
+            99
+          ],
+          "path": "docs/ir-operation-design.md",
+          "sha256": "b8e626a523869b7d2c71d43b89b64f695765af35d20c1a342c1e5d323f779025"
+        }
+      ],
+      "existing_test_difference": {
+        "existing": "tests/test_workflow.py:420 test_one_open_question_per_topic_and_expiry_preserves_thesis calls _sent_question before expiry; tests/test_observations.py:89 already excludes unsent observations from signal denominators.",
+        "new": "Cover the18 status×reason combinations, assert rejected closures leave state/thesis unchanged, keep valid sent expiry+late reply, and reject absent sent_at in legacy inconsistent reply-eligible states. No need to recreate observation or EVSI tests."
+      },
+      "expected_user_change": "An unsent draft can be cancelled, but cannot be reported as issuer silence/refusal. Late replies to truly sent expired questions continue working. Legacy inconsistent states fail clearly rather than timestamp(None).",
+      "finite_task": "Reject no_response/declined closure for draft questions; keep draft cancellation and sent awaiting_reply closure behavior. Validate that reply-eligible legacy statuses have a recorded sent_at before reply processing, with a clear state error. Preserve stored old records and thesis values.",
+      "id": "G01-unsent-question-closure",
+      "not_in_scope": [
+        "No automated mail/send/order",
+        "No new timeout or non-response probability",
+        "No historical row rewrite",
+        "No new manifest/audit subsystem"
+      ],
+      "priority": 1,
+      "state_matrix_ref": {
+        "path": "research/ir-decision-logic-gap-review-2026-10-15/closure-reproduction.json",
+        "sha256": "d8a2757ce47113edf9dc3551fc00bafd5ae95ab4f0d8ba8b1d1cfbff164b772e"
+      }
+    },
+    {
+      "author_basis": [
+        {
+          "adaptation": "Use the existing evaluator and explicit adopted policy/position/quote inputs; persistence and source-kind design are project work.",
+          "lines": [
+            26,
+            29,
+            30,
+            31
+          ],
+          "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+          "principle": "For each new development record what changed, thesis impact and action; public information is not contingent on an IR reply.",
+          "source": "anthropic.thesis-tracker"
+        }
+      ],
+      "classification": "design_candidate_only_not_confirmed_evaluator_bug",
+      "evidence": [
+        {
+          "lines": [
+            64,
+            75,
+            218
+          ],
+          "path": "src/ir_agent/cli.py",
+          "sha256": "2598b5fae3b86a3a8ed728fc4ae38cfd883ee7c3a01d438c30b5a462e1b4b6d2"
+        },
+        {
+          "lines": [
+            59,
+            60,
+            500
+          ],
+          "path": "src/ir_agent/store.py",
+          "sha256": "84c023046d43400742f729c95fb4789e75237433ef74ec4d7c40d712b927e47e"
+        },
+        {
+          "lines": [
+            214,
+            218,
+            226,
+            237
+          ],
+          "path": "src/ir_agent/decision_lifecycle.py",
+          "sha256": "33c73746954002012984dd720924bca5cf62608ebaaa3867bd6f58731ec2149e"
+        },
+        {
+          "lines": [
+            336,
+            340
+          ],
+          "path": "src/ir_agent/harness.py",
+          "sha256": "ea6eb15ba4945c81f68f700d52fe23c4cddc36c9927195d857ef6aff5ab1b847"
+        },
+        {
+          "lines": [
+            163,
+            231
+          ],
+          "path": "docs/workflow.md",
+          "sha256": "f634ba84ccfb654ea57aff3ee496ac4e703b6687305470cbf7798c80a8481550"
+        },
+        {
+          "lines": [
+            61,
+            70
+          ],
+          "path": "docs/ir-operation-design.md",
+          "sha256": "b8e626a523869b7d2c71d43b89b64f695765af35d20c1a342c1e5d323f779025"
+        }
+      ],
+      "existing_test_difference": "tests/test_decision.py and pure CLI already calculate from public source snapshots. tests/test_decision_lifecycle.py:141 tests persisted price rereview only after an applied reply. This is a missing persistence route, not a missing calculator.",
+      "expected_user_change": "A public disclosure that resolves a question or changes the thesis can eventually produce the same policy-based recorded review without creating sham IR traffic. Missing policy/valuation/price remains unresolved.",
+      "finite_task": "Separate bounded design of a policy-backed persisted decision based on public research, without fabricating question/reply records. Root assigned another agent to design this; do not duplicate implementation or expand here.",
+      "id": "G02-public-only-persisted-decision",
+      "priority": 2,
+      "scope_limit": "Do not relax required inputs, add thresholds, silently adopt financial values, treat research proposed_action as verified action, or alter the pure decision CLI DB-free contract. Design only at present."
+    }
+  ],
+  "next_task_count": 2,
+  "not_a_gap": [
+    "Observation correction events already implemented despite an older workflow paragraph saying未実装; do not propose a duplicate correction subsystem.",
+    "EVSI/probability calibration and financial-model adoption require evidence; absent real outcomes/policies is not automatically a code defect."
+  ],
+  "recommendation": "Implement G01 first. Keep G02 as the separately delegated design candidate; no forced third task.",
+  "recorded_at": "2026-10-15T20:42:06.990390+00:00",
+  "requested_docs": [
+    {
+      "lines": [
+        1
+      ],
+      "path": "docs/ongoing-work.md",
+      "sha256": "7fc86f4a053907287f31201e0d45dd2b1e011c612afef177b6d1f88362920b34"
+    },
+    {
+      "lines": [
+        1
+      ],
+      "path": "docs/decision-policy.md",
+      "sha256": "e687e70c70ec9ce4b40b935bb9e908cd2d1328f44dfa488fad639557fbba8de5"
+    },
+    {
+      "lines": [
+        1
+      ],
+      "path": "docs/ir-operation-design.md",
+      "sha256": "b8e626a523869b7d2c71d43b89b64f695765af35d20c1a342c1e5d323f779025"
+    },
+    {
+      "lines": [
+        1
+      ],
+      "path": "docs/workflow.md",
+      "sha256": "f634ba84ccfb654ea57aff3ee496ac4e703b6687305470cbf7798c80a8481550"
+    }
+  ],
+  "scope": "Read-only comparison of requested four docs, relevant src/tests and adopted author originals. No network or actual/memory SQLite access.",
+  "side_effects": {
+    "DB_connections": 0,
+    "DB_writes": 0,
+    "new_GETs": 0,
+    "new_review_files": [
+      "gap-review.json",
+      "closure-reproduction.json",
+      "README.md"
+    ],
+    "src_tests_existing_docs_edits": 0
+  },
+  "source_and_limits": [
+    "No test suite rerun because this task prohibits DB writes and changes no implementation.",
+    "Closure branch behavior reproduced with an SQL-capture-only Python stand-in; SQLite integration verification remains a focused followup for the implementation task.",
+    "No financial parameters, probabilities, thresholds, forecasts or strategies invented."
+  ]
+}

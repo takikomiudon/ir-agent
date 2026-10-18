@@ -1,0 +1,159 @@
+{
+  "status": "intermediate_only",
+  "adoption": "unresolved",
+  "request": {
+    "annual_observations": [
+      {
+        "basis": {
+          "accounting_basis": "Synthetic arithmetic fixture",
+          "amount_unit": "millions",
+          "company_id": "synthetic:cycle-margin-demo",
+          "currency": "JPY",
+          "profit_concept": "pretax_operating_income",
+          "scope": "Fictional consolidated company"
+        },
+        "data_kind": "synthetic_example",
+        "id": "loss-period",
+        "operating_income": "-10",
+        "period": {
+          "end": "2023-12-31",
+          "kind": "full_fiscal_year",
+          "label": "Synthetic FY2023",
+          "start": "2023-01-01"
+        },
+        "revenue": "100",
+        "selection_rationale": "Explicit fictional arithmetic input; not evidence of a full cycle.",
+        "source_refs": []
+      },
+      {
+        "basis": {
+          "accounting_basis": "Synthetic arithmetic fixture",
+          "amount_unit": "millions",
+          "company_id": "synthetic:cycle-margin-demo",
+          "currency": "JPY",
+          "profit_concept": "pretax_operating_income",
+          "scope": "Fictional consolidated company"
+        },
+        "data_kind": "synthetic_example",
+        "id": "profit-period",
+        "operating_income": "90",
+        "period": {
+          "end": "2024-12-31",
+          "kind": "full_fiscal_year",
+          "label": "Synthetic FY2024",
+          "start": "2024-01-01"
+        },
+        "revenue": "300",
+        "selection_rationale": "Explicit fictional arithmetic input; not evidence of a full cycle.",
+        "source_refs": []
+      }
+    ],
+    "application_revenue": {
+      "basis": {
+        "accounting_basis": "Synthetic arithmetic fixture",
+        "amount_unit": "millions",
+        "company_id": "synthetic:cycle-margin-demo",
+        "currency": "JPY",
+        "profit_concept": "pretax_operating_income",
+        "scope": "Fictional consolidated company"
+      },
+      "data_kind": "synthetic_example",
+      "period": {
+        "end": "2025-12-31",
+        "kind": "full_fiscal_year",
+        "label": "Synthetic FY2025",
+        "start": "2025-01-01"
+      },
+      "revenue": "200",
+      "selection_rationale": "Fictional application amount, not a company forecast.",
+      "source_refs": []
+    },
+    "assessment": {
+      "application_rationale": null,
+      "comparability_rationale": null,
+      "cycle_driver": "Fictional two-period demonstration only",
+      "excluded_observations": [],
+      "full_cycle_rationale": null,
+      "source_refs": []
+    },
+    "basis": {
+      "accounting_basis": "Synthetic arithmetic fixture",
+      "amount_unit": "millions",
+      "company_id": "synthetic:cycle-margin-demo",
+      "currency": "JPY",
+      "profit_concept": "pretax_operating_income",
+      "scope": "Fictional consolidated company"
+    },
+    "method": "arithmetic_equal_annual_periods"
+  },
+  "request_sha256": "fc70fe1c3805aa633a070c6ecd95bddbcfebd35bd91d0bff143c7da98e80065a",
+  "arithmetic": {
+    "annual_margins": [
+      {
+        "id": "loss-period",
+        "operating_margin_ratio": "-0.1"
+      },
+      {
+        "id": "profit-period",
+        "operating_margin_ratio": "0.3"
+      }
+    ],
+    "period_count": 2,
+    "mean_operating_margin_ratio": "0.1",
+    "applied_operating_income": "20",
+    "basis": {
+      "accounting_basis": "Synthetic arithmetic fixture",
+      "amount_unit": "millions",
+      "company_id": "synthetic:cycle-margin-demo",
+      "currency": "JPY",
+      "profit_concept": "pretax_operating_income",
+      "scope": "Fictional consolidated company"
+    }
+  },
+  "calculation": {
+    "working_precision_digits": 80,
+    "rounding": "ROUND_HALF_UP",
+    "division_may_round": true,
+    "display_quantization": null,
+    "formula": {
+      "per_period": "operating_income / revenue",
+      "mean": "sum(annual_operating_margin_ratio) / period_count",
+      "application": "mean_operating_margin_ratio * application_revenue"
+    },
+    "author_reference": {
+      "author": "Aswath Damodaran",
+      "year": 2009,
+      "title": "Ups and Downs: Valuing Cyclical and Commodity Companies",
+      "source_id": "damodaran.cyclical-commodity.2009",
+      "pdf_sha256": "16c80720551749bcb08cfc06de0f94ce46a3162fe0e9a7cf9b3abf097c433d40",
+      "pdf_pages": [
+        14,
+        15,
+        16
+      ],
+      "support": "Average scaled profit margins and apply to recent revenues; Toyota's annual example is consistent with equal margin weights."
+    },
+    "project_adaptation": "Strict metadata/period checks, explicit equal declared-annual weights, isolated Decimal arithmetic and unresolved adoption are local API rules; the author did not prescribe a universal period weighting or automatic full-cycle test."
+  },
+  "verification": {
+    "source_references": "unverified",
+    "declared_basis_semantics": "unverified",
+    "declared_annual_periods": "unverified",
+    "fiscal_year_duration_comparability": "unverified",
+    "full_cycle_coverage": "unverified",
+    "history_selection_and_exclusions": "unverified",
+    "application_revenue_suitability": "unverified"
+  },
+  "period_dates_incomplete": [],
+  "assessment_fields_unset": [
+    "assessment.full_cycle_rationale",
+    "assessment.comparability_rationale",
+    "assessment.application_rationale"
+  ],
+  "limitations": [
+    "Matching caller metadata and carrying source/quote references do not verify the documents, annual declarations, period comparability, full-cycle coverage or applicability today; 52/53-week and changed fiscal years need separate review.",
+    "Unknown bounds and unlisted/missing years are not inferred or filled; known overlaps are rejected, but unknown dates cannot prove a complete or nonoverlapping history.",
+    "Signed income is retained; no loss row is removed or clamped, no displayed margin is substituted, and no sales/period weighting, annualization or currency/unit conversion is performed.",
+    "The applied amount is an arithmetic candidate, not reported profit or an adopted normalized forecast; no return on capital, reinvestment, financing, valuation, price, IR action or forecast probability is calculated."
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "IR_question_or_action": false,
+  "actual_DB_access": 0,
+  "adjacent_pages": [],
+  "author_policy_connection": {
+    "adopted_method": "Damodaran after-tax cash-flow / normalization research; Anthropic source/period and narrative-to-input separation.",
+    "boundary": "Company historical facts reduce a tax-basis ambiguity; neither author supplied or recommended a 5988 normal tax rate in this evidence.",
+    "existing_reference": "cashflow-oneoff-bridge-review.md:48-50; docs/decision-policy.md"
+  },
+  "code_shared_docs_index_edits": 0,
+  "company_id": "jp:5988",
+  "financial_inputs_verified": false,
+  "financial_values_automatically_adopted": false,
+  "findings": [
+    {
+      "current_values": {
+        "reported_tax_burden_rate_after_tax_effect_accounting_pct": "100.77",
+        "statutory_effective_tax_rate_pct": "30.58"
+      },
+      "finding": "当連結会計年度の法定実効税率30.58%と税効果会計適用後法人税等負担率100.77%は異なる。後者は表示された調整を経た過去の会計上の負担率であり、現金納付税率や正常/将来税率の採用値ではない。",
+      "id": "historical-statutory-vs-reported-tax",
+      "model_input_adopted": false,
+      "quote_refs": [
+        "rate-definition-columns-statutory",
+        "rate-final"
+      ]
+    },
+    {
+      "finding": "当期の税率差異表には評価性引当額の増減27.81、関係会社留保利益25.94、受取配当金消去による影響額26.30、在外連結子会社の税率差異△17.50の行がある。税率への加減調整であり、百万円の費用額・各要因の将来持続性・相対増減率ではない。",
+      "id": "reported-tax-reconciliation-drivers",
+      "model_input_adopted": false,
+      "quote_refs": [
+        "rate-definition-columns-statutory",
+        "rate-valuation-allowance",
+        "rate-retained-earnings",
+        "rate-dividend-elimination",
+        "rate-foreign-subsidiaries"
+      ],
+      "unit": "percentage-point contributions in the displayed rate reconciliation; contextual interpretation, not an independently printed pp label"
+    },
+    {
+      "current_raw_token": "338",
+      "display_unit": "百万円",
+      "finding": "当期338百万円は「繰延税金資産」の発生原因別内訳の「繰越欠損金」行。税務上の繰越欠損金元本額338百万円、現金税便益338百万円、利用可能な全額とは読まない。前年のダッシュは原tokenのまま保持し0へ変換しない。",
+      "gross_tax_loss_amount": null,
+      "id": "NOL-related-DTA-is-not-gross-NOL",
+      "model_input_adopted": false,
+      "previous_raw_token": "－",
+      "quote_refs": [
+        "tax-causes-and-columns",
+        "DTA-NOL"
+      ]
+    },
+    {
+      "finding": "当期の繰延税金資産小計1,969百万円、評価性引当額△788百万円、相殺後の繰延税金資産純額516百万円は別行。評価性引当額△788を全額NOLへ帰属したり、338から控除したり、将来回収可能な現金へ置換しない。表示表は丸め値のため差額による厳密再計算も採用しない。",
+      "id": "aggregate-allowance-and-net-DTA",
+      "model_input_adopted": false,
+      "quote_refs": [
+        "tax-causes-and-columns",
+        "DTA-subtotal",
+        "DTA-valuation-allowance",
+        "DTA-net"
+      ]
+    },
+    {
+      "finding": "当期211百万円は繰延税金資産の原因別内訳にある減損損失否認の行。減損損失額211百万円や中国337百万円の税効果と同定できず、中国約6億円の損金算入/支払/税率の回答にはならない。",
+      "id": "impairment-tax-row-does-not-resolve-China",
+      "model_input_adopted": false,
+      "quote_refs": [
+        "tax-causes-and-columns",
+        "DTA-impairment"
+      ]
+    }
+  ],
+  "network_GETs": 0,
+  "newly_answered": [
+    "Saved annual consolidated note contains separate historical statutory and reported burden rates and their listed reconciliation drivers.",
+    "NOL-related DTA line and aggregate valuation allowance are present; the NOL line is not a gross tax-loss principal amount."
+  ],
+  "recorded_at": "2026-10-15T22:20:19.474052+00:00",
+  "scope": {
+    "accounting_basis": null,
+    "annual_period_current": {
+      "basis": "Inherited established annual statement period from existing cashflow review; p94 columns themselves display closing dates.",
+      "end": "2026-03-31",
+      "start": "2025-04-01"
+    },
+    "basis": "Columns explicitly say previous/current consolidated fiscal year.",
+    "entity": "パイオラックス連結",
+    "historical_only": true,
+    "instant_dates": [
+      "2025-03-31",
+      "2026-03-31"
+    ]
+  },
+  "semantic_pages": [
+    94
+  ],
+  "status": "bounded_historical_tax_basis_review_only",
+  "still_unresolved": [
+    "Company/legal-entity/country attribution of gross tax losses and allowance; loss expiration, usage limits, realizability and future utilization.",
+    "Tax deductibility or deferred-tax attribution of the China337/approx600 disclosure; payable or cash-tax timing.",
+    "Normal operating tax rate, future cash taxes, NOPAT/FCFF/EPS forecasts, model selection, discount rate, reinvestment, price and investment-policy adoption."
+  ],
+  "why_not_duplicate": {
+    "does_not_reopen": "Does not reopen the closed China one-off cash/inclusion review or any closed author/negative network route.",
+    "duplicate_scan": "No physical-page 94 reference in structured page fields of existing 5988 JSON; whole source/text snapshots naturally include page text. Scope of search is saved 5988 evidence, not global proof no one ever read it.",
+    "existing_cashflow_review": "cashflow-oneoff-bridge-review.md:11 limited the new note review to physical 69/70/74/78/79/83 and prior P/L65; p94 was outside that stated scope.",
+    "existing_unresolved": "model-assessment.md:44 tax_loss_and_terminal_conditions_supported is null; :59 requires tax/NOL inputs. cashflow-oneoff-bridge-review.md:50 retains operating-tax/NOL and future CF gaps."
+  }
+}

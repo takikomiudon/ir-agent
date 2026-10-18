@@ -1,0 +1,71 @@
+{
+  "company_id": "jp:1870",
+  "maximum_GETs": 5,
+  "batch_maximum_GETs": 10,
+  "batch_companies": [
+    "1866",
+    "1870"
+  ],
+  "user_agent": "Codex-IR-Research/0.1",
+  "allowed_requests": [
+    {
+      "role": "issuer_robots",
+      "url": "https://www.yahagi.co.jp/robots.txt",
+      "basis": "robots endpoint for CSV official host"
+    },
+    {
+      "role": "issuer_root",
+      "url": "https://www.yahagi.co.jp/",
+      "basis": "selected CSV official_url"
+    },
+    {
+      "role": "latest_quarter_statement",
+      "url": "https://www.yahagi.co.jp/ir_news/pdf/2027%E5%B9%B43%E6%9C%88%E6%9C%9F%20%20%E7%AC%AC1%E5%9B%9B%E5%8D%8A%E6%9C%9F%E6%B1%BA%E7%AE%97%E7%9F%AD%E4%BF%A1.pdf",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[1].html_visible_text.links[134]",
+      "literal_href": "/ir_news/pdf/2027%E5%B9%B43%E6%9C%88%E6%9C%9F%20%20%E7%AC%AC1%E5%9B%9B%E5%8D%8A%E6%9C%9F%E6%B1%BA%E7%AE%97%E7%9F%AD%E4%BF%A1.pdf",
+      "label": "2027年3月期 第1四半期 決算を発表しました"
+    },
+    {
+      "role": "quarter_presentation",
+      "url": "https://www.yahagi.co.jp/ir_news/pdf/2027%E5%B9%B43%E6%9C%88%E6%9C%9F%E7%AC%AC1%E5%9B%9B%E5%8D%8A%E6%9C%9F%E6%B1%BA%E7%AE%97%E8%AA%AC%E6%98%8E%E8%B3%87%E6%96%99.pdf",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[1].html_visible_text.links[135]",
+      "literal_href": "/ir_news/pdf/2027%E5%B9%B43%E6%9C%88%E6%9C%9F%E7%AC%AC1%E5%9B%9B%E5%8D%8A%E6%9C%9F%E6%B1%BA%E7%AE%97%E8%AA%AC%E6%98%8E%E8%B3%87%E6%96%99.pdf",
+      "label": "2027年3月期 第1四半期 決算説明資料を発表しました"
+    },
+    {
+      "role": "guidance_revision",
+      "url": "https://www.yahagi.co.jp/ir_news/pdf/2027%E5%B9%B43%E6%9C%88%E6%9C%9F%20%E7%AC%AC2%E5%9B%9B%E5%8D%8A%E6%9C%9F%EF%BC%88%E4%B8%AD%E9%96%93%E6%9C%9F%EF%BC%89%E5%8F%8A%E3%81%B3%E9%80%9A%E6%9C%9F%E9%80%A3%E7%B5%90%E6%A5%AD%E7%B8%BE%E4%BA%88%E6%83%B3%E4%B8%A6%E3%81%B3%E3%81%AB%E9%85%8D%E5%BD%93%E4%BA%88%E6%83%B3%E3%81%AE%E4%BF%AE%E6%AD%A3%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%20.pdf",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[1].html_visible_text.links[133]",
+      "literal_href": "/ir_news/pdf/2027%E5%B9%B43%E6%9C%88%E6%9C%9F%20%E7%AC%AC2%E5%9B%9B%E5%8D%8A%E6%9C%9F%EF%BC%88%E4%B8%AD%E9%96%93%E6%9C%9F%EF%BC%89%E5%8F%8A%E3%81%B3%E9%80%9A%E6%9C%9F%E9%80%A3%E7%B5%90%E6%A5%AD%E7%B8%BE%E4%BA%88%E6%83%B3%E4%B8%A6%E3%81%B3%E3%81%AB%E9%85%8D%E5%BD%93%E4%BA%88%E6%83%B3%E3%81%AE%E4%BF%AE%E6%AD%A3%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%20.pdf",
+      "label": "2027年3月期 第2四半期（中間期）及び通期連結業績予想並びに配当予想の修正に関するお知らせ"
+    }
+  ],
+  "robots_reviews": {
+    "www.yahagi.co.jp": {
+      "proceed": true,
+      "branch": "complete404_missingrobots",
+      "raw_file": "research/ir-case-studies-2026-10-15/1870/initial-public-review-2026-10-16/raw/9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+      "raw_sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e",
+      "scope": "Missing robots response404; not parsed permission from failure HTML, no assertion about all site access conditions"
+    }
+  },
+  "holds_file": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+  "holds_sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952",
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu"
+  ]
+}

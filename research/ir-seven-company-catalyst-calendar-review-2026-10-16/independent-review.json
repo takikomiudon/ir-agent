@@ -1,0 +1,810 @@
+{
+  "GET_DB_connection_Store_existing_file_edit_test_code_changes": 0,
+  "calendar_request_projection": {
+    "claim_source_hash_is_native_not_raw_or_content_hash": true,
+    "do_not_copy_review_or_observation_extras_to_strict_request": true,
+    "event_allowed_fields": [
+      "id",
+      "company_id",
+      "synthetic",
+      "kind",
+      "label",
+      "period",
+      "claims"
+    ],
+    "exactly_one_schedule_claim": true,
+    "forward_exact_supported_selected_dates": {
+      "jp:4318": [
+        "2026-10-30"
+      ],
+      "jp:6814": [
+        "2027-01-08",
+        "2027-04-09",
+        "2027-07-09",
+        "2027-10-08"
+      ]
+    },
+    "only_supported_kinds": [
+      "earnings_release",
+      "earnings_presentation"
+    ],
+    "period_allowed_nonempty_text_fields": [
+      "raw_label",
+      "fiscal_year_label",
+      "quarter_label",
+      "basis_quote",
+      "interpretation"
+    ],
+    "request_not_created_or_executed": true,
+    "selected_floating_date_unknown_company": "jp:3817",
+    "still_unverified": [
+      "Actual source DB firstsave, intake schedule classification, availability and report-time source binding are not checked here.",
+      "Calendar publication/update instant, future date changes, exact time/timezone and occurrence/result links are not established.",
+      "Quiet-period rules beyond these captured calendar texts are unreviewed; no company-wide absence or exemption claim.",
+      "Current API remains schedule_monitor_only/source_bound_candidate/caller_mapping_unverified; semantic review does not authorize model inputs, automatic jobs, management-date changes or financial decisions."
+    ],
+    "time_timezone_supersedes_claim_id_must_be_null": true,
+    "unknown_date_allowed": true,
+    "unsupported_future_AGM_company": "jp:2929",
+    "visible_quote_locations_not_raw_HTML_locations": true
+  },
+  "clarification": {
+    "change": "Root-requested company-stub schema boundary only; meaning, quotes, input pins and major mismatch count unchanged.",
+    "previous_README_sha256": "4725d23bf80d4826d07c8c2011485a7a0b979224ed6160814222cab886208e40",
+    "previous_bytes_preserved_directory": "/tmp/ir-calendar-four-review-before-company-stub-note",
+    "previous_review_sha256": "8b08aee68ec28b7a4188ce0bd5789d2a238f11c61a17c9e3b47dcd9ba69ca0d3",
+    "recorded_at": "2026-10-16T11:11:47.723578+00:00"
+  },
+  "company_reviews": [
+    {
+      "actual_database_firstsave": null,
+      "calendar_publication_date": null,
+      "company_id": "jp:2929",
+      "database_checked": false,
+      "due_scheduled_at_all_null": true,
+      "events_or_rows_reviewed": [
+        {
+          "date_candidate": "2026-10-28",
+          "date_raw": "2026年10月28日",
+          "fiscal_year_label": null,
+          "id": "2929-calendar-row-1",
+          "kind": "shareholder_meeting",
+          "label_raw": "第29期定時株主総会",
+          "quarter_label": null,
+          "quote_id": "calendar-row-1",
+          "schedule_API_kind_supported": false,
+          "time_raw": null
+        },
+        {
+          "date_candidate": "2026-09-11",
+          "date_raw": "2026年09月11日",
+          "fiscal_year_label": "2026年7月期",
+          "id": "2929-calendar-row-2",
+          "kind": "earnings_release",
+          "label_raw": "2026年7月期決算発表",
+          "quarter_label": "annual",
+          "quote_id": "calendar-row-2",
+          "schedule_API_kind_supported": true,
+          "time_raw": null
+        },
+        {
+          "date_candidate": "2026-06-10",
+          "date_raw": "2026年06月10日",
+          "fiscal_year_label": "2026年7月期",
+          "id": "2929-calendar-row-3",
+          "kind": "earnings_release",
+          "label_raw": "2026年7月期第3四半期決算発表",
+          "quarter_label": "第3四半期",
+          "quote_id": "calendar-row-3",
+          "schedule_API_kind_supported": true,
+          "time_raw": null
+        },
+        {
+          "date_candidate": "2026-03-13",
+          "date_raw": "2026年03月13日",
+          "fiscal_year_label": "2026年7月期",
+          "id": "2929-calendar-row-4",
+          "kind": "earnings_release",
+          "label_raw": "2026年7月期第2四半期決算発表",
+          "quarter_label": "第2四半期",
+          "quote_id": "calendar-row-4",
+          "schedule_API_kind_supported": true,
+          "time_raw": null
+        },
+        {
+          "date_candidate": "2025-12-11",
+          "date_raw": "2025年12月11日",
+          "fiscal_year_label": "2026年7月期",
+          "id": "2929-calendar-row-5",
+          "kind": "earnings_release",
+          "label_raw": "2026年7月期第1四半期決算発表",
+          "quarter_label": "第1四半期",
+          "quote_id": "calendar-row-5",
+          "schedule_API_kind_supported": true,
+          "time_raw": null
+        },
+        {
+          "date_candidate": "2025-10-24",
+          "date_raw": "2025年10月24日",
+          "fiscal_year_label": null,
+          "id": "2929-calendar-row-6",
+          "kind": "shareholder_meeting",
+          "label_raw": "第28期定時株主総会",
+          "quarter_label": null,
+          "quote_id": "calendar-row-6",
+          "schedule_API_kind_supported": false,
+          "time_raw": null
+        },
+        {
+          "date_candidate": "2025-09-11",
+          "date_raw": "2025年09月11日",
+          "fiscal_year_label": "2025年7月期",
+          "id": "2929-calendar-row-7",
+          "kind": "earnings_release",
+          "label_raw": "2025年7月期決算発表",
+          "quarter_label": "annual",
+          "quote_id": "calendar-row-7",
+          "schedule_API_kind_supported": true,
+          "time_raw": null
+        }
+      ],
+      "financial_inputs_or_model_adopted": false,
+      "major_mismatches": [],
+      "meaning_conclusion": "Seven full Gregorian dates match the same raw date/title rows. Future Oct28 is the29th AGM, not an earnings release. No next FY2027/7 release day is established; historical release dates are not recurring future schedules.",
+      "occurrence_unconfirmed": true,
+      "projection_notes": "Five historical earnings-release rows can be projected as source-bound research observations if desired; future AGM and prior AGM are unsupported by the current two-kind API and must remain outside. There is no supported future release date in this captured scope.",
+      "published_at": null,
+      "quiet_period_scope": "No explicit quiet-period statement observed within selected calendar text; broader policy not reviewed.",
+      "quote_offset_checks": [
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 71,
+          "byte_start": 0,
+          "character_end": 29,
+          "character_start": 0,
+          "id": "calendar-title",
+          "quote": "IRカレンダー | 投資家情報 | 株式会社ファーマフーズ"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 471,
+          "byte_start": 427,
+          "character_end": 207,
+          "character_start": 185,
+          "id": "calendar-row-1",
+          "quote": "2026年10月28日 第29期定時株主総会"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 516,
+          "byte_start": 472,
+          "character_end": 232,
+          "character_start": 208,
+          "id": "calendar-row-2",
+          "quote": "2026年09月11日 2026年7月期決算発表"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 574,
+          "byte_start": 517,
+          "character_end": 262,
+          "character_start": 233,
+          "id": "calendar-row-3",
+          "quote": "2026年06月10日 2026年7月期第3四半期決算発表"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 632,
+          "byte_start": 575,
+          "character_end": 292,
+          "character_start": 263,
+          "id": "calendar-row-4",
+          "quote": "2026年03月13日 2026年7月期第2四半期決算発表"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 698,
+          "byte_start": 641,
+          "character_end": 328,
+          "character_start": 299,
+          "id": "calendar-row-5",
+          "quote": "2025年12月11日 2026年7月期第1四半期決算発表"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 743,
+          "byte_start": 699,
+          "character_end": 351,
+          "character_start": 329,
+          "id": "calendar-row-6",
+          "quote": "2025年10月24日 第28期定時株主総会"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 788,
+          "byte_start": 744,
+          "character_end": 376,
+          "character_start": 352,
+          "id": "calendar-row-7",
+          "quote": "2025年09月11日 2025年7月期決算発表"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 879,
+          "byte_start": 789,
+          "character_end": 407,
+          "character_start": 377,
+          "id": "issuer-schedule-change-caution",
+          "quote": "※都合により予告なく変更する場合があります。ご了承ください。"
+        }
+      ],
+      "raw_entity_file": "research/ir-case-studies-2026-10-15/2929/public-catalyst-calendar-discovery-2026-10-16/raw/724bf337df44dfc63ad9aa25e56b00cdf1852737d292e6deb2351ed7c0dbdd19",
+      "raw_entity_sha256": "724bf337df44dfc63ad9aa25e56b00cdf1852737d292e6deb2351ed7c0dbdd19",
+      "raw_year_binding_checks": [],
+      "semantic_scope": "Complete seven calendar rows and change caution; no future-year extrapolation.",
+      "source_content_sha256": "cf1957ff3ffb4656eb3c878cf6aef1b728971fb7c990019e1f09455d67d31da9",
+      "source_directory": "research/ir-case-studies-2026-10-15/2929/public-catalyst-calendar-discovery-2026-10-16",
+      "source_id": "case-public:875747bb17f7618d595eaf7de2ab027d5a418f04408f30de3b01cecd8d539b57",
+      "source_native_sha256": "6fd4f6688280a535af781ba2ac3b0d0548c59165cffa491e6e607d86843ad94f",
+      "source_object_checks": {
+        "content_matches_saved_text_and_builder_snapshot": true,
+        "independent_builder_rerun": false,
+        "native_matches_worker_review": true,
+        "raw_content_snapshot_hash_domains_consistent": true,
+        "verification_boundary": "Worker builder evidence reviewed; independent saved-source/native/content/map consistency and exact quote checks. No builder/network/DB execution.",
+        "worker_reports_whole_builder_replay_exact": true
+      },
+      "source_retrieved_at": "2026-10-16T11:03:06.035405+00:00"
+    },
+    {
+      "actual_database_firstsave": null,
+      "calendar_publication_date": null,
+      "company_id": "jp:4318",
+      "database_checked": false,
+      "due_scheduled_at_all_null": true,
+      "events_or_rows_reviewed": [
+        {
+          "date_candidate": "2026-10-30",
+          "date_raw": "10月30日",
+          "fiscal_year_label": "2027年3月期",
+          "id": "4318-2026-calendar-row-1",
+          "kind": "earnings_release",
+          "label_raw": "2027年3月期 第2四半期決算発表（予定）",
+          "quarter_label": "第2四半期",
+          "quote_id": "calendar-2026-row-1",
+          "schedule_API_kind_supported": true,
+          "time_raw": null
+        },
+        {
+          "date_candidate": "2026-07-31",
+          "date_raw": "7月31日",
+          "fiscal_year_label": "2027年3月期",
+          "id": "4318-2026-calendar-row-2",
+          "kind": "earnings_release",
+          "label_raw": "2027年3月期 第1四半期決算発表",
+          "quarter_label": "第1四半期",
+          "quote_id": "calendar-2026-row-2",
+          "schedule_API_kind_supported": true,
+          "time_raw": null
+        },
+        {
+          "date_candidate": "2026-06-23",
+          "date_raw": "6月23日",
+          "fiscal_year_label": null,
+          "id": "4318-2026-calendar-row-3",
+          "kind": "shareholder_meeting",
+          "label_raw": "第46回 定時株主総会",
+          "quarter_label": null,
+          "quote_id": "calendar-2026-row-3",
+          "schedule_API_kind_supported": false,
+          "time_raw": null
+        },
+        {
+          "date_candidate": "2026-06-19",
+          "date_raw": "6月19日",
+          "fiscal_year_label": null,
+          "id": "4318-2026-calendar-row-4",
+          "kind": "regulatory_filing",
+          "label_raw": "第46期 有価証券報告書提出",
+          "quarter_label": null,
+          "quote_id": "calendar-2026-row-4",
+          "schedule_API_kind_supported": false,
+          "time_raw": null
+        },
+        {
+          "date_candidate": "2026-05-12",
+          "date_raw": "5月12日",
+          "fiscal_year_label": "2026年3月期",
+          "id": "4318-2026-calendar-row-5",
+          "kind": "earnings_presentation",
+          "label_raw": "2026年3月期 決算説明会開催 【機関投資家・アナリスト向け／オンライン：10時30分～】",
+          "quarter_label": "annual",
+          "quote_id": "calendar-2026-row-5",
+          "schedule_API_kind_supported": true,
+          "time_raw": "10時30分～"
+        },
+        {
+          "date_candidate": "2026-04-30",
+          "date_raw": "4月30日",
+          "fiscal_year_label": "2026年3月期",
+          "id": "4318-2026-calendar-row-6",
+          "kind": "earnings_release",
+          "label_raw": "2026年3月期決算発表",
+          "quarter_label": "annual",
+          "quote_id": "calendar-2026-row-6",
+          "schedule_API_kind_supported": true,
+          "time_raw": null
+        },
+        {
+          "date_candidate": "2026-01-30",
+          "date_raw": "1月30日",
+          "fiscal_year_label": "2026年3月期",
+          "id": "4318-2026-calendar-row-7",
+          "kind": "earnings_release",
+          "label_raw": "2026年3月期 第3四半期決算発表",
+          "quarter_label": "第3四半期",
+          "quote_id": "calendar-2026-row-7",
+          "schedule_API_kind_supported": true,
+          "time_raw": null
+        }
+      ],
+      "financial_inputs_or_model_adopted": false,
+      "major_mismatches": [],
+      "meaning_conclusion": "2026年 option y2026 binds the enclosing raw table, so Oct30 is2026-10-30, not2027. FY2027/3Q2 release remains a planned release. May12FY2026/3 institutional/analyst online presentation is a separate historical event; its raw10:30 is not a release time or known timezone.",
+      "occurrence_unconfirmed": true,
+      "projection_notes": "Forward supported candidate:2026-10-30 earnings_release. Exclude AGM/regulatory filing from current API; historical presentation can retain10:30 only in raw label/context, since API time/timezone inputs must be null. Raw HTML year quotes cannot be passed as source.content basis_quote; use exact visible-year text plus reviewed DOM rationale.",
+      "published_at": null,
+      "quiet_period_scope": "No explicit quiet-period statement observed within selected calendar text; broader policy not reviewed.",
+      "quote_offset_checks": [
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 86,
+          "byte_start": 0,
+          "character_end": 32,
+          "character_start": 0,
+          "id": "calendar-title",
+          "quote": "IRカレンダー｜株式会社クイック - 関わった人全てをハッピーに"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 1346,
+          "byte_start": 1339,
+          "character_end": 530,
+          "character_start": 525,
+          "id": "visible-calendar-year",
+          "quote": "2026年"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 1594,
+          "byte_start": 1531,
+          "character_end": 698,
+          "character_start": 669,
+          "id": "calendar-2026-row-1",
+          "quote": "10月30日 2027年3月期 第2四半期決算発表（予定）"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 1645,
+          "byte_start": 1595,
+          "character_end": 723,
+          "character_start": 699,
+          "id": "calendar-2026-row-2",
+          "quote": "7月31日 2027年3月期 第1四半期決算発表"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 1683,
+          "byte_start": 1646,
+          "character_end": 741,
+          "character_start": 724,
+          "id": "calendar-2026-row-3",
+          "quote": "6月23日 第46回 定時株主総会"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 1730,
+          "byte_start": 1684,
+          "character_end": 762,
+          "character_start": 742,
+          "id": "calendar-2026-row-4",
+          "quote": "6月19日 第46期 有価証券報告書提出"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 1857,
+          "byte_start": 1731,
+          "character_end": 815,
+          "character_start": 763,
+          "id": "calendar-2026-row-5",
+          "quote": "5月12日 2026年3月期 決算説明会開催 【機関投資家・アナリスト向け／オンライン：10時30分～】"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 1894,
+          "byte_start": 1858,
+          "character_end": 834,
+          "character_start": 816,
+          "id": "calendar-2026-row-6",
+          "quote": "4月30日 2026年3月期決算発表"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 1945,
+          "byte_start": 1895,
+          "character_end": 859,
+          "character_start": 835,
+          "id": "calendar-2026-row-7",
+          "quote": "1月30日 2026年3月期 第3四半期決算発表"
+        }
+      ],
+      "raw_entity_file": "research/ir-case-studies-2026-10-15/4318/public-catalyst-calendar-discovery-2026-10-16/raw/4bbc0b4d1fd6f6692b91a4aee7abfff108ee5124bb11ffc8ce4319e9674b4157",
+      "raw_entity_sha256": "4bbc0b4d1fd6f6692b91a4aee7abfff108ee5124bb11ffc8ce4319e9674b4157",
+      "raw_year_binding_checks": [
+        {
+          "byte_end": 17599,
+          "byte_start": 17561,
+          "character_end": 15663,
+          "character_start": 15627,
+          "id": "selector-year",
+          "offset_basis": "raw HTML exact UTF8 decoded string, distinct from source.content",
+          "quote": "<option value=\"y2026\">2026年</option>",
+          "raw_SHA256": "4bbc0b4d1fd6f6692b91a4aee7abfff108ee5124bb11ffc8ce4319e9674b4157",
+          "raw_file": "research/ir-case-studies-2026-10-15/4318/public-catalyst-calendar-discovery-2026-10-16/raw/4bbc0b4d1fd6f6692b91a4aee7abfff108ee5124bb11ffc8ce4319e9674b4157"
+        },
+        {
+          "byte_end": 18525,
+          "byte_start": 18493,
+          "character_end": 16543,
+          "character_start": 16511,
+          "id": "table-year-container",
+          "offset_basis": "raw HTML exact UTF8 decoded string, distinct from source.content",
+          "quote": "id=\"y2026\" class=\"selectViewBox\"",
+          "raw_SHA256": "4bbc0b4d1fd6f6692b91a4aee7abfff108ee5124bb11ffc8ce4319e9674b4157",
+          "raw_file": "research/ir-case-studies-2026-10-15/4318/public-catalyst-calendar-discovery-2026-10-16/raw/4bbc0b4d1fd6f6692b91a4aee7abfff108ee5124bb11ffc8ce4319e9674b4157"
+        }
+      ],
+      "semantic_scope": "Only explicit y2026 raw DOM table and its seven visible rows; older-year tables and annual illustration are not promoted.",
+      "source_content_sha256": "1cb365149c328a09ac954c71c181d9d5a47be597cee55dbb879163e4fd5aa383",
+      "source_directory": "research/ir-case-studies-2026-10-15/4318/public-catalyst-calendar-discovery-2026-10-16",
+      "source_id": "case-public:49aebf52853c56476f720acaa467f34e807522acaebd64acf2bca45be3b31183",
+      "source_native_sha256": "18166eb765f383fa18f2230b4789a10fb60151fcb4267f1c43f65cbedce7d549",
+      "source_object_checks": {
+        "content_matches_saved_text_and_builder_snapshot": true,
+        "independent_builder_rerun": false,
+        "native_matches_worker_review": true,
+        "raw_content_snapshot_hash_domains_consistent": true,
+        "verification_boundary": "Worker builder evidence reviewed; independent saved-source/native/content/map consistency and exact quote checks. No builder/network/DB execution.",
+        "worker_reports_whole_builder_replay_exact": true
+      },
+      "source_retrieved_at": "2026-10-16T11:02:57.719139+00:00"
+    },
+    {
+      "actual_database_firstsave": null,
+      "calendar_publication_date": null,
+      "company_id": "jp:3817",
+      "database_checked": false,
+      "due_scheduled_at_all_null": true,
+      "events_or_rows_reviewed": [
+        {
+          "calendar_section": "2026年度",
+          "calendar_year_explicit": null,
+          "date": null,
+          "date_precision": "month_segment_without_explicit_calendar_year",
+          "fiscal_year_label": "2027年3月期",
+          "id": "3817-Q2-schedule-candidate",
+          "kind": "earnings_release",
+          "label": "2027年3月期第２四半期決算発表",
+          "quarter_label": "第２四半期",
+          "raw_date_label": "11月中旬",
+          "source_quote_id": "schedule-Q2"
+        },
+        {
+          "calendar_section": "2026年度",
+          "calendar_year_explicit": null,
+          "date": null,
+          "date_precision": "month_segment_without_explicit_calendar_year",
+          "fiscal_year_label": null,
+          "id": "3817-presentation-schedule-candidate",
+          "kind": "earnings_presentation",
+          "label": "機関投資家向け説明会",
+          "quarter_label": null,
+          "raw_date_label": "11月下旬",
+          "source_quote_id": "schedule-presentation"
+        },
+        {
+          "calendar_section": "2026年度",
+          "calendar_year_explicit": null,
+          "date": null,
+          "date_precision": "month_segment_without_explicit_calendar_year",
+          "fiscal_year_label": "2027年3月期",
+          "id": "3817-Q3-schedule-candidate",
+          "kind": "earnings_release",
+          "label": "2027年3月期第３四半期決算発表",
+          "quarter_label": "第３四半期",
+          "raw_date_label": "２月中旬",
+          "source_quote_id": "schedule-Q3"
+        }
+      ],
+      "financial_inputs_or_model_adopted": false,
+      "major_mismatches": [],
+      "meaning_conclusion": "2026年度 table directly supports November middle earnings release, November late institutional presentation, and February middle Q3 release as distinct labels. Concrete calendar days and explicit calendar-year mapping are not supplied by worker; date:null is conservative and avoids turning fiscal-year labels into exact dates.",
+      "occurrence_unconfirmed": true,
+      "projection_notes": "Keep all three as date_unknown with raw month segments; never choose a middle/late day. Presentation has no explicit fiscal-year/quarter label in its own row. Current API period fields require nonempty descriptive strings: explicitly mark those as not stated in caller descriptors, without fabricating a financial period.",
+      "published_at": null,
+      "quiet_period_scope": "No explicit quiet-period schedule identified in this retrieved calendar text; not company-wide nonpublication or exemption determination.",
+      "quote_offset_checks": [
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 1407,
+          "byte_start": 934,
+          "character_end": 579,
+          "character_start": 382,
+          "id": "annual-schedule-scope",
+          "quote": "年間IRスケジュール 2026年度 ５月13日 2026年3月期決算発表 ５月20日 機関投資家向け説明会 ６月25日 定時株主総会、株主通信発行 ８月上旬 2027年3月期第１四半期決算発表 ８月下旬 株主通信発行 11月中旬 2027年3月期第２四半期決算発表 11月下旬 機関投資家向け説明会 11月下旬 株主通信発行 ２月中旬 2027年3月期第３四半期決算発表 ２月下旬 株主通信発行"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 1246,
+          "byte_start": 1193,
+          "character_end": 514,
+          "character_start": 491,
+          "id": "schedule-Q2",
+          "quote": "11月中旬 2027年3月期第２四半期決算発表"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 1289,
+          "byte_start": 1247,
+          "character_end": 531,
+          "character_start": 515,
+          "id": "schedule-presentation",
+          "quote": "11月下旬 機関投資家向け説明会"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 1375,
+          "byte_start": 1321,
+          "character_end": 567,
+          "character_start": 545,
+          "id": "schedule-Q3",
+          "quote": "２月中旬 2027年3月期第３四半期決算発表"
+        }
+      ],
+      "raw_entity_file": "research/ir-case-studies-2026-10-15/3817/public-catalyst-calendar-discovery-2026-10-16/raw/ef482b00214e22d59395796ffe5fe4591b7c6d954b351e1759f4a95345eeda1a",
+      "raw_entity_sha256": "ef482b00214e22d59395796ffe5fe4591b7c6d954b351e1759f4a95345eeda1a",
+      "raw_year_binding_checks": [],
+      "semantic_scope": "Complete2026年度 ten-row table and three selected month-segment candidates; historical rows are not occurrence proof.",
+      "source_content_sha256": "13f9c97553768446adc3c304806d0b70686c0ac62109da3c860e2beb9a7c7446",
+      "source_directory": "research/ir-case-studies-2026-10-15/3817/public-catalyst-calendar-discovery-2026-10-16",
+      "source_id": "case-public:53da9f49e01f41528e73a272dfc2b11d894976ed227c96820c1e92fe4ff6e585",
+      "source_native_sha256": "fb6bd5eebbdc0cc637731ac0269275c86637b71cc7168daff2a480d13b9b1c22",
+      "source_object_checks": {
+        "content_matches_saved_text_and_builder_snapshot": true,
+        "independent_builder_rerun": false,
+        "native_matches_worker_review": true,
+        "raw_content_snapshot_hash_domains_consistent": true,
+        "verification_boundary": "Worker builder evidence reviewed; independent saved-source/native/content/map consistency and exact quote checks. No builder/network/DB execution.",
+        "worker_reports_whole_builder_replay_exact": true
+      },
+      "source_retrieved_at": "2026-10-16T11:02:51.708226+00:00"
+    },
+    {
+      "actual_database_firstsave": null,
+      "calendar_publication_date": null,
+      "company_id": "jp:6814",
+      "database_checked": false,
+      "due_scheduled_at_all_null": true,
+      "events_or_rows_reviewed": [
+        {
+          "calendar_year_explicit": 2027,
+          "date": "2027-01-08",
+          "date_precision": "day",
+          "fiscal_year_label": "2027年2月期",
+          "id": "6814-FY27Q3-schedule-candidate",
+          "kind": "earnings_release",
+          "label": "第3四半期決算発表",
+          "quarter_label": "第3四半期",
+          "raw_date_label": "2027年1月8日",
+          "source_quote_id": "schedule-FY27Q3"
+        },
+        {
+          "calendar_year_explicit": 2027,
+          "date": "2027-04-09",
+          "date_precision": "day",
+          "fiscal_year_label": "2027年2月期",
+          "id": "6814-FY27annual-schedule-candidate",
+          "kind": "earnings_release",
+          "label": "決算発表",
+          "quarter_label": "通期（FY section context）",
+          "raw_date_label": "2027年4月9日",
+          "source_quote_id": "schedule-FY27annual"
+        },
+        {
+          "calendar_year_explicit": 2027,
+          "date": "2027-07-09",
+          "date_precision": "day",
+          "fiscal_year_label": "2028年2月期",
+          "id": "6814-FY28Q1-schedule-candidate",
+          "kind": "earnings_release",
+          "label": "第1四半期決算発表",
+          "quarter_label": "第1四半期",
+          "raw_date_label": "2027年7月9日",
+          "source_quote_id": "schedule-FY28Q1"
+        },
+        {
+          "calendar_year_explicit": 2027,
+          "date": "2027-10-08",
+          "date_precision": "day",
+          "fiscal_year_label": "2028年2月期",
+          "id": "6814-FY28Q2-schedule-candidate",
+          "kind": "earnings_release",
+          "label": "第2四半期決算発表",
+          "quarter_label": "第2四半期",
+          "raw_date_label": "2027年10月8日",
+          "source_quote_id": "schedule-FY28Q2"
+        }
+      ],
+      "financial_inputs_or_model_adopted": false,
+      "major_mismatches": [],
+      "meaning_conclusion": "Same raw headings bind2027/2 to2026-03..2027-02 and2028/2 to2027-03..2028-02. Explicit dates support Jan8Q3, Apr9annual, Jul9Q1 and Oct8Q2. Apr9 annual is inferred from the fiscal heading and separate Q1/Q2/Q3 labels, not an acquired results document.2028Apr middle/May late remain source context only; no day is fabricated.",
+      "occurrence_unconfirmed": true,
+      "projection_notes": "Four selected earnings_release candidates can be projected with exact visible FY section context and null time/timezone; do not add AGMs,2028dates or all preserved rows automatically. No occurrence/result document claim follows from the calendar.",
+      "published_at": null,
+      "quiet_period_scope": "No explicit quiet-period schedule identified in this retrieved calendar text; not company-wide nonpublication or exemption determination.",
+      "quote_offset_checks": [
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 3123,
+          "byte_start": 3021,
+          "character_end": 1209,
+          "character_start": 1175,
+          "id": "change-caution",
+          "quote": "予定は事前の連絡なしに変更することがございます。予めご了承ください。"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 3655,
+          "byte_start": 3392,
+          "character_end": 1469,
+          "character_start": 1340,
+          "id": "FY2027-section",
+          "quote": "2027年2月期（2026年3月～2027年2月）スケジュール 2027年5月27日 第76回定時株主総会 2027年4月9日 決算発表 2027年1月8日 第3四半期決算発表 2026年10月9日 第2四半期決算発表 2026年7月9日 第1四半期決算発表"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 3391,
+          "byte_start": 3124,
+          "character_end": 1339,
+          "character_start": 1210,
+          "id": "FY2028-section",
+          "quote": "2028年2月期（2027年3月～2028年2月）スケジュール 2028年5月下旬 第77回定時株主総会 2028年4月中旬 決算発表 2028年1月11日 第3四半期決算発表 2027年10月8日 第2四半期決算発表 2027年7月9日 第1四半期決算発表"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 3570,
+          "byte_start": 3529,
+          "character_end": 1428,
+          "character_start": 1409,
+          "id": "schedule-FY27Q3",
+          "quote": "2027年1月8日 第3四半期決算発表"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 3528,
+          "byte_start": 3500,
+          "character_end": 1408,
+          "character_start": 1394,
+          "id": "schedule-FY27annual",
+          "quote": "2027年4月9日 決算発表"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 3391,
+          "byte_start": 3350,
+          "character_end": 1339,
+          "character_start": 1320,
+          "id": "schedule-FY28Q1",
+          "quote": "2027年7月9日 第1四半期決算発表"
+        },
+        {
+          "both_offset_domains_exact": true,
+          "byte_end": 3349,
+          "byte_start": 3307,
+          "character_end": 1319,
+          "character_start": 1299,
+          "id": "schedule-FY28Q2",
+          "quote": "2027年10月8日 第2四半期決算発表"
+        }
+      ],
+      "raw_entity_file": "research/ir-case-studies-2026-10-15/6814/public-catalyst-calendar-discovery-2026-10-16/raw/437d04335328e21b918ffc847ede56482b038845815193c9958c4612443726c2",
+      "raw_entity_sha256": "437d04335328e21b918ffc847ede56482b038845815193c9958c4612443726c2",
+      "raw_year_binding_checks": [],
+      "semantic_scope": "Only FY2027/2 and FY2028/2 sections plus change caution; four selected earnings dates, not later2028/AGM/past rows as new event claims.",
+      "source_content_sha256": "4f116e3ddf015198d22dc902778af9fbe6dd5b9ac082c398924bd35542264f29",
+      "source_directory": "research/ir-case-studies-2026-10-15/6814/public-catalyst-calendar-discovery-2026-10-16",
+      "source_id": "case-public:7036024385c5b35f7cf20876bd8d1d5967700c655ce45abf8e22f40e8e491035",
+      "source_native_sha256": "9ce751ff75c42d8df4319337886531e2951e01c7c8f65ee6cdadad31e6023ee6",
+      "source_object_checks": {
+        "content_matches_saved_text_and_builder_snapshot": true,
+        "independent_builder_rerun": false,
+        "native_matches_worker_review": true,
+        "raw_content_snapshot_hash_domains_consistent": true,
+        "verification_boundary": "Worker builder evidence reviewed; independent saved-source/native/content/map consistency and exact quote checks. No builder/network/DB execution.",
+        "worker_reports_whole_builder_replay_exact": true
+      },
+      "source_retrieved_at": "2026-10-16T11:02:53.416334+00:00"
+    }
+  ],
+  "folder_name_scope_note": "Seven-company phase folder name; this independent review covers exactly these four newly assigned companies.1975 and other accepted source work were not reopened.",
+  "independent_exact_raw_year_binding_quote_count": 2,
+  "independent_exact_visible_quote_count": 29,
+  "input_pins": {
+    "docs/catalyst-monitor-design.md": "00df130938614a0ab5f82d81a83c9ca0e7674b8f3cac14d8c7573449213b80e6",
+    "research/ir-case-studies-2026-10-15/2929/public-catalyst-calendar-discovery-2026-10-16/README.md": "4fa8e9f9e998f33b0682fef5eaa046fb86b0b8176cbe13e31e642ef164fc2098",
+    "research/ir-case-studies-2026-10-15/2929/public-catalyst-calendar-discovery-2026-10-16/calendar-builder-snapshot.json": "aa65ae1f85ff3af0435ca0f9cfc9d9ae61022619c4e13b932e2d69cf3ee3cf36",
+    "research/ir-case-studies-2026-10-15/2929/public-catalyst-calendar-discovery-2026-10-16/calendar-observations.json": "5c27dd2964a12e712a4a222ab451d8c66106901145a832c14d279f9211efe664",
+    "research/ir-case-studies-2026-10-15/2929/public-catalyst-calendar-discovery-2026-10-16/capture.json": "197aace62756b11fe14584186de8cb6601efb141548879e20f742d262abbafef",
+    "research/ir-case-studies-2026-10-15/2929/public-catalyst-calendar-discovery-2026-10-16/manifest.json": "35906047de5c74c87f22f1380934b25fb610c56e0143826bb675a258b339f030",
+    "research/ir-case-studies-2026-10-15/2929/public-catalyst-calendar-discovery-2026-10-16/raw/724bf337df44dfc63ad9aa25e56b00cdf1852737d292e6deb2351ed7c0dbdd19": "724bf337df44dfc63ad9aa25e56b00cdf1852737d292e6deb2351ed7c0dbdd19",
+    "research/ir-case-studies-2026-10-15/2929/public-catalyst-calendar-discovery-2026-10-16/review.json": "a89b49e841fd12211db64eeebd166fb95ebc6eb4804d1b41b5dd81ad74ea19b9",
+    "research/ir-case-studies-2026-10-15/2929/public-catalyst-calendar-discovery-2026-10-16/source-manifest-adapter.json": "904b8e0fe5af4c605f8a6c7594bcce49246be07d0c78d5c28ad569fd22770b4a",
+    "research/ir-case-studies-2026-10-15/2929/public-catalyst-calendar-discovery-2026-10-16/source-map.json": "0ea43bf9b4e002ab0de7f826b3357a8e5cba74339edc5af612f1530cb468fbbf",
+    "research/ir-case-studies-2026-10-15/2929/public-catalyst-calendar-discovery-2026-10-16/source-only-bundle.json": "382582e1b974546d65b2ec9fcf7e0015a3bc4b8b95d77e6f5ebf377784798244",
+    "research/ir-case-studies-2026-10-15/2929/public-catalyst-calendar-discovery-2026-10-16/source-quotes.json": "20d6ca393eff83e2c3e4133429cc9bfe1262d439f2a9909a72b34c1d748a0436",
+    "research/ir-case-studies-2026-10-15/2929/public-catalyst-calendar-discovery-2026-10-16/text/02.txt": "cf1957ff3ffb4656eb3c878cf6aef1b728971fb7c990019e1f09455d67d31da9",
+    "research/ir-case-studies-2026-10-15/2929/public-catalyst-calendar-discovery-2026-10-16/validation.json": "0fd8e2bbe90d1d9bf80763e5844d59d13cefbc14d8053eca6bc4fd223e85aa80",
+    "research/ir-case-studies-2026-10-15/3817/public-catalyst-calendar-discovery-2026-10-16/README.md": "798fb4b765d56836b662a5d24604ff8f92d5a18cd72e160d7023a8c866aa7174",
+    "research/ir-case-studies-2026-10-15/3817/public-catalyst-calendar-discovery-2026-10-16/calendar-builder-snapshot.json": "ee8b79f51e30b0e9e7c7b8f53a9038f2c22d290aa825b1349191da11f9cc06f0",
+    "research/ir-case-studies-2026-10-15/3817/public-catalyst-calendar-discovery-2026-10-16/capture.json": "ddec410437ccd0075170c4f1061fcc8c9a3fab12093076143ce208fbc6aac98e",
+    "research/ir-case-studies-2026-10-15/3817/public-catalyst-calendar-discovery-2026-10-16/manifest.json": "cbd2f14be05bb652ad054510ec75e928ace32eee6ab03575117bce89f11e99c3",
+    "research/ir-case-studies-2026-10-15/3817/public-catalyst-calendar-discovery-2026-10-16/raw/ef482b00214e22d59395796ffe5fe4591b7c6d954b351e1759f4a95345eeda1a": "ef482b00214e22d59395796ffe5fe4591b7c6d954b351e1759f4a95345eeda1a",
+    "research/ir-case-studies-2026-10-15/3817/public-catalyst-calendar-discovery-2026-10-16/review.json": "69a33fc8b137b0ceba152f01970a79c5ca3fb42f648fb7c2da08a0f73e54257b",
+    "research/ir-case-studies-2026-10-15/3817/public-catalyst-calendar-discovery-2026-10-16/source-manifest-adapter.json": "7f72afa3e73037d1a7cb5bdaa9fde55676b7da312b741a680a8727359087402c",
+    "research/ir-case-studies-2026-10-15/3817/public-catalyst-calendar-discovery-2026-10-16/source-map.json": "5d306e0687174a16f41f3891a139d87a1c72de989783fc156b81f71ae681ef16",
+    "research/ir-case-studies-2026-10-15/3817/public-catalyst-calendar-discovery-2026-10-16/source-only-bundle.json": "c5017404c43759f9e59a652770ca6ab4e388a4e2f73f7707a3f87b5f9cf72e24",
+    "research/ir-case-studies-2026-10-15/3817/public-catalyst-calendar-discovery-2026-10-16/source-quotes.json": "37fd2717dde3ce266c32d13e48ed934617402352103475650aae1cff68fdec3c",
+    "research/ir-case-studies-2026-10-15/3817/public-catalyst-calendar-discovery-2026-10-16/text/02.txt": "13f9c97553768446adc3c304806d0b70686c0ac62109da3c860e2beb9a7c7446",
+    "research/ir-case-studies-2026-10-15/3817/public-catalyst-calendar-discovery-2026-10-16/validation.json": "3dcc2ae43e2ed02748e011d3f9632bc659dc3d78c337f322e92ffcf640a8f40e",
+    "research/ir-case-studies-2026-10-15/4318/public-catalyst-calendar-discovery-2026-10-16/README.md": "6a4f2ef32808cdd1aa5661d40c41b4fbcb9f1a8f182190ca33bd17a02b7fb749",
+    "research/ir-case-studies-2026-10-15/4318/public-catalyst-calendar-discovery-2026-10-16/calendar-builder-snapshot.json": "97249be98c1674f875d04591c66cc01506d8c19d3adf063cd1f61ca2a6895f44",
+    "research/ir-case-studies-2026-10-15/4318/public-catalyst-calendar-discovery-2026-10-16/calendar-observations.json": "efdec86b5358d99bf22938621ca55715d229167f0296659714641633310eb47f",
+    "research/ir-case-studies-2026-10-15/4318/public-catalyst-calendar-discovery-2026-10-16/capture.json": "7fedeca5a5ff25c7a0d6af2ad1d2163c79de4f5bcb1add2712c0a1defee128f2",
+    "research/ir-case-studies-2026-10-15/4318/public-catalyst-calendar-discovery-2026-10-16/manifest.json": "373d45c8d05a0d6d9b952f028e2d668888b18ad06bd51be536d5cbb7826e4846",
+    "research/ir-case-studies-2026-10-15/4318/public-catalyst-calendar-discovery-2026-10-16/raw/4bbc0b4d1fd6f6692b91a4aee7abfff108ee5124bb11ffc8ce4319e9674b4157": "4bbc0b4d1fd6f6692b91a4aee7abfff108ee5124bb11ffc8ce4319e9674b4157",
+    "research/ir-case-studies-2026-10-15/4318/public-catalyst-calendar-discovery-2026-10-16/review.json": "67383ffca93887f6713f6bf171edbcd1fe4be1556b2f87a80d9632430fa26060",
+    "research/ir-case-studies-2026-10-15/4318/public-catalyst-calendar-discovery-2026-10-16/source-manifest-adapter.json": "054efbdf0e9ceff772e61ec422c264e1bc7687ac537694cab1ad838848d36c42",
+    "research/ir-case-studies-2026-10-15/4318/public-catalyst-calendar-discovery-2026-10-16/source-map.json": "6caa604eccac711f048bd9ef20ce5b323e0aa692f7f78f40670e96f9fdffd3b1",
+    "research/ir-case-studies-2026-10-15/4318/public-catalyst-calendar-discovery-2026-10-16/source-only-bundle.json": "6dadaf4a3773a31cdb1df36cc25e11545f32c3978934c757516478ea9105f9e3",
+    "research/ir-case-studies-2026-10-15/4318/public-catalyst-calendar-discovery-2026-10-16/source-quotes.json": "17d71ee78ea0316024107636a4b153e2543f6b93e2874925cc803d522a3466f9",
+    "research/ir-case-studies-2026-10-15/4318/public-catalyst-calendar-discovery-2026-10-16/text/02.txt": "1cb365149c328a09ac954c71c181d9d5a47be597cee55dbb879163e4fd5aa383",
+    "research/ir-case-studies-2026-10-15/4318/public-catalyst-calendar-discovery-2026-10-16/validation.json": "fe196ff08207da14a6a27fcf1ef258882a62f53c4630a29dd756d5a65ad92d0c",
+    "research/ir-case-studies-2026-10-15/6814/public-catalyst-calendar-discovery-2026-10-16/README.md": "f1fdb79346d12f17a60b232e3a6781f6346d016d2c9f57fc9e253ff8ab8f87e6",
+    "research/ir-case-studies-2026-10-15/6814/public-catalyst-calendar-discovery-2026-10-16/calendar-builder-snapshot.json": "79744a43526a88c2b81e35a71fde1f7382c1199a2d45116c5fade5dbd1d95c27",
+    "research/ir-case-studies-2026-10-15/6814/public-catalyst-calendar-discovery-2026-10-16/capture.json": "af733f1ec48c4ef448fcc21634522e1463165043fc5be9d6107365955c33cefa",
+    "research/ir-case-studies-2026-10-15/6814/public-catalyst-calendar-discovery-2026-10-16/manifest.json": "b5cfcd268dd71906ae8ec8a111231508c233dcaf45d5b24e29fe2e6281268452",
+    "research/ir-case-studies-2026-10-15/6814/public-catalyst-calendar-discovery-2026-10-16/raw/437d04335328e21b918ffc847ede56482b038845815193c9958c4612443726c2": "437d04335328e21b918ffc847ede56482b038845815193c9958c4612443726c2",
+    "research/ir-case-studies-2026-10-15/6814/public-catalyst-calendar-discovery-2026-10-16/review.json": "2ad346c20ac5189e46aa39216fd86d6d7669d2277c022ad63f56c786eaeb3845",
+    "research/ir-case-studies-2026-10-15/6814/public-catalyst-calendar-discovery-2026-10-16/source-manifest-adapter.json": "e804d0749f25acabcfeea7a4f1cf7ba36fda2510fe7db84c91fe672b55028f1f",
+    "research/ir-case-studies-2026-10-15/6814/public-catalyst-calendar-discovery-2026-10-16/source-map.json": "1ac6794ba1ecf5115f7d09d055722426e7bbc57e0b3346a082c58f1855e45970",
+    "research/ir-case-studies-2026-10-15/6814/public-catalyst-calendar-discovery-2026-10-16/source-only-bundle.json": "d0afd4ffeba51ed9ce14b73e6c9441ee21c4755067341231ddb1a39dce99e748",
+    "research/ir-case-studies-2026-10-15/6814/public-catalyst-calendar-discovery-2026-10-16/source-quotes.json": "bde60033b9a96af14f975f732c12b5c0102837be6bfdec90a98fa0e6a670e946",
+    "research/ir-case-studies-2026-10-15/6814/public-catalyst-calendar-discovery-2026-10-16/text/02.txt": "4f116e3ddf015198d22dc902778af9fbe6dd5b9ac082c398924bd35542264f29",
+    "research/ir-case-studies-2026-10-15/6814/public-catalyst-calendar-discovery-2026-10-16/validation.json": "30ac82b6ab90c646e9008e81b4bb9815cc6ea76b962312a1d17a58342ad8fbb0",
+    "scripts/build_case_source_bundle.py": "8f714bfdcdd3d80863388f280cdff0b812ee9912231dd69b5949595a8944661c",
+    "src/ir_agent/catalyst_schedule.py": "5d0a5f71d94cc468638931e129cc20e6bbddb4bf8253caa5f5119fcbcc4af59b"
+  },
+  "input_pins_unchanged": true,
+  "major_mismatch_count": 0,
+  "major_mismatches": [],
+  "reviewed_at": "2026-10-16T11:11:24.989214+00:00",
+  "reviewer": "codex_audit_manufacturing",
+  "scope_company_ids": [
+    "jp:2929",
+    "jp:4318",
+    "jp:3817",
+    "jp:6814"
+  ],
+  "source_bundle_company_stub_boundary": "Non-major bundle boundary:2929/4318 preserve one watch/unheld company stub in each original builder bundle;3817/6814 have companies=[]. Stubs are builder descriptors, not adopted company-state updates. Root aggregation must copy only the whole source objects into companies=[] without changing any original bundle.",
+  "status": "independent_saved_source_semantic_review_complete"
+}

@@ -1,0 +1,60 @@
+{
+  "recorded_at": "2026-10-16T14:01:01.579802+00:00",
+  "status": "prepared_for_root_review_not_registered_or_sent",
+  "source_question": {
+    "path": "research/ir-case-studies-2026-10-15/135A/customer-counting-question-preflight-v2.json",
+    "pointer": "$.question",
+    "verbatim_reuse": true
+  },
+  "branches": [
+    {
+      "from_id": "unit_defined_scope_unchanged",
+      "to_id": "unit_defined_scope_unchanged",
+      "condition_verbatim": true,
+      "effect_to_comparison_note_verbatim": true
+    },
+    {
+      "from_id": "unit_defined_scope_changed",
+      "to_id": "unit_defined_scope_changed",
+      "condition_verbatim": true,
+      "effect_to_comparison_note_verbatim": true
+    },
+    {
+      "from_id": "unit_defined_history_unknown",
+      "to_id": "unit_defined_history_unknown",
+      "condition_verbatim": true,
+      "effect_to_comparison_note_verbatim": true
+    },
+    {
+      "from_id": "unit_unknown_or_no_answer",
+      "to_id": "unresolved",
+      "condition_verbatim": true,
+      "effect_to_comparison_note_verbatim": true
+    }
+  ],
+  "case_mapping": {
+    "case_id": "135A-author-condition-monitor",
+    "issue_id": "135A-author-condition-case-monitor",
+    "topic": "customer-counting-unit",
+    "note": "旧研究candidateのcustomer-counting-unitはtopicとして保持し、request.issue_idは既存native caseの正確なissueへ対応。新case/issue作成なし。"
+  },
+  "current_usefulness": "既存のFY26末337社と中間394社を同単位・同範囲の会社系列として比較できるかを変える残余定義であり、API追加だけを理由とした新論点ではない。定義が分かっても外部著者550〜600社と同母集団とは認定しない。",
+  "previous_boundary": "旧金融questionには採用済みthesis・利益/評価入力pathがなく正式数値分岐を作れなかった。これは今回も解消しておらず、研究比較の4分岐だけを独立保存する。旧記録には現在のoutreach未確認もあるため、未登録理由が金融契約だけだったとは断定しない。",
+  "public_check_boundary": "既照合の保存範囲では1社の単位と対象期間での変更有無は未解決。Web再確認/未開示の網羅認定はしない。新資料で同じ2点が既答なら草案廃止という旧cancel_ifを維持する。",
+  "cancel_if": "同じ期間・対象範囲の1社単位と変更有無が公表済み定義で解ければ、草案を廃止して掲載箇所を参照する。",
+  "remaining_holds": [
+    "現在のIR受付/送信条件の再確認なし",
+    "返信原文はunclearで受け、公開性を別レビュー",
+    "author意図/幅/同母集団と金融入力対応は未解決"
+  ],
+  "author_method": "目的・既知情報・懸念から必要な定義を優先し既答を除くAnthropic DD手順のproject適応。既存4分岐や会社への質問を外部著者の投資規則としない。",
+  "root_next_step": "rootの正当性レビュー後にbackup/copy preflight/実DB draft登録を判断。作成日とpublic review日は今回の照合時刻であり旧10/15実読日時に遡及しない。",
+  "new_predictions_or_investment_conditions": 0,
+  "financial_inputs_verified": false,
+  "financial_adoption": 0,
+  "formal_numeric_question_registered": false,
+  "research_inquiry_registered": false,
+  "GET": 0,
+  "database_writes": 0,
+  "external_sends": 0
+}

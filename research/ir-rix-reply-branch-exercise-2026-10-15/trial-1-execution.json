@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "trial_id": "trial-1",
+  "synthetic": true,
+  "started_at": "2026-10-15T12:00:19+00:00",
+  "start_clock_source": "clock__curr_time",
+  "answers_completed_at": "2026-10-15T12:01:43.374196+00:00",
+  "creation_completed_at": "2026-10-15T12:01:43.374306+00:00",
+  "completion_clock_source": "datetime.now(timezone.utc)",
+  "input_file": "research/ir-rix-reply-branch-exercise-2026-10-15/input-cases.json",
+  "input_sha256": "b2df1ae3076a4a6e6413acb2018ca3e902421ca1b7e0e675039d0b7b592caad4",
+  "answer_file": "research/ir-rix-reply-branch-exercise-2026-10-15/trial-1-answers.json",
+  "answer_sha256": "197664c7b064c296c846b128b0f345801ed644e5ce89e4740258df57729201d0",
+  "answer_written_once": true,
+  "answer_stable_no_later_revision": true,
+  "model_name": null,
+  "same_agent_reused_from_previous_source_reasoning_trial": true,
+  "fresh_context": false,
+  "zero_shot": false,
+  "os_isolation": false,
+  "real_IR_performance_claim": false,
+  "context_note": "以前の原文8例試行を実施した同一agentを再利用した。新コンテキスト、zero-shot、OSレベルの情報隔離、実IR性能の試験とは扱わない。",
+  "evaluation_evidence_files_read_this_trial": [
+    "research/ir-rix-reply-branch-exercise-2026-10-15/input-cases.json"
+  ],
+  "mandatory_operational_files_previously_read_and_still_in_context": [
+    "AGENTS.md",
+    ".agents/skills/jp-equity-ir/SKILL.md",
+    "docs/workflow.md"
+  ],
+  "mandatory_operational_skill_resources_previously_read_and_still_in_context": [
+    "skill://plugin_connector_1p_ed5feb9070a08191b08c81c47947bc16/setup/SKILL.md",
+    "skill://plugin_connector_1p_c5b7d5df5d7081918f2c4be5a633ed5d/cloud-environment-runtime/SKILL.md"
+  ],
+  "operational_path_existence_checks_this_trial": [
+    "research/ir-rix-reply-branch-exercise-2026-10-15/AGENTS.md"
+  ],
+  "current_trial_output_files_read_for_verification": [
+    "research/ir-rix-reply-branch-exercise-2026-10-15/trial-1-answers.json"
+  ],
+  "additional_context_inputs": [
+    "親agentによる今回の試行指示。ルーブリック・禁止参照・一度保存後不変・同一agent再利用という条件を含む。",
+    "以前の原文8例試行の指示、input-cases.json、同試行で自作した回答と実行記録、その保存・JSON読取確認の文脈。",
+    "以前の試行時に確認したAGENTS.md、jp-equity-ir skill、docs/workflow.md、環境setup/runtime skill、環境状態toolの応答。"
+  ],
+  "prior_trial_context_files": [
+    "research/ir-source-reasoning-benchmark-2026-10-15/input-cases.json",
+    "research/ir-source-reasoning-benchmark-2026-10-15/trial-1-answers.json",
+    "research/ir-source-reasoning-benchmark-2026-10-15/trial-1-execution.json"
+  ],
+  "possible_related_example_exposure": {
+    "present": true,
+    "sources": [
+      ".agents/skills/jp-equity-ir/SKILL.md",
+      "docs/workflow.md",
+      "research/ir-source-reasoning-benchmark-2026-10-15/input-cases.json"
+    ],
+    "description": "運用文書には返信の明確・曖昧・無回答の区別、公開性不明時の保留、質問前に固定した分岐と入力だけを扱う規則が含まれる。前の原文8例試行のB06には7525の会社目標40%以上とQUICKの伸び悩みの区別が含まれた。それらの文脈は残るが、今回の判定根拠は指定input内の既存ルーブリック、各架空返信と宣言された合成公表参照だけとした。"
+  },
+  "answer_key_source_manifest_validation_other_reviews_or_other_research_read_this_trial": false,
+  "external_web_access_count": 0,
+  "database_operation_count": 0,
+  "code_change_count": 0,
+  "trading_action_count": 0,
+  "external_send_count": 0,
+  "existing_files_modified": false,
+  "limitations": "全件架空の演習。実在する返信受信、公開資料ID、public_clarification認定、金融入力更新、正式登録・送信可能性、売買判断を作成しない。"
+}

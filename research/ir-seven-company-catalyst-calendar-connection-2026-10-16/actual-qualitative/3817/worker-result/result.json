@@ -1,0 +1,25 @@
+{
+  "summary": "3817の新保存calendarを点検した。新規pendingは公式IRスケジュール1件だけ。2026年度表の「11月中旬 2027年3月期第２四半期決算発表」「11月下旬 機関投資家向け説明会」「２月中旬 2027年3月期第３四半期決算発表」は別の観測候補。中旬/下旬を具体日に換算せずdate:nullを保持し、年度見出しや決算期/取得日から暦年・日付を補完しない。説明会の行自体に対象FY/四半期は明記されておらず、隣の2Q発表の期ラベルを借用しない。対象は機関投資家向けという説明会の表示で、IR一般受付条件の変更とは扱わない。実施/結果文書・時刻/会社timezone・更新日時は未確認で、due/scheduled_atはnullのままとする。 業績/EPS/BPS条件の支持や新たな金融採用とはせず、case全体はunresolved。既存issue/config1/C1〜C3を保持し、内部管理日2027-01-16 Asia/Tokyoをretainする。\n\n【凍結packetの直前summaryをそのまま継承】\n3817の初回定性jobで年次原source1と同原典の2fact派生source1を比較した。原19頁の意味範囲は物理1/2/9/18だけで、FY2025-04-01～2026-03-31の連結reported基本EPS443.34円と2026-03-31のBPS2659.88円を候補入力として限定確認した。原sourceは候補の存在/basisをsupports、派生sourceは同表示の再表現でunchangedとした。会社guide435.34・個別253.08/699.68・純資産総額・丸め額からの再計算は代用していない。C1の報告年次/正値条件と、C2のEPS平均分母/BPS期末basis・普通株持分の詳細、C3のlatestperiod価格/後日異動/金融採用を分け、ケースは残余未解決としてunresolvedを維持する。新保存の読解であって新公表期や独立裏付け追加ではなく、正常利益や現在株数・価格・policyの保証はない。management2027-01-16 Asia/Tokyoは内部四半期管理日で未到来、due_occurrence:nullのためretainする。",
+  "recorded_at": "2026-10-16T11:16:03.796820+00:00",
+  "source_reviews": [
+    {
+      "source_id": "case-public:53da9f49e01f41528e73a272dfc2b11d894976ed227c96820c1e92fe4ff6e585",
+      "snapshot_sha256": "fb6bd5eebbdc0cc637731ac0269275c86637b71cc7168daff2a480d13b9b1c22",
+      "read_state": "reviewed",
+      "outcome": "unresolved",
+      "basis_quote": "年間IRスケジュール 2026年度 ５月13日 2026年3月期決算発表 ５月20日 機関投資家向け説明会 ６月25日 定時株主総会、株主通信発行 ８月上旬 2027年3月期第１四半期決算発表 ８月下旬 株主通信発行 11月中旬 2027年3月期第２四半期決算発表 11月下旬 機関投資家向け説明会 11月下旬 株主通信発行 ２月中旬 2027年3月期第３四半期決算発表 ２月下旬 株主通信発行",
+      "rationale": "新規pendingは公式IRスケジュール1件だけ。2026年度表の「11月中旬 2027年3月期第２四半期決算発表」「11月下旬 機関投資家向け説明会」「２月中旬 2027年3月期第３四半期決算発表」は別の観測候補。中旬/下旬を具体日に換算せずdate:nullを保持し、年度見出しや決算期/取得日から暦年・日付を補完しない。説明会の行自体に対象FY/四半期は明記されておらず、隣の2Q発表の期ラベルを借用しない。対象は機関投資家向けという説明会の表示で、IR一般受付条件の変更とは扱わない。実施/結果文書・時刻/会社timezone・更新日時は未確認で、due/scheduled_atはnullのままとする。 予定が示されたことは、C1の公表年次EPS443.34/C2の同年度末BPS2659.88を更新・維持確認した根拠ではない。Q2/Q3の発表予定を年次actualやnormal earnings、会社guide435.34の実現又は現行予想維持へ変換しない。C2のordinary持分・平均対期末/株対千株・OCI/NCI等の詳細mapping、C3の後日株式/連結変化とlatestperiod価格は未解決のまま。将来の資料が実際に公表され正当に保存された時、同じC1〜C3を比較する観測候補に限るためsource outcomeはunresolved。"
+    }
+  ],
+  "case_observation": {
+    "issue_id": "3817-annual-EPS-BPS-and-common-share-basis",
+    "outcome": "unresolved",
+    "rationale": "新規pendingは公式IRスケジュール1件だけ。2026年度表の「11月中旬 2027年3月期第２四半期決算発表」「11月下旬 機関投資家向け説明会」「２月中旬 2027年3月期第３四半期決算発表」は別の観測候補。中旬/下旬を具体日に換算せずdate:nullを保持し、年度見出しや決算期/取得日から暦年・日付を補完しない。説明会の行自体に対象FY/四半期は明記されておらず、隣の2Q発表の期ラベルを借用しない。対象は機関投資家向けという説明会の表示で、IR一般受付条件の変更とは扱わない。実施/結果文書・時刻/会社timezone・更新日時は未確認で、due/scheduled_atはnullのままとする。 予定が示されたことは、C1の公表年次EPS443.34/C2の同年度末BPS2659.88を更新・維持確認した根拠ではない。Q2/Q3の発表予定を年次actualやnormal earnings、会社guide435.34の実現又は現行予想維持へ変換しない。C2のordinary持分・平均対期末/株対千株・OCI/NCI等の詳細mapping、C3の後日株式/連結変化とlatestperiod価格は未解決のまま。将来の資料が実際に公表され正当に保存された時、同じC1〜C3を比較する観測候補に限るためsource outcomeはunresolved。 既存issueと条件を変更せずcase全体unresolved。due_occurrence:nullの未到来Jan16内部管理日はretainし、会社予定へ置き換えない。新価格/forecast/計算/モデル入力採用/IR質問・優先度・送信/投資actionを作らない。沈黙期間は当該calendar範囲で明示未確認、全社方針不存在ではない。\n\n【凍結packetの直前case_observation.rationaleをそのまま継承】\n元3条件を保持する。C1は同年度の連結reported EPS443.34、C2は同年度末の直接BPS2659.88という正の候補が原文で確認できる。これはnormal earningsや持続性保証を新しい必須条件にしたり、逆にそれらを成立済みにしたりするものではない。詳細BPS分子と普通株持分/OCI/NCI等の完全mapping、期中平均と期末・株と千株の精度、後日資本異動・現在株式basisは別に残る。C3では価格・金融policy未採用で、未取得latestQ1locatorを会社予想維持や現在basisの本文根拠にしない。maxgfr/cribleのannualdefaultは計算関数による年次/TTM認証ではなく、価格はlatestfiscalperiodのみ・過去行へbackdateしない仕様と、日本原典の期/basis対応は分ける。正EPSかつ正BVPSのguardから外れる将来観測はこの式の適用範囲外であり、会社永久除外や売却を意味しない。個別値・会社forecast・総純資産や丸めNI/株数を代用せず、派生2factsを独立根拠2本と数えない。参考式・金融計算/価格比較・売買action・原著Graham全基準・IR質問/回答分岐はここで追加/採用しない。新しく正当保存された訂正/後発資料は同じC1〜C3に比較し、管理日2027-01-16 Asia/Tokyoは未到来なので維持する。",
+    "evidence_source_ids": [
+      "case-public:53da9f49e01f41528e73a272dfc2b11d894976ed227c96820c1e92fe4ff6e585"
+    ]
+  },
+  "management_review_update": {
+    "mode": "retain"
+  }
+}

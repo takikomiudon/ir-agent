@@ -1,0 +1,121 @@
+{
+  "reviewed_at": "2026-10-16T11:52:21.237086+00:00",
+  "company_id": "jp:7388",
+  "status": "direct_reported_values_located_scope_mapping_pending",
+  "purpose": "Saved-source-only fit review for existing reported annualEPS/year-endBPS GrahamNumber inputs; not normalization or calculation",
+  "source_id": "case-public:b6787509990806d3699dc95e63bc3308cffb8f94efa4fbbf1e7016927bada2a3",
+  "source_native_sha256": "a194f46b4637c672103503f0383d8de215f8cc76bfe048ac582f763449821f44",
+  "original_raw_pdf_sha256": "af545f42b0d8ad4abdc0a044d0822e0ba3f8de6a540e1cbeee9629da53ad60ab",
+  "original_fulltext_sha256": "a0b2854fb8996978dcc9af18c322fcbce5838ac3b8842ead9f08e814fe7377fd",
+  "new_meaning_pages": [
+    42
+  ],
+  "latest_completed_annual_column_in_report": "2025.11",
+  "report_title2026_not_FY2026": true,
+  "same_column_values_directly_printed": [
+    {
+      "id": "7388-report-latest-annual-EPS-display",
+      "display_value": "88.79",
+      "display_unit": "円",
+      "label": "1株当たり当期純利益（EPS）",
+      "fiscal_column_raw": "2025.11",
+      "annual_context_raw": "6か年財務サマリー",
+      "base_fiscal_period_label": "2025年11月期",
+      "accepted_base_month_range": {
+        "from": "2024-12",
+        "through": "2025-11"
+      },
+      "exact_start_date": null,
+      "exact_end_date": null,
+      "issuer_reported_vs_forecast": "reported annual summary display, not a company forecast",
+      "source_quote_id": "annual-per-share-direct-displays",
+      "accounting_basis": null,
+      "consolidation_scope": null,
+      "basic_or_diluted": null,
+      "profit_shareholder_basis": null,
+      "EPS_average_denominator": null,
+      "financial_input_adopted": false
+    },
+    {
+      "id": "7388-report-latest-BPS-display",
+      "display_value": "508.60",
+      "display_unit": "円",
+      "label": "1株当たり純資産額（BPS）",
+      "fiscal_column_raw": "2025.11",
+      "position_month": "2025-11",
+      "exact_as_of_date": null,
+      "issuer_reported_vs_forecast": "reported annual closing-position summary display, day endpoint not newly inferred",
+      "source_quote_id": "annual-per-share-direct-displays",
+      "accounting_basis": null,
+      "consolidation_scope": null,
+      "ordinary_equity_OCI_NCI_mapping": null,
+      "BPS_end_denominator": null,
+      "financial_input_adopted": false
+    }
+  ],
+  "both_displayed_values_positive": true,
+  "split_basis": {
+    "quote_id": "issuer-ordinary-share-split-basis",
+    "ordinary_split_events_as_stated": [
+      {
+        "date": "2020-08-16",
+        "ratio_raw": "1株につき5,000株"
+      },
+      {
+        "date": "2023-07-01",
+        "ratio_raw": "1株につき2株"
+      }
+    ],
+    "issuer_states_retroactively_adjusted_per_share_history": true,
+    "additional_adjustment_performed": false,
+    "October_current_share_basis_certified": false
+  },
+  "method_fit": {
+    "fixed_maintainer_commit": "00944e3b8fe853d8b82050f5ffb0f8c0fc6fb1b7",
+    "EPS_required": "Annual issuer reported consolidatedbasic/ordinary basis under existing project mapping; maintainer netincome/weightedaverage columns",
+    "BPS_required": "Sameyear-end issuer direct BPS with ordinaryequity/endshare basis; maintainer totalequity/periodendcolumns",
+    "supported": [
+      "Direct EPS/BPS labels andJPYper-share unit in2025.11latestcolumn",
+      "Annualcompleted fiscal context matches prioracceptedreportperiod, not FY2026title or guide",
+      "Statedordinaryshare retrospective split adjustment retained without a second adjustment",
+      "Both directdisplayvalues are positive"
+    ],
+    "not_yet_established": [
+      "Accountingstandard is not stated on chosenfinancialsummary page; priorp2 reference toIFRSFoundation is editingframework and must not be treated as IFRS accounting evidence.",
+      "Consolidatedvsnonconsolidated andbasicvsdiluted designation are notexplicit on chosenpage; 当期純利益 label alone is not parent/ordinary-share attribution.",
+      "Annualweightedaverage/EPS andendingordinaryshares/BPS denominator, OCI/NCI/preferred/treasury numerator adjustments are notprovided by this singlepage.",
+      "Day-level FYstart/end andBPSdate notnewlyprinted inchosenpage; acceptedmonthrange andraw2025.11column remain distinct.",
+      "CurrentOctober share/earningsbasis, latercorrections andcurrentprice unverified."
+    ],
+    "decision": "Mappingpending, not currently adopted reported2modelinputs. Do not fillmissingbasis, inferbasic/consolidation, recomputefromtotalnetassets/shares, chooseearlierbetterannualvalues, or computeGrahamreference."
+  },
+  "source_reuse_boundary": "Original44p source object/native/classification created for earlier bounded business-reading scope remains unchanged. New reading uses the same actual source, not a new original or independent corroborating source.",
+  "no_document_or_investment_exclusion": true,
+  "no_Graham_original_adoption_or_reference_value": true,
+  "GET_DB_Store_original_source_oldfile_code_docs_index_normalizer_IR_changes": 0,
+  "financial_inputs_verified": false,
+  "model_inputs_adopted": false,
+  "input_pins": {
+    "research/ir-case-studies-2026-10-15/7388/business-description-public-review-2026-10-16/source-only-bundle.json": "302a47607ac20746457aa5a0ecfcbc4dc64bf4300bde7c850b92e1bdb0c2263f",
+    "research/ir-case-studies-2026-10-15/7388/business-description-public-review-2026-10-16/source-quotes.json": "95cf14de4f607f5277c591fbf07e516c8498af8c0f434bfadbc70c2e276db060",
+    "research/ir-case-studies-2026-10-15/7388/business-description-public-review-2026-10-16/review.json": "71c8bccecdb9d34459b580e2607144849003ca831ea3ffb9a1f1da6bd6838db5",
+    "research/ir-case-studies-2026-10-15/7388/business-description-public-review-2026-10-16/validation.json": "71e6fc1d85456cff1b7012a0ba527c276d90a1a8c1691a1b02be30163793cce3",
+    "research/ir-case-studies-2026-10-15/7388/business-description-public-review-2026-10-16/manifest.json": "f2612bfa98bb0b8c9cf365fe02c2408cf0616583578dac04eb8ac5a12f547131",
+    "research/ir-case-studies-2026-10-15/7388/business-description-public-review-2026-10-16/source-map.json": "56d6ec57e5f91bb3f5814ab3d2f8004c4e39067f66b7999a4c1aac915deac869",
+    "research/ir-case-studies-2026-10-15/7388/business-description-public-review-2026-10-16/source-manifest-adapter.json": "d2bdcf15939f087f385910470ca39ea65a6d676e527c407e435a4efaa86c1af4",
+    "research/ir-case-studies-2026-10-15/7388/business-description-public-review-2026-10-16/body-builder-snapshot.json": "d7f725b468bd8d9851d0ef05e9593d02a8665fee4dd7818f24505bdced03dac3",
+    "research/ir-case-studies-2026-10-15/7388/business-description-public-review-2026-10-16/text/03-full.txt": "a0b2854fb8996978dcc9af18c322fcbce5838ac3b8842ead9f08e814fe7377fd",
+    "research/ir-case-studies-2026-10-15/7388/business-description-public-review-2026-10-16/raw/af545f42b0d8ad4abdc0a044d0822e0ba3f8de6a540e1cbeee9629da53ad60ab": "af545f42b0d8ad4abdc0a044d0822e0ba3f8de6a540e1cbeee9629da53ad60ab",
+    "docs/graham-number-valuation-spec.md": "4ef4791993d6db68aea2a500e8aa0c99636ebe5f211e73efe77d9855a20841c1",
+    "research/ir-transparent-metric-formula-review-2026-10-15/upstream-INDICATORS.md": "fb82b2d47596026ea75fa561169062c52622dcb153caffe37af5491111ad084f",
+    "research/ir-transparent-metric-core-review-2026-10-15/upstream-extras.py": "3038a489679aa163f5a4d930ac7cb4dcf320d72a62122ccd45e9d9242b593631"
+  },
+  "minimal_validation": {
+    "original_source_whole_native_matches_accepted": true,
+    "fulltext_is_original_source_content": true,
+    "exact_quote_page_and_document_Unicode_UTF8_locations": 3,
+    "new_page_image_viewed": true,
+    "old_p2_month_context_reference_retained_without_day_invention": true,
+    "existing_source_or_classification_changed": false
+  }
+}

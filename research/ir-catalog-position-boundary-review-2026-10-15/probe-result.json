@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "status": "catalog_default_and_user_declared_false_indistinguishable_in_position_gate",
+  "validate_company_omitted_equals_explicit_false": true,
+  "cases": [
+    {
+      "case": "catalog_held_omitted",
+      "input_had_no_holding_declaration": true,
+      "raw_catalog_company_has_held": false,
+      "validated_company_held": false,
+      "company_status_on_initial_catalog_import": "watch",
+      "position_snapshot": {
+        "company_id": "jp:130A",
+        "held": false,
+        "observed_at": "2026-10-15T01:30:00+00:00",
+        "observation_id": 1,
+        "kind": "observed"
+      },
+      "frozen_contract_position": {
+        "company_id": "jp:130A",
+        "held": false,
+        "kind": "observed",
+        "observation_id": 1,
+        "observed_at": "2026-10-15T01:30:00+00:00"
+      },
+      "synthetic_position_assumption_present": false,
+      "observed_false_decision": {
+        "status": "reviewed",
+        "proposed_action": "buy_review",
+        "reason_codes": [
+          "entry_conditions_met"
+        ]
+      },
+      "same_inputs_except_unknown_held": {
+        "status": "unresolved",
+        "proposed_action": "unresolved",
+        "reason_codes": [
+          "position_not_verified"
+        ]
+      },
+      "financial_values_and_policy_unchanged_from_existing_fixture": true,
+      "only_test_identity_and_time_rebased": true,
+      "status_only_empty_history_stage": {
+        "probe_only_disposable_observations_reset": true,
+        "held_argument_supplied": false,
+        "new_position": {
+          "company_id": "jp:130A",
+          "held": false,
+          "observed_at": "2026-10-15T01:32:00+00:00",
+          "observation_id": 1,
+          "kind": "observed"
+        }
+      },
+      "legacy_empty_history_reopen_stage": {
+        "probe_only_disposable_observations_reset": true,
+        "catalog_contact_retained": true,
+        "new_position": {
+          "company_id": "jp:130A",
+          "held": false,
+          "observed_at": "2026-10-15T01:33:00+00:00",
+          "observation_id": 1,
+          "kind": "observed"
+        },
+        "columns": [
+          "id",
+          "company_id",
+          "observed_at",
+          "held"
+        ]
+      }
+    },
+    {
+      "case": "explicit_user_held_false",
+      "input_had_explicit_holding_declaration": true,
+      "input_company": {
+        "id": "jp:130A",
+        "name": "Synthetic company",
+        "held": false
+      },
+      "declaration_is_not_broker_audited_proof": true,
+      "position_snapshot": {
+        "company_id": "jp:130A",
+        "held": false,
+        "observed_at": "2026-10-15T01:30:00+00:00",
+        "observation_id": 1,
+        "kind": "observed"
+      },
+      "frozen_contract_position": {
+        "company_id": "jp:130A",
+        "held": false,
+        "kind": "observed",
+        "observation_id": 1,
+        "observed_at": "2026-10-15T01:30:00+00:00"
+      },
+      "synthetic_position_assumption_present": false,
+      "observed_false_decision": {
+        "status": "reviewed",
+        "proposed_action": "buy_review",
+        "reason_codes": [
+          "entry_conditions_met"
+        ]
+      },
+      "same_inputs_except_unknown_held": {
+        "status": "unresolved",
+        "proposed_action": "unresolved",
+        "reason_codes": [
+          "position_not_verified"
+        ]
+      },
+      "financial_values_and_policy_unchanged_from_existing_fixture": true,
+      "only_test_identity_and_time_rebased": true
+    }
+  ],
+  "same_position_observation_fields": true,
+  "execution": {
+    "synthetic_databases": 2,
+    "temporary_catalog_files": 1,
+    "actual_DB_accesses": 0,
+    "new_GETs": 0,
+    "production_or_old_file_changes": 0,
+    "full_suite_runs": 0
+  },
+  "limits": [
+    "Catalog import alone creates watch company and no financial thesis/job/order. Financial effect is conditional on later complete synthetic model/policy inputs.",
+    "Caller-declared false is a legitimate input observation in this probe, not independent confirmation of real brokerage holdings.",
+    "Status/startup reset stages only delete disposable synthetic observations to isolate legacy-empty-history behavior; no real or original history is altered."
+  ]
+}

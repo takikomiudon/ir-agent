@@ -1,0 +1,94 @@
+{
+  "security_code": "7192",
+  "company_name": "日本モーゲージサービス",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "その他金融業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.m-s-j.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T20:16:07.909310+00:00",
+  "completed_at": "2026-10-11T20:16:42.115360+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/7192/20261011T201607909342Z/01.json",
+      "url": "https://www.m-s-j.jp/",
+      "retrieved_at": "2026-10-11T20:16:19.595013+00:00",
+      "quote": "日本モーゲージサービス株式会社",
+      "role": "issuer_saved_page"
+    },
+    {
+      "snapshot": "evidence/7192/20261011T201607909342Z/02.json",
+      "url": "https://www.m-s-j.jp/for-our-customers.html",
+      "retrieved_at": "2026-10-11T20:16:30.928769+00:00",
+      "quote": "お客様サービス室 TEL 03-5408-8162",
+      "role": "product_customer_scope"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.m-s-j.jp/",
+      "final_url": "https://www.m-s-j.jp/",
+      "snapshot": "evidence/7192/20261011T201607909342Z/01.json",
+      "retrieved_at": "2026-10-11T20:16:19.595013+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.m-s-j.jp/for-our-customers.html",
+      "final_url": "https://www.m-s-j.jp/for-our-customers.html",
+      "snapshot": "evidence/7192/20261011T201607909342Z/02.json",
+      "retrieved_at": "2026-10-11T20:16:30.928769+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "取得済み2頁のmainは住宅ローン商品・借換・既借入返済など顧客向け情報、native forms0/公開IRメール・具体的IR質問リンク未捕捉。現JPX社名との既存identity観測履歴は保持する。",
+    "貸付新規/既存顧客、住MyNote、住宅金融支援機構・楽天銀行十色ローンの電話等を株式IR窓口に借用しない。IRナビURLを推測せずU/not_stated、不存在や個人拒否としない。",
+    "保存済み公式ページ・実フォーム欄を手動点検。送信・配信成功・回答実績は未確認。"
+  ],
+  "discovery": {
+    "security_code": "7192",
+    "official_url": "https://www.m-s-j.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "日本モーゲージサービス",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/7192/20261011T201607909342Z/01.json",
+      "normalized_name": "日本モーゲージサービス",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/7192/20261011T201607909342Z/02.json",
+      "normalized_name": "日本モーゲージサービス",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 2,
+  "unconfirmed_reason": "保存済み公式資料ではIR専用質問受付と実窓口の対応を実証できない。窓口不存在の判定ではない。",
+  "http_get_attempt_count": 3,
+  "previous_attempts": [
+    "attempts/7192/20261011T045047642472Z.json",
+    "attempts/7192/20261011T201642115545Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_services",
+    "reviewed_at": "2026-10-12T01:54:56.863274+00:00",
+    "notes": "日本モーゲージサービス現nameと保存2頁全文/native0を実読、内容は住宅ローン顧客窓口で当該株式IR質問メール/フォームの対応は未実証。ローン加入者/楽天銀行/機構窓口を流用0、/irなど推測href追加0、U/not_stated維持。",
+    "attempted_at_reviewed": "2026-10-11T20:16:07.909310+00:00",
+    "saved_evidence_only": true
+  }
+}

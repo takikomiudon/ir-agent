@@ -1,0 +1,91 @@
+{
+  "company_id": "jp:3612",
+  "company_name": "株式会社ワールド",
+  "frozen_at": {
+    "utc": "2026-10-16T10:20:53.488835+00:00",
+    "jst": "2026-10-16T19:20:53.488835+09:00"
+  },
+  "status": "needs_data_static_annual_routes_empty",
+  "scope": "Bounded official annual accounting input discovery; no investor questions, valuation or financial adoption",
+  "GET_attempt_count": 4,
+  "GET_cap_including_robots_redirects_all_hosts": 5,
+  "GETs_by_host": {
+    "corp.world.co.jp": 4
+  },
+  "redirects_followed": 0,
+  "retries": 0,
+  "all_4_HTTP200_complete": true,
+  "annual_PDF_count": 0,
+  "PDF_semantic_pages_read": [],
+  "image_render_count": 0,
+  "full_PDF_text_extraction_performed": false,
+  "observed_public_content": [
+    "Official library and annual-statements/securities-report page titles and navigation",
+    "Empty E-IR containers in static statements and securities-report HTML"
+  ],
+  "not_determined": [
+    "Latest annual document/title/publication date and any relationship to amendments or corrections",
+    "Annual period/end date, accounting basis and consolidated/individual scope",
+    "Reported annual EPS/BPS values and signs or dash/missing distinction",
+    "Ordinary-share earnings/equity numerator, annual average/end denominators and treasury/dilution basis",
+    "Current price, forecast or Graham numerical applicability"
+  ],
+  "boundaries": [
+    "HTTP200 and a page heading do not constitute financial PDF acquisition",
+    "No statement that annual reports or corrections do not exist on the company website",
+    "No negative earnings, zero value or investment exclusion inferred from failed static discovery",
+    "No JS/feed/provider/search/alternatehost/closedroute retry/price request",
+    "The original saved contact record, old evidence, all other company records and shared files remain unchanged"
+  ],
+  "provenance": {
+    "initial_literal_parent": {
+      "snapshot": "research/ir-contacts-universe-2026-10-11/evidence/3612/20261011T081525882721Z/01.json",
+      "sha256": "95ac82689158e250e474520914348f132f6a85565b33f66e797f089969078273",
+      "url": "https://corp.world.co.jp/",
+      "source_link_index": 22,
+      "actual_link": {
+        "url": "https://corp.world.co.jp/ir/library/",
+        "href": "/ir/library/",
+        "label": "IRライブラリー"
+      }
+    },
+    "statements_route": {
+      "snapshot": "02.json",
+      "sha256": "d1ca54914d0cfbbc1eef5234760a01b1bba07c4f5e7ca49a87a8ef69e50ffa14",
+      "url": "https://corp.world.co.jp/ir/library/",
+      "source_link_index": 61,
+      "actual_link": {
+        "href": "/ir/library/statements/",
+        "label": "決算短信",
+        "raw_start_tag": "<a href=\"/ir/library/statements/\">",
+        "url": "https://corp.world.co.jp/ir/library/statements/"
+      }
+    },
+    "root_authorized_alternative": {
+      "snapshot": "03.json",
+      "sha256": "60381bd011eb7d280269789cf99baa4706b069e2209882bda39da6dd2e6decd9",
+      "url": "https://corp.world.co.jp/ir/library/statements/",
+      "source_link_index": 56,
+      "actual_link": {
+        "href": "/ir/library/securities/",
+        "label": "有価証券報告書",
+        "raw_start_tag": "<a href=\"/ir/library/securities/\">",
+        "url": "https://corp.world.co.jp/ir/library/securities/"
+      }
+    },
+    "robots_capture": "01.json",
+    "access_holds": {
+      "path": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+      "sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952",
+      "exact_host": "corp.world.co.jp",
+      "held": false
+    },
+    "publication_and_capture_times": "All captured pages have publication_time:null; HTTP Date/Last-Modified and retrieval clocks are not issuer annual-publication clocks",
+    "response_entity_bytes": "requests iter_content saved response entity bytes, not wire bytes; TLS verified and inherited proxy retained"
+  },
+  "financial_inputs_verified": false,
+  "financial_values_adopted": false,
+  "questions_created_or_sent": 0,
+  "DB_Store_sharedcode_sharedindex_docs_edits": 0,
+  "stop": "Frozen after four GETs; await root, no additional route selected"
+}

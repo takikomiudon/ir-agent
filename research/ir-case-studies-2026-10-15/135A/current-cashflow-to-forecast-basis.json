@@ -1,0 +1,1870 @@
+{
+  "schema_version": 1,
+  "company_id": "jp:135A",
+  "company_name": "株式会社VRAIN Solution",
+  "recorded_at": "2026-10-15T05:31:44.337683+00:00",
+  "status": "single_statement_bridge_gaps_only",
+  "scope": "One saved interim CF table to current-accounting/forecast/stable-input crosswalk; not a new normalized fact bundle, forecast importer, model adoption or execution gate.",
+  "source": {
+    "id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+    "title": "2027年２月期 第２四半期（中間期）決算短信〔日本基準〕(非連結)",
+    "url": "https://contents.xj-storage.jp/xcontents/AS06543/0e4abefd/2c7d/4512/9376/0761580b1ba5/140120260831528808.pdf",
+    "retrieved_at": "2026-10-15T04:42:37.094960+00:00",
+    "publication_date": "2026-10-14",
+    "publication_time": null,
+    "raw_file": "library-followup/raw/6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+    "raw_sha256": "6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+    "raw_byte_count": 436197,
+    "text_file": "library-followup/03.txt",
+    "text_sha256": "3ecc1fb61cc34cf0abd0cdae3c36fed637e5257b94062cb2ed00f71e3ba52b2b",
+    "financial_scope": "日本基準・非連結",
+    "reporting_flow_period": {
+      "start": "2026-03-01",
+      "end": "2026-08-31",
+      "kind": "interim_cumulative"
+    },
+    "comparison_flow_period": {
+      "start": "2025-03-01",
+      "end": "2025-08-31"
+    },
+    "bs_stock_dates": {
+      "previous_annual_end": "2026-02-28",
+      "current_interim_end": "2026-08-31"
+    },
+    "display_precision": "百万円未満切捨て。0/△0は実額厳密ゼロを証明せず、-は0へ変換しない。表示行の差額・合計を端数調整してモデル入力へしない。"
+  },
+  "author_basis": [
+    {
+      "reference": "docs/explicit-terminal-fcff-spec.md ET-Q06 / Damodaran financial-services2009 PDF14",
+      "principle": "Company-wide after-tax cashflows before debt payments are distinct from reported CFO."
+    },
+    {
+      "reference": "docs/cyclical-reinvestment-spec.md CR-Q01/02/09/10 / cyclical2009 PDF10/11/14/24",
+      "principle": "Normalize/review profit, reinvestment, tax and financing consistently; neither a single current CF nor recovery growth supplies steady assumptions."
+    },
+    {
+      "reference": "docs/explicit-terminal-fcff-spec.md ET-Q01/02 / young-growth2009 PDF39–40",
+      "principle": "Terminal FCFF is n+1 following the final explicit forecast n, not an automatically annualized interim result."
+    }
+  ],
+  "existing_artifacts_reused": [
+    {
+      "path": "model-input-mapping.json",
+      "sha256": "798b5483521412f762c4187a29881ef3645773f651b85106ed6a8511c6b28d82"
+    },
+    {
+      "path": "cashflow-disclosed-facts/normalized-bundle.json",
+      "sha256": "7889e9b548f3d37b3e49f415bb492484c6e741b4de34b007773802fcab9bf400"
+    },
+    {
+      "path": "cashflow-disclosed-facts/meaning-review.json",
+      "sha256": "0036e10a5e7721a4f22859d940dd493cc3a069654d19550ba851a642bd6ed160"
+    }
+  ],
+  "existing_four_fact_ids": [
+    "vrain135a-2027interim-operating-cashflow",
+    "vrain135a-2027interim-depreciation-cf-adjustment",
+    "vrain135a-2027interim-ppe-acquisition-cashflow",
+    "vrain135a-2027interim-receivables-contract-assets-cf-adjustment"
+  ],
+  "citations": [
+    {
+      "id": "identity-and-precision",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 1,
+      "printed_page": null,
+      "page_text_start": 10,
+      "page_text_end_exclusive": 574,
+      "quote": "2027年２月期      第２四半期（中間期）決算短信〔日本基準〕(非連結)\n                                                           2026年10月14日\n上 場 会 社 名   株式会社ＶＲＡＩＮ Ｓｏｌｕｔｉｏｎ           上場取引所                         東\nコ ー ド 番 号   135A               URL https://vrain.co.jp/\n代   表   者 (役職名) 代表取締役社長           (氏名) 南塲 勇佑\n問合せ先責任者 (役職名) 取締役 コーポレート部部長 (氏名) 菊地 佳宏                 (TEL) 03-6280-4915\n半期報告書提出予定日       2026年10月14日 配当支払開始予定日              －\n決算補足説明資料作成の有無           ：有\n決算説明会開催の有無              ：有\n                                                                                       (百万円未満切捨て)",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "cf-heading-period-and-unit",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 113,
+      "page_text_end_exclusive": 363,
+      "quote": "（３）中間キャッシュ・フロー計算書\n                                                   (単位：百万円)\n                           前中間会計期間             当中間会計期間\n                         (自 2025年３月１日        (自 2026年３月１日\n                          至 2025年８月31日)       至 2026年８月31日)",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "cf-tax-preprofit",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 381,
+      "page_text_end_exclusive": 441,
+      "quote": " 税引前中間純利益                               95               409",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "税引前中間純利益",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-depreciation",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 442,
+      "page_text_end_exclusive": 502,
+      "quote": " 減価償却費                                  28                30",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "減価償却費",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-interest-dividend-income-adjustment",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 503,
+      "page_text_end_exclusive": 563,
+      "quote": " 受取利息及び受取配当金                             0                 0",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "受取利息及び受取配当金",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-interest-expense-adjustment",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 564,
+      "page_text_end_exclusive": 624,
+      "quote": " 支払利息                                    0                 0",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "支払利息",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-receivables-contract-assets",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 625,
+      "page_text_end_exclusive": 685,
+      "quote": " 売上債権及び契約資産の増減額（△は増加）                △418                154",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "売上債権及び契約資産の増減額（△は増加）",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-inventories",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 686,
+      "page_text_end_exclusive": 745,
+      "quote": " 棚卸資産の増減額（△は増加）                       △39               △46",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "棚卸資産の増減額（△は増加）",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-prepaids",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 746,
+      "page_text_end_exclusive": 806,
+      "quote": " 前払費用の増減額（△は増加）                       △31                 16",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "前払費用の増減額（△は増加）",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-trade-payables",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 807,
+      "page_text_end_exclusive": 866,
+      "quote": " 仕入債務の増減額（△は減少）                         13              △84",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "仕入債務の増減額（△は減少）",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-other-payables",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 867,
+      "page_text_end_exclusive": 926,
+      "quote": " 未払金の増減額（△は減少）                        △36               △23",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "未払金の増減額（△は減少）",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-accrued-expenses",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 927,
+      "page_text_end_exclusive": 986,
+      "quote": " 未払費用の増減額（△は減少）                         60              △32",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "未払費用の増減額（△は減少）",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-contract-liabilities",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 987,
+      "page_text_end_exclusive": 1047,
+      "quote": " 契約負債の増減額（△は減少）                          4                19",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "契約負債の増減額（△は減少）",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-consumption-tax-payable",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 1048,
+      "page_text_end_exclusive": 1107,
+      "quote": " 未払消費税等の増減額（△は減少）                     △40               △32",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "未払消費税等の増減額（△は減少）",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-other-operating-adjustments",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 1108,
+      "page_text_end_exclusive": 1168,
+      "quote": " その他                                   △3                 14",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "その他",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-operating-subtotal",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 1169,
+      "page_text_end_exclusive": 1229,
+      "quote": " 小計                                  △365                425",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "小計",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-cash-interest-dividends-received",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 1230,
+      "page_text_end_exclusive": 1290,
+      "quote": " 利息及び配当金の受取額                             0                 0",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "利息及び配当金の受取額",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-cash-interest-paid",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 1291,
+      "page_text_end_exclusive": 1350,
+      "quote": " 利息の支払額                                △0                △0",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "利息の支払額",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-cash-income-tax-paid",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 1351,
+      "page_text_end_exclusive": 1410,
+      "quote": " 法人税等の支払額                            △103              △202",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "法人税等の支払額",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-operating-cashflow-total",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 1411,
+      "page_text_end_exclusive": 1471,
+      "quote": " 営業活動によるキャッシュ・フロー                    △468                223",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "営業活動によるキャッシュ・フロー",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-ppe-acquisition-cash",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 1489,
+      "page_text_end_exclusive": 1548,
+      "quote": " 有形固定資産の取得による支出                       △71              △100",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "有形固定資産の取得による支出",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-deposits-paid",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 1549,
+      "page_text_end_exclusive": 1608,
+      "quote": " 敷金の差入による支出                            △9               △11",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "敷金の差入による支出",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-aro-settlement-cash",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 1609,
+      "page_text_end_exclusive": 1668,
+      "quote": " 資産除去債務の履行による支出                       △21                 -",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "資産除去債務の履行による支出",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-other-investing",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 1669,
+      "page_text_end_exclusive": 1728,
+      "quote": " その他                                    0                 0",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "その他",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-investing-cashflow-total",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 1729,
+      "page_text_end_exclusive": 1788,
+      "quote": " 投資活動によるキャッシュ・フロー                    △101              △111",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "投資活動によるキャッシュ・フロー",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-short-debt-net-change",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 1806,
+      "page_text_end_exclusive": 1865,
+      "quote": " 短期借入金の純増減額（△は減少）                     170              △400",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "短期借入金の純増減額（△は減少）",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-long-debt-repayment",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 1866,
+      "page_text_end_exclusive": 1925,
+      "quote": " 長期借入金の返済による支出                        △5                  -",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "長期借入金の返済による支出",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-warrant-exercise-proceeds",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 1926,
+      "page_text_end_exclusive": 1985,
+      "quote": " 新株予約権の行使による株式の発行による収入                  6                 -",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "新株予約権の行使による株式の発行による収入",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-financing-cashflow-total",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 1986,
+      "page_text_end_exclusive": 2045,
+      "quote": " 財務活動によるキャッシュ・フロー                     171              △400",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "財務活動によるキャッシュ・フロー",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-cash-net-change",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 2046,
+      "page_text_end_exclusive": 2105,
+      "quote": "現金及び現金同等物の増減額（△は減少）                  △399              △288",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "現金及び現金同等物の増減額（△は減少）",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-cash-beginning",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 2106,
+      "page_text_end_exclusive": 2165,
+      "quote": "現金及び現金同等物の期首残高                        488               427",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "現金及び現金同等物の期首残高",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "cf-cash-ending",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 8,
+      "printed_page": 6,
+      "page_text_start": 2166,
+      "page_text_end_exclusive": 2225,
+      "quote": "現金及び現金同等物の中間期末残高                       89               138",
+      "offset_unit": "zero-based Unicode code points; end exclusive",
+      "row_label": "現金及び現金同等物の中間期末残高",
+      "column_context_citation": "cf-heading-period-and-unit"
+    },
+    {
+      "id": "pl-operating-income",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "page_text_start": 511,
+      "page_text_end_exclusive": 563,
+      "quote": "営業利益                          95                 409",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "pl-interest-income",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "page_text_start": 570,
+      "page_text_end_exclusive": 622,
+      "quote": " 受取利息                          0                   0",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "pl-interest-expense",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "page_text_start": 788,
+      "page_text_end_exclusive": 840,
+      "quote": " 支払利息                          0                   0",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "pl-pretax-income",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "page_text_start": 999,
+      "page_text_end_exclusive": 1051,
+      "quote": "税引前中間純利益                      95                 409",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "pl-current-tax",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "page_text_start": 1052,
+      "page_text_end_exclusive": 1104,
+      "quote": "法人税、住民税及び事業税                  36                 118",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "pl-deferred-tax",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "page_text_start": 1105,
+      "page_text_end_exclusive": 1157,
+      "quote": "法人税等調整額                      △2                   23",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "pl-total-tax",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "page_text_start": 1158,
+      "page_text_end_exclusive": 1210,
+      "quote": "法人税等合計                        34                 142",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "pl-net-income",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 7,
+      "printed_page": 5,
+      "page_text_start": 1211,
+      "page_text_end_exclusive": 1263,
+      "quote": "中間純利益                         61                 267",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "bs-receivables",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 6,
+      "printed_page": 4,
+      "page_text_start": 363,
+      "page_text_end_exclusive": 421,
+      "quote": "   売掛金及び契約資産                    1,957                1,802",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "bs-inventory-products",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 6,
+      "printed_page": 4,
+      "page_text_start": 422,
+      "page_text_end_exclusive": 480,
+      "quote": "   商品及び製品                          17                   20",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "bs-inventory-wip",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 6,
+      "printed_page": 4,
+      "page_text_start": 481,
+      "page_text_end_exclusive": 539,
+      "quote": "   仕掛品                             10                    7",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "bs-inventory-materials",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 6,
+      "printed_page": 4,
+      "page_text_start": 540,
+      "page_text_end_exclusive": 598,
+      "quote": "   原材料                            179                  225",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "bs-prepaids",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 6,
+      "printed_page": 4,
+      "page_text_start": 599,
+      "page_text_end_exclusive": 657,
+      "quote": "   前払費用                            82                  140",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "bs-trade-payables",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 6,
+      "printed_page": 4,
+      "page_text_start": 1088,
+      "page_text_end_exclusive": 1148,
+      "quote": "   買掛金                            160                     75",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "bs-other-payables",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 6,
+      "printed_page": 4,
+      "page_text_start": 1209,
+      "page_text_end_exclusive": 1269,
+      "quote": "   未払金                             61                     45",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "bs-accrued-expenses",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 6,
+      "printed_page": 4,
+      "page_text_start": 1270,
+      "page_text_end_exclusive": 1330,
+      "quote": "   未払費用                           221                    189",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "bs-contract-liabilities",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 6,
+      "printed_page": 4,
+      "page_text_start": 1331,
+      "page_text_end_exclusive": 1391,
+      "quote": "   契約負債                             0                     19",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "bs-income-tax-payable",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 6,
+      "printed_page": 4,
+      "page_text_start": 1392,
+      "page_text_end_exclusive": 1452,
+      "quote": "   未払法人税等                         202                    118",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "bs-vat-payable",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 6,
+      "printed_page": 4,
+      "page_text_start": 1453,
+      "page_text_end_exclusive": 1513,
+      "quote": "   未払消費税等                          39                      6",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "bs-ppe",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 6,
+      "printed_page": 4,
+      "page_text_start": 782,
+      "page_text_end_exclusive": 840,
+      "quote": "   有形固定資産                         130                  207",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "bs-intangibles",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 6,
+      "printed_page": 4,
+      "page_text_start": 841,
+      "page_text_end_exclusive": 899,
+      "quote": "   無形固定資産                           2                    1",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "bs-other-investments",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 6,
+      "printed_page": 4,
+      "page_text_start": 900,
+      "page_text_end_exclusive": 958,
+      "quote": "   投資その他の資産                       335                  239",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "bs-stock-dates-and-unit",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 6,
+      "printed_page": 4,
+      "page_text_start": 120,
+      "page_text_end_exclusive": 292,
+      "quote": "（１）中間貸借対照表\n                                               (単位：百万円)\n                        前事業年度              当中間会計期間\n                     (2026年２月28日)         (2026年８月31日)",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "cf-note-cash-equivalent-scope-only",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 9,
+      "printed_page": 7,
+      "page_text_start": 220,
+      "page_text_end_exclusive": 598,
+      "quote": "（中間キャッシュ・フロー計算書関係）\n   ※ 現金及び現金同等物の中間期末残高と中間貸借対照表に掲記されている科目の金額との関係は、次のとおり\n     であります。\n\n                          前中間会計期間              当中間会計期間\n                        (自 2025年３月１日         (自 2026年３月１日\n                         至 2025年８月31日)        至 2026年８月31日)\n   現金及び預金                        89 百万円             138 百万円\n   現金及び現金同等物                     89 百万円             138 百万円",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "facility-opening-business-context",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 4,
+      "printed_page": 2,
+      "page_text_start": 817,
+      "page_text_end_exclusive": 854,
+      "quote": "展示会への出展によるリード獲得の強化、金\n 沢営業所及び名古屋工場の開設、",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    },
+    {
+      "id": "company-forecast-is-not-guarantee",
+      "source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "pdf_page": 5,
+      "printed_page": 3,
+      "page_text_start": 376,
+      "page_text_end_exclusive": 501,
+      "quote": "業績予想につきましては、2026年４月14日付「2026年２月期   決算短信」で公表いたしました通期の業績予想に変\n更はありません。業績予想値は、現在入手可能な情報に基づき作成したものであり、実際の業績等は様々な要因によ\nり異なる可能性があります。",
+      "offset_unit": "zero-based Unicode code points; end exclusive"
+    }
+  ],
+  "cashflow_row_crosswalk": [
+    {
+      "id": "tax-preprofit",
+      "section_role": "営業起点",
+      "row_label": "税引前中間純利益",
+      "citation_id": "cf-tax-preprofit",
+      "current_actual": {
+        "raw_display": "409",
+        "raw_unit": "百万円",
+        "sign_and_precision": "positive_display",
+        "meaning": "税引前中間純利益409から開始。営業利益409と表示上同額でも、損益概念と非営業項目を同一視しない。",
+        "comparison_raw_display": "95",
+        "value_for_model": null,
+        "current_token_page_start": 438,
+        "current_token_page_end_exclusive": 441
+      },
+      "blocked_direct_stage": "nopat",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の営業税の対象/支払時期、NOL・繰延項目と現金税の扱いが必要。支払202や費用142を率へ換算しない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定n+1期の営業税後NOPAT、安定移行・税/NOL適合、新規投資ROCとgの別根拠が必要。現在409/267/223を代用しない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "depreciation",
+      "section_role": "非資金調整",
+      "row_label": "減価償却費",
+      "citation_id": "cf-depreciation",
+      "current_actual": {
+        "raw_display": "30",
+        "raw_unit": "百万円",
+        "sign_and_precision": "positive_display",
+        "meaning": "減価償却費30は間接法の非資金調整で、CFOへ既に含まれる。現金収入や追加加算額にしない。",
+        "comparison_raw_display": "28",
+        "value_for_model": null,
+        "current_token_page_start": 500,
+        "current_token_page_end_exclusive": 502
+      },
+      "blocked_direct_stage": "reinvestment",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の設備取得/支払/償却、取得未払・非資金取得、敷金等の拘束/回収、維持/成長の根拠。現在支出を年率化しない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定期の必要設備・償却・net再投資・回収可能資金の定義と維持可能性。PPE△100/DA30をROC/gやRに変えない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "interest-dividend-income-adjustment",
+      "section_role": "収益調整",
+      "row_label": "受取利息及び受取配当金",
+      "citation_id": "cf-interest-dividend-income-adjustment",
+      "current_actual": {
+        "raw_display": "0",
+        "raw_unit": "百万円",
+        "sign_and_precision": "zero_display_not_exact_zero",
+        "meaning": "受取利息及び配当金の調整0。表示ゼロから収益の厳密不存在や調整符号の細部を推定しない。",
+        "comparison_raw_display": "0",
+        "value_for_model": null,
+        "current_token_page_start": 562,
+        "current_token_page_end_exclusive": 563
+      },
+      "blocked_direct_stage": "nopat",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の営業/非営業収益、利息費用と現金支払、負債支払前CFへの範囲・税効果の根拠。表示0を将来0に延長しない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定n+1期の営業税後NOPAT、安定移行・税/NOL適合、新規投資ROCとgの別根拠が必要。現在409/267/223を代用しない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "interest-expense-adjustment",
+      "section_role": "費用調整",
+      "row_label": "支払利息",
+      "citation_id": "cf-interest-expense-adjustment",
+      "current_actual": {
+        "raw_display": "0",
+        "raw_unit": "百万円",
+        "sign_and_precision": "zero_display_not_exact_zero",
+        "meaning": "支払利息の調整0と、その後の利息現金支払△0は別行。借入前の営業利益基準への調整は未算定。",
+        "comparison_raw_display": "0",
+        "value_for_model": null,
+        "current_token_page_start": 623,
+        "current_token_page_end_exclusive": 624
+      },
+      "blocked_direct_stage": "nopat",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の営業/非営業収益、利息費用と現金支払、負債支払前CFへの範囲・税効果の根拠。表示0を将来0に延長しない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定n+1期の営業税後NOPAT、安定移行・税/NOL適合、新規投資ROCとgの別根拠が必要。現在409/267/223を代用しない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "receivables-contract-assets",
+      "section_role": "運転項目調整",
+      "row_label": "売上債権及び契約資産の増減額（△は増加）",
+      "citation_id": "cf-receivables-contract-assets",
+      "current_actual": {
+        "raw_display": "154",
+        "raw_unit": "百万円",
+        "sign_and_precision": "positive_display",
+        "meaning": "△は資産増加。正154は当該複合行のCF寄与が正という表示であり、BS資産残高増加+154ではない。",
+        "comparison_raw_display": "△418",
+        "value_for_model": null,
+        "current_token_page_start": 682,
+        "current_token_page_end_exclusive": 685
+      },
+      "blocked_direct_stage": "working_capital",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の売上・回収/支払条件と当該勘定残高/flow、非資金変動・振替、対象範囲、季節性。現調整を固定比率・倍増で作らない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定n+1期の事業規模/回収・支払と再投資定義を根拠付きに設定。半期の各調整額は正常WCやg/ROCの根拠ではない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "inventories",
+      "section_role": "運転項目調整",
+      "row_label": "棚卸資産の増減額（△は増加）",
+      "citation_id": "cf-inventories",
+      "current_actual": {
+        "raw_display": "△46",
+        "raw_unit": "百万円",
+        "sign_and_precision": "negative_display",
+        "meaning": "△46は当該資産増加方向のCF調整。商品/製品・仕掛品・原材料の範囲と非資金変動を別確認する。",
+        "comparison_raw_display": "△39",
+        "value_for_model": null,
+        "current_token_page_start": 742,
+        "current_token_page_end_exclusive": 745
+      },
+      "blocked_direct_stage": "working_capital",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の売上・回収/支払条件と当該勘定残高/flow、非資金変動・振替、対象範囲、季節性。現調整を固定比率・倍増で作らない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定n+1期の事業規模/回収・支払と再投資定義を根拠付きに設定。半期の各調整額は正常WCやg/ROCの根拠ではない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "prepaids",
+      "section_role": "運転項目調整",
+      "row_label": "前払費用の増減額（△は増加）",
+      "citation_id": "cf-prepaids",
+      "current_actual": {
+        "raw_display": "16",
+        "raw_unit": "百万円",
+        "sign_and_precision": "positive_display",
+        "meaning": "正16はCF上の当該資産減少方向。BS前払費用82→140と直結せず、集計範囲・非資金変動/振替の対応が不足。",
+        "comparison_raw_display": "△31",
+        "value_for_model": null,
+        "current_token_page_start": 804,
+        "current_token_page_end_exclusive": 806
+      },
+      "blocked_direct_stage": "working_capital",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の売上・回収/支払条件と当該勘定残高/flow、非資金変動・振替、対象範囲、季節性。現調整を固定比率・倍増で作らない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定n+1期の事業規模/回収・支払と再投資定義を根拠付きに設定。半期の各調整額は正常WCやg/ROCの根拠ではない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "trade-payables",
+      "section_role": "運転項目調整",
+      "row_label": "仕入債務の増減額（△は減少）",
+      "citation_id": "cf-trade-payables",
+      "current_actual": {
+        "raw_display": "△84",
+        "raw_unit": "百万円",
+        "sign_and_precision": "negative_display",
+        "meaning": "△は負債減少。△84は仕入債務減少方向の調整。買掛金BS160→75を厳密なCF数値へ置き換えない。",
+        "comparison_raw_display": "13",
+        "value_for_model": null,
+        "current_token_page_start": 863,
+        "current_token_page_end_exclusive": 866
+      },
+      "blocked_direct_stage": "working_capital",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の売上・回収/支払条件と当該勘定残高/flow、非資金変動・振替、対象範囲、季節性。現調整を固定比率・倍増で作らない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定n+1期の事業規模/回収・支払と再投資定義を根拠付きに設定。半期の各調整額は正常WCやg/ROCの根拠ではない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "other-payables",
+      "section_role": "運転項目調整",
+      "row_label": "未払金の増減額（△は減少）",
+      "citation_id": "cf-other-payables",
+      "current_actual": {
+        "raw_display": "△23",
+        "raw_unit": "百万円",
+        "sign_and_precision": "negative_display",
+        "meaning": "△23は未払金減少方向。BS未払金61→45と単純一致しないため、設備未払等を含むか未確認のまま残す。",
+        "comparison_raw_display": "△36",
+        "value_for_model": null,
+        "current_token_page_start": 923,
+        "current_token_page_end_exclusive": 926
+      },
+      "blocked_direct_stage": "working_capital",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の売上・回収/支払条件と当該勘定残高/flow、非資金変動・振替、対象範囲、季節性。現調整を固定比率・倍増で作らない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定n+1期の事業規模/回収・支払と再投資定義を根拠付きに設定。半期の各調整額は正常WCやg/ROCの根拠ではない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "accrued-expenses",
+      "section_role": "運転項目調整",
+      "row_label": "未払費用の増減額（△は減少）",
+      "citation_id": "cf-accrued-expenses",
+      "current_actual": {
+        "raw_display": "△32",
+        "raw_unit": "百万円",
+        "sign_and_precision": "negative_display",
+        "meaning": "△32は未払費用減少方向。BS221→189の表示対応だけで内訳や将来支払時点を確定しない。",
+        "comparison_raw_display": "60",
+        "value_for_model": null,
+        "current_token_page_start": 983,
+        "current_token_page_end_exclusive": 986
+      },
+      "blocked_direct_stage": "working_capital",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の売上・回収/支払条件と当該勘定残高/flow、非資金変動・振替、対象範囲、季節性。現調整を固定比率・倍増で作らない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定n+1期の事業規模/回収・支払と再投資定義を根拠付きに設定。半期の各調整額は正常WCやg/ROCの根拠ではない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "contract-liabilities",
+      "section_role": "運転項目調整",
+      "row_label": "契約負債の増減額（△は減少）",
+      "citation_id": "cf-contract-liabilities",
+      "current_actual": {
+        "raw_display": "19",
+        "raw_unit": "百万円",
+        "sign_and_precision": "positive_display",
+        "meaning": "正19は契約負債増加方向。BSの前期表示0を厳密ゼロや将来の前受条件としない。",
+        "comparison_raw_display": "4",
+        "value_for_model": null,
+        "current_token_page_start": 1045,
+        "current_token_page_end_exclusive": 1047
+      },
+      "blocked_direct_stage": "working_capital",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の売上・回収/支払条件と当該勘定残高/flow、非資金変動・振替、対象範囲、季節性。現調整を固定比率・倍増で作らない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定n+1期の事業規模/回収・支払と再投資定義を根拠付きに設定。半期の各調整額は正常WCやg/ROCの根拠ではない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "consumption-tax-payable",
+      "section_role": "税等を含む調整",
+      "row_label": "未払消費税等の増減額（△は減少）",
+      "citation_id": "cf-consumption-tax-payable",
+      "current_actual": {
+        "raw_display": "△32",
+        "raw_unit": "百万円",
+        "sign_and_precision": "negative_display",
+        "meaning": "△32は未払消費税等減少方向。法人税支払とは別。営業運転資本モデルへ含める定義を未設定のままとする。",
+        "comparison_raw_display": "△40",
+        "value_for_model": null,
+        "current_token_page_start": 1104,
+        "current_token_page_end_exclusive": 1107
+      },
+      "blocked_direct_stage": "working_capital",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の売上・回収/支払条件と当該勘定残高/flow、非資金変動・振替、対象範囲、季節性。現調整を固定比率・倍増で作らない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定n+1期の事業規模/回収・支払と再投資定義を根拠付きに設定。半期の各調整額は正常WCやg/ROCの根拠ではない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "other-operating-adjustments",
+      "section_role": "未分解の営業調整",
+      "row_label": "その他",
+      "citation_id": "cf-other-operating-adjustments",
+      "current_actual": {
+        "raw_display": "14",
+        "raw_unit": "百万円",
+        "sign_and_precision": "positive_display",
+        "meaning": "その他+14の構成は当表にない。全額WC、非経常項目、恒常回収のいずれとも断定しない。",
+        "comparison_raw_display": "△3",
+        "value_for_model": null,
+        "current_token_page_start": 1166,
+        "current_token_page_end_exclusive": 1168
+      },
+      "blocked_direct_stage": "working_capital",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の売上・回収/支払条件と当該勘定残高/flow、非資金変動・振替、対象範囲、季節性。現調整を固定比率・倍増で作らない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定n+1期の事業規模/回収・支払と再投資定義を根拠付きに設定。半期の各調整額は正常WCやg/ROCの根拠ではない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "operating-subtotal",
+      "section_role": "営業小計",
+      "row_label": "小計",
+      "citation_id": "cf-operating-subtotal",
+      "current_actual": {
+        "raw_display": "425",
+        "raw_unit": "百万円",
+        "sign_and_precision": "positive_display",
+        "meaning": "小計425は税・利息等の現金決済行の前。税引後NOPAT/FCFF/CFO純額の代わりにしない。",
+        "comparison_raw_display": "△365",
+        "value_for_model": null,
+        "current_token_page_start": 1226,
+        "current_token_page_end_exclusive": 1229
+      },
+      "blocked_direct_stage": "nopat",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の営業税の対象/支払時期、NOL・繰延項目と現金税の扱いが必要。支払202や費用142を率へ換算しない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定n+1期の営業税後NOPAT、安定移行・税/NOL適合、新規投資ROCとgの別根拠が必要。現在409/267/223を代用しない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "cash-interest-dividends-received",
+      "section_role": "現金収益",
+      "row_label": "利息及び配当金の受取額",
+      "citation_id": "cf-cash-interest-dividends-received",
+      "current_actual": {
+        "raw_display": "0",
+        "raw_unit": "百万円",
+        "sign_and_precision": "zero_display_not_exact_zero",
+        "meaning": "利息及び配当金受取額0は表示精度付き現金行。営業資産からのCFへの範囲分類を未確定とする。",
+        "comparison_raw_display": "0",
+        "value_for_model": null,
+        "current_token_page_start": 1289,
+        "current_token_page_end_exclusive": 1290
+      },
+      "blocked_direct_stage": "nopat",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の営業/非営業収益、利息費用と現金支払、負債支払前CFへの範囲・税効果の根拠。表示0を将来0に延長しない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定n+1期の営業税後NOPAT、安定移行・税/NOL適合、新規投資ROCとgの別根拠が必要。現在409/267/223を代用しない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "cash-interest-paid",
+      "section_role": "現金費用",
+      "row_label": "利息の支払額",
+      "citation_id": "cf-cash-interest-paid",
+      "current_actual": {
+        "raw_display": "△0",
+        "raw_unit": "百万円",
+        "sign_and_precision": "negative_zero_display_not_exact_zero",
+        "meaning": "利息支払△0は符号付き表示ゼロ。厳密0や借入利息なしを認定せず、税後利息加算等を計算しない。",
+        "comparison_raw_display": "△0",
+        "value_for_model": null,
+        "current_token_page_start": 1348,
+        "current_token_page_end_exclusive": 1350
+      },
+      "blocked_direct_stage": "nopat",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の営業/非営業収益、利息費用と現金支払、負債支払前CFへの範囲・税効果の根拠。表示0を将来0に延長しない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定n+1期の営業税後NOPAT、安定移行・税/NOL適合、新規投資ROCとgの別根拠が必要。現在409/267/223を代用しない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "cash-income-tax-paid",
+      "section_role": "現金税",
+      "row_label": "法人税等の支払額",
+      "citation_id": "cf-cash-income-tax-paid",
+      "current_actual": {
+        "raw_display": "△202",
+        "raw_unit": "百万円",
+        "sign_and_precision": "negative_display",
+        "meaning": "△202は法人税等の現金支払。PL税費用142と別で、当期だけに対応する税額や実効/限界税率を逆算しない。",
+        "comparison_raw_display": "△103",
+        "value_for_model": null,
+        "current_token_page_start": 1406,
+        "current_token_page_end_exclusive": 1410
+      },
+      "blocked_direct_stage": "nopat",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の営業税の対象/支払時期、NOL・繰延項目と現金税の扱いが必要。支払202や費用142を率へ換算しない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定n+1期の営業税後NOPAT、安定移行・税/NOL適合、新規投資ROCとgの別根拠が必要。現在409/267/223を代用しない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "operating-cashflow-total",
+      "section_role": "営業CF純額",
+      "row_label": "営業活動によるキャッシュ・フロー",
+      "citation_id": "cf-operating-cashflow-total",
+      "current_actual": {
+        "raw_display": "223",
+        "raw_unit": "百万円",
+        "sign_and_precision": "positive_display",
+        "meaning": "CFO223は当中間累計の報告額。税・利息・非資金・WC等の範囲を保ち、FCFF/年次/将来CFにしない。",
+        "comparison_raw_display": "△468",
+        "value_for_model": null,
+        "current_token_page_start": 1468,
+        "current_token_page_end_exclusive": 1471
+      },
+      "blocked_direct_stage": "forecast_fcff",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の営業税後・負債支払前・再投資後FCFFと全入力来歴、期間/範囲/単位。CFO223を転記しない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定n+1期のNOPAT/ROC_new/g、予測最終nとの隣接、単一rの適合が必要。全て未設定。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "ppe-acquisition-cash",
+      "section_role": "設備現金支出",
+      "row_label": "有形固定資産の取得による支出",
+      "citation_id": "cf-ppe-acquisition-cash",
+      "current_actual": {
+        "raw_display": "△100",
+        "raw_unit": "百万円",
+        "sign_and_precision": "negative_display",
+        "meaning": "△100は有形固定資産取得の現金支出。取得原価・net capex・維持/成長投資・再投資全体と区別する。",
+        "comparison_raw_display": "△71",
+        "value_for_model": null,
+        "current_token_page_start": 1544,
+        "current_token_page_end_exclusive": 1548
+      },
+      "blocked_direct_stage": "reinvestment",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の設備取得/支払/償却、取得未払・非資金取得、敷金等の拘束/回収、維持/成長の根拠。現在支出を年率化しない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定期の必要設備・償却・net再投資・回収可能資金の定義と維持可能性。PPE△100/DA30をROC/gやRに変えない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "deposits-paid",
+      "section_role": "その他投資",
+      "row_label": "敷金の差入による支出",
+      "citation_id": "cf-deposits-paid",
+      "current_actual": {
+        "raw_display": "△11",
+        "raw_unit": "百万円",
+        "sign_and_precision": "negative_display",
+        "meaning": "敷金差入△11をPPE支出へ混ぜず、事業に必要な資金拘束/回収・再投資定義への含否を別点検する。",
+        "comparison_raw_display": "△9",
+        "value_for_model": null,
+        "current_token_page_start": 1605,
+        "current_token_page_end_exclusive": 1608
+      },
+      "blocked_direct_stage": "reinvestment",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の設備取得/支払/償却、取得未払・非資金取得、敷金等の拘束/回収、維持/成長の根拠。現在支出を年率化しない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定期の必要設備・償却・net再投資・回収可能資金の定義と維持可能性。PPE△100/DA30をROC/gやRに変えない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "aro-settlement-cash",
+      "section_role": "その他投資",
+      "row_label": "資産除去債務の履行による支出",
+      "citation_id": "cf-aro-settlement-cash",
+      "current_actual": {
+        "raw_display": "-",
+        "raw_unit": "百万円",
+        "sign_and_precision": "dash_not_normalized",
+        "meaning": "当期は-。金額ゼロや将来の資産除去負担なしへ置換しない。前年△21と区別する。",
+        "comparison_raw_display": "△21",
+        "value_for_model": null,
+        "current_token_page_start": 1667,
+        "current_token_page_end_exclusive": 1668
+      },
+      "blocked_direct_stage": "reinvestment",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の設備取得/支払/償却、取得未払・非資金取得、敷金等の拘束/回収、維持/成長の根拠。現在支出を年率化しない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定期の必要設備・償却・net再投資・回収可能資金の定義と維持可能性。PPE△100/DA30をROC/gやRに変えない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "other-investing",
+      "section_role": "その他投資",
+      "row_label": "その他",
+      "citation_id": "cf-other-investing",
+      "current_actual": {
+        "raw_display": "0",
+        "raw_unit": "百万円",
+        "sign_and_precision": "zero_display_not_exact_zero",
+        "meaning": "投資その他0は内容未分解の表示ゼロ。厳密な経済ゼロ/投資不要とせず、部品分類を保留する。",
+        "comparison_raw_display": "0",
+        "value_for_model": null,
+        "current_token_page_start": 1727,
+        "current_token_page_end_exclusive": 1728
+      },
+      "blocked_direct_stage": "reinvestment",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の設備取得/支払/償却、取得未払・非資金取得、敷金等の拘束/回収、維持/成長の根拠。現在支出を年率化しない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定期の必要設備・償却・net再投資・回収可能資金の定義と維持可能性。PPE△100/DA30をROC/gやRに変えない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "investing-cashflow-total",
+      "section_role": "投資CF純額",
+      "row_label": "投資活動によるキャッシュ・フロー",
+      "citation_id": "cf-investing-cashflow-total",
+      "current_actual": {
+        "raw_display": "△111",
+        "raw_unit": "百万円",
+        "sign_and_precision": "negative_display",
+        "meaning": "投資CF△111はPPE以外を含む。全額CAPEXにしたりPPEと二重控除したりしない。",
+        "comparison_raw_display": "△101",
+        "value_for_model": null,
+        "current_token_page_start": 1784,
+        "current_token_page_end_exclusive": 1788
+      },
+      "blocked_direct_stage": "reinvestment",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期の設備取得/支払/償却、取得未払・非資金取得、敷金等の拘束/回収、維持/成長の根拠。現在支出を年率化しない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定期の必要設備・償却・net再投資・回収可能資金の定義と維持可能性。PPE△100/DA30をROC/gやRに変えない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "short-debt-net-change",
+      "section_role": "資金調達",
+      "row_label": "短期借入金の純増減額（△は減少）",
+      "citation_id": "cf-short-debt-net-change",
+      "current_actual": {
+        "raw_display": "△400",
+        "raw_unit": "百万円",
+        "sign_and_precision": "negative_display",
+        "meaning": "短期借入純増減△400は財務CF。アンレバード営業CF/再投資から追加控除せず、将来借入ゼロも仮定しない。",
+        "comparison_raw_display": "170",
+        "value_for_model": null,
+        "current_token_page_start": 1861,
+        "current_token_page_end_exclusive": 1865
+      },
+      "blocked_direct_stage": "financing",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期のcash必要額/拘束・返済/借換/調達・株主帰属の根拠。FCFFと財務CFを分け、現在の-や0から将来0を作らない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定期の資金調達/存続と単一WACCの適合、DCF時点のcash/debt/株数。現残高/返済だけでは満たさない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "long-debt-repayment",
+      "section_role": "資金調達",
+      "row_label": "長期借入金の返済による支出",
+      "citation_id": "cf-long-debt-repayment",
+      "current_actual": {
+        "raw_display": "-",
+        "raw_unit": "百万円",
+        "sign_and_precision": "dash_not_normalized",
+        "meaning": "長期借入返済は当期-。未発生/不存在/厳密ゼロを区別せず、そのまま保存する。",
+        "comparison_raw_display": "△5",
+        "value_for_model": null,
+        "current_token_page_start": 1924,
+        "current_token_page_end_exclusive": 1925
+      },
+      "blocked_direct_stage": "financing",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期のcash必要額/拘束・返済/借換/調達・株主帰属の根拠。FCFFと財務CFを分け、現在の-や0から将来0を作らない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定期の資金調達/存続と単一WACCの適合、DCF時点のcash/debt/株数。現残高/返済だけでは満たさない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "warrant-exercise-proceeds",
+      "section_role": "資本調達",
+      "row_label": "新株予約権の行使による株式の発行による収入",
+      "citation_id": "cf-warrant-exercise-proceeds",
+      "current_actual": {
+        "raw_display": "-",
+        "raw_unit": "百万円",
+        "sign_and_precision": "dash_not_normalized",
+        "meaning": "新株予約権行使収入は当期-。将来の希薄化や資本調達可能額をゼロとしない。",
+        "comparison_raw_display": "6",
+        "value_for_model": null,
+        "current_token_page_start": 1984,
+        "current_token_page_end_exclusive": 1985
+      },
+      "blocked_direct_stage": "financing",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期のcash必要額/拘束・返済/借換/調達・株主帰属の根拠。FCFFと財務CFを分け、現在の-や0から将来0を作らない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定期の資金調達/存続と単一WACCの適合、DCF時点のcash/debt/株数。現残高/返済だけでは満たさない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "financing-cashflow-total",
+      "section_role": "財務CF純額",
+      "row_label": "財務活動によるキャッシュ・フロー",
+      "citation_id": "cf-financing-cashflow-total",
+      "current_actual": {
+        "raw_display": "△400",
+        "raw_unit": "百万円",
+        "sign_and_precision": "negative_display",
+        "meaning": "財務CF△400はFCFFの定義とは別。会社全体価値と普通株主への帰属の整理が必要。",
+        "comparison_raw_display": "171",
+        "value_for_model": null,
+        "current_token_page_start": 2041,
+        "current_token_page_end_exclusive": 2045
+      },
+      "blocked_direct_stage": "financing",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期のcash必要額/拘束・返済/借換/調達・株主帰属の根拠。FCFFと財務CFを分け、現在の-や0から将来0を作らない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定期の資金調達/存続と単一WACCの適合、DCF時点のcash/debt/株数。現残高/返済だけでは満たさない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "cash-net-change",
+      "section_role": "資金増減",
+      "row_label": "現金及び現金同等物の増減額（△は減少）",
+      "citation_id": "cf-cash-net-change",
+      "current_actual": {
+        "raw_display": "△288",
+        "raw_unit": "百万円",
+        "sign_and_precision": "negative_display",
+        "meaning": "現金同等物増減△288は営業・投資・財務を含む総資金増減。FCFF列へそのまま使わない。",
+        "comparison_raw_display": "△399",
+        "value_for_model": null,
+        "current_token_page_start": 2101,
+        "current_token_page_end_exclusive": 2105
+      },
+      "blocked_direct_stage": "cash_stock",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期のcash必要額/拘束・返済/借換/調達・株主帰属の根拠。FCFFと財務CFを分け、現在の-や0から将来0を作らない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定期の資金調達/存続と単一WACCの適合、DCF時点のcash/debt/株数。現残高/返済だけでは満たさない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "cash-beginning",
+      "section_role": "資金残高",
+      "row_label": "現金及び現金同等物の期首残高",
+      "citation_id": "cf-cash-beginning",
+      "current_actual": {
+        "raw_display": "427",
+        "raw_unit": "百万円",
+        "sign_and_precision": "positive_display",
+        "meaning": "期首現金同等物427はstock。flowや将来の余剰現金に読み替えない。",
+        "comparison_raw_display": "488",
+        "value_for_model": null,
+        "current_token_page_start": 2162,
+        "current_token_page_end_exclusive": 2165
+      },
+      "blocked_direct_stage": "cash_stock",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期のcash必要額/拘束・返済/借換/調達・株主帰属の根拠。FCFFと財務CFを分け、現在の-や0から将来0を作らない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定期の資金調達/存続と単一WACCの適合、DCF時点のcash/debt/株数。現残高/返済だけでは満たさない。"
+      },
+      "assigned_model_input_path": null
+    },
+    {
+      "id": "cash-ending",
+      "section_role": "資金残高",
+      "row_label": "現金及び現金同等物の中間期末残高",
+      "citation_id": "cf-cash-ending",
+      "current_actual": {
+        "raw_display": "138",
+        "raw_unit": "百万円",
+        "sign_and_precision": "positive_display",
+        "meaning": "期末現金同等物138はstock。p9の現預金との対応はあるが、DCF時点の余剰cash採用は別。",
+        "comparison_raw_display": "89",
+        "value_for_model": null,
+        "current_token_page_start": 2222,
+        "current_token_page_end_exclusive": 2225
+      },
+      "blocked_direct_stage": "cash_stock",
+      "forecast_each_period": {
+        "value": null,
+        "needs": "各期のcash必要額/拘束・返済/借換/調達・株主帰属の根拠。FCFFと財務CFを分け、現在の-や0から将来0を作らない。"
+      },
+      "stable_n_plus_1": {
+        "value": null,
+        "needs": "安定期の資金調達/存続と単一WACCの適合、DCF時点のcash/debt/株数。現残高/返済だけでは満たさない。"
+      },
+      "assigned_model_input_path": null
+    }
+  ],
+  "supporting_rows": [
+    {
+      "id": "pl-operating-income",
+      "citation_id": "pl-operating-income",
+      "role": "営業利益"
+    },
+    {
+      "id": "pl-interest-income",
+      "citation_id": "pl-interest-income",
+      "role": "受取利息"
+    },
+    {
+      "id": "pl-interest-expense",
+      "citation_id": "pl-interest-expense",
+      "role": "支払利息"
+    },
+    {
+      "id": "pl-pretax-income",
+      "citation_id": "pl-pretax-income",
+      "role": "税引前中間純利益"
+    },
+    {
+      "id": "pl-current-tax",
+      "citation_id": "pl-current-tax",
+      "role": "法人税、住民税及び事業税"
+    },
+    {
+      "id": "pl-deferred-tax",
+      "citation_id": "pl-deferred-tax",
+      "role": "法人税等調整額"
+    },
+    {
+      "id": "pl-total-tax",
+      "citation_id": "pl-total-tax",
+      "role": "法人税等合計"
+    },
+    {
+      "id": "pl-net-income",
+      "citation_id": "pl-net-income",
+      "role": "中間純利益"
+    },
+    {
+      "id": "bs-receivables",
+      "citation_id": "bs-receivables",
+      "role": "売掛金及び契約資産"
+    },
+    {
+      "id": "bs-inventory-products",
+      "citation_id": "bs-inventory-products",
+      "role": "商品及び製品"
+    },
+    {
+      "id": "bs-inventory-wip",
+      "citation_id": "bs-inventory-wip",
+      "role": "仕掛品"
+    },
+    {
+      "id": "bs-inventory-materials",
+      "citation_id": "bs-inventory-materials",
+      "role": "原材料"
+    },
+    {
+      "id": "bs-prepaids",
+      "citation_id": "bs-prepaids",
+      "role": "前払費用"
+    },
+    {
+      "id": "bs-trade-payables",
+      "citation_id": "bs-trade-payables",
+      "role": "買掛金"
+    },
+    {
+      "id": "bs-other-payables",
+      "citation_id": "bs-other-payables",
+      "role": "未払金"
+    },
+    {
+      "id": "bs-accrued-expenses",
+      "citation_id": "bs-accrued-expenses",
+      "role": "未払費用"
+    },
+    {
+      "id": "bs-contract-liabilities",
+      "citation_id": "bs-contract-liabilities",
+      "role": "契約負債"
+    },
+    {
+      "id": "bs-income-tax-payable",
+      "citation_id": "bs-income-tax-payable",
+      "role": "未払法人税等"
+    },
+    {
+      "id": "bs-vat-payable",
+      "citation_id": "bs-vat-payable",
+      "role": "未払消費税等"
+    },
+    {
+      "id": "bs-ppe",
+      "citation_id": "bs-ppe",
+      "role": "有形固定資産"
+    },
+    {
+      "id": "bs-intangibles",
+      "citation_id": "bs-intangibles",
+      "role": "無形固定資産"
+    },
+    {
+      "id": "bs-other-investments",
+      "citation_id": "bs-other-investments",
+      "role": "投資その他の資産"
+    }
+  ],
+  "visual_review": [
+    {
+      "pdf_page": 1,
+      "printed_page": null,
+      "temporary_image": "/tmp/ir-135a-bridge-cover.png",
+      "sha256": "fbf5314cb9778fabd9c5a023fb2f40109a137dfdd605a9b5c0da0cbcb5dd9458",
+      "method": "pdftoppm -f 1 -singlefile -r 90 -png SOURCE /tmp/ir-135a-bridge-cover",
+      "checked": "非連結/日本基準/中間累計/百万円未満切捨て",
+      "reviewed_by": "agent:/root/policy_documentation"
+    },
+    {
+      "pdf_page": 6,
+      "printed_page": 4,
+      "temporary_image": "/tmp/ir-135a-bridge-6.png",
+      "sha256": "7c035b07de95317bd8aee995800ba0a702bd5278691c6ab970f28dfc71556a27",
+      "method": "pdftoppm -f 6 -l 9 -r 110 -png SOURCE /tmp/ir-135a-bridge; select the numbered page PNG",
+      "checked": "当期/比較期列、行名、△/0/-、金額単位と必要注記",
+      "reviewed_by": "agent:/root/policy_documentation"
+    },
+    {
+      "pdf_page": 7,
+      "printed_page": 5,
+      "temporary_image": "/tmp/ir-135a-bridge-7.png",
+      "sha256": "64700f5f0a7f52c3ee55d230102b2421f996502eeda4abdd75a500a5c41a1b7c",
+      "method": "pdftoppm -f 6 -l 9 -r 110 -png SOURCE /tmp/ir-135a-bridge; select the numbered page PNG",
+      "checked": "当期/比較期列、行名、△/0/-、金額単位と必要注記",
+      "reviewed_by": "agent:/root/policy_documentation"
+    },
+    {
+      "pdf_page": 8,
+      "printed_page": 6,
+      "temporary_image": "/tmp/ir-135a-bridge-8.png",
+      "sha256": "545105612e0f94de9f4addcc0bb0b9f0def021b60179de6d1aaefb714f771af6",
+      "method": "pdftoppm -f 6 -l 9 -r 110 -png SOURCE /tmp/ir-135a-bridge; select the numbered page PNG",
+      "checked": "当期/比較期列、行名、△/0/-、金額単位と必要注記",
+      "reviewed_by": "agent:/root/policy_documentation"
+    },
+    {
+      "pdf_page": 9,
+      "printed_page": 7,
+      "temporary_image": "/tmp/ir-135a-bridge-9.png",
+      "sha256": "b41c8af6a6e9faf8aae8aa6084cadab3cb9c34174508eb8b64fc37b08acf6f72",
+      "method": "pdftoppm -f 6 -l 9 -r 110 -png SOURCE /tmp/ir-135a-bridge; select the numbered page PNG",
+      "checked": "当期/比較期列、行名、△/0/-、金額単位と必要注記",
+      "reviewed_by": "agent:/root/policy_documentation"
+    }
+  ],
+  "specific_current_basis_gaps": [
+    {
+      "id": "profit-tax-basis",
+      "citations": [
+        "cf-tax-preprofit",
+        "pl-operating-income",
+        "pl-pretax-income",
+        "pl-total-tax",
+        "pl-current-tax",
+        "pl-deferred-tax",
+        "cf-cash-income-tax-paid",
+        "bs-income-tax-payable"
+      ],
+      "observed": "税前純利益409、営業利益409、PL税費用142（当期税118/調整23を別掲）と現金税支払△202を区別。",
+      "gap": "同額表示を同じ利益概念とせず、支払税の対象期/営業・非営業/前期税債務/繰延・NOL対応が不足。",
+      "current_adjustment_calculated": null,
+      "needed_existing_note_or_detail": "当短信p7税科目、p6未払法人税等、p8税前利益と税支払。これらの対応の税支払内訳・税ベース注記はp9のCF関係注記にない。"
+    },
+    {
+      "id": "interest-unlevering",
+      "citations": [
+        "cf-interest-dividend-income-adjustment",
+        "cf-interest-expense-adjustment",
+        "cf-cash-interest-dividends-received",
+        "cf-cash-interest-paid",
+        "pl-interest-income",
+        "pl-interest-expense",
+        "identity-and-precision"
+      ],
+      "observed": "収益/費用調整と現金受払は別行、0/△0の表示。",
+      "gap": "非営業収益除外と税後利息等の扱い・現金/発生の対応を未確認。厳密ゼロや利息なしとしない。",
+      "current_adjustment_calculated": null,
+      "needed_existing_note_or_detail": "p7営業外収益/費用とp8小計前後の各行。利息の詳細/税効果を裏付ける既存公表注記を確認する必要がある。"
+    },
+    {
+      "id": "wc-full-scope",
+      "citations": [
+        "cf-receivables-contract-assets",
+        "cf-inventories",
+        "cf-prepaids",
+        "cf-trade-payables",
+        "cf-other-payables",
+        "cf-accrued-expenses",
+        "cf-contract-liabilities",
+        "cf-consumption-tax-payable",
+        "cf-other-operating-adjustments",
+        "bs-stock-dates-and-unit"
+      ],
+      "observed": "売上債権/契約資産154は複合一行。その他運転項目と税項目・その他を別行で保持。",
+      "gap": "非現金/振替、営業・投資・税の区分、複合項目の内訳なしに全WCを算定できない。",
+      "current_adjustment_calculated": null,
+      "needed_existing_note_or_detail": "p6対応BS勘定全行とp8各調整、その他14の内訳。p9CF注記は現預金との対応だけ。"
+    },
+    {
+      "id": "prepaid-cf-stock-difference",
+      "citations": [
+        "cf-prepaids",
+        "bs-prepaids",
+        "bs-stock-dates-and-unit"
+      ],
+      "observed": "CF前払費用+16に対し、BS前払費用は82→140。",
+      "gap": "表示されたBS単純差を符号反転するだけでは当該CF行に対応しない。範囲・非資金/振替等の原因は未確認。",
+      "current_adjustment_calculated": null,
+      "needed_existing_note_or_detail": "CF前払費用の集計範囲/BS科目の対応、非資金変動・振替の既存公表説明。推測の調整額は作らない。"
+    },
+    {
+      "id": "other-payables-cf-stock-difference",
+      "citations": [
+        "cf-other-payables",
+        "bs-other-payables",
+        "cf-ppe-acquisition-cash",
+        "bs-ppe"
+      ],
+      "observed": "CF未払金△23、BS未払金61→45。有形資産現金取得△100は別行。",
+      "gap": "未払金の範囲や設備関連債務/非資金取得を含むか未確認。取得未払を推測して差額へ充当しない。",
+      "current_adjustment_calculated": null,
+      "needed_existing_note_or_detail": "未払金CF/BS対応と設備取得未払・非現金取得の公表内訳。"
+    },
+    {
+      "id": "capex-da-other-investing",
+      "citations": [
+        "cf-depreciation",
+        "cf-ppe-acquisition-cash",
+        "cf-deposits-paid",
+        "cf-aro-settlement-cash",
+        "cf-other-investing",
+        "cf-investing-cashflow-total",
+        "bs-ppe",
+        "bs-intangibles",
+        "bs-other-investments",
+        "facility-opening-business-context"
+      ],
+      "observed": "DA30、PPE現金取得△100、敷金△11、その他/除去債務行、投資CF△111を分離。",
+      "gap": "資産stock、取得原価/現金支出/未払、償却範囲、維持成長区分、敷金回収、その他投資を一つのnet再投資にできない。施設開設説明から金額帰属を割り当てない。",
+      "current_adjustment_calculated": null,
+      "needed_existing_note_or_detail": "p6資産stock、p8設備/敷金等、p4施設開設説明に加え、固定資産増減・償却・非資金取得/未払・支払予定の公表注記が必要。"
+    },
+    {
+      "id": "reported-cash-stock-is-not-surplus-cash",
+      "citations": [
+        "cf-cash-ending",
+        "cf-note-cash-equivalent-scope-only",
+        "cf-short-debt-net-change"
+      ],
+      "observed": "p9は現金及び預金138と現金同等物138の対応を示す。",
+      "gap": "営業上必要/拘束cash、DCF時点cash/debt、将来借換/株主帰属はこの注記から得られない。",
+      "current_adjustment_calculated": null,
+      "needed_existing_note_or_detail": "資金拘束/営業必要額、借入返済/資本政策の公表情報。現預金一致を余剰cashの採用にしない。"
+    }
+  ],
+  "forecast_boundary": {
+    "current_actual_fcff": null,
+    "forecast_fcff_by_period": null,
+    "forecast_periods_n": null,
+    "stable_n_plus_1_period": null,
+    "stable_nopat_next": null,
+    "stable_roc_new": null,
+    "stable_growth_g": null,
+    "single_discount_rate_r": null,
+    "terminal_fcff_n_plus_1": null,
+    "derived_tax_rate": null,
+    "working_capital_total": null,
+    "net_reinvestment": null,
+    "annualization_factor": null,
+    "assigned_model_route": null,
+    "reason": "現在の会計範囲確認とは別に、各予測期と安定移行の出典付き見積り/明示採用がない。半期2倍、CFO−設備支出、税費用/利益比率、g/ROCは計算していない。"
+  },
+  "company_forecast_boundary": {
+    "existing_company_forecasts_remain_issuer_guidance": true,
+    "new_forecast_values_added": false,
+    "note": "既存通期会社予想を特定期間・用途へ明示採用する研究が常に禁止なのではない。現在の通期予想だけでは将来CF各期、税/再投資、安定n+1期が埋まらず、独立シナリオの根拠も未設定。",
+    "citation_id": "company-forecast-is-not-guarantee"
+  },
+  "accounting_definition_candidates": [
+    {
+      "id": "accounting-prepaids",
+      "topic": "前払費用CF調整とBS科目の集計範囲",
+      "public_anchor_citations": [
+        "cf-prepaids",
+        "bs-prepaids"
+      ],
+      "candidate_question": "公表情報の範囲で、CF計算書の前払費用の増減額とBSの前払費用の対応範囲（振替や非資金変動等を含む場合の取扱い）を説明した公開資料の参照先はありますか。",
+      "what_it_could_resolve": "現実績の調整行と対象勘定の分類。将来回収/支払時期の保証は得られない。",
+      "target_model_path": null,
+      "outreach_status": "not_ready_not_sent",
+      "why_not_ready": "定義確認後も予測値・モデル用途の採用が未設定で、回答で変える実在baseline pathを固定できていない。"
+    },
+    {
+      "id": "accounting-acquisition-payables",
+      "topic": "設備取得現金支出・未払金・償却の公表上の範囲",
+      "public_anchor_citations": [
+        "cf-ppe-acquisition-cash",
+        "cf-other-payables",
+        "bs-other-payables",
+        "cf-depreciation"
+      ],
+      "candidate_question": "有形固定資産の現金取得支出と未払金のCF調整、減価償却費について、取得未払/非資金取得や償却対象の会計上の範囲を説明した既存の公開注記・資料はありますか。",
+      "what_it_could_resolve": "現金設備支出と発生取得/非資金費用の対応。維持投資額・将来ROIの保証を求めない。",
+      "target_model_path": null,
+      "outreach_status": "not_ready_not_sent",
+      "why_not_ready": "全公開資料で未解決と断定せず、既存公表資料の参照で解ける余地を先に残す。現baseline path未設定。"
+    }
+  ],
+  "do_not_send_again": [
+    "中間CF計算書の有無、対象期・日本基準/非連結",
+    "CFO223/設備現金支出△100/DA30/売上債権調整154の公表有無",
+    "0/△0は百万円未満切捨て表示かという表紙で解ける確認",
+    "将来利益/将来新規投資ROC/恒久成長の保証、非公表予測の要求"
+  ],
+  "independent_forecast_or_explicit_adoption_needs": [
+    "各予測期の事業売上・営業利益と非営業/税・NOL・支払の見積り根拠",
+    "回収/支払条件と勘定範囲を揃えた各期の運転資金見積り",
+    "各期の設備取得/現金支払/償却・維持成長/敷金等の事業投資見積り",
+    "安定移行時点と安定n+1期NOPAT/新規投資ROC/g、単一rの適合根拠",
+    "DCFのnとn+1の対応、評価時点cash/debt/株数と資金調達/存続の根拠"
+  ],
+  "scope_limits": {
+    "new_GET_calls": 0,
+    "DB_reads": 0,
+    "DB_writes": 0,
+    "production_or_test_changes": false,
+    "old_artifact_edits": false,
+    "new_normalized_facts_created": false,
+    "WC_or_FCFF_or_forecast_calculated": false,
+    "financial_inputs_verified": false,
+    "model_adopted": false,
+    "IR_messages_sent": 0,
+    "IR_questions_registered": 0,
+    "new_gate_or_importer": false
+  },
+  "existing_input_fingerprints": {
+    "library-followup/03.txt": "3ecc1fb61cc34cf0abd0cdae3c36fed637e5257b94062cb2ed00f71e3ba52b2b",
+    "library-followup/raw/6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515": "6c7d2b098b4ac5f8ed797ff552b8be239237a54e72824cb60ab25df9d49f9515",
+    "library-followup/source-bundle.json": "a8db4fa1d594e9f9e82baa8f85bce3d16cc2f5866c46f1d409e74f1d9ce74de2",
+    "library-followup/03.json": "04a2fa967b8e0acef2629141247a8f3a2e69095ac7bba95782790bde4febca38",
+    "library-followup/manifest.json": "9a6c47566706717605317f3426d9fe35a8bc69319e744323fa72533c36d72bd7",
+    "model-input-mapping.json": "798b5483521412f762c4187a29881ef3645773f651b85106ed6a8511c6b28d82",
+    "cashflow-disclosed-facts/normalized-bundle.json": "7889e9b548f3d37b3e49f415bb492484c6e741b4de34b007773802fcab9bf400",
+    "cashflow-disclosed-facts/meaning-review.json": "0036e10a5e7721a4f22859d940dd493cc3a069654d19550ba851a642bd6ed160"
+  },
+  "validation": {
+    "source_raw_text_hashes_matched": true,
+    "source_snapshot_content_equals_saved_text": true,
+    "page_row_quotes_exact": true,
+    "current_cell_offsets_checked": true,
+    "source_rows_crosswalked": 30,
+    "page_quote_count": 58,
+    "visual_pages": [
+      1,
+      6,
+      7,
+      8,
+      9
+    ],
+    "economic_zero_inferred": false,
+    "display_sums_reconciled_by_adjustment": false
+  }
+}

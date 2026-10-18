@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T03:46:44.715349+00:00",
+  "status": "primary_sources_verified_research_adaptation_proposed",
+  "sources_record": "sources.json",
+  "production_code_changed": false,
+  "actual_db_changed": false,
+  "author_guidance_and_project_adaptation": [
+    {
+      "topic": "caller request ID / namespace",
+      "author_guidance": "AWS prefers a unique caller-provided ID; same caller plus same ID identifies duplicates. Google permits request_id on the request message, recommends UUID compatibility/documented restrictions and says IDs should be optional.",
+      "quote_ids": [
+        "aws-id-intent",
+        "google-request-field",
+        "google-optional-format"
+      ],
+      "sqlite_adaptation": "既存API互換性を保ちながら明示request_idを追加し、caller識別とoperationのnamespaceを定義する。IDなしの要求に同じ重複抑止保証があると報告しない。UUID必須/任意や具体的namespaceはproject契約の選択。",
+      "not_author_claim": "SQLiteキー構成、既存worker名を認証されたcallerとして扱えるか、IDフォーマット制限は原典で決まらない。"
+    },
+    {
+      "topic": "same ID, different payload",
+      "author_guidance": "AWS stores the initial parameters with the ID and returns a validation error indicating parameter mismatch for changed parameters.",
+      "quote_ids": [
+        "aws-mismatch"
+      ],
+      "sqlite_adaptation": "request IDだけでなく正規化した意味上の入力を保存/照合する。claimのworker/lease長等、renewのjob/worker/lease世代/延長量等を明示して同IDでの変更を拒否する。ハッシュのみなら正規化契約と衝突/比較範囲の限界を示す。",
+      "not_author_claim": "どの既定引数を展開するか、JSON正規化方式、HTTP/CLIエラーコード、payloadの具体的fieldはproject設計。"
+    },
+    {
+      "topic": "mutation and receipt atomicity",
+      "author_guidance": "AWS explicitly requires recording the token and all related mutating operations to form an ACID all-or-nothing operation. A semantically equivalent response is prepared for repeated requests.",
+      "quote_ids": [
+        "aws-atomic",
+        "aws-equivalent",
+        "google-replay"
+      ],
+      "sqlite_adaptation": "job選択・lease更新とrequest記録を同じSQLite transactionへまとめ、後続再送で返すreceipt/結果の保存も同じcommitへ含める案。commit後response喪失なら再送は保存receiptを返してleaseを再更新しない。rollbackならrequest記録とlease更新を共に残さない。",
+      "not_author_claim": "AWSはSQLite/BEGIN IMMEDIATEやresponse JSONの厳密な凍結保存手順を指定していない。応答保存まで同transactionへ含めるのはproject adaptation。"
+    },
+    {
+      "topic": "original lease already expired before replay",
+      "author_guidance": "AWS EC2 example preserves the initial idempotent contract after the resource is deleted; the returned representation can say terminated. Google permits a stale success response to reflect current resource state.",
+      "quote_ids": [
+        "aws-late",
+        "google-stale"
+      ],
+      "sqlite_adaptation": "同ID再送を新しいclaim/renewとして再実行せず、元のjob・lease_until・世代に結び付くreceiptとして扱う。元receiptの成功は現在の実行権限を証明しない。現行leaseの有効性/所有者/世代は別に検証し、期限後の再送でleaseを復活・二重延長・別job取得させない。",
+      "not_author_claim": "原典はlease expiry、fencing token、期限切れ時に古いreceiptを返すか専用エラーにするかを直接規定していない。厳密snapshot返却かcurrent-state補足かもproject契約として選ぶ。"
+    },
+    {
+      "topic": "retention and unknown outcome",
+      "author_guidance": "AWS says retention varies by service/resource, illustrates EC2 resource lifetime plus an additional interval, and rejects indefinite retention as impractical. Google allows any reasonable honoring timeframe. Neither supplies a numeric default.",
+      "quote_ids": [
+        "aws-retention",
+        "google-replay"
+      ],
+      "sqlite_adaptation": "初期実装で勝手な時間TTLを足さず、保持/削除・復元・過去IDの有効範囲とクライアント再送期限を明文化する。記録が消えた/復元欠落等の後、未知IDを未実行と判定できる根拠がなければunknownを保持し、claim/renewを盲目的に再実行しない。",
+      "not_author_claim": "unknownというAPI状態/コードやtombstoneは原典の直接規則ではない。削除済みIDと未使用IDは記録なしでは区別できないため、unknownを返す実装には保持するtombstone/世代/期限など別契約が要る。EC2の保持例をSQLite leaseの長さに置換しない。"
+    },
+    {
+      "topic": "new poll versus retry of the same poll",
+      "author_guidance": "AWS explicitly explains that identical parameters may describe two intentionally distinct EC2 launches; request parameters alone do not identify intent.",
+      "quote_ids": [
+        "aws-parameters-not-intent",
+        "aws-id-intent"
+      ],
+      "sqlite_adaptation": "同じ論理claimの通信再送は同ID、新しい仕事を取りに行く新pollは別ID。初回no-job/nullという結果を同IDで後から別jobへ変えない案。新たなrenewの意思には新IDを使い、応答喪失のrenew再送は元IDを維持する。",
+      "not_author_claim": "schedulerのpoll/null結果をキャッシュすることは原典に直接の指示がない。新pollを同payloadだから既存pollとみなさないという適応。"
+    },
+    {
+      "topic": "response equivalence and exact snapshot",
+      "author_guidance": "AWS uses semantically equivalent responses; Google recommends the prior successful response but permits current resource state when a historical response is no longer feasible.",
+      "quote_ids": [
+        "aws-equivalent",
+        "aws-late",
+        "google-replay",
+        "google-stale"
+      ],
+      "sqlite_adaptation": "このschedulerでexact保存receiptを返すなら、原典から要求された唯一の方法ではなく、lease二重延長を避け検証しやすくするproject契約として記録する。receiptと現在lease状態を混同しない。",
+      "not_author_claim": "原典が全APIにbyte-for-byteで同一の応答を無期限に返すことを義務付ける、とは読めない。"
+    }
+  ],
+  "unconfirmed_or_project_specific": [
+    "Lease-expiry/fencing behavior and exact scheduler response contract",
+    "Retention duration, cleanup/tombstone strategy, recovery epoch and request-ID validity",
+    "Semantic request payload normalization, caller namespace and validation error representation",
+    "No-job result caching and new polling intent",
+    "How to coordinate concurrent duplicate requests; atomicity is prescribed, concrete SQLite mechanism is not"
+  ],
+  "financial_policy_or_threshold_added": false
+}

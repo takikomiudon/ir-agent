@@ -1,0 +1,9 @@
+# 公開情報レビュー参照固定の限定修正
+
+独立反例2件を修正した。元v1のbefore/after/manifest/136test証跡はそのまま保持し、本folderのbefore6全文と比較する。変更はdecision_lifecycle.pyと専用testだけ。
+
+有効な長い原典DAGのpersistで起きた再帰エラーは、新feature内でpure検証済みclosure全sourceのRecordAvailability.atを各1回flatに呼ぶことで解消。reviewed_atを二つのcutoffに保ち、trustedruntimeを使う。全祖先のfirstsave/knownby/未知・missingancestor holdは残し、Store全体を変更しない。
+
+同社の別返信へ訂正を結合できた問題は、savedreply/savedquestionのID・同社・source本文とreply原文の完全一致を確認してから訂正を読むことで解消。既存ResearchDecisions._reply_bindingsと同じ内容同一性の境界であり、新しい投資規則ではない。不一致は既存transactionでValueError/rollback。
+
+専用24testを含む141対象testが1.221秒でPASS。1100祖先のpersist保存/既送信記録、祖先receipt/欠損hold、同社別本文とID不一致のrollback、正当本文・訂正hold・retry、旧未導入互換を含む。fullsuiteはrootが別途実行する。実DB/GET/送信・金融採用・旧成果編集は0。コードと成果を固定しreviewを待つ。

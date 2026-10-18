@@ -1,0 +1,41 @@
+{
+  "all_inputs_fictional": true,
+  "database": ":memory:",
+  "only_thesis_version_changed": true,
+  "max_quote_age_seconds": 3600,
+  "current_quote_check": {
+    "checked_at": "2026-10-09T08:11:00+00:00",
+    "status": "fresh",
+    "reason_codes": [],
+    "age_microseconds": 660000000,
+    "max_quote_age_seconds": 3600
+  },
+  "current_thesis_check": {
+    "reviewed_version": 2,
+    "current_version": 3,
+    "status": "mismatch",
+    "checked_at": "2026-10-09T08:11:00+00:00",
+    "reason_codes": [
+      "reviewed_thesis_version_not_current"
+    ],
+    "scope": "Raw latest DB version comparison only; not financial validation, historical PIT reconstruction or acceptance of a future thesis."
+  },
+  "before_action": "exit_review",
+  "after": {
+    "current_review": "unresolved",
+    "current_evaluation": "unresolved",
+    "review_retry": "unresolved",
+    "evaluation_retry": "unresolved",
+    "cli_review_show": "unresolved",
+    "cli_reply_show": "unresolved",
+    "requirements": [
+      "requires_thesis_review"
+    ],
+    "inbox": "requires_thesis_review"
+  },
+  "historical_exit_and_raw_records_unchanged": true,
+  "read_retry_db_dump_and_total_changes_unchanged": true,
+  "new_review_old_version_guard": "Thesis changed; review fresh research instead of reusing stale IR branches",
+  "original_reproduction_files_unchanged": true,
+  "scope": "Current-candidate version coherence only; no recomputation of old IR branches against v3."
+}

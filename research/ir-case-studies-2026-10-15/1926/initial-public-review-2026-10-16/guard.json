@@ -1,0 +1,62 @@
+{
+  "company_id": "jp:1926",
+  "maximum_GETs": 5,
+  "user_agent": "Codex-IR-Research/0.1",
+  "allowed_requests": [
+    {
+      "role": "issuer_robots",
+      "url": "https://www.raito.co.jp/robots.txt",
+      "basis": "robots endpoint on selected official host"
+    },
+    {
+      "role": "issuer_root",
+      "url": "https://www.raito.co.jp/",
+      "basis": "selected CSV official_url"
+    },
+    {
+      "role": "results_index",
+      "url": "https://www.raito.co.jp/ir/irshiryou/",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[1].html_visible_text.links[31]",
+      "literal_href": "/ir/irshiryou/",
+      "label": "IRライブラリー"
+    },
+    {
+      "role": "quarter_results_index",
+      "url": "https://www.raito.co.jp/ir/irshiryou/tanshin/",
+      "parent_capture": "capture.json",
+      "parent_jsonpath": "$.GETs[2].html_visible_text.links[61]",
+      "literal_href": "https://www.raito.co.jp/ir/irshiryou/tanshin/",
+      "label": "決算短信"
+    }
+  ],
+  "robots_reviews": {
+    "www.raito.co.jp": {
+      "proceed": true,
+      "branch": "fresh_robots200",
+      "raw_file": "research/ir-case-studies-2026-10-15/1926/initial-public-review-2026-10-16/raw/06c54a19f6865eba6b84795917e78a52be13c33ac6b0508ee2a639e221233c8d",
+      "raw_sha256": "06c54a19f6865eba6b84795917e78a52be13c33ac6b0508ee2a639e221233c8d",
+      "root_parser_allowed": true,
+      "AI_specific_hold_observed": false
+    }
+  },
+  "holds_file": "research/ir-source-access-holds-2026-10-15/holds-v8.json",
+  "holds_sha256": "4796ff27bd6ff0d54f45fd97cd5f96d46c084d6f81b7d56c7c5cb3d3f1300952",
+  "held_exact_hosts": [
+    "contents.xj-storage.jp",
+    "ssl4.eir-parts.net",
+    "web.fisco.jp",
+    "sharedresearch.jp",
+    "www.toyo.co.jp",
+    "www.xj-storage.jp",
+    "www.investors.com",
+    "data.swcms.net",
+    "jpx-jquants.com",
+    "www.aaii.com",
+    "alphaarchitect.com",
+    "www.journals.uchicago.edu"
+  ],
+  "maximum_samehost_explicit_redirect_hops": 1,
+  "no_JS_search_form_externalhost_or_diagnostics": true,
+  "maximum_meaning_image_pages": 4
+}

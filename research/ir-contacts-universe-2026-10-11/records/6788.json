@@ -1,0 +1,169 @@
+{
+  "security_code": "6788",
+  "company_name": "日本トリム",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "電気機器",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.nihon-trim.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T19:06:29.088268+00:00",
+  "completed_at": "2026-10-11T19:08:38.091256+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/6788/20261011T190629088300Z/01.json",
+      "url": "https://www.nihon-trim.co.jp/",
+      "retrieved_at": "2026-10-11T19:06:45.829718+00:00",
+      "http_status": 200,
+      "quote": "電解水素水/アルカリイオン整水器/株式会社日本トリム",
+      "role": "issuer_identity",
+      "snapshot_json_sha256": "97e7f0ec786eb32c03dc820097389cd02315be973ab4fd21d04d2e1fb514eb98"
+    },
+    {
+      "snapshot": "evidence/6788/20261011T190629088300Z/02.json",
+      "url": "https://www.nihon-trim.co.jp/ir/",
+      "retrieved_at": "2026-10-11T19:07:03.703674+00:00",
+      "http_status": 200,
+      "quote": "IR情報｜株式会社日本トリム",
+      "role": "financial_ir_identity",
+      "snapshot_json_sha256": "857020d4dcf6e874936f1fb4aefc926fa96b62c98b8ba23bf0dcd1556b4902e4"
+    },
+    {
+      "snapshot": "evidence/6788/20261011T190629088300Z/02.json",
+      "url": "https://www.nihon-trim.co.jp/ir/",
+      "retrieved_at": "2026-10-11T19:07:03.703674+00:00",
+      "http_status": 200,
+      "quote": "IRメール配信は、Eメールアドレスをご登録いただいた方へ、 IR、決算、ニュースリリースなどの情報をメールでお届けします。",
+      "role": "excluded_newsletter_scope",
+      "snapshot_json_sha256": "857020d4dcf6e874936f1fb4aefc926fa96b62c98b8ba23bf0dcd1556b4902e4"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.nihon-trim.co.jp/",
+      "final_url": "https://www.nihon-trim.co.jp/",
+      "snapshot": "evidence/6788/20261011T190629088300Z/01.json",
+      "retrieved_at": "2026-10-11T19:06:45.829718+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.nihon-trim.co.jp/ir/",
+      "final_url": "https://www.nihon-trim.co.jp/ir/",
+      "snapshot": "evidence/6788/20261011T190629088300Z/02.json",
+      "retrieved_at": "2026-10-11T19:07:03.703674+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://shop.nihon-trim.co.jp/contact",
+      "final_url": null,
+      "snapshot": "evidence/6788/20261011T190629088300Z/03.json",
+      "retrieved_at": "2026-10-11T19:07:34.503872+00:00",
+      "http_status": null,
+      "error": "robots_access_denied_stopped"
+    },
+    {
+      "url": "https://www.nihon-trim.co.jp/ir/news/",
+      "final_url": "https://www.nihon-trim.co.jp/ir/news/",
+      "snapshot": "evidence/6788/20261011T190629088300Z/04.json",
+      "retrieved_at": "2026-10-11T19:07:34.504607+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.nihon-trim.co.jp/ir/general_meeting/",
+      "final_url": "https://www.nihon-trim.co.jp/ir/general_meeting/",
+      "snapshot": "evidence/6788/20261011T190629088300Z/05.json",
+      "retrieved_at": "2026-10-11T19:07:51.594613+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.nihon-trim.co.jp/ir/library/",
+      "final_url": "https://www.nihon-trim.co.jp/ir/library/",
+      "snapshot": "evidence/6788/20261011T190629088300Z/06.json",
+      "retrieved_at": "2026-10-11T19:08:05.739417+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.nihon-trim.co.jp/ir/policy/",
+      "final_url": "https://www.nihon-trim.co.jp/ir/policy/",
+      "snapshot": "evidence/6788/20261011T190629088300Z/07.json",
+      "retrieved_at": "2026-10-11T19:08:21.969248+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [
+    "日本トリム公式金融IRの決算資料・株式・経営方針を確認したが、IRメール配信は決算/ニュースの情報配信登録であり、質問を受け付ける窓口ではない。",
+    "generic「お問い合わせ/資料請求」はshop.nihon-trim.co.jp/contactを案内するが、保存本文には金融IR質問の用途指定がない。source03はrobots_access_denied_stoppedとして停止、IR受付に借用しない。"
+  ],
+  "limitations": [
+    "https://shop.nihon-trim.co.jp/contact: robots_access_denied_stopped",
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "保存資料にIR質問の返信先・質問入力・公開IRメールと用途の結びつきがないためU。robots停止を窓口不存在とは解釈しない。会社必須・個人入力法・返信実績は未確認。",
+    "saved-source-only人手監査。新GET・送信0、送信・返信実績、相手先の投資提案受諾は未確認。"
+  ],
+  "discovery": {
+    "security_code": "6788",
+    "official_url": "https://www.nihon-trim.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "日本トリム",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/6788/20261011T190629088300Z/01.json",
+      "normalized_name": "日本トリム",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6788/20261011T190629088300Z/02.json",
+      "normalized_name": "日本トリム",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6788/20261011T190629088300Z/04.json",
+      "normalized_name": "日本トリム",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6788/20261011T190629088300Z/05.json",
+      "normalized_name": "日本トリム",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6788/20261011T190629088300Z/06.json",
+      "normalized_name": "日本トリム",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6788/20261011T190629088300Z/07.json",
+      "normalized_name": "日本トリム",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 6,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 8,
+  "previous_attempts": [
+    "attempts/6788/20261011T045047616571Z.json",
+    "attempts/6788/20261011T190838093269Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_consumer_65_batch19",
+    "reviewed_at": "2026-10-11T21:19:56.075195+00:00",
+    "reviewed_at_jst": "2026-10-12T06:19:56.075195+09:00",
+    "notes": "financial IRは実証したがIRメール配信/商品shop問い合わせは金融IR質問受付に転用せずU。 保存公式原文だけを使用し、追加GET・送信・実入力検証は行わない。"
+  }
+}

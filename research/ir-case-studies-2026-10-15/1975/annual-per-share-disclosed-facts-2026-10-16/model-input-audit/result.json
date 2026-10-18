@@ -1,0 +1,129 @@
+{
+  "aggregation": "unweighted",
+  "as_of": "2026-10-16T09:52:28.620775+00:00",
+  "company_id": "jp:1975",
+  "expected_value_available": false,
+  "financial_inputs_verified": false,
+  "inputs": [
+    {
+      "author": "株式会社朝日工業社",
+      "kind": "reported_fact",
+      "meaning_checks": [
+        "unit_not_verified",
+        "period_not_verified",
+        "definition_not_verified",
+        "authorship_and_forecast_status_not_verified"
+      ],
+      "meaning_review_status": "unreviewed",
+      "missing_meaning_fields": [],
+      "normalization_checks": [
+        {
+          "applicable": true,
+          "financial_inputs_verified": false,
+          "meaning_review_required": true,
+          "original_content_sha256_status": "matched",
+          "original_snapshot_sha256_status": "matched_supplied_snapshot",
+          "original_source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f",
+          "reason_codes": [],
+          "source_id": "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+          "status": "reproduced"
+        }
+      ],
+      "path": "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+      "period": "{\"as_of_basis\": \"BPS is the current year-end stock in physical15 one-share information/basis; physical1 consolidated financial position and physical7 current balance-sheet closing date corroborate2026-03-31, not an annual average.\", \"as_of_date\": \"2026-03-31\", \"end_date\": \"2026-03-31\", \"label\": \"当連結会計年度末 2026-03-31\", \"period_kind\": \"instant\", \"start_date\": null}",
+      "rationale": "Use the unchanged directly reported historical annual EPS level or closing BPS level; candidate mapping only. Company directly displayed BPS1,965.51円 at consolidated FY end2026-03-31. Physical15 ordinary-share net-assets basis is50,858million JPY; physical7 stockholders-capital subtotal44,745 excludes the separately displayed OCI6113 and must not be substituted automatically. Do not reconstruct BPS from rounded equity/shares or certify liquidation recovery.",
+      "reason_codes": [],
+      "recorded_at": "2026-10-16T09:52:28.620775+00:00",
+      "reference": "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json#/sources/1/content/facts/1/value; fact_id=1975-reported-year-end-BPS-20260331-observed-20260514",
+      "source_fact_id": "1975-reported-year-end-BPS-20260331-observed-20260514",
+      "source_fact_kind": "reported_fact",
+      "source_id": "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+      "source_lineage_ids": [
+        "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+        "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f"
+      ],
+      "source_value": "1965.51",
+      "status": "source_value_matched",
+      "unit": "JPY-per-share",
+      "value": "1965.51",
+      "value_path": [
+        "content",
+        "facts",
+        1,
+        "value"
+      ]
+    },
+    {
+      "author": "株式会社朝日工業社",
+      "kind": "reported_fact",
+      "meaning_checks": [
+        "unit_not_verified",
+        "period_not_verified",
+        "definition_not_verified",
+        "authorship_and_forecast_status_not_verified"
+      ],
+      "meaning_review_status": "unreviewed",
+      "missing_meaning_fields": [],
+      "normalization_checks": [
+        {
+          "applicable": true,
+          "financial_inputs_verified": false,
+          "meaning_review_required": true,
+          "original_content_sha256_status": "matched",
+          "original_snapshot_sha256_status": "matched_supplied_snapshot",
+          "original_source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f",
+          "reason_codes": [],
+          "source_id": "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+          "status": "reproduced"
+        }
+      ],
+      "path": "scenarios.reported_annual_reference.inputs.eps_jpy",
+      "period": "{\"date_basis\": \"Physical15 current annual header gives 自2025-04-01 至2026-03-31; physical1 explicitly labels annual consolidated period.\", \"end_date\": \"2026-03-31\", \"frequency\": \"annual\", \"label\": \"FY2026年3月期 連結年間実績\", \"period_kind\": \"duration\", \"start_date\": \"2025-04-01\"}",
+      "rationale": "Use the unchanged directly reported historical annual EPS level or closing BPS level; candidate mapping only. Company directly displayed annual actual basic EPS358.13円 in the current consolidated FY column. Physical15 ordinary-share profit basis is the parent profit attributable to ordinary shares; do not divide displayed9,240million JPY by rounded notes or replace with forecast/separate-company/Q1 values.",
+      "reason_codes": [],
+      "recorded_at": "2026-10-16T09:52:28.620775+00:00",
+      "reference": "research/ir-case-studies-2026-10-15/1975/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json#/sources/1/content/facts/0/value; fact_id=1975-reported-annual-EPS-FY20260331-observed-20260514",
+      "source_fact_id": "1975-reported-annual-EPS-FY20260331-observed-20260514",
+      "source_fact_kind": "reported_fact",
+      "source_id": "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+      "source_lineage_ids": [
+        "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+        "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f"
+      ],
+      "source_value": "358.13",
+      "status": "source_value_matched",
+      "unit": "JPY-per-share",
+      "value": "358.13",
+      "value_path": [
+        "content",
+        "facts",
+        0,
+        "value"
+      ]
+    }
+  ],
+  "limitations": [
+    "Numerical equality with a saved field does not verify units, periods, accounting definitions, authorship, or the meaning of a forecast.",
+    "Missing unit or period labels remain explicit meaning-review tasks; supplied labels are not automatically verified.",
+    "Explicit assumptions and synthetic examples are recorded declarations, not recommended or empirically validated inputs.",
+    "Audit status concerns only configured numerical paths; unset probabilities are neither audited nor supplied and do not produce an expected value.",
+    "This standalone audit reads only supplied source snapshots and does not consult live database classification corrections.",
+    "Known disclosed-fact normalization is replayed against its supplied original; unknown providers are not inferred to use that contract, and whole-snapshot commitments are reported separately from content reproduction.",
+    "No values, scenario probabilities, costs, or trading conditions are inferred; saved timestamps are supplied records, not independent proof of collection."
+  ],
+  "meaning_review_required": true,
+  "missing_paths": [],
+  "required_paths": [
+    "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+    "scenarios.reported_annual_reference.inputs.eps_jpy"
+  ],
+  "source_snapshot_sha256": {
+    "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f": "ee28585481c9692e9374aed4ebc15cb04e5b71757d6c56f2d739c7c7265a3e25",
+    "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313": "d6db7c7c2454470dba83cec46a48ba76814db7324ec1109c8b4e8e81d6f54bcf"
+  },
+  "status": "source_values_matched",
+  "synthetic": false,
+  "unset_probability_paths": [
+    "scenarios.reported_annual_reference.probability"
+  ]
+}

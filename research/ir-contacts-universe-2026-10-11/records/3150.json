@@ -1,0 +1,81 @@
+{
+  "security_code": "3150",
+  "company_name": "グリムス",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "電気・ガス業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.gremz.co.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T06:39:49.331368+00:00",
+  "completed_at": "2026-10-11T06:40:01.038280+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/3150/20261011T063949331450Z/02.json",
+      "url": "https://www.gremz.co.jp/contact/",
+      "retrieved_at": "2026-10-11T06:39:56.621129+00:00",
+      "quote": "株式会社グリムスFX へのお問い合わせは、下記フォームよりお気軽にご連絡ください。内容を確認のうえ、担当者より順次ご返信いたします。",
+      "role": "identity_requires_followup"
+    },
+    {
+      "snapshot": "evidence/3150/20261011T063949331450Z/01.json",
+      "url": "https://www.gremz.co.jp/",
+      "retrieved_at": "2026-10-11T06:39:53.182567+00:00",
+      "quote": "当サイトは、海外FXに関する比較・情報提供を目的としたメディアです。",
+      "role": "identity_requires_followup"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.gremz.co.jp/",
+      "final_url": "https://www.gremz.co.jp/",
+      "snapshot": "evidence/3150/20261011T063949331450Z/01.json",
+      "retrieved_at": "2026-10-11T06:39:53.182567+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://www.gremz.co.jp/contact/",
+      "final_url": "https://www.gremz.co.jp/contact/",
+      "snapshot": "evidence/3150/20261011T063949331450Z/02.json",
+      "retrieved_at": "2026-10-11T06:39:56.621129+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "保存済み公式ページ・実フォーム欄を手動点検。送信・配信成功・回答実績は未確認。"
+  ],
+  "discovery": {
+    "security_code": "3150",
+    "official_url": "https://www.gremz.co.jp/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "グリムス",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "unverified",
+  "identity_matches": [],
+  "successful_official_page_count": 2,
+  "unconfirmed_reason": "company_identity_not_verified",
+  "http_get_attempt_count": 3,
+  "previous_attempts": [
+    "attempts/3150/20261011T045047377882Z.json",
+    "attempts/3150/20261011T064001038520Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_services",
+    "reviewed_at": "2026-10-11T07:05:47.064215+00:00",
+    "notes": "保存先は株式会社グリムスFX・海外FX業者比較/口座開設サービスと明示。社名のグリムス部分一致だけでは上場グリムス3150との同一性を証明できずidentityをunverifiedに訂正。一般FX相談用途と静的フォーム説明のみで実欄なし。IR窓口不存在や公式domain変更は推測せずunconfirmed維持。",
+    "attempted_at_reviewed": "2026-10-11T06:39:49.331368+00:00",
+    "saved_evidence_only": true
+  }
+}

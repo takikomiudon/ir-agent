@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T11:19:06.218358+00:00",
+  "status": "finite_proposal_not_implemented",
+  "comparison_example_ids": [
+    "7525-policy",
+    "1518-calendar",
+    "1332-formal-statement"
+  ],
+  "existing_results_preserved": {
+    "7525-policy": "unknown",
+    "1518-calendar": "unknown",
+    "1332-formal-statement": "matched"
+  },
+  "gaps": [
+    {
+      "id": "format-dispatch",
+      "observed_in": [
+        "7525-policy",
+        "1518-calendar",
+        "1332-formal-statement"
+      ],
+      "existing_behavior": "Only two provider literals select inspected byte contracts; new providers return unknown before file checks.",
+      "evidence_refs": [
+        "scripts/verify_case_source_bundle.py:25",
+        "scripts/verify_case_source_bundle.py:95"
+      ],
+      "gap": "Research-topic provider identifiers are being used as serialization-format identifiers.",
+      "proposal": "Introduce a separate exact format identifier and positive integer version for future acquisitions. Keep provider/topic informational, not a success selector. Unsupported versions remain unknown with no fallback key search.",
+      "implementation_status": "proposal_only"
+    },
+    {
+      "id": "typed-extraction-profile",
+      "observed_in": [
+        "7525-policy",
+        "1518-calendar",
+        "1332-formal-statement"
+      ],
+      "source_metadata_pointers": [
+        "/metadata/extraction/kind",
+        "/metadata/extraction/method"
+      ],
+      "gap": "7525 has no kind; 1518 and 1332 use kind but free-text method. Matching saved text does not reproduce extraction.",
+      "proposal": "Require an enumerated versioned extraction profile, declared decoder/newline rules, input/output SHA and pinned implementation/tool version for new format. Separate saved-byte binding from optional profile replay. Missing binary-image transcription must not be replaced with empty text or a fabricated source.",
+      "implementation_status": "proposal_only"
+    },
+    {
+      "id": "transport-times-and-status",
+      "observed_in": [
+        "7525-policy",
+        "1518-calendar",
+        "1332-formal-statement"
+      ],
+      "gap": "Current verifier does not bind request URL/status/completeness/body completion to source; the 1332 selected record has only legacy retrieved_at, not explicit body completion.",
+      "proposal": "New success record needs explicit started/headers/body-completed clocks, complete-body/status/error, response-entity byte semantics and source retrieved_at equality to completion. Preserve old ambiguous clock as legacy, never retroactively infer completion from HTTP Date or newer conventions. Actual DB first-save stays a separate domain.",
+      "implementation_status": "proposal_only"
+    },
+    {
+      "id": "case-root-and-json-pointer",
+      "observed_in": [
+        "7525-policy",
+        "1518-calendar",
+        "1332-formal-statement"
+      ],
+      "gap": "Case root differs by source. Nested captures/manifest selectors and authority refs use several local conventions; current verifier only checks its explicit top-level fields.",
+      "proposal": "Require one explicit repo-relative case root and root-relative artifact paths plus declared RFC6901 pointer to a record in a SHA-pinned JSON artifact. No bundle-parent fallback, recursive field search or path-base guessing; fail on escapes. Old ../ authority ref is not a currently verified path and must not be silently interpreted under a new root.",
+      "implementation_status": "proposal_only"
+    },
+    {
+      "id": "raw-and-projection-boundary",
+      "observed_in": [
+        "7525-policy",
+        "1518-calendar",
+        "1332-formal-statement"
+      ],
+      "gap": "raw bytes and normalized visible text have different transformations; metadata method prose does not establish deterministic source-content lineage for every kind.",
+      "proposal": "Keep exact fetched response entity as immutable binary; keep decoder and extraction output separately. For HTML declare node collapse/final newline; for PDF declare layout/form-feed/tool; do not universal-newline-normalize stored text. JSON-derived projections, if added later, need a separate versioned profile and explicit path, not the HTTP text contract by analogy.",
+      "implementation_status": "proposal_only"
+    },
+    {
+      "id": "trust-status-separation",
+      "observed_in": [
+        "7525-policy",
+        "1518-calendar",
+        "1332-formal-statement"
+      ],
+      "gap": "unknown format may hide local byte agreement; matched may be mistaken for publication authenticity, semantic extraction or financial adoption.",
+      "proposal": "Report format support, declared byte agreement, transport/source binding, profile reproduction and citation byte binding separately; leave authenticity/meaning/adoption explicitly unverified. Preserve existing legacy result rather than replacing it with new semantics.",
+      "implementation_status": "proposal_only"
+    },
+    {
+      "id": "source-identity-and-history",
+      "observed_in": [
+        "7525-policy",
+        "1518-calendar",
+        "1332-formal-statement"
+      ],
+      "gap": "Verifier explicitly does not derive IDs; adding metadata/version to an existing source can change its immutable snapshot or shared ID inputs.",
+      "proposal": "Use common stable_source_id only for new sources under its recorded input contract. Do not mutate/re-ID old sources. Later adapter evidence is a separately timestamped immutable sidecar pinned to original snapshot/file SHA, never a claim that a historical capture used the new format.",
+      "implementation_status": "proposal_only"
+    },
+    {
+      "id": "collection-policy-not-byte-permission",
+      "observed_in": [
+        "7525-policy",
+        "1518-calendar",
+        "1332-formal-statement"
+      ],
+      "gap": "Matching a stored response does not authorize another GET or prove current robots/site access.",
+      "proposal": "Transport may reference saved robots/UA/hold-decision evidence with exact artifact SHA/path/pointer. Such records remain acquisition evidence; byte verification neither follows links nor overrides later exact-host collection holds. Do not retrofit current holds to earlier acquisition chronology.",
+      "implementation_status": "proposal_only"
+    }
+  ],
+  "future_format_recommendation": {
+    "format": "ir-public-response-capture",
+    "version": 1,
+    "version_value_status": "proposed_not_registered_or_accepted_by_current_verifier",
+    "scope": "Future HTTP response entity and extraction record only, not SDK normalized row/financial adoption.",
+    "provider_names_not_dispatch_keys": true,
+    "unknown_key_scan_or_provider_aliases": false,
+    "required_top_level_sections_proposed": [
+      "format",
+      "version",
+      "request",
+      "response",
+      "artifacts",
+      "extraction"
+    ],
+    "source_binding_proposed": {
+      "format": "ir-public-source-binding",
+      "version": 1,
+      "case_root": "explicit repo-relative directory",
+      "transport_artifact": "relative path and SHA",
+      "record_pointer": "explicit RFC6901 pointer, empty string selects root",
+      "source_snapshot_sha256": "models.json_text(source) UTF-8 SHA, algorithm named; not RFC8785",
+      "extraction_output_binding": "exact UTF-8 bytes = source.content UTF-8"
+    },
+    "failure_semantics_proposed": {
+      "unsupported_format_or_version": "unknown, no fallback",
+      "malformed_recognized_contract": "validation_error including missing required fields, never matched",
+      "known_byte_or_field_mismatch": "mismatch",
+      "all_declared_byte_bindings_agree": "only declared-byte agreement; other dimensions remain separate",
+      "known_artifact_absent_or_optional_evidence_unspecified": "unknown with named reason; missing required schema fields instead validation_error"
+    }
+  },
+  "future_targeted_verification_cases_not_run": [
+    "Exact format/version and bool-as-int rejection; missing/wrong extraction profile",
+    "CRLF vs LF mismatch without universal newline conversion; PDF form-feed preserved",
+    "Explicit empty-root/nested JSON pointer, escaped keys, malformed ~ escape, missing pointer, duplicate/nonfinite JSON",
+    "Absolute/../NUL/symlink path escape rejected; explicit alternate case roots accepted",
+    "Completed timestamp binding and partial/non-200 capture retained as failure; legacy clock unknown not backfilled",
+    "Unknown provider with recognized new format may be byte-checkable only after implementation; unknown format with familiar provider does not fall back",
+    "Old unknown and legacy matched results unchanged; sidecar does not re-ID or rewrite old source",
+    "Byte agreement never changes meaning/adoption/current GET permission"
+  ],
+  "implementation_or_GET_or_DB_or_new_financial_rules": 0
+}

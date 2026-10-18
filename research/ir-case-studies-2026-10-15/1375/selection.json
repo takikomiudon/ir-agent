@@ -1,0 +1,91 @@
+{
+  "recorded_at": "2026-10-15T05:04:37.923302+00:00",
+  "ledger_file": "research/ir-recovery-2026-10-13/contact-candidates.csv",
+  "ledger_sha256": "d7a55a842a7c126b48c588801cc2c6035d21bad22cb228ef57da68def1e03f31",
+  "ledger_rows": 1819,
+  "db_file": "data/ir-research-2026-10-15.sqlite3",
+  "db_access": "read-only URI mode=ro",
+  "source_count_query": "select company_id,count(*) from sources group by company_id",
+  "observed_source_counts": {
+    "jp:1332": 7,
+    "jp:135A": 12,
+    "jp:3774": 12,
+    "jp:5480": 8,
+    "jp:5988": 9
+  },
+  "eligible_count": 1814,
+  "sort": "security_code ascending, lexicographic; coverage order, not investment ranking",
+  "selected_security_code": "1375",
+  "selected_company_snapshot": {
+    "held": false,
+    "id": "jp:1375",
+    "ir_contact": {
+      "channel_status": "confirmed",
+      "channels": [
+        "form"
+      ],
+      "conditions": [
+        "回答の転載・二次利用をご遠慮との記載。",
+        "返信方法が電話・手紙になる場合がある。"
+      ],
+      "contact_url": "https://www.yukiguni-factory.co.jp/contact/",
+      "imported_at": "2026-10-15T01:21:57.622048+00:00",
+      "individual_access": "not_stated",
+      "limitations": [
+        "公開 GET の保存本文と非 hidden 入力欄を点検。送信、JavaScript・CAPTCHA の動作、実際の返信は未検証。"
+      ],
+      "outreach_suitability": "candidate",
+      "provenance": {
+        "catalog_path": "/workspace/ir-agent/research/ir-recovery-2026-10-13/contact-candidates.csv",
+        "catalog_sha256": "d7a55a842a7c126b48c588801cc2c6035d21bad22cb228ef57da68def1e03f31",
+        "csv_line_number": 4,
+        "csv_row_number": 4,
+        "reference_scope": "Original references from confirmed candidate observations for the selected contact URL; not independent re-verification.",
+        "review_source": "previous_saved_review",
+        "source_record": "/workspace/ir-agent/research/ir-contacts-universe-2026-10-11/records/1375.json",
+        "source_references": [
+          {
+            "quote": "報の適正な取り扱いに関する基本方針 」 をご覧いただいた上でご利用ください。 お問い合わせの種類 商品に関するお問い合わせ 株主優待に関するお問い合わせ 採用に関するお問い合わせ IR関連に関するお問い合わせ メディア関係者の方 その他のお問い合わせ お名前 住所 電話番号 メールアドレス お問い合わせ内容 お問い合わせフォームをご利用の際は、必ず 「 個人情報の適正な取扱いに関する基",
+            "retrieved_at": "2026-10-11T03:58:44.019170+00:00",
+            "role": "contact_channel",
+            "snapshot": "evidence/1375/03.json",
+            "url": "https://www.yukiguni-factory.co.jp/contact/"
+          },
+          {
+            "quote": "た、お問い合わせ内容によっては、Eメールではなく、お電話やお手紙でご返答させていただく場合がございますので、ご了承ください。 当社からのお返事は、お客様個人宛にお送りするものです。一部または全部を転載、二次利用することはご遠慮ください。 氏名 会社名 国名 住所 電話番号 メールアドレス お問い合わせ内容 お問い合わせフォームをご利用の際は、必ず 「 個人情報の適正な取り扱いに関する基本方針 」 をご覧いただいた",
+            "retrieved_at": "2026-10-11T03:58:44.019170+00:00",
+            "role": "conditions",
+            "snapshot": "evidence/1375/03.json",
+            "url": "https://www.yukiguni-factory.co.jp/contact/"
+          },
+          {
+            "quote": "いやメール設定環境の影響が考えられます。ご確認の上、再度送信してください。 いただいたメールに対して、お返事を差し上げられない場合がございます。 また、お問い合わせ内容によっては、Eメールではなく、お電話やお手紙でご返答させていただく場合がございますので、ご了承ください。 当社からのお返事は、お客様個人宛にお送りするものです。一部または全部を転載、二次利用することはご遠慮ください。 氏名 会社名 国名 住所 電話番",
+            "retrieved_at": "2026-10-11T03:58:44.019170+00:00",
+            "role": "conditions",
+            "snapshot": "evidence/1375/03.json",
+            "url": "https://www.yukiguni-factory.co.jp/contact/"
+          }
+        ]
+      },
+      "public_ir_emails": [],
+      "verified_at": "2026-10-11T04:15:43.401508+00:00"
+    },
+    "name": "ユキグニファクトリー",
+    "security_code": "1375",
+    "status": "watch"
+  },
+  "ledger_row": {
+    "security_code": "1375",
+    "company_name": "ユキグニファクトリー",
+    "market": "プライム（内国株式）",
+    "jpx_sector": "水産・農林業",
+    "official_url": "https://www.yukiguni-factory.co.jp/",
+    "contact_url": "https://www.yukiguni-factory.co.jp/contact/",
+    "individual_access": "not_stated"
+  },
+  "research_sample_only": true,
+  "investment_selection": false,
+  "status_changed": false,
+  "current_contact_revalidated": false,
+  "current_send_eligibility": null
+}

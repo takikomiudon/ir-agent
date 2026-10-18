@@ -1,0 +1,104 @@
+{
+  "security_code": "5243",
+  "company_name": "ｎｏｔｅ",
+  "market": "グロース（内国株式）",
+  "jpx_sector": "情報・通信業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://note.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T14:08:54.320488+00:00",
+  "completed_at": "2026-10-11T14:10:30.225099+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/5243/20261011T140854320531Z/01.json",
+      "url": "https://note.jp/?gs=a8b9aa5992f4be4b7f19dddd3679206b",
+      "retrieved_at": "2026-10-11T14:09:57.927855+00:00",
+      "http_status": 200,
+      "quote": "note株式会社",
+      "role": "issuer_identity",
+      "snapshot_json_sha256": "c135dbb4a18a3b8fae5584606fe826eb7961bbc1c6a028bbea7e2b7b8f2592da"
+    },
+    {
+      "snapshot": "evidence/5243/20261011T140854320531Z/01.json",
+      "url": "https://note.jp/?gs=a8b9aa5992f4be4b7f19dddd3679206b",
+      "retrieved_at": "2026-10-11T14:09:57.927855+00:00",
+      "http_status": 200,
+      "quote": "[note]投資家向け質問箱を開設しました 28 note IR（5243） 3か月前",
+      "role": "ir_question_box_announcement_link_only",
+      "snapshot_json_sha256": "c135dbb4a18a3b8fae5584606fe826eb7961bbc1c6a028bbea7e2b7b8f2592da",
+      "source_link_url": "https://note.com/note_ir/n/nee66bbe1398e"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://note.jp/",
+      "final_url": "https://note.jp/?gs=a8b9aa5992f4be4b7f19dddd3679206b",
+      "snapshot": "evidence/5243/20261011T140854320531Z/01.json",
+      "retrieved_at": "2026-10-11T14:09:57.927855+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://ir.note.jp/",
+      "final_url": null,
+      "snapshot": "evidence/5243/20261011T140854320531Z/02.json",
+      "retrieved_at": "2026-10-11T14:10:30.224273+00:00",
+      "http_status": null,
+      "error": "robots_access_denied_stopped"
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "公式noteホームのIR記事一覧に投資家向け質問箱の開設案内への実リンクがある。ただし記事本文や受付画面の実質問/返信先欄は未取得なのでメール/フォーム受付は未確認。",
+    "https://ir.note.jp/ はrobots.txt取得403 AccessDeniedにより停止。対象本文GET未実行で、迂回や当該URL再取得候補は作らない。",
+    "note顧客/クリエイター向けフィードバックフォーム、製品の質問箱、個人投資家イベント告知、投資情報の免責事項からIRメール/フォーム/個人受付条件を推論しない。",
+    "現時点の個人受付範囲・匿名質問/メール返信の有無・回答の公開方針・個別回答条件は未確認。"
+  ],
+  "discovery": {
+    "security_code": "5243",
+    "official_url": "https://note.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ｎｏｔｅ",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/5243/20261011T140854320531Z/01.json",
+      "normalized_name": "note",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 6,
+  "previous_attempts": [
+    "attempts/5243/20261011T045047530936Z.json",
+    "attempts/5243/20261011T141030225413Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_consumer_52_batch08",
+    "reviewed_at": "2026-10-11T14:17:36.934645+00:00",
+    "reviewed_at_jst": "2026-10-11T23:17:36.934645+09:00",
+    "notes": "note公式ホーム01の最新IR記事一覧とnote IR（5243）の同一性を確認。実hrefの質問箱開設通知は金融IRに関する有力な追加点検先だが未取得の通知記事であって質問/返信先の受付フォームではないためUを維持。開設の3か月前表示は公開本文の相対時刻であり実受付継続やメール返信条件を保証しない。IRサイト02のrobots403は正当な停止で本文なし。help-noteのフィードバック、クリエイター向け質問箱、採用、ニュースの投資免責は金融IR受付に借用しない。 保存された公開本文・native controls・実hrefのみを個別点検。追加GET/メール/フォーム送信は0件。窓口不存在・返信実績・人間の投資判断承認を示すレビューではない。",
+    "stopped_source": {
+      "snapshot": "evidence/5243/20261011T140854320531Z/02.json",
+      "snapshot_json_sha256": "56e24c18ab6e769f44311520fcb53e6a9d8c4b92b2efc50324824b85e220af50",
+      "requested_url": "https://ir.note.jp/",
+      "http_get_attempted": false,
+      "error": "robots_access_denied_stopped",
+      "robots_url": "https://ir.note.jp/robots.txt",
+      "robots_http_status": 403,
+      "robots_retrieved_at": "2026-10-11T14:10:14.666433+00:00",
+      "robots_content_sha256": "a824bc7739e226e1b40ea0f8c4e4f4c6f796fc3b4abfa6e9abe3bd119a30d938"
+    }
+  }
+}

@@ -1,0 +1,419 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T14:06:08.770780+00:00",
+  "status": "stable_offline_inventory_pass",
+  "checks": {
+    "six_codes_exact": true,
+    "all_six_in_saved_catalog": true,
+    "five_company_routes_one_known_negative": true,
+    "eleven_finite_routes": true,
+    "nine_literal_hrefs_and_two_resolved_only": true,
+    "all_preserved_href_resolution_exact": true,
+    "all_anchor_JSONpath_values_exact": true,
+    "all_source_snapshot_hashes_exact": true,
+    "no_selected_route_host_on_central_seven": true,
+    "no_target_body_already_captured_in_scoped_inputs": true,
+    "no_target_already_attempted_in_scoped_inputs": true,
+    "8725_negative_has_no_reopen_candidate": true,
+    "old_input_bytes_unchanged": true
+  },
+  "check_count": 13,
+  "input_files": {
+    "research/ir-contacts-universe-2026-10-11/evidence/290A/01.json": "4137763b3d819b0886241c31dfc29dd91d71794ee7007708036b4a295cf0f310",
+    "research/ir-contacts-universe-2026-10-11/evidence/290A/20261011T045053377366Z/01.json": "271dfecee32891efd365aac2ca0925da872dd4921970685eb72d6684cf8b850c",
+    "research/ir-contacts-universe-2026-10-11/evidence/290A/20261011T061907208383Z/01.json": "102ff8244c24ee5cd8bebc5dd8b3216f70a00818e0a8fa70ce451823c1c91df6",
+    "research/ir-contacts-universe-2026-10-11/evidence/290A/20261011T061907208383Z/02.json": "8afeec74c20759215ca2a91c6e89ed19c48066960ded6e29eae1e520eb102511",
+    "research/ir-contacts-universe-2026-10-11/evidence/290A/20261011T061907208383Z/03.json": "11755814ea1e39083a13f326d3baecd0c44fce4ac9ab5b2bdf8170eb2b58c796",
+    "research/ir-contacts-universe-2026-10-11/evidence/290A/20261011T061907208383Z/04.json": "6002afc66c2a1c3622f7d16abc00d805ae5597e0a0f42f78f19af3a86da14fc5",
+    "research/ir-contacts-universe-2026-10-11/evidence/290A/20261011T061907208383Z/05.json": "eb0ed0c2eec079cc9ed12d575a60f42f66a913bca94c9b80a52fa40fc0f3c39a",
+    "research/ir-contacts-universe-2026-10-11/evidence/290A/20261011T061907208383Z/06.json": "a1f78e4a640b774853ed4a3a517acef20fd942c8a7068eaf8c32eb44e0d01460",
+    "research/ir-contacts-universe-2026-10-11/evidence/290A/20261011T061907208383Z/07.json": "f9e44f82350b99639cc330a048fe33dda68f106dcb4ea60a9919ac61c99287e2",
+    "research/ir-contacts-universe-2026-10-11/attempts/290A/20261011T044640545725Z.json": "f2c1fbcfb42096b8794c4f3c1295f096ddbc165bfcdc88cf40c95311a50c8a02",
+    "research/ir-contacts-universe-2026-10-11/attempts/290A/20261011T045047362993Z.json": "f2c1fbcfb42096b8794c4f3c1295f096ddbc165bfcdc88cf40c95311a50c8a02",
+    "research/ir-contacts-universe-2026-10-11/attempts/290A/20261011T062027813808Z.json": "0e8cb8bc19313033bbdcecbd63463d34abb922aab7b194f7e93002bdc2120bbc",
+    "research/ir-contacts-universe-2026-10-11/evidence/6080/01.json": "6f92a113471e2af1f8b4d1e73bb37d076a8823d2822c7dbfe99215ac9a133935",
+    "research/ir-contacts-universe-2026-10-11/evidence/6080/20261011T045059487570Z/01.json": "16148e9cab20a87508c44f8aa62c82e7c4fb34ebd94ec54351d50f6367cd744f",
+    "research/ir-contacts-universe-2026-10-11/evidence/6080/20261011T161840502429Z/01.json": "336945cbca0b5c83ee4fe3d7daef74773dbf656fba42deeec90994ea983d6a5d",
+    "research/ir-contacts-universe-2026-10-11/evidence/6080/20261011T161840502429Z/02.json": "af24d9842ff74936a9a9064ca5ae3bb8505e6a8651643a210400873e402bc074",
+    "research/ir-contacts-universe-2026-10-11/evidence/6080/20261011T161840502429Z/03.json": "e1372c18a7a3c047359ef5a98049615e3b5534b27a697fde4a05094972616cae",
+    "research/ir-contacts-universe-2026-10-11/attempts/6080/20261011T044640739090Z.json": "a7af8830d5ba123e0b9a00c2bfdc6ddfb3c3e8dfa12f0b198499841a904c235d",
+    "research/ir-contacts-universe-2026-10-11/attempts/6080/20261011T045047569459Z.json": "a7af8830d5ba123e0b9a00c2bfdc6ddfb3c3e8dfa12f0b198499841a904c235d",
+    "research/ir-contacts-universe-2026-10-11/attempts/6080/20261011T161943662726Z.json": "da5f8bc8c0e8b45c1c4849516cacf64887b19cf853ae216cd390f131a880acb4",
+    "research/ir-contacts-universe-2026-10-11/evidence/6754/01.json": "ec50c529d5f4a38545eec6698f303abccd13c57fd618b6f4aab8616efc8b9320",
+    "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T045059728388Z/01.json": "84a6b0d6c6f340fef44ea360f69f18eb98fb5b8ae54fd01fdf39e5215d6f636c",
+    "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T185726005673Z/01.json": "a73acab3461e353c3b3e3294fd3f733909add00b3f80ac0f25674f3f322b3646",
+    "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T185726005673Z/02.json": "4c43c1c4984c190908439f4e69b403b03dd7f5dcd27b8a1d14944f841b149f50",
+    "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T185726005673Z/03.json": "f635c2253741e6a9166cab2bff362f00b7d87c97d802d101542b7066a8c6ce8e",
+    "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T185726005673Z/04.json": "b44e2ede809b59cfb867b66e3ca25e83fed0abfce32d8fe6751d7b48ad07cb66",
+    "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T185726005673Z/05.json": "bf021dabbb3fce65cdcb50a8ae0091c4d3d1deafe5282985469d854d1d99355f",
+    "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T185726005673Z/06.json": "3dd2e4fdf76848f0beed62c5efb771cf86108c24390525870b485217710d4326",
+    "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T185726005673Z/07.json": "12b4647250a3d59b8ba0ef1261341824bf14d773f25978c3faf644239e628714",
+    "research/ir-contacts-universe-2026-10-11/evidence/6754/20261012T052052261156Z/followup-0416.json": "cc8fed2c7e5c758248c82740e412597952b64730816fff61d419e927d1337c14",
+    "research/ir-contacts-universe-2026-10-11/evidence/6754/20261012T052052261156Z/followup-0417.json": "c859f78c965ff7634e78ee380af2f882dfd9648298e46f624ab09068a2d4819c",
+    "research/ir-contacts-universe-2026-10-11/evidence/6754/20261012T052052261156Z/followup-0418.json": "98b1987783b3b28d1d1fe46a2cfd731b7f4dc18d6e9ce36a6f92e1c30d0b833f",
+    "research/ir-contacts-universe-2026-10-11/evidence/6754/20261012T064349324504Z/followup-0033.json": "2a30405b9c83baf6bb4f869e552ce916084d8481f28e49d684f203c751f7585b",
+    "research/ir-contacts-universe-2026-10-11/attempts/6754/20261011T044640787116Z.json": "574d7ad0f1bdd57b214dcab56a1ba25247ca3be6942bbd03386f7b3faf901c88",
+    "research/ir-contacts-universe-2026-10-11/attempts/6754/20261011T045047614403Z.json": "574d7ad0f1bdd57b214dcab56a1ba25247ca3be6942bbd03386f7b3faf901c88",
+    "research/ir-contacts-universe-2026-10-11/attempts/6754/20261011T185933575982Z.json": "889897f84546e8b64cb1ddd22ecca73643b9bac1f77e3bf6a206a2595884c831",
+    "research/ir-contacts-universe-2026-10-11/attempts/6754/20261012T055904850554Z-followup.json": "d3d445aab4c7ad5cdfd305f65ecb076a39ce8173c12c4778ed35b7ffa0eef7d9",
+    "research/ir-contacts-universe-2026-10-11/attempts/6754/20261012T055908313302Z-followup.json": "488fbf74b50008d25d8356463d6caaeefb6edeedb56ad45f122cee058d7faf43",
+    "research/ir-contacts-universe-2026-10-11/attempts/6754/20261012T055911836513Z-followup.json": "d06533e1b267bcdb227b37507dd3c6c6f965d77b147ca7368c67c821bf6592c0",
+    "research/ir-contacts-universe-2026-10-11/attempts/6754/20261012T064850847576Z-followup.json": "21e3969c60b94bea01d6039c54d500eb1ee89461c96520d8041080a30bd3882f",
+    "research/ir-contacts-universe-2026-10-11/evidence/7741/01.json": "2d3d88ec00cdccc8c98279a171cfff7f7ce2eb702d9ea2d7aeed7bfe59157263",
+    "research/ir-contacts-universe-2026-10-11/evidence/7741/20261011T045059989658Z/01.json": "0e70097629cbcfdeb32f2711315ccb5d8ff3695f1b2f565c5244dc7a9f6c3357",
+    "research/ir-contacts-universe-2026-10-11/evidence/7741/20261011T220703323936Z/01.json": "eeaaa1b0df123ec1747f165521856b53a3bcc707b2fcb3bc38bf654dec66b6be",
+    "research/ir-contacts-universe-2026-10-11/evidence/7741/20261011T220703323936Z/02.json": "995412dd1f48167b8ccb3c36e3d3e3f202f145da9dfd65c8af5e6f082201506a",
+    "research/ir-contacts-universe-2026-10-11/attempts/7741/20261011T044640848160Z.json": "3b6356d4371bb02e58f3dffa9d8c3663e71bcd70bdb5dec0d88108214e24bd36",
+    "research/ir-contacts-universe-2026-10-11/attempts/7741/20261011T045047680351Z.json": "3b6356d4371bb02e58f3dffa9d8c3663e71bcd70bdb5dec0d88108214e24bd36",
+    "research/ir-contacts-universe-2026-10-11/attempts/7741/20261011T220841067639Z.json": "67dc1366f1f5065f2cd36cae41556bd6367e4475a569a3ce72d32ee6a7facc44",
+    "research/ir-contacts-universe-2026-10-11/evidence/8252/01.json": "2611761cef0d8bc09ef905b58c401dd770362efe6d357e463063de69a7f402ba",
+    "research/ir-contacts-universe-2026-10-11/evidence/8252/20261011T045100135389Z/01.json": "f25d846919735c1307101c6134a90b08a3bff40c0815a50406e25b776a3afe9a",
+    "research/ir-contacts-universe-2026-10-11/evidence/8252/20261012T001111813279Z/01.json": "24367800df64279ee7bf221e9bcb8ecba03e6942c51d1876b258a3e5e3cea4c6",
+    "research/ir-contacts-universe-2026-10-11/evidence/8252/20261012T001111813279Z/02.json": "6a27ce3608153a551917bc776796d1a07caf2090fa55d1919cfbd658f248c06d",
+    "research/ir-contacts-universe-2026-10-11/evidence/8252/20261012T001111813279Z/03.json": "a3f7f06782acf0298b5867b2875d614a0151dc09cb1f7c0afebcba6b56ed84ef",
+    "research/ir-contacts-universe-2026-10-11/attempts/8252/20261011T044640880330Z.json": "711ad17567bde335a4ded81c3685f0311d3191f585856c738242aed2509e385b",
+    "research/ir-contacts-universe-2026-10-11/attempts/8252/20261011T045047718113Z.json": "711ad17567bde335a4ded81c3685f0311d3191f585856c738242aed2509e385b",
+    "research/ir-contacts-universe-2026-10-11/attempts/8252/20261012T001215169672Z.json": "8ae73c12af890aa06d45c8acd167139136737125100ca23ae3df6b067f75c5b2",
+    "research/ir-contacts-universe-2026-10-11/evidence/8725/01.json": "8bd4cc74743938d1401c46b547f6b7ab9154ec10e9dec4ea7e161e9b8df1b486",
+    "research/ir-contacts-universe-2026-10-11/evidence/8725/20261011T045100192070Z/01.json": "268dced204a4a2616abbc4d11dca716665120501af51d3f28cca73f21e2e2f63",
+    "research/ir-contacts-universe-2026-10-11/evidence/8725/20261012T010238438023Z/01.json": "f32a7245736fad51e1f48ee296089937bb1b7732e31d8943a898abcb969f5f10",
+    "research/ir-contacts-universe-2026-10-11/attempts/8725/20261011T044640894002Z.json": "f5190bea3ef808bc8ed70dd59f4e3059b5994b1de40204ae430a83288b073d71",
+    "research/ir-contacts-universe-2026-10-11/attempts/8725/20261011T045047736154Z.json": "f5190bea3ef808bc8ed70dd59f4e3059b5994b1de40204ae430a83288b073d71",
+    "research/ir-contacts-universe-2026-10-11/attempts/8725/20261012T010251781249Z.json": "28c67ec0812390382c069d8cbb65baf41588e6783d3b96ff07c7e1f375d2eaef",
+    "research/ir-recovery-2026-10-13/evidence/8725/20261012T152547398657Z.json": "57c357f4e5d04ee15a556f10e66dbb16cb6e160ba48d55657028e158c8ee4307",
+    "research/ir-contacts-universe-2026-10-11/records/290A.json": "1fc56fed837be2ea2a34c49670a8d4c9b6df673c270c8d948353eacd10b56836",
+    "research/ir-contacts-universe-2026-10-11/records/6080.json": "37c0a26031738f3df8717a551e5739593d5780d4ae1c37b39b7d19eea72ccea7",
+    "research/ir-contacts-universe-2026-10-11/records/6754.json": "e59356f180e8be2c2f7a27da809cc00b64b63961f56551fb631f6bbd946bd5d7",
+    "research/ir-contacts-universe-2026-10-11/records/7741.json": "0d0aff049b6d7c8a93cf450e1a3e70999d346f86b980ed73d5695c53fdab06ec",
+    "research/ir-contacts-universe-2026-10-11/records/8252.json": "f9e0c9beb085b76cd3ea0dadb32bc9fc60792fac91c9e5b29d64aee337d491da",
+    "research/ir-contacts-universe-2026-10-11/records/8725.json": "ee3bd399a9adf5601f5ac8b5caf01f09af77b1a3207ace67c2a1dd5443ea43a6",
+    "research/ir-source-access-holds-2026-10-15/holds-v3.json": "ec1e9f85d378571c3d0f99eca73ec8e397ea8dd7b155aa4be80c2100d2294551",
+    "research/ir-contacts-universe-2026-10-11/companies.csv": "df5ae782f4b6fa07bcb3388d91d29eac51211465951dc7768b31de06bc90080f"
+  },
+  "scoped_snapshot_and_attempt_files": [
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/290A/01.json",
+      "sha256": "4137763b3d819b0886241c31dfc29dd91d71794ee7007708036b4a295cf0f310",
+      "bytes": 1837
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/290A/20261011T045053377366Z/01.json",
+      "sha256": "271dfecee32891efd365aac2ca0925da872dd4921970685eb72d6684cf8b850c",
+      "bytes": 10859
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/290A/20261011T061907208383Z/01.json",
+      "sha256": "102ff8244c24ee5cd8bebc5dd8b3216f70a00818e0a8fa70ce451823c1c91df6",
+      "bytes": 27906
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/290A/20261011T061907208383Z/02.json",
+      "sha256": "8afeec74c20759215ca2a91c6e89ed19c48066960ded6e29eae1e520eb102511",
+      "bytes": 24695
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/290A/20261011T061907208383Z/03.json",
+      "sha256": "11755814ea1e39083a13f326d3baecd0c44fce4ac9ab5b2bdf8170eb2b58c796",
+      "bytes": 24511
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/290A/20261011T061907208383Z/04.json",
+      "sha256": "6002afc66c2a1c3622f7d16abc00d805ae5597e0a0f42f78f19af3a86da14fc5",
+      "bytes": 21243
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/290A/20261011T061907208383Z/05.json",
+      "sha256": "eb0ed0c2eec079cc9ed12d575a60f42f66a913bca94c9b80a52fa40fc0f3c39a",
+      "bytes": 25742
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/290A/20261011T061907208383Z/06.json",
+      "sha256": "a1f78e4a640b774853ed4a3a517acef20fd942c8a7068eaf8c32eb44e0d01460",
+      "bytes": 12008
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/290A/20261011T061907208383Z/07.json",
+      "sha256": "f9e44f82350b99639cc330a048fe33dda68f106dcb4ea60a9919ac61c99287e2",
+      "bytes": 25014
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/290A/20261011T044640545725Z.json",
+      "sha256": "f2c1fbcfb42096b8794c4f3c1295f096ddbc165bfcdc88cf40c95311a50c8a02",
+      "bytes": 1884
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/290A/20261011T045047362993Z.json",
+      "sha256": "f2c1fbcfb42096b8794c4f3c1295f096ddbc165bfcdc88cf40c95311a50c8a02",
+      "bytes": 1884
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/290A/20261011T062027813808Z.json",
+      "sha256": "0e8cb8bc19313033bbdcecbd63463d34abb922aab7b194f7e93002bdc2120bbc",
+      "bytes": 2173
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6080/01.json",
+      "sha256": "6f92a113471e2af1f8b4d1e73bb37d076a8823d2822c7dbfe99215ac9a133935",
+      "bytes": 1806
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6080/20261011T045059487570Z/01.json",
+      "sha256": "16148e9cab20a87508c44f8aa62c82e7c4fb34ebd94ec54351d50f6367cd744f",
+      "bytes": 860
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6080/20261011T161840502429Z/01.json",
+      "sha256": "336945cbca0b5c83ee4fe3d7daef74773dbf656fba42deeec90994ea983d6a5d",
+      "bytes": 170589
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6080/20261011T161840502429Z/02.json",
+      "sha256": "af24d9842ff74936a9a9064ca5ae3bb8505e6a8651643a210400873e402bc074",
+      "bytes": 44773
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6080/20261011T161840502429Z/03.json",
+      "sha256": "e1372c18a7a3c047359ef5a98049615e3b5534b27a697fde4a05094972616cae",
+      "bytes": 39899
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/6080/20261011T044640739090Z.json",
+      "sha256": "a7af8830d5ba123e0b9a00c2bfdc6ddfb3c3e8dfa12f0b198499841a904c235d",
+      "bytes": 1642
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/6080/20261011T045047569459Z.json",
+      "sha256": "a7af8830d5ba123e0b9a00c2bfdc6ddfb3c3e8dfa12f0b198499841a904c235d",
+      "bytes": 1642
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/6080/20261011T161943662726Z.json",
+      "sha256": "da5f8bc8c0e8b45c1c4849516cacf64887b19cf853ae216cd390f131a880acb4",
+      "bytes": 1931
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6754/01.json",
+      "sha256": "ec50c529d5f4a38545eec6698f303abccd13c57fd618b6f4aab8616efc8b9320",
+      "bytes": 1826
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T045059728388Z/01.json",
+      "sha256": "84a6b0d6c6f340fef44ea360f69f18eb98fb5b8ae54fd01fdf39e5215d6f636c",
+      "bytes": 870
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T185726005673Z/01.json",
+      "sha256": "a73acab3461e353c3b3e3294fd3f733909add00b3f80ac0f25674f3f322b3646",
+      "bytes": 52612
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T185726005673Z/02.json",
+      "sha256": "4c43c1c4984c190908439f4e69b403b03dd7f5dcd27b8a1d14944f841b149f50",
+      "bytes": 47478
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T185726005673Z/03.json",
+      "sha256": "f635c2253741e6a9166cab2bff362f00b7d87c97d802d101542b7066a8c6ce8e",
+      "bytes": 49415
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T185726005673Z/04.json",
+      "sha256": "b44e2ede809b59cfb867b66e3ca25e83fed0abfce32d8fe6751d7b48ad07cb66",
+      "bytes": 44956
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T185726005673Z/05.json",
+      "sha256": "bf021dabbb3fce65cdcb50a8ae0091c4d3d1deafe5282985469d854d1d99355f",
+      "bytes": 40119
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T185726005673Z/06.json",
+      "sha256": "3dd2e4fdf76848f0beed62c5efb771cf86108c24390525870b485217710d4326",
+      "bytes": 23027
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6754/20261011T185726005673Z/07.json",
+      "sha256": "12b4647250a3d59b8ba0ef1261341824bf14d773f25978c3faf644239e628714",
+      "bytes": 25933
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6754/20261012T052052261156Z/followup-0416.json",
+      "sha256": "cc8fed2c7e5c758248c82740e412597952b64730816fff61d419e927d1337c14",
+      "bytes": 37899
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6754/20261012T052052261156Z/followup-0417.json",
+      "sha256": "c859f78c965ff7634e78ee380af2f882dfd9648298e46f624ab09068a2d4819c",
+      "bytes": 40842
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6754/20261012T052052261156Z/followup-0418.json",
+      "sha256": "98b1987783b3b28d1d1fe46a2cfd731b7f4dc18d6e9ce36a6f92e1c30d0b833f",
+      "bytes": 30017
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/6754/20261012T064349324504Z/followup-0033.json",
+      "sha256": "2a30405b9c83baf6bb4f869e552ce916084d8481f28e49d684f203c751f7585b",
+      "bytes": 37227
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/6754/20261011T044640787116Z.json",
+      "sha256": "574d7ad0f1bdd57b214dcab56a1ba25247ca3be6942bbd03386f7b3faf901c88",
+      "bytes": 1611
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/6754/20261011T045047614403Z.json",
+      "sha256": "574d7ad0f1bdd57b214dcab56a1ba25247ca3be6942bbd03386f7b3faf901c88",
+      "bytes": 1611
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/6754/20261011T185933575982Z.json",
+      "sha256": "889897f84546e8b64cb1ddd22ecca73643b9bac1f77e3bf6a206a2595884c831",
+      "bytes": 1900
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/6754/20261012T055904850554Z-followup.json",
+      "sha256": "d3d445aab4c7ad5cdfd305f65ecb076a39ce8173c12c4778ed35b7ffa0eef7d9",
+      "bytes": 7209
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/6754/20261012T055908313302Z-followup.json",
+      "sha256": "488fbf74b50008d25d8356463d6caaeefb6edeedb56ad45f122cee058d7faf43",
+      "bytes": 9435
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/6754/20261012T055911836513Z-followup.json",
+      "sha256": "d06533e1b267bcdb227b37507dd3c6c6f965d77b147ca7368c67c821bf6592c0",
+      "bytes": 11478
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/6754/20261012T064850847576Z-followup.json",
+      "sha256": "21e3969c60b94bea01d6039c54d500eb1ee89461c96520d8041080a30bd3882f",
+      "bytes": 13384
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/7741/01.json",
+      "sha256": "2d3d88ec00cdccc8c98279a171cfff7f7ce2eb702d9ea2d7aeed7bfe59157263",
+      "bytes": 1810
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/7741/20261011T045059989658Z/01.json",
+      "sha256": "0e70097629cbcfdeb32f2711315ccb5d8ff3695f1b2f565c5244dc7a9f6c3357",
+      "bytes": 862
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/7741/20261011T220703323936Z/01.json",
+      "sha256": "eeaaa1b0df123ec1747f165521856b53a3bcc707b2fcb3bc38bf654dec66b6be",
+      "bytes": 28239
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/7741/20261011T220703323936Z/02.json",
+      "sha256": "995412dd1f48167b8ccb3c36e3d3e3f202f145da9dfd65c8af5e6f082201506a",
+      "bytes": 27235
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/7741/20261011T044640848160Z.json",
+      "sha256": "3b6356d4371bb02e58f3dffa9d8c3663e71bcd70bdb5dec0d88108214e24bd36",
+      "bytes": 1583
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/7741/20261011T045047680351Z.json",
+      "sha256": "3b6356d4371bb02e58f3dffa9d8c3663e71bcd70bdb5dec0d88108214e24bd36",
+      "bytes": 1583
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/7741/20261011T220841067639Z.json",
+      "sha256": "67dc1366f1f5065f2cd36cae41556bd6367e4475a569a3ce72d32ee6a7facc44",
+      "bytes": 1872
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/8252/01.json",
+      "sha256": "2611761cef0d8bc09ef905b58c401dd770362efe6d357e463063de69a7f402ba",
+      "bytes": 1850
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/8252/20261011T045100135389Z/01.json",
+      "sha256": "f25d846919735c1307101c6134a90b08a3bff40c0815a50406e25b776a3afe9a",
+      "bytes": 882
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/8252/20261012T001111813279Z/01.json",
+      "sha256": "24367800df64279ee7bf221e9bcb8ecba03e6942c51d1876b258a3e5e3cea4c6",
+      "bytes": 86960
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/8252/20261012T001111813279Z/02.json",
+      "sha256": "6a27ce3608153a551917bc776796d1a07caf2090fa55d1919cfbd658f248c06d",
+      "bytes": 81221
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/8252/20261012T001111813279Z/03.json",
+      "sha256": "a3f7f06782acf0298b5867b2875d614a0151dc09cb1f7c0afebcba6b56ed84ef",
+      "bytes": 73802
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/8252/20261011T044640880330Z.json",
+      "sha256": "711ad17567bde335a4ded81c3685f0311d3191f585856c738242aed2509e385b",
+      "bytes": 1632
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/8252/20261011T045047718113Z.json",
+      "sha256": "711ad17567bde335a4ded81c3685f0311d3191f585856c738242aed2509e385b",
+      "bytes": 1632
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/8252/20261012T001215169672Z.json",
+      "sha256": "8ae73c12af890aa06d45c8acd167139136737125100ca23ae3df6b067f75c5b2",
+      "bytes": 1921
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/8725/01.json",
+      "sha256": "8bd4cc74743938d1401c46b547f6b7ab9154ec10e9dec4ea7e161e9b8df1b486",
+      "bytes": 1818
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/8725/20261011T045100192070Z/01.json",
+      "sha256": "268dced204a4a2616abbc4d11dca716665120501af51d3f28cca73f21e2e2f63",
+      "bytes": 866
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/evidence/8725/20261012T010238438023Z/01.json",
+      "sha256": "f32a7245736fad51e1f48ee296089937bb1b7732e31d8943a898abcb969f5f10",
+      "bytes": 2714
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/8725/20261011T044640894002Z.json",
+      "sha256": "f5190bea3ef808bc8ed70dd59f4e3059b5994b1de40204ae430a83288b073d71",
+      "bytes": 1714
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/8725/20261011T045047736154Z.json",
+      "sha256": "f5190bea3ef808bc8ed70dd59f4e3059b5994b1de40204ae430a83288b073d71",
+      "bytes": 1714
+    },
+    {
+      "path": "research/ir-contacts-universe-2026-10-11/attempts/8725/20261012T010251781249Z.json",
+      "sha256": "28c67ec0812390382c069d8cbb65baf41588e6783d3b96ff07c7e1f375d2eaef",
+      "bytes": 2003
+    },
+    {
+      "path": "research/ir-recovery-2026-10-13/evidence/8725/20261012T152547398657Z.json",
+      "sha256": "57c357f4e5d04ee15a556f10e66dbb16cb6e160ba48d55657028e158c8ee4307",
+      "bytes": 3196
+    }
+  ],
+  "new_artifacts_sha256": {
+    "routes.json": "d7b8d85910f5da0bece1cc68e6ec5ed9ae1338d4bcf6d2ac9d7a9e5ec2755a20",
+    "README.md": "fa8b3981e2713d46e4a29520c16c8a5206512bdfb64a16190ee27f163bb70a34"
+  },
+  "GETs": 0,
+  "DB_accesses": 0,
+  "JS_API_execution": 0,
+  "tests_or_production_changes": 0,
+  "old_file_changes": 0,
+  "notes": [
+    "No raw HTML download or 6-company financial body review performed.",
+    "No dynamic DOM/hidden API inferred, and no URL spelling/host/port repaired.",
+    "Original capture .sha256 values are retained as declarations where original raw is unavailable, not independently verified hashes."
+  ]
+}

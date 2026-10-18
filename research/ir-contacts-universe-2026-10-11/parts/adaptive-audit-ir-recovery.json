@@ -1,0 +1,1084 @@
+{
+  "generated_at": "2026-10-11T08:15:32.629696+00:00",
+  "reviewer": "ir_operations_recovery",
+  "scope": {
+    "pinned_at": "2026-10-11T08:10:00.769389+00:00",
+    "authorized_security_code_prefixes": [
+      "30",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "8"
+    ],
+    "selected_security_codes": [
+      "3501",
+      "350A",
+      "3512",
+      "3513",
+      "3524",
+      "3529",
+      "352A",
+      "3537"
+    ],
+    "finite_selected_company_count": 8,
+    "requires_completed_record": true,
+    "successful_official_page_count_greater_than": 0,
+    "requires_pending_manual_review": true,
+    "selection_snapshot": "/tmp/ir-recovery-current-pin.json"
+  },
+  "reviewed_company_count": 8,
+  "status_counts": {
+    "unconfirmed": 4,
+    "confirmed": 4
+  },
+  "individual_access_counts": {
+    "not_stated": 6,
+    "explicitly_allowed": 2
+  },
+  "records": [
+    {
+      "security_code": "3501",
+      "company_name": "ＳＵＭＩＮＯＥ",
+      "attempted_at": "2026-10-11T08:07:44.450460+00:00",
+      "completed_at": "2026-10-11T08:08:32.705030+00:00",
+      "before_sha256": "15cb956fc83a42d3f34b037f128705a6c363ffdd10719280bf7f50672c7e7208",
+      "before_status": "unconfirmed",
+      "after_status": "unconfirmed",
+      "contact_url": null,
+      "individual_access": "not_stated",
+      "outreach_suitability": "unconfirmed",
+      "manual_review": {
+        "reviewer": "ir_operations_recovery",
+        "reviewed_at": "2026-10-11T08:15:32.629696+00:00",
+        "notes": "公式FAQの証券コード3501・SUMINOEの同一性を確認。保存5成功ページはIR情報/FAQ/株式手続きの案内で、共通お問い合わせへのIR用途の指定や質問フォームは実証できない。共通contactページの503は受付拒否・サイト不存在と解釈せず、保存済みexact URLを後続取得候補に残す。"
+      },
+      "conditions": [],
+      "limitations": [
+        "保存範囲でIRメール/質問フォーム用途は未実証。共通お問い合わせページはHTTP503で本文・controls未取得。窓口不存在ではない。",
+        "株式名義/配当手続きの信託銀行窓口は事業・業績IR質問窓口として採用しない。"
+      ],
+      "existing_evidence_quotes_preserved": true,
+      "automatic_navigation_conditions_disregarded": 0,
+      "added_evidence": [
+        {
+          "snapshot": "evidence/3501/20261011T080744450494Z/04.json",
+          "url": "https://suminoe.co.jp/ir/investor/faq/",
+          "retrieved_at": "2026-10-11T08:08:05.558429+00:00",
+          "quote": "証券コードは何ですか。 3501です。",
+          "role": "issuer_identity"
+        },
+        {
+          "snapshot": "evidence/3501/20261011T080744450494Z/01.json",
+          "url": "https://suminoe.co.jp/",
+          "retrieved_at": "2026-10-11T08:07:49.961317+00:00",
+          "quote": "お問い合わせ",
+          "role": "route_discovery"
+        }
+      ],
+      "form_review": null,
+      "source_snapshot_sha256": {
+        "evidence/3501/20261011T080744450494Z/01.json": "a96b981ea371b44820f344829e7ed2e5cec0c7d9c18479deb570e9609bee4f83",
+        "evidence/3501/20261011T080744450494Z/02.json": "4045a87ba134a4fe9d8b845eebfdff66c84d12bc69149a8c499ce3ba311483e5",
+        "evidence/3501/20261011T080744450494Z/03.json": "219e7916ffe7da968d46f1df44c891e32f7515049aa23d2b772b29832f975aa8",
+        "evidence/3501/20261011T080744450494Z/04.json": "1d7b7f87e182deeee9bca08f71bc8fcc83e233fbaf2b196ac3cb60024d00b8db",
+        "evidence/3501/20261011T080744450494Z/05.json": "65a365a96b88f245002d7ca31d62e4a049478dbaefb46f3dc0e921598dd3d5fa",
+        "evidence/3501/20261011T080744450494Z/06.json": "e6220fa2445ba415839bde0083b6018b5ae54983c15fba8dedb9e6099f14d2c1",
+        "evidence/3501/20261011T080744450494Z/07.json": "bca812df1a43241a8c905f76d556066f2e1e5650911977a80a751f7e92332b02"
+      },
+      "validation_issues": [],
+      "after_sha256": "743831ab338c286e4be74713dfeef89220b7c24ff23cb459035fc9e50066e349",
+      "saved": true
+    },
+    {
+      "security_code": "350A",
+      "company_name": "デジタルグリッド",
+      "attempted_at": "2026-10-11T08:08:22.795401+00:00",
+      "completed_at": "2026-10-11T08:08:49.455844+00:00",
+      "before_sha256": "f6cb95233db847b615ff58899b9f4a47d49bb7ae03d8b332d08887b3b4576029",
+      "before_status": "confirmed",
+      "after_status": "confirmed",
+      "contact_url": "https://www.digitalgrid.com/contact/ir/",
+      "individual_access": "explicitly_allowed",
+      "outreach_suitability": "candidate",
+      "manual_review": {
+        "reviewer": "ir_operations_recovery",
+        "reviewed_at": "2026-10-11T08:15:32.629696+00:00",
+        "notes": "公式IR専用ページの受付本文と同一form内の実email型input・お問い合わせ内容textareaを確認。区分selectの個人投資家/機関投資家/アナリスト/その他を公開本文と実selectで確認し、個人利用を明示ありに更新。未公表情報・重要事実・株価動向・IR外営業等の限定的回答不可を、個別返信全体の拒否と混同しない。"
+      },
+      "conditions": [
+        "お問い合わせの内容などにより、お返事に日時を頂戴する場合がございます。",
+        "また以下項目についてはご回答しかねますので、ご了解いただけますようお願い申し上げます。 開示されていない未公表情報に関するお問い合わせ 金融商品取引法第166条に定める「重要事実」に該当する可能性のあるお問い合わせ 株式市場における株価動向や値動き等に関するお問い合わせ IR活動以外（営業・勧誘等）に関するお問い合わせ",
+        "印のない項目はすべて必須です。 任意項目には 任意 と表示しています。"
+      ],
+      "limitations": [
+        "個人投資家選択肢を確認。会社名・部署名欄の選択区分による動的必須制御は未入力のため未検証。",
+        "送信・返信実績は未確認。"
+      ],
+      "existing_evidence_quotes_preserved": true,
+      "automatic_navigation_conditions_disregarded": 17,
+      "added_evidence": [
+        {
+          "snapshot": "evidence/350A/20261011T080822795437Z/03.json",
+          "url": "https://www.digitalgrid.com/contact/ir/",
+          "retrieved_at": "2026-10-11T08:08:42.907776+00:00",
+          "quote": "株主、投資家の皆さまからのIR活動に関するご意見・ご要望・ご質問などのお問い合わせを受け付けております。",
+          "role": "contact_scope"
+        },
+        {
+          "snapshot": "evidence/350A/20261011T080822795437Z/03.json",
+          "url": "https://www.digitalgrid.com/contact/ir/",
+          "retrieved_at": "2026-10-11T08:08:42.907776+00:00",
+          "quote": "区分 選択してください 個人投資家 機関投資家 アナリスト その他",
+          "role": "individual_access"
+        },
+        {
+          "snapshot": "evidence/350A/20261011T080822795437Z/03.json",
+          "url": "https://www.digitalgrid.com/contact/ir/",
+          "retrieved_at": "2026-10-11T08:08:42.907776+00:00",
+          "quote": "メールアドレス お問合せ項目 選択してください 決算 IR全般について その他 お問い合わせ内容",
+          "role": "form_fields"
+        },
+        {
+          "snapshot": "evidence/350A/20261011T080822795437Z/03.json",
+          "url": "https://www.digitalgrid.com/contact/ir/",
+          "retrieved_at": "2026-10-11T08:08:42.907776+00:00",
+          "quote": "お問い合わせの内容などにより、お返事に日時を頂戴する場合がございます。",
+          "role": "reply_policy"
+        },
+        {
+          "snapshot": "evidence/350A/20261011T080822795437Z/03.json",
+          "url": "https://www.digitalgrid.com/contact/ir/",
+          "retrieved_at": "2026-10-11T08:08:42.907776+00:00",
+          "quote": "また以下項目についてはご回答しかねますので、ご了解いただけますようお願い申し上げます。 開示されていない未公表情報に関するお問い合わせ 金融商品取引法第166条に定める「重要事実」に該当する可能性のあるお問い合わせ 株式市場における株価動向や値動き等に関するお問い合わせ IR活動以外（営業・勧誘等）に関するお問い合わせ",
+          "role": "reply_policy"
+        },
+        {
+          "snapshot": "evidence/350A/20261011T080822795437Z/03.json",
+          "url": "https://www.digitalgrid.com/contact/ir/",
+          "retrieved_at": "2026-10-11T08:08:42.907776+00:00",
+          "quote": "印のない項目はすべて必須です。 任意項目には 任意 と表示しています。",
+          "role": "form_condition"
+        }
+      ],
+      "form_review": {
+        "snapshot": "evidence/350A/20261011T080822795437Z/03.json",
+        "form_index": 0,
+        "question_form": true,
+        "reviewed_question_form": true,
+        "controls": [
+          {
+            "tag": "input",
+            "name": "お名前",
+            "placeholder": "山田太郎",
+            "id": "name"
+          },
+          {
+            "tag": "input",
+            "name": "お名前（ふりがな）",
+            "placeholder": "やまだたろう",
+            "id": "name-katakana"
+          },
+          {
+            "tag": "select",
+            "name": "区分",
+            "id": "classification"
+          },
+          {
+            "tag": "input",
+            "name": "会社名",
+            "placeholder": "デジタルグリッド株式会社",
+            "id": "companyName"
+          },
+          {
+            "tag": "input",
+            "name": "部署名",
+            "placeholder": "〇〇部",
+            "id": "department"
+          },
+          {
+            "tag": "input",
+            "type": "email",
+            "name": "ご連絡先メールアドレス",
+            "placeholder": "info@email.com",
+            "id": "email"
+          },
+          {
+            "tag": "select",
+            "name": "お問い合わせ項目",
+            "id": "inquiryItems"
+          },
+          {
+            "tag": "textarea",
+            "name": "お問い合わせ内容",
+            "placeholder": "お問い合わせ内容をご記載ください。",
+            "id": "details"
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "プライバシーポリシー同意",
+            "id": "agreement"
+          }
+        ],
+        "visible_form_text_immutable": "お名前 お名前（ふりがな） 区分 選択してください 個人投資家 機関投資家 アナリスト その他 会社名 部署名 メールアドレス お問合せ項目 選択してください 決算 IR全般について その他 お問い合わせ内容 プライバシーポリシー に同意の上、送信します ご入力内容によっては、担当者よりご回答までにお時間をいただく場合、 またはご対応が難しい場合がございます。あらかじめご了承ください。 入力内容を確認する"
+      },
+      "source_snapshot_sha256": {
+        "evidence/350A/20261011T080822795437Z/01.json": "d808348991ee07fd8512da1b882ae601e11d142d1d69af9d6eb01f85b1ae09db",
+        "evidence/350A/20261011T080822795437Z/02.json": "1bab8e8a1d996db9e220987409cda299072180c29d5c1a6ddd274a73d1b71904",
+        "evidence/350A/20261011T080822795437Z/03.json": "37dc0a35b391abe60dec2d147bddc3516cf00ae575cdc458c193c5bbedfad287"
+      },
+      "validation_issues": [],
+      "after_sha256": "4978371075fa3e21f4261ea1976c97c1f8ef21e5c7b27fd9f6c082f1b1a35a74",
+      "saved": true
+    },
+    {
+      "security_code": "3512",
+      "company_name": "日本フエルト",
+      "attempted_at": "2026-10-11T08:08:28.070548+00:00",
+      "completed_at": "2026-10-11T08:08:55.053460+00:00",
+      "before_sha256": "0f322a177202b9a46de7c81c5deb20f705eed36ef83cbbf2d7340d5d2e7bd2c1",
+      "before_status": "confirmed",
+      "after_status": "confirmed",
+      "contact_url": "https://www.felt.co.jp/contact/",
+      "individual_access": "not_stated",
+      "outreach_suitability": "candidate",
+      "manual_review": {
+        "reviewer": "ir_operations_recovery",
+        "reviewed_at": "2026-10-11T08:15:32.629696+00:00",
+        "notes": "共通問い合わせform内の実radioとIRについての選択、message textarea、email型inputを同一formとして確認。法人専用との記載はないが会社名・学校名が必須で、個人の選択肢や個人入力方法がなく個人可を推定しない。"
+      },
+      "conditions": [
+        "必須 会社名・学校名 任意 部署名・学科名",
+        "プライバシーポリシーに同意する ※必須"
+      ],
+      "limitations": [
+        "会社名・学校名が必須。個人投資家の選択肢・個人の場合の入力指示は保存本文にないため、個人利用条件は未確認。",
+        "送信・返信実績は未確認。"
+      ],
+      "existing_evidence_quotes_preserved": true,
+      "automatic_navigation_conditions_disregarded": 6,
+      "added_evidence": [
+        {
+          "snapshot": "evidence/3512/20261011T080828070577Z/03.json",
+          "url": "https://www.felt.co.jp/contact/",
+          "retrieved_at": "2026-10-11T08:08:48.299543+00:00",
+          "quote": "必須 お問い合わせ種別 企業情報やその他について 製紙用製品について 工業用繊維製品について IRについて 採用について 必須 お問い合わせ内容",
+          "role": "contact_scope"
+        },
+        {
+          "snapshot": "evidence/3512/20261011T080828070577Z/03.json",
+          "url": "https://www.felt.co.jp/contact/",
+          "retrieved_at": "2026-10-11T08:08:48.299543+00:00",
+          "quote": "必須 会社名・学校名 任意 部署名・学科名",
+          "role": "form_condition"
+        },
+        {
+          "snapshot": "evidence/3512/20261011T080828070577Z/03.json",
+          "url": "https://www.felt.co.jp/contact/",
+          "retrieved_at": "2026-10-11T08:08:48.299543+00:00",
+          "quote": "必須 メールアドレス 必須 ご連絡可能な電話番号 ※ハイフン不要 必須 住所",
+          "role": "form_fields"
+        },
+        {
+          "snapshot": "evidence/3512/20261011T080828070577Z/03.json",
+          "url": "https://www.felt.co.jp/contact/",
+          "retrieved_at": "2026-10-11T08:08:48.299543+00:00",
+          "quote": "プライバシーポリシーに同意する ※必須",
+          "role": "form_condition"
+        }
+      ],
+      "form_review": {
+        "snapshot": "evidence/3512/20261011T080828070577Z/03.json",
+        "form_index": 0,
+        "question_form": true,
+        "reviewed_question_form": true,
+        "controls": [
+          {
+            "tag": "input",
+            "type": "radio",
+            "name": "products",
+            "id": "企業情報やその他について"
+          },
+          {
+            "tag": "input",
+            "type": "radio",
+            "name": "products",
+            "id": "製紙用製品について"
+          },
+          {
+            "tag": "input",
+            "type": "radio",
+            "name": "products",
+            "id": "工業用繊維製品について"
+          },
+          {
+            "tag": "input",
+            "type": "radio",
+            "name": "products",
+            "id": "IRについて"
+          },
+          {
+            "tag": "input",
+            "type": "radio",
+            "name": "products",
+            "id": "採用について"
+          },
+          {
+            "tag": "textarea",
+            "name": "message",
+            "placeholder": "お問い合わせの内容をなるべく詳しく入力してください。",
+            "id": "f_message"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "company",
+            "placeholder": "例：日本フエルト株式会社",
+            "id": "f_company"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "affiliation",
+            "placeholder": "例：営業",
+            "id": "f_affiliation"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "name_sei",
+            "placeholder": "例：山田",
+            "id": "f_name_sei"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "name_mei",
+            "placeholder": "例：太郎",
+            "id": "f_name_mei"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "hurigana_sei",
+            "placeholder": "例：やまだ",
+            "id": "f_hurigana_sei"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "hurigana_mei",
+            "placeholder": "例：たろう",
+            "id": "f_hurigana_mei"
+          },
+          {
+            "tag": "input",
+            "type": "email",
+            "name": "email",
+            "placeholder": "例：aaa@felt.co.jp",
+            "id": "f_email"
+          },
+          {
+            "tag": "input",
+            "type": "tel",
+            "name": "tel",
+            "placeholder": "例：0359932030",
+            "id": "f_tel"
+          },
+          {
+            "tag": "input",
+            "type": "tel",
+            "name": "zip1",
+            "placeholder": "例：115",
+            "id": "f_zip1"
+          },
+          {
+            "tag": "input",
+            "type": "tel",
+            "name": "zip2",
+            "placeholder": "例：0055",
+            "id": "f_zip"
+          },
+          {
+            "tag": "select",
+            "name": "pref",
+            "id": "f_pref"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "address1",
+            "placeholder": "例：北区赤羽西1-7-1",
+            "id": "f_address1"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "address2",
+            "id": "f_address2"
+          },
+          {
+            "tag": "input",
+            "type": "checkbox",
+            "name": "consent_list[]",
+            "id": "f_consent"
+          },
+          {
+            "tag": "input",
+            "type": "submit",
+            "id": "btn_confirm"
+          }
+        ],
+        "visible_form_text_immutable": "Japan 必須 お問い合わせ種別 企業情報やその他について 製紙用製品について 工業用繊維製品について IRについて 採用について 必須 お問い合わせ内容 必須 会社名・学校名 任意 部署名・学科名 必須 氏名 姓 名 任意 ふりがな せい めい 必須 メールアドレス 必須 ご連絡可能な電話番号 ※ハイフン不要 必須 住所 郵便番号 - 都道府県 選択してください 北海道 青森県 岩手県 宮城県 秋田県 山形県 福島県 茨城県 栃木県 群馬県 埼玉県 千葉県 東京都 神奈川県 山梨県 長野県 新潟県 富山県 石川県 福井県 岐阜県 静岡県 愛知県 三重県 滋賀県 京都府 大阪府 兵庫県 奈良県 和歌山県 鳥取県 島根県 岡山県 広島県 山口県 徳島県 香川県 愛媛県 高知県 福岡県 佐賀県 長崎県 熊本県 大分県 宮崎県 鹿児島県 沖縄県 市区郡以降 建物名 ※建物名がある場合は必須 プライバシーポリシーに同意する ※必須"
+      },
+      "source_snapshot_sha256": {
+        "evidence/3512/20261011T080828070577Z/01.json": "b9761512523a837403d62b62e9fb975608cdf02fd23d4a648fb2a4da6de87296",
+        "evidence/3512/20261011T080828070577Z/02.json": "240e6240cb36efa55cb10233f60cab5cadeb51fa81e9c518f547db003dc0c467",
+        "evidence/3512/20261011T080828070577Z/03.json": "3f35ae2d2f7bfc405f36a13541a209d9969686195d4e1d863738e9e1dc901624"
+      },
+      "validation_issues": [],
+      "after_sha256": "82d06b8f3c2dbe028e063dc9ac3834c8e9d6379a235be674c8044e444eabd705",
+      "saved": true
+    },
+    {
+      "security_code": "3513",
+      "company_name": "イチカワ",
+      "attempted_at": "2026-10-11T08:08:30.839210+00:00",
+      "completed_at": "2026-10-11T08:09:32.912366+00:00",
+      "before_sha256": "7eda1fa803884e303b2b18b6a0def390230cf73a5e0d0cd478330929cbd6f7ea",
+      "before_status": "unconfirmed",
+      "after_status": "confirmed",
+      "contact_url": "https://www.ik-felt.co.jp/inquiry/",
+      "individual_access": "explicitly_allowed",
+      "outreach_suitability": "candidate",
+      "manual_review": {
+        "reviewer": "ir_operations_recovery",
+        "reviewed_at": "2026-10-11T08:15:32.629696+00:00",
+        "notes": "自動未確認を手動で回復。公式FAQは共通フォームでIRについてを選ぶと明記、公式IRページのIRに関するお問い合わせlinkも同じexact targetを指す。同一ASP.NET formの件名selectのIR、種別radioの個人/個人株主、textareaと末尾ItemID11/12の実text inputをメールアドレス/確認の可視必須ラベルで確認。外枠form中のサイト検索・IRナビを用途根拠とせず、実問い合わせブロックと公式親案内のみを根拠にする。会社名団体名の動的表示・必須挙動は未入力のため断定しない。"
+      },
+      "conditions": [
+        "会社名・団体名 ※ 部署名 氏名 ※",
+        "土曜・日曜・祝日、年末年始休暇・夏期休暇期間は、翌営業日以降の対応とさせていただきます。また、内容によりましては回答までにお時間をいただく場合がございます。あらかじめご了承ください。",
+        "お問い合わせ内容によりまして、Eメール、書面や電話、FAX等によりご回答させていただきます。"
+      ],
+      "limitations": [
+        "問い合わせ内容は400字以内。",
+        "個人/個人株主の選択肢は明示。会社名・団体名欄に必須印があり、個人選択時の動的必須挙動・入力方法は未入力のため未検証。",
+        "送信・返信実績は未確認。"
+      ],
+      "existing_evidence_quotes_preserved": true,
+      "automatic_navigation_conditions_disregarded": 0,
+      "added_evidence": [
+        {
+          "snapshot": "evidence/3513/20261011T080830839242Z/02.json",
+          "url": "https://www.ik-felt.co.jp/ir/private/faq/",
+          "retrieved_at": "2026-10-11T08:08:53.450949+00:00",
+          "quote": "IRに関する問い合わせ先はどこですか 当サイト上部にある「 お問い合わせフォーム 」からお願いいたします。フォームは共通となっておりますので、フォーム内で「IRについて」をご選択いただき、お問い合わせ内容と必要事項をご記入のうえ、ご送信下さい。",
+          "role": "official_ir_parent"
+        },
+        {
+          "snapshot": "evidence/3513/20261011T080830839242Z/04.json",
+          "url": "https://www.ik-felt.co.jp/ir/",
+          "retrieved_at": "2026-10-11T08:09:06.722856+00:00",
+          "quote": "IRお問い合わせについて IRに関するお問い合わせ イチカワ株式会社 総務部",
+          "role": "official_ir_parent"
+        },
+        {
+          "snapshot": "evidence/3513/20261011T080830839242Z/03.json",
+          "url": "https://www.ik-felt.co.jp/inquiry/",
+          "retrieved_at": "2026-10-11T08:09:01.278999+00:00",
+          "quote": "お問い合わせ件名 ※ 企業情報やその他について 製紙用製品について 工業用製品について IRについて お問い合わせ内容 ※ 400字以内で入力してください。",
+          "role": "contact_scope"
+        },
+        {
+          "snapshot": "evidence/3513/20261011T080830839242Z/03.json",
+          "url": "https://www.ik-felt.co.jp/inquiry/",
+          "retrieved_at": "2026-10-11T08:09:01.278999+00:00",
+          "quote": "お客様種別 ※ 個人のお客様 法人・団体のお客様 個人株主のお客様 報道機関のお客様 機関投資家・アナリストのお客様",
+          "role": "individual_access"
+        },
+        {
+          "snapshot": "evidence/3513/20261011T080830839242Z/03.json",
+          "url": "https://www.ik-felt.co.jp/inquiry/",
+          "retrieved_at": "2026-10-11T08:09:01.278999+00:00",
+          "quote": "会社名・団体名 ※ 部署名 氏名 ※",
+          "role": "form_condition"
+        },
+        {
+          "snapshot": "evidence/3513/20261011T080830839242Z/03.json",
+          "url": "https://www.ik-felt.co.jp/inquiry/",
+          "retrieved_at": "2026-10-11T08:09:01.278999+00:00",
+          "quote": "メールアドレス ※ （半角英数字） メールアドレス確認 ※ （半角英数字）",
+          "role": "form_fields"
+        },
+        {
+          "snapshot": "evidence/3513/20261011T080830839242Z/03.json",
+          "url": "https://www.ik-felt.co.jp/inquiry/",
+          "retrieved_at": "2026-10-11T08:09:01.278999+00:00",
+          "quote": "土曜・日曜・祝日、年末年始休暇・夏期休暇期間は、翌営業日以降の対応とさせていただきます。また、内容によりましては回答までにお時間をいただく場合がございます。あらかじめご了承ください。",
+          "role": "reply_policy"
+        },
+        {
+          "snapshot": "evidence/3513/20261011T080830839242Z/03.json",
+          "url": "https://www.ik-felt.co.jp/inquiry/",
+          "retrieved_at": "2026-10-11T08:09:01.278999+00:00",
+          "quote": "お問い合わせ内容によりまして、Eメール、書面や電話、FAX等によりご回答させていただきます。",
+          "role": "reply_policy"
+        }
+      ],
+      "form_review": {
+        "snapshot": "evidence/3513/20261011T080830839242Z/03.json",
+        "form_index": 0,
+        "question_form": true,
+        "reviewed_question_form": true,
+        "controls": [
+          {
+            "tag": "input",
+            "type": "submit",
+            "name": "btnDummyDefault",
+            "id": "btnDummyDefault"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "dnn$ctr777$SearchInput$txtSearch",
+            "id": "dnn_ctr777_SearchInput_txtSearch"
+          },
+          {
+            "tag": "input",
+            "type": "submit",
+            "name": "dnn$ctr777$SearchInput$cmdGo",
+            "id": "dnn_ctr777_SearchInput_cmdGo"
+          },
+          {
+            "tag": "select",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID44$fldValue$ddlSubjectDropDownList",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_0_ddlSubjectDropDownList_0"
+          },
+          {
+            "tag": "textarea",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID14$fldValue$txtMultilineTextBox",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_1_txtMultilineTextBox_1"
+          },
+          {
+            "tag": "input",
+            "type": "radio",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID15$fldValue$rblRadioButtonList",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_2_rblRadioButtonList_2_0_2"
+          },
+          {
+            "tag": "input",
+            "type": "radio",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID15$fldValue$rblRadioButtonList",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_2_rblRadioButtonList_2_1_2"
+          },
+          {
+            "tag": "input",
+            "type": "radio",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID15$fldValue$rblRadioButtonList",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_2_rblRadioButtonList_2_2_2"
+          },
+          {
+            "tag": "input",
+            "type": "radio",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID15$fldValue$rblRadioButtonList",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_2_rblRadioButtonList_2_3_2"
+          },
+          {
+            "tag": "input",
+            "type": "radio",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID15$fldValue$rblRadioButtonList",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_2_rblRadioButtonList_2_4_2"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID16$fldValue$txtSingleTextBox",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_3_txtSingleTextBox_3"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID17$fldValue$txtSingleTextBox",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_4_txtSingleTextBox_4"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID9$fldValue$txtSingleTextBox",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_5_txtSingleTextBox_5"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID10$fldValue$txtSingleTextBox",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_6_txtSingleTextBox_6"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID19$fldValue$txtSingleTextBox",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_PageID3_repCategory_ctl01_repField_ItemID19_fldValue_txtSingleTextBox"
+          },
+          {
+            "tag": "input",
+            "type": "submit",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID19$fldValue$btnSearchZipCode",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_7_btnSearchZipCode_7"
+          },
+          {
+            "tag": "select",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID20$fldValue$ddlDropDownList",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_8_ddlDropDownList_8"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID21$fldValue$txtSingleTextBox",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_9_txtSingleTextBox_9"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID22$fldValue$txtSingleTextBox",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_10_txtSingleTextBox_10"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID23$fldValue$txtSingleTextBox",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_11_txtSingleTextBox_11"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID24$fldValue$txtSingleTextBox",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_12_txtSingleTextBox_12"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID11$fldValue$txtSingleTextBox",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_13_txtSingleTextBox_13"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl01$repField$ItemID12$fldValue$txtSingleTextBox",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_repField_0_fldValue_14_txtSingleTextBox_14"
+          },
+          {
+            "tag": "input",
+            "type": "submit",
+            "name": "dnn$ctr798$ViewMailForm$grdMain$PageID3$repCategory$ctl02$btnInputConfirm",
+            "id": "dnn_ctr798_ViewMailForm_grdMain_repCategory_0_btnInputConfirm"
+          }
+        ],
+        "visible_form_text_immutable": "本文へ サイトマップ 文字サイズ 小 中 大 English お問い合わせ Focus on IK 抄紙工程とプレスパート マーケットと強み 販売体制と主要取引先 企業情報 トップメッセージ 経営理念 企業行動規範 会社概要 本社アクセスマップ 柏工場アクセスマップ 岩間工場アクセスマップ 役員紹介 歴史・沿革 グループ会社 会社案内・動画 製品情報 抄紙用フエルト Zimoシリーズ レギュラー製品 抄紙用ベルト シュープレス用ベルト トランスファー用ベルト 工業用製品 イベント・展示会 技術・製造 製品設計 製造工程 製造拠点 品質管理 サステナビリティ サステナビリティマネジメント トップメッセージ SDGsへの取り組み 環境 方針・体制 社会 品質 人材育成 職場環境整備 ダイバーシティ ガバナンス コーポレート・ガバナンス 株主との対話 コンプライアンス 内部統制 リスクマネジメント 株主・投資家情報 IRニュース 個人投資家の皆さまへ 個人投資家説明会 よくあるご質問 経営方針・戦略 トップメッセージ 長期ビジョン 中期経営計画 事業等のリスク IR活動ポリシー IRカレンダー 業績・財務 業績ハイライト 財務状況 キャッシュ・フローの状況 セグメント情報 IR資料 決算短信 決算説明資料 有価証券報告書 報告書 株式情報 銘柄基本情報 株主総会 株主還元 株価情報 定款・株式取扱規程 株式諸手続き 電子公告 IRサイトの使い方 免責事項 IRサイトマップ 採用情報 ニュースリリース お問い合わせ プライバシーポリシー サイトポリシー サイトマップ Focus on IK イチカワについて 抄紙工程とプレスパート マーケットと強み 販売体制と主要取引先 Company Information 企業情報トップ トップメッセージ 経営理念 会社概要 役員紹介 歴史・沿革 グループ会社 会社案内・動画 Products 製品情報トップ 抄紙用フエルト 抄紙用ベルト 工業用製品 イベント・展示会 Engineering & Manufacturing 技術・製造トップ 製品設計 製造工程 品質管理 Sustainability サステナビリティトップ サステナビリティマネジメント SDGsへの取り組み 環境 社会 ガバナンス Investor Relations 株主・投資家情報トップ IRニュース 個人投資家の皆さまへ 経営方針・戦略 IRカレンダー 業績・財務 IR資料 株式情報 電子公告 IRサイトの使い方 免責事項 IRサイトマップ ホーム > お問い合わせ お問い合わせ ※ 印のついている項目は、入力必須です。 お問い合わせ件名 ※ 企業情報やその他について 製紙用製品について 工業用製品について IRについて お問い合わせ内容 ※ 400字以内で入力してください。 お客様種別 ※ 個人のお客様 法人・団体のお客様 個人株主のお客様 報道機関のお客様 機関投資家・アナリストのお客様 会社名・団体名 ※ 部署名 氏名 ※ 氏名（ふりがな） ※ 郵便番号 ※ （半角数字） 都道府県 ※ <未選択> 北海道 青森県 岩手県 宮城県 秋田県 山形県 福島県 茨城県 栃木県 群馬県 埼玉県 千葉県 東京都 神奈川県 新潟県 富山県 石川県 福井県 山梨県 長野県 岐阜県 静岡県 愛知県 三重県 滋賀県 京都府 大阪府 兵庫県 奈良県 和歌山県 鳥取県 島根県 岡山県 広島県 山口県 徳島県 香川県 愛媛県 高知県 福岡県 佐賀県 長崎県 熊本県 大分県 宮崎県 鹿児島県 沖縄県 市区町村・番地 ※ 建物 電話番号 ※ （半角数字、ハイフンあり） FAX番号 （半角数字） メールアドレス ※ （半角英数字） メールアドレス確認 ※ （半角英数字） 土曜・日曜・祝日、年末年始休暇・夏期休暇期間は、翌営業日以降の対応とさせていただきます。また、内容によりましては回答までにお時間をいただく場合がございます。あらかじめご了承ください。 お問い合わせ内容によりまして、Eメール、書面や電話、FAX等によりご回答させていただきます。 個人情報取扱方針 当社は、個人情報の取扱いについて、取得に際して本人から同意を得た目的の範囲内で利用し、またその保有期間中は適切な管理に努め、本人の権利・利益を保護することを社会的責務と認識しております。この認識のもと、当社のすべての役員、従業員は、個人情報の保護に取り組んでまいります。 Page Top Focus on IK 抄紙工程とプレスパート マーケットと強み 販売体制と主要取引先 企業情報 トップメッセージ 経営理念 会社概要 役員紹介 歴史・沿革 グループ会社 会社案内・動画 製品情報 抄紙用フエルト 抄紙用ベルト 工業用製品 イベント・展示会 技術・製造 製品設計 製造工程 品質管理 サステナビリティ サステナビリティマネジメント SDGsへの取り組み 環境 社会 ガバナンス 株主・投資家情報 IRニュース 個人投資家の皆さまへ 経営方針・戦略 IRカレンダー 業績・財務 IR資料 株式情報 電子公告 IRサイトの使い方 免責事項 IRサイトマップ 採用情報 ニュースリリース お問い合わせ サイトポリシー プライバシーポリシー お問い合わせ ©2016-2024 ICHIKAWA CO.,LTD."
+      },
+      "source_snapshot_sha256": {
+        "evidence/3513/20261011T080830839242Z/01.json": "c6c9158e9d29f6a27e29b5becd9c0497d348a5e1b0e61912d2f22197f64daaed",
+        "evidence/3513/20261011T080830839242Z/02.json": "01541e6033ca1a4901d784a9a03fdd8f5822fe9fff7140aa3d4345ee87bc7a06",
+        "evidence/3513/20261011T080830839242Z/03.json": "9076f6575eb5f8598c8cd5943c7d66cd57fb19101cbb8c79293af0b27990453c",
+        "evidence/3513/20261011T080830839242Z/04.json": "c99ef3289d77a7676d9e7bf32d5b305016c88286ce31a27280c272f2ee58c4e3",
+        "evidence/3513/20261011T080830839242Z/05.json": "06a8d7213c1616f54fea593f6d1ffb4adfaeda00d72493cb8800b5945b944661",
+        "evidence/3513/20261011T080830839242Z/06.json": "b3693e3e64a5e6f4ed9c75bfbb6295c1761a74c7faeceadd4aab293a7f6d77b9",
+        "evidence/3513/20261011T080830839242Z/07.json": "9f43087de871b99121cffc3b172b2e430e3c9aef513a572ce36c4c62cfe5e582"
+      },
+      "validation_issues": [],
+      "after_sha256": "61f3cd80435d2aba92e6b6efee82612d602dec876453c17d8eddeb630f06a4ec",
+      "saved": true
+    },
+    {
+      "security_code": "3524",
+      "company_name": "日東製網",
+      "attempted_at": "2026-10-11T08:08:39.072918+00:00",
+      "completed_at": "2026-10-11T08:09:51.168467+00:00",
+      "before_sha256": "f09f2e21fc89f1ba020ccbe68263e53ecf148a44d42ba6f7fbffea8a4dfbcf6e",
+      "before_status": "unconfirmed",
+      "after_status": "unconfirmed",
+      "contact_url": null,
+      "individual_access": "not_stated",
+      "outreach_suitability": "unconfirmed",
+      "manual_review": {
+        "reviewer": "ir_operations_recovery",
+        "reviewed_at": "2026-10-11T08:15:32.629696+00:00",
+        "notes": "日東製網の会社名・IRページの同一性を確認。公開contact案内は事業/製品/その他の3経路で、保存7ページに金融IR質問の用途指定・公開IRメール・実質問フォームがない。その他フォームへのexact linkは後続用途確認候補であって、IR窓口の証明にはしない。"
+      },
+      "conditions": [],
+      "limitations": [
+        "その他問い合わせのリンク先は保存範囲に未取得。IR用途・個人条件・実controlsは未確認。窓口不存在ではない。"
+      ],
+      "existing_evidence_quotes_preserved": true,
+      "automatic_navigation_conditions_disregarded": 0,
+      "added_evidence": [
+        {
+          "snapshot": "evidence/3524/20261011T080839072986Z/03.json",
+          "url": "https://nittoseimo.co.jp/contact/",
+          "retrieved_at": "2026-10-11T08:09:18.127442+00:00",
+          "quote": "その他の お問い合わせ Inquiries その他のお問い合わせは こちらから 詳しく見る",
+          "role": "route_discovery"
+        }
+      ],
+      "form_review": null,
+      "source_snapshot_sha256": {
+        "evidence/3524/20261011T080839072986Z/01.json": "9979d8d3c6f5834f274b981213b3eb00c2430c1b8ceada855f6e4863bac42eb9",
+        "evidence/3524/20261011T080839072986Z/02.json": "286235ea104031827ded25b53559dea3b1c7ded215a0ee584cb122d365c5857a",
+        "evidence/3524/20261011T080839072986Z/03.json": "a08c64189001f7326b253ccc919b8af73cc000989905ebf41f3d9c1875bfbc8f",
+        "evidence/3524/20261011T080839072986Z/04.json": "d7fd0a96746ed6091bc32e27688e4c2a4b26a09f43b5c37a5eb4eada4f083029",
+        "evidence/3524/20261011T080839072986Z/05.json": "b16c94e3305671321531e96e343bafa3ea35a11f6d2813cdc8f053f9c7e04c9d",
+        "evidence/3524/20261011T080839072986Z/06.json": "0841650af7aae9158bffa7dc806c4a7676b46ce1df0012c0eb06cc7bb461a215",
+        "evidence/3524/20261011T080839072986Z/07.json": "7c68682061383c70a71213e67403872450b46b2d31e6b04c2d6fc4b24cb9df7a"
+      },
+      "validation_issues": [],
+      "after_sha256": "cc3ea59605917dd7178abb4540a2b46fc2df55490b0b25c62f5d230907662d4d",
+      "saved": true
+    },
+    {
+      "security_code": "3529",
+      "company_name": "アツギ",
+      "attempted_at": "2026-10-11T08:08:49.457311+00:00",
+      "completed_at": "2026-10-11T08:09:42.662617+00:00",
+      "before_sha256": "eb06ebe4d59e1589f77079686153034923625530e02b1ca6556158b8da9f2c4c",
+      "before_status": "unconfirmed",
+      "after_status": "unconfirmed",
+      "contact_url": null,
+      "individual_access": "not_stated",
+      "outreach_suitability": "unconfirmed",
+      "manual_review": {
+        "reviewer": "ir_operations_recovery",
+        "reviewed_at": "2026-10-11T08:15:32.629696+00:00",
+        "notes": "アツギの公式IR/問い合わせ案内を確認。共通インターネット問い合わせはform画面へのexact linkを案内するが、保存本文に業績/株式IRの用途指定や実form controlsはない。一般窓口・商品窓口・取引先通報を混同せず、一般リンクの返信/二次利用条件をIR窓口全体の受付制限として適用しない。"
+      },
+      "conditions": [],
+      "limitations": [
+        "共通internetフォームへのリンク先は未取得。IR質問用途・個人条件・同一質問/メール欄は未確認。窓口不存在ではない。",
+        "共通窓口の回答転載・二次利用禁止は後続フォーム確認時に対象用途とともに点検する。"
+      ],
+      "existing_evidence_quotes_preserved": true,
+      "automatic_navigation_conditions_disregarded": 0,
+      "added_evidence": [
+        {
+          "snapshot": "evidence/3529/20261011T080849457341Z/03.json",
+          "url": "https://www.atsugi.co.jp/contact.html",
+          "retrieved_at": "2026-10-11T08:09:10.331002+00:00",
+          "quote": "インターネットでのお問い合わせは、下の「お問い合わせ」ボタンをクリックし、入力フォーム画面に進み、必要事項をご記入の上、送信してください。",
+          "role": "route_discovery"
+        }
+      ],
+      "form_review": null,
+      "source_snapshot_sha256": {
+        "evidence/3529/20261011T080849457341Z/01.json": "4b3fb67ef9ef957582e346fb4c3d20f08372cad8d5f3c3f53df730879c1e876e",
+        "evidence/3529/20261011T080849457341Z/02.json": "53e54a9e90cd1a38052a5551999e0fffb66be0dbd7b7dcd90fb44f660e17d499",
+        "evidence/3529/20261011T080849457341Z/03.json": "1b5def6ba0887d3502c10227b325a6b38a2852f4c8651302fc7d8bdff6849adc",
+        "evidence/3529/20261011T080849457341Z/04.json": "66cf2ae2e9b20e6aee15159a9f91d13cca931b0d3ef2843c9ad1c6df6a274d17",
+        "evidence/3529/20261011T080849457341Z/05.json": "550aab3d2ebb8f7b30f3d575605a40fe8b8b048a49269864a10b92a746680a44",
+        "evidence/3529/20261011T080849457341Z/06.json": "fe63c9eaa08a45019c4f45aad66062c574cb74585ec8e2feedc1c26b5d066250",
+        "evidence/3529/20261011T080849457341Z/07.json": "e741f87938113be035da968d9727da418768b1aedb360915b2dc09a6d5e557f4"
+      },
+      "validation_issues": [],
+      "after_sha256": "09c58684a5d06d30beb819d2735b51a87fcca2eec66b8b3decb149f8ac06269a",
+      "saved": true
+    },
+    {
+      "security_code": "352A",
+      "company_name": "ＬＯＩＶＥ",
+      "attempted_at": "2026-10-11T08:08:55.054889+00:00",
+      "completed_at": "2026-10-11T08:09:28.870570+00:00",
+      "before_sha256": "b1e61f4d9ed6adcf95fd802718447e2f33ed6d7e9f0c784565b166afdee5fc54",
+      "before_status": "unconfirmed",
+      "after_status": "unconfirmed",
+      "contact_url": null,
+      "individual_access": "not_stated",
+      "outreach_suitability": "unconfirmed",
+      "manual_review": {
+        "reviewer": "ir_operations_recovery",
+        "reviewed_at": "2026-10-11T08:15:32.629696+00:00",
+        "notes": "旧seed be-lifecreate.co.jpからの取得結果はLOIVE新公式サイトloive.co.jpを示し、会社名の同一性を確認。保存homepageに実/ir/および/contact/リンクがあるが可視ラベルが空で、受付本文・実formは未取得。法人割窓口は顧客用でIR窓口と扱わず、exact unlabeled linkを発見候補に残す。"
+      },
+      "conditions": [],
+      "limitations": [
+        "新公式homepageのIR/contactリンクは可視ラベル空。受付用途・controlsは未取得で、窓口不存在ではない。",
+        "法人割についてのお問合せ・採用・動画埋込はIR経路として採用しない。"
+      ],
+      "existing_evidence_quotes_preserved": true,
+      "automatic_navigation_conditions_disregarded": 0,
+      "added_evidence": [
+        {
+          "snapshot": "evidence/352A/20261011T080855054930Z/01.json",
+          "url": "https://loive.co.jp/",
+          "retrieved_at": "2026-10-11T08:09:21.749273+00:00",
+          "quote": "株式会社 LOIVE（ロイブ）",
+          "role": "issuer_identity"
+        }
+      ],
+      "form_review": null,
+      "source_snapshot_sha256": {
+        "evidence/352A/20261011T080855054930Z/01.json": "0b9de4af8a06878de6945342d55a5cfdf1a34459903edf8249a7c89afa1f6f83"
+      },
+      "validation_issues": [],
+      "after_sha256": "b36850155ef30d0f3c0796de9eff2ff4363c5879bc5907990575878b6703646e",
+      "saved": true
+    },
+    {
+      "security_code": "3537",
+      "company_name": "昭栄薬品",
+      "attempted_at": "2026-10-11T08:09:32.914284+00:00",
+      "completed_at": "2026-10-11T08:09:59.995500+00:00",
+      "before_sha256": "3be39e1ea3a79cd7164a8cb54a2224309c7a18aa27e73f34bff07beaa89df910",
+      "before_status": "confirmed",
+      "after_status": "confirmed",
+      "contact_url": "https://www.shoei-yakuhin.co.jp/contact/jp/",
+      "individual_access": "not_stated",
+      "outreach_suitability": "candidate",
+      "manual_review": {
+        "reviewer": "ir_operations_recovery",
+        "reviewed_at": "2026-10-11T08:15:32.629696+00:00",
+        "notes": "昭栄薬品の同一性を確認。実selectのIR・株式区分と同一form内のtext_area1 textarea・email1_1/2の実text inputをメール必須/確認可視ラベルで確認。会社名欄に必須印はないが個人選択肢や明示許可はないためnot_statedを維持。IR関連商品紹介・顧客用カテゴリ単独ではなく実IR区分を根拠にする。"
+      },
+      "conditions": [
+        "※ は入力必須項目です。"
+      ],
+      "limitations": [
+        "個人用の選択肢や明示的受付条件は保存本文にない。会社名の必須印なしだけから個人許可と判定しない。",
+        "送信・返信実績は未確認。"
+      ],
+      "existing_evidence_quotes_preserved": true,
+      "automatic_navigation_conditions_disregarded": 10,
+      "added_evidence": [
+        {
+          "snapshot": "evidence/3537/20261011T080932914384Z/03.json",
+          "url": "https://www.shoei-yakuhin.co.jp/contact/jp/",
+          "retrieved_at": "2026-10-11T08:09:53.596704+00:00",
+          "quote": "お問い合わせ区分 ※ 【選択して下さい】 化学品事業 日用品事業 土木建設資材事業 海外事業 環境ソリューション サンプル依頼 IR・株式 SDGs その他 お問い合わせ内容 ※",
+          "role": "contact_scope"
+        },
+        {
+          "snapshot": "evidence/3537/20261011T080932914384Z/03.json",
+          "url": "https://www.shoei-yakuhin.co.jp/contact/jp/",
+          "retrieved_at": "2026-10-11T08:09:53.596704+00:00",
+          "quote": "メールアドレス ※ 確認のためもう一度 メールアドレスを入力 ※ 会社名 所属 役職 氏名 ※",
+          "role": "form_fields"
+        },
+        {
+          "snapshot": "evidence/3537/20261011T080932914384Z/03.json",
+          "url": "https://www.shoei-yakuhin.co.jp/contact/jp/",
+          "retrieved_at": "2026-10-11T08:09:53.596704+00:00",
+          "quote": "※ は入力必須項目です。",
+          "role": "form_condition"
+        }
+      ],
+      "form_review": {
+        "snapshot": "evidence/3537/20261011T080932914384Z/03.json",
+        "form_index": 0,
+        "question_form": true,
+        "reviewed_question_form": true,
+        "controls": [
+          {
+            "tag": "select",
+            "name": "select1",
+            "required": "required"
+          },
+          {
+            "tag": "textarea",
+            "name": "text_area1"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email1_1",
+            "id": "mail"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "email1_2",
+            "id": "re_mail"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "text_field1",
+            "id": "company_name"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "text_field2",
+            "id": "company_affiliation"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "text_field3",
+            "id": "company_position"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "text_field4",
+            "id": "name"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "text_field5",
+            "id": "name_kana"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "text_field6",
+            "id": "zip"
+          },
+          {
+            "tag": "input",
+            "type": "text",
+            "name": "text_field7",
+            "id": "address"
+          },
+          {
+            "tag": "input",
+            "type": "tel",
+            "name": "tel_field1",
+            "id": "tel"
+          },
+          {
+            "tag": "input",
+            "type": "tel",
+            "name": "tel_field2",
+            "id": "fax"
+          },
+          {
+            "tag": "input",
+            "type": "reset"
+          },
+          {
+            "tag": "input",
+            "type": "submit"
+          }
+        ],
+        "visible_form_text_immutable": "お問い合わせ区分 ※ 【選択して下さい】 化学品事業 日用品事業 土木建設資材事業 海外事業 環境ソリューション サンプル依頼 IR・株式 SDGs その他 お問い合わせ内容 ※ メールアドレス ※ 確認のためもう一度 メールアドレスを入力 ※ 会社名 所属 役職 氏名 ※ 氏名（ふりがな） 郵便番号 住所 電話番号 FAX番号"
+      },
+      "source_snapshot_sha256": {
+        "evidence/3537/20261011T080932914384Z/01.json": "164b4ecee844ddb9ce5ba8ab4bf3687717e3e394b85f9d9491ca0bc0b7f6ddcf",
+        "evidence/3537/20261011T080932914384Z/02.json": "98c82ba109f2d04f4277ef97ed4dae41786a2c8a508ed418d6f26b0b21af81c0",
+        "evidence/3537/20261011T080932914384Z/03.json": "09c77e11b8702f4852986291de909c92960b6160af77b214c49e929d52d57ffd"
+      },
+      "validation_issues": [],
+      "after_sha256": "995003bd8bcd65ad0f3438822f4124bef72664e0c899a13e22caa9d5db8c2e61",
+      "saved": true
+    }
+  ],
+  "followup_candidates": [
+    {
+      "security_code": "3501",
+      "target_url": "https://suminoe.co.jp/contact/",
+      "source_snapshot": "evidence/3501/20261011T080744450494Z/01.json",
+      "source_url": "https://suminoe.co.jp/",
+      "retrieved_at": "2026-10-11T08:07:49.961317+00:00",
+      "quote": "お問い合わせ",
+      "source_link": {
+        "url": "https://suminoe.co.jp/contact/",
+        "href": "https://suminoe.co.jp/contact/",
+        "label": "お問い合わせ"
+      },
+      "source_snapshot_sha256": "a96b981ea371b44820f344829e7ed2e5cec0c7d9c18479deb570e9609bee4f83",
+      "followup_kind": "retry_failed_general_contact",
+      "IR_purpose_verified": false,
+      "proposal_only": true,
+      "notes": "共通contact本文がHTTP503で未取得。IR用途は未実証。正規レートとcollector停止規則に従う後続再試行候補。"
+    },
+    {
+      "security_code": "3524",
+      "target_url": "https://nittoseimo.co.jp/contact/other/",
+      "source_snapshot": "evidence/3524/20261011T080839072986Z/03.json",
+      "source_url": "https://nittoseimo.co.jp/contact/",
+      "retrieved_at": "2026-10-11T08:09:18.127442+00:00",
+      "quote": "その他の お問い合わせ Inquiries その他のお問い合わせは こちらから 詳しく見る",
+      "source_link": {
+        "url": "https://nittoseimo.co.jp/contact/other/",
+        "href": "/contact/other/",
+        "label": "その他の お問い合わせ Inquiries その他のお問い合わせは こちらから 詳しく見る"
+      },
+      "source_snapshot_sha256": "a08c64189001f7326b253ccc919b8af73cc000989905ebf41f3d9c1875bfbc8f",
+      "followup_kind": "general_contact_scope_discovery",
+      "IR_purpose_verified": false,
+      "proposal_only": true,
+      "notes": "公式その他経路の実IR選択肢・質問/メールcontrolsを確認する候補。一般カテゴリのみでIR受付へ推定しない。"
+    },
+    {
+      "security_code": "3529",
+      "target_url": "https://www.atsugi.co.jp/inquiry/input/",
+      "source_snapshot": "evidence/3529/20261011T080849457341Z/03.json",
+      "source_url": "https://www.atsugi.co.jp/contact.html",
+      "retrieved_at": "2026-10-11T08:09:10.331002+00:00",
+      "quote": "インターネットでのお問い合わせは、下の「お問い合わせ」ボタンをクリックし、入力フォーム画面に進み、必要事項をご記入の上、送信してください。",
+      "source_link": {
+        "url": "https://www.atsugi.co.jp/inquiry/input/",
+        "href": "/inquiry/input/",
+        "label": "お問い合わせ"
+      },
+      "source_snapshot_sha256": "1b5def6ba0887d3502c10227b325a6b38a2852f4c8651302fc7d8bdff6849adc",
+      "followup_kind": "general_contact_scope_discovery",
+      "IR_purpose_verified": false,
+      "proposal_only": true,
+      "notes": "公式internet経路の実IR選択肢・質問/メールcontrolsを確認する候補。商品窓口/通報と区別する。"
+    },
+    {
+      "security_code": "352A",
+      "target_url": "https://loive.co.jp/ir/",
+      "source_snapshot": "evidence/352A/20261011T080855054930Z/01.json",
+      "source_url": "https://loive.co.jp/",
+      "retrieved_at": "2026-10-11T08:09:21.749273+00:00",
+      "quote": "株式会社 LOIVE（ロイブ）",
+      "source_link": {
+        "url": "https://loive.co.jp/ir/",
+        "href": "/ir/",
+        "label": ""
+      },
+      "source_snapshot_sha256": "0b9de4af8a06878de6945342d55a5cfdf1a34459903edf8249a7c89afa1f6f83",
+      "followup_kind": "official_ir_path_discovery",
+      "IR_purpose_verified": false,
+      "proposal_only": true,
+      "notes": "新公式サイトに実在する保存済み/ir/リンク。可視ラベル空なので引用は会社同一性のみ、IR用途はURLの意味から確定していない。"
+    },
+    {
+      "security_code": "352A",
+      "target_url": "https://loive.co.jp/contact/",
+      "source_snapshot": "evidence/352A/20261011T080855054930Z/01.json",
+      "source_url": "https://loive.co.jp/",
+      "retrieved_at": "2026-10-11T08:09:21.749273+00:00",
+      "quote": "株式会社 LOIVE（ロイブ）",
+      "source_link": {
+        "url": "https://loive.co.jp/contact/",
+        "href": "/contact/",
+        "label": ""
+      },
+      "source_snapshot_sha256": "0b9de4af8a06878de6945342d55a5cfdf1a34459903edf8249a7c89afa1f6f83",
+      "followup_kind": "general_contact_scope_discovery",
+      "IR_purpose_verified": false,
+      "proposal_only": true,
+      "notes": "新公式サイトの保存済み/contact/リンク。可視ラベル空でIR用途/実フォームは未確認。"
+    }
+  ],
+  "network_GET_count": 0,
+  "external_submission_count": 0,
+  "original_snapshot_modified_count": 0,
+  "existing_evidence_quotes_modified_count": 0,
+  "skipped_update_races": [],
+  "verification": {
+    "snapshot_count": 38,
+    "current_issues": [],
+    "error_count": 0,
+    "warning_count": 0,
+    "post_save_verified_at": "2026-10-11T08:15:59.300978+00:00",
+    "exact_quote_count": 62,
+    "preserved_existing_quote_count": 36,
+    "immutable_saved_snapshot_count": 38,
+    "record_update_race_count": 0
+  },
+  "saved_company_count": 8
+}

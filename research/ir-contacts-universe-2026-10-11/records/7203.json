@@ -1,0 +1,77 @@
+{
+  "security_code": "7203",
+  "company_name": "トヨタ自動車",
+  "market": "プライム（内国株式）",
+  "jpx_sector": "輸送用機器",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://global.toyota/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T20:19:18.962004+00:00",
+  "completed_at": "2026-10-11T20:19:47.162666+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/7203/20261011T201918962047Z/01.json",
+      "url": "https://global.toyota/",
+      "retrieved_at": "2026-10-11T20:19:36.187728+00:00",
+      "http_status": 200,
+      "quote": "トヨタ自動車株式会社 公式企業サイト",
+      "role": "official_issuer_only",
+      "snapshot_json_sha256": "a51e762cb0fca9c6d87c64ed7b609d8834ab164e4d52f117cebe67bc0a341400"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://global.toyota/",
+      "final_url": "https://global.toyota/",
+      "snapshot": "evidence/7203/20261011T201918962047Z/01.json",
+      "retrieved_at": "2026-10-11T20:19:36.187728+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [
+    "保存current1はトヨタ自動車株式会社公式企業サイトのhome本文と実21linksのみ。ニュース/会社の同一性は確認するが、金融IR質問の受付操作・公開IRメール・nativeフォームは保存されていない。",
+    "current native forms空、root固定の保存資料だけではIR質問窓口と金融IR用途/個人条件を確認できない。一般的な既知企業情報やURL想像、別取得を根拠に補わない。"
+  ],
+  "limitations": [
+    "取得できた公開ページではIR用途とメール/質問フォームの結びつきを実証できなかった。窓口不存在の判定ではない。",
+    "IR質問窓口/個人利用未確認のU。公式home取得成功と金融IR質問reception未実証を両方保持し、窓口不存在とは断定しない。",
+    "saved-source-only人手監査。新GET・送信0、送信・返信実績、相手先の投資提案受諾は未確認。"
+  ],
+  "discovery": {
+    "security_code": "7203",
+    "official_url": "https://global.toyota/",
+    "discovery_url": "https://memo.eightban.com/kabu/marketsprimeurl",
+    "discovered_at": "2026-10-11T03:55:06.222171+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "トヨタ自動車",
+    "source_data_as_of": "2026-03-31"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/7203/20261011T201918962047Z/01.json",
+      "normalized_name": "トヨタ自動車",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 3,
+  "previous_attempts": [
+    "attempts/7203/20261011T045047643735Z.json",
+    "attempts/7203/20261011T201947162830Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_consumer_70_batch24",
+    "reviewed_at": "2026-10-12T01:51:01.091054+00:00",
+    "reviewed_at_jst": "2026-10-12T10:51:01.091054+09:00",
+    "notes": "公式home1を全文確認U。金融IR受付/質問返信native/公開IRmailboxを確認できず、他URLや個人許可を補わない。 保存公式原文だけを使用し、追加GET・送信・実入力検証は行わない。"
+  }
+}

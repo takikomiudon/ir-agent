@@ -1,0 +1,587 @@
+--- before/src/ir_agent/models.py
++++ after/src/ir_agent/models.py
+@@ -182,6 +182,10 @@
+         text(result.get(key), f"question.{key}")
+     integer(result.get("thesis_version"), "question.thesis_version", minimum=1)
+     timestamp(result.get("created_at"), "question.created_at")
++    if "public_information_review" in result:
++        from .public_information_review import validate_public_information_review
++        result["public_information_review"] = validate_public_information_review(
++            result["public_information_review"], created_at=result["created_at"])
+     strings(result.get("evidence_ids"), "question.evidence_ids", nonempty=True)
+     branches = result.get("branches")
+     if not isinstance(branches, list) or len(branches) < 2:
+--- before/src/ir_agent/decision.py
++++ after/src/ir_agent/decision.py
+@@ -395,6 +395,13 @@
+         raise ValueError("Question parameter_paths must identify existing valuation inputs")
+     outcomes = []
+     incomplete = []
++    public_review = None
++    if "public_information_review" in question:
++        from .public_information_review import check_public_information_review
++        public_review = check_public_information_review(question, request.get("sources"),
++                                                       as_of=as_of.isoformat())
++        if public_review["reason_codes"]:
++            incomplete.append("public_information_review_binding")
+     for branch in question["branches"]:
+         if branch["action"] == "unresolved":
+             outcomes.append({"branch_id": branch["id"], "proposed_action": "unresolved", "status": "unresolved",
+@@ -421,7 +428,10 @@
+     actions = {x["proposed_action"] for x in outcomes if x["status"] == "reviewed"}
+     if question.get("public_answer_status") != "not_found":
+         incomplete.append("public_information_review")
+-    return {"question_id": question["id"], "company_id": thesis["company_id"], "as_of": as_of.isoformat(),
++    result = {"question_id": question["id"], "company_id": thesis["company_id"], "as_of": as_of.isoformat(),
+             "question_value": "needs_review" if incomplete else "decision_distinguishing" if len(actions) > 1 else "no_decision_change",
+             "incomplete_reviews": incomplete, "outcomes": outcomes,
+             "interpretation": "Conditional analysis before receipt; no branch has been observed or applied."}
++    if public_review is not None:
++        result["public_information_review_check"] = public_review
++    return result
+--- before/src/ir_agent/decision_lifecycle.py
++++ after/src/ir_agent/decision_lifecycle.py
+@@ -42,6 +42,69 @@
+             sources[source_id] = source
+             pending.extend(source_origins(source))
+         return [sources[key] for key in sorted(sources)]
++
++    def public_information_sources_for(self, question: dict) -> list[dict]:
++        """Resolve review-only roots without adding them to financial evidence."""
++        from .public_information_review import validate_public_information_review
++        review = validate_public_information_review(question['public_information_review'],
++                                                    created_at=question['created_at'])
++        roots = {item['source_id'] for item in review['sources']}
++        pending, visited, sources = list(roots), set(), {}
++        while pending:
++            identity = pending.pop()
++            if identity in visited:
++                continue
++            visited.add(identity)
++            try:
++                source = self.store.source(identity)
++            except ValueError:
++                if identity in roots:
++                    raise ValueError('Unknown public information review source') from None
++                # The pure check and PIT reader retain a missing-origin hold.
++                continue
++            sources[identity] = source
++            pending.extend(source_origins(source))
++        return [sources[key] for key in sorted(sources)]
++
++    def review_public_information(self, question: dict, *, as_of: str, now: str) -> dict:
++        """Keep claimed review time, saved presence and current corrections apart."""
++        from .public_information_review import check_public_information_review
++        if timestamp(as_of) > timestamp(now):
++            raise ValueError('Public information review boundary exceeds trusted runtime')
++        sources = self.public_information_sources_for(question)
++        check = check_public_information_review(question, sources, as_of=as_of)
++        reviewed = question['public_information_review']['reviewed_at']
++        reasons = check['reason_codes']
++        availability = {}
++        source_map = {source['id']: source for source in sources}
++        for identity in check['source_ids']:
++            result = self.store.source_availability(source_map[identity], as_of=reviewed,
++                                                    knowledge_at=reviewed, now=now)
++            availability[identity] = result
++            if result['available'] is not True:
++                reasons.append('public_information_review_source_availability_unresolved')
++        # Do not let a same-company source impersonate another company's reply
++        # classification subject through metadata.reply_id.
++        for source in sources:
++            if source['source_type'] != 'ir_reply':
++                continue
++            subject = source.get('metadata', {}).get('reply_id')
++            if not subject:
++                reasons.append('public_information_review_reply_binding_unknown')
++                continue
++            reply = self.store.reply(text(subject, 'public review reply_id'))
++            if self.store.question(reply['question_id'])['company_id'] != question['company_id']:
++                raise ValueError('Public information review reply belongs to another company')
++        corrections = {}
++        for label, boundary in (('at_review', reviewed), ('at_boundary', as_of), ('at_runtime', now)):
++            corrections[label] = source_assessments(self.store, list(source_map), as_of=boundary)
++            if any(item['information_status'] != 'public_clarification'
++                   for item in corrections[label].values()):
++                reasons.append('public_information_review_information_held_for_review')
++        check.update(availability_at_review=availability, information_reviews=corrections,
++                     checked_at=timestamp(now).isoformat(),
++                     reason_codes=list(dict.fromkeys(reasons)))
++        return check
+ 
+     def dependency_information_holds(self, thesis: dict, *, as_of: str) -> dict:
+         """Read corrections for the selected thesis's complete source lineage.
+@@ -218,10 +281,24 @@
+         return reference
+ 
+     def plan(self, question, thesis, reference, policy, held, as_of, *, now=None):
++        sources = self.sources_for(thesis, reference['quote'])
++        if 'public_information_review' in question:
++            # This pool serves the plan only. Thesis/valuation evidence and
++            # sources_for's other callers retain their existing roots.
++            combined = {source['id']: source for source in sources}
++            combined.update({source['id']: source for source in self.public_information_sources_for(question)})
++            sources = [combined[key] for key in sorted(combined)]
+         value = evaluate_ir_plan({'synthetic': reference['synthetic'], 'as_of': as_of,
+             'thesis': thesis, 'question': question, 'policy': policy, 'quote': reference['quote'],
+-            'sources': self.sources_for(thesis, reference['quote']), 'context': {'held': held}})
++            'sources': sources, 'context': {'held': held}})
+         checked_at = timestamp(now if now is not None else now_iso()).isoformat()
++        if 'public_information_review' in question:
++            check = self.review_public_information(question, as_of=as_of, now=checked_at)
++            value['public_information_review_check'] = check
++            if check['reason_codes']:
++                value['question_value'] = 'needs_review'
++                value['incomplete_reviews'] = list(dict.fromkeys(
++                    [*value['incomplete_reviews'], 'public_information_review_binding']))
+         historical = self.dependency_information_holds(thesis, as_of=as_of)
+         current = self.dependency_information_holds(thesis, as_of=checked_at)
+         if historical or current:
+--- before/src/ir_agent/harness.py
++++ after/src/ir_agent/harness.py
+@@ -395,6 +395,11 @@
+             existing = self.db.execute("SELECT data FROM questions WHERE id=?", (question["id"],)).fetchone()
+             if existing:
+                 saved = json.loads(existing["data"])
++                if "public_information_review" in question and "public_information_review_check" in saved:
++                    if ("public_information_review_check" in question
++                            and question["public_information_review_check"] != saved["public_information_review_check"]):
++                        raise ValueError("Saved public information review checks are immutable")
++                    question["public_information_review_check"] = saved["public_information_review_check"]
+                 if "decision_contract" in question and "decision_contract" in saved:
+                     incoming = deepcopy(object_value(question["decision_contract"], "decision contract"))
+                     incoming.setdefault("synthetic", False)
+@@ -413,6 +418,11 @@
+             if thesis is None or thesis["version"] != question["thesis_version"]:
+                 raise ValueError("Question must reference the current thesis version")
+             created = timestamp(question["created_at"])
++            if "public_information_review" in question:
++                if "public_information_review_check" in question:
++                    raise ValueError("Public information review checks are server-computed")
++                if created > current:
++                    raise ValueError("A bound question cannot be created in the future")
+             if timestamp(thesis["recorded_at"]) > created:
+                 raise ValueError("Question cannot predate its thesis")
+             for source_id in question["evidence_ids"]:
+@@ -421,6 +431,9 @@
+                     raise ValueError("Question evidence must be available for the same company")
+             if "decision_contract" in question:
+                 question["decision_contract"] = DecisionLifecycle(self.store).freeze(question, thesis, current.isoformat())
++            elif "public_information_review" in question:
++                question["public_information_review_check"] = DecisionLifecycle(self.store).review_public_information(
++                    question, as_of=question["created_at"], now=current.isoformat())
+             question["thesis_snapshot"] = thesis
+             try:
+                 self.db.execute("INSERT INTO questions(id,company_id,topic,status,data) VALUES (?,?,?,?,?)",
+@@ -448,6 +461,13 @@
+                 if sent > current:
+                     raise ValueError("A contracted question cannot be recorded as sent in the future")
+                 DecisionLifecycle(self.store).validate_send(question, sent_at, now=current.isoformat())
++            elif "public_information_review" in question:
++                if sent > current:
++                    raise ValueError("A bound question cannot be recorded as sent in the future")
++                check = DecisionLifecycle(self.store).review_public_information(
++                    question, as_of=sent_at, now=current.isoformat())
++                if check['reason_codes']:
++                    raise ValueError('Public information review needs review: ' + ', '.join(check['reason_codes']))
+             self.db.execute("UPDATE questions SET status='awaiting_reply',sent_at=? WHERE id=?", (sent_at, question_id))
+             return self.store.question(question_id)
+ 
+--- before/src/ir_agent/public_information_review.py
++++ after/src/ir_agent/public_information_review.py
+@@ -0,0 +1,104 @@
++"""Optional exact-source bindings for a review of already public information.
++
++Presence, scope and time checks do not certify that an answer is absent, that a
++review was actually performed, or that all later public information was read.
++No investment inputs or actions are inferred from this record.
++"""
++from __future__ import annotations
++
++from copy import deepcopy
++from hashlib import sha256
++import re
++
++from .models import available, json_text, object_value, source_origins, text, timestamp, validate_source
++
++
++def validate_public_information_review(value, *, created_at):
++    review = deepcopy(object_value(value, 'public_information_review'))
++    if set(review) != {'reviewed_at', 'reviewer', 'rationale', 'sources'}:
++        raise ValueError('Public information review has missing or unknown fields')
++    reviewed = timestamp(review['reviewed_at'], 'public_information_review.reviewed_at')
++    if reviewed > timestamp(created_at, 'question.created_at'):
++        raise ValueError('Public information review cannot postdate question creation')
++    text(review['reviewer'], 'public_information_review.reviewer')
++    text(review['rationale'], 'public_information_review.rationale')
++    if not isinstance(review['sources'], list) or not review['sources']:
++        raise ValueError('Public information review sources must be a nonempty list')
++    seen = set()
++    for item in review['sources']:
++        item = object_value(item, 'public information review source')
++        if set(item) != {'source_id', 'source_snapshot_sha256', 'scope', 'basis_quote'}:
++            raise ValueError('Public information review source has missing or unknown fields')
++        identity = text(item['source_id'], 'public review source_id')
++        if identity in seen:
++            raise ValueError('Duplicate public information review source_id')
++        seen.add(identity)
++        digest = item['source_snapshot_sha256']
++        if not isinstance(digest, str) or not re.fullmatch(r'[0-9a-f]{64}', digest):
++            raise ValueError('Public review source_snapshot_sha256 must be lowercase SHA256')
++        text(item['scope'], 'public review scope')
++        text(item['basis_quote'], 'public review basis_quote')
++    return review
++
++
++def check_public_information_review(question, sources, *, as_of):
++    """Check only this opt-in binding against the supplied source snapshots."""
++    review = validate_public_information_review(question['public_information_review'],
++                                                created_at=question['created_at'])
++    if timestamp(question['created_at']) > timestamp(as_of):
++        raise ValueError('Question creation cannot postdate the public review boundary')
++    if not isinstance(sources, list):
++        raise ValueError('Public information review requires source snapshots')
++    raw, checked = {}, {}
++    for item in sources:
++        source = validate_source(item)
++        if source['id'] in checked:
++            raise ValueError('Duplicate source IDs in public information review snapshots')
++        raw[source['id']] = item
++        checked[source['id']] = source
++    roots = [item['source_id'] for item in review['sources']]
++    for item in review['sources']:
++        source = raw.get(item['source_id'])
++        if source is None:
++            raise ValueError('Missing public information review source snapshot')
++        if sha256(json_text(source).encode('utf-8')).hexdigest() != item['source_snapshot_sha256']:
++            raise ValueError('Public information review source snapshot SHA differs')
++        if item['basis_quote'] not in source['content']:
++            raise ValueError('Public information review quote is absent from its source')
++    reasons, active, visited = [], set(), set()
++    boundary = timestamp(review['reviewed_at'])
++
++    pending = [(identity, False) for identity in roots]
++    while pending:
++        identity, exiting = pending.pop()
++        if exiting:
++            active.remove(identity)
++            visited.add(identity)
++            continue
++        if identity in active:
++            raise ValueError('Cyclic public information review provenance')
++        if identity in visited:
++            continue
++        source = checked.get(identity)
++        if source is None:
++            reasons.append('missing_origin_source_snapshot')
++            continue
++        if source['company_id'] != question['company_id']:
++            raise ValueError('Public information review source belongs to another company')
++        if source['source_type'] == 'market_data':
++            raise ValueError('Market data is not a public information review source')
++        if not available(source, boundary):
++            reasons.append('source_origin_not_available')
++        classification = source['metadata'].get('information_status')
++        if ((source['source_type'] == 'ir_reply' and classification != 'public_clarification')
++                or classification not in (None, 'public_disclosure', 'public_clarification')):
++            reasons.append('source_information_held_for_review')
++        active.add(identity)
++        pending.append((identity, True))
++        pending.extend((parent, False) for parent in source_origins(source))
++    return {'reviewed_at': review['reviewed_at'], 'source_ids': roots,
++            'source_closure_ids': sorted(visited),
++            'source_snapshot_sha256': {item['source_id']: item['source_snapshot_sha256']
++                                       for item in review['sources']},
++            'reason_codes': list(dict.fromkeys(reasons)),
++            'meaning_review_required': True, 'answer_absence_verified': False}
+--- before/tests/test_public_information_review.py
++++ after/tests/test_public_information_review.py
+@@ -0,0 +1,288 @@
++"""Optional public-review evidence binding, never semantic absence or trading."""
++from copy import deepcopy
++from datetime import datetime, timedelta
++from hashlib import sha256
++import json
++import unittest
++from unittest.mock import patch
++
++from ir_agent.availability import RecordAvailability
++from ir_agent.decision import evaluate_ir_plan
++from ir_agent.decision_lifecycle import DecisionLifecycle
++from ir_agent.harness import Harness
++from ir_agent.information_review import add_assessment
++from ir_agent.models import json_text, validate_question, validate_source
++from ir_agent.store import Store
++from test_decision import plan
++
++CREATED = datetime.fromisoformat('2026-10-09T10:00:00+09:00')
++BEFORE = CREATED - timedelta(minutes=1)
++REVIEWED = CREATED - timedelta(seconds=30)
++SAVED = CREATED + timedelta(minutes=1)
++SENT = CREATED + timedelta(minutes=5)
++
++
++def source(identity='public-qa', company='demo-services', **changes):
++    value = {'id': identity, 'company_id': company, 'title': 'Synthetic public QA only',
++             'url': 'https://example.invalid/qa', 'source_type': 'public_disclosure',
++             'published_at': None, 'retrieved_at': (BEFORE - timedelta(minutes=1)).isoformat(),
++             'content': 'Synthetic Q: Which table? A: Consolidated table. Other definitions not stated here.',
++             'requires_research': True, 'metadata': {'synthetic': True}}
++    value.update(changes)
++    return value
++
++
++def binding(qa, scope='Saved Q&A, question1/table scope only'):
++    return {'reviewed_at': REVIEWED.isoformat(), 'reviewer': 'Synthetic reviewer',
++            'rationale': 'The remaining definition is not resolved by this cited scope; assertion only.',
++            'sources': [{'source_id': qa['id'], 'source_snapshot_sha256': sha256(json_text(qa).encode()).hexdigest(),
++                         'scope': scope, 'basis_quote': qa['content']}]}
++
++
++def pure():
++    value = plan(); qa = source(company=value['thesis']['company_id'])
++    value['sources'].append(qa)
++    value['question']['public_information_review'] = binding(qa)
++    return value
++
++
++class PublicInformationPureTests(unittest.TestCase):
++    def test_extra_review_source_is_not_financial_evidence_or_absence_certification(self):
++        value = pure(); saved = deepcopy(value); baseline = deepcopy(value)
++        baseline['question'].pop('public_information_review'); baseline['sources'].pop()
++        old = evaluate_ir_plan(baseline); result = evaluate_ir_plan(value)
++        self.assertEqual(result['outcomes'], old['outcomes'])
++        self.assertEqual(result['question_value'], old['question_value'])
++        self.assertNotIn('public_information_review_check', old)
++        baseline['question']['public_information_review_check'] = {'answer_absence_verified': True}
++        self.assertEqual(evaluate_ir_plan(baseline), old)
++        check = result['public_information_review_check']
++        self.assertEqual(check['source_closure_ids'], ['public-qa'])
++        self.assertFalse(check['answer_absence_verified']); self.assertTrue(check['meaning_review_required'])
++        self.assertNotIn('public-qa', value['thesis']['evidence_ids']); self.assertEqual(value, saved)
++        value['question']['public_answer_status'] = 'found'
++        self.assertEqual(evaluate_ir_plan(value)['question_value'], 'needs_review')
++
++    def test_record_shape_scope_hash_types_duplicates_and_typos_are_strict(self):
++        for mode in ('null', 'empty', 'extra', 'missing', 'source_empty', 'duplicate', 'scope_empty',
++                     'scope_object', 'hash_upper', 'hash_short', 'source_extra', 'quote_empty', 'reviewer_empty'):
++            value = pure(); r = value['question']['public_information_review']; s = r['sources'][0]
++            if mode == 'null': value['question']['public_information_review'] = None
++            elif mode == 'empty': value['question']['public_information_review'] = {}
++            elif mode == 'extra': r['reviewd_at'] = r['reviewed_at']
++            elif mode == 'missing': del r['rationale']
++            elif mode == 'source_empty': r['sources'] = []
++            elif mode == 'duplicate': r['sources'].append(deepcopy(s))
++            elif mode == 'scope_empty': s['scope'] = ' '
++            elif mode == 'scope_object': s['scope'] = {'page': 1}
++            elif mode == 'hash_upper': s['source_snapshot_sha256'] = 'A' * 64
++            elif mode == 'hash_short': s['source_snapshot_sha256'] = '0' * 63
++            elif mode == 'source_extra': s['source_hash'] = s['source_snapshot_sha256']
++            elif mode == 'quote_empty': s['basis_quote'] = ''
++            else: r['reviewer'] = ''
++            with self.subTest(mode=mode), self.assertRaises(ValueError): validate_question(value['question'])
++
++    def test_hash_quote_company_market_missing_root_and_review_time_refuse(self):
++        for mode in ('hash', 'quote', 'company', 'market', 'missing', 'naive', 'later_review'):
++            value = pure(); qa = value['sources'][-1]; r = value['question']['public_information_review']
++            if mode == 'hash': r['sources'][0]['source_snapshot_sha256'] = '0' * 64
++            elif mode == 'quote': r['sources'][0]['basis_quote'] = 'Not in saved source'
++            elif mode == 'company': qa['company_id'] = 'another-company'; value['question']['public_information_review'] = binding(qa)
++            elif mode == 'market': qa['source_type'] = 'market_data'; value['question']['public_information_review'] = binding(qa)
++            elif mode == 'missing': value['sources'].pop()
++            elif mode == 'naive': r['reviewed_at'] = '2026-10-09T09:59:30'
++            else: r['reviewed_at'] = (CREATED + timedelta(seconds=1)).isoformat()
++            with self.subTest(mode=mode), self.assertRaises(ValueError): evaluate_ir_plan(value)
++
++    def test_unavailable_source_is_notready_even_if_caller_spoofs_a_success_check(self):
++        value = pure(); qa = value['sources'][-1]
++        qa['retrieved_at'] = CREATED.isoformat(); value['question']['public_information_review'] = binding(qa)
++        value['question']['public_information_review_check'] = {'reason_codes': [], 'answer_absence_verified': True}
++        result = evaluate_ir_plan(value)
++        self.assertEqual(result['question_value'], 'needs_review')
++        self.assertIn('source_origin_not_available', result['public_information_review_check']['reason_codes'])
++        self.assertFalse(result['public_information_review_check']['answer_absence_verified'])
++
++    def test_dag_uses_all_parents_shared_origin_cycle_missing_and_private_hold(self):
++        value = pure(); root = value['sources'][-1]; a = source('parent-a'); b = source('parent-b'); shared = source('shared')
++        root['metadata']['original_source_ids'] = [a['id'], b['id']]
++        a['metadata']['original_source_id'] = shared['id']; b['metadata']['original_source_id'] = shared['id']
++        value['sources'].extend([a, b, shared]); value['question']['public_information_review'] = binding(root)
++        self.assertEqual(len(evaluate_ir_plan(value)['public_information_review_check']['source_closure_ids']), 4)
++        for mode in ('private', 'missing', 'company', 'market', 'cycle'):
++            changed = deepcopy(value); parent = changed['sources'][-1]
++            if mode == 'private': parent['metadata']['information_status'] = 'unclear'
++            elif mode == 'missing': changed['sources'].pop()
++            elif mode == 'company': parent['company_id'] = 'another-company'
++            elif mode == 'market': parent['source_type'] = 'market_data'
++            else: parent['metadata']['original_source_id'] = root['id']
++            with self.subTest(mode=mode):
++                if mode in ('company', 'market', 'cycle'):
++                    with self.assertRaises(ValueError): evaluate_ir_plan(changed)
++                else: self.assertEqual(evaluate_ir_plan(changed)['question_value'], 'needs_review')
++
++    def test_pure_long_valid_chain_needs_no_new_depth_limit(self):
++        value = pure(); root = value['sources'][-1]
++        previous = root
++        for index in range(1100):
++            parent = source('chain-' + str(index))
++            previous['metadata']['original_source_id'] = parent['id']
++            value['sources'].append(parent); previous = parent
++        value['question']['public_information_review'] = binding(root)
++        self.assertEqual(len(evaluate_ir_plan(value)['public_information_review_check']['source_closure_ids']), 1101)
++
++
++class PublicInformationPersistenceTests(unittest.TestCase):
++    def setUp(self):
++        self.value = plan(); self.store = Store(':memory:'); self.addCleanup(self.store.close)
++        self.harness = Harness(self.store); self.company = self.value['thesis']['company_id']; self.qa = source(company=self.company)
++        self.harness.ingest({'schema_version': 1, 'companies': [{'id': self.company, 'name': 'Synthetic company', 'status': 'active'}],
++                            'sources': [*self.value['sources'], self.qa], 'theses': [self.value['thesis']]}, now=BEFORE)
++        self.harness.register_decision_policy(self.value['policy'], now=BEFORE)
++        self.store.declare_position(self.company, False, now=BEFORE)
++
++    def question(self, *, contracted=True):
++        q = deepcopy(self.value['question']); q['public_information_review'] = binding(self.qa)
++        if contracted:
++            q['decision_contract'] = {'policy_id': self.value['policy']['id'], 'policy_version': 1,
++                                      'quote': deepcopy(self.value['quote']), 'synthetic': True}
++        return q
++
++    def save(self, q=None): return self.harness.add_question(q or self.question(), now=SAVED)
++    def snapshot(self): return tuple(self.store.connection.iterdump())
++    def check(self, q): return q.get('public_information_review_check', q.get('decision_contract', {}).get('preflight', {}).get('public_information_review_check'))
++
++    def ir_source(self, *, other_company=False):
++        company = 'other-company' if other_company else self.company
++        with self.store.transaction():
++            if other_company: self.store.connection.execute("INSERT INTO companies(id,data) VALUES (?,?)", (company, json_text({'id': company, 'name': 'Other synthetic', 'status': 'watch'})))
++            question = {'id': 'prior-question', 'company_id': company, 'created_at': (BEFORE - timedelta(minutes=10)).isoformat()}
++            reply = {'id': 'prior-reply', 'question_id': question['id'], 'received_at': (BEFORE - timedelta(minutes=2)).isoformat(),
++                     'raw_text': self.qa['content'], 'information_status': 'public_clarification'}
++            self.store.connection.execute('INSERT INTO questions(id,company_id,topic,status,data,sent_at) VALUES (?,?,?,?,?,?)',
++                (question['id'], company, 'prior', 'answered', json_text(question), question['created_at']))
++            self.store.connection.execute('INSERT INTO replies VALUES (?,?,?)', (reply['id'], question['id'], json_text(reply)))
++            RecordAvailability(self.store.connection).record_first_save('reply', reply['id'], reply, now=BEFORE)
++        ir = source('review-only-ir', company=self.company, source_type='ir_reply',
++                    metadata={'synthetic': True, 'reply_id': reply['id'], 'information_status': 'public_clarification'})
++        self.store.put_source(validate_source(ir), now=BEFORE); self.qa = ir
++        return reply
++
++    def correct(self, status, at, version=0):
++        return add_assessment(self.store, {'reply_id': 'prior-reply', 'expected_version': version,
++            'information_status': status, 'basis_quote': self.qa['content'], 'rationale': 'Synthetic correction',
++            'recorded_at': at.isoformat()}, now=at.isoformat())
++
++    def test_binding_freezes_scope_and_keeps_review_roots_outside_financial_sources(self):
++        q = self.question(); original = deepcopy(q); saved = self.save(q)
++        self.assertEqual(saved['decision_contract']['preflight']['question_value'], 'decision_distinguishing')
++        self.assertEqual(self.check(saved)['reason_codes'], [])
++        self.assertNotIn(self.qa['id'], [s['id'] for s in DecisionLifecycle(self.store).sources_for(self.store.thesis(self.company), {})])
++        self.assertEqual(self.save(q), saved); self.assertEqual(q, original)
++        q['public_information_review']['sources'][0]['scope'] = 'Same source, new physical page only'
++        before = self.snapshot()
++        with self.assertRaisesRegex(ValueError, 'immutable'): self.save(q)
++        self.assertEqual(self.snapshot(), before)
++
++    def test_uncontracted_new_field_has_notready_reasons_and_original_request_retry(self):
++        self.store.connection.execute('DELETE FROM record_availability WHERE entity_type=? AND entity_id=?', ('source', self.qa['id']))
++        q = self.question(contracted=False); saved = self.save(q); before = self.snapshot()
++        self.assertIn('public_information_review_source_availability_unresolved', self.check(saved)['reason_codes'])
++        self.assertEqual(self.save(q), saved); self.assertEqual(self.snapshot(), before)
++        # Like the old API, its response adds row state; it is not a new add request.
++        with self.assertRaises(ValueError): self.save(saved)
++        with self.assertRaisesRegex(ValueError, 'needs review'): self.harness.mark_sent(q['id'], SENT.isoformat(), now=SENT)
++        self.assertEqual(self.snapshot(), before)
++
++    def test_server_check_spoof_refused_for_new_and_changed_retry(self):
++        q = self.question(contracted=False); q['public_information_review_check'] = {'reason_codes': []}; before = self.snapshot()
++        with self.assertRaisesRegex(ValueError, 'server-computed'): self.save(q)
++        self.assertEqual(self.snapshot(), before)
++        q.pop('public_information_review_check'); saved = self.save(q)
++        q['public_information_review_check'] = {**self.check(saved), 'answer_absence_verified': True}
++        before = self.snapshot()
++        with self.assertRaisesRegex(ValueError, 'immutable'): self.save(q)
++        self.assertEqual(self.snapshot(), before)
++
++    def test_first_save_after_review_cannot_be_backdated_and_blocks_new_send_record(self):
++        self.store.connection.execute('UPDATE record_availability SET first_saved_at=?,presence_observed_at=? WHERE entity_type=? AND entity_id=?',
++            (CREATED.isoformat(), CREATED.isoformat(), 'source', self.qa['id']))
++        saved = self.save(); check = self.check(saved)
++        self.assertIn('public_information_review_source_availability_unresolved', check['reason_codes'])
++        self.assertIn('first_saved_after_knowledge_at', check['availability_at_review'][self.qa['id']]['reason_codes'])
++        before = self.snapshot()
++        with self.assertRaisesRegex(ValueError, 'needs review'): self.harness.mark_sent(saved['id'], SENT.isoformat(), now=SENT)
++        self.assertEqual(self.snapshot(), before)
++
++    def test_legacy_known_by_is_used_without_minting_an_earlier_first_save(self):
++        self.store.connection.execute('DELETE FROM record_availability WHERE entity_type=? AND entity_id=?', ('source', self.qa['id']))
++        with self.store.transaction(): RecordAvailability(self.store.connection).observe_existing('source', self.qa['id'], self.qa, now=BEFORE)
++        saved = self.save(); self.assertEqual(self.check(saved)['reason_codes'], [])
++        receipt = RecordAvailability(self.store.connection).get('source', self.qa['id'])
++        self.assertIsNone(receipt['first_saved_at']); self.assertEqual(receipt['basis'], 'legacy_presence')
++
++    def test_late_legacy_presence_remains_unknown_for_the_claimed_review_time(self):
++        self.store.connection.execute('DELETE FROM record_availability WHERE entity_type=? AND entity_id=?', ('source', self.qa['id']))
++        with self.store.transaction(): RecordAvailability(self.store.connection).observe_existing('source', self.qa['id'], self.qa, now=CREATED)
++        saved = self.save(); self.assertIn('public_information_review_source_availability_unresolved', self.check(saved)['reason_codes'])
++        self.assertIn('legacy_history_unknown', self.check(saved)['availability_at_review'][self.qa['id']]['reason_codes'])
++
++    def test_runtime_correction_on_review_only_ir_blocks_historical_send_without_rewriting(self):
++        self.ir_source(); q = self.question(); saved = self.save(q)
++        self.correct('unclear', SENT + timedelta(minutes=1)); before = self.snapshot()
++        with self.assertRaisesRegex(ValueError, 'needs review'):
++            self.harness.mark_sent(q['id'], SENT.isoformat(), now=SENT + timedelta(minutes=2))
++        self.assertEqual(self.snapshot(), before); self.assertEqual(self.save(q), saved)
++        check = DecisionLifecycle(self.store).review_public_information(q, as_of=SENT.isoformat(), now=(SENT + timedelta(minutes=2)).isoformat())
++        self.assertEqual(check['information_reviews']['at_boundary'], {})
++        self.assertEqual(check['information_reviews']['at_runtime']['prior-reply']['information_status'], 'unclear')
++
++    def test_correction_at_question_boundary_not_hidden_by_later_reaffirmation(self):
++        self.ir_source(); self.correct('unclear', CREATED - timedelta(seconds=10))
++        self.correct('public_clarification', CREATED + timedelta(seconds=10), version=1)
++        saved = self.save(); check = self.check(saved)
++        self.assertEqual(check['information_reviews']['at_review'], {})
++        self.assertEqual(check['information_reviews']['at_boundary']['prior-reply']['information_status'], 'unclear')
++        self.assertEqual(check['information_reviews']['at_runtime']['prior-reply']['information_status'], 'public_clarification')
++        self.assertIn('public_information_review_information_held_for_review', check['reason_codes'])
++
++    def test_other_company_reply_subject_is_not_accepted_through_same_company_source(self):
++        self.ir_source(other_company=True); before = self.snapshot()
++        with self.assertRaisesRegex(ValueError, 'reply belongs to another company'): self.save()
++        self.assertEqual(self.snapshot(), before)
++
++    def test_insert_and_question_receipt_roll_back_atomically(self):
++        before = self.snapshot()
++        with patch('ir_agent.availability.RecordAvailability.record_first_save', side_effect=ValueError('injected receipt failure')):
++            with self.assertRaisesRegex(ValueError, 'injected receipt'): self.save()
++        self.assertEqual(self.snapshot(), before)
++
++    def test_invalid_binding_and_unknown_root_leave_no_partial_question(self):
++        for mode in ('hash', 'quote', 'unknown'):
++            q = self.question(); item = q['public_information_review']['sources'][0]
++            if mode == 'hash': item['source_snapshot_sha256'] = '0' * 64
++            elif mode == 'quote': item['basis_quote'] = 'Absent quote'
++            else: item['source_id'] = 'unknown'
++            before = self.snapshot()
++            with self.subTest(mode=mode), self.assertRaises(ValueError): self.save(q)
++            self.assertEqual(self.snapshot(), before)
++
++    def test_unintroduced_legacy_question_keeps_old_fields_and_send_behavior(self):
++        q = self.question(contracted=False); q.pop('public_information_review'); saved = self.save(q)
++        self.assertNotIn('public_information_review', saved); self.assertNotIn('public_information_review_check', saved)
++        self.assertEqual(self.save(q), saved)
++        sent = self.harness.mark_sent(q['id'], SENT.isoformat(), now=SENT)
++        self.assertEqual(sent['status'], 'awaiting_reply'); self.assertNotIn('public_information_review_check', sent)
++
++    def test_unintroduced_same_named_extra_json_retains_legacy_no_feature_meaning(self):
++        q = self.question(contracted=False); q.pop('public_information_review')
++        q['public_information_review_check'] = {'legacy_extra_json': True, 'reason_codes': ['not_a_server_check']}
++        saved = self.save(q)
++        self.assertEqual(saved['public_information_review_check'], q['public_information_review_check'])
++        self.assertEqual(self.save(q), saved)
++        sent = self.harness.mark_sent(q['id'], SENT.isoformat(), now=SENT)
++        self.assertEqual(sent['status'], 'awaiting_reply')
++        self.assertNotIn('public_information_review', sent)
++
++
++if __name__ == '__main__': unittest.main()

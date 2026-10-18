@@ -1,0 +1,44 @@
+[
+  {
+    "security_code": "6157",
+    "company_name": "日進工具",
+    "url": "https://www.ns-tool.com/",
+    "reason": "公式トップページおよび試行したIRページのGETがupstream TLS証明書検証エラーの503。IR受付フォーム・メールの存在は確認できていない。TLS検証は無効化していない。",
+    "snapshot": "evidence/mfg-6157-contact.json",
+    "evidence": [
+      {
+        "snapshot": "evidence/mfg-6157-home.json",
+        "url": "https://www.ns-tool.com/",
+        "retrieved_at": "2026-10-11T03:35:39.487910+00:00",
+        "http_status": 503
+      },
+      {
+        "snapshot": "evidence/mfg-6157-contact.json",
+        "url": "https://www.ns-tool.com/ja/ir/",
+        "retrieved_at": "2026-10-11T03:36:15.136595+00:00",
+        "http_status": 503
+      }
+    ]
+  },
+  {
+    "security_code": "7716",
+    "company_name": "ナカニシ",
+    "url": "https://www.nakanishi-inc.jp/contact/verification/",
+    "reason": "公式の会社全般問い合わせは、メールアドレスにフォームURLを送る認証段階のみを公開。取得したページではIR受付を明示するカテゴリ・説明を確認できず、認証メールの送信も行っていない。",
+    "snapshot": "evidence/mfg-7716-form.json",
+    "evidence": [
+      {
+        "snapshot": "evidence/mfg-7716-contact.json",
+        "url": "https://www.nakanishi-inc.jp/contact/",
+        "retrieved_at": "2026-10-11T03:36:17.557201+00:00",
+        "http_status": 200
+      },
+      {
+        "snapshot": "evidence/mfg-7716-form.json",
+        "url": "https://www.nakanishi-inc.jp/contact/verification/",
+        "retrieved_at": "2026-10-11T03:37:29.537819+00:00",
+        "http_status": 200
+      }
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+# legacy known-by限定読解の独立レビュー
+
+対応必須の不具合は見つからなかった。独立32チェック、新規focused11テストは全て成功。ネット接続禁止guardを使い、実DB・実ネット・producer/実装編集・full suiteは0。
+
+凍結前moduleとのtrusted経路9例（cutoff3種類×inventoryなし/一致/不一致）で返値全JSONが同値。ASTでも_source_check以外のコード全体が不変だった。memory DBの全行、source/receipt、read-only monitor返値の不変を確認した。
+
+rootの存在known-byが先でも分類が後着ならbootstrapを拒否し、分類と同時刻のcutoffで初めて読解可能となる。全legacy DAGでもrootより後の祖先presence以前は拒否、全祖先が揃う境界では許可する。top-level known_by_atはroot snapshotの存在上界であり、祖先のより遅い上界はlineage内に残る。これをDAG全体がその時点で利用可能だったという時刻へ転用しない。
+
+legacy未読sourceは自動既読にならず現在jobのpendingに入り、実際のcomplete時刻で既読化する。first_saved_at=null / first_save_known=false / arrival非freshと元receiptは維持される。inventory SHA不一致も解除されない。
+
+11focusedの欠損/破損receipt・会社/synthetic/循環・祖先後着/分類後着・current分類保留・公開性訂正によるclaim/complete拒否も再確認した。現在公開性訂正の1例は既存readerへのsynthetic hookであり、新しいIR公開性訂正APIの実装・全運用経路の監査を主張しない。bounded readerの公開IR scopeを拡張する変更でもない。
+
+[review.json](review.json)に個別結果と凍結SHA、[focused-tests.log](focused-tests.log)に実行結果。初回の独立架空fixtureはreceipt時計順を逆転させたため既存防御に止められ、時刻順を直して有限チェックを完了した。本体の不具合ではない。rootのfull suiteへ引き継げる。

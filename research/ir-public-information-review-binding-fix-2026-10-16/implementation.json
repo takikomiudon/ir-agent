@@ -1,0 +1,85 @@
+{
+  "recorded_at": "2026-10-16T04:03:08.990843+00:00",
+  "status": "frozen_for_root_and_independent_review",
+  "original_v1_research_directory": "research/ir-public-information-review-binding-2026-10-16",
+  "original_v1_files_unchanged": 25,
+  "changes": [
+    "src/ir_agent/decision_lifecycle.py",
+    "tests/test_public_information_review.py"
+  ],
+  "after_files": [
+    {
+      "path": "src/ir_agent/models.py",
+      "sha256": "e0d0444fda0e730de6c6e9beaa110bbd796de00f3228c041daa016284a8e234e",
+      "bytes": 10337,
+      "frozen_copy": "research/ir-public-information-review-binding-fix-2026-10-16/after/src/ir_agent/models.py"
+    },
+    {
+      "path": "src/ir_agent/decision.py",
+      "sha256": "5243aa9c51d42d1abc9a2cd95cc65d8b9671be1625a30d8cdeaddfdade026614",
+      "bytes": 24954,
+      "frozen_copy": "research/ir-public-information-review-binding-fix-2026-10-16/after/src/ir_agent/decision.py"
+    },
+    {
+      "path": "src/ir_agent/decision_lifecycle.py",
+      "sha256": "a6813698eb32ea6293d765b616a86340f6695d247e563ebcca3296941f633273",
+      "bytes": 29387,
+      "frozen_copy": "research/ir-public-information-review-binding-fix-2026-10-16/after/src/ir_agent/decision_lifecycle.py"
+    },
+    {
+      "path": "src/ir_agent/harness.py",
+      "sha256": "23e145a1487fe2a529f64e842a1468b23131d61a260c6746147cbe42ccd25d3e",
+      "bytes": 43737,
+      "frozen_copy": "research/ir-public-information-review-binding-fix-2026-10-16/after/src/ir_agent/harness.py"
+    },
+    {
+      "path": "src/ir_agent/public_information_review.py",
+      "sha256": "1c7d19a0cf79d1628144196217cd84bfd0c656a48a1308934a13943e70b249aa",
+      "bytes": 5582,
+      "frozen_copy": "research/ir-public-information-review-binding-fix-2026-10-16/after/src/ir_agent/public_information_review.py"
+    },
+    {
+      "path": "tests/test_public_information_review.py",
+      "sha256": "e66303ce2dd2488c88e87c5051af4438d0ccfc894f48f0472ebee46e7d39a2ec",
+      "bytes": 24539,
+      "frozen_copy": "research/ir-public-information-review-binding-fix-2026-10-16/after/tests/test_public_information_review.py"
+    }
+  ],
+  "fixed_findings": [
+    {
+      "id": "persistent_long_DAG",
+      "cause": "Newfeature called existing recursive Store.source_availability on a valid long DAG. Pure validation was iterative but persistence retraversal was not.",
+      "fix": "After pure closure validation, invoke existing RecordAvailability.at exactly once for every known closure source with reviewed_at on both clocks and trusted now. No Store-wide change or new depth limit. Missing origins retain pure hold.",
+      "regression": "1100ancestor memoryDB save and mark_sent; count1101at calls, recursive Store reader patched to fail if invoked; ancestorlate-receipt/missing-origin holds preserved."
+    },
+    {
+      "id": "same_company_reply_content_identity",
+      "cause": "Same-company metadata.reply_id could refer to another saved reply body, causing classification corrections to be attached to unrelated source content.",
+      "fix": "Before source_assessments, require savedreply.id==metadata.reply_id, savedquestion.id==reply.question_id, samecompany, and exactsource.content==reply.raw_text. Uses the identity/content boundary of existing ResearchDecisions._reply_bindings; mismatch ValueError under original transaction.",
+      "regression": "Same-company different-body source rejects without partialwrite; row ID spoof rejects; existing correct-body/runtimehold/historyretry tests remain passing."
+    }
+  ],
+  "tests": {
+    "new_feature_test_methods": 24,
+    "previous_v1_feature_test_methods": 19,
+    "additional_regression_test_methods": 5,
+    "targeted_total": 141,
+    "reported_seconds": "1.221",
+    "status": "passed",
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=tests .venv/bin/python -m unittest test_public_information_review test_decision test_decision_lifecycle test_workflow test_question_baseline_binding test_dependency_information_gates test_unweighted_decision -v",
+    "log_file": "focused-tests.log",
+    "log_sha256": "adae93aade02ac98ebfbe6c825ecf65a99b19e95d7c63a69131eea8cfe81fef1",
+    "full_suite_run_by_producer": false
+  },
+  "compatibility": "Only explicit newfield persistence check changed; old nofield paths, purechecker, financial sources_for, Store/CLI/schema/docs not edited. availability_at_review now maps all known closure sourceIDs to existing ledger.at results rather than rootIDs to recursive aggregated results.",
+  "operations": {
+    "GETs": 0,
+    "actual_operational_DB_access_or_write": 0,
+    "synthetic_memory_DB_tests": true,
+    "old_v1_artifact_edits": 0,
+    "Store_schema_CLI_shared_docs_edits": 0,
+    "financial_thresholds_or_adoptions": 0,
+    "real_question_or_IR_sends": 0
+  },
+  "next": "root and independent review; do not edit frozen code/artifacts until a separately scoped correction"
+}

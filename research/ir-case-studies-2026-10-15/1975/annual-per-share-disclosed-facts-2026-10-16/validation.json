@@ -1,0 +1,127 @@
+{
+  "validated_at": "2026-10-16T09:48:51.104120+00:00",
+  "status": "file_only_normalization_reproduced",
+  "normalization_input_sha256": "4506961a3b0ab927e83d2184d15cfad49d9027e476029a5cacaa68a89fb6f977",
+  "normalized_bundle_sha256": "0defeba27b9f4538afd8d82c05c158918fcdfcaf455a64f1ea897eca7543e41e",
+  "quotes_sha256": "b0cfc791745b8327bdcf2aadc1ac03ef8a3a0f3c9f70711f6a57f3d1cc1ff744",
+  "source_count": 2,
+  "fact_count": 2,
+  "original_source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f",
+  "original_source_native_snapshot_sha256": "ee28585481c9692e9374aed4ebc15cb04e5b71757d6c56f2d739c7c7265a3e25",
+  "original_source_content_utf8_sha256": "78164fa407264654d3954c18a04672dd65d85e6f5efc3c09899a7df3317b354e",
+  "original_whole16page_source_unchanged": true,
+  "derived_source_id": "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+  "derived_native_snapshot_sha256": "d6db7c7c2454470dba83cec46a48ba76814db7324ec1109c8b4e8e81d6f54bcf",
+  "derived_original_snapshot_hash_definition": "normalizer compact canonical_json(original), not native models.json_text snapshot; retain both domains without mixing",
+  "derived_retrieved_at": "2026-10-16T09:48:51.082723+00:00",
+  "derived_actual_database_first_save": null,
+  "original_database_first_save": "not queried or modified; original was already ingested by root",
+  "normalization_version": 1,
+  "primary_CLI_generation_exit": 0,
+  "same_now_entire_bundle_repeat_equal": true,
+  "existing_reproducer": {
+    "source_id": "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+    "applicable": true,
+    "status": "reproduced",
+    "reason_codes": [],
+    "financial_inputs_verified": false,
+    "meaning_review_required": true,
+    "original_content_sha256_status": "matched",
+    "original_snapshot_sha256_status": "matched_supplied_snapshot",
+    "fact_kinds": [
+      {
+        "id": "1975-reported-annual-EPS-FY20260331-observed-20260514",
+        "kind": "reported_fact"
+      },
+      {
+        "id": "1975-reported-year-end-BPS-20260331-observed-20260514",
+        "kind": "reported_fact"
+      }
+    ],
+    "original_source_id": "case-public:f733d2deff739e7de2b2f93256929a68e1eb1d6b88ec50ef3c828e0f27f9036f"
+  },
+  "concept_contract": "Nonempty text; no enumerated concepts. Names explicitly distinguish consolidated annual EPS and closing common BPS.",
+  "period_contract": "Nonempty descriptor; explicit EPS duration/annual and BPS instant preserved as reviewer assertions.",
+  "all_quote_and_token_unicode_utf8_offsets_checked": true,
+  "model_input_source_paths": {
+    "annual_actual_EPS": {
+      "source_id": "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+      "value_path": [
+        "content",
+        "facts",
+        0,
+        "value"
+      ],
+      "value": "358.13",
+      "unit": "JPY-per-share",
+      "kind": "reported_fact"
+    },
+    "year_end_common_BPS": {
+      "source_id": "disclosed-facts:9d7b21bfd8ffec2d0369103cfcdf945e6407dff6e690816edc895d115470d313",
+      "value_path": [
+        "content",
+        "facts",
+        1,
+        "value"
+      ],
+      "value": "1965.51",
+      "unit": "JPY-per-share",
+      "kind": "reported_fact"
+    }
+  },
+  "external_pins_before_after_equal": [
+    {
+      "file": "research/ir-case-studies-2026-10-15/1975/annual-earnings-book-input-discovery-2026-10-16/source-candidate/source-only-bundle.json",
+      "sha256": "a531a97e9ecbc8fd608e1efd4ac85ad99804329e7bad5a21721c75e7983d867e",
+      "bytes": 82873
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/1975/annual-earnings-book-input-discovery-2026-10-16/source-candidate/manifest.json",
+      "sha256": "f4496cf6499e0c0079931ab6a7ebb34db8e2be20753e336bc4424d375f37bbf7",
+      "bytes": 2753
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/1975/annual-earnings-book-input-discovery-2026-10-16/source-candidate/parent-acceptance.json",
+      "sha256": "4957e626fa5c47772d11b551201d890ad73c3417d36d0d00b84fc03fb728932c",
+      "bytes": 568
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/1975/annual-earnings-book-input-discovery-2026-10-16/manifest.json",
+      "sha256": "cc1eb6339659164ee303a229702130f832532d5e65926943b8fe6a366c6a7c10",
+      "bytes": 5233
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/1975/annual-earnings-book-input-discovery-2026-10-16/review.json",
+      "sha256": "11ede99029fed93dd236039253101b564331188274333956e1b67cfa25e7fae7",
+      "bytes": 21110
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/1975/annual-earnings-book-input-discovery-2026-10-16/images/page-01.png",
+      "sha256": "674a57d698776b8b3a2374eeaaaa9876fafaa15a2e5fb67112b0badbf1089093",
+      "bytes": 366259
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/1975/annual-earnings-book-input-discovery-2026-10-16/images/page-15.png",
+      "sha256": "c0cceafd6c927ac5717c6f709f05da7299061967ffc02aad002dc24ac4b21249",
+      "bytes": 229383
+    },
+    {
+      "file": "src/ir_agent/disclosed_facts.py",
+      "sha256": "d434b41cfa19568d0cef1a2e6710365f447012d75a4b07ca950cc62b6bd9db51",
+      "bytes": 23175
+    },
+    {
+      "file": "src/ir_agent/cli.py",
+      "sha256": "149e43c4a0a645127f1180fca0567fcf29d06b4e0ea4dad96006e4820ddcc37f",
+      "bytes": 26938
+    }
+  ],
+  "normalization_only_not_laneB_reconstruction": true,
+  "financial_inputs_verified": false,
+  "forecast_values_automatically_adopted": false,
+  "model_input_audit_or_Graham_calculation_run": false,
+  "GET": 0,
+  "POST": 0,
+  "DB_Store_access": 0,
+  "old_shared_files_mutated": false
+}

@@ -1,0 +1,112 @@
+{
+  "company_id": "jp:135A",
+  "status": "partial_price_observation_saved_not_ready_as_market_data_input",
+  "purpose": "Source-backed price evidence discovery only, separate from financial forecasts/valuation.",
+  "GET_cap": 3,
+  "GET_count": 3,
+  "HTTP_statuses": [
+    200,
+    200,
+    200
+  ],
+  "retry_redirect_JS_auth_payment_contact_calls": 0,
+  "reused_issuer_robots": {
+    "saved_snapshot": "research/ir-case-studies-2026-10-15/135A/01.json",
+    "retrieved_at": "2026-10-15T04:30:00.550844+00:00",
+    "raw_sha256": "4b59547488224f1725258fa9a43f18834da9d22c2dcf2f5216e5d77aacdb4339",
+    "allow_decision_for_target": true,
+    "text": "User-agent: *\r\nDisallow: /vrain/wp-admin/\r\nAllow: /vrain/wp-admin/admin-ajax.php\r\n\r\nSitemap: https://vrain.co.jp/sitemap.xml\r\nSitemap: https://vrain.co.jp/sitemap.rss\n"
+  },
+  "new_target_robots": {
+    "snapshot": "02.json",
+    "allow_decision": true,
+    "UA": "ir-agent-public-research/0.1"
+  },
+  "identity": {
+    "code": "135A",
+    "code_with_market_extension": "135A.T",
+    "name": "(株)ＶＲＡＩＮ　Ｓｏｌｕｔｉｏｎ",
+    "status": "supported",
+    "source_path": [
+      "record-6.json",
+      3,
+      "preloadedStore",
+      "priceBoard",
+      "board",
+      "code"
+    ]
+  },
+  "four_required_elements": {
+    "security": {
+      "status": "supported",
+      "value": "135A",
+      "field_path": [
+        3,
+        "preloadedStore",
+        "priceBoard",
+        "board",
+        "code"
+      ]
+    },
+    "displayed_price": {
+      "status": "supported_literal_not_normalized_quote",
+      "raw_token": "4,195",
+      "field_path": [
+        3,
+        "preloadedStore",
+        "priceBoard",
+        "board",
+        "price",
+        "value"
+      ]
+    },
+    "currency_JPY": {
+      "status": "unknown",
+      "value": null,
+      "field_path": null,
+      "reason": "No currency/Japanese-yen unit directly bound to price board; JPY substrings refer to unrelated USDJPY comparison item. Domestic listing and other fields denominated in yen are not substituted."
+    },
+    "observed_at": {
+      "status": "incomplete_time_only",
+      "value": null,
+      "literal": "14:42",
+      "field_path": [
+        3,
+        "preloadedStore",
+        "priceBoard",
+        "board",
+        "japanUpdateTime"
+      ],
+      "HTML_element": "<time>14:42</time>",
+      "date": null,
+      "timezone": null,
+      "reason": "Price time is time-only. Other indicator datetime attributes, rankings update dates and page retrieval date are not the quote timestamp."
+    }
+  },
+  "timestamp_separation": {
+    "page_first_retrieved_at": "2026-10-15T06:08:27.580453+00:00",
+    "extraction_recorded_at": "2026-10-15T06:10:46.205532+00:00",
+    "observed_at": null,
+    "published_at": null,
+    "no_date_or_timezone_filled": true
+  },
+  "source_bundle_created": false,
+  "source_bundle_not_created_reason": "Required four elements are not all explicit/bound. No market_data/requires_research=false source was produced, and no existing source was relabelled.",
+  "unverified": [
+    "Price currency explicitly tied to selected quote",
+    "Full quote observation date/timezone",
+    "Underlying provider/exchange independent verification",
+    "Current/live/executable trade availability",
+    "Freshness policy/acceptable delay",
+    "Authorization for recurring reuse/licensed feed"
+  ],
+  "excluded_values": [
+    "PE/EPS/stock count/consensus or other financial indicators",
+    "PTS figure",
+    "Other-security rankings"
+  ],
+  "DB_access_or_modification": false,
+  "forecast_valuation_model_question_or_send_changed": false,
+  "new_provider_or_SDK_code": false,
+  "stop_reason": "Three GET scope exhausted; no retry, diagnostics, alternative URL or new phase."
+}

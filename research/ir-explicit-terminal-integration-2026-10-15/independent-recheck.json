@@ -1,0 +1,78 @@
+{
+  "scope": "Finite explicit-terminal arithmetic and existing canonical IR constraints",
+  "input_sha256": "506b3de57a338fadcd700b6c49121c3db291e3a2566e6e478a549beac38bc514",
+  "checks": {
+    "sample_fraction": {
+      "forecast_periods": 1,
+      "forecast_pv_fraction": "100000000/11",
+      "terminal_value_fraction": "1000000000",
+      "terminal_pv_fraction": "10000000000/11",
+      "fair_value_fraction": "1010/11",
+      "returned_unrounded_jpy": "91.818181818181818181818181818181818181818181818181818181818181818181818181818182",
+      "absolute_error_fraction": "1/5500000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "two_period_fraction": {
+      "forecast_periods": 2,
+      "forecast_pv_fraction": "0",
+      "terminal_value_fraction": "2500",
+      "terminal_pv_fraction": "250000/121",
+      "fair_value_fraction": "25000/121",
+      "returned_unrounded_jpy": "206.61157024793388429752066115702479338842975206611570247933884297520661157024793",
+      "absolute_error_fraction": "47/12100000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "terminal_separate_from_last_forecast_and_no_growth_tax_reinvestment_repeat": true,
+    "zero_terminal_and_equity": {
+      "forecast_periods": 1,
+      "forecast_pv_fraction": "0",
+      "terminal_value_fraction": "0",
+      "terminal_pv_fraction": "0",
+      "fair_value_fraction": "0",
+      "returned_unrounded_jpy": "0",
+      "absolute_error_fraction": "0"
+    },
+    "negative_terminal_retained_with_positive_equity": {
+      "forecast_periods": 2,
+      "forecast_pv_fraction": "0",
+      "terminal_value_fraction": "-2500",
+      "terminal_pv_fraction": "-250000/121",
+      "fair_value_fraction": "11300/121",
+      "returned_unrounded_jpy": "93.38842975206611570247933884297520661157024793388429752066115702479338842975207",
+      "absolute_error_fraction": "47/12100000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "strict_seven_fields_rejections": {
+      "missing_fcf_jpy": "valuation.scenarios[0].inputs must contain exactly the seven dcf_explicit_terminal inputs",
+      "missing_terminal_fcff_jpy": "valuation.scenarios[0].inputs must contain exactly the seven dcf_explicit_terminal inputs",
+      "missing_discount_rate": "valuation.scenarios[0].inputs must contain exactly the seven dcf_explicit_terminal inputs",
+      "missing_terminal_growth_rate": "valuation.scenarios[0].inputs must contain exactly the seven dcf_explicit_terminal inputs",
+      "missing_cash_jpy": "valuation.scenarios[0].inputs must contain exactly the seven dcf_explicit_terminal inputs",
+      "missing_debt_jpy": "valuation.scenarios[0].inputs must contain exactly the seven dcf_explicit_terminal inputs",
+      "missing_shares_outstanding": "valuation.scenarios[0].inputs must contain exactly the seven dcf_explicit_terminal inputs",
+      "extra_tax_rate": "valuation.scenarios[0].inputs must contain exactly the seven dcf_explicit_terminal inputs",
+      "extra_reinvestment_rate": "valuation.scenarios[0].inputs must contain exactly the seven dcf_explicit_terminal inputs",
+      "extra_terminal_discount_rate": "valuation.scenarios[0].inputs must contain exactly the seven dcf_explicit_terminal inputs",
+      "null_terminal": "valuation.scenarios[0].inputs.terminal_fcff_jpy must be a finite number or numeric string",
+      "bool_terminal": "valuation.scenarios[0].inputs.terminal_fcff_jpy must be a finite number or numeric string",
+      "year_specific_rate_unimplemented": "valuation.scenarios[0].inputs.discount_rate must be a finite number or numeric string"
+    },
+    "legacy_raw_terminal_ignored_and_complete_old_output_unchanged": true,
+    "ambient_decimal_independence": true,
+    "explicit_million_jpy_conversion_keeps_upstream_adoption_unresolved": true,
+    "canonical_terminal_provenance_required": {
+      "required_path": "scenarios.synthetic-base.inputs.terminal_fcff_jpy",
+      "matched_value": "80000000",
+      "missing_status": "needs_review",
+      "mismatched_status": "needs_review",
+      "meaning_review_required": true,
+      "financial_inputs_verified": false
+    },
+    "precommitted_terminal_only_rate_change_hold_old_question_reject": true,
+    "actual_cli_and_memory_db_no_mutation": true
+  },
+  "limitations": [
+    "Numerical reproduction does not verify source authenticity, financial adoption, currency, annual period, tax, ROC, or stable-growth applicability.",
+    "JPY and year-end FCFF are caller declarations. Million-JPY conversion below is explicit arithmetic; no automatic unit or FX conversion is certified.",
+    "Only a single forecast/stable discount rate is implemented. The author year-specific WACC example is not reproduced as a complete valuation.",
+    "No real database, network, IR sending, forecast adoption or production/test file is modified."
+  ],
+  "status": "passed"
+}

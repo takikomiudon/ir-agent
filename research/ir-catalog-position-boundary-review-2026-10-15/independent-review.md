@@ -1,0 +1,13 @@
+# 保有申告境界修正の独立レビュー
+
+凍結された修正前後の差分と新12テストを読み、3つの合成DBで確認した範囲では、具体的な不備は見つかりませんでした。開始・終了ともlive 5ファイルは固定SHA・source-afterと全byte一致し、source-before 7ファイル・未変更live 3ファイル・元レビューを保持しています。
+
+- catalog由来の既定false、明記heldのingest、statusのみの変更は申告receiptを作りません。元の再現条件ではpositionがunknownで、判断は`unresolved / position_not_verified`でした。同じfalseを明示APIで再申告すると、既存の合成モデルの保有状態条件だけが通りました。価格・評価入力・方針は変更していません。
+- 同値falseも新規申告として追加され、trueも現在company metadataと一致します。UTC/JST同時刻と直前1µs、後の無資格観測からの旧申告fallback禁止、再申告後の適格性を確認しました。既存synthetic例外は維持され、実案件参照でsynthetic仮定を渡すと拒否されます。
+- provider再取り込み・再起動で再申告や履歴増加は起きず、全dumpと固定済み質問は不変でした。receipt INSERT失敗ではcompany/status/history/receiptがまとめて戻り、直接APIの外側transaction取消しも戻りました。時計はwriter取得内で読まれています。
+
+既存lifecycleテストの3変更は、申告snapshotのkind・broker_verifiedの明示、失敗注入先を実際のdeclare_position責務へ移す変更、旧bootstrapの申告unknown追加です。旧metadata観測のassertと金融actionの期待値は保持され、弱化は認めませんでした。新12テストは読取点検し、親が実施する全suiteは重複実行していません。
+
+旧company JSONと観測履歴は申告来歴へ格上げされません。新receiptは利用者の明示申告で、証券口座での実保有を検証したものではありません。旧saved reviewの現在表示を再監査する境界は別記録の対象で、この点検では拡大していません。
+
+実行可能な[独立probe](independent-probe.py)、[3件の結果](independent-probe-result.json)、file:line・SHAを含む[詳細記録](independent-review.json)を保存しました。実DB・GET・production/既存test/旧artifactの変更は0です。

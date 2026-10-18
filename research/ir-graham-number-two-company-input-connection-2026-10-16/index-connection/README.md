@@ -1,0 +1,18 @@
+共有公表数値索引v38を新規作成しました。29社/230事実/43親エントリ/45派生資料/36会社原典組で、実接続は43派生資料/223事実、従来file-only8331・9702の2派生資料/7事実は不変です。
+
+凍結候補の43エントリ/230事実は全objectをそのまま使用し、旧v37の41エントリ/226事実・既存per-fact source/artifact overrideも完全不変。artifact_resolutionに従い、per-fact指定があれば優先、なければ親entryを使いました。新4事実はrawfactの原典source_idを索引overrideへ転記していません。
+
+Root最終receipt completed_at=2026-10-16T10:10:16.750520+00:00（SHA5df097a9cff2cbf628843dfb6a866e41d3a998286c246ea38dbc0a86aafa03b6）の後、sqlite3 mode=ro/query_only/closingだけで独立照合しました。全45の解決先/原artifactを確認し、実保存43資料の全objectは該当artifactと一致、最新分類snapshotも一致。新しい原2+派生2は全object/nativeSHA/availability/分類・引用を照合しました。新バッチ増分は3817原典1+派生2の3資料で、既保存1975原典は重複していません。parent-validation-candidate.jsonに全照合値と実firstsaveを記録しています。
+
+現snapshotは216sources/215分類/126完了job/123attempt/246events/123receipts、28heads/55versions/165readsです。DBmainSHA8a456c3d095b5a252877f90daf301d3da6ce931fad74542b4fcf9f1440ab4e6bは前後一致、全27tableの件数とschemaも前後一致。全旧行multisetの保存証明はrootreceiptに帰属し、このworkerが全旧行検証を再実行したとはしていません。WAL観測を保持し、mainSHAだけで全DB状態を認証していません。
+
+v37のactual接続object全体（210sources/41派生/219事実）はprevious_v37_actual_research_source_connections_snapshotへ別名保持。さらに以前のv36/前historyobjectも変更していません。凍結候補と旧v37は同名編集せず、現在objectだけrootreceiptと独立RO確認に基づいて更新しました。
+
+原文の年次EPSと期末BPSの期間/単位/主体/scopeは不変です。数値一致・実保存は金融model採用、現在株数、現在株価、適正価値、確率・方針・買い/退出判断の認証ではありません。新GET/DB書込/Store/normalizer/共有コード/旧artifact編集は0。共有README等は変更していません。
+
+固定SHA:
+
+- canonicalv38 `717d74ee956aff199c09c5f563e0e7493de26c5f050233897394806dfa53a397`
+- parent-validation-candidate.json `469e46b1896f63ad9d3b259bea8e80efe9b6d5d362822b2a7e02260730062a35`
+
+この3新ファイルを2026-10-16T10:12:34.757537+00:00に固定し、以降同名編集しません。親の最終受入待ちです。

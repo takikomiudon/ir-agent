@@ -1,0 +1,367 @@
+{
+  "artifact_type": "bounded_authored_decision_bottleneck_audit",
+  "bounded_case_comparison": [
+    {
+      "company_id": "jp:135A",
+      "distance_to_numeric_logic": "Narrative lacks a complete EPS/FCFF valuation recipe; company EPS94.85 is not AENTRO independent EPS. Cashflow/reinvestment/cost/terminal assumptions remain separate.",
+      "existing_strength": "AENTRO operating outlook and actual KPI comparison; AND condition preserved.",
+      "refs": [
+        "research/ir-case-studies-2026-10-15/135A/author-condition-followup/case-record-v2.md",
+        "research/ir-case-studies-2026-10-15/135A/model-input-mapping.md"
+      ],
+      "why_not_selected": "Would require building several linked future inputs, not just selecting a valuation multiplier."
+    },
+    {
+      "company_id": "jp:6323",
+      "distance_to_numeric_logic": "Target EPS-year/multiple/formula still not identified, and April target is not a current valuation.",
+      "existing_strength": "Authored EPS and explicit dated4500 target plus later issuer observations.",
+      "refs": [
+        "research/ir-case-studies-2026-10-15/6323/author-condition-followup/case-record.md",
+        "research/ir-case-studies-2026-10-15/6323/author-condition-followup/presentation-addendum.md"
+      ],
+      "why_not_selected": "Adopting an unexplained target would not yield an IR-recomputable formula; selectedEPS/current multiple cannot be reverse engineered from4500."
+    },
+    {
+      "company_id": "jp:2983",
+      "distance_to_numeric_logic": "An applicable selected fair-multiple method/input remains absent. p1 tradingPER5.2 and p7 forward peer comparison are not selected fairPE.",
+      "existing_strength": "Completed direct author EPS candidate identification for1/27E308.31,1/28E339.81,1/29E369.46 plus business assumptions and issuer comparison. Candidate may be read without demanding unpublished exact future share counts.",
+      "not_investment_rank": true,
+      "refs": [
+        "research/ir-case-studies-2026-10-15/2983/eps-applicability-review/README.md",
+        "research/ir-case-studies-2026-10-15/2983/eps-applicability-review/review.json",
+        "research/ir-case-studies-2026-10-15/2983/order-netting-question-preflight/preflight.json",
+        "research/ir-case-studies-2026-10-15/2983/order-netting-question-preflight/README.md",
+        "research/ir-next-financial-connection-memo-2026-10-16/parent-disposition.json"
+      ],
+      "selected_for_next_method_task": true
+    }
+  ],
+  "main_finding": {
+    "conclusion": "The reviewed author methods and current docs do not impose an external independent company-specific EPS/target report as a universal prerequisite. Method, issuer/analyst facts and estimates, investor assumptions/adoption, and execution conditions have distinct owners.",
+    "evidence_quote_ids": [
+      "D01-narrative-owner",
+      "D02-narrative-input",
+      "D03-select-comparables",
+      "D06-author-market-regression",
+      "A01-consensus-context",
+      "A02-operating-scenarios",
+      "A03-own-scenarios",
+      "T-discount",
+      "P01-assumption-types"
+    ],
+    "id": "F01-authored-method-not-company-forecast-prerequisite",
+    "limits": "Anthropic earnings-preview does request consensus for that full preview. This is not omitted or replaced by company guidance. Absence of an external-forecast universal rule does not establish completeness of a numeric valuation or authorize invented fairPE/growth/risk/cost inputs. This audit does not claim an exhaustive review of all code/26 companies.",
+    "operational_overrequirement_to_avoid": "Do not wait for a broker to publish an applicable fair multiple for every issuer as the only possible valuation method. Conversely citing Damodaran does not make analyst-chosen peer criteria/adjustments or unsupported forecasts his supplied numbers."
+  },
+  "next_method_candidate": {
+    "candidate": "Relative valuation using authored comparison adjustment or published market/regional regression; prioritize published regression route to minimize discretionary peer selection/adjustment. This is a proposed method task, not an adoption of a numerical multiple.",
+    "closed_tasks_preserved": [
+      "2983 EPS candidate identification is complete, not an indefinite wait for precision/share denominators.",
+      "2983 cancellation definition preflight remains A/B/C definition annotations only, valuation changes empty.",
+      "Parent rejected duplicate baseline/answer mapping ticket and closed it. No reactivation without genuinely new author revision specification.",
+      "Previous company/broker route collection closures and existing method/valuation negative scopes remain unchanged."
+    ],
+    "company_id": "jp:2983",
+    "literal_route_check": {
+      "annotation_XML_SHA": "537bdb4cc3faa471a8cd2c17939af7c55860b93eddf7a5d5e980bdbeac74305d",
+      "annotation_XML_probe_command": [
+        "pdftohtml",
+        "-xml",
+        "-stdout",
+        "-f",
+        "5",
+        "-l",
+        "6",
+        "research/ir-policy-adoption-2026-10-15/evidence/454e360e2efebcc9616e6eddd46b0dcc7f477d15aca75412a377b2d4db9e0dce.raw"
+      ],
+      "annotation_href_count": 0,
+      "claim_scope": "No literal dataset URL was recovered from saved capture links or p5-6 pdftohtml XML anchors. Not a universal assertion that the PDF has no annotations or that author data are unavailable. The PDF source URL is a document route, not the missing regression table URL.",
+      "document_path": "research/ir-policy-adoption-2026-10-15/evidence/454e360e2efebcc9616e6eddd46b0dcc7f477d15aca75412a377b2d4db9e0dce.raw",
+      "literal_data_entry_URL": null,
+      "literal_data_entry_label": null,
+      "page_text_mentions": [
+        "S&P Capital IQ",
+        "my web site",
+        "check my website"
+      ],
+      "pages": [
+        5,
+        6
+      ],
+      "raw_sha256": "454e360e2efebcc9616e6eddd46b0dcc7f477d15aca75412a377b2d4db9e0dce",
+      "saved_capture_links_JSONpath": "$.links",
+      "saved_capture_links_count": 0,
+      "saved_capture_path": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.json"
+    },
+    "method_author": "Aswath Damodaran",
+    "next_three_finite_steps": [
+      {
+        "action": "Create the separate method-adoption review using D03-D07; fix intended company/date/currency/period and regression-route rationale. Reuse completed EPS candidate scope; do not register numerical financial adoption or duplicate a baseline/answer-mapping ticket.",
+        "step": 1,
+        "success_or_stop": "No additional broker company-forecast prerequisite; author method and analyst selection distinguished."
+      },
+      {
+        "action": "Root may separately authorize bounded official-author entry discovery then at most one relevant original regression table. Current saved p5-6 supplies no literal table href, so do not guess an endpoint or claim a ready route. Check actual table definitions/sample/time and Japan/accounting/growth/ROE/risk applicability before any use.",
+        "step": 2,
+        "success_or_stop": "If no literal official route or applicable complete table is obtained, close this finite method task with the precise deficiency; do not reopen closed broker/issuer routes or multiply reports."
+      },
+      {
+        "action": "Only after an applicable original table exists, map its actual predictor requirements to saved2983 candidates, preserving authoredEPS/basis uncertainties and independently check the formula with non-adopted research inputs. If any needed predictor/period/basis is missing, record that specific gap. Leave valuation and IR linkage unset until supported; do not substitute tradingPER or reverse engineer a target.",
+        "step": 3,
+        "success_or_stop": "A reproducible authored relation, or a decisive named predictor/applicability deficiency. Does not imply buy/sell or that cancellation clarification revises EPS."
+      }
+    ],
+    "one_decisive_source_gap": {
+      "actual_table_URL": null,
+      "available_in_reviewed_source": false,
+      "document_needed": "A Damodaran-published PER market/regional regression original table applicable to the intended market/valuation period, with coefficients, explanatory-variable definitions, pricing/earnings basis, sample/region and data timestamp.",
+      "not_sufficient_alone": "A table may be inapplicable or require missing predictor inputs. No resulting fairPE, EPS selection, forecast revision or trade rule is adopted here.",
+      "unknowns_not_invented": [
+        "Japan applicability",
+        "expected-growth/ROE/risk/payout or other predictor definitions actually used",
+        "sample coverage and accounting comparability",
+        "target fiscal-period alignment",
+        "regression coefficients and fit limits"
+      ],
+      "why": "It can supply an externally authored relation for an estimated multiple instead of treating traded peer PER as a chosen fairPE. The assignment supplies the method but not the coefficients or applicability."
+    },
+    "satisfied_inputs_without_new_read": [
+      "Existing direct Astris EPS candidate labels/units/authorship and company-vs-author separation are already fixed.",
+      "Existing operating assumptions and issuer comparison are available; no repeat EPS applicability audit.",
+      "Damodaran already supplies an authored procedural route for selecting and adjusting relative valuation; an independent issuer-specific target is not required by that route."
+    ],
+    "source_URL": "https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/eqprojspr25.pdf",
+    "source_pages": [
+      5,
+      6
+    ]
+  },
+  "original_and_project_quotes": [
+    {
+      "UTF8_byte_end": 1770,
+      "UTF8_byte_start": 1730,
+      "character_end": 1762,
+      "character_start": 1722,
+      "file_sha256": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106",
+      "id": "D01-narrative-owner",
+      "offset_semantics": "Zero-based half-open saved UTF8 Unicode/bytes; original newlines and formfeeds retained.",
+      "owner": "author_original",
+      "path": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt",
+      "physical_page": 4,
+      "text": "Develop your narrative for this company."
+    },
+    {
+      "UTF8_byte_end": 1985,
+      "UTF8_byte_start": 1908,
+      "character_end": 1976,
+      "character_start": 1899,
+      "file_sha256": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106",
+      "id": "D02-narrative-input",
+      "offset_semantics": "Zero-based half-open saved UTF8 Unicode/bytes; original newlines and formfeeds retained.",
+      "owner": "author_original",
+      "path": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt",
+      "physical_page": 4,
+      "text": "Tie your narrative to key numbers that you will be using in\n  your valuation."
+    },
+    {
+      "UTF8_byte_end": 2547,
+      "UTF8_byte_start": 2455,
+      "character_end": 2530,
+      "character_start": 2442,
+      "file_sha256": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106",
+      "id": "D03-select-comparables",
+      "offset_semantics": "Zero-based half-open saved UTF8 Unicode/bytes; original newlines and formfeeds retained.",
+      "owner": "author_original",
+      "path": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt",
+      "physical_page": 5,
+      "text": "Prepare a list of “comparable” companies, using criteria that\n you think are appropriate"
+    },
+    {
+      "UTF8_byte_end": 2920,
+      "UTF8_byte_start": 2822,
+      "character_end": 2900,
+      "character_start": 2802,
+      "file_sha256": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106",
+      "id": "D04-relative-adjustment",
+      "offset_semantics": "Zero-based half-open saved UTF8 Unicode/bytes; original newlines and formfeeds retained.",
+      "owner": "author_original",
+      "path": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt",
+      "physical_page": 5,
+      "text": "using simple techniques (do a qualitative analysis adjusting the\n    average for comparable firms)"
+    },
+    {
+      "UTF8_byte_end": 2994,
+      "UTF8_byte_start": 2926,
+      "character_end": 2973,
+      "character_start": 2905,
+      "file_sha256": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106",
+      "id": "D05-sector-regression",
+      "offset_semantics": "Zero-based half-open saved UTF8 Unicode/bytes; original newlines and formfeeds retained.",
+      "owner": "author_original",
+      "path": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt",
+      "physical_page": 5,
+      "text": "using a sector regression (a regression across firm in your sector)."
+    },
+    {
+      "UTF8_byte_end": 3313,
+      "UTF8_byte_start": 3156,
+      "character_end": 3291,
+      "character_start": 3134,
+      "file_sha256": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106",
+      "id": "D06-author-market-regression",
+      "offset_semantics": "Zero-based half-open saved UTF8 Unicode/bytes; original newlines and formfeeds retained.",
+      "owner": "author_original",
+      "path": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt",
+      "physical_page": 6,
+      "text": "Using the latest regression posted for the market on my web\n site, and the multiple you chose in step 3, evaluate whether\n your firm is under or over valued."
+    },
+    {
+      "UTF8_byte_end": 3531,
+      "UTF8_byte_start": 3423,
+      "character_end": 3507,
+      "character_start": 3399,
+      "file_sha256": "2fb7cdc6c1b601afa445270e87059859e8d60809a19afb7ec4ad56e4f59f1106",
+      "id": "D07-region",
+      "offset_semantics": "Zero-based half-open saved UTF8 Unicode/bytes; original newlines and formfeeds retained.",
+      "owner": "author_original",
+      "path": "research/ir-policy-adoption-2026-10-15/evidence/5215df891e0802c0.txt",
+      "physical_page": 6,
+      "text": "If you have a foreign company, you can use the regressions that I\n    have for the region (check my website)"
+    },
+    {
+      "UTF8_byte_end": 609,
+      "UTF8_byte_start": 534,
+      "character_end": 609,
+      "character_start": 534,
+      "file_sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+      "id": "A01-consensus-context",
+      "offset_semantics": "Zero-based half-open saved UTF8 Unicode/bytes; original newlines and formfeeds retained.",
+      "owner": "author_original",
+      "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+      "physical_page": null,
+      "text": "Pull consensus estimates via web search (revenue, EPS, key segment metrics)"
+    },
+    {
+      "UTF8_byte_end": 1684,
+      "UTF8_byte_start": 1624,
+      "character_end": 1682,
+      "character_start": 1622,
+      "file_sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+      "id": "A02-operating-scenarios",
+      "offset_semantics": "Zero-based half-open saved UTF8 Unicode/bytes; original newlines and formfeeds retained.",
+      "owner": "author_original",
+      "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+      "physical_page": null,
+      "text": "For each scenario:\n- What would need to happen operationally"
+    },
+    {
+      "UTF8_byte_end": 2756,
+      "UTF8_byte_start": 2731,
+      "character_end": 2742,
+      "character_start": 2717,
+      "file_sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33",
+      "id": "A03-own-scenarios",
+      "offset_semantics": "Zero-based half-open saved UTF8 Unicode/bytes; original newlines and formfeeds retained.",
+      "owner": "author_original",
+      "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+      "physical_page": null,
+      "text": "compare to your scenarios"
+    },
+    {
+      "UTF8_byte_end": 20966,
+      "UTF8_byte_start": 20829,
+      "character_end": 20820,
+      "character_start": 20685,
+      "file_sha256": "397a46f02ed9bcc4f3834c1d32fbfad41619e5a8336e1b0ba3935be6fed73ec1",
+      "id": "T-discount",
+      "offset_semantics": "Zero-based half-open saved UTF8 Unicode/bytes; original newlines and formfeeds retained.",
+      "owner": "author_original",
+      "path": "research/ir-tweedy-author-policy-discovery-2026-10-15/text/original.txt",
+      "physical_page": 8,
+      "text": "stocks whose current market prices are at discounts (that is, undervalued)\nto the Firm’s estimate of their underlying intrinsic values."
+    },
+    {
+      "UTF8_byte_end": 23032,
+      "UTF8_byte_start": 22876,
+      "character_end": 22854,
+      "character_start": 22700,
+      "file_sha256": "397a46f02ed9bcc4f3834c1d32fbfad41619e5a8336e1b0ba3935be6fed73ec1",
+      "id": "T-conditional-sale",
+      "offset_semantics": "Zero-based half-open saved UTF8 Unicode/bytes; original newlines and formfeeds retained.",
+      "owner": "author_original",
+      "path": "research/ir-tweedy-author-policy-discovery-2026-10-15/text/original.txt",
+      "physical_page": 8,
+      "text": "To the extent market conditions warrant, investments may be sold as the market price approaches or\nexceeds the Firm’s estimates of their intrinsic values."
+    },
+    {
+      "UTF8_byte_end": 2694,
+      "UTF8_byte_start": 2601,
+      "character_end": 1432,
+      "character_start": 1401,
+      "file_sha256": "4f4b6474033c4f2d979991cd282b1600748c8c53b81488d073deb0c0d4acadca",
+      "id": "P01-assumption-types",
+      "offset_semantics": "Zero-based half-open saved UTF8 Unicode/bytes; original newlines and formfeeds retained.",
+      "owner": "project_adaptation_of_author",
+      "path": "docs/decision-policy.md",
+      "physical_page": null,
+      "text": "会社計画、市場予想、独自の仮定を区別し、出典と時点を記録する。"
+    },
+    {
+      "UTF8_byte_end": 11600,
+      "UTF8_byte_start": 11510,
+      "character_end": 5526,
+      "character_start": 5496,
+      "file_sha256": "4f4b6474033c4f2d979991cd282b1600748c8c53b81488d073deb0c0d4acadca",
+      "id": "P02-applicable-adoption",
+      "offset_semantics": "Zero-based half-open saved UTF8 Unicode/bytes; original newlines and formfeeds retained.",
+      "owner": "project_instruction_interpretation",
+      "path": "docs/decision-policy.md",
+      "physical_page": null,
+      "text": "対象・単位・期間が適合する著者の手法を研究用途へ採用できる。"
+    },
+    {
+      "UTF8_byte_end": 2498,
+      "UTF8_byte_start": 2444,
+      "character_end": 1135,
+      "character_start": 1115,
+      "file_sha256": "6b6beac102091394b99827521b7def3677412437de36590e5539e5f4790c5d5e",
+      "id": "R01-completed-EPS",
+      "offset_semantics": "Zero-based half-open saved UTF8 Unicode/bytes; original newlines and formfeeds retained.",
+      "owner": "frozen_project_case_review",
+      "path": "research/ir-case-studies-2026-10-15/2983/eps-applicability-review/README.md",
+      "physical_page": null,
+      "text": "直接公表された外部EPS候補の同定は完了"
+    }
+  ],
+  "ownership": {
+    "analyst_assumptions": "Original methods explicitly involve the analyst narrative, comparable selection and estimate construction. Such assumptions must be identified as analyst/project assumptions and justified. They are not mechanically copied author numbers.",
+    "author_original_method": "Damodaran p4 narrative-to-input; p5 comparable selection and qualitative adjustment or sector regression; p6 author market/regional regression. Tweedy uses the Firm own intrinsic estimates, not mandatory outside analyst targets.",
+    "company_facts": "Periods, accounting, business metrics, guidance and definitions; not fair multiple, investor value or revision of someone else forecast.",
+    "execution_and_personal_conditions": "Holding/cost/return/risk/data-use policies remain separate from issuer/company forecasts. Existing input-ownership study reused, not all referred to an analyst report.",
+    "user_constraint": "Prefer an existing authored policy and avoid autonomous investment judgment. This supports a method candidate/adoption review within authorization, not arbitrary financial values. No extra hypothetical user approval prerequisite is introduced."
+  },
+  "recorded_at": "2026-10-16T07:32:18.402685+00:00",
+  "scope": {
+    "DB_access": 0,
+    "IR_registration_sending": 0,
+    "Store": 0,
+    "case_basis": "Existing fixed case reviews reused; no new issuer/author page audit or source discovery. Native26 cases is parent-reported cohort, not independently DB-counted here.",
+    "case_compared_only": [
+      "jp:135A",
+      "jp:2983",
+      "jp:6323"
+    ],
+    "financial_values_or_rules_adopted": 0,
+    "new_GET": 0,
+    "prior_six_policy_and_weighted_contract_audit": "Reused existing completed scope; not repeated.",
+    "production_edits": 0,
+    "shared_documents_or_inventory_changes": 0
+  },
+  "status": "research_method_candidate_only_no_financial_adoption",
+  "validation": {
+    "all_quote_spans_exact": true,
+    "input_pins_unchanged": true,
+    "no_new_source_or_case_or_IR_payload": true,
+    "no_new_values_periods_thresholds_or_model_input_adoption": true
+  }
+}

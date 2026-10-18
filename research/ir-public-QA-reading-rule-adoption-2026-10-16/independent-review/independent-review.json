@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-16T13:01:15.587198+00:00",
+  "reviewer": "Codex / audit_consumer independent reviewer",
+  "scope": "Frozen proposed public-QA reading procedure, two-link minimal patch, authored shortquote contexts and the seven cited company quote references. Read-only; no company forecasts or finance adoption revalidated.",
+  "blind_review": false,
+  "blind_review_note": "Producer proposal/evidence/validation were read before conclusions. Semantic assessment used actual cited DD/JIRA contexts and original saved company source text, not producer pass declarations alone.",
+  "status": "completed_no_material_findings_ready_for_root_apply",
+  "findings": [],
+  "substantive_observations": [
+    {
+      "topic": "著者帰属と適用範囲",
+      "location": "proposed/docs/public-qa-reading.md introduction; method-and-evidence.json author_boundary",
+      "evidence_refs": [
+        "DD-margin",
+        "DD-comparison",
+        "DD-neutral",
+        "JIRA-past-reasons",
+        "JIRA-public-answers"
+      ],
+      "assessment": "DD原文はPE面談の既知情報/比較差/非誘導の準備、JIRA2018は企業向けの公表実績説明と情報共有の推奨である。案は質問者前提・期/範囲・flow/stockの読み分けをproject adaptationと明示し、外部著者の売買規則や返答保証にしていない。確認した短い原文と前後文に整合する。"
+    },
+    {
+      "topic": "質問者の前提と会社が実際に答えた範囲",
+      "location": "proposed doc step1; 6200 examples rows1/2",
+      "evidence_refs": [
+        "Q3-question-OJT-not-confirmed",
+        "Q3-sales-guide-reasons",
+        "Q8-future-plan-distinct-scope",
+        "Q9-question-hiring-premise-and-intention"
+      ],
+      "assessment": "OJT負担継続、41%、4月新人40名はそれぞれ質問文にある。回答3は大型研修案件/リードタイム/ITカスタマイズ売上を理由として答え、OJT負担継続を明示確認していない。回答8の利益率向上意向や回答9の将来採用意向から質問者の数値を会社認証済み実績へ移していないという例示は正確。"
+    },
+    {
+      "topic": "当時予想と将来中計、採用flowと人員stock",
+      "location": "proposed doc step2; 6200 example row3",
+      "evidence_refs": [
+        "Q7-AI-staffing-assumption",
+        "Q8-future-plan-distinct-scope",
+        "Q9-question-hiring-premise-and-intention"
+      ],
+      "assessment": "質問7は業績予想、質問8は11月見直しの中期計画、質問9は将来の新人採用を問う。回答7の大幅人員減を想定しない説明、回答8の人員数減/人員転換、回答9の新人採用継続の意図を、同一期間・同一母集団の矛盾や削減率へ換算しないという限定は妥当。会社の計画の整合性そのものを認証するものではない。"
+    },
+    {
+      "topic": "主な費目・概数と完全bridge、予測と実績",
+      "location": "proposed doc step3; 4318 example row4",
+      "evidence_refs": [
+        "4318-QA-FY2026-annual-Q2-FY2027-SG&A-cost-outlook"
+      ],
+      "assessment": "4318の年度見出しはFY2026/3説明会でも、当該Q2はFY2027/3見通しを問う。回答は主な費目の概数を列挙する会社予測であり、FY2026実績/売却益税後調整へ移さず、全費目の合計や残差を補わないという読み分けに整合する。部分説明の定性的価値を残し、正常EPS未完成を研究禁止にしていない。"
+    },
+    {
+      "topic": "文書日・会合日・URL・編集注記・話者",
+      "location": "proposed doc steps1/4; 6200 date example; evidence identity ref",
+      "evidence_refs": [
+        "identity-date-edited-QA"
+      ],
+      "assessment": "保存原文には文書上の日付と会合日時の双方が2026-05-11としてあり、全回答を舟橋が行った旨と部分的加筆修正の注記がある。提案はURLの26051301を公表日へ逆算せず、明示されないTZや精密公表時刻を補わず、編集済Q&Aを逐語録へ変えない。これらの記述は原文に沿う。"
+    },
+    {
+      "topic": "既答除外と残余、公開性と金融契約の境界",
+      "location": "proposed doc step5/final paragraph; both patch insertions",
+      "evidence_refs": [
+        "DD-comparison",
+        "JIRA-public-answers"
+      ],
+      "assessment": "既答を同じscopeで再質問から除き、残る公開資料/定義と投資家側の予測・価値を分ける。比較/入力の意味を特定する手順であり、新しい数値入力・式・返信分岐・必須schema field・普遍的送信gateを追加しない。個別返信の公開性を別確認としJIRAからpublic_clarificationを自動保証しないため、既存契約と実質矛盾しない。"
+    }
+  ],
+  "source_reference_check": {
+    "authored_shortquotes": 5,
+    "company_quote_references": 7,
+    "native_and_verbatim_quote_bindings_matched": true,
+    "6200_citation_source_alias": "6200-Q2-QA-May11-original is retained as original_manifest_source_id in the canonical source; source-ID difference is an explicit alias mapping, not another company/source.",
+    "company_quotes_reproduced_in_this_review": false,
+    "limits": "No new GET, full-paper review, PDF re-render or independent financial validation. Selected saved text contexts and original source objects were used for this procedure review."
+  },
+  "application_assessment": {
+    "material_blocker": false,
+    "recommendation": "ready_for_root_to_apply_new_doc_and_two_paragraph_insertions",
+    "scope": "Only the frozen new docs/public-qa-reading.md and minimal two insertions. Root owns live application.",
+    "current_two_shared_targets_match_frozen_before_SHA": true,
+    "new_doc_target_currently_absent": true,
+    "recheck_before_SHA_at_apply": true,
+    "new_gate_or_permission_required": false,
+    "financial_adoption_or_IR_ready_approval": false
+  },
+  "input_freeze": {
+    "frozen_at": "2026-10-16T12:58:15.308739+00:00",
+    "files": [
+      {
+        "file": "research/ir-public-QA-reading-rule-adoption-2026-10-16/README.md",
+        "sha256": "7c3c96b45053a576bb37096f3bb04fc13831f513fd27ccb88f01a444a4a6fce9",
+        "bytes": 2265
+      },
+      {
+        "file": "research/ir-public-QA-reading-rule-adoption-2026-10-16/before/.agents/skills/jp-equity-ir/SKILL.md",
+        "sha256": "1fc19003146ab2bf216fc514071918b56918bd2d1bb47416cc1ec0b5a07b4959",
+        "bytes": 29527
+      },
+      {
+        "file": "research/ir-public-QA-reading-rule-adoption-2026-10-16/before/docs/ir-question-preparation.md",
+        "sha256": "c5e881e0a0874edfc28dcc67d8d48c69600a4916254131477f71b961218d7a7f",
+        "bytes": 5660
+      },
+      {
+        "file": "research/ir-public-QA-reading-rule-adoption-2026-10-16/manifest.json",
+        "sha256": "0545b0d08eef2a3ebcc06f7d6a881a7e5a0647263aed51cb2c005e918cac0162",
+        "bytes": 1352
+      },
+      {
+        "file": "research/ir-public-QA-reading-rule-adoption-2026-10-16/meaning-validation.json",
+        "sha256": "db908baab1d5693f94c911e43fde0970c6d32561b228f6e776422e367b55378b",
+        "bytes": 4691
+      },
+      {
+        "file": "research/ir-public-QA-reading-rule-adoption-2026-10-16/method-and-evidence.json",
+        "sha256": "5b564670c6bb161569cba28b4133e738a86e1235e91f60fe86440b9f87e3d1e7",
+        "bytes": 15080
+      },
+      {
+        "file": "research/ir-public-QA-reading-rule-adoption-2026-10-16/minimal-links.patch",
+        "sha256": "20f1b5c758693bb9dff046ba5439ed0da390bc87abe9e23784558dedb0d6f278",
+        "bytes": 3186
+      },
+      {
+        "file": "research/ir-public-QA-reading-rule-adoption-2026-10-16/proposed/docs/public-qa-reading.md",
+        "sha256": "894a0ad1e392b0e050bfa83bb17da999ad9668978a5f0c2e997af7f98f24db2b",
+        "bytes": 3774
+      }
+    ]
+  },
+  "reviewed_supporting_files": [
+    {
+      "file": "research/ir-case-studies-2026-10-15/6200/second-quarter-public-QA-review-2026-10-16/source-only-bundle.json",
+      "sha256": "0e80826b483219babb3c572ecba239d142fcb44f74618c2bacf33872eae72a74"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/6200/second-quarter-public-QA-review-2026-10-16/source-quotes.json",
+      "sha256": "a025cb3c3ad46dd76957d1f220bf0610313f41a69795af7a48b7803851223b0e"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/6200/second-quarter-public-QA-review-2026-10-16/review.json",
+      "sha256": "fcb5c53b0f669b70f81cff6610aa727deb7d19be47a1faac2423c7aaade70839"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/6200/second-quarter-public-QA-review-2026-10-16/manifest.json",
+      "sha256": "ec337ed579fddd94ba4b248821ad94fa0504ae1f3f0387fc4ad9e8371697fabf"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/4318/public-earnings-QA-index-review-2026-10-16/source-only-bundle.json",
+      "sha256": "afa405d09cb25f0076b36e39bdd3d527d15f8ea6ba50cd164086544aaaf19f4d"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/4318/public-earnings-QA-index-review-2026-10-16/quotes.json",
+      "sha256": "56e427c6904cd5bbc80a43a05238cc14a96ae8176abbb83b49b62daed03612cd"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/4318/public-earnings-QA-index-review-2026-10-16/review.json",
+      "sha256": "26603ce6a333741c9634229d5f66b4a383f5018b4c39772c24cd3d7de3633a91"
+    },
+    {
+      "file": "research/ir-case-studies-2026-10-15/4318/public-earnings-QA-index-review-2026-10-16/manifest.json",
+      "sha256": "ef707da2cbf4e076583ef583f0c5b88445c7eec01cde730569c6d2c0c2d76278"
+    },
+    {
+      "file": "docs/workflow.md",
+      "sha256": "d667504381f03579d87d1054286441074b758fc293e2d3113d4c9dbf3e01ca1a"
+    },
+    {
+      "file": "docs/ir-question-preparation.md",
+      "sha256": "c5e881e0a0874edfc28dcc67d8d48c69600a4916254131477f71b961218d7a7f"
+    },
+    {
+      "file": ".agents/skills/jp-equity-ir/SKILL.md",
+      "sha256": "1fc19003146ab2bf216fc514071918b56918bd2d1bb47416cc1ec0b5a07b4959"
+    },
+    {
+      "file": "third_party/anthropic/manifest.json",
+      "sha256": "e26191efdbd0129d708b6b9c29ba796824c82c33f6f1e300ba9064337b6cf219"
+    },
+    {
+      "file": "third_party/anthropic/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "third_party/anthropic/skills/dd-meeting-prep/SKILL.md",
+      "sha256": "a74eecadece794106d515ce3d00e07b3857ed123e841e8962e26363d2413d94f"
+    },
+    {
+      "file": "research/ir-jira-dialogue-best-practices-2026-10-15/review.json",
+      "sha256": "1dcbd63edd10ae382021ef7566ca4e5ab5899a32d1cf8b85185b5fa431414106"
+    }
+  ],
+  "execution": {
+    "new_GET": 0,
+    "DB_Store_CLI": 0,
+    "live_doc_or_skill_changes": 0,
+    "producer_file_changes": 0,
+    "old_source_changes": 0,
+    "financial_calculation_or_adoption": 0,
+    "formal_IR_or_send": 0,
+    "output_files": 1
+  }
+}

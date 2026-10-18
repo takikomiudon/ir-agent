@@ -1,0 +1,112 @@
+{
+  "quotes": [
+    {
+      "id": "issuer-authorized-link-description",
+      "capture_id": "vrain-price-01",
+      "quote": "Yahoo! JAPAN提供の株価情報ページにリンクします。",
+      "raw_sha256": "33439cd5280b1792798d58d28c855fa253cc3d9cdddd78b3a921f6268b4f74ca",
+      "url": "https://vrain.co.jp/ir/quote/",
+      "retrieved_at": "2026-10-15T06:08:00.747708+00:00",
+      "published_at": null,
+      "location": {
+        "saved_text_file": "01.visible.txt",
+        "text_character_start": 501,
+        "text_character_end": 531,
+        "offset_unit": "Unicode code points; end exclusive",
+        "kind": "visible_text"
+      },
+      "scope": "Issuer links to third-party page; not issuer verification of each quote."
+    },
+    {
+      "id": "issuer-exact-stock-href",
+      "capture_id": "vrain-price-01",
+      "quote": "<a href=\"https://finance.yahoo.co.jp/quote/135A.T/chart\" target=\"_blank\" rel=\"noopener\">こちらをクリックして</a>",
+      "raw_sha256": "33439cd5280b1792798d58d28c855fa253cc3d9cdddd78b3a921f6268b4f74ca",
+      "url": "https://vrain.co.jp/ir/quote/",
+      "retrieved_at": "2026-10-15T06:08:00.747708+00:00",
+      "published_at": null,
+      "location": {
+        "saved_text_file": "01.txt",
+        "text_character_start": 55840,
+        "text_character_end": 55942,
+        "offset_unit": "Unicode code points; end exclusive",
+        "kind": "raw_HTML"
+      },
+      "scope": "Literal anchor URL, no guessed endpoint."
+    },
+    {
+      "id": "security-price-partial-time",
+      "capture_id": "vrain-price-03",
+      "quote": "(株)ＶＲＡＩＮ Ｓｏｌｕｔｉｏｎ 135A 情報・通信 ポートフォリオに追加 4,195 前日比 -700 ( -14.30 % ) リアルタイム株価 14:42",
+      "raw_sha256": "606ee52ebad4d96a46dc2966510f6844e685331e59ba20501771d9ba04179058",
+      "url": "https://finance.yahoo.co.jp/quote/135A.T/chart",
+      "retrieved_at": "2026-10-15T06:08:27.580453+00:00",
+      "published_at": null,
+      "location": {
+        "saved_text_file": "03.visible.txt",
+        "text_character_start": 356,
+        "text_character_end": 438,
+        "offset_unit": "Unicode code points; end exclusive",
+        "kind": "visible_text"
+      },
+      "scope": "Page label retained only; not verified live, executable or current quote."
+    },
+    {
+      "id": "quote-time-has-no-date",
+      "capture_id": "vrain-price-03",
+      "quote": "<time>14:42</time>",
+      "raw_sha256": "606ee52ebad4d96a46dc2966510f6844e685331e59ba20501771d9ba04179058",
+      "url": "https://finance.yahoo.co.jp/quote/135A.T/chart",
+      "retrieved_at": "2026-10-15T06:08:27.580453+00:00",
+      "published_at": null,
+      "location": {
+        "saved_text_file": "03.txt",
+        "text_character_start": 21684,
+        "text_character_end": 21702,
+        "offset_unit": "Unicode code points; end exclusive",
+        "kind": "raw_HTML"
+      },
+      "scope": "Price board time element has no datetime attribute or date/offset. No today/JST/close inference."
+    },
+    {
+      "id": "other-indicator-date-not-quote-date",
+      "capture_id": "vrain-price-03",
+      "quote": "時価総額<time dateTime=\"2026-10-15T14:42:00+09:00\">14:42</time>",
+      "raw_sha256": "606ee52ebad4d96a46dc2966510f6844e685331e59ba20501771d9ba04179058",
+      "url": "https://finance.yahoo.co.jp/quote/135A.T/chart",
+      "retrieved_at": "2026-10-15T06:08:27.580453+00:00",
+      "published_at": null,
+      "location": {
+        "saved_text_file": "03.txt",
+        "text_character_start": 31316,
+        "text_character_end": 31375,
+        "offset_unit": "Unicode code points; end exclusive",
+        "kind": "raw_HTML"
+      },
+      "scope": "A complete datetime exists for market-cap indicator, not directly for quote. It is deliberately not substituted as observed_at."
+    },
+    {
+      "id": "reuse-restriction-notice",
+      "capture_id": "vrain-price-03",
+      "quote": "株式情報の転用、販売は固く禁じます。",
+      "raw_sha256": "606ee52ebad4d96a46dc2966510f6844e685331e59ba20501771d9ba04179058",
+      "url": "https://finance.yahoo.co.jp/quote/135A.T/chart",
+      "retrieved_at": "2026-10-15T06:08:27.580453+00:00",
+      "published_at": null,
+      "location": {
+        "saved_text_file": "03.visible.txt",
+        "text_character_start": 2725,
+        "text_character_end": 2743,
+        "offset_unit": "Unicode code points; end exclusive",
+        "kind": "visible_text"
+      },
+      "scope": "Page notice retained; no licensed recurring feed/reuse assumed; this is bounded research capture only."
+    }
+  ],
+  "source_snapshot_files": [
+    "01.json",
+    "02.json",
+    "03.json"
+  ],
+  "semantic_limit": "Literal quote/field evidence only; missing currency and full price observation time prevent price-input candidacy."
+}

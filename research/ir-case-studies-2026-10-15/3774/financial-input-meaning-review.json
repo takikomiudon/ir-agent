@@ -1,0 +1,993 @@
+{
+  "schema_version": 1,
+  "artifact_type": "offline_financial_input_meaning_review",
+  "company_id": "jp:3774",
+  "recorded_at": "2026-10-15T02:33:08.715202+00:00",
+  "reviewer": "Codex / saved issuer disclosure review",
+  "research_only": true,
+  "financial_inputs_verified": false,
+  "model_inputs_adopted": false,
+  "new_get_count": 0,
+  "scope_note": "保存済み原sourceのみの有限点検。supportedは当該記述と期間・範囲の対応が保存原文に支持されるという意味で、モデル入力の採用・予想達成・現在の最新版を保証しない。unknownは今回の保存コーパスで未確認であり非公表や不存在の断定ではない。",
+  "input_artifact": "disclosed-facts-draft.json",
+  "reviewed_source_ids": [
+    "case-public:f0a327d461f999a7037dbeb85a37012ff22a0d989472237bc418f388857a4288",
+    "case-public:21d8bd89ca1db7d29cc5bd7ec45a7b7293a5e7b0d19e22feef0ea7121660e21d",
+    "case-public:359ba064d0d907be527823565bb73ae03f96fa3aababe6ec08e483eb27c0efdf",
+    "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+    "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+    "case-public:ad6e6c19c1c65844dbad2164d7fe96c3a23b15f695bee5f1c65917b23a8ecc00",
+    "case-public:bba5e69409daf7f19379df26b1205f46097336f71a1e698206f7befcdd32daf5",
+    "case-public:a7b25f4959a00b9428e6d375aec91b50078fe5c759ecd5f50da9df3a0798684d",
+    "case-public:0139eea0c070051e1ab9add2b6f57843f9208cb40c5628f4ca163a9279bb1bc7",
+    "case-public:0caff4ebca925effd24023209f08f9e2f54a1d66addbe898d755b4e8b2a0860b",
+    "case-public:5db0f6585e775ff8710b514b16ce77af4f68c846b978d97d35665c5b17fc95ec",
+    "case-public:3eddc87cf3e2db2587c233569c47890767b67248ba06e0f13bb4dba868b716c9"
+  ],
+  "source_inventory": [
+    {
+      "id": "case-public:f0a327d461f999a7037dbeb85a37012ff22a0d989472237bc418f388857a4288",
+      "title": "株主・投資家向け情報 | インターネットイニシアティブ（IIJ）",
+      "url": "https://www.iij.ad.jp/ir/",
+      "retrieved_at": "2026-10-15T01:09:57.244120+00:00",
+      "publication_date": null,
+      "content_sha256": "1c6f27ab47b0ace7f6ac6d685fa3ff8a8f843f423db02a7475b80424f7e9eab9",
+      "saved_extraction": "3774/evidence/48e58412b8afcd54.json"
+    },
+    {
+      "id": "case-public:21d8bd89ca1db7d29cc5bd7ec45a7b7293a5e7b0d19e22feef0ea7121660e21d",
+      "title": "よくあるご質問（IR関連） | 株主・投資家向け情報 | インターネットイニシアティブ(IIJ)",
+      "url": "https://www.iij.ad.jp/ir/faq/",
+      "retrieved_at": "2026-10-15T01:10:00.809617+00:00",
+      "publication_date": null,
+      "content_sha256": "ca6896aa54b80e83efba0ca95b5dd87e0ad3228db31d75de60394f5e0a00bff5",
+      "saved_extraction": "3774/evidence/d3f3cacc5ade95e7.json"
+    },
+    {
+      "id": "case-public:359ba064d0d907be527823565bb73ae03f96fa3aababe6ec08e483eb27c0efdf",
+      "title": "事業内容・事業戦略について | 株主・投資家向け情報 | インターネットイニシアティブ(IIJ)",
+      "url": "https://www.iij.ad.jp/ir/faq/keiei/index.html",
+      "retrieved_at": "2026-10-15T01:10:53.936200+00:00",
+      "publication_date": null,
+      "content_sha256": "9ba39752bad28e7cd21964241e5da4021312f01ab6c3c2170a19c0f9b8218e02",
+      "saved_extraction": "3774/evidence/25a3f23368e27d86.json"
+    },
+    {
+      "id": "case-public:fbb8cf4d04e09e0afd7d59f5c43158f7f75dc5c33d63783175e3a9d66a4a331d",
+      "title": "決算・財務情報について | 株主・投資家向け情報 | インターネットイニシアティブ(IIJ)",
+      "url": "https://www.iij.ad.jp/ir/faq/kessan/index.html",
+      "retrieved_at": "2026-10-15T01:10:54.665155+00:00",
+      "publication_date": null,
+      "content_sha256": "2325e1d0e734eb31d3fbd2001eaa9c7a13521eadaede6e935d6a1d8bc2d7c839",
+      "saved_extraction": "3774/evidence/3f8e02d9d7390f80.json"
+    },
+    {
+      "id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+      "title": "IIJ1Q26J.pdf",
+      "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J.pdf",
+      "retrieved_at": "2026-10-15T01:10:08.679271+00:00",
+      "publication_date": "2026-08-07",
+      "content_sha256": "f3cc58c011bbfc8f52ae8ce2ce6bdf04ff9f3f502e7177026e6f4ba6a4c3c107",
+      "saved_extraction": "3774/evidence/58fa60ba292505d2.txt"
+    },
+    {
+      "id": "case-public:ad6e6c19c1c65844dbad2164d7fe96c3a23b15f695bee5f1c65917b23a8ecc00",
+      "title": "IIJ1Q26J_presentation.pdf",
+      "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J_presentation.pdf",
+      "retrieved_at": "2026-10-15T01:10:12.367485+00:00",
+      "publication_date": "2026-08-07",
+      "content_sha256": "d8dea67ae53005de1fe2f334bef8dec9acc709da8d1728274047275c70dbc6be",
+      "saved_extraction": "3774/evidence/839b494e86bffba3.txt"
+    },
+    {
+      "id": "case-public:bba5e69409daf7f19379df26b1205f46097336f71a1e698206f7befcdd32daf5",
+      "title": "261Q_databook.xlsx",
+      "url": "https://www.iij.ad.jp/ir/library/financial/xlsx/261Q_databook.xlsx",
+      "retrieved_at": "2026-10-15T01:14:43.143241+00:00",
+      "publication_date": null,
+      "content_sha256": "ccc03457bf5485d76e286cb4efb857382c4dba6ab83e963231e0373cc8445dcb",
+      "saved_extraction": "3774/evidence/261Q_databook-extracted.json"
+    },
+    {
+      "id": "case-public:a7b25f4959a00b9428e6d375aec91b50078fe5c759ecd5f50da9df3a0798684d",
+      "title": "決算説明会等での主な質疑応答内容 | 株主・投資家向け情報 | インターネットイニシアティブ（IIJ）",
+      "url": "https://www.iij.ad.jp/ir/library/questions/20260807.html",
+      "retrieved_at": "2026-10-15T01:10:10.898820+00:00",
+      "publication_date": "2026-08-07",
+      "content_sha256": "ce3ca678a67b95b410618042b99138afe989961ab177c47f36a10d018de86e14",
+      "saved_extraction": "3774/evidence/6a87d55ee3151370.json"
+    },
+    {
+      "id": "case-public:0139eea0c070051e1ab9add2b6f57843f9208cb40c5628f4ca163a9279bb1bc7",
+      "title": "FY2025_End.pdf",
+      "url": "https://www.iij.ad.jp/ir/library/report/pdf/FY2025_End.pdf",
+      "retrieved_at": "2026-10-15T01:14:44.385143+00:00",
+      "publication_date": "2026-06-25",
+      "content_sha256": "667adc7f94ae8325e566e78e2540ef4589454df18bd2d22fd11a914c24373867",
+      "saved_extraction": "3774/evidence/5681c7a946e64688.txt"
+    },
+    {
+      "id": "case-public:0caff4ebca925effd24023209f08f9e2f54a1d66addbe898d755b4e8b2a0860b",
+      "title": "ディスクロージャ・ポリシー | 株主・投資家向け情報 | インターネットイニシアティブ（IIJ）",
+      "url": "https://www.iij.ad.jp/ir/policy/disclosure/",
+      "retrieved_at": "2026-10-15T01:09:59.391399+00:00",
+      "publication_date": null,
+      "content_sha256": "52ee645b7fece472449f00cef0a3b4b7bdad1febd9648be5fb23fa6f2169ebc3",
+      "saved_extraction": "3774/evidence/3c662dadc31b1de5.json"
+    },
+    {
+      "id": "case-public:5db0f6585e775ff8710b514b16ce77af4f68c846b978d97d35665c5b17fc95ec",
+      "title": "財務ハイライト | 株主・投資家向け情報 | インターネットイニシアティブ（IIJ）",
+      "url": "https://www.iij.ad.jp/ir/results/?sort=sort03",
+      "retrieved_at": "2026-10-15T01:14:48.564221+00:00",
+      "publication_date": null,
+      "content_sha256": "8a7f9aa96e472d0b1fdc08d706eded746c125f9e29c1ea3c38f794b9138fa2e6",
+      "saved_extraction": "3774/evidence/36e6ae7947073196.json"
+    },
+    {
+      "id": "case-public:3eddc87cf3e2db2587c233569c47890767b67248ba06e0f13bb4dba868b716c9",
+      "title": "財務ハイライト | 株主・投資家向け情報 | インターネットイニシアティブ（IIJ）",
+      "url": "https://www.iij.ad.jp/ir/results/?sort=sort04",
+      "retrieved_at": "2026-10-15T01:14:45.222264+00:00",
+      "publication_date": null,
+      "content_sha256": "8a7f9aa96e472d0b1fdc08d706eded746c125f9e29c1ea3c38f794b9138fa2e6",
+      "saved_extraction": "3774/evidence/2db082d6e039051d.json"
+    }
+  ],
+  "items": [
+    {
+      "id": "forecast_eps_period_and_consolidation",
+      "label": "通期予想EPSの期間・範囲",
+      "status": "supported",
+      "value": {
+        "raw_value": "141.03",
+        "unit": "JPY-per-share",
+        "kind": "issuer_guidance",
+        "consolidation": "consolidated",
+        "accounting_basis": "IFRS",
+        "label": "基本的1株当たり当期利益"
+      },
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "親会社所有者/株主に帰属する利益を示す連結業績予想の1株値",
+      "evidence": [
+        {
+          "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J.pdf",
+          "retrieved_at": "2026-10-15T01:10:08.679271+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "３．2027年3月期の連結業績予想（2026年4月1日～2027年3月31日）\n\n                                                  (％表示は、通期は対前期、四半期は対前年同四半期増減率)\n                                                                                   親会社の所有者に帰属              基本的1株当たり\n                   売上収益                    営業利益                  税引前利益               する当期利益                  当期利益\n                   百万円           ％        百万円          ％            百万円        ％         百万円        ％                円   銭\n  第2四半期(累計)      180,000       11.2       15,350    △0.2         14,050 △7.3              9,550 △4.8                 53.88\n     通期          385,000       11.5       38,500     10.5        37,000  5.0             25,000  3.4                141.03\n(注) 直近に公表されている業績予想からの修正の有無                  ： 無\n(注) 2027年3月期の連結業績予想の詳細につきましては、添付資料8頁「１．当四半期決算に関する定性的情報 (３) 連結業績予想などの将来予\n  測情報に関する説明」をご覧下さい。\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "連結業績予想・通期EPS欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J.pdf",
+          "retrieved_at": "2026-10-15T01:10:08.679271+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "2027年3月期           第1四半期決算短信〔ＩＦＲＳ〕(連結)\n                                                           2026年8月7日\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "決算短信表紙の会計基準・連結表示",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "見出しの対象日・連結表示と通期EPSの列を同じ原短信で確認。実績値や半期値とは別。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "forecast_annual_dps_and_installments",
+      "label": "年間配当予想の期間・合計・内訳",
+      "status": "supported",
+      "value": {
+        "raw_value": "43.00",
+        "unit": "JPY-per-share",
+        "kind": "issuer_guidance",
+        "interim_jpy": "21.50",
+        "fiscal_year_end_jpy": "21.50",
+        "entity": "issuer distribution per share, not consolidated earnings"
+      },
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "当期予想行の年間配当金・合計欄",
+      "evidence": [
+        {
+          "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J.pdf",
+          "retrieved_at": "2026-10-15T01:10:08.679271+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "２．配当の状況\n                                                   年間配当金\n\n                第1四半期末          第2四半期末             第3四半期末                 期末               合計\n                       円   銭              円 銭               円    銭            円    銭           円   銭\n2026年3月期                   ―              19.50                 ―             19.50            39.00\n2027年3月期                   ―\n2027年3月期(予想)                              21.50                 ―             21.50            43.00\n(注) 直近に公表されている配当予想からの修正の有無                  ： 無\n\n\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "提出会社の年間1株配当予想・合計欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "合計は期末のみの額でなく年間予想。配当は提出会社の株式への分配で、連結利益額の測定値と同一視しない。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "quarter_actual_share_counts",
+      "label": "当四半期期末株式数・自己株式数と期中平均",
+      "status": "supported",
+      "value": {
+        "share_class": "ordinary shares",
+        "issued_including_treasury": "183471380",
+        "treasury_at_period_end": "6118847",
+        "quarter_weighted_average": "177296398"
+      },
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2026-06-30",
+        "label": "2027年3月期第1四半期・実績"
+      },
+      "scope": "短信に記載された当第1四半期普通株式数",
+      "evidence": [
+        {
+          "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J.pdf",
+          "retrieved_at": "2026-10-15T01:10:08.679271+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 2,
+          "printed_page": null,
+          "quote": "（３）発行済株式数（普通株式）\n  ① 期末発行済株式数 (自己株式を含む)            2027年3月期1Ｑ   183,471,380株 2026年3月期     183,448,852株\n\n  ②   期末自己株式数                     2027年3月期1Ｑ    6,118,847株 2026年3月期       6,186,958株\n\n  ③   期中平均株式数（四半期累計）              2027年3月期1Ｑ   177,296,398株 2026年3月期1Ｑ   176,948,883株\n\n\n ",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2026-06-30",
+            "label": "2027年3月期第1四半期・実績"
+          },
+          "scope": "普通株式数と自己株式、四半期累計の期中平均株式数",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "期末株式数（自己株式含む）、自己株式数、四半期累計の期中平均はそれぞれ異なる表示。今回の期間を超える予想株式数ではない。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "forecast_eps_weighted_average_share_count",
+      "label": "通期予想EPSに使った将来加重平均株式数",
+      "status": "unknown",
+      "value": null,
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "通期予想EPSの分母",
+      "evidence": [
+        {
+          "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J.pdf",
+          "retrieved_at": "2026-10-15T01:10:08.679271+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "３．2027年3月期の連結業績予想（2026年4月1日～2027年3月31日）\n\n                                                  (％表示は、通期は対前期、四半期は対前年同四半期増減率)\n                                                                                   親会社の所有者に帰属              基本的1株当たり\n                   売上収益                    営業利益                  税引前利益               する当期利益                  当期利益\n                   百万円           ％        百万円          ％            百万円        ％         百万円        ％                円   銭\n  第2四半期(累計)      180,000       11.2       15,350    △0.2         14,050 △7.3              9,550 △4.8                 53.88\n     通期          385,000       11.5       38,500     10.5        37,000  5.0             25,000  3.4                141.03\n(注) 直近に公表されている業績予想からの修正の有無                  ： 無\n(注) 2027年3月期の連結業績予想の詳細につきましては、添付資料8頁「１．当四半期決算に関する定性的情報 (３) 連結業績予想などの将来予\n  測情報に関する説明」をご覧下さい。\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "連結業績予想・通期EPS欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J.pdf",
+          "retrieved_at": "2026-10-15T01:10:08.679271+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 2,
+          "printed_page": null,
+          "quote": "（３）発行済株式数（普通株式）\n  ① 期末発行済株式数 (自己株式を含む)            2027年3月期1Ｑ   183,471,380株 2026年3月期     183,448,852株\n\n  ②   期末自己株式数                     2027年3月期1Ｑ    6,118,847株 2026年3月期       6,186,958株\n\n  ③   期中平均株式数（四半期累計）              2027年3月期1Ｑ   177,296,398株 2026年3月期1Ｑ   176,948,883株\n\n\n ",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2026-06-30",
+            "label": "2027年3月期第1四半期・実績"
+          },
+          "scope": "普通株式数と自己株式、四半期累計の期中平均株式数",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "保存資料は通期EPSと四半期実績株式数を開示するが、その通期予想の正確な分母・自己株取得処分や新株発行の時期別織込みは特定できなかった。EPSと丸められた利益の逆算は採用しない。",
+      "remaining_missing": [
+        "会社が使用した通期加重平均普通株式数と予想期内の自己株式取得・処分・発行の織込み時点"
+      ],
+      "model_input_adopted": false
+    },
+    {
+      "id": "forecast_uncertainty",
+      "label": "会社予想の不確実性",
+      "status": "supported",
+      "value": {
+        "issuer_forecast_not_guarantee": true
+      },
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "会社が公表した見通しに付された注意書き",
+      "evidence": [
+        {
+          "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J.pdf",
+          "retrieved_at": "2026-10-15T01:10:08.679271+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 2,
+          "printed_page": null,
+          "quote": "（1）業績予想の適切な利用に関する説明\n       業績予想は、本資料の発表日現在において当社グループの入手可能な情報に基づき、一定の前提（仮定）を用いて作成したものであ\n      り、リスクや不確実性を含んでいます。また、今後の当社グループの事業を取り巻く経営環境の変化、市場の動向、その他様々な要因\n      により、実際の業績が現状の見通し数値と大きく変わる可能性があります。業績予想につきましては、添付資料8頁「１．当四半期決\n      算に関する定性的情報（３）連結業績予想などの将来予測情報に関する説明」をご覧下さい。\n\n\n ",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "予想は公表時点の情報・仮定であり不確実性を伴うという開示",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "会社自身が入手可能情報・前提と実際の結果の乖離可能性を説明している。確率分布・シナリオ確率を公表したという意味ではない。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "reported_eps_method",
+      "label": "開示実績EPSの基本的/希薄化後の定義",
+      "status": "supported",
+      "value": {
+        "basic_denominator": "weighted average ordinary shares outstanding",
+        "diluted_adjustment": "all dilutive potential ordinary shares; stock options"
+      },
+      "target_period": {
+        "start_date": "2025-04-01",
+        "end_date": "2026-03-31",
+        "label": "2026年3月期・実績"
+      },
+      "scope": "有報の連結EPS会計方針",
+      "evidence": [
+        {
+          "source_id": "case-public:0139eea0c070051e1ab9add2b6f57843f9208cb40c5628f4ca163a9279bb1bc7",
+          "url": "https://www.iij.ad.jp/ir/library/report/pdf/FY2025_End.pdf",
+          "retrieved_at": "2026-10-15T01:14:44.385143+00:00",
+          "publication_date": "2026-06-25",
+          "pdf_page": 113,
+          "printed_page": 113,
+          "quote": "(15) 1株当たり利益\n     基本的1株当たり当期利益は、親会社の普通株主に帰属する当期利益を期中の加重平均流通普通株式数で除して算出しております。希薄化\n   後1株当たり当期利益は、希薄化効果を有するすべての潜在的普通株式の影響を調整して算出しております。当社グループの潜在的普通株式\n   はストックオプション制度にかかるものであります。\n\n",
+          "target_period": {
+            "start_date": "2025-04-01",
+            "end_date": "2026-03-31",
+            "label": "2026年3月期・実績"
+          },
+          "scope": "有報の連結会計方針・基本的/希薄化後EPS",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "基本的EPSと希薄化後EPSを別計算する定義は明文。将来予想EPSの株数シナリオまで確定する説明ではない。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "reported_dilution_basis",
+      "label": "直前通期実績における希薄化の基礎",
+      "status": "supported",
+      "value": {
+        "basic_weighted_average_shares": "177182655",
+        "stock_option_dilution_shares": "771478",
+        "diluted_weighted_average_shares": "177954133"
+      },
+      "target_period": {
+        "start_date": "2025-04-01",
+        "end_date": "2026-03-31",
+        "label": "2026年3月期・実績"
+      },
+      "scope": "連結実績のEPS計算基礎",
+      "evidence": [
+        {
+          "source_id": "case-public:0139eea0c070051e1ab9add2b6f57843f9208cb40c5628f4ca163a9279bb1bc7",
+          "url": "https://www.iij.ad.jp/ir/library/report/pdf/FY2025_End.pdf",
+          "retrieved_at": "2026-10-15T01:14:44.385143+00:00",
+          "publication_date": "2026-06-25",
+          "pdf_page": 140,
+          "printed_page": 140,
+          "quote": "28．1株当たり利益\n 基本的1株当たり当期利益及び希薄化後1株当たり当期利益は、下記のとおりであります。\n\n                                             前連結会計年度                  当連結会計年度\n                                            (自 2024年4月1日             (自 2025年4月1日\n                                             至 2025年3月31日)            至 2026年3月31日)\n分子：\n\n 親会社の普通株主に帰属する当期利益(百万円)                                  19,933                   24,188\n 当期利益調整額(百万円)                                                ―                        ―\n\n 希薄化後1株当たり当期利益の計算に使用する当期利益(百万円)                          19,933                   24,188\n\n\n分母：\n\n 基本的加重平均普通株式数(株)                                    176,901,512              177,182,655\n ストックオプションによる希薄化効果(株)                                   912,516                  771,478\n\n 希薄化後加重平均普通株式数(株)                                   177,814,028              177,954,133\n\n\n1株当たり当期利益\n\n 基本的(円)                                                  112.68                   136.51\n\n 希薄化後(円)                                                 112.10                   135.92\n\n\n\n\n                                  140/194\n",
+          "target_period": {
+            "start_date": "2025-04-01",
+            "end_date": "2026-03-31",
+            "label": "2026年3月期・実績"
+          },
+          "scope": "連結実績EPSの計算基礎（前連結期と当連結期）",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "有報の当連結会計年度列にストックオプションの希薄化効果を明記。現在の新規発行計画や予想期間全体には外挿しない。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "historical_split_adjustments",
+      "label": "確認できた過去の株式分割調整",
+      "status": "supported",
+      "value": {
+        "split_date": "2022-10-01",
+        "ratio": "1 ordinary share to 2 ordinary shares",
+        "historical_eps_adjusted": true,
+        "fy2023_historical_dps_assumes_split_at_start_of_year": true
+      },
+      "target_period": {
+        "label": "2022-10-01分割と有報掲載の過去比較"
+      },
+      "scope": "有報の主要指標表および2023年3月期配当表示",
+      "evidence": [
+        {
+          "source_id": "case-public:0139eea0c070051e1ab9add2b6f57843f9208cb40c5628f4ca163a9279bb1bc7",
+          "url": "https://www.iij.ad.jp/ir/library/report/pdf/FY2025_End.pdf",
+          "retrieved_at": "2026-10-15T01:14:44.385143+00:00",
+          "publication_date": "2026-06-25",
+          "pdf_page": 2,
+          "printed_page": 2,
+          "quote": "2.当社は、2022年10月1日付けで、普通株式1株につき普通株式2株の割合で株式分割を行っております。各事業年度の1株当たり親会社\n       所有者帰属持分、基本的1株当たり当期利益及び希薄化後1株当たり当期利益について、当該株式分割調整後の数値を記載しておりま\n       す。\n      ",
+          "target_period": {
+            "label": "2022年3月期〜2026年3月期の有報主要指標表; 分割日2022-10-01"
+          },
+          "scope": "連結主要経営指標表の1株指標調整",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:0139eea0c070051e1ab9add2b6f57843f9208cb40c5628f4ca163a9279bb1bc7",
+          "url": "https://www.iij.ad.jp/ir/library/report/pdf/FY2025_End.pdf",
+          "retrieved_at": "2026-10-15T01:14:44.385143+00:00",
+          "publication_date": "2026-06-25",
+          "pdf_page": 3,
+          "printed_page": 3,
+          "quote": "4.2023年3月期の1株当たり配当額及び1株当たりの中間配当額については、2022年10月1日付けの普通株式1株につき2株の割合での株式\n       分割が、期首に行われたと仮定して算出した数値を記載しております。\n      ",
+          "target_period": {
+            "label": "2023年3月期の配当額の遡及表示"
+          },
+          "scope": "提出会社経営指標表の過去配当調整",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "過去のEPS・配当の株式分割調整は原注記で確認。これを根拠に予想EPSへ再度2倍/半分調整しない。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "current_forecast_split_assumptions",
+      "label": "現在の通期予想EPS/DPSの追加分割想定",
+      "status": "unknown",
+      "value": null,
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "2027年3月期会社予想の株式単位",
+      "evidence": [
+        {
+          "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J.pdf",
+          "retrieved_at": "2026-10-15T01:10:08.679271+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "３．2027年3月期の連結業績予想（2026年4月1日～2027年3月31日）\n\n                                                  (％表示は、通期は対前期、四半期は対前年同四半期増減率)\n                                                                                   親会社の所有者に帰属              基本的1株当たり\n                   売上収益                    営業利益                  税引前利益               する当期利益                  当期利益\n                   百万円           ％        百万円          ％            百万円        ％         百万円        ％                円   銭\n  第2四半期(累計)      180,000       11.2       15,350    △0.2         14,050 △7.3              9,550 △4.8                 53.88\n     通期          385,000       11.5       38,500     10.5        37,000  5.0             25,000  3.4                141.03\n(注) 直近に公表されている業績予想からの修正の有無                  ： 無\n(注) 2027年3月期の連結業績予想の詳細につきましては、添付資料8頁「１．当四半期決算に関する定性的情報 (３) 連結業績予想などの将来予\n  測情報に関する説明」をご覧下さい。\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "連結業績予想・通期EPS欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J.pdf",
+          "retrieved_at": "2026-10-15T01:10:08.679271+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "２．配当の状況\n                                                   年間配当金\n\n                第1四半期末          第2四半期末             第3四半期末                 期末               合計\n                       円   銭              円 銭               円    銭            円    銭           円   銭\n2026年3月期                   ―              19.50                 ―             19.50            39.00\n2027年3月期                   ―\n2027年3月期(予想)                              21.50                 ―             21.50            43.00\n(注) 直近に公表されている配当予想からの修正の有無                  ： 無\n\n\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "提出会社の年間1株配当予想・合計欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:0139eea0c070051e1ab9add2b6f57843f9208cb40c5628f4ca163a9279bb1bc7",
+          "url": "https://www.iij.ad.jp/ir/library/report/pdf/FY2025_End.pdf",
+          "retrieved_at": "2026-10-15T01:14:44.385143+00:00",
+          "publication_date": "2026-06-25",
+          "pdf_page": 2,
+          "printed_page": 2,
+          "quote": "2.当社は、2022年10月1日付けで、普通株式1株につき普通株式2株の割合で株式分割を行っております。各事業年度の1株当たり親会社\n       所有者帰属持分、基本的1株当たり当期利益及び希薄化後1株当たり当期利益について、当該株式分割調整後の数値を記載しておりま\n       す。\n      ",
+          "target_period": {
+            "label": "2022年3月期〜2026年3月期の有報主要指標表; 分割日2022-10-01"
+          },
+          "scope": "連結主要経営指標表の1株指標調整",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "会社予想は公表された1株値として保存する。過去分割の注記はあるが、予想期の新たな分割/併合想定の有無・再調整の明示は確認できなかった。",
+      "remaining_missing": [
+        "予想期中の新たな分割/併合がある場合の効力日と当該予想値の調整基準。存在自体を推測しない"
+      ],
+      "model_input_adopted": false
+    },
+    {
+      "id": "dividend_basic_policy",
+      "label": "公表された配当基本方針",
+      "status": "supported",
+      "value": {
+        "description": "internal reserves for financial strength and medium/long-term business growth/investment while maintaining stable continuing dividends",
+        "payments_per_year": 2,
+        "interim_decider": "board of directors",
+        "year_end_decider": "shareholder general meeting"
+      },
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "最新説明資料の基本方針; 決定機関・年2回は直前通期有報で説明",
+      "evidence": [
+        {
+          "source_id": "case-public:ad6e6c19c1c65844dbad2164d7fe96c3a23b15f695bee5f1c65917b23a8ecc00",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J_presentation.pdf",
+          "retrieved_at": "2026-10-15T01:10:12.367485+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 22,
+          "printed_page": 21,
+          "quote": "FY26配当見通し（26年5月から変更なし）                                                              単位：円\n\n\n\n\n 株主還元の基本方針：\n  財務体質の強化、中長期的な事業拡大・投資等のための内部留保に配慮しつつ安定的な配当を継続\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "FY26配当見通しに記載の還元基本方針",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:0139eea0c070051e1ab9add2b6f57843f9208cb40c5628f4ca163a9279bb1bc7",
+          "url": "https://www.iij.ad.jp/ir/library/report/pdf/FY2025_End.pdf",
+          "retrieved_at": "2026-10-15T01:14:44.385143+00:00",
+          "publication_date": "2026-06-25",
+          "pdf_page": 67,
+          "printed_page": 67,
+          "quote": "3 【配当政策】\n  当社は、財務体質の強化及び中長期的な事業拡大並びに事業投資等のための内部留保に配慮しつつ、継続的かつ\n 安定的な配当による株主還元を行うことを基本方針としております。\n  当社は、中間配当を行うことができる旨を定款に定めております。当社の剰余金の配当の回数は、当社定款に基\n づき、中間配当及び期末配当の年2回を基本としており、配当の決定機関は、中間配当は取締役会、期末配当は株主\n 総会であります。\n  当事業年度の剰余金の配当につきましては、上記の基本方針のもと、中間配当にて1株当たり19.50円、期末配当\n にて1株当たり19.50円とし、総額で1株当たり39.00円といたしました。\n  内部留保資金の使途は、財務体質の強化に配慮しつつ、主として継続的な事業拡大に必要となる投資及び支出、\n 更なる中長期的な成長を展望したM&A等に充当していくことを想定しております。\n  ",
+          "target_period": {
+            "start_date": "2025-04-01",
+            "end_date": "2026-03-31",
+            "label": "2026年3月期・実績"
+          },
+          "scope": "提出会社の剰余金配当の基本方針・決定機関",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "最新説明資料と有報に整合する定性的方針を確認。安定的という文言を減配しない保証や数値下限へ変換しない。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "payout_target_scope",
+      "label": "公表された配当性向の期間・性質",
+      "status": "supported",
+      "value": {
+        "current_fy_outlook_percent": "30.5",
+        "original_fy2026_midterm_target_percent": "30",
+        "long_term_vision_percent_range": [
+          "30",
+          "40"
+        ],
+        "status": "company outlook / medium-term target / long-term vision, not guaranteed floor"
+      },
+      "target_period": {
+        "label": "FY26見通しとFY24-26中計、将来の中長期ビジョン"
+      },
+      "scope": "連結ベースと表示された説明資料の目標指標",
+      "evidence": [
+        {
+          "source_id": "case-public:ad6e6c19c1c65844dbad2164d7fe96c3a23b15f695bee5f1c65917b23a8ecc00",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J_presentation.pdf",
+          "retrieved_at": "2026-10-15T01:10:12.367485+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 43,
+          "printed_page": 42,
+          "quote": "中長期ビジョン                                                                                                                                     会社紹介資料\n\n\n\n  中長期で目指している想定の状態・イメージ\n\n                前中期計画                      中期計画                                      中長期ビジョン                            Beyond 5,000\n                 （FY21-23）                 （FY24-26）\n                                                                    売上高 5,000億円規模                               NW社会実現を支えるインフラ運用フルアウト\n          法人ストック売上伸長で                既存領域に特化しリソース集中                                                             ソーサーとしての付加価値発揮\n          利益ベース確立                    で事業規模拡大を加速                     営業利益率 12% ~ 15%\n                                                                                                                 • 有線無線網・エッジ含めたDC・クラウド\n                                     長期成長に向けスケール追求\n                                                                                                                      リソース・フル運用で各種データをセキュリティ・\n          •   NWインフラ・サービスライン                                             • NW運営事業者・IT事業者として                           性能含め統合的に処理するプラットフォーム\n              アップの強化\n                                        • 既存コア領域の一層強化                       コア領域に最注力                             • 大口顧客のNW・IT領域フルアウトソースで\n          •   ストック売上積上げによる                                                  国内有数とのリーディングポジション確立                       高利益率実現\n              利益スケールメリットの発揮                                                 NW運営・サービス提供モデルで圧倒的差別化\n                                        • 新たな成長領域の創出                        サービスインテグレーション牽引でSI事業拡大               • 業界構図変動のなかM&A含めリーダーシップ発揮\n          •   NW更改等で大型プロジェクト\n              案件増加                                                          大口顧客層増加でビジネススケール発揮\n                                                                                                                 • 国内知見･SWOTをASEAN展開でアジア有数\n          •   クラウド・セキュリティ・IoT需要         • 経営・事業基盤の強化                     • NW社会を支えるNWプラットフォームの提供・                     ITサービス事業者へ\n          •   M&A実行も含む国際事業拡大                                                技術開発へ邁進\n                                                                            AI普及・データ駆動社会到来等に向けた最適\n          •   人材規模拡大                                                        NW・セキュリティ等のプラットフォームの創出\n          •   デジタル通貨等新規事業領域へ\n                                                                         • チャレンジャーとしてのIIJ企業カルチャーの\n              の取組み\n                                                                            承継・発展\n                                                                            事業立ち上げ時から変わらず多様な構成員が\n                                                                            自律的に新たな課題にチャレンジ\n                             売上高5,000億円規模実現への道筋を早期に実践\n\n目標指標\n（連結ベース）                FY23実績        FY26見通し    FY26当初中計目標\n\n売上高                   2,761億円        3,850億円       3,800億円                                      5,000億円\n\n営業利益率                   10.5%          10.0%           12%                                                12% ~ 15%\n                                                                                                                                事業規模拡大に伴い\n配当性向                                   30.5%           30%                                                30% ~ 40%             配当性向を順次向上\n\n\n\n                                                             © Internet Initiative Japan Inc.                                                    42\n",
+          "target_period": {
+            "label": "中期計画FY24-26と中長期ビジョン（5,000億円規模）"
+          },
+          "scope": "目標指標（連結ベース）。中長期イメージであり下限条項ではない",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "30.5%は見通し、30%は当初中計目標、30〜40%は事業規模拡大に伴う順次向上という中長期イメージ。通期DPS算定の機械的な下限ルールとは異なる。",
+      "remaining_missing": [],
+      "model_input_adopted": false
+    },
+    {
+      "id": "doe_or_numeric_dividend_floor",
+      "label": "DOEまたは数値の最低配当条項",
+      "status": "unknown",
+      "value": null,
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "今回の保存公開資料内の会社配当方針",
+      "evidence": [
+        {
+          "source_id": "case-public:ad6e6c19c1c65844dbad2164d7fe96c3a23b15f695bee5f1c65917b23a8ecc00",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J_presentation.pdf",
+          "retrieved_at": "2026-10-15T01:10:12.367485+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 22,
+          "printed_page": 21,
+          "quote": "FY26配当見通し（26年5月から変更なし）                                                              単位：円\n\n\n\n\n 株主還元の基本方針：\n  財務体質の強化、中長期的な事業拡大・投資等のための内部留保に配慮しつつ安定的な配当を継続\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "FY26配当見通しに記載の還元基本方針",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:0139eea0c070051e1ab9add2b6f57843f9208cb40c5628f4ca163a9279bb1bc7",
+          "url": "https://www.iij.ad.jp/ir/library/report/pdf/FY2025_End.pdf",
+          "retrieved_at": "2026-10-15T01:14:44.385143+00:00",
+          "publication_date": "2026-06-25",
+          "pdf_page": 67,
+          "printed_page": 67,
+          "quote": "3 【配当政策】\n  当社は、財務体質の強化及び中長期的な事業拡大並びに事業投資等のための内部留保に配慮しつつ、継続的かつ\n 安定的な配当による株主還元を行うことを基本方針としております。\n  当社は、中間配当を行うことができる旨を定款に定めております。当社の剰余金の配当の回数は、当社定款に基\n づき、中間配当及び期末配当の年2回を基本としており、配当の決定機関は、中間配当は取締役会、期末配当は株主\n 総会であります。\n  当事業年度の剰余金の配当につきましては、上記の基本方針のもと、中間配当にて1株当たり19.50円、期末配当\n にて1株当たり19.50円とし、総額で1株当たり39.00円といたしました。\n  内部留保資金の使途は、財務体質の強化に配慮しつつ、主として継続的な事業拡大に必要となる投資及び支出、\n 更なる中長期的な成長を展望したM&A等に充当していくことを想定しております。\n  ",
+          "target_period": {
+            "start_date": "2025-04-01",
+            "end_date": "2026-03-31",
+            "label": "2026年3月期・実績"
+          },
+          "scope": "提出会社の剰余金配当の基本方針・決定機関",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:ad6e6c19c1c65844dbad2164d7fe96c3a23b15f695bee5f1c65917b23a8ecc00",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J_presentation.pdf",
+          "retrieved_at": "2026-10-15T01:10:12.367485+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 43,
+          "printed_page": 42,
+          "quote": "中長期ビジョン                                                                                                                                     会社紹介資料\n\n\n\n  中長期で目指している想定の状態・イメージ\n\n                前中期計画                      中期計画                                      中長期ビジョン                            Beyond 5,000\n                 （FY21-23）                 （FY24-26）\n                                                                    売上高 5,000億円規模                               NW社会実現を支えるインフラ運用フルアウト\n          法人ストック売上伸長で                既存領域に特化しリソース集中                                                             ソーサーとしての付加価値発揮\n          利益ベース確立                    で事業規模拡大を加速                     営業利益率 12% ~ 15%\n                                                                                                                 • 有線無線網・エッジ含めたDC・クラウド\n                                     長期成長に向けスケール追求\n                                                                                                                      リソース・フル運用で各種データをセキュリティ・\n          •   NWインフラ・サービスライン                                             • NW運営事業者・IT事業者として                           性能含め統合的に処理するプラットフォーム\n              アップの強化\n                                        • 既存コア領域の一層強化                       コア領域に最注力                             • 大口顧客のNW・IT領域フルアウトソースで\n          •   ストック売上積上げによる                                                  国内有数とのリーディングポジション確立                       高利益率実現\n              利益スケールメリットの発揮                                                 NW運営・サービス提供モデルで圧倒的差別化\n                                        • 新たな成長領域の創出                        サービスインテグレーション牽引でSI事業拡大               • 業界構図変動のなかM&A含めリーダーシップ発揮\n          •   NW更改等で大型プロジェクト\n              案件増加                                                          大口顧客層増加でビジネススケール発揮\n                                                                                                                 • 国内知見･SWOTをASEAN展開でアジア有数\n          •   クラウド・セキュリティ・IoT需要         • 経営・事業基盤の強化                     • NW社会を支えるNWプラットフォームの提供・                     ITサービス事業者へ\n          •   M&A実行も含む国際事業拡大                                                技術開発へ邁進\n                                                                            AI普及・データ駆動社会到来等に向けた最適\n          •   人材規模拡大                                                        NW・セキュリティ等のプラットフォームの創出\n          •   デジタル通貨等新規事業領域へ\n                                                                         • チャレンジャーとしてのIIJ企業カルチャーの\n              の取組み\n                                                                            承継・発展\n                                                                            事業立ち上げ時から変わらず多様な構成員が\n                                                                            自律的に新たな課題にチャレンジ\n                             売上高5,000億円規模実現への道筋を早期に実践\n\n目標指標\n（連結ベース）                FY23実績        FY26見通し    FY26当初中計目標\n\n売上高                   2,761億円        3,850億円       3,800億円                                      5,000億円\n\n営業利益率                   10.5%          10.0%           12%                                                12% ~ 15%\n                                                                                                                                事業規模拡大に伴い\n配当性向                                   30.5%           30%                                                30% ~ 40%             配当性向を順次向上\n\n\n\n                                                             © Internet Initiative Japan Inc.                                                    42\n",
+          "target_period": {
+            "label": "中期計画FY24-26と中長期ビジョン（5,000億円規模）"
+          },
+          "scope": "目標指標（連結ベース）。中長期イメージであり下限条項ではない",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "保存資料には安定配当の方針と配当性向見通し/目標を確認したが、DOEの定義・水準や恒久的な1株配当下限の条項を特定できなかった。制度が存在しないという否定ではない。",
+      "remaining_missing": [
+        "DOE/数値下限を使うならその定義・適用期間・公表根拠"
+      ],
+      "model_input_adopted": false
+    },
+    {
+      "id": "forecast_future_dilution_and_treasury_path",
+      "label": "予想期の増資・自己株式取得処分と希薄化の全経路",
+      "status": "unknown",
+      "value": null,
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "予想EPSと将来DPSを投資モデルへ拡張する際の株式数シナリオ",
+      "evidence": [
+        {
+          "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J.pdf",
+          "retrieved_at": "2026-10-15T01:10:08.679271+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "３．2027年3月期の連結業績予想（2026年4月1日～2027年3月31日）\n\n                                                  (％表示は、通期は対前期、四半期は対前年同四半期増減率)\n                                                                                   親会社の所有者に帰属              基本的1株当たり\n                   売上収益                    営業利益                  税引前利益               する当期利益                  当期利益\n                   百万円           ％        百万円          ％            百万円        ％         百万円        ％                円   銭\n  第2四半期(累計)      180,000       11.2       15,350    △0.2         14,050 △7.3              9,550 △4.8                 53.88\n     通期          385,000       11.5       38,500     10.5        37,000  5.0             25,000  3.4                141.03\n(注) 直近に公表されている業績予想からの修正の有無                  ： 無\n(注) 2027年3月期の連結業績予想の詳細につきましては、添付資料8頁「１．当四半期決算に関する定性的情報 (３) 連結業績予想などの将来予\n  測情報に関する説明」をご覧下さい。\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "連結業績予想・通期EPS欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J.pdf",
+          "retrieved_at": "2026-10-15T01:10:08.679271+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 2,
+          "printed_page": null,
+          "quote": "（３）発行済株式数（普通株式）\n  ① 期末発行済株式数 (自己株式を含む)            2027年3月期1Ｑ   183,471,380株 2026年3月期     183,448,852株\n\n  ②   期末自己株式数                     2027年3月期1Ｑ    6,118,847株 2026年3月期       6,186,958株\n\n  ③   期中平均株式数（四半期累計）              2027年3月期1Ｑ   177,296,398株 2026年3月期1Ｑ   176,948,883株\n\n\n ",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2026-06-30",
+            "label": "2027年3月期第1四半期・実績"
+          },
+          "scope": "普通株式数と自己株式、四半期累計の期中平均株式数",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "現時点/過去の株式数や取得計画の存在は、会社予想に織り込んだ取得株数・取得価格・実行時期・処分/発行/オプション行使の全経路を確定しない。",
+      "remaining_missing": [
+        "将来の分母変化と希薄化/自己株式取引を反映した明示株数シナリオ。公表済み以上の実行確約を補わない"
+      ],
+      "model_input_adopted": false
+    },
+    {
+      "id": "forecast_dps_cashflow_calendar",
+      "label": "DDMへ使う場合の配当キャッシュフロー時点",
+      "status": "unknown",
+      "value": null,
+      "target_period": {
+        "start_date": "2026-04-01",
+        "end_date": "2027-03-31",
+        "label": "2027年3月期・会社予想"
+      },
+      "scope": "年間会社予想DPSを予測年末のキャッシュフローへ写像する条件",
+      "evidence": [
+        {
+          "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J.pdf",
+          "retrieved_at": "2026-10-15T01:10:08.679271+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "２．配当の状況\n                                                   年間配当金\n\n                第1四半期末          第2四半期末             第3四半期末                 期末               合計\n                       円   銭              円 銭               円    銭            円    銭           円   銭\n2026年3月期                   ―              19.50                 ―             19.50            39.00\n2027年3月期                   ―\n2027年3月期(予想)                              21.50                 ―             21.50            43.00\n(注) 直近に公表されている配当予想からの修正の有無                  ： 無\n\n\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "提出会社の年間1株配当予想・合計欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "年間DPS予想は中間と期末の合計表示。モデルの各年末の割引時点や取得後受取可能額との対応まで自動確認できない。過去の基準日/効力発生日は将来の受取日を確定しない。",
+      "remaining_missing": [
+        "投資評価時点、対象となる配当基準日/効力日、既経過分と未経過分、モデルの期末近似の明示"
+      ],
+      "model_input_adopted": false
+    },
+    {
+      "id": "multi_year_forecast_and_terminal_inputs",
+      "label": "多年予測と終価の入力",
+      "status": "unknown",
+      "value": null,
+      "target_period": {
+        "label": "当会社予想期を超える予測期および安定期"
+      },
+      "scope": "DDM/評価シナリオの期間拡張",
+      "evidence": [
+        {
+          "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J.pdf",
+          "retrieved_at": "2026-10-15T01:10:08.679271+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "２．配当の状況\n                                                   年間配当金\n\n                第1四半期末          第2四半期末             第3四半期末                 期末               合計\n                       円   銭              円 銭               円    銭            円    銭           円   銭\n2026年3月期                   ―              19.50                 ―             19.50            39.00\n2027年3月期                   ―\n2027年3月期(予想)                              21.50                 ―             21.50            43.00\n(注) 直近に公表されている配当予想からの修正の有無                  ： 無\n\n\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "提出会社の年間1株配当予想・合計欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        },
+        {
+          "source_id": "case-public:3e8f5cc027fecef0a566a188cc6ceb29669b8988094e48c6ab25abe81ff86a6f",
+          "url": "https://www.iij.ad.jp/ir/library/financial/pdf/IIJ1Q26J.pdf",
+          "retrieved_at": "2026-10-15T01:10:08.679271+00:00",
+          "publication_date": "2026-08-07",
+          "pdf_page": 1,
+          "printed_page": null,
+          "quote": "３．2027年3月期の連結業績予想（2026年4月1日～2027年3月31日）\n\n                                                  (％表示は、通期は対前期、四半期は対前年同四半期増減率)\n                                                                                   親会社の所有者に帰属              基本的1株当たり\n                   売上収益                    営業利益                  税引前利益               する当期利益                  当期利益\n                   百万円           ％        百万円          ％            百万円        ％         百万円        ％                円   銭\n  第2四半期(累計)      180,000       11.2       15,350    △0.2         14,050 △7.3              9,550 △4.8                 53.88\n     通期          385,000       11.5       38,500     10.5        37,000  5.0             25,000  3.4                141.03\n(注) 直近に公表されている業績予想からの修正の有無                  ： 無\n(注) 2027年3月期の連結業績予想の詳細につきましては、添付資料8頁「１．当四半期決算に関する定性的情報 (３) 連結業績予想などの将来予\n  測情報に関する説明」をご覧下さい。\n",
+          "target_period": {
+            "start_date": "2026-04-01",
+            "end_date": "2027-03-31",
+            "label": "2027年3月期・会社予想"
+          },
+          "scope": "連結業績予想・通期EPS欄",
+          "verification": "exact substring in original saved content and declared PDF page"
+        }
+      ],
+      "reason": "通期1期分の会社予想は、多年配当予測・明示終価翌期DPS・株主資本コスト・安定期成長率やEPS評価倍率を供給しない。配当方針を機械的に数値外挿しない。",
+      "remaining_missing": [
+        "モデル適合の点検、独立に根拠を付けた多年予測、両期の株主資本コスト、終価翌期配当、終価成長率。EPS×PERなら倍率の根拠も別途必要"
+      ],
+      "model_input_adopted": false
+    }
+  ],
+  "public_information_resolution": {
+    "resolved": [
+      {
+        "item_id": "forecast_eps_period_and_consolidation",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      },
+      {
+        "item_id": "forecast_annual_dps_and_installments",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      },
+      {
+        "item_id": "quarter_actual_share_counts",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      },
+      {
+        "item_id": "forecast_uncertainty",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      },
+      {
+        "item_id": "reported_eps_method",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      },
+      {
+        "item_id": "reported_dilution_basis",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      },
+      {
+        "item_id": "historical_split_adjustments",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      },
+      {
+        "item_id": "dividend_basic_policy",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      },
+      {
+        "item_id": "payout_target_scope",
+        "status": "supported",
+        "resolution": "answered_in_saved_public_materials",
+        "question": "この項目の定義/基準は公開資料でどこまで分かるか",
+        "ir_action": "do_not_ask_as_an_unanswered_definition"
+      }
+    ],
+    "unresolved": [
+      {
+        "item_id": "forecast_eps_weighted_average_share_count",
+        "status": "unknown",
+        "resolution": "unresolved_in_this_saved_corpus",
+        "ir_action": "not_registered_or_scheduled",
+        "reason": "投資モデルへの必要性と公開資料の追加価値を別途立証するまで送信対象としない。未確認が非公表を意味するわけではない。"
+      },
+      {
+        "item_id": "current_forecast_split_assumptions",
+        "status": "unknown",
+        "resolution": "unresolved_in_this_saved_corpus",
+        "ir_action": "not_registered_or_scheduled",
+        "reason": "投資モデルへの必要性と公開資料の追加価値を別途立証するまで送信対象としない。未確認が非公表を意味するわけではない。"
+      },
+      {
+        "item_id": "doe_or_numeric_dividend_floor",
+        "status": "unknown",
+        "resolution": "unresolved_in_this_saved_corpus",
+        "ir_action": "not_registered_or_scheduled",
+        "reason": "投資モデルへの必要性と公開資料の追加価値を別途立証するまで送信対象としない。未確認が非公表を意味するわけではない。"
+      },
+      {
+        "item_id": "forecast_future_dilution_and_treasury_path",
+        "status": "unknown",
+        "resolution": "unresolved_in_this_saved_corpus",
+        "ir_action": "not_registered_or_scheduled",
+        "reason": "投資モデルへの必要性と公開資料の追加価値を別途立証するまで送信対象としない。未確認が非公表を意味するわけではない。"
+      },
+      {
+        "item_id": "forecast_dps_cashflow_calendar",
+        "status": "unknown",
+        "resolution": "unresolved_in_this_saved_corpus",
+        "ir_action": "not_registered_or_scheduled",
+        "reason": "投資モデルへの必要性と公開資料の追加価値を別途立証するまで送信対象としない。未確認が非公表を意味するわけではない。"
+      },
+      {
+        "item_id": "multi_year_forecast_and_terminal_inputs",
+        "status": "unknown",
+        "resolution": "unresolved_in_this_saved_corpus",
+        "ir_action": "not_registered_or_scheduled",
+        "reason": "投資モデルへの必要性と公開資料の追加価値を別途立証するまで送信対象としない。未確認が非公表を意味するわけではない。"
+      }
+    ]
+  },
+  "case_constraints_preserved": {
+    "iij_capex_question": "closed_no_send_insufficient_incremental_value",
+    "piolax_question_readiness": "not_ready",
+    "question_registration_or_send": false,
+    "company_state_changes": false
+  },
+  "source_preservation": {
+    "read_only_builder_matches_saved_bundle": true,
+    "protected_file_sha256": {
+      "data/case-source-bundle.json": "09dc53022739abfdc8d4e88957de1ec01c33b26566c4e63564330a3a72d2118d",
+      "research/ir-case-studies-2026-10-15/3774/README.md": "c1695ef7b351d5f0468d7bfa9cfb75eb8bef7552edf9ebd8521e37c065f85861",
+      "research/ir-case-studies-2026-10-15/3774/additional-public-review.json": "b013650bb601ec7c7fb4c6b0a9974029506389d781b2dc1fd9362c65643b9e26",
+      "research/ir-case-studies-2026-10-15/3774/disclosed-facts-draft.json": "4a1162fd3f7cf28b8058e7cfc55495b5777142811c5be4b9d6287dd89d6b6c0c",
+      "research/ir-case-studies-2026-10-15/3774/draft.json": "9320eb485feaf6b9e3f9216c9cd4131b54de1447be670f006d2285f92a3e5b52",
+      "research/ir-case-studies-2026-10-15/3774/evidence/0e5d120d1acbad92f9fa7b96166c320a5f867764c81b4b9e828acec677267c5a.raw": "0e5d120d1acbad92f9fa7b96166c320a5f867764c81b4b9e828acec677267c5a",
+      "research/ir-case-studies-2026-10-15/3774/evidence/1616d8666ded5174384e671cb9d69de3cfcdadfd0dff73569646b1db8b32a3d7.raw": "1616d8666ded5174384e671cb9d69de3cfcdadfd0dff73569646b1db8b32a3d7",
+      "research/ir-case-studies-2026-10-15/3774/evidence/25a3f23368e27d86.json": "303772e0641330640dc2378e3f080b1155cb7c0aada7be65d4fc3dac78ab8082",
+      "research/ir-case-studies-2026-10-15/3774/evidence/261Q_databook-extracted.json": "ccc03457bf5485d76e286cb4efb857382c4dba6ab83e963231e0373cc8445dcb",
+      "research/ir-case-studies-2026-10-15/3774/evidence/2733b927b374cb5caee231980b53a157005501d25d7fc1979256957e0a0d1af1.raw": "2733b927b374cb5caee231980b53a157005501d25d7fc1979256957e0a0d1af1",
+      "research/ir-case-studies-2026-10-15/3774/evidence/2db082d6e039051d.json": "87547e5e64d6469aa012a4c7fc58980d49acbf545c1db22c503afd19bd9d215c",
+      "research/ir-case-studies-2026-10-15/3774/evidence/2f41e73809f88df8bc22e748cfd1e9aaa9002258c86a9c90dc359bdf82747047.raw": "2f41e73809f88df8bc22e748cfd1e9aaa9002258c86a9c90dc359bdf82747047",
+      "research/ir-case-studies-2026-10-15/3774/evidence/36e6ae7947073196.json": "a498f420308625f5f50fa5cf757dbb66ef4ba855bb560bb0c6263e1e19ef6c90",
+      "research/ir-case-studies-2026-10-15/3774/evidence/3c662dadc31b1de5.json": "508a7dc087c263f1abcd7c2e2f47bf0362403e6e5b98acfc80b9547e20461a21",
+      "research/ir-case-studies-2026-10-15/3774/evidence/3f8e02d9d7390f80.json": "619ff51671b3d218cf4d3cb96e2405463050491a99d0b3af9e8635c5505b6538",
+      "research/ir-case-studies-2026-10-15/3774/evidence/48e58412b8afcd54.json": "fa9f8174b25ab80f2d141d1d0a5dbfe899138a7f4f2fc250423a203f62977bf1",
+      "research/ir-case-studies-2026-10-15/3774/evidence/4c5c0f8218b0d38f789e02594de00598210149745433d520d78a64d058f453a1.raw": "4c5c0f8218b0d38f789e02594de00598210149745433d520d78a64d058f453a1",
+      "research/ir-case-studies-2026-10-15/3774/evidence/5681c7a946e64688.json": "4ba9f29676ffa5a714c3b4de203129514e63082741340d57f6918d400eb23575",
+      "research/ir-case-studies-2026-10-15/3774/evidence/5681c7a946e64688.txt": "667adc7f94ae8325e566e78e2540ef4589454df18bd2d22fd11a914c24373867",
+      "research/ir-case-studies-2026-10-15/3774/evidence/57e1c7caecc76e22.json": "865f344e215265451b11531dcf4cb8d0a57e9fea862be010f29def7384949996",
+      "research/ir-case-studies-2026-10-15/3774/evidence/58fa60ba292505d2.json": "494e8c4c10add7415317b363d2b5c0e9ef9be35ef0c563bed8fba6415a440417",
+      "research/ir-case-studies-2026-10-15/3774/evidence/58fa60ba292505d2.txt": "f3cc58c011bbfc8f52ae8ce2ce6bdf04ff9f3f502e7177026e6f4ba6a4c3c107",
+      "research/ir-case-studies-2026-10-15/3774/evidence/5c29125ab4939735d4496cd0f665d7fea602ddc9e838de7ff60bd2b8502c5294.raw": "5c29125ab4939735d4496cd0f665d7fea602ddc9e838de7ff60bd2b8502c5294",
+      "research/ir-case-studies-2026-10-15/3774/evidence/6a87d55ee3151370.json": "77c01e71461dd88a5ec28e2d034a38d249a1ba7b8b5b0767545e10e3d8fb70b5",
+      "research/ir-case-studies-2026-10-15/3774/evidence/839b494e86bffba3.json": "c1169515ccc33e8db6dab1de57115f7458e44d0bc2bb6289df3283a3729943b4",
+      "research/ir-case-studies-2026-10-15/3774/evidence/839b494e86bffba3.txt": "d8dea67ae53005de1fe2f334bef8dec9acc709da8d1728274047275c70dbc6be",
+      "research/ir-case-studies-2026-10-15/3774/evidence/a48e391c51fd8d03c7c64396fb616b274d3e0043695e14fb4a88c576c7da684e.raw": "a48e391c51fd8d03c7c64396fb616b274d3e0043695e14fb4a88c576c7da684e",
+      "research/ir-case-studies-2026-10-15/3774/evidence/b3e81e948274f16ae661610d8ecbe778b808861cdd8700d8de5ca0ca0a1da161.raw": "b3e81e948274f16ae661610d8ecbe778b808861cdd8700d8de5ca0ca0a1da161",
+      "research/ir-case-studies-2026-10-15/3774/evidence/c35eb6b235eb1d0cf78c64a8f3ff8f2fb9e0cd6e31d6f42e223a4a0e9be521cd.raw": "c35eb6b235eb1d0cf78c64a8f3ff8f2fb9e0cd6e31d6f42e223a4a0e9be521cd",
+      "research/ir-case-studies-2026-10-15/3774/evidence/c58edd6608cfd4f4062ade3bc061a9aca3f5fcb9a3b4f91119ad4d24b4ca8b1a.raw": "c58edd6608cfd4f4062ade3bc061a9aca3f5fcb9a3b4f91119ad4d24b4ca8b1a",
+      "research/ir-case-studies-2026-10-15/3774/evidence/d3f3cacc5ade95e7.json": "b37b8a41354b4b081651e0d248d16bb507174b18f3204e93cd030e20087e9701",
+      "research/ir-case-studies-2026-10-15/3774/evidence/f7b37fef59921452697650d0bb2f3e35a457d3ff1381c6fb2c90434db4c6d463.raw": "f7b37fef59921452697650d0bb2f3e35a457d3ff1381c6fb2c90434db4c6d463",
+      "research/ir-case-studies-2026-10-15/manifest-source-map.json": "498f6f979e830ea95885b4c9ad5d2ce06d8bb8bf7bd65ddfa6fc2e86d77e4f62"
+    },
+    "verified_at": "2026-10-15T02:33:58.673476+00:00",
+    "guard_scope_note": "原source、raw、snapshot、保存抽出本文、manifest、case原draft、数値抽出request、source bundleを照合。別担当がCLI実行記録を追記する派生extraction-notes.mdとnormalize出力bundleは原資料保持guardの対象外（当担当から変更なし）。"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "adoption": {
+    "IR_question_or_order": false,
+    "code_import_install_execution": false,
+    "code_vendoring_or_dependency": false,
+    "financial_inputs_or_company_rankings_adopted": false,
+    "new_policy": false
+  },
+  "closure": "Screen/rank implementation reference obtained, but the requested complete selection-plus-periodic-sale baseline is not provided. Stop here without inventing missing rules or expanding repositories.",
+  "facts": [
+    {
+      "cells": [
+        3,
+        5,
+        8,
+        9,
+        11
+      ],
+      "external_site_requests_performed_by_review": 0,
+      "finding": "固定28tickerのlist。commentはDow Jones30株と述べるがlist長は28。Yahooのin.finance.yahoo.com配下のBS/P&L/CF/key-statisticsを旧CSS classでscrapeし、financial表の最初の値をfield名へ対応、MarketCapはintra-day、DivYieldはforward annual表示。年度/TTM/四半期/取得時点・同一通貨/金額単位の検証や日本株入力への対応はない。M/B/TをE+03/E+06/E+09へ、%をE-02へ置換する実装を確認しただけで、その金融整合を認定しない。",
+      "topic": "data inputs and matching"
+    },
+    {
+      "cells": [
+        8,
+        14
+      ],
+      "finding": "EBITはEBITDAから減価償却を控除。TEVは時価総額とLong-term debtを足し、流動資産と流動負債の差を控除する。earnings yieldはEBIT/当該TEV。ROCはEBITをPPEと同じ流動差額の和で除す。BookToMkt・配当利回り・CFOとCapexからのFCFYieldも計算する。これがGreenblatt原式の完全再現/会計調整仕様だとは確認できない。短期/長期負債・現金/運転資本・対象資産の定義はこのローカルfield対応のままで日本株へ代替しない。 このTEVはcashだけではなく現金以外を含む流動資産全体と流動負債の差を控除するmaintainerの独自近似であり、現金残高控除と同じとは扱わない。",
+      "topic": "maintainer-defined arithmetic"
+    },
+    {
+      "cells": [
+        5,
+        6,
+        9,
+        11,
+        14,
+        18
+      ],
+      "finding": "scrape/stat取得の例外はprintしてskip。小文字を含むrowのfilter、numeric coercion、欠損があるticker列を落とすdropnaを行う。その後TEVの構成値にfillna(0)、順位出力の表示にもfillna(0)がある。前段で通常欠損列が落ちる経路を無視して「全欠損を0にして全株を評価する」とは言わない。TEV/ROC分母の0・負値、無限/非有限比率を明示除外/保留するguardはない。cached出力には負ROCも残るが、実データの正しさ・再現は未検証。",
+      "topic": "missing values and invalid denominators"
+    },
+    {
+      "cells": [
+        12,
+        14
+      ],
+      "finding": "保存出力のCapex行には負符号がある一方、FCFYield式はCFOからCapexを引く。負の支出tokenなら算術上支出分を足す方向になるため、符号定義の確認が必要。ただしFCFYieldはMagicFormula二指標rankに使用されていない。出力は作者の過去計算表示で、本レビューで正しいFCFを計算/再現したものではない。",
+      "topic": "capex sign"
+    },
+    {
+      "cells": [
+        1,
+        3,
+        5,
+        11
+      ],
+      "finding": "READMEはUS・large/mega cap、Finance/Insurance非対象と主張するが、コードは固定ticker listから取得/欠損の残った株を扱う。市場時価総額閾値やFinance/Insurance/utilityの分類filterは実装されていない。各ticker業種の独立照合はしていない。in.finance.yahoo.comという配信hostだけでIndia株戦略とは扱わず、Japanese/Brazil等への適合も未確認。 固定listにはAXP/TRVのtickerも明示的に含まれる（cell3）。業種除外の実装不在と、README上の除外方針の主張を区別する。",
+      "topic": "universe exclusions"
+    },
+    {
+      "cells": [
+        18,
+        19,
+        21,
+        23
+      ],
+      "finding": "earnings yieldとROCを各降順に順位付けし順位和を作り、合成順位をmethod firstで再順位付け。二指標rankのtie処理は各列のdefaultと最終firstを区別する。結果は全残存株のsort表示で、固定N購入/等金額allocationのコードはない。本文のtop3所感は購入処理ではない。後段は著者がMagicFormula外と記す配当利回りを第3順位として加える独自variantで、公式原式へ混ぜない。 配当を加える段階はmaintainer改変であり、Greenblatt本人の原式だとは認定しない。",
+      "topic": "ranking and optional variant"
+    },
+    {
+      "cells": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "finding": "全cellに保有台帳・購入/売却注文・経過日判定・年次rebalance・銘柄の入替/売却処理・税処理は実装されていない。READMEの5–20年はmaintainerが述べる戦略への長期投資期待であり、コード上の1銘柄保有期間や利用者への数カ月〜1年推奨ではない。年次売却を本の一般知識で補わない。",
+      "topic": "sale replacement holding"
+    },
+    {
+      "cells": [
+        1,
+        5,
+        24
+      ],
+      "finding": "search license metadataはnull、完全tree4entryにはLICENSE/NOTICE名のfileなし、利用許諾本文未確認。研究用の取得保存に限りproduct/third_party移植・依存導入なし。Yahooの取得/robots/利用条件検証は行わず、scrapingが現在動く/許可されるとも認定しない。READMEの成果/優位性主張・cached順位は独立検証やbacktestを実施した証拠ではない。",
+      "topic": "licensing scraping and empirical scope"
+    }
+  ],
+  "fixed_commit_SHA": "e5075f731f169606991f426f7997eaf0e6f368cc",
+  "recorded_at": "2026-10-15T23:08:36.436180+00:00",
+  "semantic_scope": "Entire selected README and all25 notebook cell sources statically read; selected cached output displays interpreted only as unverified author artifacts. Same-SHA checkpoint not separately fetched.",
+  "specific_remaining_gaps": [
+    "Periodic sale/replacement/holding implementation absent in the full selected notebook.",
+    "No complete financial metric input contract with matched period/currency/accounting adjustments, finite-denominator and missing-data policy suitable for current Japanese equities.",
+    "Universe/sector filters and fixed purchase count/allocation not implemented despite README scope statements.",
+    "License/reuse rights and external data-site utilization terms unconfirmed.",
+    "No independently validated return/cost/tax/turnover or Japanese strategy suitability evidence."
+  ],
+  "status": "finite_closed_screen_and_rank_only_no_periodic_sale_implementation"
+}

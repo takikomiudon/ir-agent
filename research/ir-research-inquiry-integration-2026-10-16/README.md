@@ -1,0 +1,9 @@
+# 数値thesis前の研究inquiry：実装と未送信draftの接続
+
+既存Anthropic DD/thesis tracker/JIRAの公開既答確認を参照し、case版・公開根拠・比較用の事前分岐、受信原文と公開性レビューを保存する[研究inquiry](../../docs/research-inquiries.md)を実装した。比較分岐はproject適応であり、著者の売買規則ではない。金融question/reply・元case/job・数値thesis/金融入力へ自動適用せず、外部送信を実行しない。
+
+[検証結果](test-result.json)はfocused27件・全1,612件成功（42.762秒）。[独立レビュー](independent-review.json)は既報反例の限定再確認で必須指摘0。7388のcopy検証後、[本番検証](actual-verification.json)で未送信研究draft1件を保存した。idは`research-inquiry:7388:quality-support-rate-definition:20261016`、初保存2026-10-16T13:17:59.149371+00:00、現在draft/no_reply・sent_at:null。研究返信/レビューは各0で、返信の意味や比較分岐の妥当性を自動認定したものではない。
+
+2026-10-16T13:18:29.001190+00:00の観測では旧27表のschema/全旧行は完全一致、新研究3表だけ追加して計30表。261source（公開260/市場1）・分類260/availability261、全179job完了（intake135/定性44）・176attempt/352event/176receipt、native34case/79版/197既読とJan15=12/Jan16=22は不変。金融thesis/policy・正式金融question/reply・明示保有・RDR・送信/注文は0。索引v42の35社250fact・52parent/54derived/45pairs、実52derived243fact/対象外2derived7factとGraham7社集合も不変で、旧snapshotを現在へ上書きしない。
+
+次は保存draftの既答・残余・比較分岐を元準備票と照合し、窓口の現在受付・送信可否を別途確認する段階。今回の保存を受付再確認・送信ready・金銭的IR価値・金融採用と扱わず、受信前に返信/レビューを作らない。成功済み実保存は再実行しない。consumer更新の前全文・差分・hash/link検証は[docs-update/receipt.json](docs-update/receipt.json)に保持する。親の最終受入receiptは後続で追加予定。

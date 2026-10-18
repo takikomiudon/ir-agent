@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "artifact_type": "bounded_reply_runtime_gap_review",
+  "recorded_at": "2026-10-15T12:01:21.574842+00:00",
+  "status": "one_concrete_runtime_gap_reproduced",
+  "finding_count": 1,
+  "scope": "Store-backed question freeze/send and reply application, pure ir-plan boundary, existing decision/current views. One dependency-information gap only; three synthetic :memory: cases. No other bug hunt.",
+  "findings": [
+    {
+      "id": "RG01",
+      "severity": "P1",
+      "title": "既存依存返信の公開性訂正が新question/sendと新金融入力適用の直前に接続されていない",
+      "policy_basis": {
+        "path": "docs/decision-policy.md",
+        "line": 37,
+        "quote": "公開情報の補足と確認できない返信は適用を保留する。",
+        "attribution": "project adaptation #4; executable runtime integration of the adopted review principle, not an externally invented numeric trading policy"
+      },
+      "evidence": [
+        {
+          "path": "src/ir_agent/decision_lifecycle.py",
+          "line": 88,
+          "end_line": 91,
+          "observation": "plan passes stored source snapshots to pure evaluate_ir_plan without current reply-information assessments."
+        },
+        {
+          "path": "src/ir_agent/decision_lifecycle.py",
+          "line": 100,
+          "end_line": 110,
+          "observation": "validate_send recomputes plan, position and freshness, but inherits the missing current dependent-classification overlay."
+        },
+        {
+          "path": "src/ir_agent/harness.py",
+          "line": 477,
+          "end_line": 481,
+          "observation": "evaluate_reply checks assessments only for the incoming reply ID, not existing thesis evidence/origin closure."
+        },
+        {
+          "path": "src/ir_agent/harness.py",
+          "line": 496,
+          "end_line": 521,
+          "observation": "new reply source and financial-thesis version are persisted before review_applied consults dependent corrections."
+        },
+        {
+          "path": "src/ir_agent/decision_lifecycle.py",
+          "line": 137,
+          "end_line": 145,
+          "observation": "dependent assessment holds are correctly applied to decision result, after the financial input update."
+        },
+        {
+          "path": "src/ir_agent/decision_lifecycle.py",
+          "line": 25,
+          "end_line": 39,
+          "observation": "sources_for already traverses all source_origins; reuse it rather than adding a single-parent-only guard."
+        },
+        {
+          "path": "src/ir_agent/information_review.py",
+          "line": 154,
+          "end_line": 168,
+          "observation": "source_assessments reads classifications for supplied source IDs; it does not itself traverse their parents."
+        }
+      ],
+      "reproduction": {
+        "script": "reproduce.py",
+        "output": "reproduction.json",
+        "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python research/ir-reply-runtime-gap-review-2026-10-15/reproduce.py /tmp/ir_reply_runtime_gap_repro.json",
+        "steps": [
+          "既存synthetic fixtureのq1/public返信を適用し、thesis v2・base EPS70を保存する。",
+          "旧返信の公開性を17:02にunclearへappend-only訂正する。旧source.metadataはpublic_clarificationのまま保存される。",
+          "当該sourceをevidenceに持つv2で新q2を17:06に保存し、17:07にmark_sentする。",
+          "新しい別public返信を既存persistent分岐へ17:10に適用する。全数値は既存テストfixtureを再利用する。"
+        ],
+        "actual_new_question_phase": {
+          "current_dependency_status": "unclear",
+          "preflight": "decision_distinguishing",
+          "mark_sent_status": "awaiting_reply"
+        },
+        "actual_application_phase": {
+          "new_reply_information_status": "public_clarification",
+          "evaluation_applied": true,
+          "thesis_versions": [
+            2,
+            3
+          ],
+          "base_eps_jpy": [
+            "70",
+            "40"
+          ],
+          "decision_action": "unresolved",
+          "reason_code": "reply_information_corrected"
+        },
+        "desired_boundary": "新たな依存根拠を公開補足として確認できない間、新send検査は保留し、新replyの金融入力適用はapplied:falseとする。過去v2/source/原返信は書き換えない。"
+      },
+      "impact": "現在のbuy/exit候補は正しく保留されるが、未解決依存を持つ新質問が送信記録の検査を通り、新しい財務仮説版/EPSをappliedとして保存できる。API利用者や後続研究は最新thesisを更新済みモデルとして取得する。",
+      "not_the_claim": [
+        "現在buy/exit候補が保留なしに出るという再現ではない。",
+        "既存の過去appliedthesisを自動差戻しする要求ではない。新規処理にholdを接続する不足である。",
+        "pure ir-plan FILEがlive DBの訂正を自動取得すべきという要求ではない。",
+        "旧source raw/metadataを訂正で書き換える要求ではない。"
+      ],
+      "minimal_fix": [
+        "Store-backed lifecycle.plan/freezeとvalidate_sendで、既存sources_forが返す全parent closureにsource_assessmentsを適用する。現在nonpublic/unclear依存があれば新preflightをneeds_reviewとしてsendを通さない。pure計算器の数値gateやAPIを弱めない。",
+        "Harness.evaluate_replyの同一transaction内、put_source/put_thesisより前に、現在thesisのevidence全originへ最新visible分類を照合する。非public依存があれば評価記録をapplied:false/held_for_review/action:unresolvedとし、新source/金融版を作らない。",
+        "当該新返信自身のinformation_statusと、依存返信のhold理由/ID/versionを別に保存する。旧依存がunclearであることを、実際にpublic確認済みの新返信の分類へ誤転記しない。",
+        "新規writeのguardはtrusted runtimeで既知の訂正を見落とさない。申告recorded_at/sent_atを過去へ戻して既知holdを回避しない。歴史結果/再送は不変とcurrent viewの既存契約を保つ。"
+      ],
+      "minimal_regression_scope": [
+        "既知unclear/potential_nonpublic依存で新freeze/sendを保留。",
+        "q2送信後の旧依存訂正でもreply2適用をholdし、thesis/source追加なしを確認。",
+        "第二parentだけに訂正済みIR sourceがある派生evidenceも同じhold。shared DAGはcycleと誤認しない。",
+        "当該返信だけのhold・エラーrollback・正常public依存・immutable過去/再送という既存挙動を維持。"
+      ]
+    }
+  ],
+  "positive_controls": [
+    {
+      "case": "own_reply_correction_control",
+      "result": "当該新返信自体にunclear訂正があればapplied:false/held_for_review、v2/EPS70保持。評価記録は正しく追加する。"
+    },
+    {
+      "case": "unknown_quote_rollback_control",
+      "result": "後段のUnknown source例外でsource/thesis/evaluationを含むDB全dumpが前後一致。atomic rollbackは正常。"
+    },
+    {
+      "case": "dependent_reply_correction",
+      "result": "旧原返信、旧source、過去v2 JSONは不変。現在actionは依存訂正を反映してunresolved。"
+    }
+  ],
+  "existing_coverage_read_not_full_suite_rerun": [
+    {
+      "path": "tests/test_information_review.py",
+      "test": "test_initial_apply_cannot_override_current_unclear_classification",
+      "covers": "当該返信の公開性訂正をcaller overrideで回避できない。",
+      "gap": "別返信への新適用/新question/sendの依存側訂正ではない。"
+    },
+    {
+      "path": "tests/test_information_review.py",
+      "test": "test_correction_is_append_only_idempotent_and_preserves_models_and_reviews",
+      "covers": "旧履歴不変/current view/retry保留。",
+      "gap": "依存を持つ次のquestion/reply適用は含まない。"
+    },
+    {
+      "path": "tests/test_decision_lifecycle.py",
+      "test": "test_missing_quote_source_rolls_back_all_reply_application_writes",
+      "covers": "全体rollback。",
+      "gap": "今回も独立対照で正常を確認。"
+    },
+    {
+      "path": "tests/test_decision_lifecycle.py",
+      "test": "test_changed_branch_inputs_are_not_applied_even_if_draft_was_saved",
+      "covers": "事前許可外入力のpreflight/send hold。",
+      "gap": "公開性訂正のlive接続ではない。"
+    },
+    {
+      "path": "tests/test_decision.py",
+      "test": "test_unmapped_multiple_change_is_held_for_review",
+      "covers": "限定入力変更。",
+      "gap": "本件では既存許可base EPS pathだけ変更するため通る。"
+    },
+    {
+      "path": "tests/test_source_provenance.py",
+      "test": "test_lifecycle_collects_every_parent_once_and_preserves_source_snapshots",
+      "covers": "全原典closureを収集する既存helper。",
+      "gap": "分類照合をplan/apply直前へ接続する必要がある。"
+    },
+    {
+      "path": "tests/test_source_provenance.py",
+      "test": "test_plural_parent_information_correction_queues_daily_without_rewriting_sources",
+      "covers": "第二親訂正からdaily job化できる。",
+      "gap": "dailyへ通知できることは新送信/適用guardがあることとは別。"
+    },
+    {
+      "path": "tests/test_information_research.py",
+      "test": "test_correction_alone_queues_and_completion_checks_it_without_rewriting_history",
+      "covers": "訂正専用daily処理は実装済み。",
+      "gap": "新機能として再提案しない。"
+    },
+    {
+      "path": "tests/test_workflow.py",
+      "test": "test_public_but_unresolved_branch_preserves_valuation",
+      "covers": "曖昧branchのunknown保持。",
+      "gap": "正しく実装済みであり新機能提案対象外。"
+    }
+  ],
+  "input_snapshots": [
+    {
+      "path": "src/ir_agent/harness.py",
+      "sha256": "5707ac71d6dd4b962bb2281572a7f5eb5939e257d433257034344a2b7b464f99",
+      "byte_count": 37926
+    },
+    {
+      "path": "src/ir_agent/decision_lifecycle.py",
+      "sha256": "9f3922b8996ad7cc1411ca1957ad7bf4e68c43c41fef49e8b6230916ed6d345a",
+      "byte_count": 12904
+    },
+    {
+      "path": "src/ir_agent/decision.py",
+      "sha256": "2c441f1d94a38453427dd8be3f589565dd7170a4c8cd7ec248be71d1ec516934",
+      "byte_count": 22938
+    },
+    {
+      "path": "src/ir_agent/information_review.py",
+      "sha256": "22df6e4a6e5d717a390e817bb311b091112eb1d44722e0651623548f09b7d9ee",
+      "byte_count": 16070
+    },
+    {
+      "path": "src/ir_agent/models.py",
+      "sha256": "8bf7fa62b925f80bfc7535759e7a7756c3c6816e3a0978f7049beedee6f1c01c",
+      "byte_count": 10045
+    },
+    {
+      "path": "src/ir_agent/store.py",
+      "sha256": "2b9e6f3a3170c9164c052bf98c3e36b23b52dcdadd83d49f0b351350a22bceb9",
+      "byte_count": 24694
+    },
+    {
+      "path": "docs/decision-policy.md",
+      "sha256": "e687e70c70ec9ce4b40b935bb9e908cd2d1328f44dfa488fad639557fbba8de5",
+      "byte_count": 14357
+    },
+    {
+      "path": "docs/workflow.md",
+      "sha256": "6415612b8dca5bdd3c9070cdacc94117292968ac1c05dc8cbfe63d4395028ec3",
+      "byte_count": 56452
+    },
+    {
+      "path": "tests/test_decision.py",
+      "sha256": "8d3389fdd6354a3624effd24fd1958a0f4c515461010886797763a511212904d",
+      "byte_count": 18141
+    },
+    {
+      "path": "tests/test_decision_lifecycle.py",
+      "sha256": "cea2467f3a6096e6fdc5960bf9e64f915386063cce70ee58547c1033c27c360d",
+      "byte_count": 15716
+    },
+    {
+      "path": "tests/test_information_review.py",
+      "sha256": "a30b67230498f6ae341f91d92002f7947ed458a7543273c6a06c3f5270a3a9e6",
+      "byte_count": 9288
+    },
+    {
+      "path": "tests/test_source_provenance.py",
+      "sha256": "568ec14ca67dc5c4f3ebd24a7ac85e994d9ebd01de45f259ecf95f1fa0e48e3f",
+      "byte_count": 7042
+    },
+    {
+      "path": "tests/test_information_research.py",
+      "sha256": "42ef16806d6c442be02c9f07200a8b88d5e9eb7795b204a5359e7eacd7b3b9e8",
+      "byte_count": 10455
+    },
+    {
+      "path": "tests/test_workflow.py",
+      "sha256": "88dac2b3637d8c96440401c9a0e5138382139a74360c5a0fe8a1a7c1b768927e",
+      "byte_count": 33036
+    },
+    {
+      "path": "examples/demo.json",
+      "sha256": "71532a16b8efec2fbdbe4a03311bfe9abffebe3626a7be19752d216ef211a5da",
+      "byte_count": 2742
+    },
+    {
+      "path": "examples/question.json",
+      "sha256": "3f2f064e97126d6269f3db578dcba9d0776f0fcf648f7aa43608c47b4a7de2df",
+      "byte_count": 2271
+    },
+    {
+      "path": "examples/reply.json",
+      "sha256": "c0d66bb1f828a8188415c99014f5ee50251ed42d9285380500cf40c8ed09633b",
+      "byte_count": 431
+    },
+    {
+      "path": "examples/reply-evaluation.json",
+      "sha256": "1a721efc3e7804e87763fe5f1ce04a3dfaae781bb593ae021412b30f29c14548",
+      "byte_count": 421
+    }
+  ],
+  "parent_baseline_reference": "parent-before-code-change.json",
+  "execution": {
+    "new_gets": 0,
+    "real_db_access": 0,
+    "real_db_changes": 0,
+    "synthetic_sqlite_memory_cases": 3,
+    "production_code_changes": 0,
+    "existing_tests_or_research_changes": 0,
+    "test_suite_runs": 0,
+    "new_financial_policy_or_thresholds": 0,
+    "IR_drafts_or_sends": 0
+  },
+  "limitations": [
+    "新しい財務数値や投資方針は作らず、既存合成fixtureだけを使用。",
+    "最大3件を埋める目的の探索はせず、この1件で有限終了。",
+    "reproduce.pyのassertionは修正前checkpointの観測を固定する。修正後にはbug-path assertionが失敗することを期待する。",
+    "コード引用line/hashはこの保存checkpointのもの。修正後の行番号ではない。"
+  ]
+}

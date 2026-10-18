@@ -1,0 +1,1354 @@
+{
+  "case_id": "2163-utilization-profit-cash-and-split-basis-monitor",
+  "company_id": "jp:2163",
+  "issue_id": "2163-utilization-denominators-cashflow-and-split-basis",
+  "status": "file_only_actual_source_handoff_prepared_not_registered",
+  "synthetic": false,
+  "recorded_at": "2026-10-16T04:53:05.836422+00:00",
+  "purpose": "稼働率/単体平均/単価工数と費用時期、連結利益とCF、分割既調整と混在DPSを会社公表scopeに沿って比較する。",
+  "author_method_references": [
+    {
+      "id": "anthropic.earnings-preview",
+      "ref": {
+        "path": "third_party/anthropic/skills/earnings-preview/SKILL.md",
+        "sha256": "a30d383a6f1c06b732b4d34e422dd2ff18f6340db67229a3347d057d52697f33"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sections": [
+        "Step 1: Gather Context",
+        "Step 2: Key Metrics Framework",
+        "Step 4: Catalyst Checklist"
+      ],
+      "project_adaptation": "明示された会社/期間/指標/当時予想と戦略変化を比較する。単体/連結・平均/末値の違いを保ち未取得consensusや独自予測/価格反応を補わない。",
+      "author_did_not_state_2163_specific_conditions": true
+    },
+    {
+      "id": "anthropic.thesis-tracker",
+      "ref": {
+        "path": "third_party/anthropic/skills/thesis-tracker/SKILL.md",
+        "sha256": "6b4ce2967c5e01c6b42f5c140fa1e94dee2713b5d2de3eb71957ff5a5c11469b"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sections": [
+        "Step 2: Update Log",
+        "Important Notes / quarterly review"
+      ],
+      "project_adaptation": "同じ論点に実新資料の支持/反証候補/不変/不明を追記する。株価や未指定閾値で反証を発明せず四半期を内部研究へ適応。",
+      "author_did_not_state_2163_specific_conditions": true
+    },
+    {
+      "id": "anthropic.dd-meeting-prep",
+      "ref": {
+        "path": "third_party/anthropic/skills/dd-meeting-prep/SKILL.md",
+        "sha256": "a74eecadece794106d515ce3d00e07b3857ed123e841e8962e26363d2413d94f"
+      },
+      "fixed_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+      "sections": [
+        "Step 1: Meeting Context",
+        "Step 3: Benchmarks & Context",
+        "Important Notes / neutral questions"
+      ],
+      "project_adaptation": "公表既答/懸念/比較資料を先に確認し不足の主体を分ける。再質問や非公開PE調査/問数/身振り評価を追加せず、残る定義と必要性を記録。",
+      "author_did_not_state_2163_specific_conditions": true
+    }
+  ],
+  "source_ids": [
+    "case-public:8762d25f40e325fb193be63e274436f94ed3cdbb7171d98974234b1325c0061e",
+    "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+    "case-public:a47a80ab4944d5df950653bacb972925c1d314589f56a8289030366103e7579c",
+    "case-public:90d88a20b909eb612482b52a026a419d2df47d5d69cef106aaaa25b5abd9206c",
+    "disclosed-facts:755a470d6fd7f1595738e8ba66bfd4fccd6d09f12466825b2ae013618a3c8191"
+  ],
+  "source_inventory": [
+    {
+      "source_id": "case-public:8762d25f40e325fb193be63e274436f94ed3cdbb7171d98974234b1325c0061e",
+      "source_ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/initial-public-review-2026-10-16/source-bundle.json",
+        "sha256": "f474cbfc11a0466eda12beb94acb9931b071969d27214e3babfe82484a0416f5",
+        "json_pointer": "/sources/0"
+      },
+      "native_snapshot_sha256": "62afb76b3b4aef0c05b0e1cfe3eb199499daa88ea41b002764d681052f8bff9c",
+      "snapshot_algorithm": "SHA256 UTF8 sorted JSON default separators; native registry domain",
+      "content_sha256": "44ded3de0baf3ae34a372fd901d566f816002ef32682a89fae70a38d9db962d4",
+      "title": "投資家情報 - 株式会社アルトナー",
+      "publication_day": null,
+      "published_at_preserved": null,
+      "retrieved_at_preserved": "2026-10-16T04:32:20.765922+00:00",
+      "actual_DB_first_saved_at": "2026-10-16T04:48:38.513557+00:00"
+    },
+    {
+      "source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "source_ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/initial-public-review-2026-10-16/source-bundle.json",
+        "sha256": "f474cbfc11a0466eda12beb94acb9931b071969d27214e3babfe82484a0416f5",
+        "json_pointer": "/sources/1"
+      },
+      "native_snapshot_sha256": "7f8addec7f56d233043a39f0c8c2269ee6291464f14a23dc0f09d9c5c1358427",
+      "snapshot_algorithm": "SHA256 UTF8 sorted JSON default separators; native registry domain",
+      "content_sha256": "06addb6e6b6928927e97ccd706a0c2befe947f9f1a6932b1409b819a9e0d9a76",
+      "title": "株式会社アルトナー 2027年1月期 第2四半期（中間期）決算短信〔日本基準〕（連結）",
+      "publication_day": "2026-09-10",
+      "published_at_preserved": null,
+      "retrieved_at_preserved": "2026-10-16T04:32:46.857649+00:00",
+      "actual_DB_first_saved_at": "2026-10-16T04:48:38.513557+00:00"
+    },
+    {
+      "source_id": "case-public:a47a80ab4944d5df950653bacb972925c1d314589f56a8289030366103e7579c",
+      "source_ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/public-explanation-followup-2026-10-16/source-bundle.json",
+        "sha256": "48fe77d04c91155b9f157d3d1a311243c25fa1b6b22e2426842bbe1b02683e3f",
+        "json_pointer": "/sources/0"
+      },
+      "native_snapshot_sha256": "d0abf2f334ad491635b56fe5dd71f618672d77721279c24406325f17ce4c2967",
+      "snapshot_algorithm": "SHA256 UTF8 sorted JSON default separators; native registry domain",
+      "content_sha256": "319bef13c03b830d18fb112d53c40944ef2c71d30d3fd05d336dc428fc33381b",
+      "title": "よくあるご質問 - 株式会社アルトナー",
+      "publication_day": null,
+      "published_at_preserved": null,
+      "retrieved_at_preserved": "2026-10-16T04:37:10.077442+00:00",
+      "actual_DB_first_saved_at": "2026-10-16T04:48:38.513557+00:00"
+    },
+    {
+      "source_id": "case-public:90d88a20b909eb612482b52a026a419d2df47d5d69cef106aaaa25b5abd9206c",
+      "source_ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/public-explanation-followup-2026-10-16/source-bundle.json",
+        "sha256": "48fe77d04c91155b9f157d3d1a311243c25fa1b6b22e2426842bbe1b02683e3f",
+        "json_pointer": "/sources/1"
+      },
+      "native_snapshot_sha256": "87950d15a56842992300528dce6823ef2022e397259e63269606dff4632258e3",
+      "snapshot_algorithm": "SHA256 UTF8 sorted JSON default separators; native registry domain",
+      "content_sha256": "3a4768ffa00847dcf28240c46f6d22987c944748e11c94348ff22f68dbeffda9",
+      "title": "株式会社アルトナー 2027年1月期 第2四半期(中間期) 決算短信 補足説明資料",
+      "publication_day": "2026-09-10",
+      "published_at_preserved": null,
+      "retrieved_at_preserved": "2026-10-16T04:37:17.163788+00:00",
+      "actual_DB_first_saved_at": "2026-10-16T04:48:38.513557+00:00"
+    },
+    {
+      "source_id": "disclosed-facts:755a470d6fd7f1595738e8ba66bfd4fccd6d09f12466825b2ae013618a3c8191",
+      "source_ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/disclosed-facts-2026-10-16/normalized-bundle.json",
+        "sha256": "fbbeda004f81a4f0b213239379b789c2a8c1da4fc7367ad8d56595e0b8af2dcd",
+        "json_pointer": "/sources/1"
+      },
+      "native_snapshot_sha256": "7508692b6dd90642e12a9a25a92011da25cead64ff93403824cd0b1037dca18e",
+      "snapshot_algorithm": "SHA256 UTF8 sorted JSON default separators; native registry domain",
+      "content_sha256": "c9c191df1fa3e7fde580dbe0892f3a79412fb3aa23a7afc0c26367ba684d122a",
+      "title": "株式会社アルトナー 2027年1月期 第2四半期（中間期）決算短信〔日本基準〕（連結） — cited fact extraction (meaning review required)",
+      "publication_day": null,
+      "published_at_preserved": null,
+      "retrieved_at_preserved": "2026-10-16T04:41:03.995793+00:00",
+      "actual_DB_first_saved_at": "2026-10-16T04:48:38.513557+00:00"
+    }
+  ],
+  "actual_source_first_saved_at": "2026-10-16T04:48:38.513557+00:00",
+  "bootstrap_handoff_reviewed_at": "2026-10-16T04:53:05.836422+00:00",
+  "review_questions": [
+    {
+      "id": "utilization-denominators-standalone-averages-price-hours-and-cost-seasonality",
+      "known": "FAQ通常稼働率は派遣稼働人員÷派遣対象在籍人員、配属前新卒等を除外。研修者込みは全社技術者を分母に含める。未配属労務費はSG&A、配属後は原価で費用消滅ではない。賞与引当/支給と休日/工数、新卒Q1給与が4月のみという季節性も既答。HVは単価と本人給与が連動しWV/PVより低粗利、FY2026年1月期の単価帯/法定派遣margin例を現中間OP率にしない。補足11/12の単体表頭「27年1月期(平均)第2四半期」1,392人/97.6%/4,852円h/168h月と、7月末1,431人/Q2(5–7月)chart96.9%/4,895円h/169h月を別表示で保持。",
+      "next_comparison": "新しい会社説明を同じ分母・母集団・期間・単体/連結・平均/期末で照合し、単価/人数/工数と費用区分・発生時期の違いを記録。既答と新しい定義/訂正を分ける。",
+      "residual": "平均窓/重み/式、採用/研修/人員mix・費用の数量寄与と持続性、FAQ更新時点は未確定。",
+      "do_not_infer": "高通常稼働を全員配属、高単価を高利益率、給与の費用科目移動を費用減としない。指標積から連結売上を復元せず、季節費用を一括正常化しない。",
+      "evidence_quote_ids": [
+        "Q2-statement-physical-4",
+        "IRFAQ-period-cost-and-utilization",
+        "IRFAQ-group-prices-and-margin-costs",
+        "IRFAQ-HV-gross-margin",
+        "Q2-supplement-physical-11",
+        "Q2-supplement-physical-12"
+      ]
+    },
+    {
+      "id": "consolidated-profit-stages-and-cashflow-adjustments-versus-realization",
+      "known": "中間連結は2026-02-01〜07-31、本文/PL/CFは千円、表紙は百万円未満切捨て。前年中間連結比較は連結開始時期により非記載。CFは税前1,209,927起点/CFO148,819。役員退職慰労引当金△360,900と退職給付負債28,228は別。納税△292,967千円、PL税費用/正常税率とは別。保険解約返戻11,796のPL営業外・CF調整△11,796と投資解約収入23,468を分ける。証券売却損12,342は特別損失/CF調整12,342、投資売却収入47,893と別。CF投資△2,556/財務△548,643/現金同等物増減△402,380、期首4,725,285/期末4,322,905は各flow/stock。単一報告segmentは単一法人ではない。",
+      "next_comparison": "新資料の同じ期・会社scope・利益起点/調整・実際の入出金をそれぞれ比較し、既にCFに含む項目と追加現金化を区別する。原37行の符号/ラベルを残し、当時説明と実訂正/追加資料を照合する。",
+      "residual": "引当金支払/債権回収の将来経路、正常税/将来税cash、個別保険/証券の1対1対応・税効果、維持投資・正常CFは未確認/未採用。",
+      "do_not_infer": "引当減を支払別行や将来正常値にせず、PLへ損失再足戻し/CFOへ投資収入再加算/簿価逆算をしない。CF37行を再合計してFCF/FCFFを作らず、非記載前年連結値を単体から作らない。単一報告segmentを子会社/NCIなしとしない。",
+      "evidence_quote_ids": [
+        "Q2-statement-physical-1",
+        "Q2-statement-physical-4",
+        "Q2-statement-physical-6",
+        "cf-period-unit-and-starting-scope",
+        "cf-operating-bridge-complete",
+        "cf-provisions-are-distinct",
+        "cf-cash-interest-tax-and-cfo",
+        "cf-investing-realized-cash",
+        "cf-financing-cash",
+        "cf-cash-equivalent-stock-and-change",
+        "single-reporting-segment-note"
+      ]
+    },
+    {
+      "id": "already-split-adjusted-EPS-shares-and-mixed-dividend-period-basis",
+      "known": "会社は2026-08-01の1→2分割をEPS・発行済/自己株/平均株へ前年度期首から遡及調整済みと表示。中間43円preと期末予想21.50円postは混在basisで単純合計不可・年間dash。補足16は会社参考の分割前換算86円/実質2円増配を表示。50%base方針/予想73.1%も会社説明で投資家売買条件ではない。FY2026-02-01〜2027-01-31の通期1period会社予想は9/10当時版。",
+      "next_comparison": "新しい公表予想/実績を原期・公表版・分割前後/既調整・会社総額/1株系列で照合する。当時の株数/EPS/DPSと現在分母・将来予測を区別する。",
+      "residual": "後日予想/現在株式基準と配当支払・将来配当列、外部著者固有予測/評価とIR確認価値は未採用/未確認。",
+      "do_not_infer": "既調整EPS/株数を再分割せず、7月末の未調整法定株数へ読み替えない。43+21.5や会社参考86から独自年間postDPS/将来DDM列を作らず、歴史的分割換算株価/掲載利回りを現在価格にしない。会社予想・配当方針を著者futureforecastや投資家policyへ変えない。",
+      "evidence_quote_ids": [
+        "Q2-statement-physical-1",
+        "Q2-statement-physical-2",
+        "IRFAQ-issuer-dividend-approach",
+        "Q2-supplement-physical-16",
+        "same-page-share-split-context-not-adopted"
+      ]
+    }
+  ],
+  "evidence_quote_bindings": {
+    "latest-Q2-static-materials": {
+      "quote_id": "latest-Q2-static-materials",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "061ea298908a320b7512abfe332f897f09357b76540dd4d1114c17ade5efe2ad",
+        "json_pointer": "/0"
+      },
+      "source_id": "case-public:8762d25f40e325fb193be63e274436f94ed3cdbb7171d98974234b1325c0061e",
+      "physical_page": null,
+      "source_character_start": 6234,
+      "source_character_end": 6345,
+      "quote_sha256": "5be257e939ce246c30f9c57048f600635821893af9513bbcfc393cb2035536a2",
+      "exact_to_actual_source_content": true
+    },
+    "Q2-statement-physical-1": {
+      "quote_id": "Q2-statement-physical-1",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "061ea298908a320b7512abfe332f897f09357b76540dd4d1114c17ade5efe2ad",
+        "json_pointer": "/1"
+      },
+      "source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "physical_page": 1,
+      "source_character_start": 0,
+      "source_character_end": 5046,
+      "quote_sha256": "22c2d4e687204e14894b121667af900ef933d0d987f7fc3e74175400a6b90ab6",
+      "exact_to_actual_source_content": true
+    },
+    "Q2-statement-physical-2": {
+      "quote_id": "Q2-statement-physical-2",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "061ea298908a320b7512abfe332f897f09357b76540dd4d1114c17ade5efe2ad",
+        "json_pointer": "/2"
+      },
+      "source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "physical_page": 2,
+      "source_character_start": 5047,
+      "source_character_end": 6326,
+      "quote_sha256": "769967811e1408aa234c3e4a193bab4f8e0307233e32840e63aef08bb9c02368",
+      "exact_to_actual_source_content": true
+    },
+    "Q2-statement-physical-4": {
+      "quote_id": "Q2-statement-physical-4",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "061ea298908a320b7512abfe332f897f09357b76540dd4d1114c17ade5efe2ad",
+        "json_pointer": "/3"
+      },
+      "source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "physical_page": 4,
+      "source_character_start": 7291,
+      "source_character_end": 9148,
+      "quote_sha256": "3a620df154ee11c83174f168322e2322cee0468161dde5ccbaf13b4a286ec1e0",
+      "exact_to_actual_source_content": true
+    },
+    "Q2-statement-physical-6": {
+      "quote_id": "Q2-statement-physical-6",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/initial-public-review-2026-10-16/source-quotes.json",
+        "sha256": "061ea298908a320b7512abfe332f897f09357b76540dd4d1114c17ade5efe2ad",
+        "json_pointer": "/4"
+      },
+      "source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "physical_page": 6,
+      "source_character_start": 11687,
+      "source_character_end": 13047,
+      "quote_sha256": "6a0a59a41d495d97a8d9d0d6830beb87dfa543d564059aa55133dcd47e97aefb",
+      "exact_to_actual_source_content": true
+    },
+    "IRFAQ-period-cost-and-utilization": {
+      "quote_id": "IRFAQ-period-cost-and-utilization",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/public-explanation-followup-2026-10-16/source-quotes.json",
+        "sha256": "e4b3e5a8c7826a44d75af0a2820df753e5b01f8f7429c899eb38f98b1b05643a",
+        "json_pointer": "/0"
+      },
+      "source_id": "case-public:a47a80ab4944d5df950653bacb972925c1d314589f56a8289030366103e7579c",
+      "physical_page": null,
+      "source_character_start": 11624,
+      "source_character_end": 12361,
+      "quote_sha256": "05def163cd6af9b1076c2de984f9bcc8e7ac23bdb47738f741fdc465aeea4d67",
+      "exact_to_actual_source_content": true
+    },
+    "IRFAQ-group-prices-and-margin-costs": {
+      "quote_id": "IRFAQ-group-prices-and-margin-costs",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/public-explanation-followup-2026-10-16/source-quotes.json",
+        "sha256": "e4b3e5a8c7826a44d75af0a2820df753e5b01f8f7429c899eb38f98b1b05643a",
+        "json_pointer": "/1"
+      },
+      "source_id": "case-public:a47a80ab4944d5df950653bacb972925c1d314589f56a8289030366103e7579c",
+      "physical_page": null,
+      "source_character_start": 7263,
+      "source_character_end": 7623,
+      "quote_sha256": "70fe1be07df89677fe4a4d797de5846d4671277f26ae3f00a8d394c8ccd532a3",
+      "exact_to_actual_source_content": true
+    },
+    "IRFAQ-HV-gross-margin": {
+      "quote_id": "IRFAQ-HV-gross-margin",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/public-explanation-followup-2026-10-16/source-quotes.json",
+        "sha256": "e4b3e5a8c7826a44d75af0a2820df753e5b01f8f7429c899eb38f98b1b05643a",
+        "json_pointer": "/2"
+      },
+      "source_id": "case-public:a47a80ab4944d5df950653bacb972925c1d314589f56a8289030366103e7579c",
+      "physical_page": null,
+      "source_character_start": 9792,
+      "source_character_end": 9941,
+      "quote_sha256": "8bac50e73a3b307e8280a8205d6a475ba54723fabab3fc24a114a47809bb4fc3",
+      "exact_to_actual_source_content": true
+    },
+    "IRFAQ-published-material-location": {
+      "quote_id": "IRFAQ-published-material-location",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/public-explanation-followup-2026-10-16/source-quotes.json",
+        "sha256": "e4b3e5a8c7826a44d75af0a2820df753e5b01f8f7429c899eb38f98b1b05643a",
+        "json_pointer": "/3"
+      },
+      "source_id": "case-public:a47a80ab4944d5df950653bacb972925c1d314589f56a8289030366103e7579c",
+      "physical_page": null,
+      "source_character_start": 11228,
+      "source_character_end": 11301,
+      "quote_sha256": "59d952adcf385fa5874f4395c13cc271bf30acfe6ef109e3a83be4457e6087d4",
+      "exact_to_actual_source_content": true
+    },
+    "IRFAQ-issuer-dividend-approach": {
+      "quote_id": "IRFAQ-issuer-dividend-approach",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/public-explanation-followup-2026-10-16/source-quotes.json",
+        "sha256": "e4b3e5a8c7826a44d75af0a2820df753e5b01f8f7429c899eb38f98b1b05643a",
+        "json_pointer": "/4"
+      },
+      "source_id": "case-public:a47a80ab4944d5df950653bacb972925c1d314589f56a8289030366103e7579c",
+      "physical_page": null,
+      "source_character_start": 4010,
+      "source_character_end": 4065,
+      "quote_sha256": "e13d6fd21cd9c1e7363d42a103c49430f6ee6311b1edd813fd244a323470d65a",
+      "exact_to_actual_source_content": true
+    },
+    "Q2-supplement-physical-11": {
+      "quote_id": "Q2-supplement-physical-11",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/public-explanation-followup-2026-10-16/source-quotes.json",
+        "sha256": "e4b3e5a8c7826a44d75af0a2820df753e5b01f8f7429c899eb38f98b1b05643a",
+        "json_pointer": "/5"
+      },
+      "source_id": "case-public:90d88a20b909eb612482b52a026a419d2df47d5d69cef106aaaa25b5abd9206c",
+      "physical_page": 11,
+      "source_character_start": 12233,
+      "source_character_end": 15092,
+      "quote_sha256": "37876add92412e4591171d3ba2759b182ac882c500bc14fcad47f97d1ef03b42",
+      "exact_to_actual_source_content": true
+    },
+    "Q2-supplement-physical-12": {
+      "quote_id": "Q2-supplement-physical-12",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/public-explanation-followup-2026-10-16/source-quotes.json",
+        "sha256": "e4b3e5a8c7826a44d75af0a2820df753e5b01f8f7429c899eb38f98b1b05643a",
+        "json_pointer": "/6"
+      },
+      "source_id": "case-public:90d88a20b909eb612482b52a026a419d2df47d5d69cef106aaaa25b5abd9206c",
+      "physical_page": 12,
+      "source_character_start": 15093,
+      "source_character_end": 17014,
+      "quote_sha256": "9a8b4ffb1e5c80fa2dbf45db2b54f9fbc8ce48ce5fa08963b2def7c4dd567203",
+      "exact_to_actual_source_content": true
+    },
+    "Q2-supplement-physical-16": {
+      "quote_id": "Q2-supplement-physical-16",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/public-explanation-followup-2026-10-16/source-quotes.json",
+        "sha256": "e4b3e5a8c7826a44d75af0a2820df753e5b01f8f7429c899eb38f98b1b05643a",
+        "json_pointer": "/7"
+      },
+      "source_id": "case-public:90d88a20b909eb612482b52a026a419d2df47d5d69cef106aaaa25b5abd9206c",
+      "physical_page": 16,
+      "source_character_start": 21941,
+      "source_character_end": 23406,
+      "quote_sha256": "414a66deeaaf6b4d64c6c1b4785bb04960dbd29e1a8101423fd36b5090129a1a",
+      "exact_to_actual_source_content": true
+    },
+    "physical-8-full-page": {
+      "quote_id": "physical-8-full-page",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "c880633196de4e2bf88aae4c3a4cca7caf340346e41d808686c10e832c1be458",
+        "json_pointer": "/quotes/0"
+      },
+      "source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "physical_page": 8,
+      "source_character_start": 13508,
+      "source_character_end": 15379,
+      "quote_sha256": "012cb4eae9601e18ece4e6bcd8d81e036a034be015d89d39ba92e13f04b0f48c",
+      "exact_to_actual_source_content": true
+    },
+    "physical-9-full-page": {
+      "quote_id": "physical-9-full-page",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "c880633196de4e2bf88aae4c3a4cca7caf340346e41d808686c10e832c1be458",
+        "json_pointer": "/quotes/1"
+      },
+      "source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "physical_page": 9,
+      "source_character_start": 15379,
+      "source_character_end": 16835,
+      "quote_sha256": "1d224cffadf5ee7d1bceec048a66f0679ce9e6e256fc1506dba6324115cc869d",
+      "exact_to_actual_source_content": true
+    },
+    "cf-period-unit-and-starting-scope": {
+      "quote_id": "cf-period-unit-and-starting-scope",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "c880633196de4e2bf88aae4c3a4cca7caf340346e41d808686c10e832c1be458",
+        "json_pointer": "/quotes/2"
+      },
+      "source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "physical_page": 8,
+      "source_character_start": 13569,
+      "source_character_end": 13736,
+      "quote_sha256": "528ff5614f2b40ea67e578810ad16a1fbe9abbc61064ad9fe1c9afa25b44f360",
+      "exact_to_actual_source_content": true
+    },
+    "cf-operating-bridge-complete": {
+      "quote_id": "cf-operating-bridge-complete",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "c880633196de4e2bf88aae4c3a4cca7caf340346e41d808686c10e832c1be458",
+        "json_pointer": "/quotes/3"
+      },
+      "source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "physical_page": 8,
+      "source_character_start": 13736,
+      "source_character_end": 14689,
+      "quote_sha256": "dab285c19e159c6d16406ff5d1c55a7cddfee9c07dd74389f4ad8028df78a282",
+      "exact_to_actual_source_content": true
+    },
+    "cf-provisions-are-distinct": {
+      "quote_id": "cf-provisions-are-distinct",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "c880633196de4e2bf88aae4c3a4cca7caf340346e41d808686c10e832c1be458",
+        "json_pointer": "/quotes/4"
+      },
+      "source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "physical_page": 8,
+      "source_character_start": 13968,
+      "source_character_end": 14053,
+      "quote_sha256": "177b17f48b83da4bf13418a88a15b52c05989f0cb81469e57d7213de2bdadddf",
+      "exact_to_actual_source_content": true
+    },
+    "cf-cash-interest-tax-and-cfo": {
+      "quote_id": "cf-cash-interest-tax-and-cfo",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "c880633196de4e2bf88aae4c3a4cca7caf340346e41d808686c10e832c1be458",
+        "json_pointer": "/quotes/5"
+      },
+      "source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "physical_page": 8,
+      "source_character_start": 14476,
+      "source_character_end": 14689,
+      "quote_sha256": "e322a8f975aad17dd98bb21154111581c65dd8990abed8f20a721847298feb06",
+      "exact_to_actual_source_content": true
+    },
+    "cf-investing-realized-cash": {
+      "quote_id": "cf-investing-realized-cash",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "c880633196de4e2bf88aae4c3a4cca7caf340346e41d808686c10e832c1be458",
+        "json_pointer": "/quotes/6"
+      },
+      "source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "physical_page": 8,
+      "source_character_start": 14689,
+      "source_character_end": 15032,
+      "quote_sha256": "37f55c376e2acf6fdbb2becbc0d69e64274dd26add431037dff9eeeabf26d32c",
+      "exact_to_actual_source_content": true
+    },
+    "cf-financing-cash": {
+      "quote_id": "cf-financing-cash",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "c880633196de4e2bf88aae4c3a4cca7caf340346e41d808686c10e832c1be458",
+        "json_pointer": "/quotes/7"
+      },
+      "source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "physical_page": 8,
+      "source_character_start": 15032,
+      "source_character_end": 15217,
+      "quote_sha256": "00b7e00702b5648477b369eced501452649b9e6ab3b5cf15c79d7eb2eebf411f",
+      "exact_to_actual_source_content": true
+    },
+    "cf-cash-equivalent-stock-and-change": {
+      "quote_id": "cf-cash-equivalent-stock-and-change",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "c880633196de4e2bf88aae4c3a4cca7caf340346e41d808686c10e832c1be458",
+        "json_pointer": "/quotes/8"
+      },
+      "source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "physical_page": 8,
+      "source_character_start": 15217,
+      "source_character_end": 15349,
+      "quote_sha256": "40d580b1a48a7718b016ec4dbcde8f361df283cbab663e76ab58e1e47771003f",
+      "exact_to_actual_source_content": true
+    },
+    "single-reporting-segment-note": {
+      "quote_id": "single-reporting-segment-note",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "c880633196de4e2bf88aae4c3a4cca7caf340346e41d808686c10e832c1be458",
+        "json_pointer": "/quotes/9"
+      },
+      "source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "physical_page": 9,
+      "source_character_start": 15467,
+      "source_character_end": 15521,
+      "quote_sha256": "97fe9d27827a23e936388b17a30dd95745ddb9c6bcbd1e62d11f5423fccee7f6",
+      "exact_to_actual_source_content": true
+    },
+    "specified-no-applicable-notes": {
+      "quote_id": "specified-no-applicable-notes",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "c880633196de4e2bf88aae4c3a4cca7caf340346e41d808686c10e832c1be458",
+        "json_pointer": "/quotes/10"
+      },
+      "source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "physical_page": 9,
+      "source_character_start": 15521,
+      "source_character_end": 15594,
+      "quote_sha256": "f75d6dcb23580f02f82ebeffe362724f14095bfc48c105e4de0797bbbba6188a",
+      "exact_to_actual_source_content": true
+    },
+    "same-page-share-split-context-not-adopted": {
+      "quote_id": "same-page-share-split-context-not-adopted",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/source-quotes.json",
+        "sha256": "c880633196de4e2bf88aae4c3a4cca7caf340346e41d808686c10e832c1be458",
+        "json_pointer": "/quotes/11"
+      },
+      "source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "physical_page": 9,
+      "source_character_start": 15594,
+      "source_character_end": 16799,
+      "quote_sha256": "3675ffd6faf022248c5eb105409cbec614a1d076e1e275069e2c916f19bf2577",
+      "exact_to_actual_source_content": true
+    }
+  },
+  "CF37_original_signed_row_refs": [
+    {
+      "row_index": 0,
+      "label": "税金等調整前中間純利益",
+      "display": "1,209,927",
+      "display_sign": "positive",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/0"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 1,
+      "label": "減価償却費",
+      "display": "15,343",
+      "display_sign": "positive",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/1"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 2,
+      "label": "のれん償却額",
+      "display": "76,380",
+      "display_sign": "positive",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/2"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 3,
+      "label": "貸倒引当金の増減額（△は減少）",
+      "display": "1,700",
+      "display_sign": "positive",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/3"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 4,
+      "label": "賞与引当金の増減額（△は減少）",
+      "display": "16,014",
+      "display_sign": "positive",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/4"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 5,
+      "label": "役員退職慰労引当金の増減額（△は減少）",
+      "display": "△360,900",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/5"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 6,
+      "label": "退職給付に係る負債の増減額（△は減少）",
+      "display": "28,228",
+      "display_sign": "positive",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/6"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 7,
+      "label": "受取利息及び受取配当金",
+      "display": "△1,378",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/7"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 8,
+      "label": "保険解約返戻金",
+      "display": "△11,796",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/8"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 9,
+      "label": "支払利息",
+      "display": "12,565",
+      "display_sign": "positive",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/9"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 10,
+      "label": "投資有価証券売却損益（△は益）",
+      "display": "12,342",
+      "display_sign": "positive",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/10"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 11,
+      "label": "未収入金の増減額（△は増加）",
+      "display": "△7,022",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/11"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 12,
+      "label": "売上債権の増減額（△は増加）",
+      "display": "△274,447",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/12"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 13,
+      "label": "棚卸資産の増減額（△は増加）",
+      "display": "△6,827",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/13"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 14,
+      "label": "未払消費税等の増減額（△は減少）",
+      "display": "7,406",
+      "display_sign": "positive",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/14"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 15,
+      "label": "未払金の増減額（△は減少）",
+      "display": "△219,980",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/15"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 16,
+      "label": "その他",
+      "display": "△44,416",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/16"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 17,
+      "label": "小計",
+      "display": "453,138",
+      "display_sign": "positive",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/17"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 18,
+      "label": "利息及び配当金の受取額",
+      "display": "1,378",
+      "display_sign": "positive",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/18"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 19,
+      "label": "利息の支払額",
+      "display": "△12,730",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/19"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 20,
+      "label": "法人税等の支払額",
+      "display": "△292,967",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/20"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 21,
+      "label": "営業活動によるキャッシュ・フロー",
+      "display": "148,819",
+      "display_sign": "positive",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/21"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 22,
+      "label": "有形固定資産の取得による支出",
+      "display": "△16,067",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/22"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 23,
+      "label": "無形固定資産の取得による支出",
+      "display": "△46,398",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/23"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 24,
+      "label": "保険積立金の解約による収入",
+      "display": "23,468",
+      "display_sign": "positive",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/24"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 25,
+      "label": "敷金及び保証金の差入による支出",
+      "display": "△112",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/25"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 26,
+      "label": "敷金及び保証金の回収による収入",
+      "display": "128",
+      "display_sign": "positive",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/26"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 27,
+      "label": "投資有価証券の売却による収入",
+      "display": "47,893",
+      "display_sign": "positive",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/27"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 28,
+      "label": "その他",
+      "display": "△11,468",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/28"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 29,
+      "label": "投資活動によるキャッシュ・フロー",
+      "display": "△2,556",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/29"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 30,
+      "label": "長期借入金の返済による支出",
+      "display": "△53,988",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/30"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 31,
+      "label": "自己株式の取得による支出",
+      "display": "△50,439",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/31"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 32,
+      "label": "配当金の支払額",
+      "display": "△444,215",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/32"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 33,
+      "label": "財務活動によるキャッシュ・フロー",
+      "display": "△548,643",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/33"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 34,
+      "label": "現金及び現金同等物の増減額（△は減少）",
+      "display": "△402,380",
+      "display_sign": "negative",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/34"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 35,
+      "label": "現金及び現金同等物の期首残高",
+      "display": "4,725,285",
+      "display_sign": "positive",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/35"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    },
+    {
+      "row_index": 36,
+      "label": "現金及び現金同等物の中間期末残高",
+      "display": "4,322,905",
+      "display_sign": "positive",
+      "ref": {
+        "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/signed-cf-rows.json",
+        "sha256": "58953446ca024d28e2c145664c585b2422e00288ab756d33713e500a170e5c97",
+        "json_pointer": "/rows/36"
+      },
+      "existing_source_id": "case-public:46fd66fbe784a7705c2e34e30c8bf276334c0225acf0ef9eb329045313b87558",
+      "exact_current_source_character_and_UTF8_binding": true
+    }
+  ],
+  "manual_residual_handoff": {
+    "parent_acceptance_ref": {
+      "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/parent-acceptance.json",
+      "sha256": "51f90b87618f3a20b29d3541901786413289c0ede75a2b442d8e8328e0b3711e"
+    },
+    "residual_map_ref": {
+      "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+      "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b"
+    },
+    "worker_handoff_ref": {
+      "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/worker-handoff.json",
+      "sha256": "cda01d9d47d17cd37849399ea950e76e30bd91c8c1b976eb39e1e0ec80cd934c"
+    },
+    "known": [
+      {
+        "local_id": "K1",
+        "topic": "連結中間/通期予想・精度・比較無し",
+        "ref": {
+          "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+          "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b",
+          "json_pointer": "/known_do_not_reask/0"
+        },
+        "condition_ids": [
+          "consolidated-profit-stages-and-cashflow-adjustments-versus-realization",
+          "already-split-adjusted-EPS-shares-and-mixed-dividend-period-basis"
+        ]
+      },
+      {
+        "local_id": "K2",
+        "topic": "稼働率の分母",
+        "ref": {
+          "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+          "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b",
+          "json_pointer": "/known_do_not_reask/1"
+        },
+        "condition_ids": [
+          "utilization-denominators-standalone-averages-price-hours-and-cost-seasonality"
+        ]
+      },
+      {
+        "local_id": "K3",
+        "topic": "未配属給与・賞与・労働工数の時期",
+        "ref": {
+          "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+          "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b",
+          "json_pointer": "/known_do_not_reask/2"
+        },
+        "condition_ids": [
+          "utilization-denominators-standalone-averages-price-hours-and-cost-seasonality"
+        ]
+      },
+      {
+        "local_id": "K4",
+        "topic": "HV単価・給与連動とmarginの別定義",
+        "ref": {
+          "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+          "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b",
+          "json_pointer": "/known_do_not_reask/3"
+        },
+        "condition_ids": [
+          "utilization-denominators-standalone-averages-price-hours-and-cost-seasonality"
+        ]
+      },
+      {
+        "local_id": "K5",
+        "topic": "単体の平均表と期末/四半期チャート",
+        "ref": {
+          "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+          "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b",
+          "json_pointer": "/known_do_not_reask/4"
+        },
+        "condition_ids": [
+          "utilization-denominators-standalone-averages-price-hours-and-cost-seasonality"
+        ]
+      },
+      {
+        "local_id": "K6",
+        "topic": "CF起点・符号と引当金/税cash",
+        "ref": {
+          "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+          "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b",
+          "json_pointer": "/known_do_not_reask/5"
+        },
+        "condition_ids": [
+          "consolidated-profit-stages-and-cashflow-adjustments-versus-realization"
+        ]
+      },
+      {
+        "local_id": "K7",
+        "topic": "PL利益調整と投資cashは別物",
+        "ref": {
+          "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+          "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b",
+          "json_pointer": "/known_do_not_reask/6"
+        },
+        "condition_ids": [
+          "consolidated-profit-stages-and-cashflow-adjustments-versus-realization"
+        ]
+      },
+      {
+        "local_id": "K8",
+        "topic": "投資/財務cashとstock/flow",
+        "ref": {
+          "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+          "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b",
+          "json_pointer": "/known_do_not_reask/7"
+        },
+        "condition_ids": [
+          "consolidated-profit-stages-and-cashflow-adjustments-versus-realization"
+        ]
+      },
+      {
+        "local_id": "K9",
+        "topic": "分割既調整・mixedDPSと会社参考86",
+        "ref": {
+          "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+          "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b",
+          "json_pointer": "/known_do_not_reask/8"
+        },
+        "condition_ids": [
+          "already-split-adjusted-EPS-shares-and-mixed-dividend-period-basis"
+        ]
+      },
+      {
+        "local_id": "K10",
+        "topic": "単一報告segmentと限定した該当なし",
+        "ref": {
+          "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+          "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b",
+          "json_pointer": "/known_do_not_reask/9"
+        },
+        "condition_ids": [
+          "consolidated-profit-stages-and-cashflow-adjustments-versus-realization"
+        ]
+      }
+    ],
+    "remaining": [
+      {
+        "local_id": "P1",
+        "topic": "保存本文の未読",
+        "owner": "researcher_public_unread",
+        "status": "remaining_not_prioritized_for_IR",
+        "ref": {
+          "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+          "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b",
+          "json_pointer": "/remaining_owner_tasks/0"
+        },
+        "condition_ids": [
+          "utilization-denominators-standalone-averages-price-hours-and-cost-seasonality",
+          "consolidated-profit-stages-and-cashflow-adjustments-versus-realization",
+          "already-split-adjusted-EPS-shares-and-mixed-dividend-period-basis"
+        ]
+      },
+      {
+        "local_id": "P2",
+        "topic": "会議QA・後日更新",
+        "owner": "researcher_public_update",
+        "status": "remaining_not_prioritized_for_IR",
+        "ref": {
+          "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+          "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b",
+          "json_pointer": "/remaining_owner_tasks/1"
+        },
+        "condition_ids": [
+          "utilization-denominators-standalone-averages-price-hours-and-cost-seasonality",
+          "consolidated-profit-stages-and-cashflow-adjustments-versus-realization",
+          "already-split-adjusted-EPS-shares-and-mixed-dividend-period-basis"
+        ]
+      },
+      {
+        "local_id": "C1",
+        "topic": "平均窓・分母/集計比較",
+        "owner": "issuer_definition_after_public_review",
+        "status": "remaining_not_prioritized_for_IR",
+        "ref": {
+          "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+          "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b",
+          "json_pointer": "/remaining_owner_tasks/2"
+        },
+        "condition_ids": [
+          "utilization-denominators-standalone-averages-price-hours-and-cost-seasonality"
+        ]
+      },
+      {
+        "local_id": "C2",
+        "topic": "単価/人員mix・費用時期の残余",
+        "owner": "issuer_definition_after_public_review",
+        "status": "remaining_not_prioritized_for_IR",
+        "ref": {
+          "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+          "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b",
+          "json_pointer": "/remaining_owner_tasks/3"
+        },
+        "condition_ids": [
+          "utilization-denominators-standalone-averages-price-hours-and-cost-seasonality"
+        ]
+      },
+      {
+        "local_id": "C3",
+        "topic": "CF・取引の範囲/時期",
+        "owner": "issuer_definition_after_public_review",
+        "status": "remaining_not_prioritized_for_IR",
+        "ref": {
+          "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+          "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b",
+          "json_pointer": "/remaining_owner_tasks/4"
+        },
+        "condition_ids": [
+          "consolidated-profit-stages-and-cashflow-adjustments-versus-realization"
+        ]
+      },
+      {
+        "local_id": "A1",
+        "topic": "著者forecast未採用",
+        "owner": "external_author_forecast_and_method",
+        "status": "remaining_not_prioritized_for_IR",
+        "ref": {
+          "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+          "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b",
+          "json_pointer": "/remaining_owner_tasks/5"
+        },
+        "condition_ids": [
+          "utilization-denominators-standalone-averages-price-hours-and-cost-seasonality",
+          "consolidated-profit-stages-and-cashflow-adjustments-versus-realization",
+          "already-split-adjusted-EPS-shares-and-mixed-dividend-period-basis"
+        ]
+      },
+      {
+        "local_id": "I1",
+        "topic": "正常利益・予測/評価/IR価値",
+        "owner": "investor_valuation_using_adopted_method",
+        "status": "remaining_not_prioritized_for_IR",
+        "ref": {
+          "path": "research/ir-case-studies-2026-10-15/2163/question-residual-preparation-2026-10-16/residual-map.json",
+          "sha256": "1b8c5bf5d0f5acd69a913e7c43f22f01f692a780a2e4b69a8880a274c5ce696b",
+          "json_pointer": "/remaining_owner_tasks/6"
+        },
+        "condition_ids": [
+          "utilization-denominators-standalone-averages-price-hours-and-cost-seasonality",
+          "consolidated-profit-stages-and-cashflow-adjustments-versus-realization",
+          "already-split-adjusted-EPS-shares-and-mixed-dividend-period-basis"
+        ]
+      }
+    ],
+    "local_IDs_not_new_native_issues": true,
+    "worker_use": "将来の正当packet/prior_reviewに対し既知10/残余7・読解時刻・原scope/fileSHA/実snapshotをsummaryとcase_observation.rationale双方へ手動引継ぎ。source_reviews/evidenceは実pendingだけ。自動packet同梱/機械受領/金融認証を保証しない。"
+  },
+  "current_source_check_ref": {
+    "path": "research/ir-case-studies-2026-10-15/2163/native-case-setup-2026-10-16/actual-inputs/actual-readonly-check.json",
+    "sha256": "1da44c7d6090a3fe76cf8fdf57010977daa71cff7edb3a93c1c84f8217e169d5"
+  },
+  "reading_scope": {
+    "initial_HTML": "IR入口の選定掲載箇所のみ。",
+    "statement_initial_pages": [
+      1,
+      2,
+      4,
+      6
+    ],
+    "statement_additional_same_source_pages": [
+      8,
+      9
+    ],
+    "statement_fulltext_saved_pages": 9,
+    "same_source_note_is_new_publication": false,
+    "FAQ_selected_scope_count": 5,
+    "FAQ_full_visible_text_saved_not_all_read": true,
+    "FAQ_publication_or_revision_date": null,
+    "FAQ_answer_FYlabel_is_not_publication_date": true,
+    "supplement_pages": [
+      11,
+      12,
+      16
+    ],
+    "supplement_fulltext_saved_pages": 22,
+    "full_statement_FAQ_or_supplement_meaning_read": false,
+    "specific_earnings_meeting_QA_or_notice_body_not_confirmed_by_this_scope": true,
+    "derived10_facts": "Same interim original re-expression; not new disclosure or financial adoption",
+    "chronology": "Preserve initial then-unread/awaiting-review metadata and later acceptance chronology. Current checks/firstsave are separate; no old source or receipt rewrite."
+  },
+  "parent_acceptance_refs": [
+    {
+      "path": "research/ir-case-studies-2026-10-15/2163/initial-public-review-2026-10-16/parent-acceptance.json",
+      "sha256": "589faad173d362302f86bb0e1d9c14adff8496ea5123b287ad4bdbd33f316340"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2163/public-explanation-followup-2026-10-16/parent-acceptance.json",
+      "sha256": "92fe99c6c24ca48046a073c780428f0760281b9d153fef737367b3c7ba3b25e3"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2163/statement-note-followup-2026-10-16/parent-acceptance.json",
+      "sha256": "8141390e7a98899d935e81259eaeb5d25eb12631739ddc902080ae8d5a4b27d3"
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/2163/disclosed-facts-2026-10-16/parent-acceptance.json",
+      "sha256": "6b6ff607ac9f21fc99a8bff62ec61adfd0afd3b44e4e5ff50b270f5d363af47f"
+    }
+  ],
+  "comparison_protocol": {
+    "supports": "明示新根拠が同期間/主体/分母/単位の特定観測を支持する場合のみ。",
+    "counterevidence": "実際の訂正/矛盾を記録し、未指定金融閾値や価格を反証にしない。",
+    "unchanged": "既知内容/構造化のみでは不変を許す。",
+    "unresolved": "未読/不明/曖昧を残し、無回答/0/投資不適格に自動変換しない。"
+  },
+  "management_review": {
+    "date": "2027-01-16",
+    "timezone": "Asia/Tokyo",
+    "purpose": "quarterly internal research date, not issuer event or sale deadline"
+  },
+  "IR_boundary": "既答を再質問に戻さず新IR文案/分岐/送信準備を作らない。将来正常利益/税/CF/利回り・評価の保証を会社へ求めない。",
+  "bootstrap_is_meaning_certification": false,
+  "financial_inputs_verified": false,
+  "financial_input_adoption": false,
+  "financial_thesis_or_investment_action": null,
+  "new_numeric_forecasts_prices_probabilities_valuationbranches_IRdrafts": 0,
+  "unadopted": [
+    "通常事業を含む金融モデル適合/正常利益/将来税CF/再投資",
+    "外部著者固有2163予測/評価/倍率/価格/確率/売買条件",
+    "現在株式分母・独自年間DPS/将来DDM列",
+    "会社決算日/売却期限/外部送信"
+  ],
+  "source_graph_basis": "All actual5 public-disclosure snapshots and current classifications/receipts checked. Derived original is within this frozen set; additional notes are same original, not another publication."
+}

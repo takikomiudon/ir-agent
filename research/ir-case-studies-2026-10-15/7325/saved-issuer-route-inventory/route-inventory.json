@@ -1,0 +1,278 @@
+{
+  "JS_or_API_guesses": 0,
+  "access_boundary": "Initial homepage/robots503 and later circuit-breaker are preserved; a later independently saved HTTP200 homepage/robots exists. This inventory does not retry the failed homepage or erase the earlier failures. New proposed business path was not requested in these5snapshots; saved success is not a current network/robots guarantee.",
+  "actual_DB_access": 0,
+  "actual_DB_writes": 0,
+  "central_holds": {
+    "exact_hosts": [
+      "contents.xj-storage.jp",
+      "sharedresearch.jp",
+      "ssl4.eir-parts.net",
+      "web.fisco.jp",
+      "www.investors.com",
+      "www.toyo.co.jp",
+      "www.xj-storage.jp"
+    ],
+    "file": "research/ir-source-access-holds-2026-10-15/holds-v3.json",
+    "selected_host_on_hold": false,
+    "sha256": "ec1e9f85d378571c3d0f99eca73ec8e397ea8dd7b155aa4be80c2100d2294551"
+  },
+  "company_id": "jp:7325",
+  "company_name": "株式会社アイリックコーポレーション",
+  "external_sends": 0,
+  "model_or_financial_input_adoption": 0,
+  "new_GETs": 0,
+  "recorded_at": "2026-10-15T20:05:20.102038+00:00",
+  "root_fetch_plan": {
+    "automatic_model_selection": false,
+    "failed_homepage_not_reopened": true,
+    "maximum_issuer_originals": 1,
+    "maximum_semantic_pages": 3,
+    "maximum_total_GETs_including_robots": 3,
+    "new_GETs_in_this_task": 0,
+    "no_GET_of_company_secondary_in_this_plan": true,
+    "planned_requests": [
+      {
+        "order": 1,
+        "purpose": "Fresh robots for fixed UA; old Oct11 snapshot is historical only.",
+        "url": "https://www.irrc.co.jp/robots.txt"
+      },
+      {
+        "condition": "Only after fresh robots permits this exact path and hold check remains clear.",
+        "order": 2,
+        "purpose": "One previously unrequested literal issuer business original.",
+        "url": "https://www.irrc.co.jp/business/insurancesales.html"
+      }
+    ],
+    "secondary_candidate_automatic_fallback": false,
+    "semantic_scope_for_HTML": "One HTML business document; at most three clearly named business/agency-role/remuneration blocks. No invented PDF page numbers. If unexpectedly PDF, at most three physical pages.",
+    "status": "proposal_only_not_executed",
+    "stop_conditions": [
+      "Exact host on preserved central hold list; do not request it",
+      "robots forbidden, unverified 401/403/429/5xx, redirect requiring another request, TLS or transport failure: stop without retry/UA change",
+      "Target redirect, denial, challenge or transport error: stop without alternate host/URL",
+      "One business original lacks the role/fee/regulation definition: record unresolved and close this finite path; no company-page fallback, JS/API request or deeper link traversal"
+    ],
+    "transport": "Preserve existing proxy/CA; TLS verification enabled; no redirect following; one attempt per planned URL; fixed UA Codex-IR-Research/0.1; bounded response size/time must be fixed by parent before GET.",
+    "unallocated_budget": 1,
+    "unallocated_budget_not_permission_for_retry_or_expansion": true
+  },
+  "routes": [
+    {
+      "central_exact_host_hold": false,
+      "exact_host": "www.irrc.co.jp",
+      "label": "保険クリニック事業",
+      "link_json_path": "$.links[13]",
+      "literal_href": "https://www.irrc.co.jp/business/insurancesales.html",
+      "old_robots_literal_can_fetch_for_fixed_UA": true,
+      "old_robots_permission_not_current_fetch_permission": true,
+      "purpose": "Primary: issuer insurance-shop business page; check actual agency/underwriting role, remuneration description and group/entity boundaries.",
+      "rank": 1,
+      "resolved_url": "https://www.irrc.co.jp/business/insurancesales.html",
+      "same_company_host_and_identity_evidence": "research/ir-contacts-universe-2026-10-11/evidence/7325/20261011T204045129243Z/02.json",
+      "snapshot_HTTP_status": 200,
+      "source_snapshot_file": "research/ir-contacts-universe-2026-10-11/evidence/7325/20261011T204045129243Z/01.json",
+      "source_snapshot_sha256": "ae92ab72e71c56b34a867f587afa985ccc01898dd36f77dfaf691c520b0b1d9c",
+      "target_content_or_permission_currently_verified": false,
+      "target_retrieved_in_this_task": false
+    },
+    {
+      "central_exact_host_hold": false,
+      "exact_host": "www.irrc.co.jp",
+      "label": "会社概要",
+      "link_json_path": "$.links[2]",
+      "literal_href": "https://www.irrc.co.jp/company/",
+      "old_robots_literal_can_fetch_for_fixed_UA": true,
+      "old_robots_permission_not_current_fetch_permission": true,
+      "purpose": "Secondary inventory only: company overview may state business registration/operating activities. Not an automatic fallback GET in this finite plan.",
+      "rank": 2,
+      "resolved_url": "https://www.irrc.co.jp/company/",
+      "same_company_host_and_identity_evidence": "research/ir-contacts-universe-2026-10-11/evidence/7325/20261011T204045129243Z/02.json",
+      "snapshot_HTTP_status": 200,
+      "source_snapshot_file": "research/ir-contacts-universe-2026-10-11/evidence/7325/20261011T204045129243Z/01.json",
+      "source_snapshot_sha256": "ae92ab72e71c56b34a867f587afa985ccc01898dd36f77dfaf691c520b0b1d9c",
+      "target_content_or_permission_currently_verified": false,
+      "target_retrieved_in_this_task": false
+    }
+  ],
+  "saved_access_chronology": [
+    {
+      "HTTP_body_completed_at_as_saved": null,
+      "error": null,
+      "requested_url": "https://www.irrc.co.jp/",
+      "retrieved_at_as_saved": "2026-10-11T04:03:32.450417+00:00",
+      "robots_error": null,
+      "robots_status": 503,
+      "snapshot_file": "research/ir-contacts-universe-2026-10-11/evidence/7325/01.json",
+      "status": 503
+    },
+    {
+      "HTTP_body_completed_at_as_saved": null,
+      "error": "environment_circuit_breaker_open",
+      "requested_url": "https://www.irrc.co.jp/",
+      "retrieved_at_as_saved": "2026-10-11T04:50:59.886663+00:00",
+      "robots_error": "environment_circuit_breaker_open",
+      "robots_status": null,
+      "snapshot_file": "research/ir-contacts-universe-2026-10-11/evidence/7325/20261011T045059886634Z/01.json",
+      "status": null
+    },
+    {
+      "HTTP_body_completed_at_as_saved": "2026-10-11T20:41:08.054500+00:00",
+      "error": null,
+      "requested_url": "https://www.irrc.co.jp/",
+      "retrieved_at_as_saved": "2026-10-11T20:40:56.523661+00:00",
+      "robots_error": null,
+      "robots_status": 200,
+      "snapshot_file": "research/ir-contacts-universe-2026-10-11/evidence/7325/20261011T204045129243Z/01.json",
+      "status": 200
+    },
+    {
+      "HTTP_body_completed_at_as_saved": "2026-10-11T20:41:19.577160+00:00",
+      "error": null,
+      "requested_url": "https://www.irrc.co.jp/ir/stockinformation/stock.html",
+      "retrieved_at_as_saved": "2026-10-11T20:41:08.058824+00:00",
+      "robots_error": null,
+      "robots_status": 200,
+      "snapshot_file": "research/ir-contacts-universe-2026-10-11/evidence/7325/20261011T204045129243Z/02.json",
+      "status": 200
+    },
+    {
+      "HTTP_body_completed_at_as_saved": "2026-10-11T20:41:30.826551+00:00",
+      "error": null,
+      "requested_url": "https://www.irrc.co.jp/contact/",
+      "retrieved_at_as_saved": "2026-10-11T20:41:19.580748+00:00",
+      "robots_error": null,
+      "robots_status": 200,
+      "snapshot_file": "research/ir-contacts-universe-2026-10-11/evidence/7325/20261011T204045129243Z/03.json",
+      "status": 200
+    }
+  ],
+  "saved_business_review": {
+    "industry_tag_cannot_auto_select_model": true,
+    "insurance_underwriter_or_commission_agent_final_classification": null,
+    "model_routing_decision": "unresolved_pending_specific_business_original",
+    "not_established": [
+      "Exact insurance agency registration and underwriting responsibility by legal entity",
+      "Commission/renewal/contingent fee mechanics and revenue composition",
+      "Whether any group entity underwrites or holds insurance liabilities",
+      "Whether and where risk-based regulatory capital requirements apply",
+      "Appropriate valuation model, required returns, regulatory reinvestment, FCFE, price or investment action"
+    ],
+    "observed_business_structure": "Saved issuer homepage describes insurance-shop operation/product-selection support plus seller-facing solutions and group software/AI-OCR activities. This supports requiring an operating-structure review before selecting a regulatory-capital model.",
+    "quotes": [
+      {
+        "UTF8_byte_end": 4376,
+        "UTF8_byte_start": 4023,
+        "character_end": 1760,
+        "character_start": 1637,
+        "interpretation": "Issuer describes operating insurance shops and supporting product selection. Does not itself establish commission contract terms, no underwriting risk anywhere in group, or capital regulation applicability.",
+        "json_pointer": "/text",
+        "offset_basis": "Decoded saved JSON /text value; zero-based Unicode characters and UTF8 bytes, half-open; not JSON serialization offsets.",
+        "quote": "保険クリニック事業 1999年より保険ショップ『保険クリニック®』の運営を行っています。独自に開発した保険分析・検索システム『保険IQシステム®』を活用して、数多くの保険の中からお客さま一人ひとりのご希望にぴったりの保険選びをサポートしています。",
+        "snapshot_file": "research/ir-contacts-universe-2026-10-11/evidence/7325/20261011T204045129243Z/01.json",
+        "snapshot_sha256": "ae92ab72e71c56b34a867f587afa985ccc01898dd36f77dfaf691c520b0b1d9c",
+        "text_sha256": "7ef74ecb9e22c2f77d9757f73cc946a0a037e5b4a0a33b944a03baf4f915ac39"
+      },
+      {
+        "UTF8_byte_end": 4612,
+        "UTF8_byte_start": 4377,
+        "character_end": 1844,
+        "character_start": 1761,
+        "interpretation": "Issuer also provides solutions to insurance sellers; industry tag does not specify sole activity or group revenue mix.",
+        "json_pointer": "/text",
+        "offset_basis": "Decoded saved JSON /text value; zero-based Unicode characters and UTF8 bytes, half-open; not JSON serialization offsets.",
+        "quote": "ソリューション事業 保険販売事業者に向けたソリューション提供を行っています。システムやノウハウ、AI-OCRを提供するインシュアテックソリューションを展開しています。",
+        "snapshot_file": "research/ir-contacts-universe-2026-10-11/evidence/7325/20261011T204045129243Z/01.json",
+        "snapshot_sha256": "ae92ab72e71c56b34a867f587afa985ccc01898dd36f77dfaf691c520b0b1d9c",
+        "text_sha256": "7ef74ecb9e22c2f77d9757f73cc946a0a037e5b4a0a33b944a03baf4f915ac39"
+      },
+      {
+        "UTF8_byte_end": 5275,
+        "UTF8_byte_start": 4959,
+        "character_end": 2098,
+        "character_start": 1963,
+        "interpretation": "Issuer describes software/AI-OCR activities at a named group company; not evidence of automatic ordinary-business or financial-equity valuation selection.",
+        "json_pointer": "/text",
+        "offset_basis": "Decoded saved JSON /text value; zero-based Unicode characters and UTF8 bytes, half-open; not JSON serialization offsets.",
+        "quote": "システム事業 『保険IQシステム®』や『ASシステム』などのシステム開発のほか、AI-OCRをベースとしたADX (AI Document Transformation) プロダクトの企画･開発･販売･運用を一貫して、グループ会社であるインフォディオにて展開しています。",
+        "snapshot_file": "research/ir-contacts-universe-2026-10-11/evidence/7325/20261011T204045129243Z/01.json",
+        "snapshot_sha256": "ae92ab72e71c56b34a867f587afa985ccc01898dd36f77dfaf691c520b0b1d9c",
+        "text_sha256": "7ef74ecb9e22c2f77d9757f73cc946a0a037e5b4a0a33b944a03baf4f915ac39"
+      },
+      {
+        "UTF8_byte_end": 929,
+        "UTF8_byte_start": 842,
+        "character_end": 405,
+        "character_start": 370,
+        "interpretation": "Same company host stock page explicitly identifies security code7325. Preserve old snapshot official_identity_basis=third_party_unverified unchanged; present identity cross-check is separate.",
+        "json_pointer": "/text",
+        "offset_basis": "Decoded saved JSON /text value; zero-based Unicode characters and UTF8 bytes, half-open; not JSON serialization offsets.",
+        "quote": "株式情報 上場市場 東京証券取引所 グロース市場 証券コード 7325",
+        "snapshot_file": "research/ir-contacts-universe-2026-10-11/evidence/7325/20261011T204045129243Z/02.json",
+        "snapshot_sha256": "2ecadd07b296363c0df7d0c5d9dadf2bebee2ce0f5ef3a41a3ac5d22a87a5d34",
+        "text_sha256": "0498ba0d0e4067168172e648c138085dd61b7ce36ffb1848f1685ead1a433733"
+      }
+    ]
+  },
+  "saved_robots": {
+    "body_sha256": "3136bc9bcde1b67a011aa61cf19b6ba40f0377ef2d197a1fb5c7198609671b75",
+    "body_text": "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://www.irrc.co.jp/sitemap.xml\n",
+    "current_permission_verified": false,
+    "fixed_UA": "Codex-IR-Research/0.1",
+    "http_status": 200,
+    "json_pointer": "/robots",
+    "raw_http_entity_not_separately_available_in_this_inventory": true,
+    "requested_url": "https://www.irrc.co.jp/robots.txt",
+    "saved_byte_count": 112,
+    "snapshot_file": "research/ir-contacts-universe-2026-10-11/evidence/7325/20261011T204045129243Z/01.json"
+  },
+  "schema_version": 1,
+  "scope": "Read at most5 existing evidence JSON snapshots; select at most2 literal company originals for operating-structure verification, not investment ranking.",
+  "snapshots_read": [
+    {
+      "body_length_characters": 215,
+      "error": null,
+      "file": "research/ir-contacts-universe-2026-10-11/evidence/7325/01.json",
+      "historical_identity_label_preserved": "third_party_unverified",
+      "http_status": 503,
+      "requested_url": "https://www.irrc.co.jp/",
+      "sha256": "eb0eaf2a23a9cac7cea41b2d3f7693611419d5da0885b3e037a2c9634949c992"
+    },
+    {
+      "body_length_characters": 0,
+      "error": "environment_circuit_breaker_open",
+      "file": "research/ir-contacts-universe-2026-10-11/evidence/7325/20261011T045059886634Z/01.json",
+      "historical_identity_label_preserved": "third_party_unverified",
+      "http_status": null,
+      "requested_url": "https://www.irrc.co.jp/",
+      "sha256": "e772c33a73017e0d86b9020ccc528e125c6f7d2c74f342315e5664145ceb1fa0"
+    },
+    {
+      "body_length_characters": 2711,
+      "error": null,
+      "file": "research/ir-contacts-universe-2026-10-11/evidence/7325/20261011T204045129243Z/01.json",
+      "historical_identity_label_preserved": "third_party_unverified",
+      "http_status": 200,
+      "requested_url": "https://www.irrc.co.jp/",
+      "sha256": "ae92ab72e71c56b34a867f587afa985ccc01898dd36f77dfaf691c520b0b1d9c"
+    },
+    {
+      "body_length_characters": 1603,
+      "error": null,
+      "file": "research/ir-contacts-universe-2026-10-11/evidence/7325/20261011T204045129243Z/02.json",
+      "historical_identity_label_preserved": "third_party_unverified",
+      "http_status": 200,
+      "requested_url": "https://www.irrc.co.jp/ir/stockinformation/stock.html",
+      "sha256": "2ecadd07b296363c0df7d0c5d9dadf2bebee2ce0f5ef3a41a3ac5d22a87a5d34"
+    },
+    {
+      "body_length_characters": 2302,
+      "error": null,
+      "file": "research/ir-contacts-universe-2026-10-11/evidence/7325/20261011T204045129243Z/03.json",
+      "historical_identity_label_preserved": "third_party_unverified",
+      "http_status": 200,
+      "requested_url": "https://www.irrc.co.jp/contact/",
+      "sha256": "f39dbf2c15c606d28bab5786a769a669143daf979ef0fc95e9234300769a873d"
+    }
+  ]
+}

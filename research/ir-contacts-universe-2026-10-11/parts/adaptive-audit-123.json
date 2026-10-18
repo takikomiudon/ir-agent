@@ -1,0 +1,1425 @@
+{
+  "reviewer": "codex_adaptive_audit_123",
+  "scope": "New goal completed successful saved records security_code prefix 1/2, attempted_at >= 2026-10-11T06:12:06.589723+00:00. Prefix 3 transferred to ir_operations before any review/write.",
+  "started_at": "2026-10-11T06:12:06.589723+00:00",
+  "reviews": [
+    {
+      "security_code": "290A",
+      "company_name": "Ｓｙｎｓｐｅｃｔｉｖｅ",
+      "attempted_at": "2026-10-11T06:19:07.208333+00:00",
+      "reviewed_at": "2026-10-11T06:23:19.852579+00:00",
+      "before_status": "unconfirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "株式会社Synspectiveの公式トップ・IR・問い合わせ本文7件を点検。公式問い合わせページ04.jsonにsol.synspective.comの同一iframe URLがあり、06.jsonの同一フォーム本体に件名選択肢「IRに関するお問合せ」、メールアドレスの公開ラベル、text input、質問textareaを確認。Pardotの入力名は数値だが、メールラベルと質問textareaは同じ実フォーム内に存在するため、例示メールやナビIRで判定していない。会社/組織名・部署・役職が表示されるが必須マーク/required属性や個人記入説明は保存範囲で未確認。個人無条件利用・返信保証は推定しない。公開GETで取得した欄の監査だけで、メール/フォーム送信0件。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/290A/20261011T061907208383Z/04.json",
+          "quote": "お問い合わせ｜株式会社Synspective",
+          "source_link_url": "https://sol.synspective.com/l/898161/2024-10-17/vl2k9",
+          "role": "official_parent_embedded_form",
+          "url": "https://www.synspective.com:443/jp/contact/",
+          "retrieved_at": "2026-10-11T06:20:01.268560+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/290A/20261011T061907208383Z/06.json",
+          "quote": "採用に関するお問合せ IRに関するお問合せ 姓 名 メールアドレス 会社/組織名 部署 役職 業種",
+          "role": "ir_form_fields",
+          "url": "https://sol.synspective.com/l/898161/2024-10-17/vl2k9",
+          "retrieved_at": "2026-10-11T06:20:16.839223+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/290A/20261011T061907208383Z/06.json",
+          "quote": "電話番号 お問合せ内容 個人情報取り扱いに同意する",
+          "role": "question_and_consent_fields",
+          "url": "https://sol.synspective.com/l/898161/2024-10-17/vl2k9",
+          "retrieved_at": "2026-10-11T06:20:16.839223+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2916",
+      "company_name": "仙波糖化工業",
+      "attempted_at": "2026-10-11T06:19:08.216199+00:00",
+      "reviewed_at": "2026-10-11T06:23:19.854278+00:00",
+      "before_status": "unconfirmed",
+      "investigation_status": "unconfirmed",
+      "verification_level": "none",
+      "outreach_suitability": "unconfirmed",
+      "individual_access": "not_stated",
+      "notes": "仙波糖化工業公式トップ・IR・製品FAQ・事業所・お問い合わせ・株式情報・決算短信の7件を全文と実欄で確認。一般お問い合わせフォームにはEmail/Email確認と質問textareaがあるが、実フォーム内は製品名を記入する案内でIRカテゴリ/IR質問受付の明示はない。IRページの共通ナビ「お問い合わせ」は用途の指定とみなさない。株式情報の証券代行電話も業績IRメールではない。個人宛て回答・二次利用禁止は一般窓口の規約で、個人投資家のIR受付可を意味しない。unconfirmedを維持し、窓口不存在とは判定しない。取得済み範囲には未取得の明示IR質問フォームへの導線がない。",
+      "remaining_reason": "実際の一般質問欄はあるがIR用途の指定を実証できない。",
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2916/20261011T061908216255Z/05.json",
+          "quote": "お問い合わせ内容 件名 必須 製品に関するお問い合わせにつきましては、製品名をご記入ください。 お問い合わせ内容 必須 基本情報 お名前(漢字) 必須 お名前(カタカナ) 必須 メールアドレス 必須",
+          "role": "manual_general_form_scope",
+          "url": "https://www.sembatohka.co.jp/contact",
+          "retrieved_at": "2026-10-11T06:19:39.498303+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2918",
+      "company_name": "わらべや日洋ホールディングス",
+      "attempted_at": "2026-10-11T06:19:09.644350+00:00",
+      "reviewed_at": "2026-10-11T06:28:02.426915+00:00",
+      "before_status": "provisional",
+      "investigation_status": "provisional",
+      "verification_level": "official_form_link_only",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "会社名一致の公式IR専用受付案内から同意後の外部フォームへの明示リンクを確認。実フォーム取得はrobots403で停止したため、入力欄は未検証でprovisionalを維持。IRナビ・一般商品窓口・回答メールの記述を公開IRメールアドレスと誤認しない。個人受付・必須会社名は未確認。",
+      "remaining_reason": "IR専用受付案内はあるが、外部フォームのrobots403停止により実質問欄/返信先メール欄を確認できない。",
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2918/20261011T061909644392Z/03.json",
+          "quote": "IRに関するご意見・お問い合わせ以外はご遠慮ください。 同意しない 同意してフォームに進む",
+          "role": "ir_form_scope_and_official_link",
+          "source_link_url": "https://cloud.swcms.net/warabeya-corpPublic/ja/contact/contact2/inquiry2.html",
+          "url": "https://www.warabeya.co.jp/ja/contact/contact2.html",
+          "retrieved_at": "2026-10-11T06:19:45.764484+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2918/20261011T061909644392Z/03.json",
+          "quote": "お問合せの内容によっては、お返事までにお時間を頂戴する場合や、ご返信できかねる場合がございます。また、 電話・手紙で対応させていただく場合がございます。",
+          "role": "reply_conditions",
+          "url": "https://www.warabeya.co.jp/ja/contact/contact2.html",
+          "retrieved_at": "2026-10-11T06:19:45.764484+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "291A",
+      "company_name": "リスキル",
+      "attempted_at": "2026-10-11T06:19:10.299211+00:00",
+      "reviewed_at": "2026-10-11T06:28:02.429306+00:00",
+      "before_status": "unconfirmed",
+      "investigation_status": "unconfirmed",
+      "verification_level": "none",
+      "outreach_suitability": "unconfirmed",
+      "individual_access": "not_stated",
+      "notes": "株式会社リスキルの会社トップの保存本文・全リンク・form空を点検。IR情報リンクはあるが一般問い合わせリンクをIR窓口と認定しない。IRメール/質問フォーム未検証のためunconfirmedを維持。窓口不存在を意味しない。",
+      "remaining_reason": "公式IR情報の先に進めておらず、受付方式/個人条件/返信制限は未確認。",
+      "todos": [
+        {
+          "url": "https://www.recurrent.jp/corp/ir",
+          "parent_snapshot": "evidence/291A/20261011T061910299261Z/01.json",
+          "quote": "IR情報",
+          "reason": "会社名一致の公式トップが明示するIR情報。まず保存導線の先でIR受付専用リンク・メールを探す。一般問い合わせ自体はIR用途未実証。",
+          "parent_url": "https://www.recurrent.jp/corp/",
+          "parent_retrieved_at": "2026-10-11T06:19:27.704460+00:00"
+        }
+      ],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/291A/20261011T061910299261Z/01.json",
+          "quote": "株式会社リスキル Reskill - 会社サイト",
+          "role": "issuer_identity",
+          "url": "https://www.recurrent.jp/corp/",
+          "retrieved_at": "2026-10-11T06:19:27.704460+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2922",
+      "company_name": "なとり",
+      "attempted_at": "2026-10-11T06:19:33.164506+00:00",
+      "reviewed_at": "2026-10-11T06:28:02.430521+00:00",
+      "before_status": "provisional",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "会社名一致の公式問い合わせ一覧が商品とIRを分け、IRフォームへ明示リンクする。先の実フォームは必須メールアドレス/確認用の表示とtext入力、質問textareaを同一formに持つためconfirmedへ更新。欄名が数値でも表示ラベルと実controlsで一致を確認。個人宛返信は個人投資家の受付明示とみなさずnot_stated。会社名欄なし。営業時間/回答不可の場合/返信転用不可を保存。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2922/20261011T061933164534Z/05.json",
+          "quote": "IR情報に関するお問い合わせ－株式会社なとり",
+          "role": "ir_form_identity",
+          "url": "https://www.natori.co.jp/contact/ir.html",
+          "retrieved_at": "2026-10-11T06:19:55.962365+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2922/20261011T061933164534Z/05.json",
+          "quote": "お名前（漢字） 【必須】 姓 名 お名前（ひらがな） 【必須】 せい めい メールアドレス 【必須】 メールアドレス確認用 【必須】 お問い合わせ内容 個人情報の取扱規定 【必須】",
+          "role": "ir_form_fields",
+          "url": "https://www.natori.co.jp/contact/ir.html",
+          "retrieved_at": "2026-10-11T06:19:55.962365+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2922/20261011T061933164534Z/05.json",
+          "quote": "・お送り頂いたメールの中には、お時間を要してしまう場合や、お返事を差し上げられない場合がございますので、あらかじめご了承ください。 ・弊社からお客様へお送りするメールは、お客様個人宛にお送りするものです。 お送りしたメール内容の一部または全部を転用することはご遠慮ください。",
+          "role": "reply_and_reuse_conditions",
+          "url": "https://www.natori.co.jp/contact/ir.html",
+          "retrieved_at": "2026-10-11T06:19:55.962365+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2922/20261011T061933164534Z/04.json",
+          "quote": "IR情報のお問い合わせフォーム",
+          "role": "official_parent_ir_link",
+          "source_link_url": "https://www.natori.co.jp/contact/ir.html",
+          "url": "https://www.natori.co.jp/contact.html",
+          "retrieved_at": "2026-10-11T06:19:51.026701+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2923",
+      "company_name": "サトウ食品",
+      "attempted_at": "2026-10-11T06:19:53.610858+00:00",
+      "reviewed_at": "2026-10-11T06:28:53.993038+00:00",
+      "before_status": "unconfirmed",
+      "investigation_status": "provisional",
+      "verification_level": "official_form_link_only",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "サトウ食品の証券コード2923が一致するIR FAQの本文が特定URLの問い合わせフォームへIR質問を明示案内する。一般問い合わせナビだけではなく本文のIR受付指定を根拠にprovisionalへ更新。先ページは検索formだけで質問・返信先欄はなく外部kintone埋込が未取得のためconfirmedにしない。個人宛返信は個人投資家受付の明示ではない。",
+      "remaining_reason": "IR用途の公式親導線は確認したが、外部埋込フォームの実入力欄は未取得。",
+      "todos": [
+        {
+          "url": "https://satosyokuhin-group.form.kintoneapp.com/public/20f7058f31be4159c75910bbf4301f0b625ca32b7151c294558e0d00bc450409?iframe=true",
+          "parent_snapshot": "evidence/2923/20261011T061953610906Z/03.json",
+          "quote": "embedded frame",
+          "reason": "IR FAQが明示指定した同じ問い合わせURL内の唯一の外部埋込。実質問欄/返信先メール欄・会社必須・個人条件を確認する候補。",
+          "parent_url": "https://www.satosyokuhin.co.jp/inquiry/contact/",
+          "parent_retrieved_at": "2026-10-11T06:20:06.693101+00:00"
+        }
+      ],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2923/20261011T061953610906Z/02.json",
+          "quote": "IRに関するお問い合わせはこちらから ※公平で正確な対応を行うため、文字で記録が残る お問い合わせフォーム にてお願いいたします。 ※内容によっては返信に1週間程度お時間をいただく場合がございます。",
+          "role": "official_ir_parent_form_link",
+          "source_link_url": "https://www.satosyokuhin.co.jp/inquiry/contact/",
+          "url": "https://www.satosyokuhin.co.jp/ir/faq.html",
+          "retrieved_at": "2026-10-11T06:20:02.987293+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2923/20261011T061953610906Z/03.json",
+          "quote": "●弊社からの返答はお客様個人宛てに返答するものです。一部または全体を転載、二次利用はお断りしております。",
+          "role": "reply_reuse_conditions",
+          "url": "https://www.satosyokuhin.co.jp/inquiry/contact/",
+          "retrieved_at": "2026-10-11T06:20:06.693101+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2924",
+      "company_name": "イフジ産業",
+      "attempted_at": "2026-10-11T06:20:07.815568+00:00",
+      "reviewed_at": "2026-10-11T06:28:53.994084+00:00",
+      "before_status": "provisional",
+      "investigation_status": "provisional",
+      "verification_level": "official_form_link_only",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "イフジ産業会社名一致の専用IR問い合わせページと公式IR親からの同一URL導線を確認。ただし保存本文/全formsは空で実入力欄がないためprovisional維持。採用/商品/その他の別ページと受付終了した機関向けイベント申込はIR質問フォームと分離。個人投資家向け説明会の過去告知は当該フォームの個人受付証明にはならない。",
+      "remaining_reason": "IR専用案内のHTMLには入力欄も質問フォーム埋込リンクも保存されておらず、動的表示の可能性を含め実 fields 未検証。",
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2924/20261011T062007815629Z/02.json",
+          "quote": "IRについてお問い合わせ CONTACT お間違えのないようご注意の上、以下のフォームに必要事項をご記入ください。 （ ※ 印は必須入力項目となっております。必ずご記入ください）",
+          "role": "ir_form_scope_without_actual_fields",
+          "url": "https://www.ifuji.co.jp/contact_ir/",
+          "retrieved_at": "2026-10-11T06:20:36.902506+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2924/20261011T062007815629Z/07.json",
+          "quote": "is no longer accepting responses.",
+          "role": "closed_event_registration_not_ir_inquiry",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSeP9ep7O3w4JbrIzHNHqYl1qUXPmkfscxojKBLIreqsI6II-g/closedform",
+          "retrieved_at": "2026-10-11T06:21:34.319555+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2926",
+      "company_name": "篠崎屋",
+      "attempted_at": "2026-10-11T06:20:08.189705+00:00",
+      "reviewed_at": "2026-10-11T06:29:46.972422+00:00",
+      "before_status": "confirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "篠崎屋の会社名一致。実フォームの選択肢内にIR用途があり、同一form内type=emailの返信先/確認用とtextareaを確認。ナビIR語・privacyは根拠にしていないためconfirmed維持。氏名/ふりがな/性別/メール必須の表示を記録し、会社名欄なし・個人受付の明示未確認としてnot_stated維持。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2926/20261011T062008189862Z/05.json",
+          "quote": "お問い合わせ内容（必須） —以下から選択してください— 商品に関するお問い合わせ 店舗に関するお問い合わせ IRに関するお問い合わせ その他に関するお問い合わせ",
+          "role": "ir_form_category",
+          "url": "https://shinozakiya.com/page-448/",
+          "retrieved_at": "2026-10-11T06:20:40.711380+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2926/20261011T062008189862Z/05.json",
+          "quote": "ご職業 メールアドレス (必須) メールアドレス再入力 (確認) お問い合わせ内容",
+          "role": "reply_email_and_question_fields",
+          "url": "https://shinozakiya.com/page-448/",
+          "retrieved_at": "2026-10-11T06:20:40.711380+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2927",
+      "company_name": "ＡＦＣ－ＨＤアムスライフサイエンス",
+      "attempted_at": "2026-10-11T06:20:27.815154+00:00",
+      "reviewed_at": "2026-10-11T06:29:46.973182+00:00",
+      "before_status": "confirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "explicit",
+      "notes": "AFC-HDアムスライフサイエンスの公式IR質問専用ページの実form内メールtype=emailとtextareaを確認。属性選択肢が個人投資家を明示しているのでindividual_accessをexplicitに更新。株主優待のリンクラベルもあるが本文はIR質問全般の専用受付であり優待だけに限定されていない。公開IRメールは同form不調時という条件付きで保持。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2927/20261011T062027815209Z/02.json",
+          "quote": "IRに関するご質問は、下記のフォームをご利用ください。",
+          "role": "ir_form_scope",
+          "url": "https://www.ams-life.co.jp/ams/irinquairy",
+          "retrieved_at": "2026-10-11T06:20:45.297036+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2927/20261011T062027815209Z/02.json",
+          "quote": "氏名 ※ ふりがな ※ メールアドレス ※ お電話番号 - - 属性 ※ 株主 個人投資家 機関投資家 その他 お問い合わせ内容",
+          "role": "ir_form_fields_and_individual_choice",
+          "url": "https://www.ams-life.co.jp/ams/irinquairy",
+          "retrieved_at": "2026-10-11T06:20:45.297036+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2927/20261011T062027815209Z/02.json",
+          "quote": "IRお問い合わせフォームが正常に動作しない場合には ir-ams@ams-life.com までメールにてお問い合わせください。",
+          "role": "conditional_ir_fallback_email",
+          "url": "https://www.ams-life.co.jp/ams/irinquairy",
+          "retrieved_at": "2026-10-11T06:20:45.297036+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2929",
+      "company_name": "ファーマフーズ",
+      "attempted_at": "2026-10-11T06:20:46.742130+00:00",
+      "reviewed_at": "2026-10-11T06:31:06.764539+00:00",
+      "before_status": "confirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "explicit",
+      "notes": "会社名/証券コード2929一致。公式IRページの明示フォームリンクと先のIR専用form内email/confirmation_email入力・body textareaを確認。別の公式窓口一覧本文が機関投資家、個人投資家、報道機関へ同URLのIR質問フォームを案内しているため個人受付をexplicitに更新。会社名が必須でないことだけを個人受付の根拠にしていない。privacy苦情窓口の時間はIR応答制限ではない。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2929/20261011T062046742163Z/07.json",
+          "quote": "IRに関するお問い合わせ専用フォームです。",
+          "role": "ir_form_scope",
+          "url": "https://www.pharmafoods.co.jp/contact/ir",
+          "retrieved_at": "2026-10-11T06:21:56.774650+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2929/20261011T062046742163Z/07.json",
+          "quote": "お名前（必須） ふりがな（必須） 会社名 電話番号 メールアドレス（必須） メールアドレス（確認用）（必須） お問合せ内容（必須）",
+          "role": "ir_form_fields",
+          "url": "https://www.pharmafoods.co.jp/contact/ir",
+          "retrieved_at": "2026-10-11T06:21:56.774650+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2929/20261011T062046742163Z/04.json",
+          "quote": "機関投資家、個人投資家、報道機関の皆様 投資家向け情報（IR）について 経営方針、財務情報、IR資料、当社事業へのご質問",
+          "role": "individual_ir_parent_channel",
+          "source_link_url": "https://www.pharmafoods.co.jp/contact/ir",
+          "url": "https://www.pharmafoods.co.jp/contact",
+          "retrieved_at": "2026-10-11T06:21:32.630022+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2931",
+      "company_name": "ユーグレナ",
+      "attempted_at": "2026-10-11T06:20:50.238123+00:00",
+      "reviewed_at": "2026-10-11T06:31:06.765746+00:00",
+      "before_status": "provisional",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "explicit",
+      "notes": "株式会社ユーグレナの会社/証券コード2931が一致。IR受付を法人b06と個人c03に分離し、法人フォームが個人をexact c03 URLへ明示案内している。c03本文/titleも個人専用株式IR質問で、同一実formにmail/mail2入力とcomment textareaを確認しconfirmed/explicitへ更新。個人用は会社名必須表示なし。非公開重要事実/株価質問は回答対象外と記録。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2931/20261011T062050238155Z/05.json",
+          "quote": "株式・IRに関するお問い合わせ（個人のお客様） | 株式会社ユーグレナ",
+          "role": "explicit_individual_ir_form_scope",
+          "url": "https://www.euglena.jp/contact/c03/",
+          "retrieved_at": "2026-10-11T06:21:45.793430+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2931/20261011T062050238155Z/05.json",
+          "quote": "お名前 必須 電話番号 メールアドレス 必須 メールアドレス（確認用） 必須 会社名 お問い合わせの内容 必須",
+          "role": "individual_ir_form_fields",
+          "url": "https://www.euglena.jp/contact/c03/",
+          "retrieved_at": "2026-10-11T06:21:45.793430+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2931/20261011T062050238155Z/04.json",
+          "quote": "こちらのフォームは法人のお客様専用となりますので、個人のお客様は「 こちら 」からお問合せください。",
+          "role": "official_parent_individual_form_redirect",
+          "source_link_url": "https://www.euglena.jp/contact/c03/",
+          "url": "https://www.euglena.jp/contact/b06/",
+          "retrieved_at": "2026-10-11T06:21:35.345818+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2931/20261011T062050238155Z/05.json",
+          "quote": "業績動向や事業進捗など金商法の重要事実に該当する可能性のある非公開情報、 ならびに株価動向や株価見通しなどにつきましては、 お問合せをいただいても回答を差し控えさせていただきますので、ご了承ください。",
+          "role": "answer_scope_restriction",
+          "url": "https://www.euglena.jp/contact/c03/",
+          "retrieved_at": "2026-10-11T06:21:45.793430+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2932",
+      "company_name": "ＳＴＩフードホールディングス",
+      "attempted_at": "2026-10-11T06:20:58.016815+00:00",
+      "reviewed_at": "2026-10-11T06:32:15.276688+00:00",
+      "before_status": "confirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "STIフードHD公式IR情報親がIRお問い合わせとしてsame exact targetを明示し、先のIR専用見出し/本文にtype=email入力と質問textareaの実formを確認。会社名は必須でないがそれから個人受付を推定せずnot_statedを維持。取引問い合わせは対象外で、IRメール配信登録を質問窓口と混同しない。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2932/20261011T062058016857Z/03.json",
+          "quote": "IRに関するお問い合わせ お名前 （必須） 御社名 メールアドレス （必須） 電話番号 お問い合わせ内容 （必須）",
+          "role": "ir_form_fields",
+          "url": "https://www.stifoods-hd.com/ja/contact_ir.html",
+          "retrieved_at": "2026-10-11T06:21:33.792433+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2932/20261011T062058016857Z/03.json",
+          "quote": "当社との取引等のお問い合わせに関しては基本的には当フォームからは承っておりません。 お問い合わせ頂いてもご返信できない場合がございますので、ご了承くださいませ。",
+          "role": "inquiry_scope_reply_conditions",
+          "url": "https://www.stifoods-hd.com/ja/contact_ir.html",
+          "retrieved_at": "2026-10-11T06:21:33.792433+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2933",
+      "company_name": "紀文食品",
+      "attempted_at": "2026-10-11T06:21:43.109494+00:00",
+      "reviewed_at": "2026-10-11T06:32:15.277807+00:00",
+      "before_status": "confirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "ir_email_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "紀文食品の会社名一致。IR専用ページ本文がメール及びフォーム受付を明示し、IR担当名/公開アドレス ir@kibun.co.jp とsame mailtoを確認したためir_email_verifiedを維持。検索formは質問フォームではない。別フォームリンクはfields未取得。global個人投資家navから個人受付を推論しない。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2933/20261011T062143109521Z/02.json",
+          "quote": "IRに関するお問い合わせは、お問い合わせフォームへご記入いただくか、下記メールアドレスへお送りいただきますようお願い申し上げます。",
+          "role": "ir_email_form_scope",
+          "url": "https://www.kibun.co.jp/corporate/ir/contact/index.html",
+          "retrieved_at": "2026-10-11T06:21:57.815969+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2933/20261011T062143109521Z/02.json",
+          "quote": "株式会社紀文食品 グループ統括室IR担当 ＩＲに関するお問い合わせ お問い合わせフォーム メールでのお問合せ ir@kibun.co.jp 受付時間 9時00分～17時00分（土日・祝祭日・年末年始を除く）",
+          "role": "specific_ir_email_and_hours",
+          "url": "https://www.kibun.co.jp/corporate/ir/contact/index.html",
+          "retrieved_at": "2026-10-11T06:21:57.815969+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2934",
+      "company_name": "ジェイフロンティア",
+      "attempted_at": "2026-10-11T06:21:43.374499+00:00",
+      "reviewed_at": "2026-10-11T06:32:36.436247+00:00",
+      "before_status": "confirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "ジェイフロンティア会社名一致の公式IR親がIR問い合わせへ明示導線を持ち、先の株主/投資家質問formにyour-email(type=email)とyour-message(textarea)を確認。業務提携という誤ラベルのリンクもあるが本フォームの本文はIR質問受付なので本文優先。会社欄任意表示から個人利用を推定せずnot_stated。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2934/20261011T062143374532Z/03.json",
+          "quote": "当社株主、投資家の皆様からのお問い合わせはメールによるお問い合わせとさせていただいております。 下記よりお問い合わせフォームに必要事項をご入力いただき、「送信」ボタンを押してください。",
+          "role": "ir_form_scope",
+          "url": "https://jfrontier.jp/ir/contact/",
+          "retrieved_at": "2026-10-11T06:22:02.855485+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2934/20261011T062143374532Z/03.json",
+          "quote": "会社名 ホームページURL お名前 必須 メールアドレス 必須 電話番号 お問い合わせ内容 必須",
+          "role": "ir_form_fields",
+          "url": "https://jfrontier.jp/ir/contact/",
+          "retrieved_at": "2026-10-11T06:22:02.855485+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2935",
+      "company_name": "ピックルスホールディングス",
+      "attempted_at": "2026-10-11T06:22:01.097461+00:00",
+      "reviewed_at": "2026-10-11T06:32:36.436994+00:00",
+      "before_status": "unconfirmed",
+      "investigation_status": "provisional",
+      "verification_level": "official_form_link_only",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "ピックルスHD会社名及び株式コード2935一致。公式問い合わせ一覧本文がIR専用欄に電話/時間とexactフォームを置き、商品の別子会社窓口と明確に区別。IRナビだけの判断ではなく本文のIR用途と同じリンクtargetを確認したためprovisionalに更新。未取得の実フォームを確認済みとは扱わず、個人条件/返信制限も未確認。",
+      "remaining_reason": "公式IR欄のフォーム先がページ上限で未取得のため実メール/質問欄は未検証。",
+      "todos": [
+        {
+          "url": "https://www.pickles-hd.co.jp/contact/form/",
+          "parent_snapshot": "evidence/2935/20261011T062201097510Z/03.json",
+          "quote": "お問い合わせフォーム",
+          "reason": "公式問い合わせ一覧のIR専用欄が直接指定するフォーム。商品向け別ドメインフォームと区別して実入力欄を検証する。",
+          "parent_url": "https://www.pickles-hd.co.jp/contact/",
+          "parent_retrieved_at": "2026-10-11T06:22:15.177687+00:00"
+        }
+      ],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2935/20261011T062201097510Z/03.json",
+          "quote": "IRに関するお問い合わせ 04-2925-8885 [平日] 9:00 - 17:00 ※土・日・祝日を除く お問い合わせフォーム 商品に関するお問い合わせ",
+          "role": "specific_ir_parent_form_link",
+          "source_link_url": "https://www.pickles-hd.co.jp/contact/form/",
+          "url": "https://www.pickles-hd.co.jp/contact/",
+          "retrieved_at": "2026-10-11T06:22:15.177687+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2936",
+      "company_name": "ベースフード",
+      "attempted_at": "2026-10-11T06:22:01.962366+00:00",
+      "reviewed_at": "2026-10-11T06:33:05.740734+00:00",
+      "before_status": "provisional",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "ベースフードの公式IR受付本文（日本語・英語双方）がexact Zendesk targetをIR送付先に明示し、先の同一実formにrequest[anonymous_requester_email] text入力とrequest[description] textareaを確認したのでform_fields_verifiedへ更新。Zendesk本文自体は商品契約向け共通フォームだが、genericnavでなく公式IR本文の具体的指定を根拠とする。IR分類の選択肢は保存controlsにないため未確認、個人受付もnot_stated。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2936/20261011T062201962408Z/03.json",
+          "quote": "IRに関するお問い合わせは、 お問い合わせフォーム からお願い致します。",
+          "role": "official_ir_parent_exact_form_direction",
+          "source_link_url": "https://basefood.zendesk.com/hc/ja/requests/new",
+          "url": "https://basefood.co.jp/ir/contact/",
+          "retrieved_at": "2026-10-11T06:22:26.030790+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2936/20261011T062201962408Z/05.json",
+          "quote": "メールアドレス お問い合わせの分類 ※ご契約状況を確認しますので、ご登録時の情報をご記入ください",
+          "role": "common_form_reply_email",
+          "url": "https://basefood.zendesk.com/hc/ja/requests/new",
+          "retrieved_at": "2026-10-11T06:22:39.989708+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2936/20261011T062201962408Z/05.json",
+          "quote": "お名前 ふりがな お電話番号 ご住所 会社名 件名 お問い合わせ内容",
+          "role": "common_form_question_fields",
+          "url": "https://basefood.zendesk.com/hc/ja/requests/new",
+          "retrieved_at": "2026-10-11T06:22:39.989708+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2937",
+      "company_name": "サンクゼール",
+      "attempted_at": "2026-10-11T06:22:07.303573+00:00",
+      "reviewed_at": "2026-10-11T06:33:05.741689+00:00",
+      "before_status": "confirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "サンクゼール公式企業IRと問い合わせ一覧からIR用フォームへ明示導線を確認。先のIRに限定する本文、実your-email(type=email)とyour-message(textarea)、全入力欄必須を確認しconfirmed維持。入力例sample@stc.co.jpは公開アドレスではなく除外。商品/通販/採用/優待専用と混同していない。個人投資家明示は未確認。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2937/20261011T062207303622Z/05.json",
+          "quote": "※下記は IRに関するお問い合わせ に限らせていただきます。 ※営業を目的としたお問合わせはご遠慮ください。返信いたしかねます。",
+          "role": "ir_only_form_scope",
+          "url": "https://www.stcousair.co.jp/company/inquiry/ir%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B",
+          "retrieved_at": "2026-10-11T06:22:39.390889+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2937/20261011T062207303622Z/05.json",
+          "quote": "氏名 ふりがな 電話番号 メールアドレス お問い合わせ内容 入力欄は全て必須項目です。",
+          "role": "mandatory_ir_fields",
+          "url": "https://www.stcousair.co.jp/company/inquiry/ir%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B",
+          "retrieved_at": "2026-10-11T06:22:39.390889+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2937/20261011T062207303622Z/05.json",
+          "quote": "ご返信に日数を要する場合もございます。 ご質問の内容によっては返信いたしかねますのであらかじめご了承ください。",
+          "role": "reply_conditions",
+          "url": "https://www.stcousair.co.jp/company/inquiry/ir%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B",
+          "retrieved_at": "2026-10-11T06:22:39.390889+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2961",
+      "company_name": "日本調理機",
+      "attempted_at": "2026-10-11T06:22:18.284083+00:00",
+      "reviewed_at": "2026-10-11T06:33:37.161731+00:00",
+      "before_status": "unconfirmed",
+      "investigation_status": "unconfirmed",
+      "verification_level": "none",
+      "outreach_suitability": "unconfirmed",
+      "individual_access": "not_stated",
+      "notes": "日本調理機の保存トップ1ページの全文と全26links、forms空を点検。事例URLのiryoは医療でIR用途ではない。IRメール/質問フォームを示す本文・リンクがないためunconfirmedを維持。具体的な未取得IRtargetを推測せずtodoなし。",
+      "remaining_reason": "保存トップのみではIR受付情報/導線が実証できない。ナビの動的表示等も未確認で、受付不存在とはみなさない。",
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2961/20261011T062218284157Z/01.json",
+          "quote": "日本調理機 お知らせ View All",
+          "role": "saved_issuer_top_only",
+          "url": "https://www.nitcho.co.jp/",
+          "retrieved_at": "2026-10-11T06:22:23.199099+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2962",
+      "company_name": "テクニスコ",
+      "attempted_at": "2026-10-11T06:22:28.055181+00:00",
+      "reviewed_at": "2026-10-11T06:35:35.900884+00:00",
+      "before_status": "provisional",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "テクニスコ会社名一致の専用IRページ見出しと実formにメールラベル、数値名formElementVal976入力とformElementVal977 textareaがありconfirmedへ更新。商品用contact.htmlの別formを根拠にしていない。会社名必須表示と個人用代替記入の案内未確認を条件に保存。会社名必須だけでは法人/機関専用又は個人拒否を意味しないためcandidate/not_statedを維持。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2962/20261011T062228055221Z/02.json",
+          "quote": "IRに関するお問い合わせ IRに関するお問い合わせ 入力画面 入力内容の確認 送信完了 当社へのお問い合わせは、下記お問い合わせフォームにてお寄せください。",
+          "role": "ir_form_scope",
+          "url": "https://www.tecnisco.com/ir/contact.html",
+          "retrieved_at": "2026-10-11T06:22:37.638801+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2962/20261011T062228055221Z/02.json",
+          "quote": "会社名 【必須】 部署名 ご担当者名 【必須】",
+          "role": "mandatory_company_condition",
+          "url": "https://www.tecnisco.com/ir/contact.html",
+          "retrieved_at": "2026-10-11T06:22:37.638801+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2962/20261011T062228055221Z/02.json",
+          "quote": "電話番号 【必須】 FAX番号 メールアドレス 【必須】 お問い合わせ内容 【必須】 個人情報の取扱規定 【必須】",
+          "role": "ir_question_reply_email_fields",
+          "url": "https://www.tecnisco.com/ir/contact.html",
+          "retrieved_at": "2026-10-11T06:22:37.638801+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "296A",
+      "company_name": "令和アカウンティング・ホールディングス",
+      "attempted_at": "2026-10-11T06:22:38.011158+00:00",
+      "reviewed_at": "2026-10-11T06:35:35.901441+00:00",
+      "before_status": "confirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "令和アカウンティングHD会社名一致のform内category選択肢にIRがあり、type=email返信先・実質問textareaがあるためconfirmed維持。会社名ほか多数の必須欄と個人用記入案内未確認を条件に保存。会社名必須だけから個人拒否/法人専用は断定せずcandidate/not_statedを維持。privacyの利用目的文章からIR用途を推論せず実選択肢を使用。placeholder例示メールは公開IRメールに含めない。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/296A/20261011T062238011217Z/02.json",
+          "quote": "お問い合わせ種別 必須 選択してください 業務についてのお問い合わせ セミナー・研修についてのお問い合わせ 人材派遣紹介についてのお問い合わせ IRについてのお問い合わせ その他お問い合わせ 会社名 必須",
+          "role": "ir_category_and_mandatory_company",
+          "url": "https://rw-ah.net/contact/",
+          "retrieved_at": "2026-10-11T06:22:51.180130+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/296A/20261011T062238011217Z/02.json",
+          "quote": "電話番号 必須 メールアドレス 必須 当社からの ご連絡方法 必須 電話での連絡を希望 メールでの連絡を希望",
+          "role": "reply_email_and_contact_condition",
+          "url": "https://rw-ah.net/contact/",
+          "retrieved_at": "2026-10-11T06:22:51.180130+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2970",
+      "company_name": "ＧＬＣ　ＧＲＯＵＰ",
+      "attempted_at": "2026-10-11T06:26:42.752886+00:00",
+      "reviewed_at": "2026-10-11T06:34:08.143044+00:00",
+      "before_status": "confirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "現会社名GLC GROUPと公式保存本文が一致。公式IRお問い合わせのexacttargetに実formがあり、form自身の種別が決算発表リリース関連/株式関連を明示。type=email mail入力とmessage textareaを確認しconfirmed維持。required:nullはboolean required属性の保存で氏名/メール/質問/同意に存在、会社欄は属性なし。会社名任意を個人受付の証拠としない。例示アドレスは除外。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2970/20261011T062642752944Z/02.json",
+          "quote": "お問い合わせ種別 選択してください 決算発表リリース関連 株式関連 その他 お名前 フリガナ 会社名 メールアドレス 電話番号 お問い合わせ内容",
+          "role": "actual_financial_stock_form_fields",
+          "url": "https://www.goodlife-c.co.jp/contact/",
+          "retrieved_at": "2026-10-11T06:26:48.727017+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2970/20261011T062642752944Z/02.json",
+          "quote": "当社へのお問い合わせはこちらのフォームにてお寄せください。後日、担当者よりお返事させていただきます。",
+          "role": "reply_guidance",
+          "url": "https://www.goodlife-c.co.jp/contact/",
+          "retrieved_at": "2026-10-11T06:26:48.727017+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2975",
+      "company_name": "スター・マイカ・ホールディングス",
+      "attempted_at": "2026-10-11T06:26:43.509667+00:00",
+      "reviewed_at": "2026-10-11T06:34:32.886456+00:00",
+      "before_status": "confirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "スターマイカHD会社名一致。IR専用本文の下に実inputMail(type=email)とinputContent(textarea)を持つformがありconfirmed維持。本文冒頭はIR質問全般、後のよくある問い合わせに株主優待再配送が併記されても優待だけ専用とは読まない。会社名欄なしから個人受付を推論しない。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2975/20261011T062643509751Z/02.json",
+          "quote": "IRについてのお問い合わせは、下記フォームよりお問い合わせください。",
+          "role": "ir_form_scope",
+          "url": "https://www.starmica-holdings.co.jp/contact/ir-form/",
+          "retrieved_at": "2026-10-11T06:26:50.645073+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2975/20261011T062643509751Z/02.json",
+          "quote": "お名前 必須 メールアドレス 必須 お問い合わせ内容 必須 プライバシーポリシーに同意する 必須",
+          "role": "ir_question_reply_email_fields",
+          "url": "https://www.starmica-holdings.co.jp/contact/ir-form/",
+          "retrieved_at": "2026-10-11T06:26:50.645073+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2978",
+      "company_name": "ツクルバ",
+      "attempted_at": "2026-10-11T06:26:44.238692+00:00",
+      "reviewed_at": "2026-10-11T06:34:32.887468+00:00",
+      "before_status": "confirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "ツクルバ公式IR専用問い合わせtitle/見出しと同一実formのメール名email/email2入力・message textareaを確認しconfirmed維持。返信差し控え対象と沈黙期間を本文から記録。保存テキストの「必須項目」はlegendのような表示で各欄への対応が分からず会社名必須とは断定しない。global株主投資家という語だけでは個人受付explicitにしない。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2978/20261011T062644238733Z/02.json",
+          "quote": "IRについてのお問い合わせ お問い合わせの前に 株主・投資家の皆様からよく寄せられるご質問をFAQとしてまとめています。",
+          "role": "ir_inquiry_scope",
+          "url": "https://tsukuruba.com/inquiry/ir",
+          "retrieved_at": "2026-10-11T06:26:54.514736+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2978/20261011T062644238733Z/02.json",
+          "quote": "当社は、決算情報の漏洩を防止し公平性を確保するため、決算期日の翌日から決算発表日までの一定期間を「沈黙期間」としております。 ・当該期間中のご質問・お問い合わせへの対応につきましては差し控えております。",
+          "role": "quiet_period_no_reply",
+          "url": "https://tsukuruba.com/inquiry/ir",
+          "retrieved_at": "2026-10-11T06:26:54.514736+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2978/20261011T062644238733Z/02.json",
+          "quote": "必須項目 貴社名 お名前 ふりがな（全角かな） メールアドレス メールアドレス（確認） 電話番号 お問い合わせ内容",
+          "role": "displayed_ir_form_fields",
+          "url": "https://tsukuruba.com/inquiry/ir",
+          "retrieved_at": "2026-10-11T06:26:54.514736+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2980",
+      "company_name": "ＳＲＥホールディングス",
+      "attempted_at": "2026-10-11T06:26:52.253618+00:00",
+      "reviewed_at": "2026-10-11T06:34:54.939704+00:00",
+      "before_status": "confirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "explicit",
+      "notes": "SREホールディングスの公式トップがexact別ドメインtargetをIRお問い合わせとしてリンクし、先は同じ会社名を表示。実formに個人/法人radio選択肢と広報/IRcategory、mailAddress入力とinquiry textareaを確認しconfirmed/個人explicit。privacyの不動産説明から用途を推論していない。会社名任意は本文で明示、入力例メールは公開IRメールから除外。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2980/20261011T062652253660Z/02.json",
+          "quote": "お問い合わせ内容 個人/法人 必須 法人 個人 会社名 任意 部署 任意 お名前 必須 氏名 フリガナ 電話番号 ※半角数字 任意 メールアドレス 必須",
+          "role": "explicit_individual_form_fields",
+          "url": "https://sre-realestate.com/finquiry/inquiry",
+          "retrieved_at": "2026-10-11T06:27:03.627585+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2980/20261011T062652253660Z/02.json",
+          "quote": "お問い合わせ項目 必須 選択してください 物件に関するお問い合わせ クラウドサービスに関するお問い合わせ 広報／IRに関するお問い合わせ 当社へのご提案 採用／研修に関するお問い合わせ",
+          "role": "actual_ir_category",
+          "url": "https://sre-realestate.com/finquiry/inquiry",
+          "retrieved_at": "2026-10-11T06:27:03.627585+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2980/20261011T062652253660Z/02.json",
+          "quote": "問合せ内容 ※3,000文字まで 必須 上記入力の個人情報以外は記載しないでください。",
+          "role": "question_length_condition",
+          "url": "https://sre-realestate.com/finquiry/inquiry",
+          "retrieved_at": "2026-10-11T06:27:03.627585+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2981",
+      "company_name": "ランディックス",
+      "attempted_at": "2026-10-11T06:26:54.052934+00:00",
+      "reviewed_at": "2026-10-11T06:34:54.940455+00:00",
+      "before_status": "confirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "ランディックス会社名一致。一般お問い合わせの実radio種別にIRが含まれ同一formにemail入力とcontents textareaがありconfirmed維持。ナビIR語のみの判断ではない。会社名欄なしから個人受付を推論せずnot_stated。入力例メールを除外し、返信日数の注意を保存。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2981/20261011T062654052972Z/03.json",
+          "quote": "お問い合わせ種別 * IRに関するお問い合わせ 物件に関するお問い合わせ その他 お名前 * メールアドレス * 電話番号 題名 お問い合わせ内容 *",
+          "role": "ir_category_and_question_fields",
+          "url": "https://landix.jp/contact",
+          "retrieved_at": "2026-10-11T06:27:10.672401+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2981/20261011T062654052972Z/03.json",
+          "quote": "担当者よりご返信させていただきます。なお、返信に数日かかる場合がございますが、予めご了承ください。",
+          "role": "reply_guidance",
+          "url": "https://landix.jp/contact",
+          "retrieved_at": "2026-10-11T06:27:10.672401+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2982",
+      "company_name": "ＡＤワークスグループ",
+      "attempted_at": "2026-10-11T06:26:58.382673+00:00",
+      "reviewed_at": "2026-10-11T06:36:09.231671+00:00",
+      "before_status": "provisional",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "ADワークスグループ会社名/証券コード2982一致。IR専用受付ページの実formにmail/mailconfirm入力とabout textareaがあり、同じpublicformtextがIR受付・必須E-MAILを示すためconfirmedへ更新。plain mail nameのauto見逃しを補正。採用/取材の別formはIR確認根拠にしない。会社名は必須印なしだが個人受付を推論せずnot_stated。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2982/20261011T062658382713Z/04.json",
+          "quote": "IRに関するお問い合わせを下記フォームより受け付けております。",
+          "role": "ir_form_scope",
+          "url": "https://www.adwg.co.jp/contact/ir/",
+          "retrieved_at": "2026-10-11T06:27:22.218061+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2982/20261011T062658382713Z/04.json",
+          "quote": "* は必須項目となります。 お問い合わせ内容 * 会社名 部署名 役職 お名前 *",
+          "role": "question_and_company_conditions",
+          "url": "https://www.adwg.co.jp/contact/ir/",
+          "retrieved_at": "2026-10-11T06:27:22.218061+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2982/20261011T062658382713Z/04.json",
+          "quote": "E-MAIL * E-MAIL（確認用） * 確認のため、もう一度メールアドレスをご入力ください",
+          "role": "mandatory_reply_email_fields",
+          "url": "https://www.adwg.co.jp/contact/ir/",
+          "retrieved_at": "2026-10-11T06:27:22.218061+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2983",
+      "company_name": "アールプランナー",
+      "attempted_at": "2026-10-11T06:27:08.648273+00:00",
+      "reviewed_at": "2026-10-11T06:36:09.233036+00:00",
+      "before_status": "confirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "アールプランナー会社名/証券コード2983一致。公式問い合わせ一覧のdistinct IR link先に同一actualformがあり、form内「お問い合わせ内容 IR」とメール/確認type=email・textareaを確認しconfirmed維持。会社名など必須と個人用記入指示未確認を条件に保存するが個人受付可否はnot_stated。入力例メールは除外。別IRポータルの空お問い合わせページだけで認定していない。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2983/20261011T062708648312Z/07.json",
+          "quote": "お問い合わせ内容 IR ※ は必須項目です。 会社名 ※ ご担当者名 ※ ご担当者名フリガナ ※ 住所 ※ 電話番号 ※ FAX メールアドレス ※ メールアドレス ※ （確認のため再度入力） お問い合わせ内容 ※",
+          "role": "ir_form_fields_mandatory_company",
+          "url": "https://www.arrplanner.co.jp/contact/ir/",
+          "retrieved_at": "2026-10-11T06:27:41.004897+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2983/20261011T062708648312Z/06.json",
+          "quote": "お問い合わせ内容を、お選びください。 お客様 法人様 オーナーズクラブ プレス・広報 IR その他",
+          "role": "official_parent_distinct_ir_route",
+          "source_link_url": "https://www.arrplanner.co.jp/contact/ir/",
+          "url": "https://www.arrplanner.co.jp/contact/",
+          "retrieved_at": "2026-10-11T06:27:36.593145+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "297A",
+      "company_name": "アルピコホールディングス",
+      "attempted_at": "2026-10-11T06:26:45.786890+00:00",
+      "reviewed_at": "2026-10-11T06:37:19.787887+00:00",
+      "before_status": "unconfirmed",
+      "investigation_status": "unconfirmed",
+      "verification_level": "none",
+      "outreach_suitability": "unconfirmed",
+      "individual_access": "not_stated",
+      "notes": "アルピコHD会社名/証券コード297A一致。保存IR情報/FAQは公開資料・株主手続の案内のみでIRメールや質問送付先の明示はない。問い合わせ一覧はグループ各社とHD自身を区別しHD formの未取得targetを持つが、現在IR用途は未確認なのでunconfirmed維持。フォーム不存在とは判断しない。",
+      "remaining_reason": "持株会社の実フォーム先が未取得で、IRカテゴリ/メール/質問欄を確認できない。",
+      "todos": [
+        {
+          "url": "https://holdings.alpico.co.jp/inquiry/form?hsLang=ja",
+          "parent_snapshot": "evidence/297A/20261011T062645786927Z/03.json",
+          "quote": "アルピコホールディングス ALPICO Holdings",
+          "reason": "公式窓口一覧が指定する持株会社自身のフォーム候補。IR用途は未実証なので発見用途としてIRカテゴリ/質問欄を調べる。交通/ホテル等の子会社窓口とは区別する。",
+          "purpose_status": "general_holdings_form_ir_scope_unverified",
+          "parent_url": "https://holdings.alpico.co.jp/inquiry",
+          "parent_retrieved_at": "2026-10-11T06:27:14.202156+00:00"
+        }
+      ],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/297A/20261011T062645786927Z/03.json",
+          "quote": "アルピコホールディングス ALPICO Holdings",
+          "role": "holdings_company_discovery_only",
+          "source_link_url": "https://holdings.alpico.co.jp/inquiry/form?hsLang=ja",
+          "url": "https://holdings.alpico.co.jp/inquiry",
+          "retrieved_at": "2026-10-11T06:27:14.202156+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2984",
+      "company_name": "ヤマイチエステート",
+      "attempted_at": "2026-10-11T06:27:15.754347+00:00",
+      "reviewed_at": "2026-10-11T06:37:19.788781+00:00",
+      "before_status": "unconfirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "ヤマイチエステート会社名一致。共通formのc_type radioがIRに関してという独立種別を明示し、同じ実formにrequired name=mail/mail2入力とrequired comment textareaがあるためunconfirmedからconfirmedに更新。表現IRに関して及びplain mail名のauto抽出見逃し。IRナビだけ/個別物件資料フォームを根拠としない。会社名欄なしは個人利用保証ではない。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2984/20261011T062715754381Z/03.json",
+          "quote": "お問い合わせタイプ ※ 企業に関して 新築マンションに関して 戸建て住宅 / リフォームに関して ウェルネス / レジャーに関して IRに関して その他のお問い合わせ",
+          "role": "actual_ir_category",
+          "url": "https://www.yueg.co.jp/contact/",
+          "retrieved_at": "2026-10-11T06:27:30.106371+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2984/20261011T062715754381Z/03.json",
+          "quote": "お名前 ※ 姓 名 （全角） フリガナ ※ セイ メイ （全角カナ） Eメールアドレス ※ Eメールアドレス確認 ※",
+          "role": "mandatory_reply_email_fields",
+          "url": "https://www.yueg.co.jp/contact/",
+          "retrieved_at": "2026-10-11T06:27:30.106371+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2984/20261011T062715754381Z/03.json",
+          "quote": "お問い合わせ内容 ※ 個人情報の 取り扱いについて ※",
+          "role": "question_and_privacy_fields",
+          "url": "https://www.yueg.co.jp/contact/",
+          "retrieved_at": "2026-10-11T06:27:30.106371+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2986",
+      "company_name": "ＬＡホールディングス",
+      "attempted_at": "2026-10-11T06:27:38.331992+00:00",
+      "reviewed_at": "2026-10-11T06:37:57.083665+00:00",
+      "before_status": "unconfirmed",
+      "investigation_status": "unconfirmed",
+      "verification_level": "none",
+      "outreach_suitability": "unconfirmed",
+      "individual_access": "not_stated",
+      "notes": "LAホールディングス会社名一致。保存IR/財務情報と一般問い合わせ本文/全formsを点検。問い合わせ本文が外部quboフォームを会社全般の質問先に指定するがIR用途は明示していない。contact/irのIR情報リンク先も保存ではIR資料トップで質問欄はないのでIR受付と認定せずunconfirmed維持。未取得の一般フォームは発見用todoに分離。",
+      "remaining_reason": "外部qubo会社質問フォームが未取得でIRカテゴリー/実質問欄/個人受付を検証できない。",
+      "todos": [
+        {
+          "url": "https://req.qubo.jp/lahd/form/contact",
+          "parent_snapshot": "evidence/2986/20261011T062738332017Z/03.json",
+          "quote": "【こちら】",
+          "reason": "公式会社全般質問ページが指定する外部フォーム。IR用途は現在未確認なので発見用途としてIRカテゴリの有無を調べる。",
+          "purpose_status": "general_company_form_ir_scope_unverified",
+          "parent_url": "https://lahd.co.jp/contact/",
+          "parent_retrieved_at": "2026-10-11T06:27:56.445180+00:00"
+        }
+      ],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2986/20261011T062738332017Z/03.json",
+          "quote": "株式会社LAホールディングスについての全般的なご質問や、 このサイトについてのご質問は、 【こちら】 からお願いします。",
+          "role": "general_company_form_discovery_only",
+          "source_link_url": "https://req.qubo.jp/lahd/form/contact",
+          "url": "https://lahd.co.jp/contact/",
+          "retrieved_at": "2026-10-11T06:27:56.445180+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "298A",
+      "company_name": "ＧＶＡ　ＴＥＣＨ",
+      "attempted_at": "2026-10-11T06:27:45.564521+00:00",
+      "reviewed_at": "2026-10-11T06:37:57.084336+00:00",
+      "before_status": "unconfirmed",
+      "investigation_status": "unconfirmed",
+      "verification_level": "none",
+      "outreach_suitability": "unconfirmed",
+      "individual_access": "not_stated",
+      "notes": "GVA TECH会社名一致の保存タイトルはあるが公開抽出はtitleだけでheadings/links/formsが全て空。IR受付用途・入力欄・個人条件を証明できないためunconfirmed維持。JS表示の未検証を理由に保存導線のないURLを推測しない。",
+      "remaining_reason": "保存HTMLがtitleのみのshellで、実IR受付導線/フォーム欄を観測できない。",
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/298A/20261011T062745564555Z/01.json",
+          "quote": "GVA TECH株式会社 | 法とすべての活動の垣根をなくす",
+          "role": "issuer_title_only_js_shell",
+          "url": "https://gvatech.co.jp/",
+          "retrieved_at": "2026-10-11T06:27:47.774442+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2991",
+      "company_name": "ランドネット",
+      "attempted_at": "2026-10-11T06:27:49.145113+00:00",
+      "reviewed_at": "2026-10-11T06:38:18.934128+00:00",
+      "before_status": "confirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "ランドネット会社名一致。IR専用title/本文とactual同formのemail(type=email)・content textareaを確認しconfirmed維持。入力例メールを除外。「個人の方/法人の方」は別物件窓口リンク、IRは別の株主投資家向けタブで個人投資家明示と解釈しない。必須欄のvisual対応は未保存なので不明を残す。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2991/20261011T062749145161Z/02.json",
+          "quote": "当社のIRに関するご質問は下記フォームよりお問い合わせください。",
+          "role": "ir_form_scope",
+          "url": "https://landnet.co.jp/ir/contact/",
+          "retrieved_at": "2026-10-11T06:27:55.155027+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2991/20261011T062749145161Z/02.json",
+          "quote": "また、お問い合わせ内容によっては、回答を差し控える場合もございますので、あらかじめご了承下さい。",
+          "role": "reply_scope_condition",
+          "url": "https://landnet.co.jp/ir/contact/",
+          "retrieved_at": "2026-10-11T06:27:55.155027+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2991/20261011T062749145161Z/02.json",
+          "quote": "お名前 例）鈴木 太郎 メールアドレス 例）example@landnet.co.jp 電話番号 ※ハイフン無しで入力して下さい 例）09012349876 お問い合わせ内容",
+          "role": "ir_form_fields_with_example_excluded",
+          "url": "https://landnet.co.jp/ir/contact/",
+          "retrieved_at": "2026-10-11T06:27:55.155027+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2993",
+      "company_name": "長栄",
+      "attempted_at": "2026-10-11T06:27:49.936059+00:00",
+      "reviewed_at": "2026-10-11T06:38:18.935357+00:00",
+      "before_status": "confirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "ir_email_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "株式会社長栄の会社名一致。IR専用本文で特定IR担当とメールir@choei-net.ne.jpを指定し、same mailtoリンクを確認したためir_email_verifiedを維持。IR質問用途はnavやprivacyからの推論ではない。入居者/物件オーナー問い合わせは別目的として除外し個人受付はnot_stated。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2993/20261011T062749936104Z/02.json",
+          "quote": "IRに関する問合せは、下記メールアドレスへお願いいたします。",
+          "role": "ir_email_scope",
+          "url": "https://www.kk-choei.co.jp/ir/contact/",
+          "retrieved_at": "2026-10-11T06:27:55.998091+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2993/20261011T062749936104Z/02.json",
+          "quote": "■IRに関する問合せ先 統括本部 IR担当者 メール ir@choei-net.ne.jp 受付時間 9時00分～18時00分（土日祝日・夏季冬季休暇を除く）",
+          "role": "specific_ir_email_and_hours",
+          "url": "https://www.kk-choei.co.jp/ir/contact/",
+          "retrieved_at": "2026-10-11T06:27:55.998091+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2997",
+      "company_name": "ストレージ王",
+      "attempted_at": "2026-10-11T06:27:50.110544+00:00",
+      "reviewed_at": "2026-10-11T06:39:31.038295+00:00",
+      "before_status": "unconfirmed",
+      "investigation_status": "unconfirmed",
+      "verification_level": "none",
+      "outreach_suitability": "unconfirmed",
+      "individual_access": "not_stated",
+      "notes": "ストレージ王会社名/証券コード2997一致。実type=emailと質問textareaを持つIRサイト内inquiryは確認したが、同本文/titleは一般問い合わせで実IR種別やIR質問受付の明記がなく、一般contactと同じ欄構成。IRサイトのメニュー配置だけからIR用途を伝播させないためunconfirmed維持。未取得IR FAQで当該フォーム/メールへの明示指定を点検する候補を保存。",
+      "remaining_reason": "実質問フォーム自体はあるが保存本文ではIR用途を明示的に結びつけられない。",
+      "todos": [
+        {
+          "url": "https://www.storageoh.co.jp/ir/faq/",
+          "parent_snapshot": "evidence/2997/20261011T062750110577Z/01.json",
+          "quote": "FAQ",
+          "reason": "公式IR情報に明示リンクされるFAQ。一般/IRサイト内問い合わせフォームへのIR質問送付指定があるか追加確認する。",
+          "parent_url": "https://www.storageoh.co.jp/ir/",
+          "parent_retrieved_at": "2026-10-11T06:27:54.669351+00:00"
+        }
+      ],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2997/20261011T062750110577Z/04.json",
+          "quote": "下記のお問い合わせフォームに必要事項を入力のうえ下の「入力内容のご確認」 をクリックして下さい。",
+          "role": "general_question_form_ir_scope_unverified",
+          "url": "https://www.storageoh.co.jp/ir/inquiry/",
+          "retrieved_at": "2026-10-11T06:28:05.933265+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2997/20261011T062750110577Z/04.json",
+          "quote": "会社名 お名前 フリガナ 電話番号 メールアドレス メールアドレス確認 お問い合わせ内容",
+          "role": "existing_form_fields_without_explicit_ir_scope",
+          "url": "https://www.storageoh.co.jp/ir/inquiry/",
+          "retrieved_at": "2026-10-11T06:28:05.933265+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2998",
+      "company_name": "クリアル",
+      "attempted_at": "2026-10-11T06:27:57.596995+00:00",
+      "reviewed_at": "2026-10-11T06:39:31.039285+00:00",
+      "before_status": "unconfirmed",
+      "investigation_status": "unconfirmed",
+      "verification_level": "none",
+      "outreach_suitability": "unconfirmed",
+      "individual_access": "not_stated",
+      "notes": "クリアル会社名一致。日本語/英語の一般お問い合わせは実メール/質問欄を持つが、種別にIR明記はなくIRトップへのnavや「コーポレート全般」だけでは株式IR受付を実証できないためunconfirmed維持。特定投資家制度の金融商品区分はIR個人適格性と別物。未取得IR開示方針で当該窓口の具体的指定を点検するtodoを保存。",
+      "remaining_reason": "実一般フォームと株式IR質問用途との結びつきが保存本文で未確認。",
+      "todos": [
+        {
+          "url": "https://corp.creal.jp/ir/disclosure-policy/",
+          "parent_snapshot": "evidence/2998/20261011T062757597103Z/02.json",
+          "quote": "ディスクロージャーポリシー",
+          "reason": "公式IRページがリンクする情報開示方針。IR担当/問い合わせ先の具体的明示があるか点検する。",
+          "parent_url": "https://corp.creal.jp/ir/",
+          "parent_retrieved_at": "2026-10-11T06:28:06.220939+00:00"
+        }
+      ],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2998/20261011T062757597103Z/03.json",
+          "quote": "種別 不動産に関して 広告・マーケティングに関して クラウドファンディングに関して コーポレート全般に関して メディア掲載・取材に関して その他",
+          "role": "general_form_scope_not_explicit_ir",
+          "url": "https://corp.creal.jp/contacts/",
+          "retrieved_at": "2026-10-11T06:28:09.866196+00:00",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "security_code": "2999",
+      "company_name": "ホームポジション",
+      "attempted_at": "2026-10-11T06:27:58.728853+00:00",
+      "reviewed_at": "2026-10-11T06:39:31.040026+00:00",
+      "before_status": "confirmed",
+      "investigation_status": "confirmed",
+      "verification_level": "form_fields_verified",
+      "outreach_suitability": "candidate",
+      "individual_access": "not_stated",
+      "notes": "ホームポジション会社名一致。公式IR親のexact IRフォーム指定先が実form内で投資家IR質問を明示し、email(type=email)とmessage textareaを確認しconfirmed維持。会社欄は法人の方向けと記載されるが個人投資家の明示受付文とは扱わずnot_stated。privacyの株主管理目的/相談受付時間と実IR用途・返信条件を区別。placeholder例示メール除外。",
+      "remaining_reason": null,
+      "todos": [],
+      "new_evidence": [
+        {
+          "snapshot": "evidence/2999/20261011T062758728880Z/03.json",
+          "quote": "IR関連（投資家様向け）のお問い合わせは、下記お問い合わせフォームよりお願いいたします。",
+          "role": "ir_form_scope",
+          "url": "https://www.homeposition.co.jp/corporate/ir/contact/",
+          "retrieved_at": "2026-10-11T06:28:14.186100+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2999/20261011T062758728880Z/03.json",
+          "quote": "会社名（法人の方） お名前（漢字） 必須 姓 名 お名前（ひらがな） 必須 せい めい メールアドレス 必須 お問い合わせ内容 必須",
+          "role": "ir_form_fields_and_corporate_label",
+          "url": "https://www.homeposition.co.jp/corporate/ir/contact/",
+          "retrieved_at": "2026-10-11T06:28:14.186100+00:00",
+          "http_status": 200
+        },
+        {
+          "snapshot": "evidence/2999/20261011T062758728880Z/03.json",
+          "quote": "土・日・祝日、年末年始の他、当社休業日に頂いたお問い合わせについては、営業日以降のご回答となります。 なお、お問い合わせの内容によっては、回答できかねる場合がございますので、ご了承ください。",
+          "role": "reply_hours_and_scope",
+          "url": "https://www.homeposition.co.jp/corporate/ir/contact/",
+          "retrieved_at": "2026-10-11T06:28:14.186100+00:00",
+          "http_status": 200
+        }
+      ]
+    }
+  ],
+  "todos": [
+    {
+      "security_code": "291A",
+      "company_name": "リスキル",
+      "url": "https://www.recurrent.jp/corp/ir",
+      "parent_snapshot": "evidence/291A/20261011T061910299261Z/01.json",
+      "quote": "IR情報",
+      "reason": "会社名一致の公式トップが明示するIR情報。まず保存導線の先でIR受付専用リンク・メールを探す。一般問い合わせ自体はIR用途未実証。",
+      "parent_url": "https://www.recurrent.jp/corp/",
+      "parent_retrieved_at": "2026-10-11T06:19:27.704460+00:00"
+    },
+    {
+      "security_code": "2923",
+      "company_name": "サトウ食品",
+      "url": "https://satosyokuhin-group.form.kintoneapp.com/public/20f7058f31be4159c75910bbf4301f0b625ca32b7151c294558e0d00bc450409?iframe=true",
+      "parent_snapshot": "evidence/2923/20261011T061953610906Z/03.json",
+      "quote": "embedded frame",
+      "reason": "IR FAQが明示指定した同じ問い合わせURL内の唯一の外部埋込。実質問欄/返信先メール欄・会社必須・個人条件を確認する候補。",
+      "parent_url": "https://www.satosyokuhin.co.jp/inquiry/contact/",
+      "parent_retrieved_at": "2026-10-11T06:20:06.693101+00:00"
+    },
+    {
+      "security_code": "2935",
+      "company_name": "ピックルスホールディングス",
+      "url": "https://www.pickles-hd.co.jp/contact/form/",
+      "parent_snapshot": "evidence/2935/20261011T062201097510Z/03.json",
+      "quote": "お問い合わせフォーム",
+      "reason": "公式問い合わせ一覧のIR専用欄が直接指定するフォーム。商品向け別ドメインフォームと区別して実入力欄を検証する。",
+      "parent_url": "https://www.pickles-hd.co.jp/contact/",
+      "parent_retrieved_at": "2026-10-11T06:22:15.177687+00:00"
+    },
+    {
+      "security_code": "297A",
+      "company_name": "アルピコホールディングス",
+      "url": "https://holdings.alpico.co.jp/inquiry/form?hsLang=ja",
+      "parent_snapshot": "evidence/297A/20261011T062645786927Z/03.json",
+      "quote": "アルピコホールディングス ALPICO Holdings",
+      "reason": "公式窓口一覧が指定する持株会社自身のフォーム候補。IR用途は未実証なので発見用途としてIRカテゴリ/質問欄を調べる。交通/ホテル等の子会社窓口とは区別する。",
+      "purpose_status": "general_holdings_form_ir_scope_unverified",
+      "parent_url": "https://holdings.alpico.co.jp/inquiry",
+      "parent_retrieved_at": "2026-10-11T06:27:14.202156+00:00"
+    },
+    {
+      "security_code": "2986",
+      "company_name": "ＬＡホールディングス",
+      "url": "https://req.qubo.jp/lahd/form/contact",
+      "parent_snapshot": "evidence/2986/20261011T062738332017Z/03.json",
+      "quote": "【こちら】",
+      "reason": "公式会社全般質問ページが指定する外部フォーム。IR用途は現在未確認なので発見用途としてIRカテゴリの有無を調べる。",
+      "purpose_status": "general_company_form_ir_scope_unverified",
+      "parent_url": "https://lahd.co.jp/contact/",
+      "parent_retrieved_at": "2026-10-11T06:27:56.445180+00:00"
+    },
+    {
+      "security_code": "2997",
+      "company_name": "ストレージ王",
+      "url": "https://www.storageoh.co.jp/ir/faq/",
+      "parent_snapshot": "evidence/2997/20261011T062750110577Z/01.json",
+      "quote": "FAQ",
+      "reason": "公式IR情報に明示リンクされるFAQ。一般/IRサイト内問い合わせフォームへのIR質問送付指定があるか追加確認する。",
+      "parent_url": "https://www.storageoh.co.jp/ir/",
+      "parent_retrieved_at": "2026-10-11T06:27:54.669351+00:00"
+    },
+    {
+      "security_code": "2998",
+      "company_name": "クリアル",
+      "url": "https://corp.creal.jp/ir/disclosure-policy/",
+      "parent_snapshot": "evidence/2998/20261011T062757597103Z/02.json",
+      "quote": "ディスクロージャーポリシー",
+      "reason": "公式IRページがリンクする情報開示方針。IR担当/問い合わせ先の具体的明示があるか点検する。",
+      "parent_url": "https://corp.creal.jp/ir/",
+      "parent_retrieved_at": "2026-10-11T06:28:06.220939+00:00"
+    }
+  ],
+  "network_requests": 0,
+  "external_messages_sent": 0,
+  "original_evidence_modified": false,
+  "updated_at": "2026-10-11T06:39:31.040649+00:00",
+  "summary": {
+    "reviewed_count": 36,
+    "status_counts": {
+      "confirmed": 24,
+      "unconfirmed": 8,
+      "provisional": 4
+    },
+    "security_codes": [
+      "290A",
+      "2916",
+      "2918",
+      "291A",
+      "2922",
+      "2923",
+      "2924",
+      "2926",
+      "2927",
+      "2929",
+      "2931",
+      "2932",
+      "2933",
+      "2934",
+      "2935",
+      "2936",
+      "2937",
+      "2961",
+      "2962",
+      "296A",
+      "2970",
+      "2975",
+      "2978",
+      "2980",
+      "2981",
+      "2982",
+      "2983",
+      "297A",
+      "2984",
+      "2986",
+      "298A",
+      "2991",
+      "2993",
+      "2997",
+      "2998",
+      "2999"
+    ],
+    "todo_url_count": 7,
+    "pending_now_count": 0
+  }
+}

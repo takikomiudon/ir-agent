@@ -1,0 +1,27 @@
+{
+  "aggregation": "unweighted",
+  "research_context": {
+    "kind": "synthetic_example",
+    "note": "All amounts, forecasts and comparison price are fictional test settings; no investment parameters are adopted.",
+    "comparison_price_jpy": "100",
+    "financial_inputs_verified": false,
+    "model_adopted": false
+  },
+  "scenarios": [
+    {
+      "name": "synthetic-equity-bridge",
+      "method": "dcf_explicit_terminal_equity_bridge",
+      "inputs": {
+        "fcf_jpy": ["10000000"],
+        "terminal_fcff_jpy": "80000000",
+        "discount_rate": "0.10",
+        "terminal_growth_rate": "0.02",
+        "cash_jpy": "0",
+        "non_operating_assets_jpy": "20000000",
+        "debt_jpy": "0",
+        "minority_interests_jpy": "10000000",
+        "shares_outstanding": "10000000"
+      }
+    }
+  ]
+}

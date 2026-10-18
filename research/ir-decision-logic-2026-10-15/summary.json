@@ -1,0 +1,65 @@
+{
+  "recorded_at_jst": "2026-10-15T10:00:59.507914+09:00",
+  "implementation": "IR answer scenarios and explicitly sourced investment policy reviews",
+  "adopted_framework": "Anthropic financial-services-plugins",
+  "source_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+  "upstream_principles": [
+    "falsifiable thesis",
+    "disconfirming evidence",
+    "explicit valuation and exit conditions",
+    "bull/base/bear scenarios",
+    "screens are candidates rather than conclusions"
+  ],
+  "project_adaptations": [
+    "precommitted IR branches",
+    "public-information and evidence-snapshot checks",
+    "sourced configurable price/risk/fee limits",
+    "permitted valuation-input paths",
+    "price-aware review candidates"
+  ],
+  "tests": {
+    "total_passed": 651,
+    "new_decision_tests": 22,
+    "failed": 0,
+    "duration_seconds": "36.509",
+    "command": ".venv/bin/python -m unittest discover -s tests -v"
+  },
+  "synthetic_end_to_end": {
+    "command": ".venv/bin/python scripts/demo_ir_decision.py",
+    "before_reply_actions": {
+      "temporary": "hold_review",
+      "persistent": "exit_review",
+      "unclear": "unresolved"
+    },
+    "applied_thesis_version": 3,
+    "precommitted_proposal": "buy_review",
+    "reviewed_action": "hold_review"
+  },
+  "independent_review": {
+    "findings_fixed": 4,
+    "items": [
+      "unverified evidence snapshots",
+      "ambiguous flattened financial-input paths",
+      "oversized freshness value overflow",
+      "unknown policy source key validation"
+    ],
+    "reviewer_confirmed_fixes": true
+  },
+  "external_IR_sends": 0,
+  "orders": 0,
+  "real_issuer_recommendations": 0,
+  "deadline": {
+    "requested_time_jst": "2026-10-15T09:00:00+09:00",
+    "resumed_at_jst": "2026-10-15T09:47:32+09:00",
+    "completed_by_deadline": false,
+    "continuous_execution_verified": false
+  },
+  "remaining": [
+    "Choose and record an adopted numerical investment policy; template intentionally has no financial defaults.",
+    "Connect available market/disclosure sources and normalize actual observation timestamps.",
+    "Apply screening to the 1,819 contact candidates and build real issuer theses before any actual decision.",
+    "Choose the external scheduler and durable data store for continuous monitoring.",
+    "Configure sending/receiving operations separately; no real IR was sent.",
+    "Evaluate the research process and IR contribution prospectively; test success does not establish investment returns."
+  ]
+}

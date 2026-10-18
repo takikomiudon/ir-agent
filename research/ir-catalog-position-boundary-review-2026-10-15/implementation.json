@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-15T13:25:03.156821+00:00",
+  "status": "implementation_frozen_targeted_80_tests_pass_independent_review_pending",
+  "problem": "Catalog/default and caller-declared holdings were indistinguishable in decision context. Origin-unknown legacy observations could release the position gate.",
+  "implementation": {
+    "new_table": "position_declarations(observation_id PRIMARY KEY FK position_observations.id, declared_at, origin explicit_user_declaration)",
+    "new_APIs": [
+      "Store.declare_position(company_id, held, *, now=None)",
+      "Store.declared_position_at(company_id, as_of)"
+    ],
+    "explicit_entrypoints": [
+      "Harness.set_company_status(..., held=True|False), including existing CLI company set-status --held|--no-held",
+      "Store.declare_position as explicit caller declaration API"
+    ],
+    "not_declaration_entrypoints": [
+      "ingest held omitted or explicitly supplied",
+      "contact/catalog import",
+      "Store.put_company",
+      "Store.observe_position metadata observation",
+      "Store bootstrap/reopen",
+      "status change with held omitted"
+    ],
+    "clock": "declare_position takes trusted runtime now only after entering _record_write (BEGIN IMMEDIATE or nested SAVEPOINT); no caller JSON observation timestamp is added. now injection is trusted runtime/test input.",
+    "atomicity": "Current company held metadata, new observation, and receipt are in the same transaction/savepoint. Harness status update is in the outer transaction. Same-value explicit declarations always append new observations; old rows receive no retrofit receipts.",
+    "decision_boundary": "DecisionLifecycle.position_for calls declared_position_at. Latest observation at as_of must itself have explicit_user_declaration receipt with declared_at<=as_of; no fallback to earlier receipt-qualified observations. Missing/unknown yields None and existing unknown position guards. Existing synthetic_position scope remains unchanged.",
+    "metadata_compatibility": "Existing position_at returns metadata history/kind observed. Company held defaults and provider preservation and queue priorities are unchanged. Explicit ingest held is still metadata, not a user holding declaration. This is an intentional decision eligibility boundary.",
+    "declaration_semantics": "Declared view: kind user_declaration, origin explicit_user_declaration, declared_at and broker_verified:false. It records caller assertion, not broker verification.",
+    "old_records": "No company/position/history migration UPDATE or origin backfill. Existing company JSON changes only through intentional existing status updates or the explicit declaration API. Frozen contracts, old thesis/policy/evaluation JSON remain untouched. Bootstrap metadata observation stays compatible and produces no declaration receipt.",
+    "pure_CLI": "Snapshot-only decision/ir-plan calculators retain caller-supplied snapshot context; this change does not add live DB/holdings verification to those routes."
+  },
+  "tests": {
+    "command": "PYTHONPATH=src:tests .venv/bin/python -m unittest tests/test_position_declarations.py tests/test_decision_lifecycle.py tests/test_contacts.py tests/test_workflow.py tests/test_contact_workflow.py",
+    "final_result": {
+      "tests": 80,
+      "seconds": 0.411,
+      "exit_code": 0
+    },
+    "module_test_counts": {
+      "tests/test_position_declarations.py": 12,
+      "tests/test_decision_lifecycle.py": 17,
+      "tests/test_contacts.py": 12,
+      "tests/test_workflow.py": 29,
+      "tests/test_contact_workflow.py": 10
+    },
+    "runs": [
+      {
+        "tests": 79,
+        "seconds": 0.397,
+        "exit_code": 0,
+        "before_final_CLI_regression_added": true
+      },
+      {
+        "tests": 80,
+        "seconds": 0.411,
+        "exit_code": 0
+      }
+    ],
+    "new_coverage": [
+      "Catalog import and explicit/omitted ingest booleans all have no receipts and cannot satisfy position decision gate",
+      "Same false and true are explicit current declarations without rewriting earlier unknown rows",
+      "Exact receipt/observation timing boundaries; synthetic isolated future receipt remains ineligible before receipt time",
+      "Latest unqualified observation prevents fallback to prior declaration",
+      "Provider refresh preserves current metadata and receipt and does not reconfirm",
+      "Receipt insert trigger failure rolls back position+receipt+company+status; direct nested API rollback",
+      "Trusted clock sampled inside acquired write transaction",
+      "Malformed bool/null/int/str/list/dict reject without writes",
+      "Legacy schema reopen creates empty receipt table without relabeling old rows or rewriting company JSON",
+      "New declaration leaves frozen question JSON/preflight and past position unknown",
+      "Existing CLI status held omitted then --no-held then --held takes the intended distinct paths"
+    ],
+    "existing_assertion_changes": [
+      {
+        "file": "tests/test_decision_lifecycle.py",
+        "reason": "Declared view intentionally returns user_declaration with broker_verified:false; raw metadata view remains observed."
+      },
+      {
+        "file": "tests/test_decision_lifecycle.py",
+        "reason": "Existing rollback injection now targets declare_position, the actual explicit-declaration responsibility; legacy bootstrap raw-view assertions kept and declared-view unknown assertion added."
+      }
+    ],
+    "full_suite_run": false
+  },
+  "files": [
+    {
+      "path": "src/ir_agent/store.py",
+      "copy": "research/ir-catalog-position-boundary-review-2026-10-15/source-after/store.py",
+      "sha256": "ed44bd2a1d7bf269613c64546f3b5a47c8fd9ce39669798254d619870c63c49f",
+      "bytes": 27295
+    },
+    {
+      "path": "src/ir_agent/harness.py",
+      "copy": "research/ir-catalog-position-boundary-review-2026-10-15/source-after/harness.py",
+      "sha256": "f12e5369800c39bae7ec431368730e8b09c8d4b1f8260e60a475883de99a2e2f",
+      "bytes": 39151
+    },
+    {
+      "path": "src/ir_agent/decision_lifecycle.py",
+      "copy": "research/ir-catalog-position-boundary-review-2026-10-15/source-after/decision_lifecycle.py",
+      "sha256": "33c73746954002012984dd720924bca5cf62608ebaaa3867bd6f58731ec2149e",
+      "bytes": 15927
+    },
+    {
+      "path": "tests/test_decision_lifecycle.py",
+      "copy": "research/ir-catalog-position-boundary-review-2026-10-15/source-after/test_decision_lifecycle.py",
+      "sha256": "70400c7a6e90dab2dc229798b8916d21a93762f9cb9087e3c9402630df3fbd99",
+      "bytes": 15919
+    },
+    {
+      "path": "tests/test_position_declarations.py",
+      "copy": "research/ir-catalog-position-boundary-review-2026-10-15/source-after/test_position_declarations.py",
+      "sha256": "dcba8cb8e6c486f3850f5f7914b86254e9574ce68134937f64bb7f88406e0d30",
+      "bytes": 13922
+    }
+  ],
+  "before_manifest": "research/ir-catalog-position-boundary-review-2026-10-15/parent-before-change.json",
+  "before_manifest_sha256": "e6ded2be7815c3d262ce9d4fc81f7f9d7a4300ecd91e49a91da32a121e58078f",
+  "unchanged_before_files": [
+    "src/ir_agent/models.py",
+    "tests/test_contacts.py",
+    "tests/test_workflow.py"
+  ],
+  "execution": {
+    "actual_DB_accesses": 0,
+    "GETs": 0,
+    "external_sends": 0,
+    "old_research_artifacts_modified": 0,
+    "additional_existing_files_modified_without_before_copy": 0,
+    "full_suite_runs": 0
+  },
+  "known_adjacent_boundary_not_changed": [
+    "current_decision_view/current_evaluation_view do not newly re-audit old saved review position origins. Their historical raw is unchanged; parent will separately bound any current-display issue.",
+    "This receipt cannot independently verify ownership or brokerage accounts. Explicit callers can make false declarations; financial suitability and other policy/data gates remain separate.",
+    "A receipt records storage-time declaration. No past ownership or original legacy input origin is reconstructed."
+  ],
+  "freeze_checks": {
+    "only_expected_existing_files_changed": true,
+    "source_after_bytes_equal_current": true,
+    "new_tests": 12,
+    "old_source_before_bytes_preserved": true
+  }
+}

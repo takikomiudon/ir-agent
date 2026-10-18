@@ -1,0 +1,122 @@
+{
+  "document_kind": "file_only_research_question_preparation_comparison",
+  "recorded_at": "2026-10-16T12:11:56.183759+00:00",
+  "reviewer_id": "codex-review_5831_policy",
+  "template_status": "docs/ir-question-preparation.mdと既存1頁準備票を使う研究用構成。productionのquestion/decision_contract schemaではない。",
+  "method_refs": [
+    "DD-priority",
+    "DD-margin",
+    "DD-comparison",
+    "DD-neutral",
+    "JIRA-past-reasons",
+    "JIRA-public-answers"
+  ],
+  "items": [
+    {
+      "company_id": "jp:7388",
+      "company_name": "FPパートナー",
+      "source_id": "case-public:b6787509990806d3699dc95e63bc3308cffb8f94efa4fbbf1e7016927bada2a3",
+      "source_native_sha256": "a194f46b4637c672103503f0383d8de215f8cc76bfe048ac582f763449821f44",
+      "selected_original_item": "D5-quality-rates",
+      "one_issue": "公表された業務品質支援金の「料率低下」が比較している料率・対象・期間の定義",
+      "why_this_one": "DDのmargin bridge/比較差明確化に従う。料率定義を揃えないと、契約数/商品構成の変化と同条件の料率変更を切り分けて比較できず、例示の約率を全契約へ誤適用するため。未知項目を全部質問化する選好ではない。",
+      "public_already_answered": [
+        "FY2025/11減収について、営業社員純減・提携集客減→新規契約減少という会社説明がある。原価減と販管費増の理由も公表済み。",
+        "p30は業務品質支援金の料率低下と減少を述べ、手数料率/支払率は保険会社・商品で異なると注記する。例示ANP約率は普遍料率ではない。",
+        "p31の改善命令受領→提携集客の一時停止という会社説明は、p30支援金料率低下と同じ因果とは未確認。「一時的」は将来回復保証ではない。",
+        "追加p32で期末営業社員2,518→2,333と年間採用681→491は公表既答。純減を退職者数/平均へ変えず、単純照会を追加しない。"
+      ],
+      "evidence_refs": [
+        "7388-rate-explanation",
+        "7388-rate-scope",
+        "7388-lead-cause-separate",
+        "7388-selected-definition",
+        "7388-staffing-public-answer"
+      ],
+      "public_answer_candidates": {
+        "first_owner": "public_document_check",
+        "candidate_ref": "7388-public-next",
+        "scope": "同年度の決算短信/説明資料・収益認識や支援金説明の公表注記。現phaseはその実URL/本文を確認していない。全44頁や全公式資料での不存在は未認定。",
+        "consequence": "公表で比較対象が特定できれば下記暫定文は取り下げ、資料参照を記録する。"
+      },
+      "provisional_question": {
+        "status": "source_bound_preparation_only_public_followup_first",
+        "text": "統合報告書の2025年11月期の振り返り（物理30頁）にある、業務品質支援金の「料率が低下」という説明は、どの料率を、どの対象・比較期間で比べたものですか。公表済みの算定基準や適用範囲、掲載箇所があればご教示ください。",
+        "scope": "公表済み過去説明の対象範囲/定義。未公表の保険会社別数値・顧客情報・将来料率/利益保証を求めない。",
+        "not_a_formal_question_draft": true
+      },
+      "research_reply_effects": {
+        "A": "同じ保険会社/商品/評価条件について制度上の料率改定とその比較期が公表根拠で特定できる場合、その対象系列/版に料率変更の注記を付ける。対象外契約へ一律外挿せず、数量や品質自体の悪化と同一視しない。",
+        "B": "実現平均率や商品・保険会社・評価構成等の変化を含む説明なら、構成依存の比較として残す。単一料率引下げと全件に置換せず、同条件比較を要するという反証候補の範囲を狭める。",
+        "mixed": "複数要因なら対象別に併記しA/Bへ無理に単一分類しない。寄与額を推計しない。",
+        "ambiguous_or_no_response": "比較範囲未解決を維持する。品質悪化/行政処分との同因果・料率回復・会社仮説反証・悪材料とは自動認定しない。"
+      },
+      "company_fact_owner": "既公表説明の料率定義、対象系列・比較期・公表箇所。",
+      "investor_author_owner": "将来契約数、商品/評価構成、料率、持続利益/税/CF/価値の予測・採用。定義回答だけでは埋まらない。",
+      "specific_qualitative_value": "同条件の料率差と構成差を混同しない比較へ進める可能性。価格/正常EPS未完成だけで価値0とはしないが、金銭的IR価値と実際の回答可能性は未立証。",
+      "proposed_future_monitor_issue_id": "7388-quality-support-rate-comparability"
+    },
+    {
+      "company_id": "jp:3612",
+      "company_name": "ワールド",
+      "source_id": "case-public:5304377b63a7df6f4b648f1e486e7813c5bc96b42acfb84f3b1666a65043a3cf",
+      "source_native_sha256": "82ba3b28b1acbb67b4f11c5c83802f38f37f03d698b27f4985fd5628bab0081d",
+      "selected_original_item": "known_concerns_and_disposition[0]:売上・親利益増と事業/営業減益の並存",
+      "one_issue": "FY2026/2の公表事業/営業利益と親会社利益を、同じ表示版・対象範囲で比較するための定義/対応",
+      "why_this_one": "DDのmargin bridgeと比較資料の差異確認に従う。売上/親利益増を既存事業の営業回復と誤認する比較や、会社のM&A叙述を当期寄与bridgeへ置く反証を防ぐ。",
+      "public_already_answered": [
+        "会社は高い販売計画に対する仕入/経費先行と修正遅れをコア減益の説明とし、取得会社の収益貢献増も述べる。両者の存在自体は再質問しない。",
+        "コア→事業利益の呼称変更/IFRS18変更反映は既知。資本配分図の純利益が非資金損益調整後で、法定単年度親利益/CFとは別なのも公表済み。",
+        "取得事業が親利益約4割という記載は2027/2見通しで、2026/2実績に移さない。",
+        "追加物理p5を実読した追補は、親利益を高める構造という会社説明と非連続成長に向けた経営評価を確認した。税/金融/NCIの金額bridgeを回答したものではない。"
+      ],
+      "evidence_refs": [
+        "3612-core-cost-timing",
+        "3612-acquired-contribution",
+        "3612-future-four-tenths",
+        "3612-capital-chart-definition",
+        "3612-accounting-basis",
+        "3612-p5-public-followup"
+      ],
+      "public_answer_candidates": {
+        "first_owner": "public_document_check",
+        "candidate": "同年度の正式連結P/L・注記/IFRS18組替対応、取得日・取込期間の公表記載を先に確認。具体URLや未読頁の内容は今回補わない。",
+        "completed_candidate": "旧p5 locatorは新追補で解消済みなので、同じp5を次の未読候補に戻さない。",
+        "scope": "未解決bridgeは現在読解範囲で未特定という意味。報告書全体/他公開資料での非開示とはしない。",
+        "consequence": "公開表で科目/対象期対応が分かればIRの問いは不要。"
+      },
+      "provisional_question": {
+        "status": "withheld_public_statement_comparison_first",
+        "text": null,
+        "reason": "比較元の公表P/L/注記が未読で、まだ尋ねる調整科目・系列を特定できない。一般説明を聞き直す暫定文は作らない。",
+        "condition_to_prepare": "公開比較後にも特定の表/期/調整項目の定義が残った場合、その一点と公表箇所に絞る。新事実なしに同義の質問票を増やさない。"
+      },
+      "research_reply_effects": {
+        "scope": "将来、公表表に結び付いた定義確認が必要になった場合の研究上の比較効果。現時点の正式回答分岐ではない。",
+        "A": "同年度・同表示版・同連結範囲の対応が確認できれば、利益段階別の説明を分けて比較できる。親利益増だけを既存事業の営業改善と呼ぶ読みに対して照合根拠が得られる。",
+        "B": "表示組替や取得取込期間/範囲差が残る場合は別系列として保持し、同一母集団の改善/悪化という比較を保留する。一般M&A説明や来期約4割で当期を埋めない。",
+        "ambiguous_or_no_response": "比較可能性未解決を維持。会社予測の反証・会計不正・将来減益とは認定しない。"
+      },
+      "company_fact_owner": "公開比較後に残る、特定公表表の調整項目/版/対象期と連結範囲の定義。",
+      "investor_author_owner": "既存/取得事業の持続性、正常収益、将来EPS/CF、買収評価、倍率/価格。",
+      "specific_qualitative_value": "利益指標/範囲の比較誤りを解消しうる。ただし現在は会社へ送るより公開P/L/注記確認が先で、価格未完成という理由で研究を禁止したものではない。",
+      "proposed_future_monitor_issue_id": "3612-profit-measure-and-acquisition-scope-comparability"
+    }
+  ],
+  "common_limits": {
+    "reply_effects_authorship": "A/B/曖昧無回答の比較効果はproject適応。DD/JIRA原典に売買分岐や回答後EPS更新規則はない。",
+    "information_status": "返信が生じた場合の公開性は受信原文と公表根拠で別に確認。JIRAのモザイク説明を個別返信のpublic_clarification保証にしない。unclear/potential_nonpublicな返信を金融入力へ適用しない。",
+    "IR_value": "unproven",
+    "financial_branches": null,
+    "price_or_normalized_EPS_required_for_qualitative_research": false,
+    "financial_input_changes": null,
+    "investment_action": null,
+    "forecast": null,
+    "multiple": null,
+    "price_conditions": null,
+    "likelihood_EVSI": null,
+    "formal_question_registered": false,
+    "send_ready": false,
+    "DB_Store_GET_calculation_old_edit": 0
+  }
+}

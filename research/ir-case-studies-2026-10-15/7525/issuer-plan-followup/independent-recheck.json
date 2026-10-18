@@ -1,0 +1,204 @@
+{
+  "recorded_at": "2026-10-15T10:04:17.776671+00:00",
+  "status": "passed_bounded_independent_recheck_no_financial_approval",
+  "company_id": "jp:7525",
+  "scope": "Offline only, new independent-recheck.json/.md; no GET/DB/code/oldfile/model/IR changes.",
+  "bundle_sha256": "5993ad2091a77c8a73ff614952af7a723f13d25b06da87b7f7f2a6c22b4735d8",
+  "GETs_observed_in_original_capture": 3,
+  "all_200": true,
+  "capture_raw_text_checks": [
+    {
+      "sequence": 1,
+      "status200_complete": true,
+      "raw_bytecount_SHA": true,
+      "snapshot_equals_capture": true,
+      "text_reextraction_exact": true,
+      "title_links_reextract_exact": false,
+      "completion": "2026-10-15T09:57:34.944365+00:00"
+    },
+    {
+      "sequence": 2,
+      "status200_complete": true,
+      "raw_bytecount_SHA": true,
+      "snapshot_equals_capture": true,
+      "text_reextraction_exact": true,
+      "title_links_reextract_exact": true,
+      "completion": "2026-10-15T09:57:43.343379+00:00"
+    },
+    {
+      "sequence": 3,
+      "status200_complete": true,
+      "raw_bytecount_SHA": true,
+      "snapshot_equals_capture": true,
+      "text_reextraction_exact": true,
+      "title_links_reextract_exact": true,
+      "completion": "2026-10-15T09:58:25.782654+00:00"
+    }
+  ],
+  "source_checks": [
+    {
+      "source_id": "case-public:9972764ea77dab3888a7f68afe0d3347aeb36aed4f9d6488877e2ac4a73aba0f",
+      "schema_valid": true,
+      "full_stable_ID_recomputed": true,
+      "all_metadata_paths_and_SHA_match": true,
+      "source_completion_exact": true,
+      "pubnull": true
+    },
+    {
+      "source_id": "case-public:02818ddeb45b03ffd597c857ead6a7f874ad75c7c68b411596058602ca1297a1",
+      "schema_valid": true,
+      "full_stable_ID_recomputed": true,
+      "all_metadata_paths_and_SHA_match": true,
+      "source_completion_exact": true,
+      "pubnull": true
+    }
+  ],
+  "quote_checks": [
+    {
+      "id": "GP-company-original40-goal",
+      "offset_SHA_exact": true
+    },
+    {
+      "id": "GP-co-creation-merchant-manufacturer-description",
+      "offset_SHA_exact": true
+    },
+    {
+      "id": "GP-group-overseas-co-creation",
+      "offset_SHA_exact": true
+    },
+    {
+      "id": "LV-consolidated-revenue-goal-context",
+      "offset_SHA_exact": true
+    },
+    {
+      "id": "LV-overseas-exclusive-products-context",
+      "offset_SHA_exact": true
+    },
+    {
+      "id": "LV-company-original55-goal",
+      "offset_SHA_exact": true
+    },
+    {
+      "id": "LV-creation-process-description",
+      "offset_SHA_exact": true
+    },
+    {
+      "id": "LV-brochure-context-not-fetched",
+      "offset_SHA_exact": true
+    },
+    {
+      "id": "robots-current-raw-body",
+      "offset_SHA_exact": true
+    },
+    {
+      "id": "GP-LV-href-raw",
+      "offset_SHA_exact": true
+    },
+    {
+      "id": "LV-brochure-href-raw",
+      "offset_SHA_exact": true
+    }
+  ],
+  "quote_counts": {
+    "visible_body_and_robots": 9,
+    "raw_HTML_tags": 2
+  },
+  "exact_links": {
+    "GP_to_LV_anchor_matches": true,
+    "brochure_anchor_matches": true,
+    "unique_PDF_URLs": 1,
+    "brochure_HTTP_not_attempted": true
+  },
+  "old_input_hash_checks": [
+    {
+      "path": "research/ir-case-studies-2026-10-15/7525/issuer-source-routes/routes.json",
+      "declared_SHA": "bc2fe44eae648a1d1e47e9b75f5f82c896fc2c3b4ce2f72b7ed10a05fdea9008",
+      "current_SHA": "bc2fe44eae648a1d1e47e9b75f5f82c896fc2c3b4ce2f72b7ed10a05fdea9008",
+      "matched": true
+    },
+    {
+      "path": "research/ir-case-studies-2026-10-15/7525/author-original-product-review/case-record.json",
+      "declared_SHA": "ccec4fc4179bd510a39268ec8ae5af07c83bdafad1a3e75e6c0c3fa9617cd61a",
+      "current_SHA": "ccec4fc4179bd510a39268ec8ae5af07c83bdafad1a3e75e6c0c3fa9617cd61a",
+      "matched": true
+    },
+    {
+      "path": "research/ir-source-access-holds-2026-10-15/holds.json",
+      "declared_SHA": "f3b5ab3f27cd7d7049c898753ffae035d83ae829c8aad0efb3450e7bad27c154",
+      "current_SHA": "f3b5ab3f27cd7d7049c898753ffae035d83ae829c8aad0efb3450e7bad27c154",
+      "matched": true
+    }
+  ],
+  "semantic_boundary_reviews": [
+    {
+      "topic": "company40and55",
+      "status": "consistent",
+      "quote_ids": [
+        "GP-company-original40-goal",
+        "LV-company-original55-goal"
+      ],
+      "finding": "40%以上/55%以上 statedcompanygoals, not reachedratio or authorsinvestmentthreshold."
+    },
+    {
+      "topic": "planperiods",
+      "status": "unresolved_retained",
+      "finding": "VisibleGP2026/LV2030 labels do not establish fiscalend/startdates. PriorQUICK27/3/31/3attribution not transferred into newHTML certainty."
+    },
+    {
+      "topic": "numerator_and_denominator",
+      "status": "unresolved_retained",
+      "quote_ids": [
+        "GP-co-creation-merchant-manufacturer-description",
+        "LV-consolidated-revenue-goal-context"
+      ],
+      "finding": "Consolidatedsalesgoals anddirectsales×manufacturing are companystrategycontext, not ratio-specificgroup/elimination/numeratorrules."
+    },
+    {
+      "topic": "overseas_exclusivity",
+      "status": "unresolved_retained",
+      "quote_ids": [
+        "LV-overseas-exclusive-products-context"
+      ],
+      "finding": "Productswithoverseasexclusivesalesandownproductdevelopmentintent are not statisticalinclusiondefinition."
+    },
+    {
+      "topic": "brochure_boundary",
+      "status": "correctly_not_fetched",
+      "quote_ids": [
+        "LV-brochure-context-not-fetched",
+        "LV-brochure-href-raw"
+      ],
+      "finding": "OnlyPDFanchorinreceivedpagesisstaffRIXingActionbrochure; no HTTPrequest/bodyreading or calculation-content inference."
+    }
+  ],
+  "specific_material_defects": [],
+  "existing_artifacts_unchanged": {
+    "count": 15,
+    "hashes": {
+      "research/ir-case-studies-2026-10-15/7525/issuer-plan-followup/02.txt": "f8857c1878b54353fa04a16a8e355a374ad20fa3e71380a4efc430d1d2ad88be",
+      "research/ir-case-studies-2026-10-15/7525/issuer-plan-followup/03.json": "346df1d7a0e001b9aee5a1359605ee2c53304db79b6e30bc88a7838ea2e2d9e0",
+      "research/ir-case-studies-2026-10-15/7525/issuer-plan-followup/review.json": "8655a42358e66f8b74acb45a9df3cda11b14b8b8172decc49cf91fe0df2d1b76",
+      "research/ir-case-studies-2026-10-15/7525/issuer-plan-followup/quotes.json": "b5537bf4a6fa0775696d9847f91c74b57275891452116e508787e67ec387d93c",
+      "research/ir-case-studies-2026-10-15/7525/issuer-plan-followup/01.json": "65235709fa628aaec138f07c0d542bdb5de4900ecaa37b6fa56f11d4e44ee1ff",
+      "research/ir-case-studies-2026-10-15/7525/issuer-plan-followup/01.txt": "ca6a0c23cad5967ad90949a0df4dfbcb5b9f90465cced16f0367851aeff9344c",
+      "research/ir-case-studies-2026-10-15/7525/issuer-plan-followup/02.json": "0af52939f6ce79d3b2ea4c88de94ff344dd611a6a0d391f03ff33cf1b8a482b8",
+      "research/ir-case-studies-2026-10-15/7525/issuer-plan-followup/README.md": "cb317d9f0910a77a72a1be59e56e32062cd2a35c4170e072df1111dfbc72b183",
+      "research/ir-case-studies-2026-10-15/7525/issuer-plan-followup/validation.json": "1c90304451b4b9478f316d2cd9f21934123718060d17e9a03ab6c93cbc6e6396",
+      "research/ir-case-studies-2026-10-15/7525/issuer-plan-followup/capture.json": "4c49088fcac1a7822825c39b48ecaa80bcbbf79b9a11f1f5c99d55cf11cf5586",
+      "research/ir-case-studies-2026-10-15/7525/issuer-plan-followup/source-bundle.json": "5993ad2091a77c8a73ff614952af7a723f13d25b06da87b7f7f2a6c22b4735d8",
+      "research/ir-case-studies-2026-10-15/7525/issuer-plan-followup/03.txt": "28addd18c724b430caeb8eb9098e6cfadf1d7eb3ea8e349b7c187e7ccae0b4c6",
+      "research/ir-case-studies-2026-10-15/7525/issuer-plan-followup/raw/57c5f89a0ec41174b41dddfd8a7b12adc45651c8aa871f7e665126470d3e2e0f": "57c5f89a0ec41174b41dddfd8a7b12adc45651c8aa871f7e665126470d3e2e0f",
+      "research/ir-case-studies-2026-10-15/7525/issuer-plan-followup/raw/662db6abaac0b990e74564c56ded339d61da854fd2edad5afc48017e1394d05b": "662db6abaac0b990e74564c56ded339d61da854fd2edad5afc48017e1394d05b",
+      "research/ir-case-studies-2026-10-15/7525/issuer-plan-followup/raw/ca6a0c23cad5967ad90949a0df4dfbcb5b9f90465cced16f0367851aeff9344c": "ca6a0c23cad5967ad90949a0df4dfbcb5b9f90465cced16f0367851aeff9344c"
+    }
+  },
+  "limitations": [
+    "Localbyte/text/metadata consistency isnotindependent webauthenticity, latestness, financialmeaning or modelapproval.",
+    "Noimageassetsretrieved/read; noexactfiscaldates inferredfromplanlabels.",
+    "Fullbrand/PB/group/overseasratio scope not established."
+  ],
+  "financial_inputs_verified": false,
+  "new_GETs": 0,
+  "DB_access": false,
+  "model_or_IR_adopted": false
+}

@@ -1,0 +1,73 @@
+{
+  "evidence": [
+    {
+      "source_snapshot": "../05.json",
+      "quote": "const eirCode = '5480';",
+      "character_start": 56,
+      "character_end": 79
+    },
+    {
+      "source_snapshot": "../05.json",
+      "quote": "const uniCodeEir = '20230517';",
+      "character_start": 81,
+      "character_end": 111
+    },
+    {
+      "source_snapshot": "../05.json",
+      "quote": "const eirLanguage = 'jp';",
+      "character_start": 176,
+      "character_end": 201
+    },
+    {
+      "source_snapshot": "../05.json",
+      "quote": "const eirUrl = ('https:' == document.location.protocol ? 'https://ssl4' : 'http://v4') + '.eir-parts.net';",
+      "character_start": 698,
+      "character_end": 804
+    },
+    {
+      "source_snapshot": "../05.json",
+      "quote": "var eirPass = eirUrl + '/Custom/' + eirLevel + '/v5parts/' + eirCode + '/' + eirLanguage + '/' + uniCodeEir + '/';",
+      "character_start": 936,
+      "character_end": 1050
+    },
+    {
+      "source_snapshot": "../05.json",
+      "quote": "var eirPassCore = eirPass + 'core/';",
+      "character_start": 1344,
+      "character_end": 1380
+    },
+    {
+      "source_snapshot": "../04.json",
+      "quote": "scriptLoader.setSrc(eirPassCore + 'eir_common.js');",
+      "character_start": 12254,
+      "character_end": 12305
+    }
+  ],
+  "eir_level": "public: saved official https://www.nyk.co.jp/investors/library/presentation.html matches neither demo hostname nor #demo/level=demo overrides; JS read as data, never executed",
+  "first_url": "https://ssl4.eir-parts.net/Custom/public/v5parts/5480/jp/20230517/core/eir_common.js",
+  "scheme": "HTTPS inherited from saved official source URL and explicit static branch",
+  "javascript_executed": false,
+  "endpoint_company_id_guessed": false,
+  "get_cap": 4,
+  "purpose": "Follow saved official dynamic-library literal references to find formal annual filings; no presumed file/category endpoint",
+  "next_reference": {
+    "source": "01.txt",
+    "quote": "scriptLoader.setSrc(unescape(eirPassApp + 'conf/common_conf.js' + gt));",
+    "character_start": 7452,
+    "character_end": 7523,
+    "app_base": "eirPass + app/ explicitly in original05 config",
+    "constructed_url": "https://ssl4.eir-parts.net/Custom/public/v5parts/5480/jp/20230517/app/conf/common_conf.js",
+    "cache_query_note": "Dynamic cache-busting transport query gt omitted; literal static resource path used, no endpoint/company/date/category invented, not claiming browser-runtime byte-identical URL"
+  },
+  "data_feed_reference": {
+    "source": "02.txt",
+    "quote": "_e.json= \"http://v4.eir-parts.net/V4Public/eir/5480/ja/announcement/announcement_0.js\";",
+    "character_start": 18,
+    "character_end": 105,
+    "literal_url": "http://v4.eir-parts.net/V4Public/eir/5480/ja/announcement/announcement_0.js",
+    "https_mapping_implementation_verified": false,
+    "execution": false,
+    "requested_url": "https://v4.eir-parts.net/V4Public/eir/5480/ja/announcement/announcement_0.js",
+    "transport_selection": "Parent explicitly permits scheme-only HTTP to HTTPS upgrade with unchanged host/path/query; toSslPath behavior unverified, no host replacement"
+  }
+}

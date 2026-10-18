@@ -1,0 +1,103 @@
+{
+  "security_code": "6093",
+  "company_name": "ミトラグループ",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "サービス業",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://www.ea-j.jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T16:24:23.007542+00:00",
+  "completed_at": "2026-10-11T16:25:44.076238+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/6093/20261011T162423007648Z/01.json",
+      "url": "https://www.mitra.co.jp/",
+      "retrieved_at": "2026-10-11T16:25:27.289559+00:00",
+      "http_status": 200,
+      "quote": "ミトラグループ株式会社 （旧社名 ㈱エスクロー・エージェント・ジャパン）",
+      "role": "issuer_renaming",
+      "snapshot_json_sha256": "6ed39b102f1bf1f37e195b81b5eba0c5ab1f1b2031890ca9c8edc3044bfbf4ad"
+    },
+    {
+      "snapshot": "evidence/6093/20261011T162423007648Z/01.json",
+      "url": "https://www.mitra.co.jp/",
+      "retrieved_at": "2026-10-11T16:25:27.289559+00:00",
+      "http_status": 200,
+      "quote": "投資家向け情報 投資家向け情報 IR情報 IR情報 投資家向け情報 株主・投資家の皆さまへ向けた、業績・財務情報、 各種IR資料などを掲載しています。",
+      "role": "financial_information_route",
+      "snapshot_json_sha256": "6ed39b102f1bf1f37e195b81b5eba0c5ab1f1b2031890ca9c8edc3044bfbf4ad",
+      "source_link_url": "https://www.mitra.co.jp/ir/",
+      "source_link_href": "/ir/",
+      "source_link_label": "投資家向け情報 投資家向け情報 IR情報 IR情報",
+      "source_link_index": 20
+    },
+    {
+      "snapshot": "evidence/6093/20261011T162423007648Z/01.json",
+      "url": "https://www.mitra.co.jp/",
+      "retrieved_at": "2026-10-11T16:25:27.289559+00:00",
+      "http_status": 200,
+      "quote": "お問い合わせ",
+      "role": "general_contact_route",
+      "snapshot_json_sha256": "6ed39b102f1bf1f37e195b81b5eba0c5ab1f1b2031890ca9c8edc3044bfbf4ad",
+      "source_link_url": "https://www.mitra.co.jp/contact/",
+      "source_link_href": "/contact/",
+      "source_link_label": "お問い合わせ",
+      "source_link_index": 102
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://www.ea-j.jp/",
+      "final_url": "https://www.mitra.co.jp/",
+      "snapshot": "evidence/6093/20261011T162423007648Z/01.json",
+      "retrieved_at": "2026-10-11T16:25:27.289559+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [
+    "元seed https://www.ea-j.jp/ から https://www.mitra.co.jp/ への保存301リダイレクトと、本文のミトラグループ株式会社/旧社名エスクロー・エージェント・ジャパン表記を照合。原sourceの official_identity_basis=third_party_unverified 等の取得metadataは変更しない。",
+    "現社名サイトに投資家向け業績・財務情報/各種IR資料の説明と実 /ir/ リンクがある。一般お問い合わせ /contact/ も実リンクだが、金融IR問い合わせ受付の本文は保存資料にない。"
+  ],
+  "limitations": [
+    "現保存範囲はredirect後のhome1頁で forms=[]。IR頁/受付頁のnative返信質問欄・専用公開IRメール・会社必須/個人入力/返信条件は未実証。",
+    "金融ソリューション事業や投資家情報案内を金融IR受付と混同しない。取得時の別host未検証metadataを上書きせず、窓口不存在とも判定しない。",
+    "保存済み資料のみで監査。追加GET・フォーム送信・メール送信0。送信成功・回答実績・現在の稼働/到達性・投資提案の承認は確認していない。"
+  ],
+  "discovery": {
+    "security_code": "6093",
+    "official_url": "https://www.ea-j.jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "エスクロー・エージェント・ジャパン",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/6093/20261011T162423007648Z/01.json",
+      "normalized_name": "ミトラグループ",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 1,
+  "unconfirmed_reason": "旧公式seedの保存301先と新旧社名本文は照合したが、現保存範囲がホームのみで、同issuer金融IRの実受付を実証できない。",
+  "http_get_attempt_count": 5,
+  "previous_attempts": [
+    "attempts/6093/20261011T045047571442Z.json",
+    "attempts/6093/20261011T162544076464Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "codex_audit_consumer_61_batch14",
+    "reviewed_at": "2026-10-11T16:47:53.680175+00:00",
+    "reviewed_at_jst": "2026-10-12T01:47:53.680175+09:00",
+    "notes": "旧ea-j.jp→mitra.co.jp保存301と現社名/旧社名原文を照合。別host取得のthird_party_unverified metadataは保持。投資家向け案内やgenericお問い合わせ実リンクは確認するが、未取得IR/受付頁の回答フォームやIRメールを推論しない。 保存済み資料だけを使用。新GET/送信0、送信・回答実績や投資提案の承認は推論しない。"
+  }
+}

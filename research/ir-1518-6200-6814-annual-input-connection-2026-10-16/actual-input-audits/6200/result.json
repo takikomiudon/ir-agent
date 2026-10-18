@@ -1,0 +1,129 @@
+{
+  "company_id": "jp:6200",
+  "as_of": "2026-10-16T10:51:09.863820+00:00",
+  "synthetic": false,
+  "status": "source_values_matched",
+  "required_paths": [
+    "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+    "scenarios.reported_annual_reference.inputs.eps_jpy"
+  ],
+  "missing_paths": [],
+  "inputs": [
+    {
+      "path": "scenarios.reported_annual_reference.inputs.book_value_per_share_jpy",
+      "value": "148.70",
+      "status": "source_value_matched",
+      "reason_codes": [],
+      "meaning_review_status": "unreviewed",
+      "meaning_checks": [
+        "unit_not_verified",
+        "period_not_verified",
+        "definition_not_verified",
+        "authorship_and_forecast_status_not_verified"
+      ],
+      "kind": "reported_fact",
+      "reference": "research/ir-case-studies-2026-10-15/6200/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json#/sources/1/content/facts/1/value; fact_id=6200-reported-year-end-BPS-20250930",
+      "rationale": "p1会社直接表示候補。期間とbasisは担当者申告、詳細BPS分母は未確認。金融入力採用false。",
+      "recorded_at": "2026-10-16T10:51:09.863820+00:00",
+      "author": "株式会社インソース（公表実績）",
+      "source_id": "disclosed-facts:65bf86cb904c1f0740db3b27c61824b01aa65cea08c748017255f9183e7f61b6",
+      "value_path": [
+        "content",
+        "facts",
+        1,
+        "value"
+      ],
+      "unit": "JPY-per-share",
+      "period": "{\"as_of_date\": \"2025-09-30\", \"date_basis\": \"p1連結財政状態の2025年9月期行。p1年次末日とp18当年度末BPS表対応による明示レビュー判断。\", \"end_date\": \"2025-09-30\", \"label\": \"2025年9月期末\", \"period_kind\": \"instant\", \"start_date\": null}",
+      "missing_meaning_fields": [],
+      "source_lineage_ids": [
+        "disclosed-facts:65bf86cb904c1f0740db3b27c61824b01aa65cea08c748017255f9183e7f61b6",
+        "case-public:4e3b5b50cf1056ea17c9611853d8480231efa5c2eb3a8642d6f9ffb6a898280c"
+      ],
+      "normalization_checks": [
+        {
+          "source_id": "disclosed-facts:65bf86cb904c1f0740db3b27c61824b01aa65cea08c748017255f9183e7f61b6",
+          "applicable": true,
+          "status": "reproduced",
+          "reason_codes": [],
+          "financial_inputs_verified": false,
+          "meaning_review_required": true,
+          "original_content_sha256_status": "matched",
+          "original_snapshot_sha256_status": "matched_supplied_snapshot",
+          "original_source_id": "case-public:4e3b5b50cf1056ea17c9611853d8480231efa5c2eb3a8642d6f9ffb6a898280c"
+        }
+      ],
+      "source_fact_id": "6200-reported-year-end-BPS-20250930",
+      "source_fact_kind": "reported_fact",
+      "source_value": "148.70"
+    },
+    {
+      "path": "scenarios.reported_annual_reference.inputs.eps_jpy",
+      "value": "49.20",
+      "status": "source_value_matched",
+      "reason_codes": [],
+      "meaning_review_status": "unreviewed",
+      "meaning_checks": [
+        "unit_not_verified",
+        "period_not_verified",
+        "definition_not_verified",
+        "authorship_and_forecast_status_not_verified"
+      ],
+      "kind": "reported_fact",
+      "reference": "research/ir-case-studies-2026-10-15/6200/annual-per-share-disclosed-facts-2026-10-16/normalized-bundle.json#/sources/1/content/facts/0/value; fact_id=6200-reported-annual-EPS-FY20250930",
+      "rationale": "p1会社直接表示候補。期間とbasisは担当者申告、詳細BPS分母は未確認。金融入力採用false。",
+      "recorded_at": "2026-10-16T10:51:09.863820+00:00",
+      "author": "株式会社インソース（公表実績）",
+      "source_id": "disclosed-facts:65bf86cb904c1f0740db3b27c61824b01aa65cea08c748017255f9183e7f61b6",
+      "value_path": [
+        "content",
+        "facts",
+        0,
+        "value"
+      ],
+      "unit": "JPY-per-share",
+      "period": "{\"date_basis\": \"原p1連結業績見出しの明示期間。p18当連結年度の期間に一致。\", \"end_date\": \"2025-09-30\", \"frequency\": \"annual\", \"label\": \"2025年9月期 連結年次実績\", \"period_kind\": \"duration\", \"start_date\": \"2024-10-01\"}",
+      "missing_meaning_fields": [],
+      "source_lineage_ids": [
+        "disclosed-facts:65bf86cb904c1f0740db3b27c61824b01aa65cea08c748017255f9183e7f61b6",
+        "case-public:4e3b5b50cf1056ea17c9611853d8480231efa5c2eb3a8642d6f9ffb6a898280c"
+      ],
+      "normalization_checks": [
+        {
+          "source_id": "disclosed-facts:65bf86cb904c1f0740db3b27c61824b01aa65cea08c748017255f9183e7f61b6",
+          "applicable": true,
+          "status": "reproduced",
+          "reason_codes": [],
+          "financial_inputs_verified": false,
+          "meaning_review_required": true,
+          "original_content_sha256_status": "matched",
+          "original_snapshot_sha256_status": "matched_supplied_snapshot",
+          "original_source_id": "case-public:4e3b5b50cf1056ea17c9611853d8480231efa5c2eb3a8642d6f9ffb6a898280c"
+        }
+      ],
+      "source_fact_id": "6200-reported-annual-EPS-FY20250930",
+      "source_fact_kind": "reported_fact",
+      "source_value": "49.20"
+    }
+  ],
+  "aggregation": "unweighted",
+  "expected_value_available": false,
+  "unset_probability_paths": [
+    "scenarios.reported_annual_reference.probability"
+  ],
+  "meaning_review_required": true,
+  "financial_inputs_verified": false,
+  "source_snapshot_sha256": {
+    "case-public:4e3b5b50cf1056ea17c9611853d8480231efa5c2eb3a8642d6f9ffb6a898280c": "37a66ed5fa097b293d58ca0febab29c1d29ed3def5194b550eecbdda63ade6bd",
+    "disclosed-facts:65bf86cb904c1f0740db3b27c61824b01aa65cea08c748017255f9183e7f61b6": "8b86f6bcaf248b49469e65df104f566600654c903808409fb9e14fbeb25441c4"
+  },
+  "limitations": [
+    "Numerical equality with a saved field does not verify units, periods, accounting definitions, authorship, or the meaning of a forecast.",
+    "Missing unit or period labels remain explicit meaning-review tasks; supplied labels are not automatically verified.",
+    "Explicit assumptions and synthetic examples are recorded declarations, not recommended or empirically validated inputs.",
+    "Audit status concerns only configured numerical paths; unset probabilities are neither audited nor supplied and do not produce an expected value.",
+    "This standalone audit reads only supplied source snapshots and does not consult live database classification corrections.",
+    "Known disclosed-fact normalization is replayed against its supplied original; unknown providers are not inferred to use that contract, and whole-snapshot commitments are reported separately from content reproduction.",
+    "No values, scenario probabilities, costs, or trading conditions are inferred; saved timestamps are supplied records, not independent proof of collection."
+  ]
+}

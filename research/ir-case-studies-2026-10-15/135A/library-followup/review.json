@@ -1,0 +1,142 @@
+{
+  "company_id": "jp:135A",
+  "research_only": true,
+  "status": "latest_linked_interim_financial_body_obtained_model_inputs_unverified",
+  "scope": "Separate finite followup to initial five GETs; only official library loader, its literal selected results endpoint and its latest explicit earnings PDF. Not an investment selection or outreach assessment.",
+  "retrieved_at_range": [
+    "2026-10-15T04:39:21.769011+00:00",
+    "2026-10-15T04:42:37.094960+00:00"
+  ],
+  "get_count": 3,
+  "maximum_get_count": 3,
+  "retry_count": 0,
+  "redirects_followed": 0,
+  "javascript_executed": false,
+  "endpoint_or_company_id_guessed": false,
+  "custom_callback": {
+    "value": "ir_agent_review",
+    "meaning": "Caller-chosen transport identifier; not a reproduction of jQuery runtime callback",
+    "validation": "Exact ir_agent_review( prefix and ); suffix after outer whitespace, JSON payload read by existing parse_json, no eval/exec"
+  },
+  "publication": {
+    "date": "2026-10-14",
+    "index_timestamp_string": "2026/10/14 16:15:00",
+    "timezone": null,
+    "published_at": null,
+    "quotes": [
+      "identity-and-interim-period",
+      "index-latest-interim-title-date"
+    ]
+  },
+  "resolved_from_public_information": [
+    {
+      "issue": "Latest linked earnings release and reported scope/period",
+      "status": "supported",
+      "answer": "2027年2月期中間期、2026-03-01〜2026-08-31、日本基準・非連結。最新は取得したresultsカテゴリー11件内での最新。",
+      "quote_ids": [
+        "identity-and-interim-period",
+        "income-comparison-period-and-table"
+      ]
+    },
+    {
+      "issue": "Full-year company forecast target and revision status",
+      "status": "supported",
+      "answer": "対象は2026-03-01〜2027-02-28。2026-04-14公表通期予想から変更なしと明示。独自予測/投資モデル入力として採用していない。",
+      "quote_ids": [
+        "full-year-company-forecast",
+        "investing-financing-and-forecast-unchanged"
+      ]
+    },
+    {
+      "issue": "Is interim cash-flow statement available?",
+      "status": "supported",
+      "answer": "中間CF計算書を本文まで取得。前期比較は2025-03-01〜2025-08-31、当期は2026-03-01〜2026-08-31、単位百万円。",
+      "quote_ids": [
+        "cashflow-comparison-period-and-table"
+      ]
+    },
+    {
+      "issue": "Company description and segment reporting",
+      "status": "supported",
+      "answer": "製造業向けAI/IoT、製造業DX単一セグメントとの会社説明を確認。業種だけでモデルrouteを確定しない。",
+      "quote_ids": [
+        "business-and-observed-interim-results",
+        "notes-and-single-segment"
+      ]
+    }
+  ],
+  "publicly_answered_questions_not_to_send": [
+    "最新の決算短信はどれで、対象期間・会計基準・連結範囲は何か",
+    "通期会社予想が直近発表から変更されたか",
+    "当中間期の営業/投資/財務CFと有形固定資産取得支出は公表されているか",
+    "単一セグメントか"
+  ],
+  "candidate_disclosed_metrics_not_adopted": [
+    {
+      "metric": "Basic/diluted interim EPS",
+      "period": "2026-03-01/2026-08-31",
+      "scope": "nonconsolidated actual",
+      "quote_ids": [
+        "identity-and-interim-period"
+      ],
+      "needs": "EPS table itself preserved in source; structured extraction/unit/share-basis review remains, identity quote does not assert EPS values."
+    },
+    {
+      "metric": "Full-year company-forecast EPS and annual forecast dividend",
+      "period": "2026-03-01/2027-02-28",
+      "scope": "nonconsolidated company forecast, not independent forecast",
+      "quote_ids": [
+        "full-year-company-forecast",
+        "dividend-company-forecast"
+      ],
+      "needs": "Forecast EPS/share-basis assumptions and payout policy/sustainability, future periods, valuation method fit, externally sourced forecast assumptions."
+    },
+    {
+      "metric": "Operating/investing/financing CF, tangible capex, depreciation, working-capital lines",
+      "period": "2026-03-01/2026-08-31 (comparison 2025-03-01/2025-08-31)",
+      "scope": "nonconsolidated actual",
+      "quote_ids": [
+        "cashflow-comparison-period-and-table"
+      ],
+      "needs": "Do not convert interim historical CF to annual unlevered future FCF; taxes/reinvestment/current-scale and model-specific definitions need separate review."
+    }
+  ],
+  "remaining_unknowns": [
+    {
+      "item": "Public explanation/Q&A and supplemental presentation body",
+      "status": "unknown",
+      "reason": "Cover reports presentation materials and meeting exist; results-category GETs did not request separate presentations/FAQ categories. Do not claim public answer not found across all company disclosures."
+    },
+    {
+      "item": "Exact next calendar event date/time",
+      "status": "unknown",
+      "reason": "Initial calendar had generic monthly schedule only; no additional calendar GET or date inference."
+    },
+    {
+      "item": "Financial/cyclical/young-loss special-model evidence and ordinary-model suitability",
+      "status": "needs_data",
+      "reason": "This single interim statement and one prior interim comparison do not establish full-cycle earnings/reinvestment normalization, long operating history, regulated-capital relevance, funding path or appropriate valuation model."
+    },
+    {
+      "item": "Share basis and future dilution/long-run payout",
+      "status": "needs_data",
+      "reason": "Current/basic/diluted EPS and share counts do not by themselves establish forecast denominator, future dilution or a future dividend path. No default assumptions."
+    },
+    {
+      "item": "Prices, valuation inputs, probabilities and decision policy fit",
+      "status": "unknown",
+      "reason": "Not fetched or inferred. No price target, buy/sell decision or model forecast adopted."
+    },
+    {
+      "item": "Current IR submission eligibility",
+      "status": "unknown",
+      "reason": "Historical ledger contact is not current outreach eligibility; no contact form visit or submission."
+    }
+  ],
+  "financial_inputs_verified": false,
+  "financial_values_automatically_adopted": false,
+  "ir_questions_created": [],
+  "database_changed": false,
+  "company_status_changed": false,
+  "authority": "Existing jp-equity-ir public-information-first workflow adapted from saved Anthropic; saved Damodaran model-routing research, no new author rule or threshold."
+}

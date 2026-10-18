@@ -1,0 +1,114 @@
+{
+  "security_code": "6694",
+  "company_name": "ズーム",
+  "market": "スタンダード（内国株式）",
+  "jpx_sector": "電気機器",
+  "investigation_status": "unconfirmed",
+  "verification_level": "none",
+  "official_url": "https://zoomcorp.com/ja/jp/",
+  "contact_url": null,
+  "channels": [],
+  "public_ir_emails": [],
+  "individual_access": "not_stated",
+  "outreach_suitability": "unconfirmed",
+  "attempted_at": "2026-10-11T18:44:53.703936+00:00",
+  "completed_at": "2026-10-11T18:45:43.863357+00:00",
+  "manual_review_required": false,
+  "evidence": [
+    {
+      "snapshot": "evidence/6694/20261011T184453703980Z/02.json",
+      "url": "https://zoomcorp.com/ja/jp/contact/",
+      "retrieved_at": "2026-10-11T18:45:25.498811+00:00",
+      "quote": "ズーム製品に関するお問合せ",
+      "role": "product_contact_not_financial_IR"
+    },
+    {
+      "snapshot": "evidence/6694/20261011T184453703980Z/02.json",
+      "url": "https://zoomcorp.com/ja/jp/contact/",
+      "retrieved_at": "2026-10-11T18:45:25.498811+00:00",
+      "quote": "お名前 メールアドレス 製品名 お問合せ内容をご記入ください。 送信",
+      "role": "product_form_not_financial_IR"
+    },
+    {
+      "snapshot": "evidence/6694/20261011T184453703980Z/02.json",
+      "url": "https://zoomcorp.com/ja/jp/contact/",
+      "retrieved_at": "2026-10-11T18:45:25.498811+00:00",
+      "quote": "※当社はWEB会議サービスの「Zoomミーティング」とは何ら関係ありません。ご注意ください。",
+      "role": "issuer_not_video_conferencing_company"
+    },
+    {
+      "snapshot": "evidence/6694/20261011T184453703980Z/01.json",
+      "url": "https://zoomcorp.com/ja/jp/",
+      "retrieved_at": "2026-10-11T18:45:09.256931+00:00",
+      "quote": "企業・IRサイト",
+      "role": "official_corporate_IR_discovery",
+      "source_link_url": "https://ir.zoom.co.jp",
+      "source_link_index": 5
+    },
+    {
+      "snapshot": "evidence/6694/20261011T184453703980Z/01.json",
+      "url": "https://zoomcorp.com/ja/jp/",
+      "retrieved_at": "2026-10-11T18:45:09.256931+00:00",
+      "quote": "ZOOM | すべては、クリエイターのために。 | ZOOM ZOOM | すべては、クリエイターのために。",
+      "role": "issuer_identity"
+    }
+  ],
+  "fetches": [
+    {
+      "url": "https://zoomcorp.com/ja/jp/",
+      "final_url": "https://zoomcorp.com/ja/jp/",
+      "snapshot": "evidence/6694/20261011T184453703980Z/01.json",
+      "retrieved_at": "2026-10-11T18:45:09.256931+00:00",
+      "http_status": 200,
+      "error": null
+    },
+    {
+      "url": "https://zoomcorp.com/ja/jp/contact/",
+      "final_url": "https://zoomcorp.com/ja/jp/contact/",
+      "snapshot": "evidence/6694/20261011T184453703980Z/02.json",
+      "retrieved_at": "2026-10-11T18:45:25.498811+00:00",
+      "http_status": 200,
+      "error": null
+    }
+  ],
+  "conditions": [],
+  "limitations": [
+    "製品用native返信/質問欄を金融IR受付に借用していない。",
+    "公式literal企業・IRサイト本文は未取得、IR窓口不存在を意味しない。",
+    "個人条件/会社必須/金融IR回答方針は未確認。"
+  ],
+  "discovery": {
+    "security_code": "6694",
+    "official_url": "https://zoomcorp.com/ja/jp/",
+    "discovery_url": "https://toushiro.com/data/list_20241008.xlsx",
+    "discovered_at": "2026-10-11T03:55:56.638289+00:00",
+    "discovery_type": "third_party_unverified",
+    "seed_company_name": "ズーム",
+    "source_data_as_of": "2024-10-08"
+  },
+  "identity_status": "name_or_security_code_observed",
+  "identity_matches": [
+    {
+      "snapshot": "evidence/6694/20261011T184453703980Z/01.json",
+      "normalized_name": "ズーム",
+      "security_code_observed": false
+    },
+    {
+      "snapshot": "evidence/6694/20261011T184453703980Z/02.json",
+      "normalized_name": "ズーム",
+      "security_code_observed": false
+    }
+  ],
+  "successful_official_page_count": 2,
+  "unconfirmed_reason": "official_channel_not_demonstrated",
+  "http_get_attempt_count": 3,
+  "previous_attempts": [
+    "attempts/6694/20261011T045047611204Z.json",
+    "attempts/6694/20261011T184543863515Z.json"
+  ],
+  "manual_review": {
+    "reviewer": "ir_operations_66_batch20",
+    "reviewed_at": "2026-10-11T20:33:42.409548+00:00",
+    "notes": "現JPXズームの保存home/contactは音楽・音響製品サイト。native製品質問form2には製品名欄があり、primaryはズーム製品の受付。Web会議Zoomとの非関係も明示。金融IR質問に転用せずU。公式actual5の企業・IRサイトir.zoom.co.jpは別の未取得発見候補のみで、IR質問受付や個人拒否は未実証。"
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "recorded_at": "2026-10-15T04:58:42.360673+00:00",
+  "company_id": "jp:135A",
+  "status": "research_mapping_only",
+  "author_methods": [
+    {
+      "reference": "docs/ir-operation-design.md sections 4-6; third_party/anthropic preserved skills",
+      "scope": "公開情報の先行確認、仮説/反証/事前分岐への対応"
+    },
+    {
+      "reference": "docs/cyclical-reinvestment-spec.md; Damodaran 2009 p17,p21",
+      "scope": "次期税引後利益、新規投資ROC、再投資の意味を区別"
+    },
+    {
+      "reference": "docs/financial-equity-valuation-spec.md",
+      "scope": "一期配当と将来配当列・安定期を区別"
+    }
+  ],
+  "project_adaptation": "以下のJSONによる入力候補の対応は本プロジェクトの研究整理。既存runtimeの新しい入力契約ではない。",
+  "facts": [
+    {
+      "fact_id": "vrain135a-2027interim-basic-eps",
+      "concept": "reported_basic_interim_eps",
+      "kind": "reported_fact",
+      "value": "26.06",
+      "unit": "JPY-per-share",
+      "period": {
+        "actual_or_forecast": "reported_actual",
+        "aggregation": "interim_cumulative",
+        "end_date": "2026-08-31",
+        "frequency": "semiannual",
+        "label": "2027年２月期中間期",
+        "standalone_second_quarter_derived": false,
+        "start_date": "2026-03-01"
+      },
+      "artifact": "research/ir-case-studies-2026-10-15/135A/disclosed-facts/normalized-bundle.json",
+      "artifact_sha256": "cd6ec111de870b91f6a3be37fecfd0cdfe3221b6b19132c8d8c0b02c6b00f36e",
+      "derived_source_id": "disclosed-facts:3a6c2eaebf52cba09b060669bfb00dea510dc16d5be6fb370045e9b2e8171911",
+      "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "source_value_path": [
+        "content",
+        "facts",
+        0,
+        "value"
+      ],
+      "possible_input_identifiers": [],
+      "assigned_model_input_path": null,
+      "model_adopted": false,
+      "remaining_review": "中間累計basic EPS。通期EPSや次期予想へ倍増・年率換算せず、潜在株式調整後EPSと区別する。"
+    },
+    {
+      "fact_id": "vrain135a-2027fy-company-eps",
+      "concept": "issuer_forecast_eps",
+      "kind": "issuer_guidance",
+      "value": "94.85",
+      "unit": "JPY-per-share",
+      "period": {
+        "actual_or_forecast": "issuer_guidance",
+        "aggregation": "full_year_guidance",
+        "as_published_date": "2026-10-14",
+        "end_date": "2027-02-28",
+        "frequency": "annual",
+        "label": "2027年２月期通期会社予想",
+        "start_date": "2026-03-01"
+      },
+      "artifact": "research/ir-case-studies-2026-10-15/135A/disclosed-facts/normalized-bundle.json",
+      "artifact_sha256": "cd6ec111de870b91f6a3be37fecfd0cdfe3221b6b19132c8d8c0b02c6b00f36e",
+      "derived_source_id": "disclosed-facts:3a6c2eaebf52cba09b060669bfb00dea510dc16d5be6fb370045e9b2e8171911",
+      "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "source_value_path": [
+        "content",
+        "facts",
+        1,
+        "value"
+      ],
+      "possible_input_identifiers": [
+        {
+          "method": "eps_multiple",
+          "input_key": "eps_jpy",
+          "target_path": null,
+          "scenario": null
+        }
+      ],
+      "assigned_model_input_path": null,
+      "model_adopted": false,
+      "remaining_review": "通期会社予想EPSの候補。採用シナリオ・評価対象期・予測者・倍率の根拠・価格が未設定で、どの保存valuationにも割り当てない。"
+    },
+    {
+      "fact_id": "vrain135a-2027interim-operating-income",
+      "concept": "reported_nonconsolidated_interim_operating_income",
+      "kind": "reported_fact",
+      "value": "409000000",
+      "unit": "JPY",
+      "period": {
+        "actual_or_forecast": "reported_actual",
+        "aggregation": "interim_cumulative",
+        "end_date": "2026-08-31",
+        "frequency": "semiannual",
+        "label": "2027年２月期中間期",
+        "standalone_second_quarter_derived": false,
+        "start_date": "2026-03-01"
+      },
+      "artifact": "research/ir-case-studies-2026-10-15/135A/disclosed-facts/normalized-bundle.json",
+      "artifact_sha256": "cd6ec111de870b91f6a3be37fecfd0cdfe3221b6b19132c8d8c0b02c6b00f36e",
+      "derived_source_id": "disclosed-facts:3a6c2eaebf52cba09b060669bfb00dea510dc16d5be6fb370045e9b2e8171911",
+      "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "source_value_path": [
+        "content",
+        "facts",
+        2,
+        "value"
+      ],
+      "possible_input_identifiers": [],
+      "assigned_model_input_path": null,
+      "model_adopted": false,
+      "remaining_review": "税引前営業利益の実績または会社予想。次期税引後営業利益NOPATではなく、税/NOL/期/再投資の根拠なしにstable-reinvestmentやFCFFへ渡さない。中間期はcycle-marginのfull fiscal year入力にも渡さない。"
+    },
+    {
+      "fact_id": "vrain135a-2027fy-company-operating-income",
+      "concept": "issuer_forecast_nonconsolidated_operating_income",
+      "kind": "issuer_guidance",
+      "value": "1449000000",
+      "unit": "JPY",
+      "period": {
+        "actual_or_forecast": "issuer_guidance",
+        "aggregation": "full_year_guidance",
+        "as_published_date": "2026-10-14",
+        "end_date": "2027-02-28",
+        "frequency": "annual",
+        "label": "2027年２月期通期会社予想",
+        "start_date": "2026-03-01"
+      },
+      "artifact": "research/ir-case-studies-2026-10-15/135A/disclosed-facts/normalized-bundle.json",
+      "artifact_sha256": "cd6ec111de870b91f6a3be37fecfd0cdfe3221b6b19132c8d8c0b02c6b00f36e",
+      "derived_source_id": "disclosed-facts:3a6c2eaebf52cba09b060669bfb00dea510dc16d5be6fb370045e9b2e8171911",
+      "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "source_value_path": [
+        "content",
+        "facts",
+        3,
+        "value"
+      ],
+      "possible_input_identifiers": [],
+      "assigned_model_input_path": null,
+      "model_adopted": false,
+      "remaining_review": "税引前営業利益の実績または会社予想。次期税引後営業利益NOPATではなく、税/NOL/期/再投資の根拠なしにstable-reinvestmentやFCFFへ渡さない。中間期はcycle-marginのfull fiscal year入力にも渡さない。"
+    },
+    {
+      "fact_id": "vrain135a-2027fy-company-annual-dividend",
+      "concept": "issuer_forecast_annual_dividend_per_share",
+      "kind": "issuer_guidance",
+      "value": "0",
+      "unit": "JPY-per-share",
+      "period": {
+        "actual_or_forecast": "issuer_guidance",
+        "aggregation": "full_year_guidance",
+        "as_published_date": "2026-10-14",
+        "end_date": "2027-02-28",
+        "frequency": "annual",
+        "label": "2027年２月期通期会社予想",
+        "start_date": "2026-03-01"
+      },
+      "artifact": "research/ir-case-studies-2026-10-15/135A/disclosed-facts/normalized-bundle.json",
+      "artifact_sha256": "cd6ec111de870b91f6a3be37fecfd0cdfe3221b6b19132c8d8c0b02c6b00f36e",
+      "derived_source_id": "disclosed-facts:3a6c2eaebf52cba09b060669bfb00dea510dc16d5be6fb370045e9b2e8171911",
+      "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "source_value_path": [
+        "content",
+        "facts",
+        4,
+        "value"
+      ],
+      "possible_input_identifiers": [
+        {
+          "method": "dividend_discount",
+          "input_key": "dividends_per_share_jpy",
+          "target_path": null,
+          "scenario": null
+        }
+      ],
+      "assigned_model_input_path": null,
+      "model_adopted": false,
+      "remaining_review": "年間予想0.00円は明示値。将来配当列/支払時点/安定期DPS/資本コストが未設定のため、一年分を永久配当0や株式価値0へ延長しない。"
+    },
+    {
+      "fact_id": "vrain135a-2027interim-operating-cashflow",
+      "concept": "reported_operating_cashflow",
+      "kind": "reported_fact",
+      "value": "223000000",
+      "unit": "JPY",
+      "period": {
+        "actual_or_forecast": "reported_actual",
+        "aggregation": "interim_cumulative",
+        "comparison_period": {
+          "end_date": "2025-08-31",
+          "label": "前中間会計期間",
+          "start_date": "2025-03-01"
+        },
+        "end_date": "2026-08-31",
+        "frequency": "semiannual",
+        "label": "2027年２月期 当中間会計期間",
+        "start_date": "2026-03-01"
+      },
+      "artifact": "research/ir-case-studies-2026-10-15/135A/cashflow-disclosed-facts/normalized-bundle.json",
+      "artifact_sha256": "7889e9b548f3d37b3e49f415bb492484c6e741b4de34b007773802fcab9bf400",
+      "derived_source_id": "disclosed-facts:8d3e2fabf17b9e9476c9d99e5237ca7c39fd707df13927c7d19ba994881ab224",
+      "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "source_value_path": [
+        "content",
+        "facts",
+        0,
+        "value"
+      ],
+      "possible_input_identifiers": [],
+      "assigned_model_input_path": null,
+      "model_adopted": false,
+      "remaining_review": "中間実績CFO。将来アンレバードFCFFとは別で、税/利息/運転資本/予測期の確認なしにdcf.fcf_jpyへ渡さない。"
+    },
+    {
+      "fact_id": "vrain135a-2027interim-depreciation-cf-adjustment",
+      "concept": "reported_depreciation_operating_cf_adjustment",
+      "kind": "reported_fact",
+      "value": "30000000",
+      "unit": "JPY",
+      "period": {
+        "actual_or_forecast": "reported_actual",
+        "aggregation": "interim_cumulative",
+        "comparison_period": {
+          "end_date": "2025-08-31",
+          "label": "前中間会計期間",
+          "start_date": "2025-03-01"
+        },
+        "end_date": "2026-08-31",
+        "frequency": "semiannual",
+        "label": "2027年２月期 当中間会計期間",
+        "start_date": "2026-03-01"
+      },
+      "artifact": "research/ir-case-studies-2026-10-15/135A/cashflow-disclosed-facts/normalized-bundle.json",
+      "artifact_sha256": "7889e9b548f3d37b3e49f415bb492484c6e741b4de34b007773802fcab9bf400",
+      "derived_source_id": "disclosed-facts:8d3e2fabf17b9e9476c9d99e5237ca7c39fd707df13927c7d19ba994881ab224",
+      "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "source_value_path": [
+        "content",
+        "facts",
+        1,
+        "value"
+      ],
+      "possible_input_identifiers": [],
+      "assigned_model_input_path": null,
+      "model_adopted": false,
+      "remaining_review": "減価償却費の中間CF調整行。営業利益への二重足戻しや将来の正常D&Aを採用せず、設備投資・資産範囲との対応は未確認。"
+    },
+    {
+      "fact_id": "vrain135a-2027interim-ppe-acquisition-cashflow",
+      "concept": "reported_ppe_acquisition_cashflow",
+      "kind": "reported_fact",
+      "value": "-100000000",
+      "unit": "JPY",
+      "period": {
+        "actual_or_forecast": "reported_actual",
+        "aggregation": "interim_cumulative",
+        "comparison_period": {
+          "end_date": "2025-08-31",
+          "label": "前中間会計期間",
+          "start_date": "2025-03-01"
+        },
+        "end_date": "2026-08-31",
+        "frequency": "semiannual",
+        "label": "2027年２月期 当中間会計期間",
+        "start_date": "2026-03-01"
+      },
+      "artifact": "research/ir-case-studies-2026-10-15/135A/cashflow-disclosed-facts/normalized-bundle.json",
+      "artifact_sha256": "7889e9b548f3d37b3e49f415bb492484c6e741b4de34b007773802fcab9bf400",
+      "derived_source_id": "disclosed-facts:8d3e2fabf17b9e9476c9d99e5237ca7c39fd707df13927c7d19ba994881ab224",
+      "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "source_value_path": [
+        "content",
+        "facts",
+        2,
+        "value"
+      ],
+      "possible_input_identifiers": [],
+      "assigned_model_input_path": null,
+      "model_adopted": false,
+      "remaining_review": "取得支出△100百万円の負のCF表示を保持。正CAPEXへ無記録で反転せず、維持/成長投資・正常化・その他投資の不足を残す。"
+    },
+    {
+      "fact_id": "vrain135a-2027interim-receivables-contract-assets-cf-adjustment",
+      "concept": "reported_trade_receivables_and_contract_assets_cf_adjustment",
+      "kind": "reported_fact",
+      "value": "154000000",
+      "unit": "JPY",
+      "period": {
+        "actual_or_forecast": "reported_actual",
+        "aggregation": "interim_cumulative",
+        "comparison_period": {
+          "end_date": "2025-08-31",
+          "label": "前中間会計期間",
+          "start_date": "2025-03-01"
+        },
+        "end_date": "2026-08-31",
+        "frequency": "semiannual",
+        "label": "2027年２月期 当中間会計期間",
+        "start_date": "2026-03-01"
+      },
+      "artifact": "research/ir-case-studies-2026-10-15/135A/cashflow-disclosed-facts/normalized-bundle.json",
+      "artifact_sha256": "7889e9b548f3d37b3e49f415bb492484c6e741b4de34b007773802fcab9bf400",
+      "derived_source_id": "disclosed-facts:8d3e2fabf17b9e9476c9d99e5237ca7c39fd707df13927c7d19ba994881ab224",
+      "original_source_id": "case-public:4b9aaae627aa90731140aa648b9c8bf60be1767accaab06041ac23dc5f6955fb",
+      "source_value_path": [
+        "content",
+        "facts",
+        3,
+        "value"
+      ],
+      "possible_input_identifiers": [],
+      "assigned_model_input_path": null,
+      "model_adopted": false,
+      "remaining_review": "売上債権および契約資産のCF調整+154百万円（△は増加）。BS残高増加+154や非現金運転資本全体の増減と置き換えない。"
+    }
+  ],
+  "public_definition_resolution": {
+    "artifact": "research/ir-case-studies-2026-10-15/135A/presentation-followup/review.json",
+    "resolved_topics": [
+      "継続顧客売上高の公開算式",
+      "販売単価の年度内累計集計",
+      "初回/追加導入より案件構成が単価に影響するという会社説明",
+      "FAQ時点で保守サービス等のストック収入なし"
+    ],
+    "unresolved_topic": "DXコンサルティング欄のリピート率90%以上の算定期間・分母/分子・顧客判定。継続顧客売上高の式とは別指標。",
+    "direct_canonical_valuation_path": null,
+    "why_not_ready_for_ir": "この定義がどの将来収益予測をどれだけ変えるか、公開資料全体に追加説明がないか、現在窓口条件と事前方針が未確認。未解決というだけで質問を登録しない。"
+  },
+  "missing_for_decision": [
+    "出典に適合する会社別の将来予測・採用シナリオ",
+    "方法に必要な残りの金融入力",
+    "新しい株価と価格根拠",
+    "出典付き判断方針の採用と明示条件",
+    "質問前の仮説・反証・変更可能入力・回答分岐"
+  ],
+  "created_theses": 0,
+  "registered_questions": 0,
+  "external_sends": 0,
+  "orders": 0
+}
